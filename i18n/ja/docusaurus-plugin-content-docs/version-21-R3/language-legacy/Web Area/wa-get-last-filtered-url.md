@@ -1,0 +1,56 @@
+﻿---
+id: wa-get-last-filtered-url
+title: WA Get last filtered URL
+slug: /commands/wa-get-last-filtered-url
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *object* : Text ) : Text<br/>**WA Get last filtered URL** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| 戻り値 | Text | &#8592; | 最後にフィルタされたURL |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.WA Get last filtered URL.Summary-->WA Get last filtered URL コマンドは、*\** と *object* 引数で指定したWebエリアで、最後にフィルタされたURLを返します。<!-- END REF-->
+
+URLは以下のいずれかの理由でフィルタされることがあります:
+
+* URLがフィルタにより拒否された ([WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS") コマンド)。
+* デフォルトブラウザでリンクが開かれる ([WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md "WA SET EXTERNAL LINKS FILTERS") コマンド)。
+* URLがポップアップウィンドウを開こうとしている。
+
+フィルタされたURLを知るためには、On URL Filtering、On Open External Link、そしてOn Window Opening Deniedフォームイベントのコンテキストでこのコマンドを呼び出すことをお勧めします。
+
+## 参照 
+
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1035 |
+| スレッドセーフである | no |
+
+

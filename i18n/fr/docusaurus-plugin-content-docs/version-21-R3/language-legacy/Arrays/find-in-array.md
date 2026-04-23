@@ -1,0 +1,131 @@
+﻿---
+id: find-in-array
+title: Find in array
+slug: /commands/find-in-array
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *tableau* ; *valeur* {; *départ*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Params-->
+<div class="no-index">
+
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| tableau | Array | &#8594;  | Tableau dans lequel effectuer la recherche |
+| valeur | Expression | &#8594;  | Valeur de même type à rechercher dans le tableau |
+| départ | Integer | &#8594;  | Elément à partir duquel commencer la recherche |
+| Résultat | Integer | &#8592; | Numéro du premier élément trouvé correspondant à valeur |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|20 R6|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
+
+*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](../../Concepts/operators.md#opérateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
+
+**Note :** Avec les tableaux d'objets, vous ne pouvez utiliser que des références d'objets dans le paramètre valeur. 
+
+Si *départ* est spécifié, **Find in array** commence la recherche à l'élément spécifié par *départ*. Si *départ* n'est pas spécifié, **Find in array** commence la recherche à l'élément 1.
+
+## Exemple 1 
+
+La méthode projet suivante efface tous les éléments vides du tableau alpha ou texte passé en paramètre : 
+
+```4d
+  // Méthode projet NETTOYER TABLEAU
+  // NETTOYER TABLEAU ( Pointeur )
+  // NETTOYER TABLEAU ( -> Tableau Texte ou Alpha )
+ 
+ #DECLARE ($arrPtr : Pointer) : Pointer
+ Repeat
+    $vlElem:=Find in array($arrPtr->;"")
+    If($vlElem>0)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
+    End if
+ Until($vlElem<0)
+```
+
+Une fois que cette méthode projet est implémentée dans votre base, vous pouvez écrire, par exemple :
+
+```4d
+ ARRAY TEXT(TabValeurs;...)
+  // ...
+  // Use le tableau comme vous voulez
+  // ...
+  // Eliminer les éléments chaînes vides
+ NETTOYER TABLEAU(->TabValeurs)
+```
+
+## Exemple 2 
+
+La méthode projet suivante sélectionne le premier élément d'un tableau dont le pointeur passé comme premier paramètre correspond à la valeur de la variable ou du champ dont le pointeur est passé en second paramètre :
+
+```4d
+  // Méthode projet SELECTIONNER ELEMENT
+  // SELECTIONNER ELEMENT ( Pointeur ; Pointeur)
+  // SELECTIONNER ELEMENT ( -> Tableau Texte ou Alpha ; -> Champ ou variable de type Texte ou Alpha )
+ 
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // Si aucun élément n'est trouvé, fixer le tableau à aucun élément sélectionné
+ End if
+```
+
+Une fois que cette méthode projet est implémentée dans la base, vous pouvez écrire, par exemple :
+
+```4d
+  // Méthode objet du pop-up menu TabTitres
+ Case of
+    :(Form event code=On Load)
+       SELECTIONNER ELEMENT(->TabTitres;->[Personnes]Titre)
+ End case
+```
+
+**Note :** Cet exemple utilise l'**élément sélectionné** du tableau. Gardez à l'esprit que l'élément sélectionné ne sera pas significatif si le tableau comporte plus de 32767 éléments (cf. section *Tableaux et objets de formulaire*). Il est dans ce cas nécessaire d'utiliser une variable entier long pour stocker le résultat de **Find in array**.
+
+## Exemple 3 
+
+Vous voulez trouver une référence d'objet :
+
+```4d
+ ARRAY OBJECT($objects;100)
+ $o1:={a10;b"xyz"}
+ $o2:={a10;b"xyz"}
+ 
+ $objects{20}:=$o1
+ var $p : Integer
+ 
+ $p:=Find in array($objects;$o1) //$p = 20 
+ $p:=Find in array($objects;$o2) //$p = -1 
+ $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
+```
+
+## Voir aussi 
+
+[Count in array](../commands/count-in-array)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
+[Size of array](../commands/size-of-array)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 230 |
+| Thread safe | yes |
+
+

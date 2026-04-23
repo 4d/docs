@@ -57,10 +57,10 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 <!-- REF #_command_.Create entity selection.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
-|settings|Object|->|Build option: context   |
+|dsTable|Table|->|Tabla en la base de datos 4D cuya selección actual se utilizará para construir la selección de entidades|
+|settings|Object|->|Opción Build: contexto   |
 |Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
 </div>
 <!-- END REF -->
@@ -298,11 +298,11 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 <!-- REF #EntitySelectionClass.add().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity|4D.Entity|->|Entity to be added to the entity selection|
-|entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
-|Result|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|
+|entity|4D.Entity|->|Entidad a añadir a la selección de entidades|
+|entitySelection|4D.EntitySelection|->|Selección de entidades a añadir a la selección de entidades original|
+|Resultado|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|
 </div>
 <!-- END REF -->
 
@@ -458,10 +458,10 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 <!-- REF #EntitySelectionClass.at().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|index|Integer|->|Index of entity to return|
-|Result|4D.Entity |<-|The entity at that index|
+|index|Integer|->|Índice de entidad a regresar|
+|Resultado|4D.Entity |<-|The entity at that index|
 </div>
 <!-- END REF -->
 
@@ -732,11 +732,11 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 <!-- REF #EntitySelectionClass.distinct().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath|Text|->|Path of attribute whose distinct values you want to get|
+|attributePath|Text|->|Ruta del atributo cuyos valores distintos desea obtener|
 |options|Integer|->|`dk diacritical`, `dk count values`|
-|Result|Collection|<-|Collection with only distinct values|
+|Resultado|Collection|<-|Collection with only distinct values|
 </div>
 <!-- END REF -->
 
@@ -825,10 +825,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attribute|Text|->|Object attribute name whose paths you want to get|
-|Result|Collection|<-|New collection with distinct paths|
+|attribute|Text|>|Nombre del atributo del objeto cuyas rutas desea obtener|
+|Resultado|Collection|<-|New collection with distinct paths|
 </div>
 <!-- END REF -->
 
@@ -1425,10 +1425,10 @@ Las entity selections siempre tienen una propiedad `.length`.
 <!-- REF #EntitySelectionClass.max().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |---|------|
-|attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Highest value of attribute|
+|attributePath |Text|->|Ruta del atributo a utilizar para el cálculo|
+|Resultado|any|<-|Highest value of attribute|
 </div>
 <!-- END REF -->
 
@@ -1534,12 +1534,12 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 <!-- REF #EntitySelectionClass.minus().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity |4D.Entity|->|Entity to substract|
-|entitySelection|4D.EntitySelection|->|Entity selection to substract|
-|keepOrder|Integer|->|`dk keep ordered` (integer) to keep the initial order in the resulting entity selection|
-|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
+|entity |4D.Entity|->|Entidad a sustraer|
+|entitySelection|4D.EntitySelection|->|Selección de entidades a sustraer|
+|keepOrder|Integer|->|`dk keep ordered` (entero) para mantener el orden inicial en la selección de entidades resultante|
+|Resultado|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
 </div>
 <!-- END REF -->
 
@@ -1684,11 +1684,11 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection|
-|pathObjects |Collection    |->|Collection of criteria objects|
-|Result|4D.EntitySelection|<-|New entity selection in the specified order|
+|pathString |Text   |->|Ruta(s) de atributo(s) e instrucciones de ordenación(es) para la selección de entidades|
+|pathObjects |Collection   |->|Colección de objetos de criterios |
+|Resultado|4D.EntitySelection|<-|New entity selection in the specified order|
 </div>
 <!-- END REF -->
 
@@ -2084,10 +2084,10 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 <!-- REF #EntitySelectionClass.selected().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
-|Result|Object|<-|Range(s) of selected entities in entity selection|
+|selectedEntities |4D.EntitySelection|->|Selección de entidades con entidades para las que conocer el rango en la selección de entidades|
+|Resultado|Object|<-|Range(s) of selected entities in entity selection|
 </div>
 <!-- END REF -->
 
@@ -2158,11 +2158,11 @@ $result2:=$invoices.selected($creditSel)
 <!-- REF #EntitySelectionClass.slice().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Index to start the operation at (included)  |
-|end    |Integer|->|End index (not included)|
-|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+|startFrom |Integer |->|Índice para iniciar la operación (incluido) |
+|end    |Integer|->|Índice final (no incluido)|
+|Resultado|4D.EntitySelection||<-|New entity selection containing sliced entities (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -2176,7 +2176,7 @@ If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is c
 *   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length*(se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 *   Si *startFrom >= length*, la función devuelve una selección de entidades vacía.
 *   Si *end* < 0, se recalcula como *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 `.sum()` devuelve 0 si la entity selection está vacía.
 

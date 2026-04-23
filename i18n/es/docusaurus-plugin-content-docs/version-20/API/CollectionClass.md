@@ -1255,13 +1255,13 @@ Quiere filtrar los elementos según su tipo de valor:
 <!-- REF #collection.find().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the search at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|any |<-|First value found, or Undefined if not found|
+|startFrom|Integer|->|Índice para iniciar la búsqueda|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|any|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|any |<-|First value found, or Undefined if not found|
 </div>
 <!-- END REF -->
 
@@ -1276,7 +1276,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efectuar toda prueba, con o sin los parámetros, y debe devolver **true** para cada elemento que cumpla la condición. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1370,7 +1370,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efectuar toda prueba, con o sin los parámetros, y debe devolver **true** para cada elemento que cumpla la condición. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1476,9 +1476,9 @@ $first:=$emptyCol.first() // devuelve Undefined
 <!-- REF #collection.flat().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|depth|Integer |->|How deep a nested collection structure should be flattened. Por defecto=1|
+|depth|Integer |->|La profundidad a la cual una estructura de colección anidada debe anidarse. Por defecto=1|
 |Resultado|Colección |<-|Flattened collection|
 </div>
 <!-- END REF -->
@@ -3178,7 +3178,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 *   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
 *   Si el valor calculado < 0, *startFrom* toma el valor 0.
 *   Si *end* < 0 , se recalcula como *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 

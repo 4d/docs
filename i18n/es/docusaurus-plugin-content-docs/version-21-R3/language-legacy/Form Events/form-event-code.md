@@ -1,0 +1,374 @@
+﻿---
+id: form-event-code
+title: Form event code
+slug: /commands/form-event-code
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Form event code.Syntax-->**Form event code**  : Integer<!-- END REF-->
+
+<!--REF #_command_.Form event code.Params-->
+
+<div class="no-index">
+
+| Parámetros | Tipo    |                             | Descripción                 |
+| ---------- | ------- | --------------------------- | --------------------------- |
+| Resultado  | Integer | &#8592; | Número de evento formulário |
+
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento                 | Modificaciones                          |
+| --------------------------- | --------------------------------------- |
+| 18                          | Renamed (Form event) |
+| <6 | Created                                 |
+
+</details>
+</div>
+
+## Descripción
+
+**Form event code** devuelve un valor numérico que identifica el tipo de evento formulario que acaba de ocurrir. Por lo general, utilizará **Form event code** en un método formulario u objeto.
+
+4D ofrece constantes predefinidas (que se encuentran en el tema *Form Events*) para comparar los valores devueltos por el comando **Form event code**. Algunos eventos son genéricos (se generan para cualquier tipo de objeto) y otros son específicos de un tipo de objeto particular.
+
+Para una descripción de los eventos, consulte la sección [**Form Events**](../../Events/overview.md).
+
+## Ejemplo 1
+
+Este ejemplo muestra cómo se utiliza el evento On Validate para asignar automáticamente (a un campo) la fecha de modificación del registro:
+
+```4d
+  //Método formulario
+ Case of
+  // ...
+    :(Form event code=On Validate)
+       [aTable]Last Modified On:=Current date
+ End case
+```
+
+## Ejemplo 2
+
+En este ejemplo, la gestión completa de una lista desplegable (inicialización, clics del usuario y liberación del objeto) se encapsula en el método del objeto:
+
+```4d
+  //Método Objeto lista desplegable asBurgerSize 
+ Case of
+    :(Form event code=On Load)
+       ARRAY TEXT(asBurgerSize;3)
+       asBurgerSize{1}:="Small"
+       asBurgerSize{1}:="Medium"
+       asBurgerSize{1}:="Large"
+    :(Form event code=On Clicked)
+       If(asBurgerSize#0)
+          ALERT("You chose a "+asBurgerSize{asBurgerSize}+" burger.")
+       End if
+    :(Form event code=On Unload)
+       CLEAR VARIABLE(asBurgerSize)
+ End case
+```
+
+## Ejemplo 3
+
+Este ejemplo es un método formulario genérico. Muestra cada uno de los posibles eventos que pueden ocurrir cuando un formulario se utiliza como formulario de salida:
+
+```4d
+  //Método de un formulario utilizado como formulario de salida para un informe resumen
+ $vpFormTable:=Current form table
+ Case of
+  //...
+    :(Form event code=On Header)
+  //Un área de encabezado está a punto de imprimirse
+       Case of
+          :(Before selection($vpFormTable->))
+  //El código para la primera ruptura de encabezado va aquí
+          :(Level=1)
+  //El código para la ruptura de encabezado nivel 1 debe ser pasado aquí
+          :(Level=2)
+  //El código para la ruptura de encabezado nivel 2 debe ser pasado aquí
+  //...
+       End case
+    :(Form event code=On Printing Detail)
+  //Un registro está a punto de imprimirse
+  //El código para cada registro va aquí
+    :(Form event code=On Printing Break)
+  //Un área de ruptura está a punto de imprimirse
+       Case of
+          :(Level=0)
+  //El código para un nivel de ruptura 0 va aquí
+          :(Level=1)
+  //El código para un nivel de ruptura 1 va aquí
+  //...
+       End case
+    :(Form event code=On Printing Footer)
+       If(End selection($vpFormTable->))
+  //El código para el último pie de página va aquí
+       Else
+  //Código par un pie va aquí
+       End if
+ End case
+```
+
+## Ejemplo 4
+
+Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](../commands/display-selection) o [MODIFY SELECTION](../commands/modify-selection). Con fines didácticos, muestra la naturaleza del evento en la barra de título de la ventana del formulario.
+
+```4d
+//Un método formulario
+ Case of
+    :(Form event code=On Load)
+       $vsTheEvent:="The form is about to be displayed"
+    :(Form event code=On Unload)
+       $vsTheEvent:="The output form has been exited and is about to disappear from the screen"
+    :(Form event code=On Display Detail)
+       $vsTheEvent:="Displaying record #"+String(Selected record number([TheTable]))
+    :(Form event code=On Menu Selected)
+       $vsTheEvent:="A menu item has been selected"
+    :(Form event code=On Header")
+       $vsTheEvent:="The header area is about to be drawn"
+    :(Form event code=On Clicked")
+       $vsTheEvent:="A record has been clicked"
+    :(Form event code=On Double Clicked")
+       $vsTheEvent:="A record has been double clicked"
+    :(Form event code=On Open Detail)
+       $vsTheEvent:="The record #"+String(Selected record number([TheTable]))+" is double-clicked"
+    :(Form event code=On Close Detail)
+       $vsTheEvent:="Going back to the output form"
+    :(Form event code=On Activate)
+       $vsTheEvent:="The form's window has just become the frontmost window"
+    :(Form event code=On Deactivate)
+       $vsTheEvent:="The form's window is no longer the frontmost window"
+    :(Form event code=On Menu Selected)
+       $vsTheEvent:="A menu item has been chosen"
+    :(Form event code=On Outside Call)
+       $vsTheEvent:="A call from another has been received"
+    Else
+       $vsTheEvent:="What's going on? Event #"+String(Form event)
+ End case
+ SET WINDOW TITLE($vsTheEvent)
+```
+
+## Ejemplo 5
+
+Para ejemplos sobre cómo manejar los eventos [`On Before Keystroke`](../../Events/onBeforeKeystroke.md) y [`On After Keystroke`](../../Events/onAfterKeystroke.md), vea los ejemplos de los comandos [Get edited text](../commands/get-edited-text), [Keystroke](../commands/keystroke) y [FILTER KEYSTROKE](../commands/filter-keystroke).
+
+## Ejemplo 6
+
+Este ejemplo muestra cómo tratar de la misma manera los clics y los dobles clics en un área desplazable:
+
+```4d
+  //Método objeto para el área de desplazamiento asChoices
+ Case of
+    :(Form event code=On Load)
+       ARRAY TEXT(asChoices;...)
+  //...
+       asChoices:=0
+    :((Form event code=On Clicked)|(Form event code=On Double Clicked))
+       If(asChoices#0)
+  //Al hacer clic en un elemento, hacer algo aquí
+  //...
+       End if
+  //...
+ End case
+```
+
+## Ejemplo 7
+
+Este ejemplo muestra cómo tratar los clics y los dobles clics utilizando una respuesta diferente. Tenga en cuenta el uso del elemento cero para realizar un seguimiento del elemento seleccionado:
+
+```4d
+//Método objeto área de desplazamiento asChoices
+ Case of
+    :(Form event code=On Load)
+       ARRAY TEXT(asChoices;...)
+  // ...
+       asChoices:=0
+       asChoices{0}:="0"
+    :(Form event code=On Clicked)
+       If(asChoices#0)
+          If(asChoices#Num(asChoices))
+//Un nuevo elemento ha sido presionado, hacer algo aquí
+//...
+//Guardar el nuevo elemento seleccionado para la próxima vez
+asChoices{0}:=String(asChoices)
+End if
+other
+Choices:=Num(asChoices{0})
+End if
+:(Form event code=On Double Clicked)
+Sif(asChoices#0)
+//Se hizo doble clic en un elemento, hacer algo diferente aquí
+       End if
+  // ...
+ End case
+```
+
+## Ejemplo 8
+
+Este ejemplo muestra cómo mantener un área de información de texto de estado desde dentro de un método de formulario, utilizando los eventos [`On Getting Focus`](../../Events/onGettingFocus.md) y [`On Losing Focus`](../../Events/onLosingFocus.md):
+
+```4d
+//Método formulario [Contacts];"Data Entry"
+ Case of
+    :(Form event code=On Load)
+       var vtStatusArea : Text
+       vtStatusArea:=""
+    :(Form event code=On Getting Focus)
+       RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
+       If(($vlTableNum#0)&($vlFieldNum#0))
+          Case of
+             :($vlFieldNum=1) //Campo Apellido
+                vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
+  //...
+             :($vlFieldNum=10) //Campo Código postal
+                vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
+  //...
+          End case
+       End if
+    :(Form event code=On Losing Focus)
+       vtStatusArea:=""
+  //...
+ End case
+```
+
+## Ejemplo 9
+
+Este ejemplo muestra cómo responder a un evento de cierre de ventana con un formulario utilizado para la entrada de datos de registro:
+
+```4d
+//Método para un formulario de entrada
+ $vpFormTable:=Current form table
+ Case of
+  //...
+    :(Form event code=On Close Box)
+       If(Modified record($vpFormTable->))
+          CONFIRM("This record has been modified. Save Changes?")
+          If(OK=1)
+             ACCEPT
+          Else
+             CANCEL
+          End if
+       Else
+          CANCEL
+       End if
+  //...
+ End case
+```
+
+## Ejemplo 10
+
+Este ejemplo muestra cómo poner en mayúsculas un campo de texto o alfanumérico cada vez que se modifica su valor:
+
+```4d
+//Método objeto de [Contacts]First Name
+ Case of
+  //...
+    :(Form event code=On Data Change)
+       [Contacts]First Name:=Uppercase(Substring([Contacts]First Name;1;1))+Lowercase(Substring([Contacts]First Name;2))
+  //...
+ End case
+```
+
+## Ejemplo 11
+
+El siguiente ejemplo ilustra cómo gestionar una acción de borrado en una lista jerárquica:
+
+```4d
+... //método de lista jerárquica
+:(Form event code=On Delete Action)
+ ARRAY LONGINT($itemsArray;0)
+ $Ref:=Selected list items(<>HL;$itemsArray;*)
+ $n:=Size of array($itemsArray)
+ 
+ Case of
+    :($n=0)
+       ALERT("No item selected")
+       OK:=0
+    :($n=1)
+       CONFIRM("Do you want to delete this item?")
+    :($n>1)
+       CONFIRM("Do you want to delete these items?")
+ End case
+ 
+ If(OK=1)
+    For($i;1;$n)
+       DELETE FROM LIST(<>HL;$itemsArray{$i};*)
+    End for
+ End if
+```
+
+## Ejemplo 12
+
+En este ejemplo, el evento formulario [`On Scroll`](../../Events/onScroll.md) nos permite sincronizar la visualización de dos imágenes en un formulario. El siguiente código se añade en el método del objeto "satellite" (campo o variable imagen):
+
+```4d
+ Case of
+    :(Form event code=On Scroll)
+// tomamos la posición de la imagen izquierda
+       OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
+// y la aplicamos a la imagen derecha
+OBJECT SET SCROLL POSITION(*; "plan";vPos;hPos;*)
+End case
+```
+
+Resultado: https://www.youtube.com/watch?v=YIRfsW1BmHE
+
+## Ejemplo 13
+
+Desea dibujar un rectángulo rojo alrededor de la celda seleccionada de un list box, y desea que el rectángulo se mueva junto con el list box si el usuario lo desplaza verticalmente. En el método objeto del list box, puedes escribir:
+
+```4d
+ Case of
+ 
+    :(Form event code=On Clicked)
+       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
+       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
+       OBJECT SET VISIBLE(*;"RedRect";True) //inicializar un rectángulo rojo
+       OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
+
+    :(Form event code=On Scroll)
+       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
+       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
+       OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
+       $toAdd:=LISTBOX Get headers height(*;"LB1") //altura del encabezado para no solaparla
+If($ylb1+$toAdd<$y1)&($ylb2>$y2) //si estamos dentro del list box
+//para simplificar, sólo manejamos los encabezados
+//pero deberíamos manejar el recorte horizontal
+//así como las barras de desplazamiento
+OBJECT SET VISIBLE(*;"RedRect";True)
+OBJECT SET COORDINATES(*; "RedRect";$x1;$y1;$x2;$y2)
+Else
+OBJECT SET VISIBLE(*; "RedRect";False)
+End if
+
+End case
+```
+
+Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
+
+![](../../assets/en/commands/pict1900395.en.png)
+
+## Ver también
+
+[Form Events](../../Events/overview.md)
+[CALL SUBFORM CONTAINER](../commands/call-subform-container)\
+[Current form table](../commands/current-form-table)\
+[FILTER KEYSTROKE](../commands/filter-keystroke)\
+[FORM Event](../commands/form-event)\
+[Get edited text](../commands/get-edited-text)\
+[Keystroke](../commands/keystroke)\
+[POST OUTSIDE CALL](../commands/post-outside-call)\
+[SET TIMER](../commands/set-timer)
+
+## Propiedades
+
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 388 |
+| Hilo seguro       | no  |
+
+
+

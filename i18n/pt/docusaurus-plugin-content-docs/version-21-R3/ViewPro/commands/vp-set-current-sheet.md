@@ -1,0 +1,48 @@
+---
+id: vp-set-current-sheet
+title: VP SET CURRENT SHEET
+---
+
+<!-- REF #_method_.VP SET CURRENT SHEET.Syntax -->
+
+**VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)<!-- END REF -->
+
+<!-- REF #_method_.VP SET CURRENT SHEET.Params -->
+
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                  |
+| ---------- | ------- | -- | ------------------------------------------ |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
+| sheet      | Integer | -> | Índice da nova folha atual                 |
+
+</div>
+<!-- END REF -->
+
+## Descrição
+
+O comando <!-- REF #_method_.VP SET ATUALIZADOR DO SHEET.Summary --> define a folha atual em *vpAreaName*<!-- END REF -->. A folha atual é a folha selecionada no documento.
+
+Em *vpAreaName*, passe o nome da área 4D View Pro.
+
+Em *sheet*, passe o índice da planilha a ser definida como planilha atual. Se o índice passado for inferior a 0 ou exceder o número de folhas, o comando não fará nada.
+
+> A indexação começa em 0.
+
+## Exemplo
+
+A folha atual do documento é a primeira folha:
+
+![first-sheet-selected](../../assets/en/ViewPro/vp-sheet-3-select.png)
+
+Definir a folha atual como a terceira folha:
+
+```4d
+VP SET CURRENT SHEET("ViewProArea";2)
+```
+
+![](../../assets/en/ViewPro/vp-sheet-3-select.png)
+
+## Veja também
+
+[VP Get current sheet](vp-get-current-sheet.md)

@@ -306,5 +306,9 @@
   "sidebar.docs.doc.Build Application": {
     "message": "Generador de aplicaciones",
     "description": "The label for the doc item 'Build Application' in sidebar 'docs', linking to the doc Desktop/building"
+  },
+  "sidebar.docs.category.listbox-in-form": {
+    "message": "List Box",
+    "description": "The label for category 'List Box' in sidebar 'docs'"
   }
 }

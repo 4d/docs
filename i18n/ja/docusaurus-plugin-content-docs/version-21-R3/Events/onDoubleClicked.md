@@ -1,0 +1,42 @@
+---
+id: onDoubleClicked
+title: On Double Clicked
+---
+
+| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 定義                 |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| 13  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [ボタン](FormObjects/button_overview.md) - [ボタングリッド](FormObjects/buttonGrid_overview.md) - [チェックボックス](FormObjects/checkbox_overview.md) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox-object.md) - [リストボックス列](FormObjects/listbox-column.md) - [ピクチャーボタン](FormObjects/pictureButton_overview.md) - [プラグインエリア](FormObjects/pluginArea_overview.md) - [進捗インジケーター](FormObjects/progressIndicator.md) - [ラジオボタン](FormObjects/radio_overview.md) - [ルーラー](FormObjects/ruler.md) - [スピナー](FormObjects/spinner.md) - [スプリッター](FormObjects/splitters.md) - [ステッパー](FormObjects/stepper.md) | オブジェクト上でダブルクリックされた |
+
+:::note
+
+`On Double Clicked` イベントは、Windows 上で[Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) レンダリングテーマが有効化されている場合には、[**ステッパー**](FormObjects/stepper.md) に対してはサポートされません。
+
+:::
+
+## 説明
+
+`On Double Clicked` イベントは、ユーザーがオブジェクトをダブルクリック したときに発生します。 ダブルクリック間隔の最大時間は、システム環境設定で定義されています。
+
+[`On Clicked`](onClicked.md) や `On Double Clicked` オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。`FORM Event` コマンドはユーザーアクションに応じ、[`On Clicked`](onClicked.md) または `On Double Clicked` を返します。
+
+両イベントがオブジェクトに対し選択されている場合、ダブルクリックがおこなわれるとまず `On Clicked` が、そして `On Double Clicked` イベントが生成されます。
+
+### 4D View Pro
+
+このイベントは、4D View Pro ドキュメント上でダブルクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
+
+| プロパティ       | 型       | 説明                  |
+| ----------- | ------- | ------------------- |
+| code        | longint | 13                  |
+| description | text    | "On Double Clicked" |
+| objectName  | text    | 4D View Pro エリア名    |
+| sheetName   | text    | イベントが発生したシート名       |
+| range       | object  | セルのレンジ              |
+
+#### 例題
+
+```4d
+ If(FORM Event.code=On Double Clicked)
+   $value:=VP Get value(FORM Event.range)
+ End if
+```
