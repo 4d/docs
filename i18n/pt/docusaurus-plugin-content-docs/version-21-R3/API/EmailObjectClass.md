@@ -158,10 +158,10 @@ A propriedade `.bodyValues` contém o objeto <!-- REF #EmailObjectClass.bodyValu
 
 O objeto `.bodyValues` contém as seguintes propriedades:
 
-| Propriedade                                | Tipo    | Valor                                                                                                                                                                                         |
-| ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | Valor da parte do corpo                                                                                                                                                                       |
-| *partID*.isEncodingProblem | boolean | True se seções malformadas forem encontradas durante a decodificação do conjunto de charset, ou charset desconhecido, ou codificação de conteúdo desconhecido. Padrão é falso |
+| Propriedade                                | Tipo    | Valor                                                                                                                                                                                               |
+| ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | Valor da parte do corpo                                                                                                                                                                             |
+| *partID*.isEncodingProblem | boolean | Verdadeiro se seções malformadas forem encontradas durante a decodificação do conjunto de charset, ou charset desconhecido, ou codificação de conteúdo desconhecido. Padrão é falso |
 
 ## .cc
 
@@ -345,7 +345,7 @@ A propriedade `.size` contém o tamanho <!-- REF #EmailObjectClass.size.Summary 
 
 ## .subject
 
-<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Texto<!-- END REF -->
 
 #### Descrição
 

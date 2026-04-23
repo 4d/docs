@@ -17,7 +17,7 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 Crée une représentation vectorielle pour l'entrée, le modèle et les paramètres fournis.
 
-| Paramètre    | Type                                                        | Description                                                                                                                                                                                                   |
+| Argument     | Type                                                        | Description                                                                                                                                                                                                   |
 | ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *input*      | Text ou Collection de textes                                | L'entrée à vectoriser.                                                                                                                                                                        |
 | *model*      | Text                                                        | Le [modèle à utiliser](https://platform.openai.com/docs/guides/embeddings#embedding-models). Supports [provider:model aliases](../provider-model-aliases.md). |

@@ -8,7 +8,7 @@ to import
 
 <!-- REF lists-WP.Desc -->
 
-## Listes
+## Enumérations
 
 4D Write Pro supports flat lists (single-level) and hierarchical lists (multi-level).
 
@@ -122,7 +122,7 @@ When created, hierarchical list style sheets use predefined values:
 - `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`
 - `wk name` is derived from the root style sheet name (Read-only for sub-levels)
-- `wk list level count` is set to the specified value for all levels
+- `wk list level count` est fixé à la valeur spécifiée pour tous les niveaux
 
   - Exemple :
 

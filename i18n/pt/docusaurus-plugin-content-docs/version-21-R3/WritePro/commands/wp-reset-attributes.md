@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
+The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
 
 > No caso de uma seção ou uma subseção, o objeto *sectionOrSubsection* pode ser passado sozinho e todos os atributos são redefinidos de uma vez.
 

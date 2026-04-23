@@ -214,7 +214,7 @@ Windows においては、Webエリアから、同じ 4Dアプリケーション
 
 ### プロトコルの挿入 (macOS)
 
-macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。 つまり、"www.mysite.com" ではなく、"http://www.mysite.com" 文字列を渡さなければならないということです。
+macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。 つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 ## Webインスペクターへのアクセス
 
@@ -245,7 +245,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド)
 
-## Supported Events
+## サポートされるイベント
 
 [On Begin URL Loading](../Events/onBeginUrlLoading.md) - [On End URL Loading](../Events/onEndUrlLoading.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Open External Link](../Events/onOpenExternalLink.md) - [On Unload](../Events/onUnload.md) - [On URL Filtering](../Events/onUrlFiltering.md) - [On URL Loading Error](../Events/onUrlLoadingError.md) - [On URL Resource Loading](../Events/onUrlResourceLoading.md) - [On Window Opening Denied](../Events/onWindowOpeningDenied.md)
 

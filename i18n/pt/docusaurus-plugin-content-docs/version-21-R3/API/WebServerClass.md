@@ -220,7 +220,7 @@ Valor padrão: 63072000 (2 anos).
 
 ## .HTTPCompressionLevel
 
-<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Integer<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel**: Integer<!-- END REF -->
 
 O <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->nível de compressão para todas as trocas HTTP comprimidas para o servidor HTTP 4D (solicitações do cliente ou respostas do servidor)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
 
@@ -309,7 +309,7 @@ O padrão = 443
 
 A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
-Padrão = 480 minutos
+Default = 480 minutos
 
 <!-- END REF -->
 

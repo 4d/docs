@@ -1,6 +1,6 @@
 ---
 id: listbox-column
-title: "[Colonne de list box](listbox_overview.md#list-box-columns)"
+title: Colonne de list box
 ---
 
 Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
@@ -322,7 +322,7 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
 Vous pouvez utiliser des attributs spécifiques afin d'associer des unités aux valeurs des cellules (par exemple "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
 
 - "unitsList" : un tableau contenant les x éléments définissant les unités disponibles (ex : "cm", "pouces", "km", "miles", etc.). Utilisez cet attribut pour définir des unités dans l'objet.
-- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. "unitsListReference" : une référence de liste 4D contenant les unités disponibles.
+- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Utilisez cet attribut pour définir les unités avec une liste 4D créée via la commande [`New list`](../commands-legacy/new-list.md).
 - "unitsListName" : un nom d'énumération 4D créée en mode Développement contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une énumération 4D créée dans la Boîte à outils.
 
 Quel que soit son mode de définition, la liste d'unités peut être associée à l'attribut suivant :

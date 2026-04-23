@@ -31,6 +31,6 @@ title: 4D View Pro エリア
 [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
 [メソッド](properties_Action.md#メソッド)
 
-## Supported Events
+## サポートされるイベント
 
 [On After Edit](../Events/onAfterEdit.md) - [On Clicked](../Events/onClicked.md) - [On Column Resize](../Events/onColumnResize.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header Click](../Events/onHeaderClick.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Row Resize](../Events/onRowResize.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Unload](../Events/onUnload.md) - [On VP Range Changed](../Events/onVpRangeChanged.md) - [On VP Ready](../Events/onVpReady.md)

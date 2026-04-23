@@ -55,7 +55,8 @@ Para recuperar la hoja de estilo "Main title":
  var $styleSheet : Object
  
  $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // comprobar si la hoja de estilo existe//si no crearla
+ If($styleSheet=Null) // check if the style sheet exists
+        //if not create it
     $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  End if
 ```

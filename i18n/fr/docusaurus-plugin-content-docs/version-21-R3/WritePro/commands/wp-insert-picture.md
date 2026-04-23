@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | ----------- | ------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
 | targetObj   | Object                                                  | &#8594; | Plage ou élément ou document 4D Write Pro                              |
 | picture     | Picture                                                 | &#8594; | Champ image ou variable, ou chemin vers le fichier image sur le disque |
-| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | A File object representing a picture file or a path                    |
+| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | Objet File représentant un fichier image ou Chemin d'accès             |
 | mode        | Integer                                                 | &#8594; | Mode d'insertion                                                       |
 | rangeUpdate | Integer                                                 | &#8594; | Mode de mise à jour de la plage                                        |
 | Résultat    | Object                                                  | &#8592; | Objet référençant l'image                                              |
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insère *picture* ou *pictureFileObj* dans le *targetObj* spécifié en fonction des paramètres *mode* d'insertion et *rangeUpdate*, et retourne une référence à l'élément picture.<!-- END REF--> L'image sera insérée comme un caractère dans le *targetObj*.
+La commande **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insère *picture* ou *pictureFileObj* dans le *targetObj* spécifié en fonction des paramètres *mode* d'insertion et *rangeUpdate*, et renvoie une référence à l'élément image.<!-- END REF--> L'image sera insérée en tant que caractère dans *targetObj*.
 
 Dans *targetObj*, vous pouvez passer:
 
@@ -38,7 +38,7 @@ Pour le deuxième paramètre, vous pouvez passer soit :
   - Champ ou variable d'image
   - Chaîne contenant le chemin d'accès à un fichier d'image stocké sur le disque, dans la syntaxe du système.
     Si vous utilisez une chaîne, vous pouvez fournir soit un chemin d'accès complet, soit un chemin d'accès relatif au fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données.
-- In *pictureFile* : a `File` object representing a picture file or a path.
+- Dans *pictureFile* : un objet `File` représentant un fichier image ou un chemin.
 
 N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands/picture-codec-list). Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
 

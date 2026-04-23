@@ -362,27 +362,27 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 - un fichier pour les deux plates-formes :
 
-```json
-"css": "<path>" 
-```
+ ```json
+ "css": "<path>" 
+ ```
 
 - ou une liste de fichiers pour les deux plates-formes :
 
-```json
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```json
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - ou une liste de fichiers par plate-forme :
 
-```json
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```json
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 :::note
 

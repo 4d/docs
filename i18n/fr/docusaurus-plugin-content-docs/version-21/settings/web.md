@@ -106,7 +106,7 @@ Permet d’optimiser le fonctionnement du serveur Web de 4D en mode distant. Voi
 
 Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
-Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
+Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des process Web préemptifs](../WebServer/preemptiveWeb.md).
 
 > Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client). Voir [Activer le mode préemptif pour le serveur web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
@@ -263,7 +263,7 @@ Pour plus d'informations sur la prise en charge des services Web dans 4D, veuill
 
 Cette zone affiche les options relatives à l’utilisation de 4D en tant que “serveur” de Web Services, c’est-à-dire publiant des méthodes projet sous forme de Web Services.
 
-- **Autoriser requêtes Web Services** : Cette option permet d’initialiser la publication de Web Services. Si cette option n’est pas cochée, 4D refuse les requêtes SOAP et ne génère pas de WSDL — même si des méthodes disposent de l’attribut *Disponible via Web Service*. Lorsque cette option est cochée, 4D crée le fichier WSDL.
+- **Autoriser requêtes Web Services** : Cette option permet d’initialiser la publication de Web Services. Si cette option n'a pas été cochée, 4D refuse les requêtes SOAP et ne génère pas de WSDL - même si les méthodes ont l'attribut *Publiées dans WSDL*. Lorsque cette option est cochée, 4D crée le fichier WSDL.
 - **Nom Web Service**: cette zone permet de modifier le “nom générique” du Web Service. Ce nom permet de différencier les services au niveau du serveur SOAP (lorsque le serveur publie plusieurs Web Services), ainsi que dans les annuaires de Web Services. Par défaut, 4D utilise le nom A_WebService.
 - **Espace de nommage Web Services** : cette zone permet de modifier l’espace de nommage (le namespace) des Web Services publiés par 4D. Chaque Web Service publié sur Internet doit être unique. L’unicité des noms de Web Services est assuré à l’aide des espaces de nommage XML (XML namespace). Un espace de nommage est une chaîne de caractères arbitraire permettant d’identifier de manière unique un ensemble de balises XML. Typiquement, l’espace de nommage début par l’URL de la société (http://masociete.com/monespacedenommage). Dans ce cas, il n’est pas indispensable qu’il y ait quelque chose à l’URL défini, il importe simplement que la chaîne de caractères utilisée soit unique. Par défaut, 4D utilise l’espace de nommage http://www.4d.com/namespace/default.
 

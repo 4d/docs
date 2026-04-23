@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-Los System workers permiten que el código 4D llame a cualquier proceso externo (un comando shell, PHP, etc.) en la misma máquina. Los trabajadores del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
+Los System workers permiten que el código 4D llame a cualquier proceso externo (un comando shell, PHP, etc.) en la misma máquina. Los workers del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
 
 La clase `SystemWorker` está disponible en el class store `4D`.
 
@@ -428,7 +428,7 @@ Esta propiedad está en **lectura-escritura**.
 
 ## .pid
 
-<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid**: Integer<!-- END REF -->
 
 #### Descripción
 
