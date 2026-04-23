@@ -12,7 +12,7 @@ El uso del servidor web en un 4D remoto es **obsoleto** a partir de 4D 21. Ya no
 
 :::
 
-## Administración simplificada
+## Fácil de supervisar
 
 Puede iniciar o detener la publicación de la aplicación web en cualquier momento. Para ello, basta con seleccionar un comando del menú o ejecutar una sola línea de código.
 

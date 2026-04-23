@@ -6,34 +6,34 @@ slug: /WritePro/formulas
 
 ## Vue d’ensemble
 
-Les documents 4D Write Pro peuvent contenir des références à des formules 4D telles que des variables, des champs, des expressions, des méthodes de projet ou des commandes 4D. Des informations spécifiques telles que le numéro de page peuvent également être référencées par des formules (voir [Insertion de document et expressions de page](#inserting-date-and-time-formulas) ci-dessous).
+Les documents 4D Write Pro peuvent contenir des références à des formules 4D telles que des variables, des champs, des expressions, des méthodes projet ou des commandes 4D. Des informations spécifiques telles que le numéro de page peuvent également être référencées par des formules (voir [Insertion de document et expressions de page](#inserting-date-and-time-formulas) ci-dessous).
 
 L'insertion de formules dans les zones de 4D Write Pro se fait avec la commande [**WP INSERT FORMULA**](commands/wp-insert-formula.md) et peut être lue avec la commande [**WP Get formulas**](commands-legacy/wp-get-formulas.md). Ils sont également retournés par la commande [**WP Get text**](commands-legacy/wp-get-text.md).
 
-### Formula evaluation
+### Évaluation des formules
 
 Les formules sont évaluées :
 
-- lorsqu'ils sont insérés dans un objet de formulaire qui affiche des valeurs calculées
+- lorsqu'elles sont insérées dans un objet de formulaire qui affiche des valeurs calculées
 - lorsque l'objet 4D Write Pro est chargé dans un objet de formulaire qui affiche les valeurs calculées
 - lorsque la commande [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) est appelée
-- quand ils sont "gelés" en utilisant la commande [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) (si ce n'est pas déjà calculé)
+- lorsqu'elles sont "figées" à l'aide de la commande [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) (si elles n'ont pas déjà été calculées)
 - avant impression (si pas déjà calculé)
 - avant d'exporter vers .docx (si la formule ne peut pas être mappée avec les formules MS Word)
-- lorsque les actions standards pour geler, imprimer, exporter ou calculer des formules sont appelées. Voir *Actions standard*
+- lorsque les actions standard pour figer, imprimer, exporter ou calculer des formules sont appelées. Voir *Actions standard*
 
 Les formules ne sont pas évaluées lorsqu'un document est chargé (en utilisant [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), ou `wpArea:=[table]field`) :
 
 - si le document est uniquement hors écran,
 - si le document est affiché à l'écran, mais l'objet de formulaire n'affiche que les références.
 
-Formulas become static values if you call the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (except for page number and page count, see below).
+Les formules deviennent des valeurs statiques si vous appelez la commande [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) (sauf pour le numéro de page et le nombre de pages, voir ci-dessous).
 
-**Compatibility Note**: *Handling expressions using the [**ST INSERT EXPRESSION**](../commands/st-insert-expression), [**ST Get expression**](../commands/st-get-expression), [**ST COMPUTE EXPRESSIONS**](../commands/st-compute-expressions), and [**ST FREEZE EXPRESSIONS**](../commands/st-freeze-expressions) commands is deprecated, however, it is still supported in 4D Write Pro for compatibility*.
+**Note de compatibilité** : *La gestion des expressions à l'aide des commandes [**ST INSERT EXPRESSION**](../commands/st-insert-expression), [**ST Get expression**](../commands/st-get-expression), [**ST COMPUTE EXPRESSIONS**](../commands/st-compute-expressions), et [**ST FREEZE EXPRESSIONS**](../commands/st-freeze-expressions) est obsolète, mais elle est toujours prise en charge dans 4D Write Pro à des fins de compatibilité*.
 
 :::note
 
-For security reasons, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. Si aucune valeur n'est disponible (par exemple, la formule n'a jamais été calculée), 4D colle la source de la formule sous forme de texte brut.
+Pour des raisons de sécurité, lorsque des formules sont collées à partir d'une autre application 4D ou d'un environnement externe, seules les *valeurs calculées* (texte ou images) disponibles au moment de la copie sont collées. Si aucune valeur n'est disponible (par exemple, la formule n'a jamais été calculée), 4D colle la source de la formule sous forme de texte brut.
 
 :::
 
@@ -52,45 +52,45 @@ Vous souhaitez remplacer la sélection d'une zone de 4D Write Pro par le contenu
  End case
 ```
 
-## Formula context object
+## Objet de contexte de formule
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this):
+Vous pouvez insérer des expressions spéciales liées aux attributs du document dans n'importe quelle zone du document (corps, en-tête, pied de page) à l'aide de la commande [WP Insert formula](commands/wp-insert-formula.md). Dans une formule, un objet de contexte de formule est automatiquement exposé. Vous pouvez utiliser les propriétés de cet objet par l'intermédiaire de [**This**](../commands/this) :
 
-| Propriétés                                              | Type   | Description                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| This.title                              | Text   | Titre défini dans l'attribut wk title                                                                                                                                                                                                                                                                                                                                   |
-| This.author                             | Text   | Auteur défini dans l'attribut wk author                                                                                                                                                                                                                                                                                                                                 |
-| This.subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                                 |
-| This.company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                                 |
-| This.notes                              | Text   | Notes defined in wk notes attribute                                                                                                                                                                                                                                                                                                                                     |
-| This.dateCreation                       | Date   | Date creation defined in wk date creation attribute                                                                                                                                                                                                                                                                                                                     |
-| This.dateModified                       | Date   | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                                     |
-| This.pageNumber (\*) | Number | Page number as it is defined:<ul><li>From the document start (default) or </li><li>From the section page start if it is defined by section page start.</li></ul>  This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
-| This.pageCount (\*)  | Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.                                                                                                                                               |
-| This.document                           | Object | Document 4D Write Pro                                                                                                                                                                                                                                                                                                                                                   |
-| This.data                               | Object | Contexte des données du document 4D Write Pro défini par [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                              |
-| This.sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                                   |
-| This.pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                                                                                                                                                         |
-| This.sectionName                        | String | Le nom que l'utilisateur donne à la section                                                                                                                                                                                                                                                                                                                             |
+| Propriétés                                              | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| This.title                              | Text   | Titre défini dans l'attribut wk title                                                                                                                                                                                                                                                                                                                                                                         |
+| This.author                             | Text   | Auteur défini dans l'attribut wk author                                                                                                                                                                                                                                                                                                                                                                       |
+| This.subject                            | Text   | Sujet défini dans l'attribut wk subject attribute                                                                                                                                                                                                                                                                                                                                                             |
+| This.company                            | Text   | Entreprise définie dans l'attribut wk company attribute                                                                                                                                                                                                                                                                                                                                                       |
+| This.notes                              | Text   | Notes définies dans l'attribut wk notes                                                                                                                                                                                                                                                                                                                                                                       |
+| This.dateCreation                       | Date   | Date de création définie dans l'attribut wk date creation                                                                                                                                                                                                                                                                                                                                                     |
+| This.dateModified                       | Date   | Date de modification définie dans l'attribut wk date modified                                                                                                                                                                                                                                                                                                                                                 |
+| This.pageNumber (\*) | Number | Numéro de page tel qu'il est défini :<ul><li> - à partir du début du document (par défaut) ou </li><li>- à partir de la première page de la section s'il est défini par section.</li></ul> Cette formule est toujours dynamique ; elle n'est pas affectée par la commande [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md). |
+| This.pageCount (\*)  | Number | Nombre de pages : nombre total de pages.<br/> Cette formule est toujours dynamique ; elle n'est pas affectée par la commande [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md).                                                                                                                                                                 |
+| This.document                           | Object | Document 4D Write Pro                                                                                                                                                                                                                                                                                                                                                                                         |
+| This.data                               | Object | Contexte des données du document 4D Write Pro défini par [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                                                                    |
+| This.sectionIndex                       | Number | L'indice de la section dans le document 4D Write Pro à partir de 1                                                                                                                                                                                                                                                                                                                                            |
+| This.pageIndex                          | Number | Le numéro de page courant dans le document 4D Write Pro à partir de 1 (indépendamment des numéros de page de la section)                                                                                                                                                                                                                                                                   |
+| This.sectionName                        | String | Le nom que l'utilisateur donne à la section                                                                                                                                                                                                                                                                                                                                                                   |
 
 :::note
 
-When you **work with tables**, [additional context expressions](./user-legacy/handling-tables.md#table-formula-object) such as `This.item` are available.
+Lorsque vous **travaillez avec des tables**, des [expressions contextuelles supplémentaires](./user-legacy/handling-tables.md#table-formula-object) telles que `This.item` sont disponibles.
 
 :::
 
-(\*) **Important**: **This.pageNumber**, **This.pageIndex** and **This.pageCount** must be used only directly in a 4D Write Pro formula (they must be present in the *formula.source* string). They will return incorrect values if they are used by the 4D language within a method called by the formula. Cependant, ils peuvent être passés en tant que paramètres à une méthode appelée directement par la formule :
+(\*) **Important** : **This.pageNumber**, **This.pageIndex** et **This.pageCount** ne peuvent être utilisés que directement dans une formule 4D Write Pro (elles doivent être présentes dans la chaîne *formula.source*). Elles renverront des valeurs incorrectes si elles sont utilisées par le langage 4D dans une méthode appelée par la formule. Toutefois, elles peuvent être passées en tant que paramètres à une méthode appelée directement par la formule :
 
 - Cela fonctionnera : « *formatNumber(This.pageNumber)* »
-- This will NOT work: « *formatNumber* » with *formatNumber* method processing *This.pageNumber*.
+- Cela ne fonctionnera pas : " *formatNumber* " avec la méthode *formatNumber* traitant *This.pageNumber*.
 
 Par exemple, pour insérer le numéro de page dans la zone de pied de page :
 
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP INSERT FORMULA($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  //Utilisation de Formula(myMethod) avec myMethod traitant This.pageNumber
+  //ne fonctionnerait pas correctement
 ```
 
 :::note

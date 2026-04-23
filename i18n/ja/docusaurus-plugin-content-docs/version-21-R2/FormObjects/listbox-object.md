@@ -1,17 +1,17 @@
 ---
 id: listbox-object
-title: List Box Object
+title: リストボックスオブジェクト
 ---
 
 ## 配列リストボックス
 
 配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。 ポインター配列を除きすべてのタイプの配列を使用できま す。 行数は配列の要素数により決定されます。
 
-デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
+デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 これは他のカラムプロパティ同様、 [カラムプロパティ](./listbox-column.md) 内で変更することができます。 The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
 
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
-配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。
+配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 カラムに [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。
 The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) as well as array manipulation commands. たとえば、列の内容を初期化するには、以下の命令を使用できます:
 
 ```4d

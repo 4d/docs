@@ -71,9 +71,9 @@ Para cada petición, se registran los siguientes campos:
 | bytes_in                                                                          | Número de bytes recibidos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | bytes_out                                                                         | Número de bytes enviados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | server\_duration &#124; exec\_duration | Depende del lugar donde se genere el registro:<li>_server\*duration* cuando se genera en el cliente --Time tomado en microsegundos para que el servidor procese la solicitud y devuelva una respuesta. B a F en la imagen de abajo, O</li><li>_exec\*duration* cuando se genera en el servidor --Tiempo empleado en microsegundos para que el servidor procese la petición. B a E en la imagen de abajo.</li> |
-| write\_duration                                                                  | Tiempo tomado en microsegundos para enviar la:<li>Petición (cuando se ejecuta en el cliente). A a B en la imagen debajo.</li><li>Respuesta (cuando se ejecuta en el servidor). E a F en la imagen de abajo.</li>                                                                                                                                                                                    |
+| write\_duration                                                                  | Tiempo tomado en microsegundos para enviar la:<li>Petición (cuando se ejecuta en el cliente). A a B en la imagen inferior.</li><li>Respuesta (cuando se ejecuta en el servidor). E a F en la imagen de abajo.</li>                                                                                                                                                                                  |
 | task_kind                                                                         | Apropiativo o cooperativo (respectivamente "p" o "c")                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| rtt                                                                                                    | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la acuse de recibo. A a D y E a H en la imagen de abajo.<li>Solo medido al utilizar la capa de red ServerNet, devuelve 0 cuando se usa con la capa de red antigua.</li><li>Para versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada retornará 0.</li>                                                                                    |
+| rtt                                                                                                    | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la acuse de recibo. A a D y E a H en la imagen inferior.<li>Sólo se mide cuando se utiliza la capa de red ServerNet, devuelve 0 cuando se utiliza con la capa de red heredada.</li><li>Para las versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada devolverá 0.</li>                                                                    |
 | extra                                                                                                  | Información adicional relacionada con el contexto, por ejemplo el nombre de la clase de datos y/o el nombre del atributo en caso de petición ORDA                                                                                                                                                                                                                                                                                                                                                                         |
 
 Flujo de solicitudes:
@@ -315,21 +315,21 @@ Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 Para iniciar este historial:
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### Contenido
 

@@ -55,7 +55,8 @@ If the *styleSheetName* is the root-level name of a hierarchical list style shee
  var $styleSheet : Object
  
  $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // スタイルシートが存在するか チェックし、なければ作成する
+ If($styleSheet=Null) // check if the style sheet exists
+        //if not create it
     $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  End if
 ```

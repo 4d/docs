@@ -20,7 +20,7 @@ La clase `OpenAIFileListParameters` contiene los parámetros para listar los arc
 | `order`                | Text    | Opcional  | desc        | Ordenar por la marca de tiempo 'created_at' de los objetos. `asc` para el orden ascendente y `desc` para el descendente.                                                                                                                                                                                                                      |
 | `purpose`              | Text    | Opcional  | -           | Devuelve sólo los archivos con la finalidad indicada.                                                                                                                                                                                                                                                                                                                              |
 
-## Ejemplo de uso
+## Ejemplo de Uso
 
 ```4d
 // Obtener los primeros 100 archivos con el objeto "fine-tune"

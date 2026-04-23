@@ -195,7 +195,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
+クラス関数の場合、`Current method name` コマンドは以下のものを返します: `<ClassName>.<FunctionName>` 例えば、 "MyClass.myFunction" 。
 
 アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#引数) を受け取ることができます。  以下のシンタックスがサポートされています:
 
@@ -736,7 +736,7 @@ shared Function Bar($value : Integer)
 
 :::
 
-クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。   インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。   この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
@@ -923,7 +923,7 @@ End if
 
 [クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`server` キーワードは、関数は**サーバー側で実行されなければならない** ということを意味します。
 
-:::note リマインダー
+:::note 注記
 
 `server` キーワードは、デフォルトでサーバー上で実行される [ORDA データモデル関数](../ORDA/ordaClasses.md) に対しては特に意味を持ちません。
 
@@ -944,20 +944,20 @@ End if
 - シングルトン *S1* はクライアント上でインスタンス化されます(名前は *s1* )
 - *s1.function()* はクライアント上で実行されます。
 
-その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタン上で実行されます。 As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
+その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタン上で実行されます。 結果として、それぞれ異なるプロパティ値をもつ、二つの *S1* のインスタンスが(クライアント側とサーバー側で)共存することが有り得ます。 この場合、 *s1.property* は常にローカルにアクセス可能です。 これはサーバーからはアクセスすることはできません。例えば、サーバー側のコードで直接ドット記法からアクセスするなどです(エラーが返されます)。
 
 :::
 
-#### Example: Administration singleton
+#### 例: Administration シングルトン
 
-The *Administration* shared singleton has a "server" function running the [`Process activity`](../commands/process-activity) command. This singleton is instantiated on a remote 4D but the function returns the server activity on the server.
+*Administration* 共有シングルトンは[`Process activity`](../commands/process-activity) コマンドを実行する "server" 関数を持っています。 このシングルトンはリモート4D でインスタンス化されますが関数はサーバー上でのサーバーのアクティビティを返します。
 
 ```4d
-  // Administration class
+  // Administration クラス
 
 shared singleton Class constructor
 
-  // This function is executed on the server
+  // この関数はサーバー上で実行される
 server Function processActivity() : Object
   return Process activity
 
@@ -966,29 +966,29 @@ Function localProcessActivity() : Object
   return Process activity
 ```
 
-Code running on the client:
+クライアント上で実行されるコード:
 
 ```4d
 var $localActivity; $serverActivity : Object
 var $administration : cs.Administration
 
-// The Administration singleton is instantiated on the 4D Client
+// Administration シングルトンは4D クライアントでインスタンス化される
 $administration:=cs.Administration.me
 
-// Get processes running on the remote 4D
+// リモート4D 上で実行中のプロセスを取得
 $localActivity:=$administration.localProcessActivity()
 
-// Get processes and sessions running on 4D Server
+// 4D Server 上で実行中のプロセスとセッションを取得
 $serverActivity:=$administration.processActivity()
 
 ```
 
-#### Example: Session singleton
+#### 例題: セッションシングルトン
 
-You store your users in a Users table and handle a custom authentication. You use a session singleton for the authentication:
+ユーザーをUsers テーブルに保存し、カスタムの認証を管理します。 このとき認証にセッションシングルトンを使用します:
 
 ```4d
-// UserSession session singleton class
+// UserSession セッションシングルトンクラス
 
 server Function checkUser($credentials : Object) : Boolean
 	
@@ -1010,7 +1010,7 @@ End if
 return $result
 ```
 
-To provide the current user to 4D clients, the singleton exposes a user computed property got from the server:
+カレントユーザーを4D クライアントに提供するために、シングルトンはサーバーから取得したユーザー計算プロパティを公開します:
 
 ```4d
 server Function get user() : cs.UsersEntity

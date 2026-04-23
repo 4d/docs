@@ -90,7 +90,7 @@ Class extends Entity
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
+- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>`形式で表示されます。
 
 ## メソッドやクラスの削除
 
