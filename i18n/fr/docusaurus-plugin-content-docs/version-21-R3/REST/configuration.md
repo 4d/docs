@@ -70,7 +70,7 @@ Pour supprimer l'exposition REST d'un champ :
 
 1. Affichez l'Inspecteur de champ dans l'Editeur de structure et sélectionnez le champ à modifier.
 
-2. Décochez la case **Exposer avec le service REST** pour le champ.<br/>
+2. Décochez l'option **Exposer avec le service REST** pour le champ.<br/>
    ![alt-text](../assets/en/REST/field.png)<br/>
    Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
 

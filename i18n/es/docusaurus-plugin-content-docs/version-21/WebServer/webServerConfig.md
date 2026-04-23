@@ -123,7 +123,7 @@ Estado del archivo de registro de peticiones HTTP del servidor web ([*HTTPDebugL
 
 | Valor | Constante                      | Descripción                                                                                                            |
 | ----- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                               |
+| 0     | wdl disable                    | Web HTTP debug log desactivado                                                                                         |
 | 1     | wdl enable without body        | Web HTTP debug log activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
 | 3     | wdl enable with response body  | Web HTTP debug log activado con la partes del cuerpo únicamente                                                        |
 | 5     | wdl enable with request body   | Web HTTP debug log activado con la partes del cuerpo en la petición únicamente                                         |
@@ -626,6 +626,6 @@ Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 - **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión permite evitar la saturación del servidor, debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p>
   El valor por defecto (100) puede ser aumentado o disminuido en función de los recursos de la máquina que aloja el servidor 4D web.</p>
 
-- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Una vez finalizado este periodo, el servidor cierra la conexión.<p>
+- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web.
   Si el navegador web envía una solicitud después de cerrar la conexión, se crea automáticamente una nueva conexión TCP. Esta operación no es visible para el usuario.</p>
 

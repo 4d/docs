@@ -49,7 +49,7 @@ Toute modification apportée à la structure de la base invalide la couche coura
 
 Lorsque le modèle ORDA courant est invalidé, il est automatiquement rechargé et mis à jour dans les appels ultérieurs du datastore local `ds` sur 4D et 4D Server. A noter que les références existantes vers des objets ORDA tels que des entités ou des sélections d'entités continueront d'utiliser les données à partir desquelles elles ont été créées, et ce jusqu'à ce qu'elles soient regénérées.
 
-Toutefois, le modèle de données ORDA mis à jour n'est pas automatiquement disponible dans les contextes suivants :
+Toutefois, la couche de données ORDA mise à jour n'est pas automatiquement disponible dans les contextes suivants :
 
 - une application 4D distante connectée à 4D Server -- l'application distante doit être reconnectée au serveur.
 - un datastore distant ouvert à l'aide de `Open datastore` ou des [appels REST](REST/gettingStarted.md) -- une nouvelle session doit être ouverte.
@@ -111,7 +111,7 @@ $compClass:=ds.Company //affecte la référence de dataclasse Company à $compCl
 
 Un objet dataclass peut contenir :
 
-- des attributs
+- attributes
 - des attributs relationnels
 
 La dataclass offre une abstraction de la base de données physique et permet de gérer un modèle de données conceptuel. La dataclass est le seul moyen d'interroger le datastore. Une requête est effectuée à partir d'une seule dataclass. Les requêtes sont construites autour des attributs et des noms d'attributs relationnels des dataclasses. Les attributs relationnels sont ainsi les moyens d'impliquer plusieurs tables liées dans une requête.
@@ -165,7 +165,7 @@ En outre, les attributs relationnels suivants seront également disponibles auto
 - dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 - dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
 
-> La propriété Manuel ou Automatique d'un lien de base de données n'a aucun effet dans ORDA.
+> La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 

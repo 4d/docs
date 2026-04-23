@@ -3,7 +3,7 @@ id: viewProAreaOverview
 title: Zone 4D View Pro
 ---
 
-4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. Un tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images.
+4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images.
 
 ![](../assets/en/FormObjects/viewPro2.png)
 
@@ -19,4 +19,4 @@ Les zones 4D View Pro sont documentées dans [la section 4D View Pro](ViewPro/ge
 
 ## Supported Events
 
-[On After Edit](../Events/onAfterEdit.md) - [On Clicked](../Events/onClicked.md) - [On Column Resize](../Events/onColumnResize.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header Click](../Events/onHeaderClick.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Row Resize](../Events/onRowResize.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Unload](../Events/onUnload.md) - [On VP Range Changed](../Events/onVPRangeChanged.md) - [On VP Ready](../Events/onVPReady.md)
+[On After Edit](../Events/onAfterEdit.md) - [On Clicked](../Events/onClicked.md) - [On Column Resize](../Events/onColumnResize.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header Click](../Events/onHeaderClick.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Row Resize](../Events/onRowResize.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Unload](../Events/onUnload.md) - [On VP Range Changed](../Events/onVpRangeChanged.md) - [On VP Ready](../Events/onVpReady.md)

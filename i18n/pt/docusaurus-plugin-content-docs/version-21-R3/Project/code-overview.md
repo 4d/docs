@@ -91,7 +91,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
+- In the Runtime explorer and Debugger, class functions are displayed with the `<ClassName>` constructor or `<ClassName>.<FunctionName>` format.
 
 ## Excluir os métodos ou as classes
 
