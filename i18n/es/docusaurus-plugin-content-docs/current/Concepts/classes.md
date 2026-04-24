@@ -844,7 +844,7 @@ $myList := cs.ItemInventory.me.itemList
 
 :::
 
-## `local` and `server`
+## `local` y `server`
 
 In [client/server architecture](../Desktop/clientServer.md), `local` and `server` keywords allow you to specify where you want the function to be executed: client-side, or server-side. Controlling the execution location is useful for performance reasons or to implement business logic features.
 

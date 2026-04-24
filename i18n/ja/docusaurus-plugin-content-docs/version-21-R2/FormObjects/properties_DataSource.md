@@ -242,7 +242,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 ---
 

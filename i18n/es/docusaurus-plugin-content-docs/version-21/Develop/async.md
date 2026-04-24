@@ -45,7 +45,7 @@ Elegir entre ejecución síncrona y asíncrona:
 
 The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Las retrollamadas se pueden pasar como funciones clase (recomendado) o como objetos Formula.
 
-This model is common to [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). Todos estos comandos/clases inician una operación que se ejecuta en segundo plano. La sentencia que lanza la operación retorna inmediatamente, sin esperar a que la operación finalice.
+Este modelo es común a [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), y [clases que soportan la ejecución ayncrónica](#asynchronous-programming-with-4d-classes). Todos estos comandos/clases inician una operación que se ejecuta en segundo plano. La sentencia que lanza la operación retorna inmediatamente, sin esperar a que la operación finalice.
 
 ### Workers
 
@@ -55,11 +55,11 @@ Using worker processes in asynchronous programming **is mandatory** since "class
 
 ### Event queue (mailbox)
 
-Cada worker (o ventana de formulario para [`CALL FORM`](../commands-legacy/call-form.md)) tiene su propia cola de mensajes. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Se conservan las variables de proceso, las selecciones actuales, etc.
+Cada worker (o ventana de formulario para [`CALL FORM`](../commands-legacy/call-form.md)) tiene su propia cola de mensajes. [`CALL WORKER`](../commands-legacy/call-worker.md) o [`CALL FORM`](../commands-legacy/call-form.md) simplemente envía un mensaje a esta cola. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Se conservan las variables de proceso, las selecciones actuales, etc.
 
 ### Comunicación bidireccional mediante mensajes
 
-El proceso llamante envía un mensaje y el worker lo ejecuta. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). Este mecanismo sustituye al retorno clásico de las llamadas síncronas.
+El proceso llamante envía un mensaje y el worker lo ejecuta. El worker puede publicar a su vez un mensaje (a través de [`CALL WORKER`](../commands-legacy/call-worker.md) o [`CALL FORM`](../commands-legacy/call-form.md)) de vuelta a la persona que llama u otro worker para notificar un evento (finalización de tarea, datos recibidos, error, progreso, etc.). Este mecanismo sustituye al retorno clásico de las llamadas síncronas.
 
 ### Event listening
 

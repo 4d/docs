@@ -123,7 +123,7 @@ Each object in the collection contains:
 | Propiedad   | Tipo | Descripción                       |
 | ----------- | ---- | --------------------------------- |
 | `name`      | Text | Model alias name                  |
-| `proveedor` | Text | Provider name                     |
+| `proveedor` | Text | Nombre del proveedor              |
 | `model`     | Text | Model ID to use with the provider |
 
 #### Ejemplo
@@ -150,7 +150,7 @@ var $client := cs.AIKit.OpenAI.new()
 $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 ```
 
-This is resolved internally to:
+Esto se resuelve internamente:
 
 1. Split `"openai:gpt-5.1"` into provider=`"openai"` and model=`"gpt-5.1"`
 2. Look up the `"openai"` provider configuration
@@ -172,7 +172,7 @@ var $client := cs.AIKit.OpenAI.new()
 $client.chat.completions.create($messages; {model: ":my-gpt"})
 ```
 
-This is resolved internally to:
+Esto se resuelve internamente:
 
 1. Look up `"my-gpt"` in the `models` configuration
 2. Find its `provider` (e.g., `"openai"`) and `model` (e.g., `"gpt-5.1"`)

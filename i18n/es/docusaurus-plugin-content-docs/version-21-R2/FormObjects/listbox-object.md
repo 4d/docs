@@ -1,6 +1,6 @@
 ---
 id: listbox-object
-title: List Box Object
+title: Objeto List Box
 ---
 
 ## List box de tipo array

@@ -5,7 +5,7 @@ title: Release Notes
 
 ## 4D 21 R3
 
-Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), the blog post that lists all new features and enhancements in 4D 21 R3.
+Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-21-r3), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R3.
 
 #### Points forts
 
@@ -32,8 +32,8 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - La commande [`JSON Validate`](../commands/json-validate) prend maintenant en compte la clé *$schema* et génère une erreur si une version non prise en charge est déclarée dans le schéma.
 - Pour plus de clarté, les objets formules sont désormais des instances d'une nouvelle classe [`4D.Formula`](../API/FormulaClass.md) qui hérite de la classe générique [`4D.Function`](../API/FunctionClass.md).
 - Dans 4D 21 R3, de nouvelles améliorations du [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) s'appliquent aux commandes du langage (voir [cet article de blog](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Il est possible que des erreurs de syntaxe qui n'étaient pas détectées auparavant soient désormais signalées dans votre code.
-- La page "PHP" a été supprimée de la [boîte de dialogue des Propriétés](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter.
-- The **Legacy** network layer is no longer supported. Les projets et les bases de données binaires qui utilisaient l'ancienne couche réseau sont automatiquement configurés en [**ServerNet**](../settings/client-server.md#network-layer) lors de la mise à niveau vers 4D 21 R3 et versions ultérieures.
+- La page "PHP" a été supprimée de la [boîte de dialogue des Propriétés](../settings/overview.md). Utilisez les [sélecteurs PHP de la commande `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) pour configurer un interpréteur PHP.
+- L'ancienne couche réseau **Legacy** n'est plus prise en charge. Les projets et les bases de données binaires qui utilisaient l'ancienne couche réseau sont automatiquement configurés en [**ServerNet**](../settings/client-server.md#network-layer) lors de la mise à niveau vers 4D 21 R3 et versions ultérieures.
 
 ## 4D 21 R2
 

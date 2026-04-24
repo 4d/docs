@@ -450,7 +450,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -527,7 +527,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 ---
 
