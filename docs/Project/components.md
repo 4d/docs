@@ -53,7 +53,7 @@ This section describes how to work with components in the **4D** and **4D Server
 To load a component in your 4D project, you can either:
 
 - copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-or-gitlab-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:
 
@@ -272,7 +272,7 @@ When a release is created in GitHub or GitLab, it is associated to a **tag** and
 
 :::note
 
-If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).   
+If you select the [**Follow 4D Version**](#defining-a-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).   
 
 :::
 
@@ -563,7 +563,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -614,7 +614,7 @@ Dependencies are regularly checked for updates on GitHub. This checking is done 
 
 :::note
 
-If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+If you provide an [access token](#providing-your-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
 
 :::
 

@@ -19,8 +19,7 @@ The 4D [project architecture](../Project/architecture.md) is open and can be ext
 
 4D proposes various components to the 4D community, covering many development needs. All 4D components can be found on the [**4D github repository**](https://github.com/4d).
 
-A subset of these components is listed by default in the Github panel of the [Dependency Manager](../Project/components.md#adding-a-github-dependency), including:
- including:
+A subset of these components is listed by default in the Github panel of the [Dependency Manager](../Project/components.md#adding-a-github-or-gitlab-dependency), including:
 
 |Component|Github repository|Description|Main Features| 
 |---|---|---|---|
