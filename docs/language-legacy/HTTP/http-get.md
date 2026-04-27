@@ -5,17 +5,17 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object, Collection {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | url | Text | &#8594;  | URL to which to send the request |
-| response | Text, Blob, Picture, Object | &#8592; | Result of request |
+| response | Text, Blob, Picture, Object, Collection | &#8592; | Result of request |
 | headerNames | Text array | &#8596;  | *in:* Header names of the request<br/> *out:* Returned header names |
 | headerValues | Text array | &#8596;  | *in:* Header values of the request<br/> *out:* Returned header values  |
-| * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
+| * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)<br/>If omitted, connection is closed automatically |
 | Function result | Integer | &#8592; | HTTP status code |
 </div>
 <!-- END REF-->
@@ -51,7 +51,15 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 For example, you can pass the following strings:  
 
 ```RAW
-    http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+http://www.myserver.com    
+http://www.myserver.com/path    
+http://www.myserver.com/path?name="jones"        
+https://www.myserver.com/login (*)    
+http://123.45.67.89:8083     
+http://john:smith@123.45.67.89:8083   
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+
 ```
 
 *(\*)* During HTTPS requests, authority of the certificate is not checked.   
