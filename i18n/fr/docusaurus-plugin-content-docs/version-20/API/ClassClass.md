@@ -59,10 +59,10 @@ Cette propriété est en **lecture seule**.
 <!-- REF #ClassClass.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Object|<-|New object of the class|
+|param|any|->|Paramètre(s) à passer à la fonction constructeur|
+|Résultat|4D.Object|<-|New object of the class|
 </div>
 <!-- END REF -->
 

@@ -10,7 +10,7 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 - [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Générer, partager et utiliser des passcodes à usage unique (OTP) pour les sessions web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
+- [Oubliez les wrappers côté serveur, utilisez les sessions 4D à partir du client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 
@@ -855,7 +855,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette 
 
 En client/serveur, l'objet `.storage` de la session de l'utilisateur distant n'est **pas** le même sur le serveur et sur le client.
 
-Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
+Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
 
 :::tip
 

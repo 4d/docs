@@ -11,7 +11,7 @@ title: データソース
 
 このプロパティは次のフォームオブジェクトでサポートされています:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
+- 選択リストと紐づけられている [コンボボックス](comboBox_overview.md) および [リストボックスカラム](listbox-column.md) フォームオブジェクト。
 - 配列またはオブジェクトデータソースにより、紐づけられたリストが生成されている [コンボボックス](comboBox_overview.md) フォームオブジェクト。
 
 たとえば、"France, Germany, Italy" という値を含む選択リストが "Countries" というコンボボックスに関連付けられていた場合を考えます。**自動挿入** のオプションがチェックをされていて、ユーザーが "Spain" という値を入力すると、"Spain" という値が自動的にメモリー内のリストに追加されます:
@@ -28,7 +28,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md)
+[コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -45,8 +45,9 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox-column.md)
+[ドロップダウンリスト](dropdownList_Overview.md)* [コンボボックス](comboBox_overview.md)
+* [階層リスト](list_overview.md)
+* [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -126,7 +127,7 @@ title: データソース
 
 表示される式のデータタイプを定義します。 このプロパティは次のフォームオブジェクトで使用されます:
 
-- [List box columns](listbox-column.md) of the selection and collection types.
+- セレクションおよびコレクション型の [リストボックスカラム](listbox-column.md)。
 - オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md)。
 
 [式タイプ](properties_Object.md#式の型式タイプ) の章も参照ください。
@@ -139,7 +140,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox-column.md)
+オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -196,14 +197,13 @@ title: データソース
 
 #### 対象オブジェクト
 
-[List Box Column (array type only)](listbox-column.md)
+[リストボックスカラム(配列型のみ)](listbox-column.md)
 
 ---
 
 ## 式
 
-This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes)
-and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
+[セレクション型](FormObjects/listbox_object.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](../FormObjects/listbox-object.md#コレクションまたはエンティティセレクションリストボックス) リストボックス特有のプロパティです。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
 列に割り当てる 4D式です。 以下のものを指定できます:
 
@@ -275,7 +275,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 このプロパティは以下の場合に表示されます:
 
 - オブジェクトに対して [選択リスト](#選択リスト) が割り当てられている
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- [入力](input_overview.md) および [リストボックスカラム](listbox-column.md) の場合には、ユーザーがリスト内の値のみ入力できるように、オブジェクトに対して [指定リスト](properties_RangeOfValues.md#指定リスト) も定義されている (通常は両方のオプションで同じリストを使用しているはずです)。
 
 このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
@@ -297,7 +297,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 

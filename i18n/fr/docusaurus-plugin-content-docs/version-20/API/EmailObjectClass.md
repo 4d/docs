@@ -376,10 +376,10 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|mime|Blob, Text|->|Email in MIME|
-|Result|Object|<-|Email object|
+|mime|Blob, Text|->|Email en MIME|
+|Résultat|Object|<-|Email object|
 </div>
 <!-- END REF -->
 
@@ -464,11 +464,11 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|mail|Object|->|Email object|
-|options|Object|->|Charset and encoding mail options|
-|Result|Text|<-|Email object converted to MIME|
+|mail|Object|->|Objet mail|
+|options|Object|->|Charset et options d'encodage du mail|
+|Résultat|Text|<-|Email object converted to MIME|
 </div>
 <!-- END REF -->
 

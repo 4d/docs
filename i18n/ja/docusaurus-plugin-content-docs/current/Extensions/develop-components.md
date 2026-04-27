@@ -68,7 +68,7 @@ title: コンポーネントの開発
 
 - ホストプロジェクトがインタープリタモードで実行中である
 - コンポーネントが、[インタープリタモードでロードされてい](../Project/components.md#interpreted-and-compiled-components) 、ソースコードが編集可能である
-- コンポーネントのファイルはローカルに保存されます(つまり、それらは[downloaded from GitHub からダウンロードされるわけではありません](../Project/components.md#github-依存関係を追加))。
+- the component files are stored locally (i.e. they are not [downloaded from GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 このコンテキストでは、以下の2箇所において、コンポーネントのコードをコードエディターで開き、編集して、保存することができます:
 

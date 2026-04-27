@@ -458,7 +458,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value*: any { ; *...valueN*: any } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.concat().Params -->
@@ -3064,7 +3064,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 #### Description
 
-La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->renvoie une nouvelle collection contenant tous les éléments de la collection d'origine dans l'ordre inverse<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 #### Exemple

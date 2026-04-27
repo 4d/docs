@@ -164,7 +164,7 @@ Una sesión independiente es la sesión de un solo usuario que se ejecuta cuando
 
 ### Utilización
 
-La sesión autónoma se puede utilizar para desarrollar y probar su aplicación cliente/servidor y su interacción con sesiones web y [compartir OTP](#sharing-a-desktop-session-for-web-accesses). Puede utilizar el objeto `session` en su código en sesión autónoma igual que el objeto `session` de las sesiones remotas.
+La sesión autónoma se puede utilizar para desarrollar y probar su aplicación cliente/servidor y su interacción con sesiones web y [compartir OTP](#sharing-a-remote-session-for-web-accesses). Puede utilizar el objeto `session` en su código en sesión autónoma igual que el objeto `session` de las sesiones remotas.
 
 ### Disponibilidad
 

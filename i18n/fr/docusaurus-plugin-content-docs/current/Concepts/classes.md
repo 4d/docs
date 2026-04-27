@@ -67,7 +67,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 </div>
 <!-- END REF -->
 
-La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](../Project/code-overview.md#creating-classes) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -930,7 +930,7 @@ The `server` keyword is useless for [ORDA data model functions](../ORDA/ordaClas
 
 `server` function parameters and result must be [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
 
-This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](#shared-or-session-singleton-functions) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](../Concepts/classes.md#session-singleton) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
 
 By default, shared or session singleton functions are executed locally. Adding the `server` keyword in the class function definition makes 4D use the singleton instance on the server. Note that this can result of an instantiation of the singleton on the server if no instance exists yet.
 

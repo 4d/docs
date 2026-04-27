@@ -524,7 +524,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+Si le composant est stocké dans un [référentiel privé](#private-repositories) et que votre jeton personnel est manquant, un message d'erreur s'affiche et un bouton **Ajouter un jeton d'accès personnel...** apparaît (voir [Fournir votre jeton d'accès](#providing-your-access-token)).
 
 :::
 

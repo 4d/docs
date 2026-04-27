@@ -429,7 +429,7 @@ End if
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 

@@ -38,17 +38,17 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 <!-- REF #_command_.MAIL New attachment.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|file|4D.File|->|Attachment file|
-|zipFile|4D.ZipFile|->|Attachment Zipfile|
-|blob|4D.Blob|->|BLOB containing the attachment|
-|path|Text|->|Path of the attachment file|
-|name|Text|->|Name + extension used by the mail client to designate the attachment|
-|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
-|type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|file|4D.File|->|Fichier joint|
+|zipFile|4D.ZipFile|->|Fichier Zip joint|
+|blob|4D.Blob|->|BLOB contenant le fichier joint|
+|path|Text|->|Chemin d'accès au fichier joint||
+|name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
+|cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
+|type|Text|->|Valeur de l'en-tête content-type|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
+|Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -186,17 +186,17 @@ $transporter.send($email)
 <!-- REF #4D.MailAttachment.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|file|4D.File|->|Attachment file|
-|zipFile|4D.ZipFile|->|Attachment Zipfile|
-|blob|4D.Blob|->|BLOB containing the attachment|
-|path|Text|->|Path of the attachment file|
-|name|Text|->|Name + extension used by the mail client to designate the attachment|
-|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
-|type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|file|4D.File|->|Fichier joint|
+|zipFile|4D.ZipFile|->|Fichier Zip joint|
+|blob|4D.Blob|->|BLOB contenant le fichier joint|
+|path|Text|->|Chemin d'accès au fichier joint||
+|name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
+|cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
+|type|Text|->|Valeur de l'en-tête content-type|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
+|Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -237,9 +237,9 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 <!-- REF #MailAttachmentClass.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|--- |:---:|------|
-|Result|4D.Blob|<-|Content of the attachment|
+|Résultat|4D.Blob|<-|Content of the attachment|
 </div>
 <!-- END REF -->
 

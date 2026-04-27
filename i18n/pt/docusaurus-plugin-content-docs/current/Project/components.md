@@ -49,7 +49,7 @@ This section describes how to work with components in the **4D** and **4D Server
 Para carregar um componente no seu projeto 4D, você pode:
 
 - copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components) (as pastas de pacotes de componentes interpretados devem ser sufixadas com ".4dbase", veja acima),
-- ou, declarar o componente nas **dependências**. fil\*\* arquivo de seu projeto; isto é feito automaticamente para arquivos locais quando você [**adicionar uma dependência usando a interface do Gerenciador de Dependência**](#adding-a-github-dependency).
+- ou, declarar o componente nas **dependências**. fil\*\* arquivo de seu projeto; isto é feito automaticamente para arquivos locais quando você [**adicionar uma dependência usando a interface do Gerenciador de Dependência**](#adding-a-github-or-gitlab-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
 
@@ -256,7 +256,7 @@ When a release is created in GitHub or GitLab, it is associated to a **tag** and
 
 :::note
 
-Se você selecionar a [**Seguir 4D Version**](#defining-a-github-dependency-version-range) regra de dependência, você precisa usar uma [convenção de nome específico para as tags](#naming-conventions-for-4d-version-tags).
+Se você selecionar a [**Seguir 4D Version**](#defining-a-dependency-version-range) regra de dependência, você precisa usar uma [convenção de nome específico para as tags](#naming-conventions-for-4d-version-tags).
 
 :::
 
@@ -524,7 +524,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -571,7 +571,7 @@ As dependências são verificadas regularmente quanto a atualizações no GitHub
 
 :::note
 
-Se você fornecer um [token de acesso](#providing-your-github-access-token), as verificações serão realizadas com mais frequência, pois o GitHub permite uma frequência maior de solicitações aos repositórios.
+Se você fornecer um [token de acesso](#providing-your-access-token), as verificações serão realizadas com mais frequência, pois o GitHub permite uma frequência maior de solicitações aos repositórios.
 
 :::
 

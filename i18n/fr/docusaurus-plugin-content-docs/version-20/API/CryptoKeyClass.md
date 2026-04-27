@@ -45,10 +45,10 @@ Pour une présentation complète de cette classe, nous vous recommandons de lire
 <!-- REF #4D.CryptoKey.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|----|---|
-|settings|Object|->|Settings to generate or load a key pair|
-|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|Paramètre|Type||Description|
+|---||----|---|
+|settings|Object|->|Paramètres pour générer ou charger une paire de clés|
+|Résultat|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
 </div>
 <!-- END REF -->
 
@@ -164,11 +164,11 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 <!-- REF #CryptoKey.decrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|----|---|
-|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|Object|->|Decoding options|
-|Result|Object|<-|Status|
+|Paramètre|Type||Description|
+|---||----|---|
+|message|Text|->|Chaîne de message à décoder en utilisant `options.encodingEncrypted` et decrypted.|  
+|options|Object|->|Options de décodage|
+|Résultat|Object|<-|Status|
 </div>
 <!-- END REF -->
 
@@ -213,11 +213,11 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 <!-- REF #CryptoKey.encrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|----|---|
-|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|Object|->|Encoding options|
-|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+|Paramètre|Type||Description|
+|---||----|---|
+|message|Text|->|Chaîne de message à encoder en utilisant `options.encodingDecrypted` et encrypted.|  
+|options|Object|->|Options d'encodage|
+|Résultat|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
 
@@ -254,9 +254,9 @@ La valeur retournée est un message chiffré.
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|----|---|
-|Result|Text|<-|Private key in PEM format|
+|Paramètre|Type||Description|
+|---|||----|---|
+|Résultat|Text|<-|Private key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -283,9 +283,9 @@ La valeur retournée est la clé privée.
 <!-- REF #CryptoKey.getPublicKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|Result|Text|<-|Public key in PEM format|
+|Paramètre|Type||Description|
+|---|----|---|
+|Résultat|Text|<-|Public key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -331,11 +331,11 @@ La valeur retournée est la clé publique.
 <!-- REF #CryptoKey.sign().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|message|Text OR Blob|->|Message to sign|  
-|options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|Paramètre|Type||Description|
+|---|----|---|
+|message|Text OU Blob|->|Message à signer|  
+|options|Object|->|Options de signature|
+|Résultat|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 </div>
 <!-- END REF -->
 
@@ -413,12 +413,12 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 <!-- REF #CryptoKey.verify().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|message|Text OR Blob|->|Message that was used to produce the signature|  
-|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
+|Paramètre|Type||Description|
+|---||---||
+|message|Text OU Blob|->|Message utilisé pour produire la signature|  
+|signature|Text|->|Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur de `options.encoding`|
+|options|Object|->|Options de signature|
+|Résultat|Object|<-|Status of the verification|
 </div>
 <!-- END REF -->
 

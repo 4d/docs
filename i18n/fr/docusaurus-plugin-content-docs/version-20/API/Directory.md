@@ -401,12 +401,12 @@ Cette propriété est en **lecture seule**.
 <!-- REF #directory.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|
+|destinationFolder |4D.Folder |->|Dossier de destination|
+|newName|Text|->|Nom de la copie|
+|overwrite|Integer|->|`fk overwrite` pour remplacer les éléments existants|
+|Résultat|4D.Folder|<-|Copied file or folder|
 </div>
 <!-- END REF -->
 
@@ -458,10 +458,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
+|Paramètre|Type||Description|
+|---|----|---|
+|Path|Text|->|Chemin d'accès POSIX relatif du fichier |
+|Résultat|4D.File|<-|`File` object (null if invalid path)|
 </div>
 <!-- END REF -->
 
@@ -502,10 +502,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.files().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|
+|Paramètre|Type||Description|
+|---|----|---|
+|options|Integer|->|Options de la liste des fichiers|
+|Résultat|Collection|<-|Collection of children file objects|
 </div>
 <!-- END REF -->
 
@@ -567,10 +567,10 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 <!-- REF #directory.folder().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+|Paramètre|Type||Description|
+|---|----|---|
+|Path|Text|->|Chemin d'accès POSIX relatif du fichier |
+|Résultat|4D.Folder|<-|Created folder object (null if invalid *path*)|
 </div>
 <!-- END REF -->
 
@@ -611,10 +611,10 @@ Un objet `Folder` object ou null si *path* est invalide.
 <!-- REF #directory.folders().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|
+|Paramètre|Type||Description|
+|---|----|---|
+|options|Integer|->|Options de la liste des dossiers|
+|Résultat|Collection|<-|Collection of children folder objects|
 </div>
 <!-- END REF -->
 
@@ -662,10 +662,10 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 <!-- REF #directory.getIcon().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|Paramètre|Type||Description|
+|---|----|---|
+|size|Integer|->|Longueur du côté de l'image renvoyée (pixels)|
+|Résultat|Picture|<-|Icon|
 </div>
 <!-- END REF -->
 

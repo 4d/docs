@@ -49,7 +49,7 @@ This section describes how to work with components in the **4D** and **4D Server
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - コンポーネントファイルを[プロジェクトの**Components**フォルダ](architecture.md#components)内にコピーする(インタープリタ版コンポーネントパッケージフォルダはフォルダ名の末尾が".4dbase" になっている必要があります、上記参照)。
-- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
+- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-or-gitlab-dependency).
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -256,7 +256,7 @@ When a release is created in GitHub or GitLab, it is associated to a **tag** and
 
 :::note
 
-[**4Dのバージョンに追随する**](#defining-a-github-dependency-version-range) 依存関係ルールを選択した場合、[タグには特定の命名規則](#4dバージョンタグの命名規則) を使用する必要があります。
+[**4Dのバージョンに追随する**](#defining-a-dependency-version-range) 依存関係ルールを選択した場合、[タグには特定の命名規則](#4dバージョンタグの命名規則) を使用する必要があります。
 
 :::
 
@@ -524,7 +524,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -571,7 +571,7 @@ You can modify the [version setting](#defining-a-dependency-version-range) for a
 
 :::note
 
-[アクセストークン](#自分のgithub-アクセストークンの提供) を提供した場合、このチェックはより頻繁に実行されます。GitHub はリポジトリへのより高頻度のリクエストを許可するからです。
+If you provide an [access token](#providing-your-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
 
 :::
 

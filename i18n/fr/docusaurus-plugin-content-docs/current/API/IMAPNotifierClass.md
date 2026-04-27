@@ -3,7 +3,7 @@ id: IMAPNotifierClass
 title: IMAPNotifier
 ---
 
-The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a selected mailbox.
+La classe `IMAPNotifier` vous permet de gérer les notifications IMAP IDLE pour une boîte aux lettres sélectionnée.
 
 <details><summary>Historique</summary>
 
@@ -13,22 +13,22 @@ The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a sele
 
 </details>
 
-The `IMAPNotifier` class is available from the `4D` class store.
+La classe `IMAPNotifier` est disponible dans le class store `4D`.
 
-An `IMAPNotifier` object is associated with an [IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) and provides access to mailbox notification management.
+Un objet `IMAPNotifier` est associé à un [transporteur IMAP](./IMAPTransporterClass.md#imap-transporter-object) et permet de gérer les notifications de boîte aux lettres.
 
-All `IMAPNotifier` class functions are thread-safe.
+Toutes les fonctions de la classe `IMAPNotifier` sont thread-safe.
 
 :::tip Article de blog lié
 
-[Instant Email Notifications with IMAP Transporter](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
+[Notifications instantanées par courrier électronique avec le transporteur IMAP](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
 
 :::
 
 ### Exemple
 
 ```4d
-// Define listener callbacks
+// Définir les fonctions callback du listener
 var $parameter : Object
 var $transporter : 4D.IMAPTransporter
 
@@ -46,9 +46,9 @@ $transporter.selectBox("INBOX")
 $transporter.notifier.start()     
 ```
 
-## IMAPNotifier object
+## Objet IMAPNotifier
 
-An IMAPNotifier object provides the following properties and functions:
+Un objet IMAPNotifier fournit les propriétés et fonctions suivantes :
 
 |                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------ |
@@ -64,15 +64,15 @@ An IMAPNotifier object provides the following properties and functions:
 
 <!-- REF #4D.IMAPNotifier.new().params -->
 
-| Paramètres | Type                            |                             | Description             |
-| ---------- | ------------------------------- | --------------------------- | ----------------------- |
-| Résultat   | 4D.IMAPNotifier | <- | New IMAPNotifier object |
+| Paramètres | Type                            |                             | Description               |
+| ---------- | ------------------------------- | --------------------------- | ------------------------- |
+| Résultat   | 4D.IMAPNotifier | <- | Nouvel objet IMAPNotifier |
 
 <!-- END REF -->
 
 #### Description
 
-The `4D.IMAPNotifier.new()` function <!-- REF #4D.IMAPNotifier.new().Summary -->creates a new IMAPNotifier object<!-- END REF -->.
+La fonction `4D.IMAPNotifier.new()` <!-- REF #4D.IMAPNotifier.new().Summary -->crée un nouvel objet IMAPNotifier<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -84,7 +84,7 @@ The `4D.IMAPNotifier.new()` function <!-- REF #4D.IMAPNotifier.new().Summary -->
 
 #### Description
 
-The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates whether the notifier is started (`true`) or stopped (`false`)<!-- END REF -->. Cette propriété est en **lecture seule**.
+La propriété `.isStarted` <!-- REF #IMAPNotifier.isStarted.Summary -->indique si le notificateur est démarré (`true`) ou arrêté (`false`)<!-- END REF -->. Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -96,25 +96,25 @@ The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates 
 
 <!-- REF #IMAPNotifier.start().params -->
 
-| Paramètres | Type   |                             | Description      |
-| ---------- | ------ | :-------------------------: | ---------------- |
-| Résultat   | Object | <- | Operation status |
+| Paramètres | Type   |                             | Description           |
+| ---------- | ------ | :-------------------------: | --------------------- |
+| Résultat   | Object | <- | Statut de l'opération |
 
 <!-- END REF -->
 
 #### Description
 
-The `.start()` function <!-- REF #IMAPNotifier.start().Summary -->starts the subscription to server notifications and activates IMAP listener callbacks<!-- END REF -->.
+La fonction `.start()` <!-- REF #IMAPNotifier.start().Summary -->démarre l'abonnement aux notifications du serveur et active les callbacks<!-- END REF -->.
 
-A mailbox must be selected using [`selectBox()`](./IMAPTransporterClass.md#selectbox) before calling `.start()`.
+Une boîte aux lettres doit être sélectionnée à l'aide de [`selectBox()`](./IMAPTransporterClass.md#selectbox) avant d'appeler `.start()`.
 
-Callback functions are executed in the worker where `.start()` is called.
+Les fonctions de rappel sont exécutées dans le worker où `.start()` est appelé.
 
 :::note Notes
 
-- When the notifier is started, other transporter functions (such as `getMail()` or `send()`) are not available. You must call `.stop()` before using these functions, then call `.start()` again to resume notifications.
+- Lorsque le notificateur est lancé, les autres fonctions du transporteur (telles que `getMail()` ou `send()`) ne sont pas disponibles. Vous devez appeler `.stop()` avant d'utiliser ces fonctions, puis appeler `.start()` à nouveau pour reprendre les notifications.
 
-- IMAP IDLE notifications indicate that a change has occurred but do not provide updated mailbox data. To refresh the mailbox state, you must stop the notifier, retrieve the updated data (for example using `getMail()`), and then restart it.
+- Les notifications IMAP IDLE indiquent qu'un changement s'est produit mais ne fournissent pas de données actualisées sur la boîte aux lettres. Pour actualiser le statut de la boîte aux lettres, vous devez arrêter le notificateur, récupérer les données mises à jour (par exemple à l'aide de `getMail()`), puis le redémarrer.
 
 :::
 
@@ -124,10 +124,10 @@ Callback functions are executed in the worker where `.start()` is called.
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------ |
 | success    |                                                                                             | Boolean    | Vrai si l'opération est réussie, sinon Faux                                                            |
 | statusText |                                                                                             | Text       | Message du statut retourné par le serveur IMAP, ou dernière erreur retournée dans la pile d'erreurs 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                      |
+| errors     |                                                                                             | Collection | Pile d'erreur 4D (non retournée si une réponse du serveur est reçue)                |
 |            | \[].errcode            | Number     | Code d'erreur 4D                                                                                       |
 |            | \[].message            | Text       | Description de l'erreur                                                                                |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                                     |
+|            | \[].componentSignature | Text       | Signature du composant qui a renvoyé l'erreur                                                          |
 
 <!-- END REF -->
 
@@ -139,15 +139,15 @@ Callback functions are executed in the worker where `.start()` is called.
 
 <!-- REF #IMAPNotifier.stop().params -->
 
-| Paramètres | Type   |                             | Description      |
-| ---------- | ------ | :-------------------------: | ---------------- |
-| Résultat   | Object | <- | Operation status |
+| Paramètres | Type   |                             | Description           |
+| ---------- | ------ | :-------------------------: | --------------------- |
+| Résultat   | Object | <- | Statut de l'opération |
 
 <!-- END REF -->
 
 #### Description
 
-The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notification subscription<!-- END REF -->. Calling `.stop()` is required before using other transporter functions (such as `getMail()` or `send()`).
+La fonction `.stop()` <!-- REF #IMAPNotifier.stop().Summary -->arrête l'abonnement aux notifications<!-- END REF -->. L'appel à `.stop()` est nécessaire avant d'utiliser d'autres fonctions du transporteur (comme `getMail()` ou `send()`).
 
 #### Objet retourné
 
@@ -155,10 +155,10 @@ The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notifi
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------ |
 | success    |                                                                                             | Boolean    | Vrai si l'opération est réussie, sinon Faux                                                            |
 | statusText |                                                                                             | Text       | Message du statut retourné par le serveur IMAP, ou dernière erreur retournée dans la pile d'erreurs 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                      |
+| errors     |                                                                                             | Collection | Pile d'erreur 4D (non retournée si une réponse du serveur est reçue)                |
 |            | \[].errcode            | Number     | Code d'erreur 4D                                                                                       |
 |            | \[].message            | Text       | Description de l'erreur                                                                                |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                                     |
+|            | \[].componentSignature | Text       | Signature du composant qui a renvoyé l'erreur                                                          |
 
 <!-- END REF -->
 

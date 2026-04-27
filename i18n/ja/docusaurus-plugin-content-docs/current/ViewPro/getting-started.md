@@ -27,11 +27,11 @@ title: はじめに
 1. [依存関係マネージャー](../Project/components.md) ウィンドウを開きます。
 2. **+** ボタンをクリックしてコンポーネントを追加します。
 3. **GitHub** タブをクリックします。
-4. [コンポーネントのデフォルトのリスト](../Extensions/overview.md) から**4d/4D-ViewPro** を選択し、[依存関係ルール](../Project/components.md#github-依存関係のバージョン範囲を定義) として**Follow 4D version** を選択して、**追加** をクリックします。
+4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-dependency-version-range), then click **Add**.
 
 ![](../assets/en/ViewPro/install.png)
 
-プロジェクトを再起動すると、4D View Pro コンポーネントは[Github 依存関係](../Project/components.md#githubの依存関係の追加)としてインストールされます。
+Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-or-gitlab-dependency).
 
 4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 

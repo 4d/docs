@@ -52,14 +52,14 @@ End if
 <!-- REF #_command_.ZIP Create archive.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|fileToZip|4D.File|->|File or Folder object to compress|
-|folderToZip|4D.Folder|->|File or Folder object to compress|
-|zipStructure|Object|->|File or Folder object to compress|
-|destinationFile|4D.File|->|Destination file for the archive|
-|options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|<-|Status object|
+|fileToZip|4D.File|->|Objet Fichier ou Dossier à compresser|
+|folderToZip|4D.Folder|->|Objet Fichier ou Dossier à compresser|
+|zipStructure|Object|->|Objet Fichier ou Dossier à compresser|
+|destinationFile|4D.File|->|Fichier de destination pour l'archive|
+|options|Integer|->|Option *folderToZip* : `ZIP Without enclosing folder`|
+|Résultat|Object|<-|Status object|
 </div>
 <!-- END REF -->
 
@@ -208,11 +208,11 @@ $err:=ZIP Create archive($zip; $destination)
 <!-- REF #_command_.ZIP Read archive.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|zipFile|4D.File|->|Zip archive file|
-|password|Text|->|ZIP archive password if any|
-|Result|4D.ZipArchive|<-|Archive object|
+|zipFile|4D.File|->|Fichier d'archive ZIP|
+|password|Text|->|Mot de passe de l'archive ZIP, le cas échéant|
+|Résultat|4D.ZipArchive|<-|Archive object|
 </div>
 <!-- END REF -->
 
