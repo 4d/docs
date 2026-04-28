@@ -5,7 +5,7 @@ title: Extendiendo aplicaciones 4D
 
 ## Generalidades
 
-La [arquitectura del proyecto] 4D (../Project/architecture.md) es abierta y puede ampliarse de diferentes maneras. Si necesita una funcionalidad que no está disponible de forma nativa en 4D, siempre puede integrarla en su aplicación de diversas maneras, por ejemplo:
+La [arquitectura de los [proyectos 4D](../Project/architecture.md) es abierta y puede ampliarse de diferentes maneras. Si necesita una funcionalidad que no está disponible de forma nativa en 4D, siempre puede integrarla en su aplicación de diversas maneras, por ejemplo:
 
 - Los [**workers del sistema**](../API/SystemWorkerClass.md) permiten al código 4D llamar a cualquier proceso externo (un comando shell, PHP, cualquier script, etc.) y supervisar su ejecución.
 - Los [**comandos SQL**](../commands/theme/SQL) permiten conectar y utilizar diversas fuentes de datos SQL.
@@ -18,8 +18,7 @@ La [arquitectura del proyecto] 4D (../Project/architecture.md) es abierta y pued
 
 4D propone diferentes componentes a la comunidad 4D, cubriendo muchas necesidades de desarrollo. Todos los componentes 4D se pueden encontrar en el [**repositorio github de 4D**](https://github.com/4d).
 
-A subset of these components is listed by default in the Github panel of the [Dependency Manager](../Project/components.md#adding-a-github-dependency), including:
-including:
+Un subconjunto de estos componentes se muestra por defecto en el panel de Github del [Administrador de dependencias](../Project/components.md#adding-a-github-dependency), incluyendo:
 
 | Componente           | Repositorio Github                                                          | Descripción                                                                                      | Principales funcionalidades                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |

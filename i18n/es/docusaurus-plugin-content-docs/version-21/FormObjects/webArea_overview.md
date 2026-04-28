@@ -13,9 +13,9 @@ Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de
 
 Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
 
-You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+Puede integrar una página Qodly en un área Web y luego actualizar [las fuentes Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) desde 4D llamando a [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
+En las aplicaciones cliente/servidor 4D, las páginas Qodly en las áreas Web pueden [compartir su sesión con el usuario remoto](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) para un alto nivel de seguridad.
 
 :::tip Entrada de blog relacionada
 

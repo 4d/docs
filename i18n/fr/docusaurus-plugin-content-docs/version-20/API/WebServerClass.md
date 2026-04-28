@@ -73,10 +73,10 @@ Leurs propriétés et fonctions sont les suivantes :
 <!-- REF #_command_.WEB Server.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|----|---|
-|option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
-|Result|4D.WebServer|<-|Web server object|
+|option|Integer|->|Serveur Web à utiliser (par défaut si non spécifié = `Web server database`)|  
+|Résultat|4D.WebServer|<-|Web server object|
 </div>
 <!-- END REF -->
 
@@ -120,9 +120,9 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 <!-- REF #_command_.WEB Server list.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|----|---|
-|Result|Collection|<-|Collection of the available Web server objects|
+|Résultat|Collection|<-|Collection of the available Web server objects|
 </div>
 <!-- END REF -->
 
@@ -650,7 +650,7 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
+La <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
 
 | Constante           | Valeur   | Description                                                                                                                               |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -693,10 +693,10 @@ Le <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'a
 <!-- REF #WebServerClass.start().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|----|---|
-|settings|Object|->|Web server settings to set at startup|  
-|Result|Object|<-|Status of the web server startup|
+|settings|Object|->|Paramètres du serveur Web à définir au démarrage|  
+|Résultat|Object|<-|Status of the web server startup|
 </div>
 <!-- END REF -->
 
@@ -755,9 +755,9 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 <!-- REF #WebServerClass.stop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|----|---|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 

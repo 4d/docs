@@ -5,7 +5,7 @@ title: フッター
 
 ## フッターを表示
 
-This property is used to display or hide [list box column footers](listbox-header-footer.md#footers). 列ごとに 1つのフッターを表示できます。それぞれのフッターは個別に設定できます。
+このプロパティは、[リストボックスカラムのフッター](listbox-header-footer.md#フッター) の表示/非表示を指定するのに使用されます。 列ごとに 1つのフッターを表示できます。それぞれのフッターは個別に設定できます。
 
 #### JSON 文法
 
@@ -70,5 +70,5 @@ This property is used to display or hide [list box column footers](listbox-heade
 
 #### 参照
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[ヘッダー](properties_Headers.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 

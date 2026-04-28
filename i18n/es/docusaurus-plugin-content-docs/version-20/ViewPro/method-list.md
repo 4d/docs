@@ -2961,10 +2961,10 @@ End if
 <!-- REF #_method_.VP Get values.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-|Result  |Collection|<-|Collection of values|
+|rangoObj |Object|->|Objeto Rango|
+|Resultado |Collection|<-|Collection of values|
 </div>
 <!-- END REF -->
 
@@ -3015,10 +3015,10 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 <!-- REF #_method_.VP Get workbook options.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|Result |Object|<-|Object containing the workbook options|
+|vpAreaName |Text|->|Nombre del objeto formulario área 4d View Pro|
+|Resultado |Object|<-|Object containing the workbook options|
 </div>
 <!-- END REF -->
 
@@ -3524,9 +3524,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpAreaName |Text|->|Nombre del objeto formulario del área 4D View Pro|
 </div>
 <!-- END REF -->
 
@@ -4828,11 +4828,11 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName|Text|->|4D View Pro area form object name|
-|columnCount|Integer|->|Number of columns|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|-|
+|vpAreaName|Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|columnCount|Integer|->|Número de columnas|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -4871,16 +4871,16 @@ VP SET COLUMN COUNT("ViewProArea";5)
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Index of the new current sheet|
+|vpAreaName| Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|sheet|Integer|->|Índice de la nueva hoja actual|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-El comando `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->establece la hoja actual en *vpAreaName*<!-- END REF --> . La hoja actual es la hoja seleccionada en el documento.
+El comando `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->define la hoja actual en *vpAreaName*<!-- END REF --> . La hoja actual es la hoja seleccionada en el documento.
 
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
@@ -4915,10 +4915,10 @@ VP SET CURRENT SHEET("ViewProArea";2)
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|formulaObj |Object|->|Formula object|
+|vpAreaName |Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|formulaObj |Object|->|Objeto fórmula|
 </div>
 <!-- END REF -->
 
@@ -5008,13 +5008,13 @@ End case
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|dataObj|Object|->|Data object to load in the data context|
-|dataColl|Collection|->|Data collection to load in the data context|
-|options |Object|->|Additional options|
-|sheet|Integer|->|Sheet index|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|-|
+|vpAreaName |Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|dataObj|Object|->|Objeto de datos a cargar en el contexto de datos|
+|dataColl|Collection|->|Colección de datos a cargar en el contexto de datos|
+|options |Object|->|Opciones adicionales|
+|sheet|Integer|->|Índice de hoja|
 </div>
 <!-- END REF -->
 
@@ -5144,12 +5144,12 @@ Este es el resultado una vez que se generan las columnas:
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|rangeObj |Object|->|Range object|
-|dateValue |Date|->|Date value to set|
-|timeValue |Time|->|Time value to set|
-|formatPattern |Text|->|Format of value|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|rangeObj |Object|->|Objeto de rango|
+|dateValue |Date|->|Valor de fecha a definir|
+|timeValue |Time|->|Valor de hora a definir|
+|formatPattern |Text|->|Formato del valor|
 </div>
 <!-- END REF -->
 
@@ -5188,11 +5188,11 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|dateValue |Date|->|Date value to set|
-|formatPattern |Text|->|Format of value|
+|rangeObj |Object|->|Rango objeto|
+|dateValue |Date|->|Valor fecha a definir|
+|Formato |Text|->|Formato de valor|
 </div>
 <!-- END REF -->
 
@@ -5238,11 +5238,11 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|styleObj |Object|->|Style object|
-|sheet|Integer|->|Sheet index (default = current sheet)|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|vpAreaName |Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|styleObj |Object|->|Objeto de estilo|
+|sheet|Integer|->|Índice de hoja (por defecto = hoja actual)|
 </div>
 <!-- END REF -->
 
@@ -5283,11 +5283,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 <!-- REF #_method_.VP SET FIELD.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|field |Pointer|->|Reference to field in virtual structure|
-|formatPattern |Text|->|Format of field|
+|rangeObj |Object|->|Objeto Rango|
+|field |Pointer|->|Referencia al campo en estructura virtual|
+|formatPattern |Text|->|Formato de campo|
 </div>
 <!-- END REF -->
 
@@ -5295,7 +5295,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->asigna un campo virtual de la base 4D a un rango de celdas designado<!-- END REF -->.
 
-En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. Si *rangeObj* incluye varias celdas, el campo especificado se vinculará en cada celda.
 
 El parámetro *field* indica un [campo virtual](formulas.md#referencing-fields-using-the-virtual-structure) de la base 4D que se asignará al *rangeObj*. El nombre de la estructura virtual para el *field* se puede ver en la barra de fórmulas. Si alguna de las celdas de *rangeObj* tiene contenido, se sustituirá por *field*.
 
@@ -5321,11 +5321,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|formula |Text|->|Formula or 4D method|
-|formatPattern |Text|->|Format of field|
+|rangeObj |Object|->|Objeto rango|
+|formula |Text|->|Formula o método 4D|
+|formatPattern|Texto|->|Formato de campo|
 </div>
 <!-- END REF -->
 
@@ -5376,10 +5376,10 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar los parámetros
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Cell range object|
-|formulasCol |Collection|->|Collection of formulas|
+|rangeObj |Object|->|Objeto de rango de celda|
+|formulasCol |Collection|->|Colección de fórmulas|
 </div>
 <!-- END REF -->
 
@@ -5440,11 +5440,11 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Asignar a celdas
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|paneObj |Object|->|Object containing frozen column and row information|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|paneObj |Object|->|Objeto que contiene información congelada de columnas y filas|
+|sheet|Integer|->|Índice de la hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -5500,11 +5500,11 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|numberValue |Number|->|Number value to set|
-|formatPattern |Text|->|Format of value|
+|rangeObj |Object|->|objeto Rango|
+|numberValue |Number|->|Valor numérico a definir|
+|formatPattern |Text|->|Formato de valor|
 </div>
 <!-- END REF -->
 
@@ -5540,11 +5540,11 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area name|
-|printInfo |Object|->|Object containing printing attributes|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|Nombre de área de 4D View Pro|
+|printInfo |Object|->|Objeto que contiene atributos de impresión|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -5616,10 +5616,10 @@ El PDF:
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|rangeObj |Object|->|Range of rows|
-|propertyObj |Object|->|Object containing row properties|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|rangeObj |Object|->|Rango de filas|
+|propertyObj |Object|->|Objeto que contiene propiedades de fila|
 </div>
 <!-- END REF -->
 
@@ -5667,11 +5667,11 @@ VP SET ROW ATTRIBUTES($row;$properties)
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|rowCount |Integer|->|Number of rows|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName|Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|rowCount |Integer|->|Número de líneas|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -5743,10 +5743,10 @@ VP SET SELECTION($currentSelection)
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|number |Integer|->|Number of sheets|
+|vpAreaName |Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|number |Integer|->|Número de hojas|
 </div>
 <!-- END REF -->
 
@@ -5783,11 +5783,11 @@ VP SET SHEET COUNT("ViewProArea";3)
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|name|Text|->|New name for the sheet|
-|sheet|Integer|->|Index of the sheet to be renamed|
+|vpAreaName |Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|name|Text|->|Nuevo nombre para la hoja|
+|sheet|Integer|->|Índice de la hoja a renombrar|
 </div>
 <!-- END REF -->
 
@@ -5832,11 +5832,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area name|
-|sheetOptions |Object|->|Sheet option(s) to set|
-|sheet |Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|Nombre del área de 4D View Pro|
+|sheetOptions |Object|->|Opciones de hoja a configurar||
+|sheet |Integer|->|Índice de hojas (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -5954,11 +5954,11 @@ Resultado:
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|visible|Boolean|->|Print lines displayed if True (default), hidden if False|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|visible|Boolean|->|Líneas de impresión mostradas si es True (por defecto), ocultas si es False|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -6012,13 +6012,13 @@ Con un salto de página:
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
-|---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|column|Integer|->|Index of the column in the table|
-|attributes |Object|->|Attribute(s) to apply to the *column*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Parámetro|Tipo| |Descripción|
+||---|-|-|---|
+|vpAreaName |Text|->|Nombre del objeto formulario del área 4D View Pro|
+|tableName|Text|->|Nombre de la tabla|
+|column|Integer|->|Índice de la columna en la tabla|
+|attributes |Object|->|Atributo(s) a aplicar a *column*|
+|sheet |Integer|->|Índice de hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -6117,11 +6117,11 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
-|---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|options|[cs.ViewPro.TableTheme](classes.md#tabletheme)|->|Table theme properties to modify|
+|Parámetro|Tipo| |Descripción|
+||---|-|-|-|-|-|
+|vpAreaName |Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|tableName|Text|->|Nombre de la tabla|
+|options|[cs.ViewPro.TableTheme](classes.md#tabletheme)|->Propiedades del tema de la tabla a modificar|
 </div>
 <!-- END REF -->
 
@@ -6200,11 +6200,11 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|textValue |Text|->|Text value to set|
-|formatPattern |Text|->|Format of value|
+|rangeObj |Object|->|Rango objeto|
+|textValue |Text|->|Valor texto a definir|
+|Formato |Text|->|Formato de valor|
 </div>
 <!-- END REF -->
 
@@ -6236,11 +6236,11 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|timeValue |Time|->|Time value to set|
-|formatPattern |Text|->|Format of value|
+|rangeObj |Object|->|Objeto Rango|
+|timeValue |Time|->|Valor de tiempo a establecer|
+|formatPattern |Text|->|Formato de valor|
 </div>
 <!-- END REF -->
 
@@ -6276,10 +6276,10 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 <!-- REF #_method_.VP SET VALUE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|valueObj  |Object|->|Cell values and format options|
+|rangeObj |Object|->|Objetivo Rango |
+|ValueObj |Object|->|Valores de celda y opciones de formato|
 </div>
 <!-- END REF -->
 
@@ -6395,10 +6395,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|optionObj |Object|->|Object containing the workbook options to be set|
+|vpAreaName |Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|optionObj |Object|->|Objeto que contiene las opciones del libro de trabajo a configurar|
 </div>
 <!-- END REF -->
 
@@ -6503,11 +6503,11 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 <!-- REF #_method_.VP SHOW CELL.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|vPos  |Integer|->|Vertical view position of cell or row|
-|hPos  |Integer|->|Horizontal view position of cell or row|
+|rangeObj |Object|->|Objeto rango|
+|vPos |Integer|->|Posición vertical de la celda o fila|
+|hPos |Integer|->|Posición horizontal de la celda o fila|
 </div>
 <!-- END REF -->
 
@@ -6567,9 +6567,9 @@ Resultado:
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
+|vpAreaName |Text|->|4D View Pro nombre del objeto|
 </div>
 <!-- END REF -->
 

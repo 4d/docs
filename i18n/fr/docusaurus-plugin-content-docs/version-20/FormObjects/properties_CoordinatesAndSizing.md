@@ -175,7 +175,7 @@ Cette propriété désigne la taille verticale d'un objet.
 
 Cette propriété désigne la taille horizontale d'un objet.
 > * Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
-> * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox-column.md), the user can also manually resize the column.
+> * Si la propriété [Resizable](properties_ResizingOptions.md#resizable) est utilisée pour une [colonne de liste déroulante](listbox-column.md), l'utilisateur peut également redimensionner manuellement la colonne.
 > * Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
 
 #### Grammaire JSON

@@ -164,7 +164,7 @@ A standalone session is the single-user session running when you work locally wi
 
 ### Utilização
 
-The standalone session can be used to develop and test your client/server application and its interaction with web sessions and [OTP sharing](#sharing-a-desktop-session-for-web-accesses). You can use the `session` object in your code in standalone session just as the `session` object of the remote sessions.
+The standalone session can be used to develop and test your client/server application and its interaction with web sessions and [OTP sharing](#sharing-a-remote-session-for-web-accesses). You can use the `session` object in your code in standalone session just as the `session` object of the remote sessions.
 
 ### Disponibilidade
 

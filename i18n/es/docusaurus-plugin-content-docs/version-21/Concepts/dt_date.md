@@ -70,10 +70,10 @@ Utilizando el comando [`Date`](../commands-legacy/date.md):
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversión usando el comando [`Date`](../commands-legacy/date.md) siempre tiene en cuenta la zona horaria local.
+Observe la diferencia entre estas dos soluciones: [`JSON Parse`](../commands-legacy/json-parse.md) respeta el [modo de conversión definido con `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (si existe), mientras que [`Date`](../commands-legacy/date.md) no está sujeto a esto. Conversión usando el comando [`Date`](../commands-legacy/date.md) siempre tiene en cuenta la zona horaria local.
 
 :::note
 
-When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+Cuando la configuración actual de almacenamiento de fecha es [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (por defecto), las cadenas de fecha JSON en formato "YYYY-MM-DD" son manejadas automáticamente como valores de fecha por los comandos [`JSON Parse`](../commands-legacy/json-parse.md) y [`Date`](../commands-legacy/date.md).
 
 :::

@@ -855,7 +855,7 @@ End if
 
 クライアント/サーバーでは、リモートユーザーセッションの `.storage` オブジェクトは、サーバーまたはクライアントのものとは**同じではありません**。
 
-リモートユーザーセッションとWeb セッションが[OTP を使用して共有されていた](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) 場合、これらはたとえOTP がクライアント側のセッションから[作成](#createotp) されていた場合でも、同じ`.storage` オブジェクトをサーバー上で共有します。
+リモートユーザーセッションとWeb セッションが[OTP を使用して共有されていた](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) 場合、これらはたとえOTP がクライアント側のセッションから[作成](#createotp) されていた場合でも、同じ`.storage` オブジェクトをサーバー上で共有します。
 
 :::tip
 

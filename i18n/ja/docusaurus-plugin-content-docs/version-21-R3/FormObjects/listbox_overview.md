@@ -29,10 +29,10 @@ title: リストボックス
 
 リストボックスオブジェクトは、以下4つの項目で構成されます:
 
-- the [list box object](./listbox-object.md) in its entirety,
-- [columns](./listbox-column.md),
-- column [headers](./listbox-header-footer.md#headers), and
-- column [footers](./listbox-header-footer.md#footers).
+- [リストボックスオブジェクト](./listbox-object.md) 全体
+- [カラム](./listbox-column.md)
+- カラムの[ヘッダー](./listbox-header-footer.md#headers)
+- カラムの[フッター](./listbox-header-footer.md#footers)
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
@@ -43,7 +43,7 @@ title: リストボックス
 1. 各列のオブジェクトメソッド
 2. リストボックスのオブジェクトメソッド
 
-The column object method gets events that occur in its [header](./listbox-header-footer.md#headers) and [footer](./listbox-header-footer.md#footers).
+カラムのオブジェクトメソッドは [header](./listbox-header-footer.md#headers) および [footer](./listbox-header-footer.md#footers) 内で発生するイベントも取得します。
 
 ### リストボックスの型
 
@@ -59,7 +59,7 @@ The column object method gets events that occur in its [header](./listbox-header
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。
 
 ## 入力の管理
 
@@ -245,14 +245,14 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 標準ソートのサポートは、リストボックスのタイプに依存します:
 
-| リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object の Collection | ◯          | <ul><li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                  |
-| スカラー値のコレクション        | ×          | [`orderBy()`](../API/CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| エンティティセレクション        | ◯          | <ul><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>サポートされる: オブジェクト属性プロパティに対するソート (例: "data" がオブジェクト属性であるときに"This.data.city")</li><li>サポートされる: リレートされた属性に対するソート(例: "This.company.name")</li><li>サポートされない: リレートされた属性を経由したオブジェクト属性に対するソート(例: "This.company.data.city")。 For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li></ul> |
-| カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 命名セレクション            | ×          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object の Collection | ◯          | <ul><li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li></ul>                                                                                                                                                                                                                                                                                                                                                               |
+| スカラー値のコレクション        | ×          | [`orderBy()`](../API/CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| エンティティセレクション        | ◯          | <ul><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>サポートされる: オブジェクト属性プロパティに対するソート (例: "data" がオブジェクト属性であるときに"This.data.city")</li><li>サポートされる: リレートされた属性に対するソート(例: "This.company.name")</li><li>サポートされない: リレートされた属性を経由したオブジェクト属性に対するソート(例: "This.company.data.city")。 この場合には、[`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li></ul> |
+| カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 命名セレクション            | ×          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ### カスタムソート
 
@@ -310,8 +310,8 @@ End if
 
 リストボックスの背景色、フォントカラー、そしてフォントスタイルを設定するためにはいくつかの方法があります:
 
-- at the level of the [list box object properties](./listbox-object.md),
-- at the level of the [column properties](./listbox-column.md),
+- [リストボックスオブジェクトのプロパティリスト](./listbox-object.md) を使用
+- [カラムのプロパティリスト](./listbox-column.md) を使用
 - リストボックスまたは列ごとの [配列や式](#配列と式の使用) プロパティを使用
 - セルごとのテキストにて定義 ([マルチスタイルテキスト](properties_Text.md#マルチスタイル) の場合)
 
@@ -319,12 +319,12 @@ End if
 
 優先順位や継承の原理は、複数のレベルにわたって同じプロパティに異なる値が指定された場合に適用されます。
 
-1. (highest priority) Cell (if multi-style text)
+1. (最優先) セル(マルチスタイルテキストの場合)
 2. 列の配列/メソッド
 3. リストボックスの配列/メソッド
 4. 列のプロパティ
 5. リストボックスのプロパティ
-6. (lowest priority) Meta Info expression (for collection or entity selection list boxes)
+6. (最も低い優先度) メタ情報式(コレクションまたはエンティティセレクション型リストボックスの場合)
 
 例として、リストボックスのプロパティにてフォントスタイルを設定しながら、列には行スタイル配列を使用して異なるスタイルを設定した場合、後者が有効となります。
 
@@ -514,20 +514,20 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
  ->MyListbox{3}:=True
 ```
 
-*Non-hierarchical representation:*  
+*非階層表示:*  
 ![](../assets/en/FormObjects/hierarch7.png)
 
-*Hierarchical representation:*  
+*階層表示:*  
 ![](../assets/en/FormObjects/hierarch8.png)
 
 > 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
 選択と同様に、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
 
-*Non-hierarchical representation:*  
+*非階層表示:*  
 ![](../assets/en/FormObjects/hierarch9.png)
 
-*Hierarchical representation:*  
+*階層表示:*  
 ![](../assets/en/FormObjects/hierarch10.png)
 
 サブ階層のすべての行が隠されているとき、ブレーク行は自動で隠されます。 先の例題で 1から 3行目までが隠されていると、"Brittany" のブレーク行は表示されません。
@@ -544,13 +544,13 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 以下のリストボックスを例題とします (割り当てた配列名は括弧内に記載しています):
 
-*Non-hierarchical representation:*  
+*非階層表示:*  
 ![](../assets/en/FormObjects/hierarch12.png)
 
-*Hierarchical representation:*  
+*階層表示:*  
 ![](../assets/en/FormObjects/hierarch13.png)
 
-階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します: ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
+階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
@@ -573,7 +573,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
-- リストボックスが表示される際、先頭の配列のみ値を埋めます。 However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:  
+- リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません:
   ![](../assets/en/FormObjects/hierarch15.png)
 
 - ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドから得られる値を設定します。そして[`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。  

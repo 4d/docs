@@ -356,3 +356,52 @@ contents of the_category_.json files:
 Translate commit (dry-run) — pour prévisualiser
 Translate commit (apply + commit) — pour appliquer et committer
 4. Coller le SHA du commit quand demandé
+
+5. ## GRAM
+
+| Character | r value |
+|----------|---------|
+| B | a_bool |
+| X | noarg |
+| A | a_text |
+| S | _AnyText |
+| a | _AnyText |
+| R | _ETENDU |
+| l | _LONGENTIER |
+| L | _AnyNum |
+| D | a_date |
+| T | a_temps |
+| o | a_object |
+| U | a_pointe |
+| u | _PtrNum |
+| E | a_expr |
+| e | a_expr |
+| v | a_var |
+| V | a_var |
+| $ | a_var |
+| C | a_champ |
+| y | a_champouvar |
+| Y | a_champouvar |
+| W | a_ficouchamp |
+| F | a_fichier |
+| f | a_fichierstrict |
+| * | a_etoile |
+| # | a_dif |
+| & | a_et |
+| ! | a_ou |
+| = | a_egal |
+| Z | a_restant |
+| j | a_collection |
+| p | a_picture |
+| b | a_blob |
+| > | a_sup / a_supegal / a_supouinf |
+| < | a_inf / a_infegal |
+| + | a_fourch |
+| % | a_contient_keyword |
+| 179 (³) | a_supegal |
+| 178 (²) | a_infegal |
+| 177 (±) | a_fourch |
+| 199 (Ç) | a_supouinf |
+| 164 (¤) | a_contient_keyword |
+| default | (assert) |
+

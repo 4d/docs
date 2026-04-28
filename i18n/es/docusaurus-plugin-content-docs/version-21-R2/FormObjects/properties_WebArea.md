@@ -29,7 +29,7 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0 y 100, que representa el porcentaje de finalización de la carga de la página en el área web. Actualizado automáticamente por 4D, no puede ser modificado manualmente.
 
-> As of 4D 19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> A partir de 4D 19 R5, esta variable solo se actualiza en Windows si el área Web [utiliza el motor de renderizado Web anidado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 #### Gramática JSON
 
@@ -85,16 +85,16 @@ Esta opción permite elegir entre dos motores de renderizado para el área web, 
 
 > En Windows, si Microsoft Edge WebView2 no está instalado, 4D utiliza el motor integrado como motor de renderizado del sistema. Para saber si está instalado en su sistema, busque "Microsoft Edge WebView2 Runtime" en su panel de aplicaciones.
 
-- **marcado** - `valor JSON: anidado`: en este caso, 4D utiliza Chromium Embedded Framework (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table).
+- **marcado** - `valor JSON: anidado`: en este caso, 4D utiliza Chromium Embedded Framework (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). Cuando se elige esta opción, ya no se beneficia de las actualizaciones automáticas del motor Web realizadas por el sistema operativo; sin embargo, [las nuevas versiones de los motores se proporcionan regularmente a través de 4D](../Notes/updates.md#library-table).
 
 El motor CEF tiene las siguientes limitaciones:
 
-- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
+- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): el uso de este comando requiere que al menos una página ya esté cargada en el área (mediante una llamada a [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o una asignación a la variable URL asociada al área).
+- Cuando se habilita soltar URL mediante el selector `WA enable URL drop` del comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md), la primera caída debe ir precedida de al menos una llamada a [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o una asignación a la variable URL asociada al área.
 
 :::note
 
-Puede personalizar los parámetros del área de CEF creando un [archivo de configuración 4DCEFParameters.json] local (webArea_overview.md#4dcefparametersjson).
+Puede personalizar los parámetros del área de CEF creando un [archivo de configuración local [4DCEFParameters.json](webArea_overview.md#4dcefparametersjson).
 
 :::
 
