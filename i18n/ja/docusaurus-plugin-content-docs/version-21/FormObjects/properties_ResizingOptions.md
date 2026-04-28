@@ -142,7 +142,7 @@ title: リサイズオプション
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 #### コマンド
 

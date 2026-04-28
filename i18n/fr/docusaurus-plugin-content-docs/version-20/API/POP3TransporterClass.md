@@ -46,10 +46,10 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 <!-- REF #_command_.POP3 New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|server|object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|object|->|Informations sur le serveur de messagerie|
+|Résultat|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -107,10 +107,10 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 <!-- REF #4D.POP3Transporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|Object|->|Informations sur le serveur de messagerie|
+|Résultat|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -167,9 +167,9 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 <!-- REF #POP3TransporterClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message to delete|
+|msgNumber|Integer|->|Numéro du message à supprimer|
 </div>
 <!-- END REF -->
 
@@ -215,9 +215,9 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|boxInfo object|
+|Résultat|Object|<-|boxInfo object|
 </div>
 <!-- END REF -->
 
@@ -267,11 +267,11 @@ L'objet `boxInfo` contient les propriété suivantes :
 <!-- REF #POP3TransporterClass.getMail().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message in the list |
-|headerOnly|Boolean|->|True to download only the email headers (default is False) |
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+|msgNumber|Integer|->|Numéro du message dans la liste|
+|headerOnly|Boolean|->|Vrai pour télécharger uniquement les en-têtes des e-mails (Faux par défaut) |
+|Résultat|Object|<-|[Email object](EmailObjectClass.md#email-object)|
 </div>
 <!-- END REF -->
 
@@ -337,10 +337,10 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message in the list |
-|Result|Object|<-|mailInfo object|
+|msgNumber|Integer|->|Numéro du message dans la liste |
+|Résultat|Object|<-|mailInfo object|
 </div>
 <!-- END REF -->
 
@@ -467,10 +467,10 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|-> |Number of the message in the list|
-|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+|msgNumber|Integer|-> |Numéro du message dans la liste|
+|Résultat|Blob|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 
@@ -536,7 +536,7 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 

@@ -7,8 +7,8 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Propriétés
 
-- **Streamable**: no
-- **Sharable**: no
+- **Streamable** : non
+- **Partageable** : non
 
 ### Objet Web Server
 

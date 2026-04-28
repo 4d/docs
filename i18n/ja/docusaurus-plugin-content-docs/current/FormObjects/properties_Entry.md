@@ -49,7 +49,10 @@ title: 入力
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[入力](input_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[Web エリア](webArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md)
 
 #### コマンド
 
@@ -73,7 +76,14 @@ title: 入力
 
 #### 対象オブジェクト
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro エリア](writeProArea_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[ステッパー](stepper.md)
 
 #### コマンド
 
@@ -135,7 +145,7 @@ title: 入力
 
 #### 対象オブジェクト
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md)
+[チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 

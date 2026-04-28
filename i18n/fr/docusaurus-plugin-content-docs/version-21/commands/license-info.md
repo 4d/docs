@@ -140,7 +140,7 @@ Vous souhaitez obtenir des informations sur votre licence 4D Server courante :
                     "expirationDate": {"day":1, "month":11, "year":2017}
                 }, {
                     "count": 10,
-                    "expirationDate": {"day":1, "month":11, "year":2015} //expired, not counted
+                    "expirationDate": {"day":1, "month":11, "year":2015} //expiré, non pris en compte
                 }
             ],
             "usedCount": 12

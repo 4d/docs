@@ -40,9 +40,9 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 <!-- REF #_command_.Session.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Résultat|4D.Session|<-|Session object|
 </div>
 <!-- END REF -->
 
@@ -105,7 +105,7 @@ IP:port/4DACTION/action_Session
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -177,7 +177,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
 |Result|Boolean|<-|True if session has *privilege*, False otherwise|
@@ -264,9 +264,9 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+|Résultat|Booléen|<-|True if session is a Guest one, False otherwise|
 </div>
 <!-- END REF -->
 
@@ -307,11 +307,11 @@ End if
 <!-- REF #SessionClass.setPrivileges().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|->|Privilege name|
-|privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|
+|privileges|Collection|->|Collection de noms de privilèges|
+|settings|Object|->|Objet doté d'une propriété "privileges" (chaîne de caractères ou collection)|
 </div>
 <!-- END REF -->
 

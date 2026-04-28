@@ -1294,9 +1294,9 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 #### Description
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Cette propriété est en **lecture seule**.
+La propriété `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contient l'objet IMAPNotifier associé au transporteur<!-- END REF -->. Cette propriété est en **lecture seule**.
 
-See [IMAPNotifier](./IMAPNotifierClass.md).
+Voir [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 

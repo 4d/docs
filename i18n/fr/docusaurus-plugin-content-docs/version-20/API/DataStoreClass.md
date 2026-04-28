@@ -49,10 +49,10 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 <!-- REF #_command_.ds.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|localID|Text|->|Local ID of the remote datastore to return|
-|Result |cs.DataStore|<-|Reference to the datastore|
+|Paramètre|Type||Description|
+|---|---|---|
+|localID|Text|->|ID local du datastore distant à retourner|
+|Résultat |cs.DataStore|<-|Reference to the datastore|
 </div>
 <!-- END REF -->
 
@@ -120,11 +120,11 @@ Utilisation du datastore principal de la base 4D :
 <!-- REF #_command_.Open datastore.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|connectionInfo|Object|->|Connection properties used to reach the remote datastore|
-|localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |4D.DataStoreImplementation|<-|Datastore object|
+|Paramètre|Type||Description|
+|---|---|---|
+|connectionInfo|Objetc|->|Propriétés de connexion utilisées pour joindre le datastore distant|
+|localID |Text|->|Id à attribuer au datastore ouvert sur l'application locale (obligatoire)|
+|Résultat |4D.DataStoreImplementation|<-|Datastore object|
 </div>
 <!-- END REF -->
 
@@ -265,7 +265,7 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -301,7 +301,7 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -334,9 +334,9 @@ Si cela se produit, vous pouvez utiliser `.clearAllRemoteContexts()` pour réini
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|
+|Résultat|Object|<-|Information about the encryption of the current datastore and of each table|
 </div>
 <!-- END REF -->
 
@@ -408,9 +408,9 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-||||Does not require any parameters|
+Paramètre|Type||Description|
+|---|---||---|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -490,9 +490,9 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Collection|<-|Collection of optimization context objects|
+|Paramètre|Type||Description|
+|---|---||---|
+|Résultat|Collection|<-|Collection of optimization context objects|
 </div>
 <!-- END REF -->
 
@@ -569,9 +569,9 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|
+|Résultat|Object|<-|Datastore properties|
 </div>
 <!-- END REF -->
 
@@ -640,10 +640,10 @@ Sur un datastore distant :
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|contextName|Text|->|Name of the context|
-|Result|Object|<-|Description of the optimization context|
+|Paramètre|Type||Description|
+|---|---|---|
+|contextName|Text|->|Nom du contexte|
+|Résultat|Object|<-|Description of the optimization context|
 </div>
 <!-- END REF -->
 
@@ -734,9 +734,9 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+|Résultat|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
 </div>
 <!-- END REF -->
 
@@ -770,9 +770,9 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 <!-- REF #DataStoreClass.locked().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if locked|
+|Paramètre|Type||Description|
+|---------|--- |:---:|------|
+|Résultat|Booléen|<-|True if locked|
 </div>
 <!-- END REF -->
 
@@ -814,7 +814,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -847,11 +847,11 @@ Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuve
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|curPassPhrase |Text|->|Current encryption passphrase|
-|curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
+|Paramètre|Type||Description|
+|---|---|---|
+|curPassPhrase |Text|->|Passphrase de cryptage courante|
+|curDataKey |Object|->|Clé de cryptage des données courante|
+|Réultat|Object|<-|Result of the encryption key matching|
 </div>
 <!-- END REF -->
 
@@ -924,9 +924,9 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+|Paramètre|Type||Description|
+|---|---||---|
+|status|Boolean|->|True pour désactiver l'accès du Data Explorer aux données sur le port `webAdmin`, False (par défaut) pour autoriser l'accès|
 </div>
 <!-- END REF -->
 
@@ -969,15 +969,15 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|contextName|Text|->|Name of the context|
-|dataClassName|Text|->|Name of the dataclass|
-|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore.Employee)|
-|attributes|Text|->|Attribute list separated by a comma|
-|attributesColl|Collection|->|Collection of attribute names (text)|
-|contextType|Text|->|If provided, value must be "main" or "currentItem"|
-|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
+|Paramètre|Type||Description|
+|---|---|---|
+|contextName|Text|->|Nom du contexte|
+|dataClassName|Text|->|Nom de la dataclass|
+|dataClassObject|4D.DataClass|->->Objet de la dataclass (par ex. datastore.Employee)|
+|attributes|Text|->|Liste d'attributs séparés par une virgule|
+|attributesColl|Collection|->|Collection de noms d'attributs (texte)|
+|contextType|Text|->|Si elle est fournie, la valeur doit être "main" ou "currentItem"|
+|pageLength|Integer|->|Longueur de page de l'entity selection liée au contexte (80 par défaut)|
 </div>
 <!-- END REF -->
 
@@ -1103,11 +1103,11 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|file |4D.File|->|File object |
-|options |Integer|->|Log response option (server only)|
-|reqNum |Integer|->|Number of requests to keep in memory (client only)|
+|Paramètre|Type||Description|
+|---|---||
+|file |4D.File|->|Objet File |
+|options |Integer|->|Option de réponse Log (server only)|
+|reqNum |Integer|->|Nombre de requêtes à garder en mémoire (client only)|
 </div>
 <!-- END REF -->
 
@@ -1219,9 +1219,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 <!-- REF #DataStoreClass.startTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+Paramètre|Type||Description|
 |---|---|:---:|---|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -1287,9 +1287,9 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-||||Does not require any parameters|
+Paramètre|Type||Description|
+|---|---||---|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -1325,9 +1325,9 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.unlock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-||||Does not require any parameters|
+Paramètre|Type||Description|
+|---|---||---|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -1365,9 +1365,9 @@ Si la fonction `.unlock()` est appelée dans un datastore déverrouillé, elle n
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-||||Does not require any parameters|
+Paramètre|Type||Description|
+|---|---||---|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 

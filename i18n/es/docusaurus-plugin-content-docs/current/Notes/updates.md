@@ -5,7 +5,7 @@ title: Notas del lanzamiento
 
 ## 4D 21 R3
 
-Lea [**Novedades en 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21 R3.
+Lea [**Novedades en 4D 21 R3**](https://blog.4d.com/es/whats-new-in-4d-21-r3/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21 R3.
 
 #### Lo más destacado
 

@@ -29,7 +29,7 @@ Les applications Destkop (client/serveur et mono-utilisateur) fournissent égale
 Les sessions Web sont utilisées par :
 
 - les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server.md) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
+- les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](https://developer.4d.com/qodly/).
 
 ## Activation des sessions web {#enabling-web-sessions}
 
@@ -69,7 +69,7 @@ Le nom du cookie peut être obtenu en utilisant la propriété [`.sessionCookieN
 
 :::note
 
-Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
+La création d'une session web pour une requête REST peut nécessiter qu'une licence soit disponible, consultez [cette page](../REST/authUsers.md).
 
 :::
 

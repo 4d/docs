@@ -72,13 +72,13 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 <!-- REF #_command_.Folder.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|path|Text|->|Folder path|
-|folderConstant|Integer|->|4D folder constant|
-|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
-|*||->|* to return folder of host database|
-|Result|4D.Folder|<-|New folder object|
+|path|Text|->|Chemin d'accès du dossier|
+|folderConstant|Integer|->|Constante de dossier 4D|
+|pathType|Integer|->|`fk posix path` (par défaut) ou `fk platform path`|
+|*||->|* pour renvoyer le dossier de la base de données hôte|
+|Résultat|4D.Folder|<-|New folder object|
 </div>
 <!-- END REF -->
 
@@ -161,9 +161,9 @@ La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et ren
 <!--REF #FolderClass.create().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
+|Paramètre|Type||Description|
+|---------|--- |:---:|------|
+|Résultat|Booléen|<-|True if the folder was created successfully, false otherwise|
 </div>
 <!-- END REF -->
 
@@ -219,12 +219,12 @@ End if
 <!--REF #FolderClass.createAlias().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut reference|
+|Paramètre|Type||Description|
+|---|---||
+|destinationFolder|4D.Folder|->|Dossier de destination pour l'alias ou le raccourci|
+|aliasName|Text|->|Nom de l'alias ou du raccourci|
+|aliasType|Integer|->|Type du lien de l'alias|
+|Résultat|4D.File|<-|Alias or shortcut reference|
 </div>
 <!-- END REF -->
 
@@ -277,9 +277,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF #FolderClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|----|---|---|
-|option |Integer|->|Folder deletion option|
+|option |Integer|->|Option de suppression de dossier|
 </div>
 <!-- END REF -->
 
@@ -353,11 +353,11 @@ Lorsque la constante `Delete with contents` est passée :
 <!--REF #FolderClass.moveTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
-|newName|Text|->|Full name for the moved folder|
-|Result|4D.Folder|<-|Moved folder|
+|destinationFolder|4D.Folder|->Dossier de destination|
+|newName|Text|->|Nom complet du dossier déplacé|
+|Résultat|4D.Folder|<-|Moved folder|
 </div>
 <!-- END REF -->
 
@@ -411,10 +411,10 @@ Vous souhaitez déplacer et renommer un dossier :
 <!--REF #FolderClass.rename().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|---|---|
-|newName|Text|->|New full name for the folder|
-|Result|4D.Folder|<-|Renamed folder|
+|newName|Text|->|Nouveau nom complet du dossier|
+|Résultat|4D.Folder|<-|Renamed folder|
 </div>
 <!-- END REF -->
 

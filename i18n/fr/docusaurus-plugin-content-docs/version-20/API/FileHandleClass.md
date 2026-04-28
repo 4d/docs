@@ -212,9 +212,9 @@ Cette propriété est en **lecture seule**.
 <!--REF #FileHandleClass.getSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Real|<-|Size of the document in bytes|
+|Paramètre|Type||Description|
+|---|---|---|
+|Résultat|Real|<-|Size of the document in bytes|
 </div>
 <!-- END REF -->
 
@@ -319,10 +319,10 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|bytes|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+|Paramètre|Type||Description|
+|---|---||---|
+|bytes|Real|->|Nombre d'octets à lire|
+|Résultat|[4D.Blob](BlobClass)|<-|Bytes read from the file|
 </div>
 <!-- END REF -->
 
@@ -359,9 +359,9 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 <!--REF #FileHandleClass.readLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Text|<-|Line of text|
+|Paramètre|Type||Description|
+|---|---||---|
+|Résultat|Text|<-|Line of text|
 </div>
 <!-- END REF -->
 
@@ -405,10 +405,10 @@ Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de 
 <!--REF #FileHandleClass.readText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|stopChar|Text|->|Character(s) at which to stop reading|
-|Result|Text|<-|Text from the file|
+|Paramètre|Type||Description|
+|---|||---||
+|stopChar|Text|->|Charactère(s) auquel/auxquels arrêter la lecture|
+|Résultat|Text|<-|Text from the file|
 </div>
 <!-- END REF -->
 
@@ -454,9 +454,9 @@ Si le paramètre *stopChar* est passé et non trouvé, `.readText()` renvoie une
 <!--REF #FileHandleClass.setSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|size|Real|->|New size of the document in bytes|
+|Paramètre|Type||Description|
+|---|---||---|
+|size|Real|->|Nouvelle taille du document en octets|
 </div>
 <!-- END REF -->
 
@@ -490,9 +490,9 @@ Si la valeur de *size* est inférieure à la taille courante du document, le con
 <!--REF #FileHandleClass.writeBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+|Paramètre|Type||Description|
+|---|---||---|
+|blob|[4D.Blob](BlobClass)|->|Blob à écrire dans le fichier|
 </div>
 <!-- END REF -->
 
@@ -528,9 +528,9 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 <!--REF #FileHandleClass.writeLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|lineOfText|Text|->|Text to write|
+|Paramètre|Type||Description|
+|---|---|---|---|---|
+|lineOfText|Text|->|Texte à écrire|
 </div>
 <!-- END REF -->
 
@@ -566,7 +566,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|textToWrite|Text|->|Text to write|
+|textToWrite|Text|->|Texte à écrire|
 </div>
 <!-- END REF -->
 

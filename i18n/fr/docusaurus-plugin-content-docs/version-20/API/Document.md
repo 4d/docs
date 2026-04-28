@@ -397,12 +397,12 @@ Cette propriété est en **lecture seule**.
 <!-- REF #document.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder | 4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.File|<-|Copied file|
+|destinationFolder |4D.Folder |->|Dossier de destination|
+|newName|Text|->|Nom de la copie|
+|overwrite|Integer|->|`fk overwrite` pour remplacer les éléments existants|
+|Résultat|4D.File|<-|Copied file|
 </div>
 <!-- END REF -->
 
@@ -453,9 +453,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|Result | 4D.Blob |<-|File content|
+|Paramètre|Type||Description|
+|---|----||---|
+|Résultat | 4D.Blob |<-|File content|
 </div>
 <!-- END REF -->
 
@@ -497,10 +497,10 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 <!-- REF #document.getIcon().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|Paramètre|Type||Description|
+|---|----|---|
+|size|Integer|->|Longueur du côté de l'image renvoyée (pixels)|
+|Résultat|Picture|<-|Icon|
 </div>
 <!-- END REF -->
 
@@ -534,12 +534,12 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 <!-- REF #document.getText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|charSetName |Text |-> |Name of character set|
-|charSetNum |Integer |-> |Number of character set|
-|breakMode|Integer |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|
+|Paramètre|Type||Description|
+|---|---|---|
+|charSetName |Text |-> |Nom du jeu de caractères|
+|charSetNum |Integer |-> |Numéro du jeu de caractères|
+|breakMode|Integer |-> |Mode de traitement des sauts de ligne|
+|Résultat |Texte |<- |Texte de the document|
 </div>
 <!-- END REF -->
 

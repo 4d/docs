@@ -27,7 +27,7 @@ displayed_sidebar: docs
 | ------- | ----------------------------------------------- |
 | 20      | Modifié                                         |
 | 16 R6   | Modifié                                         |
-| 14      | Renamed (OPEN PRINTING FORM) |
+| 14      | Renommé (OPEN PRINTING FORM) |
 | 12      | Created                                         |
 
 </details>

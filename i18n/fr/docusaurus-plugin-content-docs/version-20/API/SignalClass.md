@@ -111,10 +111,10 @@ Méthode ***OpenForm*** :
 <!-- REF #_command_.New signal.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|description|Text|->|Description for the signal|
-|Result|4D.Signal|<-|Native object encapsulating the signal|
+|description|Text|->|Description du signal|
+|Résultat|4D.Signal|<-|Native object encapsulating the signal|
 </div>
 <!-- END REF -->
 
@@ -237,7 +237,7 @@ Cette propriété est en **lecture seule**.
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -269,10 +269,10 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 <!-- REF #SignalClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|---|---|
-|timeout|Real|->|Maximum waiting time for the signal in seconds|
-|Result|Boolean|<-|State of the `.signaled` property|
+|timeout|Real|->|Durée maximale d'attente pour le signal, en secondes|
+|Résultat|Boolean|<-|State of the `.signaled` property|
 </div>
 <!-- END REF -->
 

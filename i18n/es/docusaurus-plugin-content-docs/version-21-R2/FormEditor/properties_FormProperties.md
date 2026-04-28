@@ -10,11 +10,10 @@ title: Propiedades de los formularios
 > La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Por defecto, cuando la propiedad no está establecida, el valor de un esquema de color es **heredado** (el formulario utiliza el esquema definido en el [nivel de aplicación](../commands-legacy/get-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
-- light - dark text on a light background
-  &#062; A defined color scheme can not be overridden by a CSS.
+- light - texto oscuro en un fondo claro
 
 > El número de caracteres para el título de una ventana está limitado a 31.
 
@@ -34,9 +33,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                             |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\ |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                                                         |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| css    | cadena o colección | Rutas de archivos CSS proporcionadas como: <li>una cadena (un archivo para ambas plataformas)</li><li>una colección de cadenas (una lista de archivos para ambas plataformas)</li><li>una colección de objetos {"path":string; media":"mac" &#124; "win"}</li> |
 
 ---
 
@@ -82,7 +81,7 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ## Tema del formulario en Windows
 
-Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. Por defecto, los formularios heredan de la [configuración global del tema del proyecto](../settings/interface.md) pero puede anular esta configuración para cada formulario.
 
 Valores disponibles:
 

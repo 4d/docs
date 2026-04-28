@@ -20,11 +20,11 @@
     "description": "The generated-index page title for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Exploring Projects": {
-    "message": "Exploring Projects",
+    "message": "Explorar los proyectos",
     "description": "The label for category 'Exploring Projects' in sidebar 'docs'"
   },
   "sidebar.docs.category.Database Structure": {
-    "message": "Database Structure",
+    "message": "Estructura de la base de datos",
     "description": "The label for category 'Database Structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.Methods & Classes": {

@@ -20,15 +20,15 @@
     "description": "The generated-index page title for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Exploring Projects": {
-    "message": "Exploring Projects",
+    "message": "Explorer les projets",
     "description": "The label for category 'Exploring Projects' in sidebar 'docs'"
   },
   "sidebar.docs.category.Database Structure": {
-    "message": "Database Structure",
+    "message": "Structure de la base de données",
     "description": "The label for category 'Database Structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.Methods & Classes": {
-    "message": "Methods & Classes",
+    "message": "Méthodes et classes",
     "description": "The label for category 'Methods & Classes' in sidebar 'docs'"
   },
   "sidebar.docs.category.Database Methods": {

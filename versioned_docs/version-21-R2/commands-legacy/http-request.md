@@ -65,7 +65,15 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 For example, you can pass the following strings:  
 
 ```
-    http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+http://www.myserver.com    
+http://www.myserver.com/path    
+http://www.myserver.com/path?name="jones"        
+https://www.myserver.com/login (*)    
+http://123.45.67.89:8083     
+http://john:smith@123.45.67.89:8083   
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+
 ```
 
 *(\*)* During HTTPS requests, authority of the certificate is not checked.   

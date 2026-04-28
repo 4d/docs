@@ -44,10 +44,10 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 <!-- REF #_command_.SMTP New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|Informations sur le serveur de messagerie|
+|Résultat|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -122,10 +122,10 @@ La fonction retourne un [**objet SMTP transporter**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|Informations sur le serveur de messagerie|
+|Résultat|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -214,10 +214,10 @@ La connexion SMTP est automatiquement fermée :
 <!-- REF #SMTPTransporterClass.send().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
-|Result|Object|<-|SMTP status|
+|mail|Object|->|[E-mail](EmailObjectClass.md#email-object) à envoyer|
+|Résultat|Object|<-|SMTP status|
 </div>
 <!-- END REF -->
 

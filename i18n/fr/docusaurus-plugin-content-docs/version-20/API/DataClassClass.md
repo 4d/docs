@@ -137,10 +137,10 @@ Considérant les propriétés de table suivantes :
 <!-- REF #DataClassClass.all().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+|settings|Object|->|Option de construction : context|
+|Résultat|4D.EntitySelection|<-|References on all entities related to the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -190,7 +190,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -245,11 +245,11 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.fromCollection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|objectCol |Collection|->|Collection of objects to be mapped with entities|
-|settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+|objectCol |Collection|->|Collection d'objets à mettre en correspondance avec des entités|
+|settings |Object|->|Option de construction : context|
+|Resultat|4D.EntitySelection|<-|Entity selection filled from the collection|
 </div>
 <!-- END REF -->
 
@@ -445,11 +445,11 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 <!-- REF #DataClassClass.get().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
-|settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
+|primaryKey |Integer OU Text|->|Valeur de la clé primaire de l'entité à récupérer|
+|settings |Object|->|Option de construction : context|
+|Resultat|4D.Entity|<-|Entity matching the designated primary key|
 </div>
 <!-- END REF -->
 
@@ -530,9 +530,9 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 <!-- REF #DataClassClass.getCount().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|
+|Paramètre|Type||Description|
+|---|---|---|
+|Résultat|Integer|<-|Number of entities in the dataclass|
 </div>
 <!-- END REF -->
 
@@ -572,9 +572,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
+|Resultat|cs.DataStore|<-|Datastore of the dataclass|
 </div>
 <!-- END REF -->
 
@@ -628,9 +628,9 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 <!-- REF #DataClassClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
+|Paramètre|Type||Description|
+|---|---|---|
+|Résultat|Object|<-|Information on the dataclass|
 </div>
 <!-- END REF -->
 
@@ -703,9 +703,9 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
+|Paramètre|Type||Description|
+|---|---|---|
+|Résultat|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
 </div>
 <!-- END REF -->
 
@@ -796,9 +796,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
+|Paramètre|Type||Description|
+|---|---|---|
+|Résultat|4D.Entity|<-|New entity matching the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -844,10 +844,10 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 <!-- REF #DataClassClass.newSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+|Paramètre|Type||Description|
+|---|---|---|
+|keepOrder |Integer |-> |`dk keep ordered` : crée une entity selection ordonnée,<br/>`dk non ordered` : crée une entity selection non ordonnée (par défaut si omis) |
+|Résultat|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
 </div>
 <!-- END REF -->
 
@@ -890,13 +890,13 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 <!-- REF #DataClassClass.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|queryString |Text |-> |Search criteria as string|
-|formula |Object |-> |Search criteria as formula object|
-|value|any|->|Value(s) to use for indexed placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+|Paramètre|Type||Description|
+|---|---|---|
+|queryString |Text |-> |Critères de recherche sous forme de chaîne|
+|formule |Object |-> |Critères de recherche sous forme d'objet formule|
+|value|any|->->Valeur(s) à utiliser pour le(s) placeholder(s) indexé(s)|
+|querySettings|Object|->|Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Résultat|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
 
@@ -1572,9 +1572,9 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
+|Paramètre|Type||Description|
+|---|---|---|
+|settings|Object|->|Objet qui définit le délai d'attente et la taille maximale du cache ORDA pour la dataclass.|
 </div>
 <!-- END REF -->
 

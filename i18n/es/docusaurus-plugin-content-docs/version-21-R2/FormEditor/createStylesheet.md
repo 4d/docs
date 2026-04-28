@@ -206,7 +206,7 @@ text[text|=Hello]
 
 ### Consultas de medios
 
-Las consultas de medios permiten aplicar estilos basados en condiciones específicas. 4D supports media queries for **color schemes** and **platform themes**.
+Las consultas de medios permiten aplicar estilos basados en condiciones específicas. 4D soporta media queries para **esquemas de color** y **temas de plataforma**.
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
@@ -246,27 +246,27 @@ Este CSS define una combinación de colores para el texto y el fondo del texto e
 ##### Ejemplo 2
 
 ```css
-/* Default style (all themes and modes) */
+/* Estilo por defecto (todos los temas y modos) */
 .textLabel {
     fontFamily: "Segoe UI";
 }
  
-/* Fluent UI theme*/
+/* Tema Fluent UI*/
 @media (form-theme: fluent-ui) {
     .textLabel {
         stroke: #2A2A2A;
         fontSize: 14px;
     }
  
-    /* dark mode */
-    @media (prefers-color-scheme: dark) {
+    /* modo oscuro */
+    @media (prefiere-esquema-de-color: oscuro) {
         .textLabel {
-            stroke: #E0E0E0;
+            trazo: #E0E0E0;
         }
     }
 }
  
-/* Windows classic theme */
+/* Tema clásico de Windows */
 @media (form-theme: win-classic) {
     .textLabel {
         stroke: #000000;
