@@ -16,17 +16,18 @@ La ejecución síncrona se utiliza cuando:
 - La ejecución de las tareas debe seguir un orden estricto.
 - El impacto en el rendimiento es mínimo (por ejemplo, operaciones rápidas).
 - Se ejecuta en un contexto de un solo hilo donde el bloqueo es aceptable.
-- La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para tareas rápidas y ordenadas en las que el bloqueo es aceptable.
+
+La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para tareas rápidas y ordenadas en las que el bloqueo es aceptable.
 
 #### Ejecución asíncrona
 
-La ejecución asincrónica es **event-driiven** y permite que otras operaciones se completen. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
+Asynchronous execution is **event-driven** and allows other operations to complete. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
 
 La ejecución asíncrona se utiliza cuando:
 
 - Una operación tarda mucho tiempo (por ejemplo, esperando una respuesta del servidor).
 - La capacidad de respuesta es fundamental (por ejemplo, las interacciones de la interfaz de usuario).
-- Realización de tareas en segundo plano, comunicación en red o procesamiento paralelo.
+- Background tasks, network communication, or parallel processing are performed.
 
 Elegir entre ejecución síncrona y asíncrona:
 
@@ -87,7 +88,7 @@ En 4D, todos los objetos son liberados [cuando no existen más referencias](../C
 
 Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. Esta referencia sólo se libera cuando finaliza la operación, es decir, después de que se active el evento `onTerminate`. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
 
-Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
+Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\\` así libera el objeto.
 
 ### Ejemplos que ilustran el concepto común
 
@@ -109,7 +110,7 @@ Varias clases 4D soportan el procesamiento asíncrono:
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 
-Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. Por ejemplo, puede crear una función `onResponse()` en la clase, que será llamada automáticamente de forma asíncrona cuando se dispare un evento *reponse*.
+Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
 
 Recomendamos la siguiente secuencia:
 

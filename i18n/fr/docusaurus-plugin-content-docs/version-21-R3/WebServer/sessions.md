@@ -29,7 +29,7 @@ Les applications Destkop (client/serveur et mono-utilisateur) fournissent égale
 Les sessions Web sont utilisées par :
 
 - les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
+- les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](https://developer.4d.com/qodly/).
 
 ## Activation des sessions web {#enabling-web-sessions}
 
@@ -69,7 +69,7 @@ Le nom du cookie peut être obtenu en utilisant la propriété [`.sessionCookieN
 
 :::note
 
-Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
+La création d'une session web pour une requête REST peut nécessiter qu'une licence soit disponible, consultez [cette page](../REST/authUsers.md).
 
 :::
 
@@ -221,7 +221,7 @@ Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et 
 
 :::info
 
-Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
+Les tokens de session peuvent également être créés à partir de [sessions utilisateur distantes](../Desktop/sessions.md) et partagés avec des sessions web pour mettre en œuvre des applications desktop qui utilisent des interfaces basées sur le web. Voir [Partager une session distante pour les accès web](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 
@@ -481,7 +481,7 @@ Un nouvel utilisateur est créé et des informations sont stockées dans la sess
 - Les schémas HTTP et HTTPS sont tous deux pris en charge.
 - Seules des [sessions évolutives](#enabling-web-sessions) peuvent être réutilisées avec des tokens.
 - Seules les sessions de la base de données hôte peuvent être réutilisées (les sessions créées dans les serveurs web des composants ne peuvent pas être restaurées).
-- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Les tokens peuvent être **partagés** avec des [sessions utilisateur distantes](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) pour les accès hybrides (desktop et web).
 
 ### Durée de vie
 

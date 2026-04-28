@@ -149,7 +149,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) (tous les styles sauf [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 ---
 

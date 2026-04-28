@@ -103,28 +103,29 @@ Pour plus d'informations sur l'insertion de formules, voir [WP INSERT FORMULA](.
 
 **Date**
 
-When the [**Current date**](../commands/current-date) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
+Lorsque la commande [**Current date**](../commands/current-date), une variable date ou une méthode renvoyant une date est insérée dans une formule, elle est automatiquement transformée en texte en utilisant le format date système court.
 
 **Time**
 
 Lorsque la commande [**Current time**](../commands/current-time), une variable temporelle ou une méthode retournant une heure est insérée dans une formule, elle doit être incluse dans une commande [**String**](../commands/string) car le type heure n'est pas pris en charge dans JSON. Examinez les exemples de formules suivants :
 
 ```4d
-  // This code is the best practice
+  // Bonne pratique
  $formula1:=Formula(String(Current time)) //OK 
  
-  // This code will work but is usually not recommended, except after "Edit formula"
+  // Fonctionnera mais n'est généralement pas recommandé, sauf après "Edit formula"
  $formula2:=Formula from string("String(Current time)") //OK
  
-  // Wrong code because time values would be displayed as a longint for seconds (or milliseconds), not as a time
- $formula3:=Formula from string("Current time") //NOT valid
- $formula4:=Formula(Current time) //NOT valid
+  // Code erroné car les valeurs de temps seraient affichées en tant que longint 
+  //pour des secondes (ou millisecondes), pas comme une heure
+ $formula3:=Formula from string("Current time") //NON valide
+ $formula4:=Formula(Current time) //NON valide
  
 ```
 
-## Support de la structure virtuelle
+## Prise en charge de la structure virtuelle
 
-Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) and [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*) commands.
+Les expressions de tables et de champs insérées dans les documents de 4D Write Pro prennent en charge la définition de structure virtuelle de la base de données. La structure virtuelle exposée aux formules est définie par les commandes [**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) et [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*).
 
 Quand une structure virtuelle est définie :
 
@@ -134,7 +135,7 @@ Quand une structure virtuelle est définie :
 
 :::note
 
-When a document is displayed in "display expressions" mode, references to tables or fields that do not belong to the virtual structure are displayed with "`?`" characters, for example `[VirtualTableName]?` when the field is not defined in the virtual structure.
+Lorsqu'un document est affiché en mode "afficher expressions", les références de tables ou de champs qui n'appartiennent pas à la structure virtuelle sont affichées avec les caractères "`?`", par exemple `[VirtualTableName]?` lorsque le champ n'est pas défini dans la structure virtuelle.
 
 :::
 
@@ -147,23 +148,23 @@ Vous pouvez contrôler comment les formules sont affichées dans vos documents :
 
 ### Références ou valeurs
 
-Par défaut, les formules 4D sont affichées sous forme de valeurs. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
+Par défaut, les formules 4D sont affichées sous forme de valeurs. Lorsque vous insérez une formule 4D, 4D Write Pro calcule et affiche sa valeur courante.  Si vous voulez savoir quelle formule est utilisée ou quel est son nom, vous devez l'afficher comme référence.
 
 Pour afficher les formules en tant que références, vous pouvez:
 
-- check the **Show references** option in the Property list (see *Configuring View properties*), or
-- use the visibleReferences standard action (see *Dynamic expressions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk visible references` selector to **True**.
+- cocher l'option **Afficher les références** dans la liste des propriétés (voir *Configuration des propriétés de vue*), ou
+- utiliser l'action standard visibleReferences (voir *Expressions dynamiques*), ou
+- utiliser la commande [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) avec le sélecteur `wk visible references` à **True**.
 
 Les références de formule peuvent être affichées en tant que :
 
 - textes sources (par défaut)
-- symbols
-- names
+- symboles
+- noms
 
-### References as source texts (default)
+### Références en textes sources (par défaut)
 
-When formulas are displayed as references, by default the source text of the formula appear in your document, with a default gray background (can be customized using the `wk formula highlight` selector).
+Lorsque les formules sont affichées en tant que références, le texte source de la formule apparaît par défaut dans votre document, avec un arrière-plan gris (qui peut être personnalisé à l'aide du sélecteur `wk formula highlight`).
 
 Par exemple, vous avez inséré la date courante avec un format, la date s'affiche :
 
@@ -173,25 +174,25 @@ Lorsque vous affichez les formules comme références, la **source** de la formu
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-### Les références comme symboles
+### Références en symboles
 
-When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
+Lorsque les textes sources des formules sont affichés dans un document, le rendu peut être confus si vous travaillez sur des modèles sophistiqués utilisant des tableaux, par exemple, et si les formules sont complexes :
 
 ![](../assets/en/WritePro/wp-formulas3.png)
 
-In this case, you can display formula references as ![](../assets/en/WritePro/wp-formulas.png) symbols, so that the document is more compact:
+Dans ce cas, vous pouvez afficher les références des formules sous forme de symboles ![](../assets/en/WritePro/wp-formulas.png), afin de rendre le document plus compact :
 
 ![](../assets/en/WritePro/wp-formulas4.png)
 
-Pour afficher les références de formules en tant que symboles, vous pouvez:
+Pour afficher les références de formules en tant que symboles, vous pouvez :
 
-- check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
-- use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
+- cocher l'option **Afficher la source de la formule comme symbole** dans la liste des propriétés (voir *Configuration des propriétés de vue*), ou
+- utiliser l'action standard displayFormulaAsSymbol (voir *Utilisation des actions standard de 4D Write Pro*), ou
+- utiliser la commande [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) avec le sélecteur `wk display formula as symbol` sur **True**.
 
-### References as names
+### Références en noms
 
-You can assign names to formulas, making 4D Write Pro template documents easier to read and understand for end-users. When formulas are displayed as references (and not displayed as symbols) and you have defined a name for a formula, the formula name is displayed.
+Vous pouvez attribuer des noms aux formules, ce qui rend les modèles de documents de 4D Write Pro plus faciles à lire et à comprendre pour les utilisateurs. Lorsque les formules sont affichées comme des références (et non comme des symboles) et que vous avez défini un nom pour une formule, le nom de la formule est affiché.
 
 Par exemple, les références de formule suivantes sont affichées comme texte source par défaut :
 
@@ -204,7 +205,7 @@ Si vous attribuez des noms de formule, ils sont affichés à la place des textes
 Pour attribuer un nom à une formule, vous devez utiliser la commande [WP Insert formula](commands/wp-insert-formula.md) avec un paramètre objet. Par exemple :
 
 ```4d
-  //inserts the previous day in the document
+  //insère le jour précédent dans le document
  $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP INSERT FORMULA($range;$o;wk append)
@@ -215,31 +216,31 @@ Pour attribuer un nom à une formule, vous devez utiliser la commande [WP Insert
 
 :::note
 
-Only inline formulas can have a name (formulas for anchored images, break rows, and table datasource formulas cannot have names).
+Seules les formules en ligne peuvent avoir un nom (les formules pour les images ancrées, les ruptures et les formules de source de données de tableau ne peuvent pas avoir de nom).
 
 :::
 
-### Formula tips
+### Infobulles des formules
 
-Whatever the formula display mode, you can get additional information on formulas through **tips** that are displayed when you hover on formulas.
+Quel que soit le mode d'affichage des formule, vous pouvez obtenir des informations supplémentaires sur une formule grâce aux **infobulles** qui s'affichent lorsque vous passez la souris sur la formule.
 
-- When formulas do not have names, tips provide the source text of formulas:
+- Lorsque les formules n'ont pas de nom, les infobulles fournissent le texte source des formules :
 
   ![](../assets/en/WritePro/wp-formulas7.png)
 
-- When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
+- Lorsque les formules ont des noms mais sont affichées sous forme de valeurs ou de symboles, l'infobulle fournit le nom des formules :
 
   ![](../assets/en/WritePro/wp-formulas8.png)
 
-In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
+Dans ce contexte, vous pouvez afficher le texte source de la formule en appuyant sur **Ctrl** (Windows) ou **Cmd** (macOS) tout en survolant la formule.
 
-- When formulas have names and are displayed as names, no tip is displayed by default.
-  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
+- Lorsque les formules ont des noms et sont affichées sous forme de noms, aucune infobulle n'est affichée par défaut.
+  Vous pouvez afficher le texte source de la formule en appuyant sur **Ctrl** (Windows) ou **Cmd** (macOS) tout en survolant la formule :
   [
   ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### Voir également
 
-[Download HDI database](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
-*Using commands from the Styled Text theme*
+[Télécharger le HDI](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
+*Utilisation des commandes du thème Styled Text*
 

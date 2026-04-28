@@ -30,10 +30,10 @@ L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourci
 
 Une list box est composée de quatre parties distinctes :
 
-*   the [list box object](./listbox-object.md) in its entirety,
-*   [columns](./listbox-column.md),
-*   column [headers](./listbox-header-footer.md#headers), and
-*   column [footers](./listbox-header-footer.md#footers).
+*   l'objet [ List box](./listbox-object.md) dans son intégralité,
+*   [colonnes](./listbox-column.md),
+*   [en-têtes](./listbox-header-footer.md#headers) de colonnes, et
+*   [pieds](./listbox-header-footer.md#footers) de colonnes.
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
@@ -44,7 +44,7 @@ Il est possible d'ajouter une méthode objet à l'objet list box et/ou à chaque
 1. Méthode objet de chaque colonne
 2. Méthode objet de la list box
 
-The column object method gets events that occur in its [header](./listbox-header-footer.md#headers) and [footer](./listbox-header-footer.md#footers).
+La méthode objet de colonne obtient les événements qui se produisent dans son [en-tête](./listbox-header-footer.md#headers) et son [pied](./listbox-header-footer.md#footers).
 
 ### Types de list box
 
@@ -59,7 +59,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Pour plus d'informations, reportez-vous à la page [Récapitulatif des commandes List Box](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) dans la *référence du langage 4D*.
 
 
 ## Gestion de la saisie
@@ -302,8 +302,8 @@ Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de 
 
 Vous disposez de plusieurs possibilités pour définir des couleurs de fond, des couleurs de police et des styles de police dans les list box :
 
-* at the level of the [list box object properties](./listbox-object.md),
-* at the level of the [column properties](./listbox-column.md),
+* au niveau des [propriétés de l’objet list box](./listbox-object.md),
+* au niveau des [propriétés de la colonne,](./listbox-column.md),
 * en utilisant des [tableaux ou expressions](#using-arrays-and-expressions) pour la list box et/ou pour chaque colonne,
 * au niveau du texte de chaque cellule (si [texte multistyle](properties_Text.md#multi-style)).
 

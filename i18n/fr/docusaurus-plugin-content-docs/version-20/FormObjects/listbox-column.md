@@ -17,7 +17,7 @@ Vous pouvez définir des propriétés standard (texte, couleur de fond, etc.) po
 
 ## Événements formulaire pris en charge
 
-| Evénement formulaire | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv20/4D/20.6/FORM-Event.301-7487450.en.html) for main properties)                                                                                                                                      | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires retournées (voir [événement de formulaire](https://doc.4d.com/4Dv20/4D/20.6/FORM-Event.301-7487450.en.html) pour les propriétés principales)                                                                                                     | Commentaires                                                                                                                                                                       |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](./listbox-object#additional-properties)</li><li>[columnName](./listbox-object#additional-properties)</li><li>[row](./listbox-object#additional-properties)</li>                                                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](./listbox-object#additional-properties)</li><li>[columnName](./listbox-object#additional-properties)</li><li>[row](./listbox-object#additional-properties)</li>                                                                                                                   |                                                                                                                                                                                    |
@@ -52,7 +52,7 @@ La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ### Configurer une colonne tableau d'objets
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-INSERT-COLUMN.301-7487606.en.html) command, like with any array-based column. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
+Pour attribuer un tableau d'objets à une colonne de liste déroulante, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Variable Name"), soit à l'aide de la commande [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-INSERT-COLUMN.301-7487606.en.html), comme pour toute colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -83,7 +83,7 @@ ARRAY OBJECT(obColumn;0) // tableau de colonnes
 Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage, la saisie et l'édition des cellules sont basées sur l'attribut valueType présent dans chaque élément du tableau. Les valeurs valueType prises en charge sont les suivantes :
 
 - "text" : pour une valeur texte
-- "real": for a numeric value that can include separators like a `\<space>`, <.>, or <,>
+- "real" : pour une valeur numérique pouvant contenir des séparateurs tels que `\<space>`, <.> ou <,>
 - "integer" : pour une valeur entière
 - "boolean" : pour une valeur True/False
 - "color" : pour définir une couleur de fond
@@ -153,7 +153,7 @@ La valeur des cellules est stockée dans l'attribut "value". Cet attribut est ut
  C_OBJECT($ob1)
  $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) //si l'utilisateur saisit une nouvelle valeur, $entry contiendra la valeur modifiée
  C_OBJECT($ob2)
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -290,7 +290,7 @@ Exemples :
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
  OB SET($ob;"saveAs";"reference")
- OB SET($ob;"value";2) //displays London by default
+ OB SET($ob;"value";2) //affiche Londres par défaut
  OB SET($ob;"requiredListReference";<>List)
 ```
 

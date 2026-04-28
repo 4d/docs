@@ -76,7 +76,7 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Path|Text|->|Chemin d'accès au fichier|
+|path|Text|->|Chemin d'accès au fichier|
 |fileConstant|Integer|->|Constante de fichier 4D|
 |pathType|Integer|->|`fk posix path` (défaut) ou `fk platform path`
 |*||->|* pour retourner le fichier de la base hôte|

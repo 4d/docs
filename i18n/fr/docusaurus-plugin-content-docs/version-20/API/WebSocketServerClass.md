@@ -115,7 +115,7 @@ Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|[WSSHandler](#wsshandler-parameter)|Object|->|Objet de la user class déclarant les callbacks du serveur WebSocket|
+|[WSSHandler](#wsshandler-parameter)|Object|->|Objet de la classe utilisateur déclarant les callbacks du serveur WebSocket|
 |[options](#options-parameter)|Object|->|Paramètres de configuration WebSocket|
 |Résultat|4D.WebSocketServer|<-|New WebSocketServer object|
 </div>

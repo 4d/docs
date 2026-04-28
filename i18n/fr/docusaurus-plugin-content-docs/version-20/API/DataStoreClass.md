@@ -736,7 +736,7 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Résultat|Booléen|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+|Résultat|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
 </div>
 <!-- END REF -->
 

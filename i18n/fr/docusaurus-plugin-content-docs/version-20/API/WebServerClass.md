@@ -75,7 +75,7 @@ Leurs propriétés et fonctions sont les suivantes :
 
 |Paramètre|Type||Description|
 |---|---|----|---|
-|option|Integer|->|Serveur Web à utiliser (par défaut si non spécifié = `Base de données du serveur Web`)|  
+|option|Integer|->|Serveur Web à utiliser (par défaut si non spécifié = `Web server database`)|  
 |Résultat|4D.WebServer|<-|Web server object|
 </div>
 <!-- END REF -->
@@ -650,7 +650,7 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
+La <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
 
 | Constante           | Valeur   | Description                                                                                                                               |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
