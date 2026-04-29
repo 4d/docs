@@ -33,7 +33,7 @@ export default function RedirectAPI() {
 
               let versionToGo = ""
               //Match version
-              for (let i = 0; i < versions.length; i++) {
+              for (let i = 1; i < versions.length; i++) { // start at one to skip first version
                 const version = versions[i].replace('-','');
                 if(version === versionWanted) {
                   versionToGo = versions[i] + "/"
