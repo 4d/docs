@@ -203,6 +203,7 @@ Aller dans l'interface Algolia et lancer un reindex de la doc
 3. faire git rebase upstream/main -X ours (remettre tout dans Tempo et en cas de conflit prendre la preprod)
 4. git push (fait une PR auto et pas de conflit)
 
+5. En cas de conflits résolus: sur la preprod sur github, cliquer sur **Sync Fork**.
 
 ## Building new architecture for sorted themes
 ### Edit the sidebars.js file
