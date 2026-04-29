@@ -5,7 +5,7 @@ slug: /commands/imap-new-transporter
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #_command_.IMAP New transporter.Params -->
 
