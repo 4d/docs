@@ -251,9 +251,9 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-:::warning Note importante thread-safety
+:::warning Attention thread-safety
 
-Si une fonction de classe n'est pas thread-safe et qu'elle est appelée par une méthode avec l'attribut "Peut être exécutée dans un process preémptif" :
+Si une fonction de classe n'est pas thread-safe et qu'elle est appelée par une méthode ayant l'attribut "Peut être exécutée dans un process préemptif" :
 
 - le compilateur ne génère pas d'erreur (ce qui est différent par rapport aux méthodes standard),
 - une erreur est déclenchée par 4D uniquement au moment de l'exécution.
@@ -276,7 +276,7 @@ Si le type n'est pas fourni, le paramètre sera défini comme `Variant`.
 
 #### Valeur retournée
 
-Vous déclarez le paramètre de retour d'une fonction (optionnel) en ajoutant une flèche (`->`) et la définition du paramètre de retour après la liste des paramètres d'entrée, ou les deux points (`:`) et le tye de paramètre de retour uniquement. Par exemple :
+Vous déclarez le paramètre de retour d'une fonction (optionnel) en ajoutant une flèche (`->`) et la définition du paramètre de retour après la liste des paramètres d'entrée, ou les deux points (`:`) et le type de paramètre de retour uniquement. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -383,7 +383,7 @@ $o:=cs.MyClass.new("John";42)
 // $o = {"name" : "John" ; "age":42}
 ```
 
-### `propriété`
+### `property`
 
 #### Syntaxe
 
@@ -751,7 +751,7 @@ Les singletons sont utiles pour définir des valeurs qui doivent être disponibl
 
 - un **singleton process** a une instance unique pour le process dans lequel il est instancié,
 - un **singleton partagé** a une instance unique pour tous les process sur la machine.
-- une **singleton session** est un singleton partagé, mais avec une instance unique pour tous les process de la [session](../API/SessionClass.md). Les singletons de session sont partagés au sein d'une session entière mais varient d'une session à l'autre. Dans le contexte d'un client-serveur ou d'une application web, les singletons de session permettent de créer et d'utiliser une instance différente pour chaque session, et donc pour chaque utilisateur. Les singletons de session sont particulièrement appropriés pour les [applications Qodly](https://developer.4d.com/qodly/).
+- un **singleton session** est un singleton partagé, mais avec une instance unique pour tous les process de la [session](../API/SessionClass.md). Les singletons de session sont partagés au sein d'une même session mais varient d'une session à l'autre. Dans le contexte d'une application client-serveur ou web, les singletons de session permettent de créer et d'utiliser une instance différente pour chaque session, et donc pour chaque utilisateur. Les singletons de session sont particulièrement appropriés pour les [applications Qodly](https://developer.4d.com/qodly/).
 
 :::info
 
@@ -794,7 +794,7 @@ La propriété [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) 
 
 ### Fonctions singleton exposées
 
-Les fonctions singleton partagées et de session prennent en charge le mot-clé [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). Une fonction singleton exposée peut être directement appelée par des requêtes REST. Cette fonction est utile pour la conception de [pages Qodly appelant des fonctions 4D](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
+Les fonctions singleton partagées et de session prennent en charge le mot-clé [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). Une fonction singleton exposée peut être directement appelée par des requêtes REST. Cette fonctionnalié est utile pour la conception de [pages Qodly appelant des fonctions 4D](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
 
 ### Exemples
 

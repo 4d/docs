@@ -42,3 +42,64 @@ slug: /commands/theme/XML-DOM
 | [<!-- INCLUDE #_command_.DOM SET XML DECLARATION.Syntax -->](../../commands/dom-set-xml-declaration)<br/>                           |
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT NAME.Syntax -->](../../commands/dom-set-xml-element-name)<br/>                         |
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT VALUE.Syntax -->](../../commands/dom-set-xml-element-value)<br/>                       |
+
+## Overview of XML DOM Commands
+
+See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definition of XML DOM.
+
+### Creating, opening and closing XML documents via DOM
+
+Objects created, modified or parsed by the 4D DOM commands can be text, URLs, documents or BLOBs. The DOM commands used for opening XML objects in 4D are [`DOM Parse XML source`](../../commands/dom-parse-xml-source) and [`DOM Parse XML variable`](../../commands/dom-parse-xml-variable).
+
+Many commands then let you read, parse and write the elements and attributes. Errors are recovered using the [`XML GET ERROR`](../../commands/xml-get-error) command. Do not forget to call the [`DOM CLOSE XML`](../../commands/dom-close-xml) command to close the source in the end.
+
+Note about use of XML BLOB parameters: For historical reasons, XML commands such as [`DOM Parse XML variable`](../../commands/dom-parse-xml-variable) accept BLOB type parameters. However, it is highly recommended to store XML structures as Text. The use of BLOBs is reserved for processing binary data. In conformity with XML specifications, binary data are automatically encoded in Base64, even when the BLOB contains text.
+
+### Support of XPath notation
+
+Several XML DOM commands ([`DOM Create XML element`](../../commands/dom-create-xml-element), [`DOM Find XML element`](../../commands/dom-find-xml-element), [`DOM Create XML element arrays`](../../commands/dom-create-xml-element-arrays) and [`DOM SET XML ELEMENT VALUE`](../../commands/dom-set-xml-element-value)) support some XPath expressions for accessing XML elements.
+
+XPath notation comes from the XPath language, designed to navigate within XML structures. It allows the setting of elements directly within an XML structure via a "pathname" type syntax, without necessarily having to indicate the complete pathname in order to reach it.
+
+For example, given the following structure:
+
+```xml
+   <RootElement>
+      <Elem1>
+         <Elem2>
+            <Elem3 Font=Verdana Size=10> </Elem3>
+         </Elem2>
+      </Elem1>
+   </RootElement>
+```
+
+XPath notation allows you to access element 3 using the */RootElement/Elem1/Elem2/Elem3* syntax.
+
+4D also accepts indexed XPath elements using the *Element[ElementNum]* syntax. For example, given the following structure:
+
+```xml
+   <RootElement>
+      <Elem1>
+         <Elem2>aaa</Elem2>
+         <Elem2>bbb</Elem2>
+         <Elem2>ccc</Elem2>
+      </Elem1>
+   </RootElement>
+```
+
+XPath notation allows you to access the "ccc" value using the */RootElement/Elem1/Elem2[3]* syntax.
+
+For a comprehensive list of supported XPath expressions, refer to the [`DOM Find XML element`](../../commands/dom-find-xml-element) command description.
+
+:::note 互換性
+
+Starting with 4D 18 R3, the XPath implementation has been modified to be more compliant and to support a wider set of expressions. If you want to benefit from the extended features in your converted databases, you need to select the **Use standard XPath** option of the [Compatibility page](../../settings/compatibility.md).
+
+:::
+
+### Error Handling
+
+Many functions in this theme return an XML element reference. If an error occurs during function execution (for example, if the root element reference is not valid), the *OK* variable is set to 0 and an error is generated.
+
+In addition, the reference returned in this case is a sequence of 32 zero "0" characters.
+

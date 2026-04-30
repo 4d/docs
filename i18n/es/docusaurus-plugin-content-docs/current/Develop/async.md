@@ -64,7 +64,7 @@ El proceso llamante envía un mensaje y el worker lo ejecuta. El worker puede pu
 
 ### Escucha de eventos
 
-En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. Por ejemplo, cuando se muestra un formulario utilizando el comando `DIALOG`, las acciones del usuario pueden desencadenar eventos que su código puede procesar. Al hacer clic en un botón se activará el código asociado al botón.
+En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. For example, when a form is displayed using the [`DIALOG`](../commands/dialog) command, user actions can trigger events that your code can process. Al hacer clic en un botón se activará el código asociado al botón.
 
 En el contexto de la ejecución asíncrona, las siguientes funcionalidades colocan su código en modo de escucha:
 

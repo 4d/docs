@@ -21,7 +21,7 @@ Instead of hard-coding API endpoints and credentials in your code, you can:
 
 The client automatically loads provider configurations from the first existing file found (in priority order):
 
-| Prioridad                          | Ubicación | File Path                                         |
+| Prioridad                          | Ubicación | Ruta del archivo                                  |
 | ---------------------------------- | --------- | ------------------------------------------------- |
 | 1 (el mayor)    | userData  | `<data folder>/Settings/AIProviders.json`         |
 | 2                                  | user      | `<project root folder>/Settings/AIProviders.json` |
