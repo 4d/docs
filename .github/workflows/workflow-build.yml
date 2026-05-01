@@ -56,7 +56,7 @@ jobs:
           cd build
           echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
       - name: Fix version-dropdown links
-        uses: 4d/doc_postprocessing@v1
+        uses: doc4d/doc_postprocessing@v1
         with:
           path: ./build
       - uses: actions/upload-artifact@v4
