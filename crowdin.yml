@@ -1,6 +1,4 @@
 commit_message: "New Crowdin updates"
-squash_commits: true
-
 files:
   - source: /docs/**/*
     ignore:
