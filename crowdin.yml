@@ -1,4 +1,4 @@
-commit_message: "New Crowdin updates"
+commit_message: New Crowdin updates
 files:
   - source: /docs/**/*
     ignore:
