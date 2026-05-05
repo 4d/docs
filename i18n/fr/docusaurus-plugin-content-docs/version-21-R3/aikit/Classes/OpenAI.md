@@ -78,6 +78,6 @@ $client.files.create(...)
 $client.model.lists(...)
 ```
 
-## Provider Model Aliases
+## Alias de modèles de fournisseurs
 
-The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
+Le client OpenAI prend en charge les alias de modèles de fournisseurs pour faciliter l'utilisation de plusieurs fournisseurs. Voir [Alias de modèles de fournisseurs](../provider-model-aliases.md) pour une documentation complète.

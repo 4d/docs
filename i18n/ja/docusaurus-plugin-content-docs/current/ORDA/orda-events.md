@@ -48,7 +48,7 @@ title: エンティティイベント
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずローカルで実行されます。
 
 :::
 
@@ -58,7 +58,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always 
 
 以下の表は、ORDA イベントの一覧とそのルールをまとめたものです。
 
-| イベント                                  | レベル    | 関数名                                                     |        (C/S) Execution        | エラーを返すことでアクションを停止できる |
+| イベント                                  | レベル    | 関数名                                                     |       (C/S の場合) 実行される場所       | エラーを返すことでアクションを停止できる |
 | :------------------------------------ | :----- | :------------------------------------------------------ | :----------------------------------------------: | -------------------- |
 | エンティティのインスタンス化                        | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                       ローカル                       | ×                    |
 | 属性がタッチされた                             | 属性     | `event touched <attrName>()`                            | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |

@@ -66,6 +66,47 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 }
 ```
 
+## Printing forms
+
+In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
+
+### Print rendering engine
+
+4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+
+- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
+- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
+- The same output is produced, whether the form is printed from macOS or Windows.
+
+For example, the following form:
+
+![](../assets/en/FormEditor/screen_rendering.png)
+
+... will be printed with this rendering:
+
+![](../assets/en/FormEditor/print_rendering.png)
+
+:::tip Entrada de blog relacionada
+
+[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+
+:::
+
+### Legacy print renderer
+
+In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+
+You can however enable the modern print rendering engine at any moment by:
+
+- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
+- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+
+:::warning Limitación
+
+For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+
+:::
+
 ## Formulario proyecto y formulario tabla
 
 Hay dos categorías de formularios:
@@ -78,7 +119,7 @@ Normalmente, se selecciona la categoría del formulario al crearlo, pero se pued
 
 ## Páginas formulario
 
-Cada formulario consta de al menos dos páginas:
+Each form is made of at least two pages:
 
 - una página 1: una página principal, mostrada por defecto
 - una página 0: una página de fondo, cuyo contenido se muestra en todas las demás páginas.

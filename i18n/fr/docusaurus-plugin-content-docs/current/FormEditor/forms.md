@@ -71,8 +71,8 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
 
 - used in its own window for data viewing, processing, editing, or to display on-screen information to the user,
-- used as template for printing,
 - used embedded in another form (subform),
+- used as template for printing,
 - or called by specific features like the Label editor.
 
 ### Using a project form in a window
@@ -147,6 +147,10 @@ In the same way that you pass an object to a form with the [`DIALOG`](../command
 
 ### Using forms to be printed
 
+In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
+
+#### Exemples
+
 You can use forms to print data, either as page or as list.
 
 - To simply print some part of a form, use the [`Print form`](../commands/print-form) command. Par exemple :
@@ -184,6 +188,43 @@ var $h:=Print form("Request_var";$formData;Form detail)
  CLOSE PRINTING JOB
 ```
 
+#### Print rendering engine
+
+4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+
+- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
+- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
+- The same output is produced, whether the form is printed from macOS or Windows.
+
+For example, the following form:
+
+![](../assets/en/FormEditor/screen_rendering.png)
+
+... will be printed with this rendering:
+
+![](../assets/en/FormEditor/print_rendering.png)
+
+:::tip Article(s) de blog sur le sujet
+
+[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+
+:::
+
+#### Legacy print renderer
+
+In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+
+You can however enable the modern print rendering engine at any moment by:
+
+- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
+- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+
+:::warning Limitation
+
+For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+
+:::
+
 ### Other form usages
 
 There are several other ways to use forms in the 4D applications, including:
@@ -204,7 +245,7 @@ En règle générale, vous sélectionnez la catégorie de formulaire lorsque vou
 
 ## Pages formulaire
 
-Chaque formulaire est composé d'au moins deux pages :
+Each form is made of at least two pages:
 
 - une page 1 : une page principale, affichée par défaut
 - une page 0 : une page de fond, dont le contenu est affiché sur une page sur deux.
