@@ -876,7 +876,7 @@ La valeur résultante est comprise entre 0 et la longueur de l'entity selection 
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Résultat|Booléen|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+|Résultat|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
 </div>
 <!-- END REF -->
 
@@ -1662,7 +1662,7 @@ Retourne :
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Résultat|Booléen|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+|Résultat|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
 </div>
 <!-- END REF -->
 
