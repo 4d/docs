@@ -406,3 +406,7 @@ Translate commit (apply + commit) — pour appliquer et committer
 | 164 (¤) | a_contient_keyword |
 | default | (assert) |
 
+## Fix pour le switch de version entre 21.x et 21 R+ (changement de structure)
+un swizzle :
+https://github.com/doc4d/docs/commit/c20dca17cde1993756ceb632253e0b8144ed7529
+
