@@ -17,7 +17,7 @@ to import
 
 They can be created using: 
 * the toolbar or sidebar of the [4D Write Pro interface](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-* the `listStyleType` or `listStyleImage` [standard actions](./standard-actions.md) , 
+* the `listStyleType` or `listStyleImage` [standard actions](../user-legacy/standard-actions.md) , 
 * or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](./commands/wp-set-attributes). 
 
 When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`). 
