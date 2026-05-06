@@ -40,3 +40,80 @@ slug: /commands/theme/System-Documents
 | [<!-- INCLUDE #_command_.TEXT TO DOCUMENT.Syntax -->](../../commands/text-to-document)<br/>                         |
 | [<!-- INCLUDE #_command_.VOLUME ATTRIBUTES.Syntax -->](../../commands/volume-attributes)<br/>                       |
 | [<!-- INCLUDE #_command_.VOLUME LIST.Syntax -->](../../commands/volume-list)<br/>                                   |
+
+:::info Compatibilité
+
+Legacy commands from this theme can usually be usefully replaced by commands of the [*File and Folder*](./File_and_Folder.md) theme and their associated [File](../../API/FileClass.md), [Folder](../../API/FolderClass.md), [ZipFile](../../API/ZipFileClass.md) and [ZipFolder](../../API/ZipFolderClass.md) classes, allowing you to handle files and folders as objects.
+
+:::
+
+## Document reference number
+
+You open a document with the [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) and [`Append document`](../../commands/append-document) commands. Once a document is open, you can read and write characters from and to the document using commands such as [`RECEIVE PACKET`](../../commands/receive-packet) and [`SEND PACKET`](../../commands/send-packet). When you are finished with the document, you usually close it using the `CLOSE DOCUMENT` command.
+
+All open documents returned by these commands are referred to using a **document reference number** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. All commands working with open documents expect *DocRef* as a parameter. If you pass an incorrect *DocRef* to one of these commands, a file manager error occurs.
+
+A document can be opened in **read/write** mode by only one process at a time. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
+
+:::note
+
+When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. When it is called from a cooperative process, a *DocRef* reference can be used from any other cooperative process.
+
+:::
+
+## The Document system variable
+
+`Open document`, `Create document`, `Append document` and `Select document` enable you to access a document using the standard Open or Save file dialog boxes. When you access a document through a standard dialog, 4D returns the full pathname of the document in the [`Document` system variable](../../Concepts/variables.md#system-variables). This system variable has to be distinguished from the *document* parameter that appears in the parameter list of the commands.
+
+## Absolute or relative pathname
+
+Most of the routines of this section accept document names, relative pathnames or absolute pathnames:
+
+Relative pathnames define a location with respect to a folder located on disk. Passing only a document name is considered as using a relative pathname. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Relative pathnames are especially useful when deploying applications in heterogenous environments.
+Absolute pathnames define a location with respect to the root of the volume and so they do not depend on the current location of the database folder.
+To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
+
+Windows  
+If the parameter contains only two characters and if the second one is a ':',
+or if the text contains ':' and '\' as the second and third character,
+or if the text starts with "\\",
+then the pathname is absolute.
+
+In all other cases, the pathname is relative.
+
+Examples with the CREATE FOLDER command:
+
+CREATE FOLDER("lundi") // relative path
+CREATE FOLDER("\Monday") // relative path
+CREATE FOLDER("\Monday\Tuesday") // relative path
+CREATE FOLDER("c:") // absolute path
+CREATE FOLDER("d:\Monday") // absolute path
+CREATE FOLDER("\\srv-Internal\temp") // absolute path
+
+macOS  
+If the text starts with a folder separator ':',
+or if does not contain any,
+then the path is relative.
+
+In all other cases, it is absolute.
+
+Examples with the CREATE FOLDER command:
+
+CREATE FOLDER("Monday") // relative path
+CREATE FOLDER("macintosh hd:") // absolute path
+CREATE FOLDER("Monday:Tuesday") // absolute path (a volume must be called Monday)
+CREATE FOLDER(":Monday:Tuesday") // relative path
+
+:::note
+
+See also [**Absolute and relative pathnames** in the Concepts section](../../Concepts/paths.md#absolute-and-relative-pathnames).
+
+:::
+
+## Extracting pathname contents
+
+You can handle pathname contents using the Path to object and Object to path commands. In particular, using these commands, you can extract from a pathname:
+
+a file name,
+the parent folder path,
+the file or folder extension.

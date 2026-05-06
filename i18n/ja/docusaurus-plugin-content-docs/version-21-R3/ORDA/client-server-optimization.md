@@ -143,13 +143,13 @@ title: クライアント/サーバーの最適化
 
 ### `local` キーワードの使用
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+デフォルトで、[ORDA データモデル関数](../ORDA/ordaClasses.md) はサーバー上で実行されます。これは関数リクエストと結果のみがネットワーク越しで送信されるため、一般的にはベストパフォーマンスを提供するとされています。 しかしながら、関数がローカルキャッシュ内に既にあるデータを処理するために、クライアント側だけで完全に完結可能な場合もあります。 この場合、[関数定義内で `local` キーワードを使用する](../Concepts/classes.md#local) ことによって、サーバーへのリクエスト回数をおさえ、結果としてアプリケーションのパフォーマンスを改善することができます。
 
 最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 たとえば、Schools Entityクラスの次の関数を考えます:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// 最も若い生徒を取得する
+// local キーワードの不適切な使用例
 local Function getYoungest() : Object
     return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
@@ -157,7 +157,7 @@ local Function getYoungest() : Object
 - `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
 - `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
 
-#### Example: Checking attributes
+#### 例: 属性のチェック
 
 クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
 

@@ -1237,7 +1237,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Résultat|Booléen|<-|True if the entity selection is alterable, False otherwise|
+|Résultat|Boolean|<-|True if the entity selection is alterable, False otherwise|
 </div>
 <!-- END REF -->
 
@@ -1282,7 +1282,7 @@ Form.products.add(Form.product)
 
 |Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|Résultat|Booléen|<-|True if the entity selection is ordered, False otherwise|
+|Résultat|Boolean|<-|True if the entity selection is ordered, False otherwise|
 </div>
 <!-- END REF -->
 

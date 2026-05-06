@@ -161,7 +161,7 @@ Estos son los caracteres codificados:
 | \< | %3C      |
 | \>                          | %3E      |
 | ?                            | %3F      |
-| \\|                         | %7C      |
+| \|                           | %7C      |
 | \\                         | %5C      |
 | %                            | %25      |
 

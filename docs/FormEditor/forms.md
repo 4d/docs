@@ -67,6 +67,185 @@ You can add or modify 4D forms using the following elements:
 }
 ```
 
+
+## Using forms
+
+Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
+
+- used in its own window for data viewing, processing, editing, or to display on-screen information to the user,
+- used embedded in another form (subform),
+- used as template for printing,
+- or called by specific features like the Label editor. 
+
+
+### Using a project form in a window
+
+When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
+
+1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draw aan empty window, it does not display anything.
+2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in listening mode to user events. When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs (see also ["Event listening" paragraph](../Develop/async.md#event-listening)).
+3. (optional) Use the [`Form`](../commands/form) command from within the form context to access form data. 
+
+
+::note Compatibility
+
+All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY RECORD`](../commands/add-record) merge all steps in a single call. These legacy commands can still be used for prototyping or basic developments but are not adapted to modern, fully controlled interfaces. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces. 
+
+:::
+
+
+#### Simple example
+
+You create the following basic form in the [Form editor](./formEditor.md):
+
+![](../assets/en/FormEditor/example-form-1.png)
+
+The form is [associated with a "myForm" class](./properties_FormProperties.md#form-class), defined as follow:
+
+```4d
+    //cs.myForm
+property name : Text
+property age : Integer
+
+Class constructor
+  This.name:=""
+  This.age:=0
+```
+
+The form class is automatically instantiated by 4D once the form is loaded. If you execute the following project method:
+
+```4d
+    // Instantiate a form object that will host form data and UI logic
+var $formObject:=cs.myForm.new()
+
+    //Prepare default value within the form object
+$formObject.name:="Smith"
+$formObject.age:=42
+
+    // Create an empty window with ad-hoc settings that fits the desired form dimensions, resizing properties,
+    // and window type (this does not render the form)
+var $win:=Open form window("myForm"; Movable form dialog box; Horizontally centered; Vertically centered)
+
+    //Render the form, and provide $formObject's data. Dialog also activates the form event loop
+DIALOG("myForm"; $formObject)
+
+    //Without asterisk to Dialog statement, the form waits for a closing action from the user 
+    //before executing the rest of the code. Calling Close window is just a good practice 
+CLOSE WINDOW($win) //releases reference
+
+    //Display data modified by the user, if any/
+ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
+
+```
+
+4D displays:
+
+![](../assets/en/FormEditor/example-form-2.png)
+
+
+### Using forms as subforms
+
+A form can be embedded within another form, in which case it becomes a [subform object](../FormObjects/subform_overview.md) which follows specific rules. A subform is automatically used when its parent form is [displayed in a window](#using-a-project-form-in-a-window).
+
+In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. Then, you can use it in the subform with the [`Form`](../commands/form) command. In this example, the "InvoiceAddress" object is bound to the subform:
+
+![](../assets/en/FormEditor/subform-example.png)
+
+
+
+### Using forms to be printed
+
+In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing). 
+
+#### Examples
+
+You can use forms to print data, either as page or as list. 
+
+- To simply print some part of a form, use the [`Print form`](../commands/print-form) command. For example:
+
+```4d
+var $formData:={}
+$formData.lastname:="Smith"
+$formData.firstname:="john"
+$formData.request:="I need more COFFEE"
+var $h:=Print form("Request_var";$formData;Form detail)
+```
+
+- To print a form within a printing job to process data during printing, use [`FORM LOAD`](../commands/form-load) and [`Print object`](../commands/print-object) commands. For example:
+
+```4d
+ var $formData : Object
+ var $over : Boolean
+ var $full : Boolean
+ 
+ OPEN PRINTING JOB
+ $formData:={}
+ $formData.LBcollection:=[]
+ ... //fill the collection with data
+ 
+ FORM LOAD("GlobalForm";$formData) 
+ $over:=False
+ Repeat
+    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
+    If(Not($over))
+       PAGE BREAK
+    End if
+ Until($over)
+ FORM UNLOAD
+ CLOSE PRINTING JOB
+ ```
+ 
+ 
+#### Print rendering engine
+
+4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+
+- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
+- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
+- The same output is produced, whether the form is printed from macOS or Windows.
+
+For example, the following form:
+
+![](../assets/en/FormEditor/screen_rendering.png)
+
+... will be printed with this rendering:
+
+![](../assets/en/FormEditor/print_rendering.png)
+
+
+:::tip Related blog post
+
+[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+
+:::
+
+#### Legacy print renderer
+
+In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected. 
+
+You can however enable the modern print rendering engine at any moment by:
+
+- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
+- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+
+:::warning Limitation
+
+For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option. 
+
+:::
+
+
+
+### Other form usages
+
+There are several other ways to use forms in the 4D applications, including:
+
+- a form can be [inherited](#inherited-forms) from another form,
+- a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
+- the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
+
+
 ## Project form and Table form
 
 There are two categories of forms:
@@ -79,7 +258,7 @@ Typically, you select the form category when you create the form, but you can ch
 
 ## Form pages
 
-Each form has is made of at least two pages:
+Each form is made of at least two pages:
 
 - a page 1: a main page, displayed by default
 - a page 0: a background page, whose contents is displayed on every other page.
@@ -96,6 +275,8 @@ Multiple pages are a convenience used for input forms only. They are not for pri
 There are no restrictions on the number of pages a form can have. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
 
 A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
+
+
 
 
 ## Fluent UI rendering

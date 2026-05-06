@@ -18,6 +18,7 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - New [**AI** page in Settings](../settings/ai.md), allowing to configure [Provider model aliases](../aikit/provider-model-aliases.md) that can be called in the code using 4D AIKit component. 
 - 4D AIKit component: new [Providers](../aikit/Classes/OpenAIProviders.md) class to instantiate and handle [Provider and model aliases](../aikit/provider-model-aliases.md). 
 - Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions. 
+- New [printing renderer](../FormEditor/forms.md#print-rendering-engine) for forms on Liquid glass and Fluent UI interfaces. New compatibility options to [enable the renderer on Classic interfaces](../FormEditor/forms.md#legacy-print-renderer). 
 - Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R3): list of all bugs that have been fixed in 4D 21 R3.
 
@@ -37,6 +38,7 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code. 
 - The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter. 
 - The **Legacy** network layer is no longer supported. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher. 
+
 
 
 ## 4D 21 R2

@@ -64,7 +64,7 @@ Le process appelant envoie un message, puis le workerl'exécute. Le worker peut 
 
 ### Écoute d'événements
 
-Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. Par exemple, lorsqu'un formulaire est affiché à l'aide de la commande `DIALOG`, les actions de l'utilisateur peuvent déclencher des événements que votre code peut traiter. Un clic sur un bouton déclenche le code associé au bouton.
+Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. For example, when a form is displayed using the [`DIALOG`](../commands/dialog) command, user actions can trigger events that your code can process. Un clic sur un bouton déclenche le code associé au bouton.
 
 Dans le contexte de l'exécution asynchrone, les fonctionnalités suivantes placent votre code en mode d'écoute :
 

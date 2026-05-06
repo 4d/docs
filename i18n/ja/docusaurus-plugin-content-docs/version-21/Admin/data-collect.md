@@ -3,7 +3,7 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 For more information on 4D policy regarding personal data protection, please visit [this page](https://us.4d.com/privacy-policy).
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 個人データ保護に関する4D ポリシーの詳細については、[こちらのページ](https://us.4d.com/privacy-policy)を参照してください。
 
 以下の章では次のようなことを説明しています:
 
