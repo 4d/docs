@@ -52,8 +52,8 @@ You can also remove the .4dm class file from the "Classes" folder on your disk.
 
 Available classes are accessible from their class stores. Two class stores are available:
 
-- [`cs`](../commands/cs) for user class store
-- [`4D`](../commands/4d) for built-in class store
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 
 #### `cs`
@@ -67,7 +67,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|User class store for the project or component|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|User class store for the project or component|
 </div>
 <!-- END REF -->
 
@@ -90,7 +90,7 @@ $instance:=cs.myClass.new()
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|4D class store|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|4D class store|
 </div>
 <!-- END REF -->
 
