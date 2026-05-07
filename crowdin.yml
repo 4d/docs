@@ -1,5 +1,5 @@
-commit_message: "%original_file_name% %language%"
-append_commit_message: false
+commit_message: '%original_file_name% %language%'
+append_commit_message: 
 files:
   - source: /docs/**/*
     ignore:
