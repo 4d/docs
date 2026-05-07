@@ -1,4 +1,4 @@
-commit_message: New Crowdin updates
+commit_message: %original_file_name% %language%
 append_commit_message: false
 files:
   - source: /docs/**/*

@@ -3,6 +3,8 @@ id: components
 title: Dependencies
 ---
 
+
+
 The 4D [project architecture](../Project/architecture.md) is modular. You can provide additional functionalities to your 4D projects by installing [**components**](Concepts/components.md) and [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md). 
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found for example on GitHub](https://github.com/topics/4d-component).
@@ -225,6 +227,12 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 3. **Deploy** \> **Package Registry** to see the result. 
 4. Use the package URL as a release asset link.
 5. Associate it with the same Git tag.
+
+:::tip Tutorial: Create and Use a 4D Component Release with Gitlab
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zgx7MHWh9EE?si=K4oV-M2kzk6v2VSm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
 
 
 #### Declaring paths

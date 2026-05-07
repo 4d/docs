@@ -213,6 +213,12 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 4. Utilice la URL del paquete como enlace a los activos de la versión.
 5. Asócielo con la misma etiqueta Git.
 
+:::tip Tutorial: Create and Use a 4D Component Release with Gitlab
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zgx7MHWh9EE?si=K4oV-M2kzk6v2VSm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+
 #### Declarando rutas
 
 You declare components stored on GitHub and GitLab in the [**dependencies.json** file](#dependenciesjson) in the following way:

@@ -213,6 +213,12 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 4. Use the package URL as a release asset link.
 5. Associate it with the same Git tag.
 
+:::tip Tutorial: Create and Use a 4D Component Release with Gitlab
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zgx7MHWh9EE?si=K4oV-M2kzk6v2VSm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+
 #### Déclaration des chemins
 
 You declare components stored on GitHub and GitLab in the [**dependencies.json** file](#dependenciesjson) in the following way:
