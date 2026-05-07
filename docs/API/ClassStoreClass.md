@@ -17,8 +17,8 @@ title: ClassStore
 
 ||
 |---|
-|[<!-- INCLUDE #ClassStoreClass.classClassName.Syntax -->](#classclassname)<br/><!-- INCLUDE #ClassStoreClass.classclassName.Summary -->|
-|[<!-- INCLUDE #ClassStoreClass.classStoreName.Syntax -->](#classstorename)<br/><!-- INCLUDE #ClassStoreClass.classStoreName.Summary -->|
+|[<!-- INCLUDE ClassStoreClass.classClassName.Syntax -->](#classclassname)<br/><!-- INCLUDE ClassStoreClass.classClassName.Summary -->|
+|[<!-- INCLUDE ClassStoreClass.classStoreName.Syntax -->](#classstorename)<br/><!-- INCLUDE ClassStoreClass.classStoreName.Summary -->|
 
 
 ## *.classClassName*
@@ -48,7 +48,7 @@ var $myclass:=cs.EmployeeEntity
 
 Each <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` published by a component<!-- END REF --> is available as a property of the class store.
 
-The name of the class store published by a component is the component namespace as [declared in the component's Settings page](../Extensions/develop-components.md#declaring-the-component-namespace).
+The name of the class store exposed by a component is the component namespace as [declared in the component's Settings page](../Extensions/develop-components.md#declaring-the-component-namespace).
 
 #### Example
 

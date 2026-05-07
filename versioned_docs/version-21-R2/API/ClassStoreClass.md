@@ -17,8 +17,8 @@ title: ClassStore
 
 ||
 |---|
-|[<!-- INCLUDE #ClassStoreClass.classClassName.Syntax -->](#classclassname)<br/><!-- INCLUDE #ClassStoreClass.classclassName.Summary -->|
-|[<!-- INCLUDE #ClassStoreClass.classStoreName.Syntax -->](#classstorename)<br/><!-- INCLUDE #ClassStoreClass.classStoreName.Summary -->|
+|[<!-- INCLUDE ClassStoreClass.classClassName.Syntax -->](#classclassname)<br/><!-- INCLUDE ClassStoreClass.classClassName.Summary -->|
+|[<!-- INCLUDE ClassStoreClass.classStoreName.Syntax -->](#classstorename)<br/><!-- INCLUDE ClassStoreClass.classStoreName.Summary -->|
 
 
 ## *.classClassName*
