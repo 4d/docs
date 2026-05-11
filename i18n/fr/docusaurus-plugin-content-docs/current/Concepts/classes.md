@@ -49,8 +49,8 @@ Vous pouvez également supprimer le fichier de classe .4dm du dossier "Classes" 
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs) pour le class store utilisateur
-- [`4D`](../commands/4d) pour le class store intégré
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,9 +60,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                         |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
-| classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
+| Paramètres | Type                                                       |                             | Description                                                         |
+| ---------- | ---------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
 
 </div>
 <!-- END REF -->
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description    |
-| ---------- | ------ | --------------------------- | -------------- |
-| classStore | Object | &#8592; | Class store 4D |
+| Paramètres | Type                                                       |                             | Description    |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store 4D |
 
 </div>
 <!-- END REF -->

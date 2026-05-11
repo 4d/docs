@@ -135,7 +135,7 @@ Este evento se activa cada vez que se modifica un valor en la entidad.
 
 Este evento se activa tan pronto como el motor de 4D Server / 4D detecta una modificación del valor del atributo que puede deberse a las siguientes acciones:
 
-- en **cliente/servidor con la [palabra clave `local`](../ORDA/ordaClasses.md#local-functions)** o en **4D monousuario**:
+- en **cliente/servidor con la [palabra clave `local`](../Concepts/classes.md#local)** o en **4D monousuario**:
   - el usuario define un valor en un formulario 4D,
   - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - en **cliente/servidor sin la palabra clave `local`**: algún código 4D que hace una asignación con el operador `:=` es [ejecutado en el servidor](../commands/execute-on-server).

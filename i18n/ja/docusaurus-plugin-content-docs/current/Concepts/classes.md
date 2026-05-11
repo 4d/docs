@@ -49,8 +49,8 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- [`cs`](../commands/cs) - ユーザークラスストア
-- [`4D`](../commands/4d) - ビルトインクラスストア
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,9 +60,9 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 <div class="no-index">
 
-| 引数         | 型      |                             | 説明                          |
-| ---------- | ------ | --------------------------- | --------------------------- |
-| classStore | Object | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア |
+| 引数         | 型                                                          |                             | 説明                          |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア |
 
 </div>
 <!-- END REF -->
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| 引数         | 型      |                             | 説明       |
-| ---------- | ------ | --------------------------- | -------- |
-| classStore | Object | &#8592; | 4Dクラスストア |
+| 引数         | 型                                                          |                             | 説明       |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | 4Dクラスストア |
 
 </div>
 <!-- END REF -->

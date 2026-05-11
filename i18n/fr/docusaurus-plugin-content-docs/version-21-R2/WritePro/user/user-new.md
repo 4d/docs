@@ -18,7 +18,7 @@ to import
 Ils peuvent être créés avec :
 
 - la barre d'outils ou la barre latérale de [l'interface de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-- les [actions standard](./standard-actions.md) `listStyleType` ou `listStyleImage`,
+- les [actions standard](../user-legacy/standard-actions.md) `listStyleType` ou `listStyleImage`,
 - ou [par programmation](../commands-legacy/4d-write-pro-attributes.md#lists) en utilisant [WP SET ATTRIBUTE](./commands/wp-set-attributes).
 
 Lorsqu'une liste est créée à l'aide d'une action standard (`listStyleType` ou `listStyleImage`) ou de la barre d'outils/sidebar, 4D Write Pro insère automatiquement une marge avant le texte afin que le marqueur soit positionné à l'intérieur de celle-ci. La valeur de la marge insérée correspond au décalage de l'onglet par défaut (`wk tab default`).

@@ -52,8 +52,8 @@ You can also remove the .4dm class file from the "Classes" folder on your disk.
 
 Available classes are accessible from their class stores. Two class stores are available:
 
-- [`cs`](../commands/cs) for user class store
-- [`4D`](../commands/4d) for built-in class store
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 
 #### `cs`
@@ -67,11 +67,11 @@ Available classes are accessible from their class stores. Two class stores are a
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|User class store for the project or component|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|User class store for the project or component|
 </div>
 <!-- END REF -->
 
-The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](../Project/code-overview.md#creating-classes in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
 #### Example
 
@@ -90,7 +90,7 @@ $instance:=cs.myClass.new()
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|4D class store|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|4D class store|
 </div>
 <!-- END REF -->
 
@@ -115,7 +115,7 @@ You want to list 4D built-in classes:
 
 ## Class object
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
+When a class is [defined](../Project/code-overview.md#creating-classes in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)

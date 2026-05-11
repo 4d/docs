@@ -28,7 +28,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ![](../assets/en/ORDA/api.png)
 
-In addition, 4D [automatically pre-creates](../Project/code-overview.md#creating-classes) the classes for each available data model object.
+各データモデルオブジェクトに関わるクラスは、4D によって [あらかじめ自動的に作成](../Project/code-overview.md#クラスの作成) されます。
 
 ## アーキテクチャー
 
@@ -45,7 +45,7 @@ ORDA データモデルクラスはすべて **`cs`** クラスストアのプ�
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.
+> ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます。
 
 ORDA データモデルユーザークラスのオブジェクトインスタンスは、それらの親クラスのプロパティや関数を使うことができます:
 
@@ -60,7 +60,7 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 | リリース  | 内容                                                                   |
 | ----- | -------------------------------------------------------------------- |
-| 21 R3 | Support for the `server` keyword.                    |
+| 21 R3 | `server` キーワードのサポート。                                                 |
 | 19 R4 | Entity クラスのエイリアス属性                                                   |
 | 19 R3 | Entity クラスの計算属性                                                      |
 | 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
@@ -274,7 +274,7 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
-  - Do not give the same name to a 4D table and to a [user class name](../Project/code-overview.md#creating-classes). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+  - 4D テーブルと [ユーザークラス名](../Project/code-overview.md#クラスの作成) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
   - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
 - クラス定義の際、[`Class extends`](../Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
@@ -288,7 +288,7 @@ End if
 コンパイル済みの状態では、データモデルクラス関数は次のように実行されます:
 
 - シングルユーザーアプリケーションでは、**プリエンプティブまたはコオペラティブプロセス** で実行されます (呼び出し元のプロセスに依存します)。
-- in **preemptive processes** in client/server applications (except if the [`local`](../Concepts/classes.md#local) keyword is used, in which case it depends on the calling process like in single-user).
+- クライアント/サーバーアプリケーションでは、**プリエンプティブプロセス** で実行されます (ただし、[`local`](../Concepts/classes.md#local) キーワードが使用されている場合は、シングルユーザーの場合と同様に、呼び出し元プロセスに依存します)。
 
 クライアント/サーバーで動作するように設計されているプロジェクトでは、データモデルクラス関数のコードがスレッドセーフであることを確認してください。 スレッドセーフでないコードが呼び出された場合、実行時にエラーが発生します (シングルユーザーアプリケーションではコオペラティブ実行がサポートされているため、コンパイル時にはエラーが発生しません)。
 
@@ -351,7 +351,7 @@ ORDA クラスコンストラクター関数は、[ユーザークラスコン�
 
 #### リモート構成
 
-When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. クライアント上で呼び出された場合、クライアントが新規エンティティを保存しようとして、サーバーのメモリ上に作成するために更新リクエストを送信したときにはもう一度トリガーされることはありません。
+リモート設定を使用する場合、以下の原則に注意する必要があります: **クライアント/サーバー** では、呼び出しコードの実行場所においては、クライアントまたはサーバーのどちらからでも関数を呼び出すことが可能です。 クライアント上で呼び出された場合、クライアントが新規エンティティを保存しようとして、サーバーのメモリ上に作成するために更新リクエストを送信したときにはもう一度トリガーされることはありません。
 
 :::warning
 
@@ -430,7 +430,7 @@ Note over Qodly page: product.creationDate は "25/06/17" <br> そして product
 
 ```
 
-#### Example 5 (diagram): Qodly - Entity instantiated in a function
+#### 例題 5 (図): Qodly - 関数内でインスタンス化されたエンティティ
 
 ```mermaid
 
@@ -472,7 +472,7 @@ Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.
 
 > ORDA の計算属性は、デフォルトでは [**公開**](#公開vs非公開関数) されません。 計算属性を公開するには、**get 関数** の定義に `exposed` キーワードを追加します。
 
-> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
+> **get および set関数**は、クライアント/サーバー処理を最適化するために、[`local`](../Concepts/classes.md#local) プロパティを持つこともできます。
 
 ### `Function get <attributeName>`
 
@@ -480,7 +480,7 @@ Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.
 
 ```4d
 {local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
-// code
+// コード
 ```
 
 *ゲッター* 関数は、*attributeName* 計算属性を宣言するために必須です。 *attributeName* がアクセスされるたびに、4D は `Function get` のコードを評価し、*$result* 値を返します。
@@ -507,7 +507,7 @@ Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+`local` および `server` キーワードのより詳細な情報については、[local and server](../Concepts/classes.md#local-および-server) の章を参照してください。
 
 :::
 
@@ -556,7 +556,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 ```4d
 
 {local | server} Function set <attributeName>($value : type {; $event : Object})
-// code
+// コード
 ```
 
 *セッター* 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
@@ -574,7 +574,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+`local` および `server` キーワードのより詳細な情報については、[local and server](../Concepts/classes.md#local-および-server) の章を参照してください。
 
 :::
 

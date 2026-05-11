@@ -48,7 +48,7 @@ title: DataStore
 
 #### 説明
 
-データストアの各データクラスは [DataStore オブジェクト](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。  戻り値のオブジェクトには<!-- REF DataStoreClass.dataclassName.Summary -->データクラスの詳細が格納されています<!-- END REF -->。
+Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore) data. 戻り値のオブジェクトには<!-- REF DataStoreClass.dataclassName.Summary -->データクラスの詳細が格納されています<!-- END REF -->。
 
 #### 例題
 

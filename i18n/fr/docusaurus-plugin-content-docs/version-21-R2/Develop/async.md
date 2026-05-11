@@ -21,13 +21,13 @@ L'exécution synchrone bloque l'interface utilisateur et convient mieux aux tâc
 
 #### Exécution asynchrone
 
-Asynchronous execution is **event-driven** and allows other operations to complete. Elle s'appuie sur des **callbacks**, des **workers** et des **event handlers** pour gérer le flux d'exécution.
+L'exécution asynchrone est orientée événements (**event-driven**) et permet aux autres opérations de se terminer. Elle s'appuie sur des **callbacks**, des **workers** et des **event handlers** pour gérer le flux d'exécution.
 
 L'exécution asynchrone est utilisée pour :
 
 - Une opération prend un certain temps (par exemple, attente d'une réponse du serveur).
 - La réactivité est essentielle (par exemple, interactions avec l'interface utilisateur).
-- Background tasks, network communication, or parallel processing are performed.
+- Les tâches d'arrière-plan, la communication réseau ou le traitement parallèle sont effectués.
 
 Choisir entre l'exécution synchrone et l'exécution asynchrone :
 
@@ -110,7 +110,7 @@ Plusieurs classes 4D prennent en charge les traitements asynchrones :
 - [`WebSocket`](../API/WebSocketClass.md) - Gère les connexions des clients WebSocket.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gère les connexions serveur WebSocket.
 
-Toutes ces classes suivent les mêmes règles en matière d'exécution asynchrone. Leur constructeur accepte un paramètre *options* qui est utilisé pour configurer votre objet asynchrone. Il est recommandé que l'objet *options* soit une instance de [classe utilisateur](../Concepts/classes.md) qui possède des fonctions de callback. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
+Toutes ces classes suivent les mêmes règles en matière d'exécution asynchrone. Leur constructeur accepte un paramètre *options* qui est utilisé pour configurer votre objet asynchrone. Il est recommandé que l'objet *options* soit une instance de [classe utilisateur](../Concepts/classes.md) qui possède des fonctions de callback. Par exemple, vous pouvez créer une fonction `onResponse()` dans la classe, qui sera automatiquement appelée de manière asynchrone lorsqu'un événement *response* est déclenché.
 
 Nous recommandons la séquence suivante :
 

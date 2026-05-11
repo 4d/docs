@@ -66,9 +66,9 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 }
 ```
 
-## Printing forms
+## Impression de formulaires
 
-In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
+Dans les applications de bureau 4D, les formulaires peuvent être imprimés à l'aide des différentes [commandes du thème **Imprimer**](../commands/theme/Printing).
 
 ### Print rendering engine
 
@@ -78,11 +78,11 @@ In 4D desktop applications, forms can be printed using the various [commands of 
 - Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
 - The same output is produced, whether the form is printed from macOS or Windows.
 
-For example, the following form:
+Par exemple, le formulaire suivant :
 
 ![](../assets/en/FormEditor/screen_rendering.png)
 
-... will be printed with this rendering:
+... sera imprimé avec ce rendu :
 
 ![](../assets/en/FormEditor/print_rendering.png)
 

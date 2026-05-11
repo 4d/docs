@@ -26,4 +26,4 @@ Cet événement est généré dans les colonnes de [list box de type tableau obj
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox-column.md#alternatebutton).
+Consultez la [description de l'attribut "alternateButton"](FormObjects/listbox-column.md#alternatebutton).

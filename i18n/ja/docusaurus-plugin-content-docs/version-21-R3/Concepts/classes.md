@@ -49,8 +49,8 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- [`cs`](../commands/cs) - ユーザークラスストア
-- [`4D`](../commands/4d) - ビルトインクラスストア
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,14 +60,14 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 <div class="no-index">
 
-| 引数         | 型      |                             | 説明                          |
-| ---------- | ------ | --------------------------- | --------------------------- |
-| classStore | Object | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア |
+| 引数         | 型                                                          |                             | 説明                          |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア |
 
 </div>
 <!-- END REF -->
 
-`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   It returns all user classes [defined](../Project/code-overview.md#creating-classes in the opened project or component. デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| 引数         | 型      |                             | 説明       |
-| ---------- | ------ | --------------------------- | -------- |
-| classStore | Object | &#8592; | 4Dクラスストア |
+| 引数         | 型                                                          |                             | 説明       |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | 4Dクラスストア |
 
 </div>
 <!-- END REF -->
@@ -112,7 +112,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## Class オブジェクト
 
-プロジェクトにおいてクラスが [定義](#クラス定義) されていれば、それは 4Dランゲージ環境に読み込まれます 。  クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
+When a class is [defined](../Project/code-overview.md#creating-classes in the project, it is loaded in the 4D language environment. クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
 
 - [`name`](API/ClassClass.md#name) 文字列
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)

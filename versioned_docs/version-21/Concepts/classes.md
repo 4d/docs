@@ -119,7 +119,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|User class store for the project or component|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|User class store for the project or component|
 </div>
 <!-- END REF -->
 
@@ -142,7 +142,7 @@ $instance:=cs.myClass.new()
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|Object|&#8592;|4D class store|
+|classStore|[4D.ClassStore](../API/ClassStoreClass.md)|&#8592;|4D class store|
 </div>
 <!-- END REF -->
 

@@ -65,11 +65,11 @@ Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous deve
 
 #### Couche réseau
 
-This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
+Cette liste déroulante contient les couches réseau disponibles, qui sont utilisées pour gérer les communications entre 4D Server et les machines 4D distantes (clients).
 
-- **QUIC** (projects only): Enables the QUIC network layer on the server.
+- **QUIC** (projets uniquement) : Active la couche réseau QUIC sur le serveur.
 
-  **Notes about QUIC**:
+  **Notes sur le QUIC** :
 
   - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
   - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.

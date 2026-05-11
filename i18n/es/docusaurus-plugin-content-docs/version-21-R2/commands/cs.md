@@ -4,9 +4,9 @@ title: cs
 displayed_sidebar: docs
 ---
 
-| Parámetros | Tipo   |                             | Descripción                                       |
-| ---------- | ------ | --------------------------- | ------------------------------------------------- |
-| classStore | Object | &#8592; | Class store usuario para el proyecto o componente |
+| Parámetros | Tipo                                                       |                             | Descripción                                       |
+| ---------- | ---------------------------------------------------------- | --------------------------- | ------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store usuario para el proyecto o componente |
 
 <div class="no-index">
 <details><summary>Historia</summary>

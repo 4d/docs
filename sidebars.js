@@ -228,6 +228,7 @@ module.exports =
           items: [
             "API/BlobClass",
             "API/ClassClass",
+            "API/ClassStoreClass",
             "API/CollectionClass",
             "API/CryptoKeyClass",
             "API/DataClassClass",

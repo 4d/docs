@@ -18,7 +18,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
   - Image(2)
   - collection
 
-(1) [**Non-streamable objects**](#streaming-support) such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
+(1) [**Objets non streamables**](#streaming-support) tels que les objets ORDA ([entités](ORDA/dsMapping.md#entity), [sélections d'entités](ORDA/dsMapping.md#entity-selection), etc.), [handles de fichiers](../API/FileHandleClass.md), [serveur web](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
 (2) Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[object Picture]".
 

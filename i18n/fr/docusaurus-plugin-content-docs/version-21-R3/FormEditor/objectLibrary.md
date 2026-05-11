@@ -21,7 +21,7 @@ La bibliothèque est affichée dans une fenêtre séparée :
 
 :::info
 
-Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+Certains objets de cette bibliothèque ne sont disponibles que si un [composant spécifique] (../Extensions/overview.md#components-developed-by-4d) est chargé dans l'application. Par exemple, les zones 4D Write Pro nécessitent le chargement du composant [4D Write Pro Interface] (https://github.com/4d/4D-WritePro-Interface).
 
 :::
 

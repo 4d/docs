@@ -262,7 +262,7 @@ When a release is created in GitHub or GitLab, it is associated to a **tag** and
 
 :::note
 
-Si seleccionas la regla de dependencia [**Seguir la versión 4D**](#defining-a-github-dependency-version-range), necesita usar una [convención de nomenclatura específica para las etiquetas](#naming-conventions-for-4d-version-tags).
+Si seleccionas la regla de dependencia [**Seguir la versión 4D**](#defining-a-dependency-version-range), necesita usar una [convención de nomenclatura específica para las etiquetas](#naming-conventions-for-4d-version-tags).
 
 :::
 
@@ -315,7 +315,7 @@ The Dependency manager checks periodically if component updates are available on
 
 #### Convenciones de nomenclatura para las etiquetas de versión 4D
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
+If you want to use the [**Follow 4D Version**](#defining-a-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
 
 - **Versiones LTS**: modelo `x.y.p`, donde `x.y` corresponde a la versión principal de 4D a seguir y `p` (opcional) puede utilizarse para versiones correctivas o actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión LTS *x.y*, el Gestor de dependencias lo resolverá como "la última versión x.\*" si está disponible o "versión inferior a x". Si no existe tal versión, se notificará al usuario. Por ejemplo, "20.4" será resuelto por el gestor de dependencias como "la última versión del componente 20.\* o la versión inferior a 20".
 

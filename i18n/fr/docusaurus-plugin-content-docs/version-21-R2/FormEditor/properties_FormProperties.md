@@ -7,7 +7,7 @@ title: Propriétés des formulaires
 
 ## Schéma de couleurs
 
-> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> La propriété de schéma de couleurs n'est appliquée que sur macOS et [Windows avec le thème Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
 Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands-legacy/get-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
@@ -91,7 +91,7 @@ Valeurs possibles :
 
 :::note
 
-This property is ignored on macOS.
+Cette propriété est ignorée sous macOS.
 
 :::
 
@@ -101,7 +101,7 @@ This property is ignored on macOS.
 | -------- | --------------- | ----------------- |
 | fluentUI | boolean         | true, false       |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propriété n'est pas définie, l'option "inherited" est sélectionnée.
 
 ---
 

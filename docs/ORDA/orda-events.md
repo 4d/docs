@@ -155,7 +155,7 @@ This event is triggered each time a value is modified in the entity.
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
+- in **client/server with the [`local` keyword](../Concepts/classes.md#local)** or in **4D single-user**:
     - the user sets a value on a 4D form,
     - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
 - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands/execute-on-server).

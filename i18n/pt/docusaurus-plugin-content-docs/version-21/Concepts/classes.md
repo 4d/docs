@@ -109,9 +109,9 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição                                           |
-| ---------- | ------ | --------------------------- | --------------------------------------------------- |
-| classStore | Object | &#8592; | Class store de usuário para o projeto ou componente |
+| Parâmetro  | Tipo                                                       |                             | Descrição                                           |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store de usuário para o projeto ou componente |
 
 </div>
 <!-- END REF -->
@@ -134,9 +134,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição      |
-| ---------- | ------ | --------------------------- | -------------- |
-| classStore | Object | &#8592; | Class store 4D |
+| Parâmetro  | Tipo                                                       |                             | Descrição      |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store 4D |
 
 </div>
 <!-- END REF -->

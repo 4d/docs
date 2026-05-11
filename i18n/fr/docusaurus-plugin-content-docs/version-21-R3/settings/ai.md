@@ -3,7 +3,7 @@ id: ai
 title: AI page
 ---
 
-The AI page allows you to add, remove, or view the list of all your AI providers and their related model aliases, whether they come from local sources or internet-based services. Providers and model aliases can then be used in your code througout your 4D application, especially with the [**4D-AIKit component**](../aikit/overview.md) using the [**model aliases**](../aikit/provider-model-aliases.md) feature.
+La page IA vous permet d'ajouter, de supprimer ou de consulter la liste de tous vos fournisseurs d'IA et des alias de modèles associés, qu'ils proviennent de sources locales ou de services en ligne. Les fournisseurs et les alias de modèle peuvent ensuite être utilisés dans votre code tout au long de votre application 4D, en particulier avec le [**composant 4D-AIKit**](../aikit/overview.md) en utilisant la fonctionnalité [**alias de modèle**](../aikit/provider-model-aliases.md).
 
 :::tip Article(s) de blog sur le sujet
 
