@@ -5,14 +5,14 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *aTable* : Table )<br/>**REDRAW** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *aTable* : Table )<br/>**REDRAW** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to redraw the subform |
-| object | any | &#8594;  | Field or Variable for which to redraw the area, or List box to be updated |
+| object | Field, Variable | &#8594;  | Field or Variable for which to redraw the area, or List box to be updated |
 </div>
 <!-- END REF-->
 
