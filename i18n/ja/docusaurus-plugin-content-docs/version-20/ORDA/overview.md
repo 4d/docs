@@ -28,7 +28,7 @@ ORDA のデータモデルでは、単一のデータクラスだけで旧来の
 
 ORDA のオブジェクトは 4D の標準オブジェクトと同様に扱えますが、どれだけでなく特定のプロパティおよびメソッドの恩恵を自動的に享受することができます。
 
-ORDA objects are created and instantiated when necessary by 4D methods (you do not need to create them). また、ORDA データモデルオブジェクトは、[カスタム関数が追加可能なクラス](ordaClasses.md) とも関連づけられます。
+ORDA オブジェクトは 4D メソッドによって必要なときに作成・インスタンス化されます (別途作成する必要はありません)。 また、ORDA データモデルオブジェクトは、[カスタム関数が追加可能なクラス](ordaClasses.md) とも関連づけられます。
 
 
 

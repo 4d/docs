@@ -7,7 +7,7 @@ title: Propriétés des formulaires
 
 ## Schéma de couleurs
 
-> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> La propriété de schéma de couleurs n'est appliquée que sur macOS et [Windows avec le thème Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
 Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands/get-application-color-scheme)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
@@ -41,7 +41,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-Name of an existing [user class](../Project/code-overview.md#user-classes) to associate to the form. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+Nom d'une [classe utilisateur] existante (../Project/code-overview.md#user-classes) à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 L'association d'une classe au formulaire offre les avantages suivants :
 
@@ -91,7 +91,7 @@ Valeurs possibles :
 
 :::note
 
-This property is ignored on macOS.
+Cette propriété est ignorée sous macOS.
 
 :::
 
@@ -101,7 +101,7 @@ This property is ignored on macOS.
 | -------- | --------------- | ----------------- |
 | fluentUI | boolean         | true, false       |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propriété n'est pas définie, l'option "inherited" est sélectionnée.
 
 ---
 

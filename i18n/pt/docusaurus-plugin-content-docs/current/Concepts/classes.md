@@ -49,8 +49,8 @@ You can also remove the .4dm class file from the "Classes" folder on your disk.
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs) para o class store de usuário
-- [`4D`](../commands/4d) para o class store integrado
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,9 +60,9 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição                                           |
-| ---------- | ------ | --------------------------- | --------------------------------------------------- |
-| classStore | Object | &#8592; | Class store de usuário para o projeto ou componente |
+| Parâmetro  | Tipo                                                       |                             | Descrição                                           |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store de usuário para o projeto ou componente |
 
 </div>
 <!-- END REF -->
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição      |
-| ---------- | ------ | --------------------------- | -------------- |
-| classStore | Object | &#8592; | Class store 4D |
+| Parâmetro  | Tipo                                                       |                             | Descrição      |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store 4D |
 
 </div>
 <!-- END REF -->

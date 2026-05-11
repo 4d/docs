@@ -49,8 +49,8 @@ Vous pouvez également supprimer le fichier de classe .4dm du dossier "Classes" 
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs) pour le class store utilisateur
-- [`4D`](../commands/4d) pour le class store intégré
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,14 +60,14 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                         |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
-| classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
+| Paramètres | Type                                                       |                             | Description                                                         |
+| ---------- | ---------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
 
 </div>
 <!-- END REF -->
 
-La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](#class-definition) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
+La commande `cs` <!-- REF #_command_.cs.Summary -->retourne le class store utilisateur pour le projet ou le composant courant<!-- END REF -->. Elle retourne toutes les classes utilisateur [définies](../Project/code-overview.md#creating-classes) dans le projet ou le composant ouvert. Par défaut, seules les [classes ORDA](ORDA/ordaClasses.md) du projet sont disponibles.
 
 #### Exemple
 
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description    |
-| ---------- | ------ | --------------------------- | -------------- |
-| classStore | Object | &#8592; | Class store 4D |
+| Paramètres | Type                                                       |                             | Description    |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store 4D |
 
 </div>
 <!-- END REF -->
@@ -112,7 +112,7 @@ Vous voulez lister les classes 4D intégrées :
 
 ## L'objet class
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](../Project/code-overview.md#creating-classes) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
 - chaîne [`name`](API/ClassClass.md#name)
 - objet [`superclass`](API/ClassClass.md#superclass) (null s'il n'y en a pas)

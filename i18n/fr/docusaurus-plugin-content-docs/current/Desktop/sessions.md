@@ -64,7 +64,7 @@ Côté client, deux objets "storage" locaux distincts sont disponibles :
 :::tip Articles de blog sur le sujet
 
 - [Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client).
+- [Oubliez les wrappers côté serveur, utilisez les sessions 4D à partir du client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client).
 
 :::
 

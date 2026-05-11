@@ -672,7 +672,7 @@ Vous souhaitez convertir une zone 4D View Pro en SVG, prévisualiser le résulta
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
+$vPict:=VP Convert to picture($vpAreaObj) //exporter l'ensemble de la zone
 ```
 
 #### Voir également

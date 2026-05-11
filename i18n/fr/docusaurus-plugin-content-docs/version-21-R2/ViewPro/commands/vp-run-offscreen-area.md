@@ -14,7 +14,7 @@ title: VP Run offscreen area
 | Paramètres | Type   |                             | Description                                                                                                                                                  |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | parameters | Object | ->                          | Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de <code>VP RECOMPUTE FORMULAS</code>, sinon la commande ne fait rien. |
-| Résultat   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value                                                                              |
+| Résultat   | Mixed  | <- | La propriété `.result` de l'objet `.onEvent`, ou Null si aucune valeur n'est retournée                                                                       |
 
 </div>
 <!-- END REF -->
@@ -134,4 +134,4 @@ $result:=VP Run offscreen area($o)
 
 ## Voir également
 
-[Blog post: End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[Article de blog : Fin du chargement du document](https://blog.4d.com/4d-view-pro-end-of-document-loading/)

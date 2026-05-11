@@ -315,7 +315,7 @@ The Dependency manager checks periodically if component updates are available on
 
 #### Conventions de nommage pour les tags de version 4D
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
+If you want to use the [**Follow 4D Version**](#defining-a-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
 
 - **Versions LTS** : Modèle `x.y.p`, où `x.y` correspond à la version principale de 4D à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version LTS *x.y*, le Gestionnaire de dépendances le résoudra comme "la dernière version x.\*" si elle est disponible ou "une version inférieure à x". Si une telle version n'existe pas, l'utilisateur en sera informé. Par exemple, "20.4" sera résolu par le Gestionnaire de dépendances comme "la dernière version du composant 20.\* ou une version inférieure à 20".
 

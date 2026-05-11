@@ -21,13 +21,13 @@ L'exécution synchrone bloque l'interface utilisateur et convient mieux aux tâc
 
 #### Exécution asynchrone
 
-Asynchronous execution is **event-driven** and allows other operations to complete. Elle s'appuie sur des **callbacks**, des **workers** et des **event handlers** pour gérer le flux d'exécution.
+L'exécution asynchrone est orientée événements (**event-driven**) et permet aux autres opérations de se terminer. Elle s'appuie sur des **callbacks**, des **workers** et des **event handlers** pour gérer le flux d'exécution.
 
 L'exécution asynchrone est utilisée pour :
 
 - Une opération prend un certain temps (par exemple, attente d'une réponse du serveur).
 - La réactivité est essentielle (par exemple, interactions avec l'interface utilisateur).
-- Background tasks, network communication, or parallel processing are performed.
+- Les tâches d'arrière-plan, la communication réseau ou le traitement parallèle sont effectués.
 
 Choisir entre l'exécution synchrone et l'exécution asynchrone :
 
@@ -64,7 +64,7 @@ Le process appelant envoie un message, puis le workerl'exécute. Le worker peut 
 
 ### Écoute d'événements
 
-Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. For example, when a form is displayed using the [`DIALOG`](../commands/dialog) command, user actions can trigger events that your code can process. Un clic sur un bouton déclenche le code associé au bouton.
+Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. Par exemple, lorsqu'un formulaire est affiché à l'aide de la commande [`DIALOG`](../commands/dialog), les actions de l'utilisateur peuvent déclencher des événements que votre code peut traiter. Un clic sur un bouton déclenche le code associé au bouton.
 
 Dans le contexte de l'exécution asynchrone, les fonctionnalités suivantes placent votre code en mode d'écoute :
 
@@ -110,7 +110,7 @@ Plusieurs classes 4D prennent en charge les traitements asynchrones :
 - [`WebSocket`](../API/WebSocketClass.md) - Gère les connexions des clients WebSocket.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gère les connexions serveur WebSocket.
 
-Toutes ces classes suivent les mêmes règles en matière d'exécution asynchrone. Leur constructeur accepte un paramètre *options* qui est utilisé pour configurer votre objet asynchrone. Il est recommandé que l'objet *options* soit une instance de [classe utilisateur](../Concepts/classes.md) qui possède des fonctions de callback. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
+Toutes ces classes suivent les mêmes règles en matière d'exécution asynchrone. Leur constructeur accepte un paramètre *options* qui est utilisé pour configurer votre objet asynchrone. Il est recommandé que l'objet *options* soit une instance de [classe utilisateur](../Concepts/classes.md) qui possède des fonctions de callback. Par exemple, vous pouvez créer une fonction `onResponse()` dans la classe, qui sera automatiquement appelée de manière asynchrone lorsqu'un événement *response* est déclenché.
 
 Nous recommandons la séquence suivante :
 
