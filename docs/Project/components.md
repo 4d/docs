@@ -459,7 +459,7 @@ The following status labels are available:
 - **Duplicated**: The dependency is not loaded because another dependency with the same name exists at the same location (and is loaded). 
 - **Available after restart**: The dependency reference has just been added or updated [using the interface](#monitoring-project-dependencies), it will be loaded once the application restarts.  
 - **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.   
-- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.   
+- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-dependency-version-range) has been detected.   
 - **Refreshed after restart**: The [component version configuration](#defining-a-dependency-version-range) of the dependency has been modified, it will be adjusted at the next startup.   
 - **Recent update**: A new version of the dependency has been loaded at startup.  
 
