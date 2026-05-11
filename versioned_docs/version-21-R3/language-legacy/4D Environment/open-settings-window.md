@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Database Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->
 
-The *selector* parameter must contain a “key” indicating the dialog box and the page to opened. This key is constructed as follows: */Dialog{/Page{/Parameters}}*. *Dialog* indicates the dialog box to be displayed: you can pass "4D" (for the Preferences) or "Database" (for Database Settings). For example, to indicate the Compiler page of the Database Settings, *selector* should contain "*/Database/Compiler*". The list of keys that can be used is provided below. If you just pass a slash ("/") in *selector*, the command displays the first page of the Database Settings dialog box.
+The *selector* parameter must contain a “key” indicating the dialog box and the page to opened. This key is constructed as follows: */Dialog{/Page{/Parameters}}*. *Dialog* indicates the dialog box to be displayed: you can pass "4D" (for the Preferences) or "Database" (for Database Settings). For example, to indicate the [Compiler page of the Settings](../../settings/compiler.md), *selector* should contain "*/Database/Compiler*". The list of keys that can be used is provided below. If you just pass a slash ("/") in *selector*, the command displays the first page of the Database Settings dialog box.
 
-The *access* parameter lets you control user actions in the Preferences or Database Settings dialog box by locking the other pages. Typically, you may want for the user to be able to customize certain parameters while preventing others from being modified. In this case, passing True in the *access* parameter means that only the page specified by the *selector* parameter will be active and modifiable, while access to all other pages will be locked (clicking on the buttons in the navigation bar will have no effect). If you pass False or omit the *access* parameter, all the pages of the dialog box will be accessible with no restriction. 
+The *access* parameter lets you control user actions in the Preferences or Settings dialog box by locking the other pages. Typically, you may want for the user to be able to customize certain parameters while preventing others from being modified. In this case, passing True in the *access* parameter means that only the page specified by the *selector* parameter will be active and modifiable, while access to all other pages will be locked (clicking on the buttons in the navigation bar will have no effect). If you pass False or omit the *access* parameter, all the pages of the dialog box will be accessible with no restriction. 
 
-The *settingsType* parameter is taken into account in databases configured in "User settings" mode only (in this mode, custom "User settings" or "User settings for data file" are generated in an external file and used instead of the standard settings, see the *Using user settings* section in the *Design Reference* manual). In this context, this parameter lets you indicate whether you want to access the "Structure settings", the "User settings", or the "User settings for data file" dialog box. You pass one of the following constants, found in the "*4D Environment*" theme:
+The *settingsType* parameter is taken into account in databases configured in "User settings" mode only (in this mode, custom "User settings" or "User settings for data file" are generated in an external file and used instead of the standard settings, see the [*Using user settings* section](../../settings/overview.md#user-settings)). In this context, this parameter lets you indicate whether you want to access the "Structure settings", the "User settings", or the "User settings for data file" dialog box. You pass one of the following constants, found in the "*4D Environment*" theme:
 
 | Constant               | Type    | Value | Comment                                                                                                                                                                               |
 | ---------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,6 +54,7 @@ If you pass an invalid key, the first page of the Database Settings dialog box i
 
 Here are the keys that can be used in the *selector* parameter in standard mode, in other words with the "Structure settings": 
 
+```
 */4D* 
 */4D/General* 
 */4D/Structure* 
@@ -89,6 +90,7 @@ Here are the keys that can be used in the *selector* parameter in standard mode,
 */Database/SQL* 
 */Database/Compatibility* 
 */Database/Security* 
+```
 
 **Compatibility note:** You can still use keys defined for 4D versions 11.x or previous using this command; 4D automatically establishes the correspondence. However, we recommend that you replace the former calls with the keys listed above.
 
@@ -96,6 +98,7 @@ Here are the keys that can be used in the *selector* parameter in standard mode,
 
 Here are the keys that can be used in the *selector* parameter in "User settings" and "User settings for data" modes:
 
+```
 */Database* 
 */Database/Interface* 
 */Database/Database/Memory and cpu* 
@@ -110,13 +113,16 @@ Here are the keys that can be used in the *selector* parameter in "User settings
 */Database/Web/Log scheduler* 
 */Database/Web/Webservices* 
 */Database/SQL* 
+```
 
 Addtional keys in "User settings for data" mode:
 
+```
 */Database/Backup* 
 */Database/Backup/Scheduler* 
 */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
+```
 
 ## Example 1 
 
