@@ -66,6 +66,16 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 }
 ```
 
+### Formulario proyecto y formulario tabla
+
+Hay dos categorías de formularios:
+
+- **Los formularios proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
+
+- **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, una tabla tiene formularios de entrada y salida separados.
+
+Normalmente, se selecciona la categoría del formulario al crearlo, pero se puede cambiar después.
+
 ## Using forms
 
 Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
@@ -79,11 +89,11 @@ Forms are called using specific commands of the 4D Language. In your 4D desktop 
 
 When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
 
-1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draw aan empty window, it does not display anything.
-2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in listening mode to user events. When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs (see also ["Event listening" paragraph](../Develop/async.md#event-listening)).
+1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
+2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs.
 3. (optional) Use the [`Form`](../commands/form) command from within the form context to access form data.
 
-::note Compatibility
+:::note Compatibilidad
 
 All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY RECORD`](../commands/add-record) merge all steps in a single call. These legacy commands can still be used for prototyping or basic developments but are not adapted to modern, fully controlled interfaces. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
 
@@ -232,16 +242,6 @@ There are several other ways to use forms in the 4D applications, including:
 - a form can be [inherited](#inherited-forms) from another form,
 - a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
 - the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
-
-## Formulario proyecto y formulario tabla
-
-Hay dos categorías de formularios:
-
-- **Los formularios proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
-
-- **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, una tabla tiene formularios de entrada y salida separados.
-
-Normalmente, se selecciona la categoría del formulario al crearlo, pero se puede cambiar después.
 
 ## Páginas formulario
 

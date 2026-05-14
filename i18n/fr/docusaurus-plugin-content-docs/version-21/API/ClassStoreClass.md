@@ -3,12 +3,12 @@ id: ClassStoreClass
 title: ClassStore
 ---
 
-`4D.ClassStore` properties are available classes and class stores.
+Les propriétés de la classe `4D.ClassStore` sont les classes et les class stores disponibles.
 
-4D exposes two [class stores](../Concepts/classes.md#class-stores):
+4D expose deux [class stores](../Concepts/classes.md#class-stores) :
 
-- [`cs`](../commands/cs) for user classes and component class stores
-- [`4D`](../commands/4d) for built-in classes
+- [`cs`](../commands/cs) pour les classes utilisateurs et les class stores des composants
+- [`4D`](../commands/4d) pour les classes intégrées
 
 ### Sommaire
 
@@ -23,13 +23,13 @@ title: ClassStore
 
 #### Description
 
-Each <!-- REF ClassStoreClass.classClassName.Summary -->exposed [`4D.Class`](./ClassClass.md) class in the class store<!-- END REF --> is available as a property of the class store.
+Chaque <!-- REF ClassStoreClass.classClassName.Summary -->classe [`4D.Class`](./ClassClass.md) exposée dans le class store<!-- END REF --> est disponible en tant que propriété du class store.
 
 #### Exemple
 
 ```4d
 var $myclass:=cs.EmployeeEntity
-	//$myclass is a class from the cs class store
+	//$myclass est une classe du class store cs
 
 ```
 
@@ -39,7 +39,7 @@ var $myclass:=cs.EmployeeEntity
 
 #### Description
 
-Each <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` published by a component<!-- END REF --> is available as a property of the class store.
+Chaque <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` publié par un composant<!-- END REF --> est disponible en tant que propriété du class store.
 
 Le nom du class store publié par un composant correspond à l'espace de noms du composant, tel qu'il est [déclaré dans la page Paramètres du composant](../Extensions/develop-components.md#declaring-the-component-namespace).
 
@@ -47,5 +47,5 @@ Le nom du class store publié par un composant correspond à l'espace de noms du
 
 ```4d
 var $classtore:=cs.AiKit
-	//$classtore is the class store of the 4D AIKit component
+	//$classtore est le class store du composant 4D AIKit
 ```

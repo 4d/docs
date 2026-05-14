@@ -26,7 +26,7 @@ This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variabl
 
 Objetos de e-mail fornecem as seguintes propriedades:
 
-> 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html) para formatar o objeto Email.
+> 4D segue a [especificação JMAP](https://jmap.io/spec/rfc8621/) para formatar o objeto Email.
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |

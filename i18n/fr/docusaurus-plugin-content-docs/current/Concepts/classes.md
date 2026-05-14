@@ -49,8 +49,8 @@ Vous pouvez également supprimer le fichier de classe .4dm du dossier "Classes" 
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs) for user classes and component class stores
-- [`4D`](../commands/4d) for built-in classes
+- [`cs`](../commands/cs) pour les classes utilisateurs et les class stores des composants
+- [`4D`](../commands/4d) pour les classes intégrées
 
 #### `cs`
 

@@ -26,7 +26,7 @@ Cette classe est [**streamable**](../Concepts/dt_object.md#binary-streaming-vari
 
 Les objets Email exposent les propriétés suivantes :
 
-> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
+> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec/rfc8621/).
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |

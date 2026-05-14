@@ -20,7 +20,7 @@ Les commandes [`MAIL Convert from MIME`](#mail-convert-from-mime) et [`MAIL Conv
 
 Les objets Email exposent les propriétés suivantes :
 
-> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
+> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the Email object.
 
 |                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -386,7 +386,7 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 #### Description
 
 La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convertit un document MIME en un objet email valide<!-- END REF -->.
-> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
+> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the returned email object.
 
 Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre *mime*. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
 
@@ -477,7 +477,7 @@ $status:=$transporter.send($email)
 La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
-> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
+> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the email object.
 
 Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
 
