@@ -635,7 +635,7 @@ Registering your [personal access token](#authentication-and-tokens) in the Depe
 - mandatory if the component is stored on a private repository,
 - recomendado para una [verificación de actualizaciones de dependencias](#updating-dependencies) más frecuente.
 
-#### Adding a token
+#### Añadir un token
 
 To provide your GitHub or GitLab access token, you can either:
 

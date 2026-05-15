@@ -530,15 +530,15 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 :::note
 
-If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+もしコンポーネントが [プライベートリポジトリ](#認証とトークン) に保存されていて、必要なパーソナルアクセストークン (personal access token) がない場合はエラーメッセージが表示され、**パーソナルアクセストークンを追加...** ボタンが表示されます ([アクセストークンの提供](#アクセストークンの提供) 参照)。
 
 :::
 
-3. このプロジェクトで使用する[依存関係のバージョン範囲](#タグとバージョン) を定義します。 By defaut, "Latest" (GitHub) or "Highest" (GitLab) is selected, which means that the most recent version will be automatically used.
+3. このプロジェクトで使用する[依存関係のバージョン範囲](#タグとバージョン) を定義します。 デフォルトでは"自動更新する(latest)" (GitHub) または "Highest" (GitLab) が選択されており、これは最新のバージョンが自動的に使用されるということを意味します。
 
 4. プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
 
-The dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. このコンポーネントはアプリケーションの再起動後にロードされます。
+依存関係は[**dependencies.json**](#dependenciesjson) ファイル内で宣言され、[無効化依存関係一覧](#dependency-status) 内に、**Available at restart** のステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
 
 #### 依存関係のバージョン範囲を定義
 
@@ -550,15 +550,15 @@ The dependency is declared in the [**dependencies.json**](#dependenciesjson) fil
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **Latest** (GitHub) or **Highest** (GitLab): Allows to download the release with the corresponding tag, usually the most recent release. **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
+- **自動更新する(latest)** (GitHub) あるいは **Highest** (GitLab): 対応するタグを持ったリリースをダウンロードすることを許可します。これらは通常最新のリリースです。 **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
 
-The current dependency version is displayed on the right side of the dependency item:
+現在の依存関係バージョンは、依存関係の項目の右側に表示されます:
 
 ![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### Modifying the dependency version range
+#### 依存関係バージョン範囲の変更
 
-You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
+一覧に表示された依存関係に対して[バージョン設定](#依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
 
@@ -577,7 +577,7 @@ You can modify the [version setting](#defining-a-dependency-version-range) for a
 
 :::note
 
-If you provide an [access token](#providing-your-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+[アクセストークン](#アクセストークンの提供) を提供した場合、このチェックはより頻繁に実行されます。GitHub はリポジトリへのより高頻度のリクエストを許可するからです。
 
 :::
 
@@ -601,7 +601,7 @@ If you provide an [access token](#providing-your-access-token), checks are perfo
 
 #### 依存関係の更新
 
-**Updating a dependency** means downloading a new version of the dependency from GitHub or GitLab and keeping it ready to be loaded the next time the project is started.
+**依存関係の更新** とはGitHub またはGitLab から依存関係の新しいバージョンをダウンロードし、次にプロジェクトが開始されたときにロードされるように用意しておくということを意味します。
 
 依存関係はいつでも更新することができ、また単一の依存関係に対してでも、依存関係全てに対してでも更新することが可能です:
 
@@ -618,32 +618,32 @@ If you provide an [access token](#providing-your-access-token), checks are perfo
 更新コマンドを選択すると:
 
 - ダイアログボックスが表示され**プロジェクトを再起動する**ことが提示されます。再起動することによって更新された依存関係が直ちに利用可能になります。 通常、更新された依存関係を直ちに有効化するためにプロジェクトを再起動することが推奨されます。
-- if you click **Later**, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
+- **あとで** をクリックすると、更新コマンドはメニューには表示されなくなります。これは次回起動時に更新が予定されるということになります。
 
 #### 自動アップデート
 
 依存関係マネージャウィンドウの下部の**オプション**メニューから、**自動アップデート** オプションを選択することができます。
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
+このオプションがチェックされている場合(デフォルトでチェック)、GitHub コンポーネントあるいはGitLab コンポーネントで[コンポーネントバージョン設定](#依存関係バージョン範囲の定義) に合致している新しいバージョンは、次回プロジェクト起動時に自動的に更新されます。 このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
 
 このオプションがチェックされていない場合、[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいコンポーネントバージョンは、利用可能であることが表示されるに止まり、[手動での更新](#依存関係の更新) を必要とします。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
 
 ### アクセストークンの提供
 
-Registering your [personal access token](#authentication-and-tokens) in the Dependency manager is:
+依存関係マネージャーに[パーソナルアクセストークン](#認証とトークン) を登録することの扱いは、以下のようになります:
 
-- mandatory if the component is stored on a private repository,
-- recommended for a more frequent [checking of dependency updates](#updating-dependencies).
+- コンポーネントがプライベートなリポジトリに保存されている場合には必須です。
+- [依存関係の更新のチェック](#依存関係の更新) をより頻繁にしたい場合には推奨されます。
 
-#### Adding a token
+#### トークンの追加
 
-To provide your GitHub or GitLab access token, you can either:
+GitHub またはGitLab アクセストークンを提供するには、次のいずれかを実行します:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private repository path.
+- "依存関係を追加..." ダイアログボックスで、プライベートリポジトリパスを入力した後に表示される **パーソナルアクセストークンを追加...** ボタンをクリックします。
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token-button.png)
 
-- or, select **Add a GitHub personal access token...** or **Add a GitLab personal access token...** in the Dependency manager menu at any moment. For GitLab access tokens, you can select the host:
+- あるいは、依存関係マネージャーメニュー内から**GitHub パーソナルアクセストークンを追加...** または **GitLab パーソナルアクセストークンを追加...** を選択することで、いつでもトークンの追加ができます。 GitLab アクセストークンの場合には、ホストを選択することができます:
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -651,9 +651,9 @@ To provide your GitHub or GitLab access token, you can either:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-#### Editing a token
+#### トークンの編集
 
-You can only enter one personal access token per host. Once a token has been entered, you can **edit** it.
+パーソナルアクセストークンはホストにつき 1つしか入力できません。 入力したトークンは、その後 **編集** することができます。
 
 提供されたトークンは、[アクティブな4Dフォルダー](../commands/get-4d-folder#active-4d-folder) 内の**github.json** ファイルに保存されます。
 

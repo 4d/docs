@@ -76,7 +76,7 @@ Hay dos categorías de formularios:
 
 Normalmente, se selecciona la categoría del formulario al crearlo, pero se puede cambiar después.
 
-## Using forms
+## Uso de formularios
 
 Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
 
