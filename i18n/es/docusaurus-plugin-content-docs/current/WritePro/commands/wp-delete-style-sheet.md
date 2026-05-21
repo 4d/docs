@@ -77,7 +77,7 @@ WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 
 Después de la ejecución:
 
-- The `wk list level index` values are updated (former level 3 becomes level 2).
+- Los valores `wk list level index` se actualizan (el nivel 3 anterior se convierte en el nivel 2).
 - Se decrementa el `wk list level count`.
 
 Para eliminar toda la hoja de estilo jerárquica (raíz y todos los subniveles asociados):

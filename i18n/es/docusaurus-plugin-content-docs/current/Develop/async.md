@@ -11,7 +11,7 @@ title: Ejecución asíncrona
 
 Synchronous execution follows a **sequential** flow, a step-by-step where each instruction must complete before the next one starts. Esto significa que el hilo de ejecución se bloquea hasta que finaliza la operación.
 
-Synchronous execution is used when:
+La ejecución sincrónica se utiliza cuando:
 
 - La ejecución de las tareas debe seguir un orden estricto.
 - El impacto en el rendimiento es mínimo (por ejemplo, operaciones rápidas).
@@ -27,7 +27,7 @@ La ejecución asíncrona se utiliza cuando:
 
 - Una operación tarda mucho tiempo (por ejemplo, esperando una respuesta del servidor).
 - La capacidad de respuesta es fundamental (por ejemplo, las interacciones de la interfaz de usuario).
-- Background tasks, network communication, or parallel processing are performed.
+- Se realizan tareas en segundo plano, la comunicación de red o procesamiento paralelo.
 
 Elegir entre ejecución síncrona y asíncrona:
 

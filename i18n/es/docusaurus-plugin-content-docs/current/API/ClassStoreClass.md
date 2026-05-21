@@ -5,10 +5,10 @@ title: ClassStore
 
 `4D.ClassStore` properties are available classes and class stores.
 
-4D exposes two [class stores](../Concepts/classes.md#class-stores):
+4D expone dos [class stores](../Concepts/classes.md#class-stores):
 
 - [`cs`](../commands/cs) for user classes and component class stores
-- [`4D`](../commands/4d) for built-in classes
+- [`4D`](../commands/4d) para las clases integradas
 
 ### Resumen
 
@@ -29,7 +29,7 @@ Each <!-- REF ClassStoreClass.classClassName.Summary -->exposed [`4D.Class`](./C
 
 ```4d
 var $myclass:=cs.EmployeeEntity
-	//$myclass is a class from the cs class store
+	//$myclass es una clase del class store cs
 
 ```
 

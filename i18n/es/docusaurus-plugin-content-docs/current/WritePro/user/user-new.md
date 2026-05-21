@@ -121,7 +121,7 @@ Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores pre
 
 - `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` se deriva del nombre de la hoja de estilo raíz (Sólo lectura para subniveles)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 
   - Ejemplo:

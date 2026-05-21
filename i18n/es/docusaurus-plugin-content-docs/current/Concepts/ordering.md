@@ -22,7 +22,7 @@ The 4D language provides several mechanisms that rely on sorting collection elem
 When a collection or entity selection containing elements of different types is sorted, a **type-based stratification** is applied according to the following algorithm:
 
 1. **Fase de reparto**: los elementos se agrupan en clases de equivalencia en función de su tipo base. Esta fase establece una partición de todo el conjunto de elementos.
-2. **Intra-class ordering phase**: Within each class, elements are sorted according to type-specific comparison rules. The default order is **ascending**.
+2. **Intra-class ordering phase**: Within each class, elements are sorted according to type-specific comparison rules. El orden por defecto es **ascendente**.
 
 Los tipos se ordenan según la secuencia siguiente, con sus respectivas relaciones de comparación en orden ascendente:
 

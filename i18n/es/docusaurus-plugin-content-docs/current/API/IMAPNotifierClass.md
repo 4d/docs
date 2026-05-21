@@ -48,7 +48,7 @@ $transporter.notifier.start()
 
 ## IMAPNotifier object
 
-An IMAPNotifier object provides the following properties and functions:
+Un objeto IMAPNotifier proporciona las siguientes propiedades y funciones:
 
 |                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------ |
@@ -124,7 +124,7 @@ Callback functions are executed in the worker where `.start()` is called.
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | success    |                                                                                             | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                                                                                             | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
+| errors     |                                                                                             | Collection | Pila de error 4D (no retornado si se recibe una respuesta del servidor)        |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
 |            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |
@@ -155,7 +155,7 @@ The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notifi
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | success    |                                                                                             | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                                                                                             | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
+| errors     |                                                                                             | Collection | Pila de error 4D (no retornado si se recibe una respuesta del servidor)        |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
 |            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |

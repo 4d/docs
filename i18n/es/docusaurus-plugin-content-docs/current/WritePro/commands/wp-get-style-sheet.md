@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 En *wpDoc*, pase el documento 4D Write Pro que contiene la hoja de estilo.
 
-El parámetro *styleSheetName* permite especificar el nombre de la hoja de estilo a devolver. If the style sheet name does not exist in *wpDoc*, an null object is returned.
+El parámetro *styleSheetName* permite especificar el nombre de la hoja de estilo a devolver. Si el nombre de la hoja de estilo no existe en *wpDoc*, se devuelve un objeto null.
 
 If the *styleSheetName* is the root-level name of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
 

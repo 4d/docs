@@ -60,7 +60,7 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 | Lanzamiento | Modificaciones                                                                                                                                              |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 21 R3       | Support for the `server` keyword.                                                                                                           |
+| 21 R3       | Soporte para la palabra clave `server`.                                                                                                     |
 | 19 R4       | Atributos alias en la Entity Class                                                                                                                          |
 | 19 R3       | Atributos calculados en la Entity Class                                                                                                                     |
 | 18 R5       | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
@@ -425,7 +425,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 
 ```
 
-#### Example 5 (diagram): Qodly - Entity instantiated in a function
+#### Ejemplo 5 (diagrama): Qodly - Entidad instanciada en una función
 
 ```mermaid
 
@@ -551,7 +551,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 ```4d
 
 {local | server} Function set <attributeName>($value : type {; $event : Object})
-// code
+// código
 ```
 
 La función *setter* se ejecuta cada vez que se asigna un valor al atributo. Esta función suele procesar los valores de entrada y el resultado se envía entre uno o varios atributos.

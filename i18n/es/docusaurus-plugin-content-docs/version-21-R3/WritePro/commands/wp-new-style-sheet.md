@@ -59,7 +59,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 - Una hoja de estilo sólo modifica la visualización de un carácter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
 - Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
 
-### Hierarchical list style sheet
+### Hoja de estilo de lista jerárquica
 
 If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
@@ -113,7 +113,7 @@ $mainList:=WP New style sheet(wpArea; wk type paragraph; "MainList"; 3)
 
 Resultado:
 
-- The root style sheet has:
+- La hoja de estilo raíz tiene:
   - `wk list level index` = 1
   - `wk list level count` = 3
   - `wk list style type` = `wk decimal`

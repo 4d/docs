@@ -15,13 +15,13 @@ The AI page allows you to add, remove, or view the list of all your AI providers
 
 4D supports [various AI providers](../aikit/compatible-openai.md) with an OpenAI-like API, each offering unique models and features for database needs.
 
-By default, the Providers list is empty.
+Por defecto, la lista de proveedores está vacía.
 
-### Adding a provider
+### Añadir un proveedor
 
-To add an AI provider:
+Para añadir un proveedor de IA:
 
-1. Click on the **+** button at the bottom of the Providers list.
+1. Haga clic en el botón **+** situado en la parte inferior de la lista de proveedores.
 2. Enter the required [provider's configuration fields](#provider-properties), including credentials.
 3. (optional) Click the **Test connection** button to make sure the provided URL and credentials are valid.
 
@@ -35,15 +35,15 @@ If the connection test fails, an error message is displayed (e.g. "Request faile
 
 ### Editing a provider
 
-To edit or remove a provider:
+Para editar o eliminar un proveedor:
 
-1. Select a registered provider in the list.
+1. Seleccione un proveedor registrado en la lista.
 2. Edit the provider's information OR to remove a provider, click on the **-** button at the bottom of the Providers list.
 3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
 
 ## Provider properties
 
-When you select a provider in the Providers list, several properties are available. Property names in **bold** are mandatory to create a Provider.
+When you select a provider in the Providers list, several properties are available. Los nombres de propiedades en **negrita** son obligatorios para crear un Proveedor.
 
 ### Nombre
 
@@ -59,11 +59,11 @@ The combo box lists the main providers, you can select a value to enter the prov
 
 ### API Key
 
-(optional) API key for the provider. For instructions on generating an API key, please refer to your AI provider’s official documentation. Some AI providers may also require additional specific credentials.
+(optional) API key for the provider. For instructions on generating an API key, please refer to your AI provider’s official documentation. Algunos proveedores de IA también pueden exigir credenciales específicas adicionales.
 
 ### Organization
 
-(optional, OpenAI-specific) Organization ID used by the OpenAI API.
+(opcional, específico de OpenAI) ID de la organización utilizado por la API de OpenAI.
 
 ### Project
 
@@ -75,9 +75,9 @@ The provider configuration is stored in a JSON file named *AIProviders.json* loc
 
 ### Deployment with an API key
 
-When configuring an AI provider, you need to provide your own API key. It requires an external registration for getting API keys/credentials from AI providers.
+Al configurar un proveedor de AI, debe proporcionar su propia clave API. Requiere un registro externo para obtener claves/credenciales API de los proveedores de IA.
 
-Using the Settings dialog box, the 4D developer can define a custom **provider name** (for example "open-ai-v1") and use this custom name in the code. They can also test it using their API key.
+Using the Settings dialog box, the 4D developer can define a custom **provider name** (for example "open-ai-v1") and use this custom name in the code. También pueden probarlo utilizando su clave API.
 
 When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Thanks to the [User settings priority rules](../settings/overview.md#priority-of-settings), the customer settings will automatically override the developer settings.
 
@@ -94,7 +94,7 @@ The Model Aliases page allows you to list models from registered Providers that 
 When using a model alias:
 
 - The provider is automatically resolved (see [Model resolution](../aikit/Classes/OpenAIProviders.md#model-resolution) in the 4D-AIKit documentation).
-- The model ID is applied.
+- Se aplica el ID del modelo.
 - All credentials and endpoints are used.
 
 ### Adding a model alias
@@ -108,7 +108,7 @@ To be able to add a model alias, you must have entered at least one valid provid
 To add a model alias:
 
 1. Click on the **+** button at the bottom of the model aliases list.
-2. In the **Name** column, enter the name of the alias.
+2. En la columna **Nombre**, introduzca el nombre del alias.
 3. Click on the corresponding row in the **Provider** column to display the list of available providers ([provider names](#name) you entered in the Providers page), and select the name of the provider.
 4. Click on the corresponding row in the **Model** column to display the list of available models exposed by the selected provider and select the model.
 5. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
@@ -119,7 +119,7 @@ To add a model alias:
 
 To edit or remove an alias:
 
-1. Select a model alias in the list.
+1. Seleccione un alias de modelo en la lista.
 2. Edit the alias information OR to remove a alias, click on the **-** button at the bottom of the list.
 3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
 

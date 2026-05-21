@@ -8,7 +8,7 @@ La API clase `WebServer` le permite iniciar y controlar un servidor web para la 
 ### Propiedades
 
 - **Streamable**: no
-- **Sharable**: no
+- **Compartible**: no
 
 ### Objeto servidor web
 

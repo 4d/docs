@@ -29,11 +29,11 @@ slug: /commands/theme/XML-SAX
 
 See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definition of XML SAX.
 
-### Creating, opening and closing XML documents via SAX
+### Creación, apertura y cierre de documentos XML mediante SAX
 
 The SAX commands work with the standard document references of 4D (**DocRef**, a Time type reference). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
 
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. For instance, the `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` header will be written automatically in the document.
+The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
 
 :::note
 
@@ -47,8 +47,8 @@ Closing an XML document must be carried out using the [`CLOSE DOCUMENT`](../../c
 
 When writing SAX documents, 4D uses the following default settings for end-of-line characters and BOM (byte order mask) usage:
 
-- CRLF characters on Windows and LF on macOS for end-of-line characters
-- files are written without BOM.
+- Caracteres CRLF en Windows y LF en macOS para los caracteres de fin de línea
+- archivos escritos sin BOM.
 
 :::note Compatibilidad
 

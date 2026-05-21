@@ -508,7 +508,7 @@ End if
 
 #### Descripción
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the session<!-- END REF -->.
+La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión<!-- END REF -->.
 
 - **Remote user sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
 - **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info).

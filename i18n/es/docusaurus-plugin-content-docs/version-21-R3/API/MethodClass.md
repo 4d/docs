@@ -28,7 +28,7 @@ This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variabl
 
 ### Ejemplos
 
-#### Basic dynamic method creation
+#### Creación de un método dinámico de base
 
 ```4d
 var $myCode : Text

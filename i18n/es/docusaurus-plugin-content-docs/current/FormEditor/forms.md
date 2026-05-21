@@ -78,12 +78,12 @@ Normalmente, se selecciona la categoría del formulario al crearlo, pero se pued
 
 ## Uso de formularios
 
-Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
+Los formularios se llaman usando comandos específicos del lenguaje 4D. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. Un formulario puede ser:
 
 - used in its own window for data viewing, processing, editing, or to display on-screen information to the user,
 - used embedded in another form (subform),
-- used as template for printing,
-- or called by specific features like the Label editor.
+- utilizado como plantilla para la impresión,
+- o llamados por funciones específicas como el editor de etiquetas.
 
 ### Using a project form in a window
 
@@ -99,7 +99,7 @@ All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY R
 
 :::
 
-#### Simple example
+#### Ejemplo simple
 
 You create the following basic form in the [Form editor](./formEditor.md):
 
@@ -147,15 +147,15 @@ ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ![](../assets/en/FormEditor/example-form-2.png)
 
-### Using forms as subforms
+### Utilizar formularios como subformularios
 
 A form can be embedded within another form, in which case it becomes a [subform object](../FormObjects/subform_overview.md) which follows specific rules. A subform is automatically used when its parent form is [displayed in a window](#using-a-project-form-in-a-window).
 
-In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. Then, you can use it in the subform with the [`Form`](../commands/form) command. In this example, the "InvoiceAddress" object is bound to the subform:
+In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. A continuación, puede utilizarlo en el subformulario con el comando [`Form`](../commands/form). En este ejemplo, el objeto "InvoiceAddress" está vinculado al subformulario:
 
 ![](../assets/en/FormEditor/subform-example.png)
 
-### Using forms to be printed
+### Utilizar formularios para imprimir
 
 In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
 
@@ -200,11 +200,11 @@ var $h:=Print form("Request_var";$formData;Form detail)
 
 #### Print rendering engine
 
-4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. Incluye las siguientes características principales:
 
 - Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
 - Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
-- The same output is produced, whether the form is printed from macOS or Windows.
+- Se produce la misma salida, tanto si el formulario se imprime desde macOS como desde Windows.
 
 For example, the following form:
 
@@ -222,7 +222,7 @@ For example, the following form:
 
 #### Legacy print renderer
 
-In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
 
 You can however enable the modern print rendering engine at any moment by:
 
@@ -235,17 +235,17 @@ For technical reasons, the legacy print renderer is not available with forms dis
 
 :::
 
-### Other form usages
+### Otros usos de formularios
 
 There are several other ways to use forms in the 4D applications, including:
 
-- a form can be [inherited](#inherited-forms) from another form,
+- un formulario puede ser [heredado](#inherited-forms) de otro formulario,
 - a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
 - the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
 
 ## Páginas formulario
 
-Each form is made of at least two pages:
+Cada formulario consta de al menos dos páginas:
 
 - una página 1: una página principal, mostrada por defecto
 - una página 0: una página de fondo, cuyo contenido se muestra en todas las demás páginas.

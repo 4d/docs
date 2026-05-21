@@ -1,9 +1,9 @@
 ---
 id: provider-model-aliases
-title: Provider & Model Aliases
+title: Alias de proveedores y modelos
 ---
 
-# Provider & Model Aliases
+# Alias de proveedores y modelos
 
 The OpenAI client supports provider and model aliases, allowing you to define provider configurations and named model aliases in JSON files and reference them using simple syntaxes.
 
@@ -14,7 +14,7 @@ Instead of hard-coding API endpoints and credentials in your code, you can:
 - Define provider configurations in a JSON file
 - Use the `provider:model` syntax to specify a provider and model directly
 - Define named model aliases that map to a provider and a model ID
-- Use a named model alias by bare name (e.g., `my-gpt`)
+- Utilizar un alias de un modelo por nombre (por ejemplo, `my-gpt`)
 - Switch between providers (OpenAI, Anthropic, local Ollama, etc.) easily
 
 ## Configuration Files
@@ -29,7 +29,7 @@ The client automatically loads provider configurations from the first existing f
 
 **Important:** Only the **first existing file** is loaded. There is no merging of multiple files.
 
-### Configuration File Format
+### Formato del archivo de configuración
 
 ```json
 {
@@ -50,21 +50,21 @@ The client automatically loads provider configurations from the first existing f
 }
 ```
 
-### Provider Fields
+### Campos del proveedor
 
-| Campo          | Tipo | Requerido | Descripción                                                    |
-| -------------- | ---- | --------- | -------------------------------------------------------------- |
-| `baseURL`      | Text | Sí        | API endpoint URL                                               |
-| `apiKey`       | Text | No        | API key value                                                  |
-| `organization` | Text | No        | Organization ID (optional, OpenAI-specific) |
-| `project`      | Text | No        | Project ID (optional, OpenAI-specific)      |
+| Campo          | Tipo | Requerido | Descripción                                                               |
+| -------------- | ---- | --------- | ------------------------------------------------------------------------- |
+| `baseURL`      | Text | Sí        | URL del punto de terminación de la API                                    |
+| `apiKey`       | Text | No        | Valor de la llave API                                                     |
+| `organization` | Text | No        | ID de la organización (opcional, específico de OpenAI) |
+| `project`      | Text | No        | Project ID (optional, OpenAI-specific)                 |
 
 ### Model Alias Fields
 
 | Campo       | Tipo | Requerido | Descripción                                                         |
 | ----------- | ---- | --------- | ------------------------------------------------------------------- |
 | `proveedor` | Text | Sí        | Name of the provider (must exist in `providers`) |
-| `model`     | Text | Sí        | Model ID used by the provider                                       |
+| `model`     | Text | Sí        | ID del modelo utilizado por el proveedor                            |
 
 ### Example Configuration
 
@@ -105,14 +105,14 @@ The client automatically loads provider configurations from the first existing f
 
 ## Usage in API Calls
 
-### Model Parameter Formats
+### Formatos de parámetro del modelo
 
 Two syntaxes are supported:
 
-| Sintaxis              | Descripción                                                                        |
-| --------------------- | ---------------------------------------------------------------------------------- |
-| `provider:model_name` | Provider alias — specify provider and model directly                               |
-| `:model_alias`        | Model alias — reference a named model from the `models` configuration by bare name |
+| Sintaxis              | Descripción                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `provider:model_name` | Alias de proveedor: especifique directamente el proveedor y el modelo |
+| `:model_alias`        | Model alias — reference a named model from the `models` configuration by bare name    |
 
 #### Provider alias syntax
 
@@ -151,31 +151,31 @@ var $result := $client.embeddings.create("text"; ":my-embedding")
 
 ### How It Works
 
-#### Provider alias (`provider:model`)
+#### Alias de proveedor (`provider:model`)
 
 When you use the `provider:model` syntax, the client automatically:
 
-1. **Parses** the model string to extract provider name and model name
-   - Example: `"openai:gpt-5.1"` → provider=`"openai"`, model=`"gpt-5.1"`
+1. **Analiza** la cadena del modelo para extraer el nombre del proveedor y el nombre del modelo
+   - Ejemplo: `"openai:gpt-5.1"` → provider=`"openai"`, model=`"gpt-5.1"`
 
 2. **Looks up** the provider configuration from the loaded JSON file
    - Retrieves `baseURL`, `apiKey`, `organization`, `project`
 
 3. **Makes the API request** using the resolved configuration
-   - Sends request to the provider's `baseURL` with the correct `apiKey`
+   - Envía una petición a la `baseURL` del proveedor con la `apiKey` correcta
 
-#### Model alias (bare name)
+#### Alias de modelo (nombre simple)
 
-When you use a bare model name that matches a configured alias, the client automatically:
+Cuando se utiliza un nombre de modelo simple que corresponde con un alias configurado, el cliente automáticamente:
 
 1. **Looks up** the model alias in the `models` section of the configuration
    - Example: `":my-gpt"` → finds entry with `provider: "openai"`, `model: "gpt-5.1"`
 
 2. **Resolves** the associated provider to get `baseURL` and `apiKey`
 
-3. **Makes the API request** using the provider's endpoint and the stored model ID
+3. **Efectúa la petición API** utilizando el punto de terminación del proveedor y el ID del modelo almacenado
 
-### Using Plain Model Names
+### Uso de nombres de modelos sencillos
 
 If you specify a model name **without** a provider prefix or `:` prefix, the client uses the configuration from its constructor:
 
@@ -224,37 +224,37 @@ var $embedding1 := $client.embeddings.create($text; "openai:text-embedding-3-sma
 var $embedding2 := $client.embeddings.create($text; "local:nomic-embed-text")
 ```
 
-## Configuration Management
+## Gestión de configuraciones
 
 Provider configurations can be managed through [4D Settings](https://developer.4d.com/docs/settings/ai) or by directly editing JSON files.
 
 **To add or modify providers:**
 
-1. Use 4D Settings interface (recommended), or
-2. Edit the appropriate JSON file (userData, user, or structure)
-3. Restart your application or create a new OpenAI client instance to load changes
+1. Utilice la interfaz de los Parámetros 4D (recomendado), o
+2. Edite el archivo JSON apropiado (archivo de datos usuario, usuario o estructura)
+3. Reinicie la aplicación o cree una nueva instancia de cliente OpenAI para cargar los cambios
 
-**Recommended file location:**
+**Ubicación del archivo recomendado:**
 
 - **For user-specific configs:** `<data folder>/Settings/AIProviders.json`
 - **For application defaults:** `/SOURCES/AIProviders.json`
 
 ### No Reload Capability
 
-Once a client is instantiated, it cannot reload provider configurations. To pick up configuration changes:
+Once a client is instantiated, it cannot reload provider configurations. Para recoger los cambios de configuración:
 
 ```4d
 // Configuration changed - create new client
 var $client := cs.AIKit.OpenAI.new()
 ```
 
-## Security Considerations
+## Consideraciones de seguridad
 
 When using 4D in client/server mode, it is **strongly recommended** to execute AI-related code on the server side to protect API tokens and credentials from exposure to client machines.
 
-## Common Use Cases
+## Casos de uso comunes
 
-### Local Development with Ollama
+### Desarrollo local con Ollama
 
 ```json
 {
@@ -321,7 +321,7 @@ var $models := $providers.modelAliases()
 // Returns: [{name: "chat", provider: "openai", model: "gpt-5.1"}, ...]
 ```
 
-### Production with Multiple Cloud Providers
+### Producción con múltiples proveedores de servicios en la nube
 
 ```json
 {
@@ -367,6 +367,6 @@ var $resultB := $client.chat.completions.create($messages; {model: "openai-team-
 
 ## Related Documentation
 
-- [OpenAI Class](Classes/OpenAI.md) - Main client class
-- [OpenAIProviders Class](Classes/OpenAIProviders.md) - Provider configuration management
-- [Compatible OpenAI APIs](compatible-openai.md) - List of compatible providers
+- [Clase OpenAI](Classes/OpenAI.md) - Clase cliente principal
+- [Clase OpenAIProviders](Classes/OpenAIProviders.md) - Gestión de la configuración de proveedores
+- [API OpenAI compatibles](compatible-openai.md) - Lista de proveedores compatibles

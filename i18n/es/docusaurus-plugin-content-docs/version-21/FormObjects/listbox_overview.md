@@ -321,7 +321,7 @@ Los principios de prioridad y de herencia se observan cuando la misma propiedad 
 3. Arrays/métodos de Listbox
 4. Propiedades de la columna
 5. Propiedades de list box
-6. (lowest priority) Meta Info expression (for collection or entity selection list boxes)
+6. (prioridad más baja) Expresión Meta Info (para list boxes de tipo colección o selección de entidades)
 
 Por ejemplo, si define un estilo de fuente en las propiedades del list box y otro mediante un array de estilos para la columna, se tendrá en cuenta este último.
 

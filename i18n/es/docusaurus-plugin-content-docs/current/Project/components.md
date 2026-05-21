@@ -173,7 +173,7 @@ Las rutas relativas son relativas al archivo [`environment4d.json`](#environment
 
 Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que ofrecen flexibilidad y portabilidad de la arquitectura de componentes, especialmente si el proyecto está alojado en una herramienta de control de código fuente. Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
 
-### Components stored on Git hosting platforms {#components-stored-on-git-hosting-platforms}
+### Componentes almacenados en plataformas de alojamiento Git {#components-stored-on-git-hosting-platforms}
 
 4D components available as **releases** on GitHub and GitLab platforms can be referenced and automatically loaded and updated in your 4D projects.
 
@@ -185,7 +185,7 @@ Regarding components stored on GitHub or GitLab, both [**dependencies.json**](#d
 
 To be able to directly reference and use a 4D component stored on GitHub or GitLab, you need to configure the component's repository.
 
-#### Configuring a GitHub repository
+#### Configuración de un repositorio GitHub
 
 1. Comprima los archivos componentes en formato ZIP.
 2. Nombre este archivo con el mismo nombre que el repositorio GitHub. For example, for a "my-4D-Component" repository, the archive must be named "my-4D-Component.zip".
@@ -194,9 +194,9 @@ To be able to directly reference and use a 4D component stored on GitHub or GitL
 
 Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub Actions, por ejemplo.
 
-#### Configuring a GitLab repository
+#### Configuración de un repositorio GitLab
 
-GitLab releases only store the name and URL of assets, they do not contain uploaded files. Debe ofrecer el archivo zip de su componente como enlace.
+Las versiones de GitLab sólo almacenan el nombre y la URL de los activos, no contienen los archivos subidos. Debe ofrecer el archivo zip de su componente como enlace.
 
 1. Upload the component's ZIP file somewhere, i.e. either on an external server, or [using GitLab Package Registry](#using-the-gitlab-package-registry) (generic package).
 2. Create a [GitLab release](https://docs.gitlab.com/user/project/releases/) for your component, including the link to your component's file as release asset.
@@ -209,11 +209,11 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 
 1. Build your component file (for example: *MyComponent.zip*)
 2. Upload it to the [generic packages repository](https://docs.gitlab.com/user/packages/generic_packages/) using a script (see [examples in the GitLab documentation](https://docs.gitlab.com/user/packages/generic_packages/#publish-a-single-file)).
-3. **Deploy** \> **Package Registry** to see the result.
+3. **Deploy** \> **Package Registry** para ver el resultado.
 4. Utilice la URL del paquete como enlace a los activos de la versión.
 5. Asócielo con la misma etiqueta Git.
 
-:::tip Tutorial: Create and Use a 4D Component Release with Gitlab
+:::tip Tutorial: crear y utilizar una liberación de componentes 4D con Gitlab
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Zgx7MHWh9EE?si=K4oV-M2kzk6v2VSm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -332,7 +332,7 @@ El desarrollador del componente puede definir una versión mínima de 4D en el a
 Si quiere integrar un componente ubicado en un repositorio privado, necesita decirle a 4D que utilice un token de conexión para acceder a él.
 
 - for GitHub: in your [GitHub token interface](https://github.com/settings/tokens), create a token with the recommended following properties:
-  - type: **classic**
+  - tipo: **classic**
   - derechos de acceso: **repo**
 
 - para GitLab: en su cuenta de GitLab, cree un token con las siguientes propiedades:
@@ -428,7 +428,7 @@ Las siguientes etiquetas de estado están disponibles:
 - **Descargado después de reiniciar**: la referencia de dependencias acaba de ser removida [utilizando la interfaz](#removing-a-dependency), se descargará una vez que la aplicación se reinicie.
 - **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-dependency-version-range) has been detected.
 - **Refreshed after restart**: The [component version configuration](#defining-a-dependency-version-range) of the dependency has been modified, it will be adjusted at the next startup.
-- **Recent update**: A new version of the dependency has been loaded at startup.
+- **Recent update**: se ha cargado una nueva versión de la dependencia al inicio.
 
 :::tip
 
@@ -469,13 +469,13 @@ Este elemento no se muestra si la relación está inactiva porque no se encuentr
 El icono del componente y el logotipo de ubicación ofrecen información adicional:
 
 - El logotipo del componente indica si es suministrado por 4D o por un desarrollador externo.
-- Local components can be differentiated from GitHub and GitLab components by a small icon.
+- Los componentes locales pueden diferenciarse de los componentes de GitHub y GitLab por un pequeño icono.
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
 ### Añadir una dependencia local
 
-To add a local dependency, click on the **[+]** button in the footer area of the panel. Se muestra la siguiente caja de diálogo:
+Para añadir una dependencia local, haga clic en el botón **[+]** en el área de pie de página del panel. Se muestra la siguiente caja de diálogo:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
@@ -518,7 +518,7 @@ Los componentes ya instalados no están listados.
 
 :::
 
-2. Enter the path of the GitHub or GitLab repository of the dependency. Podría ser:
+2. Introduzca la ruta del repositorio de GitHub o GitLab de la dependencia. Podría ser:
 
 - a **repository URL** (e.g. "https://github.com/vdelachaux/UI-with-Classes")
 - (GitLab only) a self-hosted instance private server URL (e.g. "https://git-my-server.com/4d/components/mycomponent")
@@ -632,12 +632,12 @@ Cuando esta opción no está marcada, una nueva versión del componente que coin
 
 Registering your [personal access token](#authentication-and-tokens) in the Dependency manager is:
 
-- mandatory if the component is stored on a private repository,
+- obligatorio si el componente se almacena en un repositorio privado,
 - recomendado para una [verificación de actualizaciones de dependencias](#updating-dependencies) más frecuente.
 
 #### Añadir un token
 
-To provide your GitHub or GitLab access token, you can either:
+Para proporcionar su token de acceso a GitHub o GitLab, puede:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private repository path.
 

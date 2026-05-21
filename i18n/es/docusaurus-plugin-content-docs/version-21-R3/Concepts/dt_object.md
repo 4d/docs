@@ -265,17 +265,17 @@ $doc:=Null // liberar recursos ocupados por $doc
 
 ## Clases
 
-Objects can belong to classes. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
+Los objetos pueden pertenecer a clases. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
 
-The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. You can also define and use your own [user classes](./classes.md) to organize your code.
+The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. También puede definir y utilizar sus propias [clases de usuario](./classes.md) para organizar su código.
 
-## Streaming support
+## Soporte de streaming
 
 A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
 
-### Text streaming (`JSON Stringify`)
+### Transmisión de texto (`JSON Stringify`)
 
-JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). They support objects, collections, and user classes.
+JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). Soportan objetos, colecciones y clases de usuarios.
 
 However, text streaming of objects has the following limitations:
 
@@ -287,8 +287,8 @@ However, text streaming of objects has the following limitations:
 
 4D also implements a built-in binary streaming feature through the [`VARIABLE TO BLOB`](../commands/variable-to-blob) command. This feature allows you to get rid of most of text streaming limitations regarding objects (see above):
 
-- circular references are supported,
-- objects keep their class,
+- las referencias circulares son soportadas,
+- los objetos mantienen su clase,
 - an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
 - several native 4D class objects can be streamed, for example [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), or [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
 
