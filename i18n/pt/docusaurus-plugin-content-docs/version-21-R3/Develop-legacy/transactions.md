@@ -7,15 +7,15 @@ title: Transações
 
 As transações são uma série de modificações de dados relacionadas que são realizadas em um banco de dados ou armazenamento de dados dentro de um [process](./processes.md). Uma transação não é salva em um banco de dados permanentemente até que a transação seja validada. Se uma transação não for concluída, seja porque é cancelada ou por algum evento externo, as modificações não são salvas.
 
-Durante uma transação, todas as alterações feitas nos dados do banco de dados dentro de um processo são armazenadas localmente em um buffer temporário. Se a transação for aceita com [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), as alterações são salvas permanentemente. Se a transação for cancelada com [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), as alterações não são salvas. Em todos os casos, nem a seleção atual nem o registro atual são modificados pelos comandos de gerenciamento de transações.
+Durante uma transação, todas as alterações feitas nos dados do banco de dados dentro de um processo são armazenadas localmente em um buffer temporário. Se a transação for aceita com [`VALIDATE TRANSACTION`](../commands/validate-transaction) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), as alterações são salvas permanentemente. Se a transação for cancelada com [`CANCEL TRANSACTION`](../commands/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), as alterações não são salvas. Em todos os casos, nem a seleção atual nem o registro atual são modificados pelos comandos de gerenciamento de transações.
 
-4D suporta transações aninhadas, ou seja, transações em vários níveis hierárquicos. O número de subtransações permitidas é ilimitado. O comando [`Transaction level`](../commands-legacy/transaction-level) pode ser usado para descobrir o nível de transação atual em que o código está sendo executado. Quando transações aninhadas são usadas, o resultado de cada subtransação depende da validação ou cancelamento da transação de nível superior. Se a transação de nível superior for validada, os resultados das subtransações (validação ou cancelamento) são confirmados. Por outro lado, se a operação de nível superior for anulada, todas as suboperações são anuladas, independentemente de seus respectivos resultados.
+4D suporta transações aninhadas, ou seja, transações em vários níveis hierárquicos. O número de subtransações permitidas é ilimitado. O comando [`Transaction level`](../commands/transaction-level) pode ser usado para descobrir o nível de transação atual em que o código está sendo executado. Quando transações aninhadas são usadas, o resultado de cada subtransação depende da validação ou cancelamento da transação de nível superior. Se a transação de nível superior for validada, os resultados das subtransações (validação ou cancelamento) são confirmados. Por outro lado, se a operação de nível superior for anulada, todas as suboperações são anuladas, independentemente de seus respectivos resultados.
 
 4D inclui uma funcionalidade que permite [suspender e retomar transações](#suspending-transactions) dentro do seu código 4D. Quando uma transação é suspensa, você pode executar operações independentemente da transação em si e, em seguida, retomar a transação para validá-la ou cancelá-la como de costume.
 
 ### Exemplo
 
-Neste exemplo, o banco de dados é um sistema de faturamento simples. As linhas de fatura são armazenadas em uma tabela chamada [Invoice Lines], que está relacionada à tabela [Invoices] por meio de um relacionamento entre os campos [Invoices]Invoice ID e [Invoice Lines]Invoice ID. Quando uma fatura é adicionada, um ID único é calculado, usando o comando [`Sequence number`](../commands-legacy/sequence-number). O relacionamento entre [Invoices] e [Invoice Lines] é um relacionamento automático Relate Many. A caixa de seleção **Asignar automáticamente valor relacionado en subformulario** está marcada.
+Neste exemplo, o banco de dados é um sistema de faturamento simples. As linhas de fatura são armazenadas em uma tabela chamada [Invoice Lines], que está relacionada à tabela [Invoices] por meio de um relacionamento entre os campos [Invoices]Invoice ID e [Invoice Lines]Invoice ID. Quando uma fatura é adicionada, um ID único é calculado, usando o comando [`Sequence number`](../commands/sequence-number). O relacionamento entre [Invoices] e [Invoice Lines] é um relacionamento automático Relate Many. A caixa de seleção **Asignar automáticamente valor relacionado en subformulario** está marcada.
 
 O relacionamento entre [Invoice Lines] e [Parts] é manual.
 
@@ -32,7 +32,7 @@ Este exemplo é uma situação típica em que você precisa usar uma transação
 
 Existem várias maneiras de realizar a entrada de dados usando transações:
 
-1. Você pode gerenciar as transações você mesmo usando os comandos de transação [`START TRANSACTION`](../commands-legacy/start-transaction), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) e [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction). Você pode escrever, por exemplo:
+1. Você pode gerenciar as transações você mesmo usando os comandos de transação [`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](../commands/validate-transaction) e [`CANCEL TRANSACTION`](../commands/cancel-transaction). Você pode escrever, por exemplo:
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -72,7 +72,7 @@ title: Transactions
 
 As transações são uma série de modificações de dados relacionadas que são realizadas em um banco de dados ou armazenamento de dados dentro de um [processo](./processes.md). Uma transação não é salva em um banco de dados permanentemente até que a transação seja validada. Se uma transação não for concluída, seja porque é cancelada ou por algum evento externo, as modificações não são salvas.
 
-Durante uma transação, todas as alterações feitas nos dados do banco de dados dentro de um processo são armazenadas localmente em um buffer temporário. Se a transação for aceita com [`VALIDATE TRANSACTION`](https://www.google.com/search?q=../commands-legacy/validate-transaction.md) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), as alterações são salvas permanentemente. Se a transação for cancelada com [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), as alterações não são salvas. Em todos os casos, nem a seleção atual nem o registro atual são modificados pelos comandos de gerenciamento de transações.
+Durante uma transação, todas as alterações feitas nos dados do banco de dados dentro de um processo são armazenadas localmente em um buffer temporário. Se a transação for aceita com [`VALIDATE TRANSACTION`](https://www.google.com/search?q=../commands-legacy/validate-transaction.md) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), as alterações são salvas permanentemente. Se a transação for cancelada com [`CANCEL TRANSACTION`](../commands/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), as alterações não são salvas. Em todos os casos, nem a seleção atual nem o registro atual são modificados pelos comandos de gerenciamento de transações.
 
 O 4D suporta transações aninhadas, ou seja, transações em vários níveis hierárquicos. O número de subtransações permitidas é ilimitado. O comando [`Transaction level`](https://www.google.com/search?q=../commands-legacy/transaction-level.md) pode ser usado para descobrir o nível de transação atual em que o código está sendo executado. Quando transações aninhadas são usadas, o resultado de cada subtransação depende da validação ou cancelamento da transação de nível superior. Se a transação de nível superior for validada, os resultados das subtransações (validação ou cancelamento) são confirmados. Por outro lado, se a operação de nível superior for anulada, todas as suboperações são anuladas, independentemente de seus respectivos resultados.
 
@@ -80,7 +80,7 @@ O 4D inclui uma funcionalidade que permite [suspender e retomar transações](#s
 
 ### Example
 
-Neste exemplo, o banco de dados é um sistema de faturamento simples. As linhas de fatura são armazenadas em uma tabela chamada [Invoice Lines], que está relacionada à tabela [Invoices] por meio de um relacionamento entre os campos [Invoices]Invoice ID e [Invoice Lines]Invoice ID. Quando uma fatura é adicionada, um ID único é calculado, usando o comando [`Sequence number`](../commands-legacy/sequence-number). O relacionamento entre [Invoices] e [Invoice Lines] é um relacionamento automático Relate Many. A caixa de seleção **Asignar automáticamente valor relacionado en subformulario** está marcada.
+Neste exemplo, o banco de dados é um sistema de faturamento simples. As linhas de fatura são armazenadas em uma tabela chamada [Invoice Lines], que está relacionada à tabela [Invoices] por meio de um relacionamento entre os campos [Invoices]Invoice ID e [Invoice Lines]Invoice ID. Quando uma fatura é adicionada, um ID único é calculado, usando o comando [`Sequence number`](../commands/sequence-number). O relacionamento entre [Invoices] e [Invoice Lines] é um relacionamento automático Relate Many. A caixa de seleção **Asignar automáticamente valor relacionado en subformulario** está marcada.
 
 O relacionamento entre [Invoice Lines] e [Parts] é manual.
 
@@ -97,7 +97,7 @@ Este exemplo é uma situação típica em que você precisa usar uma transação
 
 Existem várias maneiras de realizar a entrada de dados usando transações:
 
-1. Você pode gerenciar as transações você mesmo usando os comandos de transação [`START TRANSACTION`](../commands-legacy/start-transaction), [`VALIDATE TRANSACTION`](https://www.google.com/search?q=../commands-legacy/validate-transaction.md) e [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction). Você pode escrever, por exemplo:
+1. Você pode gerenciar as transações você mesmo usando os comandos de transação [`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](https://www.google.com/search?q=../commands-legacy/validate-transaction.md) e [`CANCEL TRANSACTION`](../commands/cancel-transaction). Você pode escrever, por exemplo:
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -190,7 +190,7 @@ Se você clicar no botão *bOK*, tanto a entrada de dados quanto a transação s
  End case
 ```
 
-Neste código, chamamos o comando `CANCEL` independentemente do botão pressionado. O novo registro não é validado por uma chamada a [`ACCEPT`](../commands-legacy/accept), mas sim pelo comando [`SAVE RECORD`](../commands-legacy/save-record) Além disso, observe que `SAVE RECORD` é executado imediatamente antes do comando [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction). Portanto, salvar o registro [Invoices] é, na verdade, parte da transação. O comando ACCEPT também validaria o registro, mas neste caso a transação seria validada antes de o registro [Invoices] ser salvo. Em outras palavras, o registro seria salvo fora da transação.
+Neste código, chamamos o comando `CANCEL` independentemente do botão pressionado. O novo registro não é validado por uma chamada a [`ACCEPT`](../commands/accept), mas sim pelo comando [`SAVE RECORD`](../commands/save-record) Além disso, observe que `SAVE RECORD` é executado imediatamente antes do comando [`VALIDATE TRANSACTION`](../commands/validate-transaction). Portanto, salvar o registro [Invoices] é, na verdade, parte da transação. O comando ACCEPT também validaria o registro, mas neste caso a transação seria validada antes de o registro [Invoices] ser salvo. Em outras palavras, o registro seria salvo fora da transação.
 
 Dependendo de suas necessidades, você pode personalizar seu banco de dados, conforme mostrado nestes exemplos. No último exemplo, o gerenciamento de registros bloqueados na tabela [Parts] poderia ser ainda mais desenvolvido.
 
@@ -201,9 +201,9 @@ Dependendo de suas necessidades, você pode personalizar seu banco de dados, con
 
 Suspender uma transação é útil quando você precisa realizar, de dentro de uma transação, certas operações que não precisam ser executadas sob o controle dessa transação. Por exemplo, imagine o caso em que um cliente faz um pedido, portanto dentro de uma transação, e também atualiza seu endereço. Em seguida, o cliente muda de ideia e cancela o pedido. A transação é cancelada, mas você não deseja que a alteração de endereço seja revertida. Este é um exemplo típico em que suspender a transação é útil. Três comandos são usados para suspender e retomar transações:
 
-- [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction): pausa a transação atual. Os registros atualizados ou adicionados permanecem bloqueados.
-- [`RESUME TRANSACTION`](../commands-legacy/resume-transaction): reativa uma transação suspensa.
-- [`Active transaction`](../commands-legacy/active-transaction): retorna False se a transação estiver suspensa ou se não houver transação em andamento, e True se tiver sido iniciada ou retomada.
+- [`SUSPEND TRANSACTION`](../commands/suspend-transaction): pausa a transação atual. Os registros atualizados ou adicionados permanecem bloqueados.
+- [`RESUME TRANSACTION`](../commands/resume-transaction): reativa uma transação suspensa.
+- [`Active transaction`](../commands/active-transaction): retorna False se a transação estiver suspensa ou se não houver transação em andamento, e True se tiver sido iniciada ou retomada.
 
 ### Exemplo  
 
@@ -271,9 +271,9 @@ Funcionalidades específicas foram adicionadas para gerenciar erros:
 
 #### Transações suspensas e estado do processo
 
-O comando [`In transaction`](../commands-legacy/in-transaction) etorna True quando uma transação foi iniciada, mesmo que esteja suspensa. Para saber se a transação atual está suspensa, é necessário usar o comando [`Active transaction`](../commands-legacy/active-transaction), que retorna False neste caso. 
+O comando [`In transaction`](../commands/in-transaction) etorna True quando uma transação foi iniciada, mesmo que esteja suspensa. Para saber se a transação atual está suspensa, é necessário usar o comando [`Active transaction`](../commands/active-transaction), que retorna False neste caso. 
 
-Ambos os comandos, no entanto, também retornam False se nenhuma transação foi iniciada. Nesse caso, pode ser necessário usar o comando [`Transaction level`](../commands-legacy/transaction-level), que retorna 0 neste contexto (nenhuma transação foi iniciada).
+Ambos os comandos, no entanto, também retornam False se nenhuma transação foi iniciada. Nesse caso, pode ser necessário usar o comando [`Transaction level`](../commands/transaction-level), que retorna 0 neste contexto (nenhuma transação foi iniciada).
 
 O gráfico a seguir ilustra os diferentes contextos de transação e os valores correspondentes retornados pelos comandos de transação:
 
