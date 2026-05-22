@@ -51,7 +51,7 @@ See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definitio
 
 Objects created, modified or parsed by the 4D DOM commands can be text, URLs, documents or BLOBs. The DOM commands used for opening XML objects in 4D are [`DOM Parse XML source`](../../commands/dom-parse-xml-source) and [`DOM Parse XML variable`](../../commands/dom-parse-xml-variable).
 
-Muchos comandos permiten leer, analizar y escribir los elementos y atributos. Los errores se recuperan utilizando el comando [`XML GET ERROR`](../../commands/xml-get-error). Do not forget to call the [`DOM CLOSE XML`](../../commands/dom-close-xml) command to close the source in the end.
+Muchos comandos permiten leer, analizar y escribir los elementos y atributos. Los errores se recuperan utilizando el comando [`XML GET ERROR`](../../commands/xml-get-error). No olvide llamar al comando [`DOM CLOSE XML`](../../commands/dom-close-xml) para cerrar la fuente al final.
 
 Note about use of XML BLOB parameters: For historical reasons, XML commands such as [`DOM Parse XML variable`](../../commands/dom-parse-xml-variable) accept BLOB type parameters. However, it is highly recommended to store XML structures as Text. The use of BLOBs is reserved for processing binary data. In conformity with XML specifications, binary data are automatically encoded in Base64, even when the BLOB contains text.
 
@@ -87,7 +87,7 @@ XPath notation allows you to access element 3 using the */RootElement/Elem1/Elem
    </RootElement>
 ```
 
-XPath notation allows you to access the "ccc" value using the */RootElement/Elem1/Elem2[3]* syntax.
+La notación XPath permite acceder al valor "ccc" utilizando la sintaxis */RootElement/Elem1/Elem2[3]*.
 
 For a comprehensive list of supported XPath expressions, refer to the [`DOM Find XML element`](../../commands/dom-find-xml-element) command description.
 

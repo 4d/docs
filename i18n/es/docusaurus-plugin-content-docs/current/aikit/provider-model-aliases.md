@@ -19,7 +19,7 @@ Instead of hard-coding API endpoints and credentials in your code, you can:
 
 ## Configuration Files
 
-The client automatically loads provider configurations from the first existing file found (in priority order):
+El cliente carga automáticamente las configuraciones del proveedor a partir del primer archivo existente encontrado (por orden de prioridad):
 
 | Prioridad                          | Ubicación | Ruta del archivo                                  |
 | ---------------------------------- | --------- | ------------------------------------------------- |
@@ -226,7 +226,7 @@ var $embedding2 := $client.embeddings.create($text; "local:nomic-embed-text")
 
 ## Gestión de configuraciones
 
-Provider configurations can be managed through [4D Settings](https://developer.4d.com/docs/settings/ai) or by directly editing JSON files.
+Las configuraciones de los proveedores pueden gestionarse a través de los [Parámetros de 4D](https://developer.4d.com/docs/settings/ai) o editando directamente los archivos JSON.
 
 **To add or modify providers:**
 

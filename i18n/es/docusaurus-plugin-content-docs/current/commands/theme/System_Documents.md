@@ -51,13 +51,13 @@ Legacy commands from this theme can usually be usefully replaced by commands of 
 
 You open a document with the [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) and [`Append document`](../../commands/append-document) commands. Once a document is open, you can read and write characters from and to the document using commands such as [`RECEIVE PACKET`](../../commands/receive-packet) and [`SEND PACKET`](../../commands/send-packet). When you are finished with the document, you usually close it using the `CLOSE DOCUMENT` command.
 
-All open documents returned by these commands are referred to using a **document reference number** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. Todos los comandos que trabajan con documentos abiertos esperan *DocRef* como parámetro. Si pasa un *DocRef* incorrecto a uno de estos comandos, se produce un error del gestor de archivos.
+Todos los documentos abiertos devueltos por estos comandos se referencian utilizando un **número de referencia del documento** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. Todos los comandos que trabajan con documentos abiertos esperan *DocRef* como parámetro. Si pasa un *DocRef* incorrecto a uno de estos comandos, se produce un error del gestor de archivos.
 
 Un documento sólo puede ser abierto en modo **lectura/escritura** por un proceso a la vez. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
 
 :::note
 
-When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. When it is called from a cooperative process, a *DocRef* reference can be used from any other cooperative process.
+When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. Cuando se llama desde un proceso cooperativo, se puede utilizar una referencia *DocRef* de cualquier otro proceso cooperativo.
 
 :::
 
@@ -69,7 +69,7 @@ When it is called from a [preemptive process](../../Develop/preemptive.md), a *D
 
 Most of the routines of this section accept document names, relative pathnames or absolute pathnames:
 
-Los nombres de ruta relativos definen una ubicación con respecto a una carpeta situada en el disco. Si sólo se pasa el nombre del documento, se considera que se está utilizando una ruta relativa. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Relative pathnames are especially useful when deploying applications in heterogenous environments.
+Los nombres de ruta relativos definen una ubicación con respecto a una carpeta situada en el disco. Si sólo se pasa el nombre del documento, se considera que se está utilizando una ruta relativa. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Los nombres de ruta relativos son especialmente útiles cuando se despliegan aplicaciones en entornos heterogéneos.
 Absolute pathnames define a location with respect to the root of the volume and so they do not depend on the current location of the database folder.
 To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
 
@@ -91,9 +91,9 @@ CREATE FOLDER("d:\Monday") // absolute path
 CREATE FOLDER("\\srv-Internal\temp") // absolute path
 
 macOS  
-If the text starts with a folder separator ':',
-or if does not contain any,
-then the path is relative.
+Si el texto comienza con un separador de carpetas ':',
+o si no contiene ninguno,
+entonces la ruta es relativa.
 
 En los demás casos, es absoluta.
 

@@ -467,7 +467,7 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 
 > Los atributos calculados ORDA no están [**expuestos**](#exposed-vs-non-exposed-functions) por defecto. Para exponer un atributo calculado, añada la palabra clave `exposed` a la definición de la función \*\*get \*\*.
 
-> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
+> **Las funciones get y set** pueden tener la propiedad [`local`](../Concepts/classes.md#local) para optimizar el procesamiento cliente/servidor.
 
 ### `Function get <attributeName>`
 

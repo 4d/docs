@@ -5,7 +5,7 @@ title: List Box Header and Footer
 
 :::note
 
-- To be able to access header properties for a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option.
+- Para poder acceder a las propiedades de encabezado de un list box, debe habilitar la opción [Encabezados de pantalla](properties_Headers.md#display-headers).
 - Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
 
 :::

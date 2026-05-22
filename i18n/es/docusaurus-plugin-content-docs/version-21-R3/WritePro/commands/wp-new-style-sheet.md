@@ -44,7 +44,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 - wk type character: aplica atributos de estilo a los caracteres.
 - wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
 
-Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. El nombre de la hoja de estilo debe cumplir las siguientes reglas:
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. El nombre de la hoja de estilo debe cumplir las siguientes reglas:
 
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
@@ -63,12 +63,12 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 
 If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
-El parámetro *listLevelCount* define el número total de niveles de la jerarquía. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
+El parámetro *listLevelCount* define el número total de niveles de la jerarquía. Cuando se especifica (valor ≥ 1), el comando crea automáticamente una hoja de estilo de nivel raíz y las hojas de estilo de nivel inferior correspondientes.
 
 Se aplican los siguientes valores predefinidos:
 
 - `wk list style type` se establece en `wk decimal`
-- `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
+- `wk list level index` se asigna automáticamente (1 para el nivel raíz, incrementado para los subniveles)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 - `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
 

@@ -33,15 +33,15 @@ See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definitio
 
 The SAX commands work with the standard document references of 4D (**DocRef**, a Time type reference). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
 
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
+The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
 
 :::note
 
-Documents read by SAX commands must be opened in read-only mode by the [`Open document`](../../commands/open-document) command. This avoids any conflict between 4D and the Xerces library when you open "regular" and XML documents simultaneously. If you execute a SAX parsing command with a document open in read-write mode, an alert message is displayed and parsing is impossible.
+Documents read by SAX commands must be opened in read-only mode by the [`Open document`](../../commands/open-document) command. Esto evita cualquier conflicto entre 4D y la biblioteca Xerces cuando se abren documentos "normales" y XML simultáneamente. If you execute a SAX parsing command with a document open in read-write mode, an alert message is displayed and parsing is impossible.
 
 :::
 
-Closing an XML document must be carried out using the [`CLOSE DOCUMENT`](../../commands/close-document) command. If any XML elements were open, they will be closed automatically.
+El cierre de un documento XML debe realizarse mediante el comando [`CLOSE DOCUMENT`](../../commands/close-document). If any XML elements were open, they will be closed automatically.
 
 ### About end-of-line characters and BOM management
 

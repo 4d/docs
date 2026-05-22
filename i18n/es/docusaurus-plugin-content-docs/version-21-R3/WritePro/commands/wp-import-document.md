@@ -34,7 +34,7 @@ Se soportan los siguientes tipos de documentos:
 
 - antiguos documentos 4D Write (.4w7 o .4wt). For a detailed list of 4D Write features that are currently supported in 4D Write Pro objects, please refer to the [Importing 4D Write documents](../user-legacy/importing-4d-write-documents.md) section.
 - Documentos en formato 4D Write Pro (.4wp). Para más información sobre el formato de documento 4D Write Pro, consulte el [formato del documento .4wp](../user-legacy/storing-4d-write-pro-documents-in-4d-object-fields.md#4wp-document-format).
-- documentos en formato .docx. For more information about, refer to [Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md).
+- documentos en formato .docx. Para obtener más información, consulte [Importación y exportación en formato .docx](../user-legacy/importing-and-exporting-in-docx-format.md).
 
 **Nota:** si desea importar un documento almacenado en un campo BLOB 4D, también puede considerar el uso del comando [WP New](../commands/wp-new).
 

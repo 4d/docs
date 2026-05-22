@@ -33,7 +33,7 @@ Creates a new instance that loads provider configuration from the `AIProviders.j
 **Important:**
 
 - Only the first existing file is loaded. There is no merging of multiple files.
-- La configuración se lee una vez en el momento de la instanciación. If the `AIProviders.json` file is modified afterward, those changes will not be reflected in the existing instance. Debe crear una nueva instancia de `OpenAIProviders` para recargar la configuración actualizada.
+- La configuración se lee una vez en el momento de la instanciación. Si el archivo `AIProviders.json` se modifica posteriormente, esos cambios no se reflejarán en la instancia existente. Debe crear una nueva instancia de `OpenAIProviders` para recargar la configuración actualizada.
 
 ## Utilización
 

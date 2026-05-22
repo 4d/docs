@@ -127,9 +127,9 @@ Esta funcionalidad está diseñada para equipos de desarrollo de tamaño pequeñ
 
 ## Lugar de ejecución del código
 
-In a client/server application, it is important to know where your code will be actually executed: **server-side** or **client-side**. Execution location is crucial when you want to implement user session-related code, share information between processes, access data, etc.
+In a client/server application, it is important to know where your code will be actually executed: **server-side** or **client-side**. La ubicación de la ejecución es crucial cuando se desea implementar código relacionado con la sesión del usuario, compartir información entre procesos, acceder a datos, etc.
 
-The following table summarizes where the code is executed by default and how to switch its execution location (if allowed). Note that **local** means that the code will be executed on the machine from where it is actually called.
+La siguiente tabla resume dónde se ejecuta el código por defecto y cómo cambiar su ubicación de ejecución (si está permitido). Note that **local** means that the code will be executed on the machine from where it is actually called.
 
 | Code                                                                                                                                                                                                                                                                                                            | Ejecución por defecto | Cómo cambiar                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

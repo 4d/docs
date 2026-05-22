@@ -265,7 +265,7 @@ $doc:=Null // liberar recursos ocupados por $doc
 
 ## Clases
 
-Los objetos pueden pertenecer a clases. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
+Los objetos pueden pertenecer a clases. El uso de una clase permite predefinir el comportamiento y la estructura de un objeto con propiedades y funciones asociadas.
 
 The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. También puede definir y utilizar sus propias [clases de usuario](./classes.md) para organizar su código.
 
@@ -279,13 +279,13 @@ JSON commands that stringify contents such as [`JSON Stringify`](../commands/jso
 
 However, text streaming of objects has the following limitations:
 
-- circular references (i.e. objects containing themselves as a property) are not supported and return an error,
+- las referencias circulares (es decir, los objetos que se contienen a sí mismos como propiedad) no son compatibles y devuelven un error,
 - a class object loses its class when it is stringified,
 - native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
 
 ### Binary streaming (`VARIABLE TO BLOB`)
 
-4D also implements a built-in binary streaming feature through the [`VARIABLE TO BLOB`](../commands/variable-to-blob) command. This feature allows you to get rid of most of text streaming limitations regarding objects (see above):
+4D también implementa una función de flujo binario a través del comando [`VARIABLE TO BLOB`](../commands/variable-to-blob). Esta función le permite librarse de la mayoría de las limitaciones de transmisión de texto relativas a los objetos (ver arriba):
 
 - las referencias circulares son soportadas,
 - los objetos mantienen su clase,

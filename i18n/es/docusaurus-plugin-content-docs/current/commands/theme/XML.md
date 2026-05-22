@@ -27,7 +27,7 @@ The **XML** theme groups together the generic XML "utilities" commands of 4D. Th
 4D also offers two separate sets of XML commands: [**DOM**](../theme/XML_DOM.md) (Document Object Model) and [**SAX**](../theme/XML_SAX.md) (Simple API XML) are two different parsing modes for XML documents.
 
 - The DOM mode parses an XML source and builds its structure (its "tree") in memory. Because of this, access to each element of the source is extremely fast. However, since the entire tree structure is stored in memory, the processing of large XML documents may lead to the memory capacity being exceeded and thus provoke errors.
-- The SAX mode does not build a tree structure in memory. In this mode, "events" (such as the start and end of an element) are generated when parsing the source. This mode lets you parse XML documents of any size, regardless of the amount of memory available.
+- The SAX mode does not build a tree structure in memory. En este modo, se generan "eventos" (como el inicio y el final de un elemento) al analizar el código fuente. This mode lets you parse XML documents of any size, regardless of the amount of memory available.
 
 #### Ver también
 
@@ -56,7 +56,7 @@ This non-exhaustive list details the main XML concepts used by the commands and 
 
 - **Attribute**: an XML sub-tag associated with an element. An attribute always contains a name and a value.
 - **Child**: In an XML structure, an element in a level directly below another.
-- **DTD**: *Document Type Declaration*. The DTD records the set of specific rules and properties that the XML must follow. These rules define, more particularly, the name and content of each tag as well as its context. This formalization of the elements can be used to check whether an XML document is in compliance (in which case, it is declared “valid”). The DTD may be included in the XML document (internal DTD) or in a separate document (external DTD). Tenga en cuenta que la DTD no es obligatoria.
+- **DTD**: *Document Type Declaration*. The DTD records the set of specific rules and properties that the XML must follow. These rules define, more particularly, the name and content of each tag as well as its context. Esta formalización de los elementos puede utilizarse para comprobar si un documento XML es conforme (en cuyo caso, se declara "válido"). The DTD may be included in the XML document (internal DTD) or in a separate document (external DTD). Tenga en cuenta que la DTD no es obligatoria.
 - **Element**: an XML tag. An element always contains a name and a value. Optionally, an element may contain attributes.
 - **ElementRef**: referencia XML usada por los comandos 4D XML para especificar una estructura XML. This reference is made up of 8 coded characters in hexadecimal form, which means that its length is 32 characters on a 64-bit system. Se recomienda declarar las referencias XML como Texto.
 - **Padre**: en una estructura XML, elemento situado en un nivel directamente superior a otro.
@@ -64,8 +64,8 @@ This non-exhaustive list details the main XML concepts used by the commands and 
 - **Root**: An element located at the first level of an XML structure.
 - **Sibling**: An element at the same level as another.
 - **Structure**: structured XML object. This object can be a document, a variable, or an element.
-- **Validation**: An XML document is “validated” by the parser when it is “well-formed” and in compliance with the DTD specifications.
+- **Validación**: un documento XML es "validado" por el analizador sintáctico cuando está "bien formado" y cumple las especificaciones DTD.
 - **Well-formed**: An XML document is declared “well-formed” by the parser when it complies with the generic XML specifications.
-- **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. The XML language is based on the use of tags and a specific syntax, in keeping with the HTML language. Sin embargo, a diferencia de este último, el lenguaje XML permite definir etiquetas personalizadas.
-- **XSL**: eXtensible Stylesheet Language. A language permitting the definition of style sheets used to process and display the contents of an XSL document.
+- **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. El lenguaje XML se basa en el uso de etiquetas y una sintaxis específica, en consonancia con el lenguaje HTML. Sin embargo, a diferencia de este último, el lenguaje XML permite definir etiquetas personalizadas.
+- **XSL**: eXtensible Stylesheet Language. Un lenguaje que permite la definición de hojas de estilo utilizadas para procesar y mostrar los contenidos de un documento XSL.
 

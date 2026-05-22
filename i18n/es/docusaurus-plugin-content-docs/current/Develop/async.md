@@ -9,7 +9,7 @@ title: Ejecución asíncrona
 
 #### Ejecución sincrónica
 
-Synchronous execution follows a **sequential** flow, a step-by-step where each instruction must complete before the next one starts. Esto significa que el hilo de ejecución se bloquea hasta que finaliza la operación.
+La ejecución síncrona sigue un flujo **secuencial**, un paso a paso en el que cada instrucción debe completarse antes de que comience la siguiente. Esto significa que el hilo de ejecución se bloquea hasta que finaliza la operación.
 
 La ejecución sincrónica se utiliza cuando:
 

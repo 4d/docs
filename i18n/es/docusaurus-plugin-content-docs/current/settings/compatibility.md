@@ -8,11 +8,11 @@ La página Compatibilidad agrupa los parámetros relacionados con el mantenimien
 :::note
 
 - El número de opciones mostradas depende de la versión de 4D con la que se creó la base de datos/proyecto original, así como de los ajustes modificados en esta base de datos/proyecto.
-- This page lists the compatibility options available for database/projects converted from 4D 18 onwards. Para las opciones de compatibilidad más antiguas, consulte la [página Compatibilidad](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) en **doc.4d.com**.
+- Esta página enumera las opciones de compatibilidad disponibles para las bases de datos/proyectos convertidos a partir de 4D 18. Para las opciones de compatibilidad más antiguas, consulte la [página Compatibilidad](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) en **doc.4d.com**.
 
 :::
 
-- **Use standard XPath:** By default this option is unchecked for databases converted from a 4D version prior to 18 R3, and checked for databases created with 4D 18 R3 and higher. Starting with 18 R3, the XPath implementation in 4D has been modified to be more compliant and to support more predicates. Como consecuencia, las funcionalidades no estándar de la implementación anterior ya no funcionan. Incluyen:
+- **Use standard XPath:** By default this option is unchecked for databases converted from a 4D version prior to 18 R3, and checked for databases created with 4D 18 R3 and higher. A partir de la 18 R3, la implementación de XPath en 4D ha sido modificada para ser más compatible y soportar más predicados. Como consecuencia, las funcionalidades no estándar de la implementación anterior ya no funcionan. Incluyen:
 
   - el caracter inicial "/" no es sólo el nodo raíz - la utilización del caracter / como primer caracter en una expresión XPath no declara una ruta absoluta desde el nodo raíz
   - no hay nodo actual implícito - el nodo actual debe incluirse en la expresión XPath

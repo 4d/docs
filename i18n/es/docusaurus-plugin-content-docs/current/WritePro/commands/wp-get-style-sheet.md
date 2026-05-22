@@ -45,7 +45,7 @@ If the *styleSheetName* is the root-level name of a hierarchical list style shee
 - *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root-level, 2 = first sub-level, etc.).
 - Si se omite el parámetro y la hoja de estilo es jerárquica, se devuelve la hoja de estilo del nivel raíz.
 - Si el nivel solicitado no existe, se devuelve un objeto null.
-- If the style sheet is not a hierarchical list style sheet and *listLevelIndex* is greater than 1, a null object is returned.
+- Si la hoja de estilo no es una hoja de estilo de lista jerárquica y *listLevelIndex* es mayor que 1, se devuelve un objeto null.
 
 ## Ejemplo 1
 

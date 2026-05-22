@@ -117,7 +117,7 @@ Project methods can be called from external contexts such as other applications,
 - [procesamiento de etiquetas](../Tags/transformation-tags.md)
 - expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
 
-External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
+Las llamadas externas a los métodos proyecto deben estar permitidas en las [propiedades de los métodos proyecto](../Project/project-method-properties.md).
 
 ### Execution mode
 

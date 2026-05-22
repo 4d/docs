@@ -7,7 +7,7 @@ The AI page allows you to add, remove, or view the list of all your AI providers
 
 :::tip Entrada de blog relacionada
 
-[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centralización de proveedores de IA y alias de modelos en 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
 
 :::
 
@@ -22,10 +22,10 @@ Por defecto, la lista de proveedores está vacía.
 Para añadir un proveedor de IA:
 
 1. Haga clic en el botón **+** situado en la parte inferior de la lista de proveedores.
-2. Enter the required [provider's configuration fields](#provider-properties), including credentials.
+2. Introduzca los [campos de configuración del proveedor](#provider-properties) necesarios, incluidas las credenciales.
 3. (optional) Click the **Test connection** button to make sure the provided URL and credentials are valid.
 
-If the connection is successful, the number of available models is displayed on the right side of the button:
+Si la conexión se realiza correctamente, a la derecha del botón aparece el número de modelos disponibles:
 
 ![](../assets/en/settings/ai-connection-ok.png)
 
@@ -51,7 +51,7 @@ Local name used to identify the provider in your code, for example "claude". The
 
 ### Base URL
 
-Endpoint of the provider's API, for example `https://api.openai.com/v1` or `http://localhost:11434/v1`.
+Endpoint de la API del proveedor, por ejemplo `https://api.openai.com/v1` o `http://localhost:11434/v1`.
 
 The combo box lists the main providers, you can select a value to enter the provider endpoint:
 

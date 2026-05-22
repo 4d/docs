@@ -3,13 +3,13 @@ id: MethodClass
 title: Método
 ---
 
-A `4D.Method` object contains a piece of code that is created from text source and can be executed. Los métodos `4D.Method` siempre se ejecutan en modo interpretado, independientemente del modo de ejecución del proyecto (interpretado/compilado). Esta funcionalidad está especialmente diseñada para permitir la ejecución dinámica y sobre la marcha de fragmentos de código.
+Un objeto `4D.Method` contiene un fragmento de código que se crea a partir de la fuente de texto y puede ser ejecutado. Los métodos `4D.Method` siempre se ejecutan en modo interpretado, independientemente del modo de ejecución del proyecto (interpretado/compilado). Esta funcionalidad está especialmente diseñada para permitir la ejecución dinámica y sobre la marcha de fragmentos de código.
 
 Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 
 Los objetos `4D.Method` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar el objeto método, puede:
 
-- store a `4D.Method` object in an object property and use the `()` operator after the property name,
+- almacenar un objeto `4D.Method` en una propiedad del objeto y utilizar el operador `()` después del nombre de la propiedad,
 - o llamar directamente al objeto `4D.Method` usando la función [`call()`](#call) o [`apply()`](#apply) en él.
 
 Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).

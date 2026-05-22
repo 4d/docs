@@ -9,7 +9,7 @@ A desktop session is a user-related execution context on 4D Server, 4D remote, o
 
 Las sesiones de escritorio incluyen:
 
-- **Remote user sessions**: In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- **Sesiones de usuario remotas**: en aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones, administradas desde el cliente y desde el servidor.
 - **Sesiones de procedimientos almacenados**: en aplicaciones cliente/servidor, la única sesión virtual de usuario que gestiona todos los procedimientos almacenados ejecutados en el servidor.
 - **Sesiones autónomas**: objeto de sesión local devuelto en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
 
@@ -46,7 +46,7 @@ Functions that read privileges can be called on both client and server sides ([`
 
 El objeto `session` del usuario remoto se utiliza para gestionar y compartir los datos de la sesión.
 
-Within each environment, a [session `storage`](../API/SessionClass.md#storage) object is shared across all processes of the same user session. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
+En cada entorno, un objeto [session `storage`](../API/SessionClass.md#storage) es compartido por todos los procesos de la misma sesión de usuario. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
 
 Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses).
 

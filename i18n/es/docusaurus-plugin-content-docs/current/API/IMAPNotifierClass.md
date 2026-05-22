@@ -21,7 +21,7 @@ Todas las funciones de clase `IMAPNotifier` son hilo seguro.
 
 :::tip Entradas de blog relacionadas
 
-[Instant Email Notifications with IMAP Transporter](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
+[Notificaciones instantáneas por correo electrónico con IMAP Transporter](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
 
 :::
 
@@ -106,15 +106,15 @@ The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates 
 
 The `.start()` function <!-- REF #IMAPNotifier.start().Summary -->starts the subscription to server notifications and activates IMAP listener callbacks<!-- END REF -->.
 
-A mailbox must be selected using [`selectBox()`](./IMAPTransporterClass.md#selectbox) before calling `.start()`.
+Debe seleccionarse un buzón mediante [`selectBox()`](./IMAPTransporterClass.md#selectbox) antes de llamar a `.start()`.
 
 Callback functions are executed in the worker where `.start()` is called.
 
 :::note Notas
 
-- When the notifier is started, other transporter functions (such as `getMail()` or `send()`) are not available. You must call `.stop()` before using these functions, then call `.start()` again to resume notifications.
+- Cuando se inicia el notificador, otras funciones del transportador (como `getMail()` o `send()`) no están disponibles. You must call `.stop()` before using these functions, then call `.start()` again to resume notifications.
 
-- IMAP IDLE notifications indicate that a change has occurred but do not provide updated mailbox data. To refresh the mailbox state, you must stop the notifier, retrieve the updated data (for example using `getMail()`), and then restart it.
+- IMAP IDLE notifications indicate that a change has occurred but do not provide updated mailbox data. Para actualizar el estado del buzón, debe detener el aviso, recuperar los datos actualizados (por ejemplo usando `getMail()`), y luego reiniciarlo.
 
 :::
 

@@ -386,7 +386,7 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 #### Descripción
 
 El comando `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convierte un documento MIME en un objeto de correo electrónico válido<!-- END REF -->.
-> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the returned email object.
+> 4D sigue la [especificación JMAP](https://jmap.io/spec/rfc8621/) para dar formato al objeto de correo electrónico devuelto.
 
 Pase en *mime* un documento MIME válido para convertir. Puede ser suministrado por cualquier servidor o aplicación de correo. Puede pasar un BLOB o un texto en el parámetro *mime*. Si el MIME proviene de un archivo, se recomienda utilizar un parámetro BLOB para evitar problemas relacionados con las conversiones del conjunto de caracteres y los saltos de línea.
 

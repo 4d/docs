@@ -9,7 +9,7 @@ A desktop session is a user-related execution context on 4D Server, 4D remote, o
 
 Las sesiones de escritorio incluyen:
 
-- **Remote user sessions**: In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- **Sesiones de usuario remotas**: en aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones, administradas desde el cliente y desde el servidor.
 - **Sesiones de procedimientos almacenados**: en aplicaciones cliente/servidor, la única sesión virtual de usuario que gestiona todos los procedimientos almacenados ejecutados en el servidor.
 - **Sesiones autónomas**: objeto de sesión local devuelto en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
 

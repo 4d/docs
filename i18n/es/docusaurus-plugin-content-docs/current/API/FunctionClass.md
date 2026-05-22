@@ -133,7 +133,7 @@ The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the fu
 
 En el parámetro *thisObj*, puede pasar una referencia al objeto que se utilizará como `This` en la función.
 
-You can pass values to be used as parameters in the function using the optional *params* parameter:
+Puede pasar valores que se utilizarán como parámetros en la función utilizando el parámetro opcional *params*:
 
 - en los objetos `4D.Formula`, los parámetros se pasan en $1...$n en la fórmula.
 - en los objetos `4D.Method`, los parámetros se pasan en [parámetros declarados](../Concepts/parameters.md).
