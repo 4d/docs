@@ -181,7 +181,11 @@ export default function DocsVersionDropdownNavbarItem({
 
   function versionItemToLink({ version, label }) {
     const targetDoc = getVersionTargetDoc(version, activeDocContext, allVersions, pathname);
-    const available = hasDocInVersion(version, activeDocContext, pathname);
+    // On root / main doc pages, skip unavailable styling — every version has a main doc
+    const activeDoc = activeDocContext.activeDoc;
+    const isMainDoc = !activeDoc || (activeDocContext.activeVersion &&
+      activeDoc.id === activeDocContext.activeVersion.mainDocId);
+    const available = isMainDoc || hasDocInVersion(version, activeDocContext, pathname);
     return {
       label,
       // preserve ?search#hash suffix on version switches
