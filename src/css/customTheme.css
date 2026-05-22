@@ -168,3 +168,16 @@ summary {
 a.footer__link-item:hover {
     color: #1e90ff !important;
 }
+
+/* Version dropdown: page not available in target version */
+.dropdown__menu .version-unavailable {
+  opacity: 0.5;
+}
+.dropdown__menu .version-unavailable:hover {
+  opacity: 0.7;
+}
+.dropdown__menu .version-separator {
+  margin: 0.3rem 0.8rem;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}

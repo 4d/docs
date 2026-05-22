@@ -878,5 +878,8 @@
   },
   "4D Analyzer": {
     "message": "4D Analyzer"
+  },
+  "theme.docs.versionDropdown.notAvailable": {
+    "message": "このページはこのバージョンでは利用できません"
   }
 }
