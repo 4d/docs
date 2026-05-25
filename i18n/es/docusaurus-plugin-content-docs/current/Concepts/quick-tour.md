@@ -430,8 +430,8 @@ Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 - la palabra clave `any` se utiliza para los parámetros que pueden ser de cualquier valor (número, texto, booleano, fecha, hora, objeto, colección...).
 - when a parameter can accept several types, they are listed and separated by comma, for example: `value : Text, Real, Date, Time`
   This means the parameter *value* can be Text OR Real OR Date OR Time.
-- **parámetro variable**: la notación `...param: Type` indica de 0 a un número ilimitado de parámetros del mismo tipo. For example, `.concat( value : any { ;...valueN : any }) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- **variadic group of parameters**: the `{; ...(param1 : Type ; param2 : Type)}` notation indicates from 1 to an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) })` means that an unlimited number of couple values of type array/text can be passed to the command.
+- **parámetro variable**: la notación `...param: Type` indica de 0 a un número ilimitado de parámetros del mismo tipo. Por ejemplo, `.concat( value : any { ;...valueN :any }) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
+- **grupo variable de parámetros**: la notación `{; ...(param1 : Tipo ; param2 : Tipo)}` indica de 1 a un número ilimitado de grupos de parámetros. For example, `COLLECTION TO ARRAY( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) })` means that an unlimited number of couple values of type array/text can be passed to the command.
 
 ### Descripción del tipo de parámetro
 

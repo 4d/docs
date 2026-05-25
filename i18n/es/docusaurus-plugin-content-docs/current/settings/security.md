@@ -48,7 +48,7 @@ Esta página contiene opciones relacionadas con la protección del acceso y de l
   Cuando esta opción está seleccionada:
 
   - los componentes 4D están cargados,
-  - each [On Host Database Event database method](../commands/on-host-database-event-database-method) of the component (if any) is called by the host database,
+  - cada método base [On Host Database Event](../commands/on-host-database-event-database-method) del componente (si lo hay) es llamado por la base local,
   - se ejecuta el código del método.
 
   Cuando no está marcada:

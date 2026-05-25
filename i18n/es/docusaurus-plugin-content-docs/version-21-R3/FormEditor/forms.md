@@ -99,7 +99,7 @@ En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión
 You can however enable the modern print rendering engine at any moment by:
 
 - unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- o ejecutando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Use legacy print rendering` a 1 (configuración volátil).
 
 :::warning Limitación
 

@@ -1298,7 +1298,7 @@ Para mover todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contiene el objeto IMAPNotifier asociado al transportador<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 Véase [IMAPNotifier](./IMAPNotifierClass.md).
 

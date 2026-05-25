@@ -90,12 +90,12 @@ Los formularios se llaman usando comandos específicos del lenguaje 4D. In your 
 When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
 
 1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
-2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). Cuando llama a este comando sin asterisco (\*), el diálogo permanecerá en pantalla y la ejecución del código se congelará hasta que ocurra un evento.
+2. En el mismo método, llame al comando [`DIALOG`](../commands/dialog) para cargar realmente el formulario en la ventana de formulario abierta, listo para la interacción del usuario. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). Cuando llama a este comando sin asterisco (\*), el diálogo permanecerá en pantalla y la ejecución del código se congelará hasta que ocurra un evento.
 3. (opcional) Utilice el comando [`Form`](../commands/form) desde el contexto del formulario para acceder a los datos del formulario.
 
 :::note Compatibilidad
 
-All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY RECORD`](../commands/add-record) merge all steps in a single call. Estos comandos heredados aún pueden utilizarse para la creación de prototipos o desarrollos básicos, pero no están adaptados a las interfaces modernas totalmente controladas. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
+Los comandos todo en uno como [`ADD RECORD`](../commands/add-record) o [`MODIFY RECORD`](../commands/add-record) fusionan todos los pasos en una sola llamada. Estos comandos heredados aún pueden utilizarse para la creación de prototipos o desarrollos básicos, pero no están adaptados a las interfaces modernas totalmente controladas. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
 
 :::
 
@@ -149,7 +149,7 @@ ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ### Utilizar formularios como subformularios
 
-A form can be embedded within another form, in which case it becomes a [subform object](../FormObjects/subform_overview.md) which follows specific rules. Un subformulario se utiliza automáticamente cuando su formulario principal se [muestra en una ventana](#using-a-project-form-in-a-window).
+Un formulario puede estar integrado en otro formulario, en cuyo caso se convierte en un [objeto subformulario](../FormObjects/subform_overview.md) que sigue unas reglas específicas. Un subformulario se utiliza automáticamente cuando su formulario principal se [muestra en una ventana](#using-a-project-form-in-a-window).
 
 In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. A continuación, puede utilizarlo en el subformulario con el comando [`Form`](../commands/form). En este ejemplo, el objeto "InvoiceAddress" está vinculado al subformulario:
 
@@ -173,7 +173,7 @@ $formData.request:="I need more COFFEE"
 var $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-- To print a form within a printing job to process data during printing, use [`FORM LOAD`](../commands/form-load) and [`Print object`](../commands/print-object) commands. Por ejemplo:
+- Para imprimir un formulario en una tarea de impresión para procesar datos durante la impresión, utilice los comandos [`FORM LOAD`](../commands/form-load) y [`Print object`](../commands/print-object). Por ejemplo:
 
 ```4d
  var $formData : Object
@@ -227,7 +227,7 @@ En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión
 You can however enable the modern print rendering engine at any moment by:
 
 - unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- o ejecutando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Use legacy print rendering` a 1 (configuración volátil).
 
 :::warning Limitación
 

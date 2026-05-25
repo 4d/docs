@@ -318,7 +318,7 @@ var $embedding := $client.embeddings.create("text"; ":embedding")
 ```4d
 var $providers := cs.AIKit.OpenAIProviders.new()
 var $models := $providers.modelAliases()
-// Returns: [{name: "chat", provider: "openai", model: "gpt-5.1"}, ...]
+// Devuelve: [{nombre: "chat", proveedor: "openai", modelo: "gpt-5.1"}, ...]
 ```
 
 ### Producción con múltiples proveedores de servicios en la nube

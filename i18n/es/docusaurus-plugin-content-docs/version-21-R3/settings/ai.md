@@ -79,7 +79,7 @@ Al configurar un proveedor de AI, debe proporcionar su propia clave API. Requier
 
 Using the Settings dialog box, the 4D developer can define a custom **provider name** (for example "open-ai-v1") and use this custom name in the code. También pueden probarlo utilizando su clave API.
 
-When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Thanks to the [User settings priority rules](../settings/overview.md#priority-of-settings), the customer settings will automatically override the developer settings.
+When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Gracias a las [reglas de prioridad de configuración de usuario](../settings/overview.md#priority-of-settings), la configuración del cliente anulará automáticamente la configuración del desarrollador.
 
 :::warning
 
@@ -93,7 +93,7 @@ The Model Aliases page allows you to list models from registered Providers that 
 
 When using a model alias:
 
-- The provider is automatically resolved (see [Model resolution](../aikit/Classes/OpenAIProviders.md#model-resolution) in the 4D-AIKit documentation).
+- El proveedor se resuelve automáticamente (ver [Model resolution](../aikit/Classes/OpenAIProviders.md#model-resolution) en la documentación de 4D-AIKit).
 - Se aplica el ID del modelo.
 - All credentials and endpoints are used.
 

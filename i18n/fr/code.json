@@ -880,6 +880,6 @@
     "message": "4D Analyzer"
   },
   "theme.docs.versionDropdown.notAvailable": {
-    "message": "Cette page n'est pas disponible dans cette version"
+    "message": "This page is not available in this version"
   }
 }

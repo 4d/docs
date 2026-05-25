@@ -71,7 +71,7 @@ Most of the routines of this section accept document names, relative pathnames o
 
 Los nombres de ruta relativos definen una ubicación con respecto a una carpeta situada en el disco. Si sólo se pasa el nombre del documento, se considera que se está utilizando una ruta relativa. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Los nombres de ruta relativos son especialmente útiles cuando se despliegan aplicaciones en entornos heterogéneos.
 Absolute pathnames define a location with respect to the root of the volume and so they do not depend on the current location of the database folder.
-To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
+Para determinar si una ruta pasada a un comando debe ser interpretada como absoluta o relativa, 4D aplica un algoritmo específico en cada plataforma.
 
 Windows  
 If the parameter contains only two characters and if the second one is a ':',

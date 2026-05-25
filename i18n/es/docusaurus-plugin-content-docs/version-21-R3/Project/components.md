@@ -175,7 +175,7 @@ Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que
 
 ### Componentes almacenados en plataformas de alojamiento Git {#components-stored-on-git-hosting-platforms}
 
-4D components available as **releases** on GitHub and GitLab platforms can be referenced and automatically loaded and updated in your 4D projects.
+Los componentes 4D disponibles como **releases** en las plataformas GitHub y GitLab pueden ser referenciados y cargados y actualizados automáticamente en sus proyectos 4D.
 
 :::note
 
@@ -198,8 +198,8 @@ Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub
 
 Las versiones de GitLab sólo almacenan el nombre y la URL de los activos, no contienen los archivos subidos. Debe ofrecer el archivo zip de su componente como enlace.
 
-1. Upload the component's ZIP file somewhere, i.e. either on an external server, or [using GitLab Package Registry](#using-the-gitlab-package-registry) (generic package).
-2. Create a [GitLab release](https://docs.gitlab.com/user/project/releases/) for your component, including the link to your component's file as release asset.
+1. Suba el archivo ZIP del componente en algún lugar, es decir, en un servidor externo, o [usando GitLab Package Registry](#using-the-gitlab-package-registry) (paquete genérico).
+2. Cree una [versión de GitLab](https://docs.gitlab.com/user/project/releases/) para su componente, incluyendo el enlace al archivo de su componente como activo de la versión.
 
 The asset name is typically an artifact link name (\<my-component\>.zip).
 

@@ -41,7 +41,7 @@ Class files are managed through the 4D Explorer (see [Creating classes](../Proje
 
 #### Borrar una clase
 
-To delete an existing class, select it in the Explorer and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+Para eliminar una clase existente, selecciónela en el Explorador y haga clic en ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
 También puede eliminar el archivo de clase .4dm de la carpeta "Classes" de su disco.
 
@@ -162,7 +162,7 @@ Las funciones de clase son propiedades específicas de la clase. Son objetos de 
 
 Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin la estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
-In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. Estas palabras claves sólo pueden utilizarse con las funciones del modelo de datos ORDA y las funciones singleton compartidas/sesión. Para más información, consulte el párrafo [funciones locales y de servidor](#local-and-server) más abajo.
+En el contexto de una aplicación cliente/servidor, la palabra clave `local` o `server` permite especificar en qué máquina debe ejecutarse la función. Estas palabras claves sólo pueden utilizarse con las funciones del modelo de datos ORDA y las funciones singleton compartidas/sesión. Para más información, consulte el párrafo [funciones locales y de servidor](#local-and-server) más abajo.
 
 El nombre de la función debe ser compatible con las [reglas de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -488,7 +488,7 @@ Cuando ambas funciones están definidas, la propiedad calculada es **read-write*
 
 Si las funciones se declaran en una [clase compartida](#shared-classes), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin la estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
-In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. Estas palabras claves sólo pueden utilizarse con las funciones del modelo de datos ORDA y las funciones singleton compartidas/sesión. Para más información, consulte el párrafo [funciones locales y de servidor](#local-and-server) más abajo.
+En el contexto de una aplicación cliente/servidor, la palabra clave `local` o `server` permite especificar en qué máquina debe ejecutarse la función. Estas palabras claves sólo pueden utilizarse con las funciones del modelo de datos ORDA y las funciones singleton compartidas/sesión. Para más información, consulte el párrafo [funciones locales y de servidor](#local-and-server) más abajo.
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
@@ -884,7 +884,7 @@ If `local` and `server` keywords are used in another context, an error is return
 
 :::note
 
-For a overall description of where code is actually executed in client/server, please refer to [this section](../Desktop/clientServer.md#code-execution-location).
+Para una descripción general de dónde se ejecuta realmente el código en cliente/servidor, consulte [esta sección](../Desktop/clientServer.md#code-execution-location).
 
 ::::
 
@@ -920,7 +920,7 @@ End if
 
 ### `server`
 
-In a [client/server architecture](../Desktop/clientServer.md), the `server` keyword specifies that the function must be executed **on the server side**.
+En una [arquitectura cliente/servidor](../Desktop/clientServer.md), la palabra clave `server` especifica que la función debe ejecutarse **en el lado del servidor**.
 
 :::note Recordatorio
 
@@ -930,7 +930,7 @@ La palabra clave `server` es inútil para las [funciones del modelo de datos ORD
 
 Los parámetros y el resultado de la función `server` deben ser [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
 
-This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](../Concepts/classes.md#session-singleton) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](../Concepts/classes.md#session-singleton) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. En este caso, es posible que desee que la lógica de negocio relevante se ejecute **en el servidor** para que toda la información de la sesión se recopile en el servidor.
 
 Por defecto, las funciones singleton compartidas o de sesión se ejecutan localmente. Añadir la palabra clave `server` en la definición de la función de la clase hace que 4D utilice la instancia singleton en el servidor. Tenga en cuenta que esto puede dar lugar a una instanciación del singleton en el servidor si aún no existe ninguna instancia.
 

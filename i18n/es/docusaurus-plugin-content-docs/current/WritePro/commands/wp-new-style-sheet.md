@@ -42,7 +42,7 @@ En el parámetro *wpDoc*, pasa un documento 4D Write Pro.
 The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Hay dos tipos disponibles:
 
 - wk type character: aplica atributos de estilo a los caracteres.
-- wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
+- wk type paragraph: aplica los atributos de estilo a los párrafos (requerido si quiere crear las [hojas de estilo de lista jerárquica](#hierarchical-list-style-sheet)).
 
 Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. El nombre de la hoja de estilo debe cumplir las siguientes reglas:
 

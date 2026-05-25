@@ -671,7 +671,7 @@ El archivo de configuración del registro es un archivo `.json` que debe cumplir
 :::note
 
 - The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`), [`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log\`,...).
-- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands/web-set-option) command.
+- Para httpDebugLogs, la propiedad "level" corresponde a las opciones constantes `wdl` descritas en el comando [`WEB SET OPTION`](../commands/web-set-option).
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
 
 :::

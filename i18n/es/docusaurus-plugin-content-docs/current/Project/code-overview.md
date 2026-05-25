@@ -104,7 +104,7 @@ Para eliminar un método o clase existente, puede:
 
 ## Comandos de acceso a objetos de diseño
 
-You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). This source toolkit facilitates the integration into your applications of code control tools and more particularly version control systems (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
+You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
 
 Se aplican los siguientes principios:
 

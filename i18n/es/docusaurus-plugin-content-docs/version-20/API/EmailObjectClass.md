@@ -464,11 +464,11 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mail|Object|->|Email object|
-|options|Object|->|Charset and encoding mail options|
-|Result|Text|<-|Email object converted to MIME|
+|mail|Object|->|Objeto de correo|
+|options|Object|->|Charset y opciones de codificación del correo|
+|Resultado|Text|<-|Email object converted to MIME|
 </div>
 <!-- END REF -->
 

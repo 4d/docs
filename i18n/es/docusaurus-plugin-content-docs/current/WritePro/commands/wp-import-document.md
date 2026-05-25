@@ -26,7 +26,7 @@ El comando **WP Import document**<!--REF #_command_.WP Import document.Summary--
 
 Puede pasar un *filePath* o *fileObj*:
 
-- En el parámetro *filePath*, pase la ruta de un documento almacenado en disco. You must pass a complete path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
+- En el parámetro *filePath*, pase la ruta de un documento almacenado en disco. Debe pasar una ruta completa, a menos que el documento se encuentre en el mismo nivel que la carpeta Project, en cuyo caso puede pasar sólo su nombre.
 
 - En el parámetro *fileObj*, pase un objeto 4D.File que representa el archivo a importar.
 

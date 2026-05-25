@@ -3,9 +3,19 @@ id: updates
 title: リリースノート
 ---
 
-## 4D 21 LTS
+:::tip
 
 [**4D 21 での新機能**](https://blog.4d.com/whats-new-in-4d-21lts/): 4D 21 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+:::
+
+## 4D 21.1 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21.1): 4D 21.1 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+
+## 4D 21 LTS
 
 #### ハイライト
 

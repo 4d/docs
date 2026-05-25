@@ -290,7 +290,7 @@ However, text streaming of objects has the following limitations:
 - las referencias circulares son soportadas,
 - los objetos mantienen su clase,
 - an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
-- several native 4D class objects can be streamed, for example [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), or [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
+- se pueden transmitir varios objetos nativos de la clase 4D, por ejemplo [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), o [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
 
 ## Ejemplos
 

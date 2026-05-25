@@ -101,7 +101,7 @@ Obtener todos los nombres de proveedores.
 
 ```4d
 var $names := $providers.list()
-// Returns: ["openai", "anthropic", ...]
+// Devuelve: ["openai", "anthropic", ...]
 
 For each ($name; $names)
     var $config := $providers.get($name)

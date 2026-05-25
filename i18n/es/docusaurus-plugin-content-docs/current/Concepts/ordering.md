@@ -12,14 +12,14 @@ However, [collections](./dt_collection.md) and [objects](./dt_object.md), includ
 The 4D language provides several mechanisms that rely on sorting collection elements, object attributes, or orchestrate sorting to produce an ordered result:
 
 - **Collection sorting functions**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (multi-criteria sorting with explicit key and order specification), [`collection.orderBy()`](../API/CollectionClass.md#orderby) (sorting by evaluating an expression on each element), [`collection.sort()`](../API/CollectionClass.md#sort) (in-place sorting according to the natural ordering relation),
-- **Entity selection sorting functions**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), which applies the same sorting rules as collections,
+- **Funciones de ordenación de la selección de entidades**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), que aplica las mismas reglas de ordenación que las colecciones,
 - **Query functions with ordering**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) with the `order by attributePath` keyword, which return results in deterministic order,
 - **Order-dependent statistical functions**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), which rely on the ordering relation to identify extrema,
 - [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) comando para ordenar una tabla de base de datos en base a un campo objeto.
 
 ## Reglas de ordenación
 
-When a collection or entity selection containing elements of different types is sorted, a **type-based stratification** is applied according to the following algorithm:
+Cuando se ordena una colección o selección de entidades que contiene elementos de diferentes tipos, se aplica una **estratificación basada en el tipo** de acuerdo con el siguiente algoritmo:
 
 1. **Fase de reparto**: los elementos se agrupan en clases de equivalencia en función de su tipo base. Esta fase establece una partición de todo el conjunto de elementos.
 2. **Fase de ordenación intraclase**: dentro de cada clase, los elementos se ordenan según reglas de comparación específicas de cada tipo. El orden por defecto es **ascendente**.

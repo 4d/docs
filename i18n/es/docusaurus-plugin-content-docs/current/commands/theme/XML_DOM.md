@@ -89,7 +89,7 @@ XPath notation allows you to access element 3 using the */RootElement/Elem1/Elem
 
 La notación XPath permite acceder al valor "ccc" utilizando la sintaxis */RootElement/Elem1/Elem2[3]*.
 
-For a comprehensive list of supported XPath expressions, refer to the [`DOM Find XML element`](../../commands/dom-find-xml-element) command description.
+Para una lista completa de expresiones XPath soportadas, consulte la descripción del comando [`DOM Find XML`](../../commands/dom-find-xml-element).
 
 :::note Compatibilidad
 

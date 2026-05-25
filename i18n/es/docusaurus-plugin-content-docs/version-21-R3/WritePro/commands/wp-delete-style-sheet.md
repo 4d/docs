@@ -52,9 +52,9 @@ Al eliminar una hoja de estilo de subnivel:
 
 - The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
 - Los nombres de las hojas de estilo de subnivel afectadas se actualizan para reflejar su nuevo índice de nivel.
-- The `wk list level count` attribute of the root style sheet and all remaining sub-level style sheets is decremented to match the new total number of levels.
+- El atributo `wk list level count` de la hoja de estilo raíz y todas las hojas de estilo de subnivel restantes se decrementan para que coincidan con el nuevo número total de niveles.
 
-The command performs no action if the specified level does not exist, or if the style sheet is not part of a hierarchical list and *listLevelIndex* is greater than 1.
+El comando no realiza ninguna acción si el nivel especificado no existe, o si la hoja de estilo no forma parte de una lista jerárquica y *listLevelIndex* es mayor que 1.
 
 **Nota**: la hoja de estilo por defecto ("Normal") no se puede eliminar.
 

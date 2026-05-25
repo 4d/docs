@@ -32,7 +32,7 @@ Se pueden asociar dos variables específicas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar la URL mostrada por el área web
 - [`Progression`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> A partir de 4D 19 R5, la variable Progression ya no se actualiza en las Áreas Web que utilizan el [motor de renderizado del sistema Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderización web
 
@@ -225,8 +225,8 @@ Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR`
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
   This command can be used directly with onscreen (form object) and offscreen web areas.
 
-- **Use the web area context menu**<br/>
-  This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Utilizar el menú contextual del área web**<br/>
+  Esta función sólo puede utilizarse con áreas web en pantalla y requiere que se cumplan las siguientes condiciones:
   - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
   - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
   ```4d
