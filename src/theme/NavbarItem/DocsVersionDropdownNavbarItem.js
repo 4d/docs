@@ -175,7 +175,7 @@ export default function DocsVersionDropdownNavbarItem({
 
   const notAvailableTooltip = translate({
     id: 'theme.docs.versionDropdown.notAvailable',
-    message: 'This page is not available in this version',
+    message: 'Page not available in this version\nOpening the default page instead',
     description: 'Tooltip for version dropdown items where the current page does not exist',
   });
 

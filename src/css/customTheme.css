@@ -171,10 +171,18 @@ a.footer__link-item:hover {
 
 /* Version dropdown: page not available in target version */
 .dropdown__menu .version-unavailable {
-  opacity: 0.5;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
 }
 .dropdown__menu .version-unavailable:hover {
-  opacity: 0.7;
+  opacity: 0.95;
+}
+.dropdown__menu .version-unavailable::after {
+  content: '∅';
+  margin-left: auto;
+  padding-left: 0.5rem;
+  font-size: 0.75em;
 }
 .dropdown__menu .version-separator {
   margin: 0.3rem 0.8rem;
