@@ -3,7 +3,7 @@ id: ai
 title: AIページ
 ---
 
-The AI page allows you to add, remove, or view the list of all your AI providers and their related model aliases, whether they come from local sources or internet-based services. Providers and model aliases can then be used in your code througout your 4D application, especially with the [**4D-AIKit component**](../aikit/overview.md) using the [**model aliases**](../aikit/provider-model-aliases.md) feature.
+AI ページでは、AI プロバイダーを追加、削除、あるいはその一覧をレビューしたり、また関連したモデルエイリアスを見ることができます。これはローカルソースのものでもインターネットベースのサービスのものでも変わりません。 するとプロバイダーとモデルエイリアスは4D アプリケーション全体においてコード内で使用することができます。特に [**モデルエイリアス**](../aikit/provider-model-aliases.md) 機能を使用した [**4D-AIKit コンポーネント**](../aikit/overview.md) において役立ちます。
 
 :::tip 関連したblog 記事
 
@@ -11,17 +11,17 @@ The AI page allows you to add, remove, or view the list of all your AI providers
 
 :::
 
-## Managing providers
+## プロバイダーの管理
 
-4D supports [various AI providers](../aikit/compatible-openai.md) with an OpenAI-like API, each offering unique models and features for database needs.
+4D はOpenAI のようなAPI を持った [様々なAI プロバイダー](../aikit/compatible-openai.md) をサポートし、それぞれがデータベースの用途に合わせた固有のモデルや機能を提供しています。
 
-By default, the Providers list is empty.
+デフォルトでは、プロバイダーのリストは空です。
 
-### Adding a provider
+### プロバイダーの追加
 
-To add an AI provider:
+AI プロバイダーを追加するには:
 
-1. Click on the **+** button at the bottom of the Providers list.
+1. プロバイダーリストの下部にある **+** ボタンをクリックします。
 2. Enter the required [provider's configuration fields](#provider-properties), including credentials.
 3. (optional) Click the **Test connection** button to make sure the provided URL and credentials are valid.
 
