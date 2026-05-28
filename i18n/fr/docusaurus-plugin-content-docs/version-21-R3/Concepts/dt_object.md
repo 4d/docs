@@ -265,32 +265,32 @@ $doc:=Null // libérer les ressources occupées par $doc
 
 ## Classes
 
-Objects can belong to classes. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
+Les objets peuvent appartenir à des classes. L'utilisation d'une classe permet de prédéfinir le comportement et la structure d'un objet avec des propriétés et des fonctions associées.
 
-The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. You can also define and use your own [user classes](./classes.md) to organize your code.
+Le langage 4D propose plusieurs [classes natives](../category/class-API-reference/) que vous pouvez utiliser pour manipuler des objets. Vous pouvez également définir et utiliser vos propres [classes utilisateurs](./classes.md) pour organiser votre code.
 
-## Streaming support
+## Prise en charge de la sérialisation
 
-A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
+Une classe sérialisable (ou *streamable*) est une classe dont les objets peuvent être convertis en une séquence d'octets (texte ou binaire) afin de les écrire dans un fichier, de les envoyer en tant que paramètres, ou de pouvoir les stocker et les reconstruire par la suite.
 
-### Text streaming (`JSON Stringify`)
+### Sérialisation de texte (`JSON Stringify`)
 
-JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). They support objects, collections, and user classes.
+Les commandes JSON qui sérialisent un contenu, telles que [`JSON Stringify`](../commands/json-stringify) et la commande [`Execute on server`](../commands/execute-on-server), vous permettent de convertir des objets en json (texte). Ils prennent en charge les objets, les collections et les classes utilisateurs.
 
-However, text streaming of objects has the following limitations:
+Toutefois, la sérialisation d'objets sous forme de texte présente les limites suivantes :
 
-- circular references (i.e. objects containing themselves as a property) are not supported and return an error,
-- a class object loses its class when it is stringified,
-- native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
+- les références circulaires (c'est-à-dire les objets se contenant eux-mêmes comme propriété) ne sont pas prises en charge et renvoient une erreur,
+- un objet de classe perd sa classe lorsqu'il est sérialisé,
+- les objets de classe 4D natifs tels que [Entity](../API/EntityClass.md) ne peuvent pas être représentés sous forme de JSON et sont renvoyés sous la forme "[object \<class>]", par exemple "[object Entity]".
 
-### Binary streaming (`VARIABLE TO BLOB`)
+### Sérialisation binaire (`VARIABLE TO BLOB`)
 
-4D also implements a built-in binary streaming feature through the [`VARIABLE TO BLOB`](../commands/variable-to-blob) command. This feature allows you to get rid of most of text streaming limitations regarding objects (see above):
+4D propose également une fonction intégrée de sérialisation binaire via la commande [`VARIABLE TO BLOB`](../commands/variable-to-blob). Cette fonction vous permet de vous débarrasser de la plupart des limitations de la sérialisation de texte concernant les objets (voir ci-dessus) :
 
-- circular references are supported,
-- objects keep their class,
-- an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
-- several native 4D class objects can be streamed, for example [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), or [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
+- les références circulaires sont prises en charge,
+- les objets gardent leur classe,
+- une gamme élargie d'objets peut être sérialsiée : documents [4D Write Pro](../WritePro/user-legacy/presentation.md), objets images, [objets blobs](dt_blob.md#blob-types), et objets pointeurs,
+- des objets de classe 4D native peuvent être sérialisés, par exemple [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), ou [`Vector`](../API/VectorClass.md). Cependant, seules quelques classes 4D natives peuvent être sérialisées. À moins qu'il ne soit explicitement indiqué "Cette classe est **streamable** en binaire", il faut considérer qu'une classe 4D native n'est PAS streamable.
 
 ## Exemples
 

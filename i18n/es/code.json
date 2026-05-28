@@ -866,7 +866,7 @@
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Enviar consulta",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {

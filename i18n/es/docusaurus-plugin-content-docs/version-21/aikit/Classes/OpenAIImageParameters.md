@@ -5,7 +5,7 @@ title: OpenAIImageParameters
 
 # OpenAIImageParameters
 
-The `OpenAIImageParameters` class is designed to configure and manage the parameters used for image generation through the OpenAI API.
+La clase `OpenAIImageParameters` está diseñada para configurar y gestionar los parámetros utilizados para la generación de imágenes a través de la API OpenAI.
 
 ## Hereda
 

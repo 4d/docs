@@ -157,7 +157,7 @@ local Function getYoungest() : Object
 - **sin** la palabra clave `local`, el resultado se da utilizando una única petición
 - **con** la palabra clave `local`, son necesarias 4 peticiones: una para obtener la entidad Schools, una para la `query()`, una para la `orderBy()`, y una para la `slice()`. En este ejemplo, el uso de la palabra clave `local` es inapropiado.
 
-#### Example: Checking attributes
+#### Ejemplo: verificación de atributos
 
 Queremos comprobar la consistencia de los atributos de una entidad cargada en el cliente y actualizada por el usuario antes de solicitar al servidor que los guarde.
 

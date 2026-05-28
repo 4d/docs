@@ -13,7 +13,7 @@ The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a sele
 
 </details>
 
-The `IMAPNotifier` class is available from the `4D` class store.
+La clase `IMAPNotifier` está disponible en el class store `4D`.
 
 An `IMAPNotifier` object is associated with an [IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) and provides access to mailbox notification management.
 

@@ -81,13 +81,13 @@ Normalmente, se selecciona la categoría del formulario al crearlo, pero se pued
 Los formularios se llaman usando comandos específicos del lenguaje 4D. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. Un formulario puede ser:
 
 - utilizado en su propia ventana para la visualización de datos, procesamiento, edición, o para mostrar información en pantalla al usuario,
-- used embedded in another form (subform),
+- utilizado integrado en otro formulario (subformulario),
 - utilizado como plantilla para la impresión,
 - o llamados por funciones específicas como el editor de etiquetas.
 
-### Using a project form in a window
+### Utilizar un formulario de proyecto en una ventana
 
-When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
+When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. Los pasos más sencillos para mostrar un formulario en pantalla son:
 
 1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
 2. En el mismo método, llame al comando [`DIALOG`](../commands/dialog) para cargar realmente el formulario en la ventana de formulario abierta, listo para la interacción del usuario. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). Cuando llama a este comando sin asterisco (\*), el diálogo permanecerá en pantalla y la ejecución del código se congelará hasta que ocurra un evento.
@@ -143,7 +143,7 @@ ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ```
 
-4D displays:
+4D muestra:
 
 ![](../assets/en/FormEditor/example-form-2.png)
 
@@ -161,7 +161,7 @@ En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizan
 
 #### Ejemplos
 
-You can use forms to print data, either as page or as list.
+Puede utilizar formularios para imprimir datos, ya sea en forma de página o de lista.
 
 - To simply print some part of a form, use the [`Print form`](../commands/print-form) command. Por ejemplo:
 
@@ -206,11 +206,11 @@ var $h:=Print form("Request_var";$formData;Form detail)
 - La estructura del diseño, el espaciado y la alineación se conservan para que el documento impreso refleje la estructura lógica del formulario en pantalla.
 - Se produce la misma salida, tanto si el formulario se imprime desde macOS como desde Windows.
 
-For example, the following form:
+Por ejemplo, el siguiente formulario:
 
 ![](../assets/en/FormEditor/screen_rendering.png)
 
-... will be printed with this rendering:
+... se imprimirá con este renderizado:
 
 ![](../assets/en/FormEditor/print_rendering.png)
 

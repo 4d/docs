@@ -110,7 +110,7 @@ See also [**Absolute and relative pathnames** in the Concepts section](../../Con
 
 :::
 
-## Extracting pathname contents
+## Extracción del contenido de una ruta
 
 Puede manejar el contenido de las rutas utilizando los comandos Path to object y Object to path. En particular, usando estos comandos, se puede extraer de una ruta:
 

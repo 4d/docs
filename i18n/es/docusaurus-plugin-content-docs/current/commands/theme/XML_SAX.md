@@ -25,7 +25,7 @@ slug: /commands/theme/XML-SAX
 | [<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax -->](../../commands/sax-open-xml-element-arrays)<br/>               |
 | [<!-- INCLUDE #_command_.SAX SET XML DECLARATION.Syntax -->](../../commands/sax-set-xml-declaration)<br/>                       |
 
-## Overview of XML SAX Commands
+## Visión general de los comandos XML SAX
 
 See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definition of XML SAX.
 

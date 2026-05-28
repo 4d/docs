@@ -207,7 +207,7 @@ The asset name is typically an artifact link name (\<my-component\>.zip).
 
 The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_registry/) allows you to host your files in GitLab itself. Sus principales ventajas incluyen un acceso autenticado, urls estables y versionadas, y la posibilidad de asociar binarios con etiquetas de lanzamiento. To use the Package Registry:
 
-1. Build your component file (for example: *MyComponent.zip*)
+1. Cree el archivo del componente (por ejemplo: *MiComponente.zip*)
 2. Upload it to the [generic packages repository](https://docs.gitlab.com/user/packages/generic_packages/) using a script (see [examples in the GitLab documentation](https://docs.gitlab.com/user/packages/generic_packages/#publish-a-single-file)).
 3. **Deploy** \> **Package Registry** para ver el resultado.
 4. Utilice la URL del paquete como enlace a los activos de la versión.
@@ -336,7 +336,7 @@ Si quiere integrar un componente ubicado en un repositorio privado, necesita dec
   - derechos de acceso: **repo**
 
 - para GitLab: en su cuenta de GitLab, cree un token con las siguientes propiedades:
-  - type: **Personal Access token**
+  - tipo: **Personal Access token**
   - alcances: **read_api** y **read_repository**
 
 A continuación, deberá [suministrar su token de conexión](#providing-your-access-token) al gestor de dependencias.
@@ -500,7 +500,7 @@ Si en este paso no se ha definido aún ningún archivo [**environment4d.json**](
 
 La dependencia se añade a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible después de reiniciar**. Se cargará cuando se reinicie la aplicación.
 
-### Adding a GitHub or GitLab dependency
+### Añadir una dependencia de GitHub o GitLab
 
 Para añadir una [dependencia GitHub o GitLab](#components-stored-on-git-hosting-platforms):
 

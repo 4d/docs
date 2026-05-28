@@ -63,7 +63,7 @@ This non-exhaustive list details the main XML concepts used by the commands and 
 - **Parsing, parser**: The act of analyzing the contents of a structured object in order to extract useful information.
 - **Root**: An element located at the first level of an XML structure.
 - **Sibling**: An element at the same level as another.
-- **Structure**: structured XML object. This object can be a document, a variable, or an element.
+- **Structure**: structured XML object. Este objeto puede ser un documento, una variable o un elemento.
 - **Validación**: un documento XML es "validado" por el analizador sintáctico cuando está "bien formado" y cumple las especificaciones DTD.
 - **Well-formed**: An XML document is declared “well-formed” by the parser when it complies with the generic XML specifications.
 - **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. El lenguaje XML se basa en el uso de etiquetas y una sintaxis específica, en consonancia con el lenguaje HTML. Sin embargo, a diferencia de este último, el lenguaje XML permite definir etiquetas personalizadas.

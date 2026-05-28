@@ -13,9 +13,9 @@ Instead of hard-coding API endpoints and credentials in your code, you can:
 
 - Define provider configurations in a JSON file
 - Use the `provider:model` syntax to specify a provider and model directly
-- Define named model aliases that map to a provider and a model ID
+- Definir los alias de modelos nombrados que se asignan a un proveedor y a un identificador de modelo
 - Utilizar un alias de un modelo por nombre (por ejemplo, `my-gpt`)
-- Switch between providers (OpenAI, Anthropic, local Ollama, etc.) easily
+- Cambiar de proveedor (OpenAI, Anthropic, Ollama local, etc.) easily
 
 ## Configuration Files
 
@@ -27,7 +27,7 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
 | 2                                  | user      | `<project root folder>/Settings/AIProviders.json` |
 | 3 (el más bajo) | structure | `/SOURCES/AIProviders.json`                       |
 
-**Important:** Only the **first existing file** is loaded. There is no merging of multiple files.
+**Importante:** sólo se carga el **primer archivo existente**. No se fusionan varios archivos.
 
 ### Formato del archivo de configuración
 
@@ -57,7 +57,7 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
 | `baseURL`      | Text | Sí        | URL del punto de terminación de la API                                    |
 | `apiKey`       | Text | No        | Valor de la llave API                                                     |
 | `organization` | Text | No        | ID de la organización (opcional, específico de OpenAI) |
-| `project`      | Text | No        | Project ID (optional, OpenAI-specific)                 |
+| `project`      | Text | No        | ID del proyecto (opcional, específico de OpenAI)       |
 
 ### Model Alias Fields
 
@@ -66,7 +66,7 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
 | `proveedor` | Text | Sí        | Name of the provider (must exist in `providers`) |
 | `model`     | Text | Sí        | ID del modelo utilizado por el proveedor                            |
 
-### Example Configuration
+### Ejemplo de configuración
 
 ```json
 {
@@ -114,7 +114,7 @@ Two syntaxes are supported:
 | `provider:model_name` | Alias de proveedor: especifique directamente el proveedor y el modelo |
 | `:model_alias`        | Model alias — reference a named model from the `models` configuration by bare name    |
 
-#### Provider alias syntax
+#### Sintaxis alias de proveedor
 
 Utilice la sintaxis `provider:model_name` en toda llamada a la API que acepte un modelo en parámetro:
 
@@ -149,7 +149,7 @@ var $result := $client.chat.completions.create($messages; {model: ":my-claude"})
 var $result := $client.embeddings.create("text"; ":my-embedding")
 ```
 
-### How It Works
+### Cómo funciona
 
 #### Alias de proveedor (`provider:model`)
 
@@ -161,7 +161,7 @@ When you use the `provider:model` syntax, the client automatically:
 2. **Looks up** the provider configuration from the loaded JSON file
    - Retrieves `baseURL`, `apiKey`, `organization`, `project`
 
-3. **Makes the API request** using the resolved configuration
+3. **Efectúa la solicitud de API** usando la configuración resuelta
    - Envía una petición a la `baseURL` del proveedor con la `apiKey` correcta
 
 #### Alias de modelo (nombre simple)
@@ -194,7 +194,7 @@ var $result := $client.chat.completions.create($messages; {model: ":my-gpt"})
 
 ## Ejemplos
 
-### Multi-Provider Chat Application
+### Aplicación de chat multiproveedor
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
@@ -211,7 +211,7 @@ var $result := $client.chat.completions.create($messages; {model: "anthropic:cla
 var $result := $client.chat.completions.create($messages; {model: "local:llama3.2"})
 ```
 
-### Embeddings with Multiple Providers
+### Integraciones con varios proveedores
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
@@ -228,7 +228,7 @@ var $embedding2 := $client.embeddings.create($text; "local:nomic-embed-text")
 
 Las configuraciones de los proveedores pueden gestionarse a través de los [Parámetros de 4D](https://developer.4d.com/docs/settings/ai) o editando directamente los archivos JSON.
 
-**To add or modify providers:**
+**Para añadir o modificar proveedores:**
 
 1. Utilice la interfaz de los Parámetros 4D (recomendado), o
 2. Edite el archivo JSON apropiado (archivo de datos usuario, usuario o estructura)
@@ -237,7 +237,7 @@ Las configuraciones de los proveedores pueden gestionarse a través de los [Par�
 **Ubicación del archivo recomendado:**
 
 - **For user-specific configs:** `<data folder>/Settings/AIProviders.json`
-- **For application defaults:** `/SOURCES/AIProviders.json`
+- **Para los valores por defecto de la aplicación:** `/SOURCES/AIProviders.json`
 
 ### No Reload Capability
 
@@ -342,7 +342,7 @@ var $models := $providers.modelAliases()
 }
 ```
 
-### Provider-Specific Organizations
+### Organizaciones específicas de proveedores
 
 ```json
 {

@@ -7,7 +7,7 @@ title: OpenAIModelsAPI
 
 ## Descripción de la clase
 
-`OpenAIModelsAPI` is a class that allows interaction with OpenAI models through various functions, such as retrieving model information, listing available models, and (optionally) deleting fine-tuned models.
+`OpenAIModelsAPI` es una clase que permite interactuar con los modelos OpenAI a través de varias funciones, como la recuperación de información de los modelos, la lista de los modelos disponibles y (opcionalmente) la eliminación de los modelos ajustados.
 
 https://platform.openai.com/docs/api-reference/models
 

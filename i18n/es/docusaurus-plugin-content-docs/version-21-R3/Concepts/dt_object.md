@@ -283,7 +283,7 @@ However, text streaming of objects has the following limitations:
 - a class object loses its class when it is stringified,
 - native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
 
-### Binary streaming (`VARIABLE TO BLOB`)
+### Serialización binaria (`VARIABLE TO BLOB`)
 
 4D también implementa una función de flujo binario a través del comando [`VARIABLE TO BLOB`](../commands/variable-to-blob). Esta función le permite librarse de la mayoría de las limitaciones de transmisión de texto relativas a los objetos (ver arriba):
 

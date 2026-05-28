@@ -863,7 +863,7 @@ server Function <functionName>
 `local` and `server` keywords are only available for the functions of the following classes:
 
 - [ORDA data model](../ORDA/ordaClasses.md) classes
-- [shared or session singleton](#singleton-classes) classes.
+- clases [singleton compartidas o de sesión](#singleton-classes).
 
 :::tip Entrada de blog relacionada
 
@@ -875,7 +875,7 @@ server Function <functionName>
 
 Supported functions have a **default execution location** when no location keyword is used. No obstante, puede insertar una palabra clave `local` o `server` para modificar la ubicación de ejecución, o para hacer el código más explícito.
 
-| Supported functions                               | Ejecución por defecto | with `local` keyword                                          | with `server` keyword                                                                                                                                                                       |
+| Supported functions                               | Ejecución por defecto | with `local` keyword                                          | con la palabra clave `server`                                                                                                                                                               |
 | ------------------------------------------------- | --------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [ORDA data model](../ORDA/ordaClasses.md)         | en el servidor        | La función se ejecuta en el cliente si se llama en el cliente |                                                                                                                                                                                             |
 | [Shared or session singleton](#singleton-classes) | Local                 |                                                               | La función se ejecuta en el servidor en la instancia de servidor del singleton. <br/>If there is no instance of the singleton on the server, it is created. |
@@ -898,7 +898,7 @@ The `local` keyword is useless for [shared or session singleton functions](#sing
 
 :::
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server. Suele ofrecer el mejor rendimiento, ya que sólo se envían por la red la petición de función y el resultado. However, [for optimization reasons](../ORDA/client-server-optimization.md#using-the-local-keyword), you could want to execute a data model function on client. You can then use the `local` keyword.
+By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server. Suele ofrecer el mejor rendimiento, ya que sólo se envían por la red la petición de función y el resultado. However, [for optimization reasons](../ORDA/client-server-optimization.md#using-the-local-keyword), you could want to execute a data model function on client. A continuación, puede utilizar la palabra clave `local`.
 
 #### Ejemplo: cálculo de la edad
 
@@ -941,7 +941,7 @@ For [sessions singletons](#singleton-classes), the function is executed on the s
 Si declara una `server Function` en un singleton compartido, entonces:
 
 - instancia un singleton *S1* en el cliente (llamado *s1*),
-- you run *s1.function()* on the client.
+- ejecuta *s1.function()* en el cliente.
 
 If no instance of *S1* exists on the server at that moment, *S1* is instantiated on the server (the constructor is executed), and *function()* runs on that server instance. As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
 
@@ -982,7 +982,7 @@ $serverActivity:=$administration.processActivity()
 
 ```
 
-#### Example: Session singleton
+#### Ejemplo: singleton de sesión
 
 You store your users in a Users table and handle a custom authentication. Utiliza un singleton de sesión para la autenticación:
 

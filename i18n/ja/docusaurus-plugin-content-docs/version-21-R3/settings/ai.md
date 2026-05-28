@@ -22,62 +22,62 @@ AI ページでは、AI プロバイダーを追加、削除、あるいはそ�
 AI プロバイダーを追加するには:
 
 1. プロバイダーリストの下部にある **+** ボタンをクリックします。
-2. Enter the required [provider's configuration fields](#provider-properties), including credentials.
-3. (optional) Click the **Test connection** button to make sure the provided URL and credentials are valid.
+2. 資格情報を含めた、必要な [プロバイダーの設定フィールド](#プロバイダーのプロパティ) を入力します。
+3. (オプション) 入力されたURL と資格情報が有効であることを確認するために **接続をテストする** ボタンをクリックします。
 
-If the connection is successful, the number of available models is displayed on the right side of the button:
+正常に接続できた場合には、ボタンの右側に利用可能なモデル数が表示されます:
 
 ![](../assets/en/settings/ai-connection-ok.png)
 
-If the connection test fails, an error message is displayed (e.g. "Request failed: Not found" or "Request failed: Unauthorized").
+接続テストが失敗した場合、エラーメッセージが表示されます(例: "Request failed: Not found" あるいは "Request failed: Unauthorized" など)。
 
-4. Click **OK** to save the new provider, or **Cancel** to revert all modifications.
+4. 新しいプロバイダーを保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
-### Editing a provider
+### プロバイダーの編集
 
-To edit or remove a provider:
+プロバイダーを編集または削除するには:
 
-1. Select a registered provider in the list.
-2. Edit the provider's information OR to remove a provider, click on the **-** button at the bottom of the Providers list.
-3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+1. リスト内に登録されたプロバイダーを選択します。
+2. プロバイダーの情報を編集するか、または、プロバイダーリストの下部にある **-** ボタンをクリックしてプロバイダーを削除します。
+3. 変更を保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
-## Provider properties
+## プロバイダーのプロパティ
 
-When you select a provider in the Providers list, several properties are available. Property names in **bold** are mandatory to create a Provider.
+プロバイダーのリストからプロバイダーを選択すると、複数のプロパティが利用できるようになります。 プロパティの名前が **太字** のものは、プロバイダーを作成するのには必須のプロパティです。
 
 ### 名称
 
-Local name used to identify the provider in your code, for example "claude". The name must be [compliant with property names](../Concepts/identifiers.md) since it will be used in the application's code to reference the provider.
+コード内でプロバイダーを識別するために使用されるローカルの名前。例: "claude"。 名前は、プロバイダーをコード内で参照するためにアプリケーション内で使用されるため、 [プロパティ名に準拠している](../Concepts/identifiers.md) 必要があります。
 
-### Base URL
+### ベースURL
 
-Endpoint of the provider's API, for example `https://api.openai.com/v1` or `http://localhost:11434/v1`.
+プロバイダーのAPI のエンドポイント。例えば、 `https://api.openai.com/v1` あるいは `http://localhost:11434/v1` など。
 
-The combo box lists the main providers, you can select a value to enter the provider endpoint:
+コンボボックスはメインのプロバイダーがリストとして表示されるので、プロバイダーのエンドポイントを入力するのそこから値を選択することができます:
 
 ![](../assets/en/settings/ai-base-url.png)
 
-### API Key
+### APIキー
 
-(optional) API key for the provider. For instructions on generating an API key, please refer to your AI provider’s official documentation. Some AI providers may also require additional specific credentials.
+(オプション) プロバイダーのAPI キー。 API キーを生成するための手順については、そのAI プロバイダーの公式ドキュメンテーションを参照して下さい。 一部のAI プロバイダーでは追加の特定の資格情報をが必要になる場合もあります。
 
 ### 組織
 
-(optional, OpenAI-specific) Organization ID used by the OpenAI API.
+(オプション、OpenAI 特有) OpenAI API が使用する組織 ID。
 
 ### Project
 
-(optional, OpenAI-specific) ID of the project. Each OpenAI API key is attached to a project.
+(オプション、OpenAI 特有) プロジェクトのID。 OpenAI の各API キーはプロジェクトに割り当てられています。
 
 ### AIProviders.json
 
-The provider configuration is stored in a JSON file named *AIProviders.json* located next to the active *settings.4DSettings file* within the [project folder](../Project/architecture.md), [depending on your deployment configuration](./overview.md#enabling-user-settings).
+プロバイダーの設定は *AIProviders.json* という名前のJSON ファイル内に保存されています。このファイルは[運用設定に応じて](./overview.md#enabling-user-settings)、[project フォルダ](../Project/architecture.md) 内の、アクティブな *settings.4DSettings ファイル* の隣に置かれています。
 
-### Deployment with an API key
+### APIキーを使用した運用
 
-When configuring an AI provider, you need to provide your own API key. It requires an external registration for getting API keys/credentials from AI providers.
+AI プロバイダーを設定しているときには、自分のAPI キーを提供する必要があります。 AI プロバイダーからAPI キー/資格情報を取得するためには外部登録が必要になります。
 
-Using the Settings dialog box, the 4D developer can define a custom **provider name** (for example "open-ai-v1") and use this custom name in the code. They can also test it using their API key.
+設定ダイアログボックスを使用することで、4D デベロッパーはカスタムの**プロバイダー名** (例えば"open-ai-v1" など)を定義し、そのカスタムの名前をコード内で使用することができます。 ここではAPI キーを使用してテストを行うこともできます。
 
 When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Thanks to the [User settings priority rules](../settings/overview.md#priority-of-settings), the customer settings will automatically override the developer settings.
 
@@ -111,7 +111,7 @@ To add a model alias:
 2. In the **Name** column, enter the name of the alias.
 3. Click on the corresponding row in the **Provider** column to display the list of available providers ([provider names](#name) you entered in the Providers page), and select the name of the provider.
 4. Click on the corresponding row in the **Model** column to display the list of available models exposed by the selected provider and select the model.
-5. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+5. 変更を保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
 ![](../assets/en/settings/model-alias.png)
 
@@ -121,7 +121,7 @@ To edit or remove an alias:
 
 1. Select a model alias in the list.
 2. Edit the alias information OR to remove a alias, click on the **-** button at the bottom of the list.
-3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+3. 変更を保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
 ### Using a model alias
 

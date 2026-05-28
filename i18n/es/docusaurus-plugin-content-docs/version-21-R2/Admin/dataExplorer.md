@@ -18,7 +18,7 @@ El Explorador de datos se basa en el componente servidor web [`WebAdmin`](webAdm
 
 ## Apertura del Explorador de datos
 
-[The Web Administration Server](webAdmin.md#starting-the-web-administration-server) is started automatically if necessary when the Data Explorer is clicked on.
+[El servidor de administración web](webAdmin.md#starting-the-web-administration-server) se inicia automáticamente si es necesario cuando se hace clic en el explorador de datos.
 
 Para conectarse a la página web del Explorador de datos:
 

@@ -43,7 +43,7 @@ slug: /commands/theme/XML-DOM
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT NAME.Syntax -->](../../commands/dom-set-xml-element-name)<br/>                         |
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT VALUE.Syntax -->](../../commands/dom-set-xml-element-value)<br/>                       |
 
-## Overview of XML DOM Commands
+## Visión general de los comandos XML DOM
 
 See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definition of XML DOM.
 
@@ -97,7 +97,7 @@ Starting with 4D 18 R3, the XPath implementation has been modified to be more co
 
 :::
 
-### Error Handling
+### Gestión de errores
 
 Muchas funciones de este tema devuelven una referencia a un elemento XML. If an error occurs during function execution (for example, if the root element reference is not valid), the *OK* variable is set to 0 and an error is generated.
 

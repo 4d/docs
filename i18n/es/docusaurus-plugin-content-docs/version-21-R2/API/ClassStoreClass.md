@@ -35,7 +35,7 @@ var $myclass:=cs.EmployeeEntity
 
 ## *.classStoreName*
 
-<!-- REF ClassStoreClass.classStoreName.Syntax -->***.classStoreName*** : 4D.ClassStore<!-- END REF -->
+<!-- REF ClassStoreClass.classStoreName.Syntax -->***.classStoreName***: 4D.ClassStore<!-- END REF -->
 
 #### Descripción
 

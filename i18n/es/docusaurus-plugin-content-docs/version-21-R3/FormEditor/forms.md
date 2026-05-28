@@ -66,7 +66,7 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 }
 ```
 
-## Printing forms
+## Impresión de formularios
 
 En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizando los diferentes [comandos del tema **Imprimir**](../commands/theme/Printing).
 
@@ -78,11 +78,11 @@ En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizan
 - La estructura del diseño, el espaciado y la alineación se conservan para que el documento impreso refleje la estructura lógica del formulario en pantalla.
 - Se produce la misma salida, tanto si el formulario se imprime desde macOS como desde Windows.
 
-For example, the following form:
+Por ejemplo, el siguiente formulario:
 
 ![](../assets/en/FormEditor/screen_rendering.png)
 
-... will be printed with this rendering:
+... se imprimirá con este renderizado:
 
 ![](../assets/en/FormEditor/print_rendering.png)
 
