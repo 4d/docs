@@ -28,9 +28,9 @@ Upload a file that can be used across various endpoints.
 
 | Parameter       | Type                           | Description                                               |
 |-----------------|--------------------------------|-----------------------------------------------------------|
-| *file*          | [4D.File](https://developer.4d.com/docs/API/FileClass) or [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | The File or Blob object (not file name) to be uploaded. |
-| *purpose*       | Text                           | **Required.** The intended purpose of the uploaded file. |
-| *parameters*    | [OpenAIFileParameters](OpenAIFileParameters.md) | Optional parameters including expiration policy.         |
+| `file`          | [4D.File](https://developer.4d.com/docs/API/FileClass) or [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | The File or Blob object (not file name) to be uploaded. |
+| `purpose`       | Text                           | **Required.** The intended purpose of the uploaded file. |
+| `parameters`    | [OpenAIFileParameters](OpenAIFileParameters.md) | Optional parameters including expiration policy.         |
 | Function result | [OpenAIFileResult](OpenAIFileResult.md) | The file result |
 
 **Throws:** An error if `file` is not a 4D.File or 4D.Blob, or if `purpose` is empty.
