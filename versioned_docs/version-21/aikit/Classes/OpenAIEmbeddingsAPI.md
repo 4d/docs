@@ -7,7 +7,7 @@ title: OpenAIEmbeddingsAPI
 
 The `OpenAIEmbeddingsAPI` provides functionalities to create embeddings using OpenAI's API.
 
-https://platform.openai.com/docs/api-reference/embeddings
+https://developers.openai.com/api/reference/resources/embeddings
 
 ## Functions
 
@@ -20,7 +20,7 @@ Creates an embeddings for the provided input, model and parameters.
 | Argument   | Type                                  | Description                                      |
 |------------|---------------------------------------|--------------------------------------------------|
 | *input*    | Text or Collection of Text           | The input to vectorize.              |
-| *model*    | Text                                 | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models)                |
+| *model*    | Text                                 | The [model to use](https://developers.openai.com/api/docs/guides/embeddings#embedding-models).             
 | *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request. |
 | Function result| [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md) | The embeddings.  |
 
