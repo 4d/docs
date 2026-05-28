@@ -134,6 +134,13 @@ Delete a file
 var $deleteResult:=$client.files.delete($fileId)
 ```
 
+:::tip Related blog post
+
+[Transform Static Documents into Actionable Knowledge with 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit).
+
+:::
+
+
 #### Moderations
 
 https://developers.openai.com/api/reference/resources/moderations
@@ -148,9 +155,6 @@ If you do not want to wait for the OpenAPI response when sending a request to it
 
 See [detailed documentation for examples](asynchronous-call.md)
 
-## License
-
-See the [LICENSE][license-url] file for details
 
 ## Copyright
 
@@ -158,8 +162,3 @@ See the [LICENSE][license-url] file for details
 - "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.
 - This project simply provides an interface to OpenAI’s services and does not claim any ownership over their technology, branding, or intellectual property.
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[code-shield]: https://img.shields.io/static/v1?label=language&message=4d&color=blue
-[code-url]: https://developer.4d.com/
-[license-url]: LICENSE.md

@@ -12,7 +12,7 @@ title: 4D-AIKit
 
 ## OpenAI
 
-The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
+The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://developers.openai.com/api/reference/overview).
 
 ### Configuration
 
@@ -48,11 +48,11 @@ See some examples below.
 
 #### Chat
 
-https://platform.openai.com/docs/api-reference/chat
+https://developers.openai.com/api/reference/resources/chat
 
 ##### Completions
 
-https://platform.openai.com/docs/api-reference/chat/create
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
 
 ```4d
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
@@ -82,7 +82,7 @@ var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description
 
 #### Images
 
-https://platform.openai.com/docs/api-reference/images
+https://developers.openai.com/api/reference/resources/images
 
 ```4d
 var $images:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"}).images
@@ -90,7 +90,7 @@ var $images:=$client.images.generate("A futuristic city skyline at sunset"; {siz
 
 #### Models
 
-https://platform.openai.com/docs/api-reference/models
+https://developers.openai.com/api/reference/resources/models
 
 Get full list of models
 
@@ -106,7 +106,7 @@ var $model:=$client.models.retrieve("a model id").model
 
 #### Files
 
-https://platform.openai.com/docs/api-reference/files
+https://developers.openai.com/api/reference/resources/files
 
 Upload a file for use with other endpoints
 
@@ -143,7 +143,7 @@ var $deleteResult:=$client.files.delete($fileId)
 
 #### Moderations
 
-https://platform.openai.com/docs/api-reference/moderations
+https://developers.openai.com/api/reference/resources/moderations
 
 ```4d
 var $moderation:=$client.moderations.create("This text contains inappropriate language and offensive behavior.").moderation
