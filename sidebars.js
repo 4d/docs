@@ -889,6 +889,7 @@ module.exports =
             "aikit/overview",
             "aikit/asynchronous-call",
             "aikit/compatible-openai",
+            "aikit/provider-model-aliases",
             {
               type: "category",
               label: "Classes",
@@ -933,6 +934,7 @@ module.exports =
                 "aikit/Classes/openaimoderationresult",
                 "aikit/Classes/openaimoderationsapi",
                 "aikit/Classes/openaiparameters",
+                "aikit/Classes/openaiproviders",
                 "aikit/Classes/openairesult",
                 "aikit/Classes/openaitool",
                 "aikit/Classes/openaivision",
