@@ -672,7 +672,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
+$vPict:=VP Convert to picture($vpAreaObj) //エリア全体を書き出します
 ```
 
 #### 参照

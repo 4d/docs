@@ -25,7 +25,7 @@ Para depuración y monitorización, puede utilizar el fichero de registro [4DTCP
 
 ### Programación asíncrona
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Esta clase soporta programación asíncrona en 4D como se describe en la página [Ejecución Asíncrona](../Develop/async.md).
 
 ### Objeto UDPSocket
 

@@ -220,7 +220,7 @@ For example, the following form:
 
 :::
 
-#### Legacy print renderer
+#### 旧式印刷レンダラー
 
 In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
 

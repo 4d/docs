@@ -9,7 +9,7 @@ La clase `SystemWorker` está disponible en el class store `4D`.
 
 ### Programación asíncrona
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Esta clase soporta programación asíncrona en 4D como se describe en la página [Ejecución Asíncrona](../Develop/async.md).
 
 ### Ejemplo
 

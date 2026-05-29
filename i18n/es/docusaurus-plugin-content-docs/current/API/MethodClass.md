@@ -32,10 +32,10 @@ Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variabl
 
 ```4d
 var $myCode : Text
-$myCode:="#DECLARE ($number1:Integer;$number2:Integer):Integer"+Char(13)+"return $number1*$number2"
+$myCode:="#DECLARE ($number1:Integer;$number2:Integer):Integer "+Char(13)+"return $number1*$number2"
 
 var $o:={}
-$o.multiplication:=4D.Method.new($myCode) //put object in a property
+$o.multiplication:=4D.Method.new($myCode) //poner objeto en una propiedad
 var $result2:=$o.multiplication(2;3) // 6
 
 var $result3:=4D.Method.new($myCode).call(Null; 10; 5) // 50
