@@ -3,18 +3,18 @@ id: FormulaClass
 title: Formula
 ---
 
-`4D.Formula` objects are created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands and allow you execute any 4D expression or code expressed as single-line text.
+Los objetos `4D.Formula` son creados por los comandos [Formula](../commands/formula) o [Formula from string](../commands/formula-from-string) y le permiten ejecutar cualquier expresión 4D o código expresado como texto de una sola línea.
 
 Los objetos de la clase `4D.Formula` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar la fórmula, puede:
 
-- store a `4D.Formula` object in an object property and use the `()` operator after the property name,
+- almacenar un objeto `4D.Formula` en una propiedad de objeto y utilizar el operador `()` después del nombre de la propiedad,
 - o llamar directamente al objeto `4D.Formula` usando la función [`call()`](#call) o [`apply()`](#apply) sobre él.
 
 Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binario.
 
 :::
 
@@ -32,8 +32,8 @@ O utilizando la función [.call()](#call):
 ```4d
  var $f : 4D.Formula
  $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
+ $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //devuelve "Welcome to 2026" (por ejemplo)
 ```
 
 #### Parámetros de un solo método
@@ -44,9 +44,9 @@ Para mayor comodidad, cuando la fórmula se compone de un único método proyect
  var $f : 4D.Formula
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
+  //Escribir Formula(myMethod($1;$2)) no es necesario
+ $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
+ $text:=$f.call() //devuelve "How are you?"
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text

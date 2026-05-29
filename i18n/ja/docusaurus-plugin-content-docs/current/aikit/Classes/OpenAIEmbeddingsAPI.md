@@ -7,7 +7,7 @@ title: OpenAIEmbeddingsAPI
 
 `OpenAIEmbeddingsAPI` はOpenAI のAPI を使用して埋め込みを作成する機能を提供します。
 
-https://platform.openai.com/docs/api-reference/embeddings
+https://developers.openai.com/api/reference/resources/embeddings
 
 ## 関数
 
@@ -17,12 +17,12 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 提供された入力、モデル、パラメータに対する埋め込みを作成します。
 
-| 引数           | 型                                                           | 説明                                                                                                                                                                                                        |
-| ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *input*      | テキストまたはテキストのコレクション                                          | ベクター化する入力。                                                                                                                                                                                                |
-| *model*      | Text                                                        | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models). Supports [provider:model aliases](../provider-model-aliases.md). |
-| *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | 埋め込みリクエストをカスタマイズするための引数。                                                                                                                                                                                  |
-| 戻り値          | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | 埋め込み。                                                                                                                                                                                                     |
+| 引数           | 型                                                           | 説明                                                                                                                                                                                                              |
+| ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *input*      | テキストまたはテキストのコレクション                                          | ベクター化する入力。                                                                                                                                                                                                      |
+| *model*      | Text                                                        | The [model to use](https://developers.openai.com/api/docs/guides/embeddings#embedding-models). Supports [provider:model aliases](../provider-model-aliases.md). |
+| *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | 埋め込みリクエストをカスタマイズするための引数。                                                                                                                                                                                        |
+| 戻り値          | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | 埋め込み。                                                                                                                                                                                                           |
 
 #### 使用例
 

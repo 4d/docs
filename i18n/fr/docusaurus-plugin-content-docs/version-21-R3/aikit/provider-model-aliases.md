@@ -21,11 +21,11 @@ Au lieu de coder en dur les points de terminaison et les identifiants de l'API d
 
 Le client charge automatiquement les configurations du fournisseur à partir du premier fichier existant trouvé (par ordre de priorité) :
 
-| Priorité                              | Emplacement | Emplacement du fichier                            |
-| ------------------------------------- | ----------- | ------------------------------------------------- |
-| 1 (le plus élevé)  | userData    | `<data folder>/Settings/AIProviders.json`         |
-| 2                                     | user        | `<project root folder>/Settings/AIProviders.json` |
-| 3 (le plus faible) | structure   | `/SOURCES/AIProviders.json`                       |
+| Priorité                              | Emplacement | Emplacement du fichier                       |
+| ------------------------------------- | ----------- | -------------------------------------------- |
+| 1 (le plus élevé)  | userData    | `<data folder>/Settings/AIProviders.json`    |
+| 2                                     | user        | `<package folder>/Settings/AIProviders.json` |
+| 3 (le plus faible) | structure   | `/SOURCES/AIProviders.json`                  |
 
 **Important:** Seul le **premier fichier existant** est chargé. Il n'y a pas de fusion de plusieurs fichiers.
 
@@ -44,7 +44,7 @@ Le client charge automatiquement les configurations du fournisseur à partir du 
   "models": {
     "model_alias_name": {
       "provider": "provider_name",
-      "model": "actual-model-id",
+      "model": "actual-model-id"
     }
   }
 }
@@ -96,8 +96,7 @@ Le client charge automatiquement les configurations du fournisseur à partir du 
     },
     "my-embedding": {
       "provider": "openai",
-      "model": "text-embedding-3-small",
-      }
+      "model": "text-embedding-3-small"
     }
   }
 }
@@ -112,7 +111,7 @@ Deux syntaxes sont prises en charge :
 | Syntaxe               | Description                                                                                |
 | --------------------- | ------------------------------------------------------------------------------------------ |
 | `provider:model_name` | Alias de fournisseur - spécifie directement le fournisseur et le modèle                    |
-| `:model_alias`        | Alias de modèle — référence un modèle nommé de la configuration `models` par un nom simple |
+| `model_alias`         | Alias de modèle — référence un modèle nommé de la configuration `models` par un nom simple |
 
 #### Syntaxe alias de fournisseur
 
@@ -141,12 +140,12 @@ Utilisez un nom de modèle simple pour référencer un modèle nommé défini da
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Utiliser un alias de modèle nommé
-var $result := $client.chat.completions.create($messages; {model: ":my-gpt"})
-var $result := $client.chat.completions.create($messages; {model: ":my-claude"})
+// Use a named model alias
+var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
+var $result := $client.chat.completions.create($messages; {model: "my-claude"})
 
-// Embeddings avec un alias de modèle nommé
-var $result := $client.embeddings.create("text"; ":my-embedding")
+// Embeddings with a named model alias
+var $result := $client.embeddings.create("text"; "my-embedding")
 ```
 
 ### Comment ça marche
@@ -169,7 +168,7 @@ Lorsque vous utilisez la syntaxe `provider:model`, le client automatiquement :
 Lorsque vous utilisez un nom de modèle simple qui correspond à un alias configuré, le client automatiquement :
 
 1. **recherche** l'alias du modèle dans la section `models` de la configuration
-   - Exemple : `":my-gpt"` → trouve une entrée avec `provider : "openai"`, `model : "gpt-5.1"`
+   - Example: `"my-gpt"` → finds entry with `provider: "openai"`, `model: "gpt-5.1"`
 
 2. **résoud** le fournisseur associé pour obtenir `baseURL` et `apiKey`
 
@@ -177,19 +176,18 @@ Lorsque vous utilisez un nom de modèle simple qui correspond à un alias config
 
 ### Utiliser des noms de modèles seuls
 
-Si vous spécifiez un nom de modèle **sans** préfixe de fournisseur ou avec un préfixe `:`, le client utilise la configuration de son constructeur :
+If you specify a model name **without** a provider prefix, the client uses the configuration from its constructor:
 
 ```4d
-// Utiliser la configuration du constructeur
-var $client := cs.AIKit.OpenAI.new({apiKey : "sk-..." ; baseURL : "https://api.openai.com/v1"})
-var $result := $client.chat.completions.create($messages; {model : "gpt-5.1"})
+// Use constructor configuration
+var $client := cs.AIKit.OpenAI.new({apiKey: "sk-..."; baseURL: "https://api.openai.com/v1"})
+var $result := $client.chat.completions.create($messages; {model: "gpt-5.1"})
 
-// Surcharge avec l'alias du fournisseur
-var $result := $client.chat.completions.create($messages; {model : "anthropic:claude-3-opus"})
+// Override with provider alias
+var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
 
-// Surcharge avec l'alias du modèle (nom simple)
-var $result := $client.chat.completions.create($messages; {model : ":my-gpt"})
-
+// Override with model alias (bare name)
+var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 ## Exemples
@@ -298,7 +296,7 @@ Définir les modèles une fois, les utiliser partout par leur nom :
     },
     "embedding": {
       "provider": "openai",
-      "model": "text-embedding-3-small",
+      "model": "text-embedding-3-small"
     }
   }
 }
@@ -307,10 +305,10 @@ Définir les modèles une fois, les utiliser partout par leur nom :
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Utiliser des alias de modèles nommés — pas besoin de se souvenir du fournisseur ou de l'ID du modèle
-var $result := $client.chat.completions.create($messages; {model: ":chat"})
-var $result := $client.chat.completions.create($messages; {model: ":fast"})
-var $embedding := $client.embeddings.create("text"; ":embedding")
+// Use named model aliases — no need to remember provider or model ID
+var $result := $client.chat.completions.create($messages; {model: "chat"})
+var $result := $client.chat.completions.create($messages; {model: "fast"})
+var $embedding := $client.embeddings.create("text"; "embedding")
 ```
 
 ### Lister tous les modèles configurés

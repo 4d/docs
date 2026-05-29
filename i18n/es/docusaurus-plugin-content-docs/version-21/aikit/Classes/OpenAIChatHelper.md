@@ -65,23 +65,23 @@ $chatHelper.reset() // Borra todos los mensajes y herramientas anteriores
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| Parámetros | Tipo   | Descripción                                                                                                                                                                                                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*     | Object | Objeto de definición de la herramienta (o instancia [OpenAITool](OpenAITool.md))                                                                                                           |
-| *handler*  | Object | La función para manejar las llamadas de herramientas ([4D.Function](../../API/FunctionClass.md) u Objeto), opcional si se define dentro de *tool* como propiedad *handler* |
+| Parámetros | Tipo   | Descripción                                                                                                                                                                     |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*     | Object | Objeto de definición de la herramienta (o instancia [OpenAITool](OpenAITool.md))                                                                             |
+| *handler*  | Object | La función para manejar las llamadas de herramientas (4D.Function u Object), opcional si se define dentro de *tool* como propiedad *handler* |
 
 Registra una herramienta con su función de gestión automática de llamadas a herramientas.
 
 El parámetro *handler* puede ser:
 
 - Un objeto **4D.Function**: función de gestión directa
-- Un **Objeto**: un objeto que contiene una propiedad `formula` que coincide con el nombre de la función de la herramienta
+- Un **Objeto**: un objeto que contiene una propiedad formula que coincide con el nombre de la función de la herramienta
 
 La función de gestión recibe un objeto que contiene los parámetros pasados por la llamada a la herramienta OpenAI. Este objeto contiene pares llave-valor en los que las llaves corresponden a los nombres de los parámetros definidos en el esquema de la herramienta, y los valores son los argumentos reales ofrecidos por el modelo de IA.
 
-#### Ejemplo de Register Tool
+#### Ejemplos de herramientas de registro
 
 ```4D
 // Ejemplo 1: Registro simple con gestor directo
@@ -117,7 +117,7 @@ Registra varias herramientas a la vez. El parámetro puede ser:
 - **Objeto**: objeto cuyas propiedades son nombres de funciones que corresponden a definiciones de herramientas
 - **Objeto con atributo `tools`**: objeto que contiene una colección `tools` y propiedades de fórmulas que coinciden con nombres de herramientas
 
-#### Ejemplo de registro de varias herramientas
+#### Ejemplos de registro de varias herramientas
 
 ##### Ejemplo 1: formato colección con los gestores en las herramientas
 

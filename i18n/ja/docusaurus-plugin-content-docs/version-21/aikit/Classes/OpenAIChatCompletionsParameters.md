@@ -1,11 +1,11 @@
 ---
 id: openaichatcompletionsparameters
-title: OpenAIChatCompletionParameters
+title: OpenAIChatCompletionsParameters
 ---
 
-# OpenAIChatCompletionParameters
+# OpenAIChatCompletionsParameters
 
-`OpenAIChatCompletionParameters` クラスはOpenAI API を使用したチャット補完に必要な引数を管理するために設計されています。
+The `OpenAIChatCompletionsParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
 
 ## 継承元
 
@@ -13,30 +13,32 @@ title: OpenAIChatCompletionParameters
 
 ## プロパティ
 
-| プロパティ                   | 型          | デフォルト値          | 説明                                                                                                          |
-| ----------------------- | ---------- | --------------- | ----------------------------------------------------------------------------------------------------------- |
-| `model`                 | Text       | `"gpt-4o-mini"` | 使用するモデルのID。                                                                                                 |
-| `stream`                | Boolean    | `false`         | 部分的な進捗をストリームで返すかどうかを決めます。 設定されていれば、トークンはデータオンリーとして送信されます。 コールバックフォーミュラが必要となります。                             |
-| `stream_options`        | Object     | `Null`          | stream = True の場合のオプションを指定するプロパティ。 例: `{include_usage: True}`                               |
-| `max_completion_tokens` | Integer    | `0`             | チャット補完の中で生成可能なトークンの最大数。                                                                                     |
-| `n`                     | Integer    | `1`             | 各プロンプトに対して生成するチャット補完の数。                                                                                     |
-| `temperature`           | Real       | `-1`            | 使用するサンプリング温度。0から2の間の値。 値が大きいほど出力はよりランダムになり、値が小さいほど出力はより集中して決まりきったものになります。                                   |
-| `store`                 | Boolean    | `false`         | このチャット補完リクエストの出力を保存するかどうか。                                                                                  |
-| `reasoning_effort`      | Text       | `Null`          | 推論モデルにおける推論の努力に対する制約。 現在サポートされている値は `"low"`、`"medium"`、および`"high"`です。                                       |
-| `response_format`       | Object     | `Null`          | モデルが出力するフォーマットを指定するオブジェクト。 構造化された出力に対応します。                                                                  |
-| `ツール`                   | Collection | `Null`          | モデルが呼び出し得るツール([OpenAITool](OpenAITool.md)) の一覧。 "function" 型のみがサポートされます。                 |
-| `tool_choice`           | Variant    | `Null`          | どのモデルによってどのツール(あれば)が呼び出されるかを管理します。 `"none"`、`"auto"`、`"required"`、または特定のツールを指定することができます。 |
-| `prediction`            | Object     | `Null`          | 再生成されているテキストファイルのコンテンツなど、静的に予想される出力内容。                                                                      |
+| プロパティ                   | 型          | デフォルト値          | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------- | ---------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `model`                 | Text       | `"gpt-4o-mini"` | 使用するモデルのID。                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `stream`                | Boolean    | `false`         | 部分的な進捗をストリームで返すかどうかを決めます。 設定されていれば、トークンはデータオンリーとして送信されます。 コールバックフォーミュラが必要となります。                                                                                                                                                                                                                                                                                                                                                          |
+| `stream_options`        | Object     | `Null`          | stream = True の場合のオプションを指定するプロパティ。 例: `{include_usage: True}`                                                                                                                                                                                                                                                                                                                                                            |
+| `max_completion_tokens` | Integer    | `0`             | チャット補完の中で生成可能なトークンの最大数。                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `n`                     | Integer    | `1`             | 各プロンプトに対して生成するチャット補完の数。                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `temperature`           | Real       | `-1`            | 使用するサンプリング温度。0から2の間の値。 値が大きいほど出力はよりランダムになり、値が小さいほど出力はより集中して決まりきったものになります。                                                                                                                                                                                                                                                                                                                                                                |
+| `top_p`                 | Real       | `-1`            | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. Only sent when the value is greater than 0 (omitted when `<= 0`, with default `-1`). |
+| `store`                 | Boolean    | `false`         | このチャット補完リクエストの出力を保存するかどうか。                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `reasoning_effort`      | Text       | `Null`          | 推論モデルにおける推論の努力に対する制約。 現在サポートされている値は `"low"`、`"medium"`、および`"high"`です。                                                                                                                                                                                                                                                                                                                                                                    |
+| `response_format`       | Object     | `Null`          | モデルが出力するフォーマットを指定するオブジェクト。 構造化された出力に対応します。                                                                                                                                                                                                                                                                                                                                                                                               |
+| `ツール`                   | Collection | `Null`          | モデルが呼び出し得るツール([OpenAITool](OpenAITool.md)) の一覧。 "function" 型のみがサポートされます。                                                                                                                                                                                                                                                                                                                                              |
+| `tool_choice`           | Variant    | `Null`          | どのモデルによってどのツール(あれば)が呼び出されるかを管理します。 `"none"`、`"auto"`、`"required"`、または特定のツールを指定することができます。                                                                                                                                                                                                                                                                                                                              |
+| `prediction`            | Object     | `Null`          | 再生成されているテキストファイルのコンテンツなど、静的に予想される出力内容。                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `service_tier`          | Text       | `Null`          | Specifies the processing type used for serving the request. `"auto"`, `"auto"`, `"default"`, and `"priority"`.                                                                                                                                                                                                                                                                                           |
 
 ### 非同期コールバック用プロパティ
 
-| プロパティ                                       | 型                           | 説明                                                   |
-| ------------------------------------------- | --------------------------- | ---------------------------------------------------- |
-| `onData` (または `formula`) | 4D.Function | データチャンクを受信する際に非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。 |
+\| Property                   | Type    | Description                                                                                       |
+\|---------------------------|---------|-------------------------|---------------------------------------------------------------------------------------------------|
+\| `onData`<br>(or `formula`)   | 4D.Function | A function to be called asynchronously when receiving data chunk.<br>*Ensure that the current process does not terminate.* |
 
-`onData` は引数として[OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md) を受け取ります。
+`onData` will receive as argument a [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)
 
-他のコールバックプロパティについては[OpenAIParameters](./OpenAIParameters.md) を参照して下さい。
+他のコールバックプロパティについては[OpenAIParameters](OpenAIParameters.md) を参照して下さい。
 
 ## レスポンスフォーマット
 

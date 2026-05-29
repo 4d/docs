@@ -79,55 +79,55 @@ AI プロバイダーを設定しているときには、自分のAPI キーを�
 
 設定ダイアログボックスを使用することで、4D デベロッパーはカスタムの**プロバイダー名** (例えば"open-ai-v1" など)を定義し、そのカスタムの名前をコード内で使用することができます。 ここではAPI キーを使用してテストを行うこともできます。
 
-When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Thanks to the [User settings priority rules](../settings/overview.md#priority-of-settings), the customer settings will automatically override the developer settings.
+4D アプリケーションが[ユーザー設定が有効化](../settings/overview.md#ユーザー設定の有効化) された状態で配布された場合、管理者は **同じ AI プロバイダー名** ("open-ai-v1") を使用することでユーザー設定を設定することができ、またエンドユーザーのキーを使用するように**API キーをカスタマイズする** ことができます。 [ユーザー設定の優先度ルール](../settings/overview.md#設定の優先順位) のおかげで、エンドユーザーの設定は開発者の設定を自動的に上書きします。
 
 :::warning
 
-When using 4D in client/server mode, it is **strongly recommended** to execute AI-related code on the server side to protect API keys and credentials from exposure to remote machines.
+4D をクライアント/サーバーモードで使用している場合、API キーおよび資格情報をリモートマシンに漏れることから保護するために、AI 関連のコードは全てサーバー側で実行することが **強く推奨されます**。
 
 :::
 
-## Model Aliases
+## モデルエイリアス
 
-The Model Aliases page allows you to list models from registered Providers that you want to use in your code and to name them with *aliases*. Thanks to model aliases, you avoid hardcoding model names, switch models without changing your code, and keep consistency across environments.
+モデルエイリアスページを使用すると、登録したプロバイダーの一覧からコード内で使用したいプロバイダーを選択肢、それに*エイリアス* で名前をつけることができます。 モデルエイリアスのおかげで、モデル名のハードコードを避けることができ、コードを変更することなくモデルを切り替え、環境を超えて一貫性を保つことができます。
 
-When using a model alias:
+モデルエイリアスを使用している場合:
 
-- The provider is automatically resolved (see [Model resolution](../aikit/Classes/OpenAIProviders.md#model-resolution) in the 4D-AIKit documentation).
-- The model ID is applied.
-- All credentials and endpoints are used.
+- プロバイダーは自動的に解決されます(詳細については4D-AIKit ドキュメンテーション内の [モデル解決](../aikit/Classes/OpenAIProviders.md#モデル解決) を参照して下さい)。
+- モデルID が適用されます。
+- 全ての資格情報とエンドポイントが使用されます。
 
-### Adding a model alias
+### モデルエイリアスの追加
 
 :::note
 
-To be able to add a model alias, you must have entered at least one valid provider in the **Providers** tab.
+モデルエイリアスを追加できるようになるためには、**プロバイダー** タブ内で少なくとも一つの有効なプロバイダーを入力している必要があります。
 
 :::
 
-To add a model alias:
+モデルエイリアスを追加するには:
 
-1. Click on the **+** button at the bottom of the model aliases list.
-2. In the **Name** column, enter the name of the alias.
-3. Click on the corresponding row in the **Provider** column to display the list of available providers ([provider names](#name) you entered in the Providers page), and select the name of the provider.
-4. Click on the corresponding row in the **Model** column to display the list of available models exposed by the selected provider and select the model.
+1. **+** モデルエイリアスリストの下部にあるボタンをクリックします。
+2. **名前** カラム内には、エイリアスの名前を入力します。
+3. カラム内の対応する行をクリックすると、利用可能なプロバイダーの一覧(プロバイダーページで入力した [プロバイダー名](#名称)) が表示されるので、そこからプロバイダーの名前を選択します。
+4. **モデル** カラム内から対応する行をクリックすると、選択されたプロバイダーによって公開されている利用可能なモデルの一覧が表示され、そこからモデルを選択します。
 5. 変更を保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
 ![](../assets/en/settings/model-alias.png)
 
-### Editing a model alias
+### モデルエイリアスの編集
 
-To edit or remove an alias:
+エイリアスを編集または削除するためには:
 
-1. Select a model alias in the list.
-2. Edit the alias information OR to remove a alias, click on the **-** button at the bottom of the list.
+1. リスト内からモデルエイリアスを選択します。
+2. エイリアス情報を編集するか、または、リストの下部にある **-** ボタンをクリックしてエイリアスを削除します。
 3. 変更を保存するには **OK** を、あるいは変更を全て元に戻すためには **キャンセル** をクリックします。
 
-### Using a model alias
+### モデルエイリアスの使用
 
-You can directly use the model alias name wherever a model name is required (provided that model aliases are supported).
+モデルエイリアスは、モデル名が必要なところであればどこでもモデルエイリアス名を直接使用することができます(モデルエイリアスがサポートされていれば)。
 
-For example, in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
+例えば、4D-AIKit 内では次のシンタックスでモデルを参照することができます: *{model:"ModelName"}* ここでの *ModelName* はモデルエイリアスタブ内で定義されている有効なモデルです:
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
@@ -137,4 +137,4 @@ var $result := $client.chat.completions.create($messages; \
 
 ### 参照
 
-["Provider & Model Aliases"](../aikit/provider-model-aliases.md) in the 4D AIKit documentation.
+4D AIKit ドキュメンテーションの["プロバイダーとモデルエイリアス"](../aikit/provider-model-aliases.md)。

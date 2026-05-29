@@ -5,27 +5,27 @@ title: Alias de proveedores y modelos
 
 # Alias de proveedores y modelos
 
-The OpenAI client supports provider and model aliases, allowing you to define provider configurations and named model aliases in JSON files and reference them using simple syntaxes.
+El cliente OpenAI soporta alias de proveedores y de modelos, permitiéndole definir las configuraciones de proveedores y de los alias de los modelos nombrados en los archivos JSON y referenciarlos utilizando sintaxis simples.
 
 ## Generalidades
 
-Instead of hard-coding API endpoints and credentials in your code, you can:
+En lugar de codificar los puntos finales de la API y las credenciales en el código, puede hacerlo:
 
-- Define provider configurations in a JSON file
-- Use the `provider:model` syntax to specify a provider and model directly
+- Definir las configuraciones de los proveedores en un archivo JSON
+- Utilice la sintaxis `provider:model` para especificar directamente un proveedor y un modelo
 - Definir los alias de modelos nombrados que se asignan a un proveedor y a un identificador de modelo
 - Utilizar un alias de un modelo por nombre (por ejemplo, `my-gpt`)
-- Cambiar de proveedor (OpenAI, Anthropic, Ollama local, etc.) easily
+- Cambiar de proveedor (OpenAI, Anthropic, Ollama local, etc.) fácilmente
 
-## Configuration Files
+## Archivos de configuración
 
 El cliente carga automáticamente las configuraciones del proveedor a partir del primer archivo existente encontrado (por orden de prioridad):
 
-| Prioridad                          | Ubicación | Ruta del archivo                                  |
-| ---------------------------------- | --------- | ------------------------------------------------- |
-| 1 (el mayor)    | userData  | `<data folder>/Settings/AIProviders.json`         |
-| 2                                  | user      | `<project root folder>/Settings/AIProviders.json` |
-| 3 (el más bajo) | structure | `/SOURCES/AIProviders.json`                       |
+| Prioridad                          | Ubicación | Ruta del archivo                             |
+| ---------------------------------- | --------- | -------------------------------------------- |
+| 1 (el mayor)    | userData  | `<data folder>/Settings/AIProviders.json`    |
+| 2                                  | user      | `<package folder>/Settings/AIProviders.json` |
+| 3 (el más bajo) | structure | `/SOURCES/AIProviders.json`                  |
 
 **Importante:** sólo se carga el **primer archivo existente**. No se fusionan varios archivos.
 
@@ -44,7 +44,7 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
   "models": {
     "model_alias_name": {
       "provider": "provider_name",
-      "model": "actual-model-id",
+      "model": "actual-model-id"
     }
   }
 }
@@ -59,12 +59,12 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
 | `organization` | Text | No        | ID de la organización (opcional, específico de OpenAI) |
 | `project`      | Text | No        | ID del proyecto (opcional, específico de OpenAI)       |
 
-### Model Alias Fields
+### Campos de alias de modelo
 
-| Campo       | Tipo | Requerido | Descripción                                                         |
-| ----------- | ---- | --------- | ------------------------------------------------------------------- |
-| `proveedor` | Text | Sí        | Name of the provider (must exist in `providers`) |
-| `model`     | Text | Sí        | ID del modelo utilizado por el proveedor                            |
+| Campo       | Tipo | Requerido | Descripción                                                           |
+| ----------- | ---- | --------- | --------------------------------------------------------------------- |
+| `proveedor` | Text | Sí        | Nombre del proveedor (debe existir en `providers`) |
+| `model`     | Text | Sí        | ID del modelo utilizado por el proveedor                              |
 
 ### Ejemplo de configuración
 
@@ -96,23 +96,22 @@ El cliente carga automáticamente las configuraciones del proveedor a partir del
     },
     "my-embedding": {
       "provider": "openai",
-      "model": "text-embedding-3-small",
-      }
+      "model": "text-embedding-3-small"
     }
   }
 }
 ```
 
-## Usage in API Calls
+## Uso en las llamadas a la API
 
 ### Formatos de parámetro del modelo
 
-Two syntaxes are supported:
+Se soportan dos sintaxis:
 
-| Sintaxis              | Descripción                                                                           |
-| --------------------- | ------------------------------------------------------------------------------------- |
-| `provider:model_name` | Alias de proveedor: especifique directamente el proveedor y el modelo |
-| `:model_alias`        | Model alias — reference a named model from the `models` configuration by bare name    |
+| Sintaxis              | Descripción                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------ |
+| `provider:model_name` | Alias de proveedor: especifique directamente el proveedor y el modelo      |
+| `model_alias`         | Alias de modelo - referencia a un modelo de la configuración `models` por su nombre simple |
 
 #### Sintaxis alias de proveedor
 
@@ -121,45 +120,45 @@ Utilice la sintaxis `provider:model_name` en toda llamada a la API que acepte un
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Chat completions
-var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
+// Finalizaciones de Chat
+var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5. "})
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
-var $result := $client.chat.completions.create($messages; {model: "local:llama3"})
+var $result := $client.chat.completions. reate($messages; {model: "local:llama3"})
 
 // Embeddings
-var $result := $client.embeddings.create("text"; "openai:text-embedding-3-small")
-var $result := $client.embeddings.create("text"; "local:nomic-embed-text")
+var $result := $client. mbeddings.create("text"; "openai:text-embedding-3-small")
+var $result := $client. mbeddings.create("text"; "local:nomic-embed-text")
 
-// Image generation
+// Generación de imágenes
 var $result := $client.images.generate("prompt"; {model: "openai:dall-e-3"})
 ```
 
-#### Model alias syntax
+#### Sintaxis alias de modelo
 
-Use a bare model name to reference a named model defined in the `models` section of the configuration file. The provider, model ID, and credentials are resolved automatically:
+Utilice un nombre de modelo simple para referenciar un modelo con nombre definido en la sección `models` del archivo de configuración. El proveedor, el ID del modelo y las credenciales se resuelven automáticamente:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use a named model alias
-var $result := $client.chat.completions.create($messages; {model: ":my-gpt"})
-var $result := $client.chat.completions.create($messages; {model: ":my-claude"})
+// Utilizar un alias de modelo con nombre
+var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
+var $result := $client.chat.completions.create($messages; {model: "my-claude"})
 
-// Embeddings with a named model alias
-var $result := $client.embeddings.create("text"; ":my-embedding")
+// Integraciones con un alias de modelo
+var $result := $client.embeddings.create("text"; "my-embedding")
 ```
 
 ### Cómo funciona
 
 #### Alias de proveedor (`provider:model`)
 
-When you use the `provider:model` syntax, the client automatically:
+Cuando se utiliza la sintaxis `provider:model`, el cliente automáticamente:
 
 1. **Analiza** la cadena del modelo para extraer el nombre del proveedor y el nombre del modelo
    - Ejemplo: `"openai:gpt-5.1"` → provider=`"openai"`, model=`"gpt-5.1"`
 
-2. **Looks up** the provider configuration from the loaded JSON file
-   - Retrieves `baseURL`, `apiKey`, `organization`, `project`
+2. **Búsqueda** la configuración del proveedor desde el archivo JSON cargado
+   - Recupera `baseURL`, `apiKey`, `organization`, `project`
 
 3. **Efectúa la solicitud de API** usando la configuración resuelta
    - Envía una petición a la `baseURL` del proveedor con la `apiKey` correcta
@@ -168,28 +167,27 @@ When you use the `provider:model` syntax, the client automatically:
 
 Cuando se utiliza un nombre de modelo simple que corresponde con un alias configurado, el cliente automáticamente:
 
-1. **Looks up** the model alias in the `models` section of the configuration
-   - Example: `":my-gpt"` → finds entry with `provider: "openai"`, `model: "gpt-5.1"`
+1. **Busca** el alias del modelo en la sección `models` de la configuración
+   - Ejemplo: `"my-gpt"` → encuentra una entrada con `provider: "openai"`, `model: "gpt-5.1"`
 
-2. **Resolves** the associated provider to get `baseURL` and `apiKey`
+2. **Resuelve** el proveedor asociado para obtener `baseURL` y `apiKey`
 
 3. **Efectúa la petición API** utilizando el punto de terminación del proveedor y el ID del modelo almacenado
 
 ### Uso de nombres de modelos sencillos
 
-If you specify a model name **without** a provider prefix or `:` prefix, the client uses the configuration from its constructor:
+Si especifica un nombre de modelo **sin** prefijo de proveedor, el cliente utiliza la configuración de su constructor:
 
 ```4d
-// Use constructor configuration
+// Utilizar la configuración del constructor
 var $client := cs.AIKit.OpenAI.new({apiKey: "sk-..."; baseURL: "https://api.openai.com/v1"})
-var $result := $client.chat.completions.create($messages; {model: "gpt-5.1"})
+var $result := $client.chat.completions.create($messages; {model: "gpt-5..." }1"})
 
-// Override with provider alias
+// Sustitución con alias de proveedor
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
 
-// Override with model alias (bare name)
-var $result := $client.chat.completions.create($messages; {model: ":my-gpt"})
-
+// Sustitución con alias de modelo (nombre vacío)
+var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 ## Ejemplos
@@ -204,10 +202,10 @@ $messages.push({role: "user"; content: "What is the capital of France?"})
 // Try OpenAI
 var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 
-// Try Anthropic
+// Prueba Antropic
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-5-sonnet"})
 
-// Try local Ollama
+// Prueba local Ollama
 var $result := $client.chat.completions.create($messages; {model: "local:llama3.2"})
 ```
 
@@ -215,12 +213,12 @@ var $result := $client.chat.completions.create($messages; {model: "local:llama3.
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
-var $text := "Hello world"
+var $text := "Hola mundo"
 
-// Use OpenAI embeddings
+// Utilizar embeddings OpenAI
 var $embedding1 := $client.embeddings.create($text; "openai:text-embedding-3-small")
 
-// Use local embeddings
+// Utilizar embeddings locales
 var $embedding2 := $client.embeddings.create($text; "local:nomic-embed-text")
 ```
 
@@ -236,21 +234,21 @@ Las configuraciones de los proveedores pueden gestionarse a través de los [Par�
 
 **Ubicación del archivo recomendado:**
 
-- **For user-specific configs:** `<data folder>/Settings/AIProviders.json`
+- **Para las configuraciones específicas de usuario:** `<data folder>/Settings/AIProviders.json`
 - **Para los valores por defecto de la aplicación:** `/SOURCES/AIProviders.json`
 
-### No Reload Capability
+### Sin capacidad de recarga
 
-Once a client is instantiated, it cannot reload provider configurations. Para recoger los cambios de configuración:
+Una vez instanciado un cliente, no puede recargar las configuraciones del proveedor. Para recoger los cambios de configuración:
 
 ```4d
-// Configuration changed - create new client
+// Configuración modificada - crear nuevo cliente
 var $client := cs.AIKit.OpenAI.new()
 ```
 
 ## Consideraciones de seguridad
 
-When using 4D in client/server mode, it is **strongly recommended** to execute AI-related code on the server side to protect API tokens and credentials from exposure to client machines.
+Cuando se utiliza 4D en modo cliente/servidor, se **recomienda encarecidamente** ejecutar el código relacionado con la IA del lado del servidor para proteger los tokens y credenciales de la API de la exposición a las máquinas cliente.
 
 ## Casos de uso comunes
 
@@ -271,9 +269,9 @@ var $client := cs.AIKit.OpenAI.new()
 var $result := $client.chat.completions.create($messages; {model: "local:llama3.2"})
 ```
 
-### Named Model Aliases
+### Alias de modelos con nombre
 
-Define models once, use them everywhere by name:
+Definir los modelos una vez, úselos en todas partes por su nombre:
 
 ```json
 {
@@ -298,7 +296,7 @@ Define models once, use them everywhere by name:
     },
     "embedding": {
       "provider": "openai",
-      "model": "text-embedding-3-small",
+      "model": "text-embedding-3-small"
     }
   }
 }
@@ -307,13 +305,13 @@ Define models once, use them everywhere by name:
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use named model aliases — no need to remember provider or model ID
-var $result := $client.chat.completions.create($messages; {model: ":chat"})
-var $result := $client.chat.completions.create($messages; {model: ":fast"})
-var $embedding := $client.embeddings.create("text"; ":embedding")
+// Utiliza alias de modelos con nombre - no es necesario recordar el proveedor o el ID del modelo
+var $result := $client.chat.completions.create($messages; {model: "chat"})
+var $result := $client.chat.completions.create($messages; {model: "fast"})
+var $embedding := $client.embeddings.create("text"; "embedding")
 ```
 
-### List All Configured Models
+### Listar todos los modelos configurados
 
 ```4d
 var $providers := cs.AIKit.OpenAIProviders.new()
@@ -360,7 +358,7 @@ var $models := $providers.modelAliases()
 ```
 
 ```4d
-// Route to different organizations
+// Ruta a diferentes organizaciones
 var $resultA := $client.chat.completions.create($messages; {model: "openai-team-a:gpt-5.1"})
 var $resultB := $client.chat.completions.create($messages; {model: "openai-team-b:gpt-5.1"})
 ```

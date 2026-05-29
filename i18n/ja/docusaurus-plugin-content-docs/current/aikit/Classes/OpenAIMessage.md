@@ -29,12 +29,12 @@ title: OpenAIMessage
 
 **addImageURL**(*imageURL* : Text; *detail* : Text)
 
-| 引数         | 型    | 説明                |
-| ---------- | ---- | ----------------- |
-| *imageURL* | Text | メッセージに追加する画像のURL。 |
-| *detail*   | Text | 画像に関する追加の詳細情報。    |
+| 引数         | 型    | 説明                                                                                       |
+| ---------- | ---- | ---------------------------------------------------------------------------------------- |
+| *imageURL* | Text | メッセージに追加する画像のURL。                                                                        |
+| *detail*   | Text | The detail level of the image: "auto", "low", or "high". |
 
-メッセージのコンテンツに画像URL を追加します。
+メッセージのコンテンツに画像URL を追加します。 コンテンツが現在テキストの場合、コレクション形式に変換されます。
 
 ### addFileId()
 
@@ -142,3 +142,5 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 ## 参照
 
 - [OpenAITool](OpenAITool.md) - ツール定義に必要
+- [OpenAIFile](OpenAIFile.md)
+- [OpenAIChoice](OpenAIChoice.md)

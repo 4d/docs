@@ -28,7 +28,7 @@ La clase `OpenAI` carga automáticamente las configuraciones de los proveedores 
 var $providers := cs.AIKit.OpenAIProviders.new()
 ```
 
-Crea una nueva instancia que carga la configuración del proveedor desde el archivo `AIProviders.json` (ver [**Archivos de configuración**](../provider-model-aliases.md#configuration-files) en la página "Alias de proveedores de modelos" para más detalles sobre la ubicación y el formato de los archivos).
+Crea una nueva instancia que carga la configuración del proveedor desde el archivo `AIProviders.json`. Vea [archivos de configuración](../provider-model-aliases.md#configuration-files) en la documentación del Modelo de Alias del Proveedor para más detalles sobre la ubicación y el formato del archivo.
 
 **Importante:**
 
@@ -169,7 +169,7 @@ Utiliza un modelo declarado por su nombre simple en la sección `models` de la c
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
-$client.chat.completions.create($messages; {model: ":my-gpt"})
+$client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 Esto se resuelve internamente:
@@ -183,4 +183,3 @@ Esto se resuelve internamente:
 
 - `"my-gpt"` → Utilizar el alias de modelo "my-gpt" (resuelve a su proveedor y modelo configurados)
 - `"my-embedding"` → Usar el alias del modelo "my-embedding" para las operaciones de embebido
-

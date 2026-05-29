@@ -21,3 +21,4 @@ API リソースへのベ基本クラスです。
 - [OpenAIChatAPI](OpenAIChatAPI.md)
 - [OpenAIImagesAPI](OpenAIImagesAPI.md)
 - [OpenAIModerationsAPI](OpenAIModerationsAPI.md)
+- [OpenAIFilesAPI](OpenAIFilesAPI.md)

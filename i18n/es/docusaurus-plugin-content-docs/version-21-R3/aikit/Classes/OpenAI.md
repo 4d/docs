@@ -9,12 +9,12 @@ La clase `OpenAI` proporciona un cliente para acceder a varios recursos de la AP
 
 ## Propiedades de configuración
 
-| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional                                                            |
-| ---------------------- | ---- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Puede ser requerido por el proveedor                                |
-| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Sí (si se omite = utilizar la plataforma OpenAI) |
-| `organization`         | Text | Su ID de organización OpenAI.                                | Sí                                                                  |
-| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí                                                                  |
+| Nombre de la propiedad | Tipo | Descripción                                                                                                            | Opcional                                                            |
+| ---------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `apiKey`               | Text | Su [llave OpenAI API](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key). | Puede ser requerido por el proveedor                                |
+| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.                                                         | Sí (si se omite = utilizar la plataforma OpenAI) |
+| `organization`         | Text | Su ID de organización OpenAI.                                                                          | Sí                                                                  |
+| `project`              | Text | Su ID de proyecto OpenAI.                                                                              | Sí                                                                  |
 
 ### Propiedades HTTP adicionales
 
@@ -81,3 +81,9 @@ $client.model.lists(...)
 ## Alias de modelos de proveedor
 
 El cliente OpenAI soporta los alias de modelos de proveedores para facilitar el uso de múltiples proveedores. Consulte la documentación completa en [Alias de modelos de proveedores](../provider-model-aliases.md).
+
+Puede construir un cliente OpenAI usando un nombre de proveedor preconfigurado. Esto le permite cambiar fácilmente entre diferentes proveedores de IA (OpenAI, Anthropic, etc.) sin especificar la configuración completa cada vez.
+
+```4d
+var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})
+```

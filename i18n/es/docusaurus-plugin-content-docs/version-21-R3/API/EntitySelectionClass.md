@@ -1372,7 +1372,7 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 La función `.max()` <!-- REF #EntitySelectionClass.max().Summary -->devuelve el valor más alto (o máximo) entre todos los valores de *attributePath* en la entity selection<!-- END REF -->. En realidad devuelve el valor de la última entidad de la selección de entidades tal y como se ordenaría de forma ascendente utilizando la función [`.orderBy()`](#orderby).
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+Si pasa en *attributePath* una ruta a una propiedad de objeto que contenga diferentes [tipos de valores](../Concepts/data-types.md), la función `.max()` devolverá el valor máximo dentro del primer tipo escalar de acuerdo con los [principios de ordenación de 4D](../Concepts/ordering.md).
 
 `.max()` devuelve **undefined** si la entity selection está vacía o no se encuentra *attributePath* en el atributo objeto.
 
@@ -1425,7 +1425,7 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 
 La función `.min()` <!-- REF #EntitySelectionClass.min().Summary --> devuelve el valor más bajo (o mínimo) entre todos los valores de attributePath en la entity selection<!-- END REF -->.  En realidad devuelve la primera entidad de la entity selection tal y como se ordenaría de forma ascendente utilizando la función [`.orderBy()`](#orderby) (excluyendo los valores **null**).
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+Si pasa en *attributePath* una ruta a una propiedad de objeto que contenga diferentes [tipos de valores](../Concepts/data-types.md), la función `.min()` devolverá el valor mínimo en el primer tipo escalar de acuerdo con los [principios de ordenación de 4D](../Concepts/ordering.md).
 
 `.min()` devuelve **undefined** si la entity selection está vacía o *attributePath* no se encuentra en el atributo objeto.
 
@@ -1655,7 +1655,7 @@ Por defecto, los atributos se clasifican en orden ascendente ("descending" es fa
 
 Puede añadir tantos objetos en la colección de criterios como sea necesario.
 
-If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si los atributos de la selección de entidades contienen valores de diferentes [tipos](../Concepts/data-types.md), se ordenarán según los [principios de ordenación de 4D](../Concepts/ordering.md).
 
 Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la función devuelve una entity selection vacía.
 

@@ -29,7 +29,7 @@ La clase `OpenAIResult` está diseñada para gestionar la respuesta de las petic
 La propiedad `rateLimit` devuelve un objeto que contiene información sobre el límite de velocidad de los encabezados de respuesta.
 Esta información incluye los límites, las peticiones restantes y los tiempos de reinicialización tanto para peticiones como para tokens.
 
-Para obtener más información sobre los límites de tarifas y los encabezados específicos utilizados, consulte [la documentación de límites de tarifa OpenAI](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+Para obtener más información sobre los límites de tarifas y los encabezados específicos utilizados, consulte [la documentación de límites de tarifa OpenAI](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers).
 
 La estructura del objeto `rateLimit` es la siguiente:
 

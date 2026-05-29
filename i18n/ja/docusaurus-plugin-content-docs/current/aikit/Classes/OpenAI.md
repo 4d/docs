@@ -9,12 +9,12 @@ title: OpenAI
 
 ## 設定プロパティ
 
-| プロパティ名    | 型    | 説明                                                         | 任意                                               |
-| --------- | ---- | ---------------------------------------------------------- | ------------------------------------------------ |
-| `apiKey`  | Text | あなたの [OpenAI API キー](https://platform.openai.com/api-keys) | プロバイダーによっては必須                                    |
-| `baseURL` | Text | OpenAI API リクエストのためのベースURL。                                | 任意 (省略時 = OpenAI プラットフォームを使用) |
-| `組織`      | Text | あなたの OpenAI 組織 ID。                                         | ◯                                                |
-| `project` | Text | あなたの OpenAI プロジェクト ID。                                     | ◯                                                |
+| プロパティ名    | 型    | 説明                                                                                                   | 任意                                               |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| `apiKey`  | Text | あなたの [OpenAI API キー](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key) | プロバイダーによっては必須                                    |
+| `baseURL` | Text | OpenAI API リクエストのためのベースURL。                                                                          | 任意 (省略時 = OpenAI プラットフォームを使用) |
+| `組織`      | Text | あなたの OpenAI 組織 ID。                                                                                   | ◯                                                |
+| `project` | Text | あなたの OpenAI プロジェクト ID。                                                                               | ◯                                                |
 
 ### 追加のHTTPプロパティ
 
@@ -81,3 +81,9 @@ $client.model.lists(...)
 ## Provider Model Aliases
 
 The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
+
+You can construct an OpenAI client using a pre-configured provider name. This allows you to easily switch between different AI providers (OpenAI, Anthropic, etc.) without specifying the full configuration each time.
+
+```4d
+var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})
+```

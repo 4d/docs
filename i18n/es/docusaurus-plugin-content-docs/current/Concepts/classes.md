@@ -49,7 +49,7 @@ También puede eliminar el archivo de clase .4dm de la carpeta "Classes" de su d
 
 Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
-- [`cs`](../commands/cs) for user classes and component class stores
+- [`cs`](../commands/cs) para las clases de usuario y las class stores de los componentes
 - [`4D`](../commands/4d) para las clases integradas
 
 #### `cs`

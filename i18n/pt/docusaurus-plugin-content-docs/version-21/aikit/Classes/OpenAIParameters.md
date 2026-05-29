@@ -13,18 +13,18 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 Use this callback property to receive the result regardless of success or error:
 
-| Propriedade                                        | Tipo                         | Descrição                                                                                                                                 |
-| -------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `onTerminate`<br>(or `formula`) | 4D. Function | A function to be called asynchronously when finished. Ensure that the current process does not terminate. |
+| Propriedade                                        | Tipo                         | Descrição                                                                                                                                       |
+| -------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onTerminate`<br>(or `formula`) | 4D. Function | A function to be called asynchronously when finished. <br>*Ensure that the current process does not terminate.* |
 
 Use these callback properties for more granular control over success and error handling:
 
-| Propriedade  | Tipo                         | Descrição                                                                                                                                                              |
-| ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onResponse` | 4D. Function | A function to be called asynchronously when the request finishes **successfully**. Ensure that the current process does not terminate. |
-| `onError`    | 4D. Function | A function to be called asynchronously when the request finishes **with errors**. Ensure that the current process does not terminate.  |
+| Propriedade  | Tipo                         | Descrição                                                                                                                                                                    |
+| ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D. Function | A function to be called asynchronously when the request finishes **successfully**. <br>*Ensure that the current process does not terminate.* |
+| `onError`    | 4D. Function | A function to be called asynchronously when the request finishes **with errors**. <br>*Ensure that the current process does not terminate.*  |
 
-> The callback function will receive the same result object type (one of [OpenAIResult](./OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
 
 See [documentation about asynchronous code for examples](../asynchronous-call.md)
 

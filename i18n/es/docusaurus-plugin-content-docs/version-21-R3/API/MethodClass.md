@@ -22,7 +22,7 @@ Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../A
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binario.
 
 :::
 

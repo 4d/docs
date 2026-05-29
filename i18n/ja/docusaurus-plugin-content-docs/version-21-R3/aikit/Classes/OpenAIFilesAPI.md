@@ -5,22 +5,22 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-`OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)、 [Batch](https://platform.openai.com/docs/api-reference/batch) 処理、そしてVision を含む様々なエンドポイントで使用することができます。
+`OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 `OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://developers.openai.com/api/reference/resources/fine_tuning)、 [Batch](https://developers.openai.com/api/reference/resources/batches) 処理、そしてVision を含む様々なエンドポイントで使用することができます。
 
 > **注意:** この API はOpenAI としか互換性がありません。 [互換性のあるプロバイダー](../compatible-openai.md) ドキュメンテーションに記載されている他のプロバイダーでは、ファイル管理操作をサポートしていません。
 
-API 参照: <https://platform.openai.com/docs/api-reference/files>
+API 参照: <https://developers.openai.com/api/reference/resources/files>
 
 ## ファイルサイズ上限
 
 - **個別のファイル:** 1ファイルあたり 512 MB まで
-- **組織全体:** 1 TB まで([組織](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization) によってアップロードされたすべてのファイルの累計サイズ)
+- **組織全体:** 1 TB まで([組織](https://developers.openai.com/api/docs/guides/production-best-practices) によってアップロードされたすべてのファイルの累計サイズ)
 
 ## 関数
 
 ### create()
 
-**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.OpenAIFileParameters) : cs.OpenAIFileResult
+**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.AIKit.OpenAIFileParameters) : cs.AIKit.OpenAIFileResult
 
 様々なエンドポイントで使用できるファイルをアップロードします。
 
@@ -37,9 +37,9 @@ API 参照: <https://platform.openai.com/docs/api-reference/files>
 
 #### サポートされている目的
 
-- `assistants`: Assistants API で使用されます (⚠️ [OpenAI では非推奨](https://platform.openai.com/docs/assistants/whats-new))
-- `batch`: [Batch API](https://platform.openai.com/docs/api-reference/batch) で使用されます (デフォルトでは 30 日後に失効します)
-- `fine-tune`: [微調整](https://platform.openai.com/docs/api-reference/fine-tuning) で使用されます
+- `assistants`: Assistants API で使用されます (⚠️ [OpenAI では非推奨](https://developers.openai.com/api/docs/assistants/migration))
+- `batch`: [Batch API](https://developers.openai.com/api/reference/resources/batches) で使用されます (デフォルトでは 30 日後に失効します)
+- `fine-tune`: [微調整](https://developers.openai.com/api/reference/resources/fine_tuning) で使用されます
 - `vision`: ビジョンの微調整に使用される画像
 - `user_data`: 任意の目的のための柔軟なファイルタイプ
 - `evals`: eval データセットに使用する
@@ -51,7 +51,7 @@ API 参照: <https://platform.openai.com/docs/api-reference/files>
 - **Assistants API:** 特定のファイルタイプをサポートします(Assistants ツールガイドを参照してください)
 - **チャット補完 API:** PDF のみがサポートされます
 
-#### 同期の例
+#### 例題
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -104,7 +104,7 @@ End if
 
 ### retrieve()
 
-**retrieve**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileResult
+**retrieve**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters) : cs.AIKit.OpenAIFileResult
 
 特定のファイルに関する情報を返します。
 
@@ -112,8 +112,8 @@ End if
 
 | 引数           | 型                                       | 説明                     |
 | ------------ | --------------------------------------- | ---------------------- |
-| `fileId`     | Text                                    | **必須。** 取得するファイルの ID 。 |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md) | リクエスト用のオプションの引数。       |
+| *fileId*     | Text                                    | **必須。** 取得するファイルの ID 。 |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md) | リクエスト用のオプションの引数。       |
 | 戻り値          | [OpenAIFileResult](OpenAIFileResult.md) | ファイルの結果                |
 
 **スロー:** `fileId` が空の場合にはエラーをスローします。
@@ -133,7 +133,7 @@ End if
 
 ### list()
 
-**list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
+**list**(*parameters* : cs.AIKit.OpenAIFileListParameters) : cs.AIKit.OpenAIFileListResult
 
 ユーザーの組織に属するファイルの一覧を返します。
 
@@ -141,7 +141,7 @@ End if
 
 | 引数           | 型                                                       | 説明                            |
 | ------------ | ------------------------------------------------------- | ----------------------------- |
-| `parameters` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | フィルタリングとページネーションに関するオプションの引数。 |
+| *parameters* | [OpenAIFileListParameters](OpenAIFileListParameters.md) | フィルタリングとページネーションに関するオプションの引数。 |
 | 戻り値          | [OpenAIFileListResult](OpenAIFileListResult.md)         | ファイルリストの結果                    |
 
 #### 例題
@@ -166,7 +166,7 @@ End if
 
 ### delete()
 
-**delete**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileDeletedResult
+**delete**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters) : cs.AIKit.OpenAIFileDeletedResult
 
 ファイルを削除します。
 
@@ -174,8 +174,8 @@ End if
 
 | 引数           | 型                                                     | 説明                     |
 | ------------ | ----------------------------------------------------- | ---------------------- |
-| `fileId`     | Text                                                  | **必須。** 削除するファイルの ID 。 |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md)               | リクエスト用のオプションの引数。       |
+| *fileId*     | Text                                                  | **必須。** 削除するファイルの ID 。 |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)               | リクエスト用のオプションの引数。       |
 | 戻り値          | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | ファイル削除の結果              |
 
 **スロー:** `fileId` が空の場合にはエラーをスローします。

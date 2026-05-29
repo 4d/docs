@@ -65,23 +65,23 @@ $chatHelper.reset()  // 以前のメッセージとツールを全て消去
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| 引数        | 型      | 説明                                                                                                                                                 |
-| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                                                             |
-| *handler* | Object | ツール呼び出しを管理する関数([4D.Function](../../API/FunctionClass.md) またはオブジェクト)、*tool* 内の *handler* プロパティで定義されている場合にはオプション。 |
+| 引数        | 型      | 説明                                                                                                                                                    |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                                                                |
+| *handler* | Object | The function to handle tool calls (4D.Function or Object), optional if defined inside *tool* as *handler* property |
 
 自動ツール呼び出し関数のために、ツールとそのハンドラ関数を登録します。
 
 *handler* 引数には以下のものを渡すことができます:
 
 - **4D.Function**: 直接ハンドラ関数
-- **オブジェクト**: ツール関数名と一致する `formula` プロパティを格納しているオブジェクト
+- An **Object**: An object containing a formula property matching the tool function name
 
 ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
 
-#### ツールを登録する例題
+#### Register Tool Examples
 
 ```4D
 // Example 1: 直接ハンドラを使用したシンプルな登録
@@ -117,7 +117,7 @@ $chatHelper.registerTool($tool; $handlerObj)
 - **オブジェクト**: 関数名がツール定義にマッピングされているキーとするオブジェクト
 - **`tools` 属性を持つオブジェクト**: `tools` コレクションと、ツール名に合致するフォーミュラプロパティを格納しているオブジェクト
 
-#### 複数のツールを登録する例題
+#### Register Multiple Tools Examples
 
 ##### 例 1: ツール内のハンドルを使用したコレクションフォーマット
 

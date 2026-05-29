@@ -7,7 +7,7 @@ title: OpenAIModerationsAPI
 
 L'interface `OpenAIModerationsAPI` est chargée de déterminer si les textes et/ou les images introduits sont potentiellement dangereux.
 
-https://platform.openai.com/docs/api-reference/moderations
+https://developers.openai.com/api/reference/resources/moderations
 
 ## Fonctions
 
@@ -24,7 +24,7 @@ https://platform.openai.com/docs/api-reference/moderations
 
 Détermine si l'entrée est potentiellement dangereuse.
 
-https://platform.openai.com/docs/api-reference/moderations/create
+https://developers.openai.com/api/reference/resources/moderations/methods/create
 
 ## Exemples
 

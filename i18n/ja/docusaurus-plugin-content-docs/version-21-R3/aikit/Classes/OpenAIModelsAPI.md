@@ -9,7 +9,7 @@ title: OpenAIModelsAPI
 
 `OpenAIModelsAPI` はさまざまな機能を通してOpenAI のモデルとやり取りをすることを可能にするクラスです。この機能とはモデル情報の取得、利用可能なモデルを一覧表示すること、そして(オプションとして)ファインチューンされたモデルを削除することなどです。
 
-https://platform.openai.com/docs/api-reference/models
+https://developers.openai.com/api/reference/resources/models
 
 ## 関数
 
@@ -25,7 +25,7 @@ https://platform.openai.com/docs/api-reference/models
 
 モデルインスタンスを取得し、基本情報を提供します。
 
-https://platform.openai.com/docs/api-reference/models/retrieve
+https://developers.openai.com/api/reference/resources/models/methods/retrieve
 
 #### 使用例:
 
@@ -45,7 +45,7 @@ var $model:=$result.model
 
 現在利用可能なモデルを一覧表示します。
 
-https://platform.openai.com/docs/api-reference/models/list
+https://developers.openai.com/api/reference/resources/models/methods/list
 
 #### 使用例:
 
