@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 By default, the records found by queries are not locked. Pass **True** in the *lock* parameter to activate locking.
 
-It is imperative for this command to be used within a transaction. If it is called outside of this context, an error is generated. This allows for better control of record locking. The records found will stay locked as long as the transaction has not been terminated (whether validated or cancelled). After the transaction is completed, all the records are unlocked, except the current record. 
+It is imperative for this command to be used within a transaction. If it is called outside of this context, it is ignored. This allows for better control of record locking. The records found will stay locked as long as the transaction has not been terminated (whether validated or cancelled). After the transaction is completed, all the records are unlocked, except the current record. 
 
 The records are locked for all the tables in the current transaction.
 

@@ -31,7 +31,7 @@ displayed_sidebar: docs
   
 Por padrão, os registros encontrados pelas pesquisas não estão bloqueados. Passe [True](../commands/true) no parâmetro *bloq* para ativar o bloqueio.  
   
-Este comando deve imperativamente ser utilizado no interior de uma transação. Se for chamado fora deste contexto, é gerado um erro. Isso permite um melhor controle do bloqueio de registros. Os registros encontrados permanecerão bloqueados até que a transação termine ( confirmada ou cancelada). Depois que a transação se completa, todos os registros são desbloqueados.  
+Este comando deve imperativamente ser utilizado no interior de uma transação. Se for chamado fora deste contexto, é ignorado. Isso permite um melhor controle do bloqueio de registros. Os registros encontrados permanecerão bloqueados até que a transação termine ( confirmada ou cancelada). Depois que a transação se completa, todos os registros são desbloqueados.  
   
 Os registros estão bloqueados para todas as tabelas na transação atual.  
   
