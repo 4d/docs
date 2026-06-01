@@ -56,7 +56,7 @@ $result:=$o.concat("Hello ") // $result is "Hello John"
 #### Utilizar un archivo de texto con comprobación sintáctica
 
 ```text
-//4d method stored in a text file
+//Método 4d almacenado en un archivo de texto
 var $newBusinessRules:=New shared object
 Use ($newBusinessRules)
 	$newBusinessRules.taxRate:=0.2
@@ -77,7 +77,7 @@ Este método se llama en el código:
 var $myFile:=File("/DATA/BusinessRules.4dm")
 
 var $myMethod:=4D.Method.new($myFile.getText())
-// Syntax errors verification
+// Verificación de errores de sintaxis
 If ($myMethod.checkSyntax().success)
    $myMethod.call()
 End if 
@@ -122,9 +122,9 @@ Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 #### Descripción
 
-The `4D.Method.new()` function <!-- REF #4D.Method.new().Summary -->creates and returns a new `4D.Method` object built from the *source* code<!-- END REF -->.
+La función `4D.Method.new()` <!-- REF #4D.Method.new().Summary -->crea y devuelve un nuevo objeto `4D.Method` construido a partir del código *source*<!-- END REF -->.
 
-En el parámetro *source*, pase el código fuente 4D del método como texto. All end-of-line characters are supported (LF, CR, CRLF) using the [`Char`](../commands/char) command or an [escape sequence](../Concepts/quick-tour.md#escape-sequences).
+En el parámetro *source*, pase el código fuente 4D del método como texto. Todos los caracteres de fin de línea son soportados (LF, CR, CRLF) utilizando el comando [`Char`](../commands/char) o una [secuencia de escape](../Concepts/quick-tour.md#escape-sequences).
 
 En el parámetro opcional *name*, pase el nombre del método que se mostrará en el depurador 4D o en el explorador Runtime. Si omite este parámetro, el nombre del método aparecerá como "anonymous".
 
@@ -133,7 +133,7 @@ En el parámetro opcional *name*, pase el nombre del método que se mostrará en
 Se recomienda nombrar explícitamente su método si lo desea:
 
 - utilizar nombre de método persistente en la [ventana de evaluación del depurador](../Debugging/debugger#custom-watch-pane) (los métodos anónimos no son persistentes en el depurador).
-- handle the volatile method using commands such as [`Method get path`](../commands/method-get-path) and [`Method resolve path`](../commands/method-resolve-path) (anonymous methods don't have paths).
+- manipular el método volátil utilizando comandos como [`Method get path`](../commands/method-get-path) y [`Method resolve path`](../commands/method-resolve-path) (los métodos anónimos no tienen rutas).
 
 :::
 
@@ -141,7 +141,7 @@ El objeto 4D.Method resultante puede ser verificado utilizando [`checkSyntax()`]
 
 :::note
 
-Named volatile method objects are not project methods, they are not stored in disk files and cannot be called by commands such as [`EXECUTE METHOD`](../commands/execute-method). On the other hand, since they inherit from the [`4D.Function`](./FunctionClass.md) class, they can be used wherever a `4D.Function` object is expected.
+Los objetos método volátiles con nombre no son métodos proyecto, no se almacenan en archivos disco y no pueden ser llamados por comandos como [`EXECUTE METHOD`](../commands/execute-method). Por otra parte, dado que heredan de la clase [`4D.Function`](./FunctionClass.md), pueden utilizarse siempre que se espere un objeto `4D.Function`.
 
 :::
 
@@ -196,16 +196,16 @@ var $result:=$m.call(Null; 10; 5) //50
 
 <div class="no-index">
 
-| Parámetros | Tipo   |                             | Descripción                |
-| ---------- | ------ | --------------------------- | -------------------------- |
-| Resultado  | Object | <- | Syntax check result object |
+| Parámetros | Tipo   |                             | Descripción                                 |
+| ---------- | ------ | --------------------------- | ------------------------------------------- |
+| Resultado  | Object | <- | Objeto resultado de verificación sintáctica |
 
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-The `.checkSyntax()` function <!-- REF #MethodClass.checkSyntax().Summary -->checks the syntax of the source code of the `4D.Method` object and returns a result object<!-- END REF -->.
+La función `.checkSyntax()` <!-- REF #MethodClass.checkSyntax().Summary -->verifica la sintaxis del código fuente del objeto `4D.Method` y devuelve un objeto resultado<!-- END REF -->.
 
 El objeto devuelto contiene las siguientes propiedades:
 
@@ -243,7 +243,7 @@ End if
 
 #### Descripción
 
-The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of the `4D.Method` object, if it was declared in the *name* parameter of the `new()` constructor<!-- END REF -->. En caso contrario, no se devuelve la propiedad.
+La propiedad `.name` <!-- REF #MethodClass.name.Summary -->contiene el nombre del objeto `4D.Method`, si fue declarado en el parámetro *name* del constructor `new()`<!-- END REF -->. En caso contrario, no se devuelve la propiedad.
 
 Esta propiedad es de **solo lectura**.
 

@@ -43,14 +43,14 @@ shared singleton Class constructor()
 	var myForm : 4D.WebForm
 	var component : 4D.WebFormItem
 	
-	myForm:=webForm  //returns the web page as an object, each property is a component
-	component:=myForm.myImage  //returns the myImage component of the web page
+	myForm:=webForm //devuelve la página web como un objeto, cada propiedad es un componente
+	component:=myForm.myImage //devuelve el componente myImage de la página web
 
 ```
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. Por ejemplo, puede manipular dinámicamente los componentes de la página o transmitir mensajes a las páginas web utilizando funciones especializadas como `myForm.setMessage()`.
+Aunque `myForm` puede no mostrar las propiedades típicas de un objeto cuando se examina en el depurador, se comporta como si fuera el objeto `webForm` real. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. Por ejemplo, puede manipular dinámicamente los componentes de la página o transmitir mensajes a las páginas web utilizando funciones especializadas como `myForm.setMessage()`.
 
 :::
 
