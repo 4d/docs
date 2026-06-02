@@ -77,7 +77,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | libZip    | 1.11.4 | 21                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
 | LZMA      | 5.8.1  | 21                |                                                                                                                                                        |
 | ngtcp2    | 1.22.1 | **21 R4**         | Utilizado para QUIC                                                                                                                                    |
-| OpenSSL   | 3.5.2  | 21                |                                                                                                                                                        |
+| OpenSSL   | 4.0                    | **21 R4**         |                                                                                                                                                        |
 | PDFWriter | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS  | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                        |

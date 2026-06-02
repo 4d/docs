@@ -85,10 +85,10 @@ Collection クラスは [コレクション](Concepts/dt_collection.md) 型の�
 <!-- REF #_command_.New collection.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|The new collection|
+|value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|コレクションの値|
+|戻り値|Collection|<-|The new collection|
 </div>
 <!-- END REF -->
 
@@ -174,10 +174,10 @@ Collection クラスは [コレクション](Concepts/dt_collection.md) 型の�
 <!-- REF #_command_.New shared collection.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|value|Number, Text, Date, Time, Boolean, Object, Collection|->|Shared collection's value(s)|
-|Result|Collection|<-|The new shared collection|
+|value|Number, Text, Date, Time, Boolean, Object, Collection|->|共有コレクションの値|
+|戻り値|Collection|<-|The new shared collection|
 </div>
 <!-- END REF -->
 
@@ -251,10 +251,10 @@ Collection クラスは [コレクション](Concepts/dt_collection.md) 型の�
 <!-- REF #collection.at().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|index|Integer|->|Index of element to return|
-|Result|any |<-|The element at that index|
+|index|Integer|->|返す要素のインデックス|
+|戻り値|any |<-|The element at that index|
 </div>
 <!-- END REF -->
 
@@ -300,10 +300,10 @@ $element:=$col.at(10) // undefined
 <!-- REF #collection.average().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real, Undefined|<-|Arithmetic mean (average) of collection values|
+|propertyPath|Text|->|計算に使用されるオブジェクトプロパティパス|
+|戻り値|Real, Undefined|<-|Arithmetic mean (average) of collection values|
 </div>
 <!-- END REF -->
 
@@ -366,9 +366,9 @@ $element:=$col.at(10) // undefined
 <!-- REF #collection.clear().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Original collection with all elements removed|
+|戻り値|Collection|<-|Original collection with all elements removed|
 </div>
 <!-- END REF -->
 
@@ -410,11 +410,11 @@ $vSize:=$col.length //$vSize=0
 <!-- REF #collection.combine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|col2|Collection|->|Collection to combine|
-|index|Integer|->|Position to which insert elements to combine in collection (default=length+1)|
-|Result|Collection|<-|Original collection containing combined element(s)|
+|col2|Collection|->|追加するコレクション|
+|index|Integer|->|追加要素を挿入する位置 (デフォルトは length+1)|
+|戻り値|Collection|<-|Original collection containing combined element(s)|
 </div>
 <!-- END REF -->
 
@@ -464,10 +464,10 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 <!-- REF #collection.concat().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|value|any|->|Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection|
-|Result|Collection|<-|New collection with value(s) added to the original collection|
+|value|any|->|連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。|
+|戻り値|Collection|<-|New collection with value(s) added to the original collection|
 </div>
 <!-- END REF -->
 
@@ -514,12 +514,12 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 <!-- REF #collection.copy().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|option|Integer|->|`ck resolve pointers`: resolve pointers before copying,<br/>`ck shared`: return a shared collection|
-|groupWithCol |Collection|->|Shared collection to be grouped with the resulting collection|
-|groupWithObj |Object|->|Shared object to be grouped with the resulting collection|
-|Result|Collection|<-|Deep copy of the original collection|
+|option|Integer|->|`ck resolve pointers`: コピー前にポインターを解決する<br/>`ck shared`: 共有コレクションを返す|
+|groupWithCol |Collection|->|結果のコレクションとグループする共有コレクション|
+|groupWithObj |Object|->|結果のコレクションとグループする共有オブジェクト|
+|戻り値|Collection|<-|Deep copy of the original collection|
 </div>
 <!-- END REF -->
 
@@ -648,10 +648,10 @@ End use
 <!-- REF #collection.count().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of elements in the collection|
+|propertyPath|Text|->|計算に使用するオブジェクトプロパティのパス|
+|戻り値|Real|<-|Number of elements in the collection|
 </div>
 <!-- END REF -->
 
@@ -700,11 +700,11 @@ End use
 <!-- REF #collection.countValues().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|value|Text, Number, Boolean, Date, Object, Collection|->|Value to count|
-|propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of occurrences of the value  |
+|value|Text, Number, Boolean, Date, Object, Collection|->|数える値|
+|propertyPath|Text|->|計算に使用するオブジェクトプロパティのパス|
+|戻り値|Real|<-|Number of occurrences of the value  |
 </div>
 <!-- END REF -->
 
@@ -786,11 +786,11 @@ End use
 <!-- REF #collection.distinct().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Path of attribute whose distinct values you want to get|
-|options|Integer|->|`ck diacritical`, `ck count values`|
-|Result|Collection|<-|New collection with only distinct values|
+|propertyPath|Text|->|重複しない値を取得する属性のパス|
+|options|Integer|->|`ck diacritical`、`ck count values`|
+|戻り値|Collection|<-|New collection with only distinct values|
 </div>
 <!-- END REF -->
 
@@ -851,11 +851,11 @@ End use
 <!-- REF #collection.equal().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|collection2|Collection|->|Collection to compare|
-|option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)
-|Result|Boolean|<-|True if collections are identical, false otherwise|
+|collection2|Collection|->|比較するコレクション|
+|option|Integer|->|`ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a")
+|戻り値|Boolean|<-|True if collections are identical, false otherwise|
 </div>
 <!-- END REF -->
 
@@ -920,13 +920,13 @@ End use
 <!-- REF #collection.every().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Boolean|<-|True if all elements successfully passed the test|
+|startFrom|Integer|->|テストを開始するインデックス|
+|formula|4D.Function|->|フォーミュラオブジェクト|
+|methodName|Text|->|メソッド名|
+|param|Mixed|->|*formula* または *methodName* に渡す引数|
+|戻り値|Boolean|<-|True if all elements successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -1018,12 +1018,12 @@ $b:=$c.every($f;Is real) //$b=false
 <!-- REF #collection.extract().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Object property path whose values must be extracted to the new collection|
-|targetpath|Text|->|Target property path or property name|
-|option|Integer|->|`ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed.|
-|Result|Collection|<-|New collection containing extracted values|
+|propertyPath|Text|->|新しいコレクションに抽出する値のオブジェクトプロパティパス|
+|targetpath|Text|->|抽出先のプロパティパスあるいはプロパティ名|
+|option|Integer|->|`ck keep null`: 返されるコレクションに null プロパティを含めます (デフォルトでは無視されます)。 *targetPath* を渡した場合には、この引数は無視されます。|
+|戻り値|Collection|<-|New collection containing extracted values|
 </div>
 <!-- END REF -->
 
@@ -3054,9 +3054,9 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 <!-- REF #collection.reverse().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Inverted copy of the collection|
+|戻り値|Collection|<-|Inverted copy of the collection|
 </div>
 <!-- END REF -->
 
