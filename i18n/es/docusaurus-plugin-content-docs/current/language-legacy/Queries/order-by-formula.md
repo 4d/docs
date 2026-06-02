@@ -5,7 +5,7 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *tabla* : Table ; *formula* : Expression {; >,<} {; ...(*formula* : Expression {; >,<})} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *tabla* : Table ; { ...(*formula* : Expression {; *formula* : >, <})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 <div class="no-index">
 

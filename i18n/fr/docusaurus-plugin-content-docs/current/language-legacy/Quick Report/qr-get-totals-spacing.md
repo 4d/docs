@@ -5,7 +5,7 @@ slug: /commands/qr-get-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *zone* ; *sousTotal* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *zone* : Integer ; *sousTotal* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 <div class="no-index">
 

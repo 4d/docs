@@ -5,7 +5,7 @@ slug: /commands/generate-encryption-keypair
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *cléPrivée* ; *cléPublique* {; *longueur*} )<!-- END REF-->
+<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *cléPrivée* : Blob ; *cléPublique* : Blob {; *longueur* : Integer} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 <div class="no-index">
 

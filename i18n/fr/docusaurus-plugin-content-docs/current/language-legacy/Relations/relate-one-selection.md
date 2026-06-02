@@ -5,7 +5,7 @@ slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tableN* ; *table1* )<!-- END REF-->
+<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tableN* : Table ; *table1* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 <div class="no-index">
 

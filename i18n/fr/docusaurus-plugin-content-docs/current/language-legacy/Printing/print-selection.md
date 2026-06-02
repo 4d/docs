@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *laTable* {;* })<br/>**PRINT SELECTION** ( *laTable* {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*laTable* : Table} {; *} )<br/>**PRINT SELECTION** ( {*laTable* : Table} {; > : >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 <div class="no-index">
 

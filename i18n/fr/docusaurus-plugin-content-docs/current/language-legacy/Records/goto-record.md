@@ -5,7 +5,7 @@ slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*laTable* ;} *enregistrement* )<!-- END REF-->
+<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*laTable* : Table ;} *enregistrement* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
 <div class="no-index">
 

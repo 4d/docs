@@ -5,7 +5,7 @@ slug: /commands/method-resolve-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *chemin* ; *typeMéthode* ; *ptrTable* ; *nomObjet* ; *nomObjetForm* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *chemin* : Text ; *typeMéthode* : Integer ; *ptrTable* : Pointer ; *nomObjet* : Text ; *nomObjetForm* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 <div class="no-index">
 

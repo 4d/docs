@@ -5,7 +5,7 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *objeto* : Text ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *objeto* : Field, Variable ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *objeto* : Text ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *objeto* : Variable ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 <div class="no-index">
 

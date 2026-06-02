@@ -5,7 +5,7 @@ slug: /commands/dom-parse-xml-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : 文字 }} ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schema* : 文字}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : Text }} ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schema* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML variable.Params-->
 <div class="no-index">
 

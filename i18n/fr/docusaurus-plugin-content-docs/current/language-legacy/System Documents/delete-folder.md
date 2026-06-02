@@ -5,7 +5,7 @@ slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* {; *optionSuppression*} )<!-- END REF-->
+<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* : Text {; *optionSuppression* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
 <div class="no-index">
 

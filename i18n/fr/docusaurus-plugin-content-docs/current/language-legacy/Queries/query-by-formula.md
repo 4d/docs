@@ -5,7 +5,7 @@ slug: /commands/query-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *laTable* {; *formule*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *laTable* : Table {; *formule* : Expression} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 <div class="no-index">
 

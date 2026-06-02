@@ -5,7 +5,7 @@ slug: /commands/wa-open-back-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *objeto* : Text )<br/>**WA OPEN BACK URL** ( *objeto* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *objeto* : Text )<br/>**WA OPEN BACK URL** ( *objeto* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA OPEN BACK URL.Params-->
 <div class="no-index">
 

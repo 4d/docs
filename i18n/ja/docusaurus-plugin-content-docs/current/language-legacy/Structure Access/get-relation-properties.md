@@ -5,7 +5,7 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* : ポインター, 倍長整数 ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* : Pointer ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 <div class="no-index">
 

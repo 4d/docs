@@ -5,7 +5,7 @@ slug: /commands/list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *liste* ; *tableau* {; *réfEléments*} )<!-- END REF-->
+<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *liste* : Text, Integer ; *tableau* : Array {; *réfEléments* : Array} )<!-- END REF-->
 <!--REF #_command_.LIST TO ARRAY.Params-->
 <div class="no-index">
 

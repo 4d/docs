@@ -5,7 +5,7 @@ slug: /commands/blob-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* ; *compressé* {; *tailleDécompressée* {; *tailleCourante*}} )<!-- END REF-->
+<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* : Blob ; *compressé* : Integer {; *tailleDécompressée* : Integer {; *tailleCourante* : Integer}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
 <div class="no-index">
 

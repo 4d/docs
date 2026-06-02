@@ -5,7 +5,7 @@ slug: /commands/listbox-set-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *objeto* : Text ; *formula* : Text ; *tipoDato* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *objeto* : Field, Variable ; *formula* : Text ; *tipoDato* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *objeto* : Text ; *formula* : Text ; *tipoDato* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *objeto* : Variable ; *formula* : Text ; *tipoDato* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 <div class="no-index">
 

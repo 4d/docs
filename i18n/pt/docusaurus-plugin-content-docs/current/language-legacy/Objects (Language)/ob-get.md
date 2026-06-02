@@ -5,7 +5,7 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objeto* : Object, Campo Object ; *propriedade* : Text {; *tipo* : Integer} ) : any<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objeto* : Object ; *propriedade* : Text {; *tipo* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/old-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *unCampo* )<!-- END REF-->
+<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *unCampo* : Field )<!-- END REF-->
 <!--REF #_command_.OLD RELATED ONE.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valeur* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valeur* : Object, any {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 <div class="no-index">
 

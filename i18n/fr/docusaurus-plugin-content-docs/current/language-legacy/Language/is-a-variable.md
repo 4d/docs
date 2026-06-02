@@ -5,7 +5,7 @@ slug: /commands/is-a-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *pointeur* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *pointeur* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
 <div class="no-index">
 

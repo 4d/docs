@@ -5,7 +5,7 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *leChamp* ; *chemin* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *leChamp* : Text, Blob, Picture ; *chemin* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 <div class="no-index">
 

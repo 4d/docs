@@ -5,7 +5,7 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* ; *cheminFichier* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* : Text ; *cheminFichier* : Text )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 <div class="no-index">
 

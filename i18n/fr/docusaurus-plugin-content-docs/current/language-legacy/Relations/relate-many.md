@@ -5,7 +5,7 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( table1 )<br/>**RELATE MANY** ( champ1 )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *table1* : Table )<br/>**RELATE MANY** ( *champ1* : Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 <div class="no-index">
 

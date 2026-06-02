@@ -5,7 +5,7 @@ slug: /commands/qr-set-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *zone* ; *numColonne* ; *titre* ; *objet* ; *cachée* ; *taille* ; *valeursRépétées* ; *formatAffich* )<!-- END REF-->
+<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *zone* : Integer ; *numColonne* : Integer ; *titre* : Text ; *objet* : Text, Pointer ; *cachée* : Integer ; *taille* : Integer ; *valeursRépétées* : Integer ; *formatAffich* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTable* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTable* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 <div class="no-index">
 

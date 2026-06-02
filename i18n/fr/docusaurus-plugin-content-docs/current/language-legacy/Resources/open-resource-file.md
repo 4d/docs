@@ -5,7 +5,7 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomFichier* {; *typeFichier*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomFichier* : Text {; *typeFichier* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *objeto* : Text ; *alineación* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *objeto* : Field, Variable ; *alineación* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *objeto* : Text ; *alineación* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *objeto* : Variable, Field ; *alineación* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valeurRetour* {; *nomRetour* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valeurRetour* : Variable {; *nomRetour* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 <div class="no-index">
 

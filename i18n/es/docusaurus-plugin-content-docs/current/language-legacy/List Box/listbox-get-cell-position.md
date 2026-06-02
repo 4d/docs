@@ -5,7 +5,7 @@ slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *objeto* : Text {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *objeto* : Field, Variable {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *objeto* : Text {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *objeto* : Variable {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 <div class="no-index">
 

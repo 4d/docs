@@ -5,7 +5,7 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *objeto* : Field, Variable {; *tipoLista* : Integer}; *lista* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *objeto* : Variable, Field {; *tipoLista* : Integer}; *lista* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 <div class="no-index">
 

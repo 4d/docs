@@ -5,7 +5,7 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resNum* {; *resFichier*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* : Text ; *resNum* : Integer {; *resFichier* : Time} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 <div class="no-index">
 

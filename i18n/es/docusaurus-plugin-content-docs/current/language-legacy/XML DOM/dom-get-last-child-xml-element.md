@@ -5,7 +5,7 @@ slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* : Text {; *nomElementHijo* : Text {; *valorElementHijo* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* : Text {; *nomElementHijo* : Text {; *valorElementHijo* : any}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-select-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW**  ( * ; *objeto* : Text ; *posiçao* : Integer {; *açao* : Integer} )<br/>**LISTBOX SELECT ROW**  ( *objeto* : Field, Variable ; *posiçao* : Integer {; *açao* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( * ; *objeto* : Text ; *posiçao* : Integer {; *açao* : Integer} )<br/>**LISTBOX SELECT ROW** ( *objeto* : Variable ; *posiçao* : Integer {; *açao* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 <div class="no-index">
 

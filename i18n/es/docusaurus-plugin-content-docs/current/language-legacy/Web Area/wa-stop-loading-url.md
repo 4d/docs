@@ -5,7 +5,7 @@ slug: /commands/wa-stop-loading-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA STOP LOADING URL.Syntax-->**WA STOP LOADING URL** ( * ; *objeto* : Text )<br/>**WA STOP LOADING URL** ( *objeto* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA STOP LOADING URL.Syntax-->**WA STOP LOADING URL** ( * ; *objeto* : Text )<br/>**WA STOP LOADING URL** ( *objeto* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA STOP LOADING URL.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/post-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* ; *message* ; *quand* ; *sourisX* ; *sourisY* ; *modifiers* {; *process*} )<!-- END REF-->
+<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* : Integer ; *message* : Integer ; *quand* : Integer ; *sourisX* : Integer ; *sourisY* : Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
 <div class="no-index">
 

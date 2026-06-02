@@ -5,7 +5,7 @@ slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *champN* ; *aller* ; *retour* {; *} )<!-- END REF-->
+<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *champN* : Field ; *aller* : Integer ; *retour* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
 <div class="no-index">
 

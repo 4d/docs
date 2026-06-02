@@ -5,7 +5,7 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* : Text ; *ensemble2* : Text ; *résultat* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 <div class="no-index">
 

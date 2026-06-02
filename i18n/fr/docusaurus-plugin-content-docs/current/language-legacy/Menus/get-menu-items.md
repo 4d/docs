@@ -5,7 +5,7 @@ slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *tabTitresMenus* ; *tabRefsMenus* )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *tabTitresMenus* : Text array ; *tabRefsMenus* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
 <div class="no-index">
 

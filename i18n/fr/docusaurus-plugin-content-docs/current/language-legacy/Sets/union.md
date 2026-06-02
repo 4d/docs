@@ -5,7 +5,7 @@ slug: /commands/union
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNION.Syntax-->**UNION** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
+<!--REF #_command_.UNION.Syntax-->**UNION** ( *ensemble1* : Text ; *ensemble2* : Text ; *résultat* : Text )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
 <div class="no-index">
 

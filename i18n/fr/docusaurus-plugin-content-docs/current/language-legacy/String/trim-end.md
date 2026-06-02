@@ -1,6 +1,7 @@
 ---
 id: trim-end
 title: Trim end
+slug: /commands/trim-end
 displayed_sidebar: docs
 ---
 

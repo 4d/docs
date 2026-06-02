@@ -5,7 +5,7 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get action** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get action** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 <div class="no-index">
 

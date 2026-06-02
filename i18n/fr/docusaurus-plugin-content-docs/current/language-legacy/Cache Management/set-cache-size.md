@@ -5,7 +5,7 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *taille* {; *libereMini*} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *taille* : Real {; *libereMini* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 <div class="no-index">
 

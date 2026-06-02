@@ -5,7 +5,7 @@ slug: /commands/log-file-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *cheminDossierDest* {; *tailleMax* {; *cheminHistorique* {; *attribChamp*}}} )<!-- END REF-->
+<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *cheminDossierDest* : Text {; *tailleMax* : Integer {; *cheminHistorique* : Text {; *attribChamp* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 <div class="no-index">
 

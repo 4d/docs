@@ -5,7 +5,7 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get font size** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get font size** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 <div class="no-index">
 

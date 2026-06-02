@@ -5,7 +5,7 @@ slug: /commands/get-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *laTable* ; *titresChamps* ; *numChamps* )<!-- END REF-->
+<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *laTable* : Table ; *titresChamps* : Text array ; *numChamps* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
 <div class="no-index">
 

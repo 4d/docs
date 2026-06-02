@@ -5,7 +5,7 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* ; *icône* {; *taille*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* : Text ; *icône* : Picture {; *taille* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 <div class="no-index">
 

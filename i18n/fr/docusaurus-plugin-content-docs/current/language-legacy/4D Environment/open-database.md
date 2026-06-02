@@ -5,7 +5,7 @@ slug: /commands/open-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *cheminFichier* )<!-- END REF-->
+<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *cheminFichier* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
 <div class="no-index">
 

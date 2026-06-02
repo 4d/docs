@@ -5,7 +5,7 @@ slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *texteOuFond* )}<!-- END REF-->
+<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** ({ *texteOuFond* : Integer })<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 <div class="no-index">
 

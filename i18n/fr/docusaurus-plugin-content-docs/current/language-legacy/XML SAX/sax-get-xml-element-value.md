@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* : Time ; *valeur* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 

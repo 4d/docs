@@ -5,7 +5,7 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *laTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** ( {*laTable* : Table} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 <div class="no-index">
 

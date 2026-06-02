@@ -5,7 +5,7 @@ slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElément* )<!-- END REF-->
+<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElément* : Text )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
 <div class="no-index">
 

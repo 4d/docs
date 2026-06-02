@@ -5,7 +5,7 @@ title: WA SET CONTEXT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Variable ; *contextObj* : Object )<!-- END REF-->
+<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Variable, Field ; *contextObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 

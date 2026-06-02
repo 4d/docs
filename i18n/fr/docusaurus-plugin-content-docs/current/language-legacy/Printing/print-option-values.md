@@ -5,7 +5,7 @@ slug: /commands/print-option-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* ; *tabNoms* {; *tabInfo1* {; *tabInfo2*}} )<!-- END REF-->
+<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* : Integer ; *tabNoms* : Text array {; *tabInfo1* : Integer array {; *tabInfo2* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
 <div class="no-index">
 

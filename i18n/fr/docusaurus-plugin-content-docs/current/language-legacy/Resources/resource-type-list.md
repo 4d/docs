@@ -5,7 +5,7 @@ slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* {; *resFichier*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* : Text array {; *resFichier* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 <div class="no-index">
 

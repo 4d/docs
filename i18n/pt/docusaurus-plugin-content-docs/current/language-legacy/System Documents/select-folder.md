@@ -5,7 +5,7 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*mensagem* : Text }{;}{ *rotaPadrao* : Text, Integer {; *opções* : Integer}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** : Text<br/>**Select folder** ( *mensagem* : Text {; *rotaPadrao* : Text, Integer {; *opções* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *objeto* : Variable, Field {; *inicioSel* : Integer {; *fimSel* : Integer {; *inicioBloq* : Integer {; *fimBloq* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 <div class="no-index">
 

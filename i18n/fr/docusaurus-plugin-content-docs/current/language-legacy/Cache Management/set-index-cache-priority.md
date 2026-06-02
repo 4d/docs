@@ -5,7 +5,7 @@ slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *leChamp* ; *priorité* )<!-- END REF-->
+<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *leChamp* : Field ; *priorité* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 <div class="no-index">
 

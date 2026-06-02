@@ -5,7 +5,7 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* ; *haut* ; *droite* ; *bas* {; *idEcran* {; *zoneEcran*}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *idEcran* : Integer {; *zoneEcran* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 <div class="no-index">
 

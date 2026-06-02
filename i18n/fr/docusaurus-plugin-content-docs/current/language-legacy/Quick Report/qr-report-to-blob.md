@@ -5,7 +5,7 @@ slug: /commands/qr-report-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *zone* ; *blob* )<!-- END REF-->
+<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *zone* : Integer ; *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
 <div class="no-index">
 

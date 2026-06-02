@@ -5,7 +5,7 @@ slug: /commands/adjust-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *Tabela* ; *prioridade* : Integer )<!-- END REF-->
+<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *Tabela* : Table ; *prioridade* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
 <div class="no-index">
 

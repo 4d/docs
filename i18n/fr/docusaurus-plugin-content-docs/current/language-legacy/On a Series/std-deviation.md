@@ -5,7 +5,7 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 <div class="no-index">
 

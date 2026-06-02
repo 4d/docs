@@ -5,7 +5,7 @@ slug: /commands/web-legacy-get-session-expiration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *idSession* ; *dateExp* ; *heureExp* )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *idSession* : Text ; *dateExp* : Date ; *heureExp* : Time )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 <div class="no-index">
 

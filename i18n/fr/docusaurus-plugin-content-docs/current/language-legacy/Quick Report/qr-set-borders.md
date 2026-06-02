@@ -5,7 +5,7 @@ slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *zone* ; *colonne* ; *ligne* ; *encadrement* ; *ligne* {; *couleur*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *zone* : Integer ; *colonne* : Integer ; *ligne* : Integer ; *encadrement* : Integer ; *ligne* : Integer {; *couleur* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/set-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *opção* : Integer ; *valor1* : Integer, Text {; *valor2* : Integer, Text} )<!-- END REF-->
+<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *opção* : Integer, Text ; *valor1* : Integer, Text {; *valor2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.SET PRINT OPTION.Params-->
 <div class="no-index">
 

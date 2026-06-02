@@ -5,7 +5,7 @@ slug: /commands/insert-in-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *blob* ; *décalage* ; *nombre* {; *remplisseur*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *blob* : Blob ; *décalage* : Integer ; *nombre* : Integer {; *remplisseur* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN BLOB.Params-->
 <div class="no-index">
 

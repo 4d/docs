@@ -5,7 +5,7 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expressionBool* {; *texteMessage*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expressionBool* : Boolean {; *texteMessage* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *objeto* : Text {; *tipoLista* : Integer} ) : Text<br/>**OBJECT Get list name** ( *objeto* : Field, Variable {; *tipoLista* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *objeto* : Text {; *tipoLista* : Integer} ) : Text<br/>**OBJECT Get list name** ( *objeto* : Variable, Field {; *tipoLista* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 <div class="no-index">
 

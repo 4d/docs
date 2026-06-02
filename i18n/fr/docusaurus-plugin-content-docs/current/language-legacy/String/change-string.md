@@ -5,7 +5,7 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *nouveau* ; *positionDépart* ) : Text<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* : Text ; *nouveau* : Text ; *positionDépart* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 <div class="no-index">
 

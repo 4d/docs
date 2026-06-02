@@ -5,7 +5,7 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *objeto* : Text ; *ativo* : Boolean )<br/>**OBJECT SET ENABLED** ( *objeto* : Field, Variable ; *ativo* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *objeto* : Text ; *ativo* : Boolean )<br/>**OBJECT SET ENABLED** ( *objeto* : Variable, Field ; *ativo* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 <div class="no-index">
 

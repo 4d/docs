@@ -5,7 +5,7 @@ slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objeto* : Object, Campo Object ; *propriedade* : Text )<!-- END REF-->
+<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objeto* : Object ; *propriedade* : Text )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
 <div class="no-index">
 

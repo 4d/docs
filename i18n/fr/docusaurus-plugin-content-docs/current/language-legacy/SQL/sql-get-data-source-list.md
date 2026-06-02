@@ -5,7 +5,7 @@ slug: /commands/sql-get-data-source-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* ; *tabNomsSources* ; *tabPilotes* )<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* : Integer ; *tabNomsSources* : Text array ; *tabPilotes* : Text array )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *zone* ; *tabColonnes* ; *tabTris* )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *zone* : Integer ; *tabColonnes* : Real array ; *tabTris* : Real array )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 <div class="no-index">
 

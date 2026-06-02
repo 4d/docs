@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *ligneMenu* ; *styleLigne* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *styleLigne* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 <div class="no-index">
 

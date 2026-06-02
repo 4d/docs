@@ -5,7 +5,7 @@ slug: /commands/document-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *cheminAccès* ; *documents* {; *options*} )<!-- END REF-->
+<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *cheminAccès* : Text ; *documents* : Text array {; *options* : Integer} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *resposta* : Text, Blob, Picture, Object {; *nomesCab* : Text array ; *valoresCab* : Text array}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *resposta* : Text, Blob, Picture, Object, Collection {; *nomesCab* : Text array ; *valoresCab* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 <div class="no-index">
 

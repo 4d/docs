@@ -5,7 +5,7 @@ slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
 <div class="no-index">
 

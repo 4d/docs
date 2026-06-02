@@ -5,7 +5,7 @@ slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFichier* )<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFichier* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 <div class="no-index">
 

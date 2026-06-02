@@ -5,7 +5,7 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* ; *dossiers* )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* : Text ; *dossiers* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 <div class="no-index">
 

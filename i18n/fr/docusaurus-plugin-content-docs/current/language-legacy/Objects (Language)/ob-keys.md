@@ -5,7 +5,7 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objet* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objet* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 <div class="no-index">
 

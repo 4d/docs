@@ -5,7 +5,7 @@ slug: /commands/listbox-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer {; *number* : Integer} )<br/>**LISTBOX DELETE COLUMN** ( *object* : Variable, Field ; *colPosition* : Integer {; *number* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer {; *number* : Integer} )<br/>**LISTBOX DELETE COLUMN** ( *object* : Variable ; *colPosition* : Integer {; *number* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 <div class="no-index">
 

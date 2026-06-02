@@ -5,7 +5,7 @@ slug: /commands/ldap-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* ; *login* ; *motDePasse* {; *digest*} )<!-- END REF-->
+<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* : Text ; *login* : Text ; *motDePasse* : Text {; *digest* : Integer} )<!-- END REF-->
 <!--REF #_command_.LDAP LOGIN.Params-->
 <div class="no-index">
 

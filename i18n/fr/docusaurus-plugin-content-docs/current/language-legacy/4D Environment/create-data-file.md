@@ -5,7 +5,7 @@ slug: /commands/create-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *cheminAccès* )<!-- END REF-->
+<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *cheminAccès* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
 <div class="no-index">
 

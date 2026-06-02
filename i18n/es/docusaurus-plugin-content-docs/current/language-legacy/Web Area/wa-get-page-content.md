@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( * ; *objeto* : Text ) : Text<br/>**WA Get page content** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( * ; *objeto* : Text ) : Text<br/>**WA Get page content** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page content.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*laTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( *laTable* : Table {; *} )<br/>**MODIFY RECORD** ( * )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 <div class="no-index">
 

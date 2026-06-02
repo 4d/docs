@@ -5,7 +5,7 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomsObjets* {; *numPage*} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomsObjets* : Text array {; *numPage* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 <div class="no-index">
 

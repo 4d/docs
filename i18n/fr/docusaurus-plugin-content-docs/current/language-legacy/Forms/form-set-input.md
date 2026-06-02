@@ -5,7 +5,7 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*laTable* ;} *formulaire* {; *formUtilisateur* {; *}} )<!-- END REF-->
+<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*laTable* : Table ;} *formulaire* : Text, Object {; *formUtilisateur* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 <div class="no-index">
 

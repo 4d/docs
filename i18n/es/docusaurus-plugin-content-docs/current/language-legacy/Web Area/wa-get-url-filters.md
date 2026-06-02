@@ -5,7 +5,7 @@ slug: /commands/wa-get-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA GET URL FILTERS** ( *objeto* : Field, Variable ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
+<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA GET URL FILTERS** ( *objeto* : Variable, Field ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET URL FILTERS.Params-->
 <div class="no-index">
 

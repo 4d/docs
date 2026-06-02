@@ -5,7 +5,7 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* : テーブル, フィールド )<br/>**RELATE MANY** ( *Field* : テーブル, フィールド )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* : Table )<br/>**RELATE MANY** ( *Field* : Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 <div class="no-index">
 

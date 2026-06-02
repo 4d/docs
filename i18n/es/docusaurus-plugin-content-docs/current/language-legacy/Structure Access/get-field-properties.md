@@ -5,7 +5,7 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *campPtr* : Puntero, Entero largo ; *campTipo* : Integer {; *campLong* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tablaNum* : Puntero, Entero largo ; *numCamp* : Integer ; *campTipo* : Integer {; *campLong* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *campPtr* : Pointer ; *campTipo* : Integer {; *campLong* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tablaNum* : Integer ; *numCamp* : Integer ; *campTipo* : Integer {; *campLong* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 <div class="no-index">

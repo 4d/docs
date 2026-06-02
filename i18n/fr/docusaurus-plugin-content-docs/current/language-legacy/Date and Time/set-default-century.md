@@ -5,7 +5,7 @@ slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siècle* {; *anPivot*} )<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siècle* : Integer {; *anPivot* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 <div class="no-index">
 

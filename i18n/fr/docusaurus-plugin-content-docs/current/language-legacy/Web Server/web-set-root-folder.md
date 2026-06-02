@@ -5,7 +5,7 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *dossierRacine* )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *dossierRacine* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 <div class="no-index">
 

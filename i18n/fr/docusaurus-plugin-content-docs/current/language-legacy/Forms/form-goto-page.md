@@ -5,7 +5,7 @@ slug: /commands/form-goto-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numéroPage* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numéroPage* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 <div class="no-index">
 

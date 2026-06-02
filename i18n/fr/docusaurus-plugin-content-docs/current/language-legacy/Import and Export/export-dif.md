@@ -5,7 +5,7 @@ slug: /commands/export-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
+<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*laTable* : Table ;} *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT DIF.Params-->
 <div class="no-index">
 

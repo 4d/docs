@@ -5,7 +5,7 @@ slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *zone* ; *numCommande* {; *valeur*} ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *zone* : Integer ; *numCommande* : Integer {; *valeur* : Integer, Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* ; *coordY* ; *depuis* ; *vers* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *depuis* : Integer ; *vers* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 <div class="no-index">
 

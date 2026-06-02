@@ -5,7 +5,7 @@ slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *sélecteur* {; *accès* {; *typePropriétés*}} )<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *sélecteur* : Text {; *accès* : Boolean {; *typePropriétés* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 <div class="no-index">
 

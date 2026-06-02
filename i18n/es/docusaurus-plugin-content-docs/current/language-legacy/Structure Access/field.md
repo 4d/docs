@@ -5,7 +5,7 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTabla* : Integer ; *numCamp* : Integer ) -> Resultado <br/>**Field** ( *ptrCamp* : Pointer ) -> numCampo<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTabla* : Integer ; *numCamp* : Integer ) : Pointer<br/>**Field** ( *ptrCamp* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 <div class="no-index">
 

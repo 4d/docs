@@ -5,7 +5,7 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 <div class="no-index">
 

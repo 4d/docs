@@ -5,7 +5,7 @@ slug: /commands/create-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *cheminCible* ; *cheminAlias* )<!-- END REF-->
+<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *cheminCible* : Text ; *cheminAlias* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
 <div class="no-index">
 

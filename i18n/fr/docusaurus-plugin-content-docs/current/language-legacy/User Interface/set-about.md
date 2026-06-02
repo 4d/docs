@@ -5,7 +5,7 @@ slug: /commands/set-about
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *libelléElément* ; *méthode* )<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *libelléElément* : Text ; *méthode* : Text )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
 <div class="no-index">
 

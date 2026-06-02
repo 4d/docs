@@ -5,7 +5,7 @@ slug: /commands/object-get-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get auto spellcheck** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get auto spellcheck** ( *objeto* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 <div class="no-index">
 

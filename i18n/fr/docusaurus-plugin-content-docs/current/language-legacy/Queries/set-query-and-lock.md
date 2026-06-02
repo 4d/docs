@@ -5,7 +5,7 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* : Text ; *url* : Text ; *contenido* : Text, Blob, Picture, Object ; *respuesta* : Text, Blob, Picture, Object {; *nomEncab* : Text array ; *valoresEncab* : Text array}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* : Text ; *url* : Text ; *contenido* : Text, Blob, Picture, Object, Collection ; *respuesta* : Text, Blob, Picture, Object, Collection {; *nomEncab* : Text array ; *valoresEncab* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 <div class="no-index">
 

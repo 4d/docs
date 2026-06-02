@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *ligneMenu* ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* : Integer, Text ; *ligneMenu* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 <div class="no-index">
 

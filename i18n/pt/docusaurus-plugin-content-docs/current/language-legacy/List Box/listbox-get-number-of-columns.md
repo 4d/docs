@@ -5,7 +5,7 @@ slug: /commands/listbox-get-number-of-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get number of columns** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get number of columns** ( *objeto* : Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of columns.Params-->
 <div class="no-index">
 

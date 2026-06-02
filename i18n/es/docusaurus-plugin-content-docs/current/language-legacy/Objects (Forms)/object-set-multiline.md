@@ -5,7 +5,7 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *objeto* : Text ; *multilinea* : Integer )<br/>**OBJECT SET MULTILINE** ( *objeto* : Field, Variable ; *multilinea* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *objeto* : Text ; *multilinea* : Integer )<br/>**OBJECT SET MULTILINE** ( *objeto* : Variable, Field ; *multilinea* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 <div class="no-index">
 

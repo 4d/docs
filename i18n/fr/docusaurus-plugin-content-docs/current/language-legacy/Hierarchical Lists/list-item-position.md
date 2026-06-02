@@ -5,7 +5,7 @@ slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *liste* ; *réfElément* ) : Integer<!-- END REF-->
+<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *liste* : Integer, Text ; *réfElément* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
 <div class="no-index">
 

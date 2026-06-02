@@ -5,7 +5,7 @@ slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get placeholder** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get placeholder** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get placeholder.Params-->
 <div class="no-index">
 

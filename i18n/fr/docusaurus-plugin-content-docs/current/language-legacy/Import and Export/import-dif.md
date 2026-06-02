@@ -5,7 +5,7 @@ slug: /commands/import-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
+<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*laTable* : Table ;} *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT DIF.Params-->
 <div class="no-index">
 

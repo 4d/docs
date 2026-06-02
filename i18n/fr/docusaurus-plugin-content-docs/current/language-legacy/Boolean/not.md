@@ -5,7 +5,7 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *booléen* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *booléen* : Boolean ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *tableau* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *tableau* : Array ; *valeur* : Expression )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 <div class="no-index">
 

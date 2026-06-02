@@ -5,7 +5,7 @@ slug: /commands/array-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomTableau* : Array ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
 <div class="no-index">
 

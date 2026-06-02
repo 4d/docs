@@ -5,7 +5,7 @@ slug: /commands/euro-converter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valeur* ; *deMonnaie* ; *versMonnaie* ) : Real<!-- END REF-->
+<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valeur* : Real ; *deMonnaie* : Text ; *versMonnaie* : Text ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
 <div class="no-index">
 

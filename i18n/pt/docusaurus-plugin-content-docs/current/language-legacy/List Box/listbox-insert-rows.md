@@ -5,7 +5,7 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *objeto* : Text ; *posiçao* : Integer {; *numFilas* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *objeto* : Field, Variable ; *posiçao* : Integer {; *numFilas* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *objeto* : Text ; *posiçao* : Integer {; *numFilas* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *objeto* : Variable ; *posiçao* : Integer {; *numFilas* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 <div class="no-index">
 

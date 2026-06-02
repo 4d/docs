@@ -5,7 +5,7 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* : Table {; *queryFormula* : Expression} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 <div class="no-index">
 

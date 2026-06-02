@@ -5,7 +5,7 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *tabBooléen* {; *ensemble*} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *tabBooléen* : Boolean array {; *ensemble* : Text} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 <div class="no-index">
 
