@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ```4d
   // On Web Connection データベースメソッド
-#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
   // メソッドコード
 ```
 
