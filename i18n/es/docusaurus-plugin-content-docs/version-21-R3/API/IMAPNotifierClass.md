@@ -3,7 +3,7 @@ id: IMAPNotifierClass
 title: IMAPNotifier
 ---
 
-The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a selected mailbox.
+La clase `IMAPNotifier` permite gestionar las notificaciones IMAP IDLE para un buzón seleccionado.
 
 <details><summary>Historia</summary>
 
@@ -13,22 +13,22 @@ The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a sele
 
 </details>
 
-The `IMAPNotifier` class is available from the `4D` class store.
+La clase `IMAPNotifier` está disponible en el class store `4D`.
 
-An `IMAPNotifier` object is associated with an [IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) and provides access to mailbox notification management.
+Un objeto `IMAPNotifier` está asociado a un [transportador IMAP](./IMAPTransporterClass.md#imap-transporter-object) y ofrece acceso a la gestión de notificaciones del buzón.
 
 Todas las funciones de clase `IMAPNotifier` son hilo seguro.
 
 :::tip Entradas de blog relacionadas
 
-[Instant Email Notifications with IMAP Transporter](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
+[Notificaciones instantáneas por correo electrónico con IMAP Transporter](https://blog.4d.com/instant-email-notifications-with-imap-transporter)
 
 :::
 
 ### Ejemplo
 
 ```4d
-// Define listener callbacks
+// Define las funciones de retrollamada del listener
 var $parameter : Object
 var $transporter : 4D.IMAPTransporter
 
@@ -48,7 +48,7 @@ $transporter.notifier.start()
 
 ## IMAPNotifier object
 
-An IMAPNotifier object provides the following properties and functions:
+Un objeto IMAPNotifier proporciona las siguientes propiedades y funciones:
 
 |                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------ |
@@ -84,7 +84,7 @@ La función `4D.IMAPNotifier.new()` <!-- REF #4D.IMAPNotifier.new().Summary -->c
 
 #### Descripción
 
-The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates whether the notifier is started (`true`) or stopped (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.isStarted` <!-- REF #IMAPNotifier.isStarted.Summary -->indica si el notificador está iniciado (`true`) o detenido (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -104,17 +104,17 @@ The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates 
 
 #### Descripción
 
-The `.start()` function <!-- REF #IMAPNotifier.start().Summary -->starts the subscription to server notifications and activates IMAP listener callbacks<!-- END REF -->.
+La función `.start()` <!-- REF #IMAPNotifier.start().Summary -->inicia la suscripción a las notificaciones del servidor y activa las retrollamadas del oyente IMAP<!-- END REF -->.
 
-A mailbox must be selected using [`selectBox()`](./IMAPTransporterClass.md#selectbox) before calling `.start()`.
+Debe seleccionarse un buzón mediante [`selectBox()`](./IMAPTransporterClass.md#selectbox) antes de llamar a `.start()`.
 
-Callback functions are executed in the worker where `.start()` is called.
+Las funciones de retrollamada son ejecutadas en el worker donde `.start()` es llamado.
 
 :::note Notas
 
-- When the notifier is started, other transporter functions (such as `getMail()` or `send()`) are not available. You must call `.stop()` before using these functions, then call `.start()` again to resume notifications.
+- Cuando se inicia el notificador, otras funciones del transportador (como `getMail()` o `send()`) no están disponibles. Debe llamar a `.stop()` antes de utilizar estas funciones, y luego llamar de nuevo a `.start()` para reanudar las notificaciones.
 
-- IMAP IDLE notifications indicate that a change has occurred but do not provide updated mailbox data. To refresh the mailbox state, you must stop the notifier, retrieve the updated data (for example using `getMail()`), and then restart it.
+- Las notificaciones IMAP IDLE indican que se ha producido un cambio pero no ofrecen datos actualizados del buzón. Para actualizar el estado del buzón, debe detener el aviso, recuperar los datos actualizados (por ejemplo usando `getMail()`), y luego reiniciarlo.
 
 :::
 
@@ -124,7 +124,7 @@ Callback functions are executed in the worker where `.start()` is called.
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | success    |                                                                                             | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                                                                                             | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
+| errors     |                                                                                             | Collection | Pila de error 4D (no retornado si se recibe una respuesta del servidor)        |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
 |            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |
@@ -147,7 +147,7 @@ Callback functions are executed in the worker where `.start()` is called.
 
 #### Descripción
 
-The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notification subscription<!-- END REF -->. Calling `.stop()` is required before using other transporter functions (such as `getMail()` or `send()`).
+La función `.stop()` <!-- REF #IMAPNotifier.stop().Summary -->detiene la suscripción a la notificación<!-- END REF -->. Es necesario llamar a `.stop()` antes de utilizar otras funciones del transportador (como `getMail()` o `send()`).
 
 #### Objeto devuelto
 
@@ -155,7 +155,7 @@ The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notifi
 | ---------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
 | success    |                                                                                             | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                                                                                             | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
+| errors     |                                                                                             | Collection | Pila de error 4D (no retornado si se recibe una respuesta del servidor)        |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
 |            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |

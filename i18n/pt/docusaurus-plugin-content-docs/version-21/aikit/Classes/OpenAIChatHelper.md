@@ -65,23 +65,23 @@ $chatHelper.reset()  // Clear all previous messages and tools
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| Parâmetro | Tipo   | Descrição                                                                                                                                                                           |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
-| *handler* | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| Parâmetro | Tipo   | Descrição                                                                                                                                             |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                               |
+| *handler* | Object | The function to handle tool calls (4D.Function or Object), optional if defined inside *tool* as *handler* property |
 
 Registers a tool with its handler function for automatic tool call handling.
 
 The *handler* parameter can be:
 
 - A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- An **Object**: An object containing a formula property matching the tool function name
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 
-#### Register Tool Example
+#### Register Tool Examples
 
 ```4D
 // Example 1: Simple registration with direct handler
@@ -117,7 +117,7 @@ Registers multiple tools at once. The parameter can be:
 - **Object**: Object with function names as keys mapping to tool definitions
 - **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
 
-#### Register Multiple Tools Example
+#### Register Multiple Tools Examples
 
 ##### Example 1: Collection format with handlers in tools
 

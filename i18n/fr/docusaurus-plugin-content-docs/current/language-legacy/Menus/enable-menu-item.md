@@ -5,7 +5,7 @@ slug: /commands/enable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* ; *ligneMenu* {; *process*} )<!-- END REF-->
+<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
 <div class="no-index">
 

@@ -399,9 +399,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of `mailInfo` objects|
+|戻り値|Collection|<-|Collection of `mailInfo` objects|
 </div>
 <!-- END REF -->
 

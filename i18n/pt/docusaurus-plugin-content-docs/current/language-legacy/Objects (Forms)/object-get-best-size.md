@@ -5,7 +5,7 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *objeto* : Text ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *objeto* : Field, Variable ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *objeto* : Text ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *objeto* : Variable, Field ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 <div class="no-index">
 

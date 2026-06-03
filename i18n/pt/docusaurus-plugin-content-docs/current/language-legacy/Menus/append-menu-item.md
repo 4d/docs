@@ -5,7 +5,7 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *itemTexto* {; *subMenu* : Text {; *processo* : Integer {; *}}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer, Text ; *itemTexto* : Text {; *subMenu* : Text {; *processo* : Integer}} {; *} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 <div class="no-index">
 

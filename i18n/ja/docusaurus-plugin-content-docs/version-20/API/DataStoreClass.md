@@ -693,9 +693,9 @@ $info:=$remoteDS.getInfo()
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of objects, where each object describes a request|
+|戻り値|Collection|<-|Collection of objects, where each object describes a request|
 </div>
 <!-- END REF -->
 

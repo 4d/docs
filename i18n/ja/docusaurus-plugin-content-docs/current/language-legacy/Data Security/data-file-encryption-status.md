@@ -5,7 +5,7 @@ slug: /commands/data-file-encryption-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( structurePath , dataPath ) : Object<!-- END REF-->
+<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( *structurePath* , dataPath ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
 <div class="no-index">
 

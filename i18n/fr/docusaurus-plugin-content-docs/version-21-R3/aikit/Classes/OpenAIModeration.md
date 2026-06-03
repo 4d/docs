@@ -7,7 +7,7 @@ title: OpenAIModeration
 
 La classe `OpenAIModeration` permet de gérer les résultats de modération de l'API OpenAI. Elle contient des propriétés permettant de stocker l'identifiant de modération, le modèle utilisé et les résultats de la modération.
 
-https://platform.openai.com/docs/api-reference/moderations/object
+https://developers.openai.com/api/reference/resources/moderations
 
 ## Propriétés
 

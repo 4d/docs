@@ -5,7 +5,7 @@ slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *liste* {; *} )<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *liste* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
 <div class="no-index">
 

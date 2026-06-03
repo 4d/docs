@@ -5,7 +5,7 @@ slug: /commands/min
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Min.Syntax-->**Min** ( *séries* {; *cheminAttribut*} ) : any<!-- END REF-->
+<!--REF #_command_.Min.Syntax-->**Min** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objeto* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *objeto* : Field, Variable {; *refMode* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objeto* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *objeto* : Variable, Field {; *refMode* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 <div class="no-index">
 

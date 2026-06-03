@@ -5,7 +5,7 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 <div class="no-index">
 

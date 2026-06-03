@@ -5,7 +5,7 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 <div class="no-index">
 

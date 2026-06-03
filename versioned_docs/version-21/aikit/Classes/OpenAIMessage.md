@@ -40,7 +40,6 @@ Adds an image URL to the content of the message.
 
 ### Create a simple message and attach an image
 
-
 ```4d
 // Create an instance of OpenAIMessage
 var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})

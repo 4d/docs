@@ -23,14 +23,26 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | `terminated`| Boolean    | A Boolean indicating whether the HTTP request was terminated.               |
 | `headers`   | Object     | Returns the response headers as an object.                                  |
 | `rateLimit` | Object     | Returns rate limit information from the response headers.                   |
-| `usage`     | Object     | Returns usage information from the response body if any.                    |
+| `usage`     | Object     | Returns usage information (token counts) from the response body if any.     |
+
+### usage
+
+The `usage` property returns an object containing token usage information from the API response. The structure varies depending on the API endpoint used.
+
+> **Note:** Different OpenAI-compatible services may return different fields in the usage object. The structure documented here is based on OpenAI's API. Not all fields may be present in responses from other providers.
+
+See the specific result class documentation for endpoint-specific usage structures:
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
 
 ### rateLimit
 
 The `rateLimit` property returns an object containing rate limit information from the response headers.
 This information includes the limits, remaining requests, and reset times for both requests and tokens.
 
-For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers).
 
 The structure of the `rateLimit` object is as follows:
 

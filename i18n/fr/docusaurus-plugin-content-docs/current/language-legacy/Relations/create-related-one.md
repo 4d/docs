@@ -5,7 +5,7 @@ slug: /commands/create-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *leChamp* )<!-- END REF-->
+<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *leChamp* : Field )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : 倍長整数, 演算子 } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : Integer } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 <div class="no-index">
 

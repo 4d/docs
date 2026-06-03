@@ -5,7 +5,7 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *codeCaractère* ) : Text<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *codeCaractère* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 <div class="no-index">
 

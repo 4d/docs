@@ -866,7 +866,7 @@
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "Enviar consulta",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
@@ -878,5 +878,8 @@
   },
   "4D Analyzer": {
     "message": "4D Analyzer"
+  },
+  "theme.docs.versionDropdown.notAvailable": {
+    "message": "Page not available in this version\nOpening the default page instead"
   }
 }

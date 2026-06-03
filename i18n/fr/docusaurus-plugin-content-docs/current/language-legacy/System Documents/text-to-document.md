@@ -5,7 +5,7 @@ slug: /commands/text-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomFichier* ; *texte* {; *jeuCaractères* {; *modeRetour*}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomFichier* : Text ; *texte* : Text {; *jeuCaractères* : Text, Integer {; *modeRetour* : Integer}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 <div class="no-index">
 

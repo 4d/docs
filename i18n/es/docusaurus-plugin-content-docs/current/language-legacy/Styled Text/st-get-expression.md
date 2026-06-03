@@ -5,7 +5,7 @@ slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<br/>**ST Get expression** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<br/>**ST Get expression** ( *objeto* : Variable, Field {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
 <div class="no-index">
 

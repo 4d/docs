@@ -3,12 +3,12 @@ id: ClassStoreClass
 title: ClassStore
 ---
 
-`4D.ClassStore` properties are available classes and class stores.
+Las propiedades de la clase `4D.ClassStore` son las clases y los almacenes de clases disponibles.
 
-4D exposes two [class stores](../Concepts/classes.md#class-stores):
+4D expone dos [class stores](../Concepts/classes.md#class-stores):
 
-- [`cs`](../commands/cs) for user classes and component class stores
-- [`4D`](../commands/4d) for built-in classes
+- [`cs`](../commands/cs) para las clases de usuario y las class stores de los componentes
+- [`4D`](../commands/4d) para las clases integradas
 
 ### Resumen
 
@@ -23,29 +23,29 @@ title: ClassStore
 
 #### Descripción
 
-Each <!-- REF ClassStoreClass.classClassName.Summary -->exposed [`4D.Class`](./ClassClass.md) class in the class store<!-- END REF --> is available as a property of the class store.
+Cada clase expuesta en <!-- REF ClassStoreClass.classClassName.Summary -->[`4D.Class`](./ClassClass.md) en el class store<!-- END REF --> está disponible como una propiedad del class store.
 
 #### Ejemplo
 
 ```4d
 var $myclass:=cs.EmployeeEntity
-	//$myclass is a class from the cs class store
+	//$myclass es una clase del class store cs
 
 ```
 
 ## *.classStoreName*
 
-<!-- REF ClassStoreClass.classStoreName.Syntax -->***.classStoreName*** : 4D.ClassStore<!-- END REF -->
+<!-- REF ClassStoreClass.classStoreName.Syntax -->***.classStoreName***: 4D.ClassStore<!-- END REF -->
 
 #### Descripción
 
-Each <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` published by a component<!-- END REF --> is available as a property of the class store.
+Cada <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` publicado por un componente<!-- END REF --> está disponible como propiedad del class store.
 
-The name of the class store exposed by a component is the component namespace as [declared in the component's Settings page](../Extensions/develop-components.md#declaring-the-component-namespace).
+El nombre del class store expuesto por un componente es el namespace del componente como [declarado en la página Parámetros del componente](../Extensions/develop-components.md#declaring-the-component-namespace).
 
 #### Ejemplo
 
 ```4d
 var $classtore:=cs.AiKit
-	//$classtore is the class store of the 4D AIKit component
+	//$classtore es el class store del componente 4D AIKit
 ```

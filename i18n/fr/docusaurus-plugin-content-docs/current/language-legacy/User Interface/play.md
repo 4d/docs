@@ -5,7 +5,7 @@ slug: /commands/play
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjet* {; *asynchrone*} )<!-- END REF-->
+<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjet* : Text {; *asynchrone* : Integer} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
 <div class="no-index">
 

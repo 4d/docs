@@ -5,7 +5,7 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *objeto* : Text {; *elemento* : Integer} )<br/>**EDIT ITEM** ( *objeto* : Field, Variable {; *elemento* : Integer} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *objeto* : Text {; *elemento* : Integer} )<br/>**EDIT ITEM** ( *objeto* : Table, Variable {; *elemento* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 <div class="no-index">
 

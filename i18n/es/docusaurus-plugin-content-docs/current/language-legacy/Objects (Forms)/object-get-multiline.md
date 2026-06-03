@@ -5,7 +5,7 @@ slug: /commands/object-get-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get multiline** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get multiline** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get multiline.Params-->
 <div class="no-index">
 

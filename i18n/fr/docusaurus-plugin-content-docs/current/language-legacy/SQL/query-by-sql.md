@@ -5,7 +5,7 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* ;} *formuleSQL* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* : Table ;} *formuleSQL* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 <div class="no-index">
 

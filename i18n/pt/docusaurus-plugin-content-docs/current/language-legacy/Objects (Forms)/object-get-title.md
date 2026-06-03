@@ -5,7 +5,7 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get title** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 <div class="no-index">
 

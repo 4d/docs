@@ -9,9 +9,9 @@ title: Ejecución asíncrona
 
 #### Ejecución sincrónica
 
-Synchronous execution follows a **sequential** flow, a step-by-step where each instruction must complete before the next one starts. Esto significa que el hilo de ejecución se bloquea hasta que finaliza la operación.
+La ejecución síncrona sigue un flujo **secuencial**, un paso a paso en el que cada instrucción debe completarse antes de que comience la siguiente. Esto significa que el hilo de ejecución se bloquea hasta que finaliza la operación.
 
-Synchronous execution is used when:
+La ejecución sincrónica se utiliza cuando:
 
 - La ejecución de las tareas debe seguir un orden estricto.
 - El impacto en el rendimiento es mínimo (por ejemplo, operaciones rápidas).
@@ -27,7 +27,7 @@ La ejecución asíncrona se utiliza cuando:
 
 - Una operación tarda mucho tiempo (por ejemplo, esperando una respuesta del servidor).
 - La capacidad de respuesta es fundamental (por ejemplo, las interacciones de la interfaz de usuario).
-- Background tasks, network communication, or parallel processing are performed.
+- Se realizan tareas en segundo plano, la comunicación de red o procesamiento paralelo.
 
 Elegir entre ejecución síncrona y asíncrona:
 
@@ -64,7 +64,7 @@ El proceso llamante envía un mensaje y el worker lo ejecuta. El worker puede pu
 
 ### Escucha de eventos
 
-En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. For example, when a form is displayed using the [`DIALOG`](../commands/dialog) command, user actions can trigger events that your code can process. Al hacer clic en un botón se activará el código asociado al botón.
+En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. Por ejemplo, cuando se muestra un formulario utilizando el comando [`DIALOG`](../commands/dialog), las acciones del usuario pueden desencadenar eventos que su código puede procesar. Al hacer clic en un botón se activará el código asociado al botón.
 
 En el contexto de la ejecución asíncrona, las siguientes funcionalidades colocan su código en modo de escucha:
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *objeto* : Text ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *objeto* : Field, Variable ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *objeto* : Text ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *objeto* : Variable, Field ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 <div class="no-index">
 

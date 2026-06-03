@@ -5,7 +5,7 @@ slug: /commands/intersection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
+<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *ensemble1* : Text ; *ensemble2* : Text ; *résultat* : Text )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
 <div class="no-index">
 

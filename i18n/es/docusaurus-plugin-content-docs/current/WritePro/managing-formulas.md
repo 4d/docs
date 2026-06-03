@@ -75,7 +75,7 @@ Puede insertar expresiones especiales relacionadas con los atributos del documen
 
 :::note
 
-When you **work with tables**, [additional context expressions](./user-legacy/handling-tables.md#table-formula-object) such as `This.item` are available.
+Cuando **trabajas con tablas**, [expresiones de contexto adicionales](./user-legacy/handling-tables.md#table-formula-object) como `Este.elemento` están disponibles.
 
 :::
 

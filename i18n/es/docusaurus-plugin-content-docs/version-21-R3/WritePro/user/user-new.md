@@ -41,7 +41,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Cada nivel se adjunta a una hoja de estilo de lista jerárquica y representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.).
 
-Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
@@ -50,7 +50,7 @@ Multi-level lists are created with command [WP New style sheet](../commands/wp-n
 Listas de varios niveles pueden ser gestionadas usando:
 
 - paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
+- [acciones estándar](../user-legacy/standard-actions.md) dedicadas para la gestión de niveles (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
 - dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Entrada de blog relacionada
@@ -75,7 +75,7 @@ Hierarchical list style sheets are fully supported by the following commands: [`
 
 ### Ejemplo
 
-The following example creates a three-level hierarchical list style sheet and applies it to paragraphs.
+El siguiente ejemplo crea una hoja de estilo de lista jerárquica de tres niveles y la aplica a los párrafos.
 
 ```4d
 // Create 3 hierarchical list style sheets
@@ -119,9 +119,9 @@ resultado:
 
 Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores predefinidos:
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- `wk margin left` = 0,75 cm \* (número de niveles anteriores) o 0,25 pulgadas \* (número de niveles anteriores), dependiendo de la unidad de diseño actual
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` se deriva del nombre de la hoja de estilo raíz (Sólo lectura para subniveles)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 
   - Ejemplo:

@@ -49,7 +49,7 @@ Esta opción puede seleccionarse en macOS, pero se ignorará cuando la aplicaci�
 
 Este menú permite seleccionar la paleta de colores que se utilizará en la aplicación principal. Una paleta de colores define un conjunto global de colores de interfaz para los textos, los fondos, las ventanas, etc., utilizados en sus formularios.
 
-> Esta opción se ignora en Windows con [Tema clásico](#use-fluent-ui-on-windows). In this context, the "Light" scheme is always used.
+> Esta opción se ignora en Windows con [Tema clásico](#use-fluent-ui-on-windows). En este contexto, siempre se utiliza el esquema "Light".
 
 Los siguientes esquemas están disponibles:
 

@@ -18,7 +18,7 @@ Los comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime) y [`
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binario.
 
 :::
 
@@ -26,7 +26,7 @@ This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variabl
 
 Los objetos Email ofrecen las siguientes propiedades:
 
-> 4D sigue la [especificación JMAP](https://jmap.io/spec-mail.html) para formatear el objeto Email.
+> 4D sigue la [especificación JMAP](https://jmap.io/spec/rfc8621/) para formatear el objeto Email.
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |

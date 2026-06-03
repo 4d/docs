@@ -32,10 +32,9 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | Parameter        | Type  | Description                                |
 |------------------|-------|--------------------------------------------|
 | *imageURL*       | Text | The URL of the image to add to the message.|
-| *detail*         | Text | Additional details about the image.        |
+| *detail*         | Text | The detail level of the image: "auto", "low", or "high". |
 
-Adds an image URL to the content of the message.
-
+Adds an image URL to the content of the message. If the content is currently text, it will be converted to a collection format.
 
 ### addFileId()
 
@@ -43,12 +42,9 @@ Adds an image URL to the content of the message.
 
 | Parameter        | Type  | Description                                |
 |------------------|-------|--------------------------------------------|
-| *fileId*       | Text | The file ID to add to the message.|
+| *fileId*         | Text  | The file ID to add to the message.         |
 
 Adds a file reference to the content of the message. If the content is currently text, it will be converted to a collection format.
-
-
-
 
 ## Example Usage
 
@@ -67,7 +63,6 @@ var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze
 // Add an image URL with details
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
-
 
 ### Adding File
 
@@ -147,3 +142,5 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 ## See Also
 
 - [OpenAITool](OpenAITool.md) - For tool definition
+- [OpenAIFile](OpenAIFile.md)
+- [OpenAIChoice](OpenAIChoice.md)

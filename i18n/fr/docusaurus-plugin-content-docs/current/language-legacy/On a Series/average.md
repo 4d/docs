@@ -5,7 +5,7 @@ slug: /commands/average
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Average.Syntax-->**Average** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
+<!--REF #_command_.Average.Syntax-->**Average** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/real-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *réel* ; *blob* ; *formatRéel* {; offset } )<br/>**REAL TO BLOB** ( *réel* ; *blob* ; *formatRéel* {; *} )<!-- END REF-->
+<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *réel* : Real ; *blob* : Blob ; *formatRéel* : Integer {; *offset* : Variable } )<br/>**REAL TO BLOB** ( *réel* : Real ; *blob* : Blob ; *formatRéel* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.REAL TO BLOB.Params-->
 <div class="no-index">
 

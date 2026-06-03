@@ -29,12 +29,12 @@ La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol,
 
 **addImageURL**(*imageURL* : Text; *detail* : Text)
 
-| Parámetros | Tipo | Descripción                                              |
-| ---------- | ---- | -------------------------------------------------------- |
-| *imageURL* | Text | La URL de la imagen a añadir al mensaje. |
-| *detail*   | Text | Detalles adicionales sobre la imagen.    |
+| Parámetros | Tipo | Descripción                                                                              |
+| ---------- | ---- | ---------------------------------------------------------------------------------------- |
+| *imageURL* | Text | La URL de la imagen a añadir al mensaje.                                 |
+| *detail*   | Text | The detail level of the image: "auto", "low", or "high". |
 
-Añade una URL de imagen al contenido del mensaje.
+Añade una URL de imagen al contenido del mensaje. Si el contenido es actualmente texto, se convertirá a un formato colección.
 
 ### addFileId()
 
@@ -67,18 +67,18 @@ $message.addImageURL("http://example.com/image.jpg"; "high")
 ### Añadir archivo
 
 ```4d
-// Upload a file with user_data purpose
+// Subir un archivo con el objetivo user_data
 var $file:=File("/RESOURCES/document.pdf")
 var $uploadResult:=$client.files.create($file; "user_data")
 
 If ($uploadResult.success)
-    var $uploadedFile:=$uploadResult.file
+    var $uploadedFile:=$uploadResult.archivo
     
-    // Create message and attach the file using its ID
-    var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this document:"})
+    // Crea el mensaje y adjunta el archivo usando su ID
+    var $message:=cs.AIKit.OpenAIMessage.new({role: "usuario"; content: "Por favor, analice este documento:"})
     $message.addFileId($uploadedFile.id)
     
-    // $message.content -> [{type: "text"; text: "Please analyze this document:"}; {type: "file"; file_id: "file-abc123"}]
+    // $message.content -> [{type: "text"; text: "Por favor, analice este documento:"}; {type: "file"; file_id: "archivo-abc123"}]
 End if
 ```
 
@@ -142,3 +142,5 @@ var $toolResponse:=cs.AIKit.OpenAIMessage. ew({ \
 ## Ver también
 
 - [OpenAITool](OpenAITool.md) - Para la definición de la herramienta
+- [OpenAIFile](OpenAIFile.md)
+- [OpenAIChoice](OpenAIChoice.md)

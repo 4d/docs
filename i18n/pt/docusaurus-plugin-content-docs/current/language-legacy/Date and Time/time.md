@@ -5,7 +5,7 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *horaString* ) : Time<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *horaString* : Text, Integer ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 <div class="no-index">
 

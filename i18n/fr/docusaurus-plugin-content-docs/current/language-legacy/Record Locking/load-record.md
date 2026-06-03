@@ -5,7 +5,7 @@ slug: /commands/load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
 <div class="no-index">
 

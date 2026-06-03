@@ -5,7 +5,7 @@ slug: /commands/object-set-drag-and-drop-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( * ; *objeto* : Text ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<br/>**OBJECT SET DRAG AND DROP OPTIONS** ( *objeto* : Field, Variable ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( * ; *objeto* : Text ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<br/>**OBJECT SET DRAG AND DROP OPTIONS** ( *objeto* : Variable, Field ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 <div class="no-index">
 

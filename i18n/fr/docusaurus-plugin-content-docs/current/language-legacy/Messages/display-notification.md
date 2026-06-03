@@ -5,7 +5,7 @@ slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titre* ; *contenu* {; *durée*} )<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titre* : Text ; *contenu* : Text {; *durée* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 <div class="no-index">
 

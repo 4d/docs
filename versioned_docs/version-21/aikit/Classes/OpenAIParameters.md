@@ -15,16 +15,16 @@ Use this callback property to receive the result regardless of success or error:
 
 | Property          | Type    | Description  |
 |-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
-| `onTerminate`<br>(or `formula`) | 4D.Function| A function to be called asynchronously when finished. Ensure that the current process does not terminate.              |
+| `onTerminate`<br>(or `formula`) | 4D.Function| A function to be called asynchronously when finished. <br>*Ensure that the current process does not terminate.*              |
 
 Use these callback properties for more granular control over success and error handling:
 
 | Property          | Type    | Description  |
 |-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
-| `onResponse`      | 4D.Function| A function to be called asynchronously when the request finishes **successfully**. Ensure that the current process does not terminate. |
-| `onError`         | 4D.Function| A function to be called asynchronously when the request finishes **with errors**. Ensure that the current process does not terminate. |
+| `onResponse`      | 4D.Function| A function to be called asynchronously when the request finishes **successfully**. <br>*Ensure that the current process does not terminate.* |
+| `onError`         | 4D.Function| A function to be called asynchronously when the request finishes **with errors**. <br>*Ensure that the current process does not terminate.* |
 
-> The callback function will receive the same result object type (one of [OpenAIResult](./OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
 
 See [documentation about asynchronous code for examples](../asynchronous-call.md)
 
@@ -35,7 +35,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 | `timeout`         | Real    | Overrides the client-level default timeout for the request, in seconds. Default is 0.  |
 | `httpAgent`       | HTTPAgent| Overrides the client-level default HTTP agent for the request.                        |
 | `maxRetries`      | Integer | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided)         |
-| `extraHeaders`    | Object  | Extra headers to send with the request.  |   
+| `extraHeaders`    | Object  | Extra headers to send with the request.                                                |
 
 ### OpenAPI Properties
 

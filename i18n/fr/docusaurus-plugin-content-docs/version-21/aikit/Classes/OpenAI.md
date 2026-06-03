@@ -9,12 +9,12 @@ La classe OpenAI fournit un client permettant d'accéder à diverses ressources 
 
 ## Propriétés de configuration
 
-| Nom de propriété | Type | Description                                                                    | Optionnel                                                         |
-| ---------------- | ---- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Peut être requis par le fournisseur                               |
-| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Oui (si omis = utiliser le fournisseur OpenAI) |
-| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui                                                               |
-| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui                                                               |
+| Nom de propriété | Type | Description                                                                                                              | Optionnel                                                        |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `apiKey`         | Text | Votre [clé API OpenAI ](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key). | Peut être requis par le fournisseur                              |
+| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                                                           | Oui (si omis = utiliser la plateforme OpenAI) |
+| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                                                                 | Oui                                                              |
+| `project`        | Text | Votre identifiant de projet OpenAI.                                                                      | Oui                                                              |
 
 ### Propriétés HTTP supplémentaires
 

@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ## 例題 1
 
-To delete a character style sheet "MyCharStyle":
+"MyCharStyle" 文字スタイルシートを削除するには:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyCharStyle")

@@ -5,13 +5,13 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* : Field {; *pageBreak* : Integer} ) : Real<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* : Field, Variable {; *pageBreak* : Integer} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Field | &#8594;  | Numeric field or variable to return subtotal |
+| data | Field, Variable | &#8594;  | Numeric field or variable to return subtotal |
 | pageBreak | Integer | &#8594;  | Break level for which to cause a page break |
 | Function result | Real | &#8592; | Subtotal of data |
 </div>

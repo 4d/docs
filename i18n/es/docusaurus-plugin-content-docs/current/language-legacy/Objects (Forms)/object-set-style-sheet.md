@@ -5,7 +5,7 @@ slug: /commands/object-set-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( * ; *objeto* : Text ; *nomHojaEstilo* : Text )<br/>**OBJECT SET STYLE SHEET** ( *objeto* : Field, Variable ; *nomHojaEstilo* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( * ; *objeto* : Text ; *nomHojaEstilo* : Text )<br/>**OBJECT SET STYLE SHEET** ( *objeto* : Variable, Field ; *nomHojaEstilo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 <div class="no-index">
 

@@ -70,7 +70,7 @@ displayed_sidebar: docs
 - `wk list style type` は `wk decimal` に設定されます
 - `wk list level index` は自動的に割り当てられます(ルートレベルは1 、そこからサブレベルに対してはインクリメントされていきます)
 - `wk list level count` は、指定された値が全てのレベルに対して設定されます
-- `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
+- `wk margin left` は自動的に計算されます(カレントのレイアウト単位によって0.75 cm × レベルインデックスまたは 0.25 インチ × レベルインデックス): そのためレイアウト単位がメートルかインチかによってオフセットが異なる可能性があります(カレントのWrite ルーラー目盛とデフォルトでよく揃えるため)。
 
 引数が省略または0 に設定された場合、標準の(階層でない)段落スタイルシートが作成されます。
 

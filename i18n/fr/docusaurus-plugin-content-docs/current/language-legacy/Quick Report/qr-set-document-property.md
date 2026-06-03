@@ -5,7 +5,7 @@ slug: /commands/qr-set-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *zone* ; *propriété* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *zone* : Integer ; *propriété* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
 <div class="no-index">
 

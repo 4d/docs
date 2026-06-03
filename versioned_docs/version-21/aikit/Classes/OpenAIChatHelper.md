@@ -11,15 +11,14 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 | Property Name        | Type                        | Default Value                    | Description                                                                         |
 |----------------------|-----------------------------|----------------------------------|-------------------------------------------------------------------------------------|
-| `chat`               | [OpenAIChatAPI](OpenAIChatAPI.md)     | -  | The chat API instance used for communication with OpenAI.                          |
-| `systemPrompt`       | [OpenAIMessage](OpenAIMessage.md)   | -   | The system prompt message that guides the chat assistant's responses.  |
-| `numberOfMessages`   | Integer      | 15  | The maximum number of messages to retain in the chat history.|
-| `parameters` | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | - | The parameters for the OpenAI chat completion request.  |
-| `messages`           | Collection of [OpenAIMessage](OpenAIMessage.md)  | []  | The collection of messages exchanged in the chat session.   |
-| `tools`              | Collection of [OpenAITool](OpenAITool.md)    | []   | List of registered OpenAI tools for function calling.    |
-| `autoHandleToolCalls`| Boolean      | True  | Boolean indicating whether tool calls are handled automatically using registered tools. |
-| `lastErrors`         | Collection     | -| Collection containing the last errors encountered during chat operations. |
-
+| `chat`               | [OpenAIChatAPI](OpenAIChatAPI.md)     | -                                | The chat API instance used for communication with OpenAI.                          |
+| `systemPrompt`       | [OpenAIMessage](OpenAIMessage.md)            | -                                | The system prompt message that guides the chat assistant's responses.              |
+| `numberOfMessages`   | Integer                     | 15                                | The maximum number of messages to retain in the chat history.                       |
+| `parameters`         | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                | The parameters for the OpenAI chat completion request.                             |
+| `messages`           | Collection of [OpenAIMessage](OpenAIMessage.md)                 | []                               | The collection of messages exchanged in the chat session.                          |
+| `tools`              | Collection of [OpenAITool](OpenAITool.md)    | []                               | List of registered OpenAI tools for function calling.                              |
+| `autoHandleToolCalls`| Boolean                     | True                             | Boolean indicating whether tool calls are handled automatically using registered tools. |
+| `lastErrors`         | Collection                  | -                                | Collection containing the last errors encountered during chat operations.           |
 
 ## Constructor
 
@@ -30,7 +29,6 @@ var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 ```
 
 This method creates a new chat helper with the specified system prompt and initializes it with default parameters. The system prompt defines the assistant's role and behavior throughout the conversation.
-
 
 ## Functions
 
@@ -67,23 +65,22 @@ $chatHelper.reset()  // Clear all previous messages and tools
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
 | Parameter        | Type        | Description                                           |
 |------------------|-------------|-------------------------------------------------------|
 | *tool*           | Object      | The tool definition object (or [OpenAITool](OpenAITool.md) instance)  |
-| *handler*        | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| *handler*        | Object      | The function to handle tool calls (4D.Function or Object), optional if defined inside *tool* as *handler* property |
 
 Registers a tool with its handler function for automatic tool call handling.
 
 The *handler* parameter can be:
 - A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- An **Object**: An object containing a formula property matching the tool function name
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 
-
-#### Register Tool Example
+#### Register Tool Examples
 
 ```4D
 // Example 1: Simple registration with direct handler
@@ -118,7 +115,7 @@ Registers multiple tools at once. The parameter can be:
 - **Object**: Object with function names as keys mapping to tool definitions
 - **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
 
-#### Register Multiple Tools Example
+#### Register Multiple Tools Examples
 
 ##### Example 1: Collection format with handlers in tools
 
@@ -160,7 +157,6 @@ $chatHelper.registerTools(cs.MyTools.new())
 ```
 
 ##### Example 4: Simple object format with tools as properties
-
 ```4D
 var $tools:={}
 $tools.getWeather:=$weatherTool  // Tool with handler property
@@ -168,7 +164,6 @@ $tools.calculate:=$calculatorTool  // Tool with handler property
 
 $chatHelper.registerTools($tools)
 ```
-
 
 ### unregisterTool()
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *objeto* : Text ) : Pointer<br/>**OBJECT Get data source** ( *objeto* : Field, Variable ) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *objeto* : Text ) : Pointer<br/>**OBJECT Get data source** ( *objeto* : Variable, Field ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *objeto* : Text ; *formato* : Text )<br/>**OBJECT SET FORMAT** ( *objeto* : Field, Variable ; *formato* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *objeto* : Text ; *formato* : Text )<br/>**OBJECT SET FORMAT** ( *objeto* : Variable, Field ; *formato* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 <div class="no-index">
 

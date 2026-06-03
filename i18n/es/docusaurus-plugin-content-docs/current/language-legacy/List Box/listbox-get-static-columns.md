@@ -5,7 +5,7 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *objeto* : Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 <div class="no-index">
 

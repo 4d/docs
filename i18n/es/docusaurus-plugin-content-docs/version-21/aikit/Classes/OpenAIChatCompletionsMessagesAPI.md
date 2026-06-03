@@ -21,4 +21,4 @@ La clase `OpenAIChatCompletionsMessagesAPI` está diseñada para interactuar con
 
 La función `list()` recupera los mensajes asociados a un ID de finalización de chat específico. Lanza un error si `completionID` está vacío. Si el argumento *parameters* no es una instancia de `OpenAIChatCompletionsMessagesParameters`, creará una nueva instancia utilizando los parámetros suministrados.
 
-https://platform.openai.com/docs/api-reference/chat/getMessages
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/subresources/messages/methods/list

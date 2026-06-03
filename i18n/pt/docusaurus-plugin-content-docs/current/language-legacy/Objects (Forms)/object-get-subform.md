@@ -5,7 +5,7 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objeto* : Text ; *pontTabela* ; *subFormDet* : Text {; *subFormList* : Text} )<br/>**OBJECT GET SUBFORM** ( *objeto* : Field, Variable ; *pontTabela* ; *subFormDet* : Text {; *subFormList* : Text} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objeto* : Text ; *pontTabela* : Table ; *subFormDet* : Text {; *subFormList* : Text} )<br/>**OBJECT GET SUBFORM** ( *objeto* : Variable, Field ; *pontTabela* : Table ; *subFormDet* : Text {; *subFormList* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 <div class="no-index">
 

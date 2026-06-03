@@ -7,7 +7,7 @@ title: OpenAIChatCompletionsAPI
 
 La clase `OpenAIChatCompletionsAPI` está diseñada para gestionar las finalizaciones de chat con la API OpenAI. Ofrece métodos para crear, recuperar, actualizar, eliminar y listar respuestas de chat.
 
-https://platform.openai.com/docs/api-reference/chat
+https://developers.openai.com/api/reference/resources/chat
 
 ## Funciones
 
@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/chat
 
 Crea un modelo de respuesta para la conversación dada.
 
-https://platform.openai.com/docs/api-reference/chat/create
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
 
 #### Ejemplo de Uso
 
@@ -62,7 +62,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 Obtener una finalización de chat almacenada.
 
-https://platform.openai.com/docs/api-reference/chat/get
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve
 
 ### update()
 
@@ -77,7 +77,7 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 Modificar una finalización de chat almacenada.
 
-https://platform.openai.com/docs/api-reference/chat/update
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/update
 
 ### delete()
 
@@ -91,7 +91,7 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 Borrar una conversación almacenada.
 
-https://platform.openai.com/docs/api-reference/chat/delete
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/delete
 
 ### lista()
 
@@ -104,4 +104,4 @@ https://platform.openai.com/docs/api-reference/chat/delete
 
 Lista almacenada de finalizaciones de chat.
 
-https://platform.openai.com/docs/api-reference/chat/list
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/list

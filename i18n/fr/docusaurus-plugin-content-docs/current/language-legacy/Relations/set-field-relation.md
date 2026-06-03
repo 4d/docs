@@ -5,7 +5,7 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* ; *aller* ; *retour* )<br/>**SET FIELD RELATION** ( *champN* ; *aller* ; *retour* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* : Table ; *aller* : Integer ; *retour* : Integer )<br/>**SET FIELD RELATION** ( *champN* : Field ; *aller* : Integer ; *retour* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 <div class="no-index">
 

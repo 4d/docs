@@ -78,7 +78,7 @@ This drop-down box contains the available network layers, which are used to hand
     - [los parámetros del tiempo de espera de las conexiones cliente-servidor](#client-server-connections-timeout) están ocultos
     - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
   - **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
-- **ServerNet** (only option available for binary databases): Enables the ServerNet network layer on the server.
+- **ServerNet** (sólo disponible para bases binarias): activa la capa de red ServerNet en el servidor.
 
 :::info
 

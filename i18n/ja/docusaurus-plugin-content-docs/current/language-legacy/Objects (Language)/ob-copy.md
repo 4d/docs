@@ -5,7 +5,7 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object, Object {; resolvePtrs } )  : Object<br/>**OB Copy** ( *object* : Object, Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object {; *resolvePtrs* : Boolean} )  : Object<br/>**OB Copy** ( *object* : Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 <div class="no-index">
 

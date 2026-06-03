@@ -5,7 +5,7 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *typeDial* )}<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *typeDial* : Integer })<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 <div class="no-index">
 

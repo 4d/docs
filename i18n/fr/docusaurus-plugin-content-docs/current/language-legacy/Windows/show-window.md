@@ -5,7 +5,7 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 <div class="no-index">
 

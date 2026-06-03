@@ -5,7 +5,7 @@ slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : any}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | childElemName | Text | &#8592; | Name of child XML element |
-| childElemValue | Text | &#8592; | Value of child XML element |
+| childElemValue | any | &#8592; | Value of child XML element |
 | Function result | Text | &#8592; | Child XML element reference |
 </div>
 <!-- END REF-->

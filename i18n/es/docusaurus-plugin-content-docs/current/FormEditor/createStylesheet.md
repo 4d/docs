@@ -206,7 +206,7 @@ text[text|=Hello]
 
 ### Consultas de medios
 
-Las consultas de medios permiten aplicar estilos basados en condiciones específicas. 4D supports media queries for **color schemes** and **platform themes**.
+Las consultas de medios permiten aplicar estilos basados en condiciones específicas. 4D soporta media queries para **esquemas de color** y **temas de plataforma**.
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 

@@ -5,7 +5,7 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUtilisateur* ; *motDePasse* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUtilisateur* : Text ; *motDePasse* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 <div class="no-index">
 
@@ -46,7 +46,7 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 
 ```4d
   // Méthode base Sur authentification Web
- #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
 
  var $utilisateur : Text
  var $0 : Boolean

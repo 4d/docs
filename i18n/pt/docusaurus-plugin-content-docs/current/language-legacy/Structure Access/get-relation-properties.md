@@ -5,7 +5,7 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *pontCampo* : Ponteiro, Inteiro longo ; *tabelaUm* : Integer ; *numCampo* : Integer {; *discriminante* : Integer {; *autoUm* : Boolean {; *autoMuitos* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *numTabela* : Ponteiro, Inteiro longo ; *numCampo* : Integer ; *tabelaUm* : Integer ; *campoUmo* : Integer {; *discriminante* : Integer {; *autoUm* : Boolean {; *autoMuitos* : Boolean}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *pontCampo* : Pointer ; *tabelaUm* : Integer ; *numCampo* : Integer {; *discriminante* : Integer {; *autoUm* : Boolean {; *autoMuitos* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *numTabela* : Integer ; *numCampo* : Integer ; *tabelaUm* : Integer ; *campoUmo* : Integer {; *discriminante* : Integer {; *autoUm* : Boolean {; *autoMuitos* : Boolean}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 <div class="no-index">
 

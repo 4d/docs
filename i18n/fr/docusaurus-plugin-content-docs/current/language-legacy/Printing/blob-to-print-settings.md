@@ -5,7 +5,7 @@ slug: /commands/blob-to-print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *paramImpression* {; *param*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *paramImpression* : Blob {; *param* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to print settings.Params-->
 <div class="no-index">
 

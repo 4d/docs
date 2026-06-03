@@ -5,7 +5,7 @@ slug: /commands/qr-set-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *zone* ; *propriété* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *zone* : Integer ; *propriété* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 <div class="no-index">
 

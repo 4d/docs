@@ -112,63 +112,63 @@ Class extends Entity
 以下のような原則が実装されています:
 
 - 4D アプリケーション内のメソッドとフォームは、それぞれアドレスをパス名という形で持っています。 例えば、table_1 のトリガメソッドは "[trigger]/table_1" にあります。 それぞれのオブジェクトパス名はアプリケーション内で固有です。
-- You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
-- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. However, commands that modify properties or access contents executable from methods can only be used in interpreted mode (see the table below).
-- You can use all the commands of this theme with 4D in local or remote mode. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
-- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. In this case, to access objects of the host, you just pass a `*` as the last parameter.
+- **デザインオブジェクトアクセス"** コマンドテーマのコマンド、例えば[`METHOD GET NAMES`](../commands/method-get-names) あるいは [`METHOD GET PATHS`](../commands/method-get-paths) などを使用することによって、4D アプリケーション内のオブジェクトにアクセスすることができます。
+- このテーマ内のほとんどのコマンドは、[インタープリタモードとコンパイルモード](../Concepts/interpreted.md) の両方で動作します。 ただし、プロパティを変更するコマンド、またはメソッドから実行可能なコンテンツにアクセスするコマンドはインタープリターモードでのみ使用可能です(以下の表参照)。
+- このテーマのコマンドはすべてローカルモードまたはリモートモードの4D で使用することができます。 しかしながら、コンパイルモードでは一部のコマンドを使用することはできないという点に注意してください: このテーマの目的はカスタム開発支援ツールを作成することです。 これらのコマンドを、実行中のデータベースの機能を動的に変更するために使用してはいけません。 例えば、カレントユーザーのステータスに応じてメソッドの属性を変更するために[`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) を使用することはできません。
+- このテーマのコマンドが[コンポーネント](../Project/components.md) から呼び出された場合、デフォルトではそのコマンドはコンポーネントのオブジェクトにアクセスします。 このような場合、ホストのオブジェクトにアクセスするためには、最後の引数として `*` を渡します。
 
-### Use in compiled mode
+### コンパイルモードでの使用
 
-For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
+コンパイルプロセスの原則に関連した理由から、コンパイルモードにおいてはこのテーマ内の一部のコマンドのみ使用することができます。 以下の表は、コンパイルモードでのコマンドの利用可能状況を表したものです:
 
-| コマンド                                                                     | Can be used in compiled mode |
-| ------------------------------------------------------------------------ | ---------------------------- |
-| [Current method path](../commands/current-method-path)                   | ◯                            |
-| [FORM GET NAMES](../commands/form-get-names)                             | ◯                            |
-| [METHOD Get attribute](../commands/method-get-attribute)                 | ◯                            |
-| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | ◯                            |
-| [METHOD GET CODE](../commands/method-get-code)                           | ×                            |
-| [METHOD GET COMMENTS](../commands/method-get-comments)                   | ◯                            |
-| [METHOD GET FOLDERS](../commands/method-get-folders)                     | ◯                            |
-| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | ◯                            |
-| [METHOD GET NAMES](../commands/method-get-names)                         | ◯                            |
-| [METHOD Get path](../commands/method-get-path)                           | ◯                            |
-| [METHOD GET PATHS](../commands/method-get-paths)                         | ◯                            |
-| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | ◯                            |
-| [METHOD OPEN PATH](../commands/method-open-path)                         | ×                            |
-| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | ◯                            |
-| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | ◯                            |
-| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | ×                            |
-| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | ×                            |
-| [METHOD SET CODE](../commands/method-set-code)                           | ×                            |
-| [METHOD SET COMMENTS](../commands/method-set-comments)                   | ×                            |
+| コマンド                                                                     | コンパイルモードで使用可能 |
+| ------------------------------------------------------------------------ | ------------- |
+| [Current method path](../commands/current-method-path)                   | ◯             |
+| [FORM GET NAMES](../commands/form-get-names)                             | ◯             |
+| [METHOD Get attribute](../commands/method-get-attribute)                 | ◯             |
+| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | ◯             |
+| [METHOD GET CODE](../commands/method-get-code)                           | ×             |
+| [METHOD GET COMMENTS](../commands/method-get-comments)                   | ◯             |
+| [METHOD GET FOLDERS](../commands/method-get-folders)                     | ◯             |
+| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | ◯             |
+| [METHOD GET NAMES](../commands/method-get-names)                         | ◯             |
+| [METHOD Get path](../commands/method-get-path)                           | ◯             |
+| [METHOD GET PATHS](../commands/method-get-paths)                         | ◯             |
+| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | ◯             |
+| [METHOD OPEN PATH](../commands/method-open-path)                         | ×             |
+| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | ◯             |
+| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | ◯             |
+| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | ×             |
+| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | ×             |
+| [METHOD SET CODE](../commands/method-set-code)                           | ×             |
+| [METHOD SET COMMENTS](../commands/method-set-comments)                   | ×             |
 
 :::note
 
-The error -9762 "The command cannot be executed in a compiled database." is generated when the command is executed in compiled mode.
+コマンドがコンパイルモードで実行された場合にはエラー -9762 "このコマンドはコンパイル済みデータベースでは実行できません。" が生成されます。
 
 :::
 
-### Creation of pathnames
+### パス名の作成
 
-Pathnames generated for 4D objects must be compatible with the file management of the operating system. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
+4D オブジェクトに対して生成されるパス名はオペレーティングシステムのファイル管理と互換性がなければなりません。 ":" など、OS レベルで禁止されている文字はメソッド名内で自動的にエンコードされるため、生成されたファイルはバージョン管理システムに自動的に統合されます。
 
-Here are the encoded characters:
+エンコードされる文字は以下の通りです:
 
-| 文字                           | Encoding |
-| ---------------------------- | -------- |
-| "                            | %22      |
-| \*                           | %2A      |
-| /                            | %2F      |
-| :            | %3A      |
-| \< | %3C      |
-| \>                          | %3E      |
-| ?                            | %3F      |
-| \|                           | %7C      |
-| \\                         | %5C      |
-| %                            | %25      |
+| 文字                           | エンコード |
+| ---------------------------- | ----- |
+| "                            | %22   |
+| \*                           | %2A   |
+| /                            | %2F   |
+| :            | %3A   |
+| \< | %3C   |
+| \>                          | %3E   |
+| ?                            | %3F   |
+| \|                           | %7C   |
+| \\                         | %5C   |
+| %                            | %25   |
 
 #### 例題
 
-`Form?1` is encoded `Form%3F1`  
-`Button/1` is encoded `Button%2F1`
+`Form?1` は `Form%3F1` にエンコードされます  
+`Button/1` は `Button%2F1` にエンコードされます

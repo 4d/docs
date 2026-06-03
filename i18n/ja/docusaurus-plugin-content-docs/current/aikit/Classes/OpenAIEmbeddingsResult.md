@@ -11,13 +11,34 @@ title: OpenAIEmbeddingsResult
 
 ## 計算プロパティ
 
-| プロパティ        | 型                                     | 説明                                                                    |
-| ------------ | ------------------------------------- | --------------------------------------------------------------------- |
-| `model`      | Text                                  | 埋め込みを計算するのに使用されたモデルを返します                                              |
-| `vector`     | `4D.Vector`                           | `vectors` コレクションから、最初の`4D.Vector` を返します。                              |
-| `vectors`    | Collection                            | `4D.Vector` のコレクションを返します。                                             |
-| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | `embeddings` コレクションから最初の [OpenAIEmbedding](OpenAIEmbedding.md) を返します。 |
-| `embeddings` | Collection                            | [OpenAIEmbedding](OpenAIEmbedding.md) のコレクションを返します。                   |
+| プロパティ        | 型                                     | 説明                                                                                                                   |
+| ------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `model`      | Text                                  | 埋め込みを計算するのに使用されたモデルを返します                                                                                             |
+| `vector`     | `4D.Vector`                           | `vectors` コレクションから、最初の`4D.Vector` を返します。                                                                             |
+| `vectors`    | Collection                            | `4D.Vector` のコレクションを返します。                                                                                            |
+| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | `embeddings` コレクションから最初の [OpenAIEmbedding](OpenAIEmbedding.md) を返します。                                                |
+| `embeddings` | Collection                            | [OpenAIEmbedding](OpenAIEmbedding.md) のコレクションを返します。                                                                  |
+| `usage`      | Object                                | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+
+### usage
+
+The `usage` property returns an object containing token usage information for embeddings.
+
+| フィールド           | 型       | 説明                                                                                                                |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
+| `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
+| `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
+
+**Example response:**
+
+```json
+{
+  "prompt_tokens": 8,
+  "total_tokens": 8
+}
+```
+
+> **Note:** Embeddings only consume prompt tokens (there is no completion), so `total_tokens` equals `prompt_tokens`.
 
 ## 参照
 

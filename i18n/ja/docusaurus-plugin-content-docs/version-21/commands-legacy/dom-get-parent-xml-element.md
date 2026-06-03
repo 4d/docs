@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML要素参照 |
 | parentElemName | Text | &#8592; | 親XML要素名 |
-| parentElemValue | Text | &#8592; | 親XML要素値 |
+| parentElemValue | any | &#8592; | 親XML要素値 |
 | 戻り値 | Text | &#8592; | 親XML要素参照 |
 </div>
 <!-- END REF-->

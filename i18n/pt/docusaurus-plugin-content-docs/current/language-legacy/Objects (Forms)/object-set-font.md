@@ -5,7 +5,7 @@ slug: /commands/object-set-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *objeto* : Text ; *fonte* : Text )<br/>**OBJECT SET FONT** ( *objeto* : Field, Variable ; *fonte* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *objeto* : Text ; *fonte* : Text )<br/>**OBJECT SET FONT** ( *objeto* : Variable, Field ; *fonte* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
 <div class="no-index">
 

@@ -1300,7 +1300,7 @@
     "description": "The label for category 'Database Structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.Methods & Classes": {
-    "message": "Methods & Classes",
+    "message": "Métodos y clases",
     "description": "The label for category 'Methods & Classes' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D-Environment-key": {

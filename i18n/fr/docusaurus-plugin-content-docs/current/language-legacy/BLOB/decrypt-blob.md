@@ -5,7 +5,7 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDécrypter* ; *cléPubEmetteur* {; *cléPrivRécepteur*} )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDécrypter* : Blob ; *cléPubEmetteur* : Blob {; *cléPrivRécepteur* : Blob} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 <div class="no-index">
 

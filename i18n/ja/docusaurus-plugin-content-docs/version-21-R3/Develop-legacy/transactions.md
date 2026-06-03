@@ -9,15 +9,15 @@ displayed_sidebar: docs
 
 Transactions are a series of related data modifications made to a database or datastore within a [process](./processes.md). A transaction is not saved to a database permanently until the transaction is validated. If a transaction is not completed, either because it is canceled or because of some outside event, the modifications are not saved.
 
-During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
+During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands/validate-transaction) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands/cancel-transaction) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
 
-4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands-legacy/transaction-level) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is cancelled, all the subtransactions are cancelled, regardless of their respective results.
+4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands/transaction-level) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is cancelled, all the subtransactions are cancelled, regardless of their respective results.
 
 4D includes a feature allowing you to [suspend and resume transactions](#suspending-transactions) within your 4D code. When a transaction is suspended, you can execute operations independently from the transaction itself and then resume the transaction to validate or cancel it as usual. 
 
 ### Example
 
-In this example, the database is a simple invoicing system. The invoice lines are stored in a table called [Invoice Lines], which is related to the table [Invoices] by means of a relation between the fields [Invoices]Invoice ID and [Invoice Lines]Invoice ID. When an invoice is added, a unique ID is calculated, using the [`Sequence number`](../commands-legacy/sequence-number) command. The relation between [Invoices] and [Invoice Lines] is an automatic Relate Many relation. The **Auto assign related value in subform** check box is checked.
+In this example, the database is a simple invoicing system. The invoice lines are stored in a table called [Invoice Lines], which is related to the table [Invoices] by means of a relation between the fields [Invoices]Invoice ID and [Invoice Lines]Invoice ID. When an invoice is added, a unique ID is calculated, using the [`Sequence number`](../commands/sequence-number) command. The relation between [Invoices] and [Invoice Lines] is an automatic Relate Many relation. The **Auto assign related value in subform** check box is checked.
 
 The relation between [Invoice Lines] and [Parts] is manual.
 
@@ -34,7 +34,7 @@ This example is a typical situation in which you need to use a transaction. You 
 
 There are several ways of performing data entry using transactions:
 
-1. You can handle the transactions yourself by using the transaction commands [`START TRANSACTION`](../commands-legacy/start-transaction), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) and [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction). You can write, for example:
+1. You can handle the transactions yourself by using the transaction commands [`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](../commands/validate-transaction) and [`CANCEL TRANSACTION`](../commands/cancel-transaction). You can write, for example:
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -131,7 +131,7 @@ If you click the *bOK* button, the data entry must be accepted and the transacti
  End case
 ```
 
-In this code, we call the `CANCEL` command regardless of the button clicked. The new record is not validated by a call to [`ACCEPT`](../commands-legacy/accept), but by the [`SAVE RECORD`](../commands-legacy/save-record) command. In addition, note that `SAVE RECORD` is called just before the [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) command. Therefore, saving the [Invoices] record is actually a part of the transaction. Calling the `ACCEPT` command would also validate the record, but in this case the transaction would be validated before the [Invoices] record was saved. In other words, the record would be saved outside the transaction.
+In this code, we call the `CANCEL` command regardless of the button clicked. The new record is not validated by a call to [`ACCEPT`](../commands/accept), but by the [`SAVE RECORD`](../commands/save-record) command. In addition, note that `SAVE RECORD` is called just before the [`VALIDATE TRANSACTION`](../commands/validate-transaction) command. Therefore, saving the [Invoices] record is actually a part of the transaction. Calling the `ACCEPT` command would also validate the record, but in this case the transaction would be validated before the [Invoices] record was saved. In other words, the record would be saved outside the transaction.
 
 Depending on your needs, you can customize your database, as shown in these examples. In the last example, the handling of locked records in the [Parts] table could be developed further.
 
@@ -142,9 +142,9 @@ Depending on your needs, you can customize your database, as shown in these exam
 
 Suspending a transaction is useful when you need to perform, from within a transaction, certain operations that do not need to be executed under the control of this transaction. For example, imagine the case where a customer places an order, thus within a transaction, and also updates their address. Next the customer changes their mind and cancels the order. The transaction is cancelled, but you do not want the address change to be reverted. This is a typical example where suspending the transaction is useful. Three commands are used to suspend and resume transactions:
 
-- [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction): pauses current transaction. Any updated or added records remain locked.
-- [`RESUME TRANSACTION`](../commands-legacy/resume-transaction): reactivates a suspended transaction.
-- [`Active transaction`](../commands-legacy/active-transaction): returns False if the transaction is suspended or if there is no current transaction, and True if it is started or resumed.
+- [`SUSPEND TRANSACTION`](../commands/suspend-transaction): pauses current transaction. Any updated or added records remain locked.
+- [`RESUME TRANSACTION`](../commands/resume-transaction): reactivates a suspended transaction.
+- [`Active transaction`](../commands/active-transaction): returns False if the transaction is suspended or if there is no current transaction, and True if it is started or resumed.
 
 ### Example  
 
@@ -212,9 +212,9 @@ Specific features have been added to handle errors:
 
 #### Suspended transactions and process status 
 
-The [`In transaction`](../commands-legacy/in-transaction) command returns True when a transaction has been started, even if it is suspended. To find out whether the current transaction is suspended, you need to use the [`Active transaction`](../commands-legacy/active-transaction) command, which returns False in this case. 
+The [`In transaction`](../commands/in-transaction) command returns True when a transaction has been started, even if it is suspended. To find out whether the current transaction is suspended, you need to use the [`Active transaction`](../commands/active-transaction) command, which returns False in this case. 
 
-Both commands, however, also return False if no transaction has been started. You may then need to use the [`Transaction level`](../commands-legacy/transaction-level) command, which returns 0 in this context (no transaction started).
+Both commands, however, also return False if no transaction has been started. You may then need to use the [`Transaction level`](../commands/transaction-level) command, which returns 0 in this context (no transaction started).
 
 The following graphic illustrates the various transaction contexts and the corresponding values returned by the transaction commands:
 

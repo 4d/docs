@@ -5,7 +5,7 @@ slug: /commands/set-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )  : Integer<!-- END REF-->
+<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *réfGroupe* : Integer ; *nom* : Text ; *propriétaire* : Integer {; *membres* : Integer array} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
 <div class="no-index">
 

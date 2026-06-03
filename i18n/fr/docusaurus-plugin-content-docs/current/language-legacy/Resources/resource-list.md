@@ -5,7 +5,7 @@ slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* ; *resNums* ; *resNoms* {; *resFichier*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* : Text ; *resNums* : Integer array ; *resNoms* : Text array {; *resFichier* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
 <div class="no-index">
 

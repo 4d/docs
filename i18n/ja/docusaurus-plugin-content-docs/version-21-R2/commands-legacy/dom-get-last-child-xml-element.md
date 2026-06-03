@@ -5,7 +5,7 @@ slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : any}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | XML要素参照 |
 | childElemName | Text | &#8592; | 子要素名 |
-| childElemValue | Text | &#8592; | 子要素値 |
+| childElemValue | any | &#8592; | 子要素値 |
 | 戻り値 | Text | &#8592; | XML要素参照 |
 </div>
 <!-- END REF-->

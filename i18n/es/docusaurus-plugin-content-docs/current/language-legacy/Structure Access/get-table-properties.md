@@ -5,7 +5,7 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *PtrTabla* : Puntero, Entero largo ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *numTabla* : Puntero, Entero largo ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *PtrTabla* : Pointer ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *numTabla* : Integer ; *invisible* : Boolean {; *trigGuardarNuevo* : Boolean {; *trigGuardaReg* : Boolean {; *trigBorrarReg* : Boolean {; *trigCargReg* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 <div class="no-index">
 

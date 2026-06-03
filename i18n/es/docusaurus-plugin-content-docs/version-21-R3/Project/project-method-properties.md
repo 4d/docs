@@ -111,13 +111,13 @@ Un **método de gestión de errores** es un método proyecto basado en interrupc
 
 ### API Methods
 
-Project methods can be called from external contexts such as other applications, web apps, processed files, etc., in which case they can be seen as API. Such calls include:
+Los métodos del proyecto pueden ser llamados desde contextos externos como otras aplicaciones, aplicaciones web, archivos procesados, etc., en cuyo caso pueden ser vistos como API. Such calls include:
 
-- calls to the web server through [http request handlers](../WebServer/http-request-handler.md) or [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
+- llamadas al servidor web a través de [http request handlers](../WebServer/http-request-handler.md) o [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
 - [procesamiento de etiquetas](../Tags/transformation-tags.md)
 - expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
 
-External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
+Las llamadas externas a los métodos proyecto deben estar permitidas en las [propiedades de los métodos proyecto](../Project/project-method-properties.md).
 
 ### Execution mode
 

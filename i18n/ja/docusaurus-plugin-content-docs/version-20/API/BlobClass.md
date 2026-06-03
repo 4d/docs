@@ -29,10 +29,10 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 <!-- REF #4D.Blob.new().Params -->
 <div class="no-index">
 
-| Parameter | Type            |     | Description  |
+| 引数 | 型            |     | 説明  |
 | --------- | --------------- | :-: | ------------ |
-| blob      | Blob | ->  | Blob to copy |
-| Result    | 4D.Blob         | <-  | New 4D.Blob  |
+| blob      | Blob | ->  | コピーする BLOB |
+| 戻り値    | 4D.Blob         | <-  | 新規 4D.Blobb  |
 </div>
 <!-- END REF -->
 
@@ -65,11 +65,11 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 <!-- REF #Blob.slice().Params -->
 <div class="no-index">
 
-| Parameter | Type ||Description |
+| 引数 | 型 ||説明 |
 | --------- | ------- | :-: | --- |
-| start| Real    | ->  | index of the first byte to include in the new `4D.Blob`.               |
-| end| Real    | ->  | index of the first byte that will not be included in the new `4D.Blob` |
-| Result| 4D.Blob | <-  | New `4D.Blob`|
+| start| Real    | ->  | 新しい`4D.Blob` に含める最初のバイトのインデックス。               |
+| end| Real    | ->  | 新しい`4D.Blob` に含まれない最初のバイトのインデックス |
+| 戻り値| 4D.Blob | <-  | New `4D.Blob`|
 </div>
 <!-- END REF -->
 

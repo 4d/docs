@@ -5,7 +5,7 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* {; *portée*} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* : Text {; *portée* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 <div class="no-index">
 

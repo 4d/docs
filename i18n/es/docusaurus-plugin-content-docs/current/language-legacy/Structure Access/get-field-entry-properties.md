@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrCamp* : Puntero, Entero largo ; *lista* : Text ; *obligatorio* : Boolean ; *noEditable* : Boolean ; *noModificable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabla* : Puntero, Entero largo ; *numCamp* : Integer ; *lista* : Text ; *obligatorio* : Boolean ; *noEditable* : Boolean ; *noModificable* : Boolean )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrCamp* : Pointer ; *lista* : Text ; *obligatorio* : Boolean ; *noEditable* : Boolean ; *noModificable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTabla* : Integer ; *numCamp* : Integer ; *lista* : Text ; *obligatorio* : Boolean ; *noEditable* : Boolean ; *noModificable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 <div class="no-index">
 

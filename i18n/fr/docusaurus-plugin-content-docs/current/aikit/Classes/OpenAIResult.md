@@ -22,14 +22,27 @@ La classe `OpenAIResult` permet de gérer la réponse des requêtes HTTP et four
 | `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                                 |
 | `headers`    | Object     | Renvoie les en-têtes de la réponse sous forme d'objet.                                                               |
 | `rateLimit`  | Object     | Renvoie les informations relatives à la limite de débit contenues dans les en-têtes de la réponse.                   |
-| `usage`      | Object     | Renvoie les informations d'utilisation depuis le body de la réponse, le cas échéant.                                 |
+| `usage`      | Object     | Returns usage information (token counts) from the response body if any.                           |
+
+### usage
+
+The `usage` property returns an object containing token usage information from the API response. The structure varies depending on the API endpoint used.
+
+> **Note:** Different OpenAI-compatible services may return different fields in the usage object. The structure documented here is based on OpenAI's API. Not all fields may be present in responses from other providers.
+
+See the specific result class documentation for endpoint-specific usage structures:
+
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
 
 ### rateLimit
 
 La propriété `rateLimit` renvoie un objet contenant des informations sur la limite de débit à partir des en-têtes de réponse.
 Ces informations comprennent les limites, les requêtes restantes et les délais de réinitialisation des requêtes et des tokens.
 
-Pour plus de détails sur les limites de taux et les en-têtes spécifiques utilisés, se référer à [la documentation sur les limites de taux de l'OpenAI](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+Pour plus de détails sur les limites de taux et les en-têtes spécifiques utilisés, se référer à [la documentation sur les limites de taux de l'OpenAI](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers).
 
 La structure de l'objet `rateLimit` est la suivante :
 

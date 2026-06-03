@@ -5,7 +5,7 @@ slug: /commands/query-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*tabla* : Table}{;}{*opConj* : Operator ;} *campoObjeto* : Field ; *rutaAtributo* : Text ; *opBusq* : Text, Operator ; *valor* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*tabla* : Table ;}{*opConj* : &, \|, # ;} *campoObjeto* : Field ; *rutaAtributo* : Text ; *opBusq* : Text, >, <, >=, <=, #, =, \|, % ; *valor* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 <div class="no-index">
 

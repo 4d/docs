@@ -20,13 +20,13 @@ La clase `OpenAIFileResult` contiene el resultado de una única operación de ar
 ## Ejemplo de Uso
 
 ```4d
-// Upload a file
+// Carga de un archivo
 var $file:=File("/RESOURCES/training-data.jsonl")
 
 var $result:=$client.files.create($file; "user_data")
 var $uploadedFile:=$result.file
 
-// Retrieve file information
+// Recuperar información del archivo
 var $retrieveResult:=$client.files.retrieve($uploadedFile.id)
 ```
 

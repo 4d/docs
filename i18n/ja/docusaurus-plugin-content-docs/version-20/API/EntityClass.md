@@ -1708,9 +1708,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.touchedAttributes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Names of touched attributes, or empty collection|
+|戻り値|Collection|<-|Names of touched attributes, or empty collection|
 </div>
 <!-- END REF -->
 

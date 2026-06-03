@@ -5,7 +5,7 @@ slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Register data key.Syntax-->**Register data key** ( phraseSecrèteCour ) : Boolean<br/>**Register data key** ( cléDonnéesCour ) : Boolean<!-- END REF-->
+<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *phraseSecrèteCour* : Text ) : Boolean<br/>**Register data key** ( *cléDonnéesCour* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
 <div class="no-index">
 

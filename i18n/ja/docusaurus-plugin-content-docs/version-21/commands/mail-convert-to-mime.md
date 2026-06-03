@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 *mail* には、 変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
 
-> 4D は Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
+> 4D は Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec/rfc8621/) に準拠します。
 
 *options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定 を指定することができます。 次のプロパティを利用することができます:
 

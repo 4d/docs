@@ -48,7 +48,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) est un objet d'interface fourni par 
 
 #### Description
 
-Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore) data. L'objet retourné <!-- REF DataStoreClass.dataclassName.Summary -->contient la description de la dataclass<!-- END REF -->.
+Chaque dataclass d'un datastore est disponible en tant que propriété de l'[objet DataStore](ORDA/dsMapping.md#datastore). L'objet retourné <!-- REF DataStoreClass.dataclassName.Summary -->contient la description de la dataclass<!-- END REF -->.
 
 #### Exemple
 
@@ -89,7 +89,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 #### Description
 
-La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->annule la transaction<!-- END REF --> ouverte par la fonction [`.startTransaction()`](#starttransaction) au niveau correspondant dans le process en cours pour le datastore spécifié.
+La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->annule la transaction<!-- END REF --> ouverte par la fonction [`.startTransaction()`](#starttransaction) au niveau correspondant dans le process courant pour le datastore spécifié.
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 

@@ -7,7 +7,7 @@ title: OpenAIEmbeddingsAPI
 
 `OpenAIEmbeddingsAPI` ofrece funcionalidades para crear integraciones utilizando la API de OpenAI.
 
-https://platform.openai.com/docs/api-reference/embeddings
+https://developers.openai.com/api/reference/resources/embeddings
 
 ## Funciones
 
@@ -17,12 +17,12 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 Crea una representación vectorial para la entrada, el modelo y los parámetros ofrecidos.
 
-| Argumento    | Tipo                                                        | Descripción                                                                                                                                                                                                         |
-| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                                                                                                                                            |
-| *model*      | Text                                                        | El [modelo a utilizar] (https://platform.openai.com/docs/guides/embeddings#embedding-models) |
-| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales.                                                                                                                       |
-| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                                                                                                                                                  |
+| Argumento    | Tipo                                                        | Descripción                                                                                                                                                                                                                                |
+| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                                                                                                                                                                   |
+| *model*      | Text                                                        | El [modelo a utilizar] (https://developers.openai.com/api/docs/guides/embeddings#embedding-models). |
+| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales.                                                                                                                                              |
+| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                                                                                                                                                                         |
 
 #### Ejemplos de uso
 

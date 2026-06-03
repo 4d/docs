@@ -5,7 +5,7 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *cléPrivée* ; *demCertif* ; *tabCodes* ; *tabLibellés* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *cléPrivée* : Blob ; *demCertif* : Blob ; *tabCodes* : Integer array ; *tabLibellés* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 <div class="no-index">
 

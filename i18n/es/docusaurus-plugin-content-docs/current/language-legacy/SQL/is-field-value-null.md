@@ -5,7 +5,7 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *unCampo* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *unCampo* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 <div class="no-index">
 

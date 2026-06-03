@@ -5,7 +5,7 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *unCampo* })<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *unCampo* : Field })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 <div class="no-index">
 

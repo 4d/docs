@@ -64,24 +64,24 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### ネットワークレイヤー
 
-This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
+このドロップダウンボックスには利用可能なネットワークレイヤーが格納されており、これを使用して4D Server とリモート4D マシン(クライアント)間での通信を管理することができます。
 
-- **QUIC** (projects only): Enables the QUIC network layer on the server.
+- **QUIC** (プロジェクトモードのみ): サーバー上でQUIC ネットワークレイヤーを有効にします。
 
-  **Notes about QUIC**:
+  **QUIC に関する注意点**:
 
-  - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
+  - [`Application info`](../commands/application-info) コマンドを使用することで、4D アプリケーションがQUIC ネットワークレイヤーを実行中かどうかを知ることができます。
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
-  - QUIC automatically connects to the port 19813 for both [application server and DB4D server](#4d-server-and-port-numbers).
+  - QUIC は、[アプリケーションサーバーおよびDB4D サーバー](#4d-server-とポート番号) の両方においてポート19813 番へと自動的に接続します。
   - QUICレイヤーオプションを選択すると:
     - [クライアント/サーバー接続タイムアウト](#クライアントサーバー接続タイムアウト) の設定は非表示になります。
     - [クライアント-サーバー通信の暗号化](#クライアント-サーバー通信の暗号化) チェックボックスは非表示になります (セキュアモードに関わらず、QUIC 通信は常に TLS です)。
   - **互換性**: QUICネットワークレイヤーに切り替えるには、まずクライアント/サーバーアプリケーションを 4D 20以上で運用する必要があります。
-- **ServerNet** (only option available for binary databases): Enables the ServerNet network layer on the server.
+- **ServerNet** (バイナリーデータベースでのみ利用可能なオプション): サーバー上でServerNet レイヤーを有効化します。
 
 :::info
 
-Using QUIC network layer is **recommended** for projects.
+プロジェクトにおいては、QUIC ネットワークレイヤーの使用が **推奨されています**。
 
 :::
 

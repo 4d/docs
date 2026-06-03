@@ -9,7 +9,7 @@ title: OpenAIModelsAPI
 
 `OpenAIModelsAPI` is a class that allows interaction with OpenAI models through various functions, such as retrieving model information, listing available models, and (optionally) deleting fine-tuned models.
 
-https://platform.openai.com/docs/api-reference/models
+https://developers.openai.com/api/reference/resources/models
 
 ## Funções
 
@@ -25,7 +25,7 @@ https://platform.openai.com/docs/api-reference/models
 
 Retrieves a model instance to provide basic information.
 
-https://platform.openai.com/docs/api-reference/models/retrieve
+https://developers.openai.com/api/reference/resources/models/methods/retrieve
 
 #### Exemplo de uso:
 
@@ -45,7 +45,7 @@ var $model:=$result.model
 
 Lists the currently available models.
 
-https://platform.openai.com/docs/api-reference/models/list
+https://developers.openai.com/api/reference/resources/models/methods/list
 
 #### Exemplo de uso:
 

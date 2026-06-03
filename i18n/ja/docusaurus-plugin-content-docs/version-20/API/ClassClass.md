@@ -59,10 +59,10 @@ title: Class
 <!-- REF #ClassClass.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Object|<-|New object of the class|
+|param|any|->|コンストラクター関数に渡す引数|
+|戻り値|4D.Object|<-|New object of the class|
 </div>
 <!-- END REF -->
 

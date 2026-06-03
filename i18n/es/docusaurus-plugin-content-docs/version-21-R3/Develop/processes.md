@@ -33,7 +33,7 @@ Un proceso puede borrarse en las siguientes condiciones (las dos primeras son au
 - Cuando el método proceso termina de ejecutarse
 - Cuando el usuario sale de la aplicación
 - Si detienes el proceso de forma formal o utiliza el botón **Abortar** en el depurador o en el Explorador de Ejecución
-- If you call the [`KILL WORKER`](../commands/kill-worker) command (to delete a worker process only).
+- Si llama al comando [`KILL WORKER`](../commands/kill-worker) (sólo para borrar un proceso worker).
 
 Un proceso puede crear otro proceso. Los procesos no están organizados jerárquicamente: todos los procesos son iguales, independientemente del proceso a partir del cual se hayan creado. Una vez que el proceso "padre" crea un proceso "hijo", el proceso hijo continuará independientemente de si el proceso padre sigue ejecutándose o no.
 

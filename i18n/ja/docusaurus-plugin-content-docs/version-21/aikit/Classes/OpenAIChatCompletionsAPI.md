@@ -7,7 +7,7 @@ title: OpenAIChatCompletionsAPI
 
 `OpenAIChatCompletionsAPI` クラスはOpenAI のAPI でチャット補完を管理するためにデザインされています。 これはチャット補完を作成、取得、更新、削除、そしてリストを表示するメソッドを提供します。
 
-https://platform.openai.com/docs/api-reference/chat
+https://developers.openai.com/api/reference/resources/chat
 
 ## 関数
 
@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/chat
 
 指定されたチャット対話のモデルレスポンスを作成します。
 
-https://platform.openai.com/docs/api-reference/chat/create
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
 
 #### 使用例
 
@@ -62,7 +62,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 保存されたチャット補完を取得する。
 
-https://platform.openai.com/docs/api-reference/chat/get
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve
 
 ### update()
 
@@ -77,7 +77,7 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 保存されたチャット補完を変更する。
 
-https://platform.openai.com/docs/api-reference/chat/update
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/update
 
 ### delete()
 
@@ -91,7 +91,7 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 保存されたチャット補完を削除する。
 
-https://platform.openai.com/docs/api-reference/chat/delete
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/delete
 
 ### list()
 
@@ -104,4 +104,4 @@ https://platform.openai.com/docs/api-reference/chat/delete
 
 保存されたチャット補完を一覧表示する。
 
-https://platform.openai.com/docs/api-reference/chat/list
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/list

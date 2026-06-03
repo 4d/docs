@@ -51,7 +51,7 @@ Crea una nueva instancia de OpenAITool. El constructor acepta tanto el formato s
 **Formato simplificado:**
 
 ```4d
-var $tool := cs.OpenAITool.new({ \
+var $tool := cs.AIKit.OpenAITool.new({ \
   name: "get_weather"; \
   description: "Get current weather for a location"; \
   parameters: { \
@@ -67,7 +67,7 @@ var $tool := cs.OpenAITool.new({ \
 **Formato de la API OpenAI**
 
 ```4d
-var $tool := cs.OpenAITool.new({ \
+var $tool := cs.AIKit.OpenAITool.new({ \
   type: "function"; \
   strict: True; \
   function: { \

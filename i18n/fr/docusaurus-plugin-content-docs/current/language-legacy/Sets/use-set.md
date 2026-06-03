@@ -5,7 +5,7 @@ slug: /commands/use-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *ensemble* )<!-- END REF-->
+<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
 <div class="no-index">
 

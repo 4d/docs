@@ -51,7 +51,7 @@ title: OpenAITool
 **簡易フォーマット:**
 
 ```4d
-var $tool := cs.OpenAITool.new({ \
+var $tool := cs.AIKit.OpenAITool.new({ \
   name: "get_weather"; \
   description: "Get current weather for a location"; \
   parameters: { \
@@ -67,7 +67,7 @@ var $tool := cs.OpenAITool.new({ \
 **OpenAI API フォーマット:**
 
 ```4d
-var $tool := cs.OpenAITool.new({ \
+var $tool := cs.AIKit.OpenAITool.new({ \
   type: "function"; \
   strict: True; \
   function: { \

@@ -3,7 +3,6 @@ id: openaiproviders
 title: OpenAIProviders
 ---
 
-
 # OpenAIProviders
 
 ## Summary
@@ -28,7 +27,7 @@ The `OpenAI` class automatically loads provider configurations when instantiated
 var $providers := cs.AIKit.OpenAIProviders.new()
 ```
 
-Creates a new instance that loads provider configuration from the `AIProviders.json` file (see [**Configuration Files**](../provider-model-aliases.md#configuration-files) in the "Provider Model Aliases" page for details on file locations and format).
+Creates a new instance that loads provider configuration from the `AIProviders.json` file. See [Configuration Files](../provider-model-aliases.md#configuration-files) in the Provider Model Aliases documentation for details on file locations and format.
 
 **Important:**
 
@@ -137,9 +136,6 @@ For each ($model; $models)
 End for each
 ```
 
-
-
-
 ## Model Resolution
 
 Two syntaxes are supported for model resolution:
@@ -159,21 +155,18 @@ This is resolved internally to:
 3. Extract `baseURL` and `apiKey`
 4. Make the API request using the resolved configuration
 
-
 **Examples:**
 - `"openai:gpt-5.1"` → Use OpenAI provider with gpt-5.1 model
 - `"anthropic:claude-3-opus"` → Use Anthropic provider with claude-3-opus
 - `"local:llama3"` → Use local provider with llama3 model
 
-
 ### Model alias (bare name)
-
 
 Use a named model by its bare name from the `models` section of the configuration:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
-$client.chat.completions.create($messages; {model: ":my-gpt"})
+$client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 This is resolved internally to:
@@ -185,4 +178,3 @@ This is resolved internally to:
 **Examples:**
 - `"my-gpt"` → Use the model alias "my-gpt" (resolves to its configured provider and model)
 - `"my-embedding"` → Use the model alias "my-embedding" for embedding operations
-

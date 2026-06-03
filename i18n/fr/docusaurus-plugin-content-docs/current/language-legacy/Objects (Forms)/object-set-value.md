@@ -5,7 +5,7 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjet* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjet* : Text ; *valeur* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 <div class="no-index">
 

@@ -34,7 +34,7 @@ No se pueden utilizar operadores en los blobs.
 
 ## Verificar si una variable contiene un blob escalar o un `4D.Blob`
 
-Use the [Value type](../commands/value-type) command to determine if a value is of type Blob or Object.
+Utilice el comando [Value type](../commands/value-type) para determinar si un valor es de tipo Blob u Object.
 Para verificar que un objeto es un objeto blob (`4D.Blob`), utilice [instancia OB de](../commands/ob-instance-of):
 
 ```4d

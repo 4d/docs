@@ -28,7 +28,7 @@ Fundamentalmente, ORDA gestiona objetos. En ORDA, todos los conceptos principale
 
 Los objetos en ORDA pueden manejarse como los objetos estándar 4D, pero se benefician automáticamente de propiedades y de métodos específicos.
 
-ORDA objects are created and instantiated when necessary by 4D methods (you do not need to create them). Sin embargo, los objetos del modelo de datos ORDA están asociados a las [clases en las que se pueden añadir funciones personalizadas](ordaClasses.md).
+Los objetos ORDA son creados e instanciados cuando es necesario por los métodos 4D (no necesitas crearlos). Sin embargo, los objetos del modelo de datos ORDA están asociados a las [clases en las que se pueden añadir funciones personalizadas](ordaClasses.md).
 
 
 

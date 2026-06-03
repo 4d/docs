@@ -7,7 +7,7 @@ title: OpenAIImagesAPI
 
 `OpenAIImagesAPI` はOpenAI のAPI を使用して画像を生成する機能を提供します。
 
-https://platform.openai.com/docs/api-reference/images
+https://developers.openai.com/api/reference/resources/images
 
 ## 関数
 
@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/images
 
 プロンプトを与えられると画像を作成します。
 
-https://platform.openai.com/docs/api-reference/images/create
+https://developers.openai.com/api/reference/resources/images/methods/generate
 
 ## 例題
 

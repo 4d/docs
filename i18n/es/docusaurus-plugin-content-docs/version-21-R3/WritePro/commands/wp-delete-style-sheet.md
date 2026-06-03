@@ -34,12 +34,12 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->The **WP DELETE STYLE SHEET** command removes the designated paragraph or character style sheet from the current document.<!-- END REF--> When a style sheet is removed, every character or paragraph that it was applied to reverts to its original style (*i.e.* the default).
+<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->El comando **WP DELETE STYLE SHEET** elimina la hoja de estilo de párrafo o de caracter designado del documento actual.<!-- END REF--> Cuando se elimina una hoja de estilo, todos los caracteres o párrafos a los que se aplicó vuelven a su estilo original (*es decir,* el predeterminado).
 
 Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar:
 
 - the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
-- the 4D Write Pro document along with the name of the style sheet to remove in the *wpDoc* and *styleSheetName* parameters.
+- el documento 4D Write Pro junto con el nombre de la hoja de estilo a eliminar en los parámetros *wpDoc* y *styleSheetName*.
 
 When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. Puede eliminar:
 
@@ -52,9 +52,9 @@ Al eliminar una hoja de estilo de subnivel:
 
 - The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
 - Los nombres de las hojas de estilo de subnivel afectadas se actualizan para reflejar su nuevo índice de nivel.
-- The `wk list level count` attribute of the root style sheet and all remaining sub-level style sheets is decremented to match the new total number of levels.
+- El atributo `wk list level count` de la hoja de estilo raíz y todas las hojas de estilo de subnivel restantes se decrementan para que coincidan con el nuevo número total de niveles.
 
-The command performs no action if the specified level does not exist, or if the style sheet is not part of a hierarchical list and *listLevelIndex* is greater than 1.
+El comando no realiza ninguna acción si el nivel especificado no existe, o si la hoja de estilo no forma parte de una lista jerárquica y *listLevelIndex* es mayor que 1.
 
 **Nota**: la hoja de estilo por defecto ("Normal") no se puede eliminar.
 
@@ -77,7 +77,7 @@ WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 
 Después de la ejecución:
 
-- The `wk list level index` values are updated (former level 3 becomes level 2).
+- Los valores `wk list level index` se actualizan (el nivel 3 anterior se convierte en el nivel 2).
 - Se decrementa el `wk list level count`.
 
 Para eliminar toda la hoja de estilo jerárquica (raíz y todos los subniveles asociados):

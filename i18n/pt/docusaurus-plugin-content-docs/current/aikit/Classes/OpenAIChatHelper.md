@@ -34,20 +34,31 @@ This method creates a new chat helper with the specified system prompt and initi
 
 ### prompt()
 
-**prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
+**prompt**(*prompt* : Variant) : OpenAIChatCompletionsResult
 
-| Parâmetro | Tipo                                                          | Descrição                                                   |
-| --------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
-| *prompt*  | Text                                                          | The text prompt to send to OpenAI chat.     |
-| Resultado | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | The completion result returned by the chat. |
+| Parâmetro | Tipo                                                          | Descrição                                                                                                                                                                                     |
+| --------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *prompt*  | Text or [OpenAIMessage](OpenAIMessage.md)                     | The text prompt to send to OpenAI chat, or an OpenAIMessage object for more complex messages (e.g., with images or files). |
+| Resultado | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | The completion result returned by the chat.                                                                                                                                   |
 
-Sends a user prompt to the chat and returns the corresponding completion result.
+Sends a user prompt to the chat and returns the corresponding completion result. You can pass either a simple text string or an [OpenAIMessage](OpenAIMessage.md) object for more advanced scenarios like including images or files.
 
 #### Exemplo de uso
 
 ```4D
+// Simple text prompt
 var $result:=$chatHelper.prompt("Hello, how can I help you today?")
 $result:=$chatHelper.prompt("Why 42?")
+
+// Using OpenAIMessage for advanced scenarios (e.g., with images)
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "What's in this image?"})
+$message.addImageURL("https://example.com/photo.jpg"; "high")
+$result:=$chatHelper.prompt($message)
+
+// Using OpenAIMessage with files
+var $fileMessage:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Analyze this document"})
+$fileMessage.addFileId($uploadedFile.id)
+$result:=$chatHelper.prompt($fileMessage)
 ```
 
 ### reset()
@@ -65,23 +76,23 @@ $chatHelper.reset()  // Clear all previous messages and tools
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| Parâmetro | Tipo   | Descrição                                                                                                                                                                           |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
-| *handler* | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| Parâmetro | Tipo   | Descrição                                                                                                                                             |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                               |
+| *handler* | Object | The function to handle tool calls (4D.Function or Object), optional if defined inside *tool* as *handler* property |
 
 Registers a tool with its handler function for automatic tool call handling.
 
 The *handler* parameter can be:
 
 - A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- An **Object**: An object containing a formula property matching the tool function name
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 
-#### Register Tool Example
+#### Register Tool Examples
 
 ```4D
 // Example 1: Simple registration with direct handler
@@ -117,7 +128,7 @@ Registers multiple tools at once. The parameter can be:
 - **Object**: Object with function names as keys mapping to tool definitions
 - **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
 
-#### Register Multiple Tools Example
+#### Register Multiple Tools Examples
 
 ##### Example 1: Collection format with handlers in tools
 

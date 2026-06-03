@@ -5,7 +5,7 @@ slug: /commands/st-compute-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *objeto* : Variable, Field {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 <div class="no-index">
 

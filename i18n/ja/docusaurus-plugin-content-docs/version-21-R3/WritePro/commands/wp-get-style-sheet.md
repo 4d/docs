@@ -40,9 +40,9 @@ displayed_sidebar: docs
 
 *styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *wpDoc* 引数のドキュメント内のそのスタイルシート名が存在しない場合、null オブジェクトが返されます。
 
-If the *styleSheetName* is the root-level name of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
+*styleSheetName* で名前を指定したスタイルシートが改装リストスタイルシートのルートレベルの名前である場合、オプションの *listLevelIndex* 引数で階層レベルを指定することで階層内の特定のレベルを取得することができます。
 
-- *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root-level, 2 = first sub-level, etc.).
+- *listLevelIndex* 引数は階層内のスタイルシートのレベルを表します(1 = ルートレベル、2 = 第一サブレベル、など)。
 - スタイルシートが階層で、この 引数が省略された場合には、ルートレベルのスタイルシートが返されます。
 - リクエストされたレベルが存在しない場合、null オブジェクトが返されます。
 - スタイルシートが改装リストスタイルシートではない場合に、*listLevelIndex* が1 より大きかった場合、null オブジェクトが返されます。
@@ -55,8 +55,8 @@ If the *styleSheetName* is the root-level name of a hierarchical list style shee
  var $styleSheet : Object
  
  $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // check if the style sheet exists
-        //if not create it
+ If($styleSheet=Null) // スタイルシートが存在するかチェックし、exists
+        // なければ作成する
     $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  End if
 ```

@@ -29,12 +29,12 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 **addImageURL**(*imageURL* : Text; *detail* : Text)
 
-| Parâmetro  | Tipo | Descrição                                                   |
-| ---------- | ---- | ----------------------------------------------------------- |
-| *imageURL* | Text | The URL of the image to add to the message. |
-| *detail*   | Text | Detalhes adicionais sobre a imagem.         |
+| Parâmetro  | Tipo | Descrição                                                                                |
+| ---------- | ---- | ---------------------------------------------------------------------------------------- |
+| *imageURL* | Text | The URL of the image to add to the message.                              |
+| *detail*   | Text | The detail level of the image: "auto", "low", or "high". |
 
-Adds an image URL to the content of the message.
+Adds an image URL to the content of the message. If the content is currently text, it will be converted to a collection format.
 
 ### addFileId()
 
@@ -142,3 +142,5 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 ## Ver também
 
 - [OpenAITool](OpenAITool.md) - For tool definition
+- [OpenAIFile](OpenAIFile.md)
+- [OpenAIChoice](OpenAIChoice.md)

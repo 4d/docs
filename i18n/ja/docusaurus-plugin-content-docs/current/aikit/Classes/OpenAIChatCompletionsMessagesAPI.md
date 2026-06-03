@@ -21,4 +21,4 @@ title: OpenAIChatCompletionsMessagesAPI
 
 `list()` 関数は特定のチャット補完ID に割り当てられたメッセージを取得します。 この関数は`completionID` が空の場合、エラーを生成します。 *parameters* 引数が `OpenAIChatCompletionsMessagesParameters` のインスタンスではない場合、提供された引数を使用して新たなインスタンスを作成します。
 
-https://platform.openai.com/docs/api-reference/chat/getMessages
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/subresources/messages/methods/list

@@ -113,6 +113,37 @@ function getVersionTargetDoc(version, activeDocContext, versions, pathname) {
   return getVersionMainDoc(version);
 }
 
+/**
+ * Check whether the current page exists in the given version
+ * (by id or slug match — without falling back to mainDoc).
+ */
+function hasDocInVersion(version, activeDocContext, pathname) {
+  const activeDoc = activeDocContext.activeDoc;
+  const activeVersion = activeDocContext.activeVersion;
+
+  // id-based match
+  if (activeDocContext.alternateDocVersions[version.name]) {
+    return true;
+  }
+
+  // slug-based match
+  let currentSlug;
+  if (activeDoc && activeVersion) {
+    currentSlug = getDocSlug(activeDoc, activeVersion);
+  } else if (activeVersion) {
+    currentSlug = pathname.startsWith(activeVersion.path)
+      ? pathname.slice(activeVersion.path.length).replace(/^\//, '')
+      : pathname.replace(/^\//, '');
+  }
+  if (currentSlug) {
+    return version.docs.some(
+      (doc) => getDocSlug(doc, version) === currentSlug,
+    );
+  }
+
+  return false;
+}
+
 function useDisplayedVersionItem({ docsPluginId, versionItems }) {
   const candidates = useDocsVersionCandidates(docsPluginId);
   const candidateItems = candidates
@@ -142,20 +173,45 @@ export default function DocsVersionDropdownNavbarItem({
     versionItems,
   });
 
+  const notAvailableTooltip = translate({
+    id: 'theme.docs.versionDropdown.notAvailable',
+    message: 'Page not available in this version\nOpening the default page instead',
+    description: 'Tooltip for version dropdown items where the current page does not exist',
+  });
+
   function versionItemToLink({ version, label }) {
     const targetDoc = getVersionTargetDoc(version, activeDocContext, allVersions, pathname);
+    // On root / main doc pages, skip unavailable styling — every version has a main doc
+    const activeDoc = activeDocContext.activeDoc;
+    const isMainDoc = !activeDoc || (activeDocContext.activeVersion &&
+      activeDoc.id === activeDocContext.activeVersion.mainDocId);
+    const available = isMainDoc || hasDocInVersion(version, activeDocContext, pathname);
     return {
       label,
       // preserve ?search#hash suffix on version switches
       to: `${targetDoc.path}${search}${hash}`,
       isActive: () => version === activeDocContext.activeVersion,
       onClick: () => savePreferredVersionName(version.name),
+      className: available ? undefined : 'version-unavailable',
+      title: available ? undefined : notAvailableTooltip,
+      _available: available,
     };
   }
 
+  const versionLinks = versionItems.map(versionItemToLink);
+  const availableLinks = versionLinks.filter((l) => l._available);
+  const unavailableLinks = versionLinks.filter((l) => !l._available);
+
+  const separator =
+    availableLinks.length > 0 && unavailableLinks.length > 0
+      ? [{ type: 'html', value: '<hr class="version-separator">' }]
+      : [];
+
   const items = [
     ...dropdownItemsBefore,
-    ...versionItems.map(versionItemToLink),
+    ...availableLinks,
+    ...separator,
+    ...unavailableLinks,
     ...dropdownItemsAfter,
   ];
 

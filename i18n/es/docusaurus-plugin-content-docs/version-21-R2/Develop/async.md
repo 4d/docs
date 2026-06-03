@@ -27,7 +27,7 @@ La ejecución asíncrona se utiliza cuando:
 
 - Una operación tarda mucho tiempo (por ejemplo, esperando una respuesta del servidor).
 - La capacidad de respuesta es fundamental (por ejemplo, las interacciones de la interfaz de usuario).
-- Background tasks, network communication, or parallel processing are performed.
+- Se realizan tareas en segundo plano, la comunicación de red o procesamiento paralelo.
 
 Elegir entre ejecución síncrona y asíncrona:
 

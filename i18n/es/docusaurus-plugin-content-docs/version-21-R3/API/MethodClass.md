@@ -3,13 +3,13 @@ id: MethodClass
 title: Método
 ---
 
-A `4D.Method` object contains a piece of code that is created from text source and can be executed. Los métodos `4D.Method` siempre se ejecutan en modo interpretado, independientemente del modo de ejecución del proyecto (interpretado/compilado). Esta funcionalidad está especialmente diseñada para permitir la ejecución dinámica y sobre la marcha de fragmentos de código.
+Un objeto `4D.Method` contiene un fragmento de código que se crea a partir de la fuente de texto y puede ser ejecutado. Los métodos `4D.Method` siempre se ejecutan en modo interpretado, independientemente del modo de ejecución del proyecto (interpretado/compilado). Esta funcionalidad está especialmente diseñada para permitir la ejecución dinámica y sobre la marcha de fragmentos de código.
 
 Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 
 Los objetos `4D.Method` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar el objeto método, puede:
 
-- store a `4D.Method` object in an object property and use the `()` operator after the property name,
+- almacenar un objeto `4D.Method` en una propiedad del objeto y utilizar el operador `()` después del nombre de la propiedad,
 - o llamar directamente al objeto `4D.Method` usando la función [`call()`](#call) o [`apply()`](#apply) en él.
 
 Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).
@@ -22,20 +22,20 @@ Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../A
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binario.
 
 :::
 
 ### Ejemplos
 
-#### Basic dynamic method creation
+#### Creación de un método dinámico de base
 
 ```4d
 var $myCode : Text
-$myCode:="#DECLARE ($number1:Integer;$number2:Integer):Integer"+Char(13)+"return $number1*$number2"
+$myCode:="#DECLARE ($number1:Integer;$number2:Integer):Integer "+Char(13)+"return $number1*$number2"
 
 var $o:={}
-$o.multiplication:=4D.Method.new($myCode) //put object in a property
+$o.multiplication:=4D.Method.new($myCode) //poner objeto en una propiedad
 var $result2:=$o.multiplication(2;3) // 6
 
 var $result3:=4D.Method.new($myCode).call(Null; 10; 5) // 50
@@ -56,7 +56,7 @@ $result:=$o.concat("Hello ") // $result is "Hello John"
 #### Utilizar un archivo de texto con comprobación sintáctica
 
 ```text
-//4d method stored in a text file
+//Método 4d almacenado en un archivo de texto
 var $newBusinessRules:=New shared object
 Use ($newBusinessRules)
 	$newBusinessRules.taxRate:=0.2
@@ -77,7 +77,7 @@ Este método se llama en el código:
 var $myFile:=File("/DATA/BusinessRules.4dm")
 
 var $myMethod:=4D.Method.new($myFile.getText())
-// Syntax errors verification
+// Verificación de errores de sintaxis
 If ($myMethod.checkSyntax().success)
    $myMethod.call()
 End if 
@@ -122,9 +122,9 @@ Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 #### Descripción
 
-The `4D.Method.new()` function <!-- REF #4D.Method.new().Summary -->creates and returns a new `4D.Method` object built from the *source* code<!-- END REF -->.
+La función `4D.Method.new()` <!-- REF #4D.Method.new().Summary -->crea y devuelve un nuevo objeto `4D.Method` construido a partir del código *source*<!-- END REF -->.
 
-En el parámetro *source*, pase el código fuente 4D del método como texto. All end-of-line characters are supported (LF, CR, CRLF) using the [`Char`](../commands/char) command or an [escape sequence](../Concepts/quick-tour.md#escape-sequences).
+En el parámetro *source*, pase el código fuente 4D del método como texto. Todos los caracteres de fin de línea son soportados (LF, CR, CRLF) utilizando el comando [`Char`](../commands/char) o una [secuencia de escape](../Concepts/quick-tour.md#escape-sequences).
 
 En el parámetro opcional *name*, pase el nombre del método que se mostrará en el depurador 4D o en el explorador Runtime. Si omite este parámetro, el nombre del método aparecerá como "anonymous".
 
@@ -132,16 +132,16 @@ En el parámetro opcional *name*, pase el nombre del método que se mostrará en
 
 Se recomienda nombrar explícitamente su método si lo desea:
 
-- use persistent method name in the [Custom watch pane of the Debugger](../Debugging/debugger#custom-watch-pane) (anonymous methods are not persistent in the debugger).
-- handle the volatile method using commands such as [`Method get path`](../commands/method-get-path) and [`Method resolve path`](../commands/method-resolve-path) (anonymous methods don't have paths).
+- utilizar nombre de método persistente en la [ventana de evaluación del depurador](../Debugging/debugger#custom-watch-pane) (los métodos anónimos no son persistentes en el depurador).
+- manipular el método volátil utilizando comandos como [`Method get path`](../commands/method-get-path) y [`Method resolve path`](../commands/method-resolve-path) (los métodos anónimos no tienen rutas).
 
 :::
 
-The resulting 4D.Method object can be checked using [`checkSyntax()`](#checksyntax) and executed using `()`, [`.apply()`](#apply) or [`.call()`](#call).
+El objeto 4D.Method resultante puede ser verificado utilizando [`checkSyntax()`](#checksyntax) y ejecutado utilizando `()`, [`.apply()`](#apply) o [`.call()`](#call).
 
 :::note
 
-Named volatile method objects are not project methods, they are not stored in disk files and cannot be called by commands such as [`EXECUTE METHOD`](../commands/execute-method). On the other hand, since they inherit from the [`4D.Function`](./FunctionClass.md) class, they can be used wherever a `4D.Function` object is expected.
+Los objetos método volátiles con nombre no son métodos proyecto, no se almacenan en archivos disco y no pueden ser llamados por comandos como [`EXECUTE METHOD`](../commands/execute-method). Por otra parte, dado que heredan de la clase [`4D.Function`](./FunctionClass.md), pueden utilizarse siempre que se espere un objeto `4D.Function`.
 
 :::
 
@@ -196,16 +196,16 @@ var $result:=$m.call(Null; 10; 5) //50
 
 <div class="no-index">
 
-| Parámetros | Tipo   |                             | Descripción                |
-| ---------- | ------ | --------------------------- | -------------------------- |
-| Resultado  | Object | <- | Syntax check result object |
+| Parámetros | Tipo   |                             | Descripción                                 |
+| ---------- | ------ | --------------------------- | ------------------------------------------- |
+| Resultado  | Object | <- | Objeto resultado de verificación sintáctica |
 
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-The `.checkSyntax()` function <!-- REF #MethodClass.checkSyntax().Summary -->checks the syntax of the source code of the `4D.Method` object and returns a result object<!-- END REF -->.
+La función `.checkSyntax()` <!-- REF #MethodClass.checkSyntax().Summary -->verifica la sintaxis del código fuente del objeto `4D.Method` y devuelve un objeto resultado<!-- END REF -->.
 
 El objeto devuelto contiene las siguientes propiedades:
 
@@ -243,7 +243,7 @@ End if
 
 #### Descripción
 
-The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of the `4D.Method` object, if it was declared in the *name* parameter of the `new()` constructor<!-- END REF -->. En caso contrario, no se devuelve la propiedad.
+La propiedad `.name` <!-- REF #MethodClass.name.Summary -->contiene el nombre del objeto `4D.Method`, si fue declarado en el parámetro *name* del constructor `new()`<!-- END REF -->. En caso contrario, no se devuelve la propiedad.
 
 Esta propiedad es de **solo lectura**.
 

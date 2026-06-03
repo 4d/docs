@@ -5,7 +5,7 @@ slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *nomFichier* ; *image* {; *} )<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *nomFichier* : Text ; *image* : Picture {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
 <div class="no-index">
 

@@ -33,7 +33,7 @@ Un list box se compone de cuatro partes distintas:
 *   el [objeto list box](./listbox-object.md) en su totalidad,
 *   [columnas](./listbox-column.md),
 *   [encabezados de](./listbox-header-footer.md#headers) columna y
-*   column [footers](./listbox-header-footer.md#footers).
+*   [pies](./listbox-header-footer.md#footers) de columnas.
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 

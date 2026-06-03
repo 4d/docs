@@ -5,7 +5,7 @@ slug: /commands/ob-remove
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *objet* ; *propriété* )<!-- END REF-->
+<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *objet* : Object ; *propriété* : Text )<!-- END REF-->
 <!--REF #_command_.OB REMOVE.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/array-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *nomTableau* : Array ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY POINTER.Params-->
 <div class="no-index">
 

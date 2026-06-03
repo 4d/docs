@@ -34,20 +34,31 @@ Este método crea un nuevo asistente de chat con el prompt sistema especificado 
 
 ### prompt()
 
-**prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
+**prompt**(*prompt* : Variant) : OpenAIChatCompletionsResult
 
-| Parámetros | Tipo                                                          | Descripción                                                        |
-| ---------- | ------------------------------------------------------------- | ------------------------------------------------------------------ |
-| *prompt*   | Text                                                          | Texto a enviar al chat de OpenAI.                  |
-| Resultado  | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | El resultado de finalización devuelto por el chat. |
+| Parámetros | Tipo                                                          | Descripción                                                                                                                                                                      |
+| ---------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *prompt*   | Texto u [OpenAIMessage](OpenAIMessage.md)                     | El mensaje de texto a enviar al chat de OpenAI, o un objeto OpenAIMessage para mensajes más complejos (por ejemplo, con imágenes o archivos). |
+| Resultado  | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | El resultado de finalización devuelto por el chat.                                                                                                               |
 
-Envía una consulta de usuario al chat y devuelve el resultado de finalización correspondiente.
+Envía una consulta de usuario al chat y devuelve el resultado de finalización correspondiente. Puede pasar una cadena de texto simple o un objeto [OpenAIMessage](OpenAIMessage.md) para escenarios más avanzados como incluir imágenes o archivos.
 
 #### Ejemplo de Uso
 
 ```4D
+// Aviso de texto simple
 var $result:=$chatHelper.prompt("Hello, how can I help you today?")
-$result:=$chatHelper.prompt("Why 42?")
+$result:=$chatHelper.prompt("¿Por qué 42?")
+
+// Uso de OpenAIMessage para escenarios avanzados (por ejemplo, con imágenes)
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "What's in this image?"})
+$message.addImageURL("https://example.com/photo.jpg"; "high")
+$result:=$chatHelper.prompt($message)
+
+// Uso de OpenAIMessage con archivos
+var $fileMessage:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Analyze this document"})
+$fileMessage.addFileId($uploadedFile.id)
+$result:=$chatHelper.prompt($fileMessage)
 ```
 
 ### reset()
@@ -65,23 +76,23 @@ $chatHelper.reset() // Borra todos los mensajes y herramientas anteriores
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| Parámetros | Tipo   | Descripción                                                                                                                                                                                                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*     | Object | Objeto de definición de la herramienta (o instancia [OpenAITool](OpenAITool.md))                                                                                                           |
-| *handler*  | Object | La función para manejar las llamadas de herramientas ([4D.Function](../../API/FunctionClass.md) u Objeto), opcional si se define dentro de *tool* como propiedad *handler* |
+| Parámetros | Tipo   | Descripción                                                                                                                                                                     |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*     | Object | Objeto de definición de la herramienta (o instancia [OpenAITool](OpenAITool.md))                                                                             |
+| *handler*  | Object | La función para manejar las llamadas de herramientas (4D.Function u Object), opcional si se define dentro de *tool* como propiedad *handler* |
 
 Registra una herramienta con su función de gestión automática de llamadas a herramientas.
 
 El parámetro *handler* puede ser:
 
 - Un objeto **4D.Function**: función de gestión directa
-- Un **Objeto**: un objeto que contiene una propiedad `formula` que coincide con el nombre de la función de la herramienta
+- Un **Objeto**: un objeto que contiene una propiedad formula que coincide con el nombre de la función de la herramienta
 
 La función de gestión recibe un objeto que contiene los parámetros pasados por la llamada a la herramienta OpenAI. Este objeto contiene pares llave-valor en los que las llaves corresponden a los nombres de los parámetros definidos en el esquema de la herramienta, y los valores son los argumentos reales ofrecidos por el modelo de IA.
 
-#### Ejemplo de Register Tool
+#### Ejemplos de herramientas de registro
 
 ```4D
 // Ejemplo 1: Registro simple con gestor directo
@@ -117,7 +128,7 @@ Registra varias herramientas a la vez. El parámetro puede ser:
 - **Objeto**: objeto cuyas propiedades son nombres de funciones que corresponden a definiciones de herramientas
 - **Objeto con atributo `tools`**: objeto que contiene una colección `tools` y propiedades de fórmulas que coinciden con nombres de herramientas
 
-#### Ejemplo de registro de varias herramientas
+#### Ejemplos de registro de varias herramientas
 
 ##### Ejemplo 1: formato colección con los gestores en las herramientas
 

@@ -36,7 +36,7 @@ La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summ
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 
-> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
+> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec/rfc8621/).
 
 Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
 

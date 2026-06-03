@@ -5,7 +5,7 @@ slug: /commands/web-send-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* {; *type*} )<!-- END REF-->
+<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* : Text {; *type* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
 <div class="no-index">
 

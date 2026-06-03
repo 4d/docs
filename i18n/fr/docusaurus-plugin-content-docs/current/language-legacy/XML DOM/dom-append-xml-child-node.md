@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElément* ; *typeEnfant* ; *valeurEnfant* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElément* : Text ; *typeEnfant* : Integer ; *valeurEnfant* : any ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *objeto* : Text ; *estiloBorde* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *objeto* : Field, Variable ; *estiloBorde* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *objeto* : Text ; *estiloBorde* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *objeto* : Variable, Field ; *estiloBorde* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 <div class="no-index">
 

@@ -7,7 +7,7 @@ title: OpenAIImage
 
 `OpenAIImage` クラスはOpenAI API によって生成された画像を表します。 このクラスは異なるフォーマットで生成された画像にアクセスするためのプロパティや、この画像を他の型へと変換するためのメソッドを提供します。
 
-https://platform.openai.com/docs/api-reference/images/object
+https://developers.openai.com/api/reference/resources/images
 
 ## プロパティ
 

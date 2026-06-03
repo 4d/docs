@@ -5,7 +5,7 @@ slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *liste* ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *liste* : Integer ; *libelléElément* : Text ; *réfElément* : Integer {; *sous_Liste* : Integer ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
 <div class="no-index">
 

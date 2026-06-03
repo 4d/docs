@@ -5,7 +5,7 @@ slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** {( *curseur* )}<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ({ *curseur* : Integer })<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
 <div class="no-index">
 

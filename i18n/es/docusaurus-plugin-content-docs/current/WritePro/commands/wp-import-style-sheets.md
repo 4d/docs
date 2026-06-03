@@ -25,13 +25,13 @@ displayed_sidebar: docs
 
 En el parámetro *targetDoc*, pase el documento 4D Write Pro que recibirá las hojas de estilo importadas.
 
-In the *sourceDoc* parameter, pass the 4D Write Pro document containing the style sheets to import.
+En el parámetro *sourceDoc*, pase el documento 4D Write Pro que contiene las hojas de estilo a importar.
 
 **Note**: If a style sheet from *sourceDoc* has the same name as a style sheet in *targetDoc*, the imported style sheet will overwrite (replace) the style sheet in the *targetDoc*.
 
 ## Ejemplo
 
-You want to import a template style sheet and receive a notification with the number for each type of style sheet imported:
+Desea importar una hoja de estilo de plantilla y recibir una notificación con el número de cada tipo de hoja de estilo importada:
 
 ```4d
  wpArea:=WP New

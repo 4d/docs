@@ -1,6 +1,7 @@
 ---
 id: trim
 title: Trim
+slug: /commands/trim
 displayed_sidebar: docs
 ---
 

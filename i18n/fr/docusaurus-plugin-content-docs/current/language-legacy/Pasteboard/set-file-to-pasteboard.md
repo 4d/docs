@@ -5,7 +5,7 @@ slug: /commands/set-file-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *fichier* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *fichier* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 <div class="no-index">
 

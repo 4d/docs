@@ -9,7 +9,7 @@ A desktop session is a user-related execution context on 4D Server, 4D remote, o
 
 Las sesiones de escritorio incluyen:
 
-- **Remote user sessions**: In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- **Sesiones de usuario remotas**: en aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones, administradas desde el cliente y desde el servidor.
 - **Sesiones de procedimientos almacenados**: en aplicaciones cliente/servidor, la única sesión virtual de usuario que gestiona todos los procedimientos almacenados ejecutados en el servidor.
 - **Sesiones autónomas**: objeto de sesión local devuelto en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
 
@@ -33,7 +33,7 @@ Este objeto se maneja a través de las funciones y propiedades de la [clase `Ses
 
 Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Ambos objetos son similares, excepto que:
 
-- sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
+- sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. Un valor almacenado en el `.storage` de la sesión usuario en el servidor no estará disponible en el `.storage` de la sesión de usuario en el cliente y viceversa.
 - for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Llamar a estas funciones en un cliente genera un error.
 
 :::note
@@ -64,7 +64,7 @@ Del lado del cliente, existen dos objetos de almacenamiento local distintos:
 :::tip Entradas de blog relacionadas
 
 - [Objeto sesión remota 4D con conexión cliente/servidor y procedimiento almacenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client).
+- [Olvídese de los wrappers del lado del servidor, utilice Sesiones 4D desde el cliente](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client).
 
 :::
 

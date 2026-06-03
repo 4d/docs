@@ -5,7 +5,7 @@ slug: /commands/object-set-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( * ; *objeto* : Text ; *indicador* : Integer )<br/>**OBJECT SET INDICATOR TYPE** ( *objeto* : Field, Variable ; *indicador* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( * ; *objeto* : Text ; *indicador* : Integer )<br/>**OBJECT SET INDICATOR TYPE** ( *objeto* : Variable, Field ; *indicador* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Params-->
 <div class="no-index">
 

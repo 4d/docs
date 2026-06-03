@@ -3,7 +3,7 @@ id: project-method-properties
 title: プロジェクトメソッド
 ---
 
-## Roles
+## ロール
 
 その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
 
@@ -12,7 +12,7 @@ title: プロジェクトメソッド
 - メニューメソッド
 - プロセスメソッド
 - イベントまたはエラー処理メソッド
-- APIs to be called from the web server, transformation tags, extensions...
+- Web サーバー、変換タグ、拡張機能などから呼び出されるAPI
 - また、テスト目的などで、プロジェクトメソッドを手動で実行することもできます。
 
 ### サブルーチン
@@ -66,7 +66,7 @@ title: プロジェクトメソッド
 
 プロジェクトメソッドは、**フォーミュラ** オブジェクトにカプセル化して、オブジェクトから呼び出すことができます。
 
-The [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) commands allow you to create [native formula objects](../API/FormulaClass.md) that you can encapsulate in object properties. つまり、カスタムなオブジェクトメソッドを実装することが可能です。
+[`Formula`](../commands/formula) または [`Formula from string`](../commands/formula-from-string) コマンドを使用すると、オブジェクトプロパティにカプセル化可能な[ネイティブなフォーミュラオブジェクト](../API/FormulaClass.md) を作成することができます。 つまり、カスタムなオブジェクトメソッドを実装することが可能です。
 
 オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **()** をつけます。 例:
 
@@ -89,35 +89,35 @@ $o.custom_Alert() // "Hello world!" と表示します
 $o["custom_Alert"]() // "Hello world!" と表示します
 ```
 
-For more information, see the [`4D.Formula` class description](../API/FormulaClass.md) and the [Using object properties as named parameters](../Concepts/parameters.md#using-object-properties-as-named-parameters) paragraph.
+詳細な情報については、[`4D.Formula` クラスの詳細](../API/FormulaClass.md) および [オブジェクトプロパティを名前付き引数として使用する](../Concepts/parameters.md#オブジェクトプロパティを名前付き引数として使用する) の章を参照してください。
 
 ### メニューメソッド
 
-メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
+メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 メニューエディターまたは["メニュー" テーマのコマンド](../commands/theme/Menus.md) を使用して、メニューにメソッドを割り当てます。 メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
 
-メニューメソッドにより、単一または複数の処理を実行することができます。 For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+メニューメソッドにより、単一または複数の処理を実行することができます。 メニューメソッドにより、単一または複数の処理を実行することができます。 たとえば、データ入力のメニューに、以下の2つの処理を実行するメソッドを割り当てられます。まず適切な入力フォームを表示し、次にユーザーがキャンセルするまでの間[`ADD RECORD`](../commands/add-record) コマンドによるデータ入力を繰り返します。
 
-Automating sequences of activities is a very powerful capability of the 4D programming language. カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
+連続した処理の自動化は、4D プログラミング言語の強力な機能の一つです。 カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
 
 ### プロセスメソッド
 
-**プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
+**プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 [ワーカープロセス](../Develop/processes.md#worker-processes) の場合を除いて、プロセスはプロセスメソッドが実行されている間だけ存続します。 メニューに属するメニューメソッドのプロパティとして [*新規プロセス開始*](../Menus/properties.md#start-a-new-process) をチェックしている場合、そのメニューメソッドは新規プロセスのプロセスメソッドでもあります。
 
 ### イベント・エラー処理メソッド
 
-**イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
+**イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 詳細については[`ON EVENT CALL`](../commands/on-event-call) コマンドの説明を参照してください。
 
 **エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 エラーや例外が発生するたびに呼び出されます。 詳細については、[エラー処理](../Concepts/error-handling.md) を参照ください。
 
-### API Methods
+### APIメソッド
 
-Project methods can be called from external contexts such as other applications, web apps, processed files, etc., in which case they can be seen as API. Such calls include:
+プロジェクトメソッドは、他のアプリケーション、Web アプリ、処理されたファイル、などの外部コンテキストから呼び出し可能です。その場合、これらはAPI としてみなすことができます。 このような呼び出しには以下のようなものが含まれます:
 
-- calls to the web server through [http request handlers](../WebServer/http-request-handler.md) or [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
-- [tag processing](../Tags/transformation-tags.md)
-- expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
+- [http リクエストハンドラー](../WebServer/http-request-handler.md) または [`4DACTION` URL](../WebServer/httpRequests.md#4daction) を通したWeb サーバーへの呼び出し。
+- [タグ処理](../Tags/transformation-tags.md)
+- 拡張機能([4D Write Pro](../WritePro/commands/wp-insert-formula.md)、 [4D View Pro](../ViewPro/formulas.md)) またはフォームオブジェクト(例: [`ST INSERT EXPRESSION`](../commands/st-insert-expression))から呼び出された式。
 
-External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
+プロジェクトメソッドへの外部呼び出しは、[プロジェクトメソッドプロパティ](../Project/project-method-properties.md) で許可されている必要があります。
 
 ### 手動での実行
 
@@ -235,11 +235,11 @@ External calls to project methods must be allowed in the [project method propert
 4D内での再帰呼び出しの代表的な使用方法は以下のとおりです:
 
 - 例題と同じく、互いに関連するテーブル内でのレコードの取り扱い。
-- Browsing documents and folders on your disk, using the commands [`FOLDER LIST`](../commands/folder-list) and [`DOCUMENT LIST`](document-list). フォルダーにはフォルダーとドキュメントが含まれており、サブフォルダーはまたフォルダーとドキュメントを含むことができます。
+- [`FOLDER LIST`](../commands/folder-list) および [`DOCUMENT LIST`](document-list) などのコマンドを使用して、ディスク上のドキュメントやフォルダをブラウズする。 フォルダーにはフォルダーとドキュメントが含まれており、サブフォルダーはまたフォルダーとドキュメントを含むことができます。
 
 :::warning
 
-Recursive calls should always end at some point. たとえば、`Genealogy of` メソッドが自身の呼び出しを止めるのは、クエリがレコードを返さないときです。 この条件のテストをしないと、メソッドは際限なく自身を呼び出します。 (メソッド内で使用される引数やローカル変数の蓄積を含む) 再帰呼び出しによって容量が一杯になると、最終的に 4Dは “スタックがいっぱいです” エラーを返します 。
+再帰呼び出しは、必ずある時点で終了する必要があります。 たとえば、`Genealogy of` メソッドが自身の呼び出しを止めるのは、クエリがレコードを返さないときです。 この条件のテストをしないと、メソッドは際限なく自身を呼び出します。 (メソッド内で使用される引数やローカル変数の蓄積を含む) 再帰呼び出しによって容量が一杯になると、最終的に 4Dは “スタックがいっぱいです” エラーを返します 。
 
 :::
 

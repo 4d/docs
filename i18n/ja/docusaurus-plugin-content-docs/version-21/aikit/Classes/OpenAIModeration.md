@@ -7,7 +7,7 @@ title: OpenAIModeration
 
 `OpenAIModeration` クラスはOpenAI API からのモデレーション結果を処理するために設計されています。 これにはモデレーションID、使用したモデル、モデレーションの結果を保存するためのプロパティが格納されています。
 
-https://platform.openai.com/docs/api-reference/moderations/object
+https://developers.openai.com/api/reference/resources/moderations
 
 ## プロパティ
 

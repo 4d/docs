@@ -31,7 +31,7 @@ La clase `WebForm` contiene funciones y propiedades que permiten manejar sus com
 
 #### Descripción
 
-The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Los componentes de las páginas web son <!-- REF WebFormClass.componentName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas páginas web.
 
 Los objetos devueltos son de la clase [`4D.WebFormItem`](WebFormItemClass.md). Estos objetos tienen funciones que puede utilizar para gestionar sus componentes de forma dinámica.
 
@@ -43,14 +43,14 @@ shared singleton Class constructor()
 	var myForm : 4D.WebForm
 	var component : 4D.WebFormItem
 	
-	myForm:=webForm  //returns the web page as an object, each property is a component
-	component:=myForm.myImage  //returns the myImage component of the web page
+	myForm:=webForm //devuelve la página web como un objeto, cada propiedad es un componente
+	component:=myForm.myImage //devuelve el componente myImage de la página web
 
 ```
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. Por ejemplo, puede manipular dinámicamente los componentes de la página o transmitir mensajes a las páginas web utilizando funciones especializadas como `myForm.setMessage()`.
+Aunque `myForm` puede no mostrar las propiedades típicas de un objeto cuando se examina en el depurador, se comporta como si fuera el objeto `webForm` real. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. Por ejemplo, puede manipular dinámicamente los componentes de la página o transmitir mensajes a las páginas web utilizando funciones especializadas como `myForm.setMessage()`.
 
 :::
 

@@ -47,17 +47,17 @@ Legacy commands from this theme can usually be usefully replaced by commands of 
 
 :::
 
-## Document reference number
+## Número de referencia del documento
 
 You open a document with the [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) and [`Append document`](../../commands/append-document) commands. Once a document is open, you can read and write characters from and to the document using commands such as [`RECEIVE PACKET`](../../commands/receive-packet) and [`SEND PACKET`](../../commands/send-packet). When you are finished with the document, you usually close it using the `CLOSE DOCUMENT` command.
 
-All open documents returned by these commands are referred to using a **document reference number** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. All commands working with open documents expect *DocRef* as a parameter. If you pass an incorrect *DocRef* to one of these commands, a file manager error occurs.
+Todos los documentos abiertos devueltos por estos comandos se referencian utilizando un **número de referencia del documento** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. Todos los comandos que trabajan con documentos abiertos esperan *DocRef* como parámetro. Si pasa un *DocRef* incorrecto a uno de estos comandos, se produce un error del gestor de archivos.
 
-A document can be opened in **read/write** mode by only one process at a time. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
+Un documento sólo puede ser abierto en modo **lectura/escritura** por un proceso a la vez. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
 
 :::note
 
-When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. When it is called from a cooperative process, a *DocRef* reference can be used from any other cooperative process.
+When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. Cuando se llama desde un proceso cooperativo, se puede utilizar una referencia *DocRef* de cualquier otro proceso cooperativo.
 
 :::
 
@@ -65,13 +65,13 @@ When it is called from a [preemptive process](../../Develop/preemptive.md), a *D
 
 `Open document`, `Create document`, `Append document` and `Select document` enable you to access a document using the standard Open or Save file dialog boxes. When you access a document through a standard dialog, 4D returns the full pathname of the document in the [`Document` system variable](../../Concepts/variables.md#system-variables). This system variable has to be distinguished from the *document* parameter that appears in the parameter list of the commands.
 
-## Absolute or relative pathname
+## Ruta absoluta o relativa
 
 Most of the routines of this section accept document names, relative pathnames or absolute pathnames:
 
-Relative pathnames define a location with respect to a folder located on disk. Passing only a document name is considered as using a relative pathname. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Relative pathnames are especially useful when deploying applications in heterogenous environments.
+Los nombres de ruta relativos definen una ubicación con respecto a una carpeta situada en el disco. Si sólo se pasa el nombre del documento, se considera que se está utilizando una ruta relativa. In 4D, a relative pathname is usually expressed with respect to the database folder, i.e. the folder containing the structure file. Los nombres de ruta relativos son especialmente útiles cuando se despliegan aplicaciones en entornos heterogéneos.
 Absolute pathnames define a location with respect to the root of the volume and so they do not depend on the current location of the database folder.
-To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
+Para determinar si una ruta pasada a un comando debe ser interpretada como absoluta o relativa, 4D aplica un algoritmo específico en cada plataforma.
 
 Windows  
 If the parameter contains only two characters and if the second one is a ':',
@@ -81,7 +81,7 @@ then the pathname is absolute.
 
 In all other cases, the pathname is relative.
 
-Examples with the CREATE FOLDER command:
+Ejemplos con el comando CREATE FOLDER:
 
 CREATE FOLDER("lundi") // relative path
 CREATE FOLDER("\Monday") // relative path
@@ -91,13 +91,13 @@ CREATE FOLDER("d:\Monday") // absolute path
 CREATE FOLDER("\\srv-Internal\temp") // absolute path
 
 macOS  
-If the text starts with a folder separator ':',
-or if does not contain any,
-then the path is relative.
+Si el texto comienza con un separador de carpetas ':',
+o si no contiene ninguno,
+entonces la ruta es relativa.
 
-In all other cases, it is absolute.
+En los demás casos, es absoluta.
 
-Examples with the CREATE FOLDER command:
+Ejemplos con el comando CREATE FOLDER:
 
 CREATE FOLDER("Monday") // relative path
 CREATE FOLDER("macintosh hd:") // absolute path
@@ -110,9 +110,9 @@ See also [**Absolute and relative pathnames** in the Concepts section](../../Con
 
 :::
 
-## Extracting pathname contents
+## Extracción del contenido de una ruta
 
-You can handle pathname contents using the Path to object and Object to path commands. In particular, using these commands, you can extract from a pathname:
+Puede manejar el contenido de las rutas utilizando los comandos Path to object y Object to path. En particular, usando estos comandos, se puede extraer de una ruta:
 
 a file name,
 the parent folder path,

@@ -1,6 +1,6 @@
 ---
 id: code-overview
-title: Managing Methods and Classes
+title: Gestión de métodos y clases
 ---
 
 El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).
@@ -15,7 +15,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md#method-types):
 
 - Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
 - Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o desde la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method.md#shortcuts).
-- **Triggers** can also be created or opened from the [Structure editor](../Develop-legacy/triggers.md#activating-and-creating-a-trigger).
+- Los **Triggers** también pueden ser creados o abiertos desde el [Editor de estructuras](../Develop-legacy/triggers.md#activating-and-creating-a-trigger).
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
 ## Crear las clases
@@ -28,7 +28,7 @@ Una clase usuario en 4D está definida por un archivo de método específico (**
 Project folder Project Sources Classes Polygon.4dm
 ```
 
-You can create a class file from the **File** menu or toolbar (**New > Class...**) or in the **Methods** page of the **Explorer** window. También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
+Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo > Clase...**) o en la página **Métodos** de la ventana **Explorador**. También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
 
 En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
 
@@ -102,53 +102,53 @@ Para eliminar un método o clase existente, puede:
 
 > Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
 
-## Design Object Access commands
+## Comandos de acceso a objetos de diseño
 
-You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). This source toolkit facilitates the integration into your applications of code control tools and more particularly version control systems (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
+You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
 
 Se aplican los siguientes principios:
 
-- Each method and form in a 4D application has its own address in the form of a pathname. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
+- Cada método y formulario de una aplicación 4D tiene su propia dirección en forma de nombre de ruta. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
 - You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
-- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. However, commands that modify properties or access contents executable from methods can only be used in interpreted mode (see the table below).
+- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
 - Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
-- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. In this case, to access objects of the host, you just pass a `*` as the last parameter.
+- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
 
 ### Uso en modo compilado
 
 For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
 
-| Comando                                                                  | Can be used in compiled mode |
-| ------------------------------------------------------------------------ | ---------------------------- |
-| [Current method path](../commands/current-method-path)                   | Sí                           |
-| [FORM GET NAMES](../commands/form-get-names)                             | Sí                           |
-| [METHOD Get attribute](../commands/method-get-attribute)                 | Sí                           |
-| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | Sí                           |
-| [METHOD GET CODE](../commands/method-get-code)                           | No                           |
-| [METHOD GET COMMENTS](../commands/method-get-comments)                   | Sí                           |
-| [METHOD GET FOLDERS](../commands/method-get-folders)                     | Sí                           |
-| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | Sí                           |
-| [METHOD GET NAMES](../commands/method-get-names)                         | Sí                           |
-| [METHOD Get path](../commands/method-get-path)                           | Sí                           |
-| [METHOD GET PATHS](../commands/method-get-paths)                         | Sí                           |
-| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | Sí                           |
-| [METHOD OPEN PATH](../commands/method-open-path)                         | No                           |
-| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | Sí                           |
-| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | Sí                           |
-| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | No                           |
-| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | No                           |
-| [METHOD SET CODE](../commands/method-set-code)                           | No                           |
-| [METHOD SET COMMENTS](../commands/method-set-comments)                   | No                           |
+| Comando                                                                  | Puede utilizarse en modo compilado |
+| ------------------------------------------------------------------------ | ---------------------------------- |
+| [Current method path](../commands/current-method-path)                   | Sí                                 |
+| [FORM GET NAMES](../commands/form-get-names)                             | Sí                                 |
+| [METHOD Get attribute](../commands/method-get-attribute)                 | Sí                                 |
+| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | Sí                                 |
+| [METHOD GET CODE](../commands/method-get-code)                           | No                                 |
+| [METHOD GET COMMENTS](../commands/method-get-comments)                   | Sí                                 |
+| [METHOD GET FOLDERS](../commands/method-get-folders)                     | Sí                                 |
+| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | Sí                                 |
+| [METHOD GET NAMES](../commands/method-get-names)                         | Sí                                 |
+| [METHOD Get path](../commands/method-get-path)                           | Sí                                 |
+| [METHOD GET PATHS](../commands/method-get-paths)                         | Sí                                 |
+| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | Sí                                 |
+| [METHOD OPEN PATH](../commands/method-open-path)                         | No                                 |
+| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | Sí                                 |
+| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | Sí                                 |
+| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | No                                 |
+| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | No                                 |
+| [METHOD SET CODE](../commands/method-set-code)                           | No                                 |
+| [METHOD SET COMMENTS](../commands/method-set-comments)                   | No                                 |
 
 :::note
 
-The error -9762 "The command cannot be executed in a compiled database." is generated when the command is executed in compiled mode.
+El error -9762 "El comando no puede ejecutarse en una base de datos compilada." se genera cuando el comando se ejecuta en modo compilado.
 
 :::
 
-### Creation of pathnames
+### Creación de rutas
 
-Pathnames generated for 4D objects must be compatible with the file management of the operating system. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
+Las rutas generadas para los objetos 4D deben ser compatibles con la gestión de archivos del sistema operativo. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
 
 Estos son los caracteres codificados:
 

@@ -47,7 +47,7 @@ Vous devez déclarer ces six paramètres de la manière suivante :
 ```4d
   // Méthode base Sur connexion Web
  
-#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
  
   // Code pour la méthode
 ```

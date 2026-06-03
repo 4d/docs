@@ -1,7 +1,7 @@
 ﻿---
 id: form
 slug: /commands/form
-title: Formulaire
+title: Form
 displayed_sidebar: docs
 ---
 

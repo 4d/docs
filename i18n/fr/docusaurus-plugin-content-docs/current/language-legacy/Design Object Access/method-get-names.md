@@ -5,7 +5,7 @@ slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *tabNoms* {; *filtre*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *tabNoms* : Text array {; *filtre* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *objeto* : Text ;  *numColumnas* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *objeto* : Field, Variable ;  *numColumnas* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *objeto* : Text ; *numColumnas* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *objeto* : Variable ; *numColumnas* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 <div class="no-index">
 

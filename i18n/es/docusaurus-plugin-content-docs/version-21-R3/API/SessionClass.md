@@ -10,7 +10,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Generar, compartir y utilizar contraseñas de un solo uso (OTP) para las sesiones web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
+- [Olvídese de los wrappers del lado del servidor, utilice Sesiones 4D desde el cliente](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 
@@ -19,8 +19,8 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 Los siguientes tipos de sesiones están soportados por esta clase:
 
 - [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-web-sessions). Se utilizan para las conexiones Web (incluidos los accesos REST) y se controlan mediante los [privilegios](../ORDA/privileges.md) asignados.
-- [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions, managed from the client and from the server.
-- [Sesiones procedimientos almacenados\*\*](../Desktop/sessions.md#stored-procedure-sessions): sesión usuario virtual para todos los procedimientos almacenados ejecutados en el servidor.
+- [**Sesiones usuario remoto**](../Desktop/sessions.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas desde el cliente y el servidor.
+- [**Sesiones procedimientos almacenados**](../Desktop/sessions.md#stored-procedure-sessions): sesión usuario virtual para todos los procedimientos almacenados ejecutados en el servidor.
 - [**Sesiones autónomas**](../Desktop/sessions.md#standalone-sessions): sesión local devuelta en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
 
 :::warning Acerca de los privilegios de sesión
@@ -83,7 +83,7 @@ La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summar
 
 - Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
 - Esta función no elimina los **privilegios promovidos** del proceso web, tanto si se han añadido a través del archivo [roles.json](../ORDA/privileges.md#rolesjson-file) como de la función [`promote()`](#promote).
-- For security reasons, this function cannot be called from the client side of a remote user session (an error is returned).
+- Por razones de seguridad, esta función no puede llamarse desde el lado del cliente de una sesión de usuario remota (se devuelve un error).
 
 :::
 
@@ -134,9 +134,9 @@ Puede definir un tiempo de espera personalizado pasando un valor en segundos en 
 - para sesiones web, el token se crea con la misma duración que el [`.idleTimeOut`](#idletimeout) de la sesión.
 - para sesiones de usuarios remotos, el token se crea con una duración de 10 segundos.
 
-In web sessions, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
+En las sesiones web, el token devuelto puede utilizarse en intercambios con aplicaciones o sitios web de terceros para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
-In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
+En las sesiones de usuarios remotas (y las sesiones autónomas con fines de prueba), el token devuelto puede ser utilizado por 4D para identificar las solicitudes provenientes de la web que [comparten la sesión](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 
@@ -187,7 +187,7 @@ Si se han añadido varios privilegios al proceso web, se debe llamar a la funci�
 :::note Notas
 
 - Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- Esta función no puede llamarse desde el lado del cliente de una sesión de usuario remota (se devuelve un error).
 
 :::
 
@@ -508,26 +508,26 @@ End if
 
 #### Descripción
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the session<!-- END REF -->.
+La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión<!-- END REF -->.
 
-- **Remote user sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
+- **Sesiones usuario remotas** y **Sesiones de procedimientos almacenados**: el objeto `.info` es el mismo objeto que el devuelto en la propiedad "session" por el comando [`Process activity`](../commands/process-activity).
 - **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info).
 - **Sesiones usuario web**: el objeto `.info` contiene las propiedades disponibles para las sesiones de usuario web.
 
 El objeto `.info` contiene las siguientes propiedades:
 
-| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                        |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                           |
-| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                 |
-| machineName      | Text          | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
-| systemUserName   | Text          | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
-| IPAddress        | Text          | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
-| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                         |
-| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                |
-| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                             |
-| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                |
-| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                    |
+| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                     |
+| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                        |
+| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                              |
+| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre del equipo servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul> |
+| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión sistema local</li><ul>                                                                                    |
+| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Standalone session: "localhost"</li></ul>                                                                      |
+| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                      |
+| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                             |
+| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                          |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                             |
+| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                                 |
 
 :::note
 
@@ -636,7 +636,7 @@ Para eliminar un privilegio dinámicamente, llame a la función `demote()` con e
 :::note Notas
 
 - Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- Esta función no puede llamarse desde el lado del cliente de una sesión de usuario remota (se devuelve un error).
 
 :::
 
@@ -717,7 +717,7 @@ En este caso, la sesión actual de usuario web se deja sin tocar (no se restaura
 :::note Notas
 
 - Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- Esta función no puede llamarse desde el lado del cliente de una sesión de usuario remota (se devuelve un error).
 
 :::
 
@@ -797,7 +797,7 @@ La propiedad [`userName`](#username) está disponible a nivel de objeto de sesi�
 :::note Notas
 
 - Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- Esta función no puede llamarse desde el lado del cliente de una sesión de usuario remota (se devuelve un error).
 
 :::
 
@@ -849,7 +849,7 @@ Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Esta p
 :::note Notas
 
 - Al tratarse de un objeto compartido, esta propiedad estará disponible en el objeto `Storage` de la máquina (servidor o cliente).
-- Like the `Storage` object of the machine, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+- Al igual que el objeto `Storage` de la máquina, la propiedad `.storage` es siempre "single": añadir un objeto compartido o una colección compartida a `.storage` no crea un grupo compartido.
 
 :::
 
