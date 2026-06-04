@@ -11,7 +11,8 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Field, Variable | &#8594;  | Numeric field or variable on which to accumulate |
+| dataField | Field | &#8594;  | Numeric field on which to accumulate |
+| dataVar | Variable | &#8594;  | Numeric variable on which to accumulate |
 </div>
 <!-- END REF-->
 

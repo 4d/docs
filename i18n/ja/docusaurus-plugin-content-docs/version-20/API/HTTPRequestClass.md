@@ -319,9 +319,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 <!-- REF #HTTPRequestClass.terminate().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 

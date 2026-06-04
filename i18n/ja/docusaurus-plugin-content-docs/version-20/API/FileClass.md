@@ -336,9 +336,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 <!--REF #FileClass.getAppInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+|戻り値|Object|<-|Contents of .exe/.dll version resource or .plist file|
 </div>
 <!-- END REF -->
 

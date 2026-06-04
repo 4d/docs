@@ -24,13 +24,16 @@ The values that operators affect are operands. In the expression `1 + 2`, the + 
 The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
 
 ```4d
-$myNumber:=3 //assigns 3 to MyNumber variable  
-$myDate:=!2018/01/21! //assigns a date literal
+$myNumber:=3 //assigns 3 to $myNumber variable  
+$myDate:=!2026/01/21! //assigns a date literal
 $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
+$myObject:={ a:2 ; b:$col } //assigns an object reference to $myObject
+$myObject.a:=3 //assigns a value to an object property
 ```
 
 > Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+
 
 
 ## Basic operators

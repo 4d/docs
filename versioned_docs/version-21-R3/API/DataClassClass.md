@@ -1243,14 +1243,21 @@ var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. For example:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  //default order, the first entity is the most similar
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //the first entity is the most similar
 ```
+
+:::note
+
+The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+
+:::
+
 
 If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 

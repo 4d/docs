@@ -38,7 +38,7 @@ Os erros lançados utilizando o comando **throw** são gestionados pelo runtime 
 
 O comando admite três sintaxes:
 
-### **throw(errorCode{; description})**
+### throw(errorCode{; description})
 
 Especifica o código de erro e um texto de descrição opcional, o erro se lança imediatamente.  
 Se não indicar nenhuma descrição, se preenche com:
@@ -46,7 +46,7 @@ Se não indicar nenhuma descrição, se preenche com:
 * Código de erro (errorCode): (host) na aplicação local
 * Código de erro (errorCode): (C00x) em um componente
 
-### **throw(errorObj)**
+### throw(errorObj)
 
 O objeto *errorObj* permite obter informação de erro mais detalhada e controlar a gestão de erros. Pode conter as seguintes propriedades, assim como toda propriedade personalizada à que possa fazer referência à propriedade **message**.
 
@@ -63,7 +63,7 @@ Quando se utilizar esta sintaxe, o objeto *errorObj* se devolve em Últimos erro
 
 **Nota:** é possível chamar o comando várias vezes no mesmo projeto para gerar vários erros. Pode usar a opção diferida para enviar todos os erros de vez.
 
-### **throw** 
+### throw
 
 Lança todos os erros atuais em **modo diferido**, o que significa que se adicionarão a uma pilha e serão geridas quando voltar ao método que os chama. Isso se faz tipicamente desde dentro de uma retrochamada [ON ERR CALL](../commands/on-err-call).
 
@@ -113,6 +113,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## Ver também 
 
 [ASSERT](../commands/assert)  
+[defer](../commands/defer)  
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
 
