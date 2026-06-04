@@ -53,7 +53,7 @@ Deve declarar esses parâmetros desta forma:
 ```4d
   // On Web Authentication Database Method
  
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  
   // Código para o método
 ```
@@ -129,7 +129,7 @@ Exemplo do On Web Authentication database method*Licenses* em modo BASIC:
 
 ```4d
   //Método de banco On Web Authentication
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuário;$senha;$IPNavegador;$IPServidor : Text
  var $ipServerDusuário : Boolean
  ARRAY TEXT($usuários;0)
@@ -178,7 +178,7 @@ Exemplo do On Web Authentication database method em modo DIGEST:
 
 ```4d
   //Método de banco On Web Authentication
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuario : Text
  $result:=False
  $usuario:=$user

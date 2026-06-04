@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ```4d
   // On Web Authentication データベースメソッド
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
   // メソッドコード
 ```
 
@@ -132,7 +132,7 @@ BASIC認証モードの**On Web Authenticationデータベースメソッド**�
 
 ```4d
   //On Web Authentication データベースメソッド
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  
  var $ipServerDuser : Boolean
  ARRAY TEXT($users;0)
@@ -178,7 +178,7 @@ DIGESTモードのの例題:
 
 ```4d
   //On Web Authentication データベースメソッド
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  $result:=False
   //セキュリティのため@を含むユーザ名とパスワードは拒否
  If(WithWildcard($user))

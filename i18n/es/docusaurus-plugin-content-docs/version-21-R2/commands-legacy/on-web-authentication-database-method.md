@@ -44,7 +44,7 @@ Debe declarar estos parámetros de esta forma:
 ```4d
   // Método de base On Web Authentication
  
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  
   // Código para el método
 ```
@@ -123,7 +123,7 @@ Ejemplo del *Método de base On Web Authentication* en modo BASIC:
 
 ```4d
   //Método de base On Web Authentication
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuario;$contraseña;$IPNavegador;$IPServidor : Text
  var $ipServerDusuario : Boolean
  ARRAY TEXT($usuarios;0)
@@ -172,7 +172,7 @@ Ejemplo del  en modo DIGEST:
 
 ```4d
   //Método de base On Web Authentication
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuario : Text
  $result:=False
  $usuario:=$user
