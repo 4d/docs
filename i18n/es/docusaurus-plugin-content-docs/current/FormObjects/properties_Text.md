@@ -434,7 +434,84 @@ Por defecto, esta opción no está activa.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) -
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text)
+
+### Supported tags
+
+You can use the following tags in 4D multi-style text areas.
+
+#### 4D Expression
+
+```html
+<span style="-d4-ref:'expression'"> </span>
+```
+
+This tag inserts a 4D expression (expression, method, field, variable, command, etc.) in the text. The expression is tokenized and evaluated:
+
+- when the expression is inserted
+- when the object is loaded
+- when the `computeExpressions` standard action is called from an interface object or by the [`INVOKE ACTION`](../commands/invoke-action) command
+- when the [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) command is executed
+- when the [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) command is executed, if the second `*` parameter is passed.
+
+The evaluated value of the expression is not saved in the `<span>` tag, only its reference is.
+
+Note: To ensure that expressions will be evaluated correctly regardless of the 4D language or version used, we recommend using the token syntax for elements whose name might vary between different versions (commands, tables, fields, constants). Por ejemplo, para insertar el comando `Current time`, ingrese `Current time:C178`. For more information about this, refer to *Using tokens in formulas*.
+
+#### URL
+
+```html
+<span><a href="url">Visible label</a></span>
+```
+
+This tag inserts a URL in the text. Ejemplo:
+
+```html
+<span><a href="http://www.4d.com/">4D Web Site</a></span>
+```
+
+#### User link
+
+```html
+<span style="-d4-ref-user:'myUserLink'">Click here</span>
+```
+
+"User links" look the same as URLs, but when you click them, they do not automatically open the source. You can pass any string you want as reference, and it is up to the developer to program any custom actions that occur when it is clicked. This means you can create links which are not URLs but references to files, 4D methods, and so on, that you can open or execute when they are clicked. The [`ST Get content type`](../commands/st-get-content-type) command detects if a user link has been clicked.
+
+User links are defined using the [`ST SET TEXT`](../commands/st-set-text) command. Por ejemplo:
+
+```4d
+ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
+```
+
+#### Custom tags
+
+You can insert any tag in plain text, for example `<img src="http://doc.4d.com/pictures/ja.png">`. It is stored in the code of the plain text without being interpreted or displayed. This is particularly useful in the context of e-mails in HTML format and including pictures for example.
+
+#### Style tags
+
+This paragraph lists the attributes of \<SPAN> tags that are supported by 4D in rich text areas. You can use these tags to implement custom style handling. Only the tags listed below are supported by 4D for style variations.
+
+- Font name: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
+- Font size: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
+- Estilo de fuente:
+  - Bold `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
+  - Italic `<SPAN STYLE="font-style: italic"> ... </SPAN>`
+  - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
+  - Underline `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
+  - Strikethrough `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
+
+*Note: The "strikethrough" style is not supported under macOS, but this tag can still be managed by programming.*
+
+- Font colors: `<SPAN STYLE="color:green"> ... </SPAN>` or `<SPAN STYLE="color:#006CCC">...</SPAN>`
+- Background colors: `<SPAN STYLE="background-color:green"> ... </SPAN>` or `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
+
+#### Color values
+
+For font color and background color attributes, the color value can be either the hexadecimal code for an RGB color, or the name of one of the 16 HTML colors defined for standard CSS by the W3C:
+
+![](../assets/en/FormObjects/colors1.png)
+![](../assets/en/FormObjects/colors2.png)
 
 ---
 

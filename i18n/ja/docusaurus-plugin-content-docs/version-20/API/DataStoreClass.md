@@ -49,10 +49,10 @@ title: DataStore
 <!-- REF #_command_.ds.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|localID|Text|->|Local ID of the remote datastore to return|
-|Result |cs.DataStore|<-|Reference to the datastore|
+|localID|Text|->|参照を取得したいリモートデータストアのローカルID|
+|戻り値|cs.DataStore|<-|Reference to the datastore|
 </div>
 <!-- END REF -->
 
@@ -263,9 +263,9 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 
@@ -299,9 +299,9 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 
@@ -812,9 +812,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 

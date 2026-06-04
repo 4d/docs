@@ -137,10 +137,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.all().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+|settings|Object|->|ビルドオプション: context|
+|戻り値|4D.EntitySelection|<-|References on all entities related to the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -188,9 +188,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.clearRemoteCache().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 
@@ -245,11 +245,11 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.fromCollection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|objectCol |Collection|->|Collection of objects to be mapped with entities|
-|settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+|objectCol |Collection|->|エンティティにマップするオブジェクトのコレクション|
+|settings  |Object|->|ビルドオプション: context|
+|戻り値|4D.EntitySelection|<-|Entity selection filled from the collection|
 </div>
 <!-- END REF -->
 
@@ -445,11 +445,11 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.get().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
-|settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
+|primaryKey |Integer OR Text|->|取得するエンティティのプライマリーキー値|
+|settings  |Object|->|ビルドオプション: context|
+|戻り値|4D.Entity|<-|Entity matching the designated primary key|
 </div>
 <!-- END REF -->
 
@@ -530,9 +530,9 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.getCount().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|
+|戻り値|Integer|<-|Number of entities in the dataclass|
 </div>
 <!-- END REF -->
 
@@ -572,9 +572,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
+|戻り値|cs.DataStore|<-|Datastore of the dataclass|
 </div>
 <!-- END REF -->
 
@@ -628,9 +628,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
+|戻り値|Object|<-|Information on the dataclass|
 </div>
 <!-- END REF -->
 
@@ -703,9 +703,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
+|戻り値|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
 </div>
 <!-- END REF -->
 
@@ -796,9 +796,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
+|戻り値|4D.Entity|<-|New entity matching the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -844,10 +844,10 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.newSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+|keepOrder |Integer |-> |`dk keep ordered`: 順列ありのエンティティセレクションを作成します<br/>`dk non ordered`: (あるいは省略時): 順列なしのエンティティセレクションを作成します|
+|戻り値|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
 </div>
 <!-- END REF -->
 
@@ -890,13 +890,13 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|queryString |Text |-> |Search criteria as string|
-|formula |Object |-> |Search criteria as formula object|
-|value|any|->|Value(s) to use for indexed placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+|queryString |Text |-> |検索条件 (文字列)|
+|formula |Object |-> |検索条件 (フォーミュラオブジェクト)|
+|value|any|->|インデックスプレースホルダーで使用する値|
+|querySettings|Object|->|クエリオプション: parameters、 attributes、 args、 allowFormulas、 context、 queryPath、 queryPlan|
+|戻り値|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
 
@@ -1572,9 +1572,9 @@ softwares:{
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
+|settings|Object|->|データクラスに対して、タイムアウトとORDA キャッシュの最大サイズを指定するオブジェクト|
 </div>
 <!-- END REF -->
 

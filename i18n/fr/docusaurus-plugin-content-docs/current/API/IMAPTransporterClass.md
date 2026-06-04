@@ -1471,6 +1471,10 @@ If ($status.success)
 End if
 ```
 
+#### Voir également
+
+[`.addFlags()`](#addflags)
+
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->

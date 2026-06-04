@@ -1467,6 +1467,10 @@ $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
+#### Ver también
+
+[`.addFlags()`](#addflags)
+
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
