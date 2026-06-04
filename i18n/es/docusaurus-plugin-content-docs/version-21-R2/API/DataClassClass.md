@@ -1254,7 +1254,7 @@ var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $c
 Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 

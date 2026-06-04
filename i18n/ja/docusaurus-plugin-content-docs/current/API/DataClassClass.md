@@ -1256,7 +1256,7 @@ var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $c
 同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 は order by に使用されます。
 ```
 
