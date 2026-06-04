@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 A string *instruçao* deve ser uma linha de código.\[#/descv\] Se *instruçao* for uma string vazia,EXECUTE FORMULA não faz nada. A regra geral é que se instrução puder ser executada como um método de uma-linha, então será executado propriamente. Use **EXECUTE FORMULA** apenas eventualmente, pois pode desacelerar a velocidade de execução. Em um banco de dados compilado, a linha de código não é compilada. Isso significa que instrução será compilada, mas não será verificada pelo compilador no momento da compilação.
 
-**Nota:** a execução de fórmulas em modo compilado pode ser otimizada utilizando uma memória caché (ver \[#cmd id="63" anchor="2882913"/\] abaixo).
+**Nota:** a execução de fórmulas em modo compilado pode ser otimizada utilizando uma memória caché (ver [Cache para formulas em modo compilado](#cache-para-formulas-em-modo-compilado) abaixo).
 
 A instrução pode estar em:
 
@@ -47,7 +47,7 @@ A instrução pode estar em:
 * Se l *instrução* for um método projeto, se recomenda utilizar [EXECUTE METHOD](../commands/execute-method) que lhe permite passar parâmetros.
 * Não se recomenda chamar a nenhum comando de declaração de variável como *C\_DATE* em *instrução* já que pode gerar conflitos no código.
 
-A fórmula pode incluir variáveis de processo e variáveis entre processos. Entretanto, a declaração não pode conter o controle das instruções de fluxo (If, While, etc.), já que deve estar em uma linha de código.
+A fórmula pode incluir variáveis de processo e variáveis entre processos. Entretanto, a declaração não pode conter o controle das instruções de fluxo (If, While, Return, Break, etc.), já que deve estar em uma linha de código. Essas palavras-chave serão ignoradas.
 
 Para garantir que a *instrução* seja avaliada corretamente, independentemente da linguagem 4D ou a versão utilizada, se recomenda utilizar a sintaxe de *token* para os elementos cujo nome possa variar entre diferentes versões (comandos, tabelas, campos, constantes). Por exemplo, para inserir o comando \[#cmd id="178"/\], introduza '**Current time:C178**'. Para saber mais, consulte *Usar tokens em fórmulas*. 
 

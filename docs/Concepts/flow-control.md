@@ -799,3 +799,25 @@ logConsole($message)
 
 ```
 
+## defer (expression)
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R4|Added
+</details>
+
+
+The [`defer`](../commands/defer) command allows you to stack one or more expression(s) that will automatically execute when the current method or function **finishes running**.
+
+Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords. 
+
+
+```4d
+   //make sure some code is executed at exit
+defer(myCleaningMethod)
+   //Do something...
+```
+
+See the [`defer`](../commands/defer) command description for more information.

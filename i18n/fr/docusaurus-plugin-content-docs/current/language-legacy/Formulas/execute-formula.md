@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
  La chaîne d'instructions doit comporter une seule ligne. Si *instruction* est une chaîne vide, **EXECUTE FORMULA** ne fait rien. Le principe est que si *instruction* peut être exécutée comme une méthode d'une seule ligne, alors elle s'exécutera correctement. La commande **EXECUTE FORMULA** doit être utilisée avec précautions, car elle ralentit la vitesse d'exécution. Dans une base compilée, le code d'*instruction* n'est pas compilé. Cela signifie que l'*instruction* sera bien exécutée, mais ne sera pas vérifiée par le compilateur au moment de la compilation. 
 
-**Note :** L'exécution de formules en mode compilé peut être optimisée à l'aide d'un cache (cf. paragraphe "Cache de formules en mode compilé" ci-dessous).
+**Note :** L'exécution de formules en mode compilé peut être optimisée à l'aide d'un cache (voir [Cache de formules en mode compilé](#cache-de-formules-en-mode-compile) ci-dessous).
 
 L'*instruction* peut notamment contenir les éléments suivants :
 
@@ -46,7 +46,7 @@ L'*instruction* peut notamment contenir les éléments suivants :
 * Si *instruction* est une méthode projet, il est recommandé d'utiliser [EXECUTE METHOD](../commands/execute-method) qui permet de passer des paramètres.
 * Il est déconseillé d'appeler des commandes de déclaration de variables telles que *C\_DATE* dans *instruction* afin d'éviter tout risque de conflit de type.
 
-La formule peut utiliser des variables process et interprocess. En revanche, *instruction* ne doit pas contenir d'instructions de contrôle de flux (Si, Tant que...) car le code doit "tenir" sur une seule ligne.
+La formule peut utiliser des variables process et interprocess. En revanche, *instruction* ne doit pas contenir d'instructions de contrôle de flux (Si, Tant que, Return, Break, etc.) car le code doit "tenir" sur une seule ligne. Ces mots-clés seront ignorés.
 
 Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](../commands/current-time), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 

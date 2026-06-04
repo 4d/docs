@@ -38,7 +38,7 @@ Errors thrown using the **throw** command are managed by the 4D runtime as any n
 
 The command supports three syntaxes:
 
-### **throw(errorCode{; description})**
+### throw(errorCode{; description})
 
 It specifies the error code and an optional description text, the error is thrown immediately.   
 If no description is provided, it is filled with:
@@ -46,7 +46,7 @@ If no description is provided, it is filled with:
 * Error code errorCode: (host) in the host application
 * Error code errorCode: (C00x) in a component
 
-### **throw(errorObj)**
+### throw(errorObj)
 
 *errorObj* object allows for more detailed error information and control over error handling. It can contain the following properties, as well as any custom property that you can refer to using placeholders within the **message** property. 
 
@@ -61,7 +61,7 @@ When you use this syntax, the *errorObj* object is returned in [Last errors](../
 
 **Note:** It is possible to call the command several times in the same project method to generate several errors. You can use the deferred option to send all errors at once.
 
-### **throw** 
+### throw
 
 It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](../commands/on-err-call) callback.
 
@@ -111,7 +111,8 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## See also 
 
 [ASSERT](../commands/assert)  
-[Last errors](../commands/last-errors)  
+[defer](../commands/defer)    
+[Last errors](../commands/last-errors) 
 [ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
