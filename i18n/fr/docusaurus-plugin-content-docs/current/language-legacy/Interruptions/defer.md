@@ -47,6 +47,8 @@ defer(ALERT("2"))
 
 Dans *exitFormula*, vous passez l'expression à évaluer à la sortie de la méthode ou de la fonction, quelle que soit la manière dont elle se termine. En interne, à chaque appel de `defer`, 4D convertit *exitFormula* en [formula](../../commands/formula) et l'ajoute à une pile associée à la méthode ou à la fonction. Quand la méthode ou la fonction se termine, toutes les formules stockées dans la pile sont évaluées dans l'ordre où elles apparaissent dans la collection.
 
+À des fins de débogage, vous pouvez obtenir la pile actuelle de formules à tout moment à l'aide de la commande [`Deferred formulas`](../../commands/deferred-formulas).
+
 Comme pour toutes les [formulas](../../commands/formula), si l'expression *exitFormula* utilise des variables locales, leurs valeurs courantes sont copiées et stockées dans l'objet formule retourné **au moment où il est placé dans la pile différée**. Lors de l'exécution, la formule utilise ces valeurs copiées et non les valeurs courantes des variables locales.
 
 :::note Notes
@@ -109,11 +111,12 @@ defer(SET DATABASE PARAMETER(Diagnostic log level; $logLevel))
 
 ## Voir aussi 
 
-[throw](../commands/throw)  
+[Deferred formulas](../commands/deferred-formulas)
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
+[throw](../commands/throw)
 
 |  |  |
 | --- | --- |
