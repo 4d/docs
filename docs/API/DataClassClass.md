@@ -1219,7 +1219,7 @@ In this case, the *value* parameter must be a **comparison vector object** conta
 |Property|Type|Description|
 |---|---|---|
 |vector|[4D.Vector](../API/VectorClass.md)|Mandatory. The vector to be compared|
-|metric|Text|Optional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine similarity between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors.|
+|metric|Text|Optional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the [cosine similarity](./VectorClass.md#cosinesimilarity) between vectors.</li><li>`mk dot`: calculates the [dot similarity](VectorClass.md#dotsimilarity) of vectors.</li><li>`mk euclidean`: calculates the [Euclidean distance](./VectorClass.md#euclideandistance) between vectors.|
 |threshold|Real|Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.|
 
 Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value: 
@@ -1236,7 +1236,7 @@ For example, you want to return entities of MyClass where the similarity with a 
 ```4d
 var $myVector : 4D.Vector
 $myVector := getVector //method to get a vector, e.g. from 4D.AIKit
-var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
@@ -1244,21 +1244,24 @@ The **order by** statement is supported in the query string so that entities in 
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //the first entity is the most similar
+  //$results.first() entity is the most similar
 ```
 
 :::note
 
-The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
+- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
 
 :::
 
 
-If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+You can only order on a single vector field. If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
+    {vector : $myVector1 };{vector : $myVector2 })  
+    //myVectorField > :1 is used for the order by
 ```
 
 See [more examples below](#example-4-2) (examples 4 and 5). 
@@ -1267,6 +1270,7 @@ See [more examples below](#example-4-2) (examples 4 and 5).
 :::tip Related blog posts
 
 - [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1635,12 +1639,16 @@ var $result:=$client.embeddings.create("my long text to search"; "text-embedding
 var $vector:=$result.vector
 
   //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+
   //search with default metric (cosine)
-var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
+
   //search with euclidean metric 
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
+var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
+
   //search with explicit cosine metric and custom threshold
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+
   //search with a formula
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
@@ -1649,18 +1657,14 @@ var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vect
 
 #### Example 5
 
-We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
+
 
 ```4d
-  //Create the comparison vectors 
-var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
-var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
-
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
-ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
-    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
-
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 
+var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by myVectorField, salary desc"; $comparisonVector)
 ```
+
 
 #### See also
 
