@@ -161,9 +161,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!--REF #FolderClass.create().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
+|戻り値|Boolean|<-|True if the folder was created successfully, false otherwise|
 </div>
 <!-- END REF -->
 

@@ -874,9 +874,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.isNew().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+|戻り値|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
 </div>
 <!-- END REF -->
 
@@ -1168,9 +1168,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.reload().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|戻り値|Object|<-|Status object|
 </div>
 <!-- END REF -->
 
@@ -1661,9 +1661,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.touched().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+|戻り値|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
 </div>
 <!-- END REF -->
 
@@ -1784,9 +1784,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.unlock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|戻り値|Object|<-|Status object|
 </div>
 <!-- END REF -->
 

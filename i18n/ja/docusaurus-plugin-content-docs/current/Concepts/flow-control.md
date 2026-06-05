@@ -58,6 +58,14 @@ title: 制御フロー
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 上記の結果はほぼ同じで、*MethodB* は必要な場合にのみ評価されます。
 
 > **注記:** [三項演算子](../dt_boolean.md#三項演算子) を使うことで、条件式を 1行で書くことができ、[If...Else](../cf_branching.md#ifelseend-if) 文を置き換えることもできます。
@@ -809,3 +817,24 @@ logConsole($message)
 
 ```
 
+## defer (expression)
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 21 R4 | 追加 |
+
+</details>
+
+The [`defer`](../commands/defer) command allows you to stack one or more expression(s) that will automatically execute when the current method or function **finishes running**.
+
+Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
+
+```4d
+   //make sure some code is executed at exit
+defer(myCleaningMethod)
+   //Do something...
+```
+
+See the [`defer`](../commands/defer) command description for more information.

@@ -14,8 +14,8 @@ slug: /commands/theme/Web-Services-Client
 | [<!-- INCLUDE #_command_.WEB SERVICE SET OPTION.Syntax -->](../../commands/web-service-set-option)<br/>       |
 | [<!-- INCLUDE #_command_.WEB SERVICE SET PARAMETER.Syntax -->](../../commands/web-service-set-parameter)<br/> |
 
-A Web Service is a set of functions published on a network. These functions can be called and used by any application compatible with Web Services and connected to the network. Web Services can carry out all types of tasks, such as supervising the routing of packages at a transporter’s, e-commerce, monitoring market values, etc.
+Un Servicio Web es un conjunto de funciones publicadas en una red. Estas funciones pueden ser llamadas y utilizadas por cualquier aplicación compatible con los Servicios Web y conectada a la red. Los servicios web pueden realizar todo tipo de tareas, como supervisar el enrutamiento de paquetes en un transportista, el comercio electrónico, controlar los valores del mercado, etc.
 
-Subscription to Web Services with 4D is easy to carry out using the [Web Services Wizard](https://doc.4d.com/4Dv21/4D/21/Subscribing-to-a-Web-Service-in-4D.300-7676804.en.html). In most cases, this Wizard will be sufficient for you to be able to use Web Services. However, if you want to customize certain mechanisms, you must use the client SOAP commands of 4D.
+La suscripción a Servicios Web con 4D es fácil de llevar a cabo utilizando el [Asistente de Servicios Web](https://doc.4d.com/4Dv21/4D/21/Subscribing-to-a-Web-Service-in-4D.300-7676804.en.html). En la mayoría de los casos, este Asistente será suficiente para que pueda utilizar los Servicios Web. Sin embargo, si desea personalizar ciertos mecanismos, debe utilizar los comandos SOAP cliente de 4D.
 
-Note: By convention, the terms “SOAP” and “Web Service” have been used to differentiate between command (and constant) names on the server and client side, respectively. These two concepts refer to the same technology.
+Nota: por convención, se han utilizado los términos "SOAP" y "Servicio Web" para diferenciar entre nombres de comandos (y constantes) en el lado del servidor y del cliente, respectivamente. Estos dos conceptos se refieren a la misma tecnología.

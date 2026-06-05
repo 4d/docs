@@ -1247,9 +1247,15 @@ var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 La instrucción **orden by** es soportada en la cadena de consulta para que las entidades en la selección de entidad resultante estén ordenadas por similitud. Por ejemplo:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  //orden por defecto, la primera entidad es la más parecida
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //the first entity is the most similar
 ```
+
+:::note
+
+The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+
+:::
 
 Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
 

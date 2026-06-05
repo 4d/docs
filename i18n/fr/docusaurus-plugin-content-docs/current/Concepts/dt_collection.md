@@ -110,6 +110,43 @@ Vous pouvez créer deux types de collections :
 
 Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
+## Affectation
+
+Les données de type collection et [objet](./dt_object.md) sont gérées dans le langage 4D via des **références** (c'est-à-dire des pointeurs internes), contrairement aux données de type scalaire (entier, date, etc.). Par conséquent, lors de l'affectation d'une collection à une variable (par exemple `$myVar:=[1;2;3]`), c'est la **référence** qui est affectée, et non la valeur elle-même. Toute modification ultérieure de la variable *$myVar* sera donc répercutée partout où la collection originale est référencée. Cela suit le même principe que les [pointeurs](./dt_collection.md), sauf que la variable *$myVar* n'a pas besoin d'être déréférencée.
+
+Par exemple :
+
+```4d
+var $col1; $col2 : Collection
+var $o : Object
+
+$col1:=[1;2;3] //une référence à la collection est créée
+$col2:=$col1 //les deux variables partagent la même référence de collection
+$o:={ list:$col1 } //l'objet stocke une référence à la même collection
+
+$col1.push(4)
+//$col2 = [1,2,3,4]
+//$o = {"list":[1,2,3,4]}
+
+$col2[0]:=10
+//$col1 = [10,2,3,4]
+//$o = {"list":[10,2,3,4]}
+
+$o.list.push(5)
+//$col1 = [10,2,3,4,5]
+//$col2 = [10,2,3,4,5]
+
+ASSERT($col1=$col2) //True
+```
+
+Ce principe s'applique partout où des objets ou des collections sont affectés, y compris dans les expressions de [paramètres](./parameters.md) ou de [formule](../commands/formula).
+
+:::note
+
+Si vous souhaitez créer une **copie profonde** d'une collection, utilisez la fonction [`collection.copy()`](../API/CollectionClass.md#copy).
+
+:::
+
 ## Fonctions de collection
 
 Les références de collections 4D bénéficient de fonctions de classe spéciales (aussi nommées *fonctions membres*). Les fonctions de collection sont listées dans la section [Collection Class](../API/CollectionClass.md) .

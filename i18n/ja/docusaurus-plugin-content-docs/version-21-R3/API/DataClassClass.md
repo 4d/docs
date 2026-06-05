@@ -1249,15 +1249,21 @@ var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 **order by** 宣言はクエリ文字列でサポートされており、これによって返されるエンティティセレクション内でエンティティは類似度順にソートされます。 例:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  // デフォルト順、最初のエンティティは最も類似したもの
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //the first entity is the most similar
 ```
+
+:::note
+
+The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+
+:::
 
 同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 は order by に使用されます。
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 
 詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。

@@ -3,6 +3,14 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 21 R4
+
+Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.
+
+#### ハイライト
+
+- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit.
+
 ## 4D 21 R3
 
 [**4D 21 R3 の新機能**](https://blog.4d.com/ja/whats-new-in-4d-21-r3/): 4D 21 R3 の新機能と拡張機能をすべてリストアップしたブログ記事です。

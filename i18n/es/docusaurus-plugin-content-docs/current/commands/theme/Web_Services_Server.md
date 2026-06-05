@@ -13,6 +13,6 @@ slug: /commands/theme/Web-Services-Server
 | [<!-- INCLUDE #_command_.SOAP Request.Syntax -->](../../commands/soap-request)<br/>                         |
 | [<!-- INCLUDE #_command_.SOAP SEND FAULT.Syntax -->](../../commands/soap-send-fault)<br/>                   |
 
-Publication of Web Services with 4D is carried out easily using [options in the method properties](../../Project/project-method-properties.md#web-services). In most cases, this operation will be sufficient to enable you to publish Web Services. However, if you want to customize certain mechanisms, use data arrays, etc., you must use the server SOAP commands of 4D.
+La publicación de Servicios Web con 4D se realiza fácilmente utilizando [opciones en las propiedades del método](../../Project/project-method-properties.md#web-services). En la mayoría de los casos, esta operación será suficiente para permitirle publicar Servicios Web. Sin embargo, si desea personalizar ciertos mecanismos, utilizar arrays de datos, etc., deberá utilizar los comandos SOAP del servidor de 4D.
 
-Note: By convention, the terms “SOAP” and “Web Service” have been used to differentiate between command (and constant) names on the server and client side, respectively. These two concepts refer to the same technology.
+Nota: por convención, se han utilizado los términos "SOAP" y "Servicio Web" para diferenciar entre nombres de comandos (y constantes) en el lado del servidor y del cliente, respectivamente. Estos dos conceptos se refieren a la misma tecnología.

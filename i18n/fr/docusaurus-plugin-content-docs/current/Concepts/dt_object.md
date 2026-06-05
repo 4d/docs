@@ -28,7 +28,7 @@ N'oubliez pas que les noms de propriétés font la différence entre les majuscu
 
 :::
 
-Vous gérez les variables, champs ou expressions de type Objet en utilisant la [notation Objet](#properties) ou les commandes disponibles dans le thème **Objets (Langage)**. A noter que des commandes spécifiques du thème **Recherches et tris** telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
+Vous gérez les variables, champs ou expressions de type Objet en utilisant la [notation Objet](#properties) ou les commandes disponibles dans le thème **Objets (Langage)**.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
@@ -113,6 +113,36 @@ Vous pouvez créer deux types d'objets :
 - des objets ordinaires (non partagés), en utilisant la commande [`New object`](../commands/new-object) ou la syntaxe littérale des objets (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
 - des objets partagés, en utilisant la commande [`New shared object`](../commands/new-shared-object). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
+
+## Affectation
+
+Les données de type objet et [collection](./dt_collection.md) sont gérées dans le langage 4D via des **références** (c'est-à-dire des pointeurs internes), contrairement aux données de type scalaire (entier, date, etc.). Par conséquent, lors de l'affectation d'un objet ou d'une collection à une variable (par exemple `$myVar:={ a:2 }`), c'est la **référence** qui est affectée, et non la valeur elle-même. Toute modification ultérieure de la variable *$myVar* sera donc répercutée partout où l'objet original est référencé. Cela suit le même principe que les [pointeurs](./dt_collection.md), sauf que la variable *$myVar* n'a pas besoin d'être déréférencée.
+
+Par exemple :
+
+```4d
+var $o1; $o2 : Object
+var $col : Collection
+
+$col:=[1;2;3] //une référence à la collection est créée
+$o1:={ a:2 ; b:$col } //une référence à l'objet est créée
+$o2:=$o1 //les variables $o1 et $o2 partagent une référence au même objet
+
+$o1.a:=10 //$o2 = {"a":10,"b":[1,2,3]}
+$o2.a:=20 //$o1 = {"a":20,"b":[1,2,3]}
+$col.push(4) 
+//$o1 = {"a":20,"b":[1,2,3,4]}
+//$o2 = {"a":20,"b":[1,2,3,4]}
+ASSERT($o1=$o2) //True
+```
+
+Ce principe s'applique partout où des objets ou des collections sont affectés, y compris dans les expressions de [paramètres](./parameters.md) ou de [formule](../commands/formula).
+
+:::note
+
+Si vous souhaitez créer une **copie profonde** d'un objet, utilisez la commande [`OB COPY`](../commands/ob-copy).
+
+:::
 
 ## Propriétés {#properties}
 

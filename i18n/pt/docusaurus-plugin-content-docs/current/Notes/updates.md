@@ -3,6 +3,14 @@ id: updates
 title: Notas de lançamento
 ---
 
+## 4D 21 R4
+
+Leia [**O que há de novo no 4D v21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v21 R4.
+
+#### Destaques
+
+- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit.
+
 ## 4D 21 R3
 
 Leia [**O que há de novo no 4D v21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v21 R3.
