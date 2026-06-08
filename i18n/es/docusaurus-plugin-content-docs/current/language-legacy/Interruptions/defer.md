@@ -114,8 +114,6 @@ defer(SET DATABASE PARAMETER(Diagnostic log level; $logLevel))
 [Deferred formulas](../commands/deferred-formulas)
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
-
-## Propiedades
 [throw](../commands/throw)
 
 |  |  |
