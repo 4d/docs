@@ -147,8 +147,8 @@ The following table summarizes where the code is executed by default and how to 
 |[User class functions](../Concepts/classes.md#function)|local|n/a|
 |[Shared or session singleton function](../Concepts/classes.md#singleton-classes)|local|use `server` keyword in function definition|
 |Trigger|server|n/a|
-|Project method called from a client|client|check [**Execute on server** option](../Project/project-method-properties.md#execute-on-server). The code is executed in the twin process of the [user session process](./sessions.md#remote-user-sessions-remote-user-sessions)|
-|||call [`Execute on server`](../commands/execute-on-server) command. The code is executed in the [Stored procedures session](./sessions.md#stored-procedure-sessions-stored-procedure-sessions) |
+|Project method called from a client|client|check [**Execute on server** option](../Project/project-method-properties.md#execute-on-server). The code is executed in the twin process of the [user session process](./sessions.md#remote-user-sessions)|
+|||call [`Execute on server`](../commands/execute-on-server) command. The code is executed in the [Stored procedures session](./sessions.md#stored-procedure-sessions) |
 |Project method called from a stored procedure on the server|server|call [`EXECUTE ON CLIENT`](../commands/execute-on-client) command. The target client must have been [registered](../commands/register-client) |
 |Object method|local|n/a|
 |Database methods:<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul>|server|n/a|

@@ -115,7 +115,7 @@ You want to list 4D built-in classes:
 
 ## Class object
 
-When a class is [defined](#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
+When a class is [defined](../Project/code-overview.md#creating-classes) in the project, it is loaded in the 4D language environment. A class is an object itself, of ["Class" class](API/ClassClass.md). A class object has the following properties and function:
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
