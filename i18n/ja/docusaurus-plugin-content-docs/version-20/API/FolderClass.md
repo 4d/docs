@@ -219,12 +219,12 @@ End if
 <!--REF #FolderClass.createAlias().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut reference|
+|destinationFolder|4D.Folder|->|エイリアスまたはショートカットの作成先フォルダー|
+|aliasName|Text|->|エイリアスまたはショートカットの名称|
+|aliasType|Integer|->|エイリアスリンクのタイプ|
+|戻り値|4D.File|<-|Alias or shortcut reference|
 </div>
 <!-- END REF -->
 

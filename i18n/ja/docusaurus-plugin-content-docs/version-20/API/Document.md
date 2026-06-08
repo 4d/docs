@@ -453,9 +453,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|Result | 4D.Blob |<-|File content|
+|戻り値| 4D.Blob |<-|File content|
 </div>
 <!-- END REF -->
 
@@ -534,12 +534,12 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|charSetName |Text |-> |Name of character set|
-|charSetNum |Integer |-> |Number of character set|
-|breakMode|Integer |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|
+|charSetName |Text |-> |文字セット名|
+|charSetNum |Integer |-> |文字セットのID番号|
+|breakMode|Integer |-> |改行文字に対する処理モード|
+|戻り値|Text  |<- |ドキュメントからのテキストhe document|
 </div>
 <!-- END REF -->
 
