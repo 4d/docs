@@ -1222,11 +1222,11 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 この場合、*value* 引数は、以下のプロパティを格納した**比較ベクトルオブジェクト** である必要があります:
 
-| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                |
-| --------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                  |
-| metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 以下の(テキスト)定数のいずれか一つを使用できます:<li>`mk cosine` (省略時のデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>`mk dot`: ベクトルのドット類似度を計算します。</li><li>`mk euclidean`: ベクトル間のユークリッド距離を計算します。 |
-| threshold | Real                                               | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                  |
+| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the [cosine similarity](./VectorClass.md#cosinesimilarity) between vectors.</li><li>`mk dot`: calculates the [dot similarity](VectorClass.md#dotsimilarity) of vectors.</li><li>`mk euclidean`: calculates the [Euclidean distance](./VectorClass.md#euclideandistance) between vectors. |
+| threshold | Real                                               | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 **comparator** 記号の、一部のみがサポートされます。 これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
@@ -1241,8 +1241,8 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //(例: 4D.AIKit などから)ベクトルを取得するメソッド
-var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
@@ -1250,20 +1250,24 @@ var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //the first entity is the most similar
+  //$results.first() entity is the most similar
 ```
 
 :::note
 
-The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+
+- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
+- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
 
 :::
 
-同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
+You can only order on a single vector field. 同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
+    {vector : $myVector1 };{vector : $myVector2 })  
+    //myVectorField > :1 is used for the order by
 ```
 
 詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。
@@ -1271,6 +1275,7 @@ var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 orde
 :::tip 関連したblog 記事
 
 - [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1637,30 +1642,29 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  // embedding 属性は4D.Vector クラスオブジェクトを格納した4D フィールドに基づいています
-  // デフォルトのmetric (コサイン)での検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
-  // ユークリッド計量での検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
-  // 明示的にコサイン計量を指定し、カスタムのしきい値を用いた検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
-  // フォーミュラを使用した検索
-var $employees:=ds.Employee.query(Formula(This.embedding.cosineSimilarity($vector)>0.9))
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
+
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
+
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+
+  //search with a formula
+var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### 例題 5
 
-異なるメトリックでのベクトルを使用したベクトル類似度によるクエリを実行し、コサイン類似度で結果を並べ替えたい場合を考えます:
+Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
 
 ```4d
-  // 比較ベクトルを作成
-var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
-var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
-
-  // embedding 属性は、4D.Vector クラスオブジェクトを格納している4D フィールドに基づいています
-ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
-    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 
+var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by myVectorField, salary desc"; $comparisonVector)
 ```
 
 #### 参照

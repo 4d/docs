@@ -9,7 +9,8 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 
 #### ハイライト
 
-- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit.
+- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface.md#multi-level-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
+- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
 
 ## 4D 21 R3
 
@@ -18,7 +19,7 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 #### ハイライト
 
 - [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
-- 4D Write Pro は[階層リストスタイルシート](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets) サポートするようになり、これにより自動ナンバリングつきの、構造化された[マルチレベルのリスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) の作成と管理が可能になりました。
+- 4D Write Pro now supports [multi-level list style sheets](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
 - テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
 - IMAP transporter は、[4D.IMAPNotifier](../API/IMAPNotifierClass.md) クラスの、[notifier オブジェクト](../API/IMAPTransporterClass.md#notifier) を通して、IDLE プロトコルを使用したメールボックスイベント通知イベントをサポートするようになりました。またこのクラスは [IMAP New transporter](../commands/imap-new-transporter) の `listener` プロパティを通して設定することができます。

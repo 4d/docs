@@ -397,12 +397,12 @@ title: Document クラス
 <!-- REF #document.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|destinationFolder | 4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.File|<-|Copied file|
+|destinationFolder | 4D.Folder |->|コピー先フォルダ|
+|newName|Text|->|コピーの新しい名前|
+|overwrite|Integer|->|既存の要素を上書きするためには `fk overwrite`|
+|戻り値|4D.File|<-|Copied file|
 </div>
 <!-- END REF -->
 
@@ -497,10 +497,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getIcon().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|size|Integer|->|返されるピクチャーの一辺の長さ(ピクセル単位)|
+|戻り値|Picture|<-|Icon|
 </div>
 <!-- END REF -->
 

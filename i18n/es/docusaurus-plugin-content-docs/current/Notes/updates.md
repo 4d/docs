@@ -9,7 +9,8 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 
 #### Lo más destacado
 
-- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit.
+- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface.md#multi-level-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
+- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
 
 ## 4D 21 R3
 
@@ -18,7 +19,7 @@ Lea [**Novedades en 4D 21 R3**](https://blog.4d.com/es/whats-new-in-4d-21-r3/), 
 #### Lo más destacado
 
 - El comando [`JSON Validate`](../commands/json-validate) ahora es compatible con el borrador 2020-12 del esquema JSON.
-- 4D Write Pro now supports [hierarchical list style sheets](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
+- 4D Write Pro now supports [multi-level list style sheets](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 - Nueva clase [`4D.Method`](../API/MethodClass.md) para crear y ejecutar un código de método 4D a partir de una fuente de texto. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
 - IMAP transporter now supports mailbox event notifications using the IDLE protocol through a [notifier object](../API/IMAPTransporterClass.md#notifier) of the [4D.IMAPNotifier](../API/IMAPNotifierClass.md) class, configurable via the `listener` property of [IMAP New transporter](../commands/imap-new-transporter).
