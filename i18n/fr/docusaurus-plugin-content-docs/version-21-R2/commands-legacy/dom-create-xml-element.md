@@ -70,10 +70,17 @@ La commande retourne en résultat la référence XML de l’élément créé.
 
 Nous souhaitons créer l’élément suivant : 
 
-```RAW
-                                      
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3> </Elem3>
+         <Elem3> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>        
 ```
-
 Pour cela, il suffit d’écrire :
 
 ```4d
@@ -87,8 +94,16 @@ Pour cela, il suffit d’écrire :
 
 Nous souhaitons créer l’élément suivant (comportant des attributs) : 
 
-```RAW
-                                      
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3 Font=Verdana Size=10> </Elem3>
+         <Elem3 Font=Verdana Size=8> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>               
 ```
 
 Pour cela, il suffit d’écrire :
@@ -120,8 +135,17 @@ Si par la suite vous souhaitez insérer un élément, vous pouvez saisir le code
 
 Vous obtenez alors :
 
-```RAW
-                                                
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RootElement>
+   <Elem1>
+      <Elem2>
+         <Elem3 Font=Verdana Size=10> </Elem3>
+         <Elem3 Font=Arial> </Elem3>
+         <Elem3 Font=Verdana Size=8> </Elem3>
+      </Elem2>
+   </Elem1>
+</RootElement>                                  
 ```
 
 ## Exemple 3 

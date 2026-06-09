@@ -45,8 +45,13 @@ displayed_sidebar: docs
 
 結果の例:
 
-```RAW
-2016-12-12T13:31:29.477Z   Log with timestamp2016-12-12T13:31:29.478Z   Connection of user12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'2016-12-12T13:31:29.492Z   Click on button16842016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
+```txt
+2016-12-12T13:31:29.477Z   Log with timestamp
+2016-12-12T13:31:29.478Z   Connection of user
+12016-12-12T13:31:29.486Z   ERROR - Exception of type 'System exception'
+2016-12-12T13:31:29.492Z   Click on button1684
+2016-12-12T13:31:29.502Z   [SP_HELP- 1 rows] Command processed
+2016-12-12T13:31:29.512Z   [SP_HELP- 5 rows] Result set fetched
 ```
 
 ## 参照 

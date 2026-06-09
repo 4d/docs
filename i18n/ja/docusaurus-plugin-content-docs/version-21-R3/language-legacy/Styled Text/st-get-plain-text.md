@@ -78,9 +78,10 @@ displayed_sidebar: docs
 
 "MyArea" というマルチスタイルエリア内に以下の様なテキストが入っている場合:
 
-```RAW
-It is now   Go to the 4D site or Open a window
+```html
+<span>It is now <span style="-d4-ref:'Current time:C178'"> </span> <a href="http://www.4d.com">Go to the 4D site</a> or <span style="-d4-ref-user:'openW'">Open a window</span></span>
 ```
+
 
 このテキストは以下の様に表示されます:
 

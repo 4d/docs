@@ -41,7 +41,7 @@ Também pode utilizar o parâmetro *fonte*, em cujo caso o novo objeto 4D Write 
 
 Como padrão, expressões HTML inseridas em documentos 4D WRite legados não são importados (não têm compatibilidade com 4D Write Pro). Se passar a constante wk import html expressions as text no parâmetro *opção*, expressões HTML serão importadas como texto raw entre as tags *##htmlBegin##* e *##htmlEnd##* \-- que exigirá depois ações de formatação. Por exemplo:
 
-```RAW
+```html
 ##htmlBegin##Imported titlebold##htmlEnd##
 ```
 

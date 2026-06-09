@@ -68,8 +68,18 @@ El comando devuelve la referencia XML de los elementos encontrados. Cuando se pa
 
 Dada la siguiente estructura XML:
 
-```RAW
-  Harry Potter  29.99  Learning XML  39.95
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bookstore>
+<book>
+  <title lang="en">Harry Potter</title>
+  <price>29.99</price>
+</book>
+<book>
+  <title lang="en">Learning XML</title>
+  <price>39.95</price>
+</book>
+</bookstore>
 ```
 
 Este ejemplo permite buscar rápidamente un elemento XML y mostrar su valor:

@@ -67,8 +67,9 @@ Par défaut, si le paramètre *modeRetour* est omis, les caractères de fin de l
 
 Soit le document texte suivant (les champs sont séparés par des tabulations) :
 
-```RAW
-id    name    price    vat3    4D Tags    99    19,6
+```txt
+id    name    price    vat
+3    4D Tags    99    19,6
 ```
 
 Si vous exécutez ce code :

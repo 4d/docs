@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **\*\*** *Tokenized equivalents are 4D language and structure elements in plain text* **expressed with token syntax as shown below (* *see also Using tokens in formulas):* 
 
-```RAW
+```txt
 [Table:1]Field:1+String:C10(1)
 ```
 

@@ -74,14 +74,28 @@ Note que usted es libre de utilizar este parámetro a su conveniencia. 4D simple
 * **Encabezado y cuerpo de la petición HTTP**  
 El segundo parámetro ($http) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa a su Método base On Web Connection tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión  
 Con Safari corriendo en Mac OS, puede recibir un encabezado similar a este:  
-```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+```txt
+GET /favicon.ico HTTP/1.1
+Referer: http://123.45.67.89/4dcgi/test
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10
+Cache-Control: max-age=0
+Accept: */*
+Accept-Language: fr-fr
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 123.45.67.89
 ```  
     
     
 Con Microsoft Internet Edge en Windows, puede recibir un encabezado similar a este:  
-```RAW  
-GET / HTTP/1.1Accept: image/jpeg, application/x-ms-application,  image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap,  application/vnd.ms-powerpoint, application/vnd.ms-excel,  application/msword, */*Accept-Language: fr-FRUser-Agent:  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2;  .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center  PC 6.0; .NET4.0C)Accept-Encoding: gzip, deflateHost: 123.45.67.89Connection: Keep-Alive  
+```txt
+GET / HTTP/1.1
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/vnd.ms-powerpoint, application/vnd.ms-excel, application/msword, */*
+Accept-Language: fr-FR
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+Accept-Encoding: gzip, deflate
+Host: 123.45.67.89
+Connection: Keep-Alive
 ```
  Si su aplicación manipula esta información, es su decisión analizar el encabezado y el cuerpo. **Nota:** por razones de rendimiento, el tamaño de estos datos no puede ser mayor a 32 KB. Si el tamaño es mayor, los datos son truncados por el servidor 4D HTTP.
 * **Dirección IP del cliente web**  

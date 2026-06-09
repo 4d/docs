@@ -41,7 +41,7 @@ Si se utiliza el parámetro *fuente*, el nuevo objeto 4D Write Pro se llenará c
 
 De forma predeterminada, las expresiones HTML insertadas en documentos antiguos 4D Write no se importan (no es soportado por 4D Write Pro). Si pasa la constante wk import html expressions as texten el parámetro *opcion*, las expresiones HTML se importarán como texto sin procesar dentro de las etiquetas *##htmlBegin##* y *##htmlEnd##* tags -- lo que requerirá acciones de formateo posteriores. Por ejemplo
 
-```RAW
+```html
 ##htmlBegin##Imported titlebold##htmlEnd##
 ```
 

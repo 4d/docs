@@ -68,8 +68,18 @@ displayed_sidebar: docs
 
 以下のXML 構造がある場合を考えます:
 
-```RAW
-  Harry Potter  29.99  Learning XML  39.95
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bookstore>
+<book>
+  <title lang="en">Harry Potter</title>
+  <price>29.99</price>
+</book>
+<book>
+  <title lang="en">Learning XML</title>
+  <price>39.95</price>
+</book>
+</bookstore>
 ```
 
 以下のコードを実行すると、XML 要素を素早く検索し、その値を表示させることができます:
