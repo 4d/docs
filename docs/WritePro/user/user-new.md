@@ -60,7 +60,7 @@ Multi-level lists can be managed using:
 
 <!-- END REF -->
 
-<!-- REF multi-level-list.Desc -->
+<!-- REF multi-level-list-style-sheets.Desc -->
 
 ## Multi-level list style sheets
 
