@@ -1,4 +1,4 @@
-d---
+---
 id: writeprointerface
 title: 4D Write Pro Interface
 slug: /WritePro/write-pro-interface
