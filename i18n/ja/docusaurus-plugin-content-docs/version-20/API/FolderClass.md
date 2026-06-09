@@ -72,13 +72,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF #_command_.Folder.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|path|Text|->|Folder path|
-|folderConstant|Integer|->|4D folder constant|
-|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
-|*||->|* to return folder of host database|
-|Result|4D.Folder|<-|New folder object|
+|path|Text|->|フォルダーパス|
+|folderConstant|Integer|->|4Dフォルダー定数|
+|pathType|Integer|->|`fk posix path` (デフォルト) または `fk platform path`|
+|*||->|ホストデータベースのフォルダーを返すには * を渡します|
+|戻り値|4D.Folder|<-|New folder object|
 </div>
 <!-- END REF -->
 
@@ -277,9 +277,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF #FolderClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|option |Integer|->|Folder deletion option|
+|option |Integer|->|フォルダー削除のオプション|
 </div>
 <!-- END REF -->
 
@@ -353,11 +353,11 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!--REF #FolderClass.moveTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
-|newName|Text|->|Full name for the moved folder|
-|Result|4D.Folder|<-|Moved folder|
+|destinationFolder|4D.Folder|->|移動先フォルダー|
+|newName|Text|->|移動先でのフォルダーの完全な名称|
+|戻り値|4D.Folder|<-|Moved folder|
 </div>
 <!-- END REF -->
 
@@ -411,10 +411,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!--REF #FolderClass.rename().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|newName|Text|->|New full name for the folder|
-|Result|4D.Folder|<-|Renamed folder|
+|newName|Text|->|フォルダーの新しい完全な名称|
+|戻り値|4D.Folder|<-|Renamed folder|
 </div>
 <!-- END REF -->
 

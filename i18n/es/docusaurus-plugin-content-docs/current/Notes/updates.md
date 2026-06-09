@@ -9,8 +9,15 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 
 #### Lo más destacado
 
-- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface.md#multi-level-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
+- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
 - New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
+- New session `.quotas` property to configure thresholds for sessions.
+- New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
+- New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
+
+#### Cambios de comportamiento
+
+- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
 
 ## 4D 21 R3
 
@@ -73,23 +80,24 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 
 ## Tabla de la librería
 
-| Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                             |
-| --------- | -------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| BoringSSL | 664a985                                | **21 R4**         | Utilizado para QUIC                                                                                                                                    |
-| CEF       | 7258                                   | 21                | Chromium 139                                                                                                                                           |
-| Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                              |
-| ICU       | 77.1                   | 21                | Esta actualización fuerza una reconstrucción automática de los índices alfanuméricos, textos y objetos.                                |
-| libldap   | 2.6.10 | 21                |                                                                                                                                                        |
-| libsasl   | 2.1.28 | 20                |                                                                                                                                                        |
-| Liblsquic | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                    |
-| Libuv     | 1.51.0 | 21                | Utilizado para QUIC                                                                                                                                    |
-| libZip    | 1.11.4 | 21                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
-| LZMA      | 5.8.1  | 21                |                                                                                                                                                        |
-| ngtcp2    | 1.22.1 | **21 R4**         | Utilizado para QUIC                                                                                                                                    |
-| OpenSSL   | 4.0                    | **21 R4**         |                                                                                                                                                        |
-| PDFWriter | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS  | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
-| webKit    | WKWebView                              | 19                |                                                                                                                                                        |
-| Xerces    | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
-| Zlib      | 1.3.1  | 21                |                                                                                                                                                        |
+| Librería        | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                             |
+| --------------- | -------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BoringSSL       | 664a985                                | **21 R4**         | Utilizado para QUIC                                                                                                                                    |
+| CEF             | 7258                                   | 21                | Chromium 139                                                                                                                                           |
+| Hunspell        | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                              |
+| ICU             | 77.1                   | 21                | Esta actualización fuerza una reconstrucción automática de los índices alfanuméricos, textos y objetos.                                |
+| libldap         | 2.6.10 | 21                |                                                                                                                                                        |
+| libsasl         | 2.1.28 | 20                |                                                                                                                                                        |
+| Liblsquic       | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                    |
+| Libuv           | 1.51.0 | 21                | Utilizado para QUIC                                                                                                                                    |
+| libZip          | 1.11.4 | 21                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
+| LZMA            | 5.8.1  | 21                |                                                                                                                                                        |
+| ngtcp2          | 1.22.1 | **21 R4**         | Utilizado para QUIC                                                                                                                                    |
+| OpenSSL         | 4.0                    | **21 R4**         |                                                                                                                                                        |
+| PDFWriter       | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
+| SpreadJS        | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
+| webKit          | WKWebView                              | 19                |                                                                                                                                                        |
+| Windows App SDK | 2.0.1  | **21 R4**         | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                             |
+| Xerces          | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
+| Zlib            | 1.3.1  | 21                |                                                                                                                                                        |
 

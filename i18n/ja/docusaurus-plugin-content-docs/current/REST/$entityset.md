@@ -7,10 +7,11 @@ title: $entityset
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                                                                                                                                       | 例題                                                                           | 説明                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                |
-| [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
+| シンタックス                                                                                                                                                                                       | 例題                                                                           | 説明                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                                                   |
+| [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します                                    |
+| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Releases one or more existing entity sets from the 4D Server's cache |
 
 ## $entityset/\{entitySetID\}
 
@@ -89,3 +90,28 @@ title: $entityset
 次の例では、2つのエンティティセットのいずれかあるいは両方に含まれているエンティティすべてを格納した新しいエンティティセットを作成します:
 
 ` GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
+
+## $entityset/$release
+
+Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+
+### 説明
+
+You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+
+### 例題
+
+Release two entity sets from the server's cache:
+
+`POST  /rest/Employee/$entityset/$release`
+
+The body must contain a collection with the entity sets ids to release:
+
+**POST データ**:
+
+```json
+[
+"552AE0C8329045FDB65A8C151AEBC532", "9D0617688D7540C090D7675CAF21D7C8"
+]
+```
+

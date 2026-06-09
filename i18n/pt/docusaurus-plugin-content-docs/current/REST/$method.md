@@ -9,9 +9,8 @@ Este parâmetro permite-lhe definir a operação a executar com a entidade ou a 
 
 | Sintaxe                                         | Exemplo                                                                                 | Descrição                                                                                                    |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Elimina a entidade, coleção de entidades ou seleção de entidades atual                                       |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Deletes the current entity, entity collection, or entity set                                                 |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | Cria um conjunto de entidades no cache do 4D Server baseado na coleção de entidades definidas no pedido REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                | Libera um conjunto de entidades existente armazenado no cache do 4D Server                                   |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Cria um conjunto de entidades com base na coleção de entidades relacionadas definidas no pedido REST         |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | Actualiza e/ou cria uma ou mais entidades                                                                    |
 
@@ -53,62 +52,34 @@ Cria um conjunto de entidades no cache do 4D Server baseado na coleção de enti
 
 ### Descrição
 
-Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
+Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to [`$timeout`](./$timeout.md). It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
 
 If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
 
+:::note
+
+By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
+
 ### Exemplo
 
-To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
+Para criar um conjunto de entidades, que será guardado no cache do 4D Server por duas horas, adicione `$method=entityset` no final do seu pedido REST:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
+Pode criar um conjunto de entidades que será armazenado na cache do 4D Server por apenas dez minutos, passando um novo timeout para `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
+Também é possível guardar o filtro e ordenar por, passando true para `$savedfilter` e `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 
-Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:
+Depois de criar um conjunto de entidades, o primeiro elemento, `__ENTITYSET`, é adicionado ao objeto retornado e indica o URI a ser usado para acessar o conjunto da entidade:
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-```
-
-## $method=release
-
-Libera um conjunto de entidades existente armazenado no cache do 4D Server.
-
-### Descrição
-
-Você pode lançar um entity set, que você criou usando [`$method=entityset`](#methodentityset), no cache do servidor 4D.
-
-### Exemplo
-
-Mostra um conjunto de entidades existente:
-
-`GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
-
-#### Responsa:
-
-Se o pedido for bem sucedido, é devolvida a seguinte resposta:
-
-```json
-{
-    "ok": true
-} If the entity set wasn't found, an error is returned:
-
-{
-    "__ERROR": [
-        {
-            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
-        }
-    ]
-}
 ```
 
 ## $method=subentityset

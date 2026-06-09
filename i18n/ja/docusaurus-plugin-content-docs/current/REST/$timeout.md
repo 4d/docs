@@ -13,6 +13,12 @@ title: $timeout
 
 一度削除されたエンティティセットが `$method=entityset` と [`$savedfilter`]($savedfilter.md) の組み合わせで再作成された場合、`$timeout` で指定していた数値に関わらず、デフォルトタイムアウトは 10分です。
 
+:::note
+
+The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
+
 ## 例題
 
 作成するエンティティセットのタイムアウトを 20分に設定します:
