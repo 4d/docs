@@ -21,10 +21,12 @@ title: 演算子
 **代入演算子** (`a:=b`) は、`a` の値を `b` の値で初期化、または更新します。
 
 ```4d
-$myNumber:=3 // MyNumber 変数に 3 を代入します
-$myDate:=!2018/01/21! // 日付リテラルを代入します
-$myLength:=Length("Acme") // コマンドの結果 (4) を $myLength に代入します
-$col:=New collection // $col を空のコレクションで初期化します
+$myNumber:=3 //assigns 3 to $myNumber variable  
+$myDate:=!2026/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection
+$myObject:={ a:2 ; b:$col } //assigns an object reference to $myObject
+$myObject.a:=3 //assigns a value to an object property
 ```
 
 > 代入演算子 `:=` と等号比較演算子 `=` とを混同しないように注意してください。 `=` とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で == や === の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。

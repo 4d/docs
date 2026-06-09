@@ -28,7 +28,7 @@ title: Object
 
 :::
 
-オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](#プロパティ) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
+オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](#プロパティ) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
@@ -113,6 +113,36 @@ $col:=$o.col[5] // 6
 - [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
 - [`New shared object`](../commands/new-shared-object) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
   詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
+
+## Assignment
+
+Object and [collection](./dt_collection.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning an object or a collection to a variable (e.g. `$myVar:={ a:2 }`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original object is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+
+例:
+
+```4d
+var $o1; $o2 : Object
+var $col : Collection
+
+$col:=[1;2;3] //a reference to the collection is created
+$o1:={ a:2 ; b:$col } //a reference to the object is created
+$o2:=$o1 //both variables $o1 and $o2 share the reference to the same object
+
+$o1.a:=10 //$o2 = {"a":10,"b":[1,2,3]}
+$o2.a:=20 //$o1 = {"a":20,"b":[1,2,3]}
+$col.push(4) 
+//$o1 = {"a":20,"b":[1,2,3,4]}
+//$o2 = {"a":20,"b":[1,2,3,4]}
+ASSERT($o1=$o2) //True
+```
+
+This principle applies wherever objects or collections are used, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+
+:::note
+
+If you want to create a **deep copy** of an object, use the [`OB COPY`](../commands/ob-copy) command.
+
+:::
 
 ## プロパティ{#properties}
 

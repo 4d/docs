@@ -637,7 +637,7 @@ In addition, you can check for updates at any moment, for a single dependency or
 ![check components](../assets/en/Project/check-component-all.png)
 
 
-If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed: 
+If a new component version matching your [component versioning configuration](#defining-a-dependency-version-range) is detected on GitHub, a specific dependency status is displayed: 
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

@@ -591,7 +591,7 @@ Además, puede buscar actualizaciones en cualquier momento, para una sola depend
 
 ![componentes de verificación](../assets/en/Project/check-component-all.png)
 
-Si se detecta en GitHub una nueva versión del componente que coincide con su [configuración de versiones del componente](#defining-a-github-dependency-version-range), se muestra un estado de dependencia específico:
+Si se detecta en GitHub una nueva versión del componente que coincide con su [configuración de versiones del componente](#defining-a-dependency-version-range), se muestra un estado de dependencia específico:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

@@ -110,6 +110,43 @@ $users:=[{name: "Alice"; \
 
 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
+## Assignment
+
+Collection and [object](./dt_object.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning a collection to a variable (e.g. `$myVar:=[1;2;3]`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original collection is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+
+例:
+
+```4d
+var $col1; $col2 : Collection
+var $o : Object
+
+$col1:=[1;2;3] //a reference to the collection is created
+$col2:=$col1 //both variables share the same collection reference
+$o:={ list:$col1 } //the object stores a reference to the same collection
+
+$col1.push(4)
+//$col2 = [1,2,3,4]
+//$o = {"list":[1,2,3,4]}
+
+$col2[0]:=10
+//$col1 = [10,2,3,4]
+//$o = {"list":[10,2,3,4]}
+
+$o.list.push(5)
+//$col1 = [10,2,3,4,5]
+//$col2 = [10,2,3,4,5]
+
+ASSERT($col1=$col2) //True
+```
+
+This principle applies wherever objects or collections are assigned, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+
+:::note
+
+If you want to create a **deep copy** of a collection, use the [`collection.copy()`](../API/CollectionClass.md#copy) function.
+
+:::
+
 ## コレクション関数
 
 4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](../API/CollectionClass.md) にまとめられています。

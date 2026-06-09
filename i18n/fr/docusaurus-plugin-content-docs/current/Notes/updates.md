@@ -3,6 +3,22 @@ id: updates
 title: Release Notes
 ---
 
+## 4D 21 R4
+
+Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.
+
+#### Points forts
+
+- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
+- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
+- New session `.quotas` property to configure thresholds for sessions.
+- New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
+- New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
+
+#### Changements de comportement
+
+- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+
 ## 4D 21 R3
 
 Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-21-r3), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R3.
@@ -10,7 +26,7 @@ Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-2
 #### Points forts
 
 - La commande [`JSON Validate`](../commands/json-validate) prend désormais en charge le draft du schéma JSON 2020-12.
-- 4D Write Pro prend en charge les [feuilles de style de liste hiérarchique](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), ce qui permet de créer et de gérer des [listes à plusieurs niveaux](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) structurées avec numérotation automatique.
+- 4D Write Pro now supports [multi-level list style sheets](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Possibilité d'utiliser un certificat personnalisé provenant du trousseau de macOS au lieu d'un dossier de certificats local dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Nouvelle classe [`4D.Method`](../API/MethodClass.md) pour créer et exécuter le code d'une méthode 4D à partir d'un texte source. Les commandes [`METHOD Get path`](../commands/method-get-path) et [`METHOD RESOLVE PATH`](../commands/method-resolve-path) prennent charge une nouvelle constante `path volatile method` (128).
 - Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
@@ -64,23 +80,24 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## Tableau des bibliothèques
 
-| Bibliothèque | Version courante                       | Mise à jour dans 4D | Commentaire                                                                                                                                           |
-| ------------ | -------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL    | 664a985                                | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
-| CEF          | 7258                                   | 21                  | Chromium 139                                                                                                                                          |
-| Hunspell     | 1.7.2  | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                   |
-| ICU          | 77.1                   | 21                  | Cette mise à jour entraîne une reconstruction automatique des index alphanumériques, textes et objets.                                |
-| libldap      | 2.6.10 | 21                  |                                                                                                                                                       |
-| libsasl      | 2.1.28 | 20                  |                                                                                                                                                       |
-| Liblsquic    | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
-| Libuv        | 1.51.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
-| libZip       | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
-| LZMA         | 5.8.1  | 21                  |                                                                                                                                                       |
-| ngtcp2       | 1.22.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
-| OpenSSL      | 4.0                    | **21 R4**           |                                                                                                                                                       |
-| PDFWriter    | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS     | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
-| webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
-| Xerces       | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
-| Zlib         | 1.3.1  | 21                  |                                                                                                                                                       |
+| Bibliothèque    | Version courante                       | Mise à jour dans 4D | Commentaire                                                                                                                                           |
+| --------------- | -------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL       | 664a985                                | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
+| CEF             | 7258                                   | 21                  | Chromium 139                                                                                                                                          |
+| Hunspell        | 1.7.2  | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                   |
+| ICU             | 77.1                   | 21                  | Cette mise à jour entraîne une reconstruction automatique des index alphanumériques, textes et objets.                                |
+| libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
+| libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
+| Liblsquic       | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.51.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
+| libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
+| LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
+| ngtcp2          | 1.22.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
+| OpenSSL         | 4.0                    | **21 R4**           |                                                                                                                                                       |
+| PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
+| SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
+| webKit          | WKWebView                              | 19                  |                                                                                                                                                       |
+| Windows App SDK | 2.0.1  | **21 R4**           | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                            |
+| Xerces          | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
+| Zlib            | 1.3.1  | 21                  |                                                                                                                                                       |
 

@@ -7,7 +7,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Chaque objet est une instance de sa classe.
+Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`étendre`](#class-extends-classname) une autre classe, et hérite ensuite de ses [fonctions](#function) et propriétés ([déclarées](#property) et [calculées](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et JavaScript sont similaires, et basés sur une chaîne de prototypes.
 
@@ -60,9 +60,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 
 <div class="no-index">
 
-| Paramètres | Type                                                       |                             | Description                                                         |
-| ---------- | ---------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------- |
-| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
+| Paramètres | Type                                                       |                             | Description                                   |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | User class store for the project or component |
 
 </div>
 <!-- END REF -->
@@ -930,7 +930,7 @@ Le mot clé `server` est inutile avec les [fonctions du modèle de données ORDA
 
 Les paramètres et le résultat de la fonction `server` doivent être [**streamable**](./dt_object.md#streaming-support). Par exemple, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), ou [WebServer](../API/WebServerClass.md) sont des classes non streamables mais [4D.File](../API/FileClass.md) est streamable.
 
-Cette fonctionnalité est particulièrement utile dans le cadre des [sessions utilisateur à distance](../Desktop/sessions.md# remote-user-sessions), vous permettant d'implémenter la logique métier dans un [singleton de session](#shared-or-session-singleton-functions) afin de la partager entre tous les processus de la session, étendant ainsi les fonctionnalités de la commande [`Session`](../commands/session). Dans ce cas, vous pourrez vouloir que la logique applicative soit exécutée **sur le serveur** afin que toutes les informations relatives à la session soient rassemblées sur le serveur.
+Cette fonctionnalité est particulièrement utile dans le cadre des [sessions utilisateur à distance](../Desktop/sessions.md#remote-user-sessions), vous permettant d'implémenter la logique métier dans un [singleton de session](#session-singleton) afin de la partager entre tous les process de la session, étendant ainsi les fonctionnalités de la commande [`Session`](../commands/session). Dans ce cas, vous pourrez vouloir que la logique applicative soit exécutée **sur le serveur** afin que toutes les informations relatives à la session soient rassemblées sur le serveur.
 
 Par défaut, les fonctions singleton partagées ou de session sont exécutées localement. L'ajout du mot-clé `server` dans la définition de la fonction de la classe permet à 4D d'utiliser l'instance singleton sur le serveur. Notez que cela peut entraîner l'instanciation du singleton sur le serveur s'il n'existe pas encore d'instance.
 

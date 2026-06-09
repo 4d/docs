@@ -42,7 +42,7 @@ If the *source* parameter is used, the new 4D Write Pro object will be filled wi
 
 By defaut, HTML expressions inserted in legacy 4D Write documents are not imported (no 4D Write Pro support). If you pass the wk import html expressions as text constant in the *option* parameter, HTML expressions will be imported as raw text within *##htmlBegin##* and *##htmlEnd##* tags -- which will require formatting actions afterwards. For example:
 
-```RAW
+```html
 ##htmlBegin##Imported titlebold##htmlEnd##
 ```
 

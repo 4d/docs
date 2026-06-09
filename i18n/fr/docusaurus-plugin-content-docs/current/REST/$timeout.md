@@ -13,6 +13,12 @@ Une fois le timeout défini, chaque fois qu'un ensemble d'entités est appelé (
 
 Si un ensemble d'entités est supprimé puis recréé en utilisant `$method=entityset` avec [`$savedfilter`]($savedfilter.md), le nouveau délai d'attente par défaut est de 10 minutes, quel que soit le délai d'attente défini lors de l'appel à `$timeout`.
 
+:::note
+
+The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
+
 ## Exemple
 
 Si un ensemble d'entités est supprimé puis recréé à l'aide de <code>$method=entityset</code> avec <a href="$savedfilter.md"><code>$savedfilter</code></a>, le nouveau timeout par défaut est de 10 minutes, quel que soit le timeout que vous avez défini lors de l'appel de <code>$timeout</code>.

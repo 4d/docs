@@ -28,7 +28,7 @@ Tenha em atenção que os nomes das propriedades diferenciam entre maiúsculas e
 
 :::
 
-Pode gerenciar variáveis, campos ou expressões do tipo Objeto usando a [notação do objeto](#properties) padrão ou os comandos disponíveis no tema **Objetos (Idioma)**. Observe que comandos específicos do tema **Queridos** como `QUERY BY ATTRIBUTE`, `QUERY SELECÇÃO BY ATTRIBUTE`, ou `ORDER BY ATTRIBUTE` podem ser usados para realizar processamento em campos de objeto.
+Pode gerenciar variáveis, campos ou expressões do tipo Objeto usando a [notação do objeto](#properties) padrão ou os comandos disponíveis no tema **Objetos (Idioma)**.
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
 
@@ -113,6 +113,36 @@ Pode criar dois tipos de objetos:
 - objetos regulares (não compartilhados), usando o comando [`New object`](../commands/new-object) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
 - objetos compartilhados, usando o comando [`New shared object`](../commands/new-shared-object). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
   Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
+
+## Assignment
+
+Object and [collection](./dt_collection.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning an object or a collection to a variable (e.g. `$myVar:={ a:2 }`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original object is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+
+Por exemplo:
+
+```4d
+var $o1; $o2 : Object
+var $col : Collection
+
+$col:=[1;2;3] //a reference to the collection is created
+$o1:={ a:2 ; b:$col } //a reference to the object is created
+$o2:=$o1 //both variables $o1 and $o2 share the reference to the same object
+
+$o1.a:=10 //$o2 = {"a":10,"b":[1,2,3]}
+$o2.a:=20 //$o1 = {"a":20,"b":[1,2,3]}
+$col.push(4) 
+//$o1 = {"a":20,"b":[1,2,3,4]}
+//$o2 = {"a":20,"b":[1,2,3,4]}
+ASSERT($o1=$o2) //True
+```
+
+This principle applies wherever objects or collections are used, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+
+:::note
+
+If you want to create a **deep copy** of an object, use the [`OB COPY`](../commands/ob-copy) command.
+
+:::
 
 ## Properties {#properties}
 

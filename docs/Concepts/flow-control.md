@@ -59,6 +59,14 @@ The expression is TRUE only if both methods are TRUE. However, even if _MethodA_
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 The result is similar and _MethodB_ is evaluated only if necessary. 
 
 > **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..Else statements.

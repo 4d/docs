@@ -401,12 +401,12 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 <!-- REF #directory.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|
+|destinationFolder |4D.Folder |->|コピー先フォルダ|
+|newName|Text|->|コピーの新しい名前|
+|overwrite|Integer|->|既存の要素を上書きするためには `fk overwrite`|
+|戻り値|4D.Folder|<-|Copied file or folder|
 </div>
 <!-- END REF -->
 
@@ -458,10 +458,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
+|path|Text|->|相対 POSIX ファイルパス名|
+|戻り値|4D.File|<-|`File` object (null if invalid path)|
 </div>
 <!-- END REF -->
 
@@ -502,10 +502,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.files().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|
+|options|Integer|->|ファイルリスト用のオプション|
+|戻り値|Collection|<-|Collection of children file objects|
 </div>
 <!-- END REF -->
 
@@ -567,10 +567,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.folder().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+|path|Text|->|相対 POSIX ファイルパス名|
+|戻り値|4D.Folder|<-|Created folder object (null if invalid *path*)|
 </div>
 <!-- END REF -->
 
@@ -611,10 +611,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.folders().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|
+|options|Integer|->|フォルダリスト用のオプション|
+|戻り値|Collection|<-|Collection of children folder objects|
 </div>
 <!-- END REF -->
 
@@ -662,10 +662,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.getIcon().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|size|Integer|->|返されるピクチャーの一辺の長さ(ピクセル単位)|
+|戻り値|Picture|<-|Icon|
 </div>
 <!-- END REF -->
 

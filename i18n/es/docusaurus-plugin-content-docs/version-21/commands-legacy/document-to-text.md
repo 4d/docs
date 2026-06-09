@@ -67,8 +67,9 @@ Por defecto, cuando se omite el parámetro *modoRetorno*, los saltos de línea s
 
 Dado el documento texto siguiente (los campos están separados por tabulaciones):
 
-```RAW
-id    name    price    vat3    4D Tags    99    19.6
+```txt
+id    name    price    vat
+3    4D Tags    99    19.6
 ```
 
 Cuando ejecuta este código:

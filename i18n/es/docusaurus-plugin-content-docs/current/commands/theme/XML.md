@@ -16,7 +16,7 @@ slug: /commands/theme/XML
 
 :::note
 
-For XML support, 4D uses the [Xerces.dll library](../../Notes/updates.md#library-table) developed by the Apache Foundation company.
+Para soporte XML, 4D utiliza la [librería Xerces.dll](../../Notes/updates.md#library-table) desarrollada por la empresa Fundación Apache.
 
 :::
 

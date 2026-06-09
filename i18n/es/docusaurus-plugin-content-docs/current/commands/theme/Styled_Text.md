@@ -23,11 +23,11 @@ slug: /commands/theme/Styled-Text
 | [<!-- INCLUDE #_command_.ST SET PLAIN TEXT.Syntax -->](../../commands/st-set-plain-text)<br/>           |
 | [<!-- INCLUDE #_command_.ST SET TEXT.Syntax -->](../../commands/st-set-text)<br/>                       |
 
-## Working with text handling commands
+## Trabajando con comandos de manejo de texto
 
 ### Interfaz de usuario
 
-The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+Los comandos que pueden utilizarse para manipular objetos de texto por programación no tienen en cuenta ninguna etiqueta de estilo integrada en el texto. Sólo actúan sobre el texto visualizado. Esto afecta a los siguientes comandos:
 
 - [User Interface](./User_Interface.md) theme commands
 - [`HIGHLIGHT TEXT`](../../commands/highlight-text)
@@ -55,7 +55,7 @@ Note also that only default properties are affected by these commands (as well a
 
 ![](../../assets/en/FormObjects/multistyle-ex1.png)
 
-The plain text of the area is as follows:
+El texto sin formato del área es el siguiente:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>

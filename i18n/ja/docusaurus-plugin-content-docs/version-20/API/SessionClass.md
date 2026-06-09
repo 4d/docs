@@ -264,9 +264,9 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+|戻り値|Boolean|<-|True if session is a Guest one, False otherwise|
 </div>
 <!-- END REF -->
 

@@ -24,7 +24,7 @@ Utilice estas propiedades de retrollamada para un control más granular de la ge
 | `onResponse` | 4D.Function | Una función a llamar de forma asíncrona cuando la petición finalice **con éxito**. <br>*Asegúrese de que el proceso actual no termina.*         |
 | `onError`    | 4D.Function | Una función que se llamará de forma asíncrona cuando la petición finalice **con errores**. <br>*Asegúrese de que el proceso actual no termina.* |
 
-> La función de retrollamada recibirá el mismo tipo de objeto de resultado (una de las clases hijas de [OpenAIResult](Classes/OpenAIResult.md)) que devolvería la función en un código síncrono.
+> La función de retrollamada recibirá el mismo tipo de objeto de resultado (una de las clases hijas de [OpenAIResult](./OpenAIResult.md)) que devolvería la función en un código síncrono.
 
 Ver la [documentación sobre código asíncrono para ejemplos](../asynchronous-call.md)
 

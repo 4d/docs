@@ -67,8 +67,9 @@ Nota de Compatibidade: opções de compatibilidade estão disponíveis para gere
 
 Dado o documento texto seguinte (os campos estão separados por tabulações):
 
-```RAW
-id    name    price    vat3    4D Tags    99    19.6
+```txt
+id    name    price    vat
+3    4D Tags    99    19.6
 ```
 
 Quando executa este código:

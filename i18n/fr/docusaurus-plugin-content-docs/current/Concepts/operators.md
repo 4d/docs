@@ -21,10 +21,12 @@ Les valeurs que les opérateurs affectent sont des opérandes. Dans l'expression
 **L'opérateur d'affectation** (`a:=b`) initialise ou met à jour la valeur de `a` avec la valeur de `b` :
 
 ```4d
-$myNumber:=3 //assigne 3 à la variable $myNumber
-$myDate:=!2018/01/21! //assigne une date littérale
-$myLength:=Length("Acme") //assigne le résultat de la commande (4) à $myLength
+$myNumber:=3 //affecte 3 à la variable $myNumber  
+$myDate:=!2026/01/21 ! //affecte une date littérale
+$myLength:=Length("Acme") //affecte le résultat de la commande (4) à $myLength
 $col:=New collection //$col est initialisé avec une collection vide
+$myObject:={ a:2 ; b :$col } //affecte une référence d'objet à $myObject
+$myObject.a:=3 //affecte une valeur à une propriété d'objet
 ```
 
 > Attention à ne PAS confondre l'opérateur d'affectation `:=` avec l'opérateur de comparaison d'égalité `=`. Un opérateur d'affectation différent (et non pas `=`) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.

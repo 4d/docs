@@ -86,9 +86,9 @@ title: Entity
 <!-- REF #EntityClass.clone().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record|
+|戻り値|4D.Entity|<-|New entity referencing the record|
 </div>
 <!-- END REF -->
 
@@ -142,11 +142,11 @@ title: Entity
 <!-- REF #EntityClass.diff().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
-|attributesToCompare|Collection|-> |Name of attributes to be compared |
-|Result|Collection|<-|Differences between the entities|
+|entityToCompare|4D.Entity|->|対象エンティティと比較するエンティティ|
+|attributesToCompare|Collection|-> |比較する属性の名称|
+|戻り値|Collection|<-|Differences between the entities|
 </div>
 <!-- END REF -->
 
@@ -345,10 +345,10 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.drop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
-|Result|Object|<-|Result of drop operation|
+|mode|Integer|->|`dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする|
+|戻り値|Object|<-|Result of drop operation|
 </div>
 <!-- END REF -->
 
@@ -454,9 +454,9 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.first().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+|戻り値|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -495,9 +495,9 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.fromObject().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|filler|Object|->|Object from which to fill the entity|
+|filler|Object|->|エンティティの属性値を設定するオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -582,9 +582,9 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.getDataClass().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+|戻り値|4D.DataClass|<-|DataClass object to which the entity belongs|
 </div>
 <!-- END REF -->
 
@@ -629,10 +629,10 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.getKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
-|Result|any|<-|Value of the primary key of the entity (Integer or Text)|
+|mode|Integer|->|`dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します|
+|戻り値|any|<-|Value of the primary key of the entity (Integer or Text)|
 </div>
 <!-- END REF -->
 
@@ -671,9 +671,9 @@ vCompareResult1 (すべての差異が返されています):
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|result|Text|<-|Context attributes linked to the entity, separated by a comma|
+|戻り値|Text|<-|Context attributes linked to the entity, separated by a comma|
 </div>
 <!-- END REF -->
 
@@ -731,9 +731,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.getSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+|戻り値|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -776,9 +776,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.getStamp().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+|戻り値|Integer|<-|Stamp of the entity (0 if entity has just been created)|
 </div>
 <!-- END REF -->
 
@@ -824,10 +824,10 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.indexOf().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
-|Result|Integer|<-|Position of the entity in an entity selection|
+|entitySelection|4D.EntitySelection|->|エンティティの位置を取得する対象のエンティティセレクション|
+|戻り値|Integer|<-|Position of the entity in an entity selection|
 </div>
 <!-- END REF -->
 
@@ -874,9 +874,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.isNew().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+|戻り値|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
 </div>
 <!-- END REF -->
 
@@ -915,9 +915,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.last().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+|戻り値|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -956,10 +956,10 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.lock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
-|Result|Object|<-|Result of lock operation|
+|mode|Integer|->|`dk reload if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする|
+|戻り値|Object|<-|Result of lock operation|
 </div>
 <!-- END REF -->
 
@@ -1081,9 +1081,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.next().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+|戻り値|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1125,9 +1125,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.previous().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+|戻り値|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1168,9 +1168,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.reload().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|戻り値|Object|<-|Status object|
 </div>
 <!-- END REF -->
 
@@ -1233,10 +1233,10 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.save().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
-|Result|Object|<-|Result of save operation|
+|mode|Integer|->|`dk auto merge`: 自動マージモードを有効化します|
+|戻り値|Object|<-|Result of save operation|
 </div>
 <!-- END REF -->
 
@@ -1370,12 +1370,12 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.toObject().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
-|filterCol |Collection |->|Collection of attribute(s) to extract|
-|options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
-|Result|Object|<-|Object built from the entity|
+|filterString |Text |->|取得する属性 (カンマ区切り)|
+|filterCol |Collection |->|取得する属性のコレクション|
+|options|Integer|->|`dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_STAMP プロパティを追加|
+|戻り値|Object|<-|Object built from the entity|
 </div>
 <!-- END REF -->
 
@@ -1661,9 +1661,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.touched().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+|戻り値|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
 </div>
 <!-- END REF -->
 
@@ -1784,9 +1784,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.unlock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|戻り値|Object|<-|Status object|
 </div>
 <!-- END REF -->
 

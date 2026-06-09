@@ -72,15 +72,32 @@ Notez que vous êtes libre d'utiliser ce paramètre à votre convenance. 4D igno
 * **En-tête et corps de la requête HTTP**  
 Le deuxième paramètre (*$http*) est l'en-tête suivi du corps de la requête *HTTP* envoyée par le navigateur Web. Notez que ces informations sont passées telles quelles à votre **On Web Connection database method**. Le contenu varie en fonction du type de navigateur Web qui tente de se connecter.  
 Avec Safari sous Mac OS, vous recevrez un en-tête semblable à celui-ci :  
-```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent: Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
-```  
+```html
+GET /favicon.ico HTTP/1.1
+Referer: http://123.45.67.89/4dcgi/test
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10
+Cache-Control: max-age=0
+Accept: */*
+Accept-Language: fr-fr
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 123.45.67.89
+```
     
     
 Avec Microsoft Edge sous Windows, vous recevrez un en-tête semblable à celui-ci :  
-```RAW  
-GET /test HTTP/1.1Accept: text/html, application/xhtml+xml, image/jxr, */*Accept-Encoding: gzip, deflateAccept-Language: fr-FRConnection: Keep-AliveHost: 123.45.67.89User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586  
-```  
+
+```html
+GET /favicon.ico HTTP/1.1
+Referer: http://123.45.67.89/4dcgi/test
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10
+Cache-Control: max-age=0
+Accept: */*
+Accept-Language: fr-fr
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 123.45.67.89
+```
     
     
 Si votre application exploite ces informations, il est de votre ressort d'analyser l'en-tête et le corps.  

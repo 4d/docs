@@ -59,6 +59,14 @@ title: 制御フロー
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
 
 > **注記:** [三項演算子](../dt_boolean.md#三項演算子) を使うことで、条件式を 1行で書くことができ、[If...Else](../cf_branching.md#ifelseend-if) 文を置き換えることもできます。

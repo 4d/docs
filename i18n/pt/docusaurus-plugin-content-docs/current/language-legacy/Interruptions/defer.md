@@ -47,6 +47,8 @@ defer(ALERT("2"))
 
 Em *exitFormula*, você passa a expressão que deseja avaliar na saída do método ou função, independentemente da forma de término. Internamente, toda vez que `defer` é chamado, o 4D converte *exitFormula* em uma [formula](../../commands/formula) e a adiciona a uma pilha associada ao método ou função. Quando o método ou função termina, todas as formulas armazenadas na pilha são avaliadas na ordem em que aparecem na coleção.
 
+Para fins de depuração, você pode obter a pilha atual de fórmulas a qualquer momento usando o comando [`Deferred formulas`](../../commands/deferred-formulas).
+
 Como para todas as [formulas](../../commands/formula), se a expressão *exitFormula* usar variáveis locais, seus valores atuais são copiados e armazenados no objeto formula retornado **no momento em que ele é colocado na pilha diferida**. Quando executada, a formula usa esses valores copiados em vez dos valores atuais das variáveis locais.
 
 :::note Notas
@@ -109,11 +111,10 @@ defer(SET DATABASE PARAMETER(Diagnostic log level; $logLevel))
 
 ## Ver também 
 
-[throw](../commands/throw)  
+[Deferred formulas](../commands/deferred-formulas)
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
-
-## Propriedades
+[throw](../commands/throw)
 
 |  |  |
 | --- | --- |

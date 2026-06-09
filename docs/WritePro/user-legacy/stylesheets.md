@@ -24,7 +24,7 @@ Style sheets allow you to define the attributes of entire paragraphs or specific
 
 Note that paragraph styles apply to whole paragraphs. To apply a style only to a specific part of a paragraph, you must use a character style sheet.
 
-<!-- INCLUDE hierarchical-list.Desc -->
+<!-- INCLUDE multi-level-list-style-sheets.Desc -->
 
 ## Style sheet precedence
 

@@ -59,6 +59,14 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo s
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
 > **Nota:** o [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If.. Else.

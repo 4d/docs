@@ -212,9 +212,9 @@ FileHandle オブジェクトは共有できません。
 <!--REF #FileHandleClass.getSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|Real|<-|Size of the document in bytes|
+|戻り値|Real|<-|Size of the document in bytes|
 </div>
 <!-- END REF -->
 
@@ -319,10 +319,10 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|bytes|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+|bytes|Real|->|読み取るバイト数|
+|戻り値|[4D.Blob](BlobClass)|<-|Bytes read from the file|
 </div>
 <!-- END REF -->
 
@@ -359,9 +359,9 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|Result|Text|<-|Line of text|
+|戻り値|Text|<-|Line of text|
 </div>
 <!-- END REF -->
 
@@ -405,10 +405,10 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|stopChar|Text|->|Character(s) at which to stop reading|
-|Result|Text|<-|Text from the file|
+|stopChar|Text|->|読み取りを停止する文字|
+|戻り値|Text|<-|Text from the file|
 </div>
 <!-- END REF -->
 
@@ -454,9 +454,9 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.setSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|size|Real|->|New size of the document in bytes|
+|size|Real|->|ドキュメントの新しいサイズ (バイト単位)|
 </div>
 <!-- END REF -->
 
@@ -490,9 +490,9 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.writeBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+|blob|[4D.Blob](BlobClass)|->|ファイルに書き込むBlob|
 </div>
 <!-- END REF -->
 
@@ -528,9 +528,9 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.writeLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|lineOfText|Text|->|Text to write|
+|lineOfText|Text|->|書き込むテキスト|
 </div>
 <!-- END REF -->
 
@@ -564,9 +564,9 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.writeText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|textToWrite|Text|->|Text to write|
+|textToWrite|Text|->|書き込むテキスト|
 </div>
 <!-- END REF -->
 

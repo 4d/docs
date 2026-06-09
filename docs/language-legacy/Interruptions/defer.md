@@ -48,6 +48,8 @@ defer(ALERT("2"))
 
 In *exitFormula*, you pass the expression that you want to be evaluated upon method or function exit, whatever the way it exited. Behind the scenes, every time a `defer` is called, 4D converts *exitFormula* into a [formula](../../commands/formula) and adds it to a stack associated with the method or function. When the method or function ends, all formulas stored in the stack are evaluated in the order they appear in the collection. 
 
+For debugging purposes, you can get the current stack of formulas at any moment using the [`Deferred formulas`](../../commands/deferred-formulas) command. 
+
 As for all [formulas](../../commands/formula), if the *exitFormula* expression uses local variables, their current values are copied and stored in the formula object returned **when it is put in the *deferred stack***. When executed, the formula uses these copied values rather than the current values of the local variables. 
 
 :::note Notes
@@ -112,16 +114,17 @@ defer(SET DATABASE PARAMETER(Diagnostic log level; $logLevel))
 
 ## See also 
 
-[throw](../commands/throw)  
+[Deferred formulas](../commands/deferred-formulas)  
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
+[throw](../commands/throw)  
 
 ## Properties
 
 |  |  |
 | --- | --- |
-| Command number | 1805 |
-| Thread safe | no |
+| Command number | 1860 |
+| Thread safe | yes |
 
 
 

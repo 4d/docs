@@ -86,12 +86,12 @@ In all other cases, the pathname is relative.
 Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
 
 ```4d
- CREATE FOLDER("lundi") // relative path
- CREATE FOLDER("\Monday") // relative path
- CREATE FOLDER("\Monday\Tuesday") // relative path
- CREATE FOLDER("c:") // absolute path
- CREATE FOLDER("d:\Monday") // absolute path
- CREATE FOLDER("\\srv-Internal\temp") // absolute path
+ CREATE FOLDER("lundi") // ruta relativa
+ CREATE FOLDER("\Monday") // ruta relativa
+ CREATE FOLDER("\Monday\Tuesday") // ruta relativa
+ CREATE FOLDER("c:") // ruta absoluta
+ CREATE FOLDER("d:\Monday") // ruta absoluta
+ CREATE FOLDER("\\srv-Internal\temp") // ruta absoluta
 ```
 
 :::note
@@ -112,14 +112,14 @@ However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New
 
 En los demás casos, es absoluta.
 
-Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
+Ejemplos con el comando [`CREATE FOLDER`](../../commands/create-folder):
 
 ```4d
 
- CREATE FOLDER("Monday") // relative path
- CREATE FOLDER("macintosh hd:") // absolute path
- CREATE FOLDER("Monday:Tuesday") // absolute path (a volume must be called Monday)
- CREATE FOLDER(":Monday:Tuesday") // relative path
+ CREATE FOLDER("Monday") // ruta relativa
+ CREATE FOLDER("macintosh hd:") // ruta absoluta
+ CREATE FOLDER("Monday:Tuesday") // ruta absoluta (un volumen debe llamarse Monday)
+ CREATE FOLDER(":Monday:Tuesday") // ruta relativa
 ```
 
 :::note
@@ -132,6 +132,6 @@ See also [**Absolute and relative pathnames** in the Concepts section](../../Con
 
 You can handle pathname contents using the [`Path to object`](../../commands/path-to-object) and [`Object to path`](../../commands/object-to-path) commands. En particular, usando estos comandos, se puede extraer de una ruta:
 
-- a file name,
-- the parent folder path,
-- the file or folder extension.
+- un nombre de archivo,
+- la ruta de la carpeta padre,
+- la extensión del archivo o carpeta.

@@ -24,7 +24,7 @@ title: OpenAIParameters
 | `onResponse` | 4D.Function | リクエストが**正常に**終了した場合に非同期で呼び出される関数。 <br>*Ensure that the current process does not terminate.*  |
 | `onError`    | 4D.Function | リクエストが**エラーで**終了した場合に非同期で呼び出される関数。 <br>*Ensure that the current process does not terminate.* |
 
-> コールバック関数は、同期コード内での関数によって返される結果のオブジェクト型([OpenAIResult](Classes/OpenAIResult.md) 子クラスのうちのいずれか)と同じものを受け取ります。
+> これらのコールバック関数は、同期コード内での関数によって返される結果のオブジェクト型([OpenAIResult](./OpenAIResult.md) 子クラスのうちのいずれか)と同じものを受け取ります。
 
 詳細な情報については [非同期コードに関するドキュメンテーション](../asynchronous-call.md) を参照してください。
 

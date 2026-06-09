@@ -215,9 +215,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|boxInfo object|
+|戻り値|Object|<-|boxInfo object|
 </div>
 <!-- END REF -->
 

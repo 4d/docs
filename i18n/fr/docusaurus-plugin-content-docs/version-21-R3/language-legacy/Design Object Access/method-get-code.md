@@ -110,8 +110,12 @@ Si vous exécutez le code suivant :
 
 Le document résultant contient :
 
-```RAW
-  //%attributes = {"lang":"fr"} commentaire réservé, ajouté par 4DAu cas ou    : (Evenement formulaire code=Sur chargement)        TOUT SELECTIONNER([Customer])Fin de cas
+```txt
+  //%attributes = {"lang":"fr"} commentaire réservé, ajouté par 4D
+Au cas ou
+    : (Evenement formulaire code=Sur chargement)
+        TOUT SELECTIONNER([Customer])
+Fin de cas
 ```
 
 Si vous exécutez le code suivant :
@@ -126,8 +130,12 @@ Si vous exécutez le code suivant :
 
 Le document résultant contient alors :
 
-```RAW
-  //%attributes = {"lang":"fr"} commentaire réservé, ajouté par 4DAu cas ou    : (Evenement formulaire code:C388=Sur chargement:K2:1)        TOUT SELECTIONNER:C47([Customer:1])Fin de cas
+```txt
+  //%attributes = {"lang":"fr"} commentaire réservé, ajouté par 4D
+Au cas ou
+    : (Evenement formulaire code:C388=Sur chargement:K2:1)
+        TOUT SELECTIONNER:C47([Customer:1])
+Fin de cas
 ```
 
 ## Voir aussi 

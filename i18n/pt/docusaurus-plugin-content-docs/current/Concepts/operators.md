@@ -21,10 +21,12 @@ Os valores que os operadores afectam são os operandos. Na expressão `1 + 2`, o
 O **operador de atribuição** (`a:=b`) inicializa ou atualiza o valor de `a` com o valor de `b`:
 
 ```4d
-$myNumber:=3 //atribui 3 à variável MyNumber  
-$myDate:=!2018/01/21! //atribui um literal de data
-$myLength:=Length("Acme") //atribui o resultado do comando (4) a $myLength
-$col:=New collection //$col é inicializado com uma coleção vazia
+$myNumber:=3 //assigns 3 to $myNumber variable  
+$myDate:=!2026/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection
+$myObject:={ a:2 ; b:$col } //assigns an object reference to $myObject
+$myObject.a:=3 //assigns a value to an object property
 ```
 
 > NÃO confunda o operador de atribuição `:=` com o operador de comparação de igualdade `=`. Um operador de atribuição diferente (e não `=`) foi escolhido deliberadamente para evitar problemas e confusões que geralmente ocorrem com == ou === em outras linguagens de programação. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.

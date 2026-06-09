@@ -49,7 +49,7 @@ Esta sección describe cómo trabajar con componentes en los entornos **4D** y *
 Para cargar un componente en su proyecto 4D, usted puede:
 
 - copie los archivos de componentes en la carpeta [**Components** de su proyecto](architecture.md#components) (las carpetas de paquetes de componentes interpretados deben llevar el sufijo ".4dbase", ver arriba),
-- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-github-dependency).
+- o bien, declare el componente en el archivo **dependencies.json** de su proyecto; esto se hace automáticamente para los archivos locales cuando [**añade una dependencia utilizando la interfaz del gestor de dependencias**](#adding-a-github-or-gitlab-dependency).
 
 Los componentes declarados en el archivo **dependencies.json** pueden almacenarse en diferentes ubicaciones:
 
@@ -530,7 +530,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -591,7 +591,7 @@ Además, puede buscar actualizaciones en cualquier momento, para una sola depend
 
 ![componentes de verificación](../assets/en/Project/check-component-all.png)
 
-Si se detecta en GitHub una nueva versión del componente que coincide con su [configuración de versiones del componente](#defining-a-github-dependency-version-range), se muestra un estado de dependencia específico:
+Si se detecta en GitHub una nueva versión del componente que coincide con su [configuración de versiones del componente](#defining-a-dependency-version-range), se muestra un estado de dependencia específico:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

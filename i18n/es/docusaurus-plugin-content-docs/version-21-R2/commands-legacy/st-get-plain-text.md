@@ -83,9 +83,10 @@ Usted está buscando el texto "muy bien" entre los valores de un campo de texto 
 
 Dado el siguiente texto ubicado en el área multiestilo "MyArea":
 
-```RAW
-It is now   Go to the 4D site or Open a window
+```html
+<span>It is now <span style="-d4-ref:'Current time:C178'"> </span> <a href="http://www.4d.com">Go to the 4D site</a> or <span style="-d4-ref-user:'openW'">Open a window</span></span>
 ```
+
 
 Este texto se muestra:
 

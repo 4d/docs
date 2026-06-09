@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 デフォルトでは、旧式の4D Write ドキュメント内に挿入されたHTM式は読み込まれません(4D Write Pro ではサポートされません)。*option* 引数にwk import html expressions as text 定数を渡した場合、HTML 式は、*##htmlBegin##* および *##htmlEnd##* タグに挟まれた標準テキストとして読み込まれます(この場合、後からフォーマットを直す必要があります)。返される標準テキストは、例えば以下のような形です:
 
-```RAW
+```html
 ##htmlBegin##Imported titlebold##htmlEnd##
 ```
 

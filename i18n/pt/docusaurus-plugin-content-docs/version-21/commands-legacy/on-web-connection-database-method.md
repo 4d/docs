@@ -76,8 +76,16 @@ Note que você é livre para usar este parâmetro quando quiser. 4D simplesmente
  O segundo parâmetro (*$http*) é o cabeçalho e o corpo da petição HTTP enviada pelo navegador web. Note que esta informação se passa a seu **On Web Connection database method** tal como está. O conteúdo varia em função do tipo de navegador web que estiver tentando a conexão.  
     
 Com Safari rodando em Mac OS, pode receber um cabeçalho similar a este:  
-```RAW  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
+```txt
+GET /favicon.ico HTTP/1.1
+Referer: http://123.45.67.89/4dcgi/test
+User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X; fr-fr) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10
+Cache-Control: max-age=0
+Accept: */*
+Accept-Language: fr-fr
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 123.45.67.89
 ```  
 Com Microsoft Internet Explorer 8 rodando em Windows, pode receber um cabeçalho similar a este:  
 ```RAW  

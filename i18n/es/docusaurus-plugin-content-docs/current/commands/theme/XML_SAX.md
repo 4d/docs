@@ -27,11 +27,11 @@ slug: /commands/theme/XML-SAX
 
 ## Visión general de los comandos XML SAX
 
-See [XML, DOM, and SAX](../theme/XML.md#xml-dom-and-sax) section for a definition of XML SAX.
+Consulte la sección [XML, DOM y SAX](../theme/XML.md#xml-dom-and-sax) para obtener una definición de XML SAX.
 
 ### Creación, apertura y cierre de documentos XML mediante SAX
 
-The SAX commands work with the standard document references of 4D (**DocRef**, a Time type reference). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
+Los comandos SAX funcionan con las referencias de documento estándar de 4D (**DocRef**, una referencia de tipo Time). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
 
 The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
 

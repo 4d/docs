@@ -1222,11 +1222,11 @@ Si *attributePath* designa un atributo que almacena [**objetos vectores**](../AP
 
 En este caso, el parámetro *value* debe ser un **objeto vectorial de comparación** que contenga las siguientes propiedades:
 
-| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| --------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. El vector a comparar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| metric    | Text                                               | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. Puede utilizar una de las siguientes constantes (Texto)<li>:`mk cosine` (por defecto si se omite): calcula la similaridad en cosenos entre los vectores.</li><li>`mk dot`: calcula la similaridad en puntos de los vectores.</li><li>`mk euclidean`: calcula la distancia euclideana entre vectores. |
-| threshold | Real                                               | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                                                                                                      |
+| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. El vector a comparar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| metric    | Text                                               | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the [cosine similarity](./VectorClass.md#cosinesimilarity) between vectors.</li><li>`mk dot`: calculates the [dot similarity](VectorClass.md#dotsimilarity) of vectors.</li><li>`mk euclidean`: calculates the [Euclidean distance](./VectorClass.md#euclideandistance) between vectors. |
+| threshold | Real                                               | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                                                                                                                                                                                             |
 
 Sólo se admite un subconjunto de símbolos **comparadores**. Tenga en cuenta que comparan los resultados con el valor umbral:
 
@@ -1241,23 +1241,33 @@ Por ejemplo, se desea devolver entidades de MyClass donde la similaridad con un 
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector ///método para obtener un vector, por ejemplo a partir de 4D.AIKit
-var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
 La instrucción **orden by** es soportada en la cadena de consulta para que las entidades en la selección de entidad resultante estén ordenadas por similitud. Por ejemplo:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  //orden por defecto, la primera entidad es la más parecida
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //$results.first() entity is the most similar
 ```
 
-Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
+:::note
+
+You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+
+- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
+- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
+
+:::
+
+You can only order on a single vector field. Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
+    {vector : $myVector1 };{vector : $myVector2 })  
+    //myVectorField > :1 is used for the order by
 ```
 
 Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).
@@ -1265,6 +1275,7 @@ Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).
 :::tip Entradas de blog relacionadas
 
 - [4D AI: Búsqueda de entidades por similaridad vectorial en 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Por qué su Pila de búsqueda está rota y cómo lo soluciona la búsqueda vectorial](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1631,31 +1642,29 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  //el atributo embedding se basa en un campo 4D que almacena objetos de clase 4D.Vector
-  //buscar con la métrica por defecto (coseno)
-var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
-  //buscar con la métrica euclídea 
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
-  //búsqueda con métrica coseno explícita y umbral personalizado
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
-  //buscar con una fórmula
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
+
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
+
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+
+  //search with a formula
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### Ejemplo 5
 
-Queremos ejecutar una consulta por similitud vectorial utilizando vectores con diferentes métricas y ordenar los resultados por similaridades de coseno:
+Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
 
 ```4d
-  //Crear los vectores de comparación 
-var $vector1Comparison:={vector: $myvector; métrica: mk coseno; umbral: 0.4}
-var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
-
-  //el atributo embedding se basa en un campo 4D que almacena objetos de clase 4D.Vector
-ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
-    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
-
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 
+var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by myVectorField, salary desc"; $comparisonVector)
 ```
 
 #### Ver también

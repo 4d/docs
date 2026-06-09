@@ -591,7 +591,7 @@ Além disso, você pode verificar se há atualizações a qualquer momento, para
 
 ![componentes de verificação](../assets/en/Project/check-component-all.png)
 
-Se uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente](#defining-a-github-dependency-version-range) for detectada no GitHub, um status de dependência específico será exibido:
+Se uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente](#defining-a-dependency-version-range) for detectada no GitHub, um status de dependência específico será exibido:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

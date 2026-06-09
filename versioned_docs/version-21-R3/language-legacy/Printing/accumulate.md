@@ -5,14 +5,14 @@ slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( {*...dataField* : Field} {; *...dataVar* : Variable )<!-- END REF-->
+<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( {*...data* : any} )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| dataField | Field | &#8594;  | Numeric field on which to accumulate |
-| dataVar | Variable | &#8594;  | Numeric variable on which to accumulate |
+| data | Field, Variable | &#8594;  | Numeric field or variable on which to accumulate |
+
 </div>
 <!-- END REF-->
 

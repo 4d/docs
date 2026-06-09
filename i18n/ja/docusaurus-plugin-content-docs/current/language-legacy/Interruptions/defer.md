@@ -47,6 +47,8 @@ defer(ALERT("2"))
 
 *exitFormula* には、メソッドまたは関数終了時に評価させたい式を渡します。終了理由は問いません。内部的には、`defer` が呼ばれるたびに 4D は *exitFormula* を [formula](../../commands/formula) に変換し、メソッドまたは関数に関連付けられたスタックへ追加します。メソッドまたは関数が終了すると、スタックに保存されたすべての formula がコレクション内の順序に従って評価されます。
 
+デバッグ目的で、[`Deferred formulas`](../../commands/deferred-formulas)コマンドを使用して、いつでも現在の数式のスタックを取得できます。
+
 すべての [formulas](../../commands/formula) と同様に、*exitFormula* がローカル変数を使用している場合、その時点の値は **遅延スタックに格納されるタイミングで** 返される formula オブジェクトへコピーされて保存されます。実行時には、ローカル変数の現在値ではなく、コピーされた値が使用されます。
 
 :::note 注記
@@ -109,11 +111,10 @@ defer(SET DATABASE PARAMETER(Diagnostic log level; $logLevel))
 
 ## 参照 
 
-[throw](../commands/throw)  
+[Deferred formulas](../commands/deferred-formulas)
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
-
-## プロパティ
+[throw](../commands/throw)
 
 |  |  |
 | --- | --- |
