@@ -53,6 +53,7 @@ All session types can handle privileges, but only the code executed in a **web c
 |[<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->|
 |[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->|
 |[<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->|
+|[<!-- INCLUDE #SessionClass.quotas.Syntax -->](#quotas)<br/><!-- INCLUDE #SessionClass.quotas.Summary -->|
 |[<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->|
 |[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
@@ -571,6 +572,8 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::
 
+This property is **read only**.
+
 
 <!-- END REF -->
 
@@ -716,6 +719,61 @@ End if
 
 
 <!-- END REF -->
+
+
+<!-- REF SessionClass.quotas.Desc -->
+## .quotas
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R4|Added|
+
+</details>
+
+<!-- REF #SessionClass.quotas.Syntax -->**.quotas** : 4D.QuotaManager<!-- END REF -->
+
+#### Description
+
+
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+
+This property is **read only**.
+
+The following properties of the `4D.QuotaManager` object are available for the session:
+
+|Property||Type|Writable|Description|
+|---|---|---|---|---|
+|[nbEntitySets](./QuotaManagerClass.md#nbentitysets)||Integer|yes|Maximum allowed number of entity sets in server's memory|
+|[defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) ||Integer|yes|Default inactivity timeout for entity sets in memory (seconds)|
+|[maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout) ||Integer|yes|Maximum inactivity timeout for entity sets in memory (seconds)|
+|currentValues||Object|no||
+||nbEntitySets|Integer|no|Number of entity sets currently in memory|
+
+When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests. 
+
+:::tip Related blog post
+
+[Make your REST server at the top of its game ... Forget throttling or crashing and tune yourself the memory usage](https://blog.4d.com/make-your-rest-server-at-the-top-of-its-game-forget-throttling-or-crashing-and-tune-yourself-the-memory-usage).
+
+:::
+
+#### Example
+
+```4d
+   //set the maximum number of entity sets in memory
+   //for the session to 50
+Session.quotas.nbEntitySets:=50
+```
+
+<!-- END REF -->
+
+
+#### See also
+
+[QuotaManager class](./QuotaManagerClass.md)
+
 
 
 <!-- REF SessionClass.restore().Desc -->

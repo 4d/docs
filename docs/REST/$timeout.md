@@ -14,6 +14,12 @@ Once the timeout has been defined, each time an entity set is called upon (by us
 
 If an entity set is removed and then recreated using `$method=entityset` along with [`$savedfilter`]($savedfilter.md), the new default timeout is 10 minutes regardless of the timeout you defined when calling `$timeout`.
 
+:::note
+
+The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property. 
+
+:::
+
 ## Example  
 
 In our entity set that we're creating, we define the timeout to 20 minutes:

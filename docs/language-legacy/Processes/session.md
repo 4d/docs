@@ -34,7 +34,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 
 Depending on the process from which the command is called, the current session can be:
 
-- a web session (when [scalable sessions are enabled](../../WebServer/sessions.md#enabling-web-sessions)),
+- a web session (when [scalable sessions are enabled](../../WebServer/sessions.md#enabling-web-sessions)), which includes REST sessions,
 - a remote user session (on the server or on the client),
 - a stored procedures session,
 - a standalone session.
@@ -42,6 +42,12 @@ Depending on the process from which the command is called, the current session c
 For more information, see the [Session types](../../API/SessionClass.md#session-types) paragraph.
 
 The command returns *Null* if it is called in a web process and scalable sessions are disabled on the web server. 
+
+:::note
+
+There is always at least one REST session on the server, even if [scalable sessions are disabled](../../WebServer/sessions.md#enabling-web-sessions). Thus, the `Session` command always returns a REST session object when called from a REST process. 
+
+:::
 
 ### Web sessions
 

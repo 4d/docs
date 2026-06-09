@@ -12,6 +12,7 @@ After [creating an entity set]($method.md#methodentityset) by using `$method=ent
 |---|---|---|
 |[**$entityset/\{entitySetID\}**](#entitysetentitysetid)|`/People/$entityset/0ANUMBER`|Retrieves an existing entity set|
 |[**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection)|`/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER`|Creates a new entity set from comparing existing entity sets|
+|[**$entityset/$release**](#entitysetrelease)|`/Employee/$entityset/$release`|Releases one or more existing entity sets from the 4D Server's cache|
 
 
 
@@ -98,3 +99,29 @@ If there is an intersection, this query returns true. Otherwise, it returns fals
 In the following example we create a new entity set that combines all the entities in both entity sets:
 
 ` GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
+
+
+## $entityset/$release
+
+Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+
+### Description  
+
+You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache. 
+
+### Example  
+
+Release two entity sets from the server's cache:
+
+`POST  /rest/Employee/$entityset/$release`
+
+The body must contain a collection with the entity sets ids to release:
+
+**POST data**:
+
+```json
+[
+"552AE0C8329045FDB65A8C151AEBC532", "9D0617688D7540C090D7675CAF21D7C8"
+]
+```
+
