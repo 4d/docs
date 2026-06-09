@@ -138,10 +138,10 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 <!-- REF #_command_.Formula.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|
+|formulaExp|Expression|->|オブジェクトとして返されるフォーミュラ|
+|戻り値|4D.Function|<-|Native function encapsulating the formula|
 </div>
 <!-- END REF -->
 
@@ -314,10 +314,10 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 <!-- REF #_command_.Formula from string.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|
+|formulaString|Text|->|オブジェクトとして返されるテキストフォーミュラ|
+|戻り値|4D.Function|<-|Native object encapsulating the formula|
 </div>
 <!-- END REF -->
 
@@ -380,11 +380,11 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 <!-- REF #FunctionClass.apply().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|thisObj|Object|->|Object to be returned by the This command in the formula|
-|formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|
+|thisObj|Object|->|関数内での `This` コマンドによって返されるオブジェクト|
+|formulaParams |Collection|->|`formula` が実行される際に $1...$n として渡される値のコレクション|
+|戻り値|any|<-|Value from formula execution|
 </div>
 <!-- END REF -->
 
@@ -455,11 +455,11 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 <!-- REF #FunctionClass.call().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|thisObj|Object|->|Object to be returned by the This command in the formula|
-|params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|
+|thisObj|Object|->|フォーミュラ内での `This` コマンドによって返されるオブジェクト|
+|params |any|->|`formula` が実行される際に $1...$n として渡される値のコレクション|
+|戻り値|any|<-|Value from formula execution|
 </div>
 <!-- END REF -->
 

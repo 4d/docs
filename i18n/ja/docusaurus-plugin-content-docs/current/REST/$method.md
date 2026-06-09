@@ -9,9 +9,8 @@ title: $method
 
 | シンタックス                                          | 例題                                                                                      | 説明                                                                 |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | エンティティまたはエンティティセレクションを削除します                                        |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Deletes the current entity, entity collection, or entity set       |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                | 4D Server のキャッシュからエンティティセットを削除します                                  |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | RESTリクエストで定義されたリレートエンティティのコレクションに基づいて、エンティティセットを作成します              |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | 一つ以上のエンティティを更新または作成します                                             |
 
@@ -53,9 +52,15 @@ RESTリクエストで定義されたエンティティのコレクションに�
 
 ### 説明
 
-RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/\{entitySetID\}` に渡すと、当該エンティティセットにアクセスできます。 デフォルトで、エンティティセットは 2時間有効です。$timeout に値 (秒単位) を渡すことで、有効時間を変更できます。
+RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/\{entitySetID\}` に渡すと、当該エンティティセットにアクセスできます。 By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to [`$timeout`](./$timeout.md). It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
 
 エンティティセットを作成する際に、`$filter` や `$orderby` と同時に`$savedfilter` や `$savedorderby` も使用していた場合には、4D Server のキャッシュからエンティティセットが削除されていても、同じ参照IDで再作成できます。
+
+:::note
+
+By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
 
 ### 例題
 
@@ -75,41 +80,6 @@ RESTでエンティティのコレクションを作成した場合、これを�
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"
-```
-
-## $method=release
-
-4D Server のキャッシュからエンティティセットを削除します。
-
-### 説明
-
-[`$method=entityset`](#methodentityset) によって作成したエンティティセットを、4D Server のキャッシュから削除することができます。
-
-### 例題
-
-既存のエンティティセットを削除します:
-
-`GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
-
-#### レスポンス:
-
-リクエストが成功した場合のレスポンス:
-
-```json
-{
-    "ok": true
-}
-エンティティセットが見つからなかった場合には、エラーが返されます
-
-{
-    "__ERROR": [
-        {
-            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
-        }
-    ]
-}
 ```
 
 ## $method=subentityset

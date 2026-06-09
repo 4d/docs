@@ -11,6 +11,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera um conjunto de entidades existente                                                    |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
+| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Releases one or more existing entity sets from the 4D Server's cache                           |
 
 ## $entityset/\{entitySetID\}
 
@@ -89,3 +90,28 @@ Se houver uma intersecção, esta consulta devolve true. . .
 No exemplo seguinte, criamos um conjunto de entidades que combina todas as entidades de ambos os conjuntos de entidades:
 
 ` GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
+
+## $entityset/$release
+
+Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+
+### Descrição
+
+You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+
+### Exemplo
+
+Release two entity sets from the server's cache:
+
+`POST  /rest/Employee/$entityset/$release`
+
+The body must contain a collection with the entity sets ids to release:
+
+**Datos POST**:
+
+```json
+[
+"552AE0C8329045FDB65A8C151AEBC532", "9D0617688D7540C090D7675CAF21D7C8"
+]
+```
+

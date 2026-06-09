@@ -13,6 +13,12 @@ Una vez que se ha definido el tiempo de espera, cada vez que se llama a un conju
 
 Se um conjunto de entidades for removido e depois recriado utilizando `$method=entityset` com [`$savedfilter`]($savedfilter.md), o novo tempo limite predefinido é de 10 minutos, independentemente do tempo limite definido ao chamar `$timeout`.
 
+:::note
+
+The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
+
 ## Exemplo
 
 No nosso conjunto de entidades que criamos, definimos o tempo limite para 20 minutos:

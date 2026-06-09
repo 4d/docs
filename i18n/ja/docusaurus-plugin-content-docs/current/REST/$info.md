@@ -13,26 +13,26 @@ title: $info
 | -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | cacheSize      | Number     | 4D Server のキャッシュサイズ                                                                                                           |
 | usedCache      | Number     | 4D Server のキャッシュ使用量                                                                                                           |
-| entitySetCount | Number     | エンティティセットの数                                                                                                                   |
-| entitySet      | Collection | 各エンティティセットの情報が格納されているオブジェクトのコレクション                                                                                            |
+| entitySetCount | Number     | Number of entity sets.                                                                                        |
+| entitySet      | Collection | A collection in which each object contains information about each entity set.                                 |
 | ProgressInfo   | Collection | 進捗インジケーターの情報が格納されているコレクション                                                                                                    |
 | sessionInfo    | Collection | 各ユーザーセッションの情報が格納されているオブジェクトのコレクション                                                                                            |
 | privileges     | Object     | "privileges" プロパティ (オブジェクトのコレクション) を持つオブジェクト。 コレクションの各オブジェクト要素は、ユーザーセッションの権限名を値とする "privilege" プロパティを持ちます。 |
 
 ### entitySet
 
-4D Server のキャッシュに保存されている各エンティティセットについて、次の情報が返されます:
+For each entity set currently stored in 4D Server's cache, the following information is returned:
 
-| プロパティ         | 型       | 説明                                                                                                                                                                |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | Text    | エンティティセットを参照する UUID                                                                                                                                               |
-| dataClass     | Text    | データクラスの名称。                                                                                                                                                        |
-| selectionSize | Number  | エンティティセットに含まれるエンティティの数                                                                                                                                            |
-| sorted        | Boolean | エンティティセットが (`$orderby` の使用により) 順列ありの場合には true、順列なしの場合は false。                                                                                  |
-| refreshed     | Date    | エンティティセットが最後に使用された日付または作成日。                                                                                                                                       |
-| expires       | Date    | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 デフォルトのタイムアウトは2時間ですが、`$timeout` を使って指定することもできます。 |
+| プロパティ         | 型       | 説明                                                                                                                                                                                                                                                                                                |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | Text    | エンティティセットを参照する UUID                                                                                                                                                                                                                                                                               |
+| dataClass     | Text    | データクラスの名称。                                                                                                                                                                                                                                                                                        |
+| selectionSize | Number  | Number of entities in the entity set.                                                                                                                                                                                                                                             |
+| sorted        | Boolean | エンティティセットが (`$orderby` の使用により) 順列ありの場合には true、順列なしの場合は false。                                                                                                                                                                                                                  |
+| refreshed     | Date    | エンティティセットが最後に使用された日付または作成日。                                                                                                                                                                                                                                                                       |
+| expires       | Date    | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 デフォルトのタイムアウトは2時間ですが、`$timeout` を使って指定することもできます。 It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property. |
 
-エンティティセットを作成する方法についての詳細は `$method=entityset` を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には `$method=release` を使います。
+For information about how to create an entity set, refer to [`$method=entityset`](./$method.md#methodentityset). If you want to remove the entity selection from 4D Server's cache, use [`$entityset/$release`](./$entityset.md#entitysetrelease).
 
 > 最適化のため、4D は独自のエンティティセットを生成します。つまり、`$method=entityset` で作成した以外のエンティティセットも返されます。
 

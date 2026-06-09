@@ -1,8 +1,8 @@
-d---
+---
 id: writeprointerface
-title: 4D Write Pro Interface
+title: 4D WritePro インターフェース
 slug: /WritePro/write-pro-interface
----------------------------------------------------
+---
 
 4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
 
@@ -564,4 +564,4 @@ Example of a customized JSON file:
 
 - [Related blog post: Multi-Level Style Sheets in 4D Write Pro: Now With a Dedicated UI](https://blog.4d.com/multi-level-style-sheets-in-4d-write-pro-now-with-a-dedicated-ui)
 - [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets)
-- [multi-level lists](.user-legacy/using-a-4d-write-pro-area.md#multi-level-lists)
+- [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists)

@@ -9,9 +9,8 @@ Este parámetro permite definir la operación a ejecutar con la entidad o selecc
 
 | Sintaxis                                        | Ejemplo                                                                                 | Descripción                                                                                                               |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Elimina la entidad actual, la colección de entidades o la selección de entidades                                          |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Deletes the current entity, entity collection, or entity set                                                              |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | Crea un conjunto de entidades en la caché de 4D Server basado en la colección de entidades definidas en la solicitud REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                | Libera un conjunto de entidades existente almacenado en la caché de 4D Server                                             |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crea un conjunto de entidades basado en la colección de entidades relativas definidas en la petición REST                 |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | Actualiza y/o crea una o varias entidades                                                                                 |
 
@@ -53,9 +52,15 @@ Crea un conjunto de entidades en la caché de 4D Server basado en la colección 
 
 ### Descripción
 
-Cuando se crea una colección de entidades en REST, también se puede crear un conjunto de entidades que se guardará en la caché de 4D Server. El conjunto de entidades tendrá un número de referencia que puede pasar a `$entityset/\{entitySetID\}` para acceder a él. Por defecto, es válido durante dos horas; sin embargo, puede modificar esa cantidad de tiempo pasando un valor (en segundos) a $timeout.
+Cuando se crea una colección de entidades en REST, también se puede crear un conjunto de entidades que se guardará en la caché de 4D Server. El conjunto de entidades tendrá un número de referencia que puede pasar a `$entityset/\{entitySetID\}` para acceder a él. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to [`$timeout`](./$timeout.md). It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
 
 Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
+
+:::note
+
+By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
 
 ### Ejemplo
 
@@ -75,41 +80,6 @@ Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, s
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-```
-
-## $method=release
-
-Libera un conjunto de entidades existente almacenado en la caché de 4D Server.
-
-### Descripción
-
-Puede liberar un entity set, que creó utilizando [`$method=entityset`](#methodentityset), de la caché del servidor 4D.
-
-### Ejemplo
-
-Muestra un conjunto de entidades existente:
-
-`GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
-
-#### Respuesta:
-
-Si la petición fue exitosa, se devuelve la siguiente respuesta:
-
-```json
-{
-    "ok": true
-}
-Si no se encuentra el conjunto de entidades, se devuelve un error:
-
-{
-    "__ERROR": [
-        {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
-        }
-    ]
-}
 ```
 
 ## $method=subentityset

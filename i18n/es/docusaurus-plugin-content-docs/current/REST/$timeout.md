@@ -13,6 +13,12 @@ Una vez que se ha definido el tiempo de espera, cada vez que se llama a un conju
 
 Si se elimina un conjunto de entidades y luego se vuelve a crear utilizando `$method=entityset` junto con [`$savedfilter`]($savedfilter.md), el nuevo tiempo de espera por defecto es de 10 minutos, independientemente del tiempo de espera que haya definido al llamar a `$timeout`.
 
+:::note
+
+The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
+
 ## Ejemplo
 
 En el conjunto de entidades que estamos creando, definimos el tiempo de espera a 20 minutos:
