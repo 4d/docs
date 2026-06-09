@@ -49,7 +49,7 @@ title: 依存関係
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
 - コンポーネントファイルを[プロジェクトの**Components**フォルダ](architecture.md#components)内にコピーする(インタープリタ版コンポーネントパッケージフォルダはフォルダ名の末尾が".4dbase" になっている必要があります、上記参照)。
-- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
+- または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#githubまたはgitlab依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
 
@@ -530,7 +530,7 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+もしコンポーネントが [プライベートリポジトリ](#認証とトークン) に保存されていて、必要なパーソナルアクセストークン (personal access token) がない場合はエラーメッセージが表示され、**パーソナルアクセストークンを追加...** ボタンが表示されます ([アクセストークンの提供](#アクセストークンの提供) 参照)。
 
 :::
 
@@ -550,7 +550,7 @@ If the component is stored on a [private repository](#private-repositories) and 
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **自動更新する(latest)** (GitHub) あるいは **Highest** (GitLab): 対応するタグを持ったリリースをダウンロードすることを許可します。これらは通常最新のリリースです。 **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
+- **自動更新する(latest)** (GitHub) あるいは **自動更新する(Highest)** (GitLab): 対応するタグを持ったリリースをダウンロードすることを許可します。これらは通常最新のリリースです。 **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
 
 現在の依存関係バージョンは、依存関係の項目の右側に表示されます:
 
@@ -591,7 +591,7 @@ If the component is stored on a [private repository](#private-repositories) and 
 
 ![check components](../assets/en/Project/check-component-all.png)
 
-[コンポーネントバージョン設定](#github-依存関係のバージョン範囲を定義) に合致する新しいコンポーネントのバージョンがGitHub 上で検知された場合、特殊な依存関係ステータスが表示されます:
+If a new component version matching your [component versioning configuration](#defining-a-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

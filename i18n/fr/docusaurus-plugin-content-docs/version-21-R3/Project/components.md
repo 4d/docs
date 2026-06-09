@@ -49,7 +49,7 @@ This section describes how to work with components in the **4D** and **4D Server
 Pour charger un composant dans votre projet 4D, vous pouvez soit :
 
 - copier les fichiers des composants dans le [dossier **Components** de votre projet](architecture.md#components) (les dossiers des composants interprétés doivent être suffixés avec ".4dbase", voir ci-dessus),
-- ou déclarer le composant dans le fichier **dependencies.json** de votre projet ; ceci est fait automatiquement pour les fichiers locaux lorsque vous [**ajoutez une dépendance en utilisant l'interface du Gestionnaire de dépendances**](#adding-a-github-dependency).
+- ou déclarer le composant dans le fichier **dependencies.json** de votre projet ; ceci est fait automatiquement pour les fichiers locaux lorsque vous [**ajoutez une dépendance en utilisant l'interface du Gestionnaire de dépendances**](#adding-a-github-or-gitlab-dependency).
 
 Les composants déclarés dans le fichier **dependencies.json** peuvent être stockés à différents endroits :
 
@@ -530,7 +530,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-Si le composant est stocké dans un [référentiel privé](#private-repositories) et que votre jeton personnel est manquant, un message d'erreur s'affiche et un bouton **Ajouter un jeton d'accès personnel...** apparaît (voir [Fournir votre jeton d'accès](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -591,7 +591,7 @@ En outre, vous pouvez vérifier les mises à jour à tout moment, pour une seule
 
 ![check components](../assets/en/Project/check-component-all.png)
 
-Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-github-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
+Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

@@ -112,7 +112,7 @@ Você deseja listar as classes 4D integradas:
 
 ## Objecto de classe
 
-Quando uma classe é [definida](#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
+Quando uma classe é [definida](../Project/code-overview.md#creating-classes) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
 
 - [`name`](API/ClassClass.md#name) string
 - objeto [`superclass`](API/ClassClass.md#superclass) (nulo se não tiver)

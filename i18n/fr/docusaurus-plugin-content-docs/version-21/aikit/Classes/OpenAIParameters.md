@@ -24,7 +24,7 @@ Utilisez ces propriétés de callback pour un contrôle plus granulaire de la ge
 | `onResponse` | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec succès**. <br>*Ensure that the current process does not terminate.*      |
 | `onError`    | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec des erreurs**. <br>*Ensure that the current process does not terminate.* |
 
-> La fonction de callback recevra le même type d'objet de résultat (l'une des classes enfant de [OpenAIResult](Classes/OpenAIResult.md)) que celui qui serait renvoyé par la fonction dans un code synchrone.
+> La fonction de callback recevra le même type d'objet de résultat (l'une des classes enfant de [OpenAIResult](./OpenAIResult.md)) que celui qui serait renvoyé par la fonction dans un code synchrone.
 
 Voir la [documentation sur le code asynchrone](../asynchronous-call.md) pour des exemples.
 

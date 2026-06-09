@@ -591,7 +591,7 @@ En outre, vous pouvez vérifier les mises à jour à tout moment, pour une seule
 
 ![check components](../assets/en/Project/check-component-all.png)
 
-Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-github-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
+Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

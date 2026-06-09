@@ -28,7 +28,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 ![](../assets/en/ORDA/api.png)
 
-De plus, 4D [crée préalablement et automatiquement](#creating-classes) les classes pour chaque objet de modèle de données disponible.
+De plus, 4D [crée préalablement et automatiquement](../Project/code-overview.md#orda-classes) les classes pour chaque objet de modèle de données disponible.
 
 ## Architecture
 
@@ -45,7 +45,7 @@ Toutes les classes de modèle de données ORDA sont exposées en tant que propri
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet [(voir ci-dessous)](#class-files).
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.
 
 De plus, les instances d'objet de classes utilisateurs du modèles de données ORDA bénéficient des propriétés et fonctions de leurs parents:
 
@@ -269,7 +269,7 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Project/code-overview.md#user-classes) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
   - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.

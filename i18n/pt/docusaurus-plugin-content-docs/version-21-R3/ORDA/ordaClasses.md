@@ -28,7 +28,7 @@ Graças a esta caraterística, toda a lógica comercial da sua aplicação 4D po
 
 ![](../assets/en/ORDA/api.png)
 
-Além disso, 4D [pré-criações automaticamente](#creating-classes) as classes para cada objeto do modelo de dados disponível.
+Além disso, 4D [pré-criações automaticamente](../Project/code-overview.md#orda-classes) as classes para cada objeto do modelo de dados disponível.
 
 ## Arquitetura
 
@@ -45,7 +45,7 @@ Todas as classes do modelo de dados ORDA são expostas como propriedades do **`c
 | cs._DataClassName_Entity    | cs. EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs. EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> As classes de utilizador ORDA são armazenadas como arquivos de classe normais (.4dm) na subpasta Classes do projeto [(ver abaixo)](#class-files).
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.
 
 Além disso, as instâncias de objetos das classes de usuárioes do modelo de dados ORDA beneficiam das propriedades e funções dos seus pais:
 
@@ -265,7 +265,7 @@ End if
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
 - Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
-  - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
+  - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](../Project/code-overview.md#user-classes). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
   - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
 - Ao definir uma classe, verifique se a instrução [`class extends`](../Concepts/classes.md#class-extends-classname) corresponde exatamente ao nome da classe pai (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, 'Classe amplia EntitySelection' para uma classe de seleção de entidade.

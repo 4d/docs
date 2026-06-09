@@ -41,7 +41,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existante à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+Nom d'une [classe utilisateur] existante (../Project/code-overview.md#user-classes) à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 L'association d'une classe au formulaire offre les avantages suivants :
 

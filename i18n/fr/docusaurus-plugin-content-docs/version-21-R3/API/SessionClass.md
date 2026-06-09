@@ -855,7 +855,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette 
 
 En client/serveur, l'objet `.storage` de la session de l'utilisateur distant n'est **pas** le même sur le serveur et sur le client.
 
-Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
+Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
 
 :::tip
 

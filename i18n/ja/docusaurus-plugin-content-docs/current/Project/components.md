@@ -591,7 +591,7 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 ![check components](../assets/en/Project/check-component-all.png)
 
-[コンポーネントバージョン設定](#github-依存関係のバージョン範囲を定義) に合致する新しいコンポーネントのバージョンがGitHub 上で検知された場合、特殊な依存関係ステータスが表示されます:
+If a new component version matching your [component versioning configuration](#defining-a-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 
