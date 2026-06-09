@@ -88,9 +88,17 @@ A mesma pesquisa também pode ser realizada desta forma:
 
 Dada a seguinte estrutura XML: 
 
-```RAW
-         aaa      bbb      ccc   
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Root>
+   <Elem1>
+      <Elem2>aaa</Elem2>
+      <Elem2>bbb</Elem2>
+      <Elem2>ccc</Elem2>
+   </Elem1>
+</Root>
 ```
+
 
 O código abaixo permite recuperar a referência de cada elemento Elem2 no array arrEncontrados:
 

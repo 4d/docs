@@ -95,9 +95,17 @@ displayed_sidebar: docs
 
 以下のXML構造があるとき: 
 
-```RAW
-         aaa      bbb      ccc   
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Root>
+   <Elem1>
+      <Elem2>aaa</Elem2>
+      <Elem2>bbb</Elem2>
+      <Elem2>ccc</Elem2>
+   </Elem1>
+</Root>
 ```
+
 
 以下のコード使用して、それぞれのElem2 要素の参照をarrAfound 配列に取得することができます:
 

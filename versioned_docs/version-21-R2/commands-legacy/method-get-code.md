@@ -110,8 +110,12 @@ If you execute the following code:
 
 The resulting document will contain:
 
-```RAW
-  //%attributes = {"lang":"en"} comment added and reserved by 4DCase of    : (Form event code=On Load)        ALL RECORDS([Customer])End case
+```json
+  //%attributes = {"lang":"en"} comment added and reserved by 4D
+Case of
+    : (Form event code=On Load)
+        ALL RECORDS([Customer])
+End case
 ```
 
 If you execute the following code:
@@ -126,8 +130,12 @@ If you execute the following code:
 
 The resulting document will contain:
 
-```RAW
-  //%attributes = {"lang":"en"} comment added and reserved by 4DCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
+```json
+  //%attributes = {"lang":"en"} comment added and reserved by 4D
+Case of
+    : (Form event code:C388=On Load:K2:1)
+        ALL RECORDS:C47([Customer:1])
+End case
 ```
 
 ## See also 
