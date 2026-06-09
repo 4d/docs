@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/API/FileClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="File オブジェクトは File コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><meta data-rh=true property=og:description content="File オブジェクトは File コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/core-development","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/class-API-reference","name":"クラス関数","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.5fa72c14.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/API/FileClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="File オブジェクトは File コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><meta data-rh=true property=og:description content="File オブジェクトは File コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/core-development","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/class-API-reference","name":"クラス関数","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.1ecff214.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/20/API/FileClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/API/FileClass>21 R3 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R2/API/FileClass>21 R2</a><li><a class=dropdown__link href=/docs/ja/21/API/FileClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/20/API/FileClass>20</a><li><a class=dropdown__link href=/docs/ja/19/API/FileClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -178,7 +178,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>path<td>Text<td style=text-align:center>-><td>File path<tr><td>fileConstant<td>Integer<td style=text-align:center>-><td>4D file constant<tr><td>pathType<td>Integer<td style=text-align:center>-><td><code>fk posix path</code> (default) or <code>fk platform path</code><tr><td>*<td><td style=text-align:center>-><td>* to return file of host database<tr><td>Result<td>4D.File<td style=text-align:center>&lt;-<td>New file object</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>path<td>Text<td style=text-align:center>-><td>ファイルパス<tr><td>fileConstant<td>Integer<td style=text-align:center>-><td>4Dファイル定数<tr><td>pathType<td>Integer<td style=text-align:center>-><td><code>fk posix path</code> (デフォルト) または <code>fk platform path</code><tr><td>*<td><td style=text-align:center>-><td>ホストデータベースのファイルを返すには * を渡します<tr><td>戻り値<td>4D.File<td style=text-align:center>&lt;-<td>New file object</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明>説明<a href=#説明 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>File</code> コマンドは、 <code>4D.File</code> 型の新しいオブジェクトを作成して返します。 このコマンドは 2種類のシンタックスを受け入れます。</p>
@@ -416,7 +416,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>destinationFolder<td>4D.Folder<td style=text-align:center>-><td>Destination folder<tr><td>newName<td>Text<td style=text-align:center>-><td>Name for the copy<tr><td>overwrite<td>Integer<td style=text-align:center>-><td><code>fk overwrite</code> to replace existing elements<tr><td>Result<td>4D.File<td style=text-align:center>&lt;-<td>Copied file</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td style=text-align:center>-><td>コピー先フォルダ<tr><td>newName<td>Text<td style=text-align:center>-><td>コピーの新しい名前<tr><td>overwrite<td>Integer<td style=text-align:center>-><td>既存の要素を上書きするためには <code>fk overwrite</code><tr><td>戻り値<td>4D.File<td style=text-align:center>&lt;-<td>Copied file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-2>説明<a href=#説明-2 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.copyTo()</code> 関数は、 <code>File</code> オブジェクトを、<em>destinationFolder</em> 引数で指定したフォルダーへとコピーします 。</p>
@@ -481,7 +481,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>Boolean<td>&lt;-<td>True if the file was created successfully, false otherwise</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Boolean<td>&lt;-<td>True if the file was created successfully, false otherwise</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-3>説明<a href=#説明-3 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.create()</code> 関数は、 <code>File</code> オブジェクトのプロパティに基づいてディスク上にファイルを作成します。</p>
@@ -548,7 +548,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>Destination folder for the alias or shortcut<tr><td>aliasName<td>Text<td>-><td>Name of the alias or shortcut<tr><td>aliasType<td>Integer<td>-><td>Type of the alias link<tr><td>Result<td>4D.File<td>&lt;-<td>Alias or shortcut file reference</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>エイリアスまたはショートカットの作成先フォルダー<tr><td>aliasName<td>Text<td>-><td>エイリアスまたはショートカットの名称<tr><td>aliasType<td>Integer<td>-><td>エイリアスリンクのタイプ<tr><td>戻り値<td>4D.File<td>&lt;-<td>Alias or shortcut file reference</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-4>説明<a href=#説明-4 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.createAlias()</code> 関数は、 エイリアス (macOS) またはショートカット (Windows) を作成します 。これらは、<em>destinationFolder</em> オブジェクトが指定するフォルダー内に、<em>aliasName</em> の名称で作成されます。</p>
@@ -659,7 +659,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-7>説明<a href=#説明-7 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.delete()</code> 関数は、 ファイルを削除します。</p>
@@ -873,7 +873,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>4D.Blob<td>&lt;-<td>File content</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>4D.Blob<td>&lt;-<td>File content</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-12>説明<a href=#説明-12 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.getContent()</code> 関数は、  ファイルの全コンテンツを格納した <code>4D.Blob</code> オブジェクトを返します。 BLOB についての詳細は、<a class="" href=/docs/ja/20/Concepts/blob>BLOB</a> の章を参照してください。</p>
@@ -924,7 +924,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>size<td>Integer<td>-><td>Side length for the returned picture (pixels)<tr><td>Result<td>Picture<td>&lt;-<td>Icon</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>size<td>Integer<td>-><td>返されるピクチャーの一辺の長さ(ピクセル単位)<tr><td>戻り値<td>Picture<td>&lt;-<td>Icon</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-13>説明<a href=#説明-13 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.getIcon()</code> 関数は、 ファイルのアイコンを返します。</p>
@@ -986,7 +986,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>charSetName<td>Text<td>-><td>Name of character set<tr><td>charSetNum<td>Integer<td>-><td>Number of character set<tr><td>breakMode<td>Integer<td>-><td>Processing mode for line breaks<tr><td>Result<td>Text<td>&lt;-<td>Text from the document</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>charSetName<td>Text<td>-><td>文字セット名<tr><td>charSetNum<td>Integer<td>-><td>文字セットのID番号<tr><td>breakMode<td>Integer<td>-><td>改行文字に対する処理モード<tr><td>戻り値<td>Text<td>&lt;-<td>ドキュメントからのテキストhe document</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-14>説明<a href=#説明-14 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.getText()</code> 関数は、 ファイルのコンテンツをテキストとして返します 。</p>
@@ -1252,7 +1252,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>Destination folder<tr><td>newName<td>Text<td>-><td>Full name for the moved file<tr><td>Result<td>4D.File<td>&lt;-<td>Moved file</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>移動先フォルダ<tr><td>newName<td>Text<td>-><td>移動先でのファイルの完全な名称<tr><td>戻り値<td>4D.File<td>&lt;-<td>Moved file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-22>説明<a href=#説明-22 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.moveTo()</code> 関数は、 <code>File</code> オブジェクトを <em>destinationFolder</em> が指定する移行先へと移動すると同時に、<em>newName</em> を指定した場合は名称も変更します。</p>
@@ -1331,7 +1331,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>mode<td>Text<td>-><td>Opening mode: "read", "write", "append"<tr><td>options<td>Object<td>-><td>Opening options<tr><td>Result<td><a class="" href=/docs/ja/20/API/FileHandleClass>4D.FileHandle</a><td>&lt;-<td>New File handle object</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>mode<td>Text<td>-><td>開くモード: "read"、"write"、"append"<tr><td>options<td>Object<td>-><td>開くオプション<tr><td>戻り値<td><a class="" href=/docs/ja/20/API/FileHandleClass>4D.FileHandle</a><td>&lt;-<td>New File handle object</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-24>説明<a href=#説明-24 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.open()</code> 関数は、 対象のファイルについて、指定のモード (<em>mode</em>) またはオプション (<em>options</em>) で新規の <a class="" href=/docs/ja/20/API/FileHandleClass>4D.FileHandle</a> オブジェクトを作成し、返します。 <a class="" href=/docs/ja/20/API/FileHandleClass>4D.FileHandle</a> クラスの関数とプロパティを使用して、ファイルにコンテンツを書き込んだり読み取ったり、追加したりすることができます。</p>
@@ -1567,7 +1567,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>newName<td>Text<td>-><td>New full name for the file<tr><td>Result<td>4D.File<td>&lt;-<td>Renamed file</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>newName<td>Text<td>-><td>ファイルの新しい完全な名称<tr><td>戻り値<td>4D.File<td>&lt;-<td>Renamed file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-29>説明<a href=#説明-29 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.rename()</code> 関数は、 ファイル名を <em>newName</em> に指定した名称に変更し、名称変更後の <code>File</code> オブジェクトを返します。</p>
@@ -1618,7 +1618,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>info<td>Object<td>-><td>Properties to write in .exe/.dll version resource or .plist file</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>info<td>Object<td>-><td>.exe/.dll バージョンリソースや .plist ファイル情報内に書き込むプロパティ</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-30>説明<a href=#説明-30 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.setAppInfo()</code> 関数は、 <em>info</em> に渡したプロパティを <strong>.exe</strong> や <strong>.dll</strong>、<strong>.plist</strong> ファイルの情報として書き込みます。</p>
@@ -1736,7 +1736,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>content<td>BLOB<td>-><td>New contents for the file</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>content<td>BLOB<td>-><td>ファイルの新しいコンテンツ</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-31>説明<a href=#説明-31 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.setContent( )</code> 関数は、 <em>content</em> 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします。 BLOB についての詳細は、<a class="" href=/docs/ja/20/Concepts/blob>BLOB</a> の章を参照してください。</p>
@@ -1800,7 +1800,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>text<td>Text<td>-><td>Text to store in the file<tr><td>charSetName<td>Text<td>-><td>Name of character set<tr><td>charSetNum<td>Integer<td>-><td>Number of character set<tr><td>breakMode<td>Integer<td>-><td>Processing mode for line breaks</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>text<td>Text<td>-><td>ファイルに保存するテキスト<tr><td>charSetName<td>Text<td>-><td>文字セットの名前<tr><td>charSetNum<td>Integer<td>-><td>文字セットの番号<tr><td>breakMode<td>Integer<td>-><td>改行の処理モード</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-32>説明<a href=#説明-32 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.setText()</code> 関数は、 <em>text</em> に渡されたテキストをファイルの新しいコンテンツとして書き込みます。</p>

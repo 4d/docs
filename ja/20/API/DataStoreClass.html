@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/DataStoreClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>DataStore | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/API/DataStoreClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="DataStore | 4D Docs"/><meta data-rh=true name=description content="データストア とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 Datastore オブジェクトは以下のコマンドによって返されます:"/><meta data-rh=true property=og:description content="データストア とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 Datastore オブジェクトは以下のコマンドによって返されます:"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/API/DataStoreClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/DataStoreClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/DataStoreClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/DataStoreClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/DataStoreClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/core-development","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/class-API-reference","name":"クラス関数","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/API/DataStoreClass","name":"DataStore","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.5fa72c14.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/DataStoreClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>DataStore | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/API/DataStoreClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="DataStore | 4D Docs"/><meta data-rh=true name=description content="データストア とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 Datastore オブジェクトは以下のコマンドによって返されます:"/><meta data-rh=true property=og:description content="データストア とは、ORDA によって提供されるインターフェースオブジェクトです。データストアはデータベースへの参照とアクセスを提供します。 Datastore オブジェクトは以下のコマンドによって返されます:"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/API/DataStoreClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/DataStoreClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/DataStoreClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/DataStoreClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/DataStoreClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/core-development","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/class-API-reference","name":"クラス関数","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/API/DataStoreClass","name":"DataStore","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.1ecff214.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/20/API/DataStoreClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/API/DataStoreClass>21 R3 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R2/API/DataStoreClass>21 R2</a><li><a class=dropdown__link href=/docs/ja/21/API/DataStoreClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/20/API/DataStoreClass>20</a><li><a class=dropdown__link href=/docs/ja/19/API/DataStoreClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -189,7 +189,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>connectionInfo<td>Object<td>-><td>Connection properties used to reach the remote datastore<tr><td>localID<td>Text<td>-><td>Id to assign to the opened datastore on the local application (mandatory)<tr><td>Result<td>4D.DataStoreImplementation<td>&lt;-<td>Datastore object</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>connectionInfo<td>Object<td>-><td>リモートデータストアへの接続に使用する接続プロパティ<tr><td>localID<td>Text<td>-><td>ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須)<tr><td>戻り値<td>4D.DataStoreImplementation<td>&lt;-<td>Datastore object</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-1>説明<a href=#説明-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>Open datastore</code> コマンドは、 <em>connectionInfo</em> 引数が指定する 4Dデータベースにアプリケーションを接続します。 ローカルエイリアス<em>localID</em>と紐づけられた<code>4D.DataStoreImplementation</code>オブジェクトが返されます。</p>
@@ -414,7 +414,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>Object<td style=text-align:center>&lt;-<td>Information about the encryption of the current datastore and of each table</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>戻り値<td>Object<td style=text-align:center>&lt;-<td>Information about the encryption of the current datastore and of each table</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-5>説明<a href=#説明-5 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.encryptionStatus()</code> 関数は、 カレントデータファイルの暗号化状態を示すオブジェクトを返します 。カレントデータファイルとはつまり、<code>ds</code> データストアのデータファイルです。 各テーブルの状態も提供されます。</p>
@@ -537,7 +537,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-6>説明<a href=#説明-6 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.flushAndLock()</code> 関数は、 ローカルデータストアのキャッシュをフラッシュし、データベースに対して他のプロセスが書き込み操作をおこなうのを防ぎます。 これにより、データストアは凍結状態におかれます。 この関数は、たとえばアプリケーションのスナップショットを実行する前に呼び出す必要があります。</p>
@@ -596,7 +596,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>Collection<td>&lt;-<td>Collection of optimization context objects</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Collection<td>&lt;-<td>Collection of optimization context objects</table>
 </div>
 <blockquote>
 <p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
@@ -651,7 +651,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>Object<td style=text-align:center>&lt;-<td>Datastore properties</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>戻り値<td>Object<td style=text-align:center>&lt;-<td>Datastore properties</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-8>説明<a href=#説明-8 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.getInfo()</code> 関数は、 データストアの情報を提供するオブジェクトを返します。 このメソッドは汎用的なコードを書くのに有用です。</p>
@@ -738,7 +738,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>contextName<td>Text<td>-><td>Name of the context<tr><td>Result<td>Object<td>&lt;-<td>Description of the optimization context</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>contextName<td>Text<td>-><td>コンテキストの名前<tr><td>戻り値<td>Object<td>&lt;-<td>Description of the optimization context</table>
 </div>
 <blockquote>
 <p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
@@ -866,7 +866,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>Boolean<td style=text-align:center>&lt;-<td>True if the Data Explorer access is disabled, False if it is enabled (default)</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>戻り値<td>Boolean<td style=text-align:center>&lt;-<td>True if the Data Explorer access is disabled, False if it is enabled (default)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-11>説明<a href=#説明-11 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.isAdminProtected()</code> 関数は、 現在のセッションにおいて <a class="" href=/docs/ja/20/Admin/dataExplorer>データエクスプローラー</a> へのアクセスが無効に設定されているの場合は <code>true</code>を返します。</p>
@@ -909,7 +909,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>Boolean<td>&lt;-<td>True if locked</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Boolean<td>&lt;-<td>True if locked</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-12>説明<a href=#説明-12 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.locked()</code> 関数は、 ローカルデータストアが現在ロックされている場合、true を返します。</p>
@@ -1012,7 +1012,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>curPassPhrase<td>Text<td>-><td>Current encryption passphrase<tr><td>curDataKey<td>Object<td>-><td>Current data encryption key<tr><td>Result<td>Object<td>&lt;-<td>Result of the encryption key matching</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>curPassPhrase<td>Text<td>-><td>カレントの暗号化パスフレーズ<tr><td>curDataKey<td>Object<td>-><td>カレントのデータ暗号化キー<tr><td>戻り値<td>Object<td>&lt;-<td>Result of the encryption key matching</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-14>説明<a href=#説明-14 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.provideDataKey()</code> 関数は、 データストアのカレントデータファイルのデータ暗号化キーを受け取り、暗号化されたデータと合致するかどうかチェックします。 この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。</p>
@@ -1130,7 +1130,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>status<td>Boolean<td>-><td>True to disable Data Explorer access to data on the <code>webAdmin</code> port, False (default) to grant access</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>status<td>Boolean<td>-><td><code>webAdmin</code> ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-15>説明<a href=#説明-15 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.setAdminProtection()</code> 関数は、 <code>WebAdmin</code>セッションにおける <a class="" href=/docs/ja/20/Admin/dataExplorer>データエクスプローラー</a> 含め、<a class="" href=/docs/ja/20/Admin/webAdmin#http%E3%83%9D%E3%83%BC%E3%83%88>Web管理ポート</a>上でのデータアクセスを無効に設定することができます。</p>
@@ -1213,7 +1213,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>contextName<td>Text<td>-><td>Name of the context<tr><td>dataClassName<td>Text<td>-><td>Name of the dataclass<tr><td>dataClassObject<td>4D.DataClass<td>-><td>dataclass object (e.g datastore.Employee)<tr><td>attributes<td>Text<td>-><td>Attribute list separated by a comma<tr><td>attributesColl<td>Collection<td>-><td>Collection of attribute names (text)<tr><td>contextType<td>Text<td>-><td>If provided, value must be "main" or "currentItem"<tr><td>pageLength<td>Integer<td>-><td>Page length of the entity selection linked to the context (default is 80)</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>contextName<td>Text<td>-><td>コンテキストの名称<tr><td>dataClassName<td>Text<td>-><td>データクラスの名称<tr><td>dataClassObject<td>4D.DataClass<td>-><td>DataClass オブジェクト (例: datastore.Employee)<tr><td>attributes<td>Text<td>-><td>カンマ区切りの属性リスト<tr><td>attributesColl<td>Collection<td>-><td>属性名 (テキスト) のコレクション<tr><td>contextType<td>Text<td>-><td>渡す場合、値は "main" または "currentItem" のいずれか<tr><td>pageLength<td>Integer<td>-><td>コンテキストにリンクされたエンティティセレクションのページ長 (デフォルトは 80)</table>
 </div>
 <blockquote>
 <p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
@@ -1304,7 +1304,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>file<td>4D.File<td>-><td>File object<tr><td>options<td>Integer<td>-><td>Log response option (server only)<tr><td>reqNum<td>Integer<td>-><td>Number of requests to keep in memory (client only)</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>file<td>4D.File<td>-><td>File オブジェクト<tr><td>options<td>Integer<td>-><td>ログレスポンスオプション (サーバーのみ)<tr><td>reqNum<td>Integer<td>-><td>メモリ内に保管するリクエストの数 (クライアントのみ)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-17>説明<a href=#説明-17 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.startRequestLog()</code> 関数は、 クライアント側またはサーバー側で ORDAリクエストのログを開始します。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。</p>
@@ -1398,7 +1398,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td><td><td style=text-align:center><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td><td><td style=text-align:center><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-18>説明<a href=#説明-18 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.startTransaction()</code> 関数は、 対象データストアに対応するデータベース上で、カレントプロセス内のトランザクションを開始します。 トランザクションプロセス中にデータストアのエンティティに加えられた変更は、トランザクションが確定されるかキャンセルされるまで一時的に保管されたままになります。</p>
@@ -1448,7 +1448,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-19>説明<a href=#説明-19 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.stopRequestLog()</code> 関数は、 クライアント側またはサーバー側の ORDAリクエストのログをすべて停止します。</p>
@@ -1492,7 +1492,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-20>説明<a href=#説明-20 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.unlock()</code> 関数は、 データストアにおける、書き込み操作に対する現在のロックが同じプロセスで設定されていた場合、そのロックを解除します。 ローカルデータストアの書き込み操作は、<a href=#flushandlock class=""><code>.flushAndLock()</code></a> 関数を使用してロックすることができます。</p>
@@ -1537,7 +1537,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
-<table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
+<table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-21>説明<a href=#説明-21 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.validateTransaction()</code> 関数は、 トランザクションを受け入れます 。このトランザクションは、対象データストアの対応するレベルで <a href=#starttransaction class=""><code>.startTransaction()</code></a> で開始されたものです。</p>
