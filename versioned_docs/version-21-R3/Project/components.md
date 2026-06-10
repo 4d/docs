@@ -620,7 +620,7 @@ Dependencies are regularly checked for updates on GitHub. This checking is done 
 
 :::note
 
-If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+If you provide an [access token](#providing-your-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
 
 :::
 
@@ -657,7 +657,7 @@ You can update dependencies at any moment, for a single dependency or for all de
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range). 
+In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-dependency-version-range). 
 
 When you select an update command:
 
@@ -668,9 +668,9 @@ When you select an update command:
 
 The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window. 
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates. 
+When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates. 
 
-When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely. 
+When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Unselect the **Automatic update** option if you want to monitor dependency updates precisely. 
 
 
 
