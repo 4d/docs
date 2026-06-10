@@ -10,7 +10,7 @@ to import
 
 ## Enumérations
 
-4D Write Pro supports flat lists (single-level) and hierarchical lists (multi-level).
+4D Write Pro prend en charge les listes plats (mono-niveau) et les listes hiérarchiques (multi-niveaux).
 
 ### Single-level lists
 
@@ -117,7 +117,7 @@ result:
 
 ### Predefined attribute values
 
-When created, hierarchical list style sheets use predefined values:
+Lors de leur création, les feuilles de style de liste hiérarchique utilisent des valeurs prédéfinies :
 
 - `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`

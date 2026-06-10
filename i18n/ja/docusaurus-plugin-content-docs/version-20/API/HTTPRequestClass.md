@@ -90,11 +90,11 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 <!-- REF #4D.HTTPRequest.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|url|Text|->|URL to which to send the request|
-|options|Object|->|Request configuration properties|
-|Result|4D.HTTPRequest|<-|New HTTPRequest object|
+|url|Text|->|リクエストの送信先URL|
+|options|Object|->|リクエスト設定プロパティ|
+|戻り値|4D.HTTPRequest|<-|New HTTPRequest object|
 </div>
 <!-- END REF -->
 
@@ -375,10 +375,10 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 <!-- REF #HTTPRequestClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|time|Real|->|Maximum time in seconds to wait for the response|
-|Result|4D.HTTPRequest|<-|HTTPRequest object|
+|time|Real|->|最大待機時間(秒)|
+|戻り値|4D.HTTPRequest|<-|HTTPRequest object|
 </div>
 <!-- END REF -->
 
