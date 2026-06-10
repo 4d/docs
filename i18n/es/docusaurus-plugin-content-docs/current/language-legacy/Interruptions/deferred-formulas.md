@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Deferred formulas.Summary-->El comando `Deferred formulas` devuelve la colección de todas las fórmulas que han sido diferidas mediante el comando [`defer`](../../commands/defer) en la función o el método actual<!-- END REF-->. 
+<!--REF #_command_.Deferred formulas.Summary-->El comando `Deferred formulas` devuelve la colección de todas las fórmulas que han sido diferidas por el comando [`defer`](../../commands/defer) en la función o el método actual<!-- END REF-->. 
 
 Si el comando se llama desde otro contexto, devuelve una colección vacía.
 
@@ -52,4 +52,4 @@ var $colStack:=Deferred formulas
 |  |  |
 | --- | --- |
 | Número de comando | 1861 |
-| Thread safe | yes |
+| Hilo seguro | Sí |
