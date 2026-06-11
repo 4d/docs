@@ -44,10 +44,10 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 <!-- REF #_command_.SMTP New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|メールサーバー情報|
+|戻り値|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -122,10 +122,10 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 <!-- REF #4D.SMTPTransporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|メールサーバー情報|
+|戻り値|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -215,10 +215,10 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 <!-- REF #SMTPTransporterClass.send().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
-|Result|Object|<-|SMTP status|
+|mail|Object|->|送信する [Eメール](EmailObjectClass.md#email-オブジェクト)|
+|戻り値|Object|<-|SMTP status|
 </div>
 <!-- END REF -->
 

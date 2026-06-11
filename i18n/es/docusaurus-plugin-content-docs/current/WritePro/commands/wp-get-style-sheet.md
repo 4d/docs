@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName* or by the style sheet name and the *listLevelIndex* in the case of a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).<!-- END REF-->
+<!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName* or by the style sheet name and the *listLevelIndex* in the case of a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).<!-- END REF-->
 
 En *wpDoc*, pase el documento 4D Write Pro que contiene la hoja de estilo.
 

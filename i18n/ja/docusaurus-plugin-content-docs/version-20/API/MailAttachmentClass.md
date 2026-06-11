@@ -38,17 +38,17 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 <!-- REF #_command_.MAIL New attachment.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|file|4D.File|->|Attachment file|
-|zipFile|4D.ZipFile|->|Attachment Zipfile|
-|blob|4D.Blob|->|BLOB containing the attachment|
-|path|Text|->|Path of the attachment file|
-|name|Text|->|Name + extension used by the mail client to designate the attachment|
-|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
-|type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|file|4D.File|->|添付ファイル|
+|zipFile|4D.ZipFile|->|添付 Zipファイル|
+|blob|4D.Blob|->|添付を格納した Blob|
+|path|Text|->|添付ファイルのパス|
+|name|Text|->|メールクライアントが添付を指定するのに使用する名前 + 拡張子|
+|cid|Text|->|添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)|
+|type|Text|->|content-type ヘッダーの値|
+|disposition|Text|->|content-disposition ヘッダーの値: "inline" あるいは "attachment"|
+|戻り値|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -187,17 +187,17 @@ $transporter.send($email)
 <!-- REF #4D.MailAttachment.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|file|4D.File|->|Attachment file|
-|zipFile|4D.ZipFile|->|Attachment Zipfile|
-|blob|4D.Blob|->|BLOB containing the attachment|
-|path|Text|->|Path of the attachment file|
-|name|Text|->|Name + extension used by the mail client to designate the attachment|
-|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
-|type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|file|4D.File|->|添付ファイル|
+|zipFile|4D.ZipFile|->|添付 Zipファイル|
+|blob|4D.Blob|->|添付を格納した Blob|
+|path|Text|->|添付ファイルのパス|
+|name|Text|->|メールクライアントが添付を指定するのに使用する名前 + 拡張子|
+|cid|Text|->|添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)|
+|type|Text|->|content-type ヘッダーの値|
+|disposition|Text|->|content-disposition ヘッダーの値: "inline" あるいは "attachment"|
+|戻り値|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -238,9 +238,9 @@ $transporter.send($email)
 <!-- REF #MailAttachmentClass.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|--- |:---:|------|
-|Result|4D.Blob|<-|Content of the attachment|
+|戻り値|4D.Blob|<-|Content of the attachment|
 </div>
 <!-- END REF -->
 

@@ -111,10 +111,10 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 <!-- REF #_command_.New signal.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|description|Text|->|Description for the signal|
-|Result|4D.Signal|<-|Native object encapsulating the signal|
+|description|Text|->|シグナルの詳細|
+|戻り値|4D.Signal|<-|Native object encapsulating the signal|
 </div>
 <!-- END REF -->
 
@@ -270,10 +270,10 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 <!-- REF #SignalClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|timeout|Real|->|Maximum waiting time for the signal in seconds|
-|Result|Boolean|<-|State of the `.signaled` property|
+|timeout|Real|->|最大待機時間(秒)|
+|戻り値|Boolean|<-|State of the `.signaled` property|
 </div>
 <!-- END REF -->
 

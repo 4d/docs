@@ -3,7 +3,7 @@ id: entityset
 title: $entityset
 ---
 
-Después de [crear un conjunto de entidades]($method.md#methodentityset) mediante el uso de `$method=entityset`, puede utilizarlo posteriormente.
+After [creating an entity set](./$method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
 ## Sintaxis disponible
 
@@ -97,7 +97,7 @@ Releases on or more existing entity set(s) stored in [4D Server's cache](./$info
 
 ### Descripción
 
-You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](./$method.md#methodentityset), from 4D Server's cache.
 
 ### Ejemplo
 

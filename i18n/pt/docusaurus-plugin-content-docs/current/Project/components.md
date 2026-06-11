@@ -613,7 +613,7 @@ Você pode atualizar as dependências a qualquer momento, para uma única depend
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-Em qualquer caso, independentemente do status atual da dependência, é feita uma verificação automática no GitHub antes de atualizar a dependência, para garantir que a versão mais recente seja recuperada, [de acordo com a configuração de controle de versão do componente](#defining-a-github-dependency-version-range).
+Em qualquer caso, independentemente do status atual da dependência, é feita uma verificação automática no GitHub antes de atualizar a dependência, para garantir que a versão mais recente seja recuperada, [de acordo com a configuração de controle de versão do componente](#defining-a-dependency-version-range).
 
 Quando você seleciona um comando de atualização:
 
@@ -624,9 +624,9 @@ Quando você seleciona um comando de atualização:
 
 A opção **Atualização automática** está disponível no menu **opções** na parte inferior da janela do Gerenciador de dependências.
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. Essa opção facilita o gerenciamento diário das atualizações de dependências, eliminando a necessidade de selecionar manualmente as atualizações.
+When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. Essa opção facilita o gerenciamento diário das atualizações de dependências, eliminando a necessidade de selecionar manualmente as atualizações.
 
-Quando essa opção estiver desmarcada, uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente] (#defining-a-github-dependency-version-range) será indicada apenas como disponível e exigirá uma [atualização manual] (#updating-dependencies). Desmarque a opção **Atualização automática** se quiser monitorar as atualizações de dependências com precisão.
+Quando essa opção estiver desmarcada, uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente] (#defining-a-dependency-version-range) será indicada apenas como disponível e exigirá uma [atualização manual] (#updating-dependencies). Desmarque a opção **Atualização automática** se quiser monitorar as atualizações de dependências com precisão.
 
 ### Providing your access token
 

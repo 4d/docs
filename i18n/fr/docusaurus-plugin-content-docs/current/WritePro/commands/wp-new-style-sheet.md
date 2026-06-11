@@ -61,7 +61,7 @@ Vous pouvez spécifier les attributs de la feuille de style en utilisant la comm
 
 ### Feuille de style de liste hiérarchique
 
-Si le paramètre *styleSheetType* est défini sur `wk type paragraph`, vous pouvez optionnellement passer le paramètre *listLevelCount* pour créer une [feuille de style liste hiérarchique](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
+If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).
 
 Le paramètre *listLevelCount* définit le nombre total de niveaux dans la hiérarchie. Lorsqu'elle est spécifiée (valeur ≥ 1), la commande crée automatiquement une feuille de style de niveau racine et les feuilles de style de niveau inférieur correspondantes.
 

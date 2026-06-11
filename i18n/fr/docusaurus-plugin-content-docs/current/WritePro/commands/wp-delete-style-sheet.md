@@ -41,7 +41,7 @@ Cette commande propose deux façons de supprimer une feuille de style. Vous pouv
 - l'objet feuille de style (créé avec la commande [WP New style sheet](../WritePro/commands/wp-new-style-sheet) ou renvoyé par la commande [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)) à supprimer via le paramètre *styleSheetType*, ou
 - le document 4D Write Pro ainsi que le nom de la feuille de style à supprimer dans les paramètres *wpDoc* et *styleSheetName*.
 
-Lorsque la feuille de style à supprimer appartient à une [feuille de style de liste hiérarchique](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), le comportement dépend du niveau supprimé. Vous pouvez supprimer :
+When the style sheet to delete belongs to a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets), the behavior depends on the level being removed. Vous pouvez supprimer :
 
 - la feuille de style au niveau de la racine, ou
 - une feuille de style de sous-niveau spécifique en fournissant le paramètre facultatif *listLevelIndex*.

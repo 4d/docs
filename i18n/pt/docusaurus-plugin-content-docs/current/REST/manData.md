@@ -37,7 +37,7 @@ Para acessar o conjunto de entidades, você deve usar `$entityset/\{entitySetID\
 
 Por padrão, um conjunto de entidades é armazenado por duas horas; no entanto, você pode alterar o tempo limite passando um novo valor para [`$timeout`]($timeout.md). O timeout é continuamente resetado ao valor definido (seja o valor padrão ou um definido por você) a cada vez que for usado.
 
-Se quiser remover um conjunto de entidades do cache de 4D Server, você pode usar [`$method=release`]($method.md#methodrelease).
+If you want to remove an entity set from 4D Server's cache, you can use [`$entityset/$release`](./$entityset.md#entitysetrelease).
 
 Se modificar qualquer dos atributos de entidade no conjunto de entidades, o valor será atualizado. Entretanto, se modificar um valor que era uma parte da pesquisa executada para criar o conjunto de entidades, não será removido do conjunto de entidades mesmo se não se enquadrar mais nos critérios de pesquisa.
 

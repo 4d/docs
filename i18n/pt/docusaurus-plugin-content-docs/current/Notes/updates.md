@@ -17,7 +17,7 @@ Leia [**O que há de novo no 4D v21 R4**](https://blog.4d.com/whats-new-in-4d-21
 
 #### Mudanças de comportamento
 
-- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](../REST/$entityset.md).
 
 ## 4D 21 R3
 

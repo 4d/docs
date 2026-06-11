@@ -41,7 +41,7 @@ Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar
 - the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
 - el documento 4D Write Pro junto con el nombre de la hoja de estilo a eliminar en los parámetros *wpDoc* y *styleSheetName*.
 
-When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. Puede eliminar:
+When the style sheet to delete belongs to a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets), the behavior depends on the level being removed. Puede eliminar:
 
 - la hoja de estilo de nivel raíz, o
 - una hoja de estilo de subnivel específica ofreciendo el parámetro opcional *listLevelIndex*.

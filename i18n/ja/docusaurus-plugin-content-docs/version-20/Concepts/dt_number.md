@@ -5,7 +5,7 @@ title: 数値 (実数、倍長整数、整数)
 
 数値とは、以下を示す総称です:
 
-- 実数のフィールド、変数、または式。 The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- 実数のフィールド、変数、または式。 実数型の範囲は ±1.7e±308 です ([倍精度浮動小数点数 のIEEE 754 標準](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) に準拠します)。
 - 倍長整数のフィールド、変数、または式。 倍長整数 (4バイト整数) データタイプの範囲は、-2^31..(2^31)-1です。
 - 整数のフィールド、変数、または式。 整数 (2バイト整数) データタイプの範囲は、-32,768..32,767 (2^15..(2^15)-1)です。
 
