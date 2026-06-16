@@ -68,7 +68,7 @@ Consulte a seção [**Descrição dos arquivos de log**](Debugging/debugLogFiles
 
 ### Iniciar/Parar Logs de Solicitação e Depuração
 
-O botão **Iniciar solicitação e depurar logs** inicia arquivos de log. Uma vez que isto pode deteriorar significativamente o desempenho do servidor, deve ser reservado para a fase de desenvolvimento da aplicação.
+O botão **Iniciar solicitação e depurar logs** inicia arquivos de log. Uma vez que isto pode deteriorar significativamente o desempenho do servidor, deve ser reservado para a fase de desenvolvimento da aplicação. Uma vez que isto pode deteriorar significativamente o desempenho do servidor, deve ser reservado para a fase de desenvolvimento da aplicação.
 
 > Este botão registra apenas operações executadas no servidor.
 

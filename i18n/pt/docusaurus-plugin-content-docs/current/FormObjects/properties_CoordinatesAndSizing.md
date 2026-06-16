@@ -292,7 +292,7 @@ Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). Por p
 
 ---
 
-## Array estilo linha
+## Array altura linha
 
 Essa propriedade é usada para especificar o nome de um array de altura de linha que você deseja associar a list box. Um array de altura de linha deve ser do tipo numérico (longint por defeito).
 

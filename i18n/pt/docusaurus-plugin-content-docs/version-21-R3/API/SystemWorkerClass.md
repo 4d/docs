@@ -51,7 +51,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF 4D.SystemWorker.new().Desc -->
 
-## 4D.SystemWorker.new()
+## 4D. SystemWorker.new()
 
 <details><summary>História</summary>
 
@@ -92,19 +92,19 @@ No parâmetro *commandLine*, passe o caminho completo do arquivo do aplicativo a
 
 No parâmetro *options*, passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade      | Tipo       | Por padrão | Descrição                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onResponse       | Formula    | indefinido | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                      |
-| onData           | Formula    | indefinido | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                  |
-| onDataError      | Formula    | indefinido | Callback para os erros do processo externo (*stderr* do processo externo). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                            |
-| onError          | Formula    | indefinido | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                    |
-| onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                                                                |
-| timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                                                     |
-| dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                                                                   |
-| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](../commands/convert-from-text)                                                                                                                                                                   |
-| variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Sintaxe: `variáveis.key=valor`, onde `chave` é o nome da variável e `valor` seu valor. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
-| currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                                                                                                                         |
-| hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                                                             |
+| Propriedade      | Tipo       | Por padrão | Descrição                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| onResponse       | Formula    | indefinido | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                 |
+| onData           | Formula    | indefinido | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                             |
+| onDataError      | Formula    | indefinido | Callback para os erros do processo externo (*stderr* do processo externo). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                       |
+| onError          | Formula    | indefinido | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                               |
+| onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                           |
+| timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                |
+| dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                              |
+| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](../commands/convert-from-text)                                                                                                                              |
+| variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Define variáveis de ambiente personalizadas para o system worker. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
+| currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                                                                                    |
+| hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                        |
 
 Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O seu conteúdo depende do retorno da chamada:
 
@@ -136,12 +136,12 @@ A função devolve um objecto system worker sobre o qual se pode chamar funçõe
 1. Para abrir o Bloco de Notas e abrir um documento específico:
 
 ```4d
-var $sw : 4D.SystemWorker
+var $sw : 4D. SystemWorker
 var $options : Object
 $options:=New object
 $options.hideWindow:= False
 
-$sw:=4D.SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
+$sw:=4D. SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
 ```
 
 2. Executar npm instalar na consola:
@@ -164,19 +164,19 @@ $worker:=4D.SystemWorker.new("cmd /c npm install";$options)
 
 ```4d
 $mydoc:="C:\\Program Files\\Microsoft Office\\Office15\\WINWORD.EXE C:\\Tempo\\output.txt"
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new($mydoc)
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new($mydoc)
 ```
 
 4. Para lançar um comando com o diretório atual e publicar uma mensagem:
 
 ```4d
 var $param : Object
-var $sys : 4D.SystemWorker
+var $sys : 4D. SystemWorker
 
 $param:=New object
 $param.currentDirectory:=Folder(fk database folder)
-$sys:=4D.SystemWorker.new("git commit -F -";$param)
+$sys:=4D. SystemWorker.new("git commit -F -";$param)
 $sys.postMessage("This is a postMessage")
 $sys.closeInput()
 ```
@@ -186,8 +186,8 @@ $sys.closeInput()
 ```4d
 $docname:=Select document("";"*.*";"Choose the file to open";0)
 If(OK=1)
- var $sw : 4D.SystemWorker
- $sw:=4D.SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
+ var $sw : 4D. SystemWorker
+ $sw:=4D. SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
 End if
 ```
 
@@ -206,8 +206,8 @@ $sw.wait() //execução síncrona
 2. Para iniciar um aplicativo "gráfico" independente, é preferível usar o comando de sistema `open` (nesse caso, o código tem o mesmo efeito de um clique duplo no aplicativo):
 
 ```4d
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new ("open /Applications/Calculator.app")
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new ("open /Applications/Calculator.app")
 ```
 
 3. Para obter o conteúdo da pasta "Users" (ls -l é o equivalente em macOS do comando dir em DOS).
@@ -354,7 +354,7 @@ A propriedade `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.S
 
 #### Descrição
 
-A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta <!-- END REF -->. Valores possíveis: "text" ou "blob".
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta <!-- END REF -->. .
 
 Essa propriedade é **somente leitura**.
 

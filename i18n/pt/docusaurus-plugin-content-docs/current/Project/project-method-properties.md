@@ -48,7 +48,7 @@ Se o código descrito anteriormente fosse um método chamado `MODIFY_CUSTOMER`, 
  PRINT SELECTION([Customers])
 ```
 
-Esta capacidade simplifica dramaticamente os seus métodos. No exemplo, você não precisa saber como o método `MODIFY_CUSTOMER` funciona, apenas o que ele faz. Esta é a segunda razão para a utilização de sub-rotinas para esclarecer os seus métodos. Desta forma, os seus métodos tornam-se extensões à linguagem 4D.
+Esta capacidade simplifica dramaticamente os seus métodos. Esta capacidade simplifica dramaticamente os seus métodos. Esta é a segunda razão para a utilização de sub-rotinas para esclarecer os seus métodos. Desta forma, os seus métodos tornam-se extensões à linguagem 4D.
 
 Se precisar mudar seu método de pesquisa de clientes nesse banco de dados de exemplo, terá que mudar apenas um método, não dez. Este é o próximo motivo para utilizar sub-rotinas para facilitar mudanças nos seus métodos.
 
@@ -92,7 +92,7 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 ### Métodos de menu
 
-Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
+Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
 Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
 
@@ -120,10 +120,9 @@ External calls to project methods must be allowed in the [project method propert
 
 ### Execution mode
 
-Os métodos projeto escritos em sua aplicação costumam ser chamados automaticamente durante o uso da aplicação através de comandos de menu, botões, outros métodos, etc. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação.
+Os métodos projeto escritos em sua aplicação costumam ser chamados automaticamente durante o uso da aplicação através de comandos de menu, botões, outros métodos, etc. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação.
 
-Entretanto, para teste e depuração, 4D deixa que execute métodos de projeto manualmente e certos métodos de banco de dados em modo Design.
-Neste caso é possível executar o método em um novo processo ou diretamente no modo Debug, para verificar sua execução passo a passo.
+Entretanto, para teste e depuração, 4D deixa que execute métodos de projeto manualmente e certos métodos de banco de dados em modo Design. Neste caso é possível executar o método em um novo processo ou diretamente no modo Debug, para verificar sua execução passo a passo.
 
 Pode executar métodos de duas formas:
 

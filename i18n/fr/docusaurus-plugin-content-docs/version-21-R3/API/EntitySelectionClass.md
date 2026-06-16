@@ -302,7 +302,7 @@ $sellist2:=$sellist2.add($sellist1)
 La fonction `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combine l'entity selection avec un paramètre *entity* ou *entitySelection* en utilisant l'opérateur logique AND<!-- END REF --> ; elle renvoie une nouvelle entity selection non ordonnée qui ne contient que les entités référencées à la fois dans l'entity selection et dans le paramètre.
 
 - Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle entity selection contenant uniquement l'entité est retournée. Sinon, une entity selection vide est retournée.
-- Si vous passez *entitySelection* comme paramètre, vous combinez les deux entity selections. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
+- Si vous passez *entitySelection* comme paramètre, vous combinez les deux entity selections. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
 
 > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
@@ -1560,7 +1560,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 La fonction `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* en utilisant l'opérateur logique OR (non exclusif)<!-- END REF --> ; elle renvoie une nouvelle entity selection non ordonnée qui contient toutes les entités de l'entity selection et du paramètre.
 
-- Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. Sinon, une nouvelle entity selection contenant l'entity selection d'origine et l'entité est retournée.
+- Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée.
 - Si vous passez *entitySelection* comme paramètre, vous comparez les deux entity selections. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à *entitySelection* est renvoyée (ou n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résult
 
 > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
@@ -2220,7 +2220,7 @@ $sum:=$sel.sum("salary")
 
 La fonction `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->crée et renvoie une collection où chaque élément est un objet contenant un ensemble de propriétés et de valeurs <!-- END REF -->correspondant aux noms et aux valeurs des attributs de l'entity selection.
 
-Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "\*", tous les attributs sont extraits. Les attributs dont la propriété [kind](DataClassClass.md#attributename) est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\_KEY (clé primaire). Les attributs dont la propriété "kind" est "relatedEntities" ne sont pas extraits.
+Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "\*", tous les attributs sont extraits. Les attributs dont la propriété [kind](DataClassClass.md#attributename) est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\*KEY (clé primaire). Les attributs dont la propriété <a href="DataClassClass.md#attributename">kind</a> est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \*\_KEY (clé primaire).
 
 Vous pouvez également indiquer les attributs à extraire à l'aide d'un paramètre de filtre. Deux types de filtres sont utilisables :
 

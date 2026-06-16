@@ -10,7 +10,7 @@ para importar
 
 ## Listas
 
-4D Write Pro supports flat lists (single-level) and multi-level lists.
+4D Write Pro soporta listas planas (de un solo nivel) y listas de varios niveles.
 
 ### Listas de un solo nivel
 
@@ -39,7 +39,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Listas de múltiples niveles
 
-Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
 Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
@@ -61,7 +61,7 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 <!-- END REF -->
 
-<!-- REF multi-level-list.Desc -->
+<!-- REF multi-level-list-style-sheets.Desc -->
 
 ## Multi-level list style sheets
 

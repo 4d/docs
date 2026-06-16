@@ -76,13 +76,13 @@ Eles oferecem as propriedades abaixo e funções:
 |Parameter|Type||Description|
 |---|---|----|---|
 |option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
-|Result|4D.WebServer|<-|Web server object|
+|Result|4D. WebServer|<-|Web server object|
 </div>
 <!-- END REF -->
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto padrão web server ou o objeto web server definido através do parâmetro *option*<!-- END REF -->.
 
-O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 | Parâmetros                                      | Valor | Comentário                                                  |
 | ----------------------------------------------- | ----- | ----------------------------------------------------------- |
@@ -702,7 +702,7 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor web em que é aplicado<!-- END REF -->, utilizando propriedades definidas nas definições opcionais ** parâmetro do objecto.
 
-O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
 

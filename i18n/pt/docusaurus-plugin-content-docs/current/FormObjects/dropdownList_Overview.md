@@ -124,7 +124,7 @@ Se quiser usar uma lista suspensa para gerenciar os valores de uma área de entr
 
 Por exemplo, no caso de um campo "Cor" que só possa conter os valores "White", "Blue", "Green" ou "Red", agora é possível criar uma lista que contenha esses valores e associe-os a um objeto emergente menu que faça referência ao campo "Color". 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
 
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, você precisará usar uma [lista de opções hierárquicas](#using-a-hierarchical-choice-list).
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
 Para associar uma lista suspensa a um campo ou variável, digite o nome do campo ou da variável diretamente como o campo [Variable or Expression](properties_Object.md#variable-or-expression) da lista suspensa na Lista de propriedades.
 

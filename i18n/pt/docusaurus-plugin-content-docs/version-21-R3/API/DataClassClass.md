@@ -732,20 +732,20 @@ Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                                             |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                                 |
-| stamp       | Integer    | Carimbo da cache.                                                                     |
-| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.    |
-| \|          | Collection | Collection \| Collection \| Contém um objecto de entrada para cada entidade na cache. |
+| Propriedade | Tipo       | Descrição                                                                                                           |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                                               |
+| stamp       | Integer    | Carimbo da cache.                                                                                   |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.                  |
+| \|          | Collection | Collection \| Collection \| Collection \| Contém um objecto de entrada para cada entidade na cache. |
 
 Cada objeto de entrada na coleção `entries` possui as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                                                               |
-| ----------- | ---------- | ----------------------------------------------------------------------- |
-| data        | Object     | Objeto que contém os dados da entrada                                   |
-| expired     | Parâmetros | True se a entrada tiver expirado                                        |
-| \|          | Text       | Text       \| Text       \| Chave primária da entidade. |
+| Propriedade | Tipo       | Descrição                                                                             |
+| ----------- | ---------- | ------------------------------------------------------------------------------------- |
+| data        | Object     | Objeto que contém os dados da entrada                                                 |
+| expired     | Parâmetros | True se a entrada tiver expirado                                                      |
+| \|          | Text       | Text       \| Text       \| Text       \| Chave primária da entidade. |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
@@ -934,7 +934,7 @@ attributePath|formula comparator value
 
 onde:
 
-- **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. No caso de um caminho de atributo cujo tipo é `Collection`, a notação `[]` é usada para lidar todas as ocorrências (por exemplo, `children[].age`).
+- **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em <em x-id="3">queryString</em> ou <em x-id="3">formula</em> (":placeholder") e valor pode ser uma string ou uma coleção de strings.
 
 > *Você não pode usar diretamente atributos cujo nome contém caracteres especiais, como ". , "\[ ]", ou "=", ">", "#"..., porque eles serão avaliados incorretamente na frase da consulta. Se precisar consultar tais atributos, deve considerar o uso de espaços reservados, que permite uma gama extendida de caracteres em caminhos de atributos (veja* **Usando espaços reservados** *abaixo).*
 
@@ -968,7 +968,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 | Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |                                |
 
 - Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados. **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20.
-  Quando usar um valor constante, as regras abaixo devem ser respeitadas:
+  Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo <strong x-id="1">value</strong> para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet.
   - A constante de tipo texto pode ser passada com ou sem aspas simples (ver **Uso de aspas mais abaixo**). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** ou **false** (diferencia maiúscula de minúscula).
   - \*\*Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
@@ -1085,23 +1085,19 @@ Ao pesquisar nos atributos de objectos de classe de dados que contêm colecçõe
 
 ```
 Entity 1:
-ds.Class.name: "A"
+ds. Class.name: "A"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
                 "val":1
-            } ] }
-
-Entity 2:
-ds.Class.name: "B"
+            } ] } Entity 2:
+ds. Class.name: "B"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
                 "val":0
-            } ] }
-
-Entity 3:
-ds.Class.name: "C"
+            } ] } Entity 3:
+ds. Class.name: "C"
 ds.Class.info:
     { "coll" : [ {
                 "val":0,
@@ -1126,7 +1122,7 @@ ds.Class.query(not("info.coll[].val = :1";0))
 Se você quer implementar uma consulta que encontra entidades onde "pelo menos uma propriedade é diferente de *valor*", você precisa usar uma notação especial usando uma carta no `[]`:
 
 ```4d
-ds.Class.query("info.coll[a].val := :1";0)  
+ds. Class.query("info.coll[a].val := :1";0)  
 // devolve A e B
 // encontra "entidades em que pelo menos uma propriedade val é diferente de 0"
 ```

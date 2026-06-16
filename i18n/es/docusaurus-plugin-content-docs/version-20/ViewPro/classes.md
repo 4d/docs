@@ -13,7 +13,7 @@ Las siguientes clases pueden utilizarse en 4D View Pro.
 <!-- REF #LineBorder.color.Syntax -->
 **.color** : Text<!-- END REF -->
 
-La propiedad `.color` es el <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. Por defecto = black.
+La propiedad `.color` es el <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. .
 
 
 ### .style
@@ -21,7 +21,7 @@ La propiedad `.color` es el <!-- REF #LineBorder.color.Summary -->[color](config
 <!-- REF #LineBorder.style.Syntax -->
 **.style** : Integer<!-- END REF -->
 
-La propiedad `.style` es el <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) del borde<!-- END REF -->. Por defecto = empty.
+La propiedad `.style` es el <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) del borde<!-- END REF -->. .
 
 
 ## TableColumn
@@ -57,7 +57,7 @@ La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contiene el nombre de
 <!-- REF #TableOptions.allowAutoExpand.Syntax -->
 **.allowAutoExpand**: Boolean<!-- END REF -->
 
-La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indica si se amplian las columnas o líneas de la tabla cuando se añaden valores en las celdas adyacentes vacías<!-- END REF -->. Por defecto = True
+La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indica si se amplian las columnas o líneas de la tabla cuando se añaden valores en las celdas adyacentes vacías<!-- END REF -->. .
 
 
 ### .bandColumns
@@ -65,7 +65,7 @@ La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns**: Boolean<!-- END REF -->
 
-La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica si se debe mostrar un estilo de columna alterna<!-- END REF -->. Por defecto = False
+La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica si se debe mostrar un estilo de columna alterna<!-- END REF -->. .
 
 
 ### .bandRows
@@ -73,7 +73,7 @@ La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica
 <!-- REF #TableOptions.bandRows.Syntax -->
 **.bandRows**: Boolean<!-- END REF -->
 
-La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se debe mostrar un estilo de líneas alternas<!-- END REF -->. Por defecto = True
+La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se debe mostrar un estilo de líneas alternas<!-- END REF -->. .
 
 
 ### .highlightLastColumn
@@ -81,14 +81,14 @@ La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn**: Boolean<!-- END REF -->
 
-La propiedad `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->. Por defecto = False
+La propiedad `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->. .
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn**: Boolean<!-- END REF -->
 
-La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->. Por defecto = False
+La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->. .
 
 
 ### .showFooter
@@ -96,21 +96,21 @@ La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter**: Boolean<!-- END REF -->
 
-La propiedad `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica si se debe mostrar un pie de página<!-- END REF -->. Por defecto = False
+La propiedad `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica si se debe mostrar un pie de página<!-- END REF -->. .
 
 ### .showHeader
 
 <!-- REF #TableOptions.showHeader.Syntax -->
 **.showHeader**: Boolean<!-- END REF -->
 
-La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica si se debe mostrar un encabezado<!-- END REF -->. Por defecto = True
+La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica si se debe mostrar un encabezado<!-- END REF -->. .
 
 ### .showResizeHandle
 
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle**: Boolean<!-- END REF -->
 
-La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica si se debe mostrar el manejador de redimensionamiento para las tablas que no tienen una *source*<!-- END REF -->. Por defecto = False
+La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica si se debe mostrar el manejador de redimensionamiento para las tablas que no tienen una *source*<!-- END REF -->. .
 
 ### .tableColumns
 
@@ -137,7 +137,7 @@ Consulte los [temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList**: Boolean<!-- END REF -->
 
-La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indica si se debe utilizar una lista desplegable en las celdas de pie de página que calculan el valor total de una columna<!-- END REF -->. Por defecto = False
+La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indica si se debe utilizar una lista desplegable en las celdas de pie de página que calculan el valor total de una columna<!-- END REF -->. .
 
 
 
@@ -156,7 +156,7 @@ La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color
 <!-- REF #TableStyle.foreColor.Syntax -->
 **.foreColor** : Text<!-- END REF -->
 
-La propiedad `.foreColor` es el <!-- REF #TableStyle.foreColor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
+[color de primer plano](configuring.md#background--foreground) de la tabla <!-- REF #TableStyle.foreColor.Summary -->La propiedad `.foreColor` es el<!-- END REF -->.
 
 
 
@@ -369,7 +369,7 @@ La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize**: Integer<!-- END REF -->
 
-La propiedad `.secondColumnStripSize` es el <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->tamaño de la segunda columna alterna<!-- END REF -->. Por defecto=1
+La propiedad `.secondRowStripSize` es el <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->tamaño de la segunda columna alterna<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -383,7 +383,7 @@ La propiedad `.secondColumnStripStyle` es la <!-- REF #TableThemeOptions.secondC
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize**: Integer<!-- END REF -->
 
-La propiedad `.secondRowStripSize` es el <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->tamaño de la segunda columna alterna<!-- END REF -->. Por defecto=1.
+La propiedad `.secondColumnStripSize` es el <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->tamaño de la segunda columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .secondRowStripStyle
 

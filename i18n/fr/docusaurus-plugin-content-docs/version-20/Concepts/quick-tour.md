@@ -56,7 +56,7 @@ Même si cela est généralement déconseillé, vous pouvez créer des variables
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. Cette flexibilité ne s'applique pas aux variables déclarées avec le mot-clé `var` (leur type ne peut pas changer) et en [mode compilé](interpreted.md) où le type ne peut jamais être modifié, quelle que soit la manière dont la variable a été créée.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu.
 
 ## Commandes
 
@@ -188,6 +188,7 @@ A noter que si la valeur de la propriété de l'objet est un objet qui encapsule
 $f:=New object
 $f.message:=Formula(ALERT("Hello world !"))
 $f.message() //affiche "Hello world!"
+$f.message() //affiche "Hello world!"
 ```
 
 Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :
@@ -290,7 +291,7 @@ Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4
 
 
 ### Types d’expressions
-Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant donne des exemples de chaque type d'expression.
+Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Le tableau suivant donne des exemples de chaque type d'expression.
 
 | Expression              | Type                  | Description                                                                                                                                                                          |
 | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

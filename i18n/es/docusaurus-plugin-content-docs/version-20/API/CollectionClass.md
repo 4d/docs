@@ -938,7 +938,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 #### Descripción
 
-La función `.every()` <!-- REF #collection.every().Summary -->devuelve **true** si todos los elementos de la colección han pasado con éxito una prueba implementada en el objeto *formula* o en el método *methodName*<!-- END REF -->.
+La función `.every()` <!-- REF #collection.every().Summary -->La función `.distinct()`<!-- END REF -->.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -1176,7 +1176,7 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 #### Descripción
 
-La función `.filter()` <!-- REF #collection.filter().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección original para los que la *formula* o *methodName* resultante es **true**<!-- END REF -->. Esta función devuelve una ***copia superficial***, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.filter()` <!-- REF #collection.filter().Summary -->La función `.filter()`<!-- END REF -->. Esta función devuelve una ***copia superficial***, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para filtrar los elementos de la colección utilizando:
@@ -1268,7 +1268,7 @@ Quiere filtrar los elementos según su tipo de valor:
 
 #### Descripción
 
-La función `.distinct()` <!-- REF #collection.find().Summary -->devuelve el primer valor de la colección cuyo resultado *formula* o *methodName*, aplicado a cada elemento, devuelve **true**<!-- END REF -->.
+La función `.distinct()` <!-- REF #collection.find().Summary -->La función `.extract()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -1276,7 +1276,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efectuar toda prueba, con o sin los parámetros, y debe devolver **true** para cada elemento que cumpla la condición. Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1362,7 +1362,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 #### Descripción
 
-La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->devuelve el índice, en la colección, del primer valor para el que la *formula* o *methodName*, aplicada a cada elemento, devuelve **true**<!-- END REF -->.
+La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->La función `.findIndex()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -1370,7 +1370,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede efectuar toda prueba, con o sin los parámetros, y debe devolver **true** para cada elemento que cumpla la condición. Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1544,7 +1544,7 @@ $col.flat(MAXLONG)
 
 #### Descripción
 
-La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->crea una nueva colección basada en el resultado de la llamada a la función 4D *formula* o al método *methodName* sobre cada elemento de la colección original y aplanada en una profundidad de 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
+La función `.combine()` <!-- REF #collection.flatMap().Summary -->inserta elementos *col2* al final o en la posición *índice* especificada en la instancia de la colección y devuelve la colección editada<!-- END REF -->. .
 
 Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamada a [`flat()`](#flat) de profundidad 1.
 > Esta función no modifica la colección original.
@@ -1588,8 +1588,14 @@ $result:=$col.flatMap(Formula(New collection($1.value*2)))
 var $col; $result : Collection
 $col:=New collection("Hello how"; ""; "are you ?")
 
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
 $result:=$col.map(Formula(Split string($1.value; " ")))
 // [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
 
 $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 // ["Hello", "how", "are", "you", "?"]
@@ -1655,7 +1661,7 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 Opcionalmente, puede pasar el índice de la colección desde el que iniciar la búsqueda en *startFrom*.
 
 *   Si *startFrom* >= longitud de la colección, se devuelve False, lo que significa que no se busca en la colección.
-*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Tenga en cuenta que incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
 *   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
@@ -1933,7 +1939,7 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 #### Descripción
 
-La función `.last()` <!-- REF #collection.last().Summary -->devuelve el último elemento de la colección<!-- END REF -->.
+La función `.last()` <!-- REF #collection.last().Summary -->La función `.last()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 La función devuelve Undefined si la colección está vacía.
@@ -2089,7 +2095,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 #### Descripción
 
-La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colección basada en el resultado de la llamada a la fórmula ** 4D función o *methodName* método en cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
+La función `.map()` <!-- REF #collection.map().Summary -->La función `.map()`<!-- END REF -->. . `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
 > Esta función no modifica la colección original.
 
 
@@ -2415,7 +2421,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-La función `.find()` <!-- REF #collection.orderByMethod().Summary -->devuelve el primer valor de la colección cuyo resultado *formula* o *methodName*, aplicado a cada elemento, devuelve **true**<!-- END REF -->.
+La función `.find()` <!-- REF #collection.orderByMethod().Summary -->La función `.every()`<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
@@ -2758,7 +2764,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 #### Descripción
 
 
-La función `.reduce()` <!-- REF #collection.reduce().Summary -->aplica la *formula * o callback *methodName* contra un acumulador y cada elemento de la colección (de izquierda a derecha) para reducirlo a un único valor<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->La función `.reduceRight()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -2852,7 +2858,7 @@ Con el siguiente método ***Flatten***:
 #### Descripción
 
 
-La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula * o retrollamada *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula * o callback *methodName* contra un acumulador y cada elemento de la colección (de izquierda a derecha) para reducirlo a un único valor<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -3073,7 +3079,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 #### Descripción
 
-La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una nueva colección con todos los elementos de la colección original en orden inverso<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.reverse()` <!-- REF #collection.reverse().Summary -->La función `.reverse()`<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 #### Ejemplo

@@ -1255,7 +1255,7 @@ var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc
 
 :::note
 
-You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+You will generally want vector similarity query results to be sorted from "most similar" to "least similar." Por defecto, los resultados devueltos con una cláusula **order by** se ordenan en orden ascendente. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
 
 - for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
 - for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.

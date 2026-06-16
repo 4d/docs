@@ -29,7 +29,7 @@ Las siguientes funciones ORDA y singleton pueden llamarse en REST:
 
 :::note
 
-`/rest/{dataClass}/Function` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades). La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
+La función se busca primero en la clase de selección de entidades. `/rest/{dataClass}/Function` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades). Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 :::
 

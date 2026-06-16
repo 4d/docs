@@ -155,6 +155,10 @@ A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary
        ALERT("Error: "+$status.statusText)
     End if
  End if
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -231,7 +235,7 @@ Executar esse método não remove de verdade qualquer email. O email marcado ser
 
 ##### Descrição
 
-A função `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->devolve uma `boxInfo` objecto correspondente à caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+A função `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->A função `.getBoxInfo()`<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
@@ -285,7 +289,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 ##### Descrição
 
-A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devolve o `Email` objeto correspondente ao *msgNumber* na caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
+A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->A função `.getMail()`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
 Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pela função [`.getMailInfoList()`](#getmailinfolist).
 
@@ -390,6 +394,7 @@ O método retorna **Null** se:
  End if
  End if
  End if
+ End if
 ```
 
 ## .getMailInfoList()
@@ -484,7 +489,7 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 ##### Descrição
 
-A função `.getMIMEAsBlob()` <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->devolve um BLOB contendo o conteúdo MIME para a mensagem correspondente ao *msgNumber* na caixa de correio designada pelo [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
+A função `.getMIMEAsBlob()` <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->A função `.getMIMEAsBlob()`<!-- END REF -->.
 
 Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pelo método [`.getMailInfoList()`](#getmailinfolist).
 

@@ -372,7 +372,7 @@ La propriété `.checkConnectionDelay` contient <!-- REF #IMAPTransporterClass.c
 
 #### Description
 
-La fonction `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->La fonction `.getMails()`<!-- END REF -->.
+La fonction `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->La fonction `.copy()`<!-- END REF -->.
 
 Vous pouvez passer :
 
@@ -555,7 +555,7 @@ End for each
 
 #### Description
 
-La fonction `delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->associe le marqueur "deleted" aux messages désignés par `msgsIDs` ou `allMsgs`<!-- END REF -->.
+La fonction `delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->La fonction `.removeFlags()`<!-- END REF -->.
 
 Vous pouvez passer :
 
@@ -681,33 +681,29 @@ La fonction retourne un objet décrivant le statut IMAP :
 Vous souhaitez supprimer la boîte enfant "Nova Orion Industries" à l'intérieur de la boîte "Bills" :
 
 ```4d
-var $pw; $name : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
+  //create transporter
+ $transporter:=IMAP New transporter($server)
 
-If(OK=1) $options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$transporter:=IMAP New transporter($options)
-
-// delete mailbox
-$name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
-$status:=$transporter.deleteBox($name)
-
-If ($status.success)
- ALERT("Mailbox deletion successful!")
- Else
- ALERT("Error: "+$status.statusText)
+  If($boxInfo.mailCount>0)
+  // retrieve the headers of the last 20 messages without marking them as read
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+     New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+    // ...
+ End for each
  End if
-End if
- Else
- ALERT("Error: "+$status.statusText)
- End if
-End if
 ```
 
 <!-- END REF -->
@@ -1162,7 +1158,7 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Numéro de séquence du message|
 |msgID|Text|-> |Identifiant unique du message|
-|updateSeen|Boolean|->|Si la valeur est True, le message est marqué comme « lu » dans la boîte de réception. Si la valeur est « False », le message reste inchangé.|
+|updateSeen|Boolean|->|Si la valeur est True, le message est marqué comme « lu » dans la boîte de réception. Si la valeur est « False », le message reste inchangé.| Si la valeur est « False », le message reste inchangé.|
 |Résultat|BLOB|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
@@ -1181,7 +1177,7 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 * **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
 * **Faux** - pour ne pas modifier le statut "seen" du message > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant, > * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée, > * S'il n'y a pas de connexion ouverte,`.getMIMEAsBlob()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de `.selectBox()`.
 > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant,
-> * var $pw : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $status:=$transporter.createBox("Invoices") If ($status.success) ALERT("Mailbox creation successful!") Else ALERT("Error: "+$status.statusText) End if End if
+> * var $pw : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) // rename mailbox $status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success) ALERT("Mailbox renaming successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
 > * var $pw; $name : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp" $status:=$transporter.unsubscribe($name) If ($status.success) ALERT("Mailbox unsubscription successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
 
 #### Résultat
@@ -1414,7 +1410,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### Description
 
-La fonction `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->supprime les flags des `msgIDs` pour les `keywords` spécifiés<!-- END REF -->.
+La fonction `delete()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->associe le marqueur "deleted" aux messages désignés par `msgsIDs` ou `allMsgs`<!-- END REF -->.
 
 Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
@@ -1480,7 +1476,13 @@ If ($status.success)
 End if
 ```
 
+#### Voir également
+
+[`.addFlags()`](#addflags) 
+
 <!-- END REF -->
+
+
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
@@ -1511,9 +1513,9 @@ End if
 
 La fonction `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->change le nom d'une boîte aux lettres sur le serveur IMAP<!-- END REF -->. Essayer de renommer une mailbox qui n'existe pas ou de renommer une mailbox avec un nom qui est déjà utilisé génère une erreur.
 
-Dans le paramètre `currentName`, passez le nom de la mailbox à renommer.
-
 Passez le nouveau nom de la mailbox dans e paramètre `newName`.
+
+Dans le paramètre `currentName`, passez le nom de la mailbox à renommer.
 
 **Objet retourné**
 
@@ -1871,6 +1873,10 @@ $status:=$transporter.subscribe($name)
 
 If ($status.success)
    ALERT("Mailbox subscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

@@ -11,15 +11,15 @@ A classe `SystemWorker` está disponível na loja de classes `4D`.
 
 ```4d
     // Exemplo Windows para obter acesso à informação ipconfig
-var $myWinWorker : 4D.SystemWorker
+var $myWinWorker : 4D. SystemWorker
 var $ipConfig : Text
-$myWinWorker:= 4D.SystemWorker.new("ipconfig")
+$myWinWorker:= 4D. SystemWorker.new("ipconfig")
 $ipConfig:=$myWinWorker.wait(1).response //timeout 1 second
 
     // exemplo macOS para mudar as permissões de um ficheiro no macOS
     // chmod é o comando macOS usado para modificar o acesso a ficheiros
-var $myMacWorker : 4D.SystemWorker
-$myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
+var $myMacWorker : 4D. SystemWorker
+$myMacWorker:= 4D. SystemWorker.new("chmod +x /folder/myfile.sh")
 
 ```
 
@@ -46,7 +46,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | [<!-- INCLUDE #SystemWorkerClass.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SystemWorkerClass.wait().Summary --> |
 
 <!-- REF 4D.SystemWorker.new().Desc -->
-## 4D.SystemWorker.new()
+## 4D. SystemWorker.new()
 
 <details><summary>Histórico</summary>
 
@@ -57,7 +57,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 </details>
 
 <!-- REF #4D.SystemWorker.new().Syntax -->
-**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
+**4D. SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D. SystemWorker<!-- END REF -->
 
 
 <!-- REF #4D.SystemWorker.new().Params -->
@@ -67,13 +67,13 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 |---------|--- |:---:|------|
 |commandLine|Text|->|Command line to execute|
 |options|Object|->|Worker parameters|
-|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+|result|4D. SystemWorker|<-|New asynchronous System worker or null if process not started|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary -->cria e devolve um objecto `4D.SystemWorker` que executará a *commandLine* que passou como parâmetro para lançar um processo externo<!-- END REF -->.
+A propriedade `.commandLine` <!-- REF #4D.SystemWorker.new().Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 O objecto worker do sistema devolvido pode ser utilizado para postar mensagens ao worker e obter a saída do worker.
 
@@ -125,27 +125,27 @@ A função devolve um objecto system worker sobre o qual se pode chamar funçõe
 1. Para abrir o Bloco de Notas e abrir um documento específico:
 
 ```4d
-var $sw : 4D.SystemWorker
+var $sw : 4D. SystemWorker
 var $options : Object
 $options:=New object
 $options.hideWindow:= False
 
-$sw:=4D.SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
+$sw:=4D. SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
 ```
 
 2. Executar npm instalar na consola:
 
 ```4d
-var $folder : 4D.Folder
+var $folder : 4D. Folder
 var $options : Object
-var $worker : 4D.SystemWorker
+var $worker : 4D. SystemWorker
 
 $folder:=Folder(fk database folder)
 $options:=New object
 $options.currentDirectory:=$folder
 $options.hideWindow:=False
 
-$worker:=4D.SystemWorker.new("cmd /c npm install";$options)
+$worker:=4D. SystemWorker.new("cmd /c npm install";$options)
 
 ```
 
@@ -153,19 +153,19 @@ $worker:=4D.SystemWorker.new("cmd /c npm install";$options)
 
 ```4d
 $mydoc:="C:\\Program Files\\Microsoft Office\\Office15\\WINWORD.EXE C:\\Tempo\\output.txt"
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new($mydoc)
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new($mydoc)
 ```
 
 4. Para lançar um comando com o diretório atual e publicar uma mensagem:
 
 ```4d
 var $param : Object
-var $sys : 4D.SystemWorker
+var $sys : 4D. SystemWorker
 
 $param:=New object
 $param.currentDirectory:=Folder(fk database folder)
-$sys:=4D.SystemWorker.new("git commit -F -";$param)
+$sys:=4D. SystemWorker.new("git commit -F -";$param)
 $sys.postMessage("This is a postMessage")
 $sys.closeInput()
 ```
@@ -175,8 +175,8 @@ $sys.closeInput()
 ```4d
 $docname:=Select document("";"*.*";"Choose the file to open";0)
 If(OK=1)
- var $sw : 4D.SystemWorker
- $sw:=4D.SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
+ var $sw : 4D. SystemWorker
+ $sw:=4D. SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
 End if
 ```
 
@@ -186,8 +186,8 @@ End if
 
 ```4d
 
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new("/bin/cat /folder/myfile.txt")
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new("/bin/cat /folder/myfile.txt")
 $sw.wait() /execução síncrona
 
 ```
@@ -195,18 +195,18 @@ $sw.wait() /execução síncrona
 2. Para lançar uma aplicação "gráfica" independente, é preferível utilizar o comando do sistema `open` (neste caso, o código tem o mesmo efeito que um duplo clique na aplicação):
 
 ```4d
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new ("open /Applications/Calculator.app")
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new ("open /Applications/Calculator.app")
 ```
 
 3. Para obter o conteúdo da pasta "Users" (ls -l é o equivalente em macOS do comando dir em DOS).
 
 ```4d
-var $systemworker : 4D.SystemWorker
+var $systemworker : 4D. SystemWorker
 var $output : Text
 var $errors : Collection
 
-$systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ")
+$systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ")
 $systemworker.wait(5)
 $output:=$systemworker.response
 $error:=$systemworker.errors
@@ -217,35 +217,23 @@ $error:=$systemworker.errors
 
 ```4d
 
-var $systemworker : 4D.SystemWorker
-$systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";cs.Params.new())
+var $systemworker : 4D. SystemWorker
+$systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 
-// "Params" class
-
-Class constructor
+// "Params" class Class constructor
  This.dataType:="text"
     This.data:=""
-    This.dataError:=""
-
-Function onResponse($systemWorker : Object)
-     This._createFile("onResponse"; $systemWorker.response)
-
-Function onData($systemWorker : Object; $info : Object)
+    This.dataError:="" Function onResponse($systemWorker : Object)
+     This._createFile("onResponse"; $systemWorker.response) Function onData($systemWorker : Object; $info : Object)
      This.data+=$info.data
-     This._createFile("onData";this.data)
-
-Function onDataError($systemWorker : Object; $info : Object)
+     This._createFile("onData";this.data) Function onDataError($systemWorker : Object; $info : Object)
      This.dataError+=$info.data
-     This._createFile("onDataError";this.dataError)
-
-Function onTerminate($systemWorker : Object)
+     This._createFile("onDataError";this.dataError) Function onTerminate($systemWorker : Object)
      var $textBody : Text
      $textBody:="Response: "+$systemWorker.response
      $textBody+="ResponseError: "+$systemWorker.responseError
-     This._createFile("onTerminate"; $textBody)
-
-Function _createFile($title : Text; $textBody : Text)
+     This._createFile("onTerminate"; $textBody) Function _createFile($title : Text; $textBody : Text)
      TEXT TO DOCUMENT(Get 4D folder(Current resources folder)+$title+".txt"; $textBody)
 
 ```
@@ -287,15 +275,12 @@ Quando o executável espera que todos os dados sejam recebidos através de `post
 ```4D
 // Criar alguns dados para gzip
 var $input;$output : Blob
-var $gzip : Text
-TEXT TO BLOB("Hello, World!";$input)
+var $gzip : Text TEXT TO BLOB("Hello, World!";$input)
 $gzip:="\"C:\\Program Files (x86)\\\GnuWin32\\bin\\gzip.exe\" "
 
 // Criar um system worker assíncrono
-var $worker : 4D.SystemWorker
-$worker:= 4D.SystemWorker.new($gzip;New object("dataType"; "blob"))
-
-// Enviar o ficheiro comprimido para stdin.
+var $worker : 4D. SystemWorker
+$worker:= 4D.
 $worker.postMessage($input)
 // Note que chamamos closeInput() para indicar que terminámos.
 // gzip (e a maioria dos dados de espera do programa stdin) esperará por mais dados até que a entrada seja explícitamente fechada.
@@ -316,7 +301,7 @@ $output:=$worker.response
 
 #### Descrição
 
-A propriedade `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4dsystemworkernew)<!-- END REF -->.
+A propriedade `.currentDirectory` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém o directório de trabalho no qual o processo externo é executado<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -325,11 +310,11 @@ Essa propriedade é **apenas leitura**.
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D. Folder<!-- END REF -->
 
 #### Descrição
 
-A propriedade `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contém o directório de trabalho no qual o processo externo é executado<!-- END REF -->.
+A propriedade `.pid` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contém o identificador único de processo do processo externo a nível do sistema<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -341,7 +326,7 @@ A propriedade `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.S
 
 #### Descrição
 
-A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta<!-- END REF -->. Valores possíveis: "text" ou "blob".
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -419,7 +404,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-A propriedade `.pid` <!-- REF #SystemWorkerClass.pid.Summary -->contém o identificador único de processo do processo externo a nível do sistema<!-- END REF -->.
+A propriedade `.timeout` <!-- REF #SystemWorkerClass.pid.Summary -->contém a duração, em segundos, antes de o processo externo ser encerrado, se ainda estiver activo<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -498,7 +483,7 @@ A propriedade `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary
 
 #### Descrição
 
-A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->força o `SystemWorker` a terminar a sua execução<!-- END REF -->.
+A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->A função `.terminate()`<!-- END REF -->.
 
 Esta função envia a instrução para terminar e devolver o controlo ao guião de execução.
 
@@ -526,7 +511,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.timeout` <!-- REF #SystemWorkerClass.timeout.Summary -->contém a duração, em segundos, antes de o processo externo ser encerrado, se ainda estiver activo<!-- END REF -->.
+A função `.wait()` <!-- REF #SystemWorkerClass.timeout.Summary -->espera até ao final do `SystemWorker` execução ou o tempo limite especificado **<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -546,7 +531,7 @@ Essa propriedade é **apenas leitura**.
 </details>
 
 <!-- REF #SystemWorkerClass.wait().Syntax -->
-**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
+**.wait**( {*timeout* : Real} ) : 4D. SystemWorker<!-- END REF -->
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
@@ -555,7 +540,7 @@ Essa propriedade é **apenas leitura**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
+|Result|4D. SystemWorker|<-|SystemWorker object|
 </div>
 <!-- END REF -->
 

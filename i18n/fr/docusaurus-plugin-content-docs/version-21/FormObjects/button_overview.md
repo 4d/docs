@@ -16,7 +16,7 @@ Les actions assignées aux boutons peuvent provenir d'[actions standard](propert
 Les boutons avec des actions standard sont grisés le cas échéant lors de l'exécution du formulaire. Par exemple, si le premier enregistrement d'une table est affiché, un bouton avec l'action standard `firstRecord` apparaît grisé.
 
 Si vous souhaitez qu'un bouton effectue une action qui n'est pas disponible en tant qu'action standard, laissez le champ action standard vide et écrivez une [méthode objet pour spécifier l'action du bouton](../FormObjects/properties_Action.md#method).
-En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
+Si vous souhaitez qu'un bouton effectue une action qui n'est pas disponible en tant qu'action standard, laissez le champ action standard vide et écrivez une [méthode objet pour spécifier l'action du bouton](../FormObjects/properties_Action.md#method). Vous pouvez associer une méthode à n'importe quel bouton.
 
 La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 

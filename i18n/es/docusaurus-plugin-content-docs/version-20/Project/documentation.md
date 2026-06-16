@@ -163,6 +163,7 @@ _italic_
     $txt:="¡Hola mundo!"  
 ```  
 ```  
+```  
 ```
 ````
 - La etiqueta de la tabla es soportada:

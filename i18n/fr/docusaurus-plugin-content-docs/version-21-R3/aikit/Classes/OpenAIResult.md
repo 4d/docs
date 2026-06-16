@@ -19,7 +19,7 @@ La classe `OpenAIResult` permet de gérer la réponse des requêtes HTTP et four
 | ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `success`    | Boolean    | Un booléen indiquant si la requête HTTP a réussi.                                                                    |
 | `errors`     | Collection | Renvoie une collection d'erreurs. Il peut s'agir d'erreurs réseau ou d'erreurs renvoyées par OpenAI. |
-| `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                                 |
+| `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close, c'est-à-dire si `onTerminate` a été appelé.                     |
 | `headers`    | Object     | Renvoie les en-têtes de la réponse sous forme d'objet.                                                               |
 | `rateLimit`  | Object     | Renvoie les informations relatives à la limite de débit contenues dans les en-têtes de la réponse.                   |
 | `usage`      | Object     | Returns usage information (token counts) from the response body if any.                           |

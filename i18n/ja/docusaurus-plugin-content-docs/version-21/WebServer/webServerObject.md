@@ -13,11 +13,11 @@ title: Webサーバーインスタンス
 
 1つの 4Dアプリケーションプロジェクトに接続できるコンポーネントの数、つまり Webサーバーの数には、メモリ以外の制限はありません。
 
-メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
+メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
 > The legacy [WEB commands](../commands/theme/Web_Server.md) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
-各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
+各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。 これには、以下が含まれます:
 
 - `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
 - 4Dタグの処理とメソッドの呼び出し

@@ -74,14 +74,10 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 #### Exemple
 
 ```4d
-  // Ask the user to enter a name
- $Find:=Request(Type a name)
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("You did not enter a name.")
- End if
- End if
+  For($vlChar;1;Length(vtSomeText))
+  //Faire quelque chose avec le caractère si c'est une tabulation
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+  //...
  End if 
 ```
 
@@ -174,6 +170,12 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
     Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
        ALERT("It was not one, two, or three.")
  //statement(s)
+ End case //Si le chiffre est 2, afficher une alerte
+    :(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+ //statement(s)
  End case
 ```
 
@@ -182,6 +184,62 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
 ```4d
  If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    Else
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") //Si le chiffre est 1, afficher une alerte
+ Else
+    If(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") //Si le chiffre est 2, afficher une alerte
+    Else
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si le chiffre est 2, afficher une alerte
+    Else
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si le chiffre est 2, afficher une alerte
+    Else
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si le chiffre est 2, afficher une alerte
+    Else
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if If(vResult=1) //Test if the number is 1
     ALERT("One.") //If it is 1, display an alert
  Else
     If(vResult=2) //Test if the number is 2
@@ -372,7 +430,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 
 ## For...End for
 
-La syntaxe de la structure répétitive `For...End for` est la suivante :
+La structure `For...End for` est une boucle contrôlée par un compteur :
 
 ```4d
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -382,7 +440,7 @@ For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 End for
 ```
 
-La structure `For...End for` est une boucle contrôlée par un compteur :
+La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 - La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
 - La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
@@ -420,7 +478,7 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 3. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
- For($vlChar;1;Length(vtSomeText))
+ For($vlChar;Length(vtSomeText);1;-1)
   //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
@@ -469,10 +527,9 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 7. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
- For($vlChar;Length(vtSomeText);1;-1)
-  //Faire quelque chose avec le caractère si c'est une tabulation
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-  //...
+ For($vlElem;2;Size of array(anArray);2)
+  //Faire quelque chose avec l'élément 2,4...2n
+    anArray{$vlElem}:=...
     End if
  End for
 ```

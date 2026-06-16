@@ -39,12 +39,12 @@ displayed_sidebar: docs
 
 *wpDoc* 引数には、4D Write Pro ドキュメントを渡します。
 
-*styleSheetType* 引数を使用すると、スタイルシートのタイプを指定することができます。これにより、 *wpDoc* のドキュメント内でどこがスタイルシートによって影響を受けるかを指定できると言うことです。 二つのタイプが利用可能です:
+*styleSheetType* 引数を使用すると、スタイルシートのタイプを指定することができます。これにより、 *wpDoc* のドキュメント内でどこがスタイルシートによって影響を受けるかを指定できると言うことです。 二つのタイプが利用可能です: 二つのタイプが利用可能です:
 
 - wk type character: スタイル属性を文字に対して適用します。
 - wk type paragraph: スタイル属性を段落に対して適用します([階層リストスタイルシート](#階層リストスタイルシート)を作成したい場合には必須)。
 
-*styleSheetName* 引数には、スタイルシートの名前を渡します。 スタイルシートの名前はドキュメントとともに保存されるため、スタイルを再利用や編集を容易にします。 また[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) および [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) コマンドで使用することもできます。 スタイルシート名は以下のルールを遵守している必要があります:
+*styleSheetName* 引数には、スタイルシートの名前を渡します。 スタイルシートの名前はドキュメントとともに保存されるため、スタイルを再利用や編集を容易にします。 また[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) および [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) コマンドで使用することもできます。 スタイルシート名は以下のルールを遵守している必要があります: スタイルシートの名前はドキュメントとともに保存されるため、スタイルを再利用や編集を容易にします。 また[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) および [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) コマンドで使用することもできます。 スタイルシート名は以下のルールを遵守している必要があります:
 
 - 必ず文字で始まらなければなりません
 - そのあとは、英数字、スペース文字、"-" 文字、また128 以上のUnicode 文字を使用することができます。
@@ -52,18 +52,18 @@ displayed_sidebar: docs
 - "section" で始めることはできません。予約されています
 - "\_" はスペースで置き換えられ、末尾のスペースは削除されます。
 
-[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドまたはオブジェクト記法を使用することで、スタイルシートの属性を指定することができます([4D Write Pro 属性](../commands-legacy/4d-write-pro-attributes.md) 参照)。 利用可能な属性の一覧については、[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) の章を参照してください。
+[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドまたはオブジェクト記法を使用することで、スタイルシートの属性を指定することができます([4D Write Pro 属性](../commands-legacy/4d-write-pro-attributes.md) 参照)。 利用可能な属性の一覧については、[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) の章を参照してください。 利用可能な属性の一覧については、[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) の章を参照してください。
 
 **注**:
 
-- スタイルシートは文字または段落の表示方法のみを変更し、それらがどのようにドキュメント内に保存されるかは変更しません。 スタイルシートが削除された場合、テキストはデフォルトのスタイルへと戻されます。
-- 新しいスタイルシート内で定義されていないあらゆる属性は、自動的にノーマルスタイルを使用します。 詳細な情報については、[*スタイルシート* ページ](../user-legacy/stylesheets.md) を参照してください。
+- スタイルシートは文字または段落の表示方法のみを変更し、それらがどのようにドキュメント内に保存されるかは変更しません。 スタイルシートが削除された場合、テキストはデフォルトのスタイルへと戻されます。 スタイルシートが削除された場合、テキストはデフォルトのスタイルへと戻されます。
+- 新しいスタイルシート内で定義されていないあらゆる属性は、自動的にノーマルスタイルを使用します。 詳細な情報については、[*スタイルシート* ページ](../user-legacy/stylesheets.md) を参照してください。 詳細な情報については、[*スタイルシート* ページ](../user-legacy/stylesheets.md) を参照してください。
 
 ### 階層リストスタイルシート
 
 If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).
 
-*listLevelCount* 引数は、階層内のレベルの総レベル数を定義します。 指定された場合(1 以上の値)、コマンドは自動的にルートレベルのスタイルシートと、対応するサブレベルのスタイルシートを自動的に作成します。
+*listLevelCount* 引数は、階層内のレベルの総レベル数を定義します。 指定された場合(1 以上の値)、コマンドは自動的にルートレベルのスタイルシートと、対応するサブレベルのスタイルシートを自動的に作成します。 指定された場合(1 以上の値)、コマンドは自動的にルートレベルのスタイルシートと、対応するサブレベルのスタイルシートを自動的に作成します。
 
 以下の定義済みの値が適用されます:
 

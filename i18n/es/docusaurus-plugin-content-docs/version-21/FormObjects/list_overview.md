@@ -95,7 +95,7 @@ Es posible modificar la apariencia de una lista jerárquica en un formulario uti
 
 ## Prioridad de los comandos de propiedad
 
-Ciertas propiedades de las listas jerárquicas (por ejemplo, el atributo **editable** o el color) pueden definirse de diferentes maneras: en las propiedades del formulario, mediante un comando del tema "Propiedades de los objetos" o mediante un comando del Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad:
+Ciertas propiedades de las listas jerárquicas (por ejemplo, el atributo **editable** o el color) pueden definirse de diferentes maneras: en las propiedades del formulario, mediante un comando del tema "Propiedades de los objetos" o mediante un comando del Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad: Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad:
 
 1. Comandos del tema "Lista jerárquica"
 2. Comandos genéricos de propiedad de objeto

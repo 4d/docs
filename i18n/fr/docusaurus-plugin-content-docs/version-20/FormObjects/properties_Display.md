@@ -56,16 +56,16 @@ Les formats de date contrôlent la façon dont les dates apparaissent lorsqu'ell
 
 Le tableau ci-dessous montre les choix disponibles :
 
-| Nom du format               | Chaine JSON              | Exemple (système US)          |
-| --------------------------- | ------------------------ | ----------------------------- |
-| Système date court          | systemShort (par défaut) | 03/25/20                      |
-| Système date abrégé *(1)*   | systemMedium             | Wed, Mar 25, 2020             |
-| Système date long           | systemLong               | Wednesday, March 25, 2020     |
-| RFC 822                     | rfc822                   | Tue, 25 Mar 2020 22:00:00 GMT |
-| Siècle court                | shortCentury             | 03/25/20 but 04/25/2032 *(2)* |
-| Interne date long           | long                     | March 25, 2020                |
+| Nom du format             | Chaine JSON              | Exemple (système US)          |
+| ------------------------- | ------------------------ | ----------------------------- |
+| Système date court        | systemShort (par défaut) | 03/25/20                      |
+| Système date abrégé *(1)* | systemMedium             | Wed, Mar 25, 2020             |
+| Système date long         | systemLong               | Wednesday, March 25, 2020     |
+| RFC 822                   | rfc822                   | Tue, 25 Mar 2020 22:00:00 GMT |
+| Siècle court              | shortCentury             | 03/25/20 but 04/25/2032 *(2)* |
+| Interne date long         | long                     | March 25, 2020                |
 | Interne date abrégé *(1)* | abbreviated              | Mar 25, 2020                  |
-| Interne date court          | short                    | 03/25/2020                    |
+| Interne date court        | short                    | 03/25/2020                    |
 | ISO Date Heure *(3)*      | iso8601                  | 2020-03-25T00:00:00           |
 
 *(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
@@ -321,8 +321,8 @@ Le tableau ci-dessous montre les formats d'affichage du champ Heure et donne des
 | Minutes Secondes          | MM_SS        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                                                                       | 270 Minutes 25 Secondes         |
 | ISO Date Heure            | iso8601      | Correspond à la norme XML pour représenter des données liées au temps. Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web | 0000-00-00T04:30:25             |
 | Système heure court       | - (default)  | Format heure standard défini dans le système                                                                                                                                                  | 04:30:25                        |
-| Système heure long abrégé | systemMedium | macOS seulement : Format d'heure abrégé défini dans le système. <br/>Windows : ce format est le même que le format système heure court                                                  | 4•30•25 AM                      |
-| Système heure long        | systemLong   | macOS seulement : Format d'heure long défini dans le système. <br/>Windows : ce format est le même que le format système heure court                                                    | 4:30:25 AM HNEC                 |
+| Système heure long abrégé | systemMedium | macOS seulement : Format d'heure long défini dans le système. <br/>Windows : ce format est le même que le format système heure court                                                    | 4•30•25 AM                      |
+| Système heure long        | systemLong   | macOS seulement : Format d'heure abrégé défini dans le système. <br/>Windows : ce format est le même que le format système heure court                                                  | 4:30:25 AM HNEC                 |
 
 #### Grammaire JSON
 

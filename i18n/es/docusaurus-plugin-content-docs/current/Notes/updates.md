@@ -97,7 +97,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | PDFWriter       | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
 | webKit          | WKWebView                              | 19                |                                                                                                                                                        |
-| Windows App SDK | 2.0.1  | **21 R4**         | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                             |
+| Windows App SDK | 2                                      | **21 R4**         | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                             |
 | Xerces          | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
 | Zlib            | 1.3.1  | 21                |                                                                                                                                                        |
 

@@ -170,7 +170,7 @@ La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et ren
 
 #### Description
 
-La fonction `.create()` <!-- REF #FolderClass.create().Summary -->crée un dossier sur le disque selon les propriétés de l'objet `Folder`<!-- END REF -->.
+La fonction `.create()` <!-- REF #FolderClass.create().Summary -->La fonction `.create()`<!-- END REF -->.
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le dossier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 

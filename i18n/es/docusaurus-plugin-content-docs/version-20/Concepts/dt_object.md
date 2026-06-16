@@ -29,7 +29,7 @@ Tenga en cuenta que los nombres de las propiedades distinguen entre mayúsculas 
 :::
 
 
-Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
+Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos. Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**.
 
 Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Puede utilizar estos valores siempre que se esperen expresiones 4D:
 
@@ -81,6 +81,16 @@ Ejemplos:
  var $o ; $o2 ; $o3 : Objeto //declaración de variables objeto
  $o := {} // instanciación de un objeto vacío 
  $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instanciación de un objeto
+        // con propiedades {"a": "foo", "b":42, "c":{}, "d":false})
+
+    // mismas propiedades utilizando variables
+ var $a : Text
+ var $b : Number
+ var $c : Object
+ $a:="foo"
+ $b:=42
+ $c:={}
+ $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}} true : false } // instanciación de un objeto
         // con propiedades {"a": "foo", "b":42, "c":{}, "d":false})
 
     // mismas propiedades utilizando variables
@@ -198,7 +208,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 

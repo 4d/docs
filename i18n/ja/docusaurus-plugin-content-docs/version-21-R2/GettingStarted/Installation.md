@@ -21,7 +21,7 @@ title: インストール
 
 :::info
 
-Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の4D においてFluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、このSDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
+Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の4D においてFluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、このSDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
 
 :::
 
@@ -53,6 +53,6 @@ Windows 用のセットアップパネルには、**Windows App SDK** のイン�
 
 :::info
 
-特定のライセンスのアクティベーションですか？ [4Dライセンスの管理](../Admin/licenses.md) ページを参照ください。
+特定のライセンスのアクティベーションですか？ 特定のライセンスのアクティベーションですか？ [4Dライセンスの管理](../Admin/licenses.md) ページを参照ください。
 
 :::

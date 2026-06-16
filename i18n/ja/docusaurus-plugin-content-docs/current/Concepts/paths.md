@@ -13,7 +13,7 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 ## ファイルシステムパス名
 
-4D は、macOS および Windows上で様々な場所にある特定の 4Dフォルダーを指定するいくつかの `filesystem` パス名を受け取ります。 ファイルシステムパスはコンテキストに基づいて評価され、絶対パスとして返されます。
+4D は、macOS および Windows上で様々な場所にある特定の 4Dフォルダーを指定するいくつかの `filesystem` パス名を受け取ります。 ファイルシステムパスはコンテキストに基づいて評価され、絶対パスとして返されます。 ファイルシステムパスはコンテキストに基づいて評価され、絶対パスとして返されます。
 
 ファイルシステムパス名の使用は、主に二つの理由から有用です:
 
@@ -93,14 +93,14 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() // ボリュームの名
 
 ### `File` および `Folder` コンストラクター
 
-[`File`](../commands/file) および [`Folder`](../commands/folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
+[`File`](../commands/file) および [`Folder`](../commands/folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません: 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
 
 ```4d
 //ERROR
 $ko:=Folder("myFolder").create() // コンストラクターで相対パス名を使用しています
 ```
 
-様々な場所 (プロジェクトフォルダー内、システムフォルダー内、など) にあるファイルやフォルダーを扱いたい場合は、`filesystems` (上述参照) を使用します。 たとえば:
+様々な場所 (プロジェクトフォルダー内、システムフォルダー内、など) にあるファイルやフォルダーを扱いたい場合は、`filesystems` (上述参照) を使用します。 たとえば: たとえば:
 
 ```4d
 $okFolder:=Folder("/PACKAGE/myFolder").create() // ストラクチャーレベルでフォルダーが作成されます
@@ -109,7 +109,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() // データフォルダー内�
 
 ### `.file()` および `.folder()` フォルダー関数
 
-[`folder.file()`](../API/FolderClass.md#file) および [`folder.folder()`](../API/FolderClass.md#folder) などのフォルダーオブジェクトの関数は、相対 POSIX パス名を受け取ります。 例:
+[`folder.file()`](../API/FolderClass.md#file) および [`folder.folder()`](../API/FolderClass.md#folder) などのフォルダーオブジェクトの関数は、相対 POSIX パス名を受け取ります。 例: 例:
 
 ```4d
 var $userImages : 4D.Folder

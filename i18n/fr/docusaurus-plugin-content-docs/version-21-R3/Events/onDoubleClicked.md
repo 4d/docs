@@ -17,7 +17,7 @@ L'événement `On Double Clicked` n'est pas supporté avec [**steppers**](FormOb
 
 L'événement `On Double Clicked` est généré lorsque l'utilisateur double-clique sur un objet. La durée maximale séparant un double-clic est définie dans les préférences système.
 
-Si la propriété d'événement d'objet [`On Clicked`](onClicked.md) ou `On Double Clicked` est sélectionnée pour un objet, vous pouvez détecter et gérer les clics dans ou sur l'objet, en utilisant la commande `FORM event` qui renvoie [`On Clicked`](onClicked.md)`ou`On Double Clicked\\\\\\` selon le cas.
+Si la propriété d'événement d'objet [`On Clicked`](onClicked.md) ou `On Double Clicked` est sélectionnée pour un objet, vous pouvez détecter et gérer les clics dans ou sur l'objet, en utilisant la commande `FORM event` qui renvoie [`On Clicked`](onClicked.md)`ou`On Double Clicked\\\\\\\` selon le cas.
 
 Si les deux événements sont sélectionnés pour un objet, les événements `On Clicked` puis `On Double Clicked` seront générés lorsque l'utilisateur double-clique sur l'objet.
 

@@ -85,7 +85,7 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<pro
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. O tamanho compacto e otimizado dos arquivos .4dz torna os pacotes de projeto fáceis de implantar.
+Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto.
 
 > Quando gerar arquivos .4dz, 4D usa um formato zip **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se não quiser usar esse formato padrão, adicione a chave XML `UseStandardZipFormat` com o valor `False` em seu arquivo [`buildApp.4DSettings`](#buildapp4dsettings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html)).
 
@@ -168,7 +168,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
   - MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   - Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
   - Database folder  - Includes a Resources folder and  MyProject.4DZ file. Database folder  - Includes a Resources folder and  MyProject.4DZ file.
-    **Observação**: Essa pasta também contém a pasta *Default Data*, se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#management-of-data-files)).
+    Database folder  - Includes a Resources folder and  MyProject.4DZ file.
   - (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para mais informações sobre isso, consulte a seção [Plugins e componentes](#plugins--components-page).
   - (Opcional) Pasta Licenses (Licenças) - Um arquivo XML de números de licença integrados ao aplicativo, se houver. Para obter mais informações sobre isso, consulte a seção [Licenças e Certificado](#licenses--certificate-page).
   - Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta 4D Volume Desktop)](#customizing-4d-volume-desktop-folder)).
@@ -187,7 +187,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 - Personalize o conteúdo da pasta *Resources*.
 
 > Construir um pacote de projeto
-> &#062; Construir um pacote de projeto &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
+> &#062; Construir um pacote de projeto &#062; Construir um pacote de projeto &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
 
 #### Localização dos arquivos da Web
 
@@ -307,7 +307,7 @@ Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usad
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre esse arquivo, consulte a descrição do comando [`BUILD APPLICATION`](../commands-legacy/build-application.md). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
+Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
@@ -378,7 +378,7 @@ A pasta `<ApplicationName>Cliente` contém a porção do cliente do aplicativo c
 
 O conteúdo dessas pastas varia dependendo da plataforma atual:
 
-- Se você quiser integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **Plugins** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado do aplicativo 4D do servidor. As pastas também contêm vários arquivos e pastas necessários para que os aplicativos funcionem e itens personalizados que podem estar na pasta de Volume 4D e no Servidor 4D.
+- Se você quiser integrar outros plugins ou componentes na aplicação executável, você só precisa colocá-los em uma pasta **Plugins** ou **Components** ao lado da aplicação 4D Volume Desktop ou ao lado do aplicativo 4D do servidor. O mecanismo para copiar o conteúdo da pasta do aplicativo de origem (ver <a href="#customizing-4d-volume-desktop-folder">Personalizando a pasta desktop de volume 4D</a>) pode ser usado para integrar qualquer tipo de arquivo na aplicação executável.
 - *macOS* - Cada pasta contém apenas o pacote de aplicação, chamado `<ApplicationName> Client` para a parte do cliente e `<ApplicationName> Server` para a parte do servidor. Cada pacote contém todos os itens necessários para que a aplicação funcione. No macOS, inicie um pacote fazendo duplo clique no mesmo.
 
 > Os pacotes macOS construídos contêm os mesmos itens que as subpastas do Windows. Você pode exibir seus conteúdos (**Control+click** no ícone) para poder modificá-los.
@@ -400,7 +400,7 @@ Os elementos devem ser instalados:
 
 - **no macOS**
   - **Aplicativo do servidor** - ao lado do pacote de software `<ApplicationName>Server`.
-  - **Aplicação de cliente** - ao lado do pacote de software \\\`<ApplicationName>cliente.
+  - **Aplicação de cliente** - ao lado do pacote de software \\\\`<ApplicationName>cliente.
 
 ### Incorporar uma aplicação cliente usuário único
 
@@ -631,7 +631,7 @@ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a ex
 
 - **Windows** - Ao construir uma aplicação clicável e dupla, o 4D lida com a personalização do seu ícone. Para fazer isso, você deve criar um arquivo de ícone (*.ico* extensão), antes de construir o arquivo do aplicativo e colocá-lo ao lado da pasta do projeto.
 
-Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo <em x-id="3">.icns</em> é renomeado <em x-id="3">ApplicationName.
+Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo <em x-id="3">.icns</em> é renomeado \*ApplicationName.
 
 Você também pode definir as [chaves XML](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a usar. Estão disponíveis as seguintes chaves:
 

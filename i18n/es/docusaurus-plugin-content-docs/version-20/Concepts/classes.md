@@ -186,7 +186,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-No hay palabra clave final para el código de una función. There is no ending keyword for function code.
+No hay palabra clave final para el código de una función. No hay palabra clave final para el código de una función.
 
 :::
 
@@ -304,14 +304,15 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### Sintaxis
 
 ```4d
-// Class: MyClass
+MyClass
 Class constructor({$parameterName : type; ...})
+// Class:
 // Class:
 ```
 
 :::note
 
-No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
+No hay palabra clave final para el código de función class constructor. No hay palabra clave final para el código de una función.
 
 :::
 
@@ -591,18 +592,11 @@ Class constructor ($side : Integer)
  // pueda utilizar 'This'
  This.
 
-//Class: Square
+ame:="Square"
 
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // Llama al class constructor de la clase padre con longitudes
- // proporcionadas para el ancho y alto del rectángulo
- Super($side;$side)
- // En las clases derivadas, Super debe ser llamado antes de que 
- // pueda utilizar 'This'
- This.
+Function getArea()
+ C_LONGINT($0)
+ $0:=This.height*This.width
 ```
 
 ```4d
@@ -617,11 +611,18 @@ Class constructor ($side : Integer)
  Super($side;$side)
  // En las clases derivadas, Super debe ser llamado antes de que 
  // pueda utilizar 'This'
- This. ame:="Square"
+ This. //Class: Square
 
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
+Class extends Rectangle
+
+Class constructor ($side : Integer)
+
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
 ```
 
 #### Ejemplo 2

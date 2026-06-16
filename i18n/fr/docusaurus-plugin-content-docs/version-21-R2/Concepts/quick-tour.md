@@ -283,7 +283,7 @@ Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4
 
 ### Types d’expressions
 
-Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant donne des exemples de chaque type d'expression.
+Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Le tableau suivant donne des exemples de chaque type d'expression.
 
 | Expression                                                                                  | Type                  | Description                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

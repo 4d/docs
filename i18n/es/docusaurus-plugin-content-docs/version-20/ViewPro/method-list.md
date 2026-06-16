@@ -166,7 +166,7 @@ El comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->inserta una
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En *index*, puede pasar un índice para la nueva hoja. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio. Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes.
+Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes. En *index*, puede pasar un índice para la nueva hoja. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio.
 > La indexación comienza en 0.
 
 En *name*, puede pasar un nombre para la nueva hoja. El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
@@ -370,7 +370,7 @@ $all:=VP All("ViewProArea") // todas las celdas de la hoja actual
 
 #### Descripción
 
-El comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->devuelve un nuevo objeto de rango que hace referencia a una celda específica<!-- END REF -->.
+El comando `VP Cells` <!-- REF #_method_.VP Cell.Summary -->devuelve un nuevo objeto de rango que hace referencia a celdas específicas<!-- END REF -->.
 
 > Este comando se aplica a los rangos de una sola celda. Para crear un objeto rango para múltiples celdas, utilice el comando [VP Cells](#vp-cells).
 
@@ -429,7 +429,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 #### Descripción
 
-El comando `VP Cells` <!-- REF #_method_.VP Cells.Summary -->devuelve un nuevo objeto de rango que hace referencia a celdas específicas<!-- END REF -->.
+El comando `VP Cell` <!-- REF #_method_.VP Cells.Summary -->devuelve un nuevo objeto de rango que hace referencia a una celda específica<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -657,7 +657,7 @@ El contenido del documento se convierte con respecto a sus atributos de visualiz
 * Altura de líneas
 * Ancho de columnas
 * Columnas / líneas ocultas.
-> La visibilidad de la rejilla depende del atributo del documento definido con [VP SET PRINT INFO](#vp-set-print-info).
+> > La visibilidad de la rejilla depende del atributo del documento definido con [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Resultado
 
@@ -877,7 +877,7 @@ En *rangeObj*, pase un objeto que contenga un rango de columnas a eliminar. Si e
 
 * de las columnas y de las líneas, sólo se eliminan las columnas.
 * únicamente las líneas, el comando no hace nada.
-> Las columnas se borran de derecha a izquierda.
+> > Las columnas se borran de derecha a izquierda.
 
 #### Ejemplo
 
@@ -917,7 +917,7 @@ En *rangeObj*, pase un objeto que contenga un rango de líneas a eliminar. Si el
 
 * tanto las columnas como las líneas, sólo se eliminan las líneas.
 * sólo columnas, el comando no hace nada.
-> > Rows are deleted from bottom to top.
+> > > Rows are deleted from bottom to top.
 
 #### Ejemplo
 
@@ -1114,7 +1114,7 @@ Aquí está el resultado:
 
 #### Descripción
 
-El comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> devuelve el objeto 4D View Pro adjunto al área 4D View Pro *vpAreaName*<!-- END REF -->. Puede utilizar este comando, por ejemplo, para almacenar el área 4D View Pro en un campo objeto de la base de datos 4D.
+El comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> devuelve el objeto 4D View Pro adjunto al área 4D View Pro *vpAreaName*<!-- END REF -->. . Puede utilizar este comando, por ejemplo, para almacenar el área 4D View Pro en un campo objeto de la base de datos 4D.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1268,12 +1268,11 @@ Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la p
 #### Ejemplo
 
 ```4d
-If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
-     $tableName:=VP Find table(FORM Event.range)
-     If ($tableName#"")
-         ALERT("La"+$tableName+" tabla ha sido modificada.")
+var $attributes : Object
+$attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
+If ($attributes.dataField#"")
+     ...
      End if
-End if
 ```
 
 
@@ -1862,7 +1861,7 @@ En *rangeObj*, pase un rango cuyas fórmulas desee recuperar. Si *rangeObj* desi
 La colección devuelta es bidimensional:
 
 * La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección representa una línea.
-* Cada subcolección define los valores de las celdas para la línea. The first-level collection contains subcollections of formulas.
+* Cada subcolección define los valores de las celdas para la línea. La colección de primer nivel contiene subcolecciones de fórmulas.
 
 #### Ejemplo
 
@@ -2008,7 +2007,7 @@ $list:=VP Get names("ViewProArea";2) //nombres en la 3a hoja
 
 El comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->devuelve un objeto que contiene los atributos de impresión de *vpAreaName*<!-- END REF -->.
 
-Pase el nombre del área 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
+Pase el nombre del área de 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
 En el parámetro opcional *sheet*, puede designar una hoja de cálculo específica (la numeración comienza en 0) cuyos atributos de impresión desea devolver.  Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
@@ -2020,7 +2019,7 @@ Este código:
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... devuelve los atributos de impresión del área 4D View Pro establecidos en el comando [VP SET PRINT INFO](#vp-set-print-info):
+? para un solo caracter (por ejemplo, la búsqueda de "h?t" puede encontrar "hot", o "hit"
 
 ```4d
 {
@@ -2134,7 +2133,7 @@ El comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->dev
 
 En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Puede definir dónde obtener el número de líneas en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
+Puede definir dónde obtener el número de columnas en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
 #### Ejemplo
 
@@ -2606,10 +2605,9 @@ Si no se encuentra *tableName* o si el índice de *column* es mayor que el núme
 #### Ejemplo
 
 ```4d
-var $attributes : Object
-$attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
-If ($attributes.dataField#"")
-     ...
+$options:=VP Get sheet options("ViewProArea")
+If($options.colHeaderVisible) //los encabezados de las columnas son visibles
+    ...
 End if
 ```
 
@@ -3998,7 +3996,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 El comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->elimina una o *count* columna(s) en *tableName* especificada en el índice *column* especificado<!-- END REF -->. El comando elimina valores y estilos.
 
-El comando elimina las columnas de la tabla *tableName*, NO de la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos a la derecha de la tabla (si los hay) se desplazan automáticamente a la izquierda según el número de columnas eliminadas.
+El comando elimina las columnas de la tabla *tableName*, NO de la hoja. El número total de columnas de la hoja no se ve afectado por el comando. El número total de columnas de la hoja no se ve afectado por el comando.
 
 Si *tableName* no existe, no pasa nada.
 
@@ -4047,7 +4045,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 El comando `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->elimina una o *count* línea(s) de *tableName* especificada en el índice *row* especificado<!-- END REF -->. El comando elimina valores y estilos.
 
-Este comando elimina las líneas de la tabla *tableName*, NO de la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia arriba en función del número de líneas eliminadas.
+Este comando elimina las líneas de la tabla *tableName*, NO de la hoja. El número total de líneas de la hoja no se ve afectado por el comando. El número total de líneas de la hoja no se ve afectado por el comando.
 
 Si la tabla *tableName* está vinculada a un [contexto de datos](#vp-set-data-context), el comando elimina el/los elemento/s de la colección.
 
@@ -4238,7 +4236,7 @@ El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devuelve un nuevo objet
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-El parámetro *row* define la primera línea del rango de líneas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. Si el rango contiene varias líneas, deberá utilizar también el parámetro opcional *rowCount*.
+El parámetro *row* define la primera línea del rango de líneas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. Pase el índice de la línea (el conteo comienza en 0) en este parámetro.
 
 El parámetro opcional *rowCount* permite definir el número total de líneas del rango. *rowCount* debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
 
@@ -4362,7 +4360,7 @@ Function onEvent()
   :(FORM Event.code=On VP Ready)
       VP IMPORT DOCUMENT(This.area;This.filePath)
        This.result:=VP Get value(VP Cell(This.area;6;22))
- 
+
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
 
@@ -4492,7 +4490,7 @@ VP SET ACTIVE CELL($activeCell)
 
 El comando `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designa los métodos proyecto que pueden ser llamados en las fórmulas 4D View Pro<!-- END REF -->. Este comando se aplica a todas las áreas 4D View Pro inicializadas después de su llamada durante la sesión. Se puede llamar varias veces en la misma sesión para inicializar diferentes configuraciones.
 
-Por defecto, por razones de seguridad, si no se ejecuta el comando `VP SET ALLOWED METHODS`, no se permite ninguna llamada a métodos en las áreas 4D View Pro -- excepto si se ha utilizado el comando genérico `SET ALLOWED METHODS` (ver nota de compatibilidad). El uso de un método no autorizado en una fórmula muestra un error #NAME? error en el área 4D View Pro.
+Por defecto, por razones de seguridad, si no se ejecuta el comando `VP SET ALLOWED METHODS`, no se permite ninguna llamada a métodos en las áreas 4D View Pro -- excepto si se ha utilizado el comando genérico `SET ALLOWED METHODS` (ver nota de compatibilidad). El uso de un método no autorizado en una fórmula muestra un error #NAME? El uso de un método no autorizado en una fórmula muestra un error #NAME? error en el área 4D View Pro.
 
 En el parámetro *methodObj*, pase un objeto en el que cada propiedad es el nombre de una función a definir en las áreas 4D View Pro:
 
@@ -4514,11 +4512,11 @@ Usted quiere autorizar dos métodos en sus áreas 4D View Pro:
 ```4d
 var $allowed : Object
 $allowed:=New object //parámetro para el comando
- 
+
 $allowed.Hello:=New object //crea una primera función simple llamada "Hello"
 $allowed.Hello.method:="My_Hello_Method" //define el método 4D
 $allowed.Hello.summary:="Hello prints hello world"
- 
+
 $allowed.Byebye:=New object //crea una segunda función con parámetros llamada "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
@@ -4528,7 +4526,7 @@ $allowed.Byebye.parameters.push(New object("name";"Time";"type";Is time))
 $allowed.Byebye.summary:="Byebye prints a custom timestamp"
 $allowed.Byebye.minParams:=3
 $allowed.Byebye.maxParams:=3
- 
+
 VP SET ALLOWED METHODS($allowed)
 ```
 
@@ -4661,10 +4659,10 @@ En *rangeObj*, pase un rango de celdas donde se aplicará el estilo de borde. Si
 
 El parámetro *borderStyleObj* permite definir el estilo de las líneas del borde. El *borderStyleObj* soporta las siguientes propiedades:
 
-| Propiedad | Tipo    | Descripción                                      | Valores posibles                                                                                                                                                                                                                                                                                                                                                                           |
-| --------- | ------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| color     | text    | Define el color del borde. Por defecto = black.  | Sintaxis de color CSS "#rrggbb" (sintaxis preferida), sintaxis de color CSS "rgb(r,g,b)" (sintaxis alternativa), nombre de color CSS (sintaxis alternativa)                                                                                                                                                                                                                                |
-| style     | Integer | Define el estilo del borde. Por defecto = empty. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
+| Propiedad | Tipo    | Descripción                   | Valores posibles                                                                                                                                                                                                                                                                                                                                                                           |
+| --------- | ------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| color     | text    | Define el color del borde. .  | Sintaxis de color CSS "#rrggbb" (sintaxis preferida), sintaxis de color CSS "rgb(r,g,b)" (sintaxis alternativa), nombre de color CSS (sintaxis alternativa)                                                                                                                                                                                                                                |
+| style     | Integer | Define el estilo del borde. . | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 Puede definir la posición del *borderStyleObj* (es decir, dónde se aplica la línea) con el *borderPosObj*:
 
@@ -4945,7 +4943,7 @@ En el parámetro *formulaObj*, pase un objeto que contenga las fórmulas 4D que 
 |                          | minParams  |            | Number               | Número mínimo de parámetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                          | maxParams  |            | Number               | Número máximo de parámetros. Pasar un número superior a la longitud de los *parámetros* permite declarar los parámetros "opcionales" con un tipo por defecto                                                                                                                                                                                                                                                                                                                                                                                                                 |
 > **ATENCIÓN**
-> * En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, los métodos permitidos por el comando [VP SET ALLOWED METHODS](#vp-set-allowed-methods) (si los hay) se ignoran en el área 4D View Pro.
+> * **ATENCIÓN** * En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, los métodos permitidos por el comando [VP SET ALLOWED METHODS](#vp-set-allowed-methods) (si los hay) se ignoran en el área 4D View Pro.
 > * En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, las funciones basadas en los comandos `SET TABLE TITLES` y `SET FIELD TITLES` se ignoran en el área 4D View Pro.
 
 #### Ejemplo
@@ -5295,7 +5293,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->asigna un campo virtual de la base 4D a un rango de celdas designado<!-- END REF -->.
 
-En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. Si *rangeObj* incluye varias celdas, el campo especificado se vinculará en cada celda.
+En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar.
 
 El parámetro *field* indica un [campo virtual](formulas.md#referencing-fields-using-the-virtual-structure) de la base 4D que se asignará al *rangeObj*. El nombre de la estructura virtual para el *field* se puede ver en la barra de fórmulas. Si alguna de las celdas de *rangeObj* tiene contenido, se sustituirá por *field*.
 
@@ -5334,11 +5332,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->asigna una fórmula especificada o un método 4D a un rango de celdas designado<!-- END REF -->.
 
-En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, la fórmula especificada se vinculará en cada celda.
+En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar.
 
 El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a *rangeObj*.
 
-> Si *formula * es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
+> Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 El parámetro opcional *formatPattern* define un [modelo](configuring.md#cell-format) para la *formula*.
 
@@ -5394,7 +5392,7 @@ El parámetro *formulasCol* es una colección bidimensional:
 * La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección define una línea.
 * Cada subcolección define los valores de las celdas para la línea. Los valores deben ser elementos textuales que contengan las fórmulas a asignar a las celdas.
 
-> Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
+> Si *formula * es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 Las fórmulas de *rangeObj* se eliminan sustituyéndolas por una cadena vacía ("").
 
@@ -5552,7 +5550,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 El comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define los atributos a utilizar cuando se imprime el *vpAreaName*<!-- END REF -->.
 
-Pase el nombre del área 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
+Pase el nombre del área de 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
 Puede pasar un objeto que contenga las definiciones para varios atributos de impresión en el parámetro *printInfo*. Para ver la lista completa de los atributos disponibles, consulte [Atributos de impresión](configuring.md#print-attributes).
 

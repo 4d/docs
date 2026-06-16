@@ -286,7 +286,7 @@ Paramètre|Type||Description|
 
 #### Description
 
-La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->La fonction `delete()`<!-- END REF -->.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
@@ -572,7 +572,7 @@ $fhandle:=$f.open("read")
 
 #### Description
 
-La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans *newName* et renvoie l'objet `File` renommé<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->La fonction `.rename()`<!-- END REF -->.
 
 Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 

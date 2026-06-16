@@ -12,7 +12,7 @@ El lenguaje 4D es compatible con los operadores que ya conoce de otros lenguajes
 El lenguaje 4D soporta los operadores **binarios** y **ternarios**:
 
 - los operadores binarios operan en dos objetivos (como `2 + 3`) y aparecen entre sus dos objetivos.
-- los operadores ternarios operan en tres objetivos. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
+- los operadores ternarios operan en tres objetivos. Al igual que C, 4D solo tiene un operador ternario, el [operador condicional ternario](#ternary-operator) (`a ? b : c`).
 
 Los valores que los operadores afectan son los operandos. En la expresión `1 + 2`, el símbolo + es un operador binario y sus dos operandos son los valores 1 y 2.
 
@@ -21,12 +21,12 @@ Los valores que los operadores afectan son los operandos. En la expresión `1 + 
 El **operador de asignación** (`a:=b`) inicializa o actualiza el valor de `a` con el valor de `b`:
 
 ```4d
-$myNumber:=3 //assigns 3 to $myNumber variable  
-$myDate:=!2026/01/21! //assigns a date literal
-$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
-$col:=New collection //$col is initialized with an empty collection
-$myObject:={ a:2 ; b:$col } //assigns an object reference to $myObject
-$myObject.a:=3 //assigns a value to an object property
+$myNumber:=3 //asigna el valor 3 a la variable ` $myNumber `  
+$myDate:=!2026/01/21! //asigna un literal de fecha
+$myLength:=Length("Acme") //asigna el resultado del comando (4) a $myLength
+$col:=New collection //$col se inicializa con una colección vacía
+$myObject:={ a:2 ; b:$col } //asigna una referencia de objeto a $myObject
+$myObject.a:=3 //asigna un valor a una propiedad del objeto
 ```
 
 > NO confunda el operador de asignación `:=` con el operador de comparación de igualdad `=`. Se ha elegido deliberadamente un operador de asignación diferente (y no `=`) para evitar los problemas y la confusión que suelen producirse con == o === en otros lenguajes de programación. Estos errores son a menudo difíciles de reconocer por el compilador y conducen a una solución de problemas que requiere mucho tiempo.
@@ -67,30 +67,30 @@ $a+=2 // $a=3
 
 Se admiten los siguientes operadores de asignación compuestos:
 
-| Operador       | Sintaxis           | Asigna  | Ejemplo                                                                        |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------------------ |
-| Adición        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                              |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                             |
-|                | Date += Number     | Fecha   | `$d+=5 //$d:=$d+5`                                                             |
-|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                          |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
-| Resta          | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                             |
-|                | Date -= Number     | Fecha   | `$d-=5 //$d:=$d-5`                                                             |
-|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                          |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
-| División       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                             |
-|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                          |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
-| Multiplicación | Text \*= Number    | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                    |
-|                | Number \*= Number  | Number  | `$n*=5 //$n:=$n*5`                                                             |
-|                | Time \*= Time      | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
-|                | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                                                          |
-|                | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
+| Operador       | Sintaxis           | Asignación | Ejemplo                                                                        |
+| -------------- | ------------------ | ---------- | ------------------------------------------------------------------------------ |
+| Adición        | Text += Text       | Text       | `$t+=" World"  //$t:=$t+" World"`                                              |
+|                | Number += Number   | Number     | `$n+=5 //$n:=$n+5`                                                             |
+|                | Date += Number     | Fecha      | `$d+=5 //$d:=$d+5`                                                             |
+|                | Time += Time       | Time       | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
+|                | Time += Number     | Number     | `$t1+=5 //$t1:=$t1+5`                                                          |
+|                | Picture += Picture | Picture    | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
+|                | Picture += Number  | Picture    | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
+| Resta          | Number -= Number   | Number     | `$n-=5 //$n:=$n-5`                                                             |
+|                | Date -= Number     | Fecha      | `$d-=5 //$d:=$d-5`                                                             |
+|                | Time -= Time       | Time       | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
+|                | Time -= Number     | Number     | `$t1-=5 //$t1:=$t1-5`                                                          |
+|                | Picture -= Number  | Picture    | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
+| División       | Number /= Number   | Number     | `$n/=5 //$n:=$n/5`                                                             |
+|                | Time /= Time       | Time       | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
+|                | Time /= Number     | Number     | `$t1/=5 //$t1:=$t1/5`                                                          |
+|                | Picture /= Picture | Picture    | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
+|                | Picture /= Number  | Picture    | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
+| Multiplicación | Text \*= Number    | Text       | `$t*="abc"  //$t:=$t*"abc"`                                                    |
+|                | Number \*= Number  | Number     | `$n*=5 //$n:=$n*5`                                                             |
+|                | Time \*= Time      | Time       | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
+|                | Time \*= Number    | Number     | `$t1*=5 //$t1:=$t1*5`                                                          |
+|                | Picture \*= Number | Picture    | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
 
 Estos operadores se aplican a cualquier [expresión asignable](quick-tour.md#assignable-vs-non-assignable-expressions) excepto:
 

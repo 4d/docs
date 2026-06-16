@@ -382,7 +382,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`                 | `Web max concurrent processes`                                                                                            |              |
 | Boîte de dialogue des Propriétés | Page [Options (I)/Process Web simultanés maximum](../settings/web.md#maximum-concurrent-web-processes) |              |
 
-Limite haute du nombre de process web pouvant être ouverts simultanément sur le serveur lorsque **Pas de sessions** ou **sessions legacy** sont utilisées (les **sessions extensibles** supportent [un nombre illimité](sessions.md) de process préemptifs). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de process Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Limite haute du nombre de process web pouvant être ouverts simultanément sur le serveur lorsque **Pas de sessions** ou **sessions legacy** sont utilisées (les **sessions extensibles** supportent [un nombre illimité](sessions.md) de process préemptifs). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de process Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -395,7 +395,7 @@ La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
 Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Passer la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.
 
-Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Lorsqu'une requête atteint cette limite, le serveur Web 4D la rejette.
+Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses.
 
 Valeurs possibles: 500 000 - 2147483648.
 
@@ -629,6 +629,6 @@ Deux options permettent de définir le mode de fonctionnement des connexions per
 - **Nombre de requêtes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises lors d'une connexion persistante. Limiter le nombre de requêtes par connexion permet d'éviter la saturation du serveur, provoquée par un trop grand nombre de requêtes entrantes (technique utilisée par les pirates informatiques).<p>
   La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le serveur Web 4D.</p>
 
-- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Une fois ce délai écoulé, le serveur ferme la connexion.<p>
+- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web.
   Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
 

@@ -477,6 +477,8 @@ Le code suivant :
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
+    NEXT RECORD([People])
+ End while
     FIRST RECORD([People])
  While(Not(End selection([People])))
     ...
@@ -704,7 +706,7 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 
 A noter que `$4dtag` et `<--#4dtag -->` ne sont pas strictement équivalents : contrairement à `<--#4dtag -->`, le traitement de `$4dtag` n'interprète pas les balises 4D [de manière récursive](#recursive-processing). Les balises `$` sont toujours évaluées une fois et le résultat est considéré comme du texte brut.
 
-Cette différence consiste à empêcher l'injection de code malveillant. Comme [expliqué ci-dessous](../WebServer/templates.md#prevention-of-malicious-code-insertion), il est fortement recommandé d'utiliser les balises `4DTEXT` au lieu des balises `4DHTML` lorsque vous manipulez du texte utilisateur, afin de se protéger contre une réinterprétation indésirable des balises : avec `4DTEXT`, les caractères spéciaux tels que "<" sont échappés, ainsi toute balise 4D utilisant la syntaxe `<!--#4dtag expression -->` perdra sa signification particulière. Cependant, étant donné que `4DTEXT` n'échappe pas le symbole `$`, nous avons choisi de ne pas prendre en charge la récursion afin d'empêcher toute injection malveillante utilisant la syntaxe `$4dtag (expression)`.
+Cette différence consiste à empêcher l'injection de code malveillant. Cependant, étant donné que `4DTEXT` n'échappe pas le symbole `$`, nous avons choisi de ne pas prendre en charge la récursion afin d'empêcher toute injection malveillante utilisant la syntaxe `$4dtag (expression)`. Comme [expliqué ci-dessous](../WebServer/templates.md#prevention-of-malicious-code-insertion), il est fortement recommandé d'utiliser les balises `4DTEXT` au lieu des balises `4DHTML` lorsque vous manipulez du texte utilisateur, afin de se protéger contre une réinterprétation indésirable des balises : avec `4DTEXT`, les caractères spéciaux tels que "<" sont échappés, ainsi toute balise 4D utilisant la syntaxe `<!--#4dtag expression -->` perdra sa signification particulière.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 

@@ -86,7 +86,7 @@ Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<pro
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
+Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto.
 
 > Al generar archivos .4dz, 4D utiliza por defecto un formato zip **estándar**. La ventaja de este formato es que es fácilmente legible por cualquier herramienta unzip. Si no desea utilizar este formato estándar, añada la llave XML `UseStandardZipFormat` con el valor `False` en su archivo [`buildApp.4DSettings`](#buildapp4dsettings) (para más información, consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
@@ -180,7 +180,7 @@ Cuando se construye una aplicación independiente, 4D copia el contenido de la c
 * Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
 * Añadir una carpeta *PlugIns* personalizada;
 * Personalizar el contenido de la carpeta *Resources*.
-> En macOS, 4D Volume Desktop se ofrece en forma de paquete de software. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+> Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
 #### Ubicación de los archivos web
 

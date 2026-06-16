@@ -166,7 +166,7 @@ La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère un
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *index*, vous pouvez passer un numéro pour la nouvelle feuille. Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
+Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes. Dans *index*, vous pouvez passer un numéro pour la nouvelle feuille. Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début.
 > La numérotation démarre à 0.
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
@@ -371,7 +371,7 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 
 #### Description
 
-La commande `VP Cells` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant une cellule<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant des cellules spécifiques<!-- END REF -->.
 
 > Cette commande s'applique aux plages d'une seule cellule. Pour créer une plage de plusieurs cellules, utilisez la commande [VP Cells](#vp-cells).
 
@@ -430,7 +430,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 #### Description
 
-La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne une nouvelle plage référençant des cellules spécifiques<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne une nouvelle plage référençant une cellule<!-- END REF -->.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -658,7 +658,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 * Hauteur de lignes
 * Largeur de colonnes
 * Visibilité : colonnes / lignes cachées.
-> La visibilité du quadrillage dépend de l'attribut de document défini avec [VP SET PRINT INFO](#vp-set-print-info).
+> > La visibilité du quadrillage dépend de l'attribut de document défini avec [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Résultat
 
@@ -1115,7 +1115,7 @@ Voici le résultat :
 
 #### Description
 
-La commande `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> retourne l'objet 4D View Pro attaché à la zone 4D View Pro *vpAreaName*<!-- END REF -->. Vous pouvez utiliser cette commande par exemple pour stocker la zone 4D View Pro dans un champ objet de la base de données 4D.
+La commande `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP Export to object.Summary --> désigne les formules 4D qui peuvent être appelées directement depuis des formules 4D View Pro<!-- END REF -->. .
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -1862,7 +1862,7 @@ Dans *rangeObj*, passez une plage dont vous souhaitez récupérer les formules. 
 La collection retournée est bidemensionnelle :
 
 * La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection représente une ligne.
-* Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs sont des éléments textuels contenant les formules des cellules.
+* Chaque sous-collection définit les valeurs des cellules de la ligne. Les données passées en paramètre sont une collection qui contient des sous-collections.
 
 #### Exemple
 
@@ -2020,7 +2020,7 @@ Le code suivant :
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... renvoie les attributs d'impression de la zone 4D View Pro définis dans la commande [VP SET PRINT INFO](#vp-set-print-info) :
+Aucune info-bulle de défilement n'est affichée.
 
 ```4d
 {
@@ -2254,7 +2254,7 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 
 #### Description
 
-Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1. <!-- REF #_method_.VP Get sheet index.Summary -->Dans *name*, passez le nom de la feuille dont l'index sera retourné.<!-- END REF -->
+La commande `VP Get sheet name` <!-- REF #_method_.VP Get sheet index.Summary -->retourne le nom de la feuille de *vpAreaName* dont vous avez le numéro en paramètre.<!-- END REF -->
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
@@ -2295,7 +2295,7 @@ $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2
 
 #### Description
 
-La commande `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->retourne le nom de la feuille de *vpAreaName* dont vous avez le numéro en paramètre.<!-- END REF -->
+`VP Get workbook options` <!-- REF #_method_.VP Get sheet name.Summary -->retourne un objet contenant les options du workbook dans *vpAreaName*<!-- END REF -->
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
@@ -2431,7 +2431,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 ```4d
 // Rechercher toutes les cellules fusionnées 
 $range:=VP Get spans(VP All("ViewProArea"))
- 
+
 //centrer le texte
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
@@ -2587,7 +2587,7 @@ La commande `VP Get table column attributes` <!-- REF #_method_.VP Get table col
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 > La numérotation démarre à 0.
 
 La commande retourne un objet décrivant les attributs courants de *column* :
@@ -2650,7 +2650,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 Dans *columnName*, passez le nom de la colonne de la table de laquelle vous souhaitez obtenir l'index.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 > La numérotation démarre à 0.
 
 Si *tableName* ou *columnName* n'est pas trouvé, la commande renvoie -1.
@@ -2708,7 +2708,7 @@ Dans *tableName*, passez le nom de la table de laquelle vous voulez récupérer 
 
 Par défaut, appeler la commande effacera le statut *dirty* de la table courante. Pour ne pas modifier ce statut, passez `False` dans le paramètre *reset*.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 
 > La numérotation démarre à 0.
 
@@ -2912,7 +2912,7 @@ $tables:=VP Get tables("ViewProArea")
 
 #### Description
 
-The `VP SET VALUE` command <!-- REF #_method_.VP Get value.Summary -->récupère la valeur d'une cellule depuis une plage de cellules<!-- END REF -->.
+La commande `VP SET VALUE` <!-- REF #_method_.VP Get value.Summary -->affecte une valeur spécifiée à une plage de cellules désignée<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la valeur.
 
@@ -3571,13 +3571,13 @@ La commande `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->
 
 Dans *fontObj*, passez un objet contenant les propriétés de police. Les propriétés suivantes sont prises en charge :
 
-| Propriété | Type | Description                                                                                                             | Valeurs possibles                                                                                                                                                                                                                                                                                                                    | Obligatoire |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| family    | text | Définit la police.                                                                                                      | tout type de famille de police standard ou générique. Ex : Ex : Ex : "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                               | Oui         |
-| size      | text | Définit la taille de la police. Le line-height peut être ajouté au font-size : font-size/line-height : Ex : "15pt/20pt" | un chiffre avec l'une des unités suivantes : <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>ou l'une des constantes suivantes :<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>   | Oui         |
-| style     | text | Style de police.                                                                                                        | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                               | Non         |
-| variant   | text | Police en petites majuscules.                                                                                           | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                          | Non         |
-| weight    | text | Définit l'épaisseur de la police.                                                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Non         |
+| Propriété | Type | Description                                                                             | Valeurs possibles                                                                                                                                                                                                                                                                                                                    | Obligatoire |
+| --------- | ---- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| family    | text | Définit la police.                                                                      | tout type de famille de police standard ou générique. Ex : Ex : Ex : "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                               | Oui         |
+| size      | text | Le line-height peut être ajouté au font-size : font-size/line-height : Ex : "15pt/20pt" | un chiffre avec l'une des unités suivantes : <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>ou l'une des constantes suivantes :<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>   | Oui         |
+| style     | text | Style de police.                                                                        | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                               | Non         |
+| variant   | text | Police en petites majuscules.                                                           | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                          | Non         |
+| weight    | text | Définit l'épaisseur de la police.                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Non         |
 
 Cet objet peut être créé à l'aide de la commande [VP Font to object](#vp-font-to-object).
 
@@ -3724,7 +3724,7 @@ Ouvrira une fenêtre de dialogue d'impression :
 
 #### Description
 
-La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (ex : si les formules sont modifiées ou si les formules contiennent des appels vers la base). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](#vp-flush-commands) pour exécuter les commandes stockées et vider le tampon de commandes, puis calcule toutes les formules dans le workbook.
+La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. . Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (ex : si les formules sont modifiées ou si les formules contiennent des appels vers la base). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](#vp-flush-commands) pour exécuter les commandes stockées et vider le tampon de commandes, puis calcule toutes les formules dans le workbook.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 > Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de `VP RECOMPUTE FORMULAS`, sinon la commande ne fait rien.
@@ -3995,7 +3995,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 La commande `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->supprime une ou *count* colonne(s) de la table *tableName* à partir de la colonne d'indice *column*<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-La commande supprime les colonnes de la table *tableName*, PAS de la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à gauche en fonction du nombre de colonnes supprimées.
+La commande supprime les colonnes de la table *tableName*, PAS de la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Le nombre total de colonnes de la feuille n'est pas impacté par la commande.
 
 Si *tableName* n'existe pas, la commande ne fait rien.
 
@@ -4044,7 +4044,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->supprime une ou *count* ligne(s) de la table *tableName* à partir de la ligne d'indice *row*<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-Cette commande supprime les lignes de la table *tableName*, PAS de la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le haut en fonction du nombre de lignes supprimées.
+Cette commande supprime les lignes de la table *tableName*, PAS de la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Le nombre total de lignes de la feuille n'est pas impacté par la commande.
 
 Si la table *tableName* est liée à un [contexte de données](#vp-set-data-context), la commande supprime le(s) élément(s) de la collection.
 
@@ -4658,12 +4658,12 @@ Dans *rangeObj*, passez une plage de cellules à laquelle s'appliquera le style 
 
 Le paramètre *borderStyleObj* vous permet de définir le style des lignes de la bordure. *borderStyleObj* prend en charge les propriétés suivantes :
 
-| Propriété | Type    | Description                                           | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                          |
-| --------- | ------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| color     | text    | Définit la couleur de la bordure. Par défaut = black. | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                                                         |
-| style     | Integer | Définit le style de la bordure. Par défaut = empty.   | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
+| Propriété | Type    | Description                         | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                          |
+| --------- | ------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| color     | text    | Définit la couleur de la bordure. . | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                                                         |
+| style     | Integer | Définit le style de la bordure. .   | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
-Les bordures appliquées à l'aide de `VP SET CELL STYLE` seront appliquées à chaque cellule de *rangeObj*, contrairement à la commande [VP SET BORDER](#vp-set-border) qui applique les bordures à l'ensemble de *rangeObj*.
+Dans le paramètre *row*, vous pouvez définir l'emplacement de la ou des lignes de la plage de cellules.
 
 | Propriété       | Type    | Description                                                                            |
 | --------------- | ------- | -------------------------------------------------------------------------------------- |
@@ -4734,7 +4734,7 @@ Ce code illustre, en termes de définition des bordures, la différence entre la
 La commande `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->applique le(s) style(s) défini(s) dans *styleObj* aux cellules définies dans *rangeObj*<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage de cellules à laquelle s'appliquera le style. Si *rangeObj* contient plusieurs cellules, le style s'applique à chaque cellule.
-> Voir également
+> Les bordures appliquées à l'aide de `VP SET CELL STYLE` seront appliquées à chaque cellule de *rangeObj*, contrairement à la commande [VP SET BORDER](#vp-set-border) qui applique les bordures à l'ensemble de *rangeObj*.
 
 Le paramètre *styleObj* vous permet de passer un objet contenant des propriétés de style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Si *styleObj* contient à la fois une feuille de style existante et des propriétés de style supplémentaires, la feuille de style existante s'applique, suivie des propriétés supplémentaires.
 
@@ -4942,7 +4942,7 @@ Dans le paramètre *formulaObj*, passez un objet contenant les formules 4D pouva
 |                          | minParams  |            | Number              | Nombre minimum de paramètres                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |                          | maxParams  |            | Number              | Nombre maximum de paramètres. Passer un nombre supérieur à la longueur de *parameters* permet de déclarer les paramètres "optionnels" avec un type par défaut                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 > **ATTENTION**
-> * Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les méthodes autorisées par la commande `VP SET ALLOWED METHODS` (le cas échéant) sont ignorées dans la zone 4D View Pro.
+> * **ATTENTION** * Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les méthodes autorisées par la commande `VP SET ALLOWED METHODS` (le cas échéant) sont ignorées dans la zone 4D View Pro.
 > * Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 
 #### Exemple
@@ -5082,7 +5082,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 #### Exemple 3
 
-Les données passées en paramètre sont une collection qui contient des sous-collections. Chaque sous-collection définit les valeurs des cellules de la ligne :
+La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection définit une ligne.
 
 ```4d
 var $data : Collection
@@ -5290,7 +5290,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 La commande `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->affecte un champ virtuel de la base de données 4D à une plage de cellules désignée<!-- END REF -->.
 
-Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, le champ spécifié sera lié à chaque cellule.
+Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. Dans *rangeObj*, passez une plage de cellule (créée via [`VP Cell`](#vp-cell)) dont vous souhaitez indiquer la valeur.
 
 Le paramètre *field* indique un [champ virtuel](formulas.md#referencing-fields-using-the-virtual-structure) de la base 4D à assigner à *rangeObj*. Le nom de la structure virtuelle pour le *field* peut être visualisé dans la barre de formule. Si du contenu est déjà présent dans l'une des cellules de *rangeObj*, il sera remplacé par *rangeObj*.
 
@@ -5329,11 +5329,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 La commande `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->affecte une formule ou une méthode 4D spécifique à une plage de cellules désignée<!-- END REF -->.
 
-Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la formule spécifiée sera liée à chaque cellule.
+Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur.
 
 Le paramètre *formula* indique un nom de formule ou de méthode 4D à assigner à *rangeObj*.
 
-> Si la formule ** est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée avec la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
+> Si la formule est une chaîne, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée avec la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 Le paramètre optionnel *formatPattern* définit un [pattern](configuring.md#cell-format) (modèle) pour le paramètre *formula*.
 
@@ -5389,7 +5389,7 @@ Le paramètre *formulasCol* est une collection bidimensionnelle :
 * La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection définit une ligne.
 * Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs doivent être des éléments textuels contenant les formules à associer aux cellules.
 
-> Si la formule est une chaîne, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée avec la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
+> Si la formule ** est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres. Si une méthode 4D est utilisée, elle doit être autorisée avec la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 Vous pouvez supprimer les formules dans *rangeObj* en les remplaçant par une chaîne vide ("").
 
@@ -6034,7 +6034,7 @@ Dans le paramètre *attributes*, passez un objet contenant les propriétés à d
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                       |
 | filterButtonVisible | boolean | Définit si le bouton de filtre de la colonne de la table est affiché (la valeur par défaut est `True` lors de la création de la table).                                                           |
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé ou si *column* est supérieur au nombre de colonnes, la commande ne fait rien.
@@ -6280,7 +6280,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 #### Description
 
-La commande `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->affecte une valeur spécifiée à une plage de cellules désignée<!-- END REF -->.
+La commande `VP SET VALUES` <!-- REF #_method_.VP SET VALUE.Summary -->assigne une collection de valeurs à partir de la plage de cellules spécifiée<!-- END REF -->.
 
 Cette commande vous permet d'utiliser un code générique pour définir et formater les types de valeurs dans *rangeObj*, alors que d'autres commandes, telles que [`VP SET TEXT VALUE`](#vp-set-text-value) et [`VP SET NUM VALUE`](#vp-set-num-value), limitent les valeurs à des types spécifiques.
 
@@ -6358,9 +6358,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 #### Description
 
-La commande `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->assigne une collection de valeurs à partir de la plage de cellules spécifiée<!-- END REF -->.
+The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUES.Summary -->assigne une collection de valeurs à partir de la plage de cellules spécifiée<!-- END REF -->.
 
-Dans *rangeObj*, passez une plage de cellule (créée via [`VP Cell`](#vp-cell)) dont vous souhaitez indiquer la valeur. La cellule définie dans *rangeObj* est utilisée pour déterminer le point de départ.
+Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la formule spécifiée sera liée à chaque cellule.
 > * Si *rangeObj* n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.
 > * Si *rangeObj* comprend plusieurs plages, seule la première cellule de la première plage est utilisée.
 

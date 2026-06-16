@@ -217,7 +217,7 @@ Une expression 4D à associer à une colonne. Vous pouvez saisir :
   - Booléen  
     Vous pouvez utiliser des champs de la table principale ou d'autres tables.
 
-- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. La valeur sera évaluée dans les événements `On Display Detail` et `On Data Change`. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
+- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. L'expression doit retourner une valeur. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
   Les types d'expression suivants sont pris en charge :
   - String
   - Numérique

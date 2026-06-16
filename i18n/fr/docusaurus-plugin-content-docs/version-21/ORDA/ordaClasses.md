@@ -32,7 +32,7 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -456,7 +456,7 @@ Un attribut calculé peut également mettre en œuvre une fonction `set`, qui s'
 
 Tout comme les attributs de stockage, les attributs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un attribut calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. Cependant, pour de meilleures performances, notamment en client/serveur, les attributs calculés peuvent implémenter une fonction de requête `query` personnalisée qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
 
-De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les attributs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
+De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée.
 
 ### Comment définir les attributs calculés
 
@@ -490,7 +490,7 @@ La fonction *getter* définit le type de données de l'attribut calculé grâce 
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- \*\*Exemple \*\* : cs.EmployeeSelection
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
@@ -596,7 +596,7 @@ Cette fonction prend en charge trois syntaxes :
   | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
   | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
-La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un attribut calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
+La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 
 > Les fonctionnalités suivantes ne sont pas prises en charge :
 >

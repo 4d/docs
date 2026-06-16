@@ -28,7 +28,7 @@ title: OpenAIChatHelper
 var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 ```
 
-このメソッドは指定されたシステムプロンプトで新しいチャットヘルパーを作成し、デフォルトの引数で初期化します。 このシステムプロンプトが会話の間全体の、アシスタントの役割と振る舞いを定義します。
+このメソッドは指定されたシステムプロンプトで新しいチャットヘルパーを作成し、デフォルトの引数で初期化します。 このシステムプロンプトが会話の間全体の、アシスタントの役割と振る舞いを定義します。 このシステムプロンプトが会話の間全体の、アシスタントの役割と振る舞いを定義します。
 
 ## 関数
 
@@ -41,7 +41,7 @@ var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 | *prompt* | Text or [OpenAIMessage](OpenAIMessage.md)                     | The text prompt to send to OpenAI chat, or an OpenAIMessage object for more complex messages (e.g., with images or files). |
 | 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | チャットから返されたチャット補完結果。                                                                                                                                                                           |
 
-ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。 You can pass either a simple text string or an [OpenAIMessage](OpenAIMessage.md) object for more advanced scenarios like including images or files.
+ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。 ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。 You can pass either a simple text string or an [OpenAIMessage](OpenAIMessage.md) object for more advanced scenarios like including images or files.
 
 #### 使用例
 
@@ -65,7 +65,7 @@ $result:=$chatHelper.prompt($fileMessage)
 
 **reset**()
 
-全てのメッセージを消去し、全てのツールの登録を解除することで、チャットコンテキストをリセットします。 これにより、システムのプロンプトとパラメータをそのままにしながら、効果的に新しい会話を始めることができます。
+全てのメッセージを消去し、全てのツールの登録を解除することで、チャットコンテキストをリセットします。 これにより、システムのプロンプトとパラメータをそのままにしながら、効果的に新しい会話を始めることができます。 これにより、システムのプロンプトとパラメータをそのままにしながら、効果的に新しい会話を始めることができます。
 
 #### リセットの例
 
@@ -90,7 +90,7 @@ $chatHelper.reset()  // 以前のメッセージとツールを全て消去
 - **4D.Function**: 直接ハンドラ関数
 - An **Object**: An object containing a formula property matching the tool function name
 
-ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
+ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
 
 #### Register Tool Examples
 
@@ -122,7 +122,7 @@ $chatHelper.registerTool($tool; $handlerObj)
 | ------------------- | ------- | ------------------------------- |
 | *toolsWithHandlers* | Variant | ツールとのそのハンドラを格納したオブジェクトまたはコレクション |
 
-複数のツールを一度に登録します。 引数には以下のものを渡すことができます:
+複数のツールを一度に登録します。 引数には以下のものを渡すことができます: 引数には以下のものを渡すことができます:
 
 - **コレクション**: (ハンドラが埋め込んである、あるいは分離してある)ツールオブジェクトのコレクション
 - **オブジェクト**: 関数名がツール定義にマッピングされているキーとするオブジェクト
@@ -201,7 +201,7 @@ $chatHelper.unregisterTool("get_weather")  // weather ツールを削除
 
 **unregisterTools**()
 
-全てのツールを一度に登録解除します。 これはすべてのツールハンドラを消去し、tools コレクションをからにし、そして引数からも全てのツールを削除します。
+全てのツールを一度に登録解除します。 全てのツールを一度に登録解除します。 これはすべてのツールハンドラを消去し、tools コレクションをからにし、そして引数からも全てのツールを削除します。
 
 #### 全てのツールを登録解除する例
 

@@ -45,7 +45,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers)
 
 ---
 
@@ -83,7 +83,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers)
 
 ---
 
@@ -109,10 +109,10 @@ title: 表示
 
 たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
 
-ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
+ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。 マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
 > 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。
 
-各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
+各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。 末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
 
 たとえば ##0 というフォーマットを使用して 3桁の数字を表示するものとします。 ユーザーがフィールドに何も入力しないと、フィールドには 0 が表示されます。 26 と入力すると、フィールドには 26 と表示されます。
 
@@ -122,7 +122,7 @@ title: 表示
 > Windows 環境下で、テンキーの小数点キーを使用した際、4D はカーソルが位置しているフィールドの型に応じて挙動が変化します:
 > 
 > * 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。
-> * それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。
+> * それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。 通常はピリオド (.) またはカンマ (,) です。
 
 ### 小数点とその他の表示文字
 
@@ -157,7 +157,7 @@ title: 表示
 
  ￥###,##0.00;(￥###,##0.00);
 
-2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
+2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。 これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
 
  ￥###,##0.00;(￥###,##0.00)
 
@@ -240,7 +240,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [進捗インジケーター](progressIndicator.md)
 
 ---
 
@@ -299,7 +299,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 ---
 
@@ -332,7 +332,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers)
 
 ---
 
@@ -341,7 +341,7 @@ title: 表示
 [ブール式](properties_Object.md#式の型式タイプ) を次のフォームオブジェクトで表示した場合:
 
 * [入力オブジェクト](input_overview.md) にテキストとして
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
+* [リストボックスカラム](listbox-column.md) 内の ["ポップアップ"](properties_Display.md#display-type) として
 
 ... 値の代わりに表示するテキストを指定することができます:
 
@@ -356,7 +356,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md) - [Input](input_overview.md)
+[リストボックスカラム](listbox-column.md) - [入力](input_overview.md)
 
 ---
 
@@ -408,7 +408,7 @@ title: 表示
 
 * 0 = チェックされていない
 * 1 = チェックされている
-* 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。
+* 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。 データ入力時、この状態は2を返します。
 * -1 = 非表示チェックボックス
 * -2 = チェックされていない、入力不可
 * -3 = チェックされている、入力不可
@@ -424,7 +424,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
+[チェックボックス](checkbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -468,7 +468,7 @@ title: 表示
 
 > テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは [ワードラップ](#ワードラップ) オプションがチェックされていない場合にのみ使用可能です。 ワードラップオプションがチェックされていた場合、セル内を超えたコンテンツについてはワードラップ機能によって管理されますので、エリプシスで省略オプションは使用できません。
 
-エリプシスで省略オプションはブール型のカラムに対しても適用可能です。しかしながら、[セルのフォーマット](#表示タイプ)によって表示される結果は異なります:
+しかしながら、[セルのフォーマット](#表示タイプ)によって表示される結果は異なります:
 
 * 表示タイプがポップアップに設定されている場合は、エリプシスでラベルが省略されます。
 * 表示タイプがチェックボックスに設定されている場合は、ラベルは常に見切れます (エリプシスで省略されません)。
@@ -481,7 +481,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 ---
 
@@ -502,7 +502,7 @@ title: 表示
 
 ![](../assets/en/FormObjects/select-row.png)
 
-オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
+オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
 
 #### JSON 文法
 
@@ -512,7 +512,7 @@ title: 表示
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
 
 ---
 
@@ -528,7 +528,7 @@ title: 表示
 
 このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
 
-* 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。下矢印キーを押すことで、エリアの内容をスクロールできます。
+* 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。 下矢印キーを押すことで、エリアの内容をスクロールできます。
 
 * 複数行のカラムやエリアの場合、4Dは自動改行を実行します。
 
@@ -538,7 +538,7 @@ title: 表示
 
 `JSON 文法では: "none"`
 
-このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
+このオブションの場合、4D はいっさい自動改行をおこないません。 表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
@@ -567,4 +567,4 @@ title: 表示
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)

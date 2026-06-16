@@ -6,7 +6,7 @@ title: Webエリア
 ---
 ## 4Dメソッドコールを許可
 
-Webエリアで実行される JavaScript コードから 4Dメソッドを呼び出して、戻り値を取得することができます。 4Dメソッドを Webエリアから呼び出せるようにするには、プロパティリストの "4Dメソッドコールを許可" にチェックをする必要があります。
+Webエリアで実行される JavaScript コードから 4Dメソッドを呼び出して、戻り値を取得することができます。 Webエリアで実行される JavaScript コードから 4Dメソッドを呼び出して、戻り値を取得することができます。
 
 > この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
@@ -61,7 +61,7 @@ URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-450484
 - ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドは両方の記法を受け付けます。
 - URL変数が空の文字列の場合、Webエリアは URL をロードしません。 Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを実行しても効果はありません。
 - URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加します。 [WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドはこれを付加しません。
-- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを実行しても効果はありません。一方、URL変数に値を代入すると、カレントURL が更新されます。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 

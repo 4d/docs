@@ -17,12 +17,12 @@ https://developers.openai.com/api/reference/resources/embeddings
 
 Crea una representación vectorial para la entrada, el modelo y los parámetros ofrecidos.
 
-| Argumento    | Tipo                                                        | Descripción                                                                                                                                                                                                                                |
-| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                                                                                                                                                                   |
-| *model*      | Text                                                        | El [modelo a utilizar] (https://developers.openai.com/api/docs/guides/embeddings#embedding-models). |
-| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales.                                                                                                                                              |
-| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                                                                                                                                                                         |
+| Argumento    | Tipo                                                        | Descripción                                                                                     |
+| ------------ | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                        |
+| *model*      | Text                                                        | Soporta [provider:model aliases](../provider-model-aliases.md). |
+| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales.   |
+| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                              |
 
 #### Ejemplos de uso
 

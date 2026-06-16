@@ -22,7 +22,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md#method-types):
 
 ### User classes
 
-Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase. Por ejemplo, una clase llamada "Polygon" se almacenará en el siguiente archivo:
+Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase. El nombre del archivo es el nombre de la clase.
 
 ```
 Project folder Project Sources Classes Polygon.4dm
@@ -62,7 +62,7 @@ Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las c
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. 4D creates the class file and add the [`extends`](../Concepts/classes.md#class-extends-classname) code. Por ejemplo, para una clase Entity:
+Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Por ejemplo, para una clase Entity:
 
 ```
 Class extends Entity

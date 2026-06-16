@@ -88,7 +88,7 @@ $MyVar:="Goodbye"
 
 :::警告 Null ポインター
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例: 例:
 
 ```4d
 var $p : Pointer // 初期化されていないポインター (Nil 値)
@@ -203,7 +203,9 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ```4d
   //takeTwo プロジェクトメソッド
   //$changeUp – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
+  これを大文字に変換します。
   //$changeLow – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
+ これを小文字に変換します。
   #DECLARE($changeUp : Pointer ; $changeLow : Pointer) 
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)

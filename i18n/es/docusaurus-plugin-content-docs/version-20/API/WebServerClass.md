@@ -128,12 +128,12 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos Web server disponibles en la aplicación 4D<!-- END REF -->.
 
-Queremos saber cuántos servidores web en funcionamiento hay disponibles:
+Una aplicación 4D puede contener de uno a varios servidores web:
 
 - un servidor web para la base de datos del host (servidor web por defecto)
 - un servidor web para cada componente.
 
-Una aplicación 4D puede contener de uno a varios servidores web:
+El comando `WEB Server list` devuelve todos los servidores web disponibles, estén o no en funcionamiento.
 
 > El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. Por otro lado, cada componente servidor web que se quiera utilizar debe ser instanciado utilizando el comando [`WEB Server`](#web-server).
 
@@ -214,7 +214,7 @@ El <!-- REF #WebServerClass.cipherSuite.Summary -->lista de cifrado utilizada pa
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.CORSEnabled.Summary -->estado del servicio CORS (*Cross-origin resource sharing*) para el servidor web<!-- END REF -->. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver `CORSSettings` abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
+El <!-- REF #WebServerClass.CORSEnabled.Summary -->El estado del servicio CORS (*Cross-origin resource sharing*) para el servidor web<!-- END REF -->. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver `CORSSettings` abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
 
 Por defecto: False (desactivado)
 
@@ -283,7 +283,7 @@ El <!-- REF #WebServerClass.defaultHomepage.Summary -->nombre de la página de i
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado del HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad `HSTSMaxAge`. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.
+El <!-- REF #WebServerClass.HSTSEnabled.Summary -->El estado del HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permite al servidor web declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con la propiedad `HSTSMaxAge`. HSTS requiere que HTTPS esté activado en el servidor. HTTP también debe estar activado para permitir las conexiones cliente iniciales.
 
 <!-- END REF -->
 

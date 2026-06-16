@@ -111,7 +111,7 @@ $result:=Num("–123e2") // –12300
 
 ## Exemple 2
 
-Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces comparaisons renvoie 1 ou 0. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide.  En définitive, le champ *\[Client\]Risk* reçoit la valeur “Good” ou “Bad” :
+Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces comparaisons renvoie 1 ou 0. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide. En définitive, le champ *\[Client\]Risk* reçoit la valeur “Good” ou “Bad” :
 
 ```4d
   // Si le client doit moins de 1000 €, le risque est faible.

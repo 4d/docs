@@ -74,7 +74,7 @@ Pour rattacher le débogueur au serveur :
 
 > **Attention** : Si cette option est sélectionnée pour un serveur qui est ensuite lancé en mode headless (sans interface), le débogueur ne sera pas disponible pour ce serveur.
 
-- Sur un client 4D distant, cette option s'appelle **Attacher le débogueur distant au démarrage**. Lorsqu'elle est sélectionnée, le client 4D distant tente automatiquement d'attacher le débogueur distant à chaque connexion ultérieure à la même base de données 4D Server. Si l'association est acceptée (voir [Demandes d'association rejetées](#rejected-attachment-requests)), le débogueur distant est automatiquement attaché au client 4D distant et l'option **Détacher le débogueur distant** s'affiche.
+- Sur un client 4D distant, cette option s'appelle **Attacher le débogueur distant au démarrage**. Lorsqu'elle est sélectionnée, le client 4D distant tente automatiquement d'attacher le débogueur distant à chaque connexion ultérieure à la même base de données 4D Server. Lorsqu'elle est sélectionnée, le client 4D distant tente automatiquement d'attacher le débogueur distant à chaque connexion ultérieure à la même base de données 4D Server.
 
 > Ce paramètre est appliqué par projet et est stocké localement dans le fichier [`.4DPreferences`](Project/architecture.md#userpreferencesusername).
 

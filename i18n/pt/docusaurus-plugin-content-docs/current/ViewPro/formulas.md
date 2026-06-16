@@ -280,7 +280,7 @@ Soluções alternativas estão disponíveis para declarar campos ou métodos com
 
 ### Referência a campos utilizando a estrutura virtual
 
-4D View Pro permite que você faça referência a campos 4D usando a estrutura virtual do banco de dados, ou seja, declarada por meio dos comandos [`SET TABLE TITLES`](../commands/set-table-titles) e/ou [`SET FIELD TITLES`](../commands/set-field-titles) com o parâmetro \*. Essa solução alternativa pode ser útil se o seu aplicativo já depender de uma estrutura virtual (caso contrário, recomenda-se [usar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area. **ATENÇÃO:** Você não pode usar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente.
 
 > **ATENÇÃO:** Você não pode usar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 

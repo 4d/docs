@@ -28,7 +28,7 @@ O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->retorna um novo objeto d
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo contém várias linhas, você também deve usar o parâmetro opcional *rowCount*.
+O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Passar o índice da linha (a contagem começa em 0) neste parâmetro.
 
 O parâmetro *rowCount* opcional permite que você defina o número total de linhas do intervalo. \*rowCount tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
 

@@ -81,7 +81,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia uma *mensagem* ao cliente<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->A função `.send()`<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *mensagem*:
 
@@ -138,7 +138,7 @@ Um *code* e uma *message* podem ser enviados ao cliente durante o encerramento p
 <!-- REF WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
-<!-- REF #WebSocketConnectionClass.wss.Syntax -->**.wss** : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.wss.Syntax -->**.wss** : 4D. WebSocketServer<!-- END REF -->
 
 #### Descrição
 

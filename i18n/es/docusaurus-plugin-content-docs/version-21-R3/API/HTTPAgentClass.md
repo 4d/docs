@@ -96,7 +96,7 @@ En macOS, cuando una nueva aplicación (nuevo [UUID](./FileClass.md#setappinfo))
 
 :::note
 
-Lanzamiento En ese caso, cada servidor tendrá su propio grupo de conexiones utilizando las mismas opciones de agente.
+Lanzamiento Lanzamiento En ese caso, cada servidor tendrá su propio grupo de conexiones utilizando las mismas opciones de agente.
 
 :::
 

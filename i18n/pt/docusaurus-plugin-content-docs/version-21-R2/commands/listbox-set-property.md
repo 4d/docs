@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parâmetro | Tipo           |                             | Descrição                                                                                                                             |
-| --------- | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador       | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object    | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                            |
-| property  | Integer        | &#8594; | List box or column property                                                                                                           |
-| value     | Integer, Text  | &#8594; | Valor da propriedade                                                                                                                  |
+| Parâmetro | Tipo           |                             | Descrição                                                                                                                                                               |
+| --------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador       | &#8594; | If specified, object is an object name (string). If specified, object is an object name (string). |
+| object    | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                                                              |
+| property  | Integer        | &#8594; | List box or column property                                                                                                                                             |
+| value     | Integer, Text  | &#8594; | Valor da propriedade                                                                                                                                                    |
 
 </div>
 <!-- END REF-->

@@ -48,7 +48,7 @@ Si el código descrito anteriormente fuera un método llamado `MODIFY_CUSTOMER`,
  PRINT SELECTION([Customers])
 ```
 
-Esta posibilidad simplifica enormemente sus métodos. En el ejemplo, no es necesario saber cómo funciona el método `MODIFY_CUSTOMER`, sólo lo que hace. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
+Esta posibilidad simplifica enormemente sus métodos. Esta posibilidad simplifica enormemente sus métodos. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
 
 Si necesita cambiar su método de búsqueda de clientes en este proyecto de ejemplo, tendrá que cambiar sólo un método, no diez. Esta es la siguiente razón para utilizar subrutinas: facilitar los cambios en sus métodos.
 
@@ -93,7 +93,7 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 ### Métodos de menú
 
-Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
+Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
 
 Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
 

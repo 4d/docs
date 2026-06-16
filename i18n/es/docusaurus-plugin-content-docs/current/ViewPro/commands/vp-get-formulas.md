@@ -28,7 +28,7 @@ En *rangeObj*, pase un rango cuyas fórmulas desea recuperar. Si *rangeObj* desi
 La colección devuelta es bidimensional:
 
 - La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección representa una línea.
-- Cada subcolección define los valores de las celdas para la línea. The first-level collection contains subcollections of formulas.
+- Cada subcolección define los valores de las celdas para la línea. La colección de primer nivel contiene subcolecciones de fórmulas.
 
 ## Ejemplo
 

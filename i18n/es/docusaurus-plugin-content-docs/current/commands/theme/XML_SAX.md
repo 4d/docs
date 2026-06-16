@@ -31,21 +31,21 @@ Consulte la sección [XML, DOM y SAX](../theme/XML.md#xml-dom-and-sax) para obte
 
 ### Creación, apertura y cierre de documentos XML mediante SAX
 
-Los comandos SAX funcionan con las referencias de documento estándar de 4D (**DocRef**, una referencia de tipo Time). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
+Los comandos SAX funcionan con las referencias de documento estándar de 4D (**DocRef**, una referencia de tipo Time). Por tanto, es posible utilizar estos comandos conjuntamente con los comandos 4D utilizados para gestionar documentos, como [`SEND PACKET`](../../commands/send-packet) o [`Append document`](../../commands/append-document).
 
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
+La creación y apertura de documentos XML por programación se lleva a cabo utilizando los comandos [`Create document`](../../commands/create-document) y [`Open document`](../../commands/open-document). Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
 
 :::note
 
-Documents read by SAX commands must be opened in read-only mode by the [`Open document`](../../commands/open-document) command. Esto evita cualquier conflicto entre 4D y la biblioteca Xerces cuando se abren documentos "normales" y XML simultáneamente. If you execute a SAX parsing command with a document open in read-write mode, an alert message is displayed and parsing is impossible.
+Los documentos que leen los comandos SAX deben abrirse en modo de solo lectura mediante el comando [`Open document`](../../commands/open-document). Esto evita cualquier conflicto entre 4D y la biblioteca Xerces cuando se abren documentos "normales" y XML simultáneamente. Si ejecuta un comando de análisis SAX con un documento abierto en modo de lectura-escritura, se muestra un mensaje de alerta y el análisis es imposible.
 
 :::
 
-El cierre de un documento XML debe realizarse mediante el comando [`CLOSE DOCUMENT`](../../commands/close-document). If any XML elements were open, they will be closed automatically.
+El cierre de un documento XML debe realizarse mediante el comando [`CLOSE DOCUMENT`](../../commands/close-document). Si se abrieran algunos elementos XML, se cerrarán automáticamente.
 
-### About end-of-line characters and BOM management
+### Acerca de caracteres finales de línea y gestión de BOM
 
-When writing SAX documents, 4D uses the following default settings for end-of-line characters and BOM (byte order mask) usage:
+Al generar documentos SAX, 4D utiliza los siguientes ajustes predeterminados para los caracteres de fin de línea y el uso de la máscara de orden de bytes (BOM):
 
 - Caracteres CRLF en Windows y LF en macOS para los caracteres de fin de línea
 - archivos escritos sin BOM.

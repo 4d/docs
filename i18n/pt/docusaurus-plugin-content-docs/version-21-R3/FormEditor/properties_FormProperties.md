@@ -10,12 +10,13 @@ title: Propriedades do formulário
 > Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (../commands/get-application-color-scheme)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Esta propriedade define o esquema de cores para o formulário. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
 
-> &#062; A defined color scheme can not be overridden by a CSS.
+> light - texto escuro sobre um fundo claro
+> &#062; &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -41,7 +42,7 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 ## Classe de formulário
 
-Nome de uma [classe usuário](../Project/code-overview.md#user-classes) existente para associar ao formulário. A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+A classe do usuário pode pertencer ao projeto host ou a um [componente](../Extensions/develop-components.md#sharing-of-classes), caso em que a sintaxe formal é "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nome de uma [classe usuário](../Project/code-overview.md#user-classes) existente para associar ao formulário.
 
 A associação de uma classe ao formulário oferece os seguintes benefícios:
 

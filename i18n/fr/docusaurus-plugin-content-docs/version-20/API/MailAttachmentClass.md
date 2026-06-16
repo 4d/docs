@@ -47,8 +47,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 |name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
 |cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
 |type|Text|->|Valeur de l'en-tête content-type|
-|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
-|Résultat|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".| |Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -195,8 +194,7 @@ $transporter.send($email)
 |name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
 |cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
 |type|Text|->|Valeur de l'en-tête content-type|
-|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
-|Résultat|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".| |Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 

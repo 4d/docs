@@ -5,12 +5,12 @@ title: Restaurar um backup
 
 4D lhe permite restaurar conjuntos inteiros de dados de um banco de dados no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
 
-- A parada inesperada do banco enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Neste caso, dependendo do estado atual do cache de dados no momento do incidente, a restauração do aplicativo pode exigir diferentes operações:
+- A parada inesperada do banco enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Neste caso, dependendo do estado atual do cache de dados no momento do incidente, a restauração do aplicativo pode exigir diferentes operações:
   - Se a cache estiver vazia, o banco de dados abre normalmente. Quaisquer mudanças feitas no banco de dados foram registradas. Este caso não exige nenhuma operação particular
   - Se a cache contiver operações, o arquivo de dados está intacto mas exige integrar o arquivo de histórico atual.
   - Se a cache estiver no processo de ser escrita, o arquivo de dados está provavelmente danificado. When restoring a backup and integrating the current log file in a encrypted database:
 
-- A perda de um ou mais arquivos do banco de dados. Este incidente pode ocorrer devido a setores defeituosos no disco que contém a aplicação, um vírus, erro de manipulação, etc. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para saber se um banco de dados foi danificado depois de um incidente, basta relançar o banco de dados com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se usar uma estratégia de backup regulares, as ferramentas de restauração de 4D permite recuperar (na maioria dos casos) o banco de dados na mesma situação que estava antes do incidente.
+- A perda de um ou mais arquivos do banco de dados. Este incidente pode ocorrer devido a setores defeituosos no disco que contém a aplicação, um vírus, erro de manipulação, etc. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para saber se um banco de dados foi danificado depois de um incidente, basta relançar o banco de dados com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se usar uma estratégia de backup regulares, as ferramentas de restauração de 4D permite recuperar (na maioria dos casos) o banco de dados na mesma situação que estava antes do incidente.
 
 > 4D pode lançar procedimentos automaticamente para recuperar os bancos de dados depois de um incidente. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Configurações. Para obter mais informações, consulte o parágrafo [Restaurador automático](settings.md#automatic-restore-and-log-integration).  
 > Se o incidente for resultado de uma operação inadequada realizada nos dados (eliminação de um registro, por exemplo), você pode tentar reparar o arquivo de dados usando a função "rollback" no arquivo de log. Esta função está disponível na página [Rollback](MSC/rollback.md) do MSC.
@@ -29,14 +29,14 @@ Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
    Execute o comando `RESTORE` a partir de um método 4D.
    Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de log (.4bl) para ser restaurado e clique em **Abrir**.
-   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Por padrão, o 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) localizada ao lado do arquivo. Pode exibir a rota:
+   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Pode exibir a rota:
 
 ![](../assets/en/Backup/backup07.png)
 
 Você também pode clicar no botão **[...]** para especificar um local diferente.
 3. Clique no botão **Restaurar**.
 4D extrai todos os arquivos de backup do local especificado.
-Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se contiver operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. A integração é feita automaticamente se a opção **Integrar último arquivo de histórico...** for marcada (ver [Restauração automática](settings.md#automatic-restore-and-log-integration)).
+Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se contiver operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. 4D extrai todos os arquivos de backup do local especificado.
 
 4.(Opcional) Clique em **OK** para integrar o arquivo de log na aplicação restaurada.
 Se a restauração e integração forem realizadas corretamente, 4D exibe uma caixa de diálogo indicando que a operação foi feita com sucesso.

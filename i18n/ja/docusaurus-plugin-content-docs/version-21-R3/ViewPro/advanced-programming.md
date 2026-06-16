@@ -3,7 +3,7 @@ id: advanced-programming
 title: Javascript による高度なプログラミング
 ---
 
-4D View Pro エリアは、[埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用する [Webエリアフォームオブジェクト](../FormObjects/webArea_overview.md) です。 つまり、他のWebエリアと同様に、[`WA Evaluate Javascript`](../commands/wa-evaluate-javascript) 4Dコマンドを呼び出すことで、Javascript のコードを実行させることができます。
+4D View Pro エリアは、[埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用する [Webエリアフォームオブジェクト](../FormObjects/webArea_overview.md) です。 つまり、他のWebエリアと同様に、[`WA Evaluate Javascript`](../commands/wa-evaluate-javascript) 4Dコマンドを呼び出すことで、Javascript のコードを実行させることができます。 つまり、他のWebエリアと同様に、[`WA Evaluate Javascript`](../commands/wa-evaluate-javascript) 4Dコマンドを呼び出すことで、Javascript のコードを実行させることができます。
 
 4D View Proは [SpreadJS スプレッドシートソリューション](https://developer.mescius.com/spreadjs) に基づいて動作するため、4D View Pro エリア内で SpreadJS の Javascriptメソッドを呼び出すことも可能です。
 
@@ -39,5 +39,5 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## 4D View Pro Tips のリポジトリ
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) は GitHub のリポジトリで、フローティングピクチャーの管理、列や行のソート、カスタムカルチャの作成など、便利な機能を満載したプロジェクトが含まれています。 このリポジトリを自由にクローンして、プロジェクトで実験してください。
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) は GitHub のリポジトリで、フローティングピクチャーの管理、列や行のソート、カスタムカルチャの作成など、便利な機能を満載したプロジェクトが含まれています。 このリポジトリを自由にクローンして、プロジェクトで実験してください。 このリポジトリを自由にクローンして、プロジェクトで実験してください。
 

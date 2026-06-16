@@ -170,7 +170,7 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 
 #### Descripción
 
-La función `.create()` <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->.
+La función `.create()` <!-- REF #FolderClass.create().Summary -->La función `.create()`<!-- END REF -->.
 
 Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades [platformPath](#platformpath) o [path](#path). Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
 
@@ -196,6 +196,9 @@ Creación de la carpeta "/Archives2019/January/" en la carpeta de la base:
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
  ALERT("The "+$newFolder.name+" folder was created.")
+Else
+ ALERT("Impossible to create a "+$newFolder.name+" folder.")
+End if
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if

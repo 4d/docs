@@ -24,7 +24,7 @@ $message:=Formula(ALERT("Hello world"))
 $f:={message: $message}
 ```
 
-Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Pour exécuter une fonction stockée dans une propriété objet, utilisez l'opérateur **()** après le nom de la propriété, comme par exemple :
+Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent.
 
 ```4d
  $f.message() //affiche"Hello world"

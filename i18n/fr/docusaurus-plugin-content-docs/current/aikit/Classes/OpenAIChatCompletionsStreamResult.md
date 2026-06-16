@@ -27,7 +27,7 @@ title: OpenAIChatCompletionsStreamResult
 | Propriété    | Type    | Description                                                                                                                                                                       |
 | ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean | Retourne `True` si le flux de données a été décodé avec succès en tant qu'objet.                                                                                  |
-| `terminated` | Boolean | Un booléen indiquant si la requête HTTP a été close, c'est-à-dire si `onTerminate` a été appelé.                                                                  |
+| `terminated` | Boolean | Un booléen indiquant si la requête HTTP a été close, c'est-à-dire si `onTerminate` a été appelé. c'est-à-dire si `onTerminate` a été appelé.      |
 | `usage`      | Object  | Returns token usage information from the stream data (only available in the final chunk when `stream_options.include_usage` is set to `True`). |
 
 ### usage

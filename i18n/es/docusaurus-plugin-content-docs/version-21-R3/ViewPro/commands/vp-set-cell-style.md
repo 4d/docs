@@ -27,7 +27,7 @@ En *rangeObj*, pase un rango de celdas donde se aplicará el estilo. Si *rangeOb
 
 > Los bordes aplicados con `VP SET CELL STYLE` se aplicarán a cada celda del *rangeObj*, a diferencia del comando [VP SET BORDER](vp-set-border.md) que aplica bordes al *rangeObj* en su conjunto.
 
-El parámetro *styleObj* permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Si *styleObj* contiene a la vez una hoja de estilo existente y propiedades de estilo adicionales, se aplica primero la hoja de estilo existente, seguida de las propiedades adicionales.
+El parámetro *styleObj* permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Puede utilizar una hoja de estilo existente o crear una nueva.
 
 Para eliminar un estilo y volver a la configuración de estilo por defecto (si la hay), pase un valor NULL:
 

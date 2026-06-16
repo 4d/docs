@@ -142,7 +142,7 @@ ASSERT($status.success)
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
-Definido somente para chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome da curva normalizada da chave<!-- END REF -->. Normalmente "prime256v1" para ES256 (por defeito), "secp384r1" para ES384, "secp521r1" para ES512.
+Definido somente para chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome da curva normalizada da chave<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -179,11 +179,11 @@ A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](htt
 
 #### *options*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                                                                   |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
-| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `message` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".   |
-| encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo | Descrição                                                                                                                                                                                                     |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                    |
+| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `message` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".     |
+| encodingDecrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultado*
 
@@ -235,7 +235,7 @@ A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](htt
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                             |
 | ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                            |
-| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                 |
+| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                |
 | encodingDecrypted | text | Codificação usada para converter o parâmetro `message` na representação binária a ser criptografada. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultado*
@@ -269,7 +269,7 @@ O valor devolvido é uma mensagem encriptada.
 </div>
 <!-- END REF -->
 
-A função ’.getPrivateKey()`<!-- REF #CryptoKey.getPrivateKey().Summary -->retorna a chave privada do objeto`CryptoKey\`<!-- END REF --> no formato PEM ou uma cadeia de caracteres vazia se não houver nenhuma disponível.
+A função ’.getPrivateKey()`<!-- REF #CryptoKey.getPrivateKey().Summary -->retorna a chave privada do objeto`CryptoKey\\`<!-- END REF --> no formato PEM ou uma cadeia de caracteres vazia se não houver nenhuma disponível.
 
 #### *Resultado*
 
@@ -367,9 +367,9 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | Propriedade       | Tipo    | Descrição                                                                                                                                                                                                                                                                                             |
 | ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
-| encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
+| encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
-| encoding          | text    | Representação a ser usada para a assinatura do resultado. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                         |
+| encoding          | text    | Representação a ser usada para a assinatura do resultado. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                                                   |
 
 #### *Resultado*
 
@@ -456,7 +456,7 @@ A `CryptoKey` deve conter uma chave **pública** válida.
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                                                         |
-| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                |
+| encoding    | text    | Representação a ser usada para a assinatura do resultado. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                                                   |
 
 #### *Resultado*
 

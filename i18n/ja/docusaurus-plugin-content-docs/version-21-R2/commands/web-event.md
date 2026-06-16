@@ -60,7 +60,9 @@ displayed_sidebar: docs
 
 - Text input コンポーネントは、 `orderNumber` というサーバー側参照を持ちます。
   ![](../assets/en/commands/web-event3.png)
+  ![](../assets/en/commands/web-event3.png)
 - Text コンポーネントは `helpOn_orderNumber` というサーバー側参照を持ちます。
+  ![](../assets/en/commands/web-event4.png)
   ![](../assets/en/commands/web-event4.png)
 - `onmouseenter` および `onmouseleave` イベントの両方には[公開された](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` 関数が割り当てられており、そこには以下のようなコードが書かれています:
 

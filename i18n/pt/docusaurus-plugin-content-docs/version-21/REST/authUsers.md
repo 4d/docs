@@ -18,14 +18,14 @@ Uma sessão é aberta depois que o usuário é autenticado com sucesso (veja aba
 
 :::note Compatibidade
 
-O modo de login legado baseado no método de banco de dados `On REST Authentication` é **obsoleto** a partir de 4D 20 R6. Agora é recomendado [usar o **modo de login forçado**](../ORDA/privileges.md#rolesjson-file) (automaticamente habilitado em novos projetos) e implementar a [função `ds.authentify()`](#function-authentify). Em projetos convertidos, [um botão na caixa de diálogo Configurações](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) o ajudará a atualizar sua configuração. No Qodly Studio para 4D, o modo pode ser definido usando a opção [**Forçar login**](https://developer.4d.com/qodly/4DQodlyPro/force-login) no painel de Privilégios.
+O modo de login legado baseado no método de banco de dados `On REST Authentication` é **obsoleto** a partir de 4D 20 R6. Em projetos convertidos, [um botão na caixa de diálogo Configurações](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) o ajudará a atualizar sua configuração. Agora é recomendado [usar o **modo de login forçado**](../ORDA/privileges.md#rolesjson-file) (automaticamente habilitado em novos projetos) e implementar a [função `ds.authentify()`](#function-authentify). No Qodly Studio para 4D, o modo pode ser definido usando a opção [**Forçar login**](https://developer.4d.com/qodly/4DQodlyPro/force-login) no painel de Privilégios.
 
 :::
 
 A sequência de login do usuário é a seguinte:
 
-1. At the first REST call (for a Qodly page call for example), a "guest" web user session is created. Não tem privilégios, nenhum direito de executar solicitações diferentes da [solicitações REST descritivas](#descriptive-rest-requests), sem consumo de licença.  
-   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
+1. In this case, they are processed through "guest" sessions. Não tem privilégios, nenhum direito de executar solicitações diferentes da [solicitações REST descritivas](#descriptive-rest-requests), sem consumo de licença.  
+   Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. At the first REST call (for a Qodly page call for example), a "guest" web user session is created.
 
 2. Você chama sua [`authentify()`](#function-authentify) (criado previamente), na qual você verifica as credenciais do usuário e chama [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) com privilégios apropriados. `authentify()` deve ser uma [função de datastore class](../ORDA/ordaClasses.md#datastore-class) exposta.
 

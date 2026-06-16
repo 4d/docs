@@ -10,12 +10,12 @@ title: Propiedades de los formularios
 > La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propiedad define el esquema de colores para el formulario. Por defecto, cuando la propiedad no está establecida, el valor de un esquema de color es **heredado** (el formulario utiliza el esquema definido en el [nivel de aplicación](../commands-legacy/get-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - texto oscuro en un fondo claro
 
-> El número de caracteres para el título de una ventana está limitado a 31.
+> light - dark text on a light background &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -41,7 +41,7 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 ## Clase de formulario
 
-Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. Name of an existing [user class](../Project/code-overview.md#user-classes) to associate to the form.
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 

@@ -116,7 +116,7 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 </div>
 <!-- END REF -->
 
-O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
+O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](../Project/code-overview.md#creating-classes) no projeto ou componente aberto.
 
 #### Exemplo
 
@@ -161,7 +161,7 @@ Você deseja listar as classes 4D integradas:
 
 ## Objecto de classe
 
-Quando uma classe é [definida](#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
+Quando uma classe é [definida](#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Quando uma classe é [definida](../Project/code-overview.md#creating-classes) no projeto, ela é carregada no ambiente de linguagem 4D. Um objecto classe tem as seguintes propriedades e função:
 
 - [`name`](API/ClassClass.md#name) string
 - objeto [`superclass`](API/ClassClass.md#superclass) (nulo se não tiver)
@@ -209,7 +209,7 @@ Não existe uma palavra-chave final para o código de função. A linguagem 4D d
 
 As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
-Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Se as funções forem declaradas em uma [classe compartilhada](#shared-classes), você poderá usar a palavra-chave `shared` com elas para que possam ser chamadas sem a estrutura [`Use...End use`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -349,7 +349,7 @@ Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e
 
 Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). O comando [`Super`](../commands/super) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependem dos parâmetros passados ao construtor, você pode defini-los usando a palavra-chave [`property`](#property).
 
@@ -409,23 +409,23 @@ Como propriedades e funções compartilham o mesmo espaço de nomes, usar o mesm
 
 O tipo de propriedade pode ser um dos seguintes tipos suportados:
 
-| Sintaxe                      | Conteúdos                                                                |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| `Text`                       | Valor texto                                                              |
-| `Date`                       | Valor data                                                               |
-| `Time`                       | Valor Hora                                                               |
-| `Boolean`                    | Valor booleano                                                           |
-| `Integer`                    | Valor inteiro longo                                                      |
-| `Real`                       | Valor real                                                               |
-| `Pointer`                    | Valor ponteiro                                                           |
-| `Picture`                    | Valor imagem                                                             |
-| `Blob`                       | Valor BLOB                                                               |
-| `Collection`                 | Valor colecção                                                           |
-| `Variant`                    | Valor variant                                                            |
-| `Object`                     | Object with default class (4D.Object) |
-| `4D.<className>`             | Objecto do nome da classe 4D                                             |
-| `cs.<className>`             | Objeto do nome da classe usuário                                         |
-| `cs.<namespace>.<className>` | Objeto do nome da classe do componente `<namespace>`                     |
+| Sintaxe                      | Conteúdos                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------- |
+| `Text`                       | Valor texto                                                               |
+| `Date`                       | Valor data                                                                |
+| `Time`                       | Valor Hora                                                                |
+| `Boolean`                    | Valor booleano                                                            |
+| `Integer`                    | Valor inteiro longo                                                       |
+| `Real`                       | Valor real                                                                |
+| `Pointer`                    | Valor ponteiro                                                            |
+| `Picture`                    | Valor imagem                                                              |
+| `Blob`                       | Valor BLOB                                                                |
+| `Collection`                 | Valor colecção                                                            |
+| `Variant`                    | Valor variant                                                             |
+| `Object`                     | Object with default class (4D. Object) |
+| `4D.<className>`             | Objecto do nome da classe 4D                                              |
+| `cs.<className>`             | Objeto do nome da classe usuário                                          |
+| `cs.<namespace>.<className>` | Objeto do nome da classe do componente `<namespace>`                      |
 
 Se você omitir o tipo na linha de declaração, a propriedade é criada como uma variante.
 
@@ -531,7 +531,7 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 
 Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
-Se as funções forem declaradas em uma [classe compartilhada](#shared-classes), você poderá usar a palavra-chave `shared` com elas para que possam ser chamadas sem a estrutura [`Use...End use`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 

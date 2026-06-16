@@ -82,7 +82,7 @@ Les privilèges ne peuvent être définis qu'à partir de la session de l'utilis
 
 :::
 
-Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions.md#session-token-otp). Après avoir créé un token OTP pour la session distante, vous ajoutez le token (par l'intermédiaire de la valeur du paramètre `$4DSID`) aux requêtes Web envoyées à partir des zones Web contenant des pages Qodly (ou à partir de n'importe quel navigateur Web) afin que la session de l'utilisateur sur le serveur soit identifiée et partagée. Du côté du serveur web, si une requête web contient un *id OTP* dans le paramètre $4DSID, la session correspondant à ce token OTP est utilisée.
+Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions.md#session-token-otp). Du côté du serveur web, si une requête web contient un *id OTP* dans le paramètre $4DSID, la session correspondant à ce token OTP est utilisée. Après avoir créé un token OTP pour la session distante, vous ajoutez le token (par l'intermédiaire de la valeur du paramètre `$4DSID`) aux requêtes Web envoyées à partir des zones Web contenant des pages Qodly (ou à partir de n'importe quel navigateur Web) afin que la session de l'utilisateur sur le serveur soit identifiée et partagée.
 
 :::note
 

@@ -62,7 +62,7 @@ São fornecidas as seguintes opções:
 
   Quando essa opção estiver marcada, o compilador 4D verificará se o método é realmente capaz e retornará erros se esse não for o caso -- por exemplo, se ele chama direta ou indiretamente comandos ou métodos que não podem ser executados em modo preemptivo (toda a cadeia de chamadas é analisada, mas os erros são reportados apenas ao primeiro subnível). Pode então editar o método para que se torne thread-safe, ou selecionar outra opção.
 
-  Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um [contexto específico](#when-is-a-process-started-preemptively).
+  Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas.
 
 - **Não pode ser executado em um processo preemptivo**: selecionando esta opção, se declara que o método não deve ser executado em modo preemptivo, e, portanto, sempre se deve executar em modo cooperativo, da mesma forma que nas versões anteriores de 4D. A propriedade "preemptive" do método é definida como "incapable".
 
@@ -76,7 +76,7 @@ Note que com essa opção, independentemente da avaliação interna de seguranç
 
 :::note Caso particular
 
-Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/project-method-properties.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
+Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**. Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/project-method-properties.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe.
 
 :::
 
@@ -190,7 +190,7 @@ Os únicos acessos possíveis à interface do usuário de um thread preemptivo s
 
 - [Diálogo de erro padrão](.../Debugging/basics). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). O botão **Rastreamento** está desativado.
 - Indicadores de progresso padrão
-- Diálogos `ALERT`, `Request` e `CONFIRM`. A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). Observe que, se o 4D Server tiver sido iniciado como um serviço no Windows sem interação com o usuário permitida, as caixas de diálogo não serão exibidas.
+- Diálogos `ALERT`, `Request` e `CONFIRM`. A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server).
 
 ### Triggers
 
@@ -217,7 +217,7 @@ Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for de
 
 :::note
 
-Em as [aplicações client/servidor](../Desktop/clientServer.md), os triggers podem ser executados em modo cooperativo, mesmo que o código deles seja thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+Em as [aplicações client/servidor](../Desktop/clientServer.md), os triggers podem ser executados em modo cooperativo, mesmo que o código deles seja thread-safe. Since this process is used for all calls from the client, it is always executed in cooperative mode. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine.
 
 :::
 

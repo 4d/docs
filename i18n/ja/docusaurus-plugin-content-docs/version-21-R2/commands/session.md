@@ -72,7 +72,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 ### ストアドプロシージャーセッション
 
-すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
+すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます: ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
 - [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
@@ -112,7 +112,7 @@ flowchart TD
 
 ## 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" 属性を有効にした `action_Session` メソッドを定義したとします。 ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session

@@ -5,7 +5,7 @@ title: Sesiones de escritorio
 
 ## Generalidades
 
-A desktop session is a user-related execution context on 4D Server, 4D remote, or 4D single-user that **does not result from any web or REST access**.
+Una sesión de escritorio es un contexto de ejecución relacionado con el usuario en 4D Server, 4D remoto o 4D monopuesto que **no resulta de ningún acceso web o REST**.
 
 Las sesiones de escritorio incluyen:
 
@@ -19,9 +19,9 @@ El siguiente diagrama muestra los diferentes tipos de sesión y cómo interactú
 
 Al igual que en una [**sesión de usuario web**](../WebServer/sessions.md), el código ejecutado en una sesión de escritorio tiene acceso a un objeto [`Session`](../API/SessionClass.md) que proporciona funciones y propiedades que permiten almacenar valores de sesión y compartirlos entre procesos de usuario, por ejemplo utilizando el objeto [`session.storage`](../API/SessionClass.md#storage).
 
-Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, el código ejecutado en las sesiones de escritorio no está controlado por [roles y privilegios](../ORDA/privileges.md). It can access any parts of the 4D application, including ORDA and data model classes (on 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses). Tenga en cuenta también que las sesiones de escritorio no requieren [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) para ser activadas.
+Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, el código ejecutado en las sesiones de escritorio no está controlado por [roles y privilegios](../ORDA/privileges.md). Puede acceder a cualquier parte de la aplicación 4D, incluidas las clases ORDA y del modelo de datos (en 4D Server, la [función de usuarios y grupos](../Users/handling_users_groups.md) permite gestionar los accesos de los usuarios). Tenga en cuenta también que las sesiones de escritorio no requieren [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) para ser activadas.
 
-You can nevertheless [**share** a remote session with a web session](#sharing-a-remote-session-for-web-accesses) so that desktop application users can access your 4D application through a web interface, using in particular **Qodly pages** and Web areas.
+Sin embargo, puede [**compartir** una sesión remota con una sesión web](#sharing-a-remote-session-for-web-accesses) para que los usuarios de la aplicación de escritorio puedan acceder a su aplicación 4D a través de una interfaz web, usando en particular **Páginas Qodly** y áreas Web.
 
 ## Sesiones de usuarios remotos {#remote-user-sessions}
 
@@ -82,7 +82,7 @@ Los privilegios sólo pueden definirse desde la sesión de usuario remoto en el 
 
 :::
 
-Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared. Del lado del servidor web, si una solicitud web contiene un *id OTP* en el parámetro $4DSID, se utiliza la sesión correspondiente a este token OTP.
+Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). Del lado del servidor web, si una solicitud web contiene un *id OTP* en el parámetro $4DSID, se utiliza la sesión correspondiente a este token OTP. After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared.
 
 :::note
 

@@ -286,7 +286,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->La función `.delete()`<!-- END REF -->.
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
 
@@ -310,6 +310,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
+ End if
  End if
  End if
 ```
@@ -491,7 +492,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descripción
 
-La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el *modo* >especificado o con las *opciones* especificadas<!-- END REF -->. Puede utilizar las funciones y las propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
+La función `.setContent( )` <!-- REF #FileClass.open().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
 
 Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file handle:
 
@@ -573,7 +574,7 @@ $fhandle:=$f.open("read")
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se le ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
+La función `.rename()` <!-- REF #FileClass.rename().Summary -->La función `.rename()`<!-- END REF -->.
 
 El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
@@ -712,7 +713,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
+La función `.open()` <!-- REF #FileClass.setContent().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el *modo* >especificado o con las *opciones* especificadas<!-- END REF -->. .
 
 #### Ejemplo
 

@@ -217,9 +217,7 @@ GetLogo (size) -> logo
 | logo      | Picture | out | Selected logo |
 
 
-## Descrição
-
-Esse método retorna um logotipo de um tamanho específico, dependendo do valor do parâmetro *size*.
+## Descrição Esse método retorna um logotipo de um tamanho específico, dependendo do valor do parâmetro *size*. 1 = tamanho mais pequeno, 5 = tamanho maior.
 1 = tamanho mais pequeno, 5 = tamanho maior.
 
 ## Example C_PICTURE($logo)

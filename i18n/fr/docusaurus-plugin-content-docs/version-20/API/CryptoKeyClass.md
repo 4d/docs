@@ -166,8 +166,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 |Paramètre|Type||Description|
 |---||----|---|
-|message|Text|->|Chaîne de message à décoder en utilisant `options.encodingEncrypted` et decrypted.|  
-|options|Object|->|Options de décodage|
+|message|Text|->|Chaîne de message à décoder en utilisant `options.encodingEncrypted` et decrypted.| |options|Object|->|Options de décodage|
 |Résultat|Object|<-|Status|
 </div>
 <!-- END REF -->
@@ -215,8 +214,7 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 
 |Paramètre|Type||Description|
 |---||----|---|
-|message|Text|->|Chaîne de message à encoder en utilisant `options.encodingDecrypted` et encrypted.|  
-|options|Object|->|Options d'encodage|
+|message|Text|->|Chaîne de message à encoder en utilisant `options.encodingDecrypted` et encrypted.| |options|Object|->|Options d'encodage|
 |Résultat|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
@@ -371,7 +369,7 @@ La représentation utf8 de *message*.
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
+Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
