@@ -337,10 +337,10 @@ This feature requires that you click on the **[...]** button and designate the l
 
 |Current server platform|Required file|Details|
 |---|---|---|
-|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...]|
+|macOS|Windows 4D Volume Desktop *or* Windows client update archive|By default, you can select the `4D Volume Desktop` application for Windows. However, **it is recommended** to select a `.4darchive` file previously built on Windows for proper icon management and to preserve a signed .exe after updates. To do so, press **Shift** while clicking on [...]|
 |Windows|macOS client update archive|Select a signed `.4darchive` file previously built on macOS|
 
-You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
+You can build a specific `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
 #### Displaying update notification
 
