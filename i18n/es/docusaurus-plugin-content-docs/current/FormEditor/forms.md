@@ -117,7 +117,7 @@ Class constructor
   This.age:=0
 ```
 
-The form class is automatically instantiated by 4D once the form is loaded. If you execute the following project method:
+The form class is automatically instantiated by 4D once the form is loaded. Si ejecuta el siguiente método de proyecto:
 
 ```4d
     // Instantiate a form object that will host form data and UI logic
@@ -198,7 +198,7 @@ var $h:=Print form("Request_var";$formData;Form detail)
  CLOSE PRINTING JOB
 ```
 
-#### Print rendering engine
+#### Imprimir motor de renderizado
 
 4D utiliza un motor de renderizado de impresión específico para generar salidas con un diseño adaptado a la impresión. Incluye las siguientes características principales:
 
@@ -220,7 +220,7 @@ Por ejemplo, el siguiente formulario:
 
 :::
 
-#### Legacy print renderer
+#### Renderizador de impresión heredado
 
 En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
 

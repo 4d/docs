@@ -14,7 +14,7 @@ title: リストボックス
 | ------- | -------------- | --------------------- |
 | columns | 列オブジェクトのコレクション | リストボックス列のプロパティを格納します。 |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox-column.md#column-specific-properties) section.
+列オブジェクトに関してサポートされているプロパティの一覧については [カラム特有のプロパティ](listbox-column.md#column-specific-properties) の章を参照してください。
 
 #### 対象オブジェクト
 

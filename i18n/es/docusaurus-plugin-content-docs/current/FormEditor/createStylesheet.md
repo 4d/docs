@@ -210,7 +210,7 @@ Las consultas de medios permiten aplicar estilos basados en condiciones específ
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
-Available media features and values:
+Funcionalidades y valores disponibles para medios:
 
 | Media features         | Valores                                                                                                  | Descripción                                                                                                                                                                  |
 | ---------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

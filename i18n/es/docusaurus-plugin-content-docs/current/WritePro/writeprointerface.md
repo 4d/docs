@@ -473,7 +473,7 @@ You can apply either a multi-level list style sheet defined in the document or o
 
 The interface provides the following predefined multi-level list templates:
 
-**Technical Blueprint**
+**Estructura técnica**
 
 Level 1: 1  
 Level 2: 1.1  
@@ -491,7 +491,7 @@ Level 5: (1)
 Level 6: (a)  
 Level 7: (i)
 
-**Educational Material**
+**Contenido educativo**
 
 Level 1: I.  
 Level 2: 1.  
@@ -527,10 +527,10 @@ You can customize the available templates by adding your own `multiLevelStyles.j
 
 If a `multiLevelStyles.json` file is present in both locations, the file located in the `4D WritePro Interface` folder takes precedence.
 
-Each template definition includes:
+Cada definición de plantilla incluye:
 
 - a template name,
-- one or more list levels,
+- uno o más niveles de lista,
 - the 4D Write Pro attributes applied to each level. Any 4D Write Pro attribute can be used in a template definition.
 
 You can use either the attribute names or the corresponding 4D Write Pro constants as JSON keys and values.
@@ -541,7 +541,7 @@ For example, the following definitions are equivalent:
 
 #### Ejemplo
 
-Example of a customized JSON file:
+Ejemplo de un archivo JSON personalizado:
 
 ```json
 {

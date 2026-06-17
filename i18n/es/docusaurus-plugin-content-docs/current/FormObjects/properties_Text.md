@@ -449,7 +449,7 @@ You can use the following tags in 4D multi-style text areas.
 This tag inserts a 4D expression (expression, method, field, variable, command, etc.) in the text. The expression is tokenized and evaluated:
 
 - when the expression is inserted
-- when the object is loaded
+- cuando se carga el objeto
 - when the `computeExpressions` standard action is called from an interface object or by the [`INVOKE ACTION`](../commands/invoke-action) command
 - cuando se ejecuta el comando [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions)
 - when the [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) command is executed, if the second `*` parameter is passed.
@@ -464,7 +464,7 @@ Note: To ensure that expressions will be evaluated correctly regardless of the 4
 <span><a href="url">Visible label</a></span>
 ```
 
-This tag inserts a URL in the text. Ejemplo:
+Esta etiqueta inserta una URL en el texto. Ejemplo:
 
 ```html
 <span><a href="http://www.4d.com/">4D Web Site</a></span>
@@ -495,7 +495,7 @@ This paragraph lists the attributes of \<SPAN> tags that are supported by 4D in 
 - Font name: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
 - Font size: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
 - Estilo de fuente:
-  - Bold `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
+  - Negrita `<SPAN STYLE="font-weight: bold">... </SPAN>`
   - Italic `<SPAN STYLE="font-style: italic"> ... </SPAN>`
   - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
   - Underline `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
