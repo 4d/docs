@@ -27,20 +27,20 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.COMPONENT LIST.Summary-->El comando COMPONENT LIST dimensiona y llena el array *arrayComponentes* con los nombres de los componentes cargados por la aplicación 4D para la base local actual.<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Summary-->El comando `COMPONENT LIST` dimensiona y llena el array *arrayComponentes* con los nombres de los componentes cargados por la aplicación 4D para el proyecto local actual.<!-- END REF-->
 
-Al abrir una base, 4D carga los componentes válidos ubicados en la carpeta Componentes:
+Al abrir un proyecto, 4D carga los componentes válidos:
 
-* la carpeta Componentes ubicada junto al archivo de estructura (si lo hay),
-* la carpeta Componentes que se encuentra junto a la aplicación 4D ejecutable.
+* encontrados en la [carpeta Components de su proyecto](../../Project/architecture.md#components).
+* declarados en el [archivo **dependencies.json** de su proyecto](../../Project/components.md#dependenciesjson-and-environment4djson).
 
-**Recuerde:** si el mismo componente está en las dos ubicaciones, 4D sólo cargará el ubicado junto a la estructura.
+**Recuerde:** si el mismo componente está instalado en diferentes ubicaciones, se aplica un [orden de prioridad](../../Project/components.md#priority).
 
-Este comando puede llamarse desde la base local o desde un componente. Si la base no utiliza componentes, el array *arrayComponentes* se devuelve vacío.
+Este comando puede llamarse desde el proyecto local o desde un componente. Si el proyecto no utiliza componentes, el array *arrayComponentes* se devuelve vacío.
 
 Los nombres de los componentes son los nombres de los archivos de estructura de las bases de las matrices (.4db, .4dc o .4dbase). Este comando puede utilizarse para configurar arquitecturas e interfaces modulares que ofrezcan funcionalidades adicionales de acuerdo a la presencia de los componentes.
 
-Para mayor información sobre componentes 4D, por favor consulte el *Manual de Diseño*.
+Para mayor información sobre componentes 4D, por favor consulte [esta página](../../Concepts/components.md).
 
 ## Ver también 
 

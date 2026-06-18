@@ -27,20 +27,20 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.COMPONENT LIST.Summary-->**COMPONENT LIST**コマンドは、4Dがカレントのホストデータベースにロードしたコンポーネントの名前を、*componentsArray* 配列に返します。<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Summary-->`COMPONENT LIST`コマンドは、4Dがカレントのホストプロジェクトにロードしたコンポーネントの名前を、*componentsArray* 配列に返します。<!-- END REF-->
 
-データベースが開かれると、4DはComponentsフォルダ内の有効なコンポーネントをロードします。
+プロジェクトが開かれると、4Dは有効なコンポーネントをロードします：
 
-* ストラクチャーファイルと同階層にあるComponentsフォルダー
-* 4Dアプリケーション実行ファイルと同階層にあるComponentsフォルダー
+* [プロジェクトのComponentsフォルダー](../../Project/architecture.md#components) にあるもの。
+* [プロジェクトの **dependencies.json** ファイル](../../Project/components.md#dependenciesjson-and-environment4djson) で宣言されているもの。
 
-**注**： 両方に同じコンポーネントがインストールされている場合、4Dはストラクチャーと同階層のComponentsフォルダーにあるコンポーネントをロードします。
+**注**： 同じコンポーネントが異なる場所にインストールされている場合、[優先順位](../../Project/components.md#priority) が適用されます。
 
-このコマンドは、ホストデータベースまたはコンポーネントから呼び出すことができます。データベースがコンポーネントを使用しない場合、*componentsArray* 配列は空となります。
+このコマンドは、ホストプロジェクトまたはコンポーネントから呼び出すことができます。プロジェクトがコンポーネントを使用しない場合、*componentsArray* 配列は空となります。
 
 コンポーネントの名前は、マトリクスデータベース (.4db, .4dc または .4dbase) のストラクチャー名です。このコマンドを使用して、コンポーネントがインストールされているかいないかにより追加の機能を提供する、アーキテクチャやモジュールインタフェースを設定できます。
 
-4Dコンポーネントに関する詳細は、Design Referenceマニュアルを参照してください。
+4Dコンポーネントに関する詳細は、[こちらのページ](../../Concepts/components.md) を参照してください。
 
 ## 参照 
 
