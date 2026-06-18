@@ -1262,7 +1262,7 @@ You will generally want vector similarity query results to be sorted from "most 
 
 :::
 
-You can only order on a single vector field. Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
+Solo se puede ordenar en un único campo vectorial. Si el mismo vector aparece varias veces en la cadena de consulta, el orden por se aplicará a los resultados del primero, por ejemplo:
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /

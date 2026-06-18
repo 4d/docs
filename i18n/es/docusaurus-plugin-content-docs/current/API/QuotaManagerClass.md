@@ -62,7 +62,7 @@ You cannot pass a value <=0 (an error is generated in this case). To reset the p
 
 #### Ejemplo
 
-In some 4D code in a REST process:
+En un código 4D de un proceso REST:
 
 ```4d
 Session.quotas.defaultEntitySetTimeout:=1200
@@ -96,7 +96,7 @@ You cannot pass a value <=0 (an error is generated in this case). To reset the p
 
 #### Ejemplo
 
-In some 4D code in a REST process:
+En un código 4D de un proceso REST:
 
 ```4d
 Session.quotas.maxEntitySetTimeout:=2400
@@ -122,7 +122,7 @@ You cannot pass a value <=0 (an error is generated in this case). To reset the p
 
 #### Ejemplo
 
-In some 4D code in a REST process:
+En un código 4D de un proceso REST:
 
 ```4d
 	//max 50 entity sets

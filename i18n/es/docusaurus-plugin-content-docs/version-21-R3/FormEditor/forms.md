@@ -70,7 +70,7 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 
 En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizando los diferentes [comandos del tema **Imprimir**](../commands/theme/Printing).
 
-### Print rendering engine
+### Imprimir motor de renderizado
 
 4D utiliza un motor de renderizado de impresión específico para generar salidas con un diseño adaptado a la impresión. Incluye las siguientes características principales:
 
@@ -92,7 +92,7 @@ Por ejemplo, el siguiente formulario:
 
 :::
 
-### Legacy print renderer
+### Renderizador de impresión heredado
 
 En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
 

@@ -25,7 +25,7 @@ Sin embargo, puede [**compartir** una sesión remota con una sesión web](#shari
 
 ## Sesiones de usuarios remotos {#remote-user-sessions}
 
-In client/server applications, when a user connects to the server, a **remote user session object** is created and available on both the server and the client. Es devuelto por el comando [`Session`](../commands/session) en ambas máquinas.
+En las aplicaciones cliente/servidor, cuando un usuario se conecta al servidor, se crea un **objeto de sesión de usuario remoto** que está disponible tanto en el servidor como en el cliente. Es devuelto por el comando [`Session`](../commands/session) en ambas máquinas.
 
 Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
@@ -34,11 +34,11 @@ Este objeto se maneja a través de las funciones y propiedades de la [clase `Ses
 Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Ambos objetos son similares, excepto que:
 
 - sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. Un valor almacenado en el `.storage` de la sesión usuario en el servidor no estará disponible en el `.storage` de la sesión de usuario en el cliente y viceversa.
-- for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Llamar a estas funciones en un cliente genera un error.
+- por motivos de seguridad, la sesión del lado del cliente no puede ejecutar funciones que **modifiquen** [privilegios](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Llamar a estas funciones en un cliente genera un error.
 
 :::note
 
-Functions that read privileges can be called on both client and server sides ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivilege()`](../API/SessionClass.md#hasprivilege), [`isGuest()`](../API/SessionClass.md#isguest))
+Las funciones que consultan los privilegios se pueden invocar tanto del lado del cliente como en el del servidor ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivilege()`](../API/SessionClass.md#hasprivilege), [`isGuest()`](../API/SessionClass.md#isguest))
 
 :::
 
@@ -46,18 +46,18 @@ Functions that read privileges can be called on both client and server sides ([`
 
 El objeto `session` del usuario remoto se utiliza para gestionar y compartir los datos de la sesión.
 
-En cada entorno, un objeto [session `storage`](../API/SessionClass.md#storage) es compartido por todos los procesos de la misma sesión de usuario. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
+En cada entorno, un objeto [session `storage`](../API/SessionClass.md#storage) es compartido por todos los procesos de la misma sesión de usuario. Por ejemplo, en el servidor, puede iniciar un procedimiento de autenticación y verificación de usuario cuando un cliente se conecta al servidor, que involucra ingresar un código enviado por correo electrónico o SMS en la aplicación. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
 
-Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses).
+En cada entorno, puedes utilizar el objeto `session` del usuario remoto para [crear un OTP](../API/SessionClass.md#createotp) y [compartir la sesión remota para los accesos web](#sharing-a-remote-session-for-web-accesses).
 
-On the server, you can also [assign privileges](../API/SessionClass.md#setprivileges) to a remote user session to control access when the session comes from [Qodly pages running in web areas](#sharing-a-remote-session-for-web-accesses).
+En el servidor, también puede [asignar privilegios](../API/SessionClass.md#setprivileges) a una sesión de usuario remota para controlar el acceso cuando la sesión proviene de [páginas Qodly que se ejecutan en áreas web](#sharing-a-remote-session-for-web-accesses).
 
 :::note
 
 Del lado del cliente, existen dos objetos de almacenamiento local distintos:
 
 - el objeto [`Storage`](../commands/storage) de la máquina cliente,
-- the [`session.storage`](../API/SessionClass.md#storage) object of the user remote session (also returned by the [`Session storage`](../commands/session-storage) command).
+- el objeto [`session.storage`](../API/SessionClass.md#storage) de la sesión remota del usuario (que también devuelve el comando [`Session storage`](../commands/session-storage)).
 
 :::
 
@@ -70,15 +70,15 @@ Del lado del cliente, existen dos objetos de almacenamiento local distintos:
 
 ### Compartir una sesión remota para los accesos web {#sharing-a-remote-session-for-web-accesses}
 
-Remote user sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). Esta posibilidad es especialmente útil para aplicaciones Cliente/Servidor en las que se utilizan [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) para la interfaz, que se ejecutan en máquinas remotas. Con esta configuración, sus aplicaciones disponen de modernas interfaces web basadas en CSS, pero siguen beneficiándose de la potencia y la sencillez del desarrollo cliente/servidor integrado. En tales aplicaciones, las páginas Qodly se ejecutan dentro de las [áreas Web](../FormObjects/webArea_overview.md) 4D estándar.
+Las sesiones de usuario remotas pueden utilizarse para gestionar los accesos web a la aplicación por parte del mismo usuario y, de este modo, gestionar sus [privilegios](../ORDA/privileges.md). Esta posibilidad es especialmente útil para aplicaciones Cliente/Servidor en las que se utilizan [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) para la interfaz, que se ejecutan en máquinas remotas. Con esta configuración, sus aplicaciones disponen de modernas interfaces web basadas en CSS, pero siguen beneficiándose de la potencia y la sencillez del desarrollo cliente/servidor integrado. En tales aplicaciones, las páginas Qodly se ejecutan dentro de las [áreas Web](../FormObjects/webArea_overview.md) 4D estándar.
 
-Para gestionar esta configuración en producción, es necesario utilizar sesiones de usuario remotas. En realidad, las peticiones procedentes tanto de la aplicación 4D remota como de sus páginas Qodly cargadas en áreas Web deben funcionar dentro de la misma sesión. You just have to share the session on the server between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, wherever the request comes from (web or remote 4D).
+Para gestionar esta configuración en producción, es necesario utilizar sesiones de usuario remotas. En realidad, las peticiones procedentes tanto de la aplicación 4D remota como de sus páginas Qodly cargadas en áreas Web deben funcionar dentro de la misma sesión. Solo tiene que compartir la sesión entre el servidor y el cliente remoto y sus páginas web para que pueda tener la misma [sesión storage](../API/SessionClass.md#storage) y licencia cliente, venga de donde venga la petición (web o 4D remoto).
 
-[Privileges](../ORDA/privileges.md) should be set in the session before executing a web request, so that the user automatically gets their privileges for web access (see example). Tenga en cuenta que los privilegios solo se aplican a las peticiones procedentes de la web.
+Los [privilegios](../ORDA/privileges.md) deben configurarse en la sesión antes de ejecutar una solicitud web, de modo que el usuario obtenga automáticamente sus privilegios de acceso a la web (ver ejemplo). Tenga en cuenta que los privilegios solo se aplican a las peticiones procedentes de la web.
 
 :::note
 
-Los privilegios sólo pueden definirse desde la sesión de usuario remoto en el servidor. For security reasons, they cannot be modified from the remote user session on the client (see [Comparing server-side and client-side user session objects](#comparing-server-side-and-client-side-user-session-objects)).
+Los privilegios sólo pueden definirse desde la sesión de usuario remoto en el servidor. Por motivos de seguridad, no se pueden modificar desde la sesión de usuario remota en el cliente (ver [Comparación entre los objetos de sesión usuario del lado del servidor y del lado del cliente](#comparing-server-side-and-client-side-user-session-objects)).
 
 :::
 
@@ -86,13 +86,13 @@ Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#
 
 :::note
 
-You can execute the [OTP creation code](../API/SessionClass.md#createotp) from the server or directly from the client (on the server you can use for example the [`On Server Open Connection`](../commands/on-server-open-connection-database-method) database method). However, keep in mind that the web session `.storage` is shared with the server-side user session `.storage` that and privileges can only be set from the user session on the server.
+Puede ejecutar el [código de creación de OTP](../API/SessionClass.md#createotp) desde el servidor o directamente desde el cliente (en el servidor puede utilizar, por ejemplo, el método base [`On Server Open Connection`](../commands/on-server-open-connection-database-method)). Sin embargo, tenga en cuenta que la sesión web `.storage` es compartida con el servidor de sesión de usuario `.storage` que y los privilegios solo pueden definirse desde la sesión de usuario en el servidor.
 
 :::
 
 :::tip
 
-For development and testing purposes, you can use a [standalone session](#standalone-sessions) to code and test all features related to web access sharing, whether your application is intended for single-user or client/server deployment.
+Para fines de desarrollo y prueba, puede utilizar una [sesión autónoma](#standalone-sessions) para codificar y probar todas las funcionalidades relacionadas con el uso compartido de acceso web, si su aplicación está destinada a un solo usuario o cliente/servidor.
 
 :::
 

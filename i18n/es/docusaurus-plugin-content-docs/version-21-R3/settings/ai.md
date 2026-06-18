@@ -67,7 +67,7 @@ The combo box lists the main providers, you can select a value to enter the prov
 
 ### Project
 
-(optional, OpenAI-specific) ID of the project. Each OpenAI API key is attached to a project.
+(optional, OpenAI-specific) ID of the project. Cada llave de la API OpenAI está vinculada a un proyecto.
 
 ### AIProviders.json
 
@@ -97,7 +97,7 @@ Cuando se utiliza un alias de modelo:
 - Se aplica el ID del modelo.
 - Se utilizan todas las credenciales y puntos finales.
 
-### Adding a model alias
+### Añadir un alias de modelo
 
 :::note
 

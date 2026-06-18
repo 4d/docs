@@ -78,7 +78,7 @@ Normalmente, se selecciona la categoría del formulario al crearlo, pero se pued
 
 ## Uso de formularios
 
-Los formularios se llaman usando comandos específicos del lenguaje 4D. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. Un formulario puede ser:
+Los formularios se llaman usando comandos específicos del lenguaje 4D. En sus aplicaciones de escritorio 4D, los formularios se pueden utilizar de varias maneras, dependiendo del estado de su interfaz. Un formulario puede ser:
 
 - utilizado en su propia ventana para la visualización de datos, procesamiento, edición, o para mostrar información en pantalla al usuario,
 - utilizado integrado en otro formulario (subformulario),
@@ -87,21 +87,21 @@ Los formularios se llaman usando comandos específicos del lenguaje 4D. In your 
 
 ### Utilizar un formulario de proyecto en una ventana
 
-When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. Los pasos más sencillos para mostrar un formulario en pantalla son:
+Cuando quiera utilizar un formulario como diálogo en pantalla, necesita (1) crear una ventana y (2) cargar el formulario en la ventana, junto con un bucle de eventos para procesar acciones del usuario. Los pasos más sencillos para mostrar un formulario en pantalla son:
 
-1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
-2. En el mismo método, llame al comando [`DIALOG`](../commands/dialog) para cargar realmente el formulario en la ventana de formulario abierta, listo para la interacción del usuario. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). Cuando llama a este comando sin asterisco (\*), el diálogo permanecerá en pantalla y la ejecución del código se congelará hasta que ocurra un evento.
+1. Llame al comando [`Open form window`](../commands/open-form-window) para crear y preconfigurar una ventana adaptada a su formulario. Tenga en cuenta que el comando solo dibuja una ventana vacía, **no** muestra nada.
+2. En el mismo método, llame al comando [`DIALOG`](../commands/dialog) para cargar realmente el formulario en la ventana de formulario abierta, listo para la interacción del usuario. [`DIALOG`](../commands/dialog) carga los datos del formulario y pone su código en [modo de escucha de eventos del usuario](../Develop/async.md#event-listening). Cuando llama a este comando sin asterisco (\*), el diálogo permanecerá en pantalla y la ejecución del código se congelará hasta que ocurra un evento.
 3. (opcional) Utilice el comando [`Form`](../commands/form) desde el contexto del formulario para acceder a los datos del formulario.
 
 :::note Compatibilidad
 
-Los comandos todo en uno como [`ADD RECORD`](../commands/add-record) o [`MODIFY RECORD`](../commands/add-record) fusionan todos los pasos en una sola llamada. Estos comandos heredados aún pueden utilizarse para la creación de prototipos o desarrollos básicos, pero no están adaptados a las interfaces modernas totalmente controladas. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
+Los comandos todo en uno como [`ADD RECORD`](../commands/add-record) o [`MODIFY RECORD`](../commands/add-record) fusionan todos los pasos en una sola llamada. Estos comandos heredados aún pueden utilizarse para la creación de prototipos o desarrollos básicos, pero no están adaptados a las interfaces modernas totalmente controladas. Dependen directamente de la base de datos 4D y de funciones heredadas, como los [formularios tabla](#project-form-and-table-form), y no aprovechan la potencia ni la flexibilidad de las [funcionalidades ORDA](../ORDA/overview.md). A menos que existan necesidades específicas, se recomienda utilizar plantillas de proyecto para las interfaces de sus aplicaciones de escritorio 4D.
 
 :::
 
 #### Ejemplo simple
 
-You create the following basic form in the [Form editor](./formEditor.md):
+Cree el siguiente formulario básico en el [Editor de formularios](./formEditor.md):
 
 ![](../assets/en/FormEditor/example-form-1.png)
 
@@ -117,28 +117,28 @@ Class constructor
   This.age:=0
 ```
 
-The form class is automatically instantiated by 4D once the form is loaded. Si ejecuta el siguiente método de proyecto:
+La clase de formulario es automáticamente instanciada por 4D una vez cargado el formulario. Si ejecuta el siguiente método de proyecto:
 
 ```4d
-    // Instantiate a form object that will host form data and UI logic
+    // Instanciar un objeto de formulario que alojará los datos del formulario y la lógica de la interfaz de usuario
 var $formObject:=cs.myForm.new()
 
-    //Prepare default value within the form object
+    // Preparar los valores por defecto en el objeto de formulario
 $formObject.name:="Smith"
 $formObject.age:=42
 
-    // Create an empty window with ad-hoc settings that fits the desired form dimensions, resizing properties,
-    // and window type (this does not render the form)
+    // Crear una ventana vacía con una configuración ad hoc que se ajuste a las dimensiones deseadas del formulario, las propiedades de redimensionamiento,
+    // y el tipo de ventana (esto no muestra el formulario)
 var $win:=Open form window("myForm"; Movable form dialog box; Horizontally centered; Vertically centered)
 
-    //Render the form, and provide $formObject's data. Dialog also activates the form event loop
+    //Representa el formulario y proporciona datos $formObject. El cuadro de diálogo también activa el bucle de eventos del formulario
 DIALOG("myForm"; $formObject)
 
-    //Without asterisk to Dialog statement, the form waits for a closing action from the user 
-    //before executing the rest of the code. Calling Close window is just a good practice 
-CLOSE WINDOW($win) //releases reference
+    //Sin el asterisco en la instrucción DIALOG, el formulario espera a que el usuario lo cierre 
+    //antes de ejecutar el resto del código. Llamar a Close window es simplemente una buena práctica 
+CLOSE WINDOW($win) //libera la referencia
 
-    //Display data modified by the user, if any/
+    //Muestra los datos modificados por el usuario, si los hay/
 ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ```
@@ -151,7 +151,7 @@ ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 Un formulario puede estar integrado en otro formulario, en cuyo caso se convierte en un [objeto subformulario](../FormObjects/subform_overview.md) que sigue unas reglas específicas. Un subformulario se utiliza automáticamente cuando su formulario principal se [muestra en una ventana](#using-a-project-form-in-a-window).
 
-In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. A continuación, puede utilizarlo en el subformulario con el comando [`Form`](../commands/form). En este ejemplo, el objeto "InvoiceAddress" está vinculado al subformulario:
+De la misma manera que pasas un objeto a un formulario con el comando [`DIALOG`](../commands/dialog), también puede pasar un objeto a un área de subformulario utilizando la lista de propiedades. A continuación, puede utilizarlo en el subformulario con el comando [`Form`](../commands/form). En este ejemplo, el objeto "InvoiceAddress" está vinculado al subformulario:
 
 ![](../assets/en/FormEditor/subform-example.png)
 
@@ -163,7 +163,7 @@ En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizan
 
 Puede utilizar formularios para imprimir datos, ya sea en forma de página o de lista.
 
-- To simply print some part of a form, use the [`Print form`](../commands/print-form) command. Por ejemplo:
+- Para imprimir solo una parte de un formulario, utilice el comando [`Print form`](../commands/print-form). Por ejemplo:
 
 ```4d
 var $formData:={}
@@ -183,13 +183,13 @@ var $h:=Print form("Request_var";$formData;Form detail)
  OPEN PRINTING JOB
  $formData:={}
  $formData.LBcollection:=[]
- ... //fill the collection with data
+ ... //llenar la colección con datos
  
  FORM LOAD("GlobalForm";$formData) 
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
-    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
+    $full:=Print object(*;"LB") // la fuente de datos de este listbox "LB" es Form.LBcollection
+     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
     End if
@@ -202,7 +202,7 @@ var $h:=Print form("Request_var";$formData;Form detail)
 
 4D utiliza un motor de renderizado de impresión específico para generar salidas con un diseño adaptado a la impresión. Incluye las siguientes características principales:
 
-- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
+- Widgets interactivos como botones, interruptores, desplegables, etc. y los efectos de interfaz de usuario modernos como vidrio, desenfoque o transparencia o efectos de sombra se convierten en representaciones estáticas adaptadas y se aplanan en estilos imprimibles, para que el documento siga siendo legible y profesional una vez impreso.
 - La estructura del diseño, el espaciado y la alineación se conservan para que el documento impreso refleje la estructura lógica del formulario en pantalla.
 - Se produce la misma salida, tanto si el formulario se imprime desde macOS como desde Windows.
 
@@ -216,31 +216,31 @@ Por ejemplo, el siguiente formulario:
 
 :::tip Entrada de blog relacionada
 
-[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+[Impresión de interfaces modernas con resultados limpios y coherentes](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
 
 :::
 
 #### Renderizador de impresión heredado
 
-En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. Por motivos de compatibilidad, el renderizador heredado está **activado por defecto** en los proyectos o bases de datos convertidos desde versiones anteriores a 4D 21 R3, de modo que los formularios diseñados con este renderizador sigan imprimiéndose como se espera.
 
-You can however enable the modern print rendering engine at any moment by:
+Sin embargo, puede habilitar el moderno motor de procesamiento de impresión en cualquier momento:
 
-- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
+- desmarcar la opción **Usar representación de impresión heredada** en la [página Compatibilidad del cuadro de diálogo Parámetros](../settings/compatibility.md) (configuración permanente),
 - o ejecutando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Use legacy print rendering` a 1 (configuración volátil).
 
 :::warning Limitación
 
-For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. En estos contextos, los formularios se **imprimen siempre con el motor de renderizado de impresión moderno**, sea cual sea la opción de compatibilidad.
+Por motivos técnicos, el motor de impresión heredado no está disponible con los formularios que se muestran con [Fluent UI](#fluent-ui-rendering) en Windows o [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) en macOS. En estos contextos, los formularios se **imprimen siempre con el motor de renderizado de impresión moderno**, sea cual sea la opción de compatibilidad.
 
 :::
 
 ### Otros usos de formularios
 
-There are several other ways to use forms in the 4D applications, including:
+Hay otras formas de utilizar los formularios en las aplicaciones de 4D, entre ellas:
 
 - un formulario puede ser [heredado](#inherited-forms) de otro formulario,
-- a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
+- un formulario puede ser [asociado a un listbox](../FormObjects/properties_ListBox.md#detail-form-name) en respuesta a una acción de usuario para mostrar una fila utilizando un botón de edición o un doble clic,
 - the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
 
 ## Páginas formulario

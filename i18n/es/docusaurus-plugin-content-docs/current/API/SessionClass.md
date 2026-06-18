@@ -704,7 +704,7 @@ The following properties of the `4D.QuotaManager` object are available for the s
 | [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí       | Default inactivity timeout for entity sets in memory (seconds) |
 | [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí       | Maximum inactivity timeout for entity sets in memory (seconds) |
 | currentValues                                                             |              | Object  | no       |                                                                                   |
-|                                                                           | nbEntitySets | Integer | no       | Number of entity sets currently in memory                                         |
+|                                                                           | nbEntitySets | Integer | no       | Número de conjuntos de entidades actualmente en memoria                           |
 
 When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
 
