@@ -346,7 +346,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 #### Configuraciones remotas
 
-When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. Cuando se llama en el cliente, no se dispara de nuevo cuando el cliente intenta guardar la nueva entidad y envía una petición de actualización al servidor para crear en memoria en el servidor.
+Al utilizar configuraciones remotas, hay que tener en cuenta el siguiente principio: en el modelo **cliente/servidor**, la función puede invocarse desde el cliente o desde el servidor, dependiendo de la ubicación del código que la invoca. Cuando se llama en el cliente, no se dispara de nuevo cuando el cliente intenta guardar la nueva entidad y envía una petición de actualización al servidor para crear en memoria en el servidor.
 
 :::warning
 
@@ -475,7 +475,7 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 
 ```4d
 {local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
-// code
+// código
 ```
 
 La función *getter* es obligatoria para declarar el atributo calculado *attributeName*. Cada vez que se accede al atributo *attributeName*, 4D evalúa el código `Function get` y devuelve el valor *$result*.
@@ -502,7 +502,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Para más información sobre las palabras clave `local` y `server`, por favor consulte la sección [local y servidor](../Concepts/classes.md#local-and-server).
 
 :::
 
@@ -569,7 +569,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Para más información sobre las palabras clave `local` y `server`, por favor consulte la sección [local y servidor](../Concepts/classes.md#local-and-server).
 
 :::
 
@@ -939,7 +939,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
+Por razones de seguridad, todas las funciones de la clase modelo de datos, incluyendo [atributos calculados](#computed-attributes-1) y los [atributos alias](#alias-attributes-1), así como las [funciones singleton compartidas](../Concepts/classes.md#shared-singleton) **no están expuestas** por defecto a **solicitudes remotas** (privacidad).
 
 Las peticiones remotas son:
 

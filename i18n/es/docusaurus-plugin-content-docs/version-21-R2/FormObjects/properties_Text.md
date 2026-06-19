@@ -197,7 +197,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Indicadores de progreso](progressIndicator.md) - [Regla](ruler.md) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
 
 #### Comandos
 
@@ -293,7 +293,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Combo Box](comboBox_overview.md) - [Lista desplegables](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Pie List Box](listbox-header-footer.md#footers) - [Botón de opción](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
 
 #### Comandos
 
@@ -320,7 +320,7 @@ Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertica
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado List Box](listbox-header-footer.md#headers)
 
 #### Comandos
 

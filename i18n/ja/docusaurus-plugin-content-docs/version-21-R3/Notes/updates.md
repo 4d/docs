@@ -34,7 +34,7 @@ title: リリースノート
 - 分かりやすさのために、フォーミュラオブジェクトは、汎用的な [`4D.Function`](../API/FunctionClass.md) クラスを継承する [`4D.Formula`](../API/FormulaClass.md) クラスの新しいインスタンスになりました。
 - 4D 21 R3 では、[コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) にもたらされた新しい改良が、ランゲージコマンドに対しても適用されます([こちらのblog 記事](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)を参照してください)。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。
 - [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
-- **旧式* ネットワークレイヤーはサポートされなくなりました。 \**旧式\* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
+- **旧式* ネットワークレイヤーはサポートされなくなりました。 \**&#x65E7;式\* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
 
 ## 4D 21 R2
 

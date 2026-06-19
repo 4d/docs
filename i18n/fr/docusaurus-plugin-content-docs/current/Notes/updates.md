@@ -17,7 +17,7 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 
 #### Changements de comportement
 
-- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](../REST/$entityset.md).
+- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
 
 ## 4D 21 R3
 
@@ -89,7 +89,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
 | libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
 | Liblsquic       | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
-| Libuv           | 1.51.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.52.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
 | ngtcp2          | 1.22.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |

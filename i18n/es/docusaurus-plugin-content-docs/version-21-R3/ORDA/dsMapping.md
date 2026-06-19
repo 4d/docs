@@ -11,7 +11,7 @@ Cuando llama a un datastore usando los comandos [`ds`](../commands/ds) u [`Open 
 
 - Las tablas se asignan a [dataclasses](#dataclass).
 - Los campos se asignan a [atributos de almacenamiento](#storage-and-relation-attributes).
-- Relations are mapped to [relation attributes](#storage-and-relation-attributes) - relation names, defined in the [Structure editor](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), are used as relation attribute names.
+- Las relaciones se asignan a los [atributos relacionales](#storage-and-relation-attributes): los nombres de las relaciones, definidos en el [Editor de estructura](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), se utilizan como nombres de los atributos de relación.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 

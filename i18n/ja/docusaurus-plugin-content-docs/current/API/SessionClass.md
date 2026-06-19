@@ -698,19 +698,19 @@ The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.Q
 
 The following properties of the `4D.QuotaManager` object are available for the session:
 
-| プロパティ                                                                     |              | 型       | Writable | 説明                                                                                |
-| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯        | Maximum allowed number of entity sets in server's memory                          |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯        | Default inactivity timeout for entity sets in memory (seconds) |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯        | Maximum inactivity timeout for entity sets in memory (seconds) |
-| currentValues                                                             |              | Object  | ×        |                                                                                   |
-|                                                                           | nbEntitySets | Integer | ×        | Number of entity sets currently in memory                                         |
+| プロパティ                                                                     |              | 型       | Writable | 説明                                                                                                        |
+| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯        | Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯        | Default inactivity timeout for entity sets in memory (seconds)                         |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯        | Maximum inactivity timeout for entity sets in memory (seconds)                         |
+| currentValues                                                             |              | Object  | ×        |                                                                                                           |
+|                                                                           | nbEntitySets | Integer | ×        | Number of entity sets currently in memory. *Undefined* = no entity set in memory          |
 
 When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
 
 :::tip 関連したblog 記事
 
-[Make your REST server at the top of its game ... Forget throttling or crashing and tune yourself the memory usage](https://blog.4d.com/make-your-rest-server-at-the-top-of-its-game-forget-throttling-or-crashing-and-tune-yourself-the-memory-usage).
+[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
 
 :::
 

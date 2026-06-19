@@ -141,15 +141,15 @@ Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embarg
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
-### Uso de la palabra clave \\`local
+### Uso de la palabra clave `local`
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. Sin embargo, puede ocurrir que una función procese datos que ya están en la caché local y sea totalmente ejecutable en el lado del cliente. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+Por defecto, las [funciones del modelo de datos ORDA](../ORDA/ordaClasses.md) se ejecutan en el servidor, lo que suele ofrecer el mejor rendimiento, ya que solo se envían por la red la solicitud de la función y el resultado. Sin embargo, puede ocurrir que una función procese datos que ya están en la caché local y sea totalmente ejecutable en el lado del cliente. En este caso, puede guardar peticiones en el servidor y, por lo tanto, mejorar el rendimiento de la aplicación [usando la palabra clave `local` en la definición de función](../Concepts/classes.md#local).
 
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obtener los estudiantes más jóvenes
+// Utilización inapropiada de la palabra clave local
 local Function getYoungest() : Object
     return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```

@@ -928,7 +928,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
+Por razones de seguridad, todas las funciones de la clase modelo de datos, incluyendo [atributos calculados](#computed-attributes-1) y los [atributos alias](#alias-attributes-1), así como las [funciones singleton compartidas](../Concepts/classes.md#shared-singleton) **no están expuestas** por defecto a **solicitudes remotas** (privacidad).
 
 Las peticiones remotas son:
 

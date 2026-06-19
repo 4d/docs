@@ -61,11 +61,11 @@ Las propiedades estándar relacionadas con las coordenadas, el tamaño y el esti
 
 Sin embargo, el tema Fuente de datos no está disponible para las columnas objeto del list box. De hecho, el contenido de cada celda de la columna se basa en los atributos presentes en el elemento correspondiente del array de objetos. Cada elemento de array puede definir:
 
-the value type (mandatory): text, color, event, etc.
-the value itself (optional): used for input/output.
-the cell content display (optional): button, list, etc.
-additional settings (optional): depend on the value type
-To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por ejemplo, puede escribir "¡Hola Mundo!" en una columna objeto utilizando este sencillo código:
+el tipo de valor (obligatorio): texto, color, evento, etc.
+el valor en sí (opcional): utilizado para la entrada/salida.
+la visualización del contenido de la celda (opcional): botón, lista, etc.
+ajustes adicionales (opcional): dependen del tipo de valor
+Para definir estas propiedades, debe establecer los atributos apropiados en el objeto (los atributos disponibles se enumeran a continuación). Por ejemplo, puede escribir "¡Hola Mundo!" en una columna objeto utilizando este sencillo código:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //array de columnas
