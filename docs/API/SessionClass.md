@@ -535,6 +535,7 @@ End if
 
 |Release|Changes|
 |---|---|
+|21 R4|New *unreachableSince* property|
 |20 R5|Added|
 
 </details>
@@ -565,6 +566,7 @@ The `.info` object contains the following properties:
 |state|Text|Session state: "active", "postponed", "sleeping"|
 |ID|Text|Session UUID (same value as [`.id`](#id))|
 |persistentID|Text|Remote/client sessions: Session's persistent ID|
+|unreachableSince|Integer|Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property.|
 
 :::note
 

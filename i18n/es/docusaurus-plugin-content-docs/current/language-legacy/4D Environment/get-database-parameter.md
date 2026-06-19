@@ -23,6 +23,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R4|Añadido *QUIC session timeout*|
 |21 R3|Modified|
 |20 R6|Modificado|
 |19 R5|Modificado|
@@ -1202,6 +1203,20 @@ Consulte el ejemplo 2.
 
 **Nota:** si quiere activar las uniones "tipo SQL" (consulte el selector QUERY BY FORMULA Joins selector), siempre debe ejecutar las fórmulas en el servidor de manera que tengan acceso a los registros. Atención, en este contexto, la fórmula no debe contener llamadas a un método, de lo contrario pasará automáticamente al equipo remoto.
 
+
+
+
+### QUIC session timeout (135)
+
+**Alcance**: aplicación 4D Server
+
+**Se mantiene entre dos sesiones**: no
+
+**Valores posibles**: entero positivo. Valor predeterminado = 900, valor mínimo = 60. 
+
+**Descripción**: tiempo de espera en segundos para las sesiones cliente/servidor en caso de desconexión inesperada al utilizar la capa de red QUIC. Este tiempo de espera es el período permitido para una sesión durante el cual la conexión entre el servidor y el cliente puede restablecerse automáticamente tras una desconexión involuntaria. Si, al final de este tiempo de espera, la conexión no se ha restablecido, la sesión se cierra.  
+
+Este parámetro solo puede configurarse en 4D Server y se aplica a todas las nuevas sesiones remotas de 4D (el valor del tiempo de espera de las sesiones existentes no se modifica). 
 
 
 

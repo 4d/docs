@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R4|Ajout de *QUIC session timeout* |
 |21 R3|Suppression Use legacy network layer|
 |20 R6|Modifié|
 |20 R3|Modifié|
@@ -778,6 +779,20 @@ Reportez-vous à l'exemple 2.
 
 **Note :** Si vous souhaitez pouvoir activer les jointures "type SQL" (cf. sélecteur Query by formula joins), vous devez toujours exécuter les formules sur le serveur afin qu'elle ait accès aux enregistrements. Attention, dans ce contexte, la formule ne doit pas contenir d'appel à une méthode, sinon elle est automatiquement basculée sur le poste distant.
 
+
+
+
+### QUIC session timeout (135)
+
+**Portée** : Application 4D Server
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Entier positif. Valeur par défaut = 900, valeur minimale = 60. 
+
+**Description** : Délai en secondes pour les sessions client/serveur en cas de déconnexion inattendue lors de l'utilisation de la couche réseau QUIC. Ce délai est la période accordée à une session pendant laquelle la connexion entre le serveur et le client peut être rétablie automatiquement suite à une déconnexion involontaire. Si, à l'issue de ce délai, la connexion n'a pas été rétablie, la session est fermée.  
+
+Ce paramètre ne peut être défini que sur 4D Server et s'applique à toutes les nouvelles sessions distantes 4D (la valeur du délai des sessions existantes n'est pas modifiée). 
 
 
 
