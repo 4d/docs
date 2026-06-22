@@ -178,7 +178,7 @@ The QUIC network layer automatically emits an "Unreachable" event to 4D Server w
 
 #### Remote stops responding
 
-When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote client status](../ServerWindow/users.md#list-of-users) is set to **Unreachable**.
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/users.md#list-of-users) is set to **Unreachable**.
 
 ![](../assets/en/Desktop/unreachable-status.png)
 
@@ -195,6 +195,8 @@ When the "Unreachable" event is received on either side, an [`info.unreachableSi
 
 ### Restoring or closing connection
 
+The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command. 
+
 The QUIC session timeout is automatically used to monitor disconnections:
 
 - If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object. 
@@ -203,5 +205,3 @@ The QUIC session timeout is automatically used to monitor disconnections:
   - In case of a server session closed from a remote machine, a warning dialog box is displayed so that the user can restart the remote application or quit:
   ![](../assets/en/Desktop/remote-not-responding.png)
 
-
-The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command. 
