@@ -41,7 +41,7 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 ## Clase de formulario
 
-Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. Name of an existing [user class](../Project/code-overview.md#user-classes) to associate to the form.
+Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. La clase de usuario puede pertenecer al proyecto host o a un [componente](../Extensions/develop-components.md#sharing-of-classes), en cuyo caso la sintaxis formal es "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 
@@ -203,7 +203,7 @@ Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Ope
 - la página actual,
 - la posición, el tamaño y la visibilidad de cada objeto del formulario (incluyendo el tamaño y la visibilidad de las columnas de list box).
 
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
+> Esta opción no tiene en cuenta objetos generados usando el comando `OBJECT DUPLICATE`. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
 
 Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
 

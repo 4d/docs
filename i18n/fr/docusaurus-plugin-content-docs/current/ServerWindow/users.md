@@ -25,7 +25,10 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
 - Déconnecter
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Status**: The following values can be displayed:
+  - "Online" - the session is active
+  - "Sleeping" - the desktop client has switched to sleep mode (see below),
+  - "Unreachable" (with [QUIC network layer](../settings/client-server.md#network-layer) only) - the desktop client is unresponsive and 4D Server will [attempt to reconnect](../Desktop/clientServer.md#management-of-unreachable-peer) during the QUIC session timeout period.
 
 ### Gestion des utilisateurs endormis
 

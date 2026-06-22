@@ -499,9 +499,10 @@ End if
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 20 R5   | Adicionado |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 21 R4   | New *unreachableSince* property |
+| 20 R5   | Adicionado                      |
 
 </details>
 
@@ -517,18 +518,19 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the sessio
 
 O objeto `.info` contém as seguintes propriedades:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                          |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                             |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                                 |
-| machineName      | Text          | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
-| systemUserName   | Text          | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
-| IPAddress        | Text          | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
-| hostType         | Text          | Host type: "windows", "mac", or "browser"                                                                                                                                                                          |
-| creationDateTime | Date ISO 8601 | Date and time of session creation (standalone session: date and time of application startup)                                                                                                    |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                   |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                                   |
-| persistentID     | Text          | Remote/client sessions: Session's persistent ID                                                                                                                                                                    |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                               |
+| ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                  |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                                      |
+| machineName      | Text          | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul>      |
+| systemUserName   | Text          | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                                    |
+| IPAddress        | Text          | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                                  |
+| hostType         | Text          | Host type: "windows", "mac", or "browser"                                                                                                                                                                               |
+| creationDateTime | Date ISO 8601 | Date and time of session creation (standalone session: date and time of application startup)                                                                                                         |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                        |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                                        |
+| persistentID     | Text          | Remote/client sessions: Session's persistent ID                                                                                                                                                                         |
+| unreachableSince | Integer       | Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property. |
 
 :::note
 

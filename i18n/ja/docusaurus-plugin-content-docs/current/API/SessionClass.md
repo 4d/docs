@@ -499,9 +499,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R5 | 追加 |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 21 R4 | New *unreachableSince* property |
+| 20 R5 | 追加                              |
 
 </details>
 
@@ -517,18 +518,19 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                           |
-| ---------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                              |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                   |
-| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul> |
-| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                  |
-| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                        |
-| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                      |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                             |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                  |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                            |
-| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                               |
+| プロパティ            | 型                                | 説明                                                                                                                                                                                                                                      |
+| ---------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                                                                                                         |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                              |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul>                                                                                            |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                                                                                                             |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                                                                                                                   |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                                                                                                                 |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                                                                                                        |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                             |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                                       |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                                                                                                          |
+| unreachableSince | Integer                          | Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property. |
 
 :::note
 

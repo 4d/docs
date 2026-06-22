@@ -101,5 +101,5 @@ A partir de 4D 18 R3, la implementación de XPath ha sido modificada para ser m�
 
 Muchas funciones de este tema devuelven una referencia a un elemento XML. Si se produce un error durante la ejecución de la función (por ejemplo, si la referencia al elemento raíz no es válida), la variable *OK* se pone en 0 y se genera un error.
 
-In addition, the reference returned in this case is a sequence of 32 zero "0" characters.
+Además, la referencia devuelta en este caso es una secuencia de 32 caracteres cero "0".
 

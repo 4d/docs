@@ -22,12 +22,12 @@ Para soporte XML, 4D utiliza la [librería Xerces.dll](../../Notes/updates.md#li
 
 ### XML, DOM y SAX
 
-The **XML** theme groups together the generic XML "utilities" commands of 4D. These are option- and error-management commands.
+El tema **XML** agrupa los comandos "utilities" XML genéricos de 4D. Estos son comandos relacionados con la gestión de opciones y de errores.
 
-4D also offers two separate sets of XML commands: [**DOM**](../theme/XML_DOM.md) (Document Object Model) and [**SAX**](../theme/XML_SAX.md) (Simple API XML) are two different parsing modes for XML documents.
+4D también ofrece dos conjuntos distintos de comandos XML: [**DOM**](../theme/XML_DOM.md) (Modelo de objetos de documento) y [**SAX**](../theme/XML_SAX.md) (API XML simple) son dos modos diferentes de análisis de documentos XML.
 
-- The DOM mode parses an XML source and builds its structure (its "tree") in memory. Because of this, access to each element of the source is extremely fast. However, since the entire tree structure is stored in memory, the processing of large XML documents may lead to the memory capacity being exceeded and thus provoke errors.
-- The SAX mode does not build a tree structure in memory. En este modo, se generan "eventos" (como el inicio y el final de un elemento) al analizar el código fuente. This mode lets you parse XML documents of any size, regardless of the amount of memory available.
+- El modo DOM analiza una fuente XML y construye su estructura (su "árbol") en la memoria. Por este motivo, el acceso a cada elemento del código fuente es extremadamente rápido. Sin embargo, dado que toda la estructura de árbol se almacena en memoria, el procesamiento de documentos XML de gran tamaño puede provocar que se supere la capacidad de memoria y, por lo tanto, dar lugar a errores.
+- El modo SAX no crea una estructura de árbol en la memoria. En este modo, se generan "eventos" (como el inicio y el final de un elemento) al analizar el código fuente. Este modo le permite analizar documentos XML de cualquier tamaño, independientemente de la cantidad de memoria disponible.
 
 #### Ver también
 
@@ -36,9 +36,9 @@ http://www.w3schools.com/xml/
 
 ### Modo apropiativo
 
-XML references created by a [preemptive process](../../Develop/preemptive.md) can only be used in that specific process. Conversely, XML references created by a cooperative process can be used by any other cooperative process, but cannot be used by any preemptive process.
+Las referencias XML creadas por un [proceso preventivo](../../Develop/preemptive.md) solo pueden utilizarse en ese proceso concreto. Por el contrario, las referencias XML creadas por un proceso cooperativo pueden ser utilizadas por cualquier otro proceso cooperativo, pero no pueden ser utilizadas por ningún proceso preemptivo.
 
-### Character Sets
+### Conjuntos de caracteres
 
 Los siguientes conjuntos de caracteres son soportados por los comandos XML DOM y XML SAX de 4D:
 
@@ -46,26 +46,26 @@ Los siguientes conjuntos de caracteres son soportados por los comandos XML DOM y
 - UTF-8
 - UTF-16 (Big/Small Endian)
 - UCS4 (Big/Small Endian)
-- EBCDIC code pages IBM037, IBM1047 and IBM1140 encodings,
+- Las codificaciones de las páginas de códigos EBCDIC IBM037, IBM1047 e IBM1140,
 - ISO-8859-1 (o Latin1)
 - Windows-1252.
 
 ### Glosario
 
-This non-exhaustive list details the main XML concepts used by the commands and functions of 4D.
+Esta lista no exhaustiva detalla los principales conceptos XML utilizados por los comandos y funciones de 4D.
 
-- **Attribute**: an XML sub-tag associated with an element. An attribute always contains a name and a value.
-- **Child**: In an XML structure, an element in a level directly below another.
-- **DTD**: *Document Type Declaration*. The DTD records the set of specific rules and properties that the XML must follow. These rules define, more particularly, the name and content of each tag as well as its context. Esta formalización de los elementos puede utilizarse para comprobar si un documento XML es conforme (en cuyo caso, se declara "válido"). The DTD may be included in the XML document (internal DTD) or in a separate document (external DTD). Tenga en cuenta que la DTD no es obligatoria.
-- **Element**: an XML tag. An element always contains a name and a value. Optionally, an element may contain attributes.
-- **ElementRef**: referencia XML usada por los comandos 4D XML para especificar una estructura XML. This reference is made up of 8 coded characters in hexadecimal form, which means that its length is 32 characters on a 64-bit system. Se recomienda declarar las referencias XML como Texto.
+- **Atributo**: subetiqueta XML asociada a un elemento. Un atributo siempre contiene un nombre y un valor.
+- **Child**: en una estructura XML, un elemento en un nivel directamente por debajo de otro.
+- **DTD**: *Document Type Declaration*. El DTD recoge el conjunto de reglas y propiedades específicas que debe cumplir el XML. Estas reglas definen, más concretamente, el nombre y el contenido de cada etiqueta así como su contexto. Esta formalización de los elementos puede utilizarse para comprobar si un documento XML es conforme (en cuyo caso, se declara "válido"). El DTD puede ser incluido en el documento XML (DTD interno) o en un documento separado (DTD externo). Tenga en cuenta que la DTD no es obligatoria.
+- **Elemento**: una etiqueta XML. Un elemento siempre contiene un nombre y un valor. Opcionalmente, un elemento puede contener atributos.
+- **ElementRef**: referencia XML usada por los comandos 4D XML para especificar una estructura XML. Esta referencia está compuesta por 8 caracteres codificados en formato hexadecimal, lo que significa que su longitud es de 32 caracteres en un sistema de 64 bits. Se recomienda declarar las referencias XML como Texto.
 - **Padre**: en una estructura XML, elemento situado en un nivel directamente superior a otro.
-- **Parsing, parser**: The act of analyzing the contents of a structured object in order to extract useful information.
-- **Root**: An element located at the first level of an XML structure.
-- **Sibling**: An element at the same level as another.
-- **Structure**: structured XML object. Este objeto puede ser un documento, una variable o un elemento.
+- **Análisis sintáctico, analizador sintáctico**: el proceso de analizar el contenido de un objeto estructurado con el fin de extraer información útil.
+- **Raíz**: un elemento ubicado en el primer nivel de una estructura XML.
+- **Elemento hermano**: un elemento que se encuentra al mismo nivel que otro.
+- **Estructura**: objeto XML estructurado. Este objeto puede ser un documento, una variable o un elemento.
 - **Validación**: un documento XML es "validado" por el analizador sintáctico cuando está "bien formado" y cumple las especificaciones DTD.
-- **Well-formed**: An XML document is declared “well-formed” by the parser when it complies with the generic XML specifications.
-- **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. El lenguaje XML se basa en el uso de etiquetas y una sintaxis específica, en consonancia con el lenguaje HTML. Sin embargo, a diferencia de este último, el lenguaje XML permite definir etiquetas personalizadas.
+- **Bien formado**: un documento XML es declarado “bienformado” por el analizador cuando cumple con las especificaciones genéricas XML.
+- **XML**: eXtensible Markup Language. Un estándar informatizado de intercambio de datos que permite la transferencia de datos, así como de su estructura. El lenguaje XML se basa en el uso de etiquetas y una sintaxis específica, en consonancia con el lenguaje HTML. Sin embargo, a diferencia de este último, el lenguaje XML permite definir etiquetas personalizadas.
 - **XSL**: eXtensible Stylesheet Language. Un lenguaje que permite la definición de hojas de estilo utilizadas para procesar y mostrar los contenidos de un documento XSL.
 

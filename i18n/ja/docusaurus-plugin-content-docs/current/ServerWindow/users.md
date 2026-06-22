@@ -25,7 +25,10 @@ title: ユーザーページ
 - **ログイン日**: リモートマシンが接続した日付と時刻。
 - **CPU時間**: 接続してからこのユーザーが消費した CPU の時間
 - **Activity**: 4D Server がこのユーザーのために使用する時間の割合 (動的表示)。
-- **ステータス**: "オンライン"、またはリモートマシンがスリープモードに切り替わっている場合には "スリープ中" と表示 (以下参照)。
+- **Status**: The following values can be displayed:
+  - "Online" - the session is active
+  - "Sleeping" - the desktop client has switched to sleep mode (see below),
+  - "Unreachable" (with [QUIC network layer](../settings/client-server.md#network-layer) only) - the desktop client is unresponsive and 4D Server will [attempt to reconnect](../Desktop/clientServer.md#management-of-unreachable-peer) during the QUIC session timeout period.
 
 ### スリープ中ユーザーの管理
 

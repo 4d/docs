@@ -52,6 +52,6 @@ Al generar documentos SAX, 4D utiliza los siguientes ajustes predeterminados par
 
 :::note Compatibilidad
 
-In projects created with 4D versions up to 19.x, by default 4D uses CRLF as end-of-line characters on macOS for SAX and a BOM. You can control the `XML line ending` and `XML BOM` management using the [`XML SET OPTIONS`](../../commands/xml-set-options) command and a [Compatibility setting](../../settings/compatibility.md). Important: Since SAX file lines are written directly at each statement, if you need to set the BOM and/or end-of-line options, you must call the [`XML SET OPTIONS`](../../commands/xml-set-options) command before the first SAX writing command.
+En proyectos creados con versiones 4D hasta 19.x, por defecto 4D usa CRLF como caracteres finales de línea en macOS para SAX y un BOM. Puede controlar la administración `XML line ending` y `XML BOM` utilizando el comando [`XML SET OPTIONS`](../../commands/xml-set-options) y una [configuración de compatibilidad](../../settings/compatibility.md). Importante: dado que las líneas del archivo SAX se escriben directamente con cada instrucción, si necesita configurar las opciones BOM y/o de fin de línea, debe ejecutar el comando [`XML SET OPTIONS`](../../commands/xml-set-options) antes del primer comando de escritura SAX.
 
 :::
