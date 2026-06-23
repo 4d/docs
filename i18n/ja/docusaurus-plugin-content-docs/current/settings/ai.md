@@ -73,6 +73,12 @@ AI プロバイダーを追加するには:
 
 プロバイダーの設定は *AIProviders.json* という名前のJSON ファイル内に保存されています。このファイルは[運用設定に応じて](./overview.md#enabling-user-settings)、[project フォルダ](../Project/architecture.md) 内の、アクティブな *settings.4DSettings ファイル* の隣に置かれています。
 
+:::warning
+
+The *AIProviders.json* file contains your provider API keys. If your project is [stored on a source control repository tool](../Project/overview.md#source-control) such as GitHub or GitLab, make sure the *AIProviders.json* file is [registered in the .gitignore file](../Project/architecture.md#gitignore-file-optional), otherwise **your keys could be publicly exposed**.
+
+:::
+
 ### APIキーを使用した運用
 
 AI プロバイダーを設定しているときには、自分のAPI キーを提供する必要があります。 AI プロバイダーからAPI キー/資格情報を取得するためには外部登録が必要になります。 AI プロバイダーからAPI キー/資格情報を取得するためには外部登録が必要になります。

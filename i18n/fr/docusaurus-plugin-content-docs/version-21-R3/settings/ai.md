@@ -73,6 +73,12 @@ The combo box lists the main providers, you can select a value to enter the prov
 
 The provider configuration is stored in a JSON file named *AIProviders.json* located next to the active *settings.4DSettings file* within the [project folder](../Project/architecture.md), [depending on your deployment configuration](./overview.md#enabling-user-settings).
 
+:::warning
+
+The *AIProviders.json* file contains your provider API keys. If your project is [stored on a source control repository tool](../Project/overview.md#source-control) such as GitHub or GitLab, make sure the *AIProviders.json* file is [registered in the .gitignore file](../Project/architecture.md#gitignore-file-optional), otherwise **your keys could be publicly exposed**.
+
+:::
+
 ### Deployment with an API key
 
 When configuring an AI provider, you need to provide your own API key. It requires an external registration for getting API keys/credentials from AI providers.

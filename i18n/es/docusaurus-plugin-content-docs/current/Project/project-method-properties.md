@@ -89,19 +89,19 @@ También se admite la sintaxis con paréntesis:
 $o["custom_Alert"]() //muestra "Hello world!"
 ```
 
-For more information, see the [`4D.Formula` class description](../API/FormulaClass.md) and the [Using object properties as named parameters](../Concepts/parameters.md#using-object-properties-as-named-parameters) paragraph.
+Para más información, vea la [descripción de la clase `4D.Formula`](../API/FormulaClass.md) y el párrafo [Uso de propiedades de objeto como parámetros nombrados](../Concepts/parameters.md#using-object-properties-as-named-parameters).
 
 ### Métodos de menú
 
 Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
 
-Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. Por ejemplo, un comando de menú de entrada de registros puede llamar a un método que realice dos tareas: mostrar el formulario de entrada apropiado y llamar al comando [`ADD RECORD`(../commands/add-record)] hasta que el usuario cancele la actividad de entrada de datos.
 
 La automatización de secuencias de actividades es una capacidad muy poderosa del lenguaje de programación 4D. Utilizando los menús personalizados, se pueden automatizar las secuencias de tareas y, por lo tanto, ofrecer más orientación a los usuarios de la aplicación.
 
 ### Métodos de gestión de proceso
 
-Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
+Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. El proceso dura sólo mientras el método proceso continúa ejecutándose, excepto si es un [proceso Worker](../Develop/processes.md#worker-processes). Tenga en cuenta que un método de menú adjunto a un comando de menú con propiedad [*Iniciar un nuevo proceso*](../Menus/properties.md#start-a-new-process) es también el método proceso para el proceso recién iniciado.
 
 ### Métodos de gestión de eventos y errores
 
@@ -109,13 +109,13 @@ Un **método de gestión de eventos** es un método dedicado a la gestión de ev
 
 Un **método de gestión de errores** es un método proyecto basado en interrupciones. Se llama cada vez que se produce un error o una excepción. Para más información, consulte la sección [Gestión de errores](../Concepts/error-handling.md).
 
-### API Methods
+### Métodos API
 
-Los métodos del proyecto pueden ser llamados desde contextos externos como otras aplicaciones, aplicaciones web, archivos procesados, etc., en cuyo caso pueden ser vistos como API. Such calls include:
+Los métodos del proyecto pueden ser llamados desde contextos externos como otras aplicaciones, aplicaciones web, archivos procesados, etc., en cuyo caso pueden ser vistos como API. Estas llamadas incluyen:
 
 - llamadas al servidor web a través de [http request handlers](../WebServer/http-request-handler.md) o [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
 - [procesamiento de etiquetas](../Tags/transformation-tags.md)
-- expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
+- expresiones llamadas desde extensiones ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) u objetos de formulario (por ejemplo, [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
 
 Las llamadas externas a los métodos proyecto deben estar permitidas en las [propiedades de los métodos proyecto](../Project/project-method-properties.md).
 
@@ -235,7 +235,7 @@ Cuando implemente el código para casos como el del ejemplo anterior, es importa
 En 4D, algunos usos típicos de la recursividad son:
 
 - Tratar los registros dentro de las tablas que se relacionan entre sí de la misma manera que en el ejemplo.
-- Browsing documents and folders on your disk, using the commands [`FOLDER LIST`](../commands/folder-list) and [`DOCUMENT LIST`](document-list). Una carpeta puede contener carpetas y documentos, las subcarpetas pueden a su vez contener carpetas y documentos, y así sucesivamente.
+- Explorar documentos y carpetas del disco con los comandos [`FOLDER LIST`](../commands/folder-list) y [`DOCUMENT LIST`](document-list). Una carpeta puede contener carpetas y documentos, las subcarpetas pueden a su vez contener carpetas y documentos, y así sucesivamente.
 
 :::warning
 
@@ -332,7 +332,7 @@ Por razones de seguridad, esta opción está desmarcada por defecto. Cada métod
 
 Cuando está marcada, esta opción permite que el método proyecto sea ejecutado por el motor SQL de 4D. Por defecto, no está seleccionado, lo que significa que, a menos que se autorice explícitamente, los métodos proyecto de 4D están protegidos y no pueden ser llamados por el motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql)  tags or the [QUERY BY SQL](../commands/query-by-sql) command.
+Esta propiedad se aplica a todas las consultas SQL internas y externas, ya sean ejecutadas a través del controlador ODBC, mediante código SQL insertado entre las etiquetas [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) o mediante el comando [QUERY BY SQL](../commands/query-by-sql).
 
 **Notas:**
 

@@ -247,7 +247,7 @@ Para agrupar los objetos:
 Para desagrupar un grupo de objetos:
 
 1. Seleccione el grupo de objetos que desea desagrupar.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D marca los bordes de los objetos individuales con marcas.
+2. Seleccione **Desagrupar** en el menú **Objeto**.<br/>O<br/>Haga clic en el botón **Desagrupar** (variante del botón **Agrupar**) en la barra de herramientas del editor de formularios.<br/>Si la opción **Desagrupar** aparece atenuada, significa que el objeto seleccionado ya está separado en su forma más simple. 4D marca los bordes de los objetos individuales con marcas.
 
 ### Alinear objetos
 
@@ -314,7 +314,7 @@ Para repartir los objetos con igual espacio:
 
 1. Seleccione tres o más objetos y haga clic en la herramienta Distribuir correspondiente.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+2. En la barra de herramientas, haga clic en la herramienta de distribución que corresponda a la distribución que desea aplicar.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>O<br/>Seleccione un comando de distribución del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.
    4D distribuye los objetos consecuentemente. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
 
 Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:

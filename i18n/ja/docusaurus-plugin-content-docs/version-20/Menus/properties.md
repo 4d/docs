@@ -13,7 +13,7 @@ title: メニュープロパティ
 メニューエディターを使って、テキストリテラルを直接、ラベルとして入力することができます。 または、変数参照、xliff参照を使用することもできます。これによりアプリケーションの翻訳が容易になります。 次のの参照タイプを使用できます:
 
 - :xliff:MyLabel という形の XLIFFリソース参照。 XLIFF参照についての詳細は、*4D デザインリファレンス* の [XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください。
-- (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
+- (**非推奨**) : `<>vlang,3` という形のような、インタープロセス変数名と、それに続く数値。 この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
 
 4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、および `SET MENU ITEM` コマンドの *itemText* パラメーターでタイトルプロパティを設定します。
 
@@ -89,7 +89,7 @@ title: メニュープロパティ
 
 メニューエディターでは、メニューのタイトルエリアにテキストを入力する代わりに、**区切り線** オプションを選択します。 すると、カレントメニューバーのエリアに線が表示されます。 このオプションが選択されると、ほかのプロパティは無効になります。 **注:** macOS ではメニュー項目タイトルの一文字目を "-" にすると、その行が区切り線になります。
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM`] commands.
+4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、または `SET MENU ITEM` コマンドの itemText パラメーターに `-` あるいは `(-` を受け渡します。
 
 
 
@@ -150,13 +150,13 @@ In the 4D language, you insert a separator line by entering `-` or `(-` as itemT
 
 ### チェック
 
-このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 You can then manage the display of the check mark using language commands `SET MENU ITEM MARK` and `Get menu item mark`.
+このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 その後チェックマークの表示を`SET MENU ITEM MARK` や `Get menu item mark` などのランゲージコマンドで制御できます。
 
 通常チェックマークは連続したアクションをおこなうメニュー項目に付けられ、そのアクションを現在実行中であることを示すために使用されます。
 
 ### フォントスタイル
 
-メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, `SET MENU ITEM STYLE`.
+メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または `SET MENU ITEM STYLE` ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
 一般的なルールとして、フォントスタイルの適用は慎重におこなってください。 煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
 > メニュータイトルに制御文字を挿入してスタイルを管理することもできます ([制御文字の使用](properties.md#制御文字の使用) 参照)。

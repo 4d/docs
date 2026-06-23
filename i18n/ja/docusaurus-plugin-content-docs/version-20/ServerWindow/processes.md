@@ -81,7 +81,7 @@ title: プロセスページ
 
 :::note
 
-Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+同様のアイコンとプロセスタイプは、[ランタイムエクスプローラーのプロセスページ](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.ja.html) でも使用されています。
 
 :::
 ## 管理ボタン

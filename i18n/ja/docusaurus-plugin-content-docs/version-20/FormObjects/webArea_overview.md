@@ -19,7 +19,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 - [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
 - [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> 4D 19 R5 以降、[Windows システムレンダリングエンジン](./webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでは、進捗状況変数が更新されません。
 
 ### Webレンダリングエンジン
 
@@ -213,7 +213,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 ## プロパティ一覧
 
-[Access 4D methods](properties_WebArea.md#access-4d-methods) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#css-class) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド) - [URL](properties_WebArea.md#url) - [進捗状況変数](properties_WebArea.md#進捗状況変数) - [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) - [4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) 
 
 
 
