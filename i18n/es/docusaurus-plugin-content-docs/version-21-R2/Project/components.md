@@ -501,11 +501,11 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. Esta opción se **recomienda**, en particular para los [componentes desarrollados por 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Última**: permite descargar la versión etiquetada como la más reciente. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
+- **Última**: permite descargar la versión etiquetada como la más reciente. **Atención:** aunque utilizar esta opción puede resultar práctico durante las primeras fases de desarrollo, es mejor evitarla en entornos de producción o en proyectos compartidos, ya que incorpora automáticamente las versiones más recientes, incluidas las versiones beta, lo que puede dar lugar a actualizaciones inesperadas o a cambios que provoquen incompatibilidades.
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 

@@ -40,9 +40,9 @@ Une erreur est retournée si l'objet *viewPro* est invalide.
 
 Dans *paramObj*, vous pouvez passer la propriété suivante :
 
-| Propriété | Type                        | Description                                                                                                                                                                                                                                                                                               |
-| --------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula   | 4D.Function | (Facultatif) Fonction callback à exécuter lorsque l'objet est chargé et que toutes les fonctions personnalisées 4D ont répondu. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
+| Propriété | Type                        | Description                                                                                                                                                                                                                                                                                                |
+| --------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula   | 4D.Function | (Facultatif) Fonction callback à exécuter lorsque l'objet est chargé et que toutes les fonctions personnalisées 4D ont répondu. Voir [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 

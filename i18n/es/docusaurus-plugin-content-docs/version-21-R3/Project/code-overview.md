@@ -104,19 +104,19 @@ Para eliminar un método o clase existente, puede:
 
 ## Comandos de acceso a objetos de diseño
 
-You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
+Puede acceder a los contenidos y rutas de todos los métodos de sus aplicaciones por programación, gracias al [**tema de "Acceso a objetos de diseño"**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). También le permite implementar sistemas avanzados para [documentación de código](../Project/documentation.md), para construir un explorador personalizado o para organizar copias de seguridad programadas del código guardado como archivos de disco.
 
 Se aplican los siguientes principios:
 
 - Cada método y formulario de una aplicación 4D tiene su propia dirección en forma de nombre de ruta. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
-- You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
-- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
-- Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
-- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
+- Puede acceder a objetos en la aplicación 4D utilizando los comandos del tema **"Acceso a objetos de diseño"**, por ejemplo [`METHOD GET NAMES`](../commands/method-get-names) o [`METHOD GET PATHS`](../commands/method-get-paths).
+- La mayoría de los comandos de este tema funcionan tanto en modo [interpretado como compilado](../Concepts/interpreted.md). Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
+- Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. Sin embargo, tenga en cuenta que no puede utilizar ciertos comandos en modo compilado: el objetivo de este tema es crear herramientas de soporte al desarrollo personalizadas. No debe utilizar estos comandos para cambiar dinámicamente el funcionamiento de una base de datos que se esté ejecutando. Por ejemplo, no se puede utilizar [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) para modificar un atributo de método en función del estado del usuario actual.
+- Cuando se ejecuta un comando de este tema desde un [componente](../Project/components.md), por defecto accede a los objetos del componente. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
 
 ### Uso en modo compilado
 
-For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
+Por razones relacionadas con el principio del proceso de compilación, sólo ciertos comandos en este tema pueden ser usados en modo compilado. La siguiente tabla muestra los comandos disponibles en modo compilado:
 
 | Comando                                                                  | Puede utilizarse en modo compilado |
 | ------------------------------------------------------------------------ | ---------------------------------- |

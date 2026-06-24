@@ -18,14 +18,14 @@ Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquan
 Pour chaque utilisateur connecté à la base, la liste fournit les informations suivantes :
 
 - Système de la machine cliente (macOS ou Windows) sous forme d’icône.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command on the user machine. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
+- **Utilisateur 4D** : Nom de l'utilisateur 4D, ou alias s'il a été défini à l'aide de la commande [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) sur la machine de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
 - **Nom de machine** : Nom de la machine distante.
 - **Nom de session** : Nom de la session ouverte sur la machine distante.
 - **Adresse IP** : Adresse IP de la machine distante.
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
 - Déconnecter
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Statut** : "Online" ou "Sleeping" si la machine distante a basculé en mode veille (voir ci-dessous).
 
 ### Gestion des utilisateurs endormis
 
@@ -37,7 +37,7 @@ Ce statut libère les ressources sur le serveur. En outre, l'application 4D dist
 
 Le scénario suivant est pris en charge : un utilisateur distant cesse de travailler durant un certain laps de temps, par exemple durant la pause déjeuner, mais garde ouverte la connexion au serveur. La machine passe en mode veille. Au retour de l'utilisateur, la machine sort du mode veille et l'application 4D distante récupère automatiquement sa connexion au serveur ainsi que son contexte de session.
 
-> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector.
+> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce délai d'expiration par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) avec le sélecteur `Remote connection sleep timeout`.
 
 ## Zone de recherche/filtrage
 
