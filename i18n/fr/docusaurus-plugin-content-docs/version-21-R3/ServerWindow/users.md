@@ -25,7 +25,7 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
 - Déconnecter
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Statut** : "Online" ou "Sleeping" si la machine distante a basculé en mode veille (voir ci-dessous).
 
 ### Gestion des utilisateurs endormis
 

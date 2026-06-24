@@ -8,7 +8,7 @@ to import
 
 <!-- REF lists-WP.Desc -->
 
-## Enumérations
+## Lists
 
 4D Write Pro prend en charge deux types principaux de listes :
 

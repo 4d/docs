@@ -538,19 +538,19 @@ Si el componente está almacenado en un [repositorio privado](#authentication-an
 
 4. Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
-The dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Se cargará cuando se reinicie la aplicación.
+La dependencia es declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
 
-#### Defining a dependency version range
+#### Definiendo un rango de dependencias
 
 Puede definir la opción [etiqueta o versión](#tags-and-versions) para una dependencia:
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. Esta opción se **recomienda**, en particular para los [componentes desarrollados por 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Último** (GitHub) o **más alto** (GitLab): permite descargar la versión con la etiqueta correspondiente, normalmente la versión más reciente. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
+- **Último** (GitHub) o **más alto** (GitLab): permite descargar la versión con la etiqueta correspondiente, normalmente la versión más reciente. **Atención:** aunque utilizar esta opción puede resultar práctico durante las primeras fases de desarrollo, es mejor evitarla en entornos de producción o en proyectos compartidos, ya que incorpora automáticamente las versiones más recientes, incluidas las versiones beta, lo que puede dar lugar a actualizaciones inesperadas o a cambios que provoquen incompatibilidades.
 
 La versión actual de la dependencia se muestra a la derecha del elemento de la dependencia:
 
@@ -601,7 +601,7 @@ Si no desea utilizar una actualización de componentes (por ejemplo, desea perma
 
 #### Actualización de dependencias
 
-**Updating a dependency** means downloading a new version of the dependency from GitHub or GitLab and keeping it ready to be loaded the next time the project is started.
+**Actualizar una dependencia** significa descargar una nueva versión de la dependencia desde GitHub o GitLab y mantenerla lista para ser cargada la próxima vez que se inicie el proyecto.
 
 Puede actualizar las dependencias en cualquier momento, para una sola dependencia o para todas las dependencias:
 
@@ -628,7 +628,7 @@ When this option is checked (default), new GitHub or GitLab component versions m
 
 Cuando esta opción no está marcada, una nueva versión del componente que coincida con su [configuración de versiones del componente](#defining-a-dependency-version-range) sólo se indicará como disponible y requerirá una [actualización manual](#updating-dependencies). The Dependency manager checks periodically if component updates are available on the Git hosting platform.
 
-### Providing your access token
+### Facilitar su token de acceso
 
 Registrar su [token de acceso personal](#authentication-and-tokens) en el gestor de dependencias es:
 
@@ -639,7 +639,7 @@ Registrar su [token de acceso personal](#authentication-and-tokens) en el gestor
 
 Para proporcionar su token de acceso a GitHub o GitLab, puede:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private repository path.
+- haga clic en el botón \*\*Agregar un token de acceso personal... \* que se muestra en el cuadro de diálogo "Añadir una dependencia" después de introducir una ruta de repositorio privada.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token-button.png)
 

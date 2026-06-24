@@ -21,7 +21,7 @@ La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para t
 
 #### Ejecución asíncrona
 
-Asynchronous execution is **event-driven** and allows other operations to complete. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
+La ejecución asincrónica es **event-driven** y permite que otras operaciones se completen. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
 
 La ejecución asíncrona se utiliza cuando:
 
@@ -110,7 +110,7 @@ Varias clases 4D soportan el procesamiento asíncrono:
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 
-Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
+Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. Por ejemplo, se puede crear una función `onResponse()` en la clase, se llamará automáticamente de forma asincrónica cuando se dispare un evento *respuesta*.
 
 Recomendamos la siguiente secuencia:
 

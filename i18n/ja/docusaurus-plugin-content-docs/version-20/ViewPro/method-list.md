@@ -18,12 +18,12 @@ title: メソッド一覧
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|vpFormula|Text|-> |4D View Pro formula
-|name|Text|->|Name for the formula|
-|options|Object|->|Options for the named formula|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|vpFormula|Text|-> |4D View Pro フォーミュラ|
+|name|Text|->|フォーミュラの名称|
+|options|Object|->|命名フォーミュラのオプション|
 </div>
 <!-- END REF -->
 
@@ -64,11 +64,11 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object |
-|name|Text|->|Name for the fomula|
-|options|Object|->|Options for the named formula|
+|rangeObj| Object|->|レンジオブジェクト|
+|name|Text|->|フォーミュラの名称|
+|options|Object|->|命名フォーミュラのオプション|
 </div>
 <!-- END REF -->
 
@@ -110,9 +110,9 @@ VP ADD RANGE NAME($range;"Total1")
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型||説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object |
+|戻り値|Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -154,9 +154,9 @@ VP ADD SELECTION($currentSelection)
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|index|Integer|-> |Index of the new sheet|
-|name|Text|->|Sheet name|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|index|Integer|-> |新しいシートのインデックス|
+|name|Text|->|シート名|
 </div>
 <!-- END REF -->
 
@@ -197,9 +197,9 @@ VP ADD SHEET("ViewProArea";2;"March")
 <!-- REF #_method_.VP ADD SPAN.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -245,12 +245,12 @@ VP ADD SHEET("ViewProArea";2;"March")
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|styleName|Text|-> |Name of style|
-|styleObj|Object|->|Object defining attribute settings|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|styleName|Text|-> |スタイルの名前|
+|styleObj|Object|->|属性設定を定義するオブジェクト|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
 </div>
 <!-- END REF -->
 
@@ -321,11 +321,11 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 <!-- REF #_method_.VP All.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of all cells|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Range object of all cells|
 </div>
 <!-- END REF -->
 
@@ -359,13 +359,13 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 <!-- REF #_method_.VP Cell.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column|Integer|->|Column index|
-|row|Integer|->|Row index|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of a single cell|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|column|Integer|->|カラムのインデックス|
+|row|Integer|->|行のインデックス|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Range object of a single cell|
 </div>
 <!-- END REF -->
 
@@ -416,15 +416,15 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 <!-- REF #_method_.VP Cells.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column| Integer|->|Column index|
-|row| Integer|->|Row index|
-|columnCount| Integer|->|Number of columns|
-|rowCount| Integer|->|Number of rows|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of cells|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|column| Integer|->|カラムのインデックス|
+|row| Integer|->|行のインデックス|
+|columnCount| Integer|->|カラム数|
+|rowCount| Integer|->|行数|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Range object of cells|
 </div>
 <!-- END REF -->
 
@@ -468,13 +468,13 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 <!-- REF #_method_.VP Column.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column| Integer|->|Column index|
-|columnCount| Integer|->|Number of columns|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of cells|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|column| Integer|->|カラムのインデックス|
+|columnCount| Integer|->|カラム数|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Range object of cells|
 </div>
 <!-- END REF -->
 
@@ -514,9 +514,9 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -554,11 +554,11 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 <!-- REF #_method_.VP Combine ranges.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
-|otherRangeObj| Object|->|Range object|
-|Result| Object|<-|Object containing a combined range|
+|rangeObj| Object|->|レンジオブジェクト|
+|otherRangeObj| Object|->|レンジオブジェクト|
+|戻り値| Object|<-|Object containing a combined range|
 </div>
 <!-- END REF -->
 
@@ -595,10 +595,10 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|4DViewDocument| Blob|->|4D View document|
-|Result| Object|<-|4D View Pro object
+|4DViewDocument| Blob|->|4D View ドキュメント|
+|戻り値| Object|<-|4D View Pro object
 </div>
 <!-- END REF -->
 
@@ -626,11 +626,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 <!-- REF #_method_.VP Convert to picture.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpObject| Object|->|4D View Pro object containing the area to convert|
-|rangeObj| Object|->|Range object|
-|Result| Picture|<-|SVG picture of the area|
+|vpObject| Object|->|変換するエリアを格納した 4D View Pro オブジェクト|
+|rangeObj| Object|->|レンジオブジェクト|
+|戻り値| Picture|<-|SVG picture of the area|
 </div>
 <!-- END REF -->
 
@@ -694,11 +694,11 @@ $vPict:=VP Convert to picture($vpAreaObj) //エリア全体を書き出します
 <!-- REF #_method_.VP Copy to object.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj|Object|->|Range object|
-|options|Object|->|Additional options|
-|Result|Object|<-|Object returned. Contains the copied data|
+|rangeObj|Object|->|レンジオブジェクト|
+|options|Object|->|追加のオプション|
+|戻り値|Object|<-|Object returned. Contains the copied data|
 </div>
 <!-- END REF -->
 
@@ -763,12 +763,12 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj|Object|->|Range object|
-|tableName|Text|->|Name for the table|
-|source|Text|->|Data context property name to display in the table|
-|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Additional options|
+|rangeObj|Object|->|レンジオブジェクト|
+|tableName|Text|->|表組みの名称|
+|source|Text|->|表に表示するデータコンテキストプロパティ名|
+|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|追加のオプション|
 </div>
 <!-- END REF -->
 
@@ -864,9 +864,9 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -904,9 +904,9 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -947,11 +947,11 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|filePath| Text|->|Pathname of the document|
-|paramObj| Object|->|Export options|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|filePath| Text|->|ドキュメントのパス名|
+|paramObj| Object|->|書き出しのオプション|
 </div>
 <!-- END REF -->
 
@@ -1105,11 +1105,11 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 <!-- REF #_method_.VP Export to object.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|options| Object|->|Export options|
-|Result| Object|<-|4D View Pro object|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|options| Object|->|書き出しのオプション|
+|戻り値| Object|<-|4D View Pro object|
 </div>
 <!-- END REF -->
 
@@ -1163,13 +1163,13 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 <!-- REF #_method_.VP Find.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|searchValue |Text|->|Search value|
-|searchCondition |Object|->|Object containing search condition(s)|
-|replaceValue  |Text|->|Replacement value|
-|Result|Object|<-|Range object|
+|rangeObj |Object|->|レンジオブジェクト|
+|searchValue |Text|->|検索値|
+|searchCondition |Object|->|検索条件を格納したオブジェクト|
+|replaceValue  |Text|->|置き換え値|
+|戻り値|Object|<-|Range object|
 </div>
 <!-- END REF -->
 
@@ -1251,10 +1251,10 @@ End if
 <!-- REF #_method_.VP Find table.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj |Object|->|Cell range|
-|Result  |Text|<-|Table name|
+|rangeObj |Object|->|セルレンジ|
+|戻り値 |Text|<-|Table name|
 </div>
 <!-- END REF -->
 
@@ -1294,9 +1294,9 @@ End if
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
 </div>
 <!-- END REF -->
 
@@ -1331,10 +1331,10 @@ TRACE
 <!-- REF #_method_.VP Font to object.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|font  |Text|->|Font shorthand string|  
-|Result  |Object|<-|Font object|
+|font  |Text|->|フォントのショートハンド文字列|
+|戻り値|Object|<-|Font object|
 </div>
 <!-- END REF -->
 
@@ -1383,11 +1383,11 @@ size:16pt
 <!-- REF #_method_.VP Get active cell.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Range object of single cell|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Range object of single cell|
 </div>
 <!-- END REF -->
 
@@ -1434,10 +1434,10 @@ $activeCell:=VP Get active cell("myVPArea")
 <!-- REF #_method_.VP Get binding path.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-| rangeObj | Object | -> | Range object |
-| Result  | Text | <- | Name of the attribute bound to the cell |
+| rangeObj | Object | -> |レンジオブジェクト|
+| Result  | Text | <- |セルにバインドされた属性の名称ll |
 </div>
 <!-- END REF -->
 
@@ -1481,10 +1481,10 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 <!-- REF #_method_.VP Get cell style.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Object|<-|Style object|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Object|<-|Style object|
 </div>
 <!-- END REF -->
 
@@ -1540,10 +1540,10 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 <!-- REF #_method_.VP Get column attributes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of column properties|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Collection|<-|Collection of column properties|
 </div>
 <!-- END REF -->
 
@@ -1583,11 +1583,11 @@ $attr:=VP Get column attributes($range)
 <!-- REF #_method_.VP Get column count.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area from object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Integer|<-|Total number of columns |
+|vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Integer|<-|Total number of columns |
 </div>
 <!-- END REF -->
 
@@ -1620,10 +1620,10 @@ $colCount:=VP Get column count("ViewProarea")
 <!-- REF #_method_.VP Get current sheet.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Index of the current sheet|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|戻り値|Integer|<-|Index of the current sheet|
 </div>
 <!-- END REF -->
 
@@ -1667,11 +1667,11 @@ $index:=VP Get current sheet("ViewProArea")
 <!-- REF #_method_.VP Get data context.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Index of the sheet to get the data context from|
-|Result |Object &#124; Collection |<-|Data context|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|sheet|Integer|->|データコンテキストを取得するシートのインデックス|
+|戻り値 |Object &#124; Collection |<-|Data context|
 </div>
 <!-- END REF -->
 
@@ -1707,11 +1707,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 <!-- REF #_method_.VP Get default style.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area from object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Default style settings |
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Object|<-|Default style settings |
 </div>
 <!-- END REF -->
 
@@ -1758,10 +1758,10 @@ $defaultStyle:=VP Get default style("myDoc")
 <!-- REF #_method_.VP Get formula.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Text|<-|Formula|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Text|<-|Formula|
 </div>
 <!-- END REF -->
 
@@ -1792,12 +1792,12 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 <!-- REF #_method_.VP Get formula by name.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|name  |Text|->|Name of the named range|
-|scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Object|<-|Named formula or named range definition|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|name  |Text|->|命名レンジの名前|
+|scope  |Number|->|ターゲットのスコープ (デフォルト=カレントシート)|
+|戻り値 |Object|<-|Named formula or named range definition|
 </div>
 <!-- END REF -->
 
@@ -1848,10 +1848,10 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 <!-- REF #_method_.VP Get formulas.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of formula values|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Collection|<-|Collection of formula values|
 </div>
 <!-- END REF -->
 
@@ -1893,11 +1893,11 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 <!-- REF #_method_.VP Get frozen panes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Object containing frozen column and row information|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Object containing frozen column and row information|
 </div>
 <!-- END REF -->
 
@@ -1946,11 +1946,11 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 <!-- REF #_method_.VP Get names.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|scope  |Number|->|Target scope (default= current sheet)|
-|Result  |Collection|<-|Existing names in the defined scope|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|scope  |Number|->|ターゲットのスコープ (デフォルト=カレントシート)|
+|戻り値  |Collection|<-|Existing names in the defined scope|
 </div>
 <!-- END REF -->
 
@@ -1998,11 +1998,11 @@ $list:=VP Get names("ViewProArea";2) // 3番目のシートにある名前
 <!-- REF #_method_.VP Get print info.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Object of printing information|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Object of printing information|
 </div>
 <!-- END REF -->
 
@@ -2081,10 +2081,10 @@ zoomFactor:1
 <!-- REF #_method_.VP Get row attributes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of row properties|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Collection|<-|Collection of row properties|
 </div>
 <!-- END REF -->
 
@@ -2122,11 +2122,11 @@ $attr:=VP Get row attributes($range)
 <!-- REF #_method_.VP Get row count.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area from object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Integer|<-|Total number of rows|
+|vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Integer|<-|Total number of rows|
 </div>
 <!-- END REF -->
 
@@ -2159,11 +2159,11 @@ $rowCount:=VP Get row count("ViewProarea")
 <!-- REF #_method_.VP Get selection.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area from object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Range object of cells|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Object|<-|Range object of cells|
 </div>
 <!-- END REF -->
 
@@ -2204,10 +2204,10 @@ $currentSelection:=VP Get selection("myVPArea")
 <!-- REF #_method_.VP Get sheet count.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Number of sheets|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|戻り値|Integer|<-|Number of sheets|
 </div>
 <!-- END REF -->
 
@@ -2247,11 +2247,11 @@ $currentSelection:=VP Get selection("myVPArea")
 <!-- REF #_method_.VP Get sheet index.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|name| Text|->|Sheet name|
-|Function result|Integer|<-|Sheet index|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|name| Text|->|シート名|
+|戻り値|Integer|<-|Sheet index|
 </div>
 <!-- END REF -->
 
@@ -2288,11 +2288,11 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 <!-- REF #_method_.VP Get sheet name.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|sheet| Integer|->|Sheet index|
-|Function result|Text|<-|Sheet name|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|sheet| Integer|->|シートのインデックス|
+|戻り値|Text|<-|Sheet name|
 </div>
 <!-- END REF -->
 
@@ -2329,11 +2329,11 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 <!-- REF #_method_.VP Get sheet options.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area from object name|
-|sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Sheet options object|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Object|<-|Sheet options object|
 </div>
 <!-- END REF -->
 
@@ -2372,11 +2372,11 @@ End if
 <!-- REF #_method_.VP Get show print lines.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Sheet index|
-|Function result|Boolean|<-|True if print lines are visible, False otherwise|
+|vpAreaName| Text|->|4D View Pro フォームオブジェクト名|
+|sheet|Integer|->|シートのインデックス|
+|戻り値|Boolean|<-|True if print lines are visible, False otherwise|
 </div>
 <!-- END REF -->
 
@@ -2411,10 +2411,10 @@ End if
 <!-- REF #_method_.VP Get spans.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Object|<-|Object of cell spans in the defined range|
+|rangeObj  |Object|->|レンジオブジェクト|
+|戻り値 |Object|<-|Object of cell spans in the defined range|
 </div>
 <!-- END REF -->
 
@@ -2452,12 +2452,12 @@ VP SET CELL STYLE($range;$style)
 <!-- REF #_method_.VP Get stylesheet.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName|Text|->|4D View Pro area form object name|
-|styleName|Text|->|Name of style|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Style sheet object|
+|vpAreaName|Text|->|4D View Pro フォームオブジェクト名|
+|styleName|Text|->|スタイル名|
+|sheet|Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Style sheet object|
 </div>
 <!-- END REF -->
 
@@ -2506,11 +2506,11 @@ borderTop:{color:green,style:10}
 <!-- REF #_method_.VP Get stylesheets.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Target scope (default = current sheet)|
-|Result  |Collection|<-|Collection of style sheet objects|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|sheet|Integer|->|ターゲットのスコープ (デフォルト=カレントシート)|
+|戻り値 |Collection|<-|Collection of style sheet objects|
 </div>
 <!-- END REF -->
 
@@ -2573,13 +2573,13 @@ $styles:=VP Get stylesheets("ViewProArea")
 <!-- REF #_method_.VP Get table column attributes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|column|Integer|->|Index of the column in the table|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Object|<-|Attributes of the *column*|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|column|Integer|->|表組内のカラムのインデックス|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Object|<-|Attributes of the *column*|
 </div>
 <!-- END REF -->
 
@@ -2636,13 +2636,13 @@ If ($attributes.dataField#"")
 <!-- REF #_method_.VP Get table column index.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|columnName|Text|->|Name of the table column|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Integer|<-|Index of *columnName*|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|columnName|Text|->|表組内のカラムの名前|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Integer|<-|Index of *columnName*|
 </div>
 <!-- END REF -->
 
@@ -2692,13 +2692,13 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|reset|Boolean|->|True to clear the dirty status from the current table, False to keep it untouched. Default=True|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Collection|<-|Collection of objects with all the items modified since the last reset|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|reset|Boolean|->|現在の表から "ダーティ" ステータスをクリアするには true、そのままにするには false を指定します。 デフォルト =True|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値|Collection|<-|Collection of objects with all the items modified since the last reset|
 </div>
 <!-- END REF -->
 
@@ -2759,13 +2759,13 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 <!-- REF #_method_.VP Get table range.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|onlyData|Integer|->|`vk table full range` (default) or `vk table data range`|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Object|<-|Range that contains the table|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|onlyData|Integer|->|`vk table full range` (デフォルト) または `vk table data range`|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Object|<-|Range that contains the table|
 </div>
 <!-- END REF -->
 
@@ -2808,11 +2808,11 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 <!-- REF #_method_.VP Get table theme.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|Result|[cs.ViewPro.TableTheme](classes.md#tabletheme)|<-|Current table theme property values|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|戻り値|[cs.ViewPro.TableTheme](classes.md#tabletheme)|<-|Current table theme property values|
 </div>
 <!-- END REF -->
 
@@ -2862,11 +2862,11 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) // true
 <!-- REF #_method_.VP Get tables.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result  |Collection|<-|Text collection with all table names|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
+|戻り値 |Collection|<-|Text collection with all table names|
 </div>
 <!-- END REF -->
 
@@ -2908,10 +2908,10 @@ $tables:=VP Get tables("ViewProArea")
 <!-- REF #_method_.VP Get value.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-|Result  |Object|<-|Object containing a cell value|
+|rangeObj   |Object|->|レンジオブジェクト|
+|戻り値 |Object|<-|Object containing a cell value|
 </div>
 <!-- END REF -->
 
@@ -2964,10 +2964,10 @@ End if
 <!-- REF #_method_.VP Get values.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-|Result  |Collection|<-|Collection of values|
+|rangeObj   |Object|->|レンジオブジェクト|
+|戻り値 |Collection|<-|Collection of values|
 </div>
 <!-- END REF -->
 
@@ -3018,10 +3018,10 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 <!-- REF #_method_.VP Get workbook options.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|Result |Object|<-|Object containing the workbook options|
+|vpAreaName  |Text|->|4D View Pro フォームオブジェクト名|
+|戻り値 |Object|<-|Object containing the workbook options|
 </div>
 <!-- END REF -->
 
@@ -3058,11 +3058,11 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-|filePath   |Text|->|Pathname of the document|
-|paramObj   |Object|->|Import options|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
+|filePath   |Text|->|ドキュメントのパス名|
+|paramObj   |Object|->|書き出しのオプション|
 </div>
 <!-- END REF -->
 
@@ -3160,10 +3160,10 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-|viewPro   |Object|->|4D View Pro object|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
+|viewPro |Object|->|4D View Pro オブジェクト|
 </div>
 <!-- END REF -->
 
@@ -3198,9 +3198,9 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj   |Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -3236,9 +3236,9 @@ VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 <!-- REF #_method_.VP INSERT ROWS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj   |Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
@@ -3281,14 +3281,14 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|column|Integer|->|Index in the table of the starting column to insert|
-|count|Text|->|Number of columns to add (must be >0) |
-|insertAfter|Integer|->|`vk table insert before` or `vk table insert after` *column*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|column|Integer|->|列の挿入場所を指定する表組み内のインデックス|
+|count|Text|->|挿入する列の数 (>0)|
+|insertAfter|Integer|->|`vk table insert before` または `vk table insert after` *column*|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
 </div>
 <!-- END REF -->
 
@@ -3336,14 +3336,14 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-|tableName|Text|->|Table name|
-|row|Integer|->|Index in the table of the starting row to insert|
-|count|Text|->|Number of rows to add (must be >0) |
-|insertAfter|Integer|->|`vk table insert before` or `vk table insert after` *row*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName |Text|->|4D View Pro フォームオブジェクト名|
+|tableName|Text|->|表組の名前|
+|row|Integer|->|行の挿入場所を指定する表組み内のインデックス|
+|count|Text|->|挿入する行の数 (>0)|
+|insertAfter|Integer|->|`vk table insert before` または `vk table insert after` *row*|
+|sheet   |Integer|->|シートのインデックス (省略した場合はカレントシート)|
 </div>
 <!-- END REF -->
 
@@ -3422,11 +3422,11 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|originRange|Object|->|Cell range to copy from|
-|targetRange|Object|->|Target range for the values, formatting and formulas|
-|options|Object|->|Additional options|
+|originRange|Object|->|移動 (コピー) 元のセルレンジ|
+|targetRange|Object|->|値・書式・フォーミュラの移動 (コピー) 先レンジ|
+|options|Object|->|追加のオプション|
 </div>
 <!-- END REF -->
 
@@ -3482,12 +3482,12 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 <!-- REF #_method_.VP Name.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName|Text|->|4D View Pro area form object name|
-|rangeName|Text|->|Existing range name|
-|sheet|Integer|->|Range location (current sheet if omitted)|
-|Result|Object|<-|Range object of name|
+|vpAreaName|Text|->|4D View Pro フォームオブジェクト名|
+|rangeName|Text|->|既存のレンジ名|
+|sheet|Integer|->|レンジの場所 (省略時はカレントシート)|
+|戻り値|Object|<-|Range object of name|
 </div>
 <!-- END REF -->
 
@@ -3527,9 +3527,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
 </div>
 <!-- END REF -->
 
@@ -3563,10 +3563,10 @@ VP NEW DOCUMENT("myVPArea")
 <!-- REF #_method_.VP Object to font.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|fontObj   |Object|->|Font object|
-|Result   |Text|<-|Font shorthand|
+|fontObj |Object|->|フォントオブジェクト|
+|戻り値|Text|<-|Font shorthand|
 </div>
 <!-- END REF -->
 
@@ -3624,11 +3624,11 @@ $cellStyle.font:=VP Object to font($font)
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj|Object|->|Cell range object|
-|dataObject|Object|->|Object containing the data to be pasted|
-|options|Integer|->|Specifies what is pasted|
+|rangeObj|Object|->|セルレンジオブジェクト|
+|dataObject|Object|->|ペーストするデータを格納したオブジェクト|
+|options|Integer|->|ペーストする内容を指定します|
 </div>
 <!-- END REF -->
 
@@ -3671,10 +3671,10 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
 <!-- REF #_method_.VP PRINT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
+|sheet |Integer|->|シートのインデックス (省略した場合はカレントシート)|
 </div>
 <!-- END REF -->
 
@@ -3721,9 +3721,9 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
 </div>
 <!-- END REF -->
 
@@ -3842,9 +3842,9 @@ VP REMOVE SHEET("ViewProArea";2)
 <!-- REF #_method_.VP REMOVE SPAN.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj   |Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 #### 説明
@@ -4193,9 +4193,9 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpAreaName   |Text|->|4D View Pro フォームオブジェクト名|
 </div>
 <!-- END REF -->
 
@@ -4468,9 +4468,9 @@ $result:=VP Run offscreen area($o)
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型| |説明|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj   |Object|->|レンジオブジェクト|
 </div>
 <!-- END REF -->
 
