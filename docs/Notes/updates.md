@@ -103,7 +103,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 |Libuv |1.52.1|**21 R4**|Used for QUIC|
 |libZip|1.11.4|21|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.8.1|21||
-|ngtcp2|1.22.1|**21 R4**|Used for QUIC|
+|ngtcp2|1.23.0|**21 R4**|Used for QUIC|
 |OpenSSL|4.0|**21 R4**||
 |PDFWriter|4.7.0|21|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |SpreadJS|18.2.0|21 R2|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) for an overview of the new features|
