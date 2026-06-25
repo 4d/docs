@@ -31,9 +31,9 @@ displayed_sidebar: docs
 
 ## 説明
 
-**Form event code** コマンドは、現在生成中のフォームイベントタイプ を示す数値を返します。  通常フォームメソッドやオブジェクトメソッド内で **Form event code** を使用します。 通常フォームメソッドやオブジェクトメソッド内で **Form event code** を使用します。
+**Form event code** コマンドは、現在生成中のフォームイベントタイプ を示す数値を返します。  通常フォームメソッドやオブジェクトメソッド内で **Form event code** を使用します。
 
-4Dには*Form Events* テーマで定義された定数が用意されており、 **Form event code** コマンドから返される値と比較することができます。 イベントには、一般的なイベント(任意のタイプのオブジェクトに対して生成される)と、特定タイプのオブジェクトのみに発生するイベントがあります。 イベントには、一般的なイベント(任意のタイプのオブジェクトに対して生成される)と、特定タイプのオブジェクトのみに発生するイベントがあります。
+4Dには*Form Events* テーマで定義された定数が用意されており、 **Form event code** コマンドから返される値と比較することができます。 イベントには、一般的なイベント(任意のタイプのオブジェクトに対して生成される)と、特定タイプのオブジェクトのみに発生するイベントがあります。
 
 イベントの詳細については[**Form Events**](../Events/overview.md) の章を参照してください。
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 この例題ではレコード更新日をOn Validateイベントで自動的に(フィールドへ)割り当てる例を示します:
 
 ```4d
-  //Method of a form
+  // フォームメソッド
  Case of
   // ...
     :(Form event code=On Validate)
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 この例題では、ドロップダウンリスト処理 (初期化, ユーザクリック, オブジェクトのリリース) をオブジェクトメソッドにカプセル化します:
 
 ```4d
-  //asBurgerSize Drop-down list Object Method
+  // asBurgerSize ドロップダウンリストオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asBurgerSize;3)
@@ -73,51 +73,51 @@ displayed_sidebar: docs
 
 ## 例題 3
 
-この例題はフォームメソッドのテンプレートです。 この例題はフォームメソッドのテンプレートです。 この例題はフォームメソッドのテンプレートです。 出力フォームとしてサマリレポートがフォームを使用する際に発生し得るイベントを示しています:
+この例題はフォームメソッドのテンプレートです。 出力フォームとしてサマリレポートがフォームを使用する際に発生し得るイベントを示しています:
 
 ```4d
-  //Method of a form being used as output form for a summary report
+  // サマリーレポートの出力フォームとして使用されているフォームのフォームメソッド
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Header)
-  //A header area is about to be printed
+  // ヘッダーエリアが印刷されようとしている
        Case of
           :(Before selection($vpFormTable->))
-  //Code for the first break header goes here
+  // 最初のブレークヘッダーのコードはここに書く
           :(Level=1)
-  //Code for a break header level 1 goes here
+  // レベル1のブレークヘッダーのコードはここに書く
           :(Level=2)
-  //Code for a break header level 2 goes here
+  // レベル2のブレークヘッダーのコードはここに書く
   //...
        End case
     :(Form event code=On Printing Detail)
-  //A record is about to be printed
-  //Code for each record goes here
+  // レコードが印刷されようとしている
+  // 各レコード用のコードはここに書く
     :(Form event code=On Printing Break)
-  //A break area is about to be printed
+  // ブレークエリアが印刷されようとしている
        Case of
           :(Level=0)
-  //Code for a break level 0 goes here
+  // ブレークレベル0 用のコードはここに書く
           :(Level=1)
-  //Code for a break level 1 goes here
+  // ブレークレベル1 用のコードはここに書く
   //...
        End case
     :(Form event code=On Printing Footer)
        If(End selection($vpFormTable->))
-  //Code for the last footer goes here
+  // 最後のフッターのコードはここに書く
        Else
-  //Code for a footer goes here
+  // フッター用のコードはここに書く
        End if
  End case
 ```
 
 ## 例題 4
 
-この例題は[DISPLAY SELECTION](../commands-legacy/display-selection.md) または [MODIFY SELECTION](../commands-legacy/modify-selection.md) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。  説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます: 説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
+この例題は[DISPLAY SELECTION](../commands-legacy/display-selection.md) または [MODIFY SELECTION](../commands-legacy/modify-selection.md) で表示されるフォームで発生するイベントを処理するメソッドのテンプレートです。  説明的にするため、フォームウィンドウのタイトルバーにイベントの説明が表示されます:
 
 ```4d
-  //A form method
+  // フォームメソッド
  Case of
     :(Form event code=On Load)
        $vsTheEvent:="The form is about to be displayed"
@@ -160,7 +160,7 @@ displayed_sidebar: docs
 この例題は、スクロールエリアでクリックとダブルクリックを同様に扱う方法を示しています:
 
 ```4d
-  //asChoices scrollable area object method
+  // asChoices スクロール可能エリアのオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -168,7 +168,7 @@ displayed_sidebar: docs
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
+  // 項目がクリックされた、何かを行う
   //...
        End if
   //...
@@ -177,10 +177,10 @@ displayed_sidebar: docs
 
 ## 例題 7
 
-この例題では、クリック とダブルクリックで異なるレスポンスをする方法を示します。  要素0を使用して選択された項目を追跡していることに注目してください: 要素0を使用して選択された項目を追跡していることに注目してください:
+この例題では、クリック とダブルクリックで異なるレスポンスをする方法を示します。  要素0を使用して選択された項目を追跡していることに注目してください:
 
 ```4d
-  //asChoices scrollable area object method
+  //asChoices スクロール可能エリアのオブジェクトメソッド
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -190,9 +190,9 @@ displayed_sidebar: docs
     :(Form event code=On Clicked)
        If(asChoices#0)
           If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
+  // 新しい項目がクリックされた、何かを行う
   //...
-  //Save the new selected element for the next time
+  // 次回のために、新しく保存された要素を保存する
              asChoices{0}:=String(asChoices)
           End if
        Else
@@ -200,7 +200,7 @@ displayed_sidebar: docs
        End if
     :(Form event code=On Double Clicked)
        If(asChoices#0)
-  //An item has been double clicked, do something different here
+  // 項目がダブルクリックされた、何か異なることを行う
        End if
   // ...
  End case
@@ -211,7 +211,7 @@ displayed_sidebar: docs
 この例題では、[`On Getting Focus`](../Events/onGettingFocus.md) と [`On Losing Focus`](../Events/onLosingFocus.md) を使用して、フォームメソッド内でステータス情報を管理します:
 
 ```4d
-  //[Contacts];"Data Entry" form method
+  // [Contacts];"Data Entry" フォームメソッド
  Case of
     :(Form event code=On Load)
        var vtStatusArea : Text
@@ -220,10 +220,10 @@ displayed_sidebar: docs
        RESOLVE POINTER(Focus object;$vsVarName;$vlTableNum;$vlFieldNum)
        If(($vlTableNum#0)&($vlFieldNum#0))
           Case of
-             :($vlFieldNum=1) //Last name field
+             :($vlFieldNum=1) // Last name フィールド
                 vtStatusArea:="Enter the Last name of the Contact; it will be capitalized automatically"
   //...
-             :($vlFieldNum=10) //Zip Code field
+             :($vlFieldNum=10) // Zip Code フィールド
                 vtStatusArea:="Enter a 5-digit zip code; it will be checked and validated automatically"
   //...
           End case
@@ -263,7 +263,7 @@ displayed_sidebar: docs
 この例題では、文字フィールドが更新されるたびに、1文字目を大文字に、それ以外を小文字に変換する方法を示します:
 
 ```4d
-  //[Contacts]First Name Object method
+  //[Contacts]First Name オブジェクトメソッド
  Case of
   //...
     :(Form event code=On Data Change)
@@ -277,7 +277,7 @@ displayed_sidebar: docs
 以下の例題では階層リストで削除アクションを管理する方法を示します:
 
 ```4d
- ... //method of hierarchical list
+ ... // 階層リストのメソッド
 :(Form event code=On Delete Action)
  ARRAY LONGINT($itemsArray;0)
  $Ref:=Selected list items(<>HL;$itemsArray;*)
@@ -302,14 +302,14 @@ displayed_sidebar: docs
 
 ## 例題 12
 
-この例題では [`On Scroll`](../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。  以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します: 以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
+この例題では [`On Scroll`](../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。  以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
 
 ```4d
  Case of
     :(Form event code=On Scroll)
-  // we take the position of the left picture
+  // 左のピクチャーの位置を取得する
        OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-  // and we apply it to the right picture
+  // そしてそれを右のピクチャーに適用する
        OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
  End case
 ```
@@ -318,7 +318,7 @@ displayed_sidebar: docs
 
 ## 例題 13
 
-リストボックスで選択されたセルの周りに赤い長方形を描画し、 リストボックスがユーザーによって垂直方向にスクロールされた場合には、その長方形を一緒に移動させたい場合を考えます。  その場合、リストボックスのオブジェクトメソッドに対して以下のように書きます: その場合、リストボックスのオブジェクトメソッドに対して以下のように書きます:
+リストボックスで選択されたセルの周りに赤い長方形を描画し、 リストボックスがユーザーによって垂直方向にスクロールされた場合には、その長方形を一緒に移動させたい場合を考えます。  その場合、リストボックスのオブジェクトメソッドに対して以下のように書きます:
 
 ```4d
  Case of
@@ -326,18 +326,18 @@ displayed_sidebar: docs
     :(Form event code=On Clicked)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-       OBJECT SET VISIBLE(*;"RedRect";True) //initialize a red rectangle
+       OBJECT SET VISIBLE(*;"RedRect";True) // 赤い四角形を初期化する
        OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
     :(Form event code=On Scroll)
        LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
        LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
        OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
-       $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
-       If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-  //to keep it simple, we only handle headers
-  //but we should handle horizontal clipping
-  //as well as scroll bars
+       $toAdd:=LISTBOX Get headers height(*;"LB1") // 重ならないようなヘッダーの高さ
+       If($ylb1+$toAdd<$y1)&($ylb2>$y2) // リストボックスで見えないなら
+  // 例題をシンプルにとどめるため、ここではヘッダーのみを管理する
+  // 実際には水平方向のクリッピングに加え
+  // スクロールバーも管理しなければなりません
           OBJECT SET VISIBLE(*;"RedRect";True)
           OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
        Else

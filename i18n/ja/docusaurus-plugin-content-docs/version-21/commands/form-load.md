@@ -48,18 +48,17 @@ displayed_sidebar: docs
 ### formData
 
 オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、 [フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。  form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
-formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。
 formData オブジェクトは、[`On Load` form event](../Events/onLoad.md)フォームイベント内で利用可能です。
 
 form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
 ### データの印刷
 
-このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
+このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
-**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレーク は生成されません。 ページブレークは開発者が別途指定する必要があります。 ページブレークは開発者が別途指定する必要があります。
+**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレーク は生成されません。 ページブレークは開発者が別途指定する必要があります。
 
-プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、 [`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。  他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。 他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
+プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、 [`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。  他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
 
 フォームのグラフィックな一貫性を保持するために、プラットフォームにかかわらず"印刷"アピアランスプロパティを適用することをお勧めします。
 
@@ -69,7 +68,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
 
-**FORM LOAD** を [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併用することで、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。 その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
+**FORM LOAD** を [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併用することで、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
 
 いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](../commands-legacy/form-unload.md)コマンドを呼び出した後にこれらをリロードする必要はありません。
 
@@ -82,7 +81,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 ## 例題 2
@@ -92,7 +91,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 ## 例題 3
@@ -101,14 +100,14 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ```4d
  FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+  // イベントやメソッドを実行することなくフォームを選択
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
  For($i;1;Size of array(arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… 処理
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD // フォームをunload するのを忘れないこと
 ```
 
 ## 例題 4
@@ -116,14 +115,14 @@ form data オブジェクトについての詳細な情報については、[`DI
 以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY TEXT(objectsArray;0) // フォームのオブジェクトを並べ替えて入れる配列
  ARRAY POINTER(variablesArray;0)
  ARRAY INTEGER(pagesArray;0)
  
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM LOAD("/RESOURCES/OutputForm.json") // フォームを読み込む
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") // オブジェクトの数を返す
 ```
 
 結果は以下のように表示されます:
@@ -144,12 +143,12 @@ form data オブジェクトについての詳細な情報については、[`DI
  OPEN PRINTING JOB
  $formData:=New object
  $formData.LBcollection:=New collection()
- ... //fill the collection with data
+ ... // コレクションにデータを入れます
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) // $formData 経由でコレクションをフォームに渡します
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // この"LB" はリストボックスで、Form.LBcollectionをデータソースとして持つとします。
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -165,7 +164,7 @@ form data オブジェクトについての詳細な情報については、[`DI
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) // ここでForm.LBcollection は利用可能です
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

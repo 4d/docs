@@ -81,18 +81,18 @@ displayed_sidebar: docs
 全てのユーザーセッションのコレクションを取得したい場合を考えます:
 
 ```4d
-  //To be executed on the server
+  // サーバー側で実行すること
  
  var $o : Object
  var $i : Integer
  var $processName;$userName : Text
 
  
- $o:=Process activity //Get process & session info
- For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
+ $o:=Process activity // プロセスとセッションの情報を取得
+ For($i;0;($o.processes.length)-1) // "processes" コレクション内をループ
     $processName:=$o.processes[$i].name
-    $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-  //use String because session object might be undefined
+    $userName:=String($o.processes[$i].session.userName) // userName へ簡単にアクセスする
+  // session オブジェクトがUndefined の場合があるのでString コマンドを必ず使用すること
  End for
 ```
 
