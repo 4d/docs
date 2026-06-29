@@ -34,15 +34,15 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName* or by the style sheet name and the *listLevelIndex* in the case of a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).<!-- END REF-->
+<!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName* or by the style sheet name and the *listLevelIndex* in the case of a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).<!-- END REF-->
 
 En *wpDoc*, pase el documento 4D Write Pro que contiene la hoja de estilo.
 
 El parámetro *styleSheetName* permite especificar el nombre de la hoja de estilo a devolver. Si el nombre de la hoja de estilo no existe en *wpDoc*, se devuelve un objeto null.
 
-If the *styleSheetName* is the root-level name of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
+Si *styleSheetName* es el nombre del nivel raíz de una hoja de estilo de lista jerárquica, puede especificar opcionalmente el parámetro *listLevelIndex* para recuperar un nivel específico de la jerarquía.
 
-- *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root-level, 2 = first sub-level, etc.).
+- *listLevelIndex* representa el nivel de la hoja de estilo en la jerarquía (1 = nivel raíz, 2 = primer subnivel, etc.).
 - Si se omite el parámetro y la hoja de estilo es jerárquica, se devuelve la hoja de estilo del nivel raíz.
 - Si el nivel solicitado no existe, se devuelve un objeto null.
 - Si la hoja de estilo no es una hoja de estilo de lista jerárquica y *listLevelIndex* es mayor que 1, se devuelve un objeto null.
@@ -55,8 +55,8 @@ Para recuperar la hoja de estilo "Main title":
  var $styleSheet : Object
  
  $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // check if the style sheet exists
-        //if not create it
+ If($styleSheet=Null) // comprobar si la hoja de estilo existe
+        //si no crearla
     $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  End if
 ```
@@ -69,14 +69,14 @@ Para recuperar un nivel específico de una hoja de estilo de lista jerárquica:
 var $rootStyle : Object
 var $subLevelStyle : Object
 
-// Retrieve root-level style sheet
+// Recuperar la hoja de estilo de nivel raíz
 $rootStyle:=WP Get style sheet(wpArea;"MainList")
 
-// Retrieve second level (first sub-level)
+// Recuperar el segundo nivel (primer subnivel)
 $subLevelStyle:=WP Get style sheet(wpArea;"MainList";2)
 
 If($subLevelStyle=Null)
-    ALERT("Requested level does not exist.")
+    ALERT("El nivel solicitado no existe.")
 End if
 ```
 

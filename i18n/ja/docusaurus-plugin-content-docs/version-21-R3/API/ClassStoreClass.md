@@ -41,7 +41,7 @@ var $myclass:=cs.EmployeeEntity
 
 Each <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` published by a component<!-- END REF --> is available as a property of the class store.
 
-The name of the class store published by a component is the component namespace as [declared in the component's Settings page](../Extensions/develop-components.md#declaring-the-component-namespace).
+コンポーネントによって公開されるクラスストアの名前は、[コンポーネントの設定ページにおいて宣言されている](../Extensions/develop-components.md#コンポーネント名前空間の宣言) コンポーネントの名前空間です。
 
 #### 例題
 

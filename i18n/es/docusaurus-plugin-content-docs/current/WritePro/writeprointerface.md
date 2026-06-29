@@ -411,19 +411,19 @@ El área Historial enumera todos los avisos enviados a la IA. Puede ocultar/most
 
 El botón Borrar permite reiniciar toda la ventana y borrar todas las interacciones. Es equivalente a cerrar/reabrir el cuadro de diálogo de IA.
 
-## Multi-level list style sheets
+## Hojas de estilo para listas de varios niveles
 
-4D Write Pro Interface allows users to create and manage [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) directly from both the toolbar and widget sidebar.
+La interfaz de 4D Write Pro permite a los usuarios crear y gestionar [listas de varios niveles](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) directamente tanto desde la barra de herramientas como desde la barra lateral de widgets.
 
-**Toolbar:**
+**Barra de herramientas:**
 
 ![](../assets/en/WritePro/wp-multi-level-list-stylesheets1.png)
 
-**Sidebar:**
+**Nota al margen:**
 
 ![](../assets/en/WritePro/wp-multi-level-list-stylesheets2.png)
 
-To manage multi-level list style sheets, click the ![](../assets/en/WritePro/wp-multi-level-list-button.png) multi-level list button.
+Para gestionar las hojas de estilo de listas de varios niveles, haga clic en el botón de listas de varios niveles ![](../assets/en/WritePro/wp-multi-level-list-button.png).
 
 When the multi-level list mode is enabled, the Style Sheets panel displays the [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets) defined in the document as well as [predefined templates](#predefined-templates).
 

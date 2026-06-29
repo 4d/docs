@@ -21,10 +21,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース                        | 内容                                      |
-| --------------------------- | --------------------------------------- |
-| 18                          | Renamed (Form event) |
-| <6 | Created                                 |
+| リリース                        | 内容                                    |
+| --------------------------- | ------------------------------------- |
+| 18                          | 名称変更(旧 Form event) |
+| <6 | Created                               |
 
 </details>
 </div>

@@ -38,7 +38,9 @@ title: データ収集
 | classUsage                                                                                                        | Object                            | 特定の言語クラスのインスタンス数                                                                                            |
 | connectionSystems                                                                                                 | Collection                        | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数                                                |
 | databases[].cacheSize                         | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
+| databases[].compatibilitySettings             | Object                            | Enabled Compatibility settings                                                                              |
 | databases[].externalDatastoreOpened           | Number                            | `Open datastore` への呼び出し回数                                                                                   |
+| databases[].fluentUI                          | Boolean                           | True if Use Fluent UI on Windows setting is checked                                                         |
 | databases[].id                                | Number                            | データベースID                                                                                                    |
 | databases[].internalDatastoreOpened           | Number                            | 外部サーバーによってデータストアが開かれた回数                                                                                     |
 | databases[].maxConcurrent4DClients            | Number                            | 回収期間の中での、(4D クライアントライセンスを使用した)同時4Dクライアントセッションの最大数                                        |
@@ -54,6 +56,7 @@ title: データ収集
 | databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガの数                                                                                 |
 | databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガの数                                                                                  |
 | databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガの数                                                                                |
+| databases[].sdi                               | Boolean                           | True if Use SDI mode on Windows setting is checked                                                          |
 | databases[].structureHash                     | Text                              |                                                                                                             |
 | databases[].uniqueID                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | databases[].uptime                            | Number                            | 二つの回収イベント間での経過時間(秒単位)                                                                    |
@@ -102,6 +105,7 @@ title: データ収集
 | numberOfWebServices                                                                                               | Number                            | Webサービスとして公開されているメソッドの数                                                                                     |
 | ODBCLogin                                                                                                         | Number                            | ODBC を使用しての `SQL LOGIN`への呼出回数                                                                               |
 | phpCall                                                                                                           | Number                            | `PHP execute` の呼び出し回数                                                                                       |
+| plugins                                                                                                           | Collection                        | List of loaded plugins                                                                                      |
 | QueryBySQL                                                                                                        | Number                            | `QUERY BY SQL` への呼出回数                                                                                       |
 | restServer                                                                                                        | Object                            | REST サーバーの情報を格納したオブジェクト                                                                                     |
 | restServer.bytesIn                                                                                | Number                            | REST サーバーで受信されたバイト                                                                                          |

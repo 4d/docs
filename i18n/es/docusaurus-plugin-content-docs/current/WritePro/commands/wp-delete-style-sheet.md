@@ -38,19 +38,19 @@ displayed_sidebar: docs
 
 Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar:
 
-- the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
+- el objeto de hoja de estilo (creado con el comando [WP New style sheet](../WritePro/commands/wp-new-style-sheet) o devuelto por el comando [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)) que se desea eliminar en el parámetro *styleSheetType*, o
 - el documento 4D Write Pro junto con el nombre de la hoja de estilo a eliminar en los parámetros *wpDoc* y *styleSheetName*.
 
-When the style sheet to delete belongs to a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets), the behavior depends on the level being removed. Puede eliminar:
+Cuando la hoja de estilo que se va a eliminar pertenece a una [hoja de estilo de lista multinivel](../user-legacy/stylesheets.md#multi-level-list-style-sheets), el comportamiento depende del nivel que se vaya a eliminar. Puede eliminar:
 
 - la hoja de estilo de nivel raíz, o
 - una hoja de estilo de subnivel específica ofreciendo el parámetro opcional *listLevelIndex*.
 
-When you delete the root-level style sheet (by passing 1 in the *listLevelIndex* parameter or ommitting it), all associated sub-level style sheets are deleted automatically and the entire hierarchical structure is removed from the document.
+Al eliminar la hoja de estilo de nivel raíz (pasando el valor 1 en el parámetro *listLevelIndex* u omitiendo dicho parámetro), todas las hojas de estilo de subniveles asociadas se eliminan automáticamente y toda la estructura jerárquica se suprime del documento.
 
 Al eliminar una hoja de estilo de subnivel:
 
-- The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
+- El índice `wk list level index` de todas las hojas de estilo de sub-nivel subsiguientes se decrementa para mantener la numeración continua de los niveles.
 - Los nombres de las hojas de estilo de subnivel afectadas se actualizan para reflejar su nuevo índice de nivel.
 - El atributo `wk list level count` de la hoja de estilo raíz y todas las hojas de estilo de subnivel restantes se decrementan para que coincidan con el nuevo número total de niveles.
 
