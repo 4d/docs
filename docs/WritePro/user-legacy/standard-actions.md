@@ -13,12 +13,12 @@ The user interface of 4D Write Pro areas can be handled through a wide set of **
 * buttons, check boxes,
 * or executed by the [INVOKE ACTION](../../commands/invoke-action) command.
 
-When assigned to interface objects, standard actions handle the activation/disabling of the object depending on the context. For more information, please refer to the *Standard actions* section.
+When assigned to interface objects, standard actions handle the activation/disabling of the object depending on the context. For more information, please refer to the [Standard actions](../../Desktop/standard-actions) main section.
 
 Two kinds of actions are available for 4D Write Pro areas:
 
 * 4D Write Pro specific actions, that can be used only with 4D Write Pro areas,
-* [Other actions](#other-actions), including fonts, expressions, spell check, and editing actions, that can be used with 4D Write Pro areas and other 4D areas (see *Standard actions*).
+* Other actions, including fonts, expressions, spell check, and editing actions, that can be used with 4D Write Pro areas and other 4D areas (see [Standard actions](../../Desktop/standard-actions) main section).
 
 ### 4D Write Pro actions 
 
@@ -175,11 +175,3 @@ The following standard actions are available with 4D Write Pro areas.
 | zoom | zoom?value={25% <= percentage in Css <= 400%} | Document, Submenu | Changes document view zoom.  Ex: zoom?value=120% | 
 
   
-### Other actions 
-
-[Several other standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) are available in 4D forms and can be used in 4D Write Pro areas:
-
-* *Edit actions*, such as copy/paste actions.
-* *Font* actions, such as fontBold or fontSize.
-* *Dynamic expressions* actions, allowing to handle inserted expressions..
-* *Spellchecking* actions.

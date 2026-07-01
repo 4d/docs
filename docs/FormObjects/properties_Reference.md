@@ -223,6 +223,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`webEngine`](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[`width`](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
 |[`withFormulaBar`](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
-|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"<a id="z"></a>|
+|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"|
+|[`writingTools`](properties_Entry.md#writing-tools) |Manages the availability of local AI-based Writing Tools. | true, false<a id="z"></a>|
 |**z**|||
 |[`zoom`](properties_Appearance.md#zoom)|Zoom percentage for displaying 4D Write Pro area|number (minimum=0)|
