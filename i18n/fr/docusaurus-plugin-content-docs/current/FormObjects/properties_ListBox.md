@@ -31,7 +31,7 @@ Indique le formulaire à utiliser pour modifier ou afficher les enregistrements 
 
 Le formulaire spécifié est affiché :
 
-- lors de l'utilisation des actions standard `Add Subrecord` et `Edit Subrecord` appliquées à la listbox (voir [Utiliser des actions standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
+- when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](/Desktop/standard-actions)),
 - lorsqu'on double-clique sur une ligne et que la propriété [Double-clic sur ligne](#double-click-on-row) est définie sur "Editer l'enregistrement" ou "Afficher l'enregistrement".
 
 #### Grammaire JSON

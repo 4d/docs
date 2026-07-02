@@ -54,7 +54,7 @@ JavaScript 内での日付はオブジェクトであるため、他のオブジ
 
 JavaScript 日付オブジェクトのJSON 形式は、ISO 8601 標準に準拠しています。例: "2013-08-23T00:00:00Z"。 このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です:
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+[`JSON Parse`](../commands-legacy/json-parse.md) コマンドを使用する:
 
 ```4d
  var $dateIso : Text // ISO フォーマットの日付を受け取る
@@ -62,7 +62,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
 
-Using the [`Date`](../commands-legacy/date.md) command:
+[`Date`](../commands-legacy/date.md) コマンドを使用する:
 
 ```4d
  var $dateIso : Text // ISO フォーマットの日付を受け取る
@@ -70,10 +70,10 @@ Using the [`Date`](../commands-legacy/date.md) command:
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+これら2つの解決策の違いに注意してください: [`JSON Parse`](../commands-legacy/json-parse.md) は[`SET DATABASE PARAMETER` を使用して設定された変換モード](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) に準拠する(あれば)一方で、[`Date`](../commands-legacy/date.md) コマンドはこれの影響を受けません。 [`Date`](../commands-legacy/date.md) コマンドを使用した変換は常にローカルのタイムゾーンを考慮します。
 
 :::note
 
-When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+カレントの日付保存設定が[`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (デフォルト)だった場合、"YYYY-MM-DD" フォーマットのJSON 日付文字列は[`JSON Parse`](../commands-legacy/json-parse.md) および [`Date`](../commands-legacy/date.md) コマンドの両方において自動的に日付値として管理されます。
 
 :::

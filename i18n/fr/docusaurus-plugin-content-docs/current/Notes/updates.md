@@ -9,6 +9,7 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 
 #### Points forts
 
+- IA: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
 - Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
 - Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
 - New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
@@ -93,7 +94,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | Libuv           | 1.52.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
-| ngtcp2          | 1.22.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
+| ngtcp2          | 1.24.0 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL         | 4.0                    | **21 R4**           |                                                                                                                                                       |
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |

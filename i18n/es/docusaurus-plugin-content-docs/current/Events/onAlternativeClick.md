@@ -15,7 +15,7 @@ Algunos estilos de botón pueden ser [vinculados a un menú emergente](FormObjec
 
 4D permite gestionar este tipo de botones utilizando el evento `On Alternative Click`. Este evento se genera cuando el usuario hace clic en el triángulo (en cuanto se mantiene presionado el botón del ratón):
 
-- Si el menú emergente está **separado**, el evento sólo se genera cuando se hace clic en la parte del botón con la flecha. Tenga en cuenta que la [acción estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) asignada al botón (si existe) no se ejecuta en este caso.
+- Si el menú emergente está **separado**, el evento sólo se genera cuando se hace clic en la parte del botón con la flecha. Note that the [standard action](/Desktop/standard-actions) assigned to the button (if any) is not executed in this case.
 - Si el menú emergente está **asociado**, el evento se genera cuando se hace clic en cualquier parte del botón. Tenga en cuenta que el evento [`On Long Click`](onLongClick.md) no se puede generar con este tipo de botón.
 
 ![](../assets/en/Events/clickevents.png)

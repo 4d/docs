@@ -165,7 +165,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## Acciones estándar
 
-Existen cuatro acciones estándar específicas para gestionar automáticamente las áreas web: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` y `Stop Loading URL`. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas.
+Existen cuatro acciones estándar específicas para gestionar automáticamente las áreas web: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` y `Stop Loading URL`. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas. These actions are described in [Standard actions](/Desktop/standard-actions).
 
 ## Eventos formulario
 

@@ -63,7 +63,7 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 <!-- REF multi-level-list-style-sheets.Desc -->
 
-## Multi-level list style sheets
+## Hojas de estilo para listas de varios niveles
 
 Multi-level list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
@@ -105,7 +105,7 @@ resultado:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Para eliminar el primer subnivel:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
@@ -115,7 +115,7 @@ resultado:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valores de atributos predefinidos
 
 When created, multi-level list style sheets use predefined values:
 

@@ -96,7 +96,7 @@ Le copier-coller ou le glisser-déposer de certains objets dans la bibliothèque
 
 Voici la liste des objets dépendants qui seront collés dans la bibliothèque en même temps que l’objet principal qui les utilise (le cas échéant) :
 
-- Lists
+- Listes
 - Formats/Filtres
 - Images
 - Messages d’aide (liés à un champ)

@@ -4,9 +4,9 @@ title: cs
 displayed_sidebar: docs
 ---
 
-| Paramètres | Type                                                       |                             | Description                                   |
-| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------------------------- |
-| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | User class store for the project or component |
+| Paramètres | Type                                                       |                             | Description                                            |
+| ---------- | ---------------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store utilisateur pour le projet ou le composant |
 
 <div class="no-index">
 <details><summary>Historique</summary>

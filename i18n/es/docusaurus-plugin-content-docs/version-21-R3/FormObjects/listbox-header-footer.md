@@ -1,6 +1,6 @@
 ---
 id: listbox-header-footer
-title: List Box Header and Footer
+title: Encabezado y pie de List Box
 ---
 
 :::note

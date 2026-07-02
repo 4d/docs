@@ -166,7 +166,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## 標準アクション
 
-Webエリアを自動で管理するために、4つの特別な自動アクションを使用できます: `Open Back URL`、 `Open Forward URL`、 `Refresh Current URL` そして`Stop Loading URL` です。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。
+Webエリアを自動で管理するために、4つの特別な自動アクションを使用できます: `Open Back URL`、 `Open Forward URL`、 `Refresh Current URL` そして`Stop Loading URL` です。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 These actions are described in [Standard actions](/Desktop/standard-actions).
 
 ## フォームイベント
 

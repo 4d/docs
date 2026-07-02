@@ -191,15 +191,15 @@ Dans d'autres cas (list box basées sur des sélections nommées, colonnes assoc
 
 ## Action standard
 
-Les actions types effectuées par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de passer d'un enregistrement à l'autre ou d'une page à l'autre dans un formulaire à plusieurs pages, etc.) ont été prédéfinies par 4D comme des actions standard. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) du *manuel de développement*. Il existe également des [actions standard spécifiques aux zones 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
+Les actions types effectuées par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de passer d'un enregistrement à l'autre ou d'une page à l'autre dans un formulaire à plusieurs pages, etc.) ont été prédéfinies par 4D comme des actions standard. They are described in detail in the [Standard actions](/Desktop/standard-actions) section of the *Design Reference*. Il existe également des [actions standard spécifiques aux zones 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
 
 Vous pouvez associer à la fois une action standard et une méthode projet à un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles                                                                                                                                                                                                  |
-| ------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| action | string          | Le nom d'une [action standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) ou d'une [action standard 4D Write Pro](../WritePro/user-legacy/standard-actions.md) valide. |
+| Nom    | Type de données | Valeurs possibles                                                                                                                                                      |
+| ------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action | string          | Le nom d'une [action standard](/Desktop/standard-actions) ou d'une [action standard 4D Write Pro](../WritePro/user-legacy/standard-actions.md) valide. |
 
 #### Objets pris en charge
 

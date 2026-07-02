@@ -15,7 +15,7 @@ The `4D.QuotaManager` class provides you with an interface to configure and moni
 
 </details>
 
-### QuotaManager Object
+### Objeto QuotaManager
 
 4D.QuotaManager objects provide the following properties:
 

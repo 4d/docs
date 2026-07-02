@@ -105,7 +105,7 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Para eliminar el primer subnivel:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
@@ -115,7 +115,7 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valores de atributos predefinidos
 
 Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores predefinidos:
 

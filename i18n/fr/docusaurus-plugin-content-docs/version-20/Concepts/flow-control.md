@@ -59,7 +59,7 @@ L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même 
  End if
 ```
 
-However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+Cependant, la solution la plus élégante consiste alors à utiliser [l'opérateur de court-circuit`&&` ](./operators.md#short-circuit-and-operator-) et à écrire :
 
 ```4d
 If (MethodA && MethodB)

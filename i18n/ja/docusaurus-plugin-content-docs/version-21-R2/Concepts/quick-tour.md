@@ -431,5 +431,5 @@ End for
 
 - 中カッコ `{ }` は、任意のパラメーターを示します。 たとえば、`.delete( { option : Integer } )` という表記の場合、関数を呼び出す際に *option* パラメーターを省略することができます。
 - `any` キーワードは、あらゆる型(数値、テキスト、ブール、日付、時間、オブジェクト、コレクション、など)が可能な引数に対して使用されます。
-- the `; *...param* : Type` notation indicates from 0 to an unlimited number of parameters of the same type. たとえば、`.concat( value : any { ;...valueN : any } ) : Collection` という表記の場合、あらゆる型の引数を数に制限なく関数に渡すことができます。
-- `...(*param* : Type ; *param2* : Type)` という表記は、グループの引数を1つから無制限に受け付けることを意味します。 `...(*param* : Type ; *param2* : Type)` という表記は、グループの引数を1つから無制限に受け付けることを意味します。 例えば、`COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` という表記は、値またはテキスト型配列のペアを無制限にコマンドに渡すことができるということを意味します。
+- `; *...param* : Type` という表記は、同じ型の引数を 0 から無制限に受け付けることを意味します。 たとえば、`.concat( value : any { ;...valueN : any } ) : Collection` という表記の場合、あらゆる型の引数を数に制限なく関数に渡すことができます。
+- `...(*param* : Type ; *param2* : Type)` という表記は、グループの引数を1つから無制限に受け付けることを意味します。 例えば、`COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` という表記は、値またはテキスト型配列のペアを無制限にコマンドに渡すことができるということを意味します。

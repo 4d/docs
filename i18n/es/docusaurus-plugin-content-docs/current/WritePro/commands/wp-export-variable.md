@@ -159,9 +159,9 @@ Para exportar la primera página de un 4D Write Pro como SVG en una variable Tex
 
 ## Ver también
 
-[4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
-[Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
-[Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
-[Exporting to HTML and MIME HTML formats](../user-legacy/exporting-to-html-and-mime-html-formats.md)<br/>
-[Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md)<br/>
+[4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)
+[Blog - 4D Write Pro: generación de facturas electrónicas](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
+[Blog post - 4D Write Pro: Exportar a PDF con cerrados](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
+[Exportar a formatos HTML y MIME HTML](../user-legacy/exporting-to-html-and-mime-html-formats.md)<br/>
+[Importar y exportar al formato docx](../user-legacy/importing-and-exporting-in-docx-format.md)<br/>
 [WP EXPORT DOCUMENT](../commands/wp-export-document)

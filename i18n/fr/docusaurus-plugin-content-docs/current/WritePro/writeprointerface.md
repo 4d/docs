@@ -314,6 +314,12 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 :::
 
+:::note Writing Tools (macOS)
+
+On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can proofread, rewrite, summarize, or change the tone of text directly within their documents, you might consider using the [Writing Tools feature](../FormObjects/properties_Entry.md#writing-tools).
+
+:::
+
 ### Limitations
 
 In the current implementation, the feature has the following limitations:

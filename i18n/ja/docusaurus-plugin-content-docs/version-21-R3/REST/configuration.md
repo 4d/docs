@@ -70,7 +70,7 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. Uncheck the **Expose as REST resource** for the field.<br/>
+2. フィールドの **RESTリソースとして公開** オプションの選択を解除します。<br/>
    ![alt-text](../assets/en/REST/field.png)<br/>
    Repeat this for each field whose exposure needs to be modified.
 

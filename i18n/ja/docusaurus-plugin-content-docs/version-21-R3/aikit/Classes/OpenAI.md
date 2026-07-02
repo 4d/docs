@@ -5,7 +5,7 @@ title: OpenAI
 
 # OpenAI
 
-`OpenAI` クラスは、様々なOpenAI API リソースにアクセスするためのクライアントを提供します。 これにはAPI 設定を管理するプロパティやOpenAI エンドポイントへの HTTPリクエストを実行するためのメソッドなどが含まれます。 これにはAPI 設定を管理するプロパティやOpenAI エンドポイントへの HTTPリクエストを実行するためのメソッドなどが含まれます。
+`OpenAI` クラスは、様々なOpenAI API リソースにアクセスするためのクライアントを提供します。 これにはAPI 設定を管理するプロパティやOpenAI エンドポイントへの HTTPリクエストを実行するためのメソッドなどが含まれます。
 
 ## 設定プロパティ
 
@@ -58,7 +58,7 @@ $client.baseURL:="https://server.ai"
 
 ## APIリソース
 
-API はOpenAI のサービスとシームレスにやりとりすることを可能にする複数のリソースへのアクセスを提供します。 それぞれのリソースは専用のAPI クラスにカプセル化されており、様々な機能と対話するための構造化された、直感的な方法を提供しています。 それぞれのリソースは専用のAPI クラスにカプセル化されており、様々な機能と対話するための構造化された、直感的な方法を提供しています。
+API はOpenAI のサービスとシームレスにやりとりすることを可能にする複数のリソースへのアクセスを提供します。 それぞれのリソースは専用のAPI クラスにカプセル化されており、様々な機能と対話するための構造化された、直感的な方法を提供しています。
 
 | プロパティ名        | 型                                               | 説明                 |
 | ------------- | ----------------------------------------------- | ------------------ |
@@ -78,11 +78,11 @@ $client.files.create(...)
 $client.model.lists(...)
 ```
 
-## Provider Model Aliases
+## プロバイダーモデルエイリアス
 
-The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
+OpenAI クライアントは、複数のプロバイダーの使用を容易にするための、プロバイダーモデルエイリアスをサポートしています。 完全なドキュメンテーションについては[プロバイダーモデルエイリアス](../provider-model-aliases.md) を参照してください。
 
-You can construct an OpenAI client using a pre-configured provider name. This allows you to easily switch between different AI providers (OpenAI, Anthropic, etc.) without specifying the full configuration each time.
+定義済みのプロバイダー名を使用して、OpenAI クライアントを構築することができます。 これを使用することで、異なるAI プロバイダー(OpenAI、Anthropic、など)を、 毎回完全な設定を指定することなく切り替えることを可能にします。
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})

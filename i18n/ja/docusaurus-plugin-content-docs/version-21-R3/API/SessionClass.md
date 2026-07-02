@@ -516,18 +516,18 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                                                                                                                 |
-| ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                                                                                                    |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                         |
-| machineName      | Text                             | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
-| systemUserName   | Text                             | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
-| IPAddress        | Text                             | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
-| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                                                                                                            |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                                                                                                   |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                        |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                                  |
-| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                                                                                                     |
+| プロパティ            | 型                                | 説明                                                                                                                                       |
+| ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                          |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                               |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシン名。</li><li>クライアントセッション: ローカルマシン名</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li> スタンドアロンセッション: マシンの名前</li></ul> |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前。</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                             |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                    |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                  |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                         |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                              |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                        |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                           |
 
 :::note
 

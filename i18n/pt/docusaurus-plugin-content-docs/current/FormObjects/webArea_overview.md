@@ -165,7 +165,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## Ações padrão
 
-Quatro ações padrão específicas estão disponíveis para gerenciar áreas da Web automaticamente: `Abrir URL anterior`, `Abrir URL anterior`, `Refrescar URL atual` e `Parar de carregar URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas.
+Quatro ações padrão específicas estão disponíveis para gerenciar áreas da Web automaticamente: `Abrir URL anterior`, `Abrir URL anterior`, `Refrescar URL atual` e `Parar de carregar URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. These actions are described in [Standard actions](/Desktop/standard-actions).
 
 ## Eventos formulário
 

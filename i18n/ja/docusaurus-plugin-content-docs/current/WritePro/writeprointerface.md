@@ -317,6 +317,12 @@ AI 機能を有効化すると、4D Write Pro ドキュメント上にチャッ�
 
 :::
 
+:::note Writing Tools (macOS)
+
+On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can proofread, rewrite, summarize, or change the tone of text directly within their documents, you might consider using the [Writing Tools feature](../FormObjects/properties_Entry.md#writing-tools).
+
+:::
+
 ### 制約
 
 現在の実装では、この機能では以下のような制約があります:
