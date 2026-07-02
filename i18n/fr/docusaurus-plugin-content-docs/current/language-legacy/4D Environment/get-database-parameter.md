@@ -124,7 +124,7 @@ Portée : 4D local, 4D Server
 
 **Valeurs possibles** : entier long > 1 (secondes)
 
-**Description** : Permet de lire ou de fixer la valeur courante de périodicité de l'écriture du cache de données sur le disque, exprimée en secondes. Si elle est modifiée, cette valeur remplace la valeur définie par l'option **Ecriture cache toutes les <n> secondes/minutes** dans la [XML DECODE](../commands/xml-decode) des Propriétés de la base durant la session courante (elle n'est pas stockée dans les Propriétés de la base).
+**Description** : Permet de lire ou de fixer la valeur courante de périodicité de l'écriture du cache de données sur le disque, exprimée en secondes. Si elle est modifiée, cette valeur remplace la valeur définie par l'option **Ecriture cache toutes les <n> secondes/minutes** dans la [page Base de données](../../settings/database.md) des paramètres durant la session courante (elle n'est pas stockée dans les paramètres).
 
 
 

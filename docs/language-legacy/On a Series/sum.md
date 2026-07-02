@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Sum.Summary-->The **Sum** command returns the sum (total of all values) for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to total the values.
+<!--REF #_command_.Sum.Summary-->The **Sum** command returns the sum (total of all values) for *series*.<!-- END REF--> If *series* is a field, the command uses to current selection ot the parent table; if it is indexed, the index is used to total the values.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
 

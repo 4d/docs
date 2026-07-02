@@ -124,3 +124,31 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
   Si chaque opération d’écriture du cache est accompagnée d’un fort ralentissement de la base de données, il faut ajuster la fréquence. Ce symptôme signifie une sauvegarde massive d’enregistrements. Dans ce cas, une fréquence d’écriture plus élevée, donc plus rapide, est plus efficace.
 
   Par défaut, 4D affiche une petite fenêtre lors de l'écriture du cache. Si vous ne voulez pas ce rappel visuel, vous pouvez désélectionner l'option **Ecriture du cache** dans la [Page Interface](./interface.md).
+
+:::note
+
+Vous pouvez modifier temporairement la fréquence d'écriture du cache à l'aide du [sélecteur `Cache flush periodicity` de la commande `SET DATABASE PARAMETER`](../commands/set-database-parameter#cache-flush-periodicity-95).
+
+:::
+
+
+
+
+### Gestion des priorités dans le cache de la base de données
+
+Le cache de la base de données 4D inclut un mécanisme automatique de gestion des priorités qui offre un haut niveau d'efficacité et de performance pour l'accès aux données. Grâce à ce mécanisme, lorsque de l'espace est nécessaire pour charger de nouvelles données dans le cache, les données mises en cache de faible priorité sont libérées en premier, tandis que les données mises en cache de priorité plus élevée restent chargées.
+
+Ce mécanisme est entièrement automatique et, en général, vous n'aurez pas à vous en préoccuper. Toutefois, pour des cas spécifiques, il peut être personnalisé à l'aide d'un [ensemble de commandes dédiées du thème "Gestion du cache"](../commands/theme/Cache_Management.md), qui permettent de modifier la priorité des objets pendant toute la durée de fonctionnement de la base, ou temporairement pour le process courant. Notez que ces commandes doivent être utilisées avec précaution car elles affectent les performances de la base de données.
+
+#### Présentation de la gestion des priorités
+
+Le gestionnaire de cache sélectionne les données à retirer du cache si nécessaire à l'aide d'un système de priorités. Les trois types d'objets pouvant être chargés dans le cache ont une priorité différente :
+
+- **tables** : toutes les données de champs standard (numériques, dates, etc.), à l'exclusion des blobs (voir ci-dessous). La priorité par défaut est moyenne.
+- **blobs** : toutes les données de champs binaires (texte, image, objet et blobs) stockées dans le fichier de données. La priorité par défaut est la plus basse.
+- **index** : tous les index de champs, y compris les index par mots-clés et les index composites. Étant donné que les index sont fréquemment consultés, ils ont un statut spécial dans le cache. La priorité par défaut est la plus élevée. 
+
+Les priorités par défaut offrent généralement les meilleures performances. Toutefois, pour des cas spécifiques, vous pouvez personnaliser les priorités du cache à l'aide de deux ensembles de commandes 4D :
+
+- Les commandes qui modifient les priorités pour toute la session et tous les process : [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority), et [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). Ces commandes doivent être utilisées dans une méthode base sur ouverture.
+- Les commandes qui modifient les priorités uniquement pour le process courant : [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority), et [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Utilisez ces commandes pour améliorer les performances d'une opération temporaire sur votre base et revenir aux priorités initiales une fois l'opération terminée. Ces commandes sont disponibles uniquement sur 4D Server ou 4D en mode local.

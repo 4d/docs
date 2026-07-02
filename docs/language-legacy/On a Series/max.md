@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Max.Summary-->**Max** returns the maximum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the maximum value.
+<!--REF #_command_.Max.Summary-->**Max** returns the maximum value in *series*.<!-- END REF--> If *series* is a field, the command uses to current selection ot the parent table; if it is indexed, the index is used to find the maximum value.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint, Real, or Date type.
 

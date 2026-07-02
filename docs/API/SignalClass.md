@@ -5,19 +5,15 @@ title: Signal
 
 Signals are tools provided by the 4D language to manage interactions and avoid conflicts between processes in a multiprocess application. Signals allow you to make sure one or more process(es) will wait for a specific task to be completed before continuing execution. Any process can wait and/or release a signal.
 
-> Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
+:::note
 
+[Semaphores](../Develop/processes.md#semaphores) can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Only the process that sets the semaphore can remove it.
+
+:::
 
 ### Signal Object
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
-
-A `4D.Signal` object contains the following built-in methods and properties:
-
-- [`.wait()`](#wait)
-- [`.trigger()`](#trigger)
-- [`.signaled`](#signaled)
-- [`.description`](#description).
 
 Any worker/process calling the `.wait()` method will suspend its execution until the `.signaled` property is true. While waiting for a signal, the calling process does not use any CPU. This can be very interesting for performance in multiprocess applications. The `.signaled` property becomes true when any worker/process calls the `.trigger()` method.
 
