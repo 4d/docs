@@ -3,7 +3,7 @@ id: DataClassClass
 title: DataClass
 ---
 
-[データクラス](ORDA/dsMapping.md#データクラス) はデータベーステーブルへのオブジェクトインターフェースを提供します。  [データクラス](ORDA/dsMapping.md#データクラス) はデータベーステーブルへのオブジェクトインターフェースを提供します。  4Dアプリケーション内のデータクラスはすべて、`ds` [データストア](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。
+[データクラス](ORDA/dsMapping.md#データクラス) はデータベーステーブルへのオブジェクトインターフェースを提供します。  4Dアプリケーション内のデータクラスはすべて、`ds` [データストア](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。
 
 ### 概要
 
@@ -1224,7 +1224,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 | --------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                          |
 | metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 以下の(テキスト)定数のいずれか一つを使用できます:<li>`mk cosine` (省略時のデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>`mk dot`: ベクトルのドット類似度を計算します。</li><li>`mk euclidean`: ベクトル間のユークリッド距離を計算します。 |
-| threshold | Real                                               | 任意(デフォルト: 0.5)。 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。           |
+| threshold | Real                                               | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                  |
 
 **comparator** 記号の、一部のみがサポートされます。 これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください: これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
@@ -1248,12 +1248,12 @@ var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //the first entity is the most similar
+  // 最初のエンティティが最も類似したもの
 ```
 
 :::note
 
-The default order is ascending, although a descending order is usually the most useful for vector similarity queries. Thus, you will usually have to add the `desc` keyword in your vector similarity query strings.
+デフォルトの並べ替え順は昇順ですが、ベクトル類似度クエリにおいては、通常は降順の方が最も有用です。 そのため、ベクトル類似度クエリ文字列においては一般的に `desc` キーワードを追加する必要があります。
 
 :::
 
@@ -1261,7 +1261,7 @@ The default order is ascending, although a descending order is usually the most 
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
+    {vector : $myVector1 };{vector : $myVector2 })  // myVectorField > :1 はorder by に使用されます
 ```
 
 詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。

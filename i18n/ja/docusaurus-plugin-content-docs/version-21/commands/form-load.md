@@ -23,12 +23,12 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                              |
-| ----- | ----------------------------------------------- |
-| 20    | 変更                                              |
-| 16 R6 | 変更                                              |
-| 14    | Renamed (OPEN PRINTING FORM) |
-| 12    | Created                                         |
+| リリース  | 内容                                             |
+| ----- | ---------------------------------------------- |
+| 20    | 変更                                             |
+| 16 R6 | 変更                                             |
+| 14    | 名称変更 (旧 OPEN PRINTING FORM) |
+| 12    | Created                                        |
 
 </details>
 </div>

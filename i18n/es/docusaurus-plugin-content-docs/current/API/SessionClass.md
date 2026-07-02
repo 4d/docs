@@ -499,10 +499,10 @@ End if
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 21 R4       | New *unreachableSince* property |
-| 20 R5       | Añadidos                        |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 21 R4       | Nueva propiedad *unreachableSince* |
+| 20 R5       | Añadidos                           |
 
 </details>
 
@@ -518,19 +518,19 @@ La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión<
 
 El objeto `.info` contiene las siguientes propiedades:
 
-| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                        |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                           |
-| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                 |
-| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre de la máquina servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul> |
-| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión del sistema local.</li><ul>                                                                                  |
-| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                            |
-| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                         |
-| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                                |
-| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                             |
-| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                                |
-| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                                    |
-| unreachableSince | Integer       | Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property.            |
+| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                                   |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                                      |
+| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                            |
+| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre de la máquina servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul>            |
+| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión del sistema local.</li><ul>                                                                                             |
+| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                                       |
+| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                                    |
+| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                                           |
+| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                                        |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                                           |
+| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                                               |
+| unreachableSince | Integer       | Sesiones remotas: número de segundos desde que no se puede contactar con el nodo. En 4D Server, este atributo se puede consultar en la propiedad [`Process activity.sessions`](../commands/process-activity). |
 
 :::note
 
@@ -694,7 +694,7 @@ End if
 
 #### Descripción
 
-The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+La propiedad `.quotas` contiene <!-- REF #SessionClass.quotas.Summary -->un objeto `4D.QuotaManager` con los valores actuales y los valores establecidos para los umbrales del servidor en la sesión actual<!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
 
 Esta propiedad es **solo lectura**.
 

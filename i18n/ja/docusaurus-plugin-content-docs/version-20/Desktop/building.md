@@ -332,12 +332,12 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 この機能を利用するには、**[...]** ボタンをクリックして、アップデートに使用するファイルのディスク上の場所を指定する必要があります。 選択するファイルは、現在のサーバープラットフォームによって異なります:
 
-| 現在のサーバープラットフォーム | 必要なファイル                                                   | 詳細                                                                                                                                                                                                                                                                                             |
-| --------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | By default, you can select the `4D Volume Desktop` application for Windows. However, **it is recommended** to select a `.4darchive` file previously built on Windows for proper icon management and to preserve a signed .exe after updates. To do so, press **Shift** while clicking on [...] |
-| Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                                                                                                                                                                                |
+| 現在のサーバープラットフォーム | 必要なファイル                                                   | 詳細                                                                                                                                                                                                             |
+| --------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| macOS           | Windows用4D Volume Desktop *または* Windows クライアントアップデートアーカイブ | デフォルトでは、Windows用の `4D Volume Desktop` アプリケーションを選択することができます。 しかしながら、更新後にも適切なアイコン管理、そして署名された.exe ファイルを保持するためにも事前にWindows 用にビルドされた`.4darchive` ファイルを使用することが、**推奨されます**。 これを行うためには、**Shift** を押しながら[...] をクリックします。 |
+| Windows         | macOS クライアントアップデートアーカイブ                                   | 前もって macOS でビルドされた署名入り `.4darchive` ファイルを選択します。                                                                                                                                                                |
 
-You can build a specific `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
+[**クライアントアプリケーションをビルド**](#build-client-application) と [**自動更新を有効にする**](#copy-of-client-applications-inside-the-server-application) オプションのみを選択することで、サーバーとは異なるプラットフォーム上で `.4darchive` ファイルをビルドすることができます。
 
 #### 更新通知の表示
 

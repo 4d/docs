@@ -1241,7 +1241,7 @@ Por ejemplo, se desea devolver entidades de MyClass donde la similaridad con un 
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+$myVector := getVector ///método para obtener un vector, por ejemplo a partir de 4D.AIKit
 var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
@@ -1250,7 +1250,7 @@ La instrucción **orden by** es soportada en la cadena de consulta para que las 
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //$results.first() entity is the most similar
+  //$results.first() la entidad es la más similar
 ```
 
 :::note
@@ -1267,7 +1267,7 @@ Solo se puede ordenar en un único campo vectorial. Si el mismo vector aparece v
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  
-    //myVectorField > :1 is used for the order by
+    //myVectorField > :1 se utiliza para la ordenación
 ```
 
 Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).

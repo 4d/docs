@@ -13,7 +13,7 @@ Las páginas Cliente-Servidor agrupan los parámetros relacionados con el uso de
 
 Esta opción le permite indicar si la base de datos 4D Server aparecerá o no en la lista de bases de datos publicadas.
 
-- Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña**Disponible**).
+- Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña **Disponible**).
 - Cuando la opción no está marcada, la base de datos no se hace pública y no aparece en la lista de bases de datos publicadas. Para conectarse, los usuarios deben introducir manualmente la dirección de la base de datos en la pestaña **Personalizada** de la caja de diálogo de conexión.
 
 :::note
@@ -65,19 +65,19 @@ Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar est
 
 #### Capa de red
 
-This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
+Esta lista desplegable contiene las capas de red disponibles, que se utilizan para gestionar las comunicaciones entre 4D Server y los equipos 4D remotos (clientes).
 
 - **QUIC** (sólo proyectos): activa la capa de red QUIC en el servidor.
 
   **Notas sobre QUIC**:
 
-  - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
+  - Puede saber si una aplicación 4D se está ejecutando con la capa de red QUIC utilizando el comando [`Application info`](../commands/application-info).
   - Dado que QUIC utiliza el protocolo UDP, asegúrese de que UDP está permitido en la configuración de seguridad de su red.
-  - QUIC automatically connects to the port 19813 for both [application server and DB4D server](#4d-server-and-port-numbers).
+  - QUIC se conecta automáticamente al puerto 19813 tanto para el [servidor de aplicaciones como para el servidor DB4D](#4d-server-and-port-numbers).
   - Cuando se selecciona la opción de capa QUIC:
     - [los parámetros del tiempo de espera de las conexiones cliente-servidor](#client-server-connections-timeout) están ocultos
-    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
-  - **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
+    - La casilla de verificación [Encriptar comunicación Cliente-Servidor](#encrypt-client-server-communications) está oculta (las comunicaciones QUIC son siempre en TLS, sea cual sea su modo seguro).
+  - \*\*Compatibilidad: necesita desplegar sus aplicaciones cliente/servidor con 4D 20 o superior antes de cambiar a la capa de red QUIC.
 - **ServerNet** (sólo disponible para bases binarias): activa la capa de red ServerNet en el servidor.
 
 :::info

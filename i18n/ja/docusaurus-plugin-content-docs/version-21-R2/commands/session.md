@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 | リリース  | 内容                               |
 | ----- | -------------------------------- |
-| 20 R8 | Support of standalone sessions   |
+| 20 R8 | スタンドアロンセッションのサポート                |
 | 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
 | 18 R6 | 追加                               |
 
@@ -72,7 +72,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 ### ストアドプロシージャーセッション
 
-すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます: ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
+すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。  ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
 - [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
