@@ -739,7 +739,7 @@ End if
 #### Description
 
 
-The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
 
 This property is **read only**. 
 

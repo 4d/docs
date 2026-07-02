@@ -250,6 +250,7 @@ module.exports =
             "API/MethodClass",
             "API/OutgoingMessageClass",
             "API/POP3TransporterClass",
+            "API/QuotaManagerClass",
             "API/SessionClass",
             "API/SignalClass",
             "API/SMTPTransporterClass",
