@@ -121,11 +121,11 @@ When this option is checked, all the 4D remote machines connecting to the databa
 
 :::note
 
-This option is not available when the [QUIC](#network-layer) network layer option is selected. 
+This option is not available when the [QUIC](#network-layer) network layer option is selected. QUIC communications are always in TLS, whatever your secured mode is.
 
 :::
 
-This option lets you activate the secured mode for communications between the server machine and the 4D remote machines. This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html) section.
+This option activates the [secured mode for communications](../Admin/tls.md#enabling-tls-with-the-other-servers) between the server machine and the 4D remote machines with ServerNet netword layer. 
 
 #### Update Resources folder during a session  
 
@@ -156,3 +156,16 @@ The behavior of the configuration table is as follows:
 
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.
 
+### Support of IPv6 
+
+4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
+
+||4D remote IPv4 only|4D remote IPv6 only|4D remote both|
+|---|---|---|----|
+|4D Server IPv4 only|IPv4|*not supported*|IPv4|
+|4D Server IPv6 only|*not supported*|IPv6|IPv6|
+|4D Server both|IPv4|IPv6|IPv6|
+
+For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
+
+Compatibility note: IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).

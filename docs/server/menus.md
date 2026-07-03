@@ -134,21 +134,17 @@ Displays the start page of your Qodly application in your default browser on the
 
 ### Maintenance Security Center  
 
-This command displays the Maintenance and Security Center (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up and compacting of data and structure files.
+This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up and compacting of data and structure files.
 This command is available even when no database is opened by 4D Server: in this case, it can be used to open a database in "maintenance mode" (it displays the standard open file dialog box so that you can designate the database to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged databases.
-For more information about the MSC, please refer to the Design Reference manual.
 
-Update License...  
-This command displays the window used to activate additional licenses in your 4D environment.
-For more information about this dialog box, refer to the 4D Installation Guide manual.
+### Online documentation  
 
-About 4D Server...  
-This command displays the 4D Server About... window, which provides various information organized in different pages that can be accessed via tabs:
+Opens the 4D documentation home page.
 
+### License manager...  
 
+This command displays the License manager, used to view, manage, and activate [licenses](../Admin/licenses.md) in your 4D environment.
 
-Program: 4D Server version and license
-Copyrights: legal mentions
-4D online: additional resources related to 4D that can be accessed on line
-4D: a view of the company 4D SAS around the world.
-Note: Under Mac OS, the About 4D Server command is found in the 4D Server menu (application menu).
+### About 4D Server...  
+
+Displays the 4D Server **About...** window. 
