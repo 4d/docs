@@ -131,24 +131,3 @@ Puede modificar temporalmente la frecuencia de escritura de la caché utilizando
 
 :::
 
-
-
-
-### Gestión de las prioridades en la caché de la base de datos
-
-La caché de la base de datos 4D incluye un mecanismo automático de gestión de prioridades que ofrece un alto nivel de eficacia y rendimiento para el acceso a los datos. Gracias a este mecanismo, cuando se necesita espacio para cargar nuevos datos en la caché, los datos en caché de baja prioridad se liberan primero, mientras que los datos en caché de mayor prioridad permanecen cargados.
-
-Este mecanismo es totalmente automático y, por lo general, no tendrá que preocuparse por él. Sin embargo, para casos específicos puede personalizarse utilizando un [conjunto de comandos dedicados del tema "Gestión de caché"](../commands/theme/Cache_Management.md), que permiten cambiar la prioridad de los objetos durante todo el tiempo que la base de datos está en ejecución, o temporalmente para el proceso actual. Tenga en cuenta que estos comandos deben utilizarse con cuidado, ya que afectan al rendimiento de la base de datos.
-
-#### Descripción general de la gestión de prioridades
-
-El gestor de caché selecciona los datos a eliminar de la caché según sea necesario mediante un sistema de prioridades. Los tres tipos de objetos que se pueden cargar en la caché tienen una prioridad diferente:
-
-- **tablas**: todos los datos de campos estándar (numéricos, fechas, etc.), excluyendo los blobs (ver más abajo). La prioridad por defecto es media.
-- **blobs**: todos los datos de campos binarios (texto, imagen, objeto y blobs) almacenados en el archivo de datos. La prioridad por defecto es la más baja.
-- **índices**: todos los índices de campos, incluidos los índices de palabras clave y los índices compuestos. Dado que los índices se consultan con frecuencia, tienen un estatus especial en la caché. La prioridad por defecto es la más alta. 
-
-Las prioridades por defecto suelen ofrecer el mejor rendimiento. Sin embargo, para casos específicos puede personalizar las prioridades de la caché utilizando dos conjuntos de comandos 4D:
-
-- Comandos que cambian las prioridades para toda la sesión y todos los procesos: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority), y [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). Estos comandos deben utilizarse en un método base de inicio.
-- Comandos que cambian las prioridades sólo para el proceso actual: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority), y [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Utilice estos comandos para mejorar el rendimiento de una operación temporal en su base de datos y volver a las prioridades iniciales una vez finalizada la operación. Estos comandos sólo están disponibles en 4D Server o 4D en modo local.
