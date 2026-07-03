@@ -109,10 +109,3 @@ To be able to carry out valid searches and sorts, you must use the [`ST Get plai
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
 ```
 
-## Automatic normalization of line endings
-
-In order to ensure multi-platform compatibility of texts handled in the database, 4D automatically normalizes line endings so that they occupy a single character: `\r` (carriage return). This normalization is carried out at the level of form objects (variables or fields) hosting plain or multi-style text. Line endings that are not native, or that use a mix of several characters (for example `\r\n`), are considered as a single `\r`.
-
-Note that in compliance with the XML standard (multi-style text format), the multi-style text commands also normalize line endings for text variables that are not associated with objects.
-
-This principle makes it easier to use multi-style text commands or commands such as [`HIGHLIGHT TEXT`](../../commands/highlight-text) in a multi-platform context. However, you must take this into account in your processing when you work with texts from heterogeneous sources.
