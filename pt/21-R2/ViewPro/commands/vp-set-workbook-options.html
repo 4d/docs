@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R2 docs-doc-page docs-doc-id-ViewPro/commands/vp-set-workbook-options" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>VP SET WORKBOOK OPTIONS | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R2 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true name=docsearch:version content=21-R2 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true property=og:title content="VP SET WORKBOOK OPTIONS | 4D Docs"/><meta data-rh=true name=description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><meta data-rh=true property=og:description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/category/extensions","name":"Extensões","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/category/4d-view-pro","name":"4D View Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/ViewPro/commands","name":"Comandos","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/commands-legacy/S","name":"S","position":4},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options","name":"VP SET WORKBOOK OPTIONS","position":5}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.8f88df23.css /><script src=/docs/pt/assets/js/runtime~main.fff19b6c.js defer></script><script src=/docs/pt/assets/js/main.866af771.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R2 docs-doc-page docs-doc-id-ViewPro/commands/vp-set-workbook-options" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>VP SET WORKBOOK OPTIONS | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R2 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true name=docsearch:version content=21-R2 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true property=og:title content="VP SET WORKBOOK OPTIONS | 4D Docs"/><meta data-rh=true name=description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><meta data-rh=true property=og:description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/category/extensions","name":"Extensões","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/category/4d-view-pro","name":"4D View Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/ViewPro/commands","name":"Comandos","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/commands-legacy/S","name":"S","position":4},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options","name":"VP SET WORKBOOK OPTIONS","position":5}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.8f88df23.css /><script src=/docs/pt/assets/js/runtime~main.e89667cb.js defer></script><script src=/docs/pt/assets/js/main.866af771.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options>21 R2</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/ViewPro/commands/vp-set-workbook-options>21 R3 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options>21 R2</a><li><a class=dropdown__link href=/docs/pt/21/ViewPro/commands/vp-set-workbook-options>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -171,175 +171,175 @@ define as opções da pasta de trabalho em <em>vpAreaName</em>.</p>
 
 
 
+<table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<tbody><tr><td>allowUserDragMerge<td>boolean<td>A operação de arrastar e mesclar é permitida (selecione células e arraste a seleção para mesclar células)<tr><td>allowAutoCreateHyperlink<td>boolean<td>Permite a criação automática de hiperlinks na planilha.<tr><td>allowContextMenu<td>boolean<td>O menu de contexto incorporado pode ser aberto.<tr><td>allowCopyPasteExcelStyle<td>boolean<td>Os estilos de uma planilha podem ser copiados e colados no Excel e vice-versa.<tr><td>allowDynamicArray<td>boolean<td>Permite arrays dinâmicos em folhas de trabalho<tr><td>allowExtendPasteRange<td>boolean<td>Estende o intervalo colado se o intervalo colado não for suficiente para os dados colados<tr><td>allowSheetReorder<td>boolean<td>É permitida a reordenação de folhas<tr><td>allowUndo<td>boolean<td>É permitido desfazer as edições.<tr><td>allowUserDeselect<td>boolean<td>É permitido desmarcar células específicas de uma seleção.<tr><td>allowUserDragDrop<td>boolean<td>É permitido arrastar e largar dados de intervalo<tr><td>allowUserDragFill<td>boolean<td>É permitido o preenchimento por arrastamento<tr><td>allowUserEditFormula<td>boolean<td>As fórmulas podem ser introduzidas nas células<tr><td>allowUserResize<td>boolean<td>As colunas e as linhas podem ser redimensionadas<tr><td>allowUserZoom<td>boolean<td>É permitido fazer zoom (ctrl + roda do rato)<tr><td>autoFitType<td>number<td>O conteúdo é formatado para caber em células, ou células e cabeçalhos. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk auto fit type cell <td>0<td> The content autofits cells<tr><td> vk auto fit type cell with header <td>1<td> The content autofits cells and headers</table><tr><td>backColor<td>string<td>Uma cadeia de cores usada para representar a cor de fundo da área, como "red" (vermelho), "#FFFF00", "rgb(255,0,0)", "Accent 5". A cor de fundo inicial fica oculta quando uma backgroundImage é definida.<tr><td>backgroundImage<td>string / picture / file<td>Imagem de fundo para a área.<tr><td>backgroundImageLayout<td>number<td>Como é apresentada a imagem de fundo. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk image layout center <td>1<td> In the center of the area.<tr><td> vk image layout none <td>3<td> In the upper left corner of the area with its original size.<tr><td> vk image layout stretch <td>0<td> Fills the area.<tr><td> vk image layout zoom <td>2<td> Displayed with its original aspect ratio.</table><tr><td>calcOnDemand<td>boolean<td>As fórmulas só são calculadas quando são solicitadas.<tr><td>columnResizeMode<td>number<td>Modo de redimensionamento de colunas. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk resize mode normal <td>0<td> Use normal resize mode (i.e remaining columns are affected)<tr><td> vk resize mode split <td>1<td> Use split mode (i.e remaining columns are not affected)</table><tr><td>copyPasteHeaderOptions<td>number<td>Cabeçalhos a incluir quando os dados são copiados ou colados. Cabeçalhos a incluir quando os dados são copiados ou colados.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk copy paste header options all headers<td>3<td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.<tr><td> vk copy paste header options column headers <td>2<td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.<tr><td> vk copy paste header options no headers<td>0<td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</table><tr><td>customList<td>collection<td>A lista para que os usuários personalizem o preenchimento de arrastar, priorize a correspondência dessa lista em cada preenchimento. Cada item da coleção é um conjunto de cadeias de caracteres. Veja na <a href=https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists target=_blank rel="noopener noreferrer" class="">documentação SpreadJS</a>.<tr><td>cutCopyIndicatorBorderColor<td>string<td>Cor da borda do indicador exibido quando o usuário corta ou copia a seleção.<tr><td>cutCopyIndicatorVisible<td>boolean<td>Apresenta um indicador quando se copia ou corta o item selecionado.<tr><td>defaultDragFillType<td>number<td>O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Constante<th>Valor<th>Descrição<tr><td>vk auto fill type auto<td>5<td>Preenche automaticamente as células. <tr><td> vk auto fill type clear values <td>4<td> Clears cell values.<tr><td> vk auto fill type copycells <td>0<td> Fills cells with all data objects, including values, formatting, and formulas.<tr><td> vk auto fill type fill formatting only <td>2<td> Fills cells only with formatting.<tr><td> vk auto fill type fill series <td>1<td> Fills cells with series. <tr><td> vk auto fill type fill without formatting <td>3<td> Preenche as células com valores e sem formatação. </table> </table>
 
 
+enableAccessibility
+boolean
+O suporte de acessibilidade está ativado na folha de cálculo.
 
 
+enableFormulaTextbox
+boolean
+A caixa de texto da fórmula está activada.
 
 
+grayAreaBackColor
+string
+Uma string de cores usada para representar a cor de fundo da área cinza, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", e assim por diante.
 
 
+highlightInvalidData
+boolean
+Os dados inválidos são realçados.
 
 
+iterativeCalculation
+boolean
+Ativa o cálculo iterativo. Veja na <a href=https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative target=_blank rel="noopener noreferrer" class="">documentação SpreadJS</a>.
 
 
+iterativeCalculationMaximumChange
+numeric
+Quantidade máxima de variação entre dois valores de cálculo.
 
 
+iterativeCalculationMaximumIterations
+numeric
+Número de vezes que a fórmula deve ser recalculada.
 
 
+newTabVisible
+boolean
+Apresentar um separador especial para permitir que os usuários insiram novas folhas.
 
 
+numbersFitMode
+number
+Muda o modo de exibição quando a largura de dados/data é maior que a largura da coluna. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk numbers fit mode mask<td>0<td> Replace data content with "###" and shows tip<tr><td> vk numbers fit mode overflow <td>1<td> Display data content as a string. If next cell is empty, overflow the content.</table>
 
 
+pasteSkipInvisibleRange
+boolean
+Paste or skip pasting data in invisible ranges: <ul><li class="">False (default): paste data<li class="">True: Skip pasting in invisible ranges</ul>See <a href=https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range target=_blank rel="noopener noreferrer" class="">SpreadJS docs</a> for more information on invisible ranges.
 
 
+referenceStyle
+number
+Estilo para referências de células e intervalos em fórmulas de células. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk reference style A1 <td>0<td> Use A1 style.<tr><td> vk reference style R1C1 <td>1<td> Use R1C1 style</table>
 
 
+resizeZeroIndicator
+number
+Política de desenho quando a linha ou coluna é redimensionada para zero. Política de desenho quando a linha ou coluna é redimensionada para zero.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk resize zero indicator default <td>0<td> Uses the current drawing policy when the row or column is resized to zero.</table>
 
 
+rowResizeMode
+number
+A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode
 
 
+scrollbarAppearance
+number
+Aspeto da barra de deslocação. Aspeto da barra de deslocação.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk scrollbar appearance mobile<td>1<td> Mobile scrollbar appearance.</table>
 
 
+scrollbarMaxAlign
+boolean
+A barra de rolagem se alinha com a última linha e coluna da folha ativa.
 
 
+scrollbarShowMax
+boolean
+As barras de rolagem exibidas são baseadas no número total de colunas e linhas da planilha.
 
 
+scrollByPixel
+boolean
+Ativar a deslocação de precisão por pixel.
 
 
+scrollIgnoreHidden
+boolean
+A barra de rolagem ignora as linhas ou colunas ocultas.
 
 
+scrollPixel
+integer
+Decide a rolagem por esse número de pixels de cada vez quando scrollByPixel é verdadeiro. Decide a rolagem por esse número de pixels de cada vez quando scrollByPixel é verdadeiro. Por exemplo: o delta de rolagem é 3, o scrollPixel é 5, os pixels finais de rolagem são 15.
 
 
+showDragDropTip
+boolean
+Exibir a dica de arrastar e soltar.
 
 
+showDragFillSmartTag
+boolean
+Exibe a caixa de diálogo de arrastar e preencher.
 
 
+showDragFillTip
+boolean
+Exibir a dica de preenchimento de arrasto.
 
 
+showHorizontalScrollbar
+boolean
+Mostrar a barra de deslocação horizontal.
 
 
+showResizeTip
+number
+Position of the tab strip. Position of the tab strip.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk show resize tip both <td>3<td> Horizontal and vertical resize tips are displayed.<tr><td> vk show resize tip column <td>1<td> Only the horizontal resize tip is displayed.<tr><td> vk show resize tip none <td>0<td> No resize tip is displayed.</table>
 
 
+showScrollTip
+number
+Position of the tab strip. Position of the tab strip.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk show scroll tip both <td>3<td> Horizontal and vertical scroll tips are displayed.<tr><td> vk show scroll tip horizontal <td>1<td> Only the horizontal scroll tip is displayed.<tr><td> vk show scroll tip none <td> No scroll tip is displayed.</table>
 
 
+showVerticalScrollbar
+boolean
+Mostrar a barra de deslocação vertical.
 
 
+tabEditable
+boolean
+A faixa da aba de folhas pode ser editada.
 
 
+tabNavigationVisible
+boolean
+Exibir a navegação da aba de folhas.
 
 
+tabStripPosition
+number
+Posição da faixa de registro. Posição da faixa de registro.Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk tab strip position bottom <td>0<td> Tab strip position is relative to the bottom of the workbook.<tr><td> vk tab strip position left <td>2<td> Tab strip position is relative to the left of the workbook.<tr><td> vk tab strip position right <td>3<td> Tab strip position is relative to the right of the workbook.</table>
 
 
+tabStripRatio
+number
+Valor percentual (0,x) que especifica quanto do espaço horizontal será alocado para a faixa de registro. O restante da área horizontal (1 - 0,x) será alocado para a barra de rolagem horizontal.
 
 
+tabStripVisible
+boolean
+Exibir a faixa de registro da folha.
 
 
+tabStripWidth
+number
+Largura da faixa de abas quando a posição é esquerda ou direita. O padrão e o mínimo são 80.
 
 
+useTouchLayout
+boolean
+Se deve ser usado o layout de toque para apresentar o componente Spread.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<tbody><tr><td>allowUserDragMerge<td>boolean<td>A operação de arrastar e mesclar é permitida (selecione células e arraste a seleção para mesclar células)<tr><td>allowAutoCreateHyperlink<td>boolean<td>Permite a criação automática de hiperlinks na planilha.<tr><td>allowContextMenu<td>boolean<td>O menu de contexto incorporado pode ser aberto.<tr><td>allowCopyPasteExcelStyle<td>boolean<td>Os estilos de uma planilha podem ser copiados e colados no Excel e vice-versa.<tr><td>allowDynamicArray<td>boolean<td>Permite arrays dinâmicos em folhas de trabalho<tr><td>allowExtendPasteRange<td>boolean<td>Estende o intervalo colado se o intervalo colado não for suficiente para os dados colados<tr><td>allowSheetReorder<td>boolean<td>É permitida a reordenação de folhas<tr><td>allowUndo<td>boolean<td>É permitido desfazer as edições.<tr><td>allowUserDeselect<td>boolean<td>É permitido desmarcar células específicas de uma seleção.<tr><td>allowUserDragDrop<td>boolean<td>É permitido arrastar e largar dados de intervalo<tr><td>allowUserDragFill<td>boolean<td>É permitido o preenchimento por arrastamento<tr><td>allowUserEditFormula<td>boolean<td>As fórmulas podem ser introduzidas nas células<tr><td>allowUserResize<td>boolean<td>As colunas e as linhas podem ser redimensionadas<tr><td>allowUserZoom<td>boolean<td>É permitido fazer zoom (ctrl + roda do rato)<tr><td>autoFitType<td>number<td>O conteúdo é formatado para caber em células, ou células e cabeçalhos. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk auto fit type cell <td>0<td> The content autofits cells<tr><td> vk auto fit type cell with header <td>1<td> The content autofits cells and headers</table><tr><td>backColor<td>string<td>Uma cadeia de cores usada para representar a cor de fundo da área, como "red" (vermelho), "#FFFF00", "rgb(255,0,0)", "Accent 5". A cor de fundo inicial fica oculta quando uma backgroundImage é definida.<tr><td>backgroundImage<td>string / picture / file<td>Imagem de fundo para a área.<tr><td>backgroundImageLayout<td>number<td>Como é apresentada a imagem de fundo. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk image layout center <td>1<td> In the center of the area.<tr><td> vk image layout none <td>3<td> In the upper left corner of the area with its original size.<tr><td> vk image layout stretch <td>0<td> Fills the area.<tr><td> vk image layout zoom <td>2<td> Displayed with its original aspect ratio.</table><tr><td>calcOnDemand<td>boolean<td>As fórmulas só são calculadas quando são solicitadas.<tr><td>columnResizeMode<td>number<td>Modo de redimensionamento de colunas. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk resize mode normal <td>0<td> Use normal resize mode (i.e remaining columns are affected)<tr><td> vk resize mode split <td>1<td> Use split mode (i.e remaining columns are not affected)</table><tr><td>copyPasteHeaderOptions<td>number<td>Cabeçalhos a incluir quando os dados são copiados ou colados. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk copy paste header options all headers<td>3<td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.<tr><td> vk copy paste header options column headers <td>2<td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.<tr><td> vk copy paste header options no headers<td>0<td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.<tr><td> vk copy paste header options row headers<td>1<td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</table><tr><td>customList<td>collection<td>A lista para que os usuários personalizem o preenchimento de arrastar, priorize a correspondência dessa lista em cada preenchimento. Cada item da coleção é um conjunto de cadeias de caracteres. Veja na <a href=https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists target=_blank rel="noopener noreferrer" class="">documentação SpreadJS</a>.<tr><td>cutCopyIndicatorBorderColor<td>string<td>Cor da borda do indicador exibido quando o usuário corta ou copia a seleção.<tr><td>cutCopyIndicatorVisible<td>boolean<td>Apresenta um indicador quando se copia ou corta o item selecionado.<tr><td>defaultDragFillType<td>number<td>O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Constante<th>Valor<th>Descrição<tr><td>vk auto fill type auto<td>5<td>Preenche automaticamente as células. <tr><td> vk auto fill type clear values <td>4<td> Clears cell values.<tr><td> vk auto fill type copycells <td>0<td> Fills cells with all data objects, including values, formatting, and formulas.<tr><td> vk auto fill type fill formatting only <td>2<td> Fills cells only with formatting.<tr><td> vk auto fill type fill series <td>1<td> Fills cells with series. <tr><td> vk auto fill type fill without formatting <td>3<td> Preenche as células com valores e sem formatação. </table><tr><td>enableAccessibility<td>boolean<td>O suporte de acessibilidade está ativado na folha de cálculo.<tr><td>enableFormulaTextbox<td>boolean<td>A caixa de texto da fórmula está activada.<tr><td>grayAreaBackColor<td>string<td>Uma string de cores usada para representar a cor de fundo da área cinza, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", e assim por diante.<tr><td>highlightInvalidData<td>boolean<td>Os dados inválidos são realçados.<tr><td>iterativeCalculation<td>boolean<td>Ativa o cálculo iterativo. Veja na <a href=https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative target=_blank rel="noopener noreferrer" class="">documentação SpreadJS</a>.<tr><td>iterativeCalculationMaximumChange<td>numeric<td>Quantidade máxima de variação entre dois valores de cálculo.<tr><td>iterativeCalculationMaximumIterations<td>numeric<td>Número de vezes que a fórmula deve ser recalculada.<tr><td>newTabVisible<td>boolean<td>Apresentar um separador especial para permitir que os usuários insiram novas folhas.<tr><td>numbersFitMode<td>number<td>Muda o modo de exibição quando a largura de dados/data é maior que a largura da coluna. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk numbers fit mode mask<td>0<td> Replace data content with "###" and shows tip<tr><td> vk numbers fit mode overflow <td>1<td> Display data content as a string. If next cell is empty, overflow the content.</table><tr><td>pasteSkipInvisibleRange<td>boolean<td>Paste or skip pasting data in invisible ranges: <ul><li class="">False (default): paste data<li class="">True: Skip pasting in invisible ranges</ul>See <a href=https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range target=_blank rel="noopener noreferrer" class="">SpreadJS docs</a> for more information on invisible ranges.<tr><td>referenceStyle<td>number<td>Estilo para referências de células e intervalos em fórmulas de células. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk reference style A1 <td>0<td> Use A1 style.<tr><td> vk reference style R1C1 <td>1<td> Use R1C1 style</table><tr><td>resizeZeroIndicator<td>number<td>Política de desenho quando a linha ou coluna é redimensionada para zero. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk resize zero indicator default <td>0<td> Uses the current drawing policy when the row or column is resized to zero.<tr><td> vk resize zero indicator enhanced <td>1<td> Draws two short lines when the row or column is resized to zero.</table><tr><td>rowResizeMode<td>number<td>A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode<tr><td>scrollbarAppearance<td>number<td>Aspeto da barra de deslocação. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk scrollbar appearance mobile<td>1<td> Mobile scrollbar appearance.<tr><td> vk scrollbar appearance skin (default)<td>0<td> Excel-like classic scrollbar appearance.</table><tr><td>scrollbarMaxAlign<td>boolean<td>A barra de rolagem se alinha com a última linha e coluna da folha ativa.<tr><td>scrollbarShowMax<td>boolean<td>As barras de rolagem exibidas são baseadas no número total de colunas e linhas da planilha.<tr><td>scrollByPixel<td>boolean<td>Ativar a deslocação de precisão por pixel.<tr><td>scrollIgnoreHidden<td>boolean<td>A barra de rolagem ignora as linhas ou colunas ocultas.<tr><td>scrollPixel<td>integer<td>Decide a rolagem por esse número de pixels de cada vez quando scrollByPixel é verdadeiro. Os pixels de rolagem finais são o resultado de <code>scrolling delta * scrollPixel</code>. Por exemplo: o delta de rolagem é 3, o scrollPixel é 5, os pixels finais de rolagem são 15.<tr><td>showDragDropTip<td>boolean<td>Exibir a dica de arrastar e soltar.<tr><td>showDragFillSmartTag<td>boolean<td>Exibe a caixa de diálogo de arrastar e preencher.<tr><td>showDragFillTip<td>boolean<td>Exibir a dica de preenchimento de arrasto.<tr><td>showHorizontalScrollbar<td>boolean<td>Mostrar a barra de deslocação horizontal.<tr><td>showResizeTip<td>number<td>Position of the tab strip. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk show resize tip both <td>3<td> Horizontal and vertical resize tips are displayed.<tr><td> vk show resize tip column <td>1<td> Only the horizontal resize tip is displayed.<tr><td> vk show resize tip none <td>0<td> No resize tip is displayed.<tr><td> vk show resize tip row <td>2<td> Only the vertical resize tip is displayed.</table><tr><td>showScrollTip<td>number<td>Position of the tab strip. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk show scroll tip both <td>3<td> Horizontal and vertical scroll tips are displayed.<tr><td> vk show scroll tip horizontal <td>1<td> Only the horizontal scroll tip is displayed.<tr><td> vk show scroll tip none <td> No scroll tip is displayed.<tr><td> vk show scroll tip vertical <td>2<td> Only the vertical scroll tip is displayed.</table><tr><td>showVerticalScrollbar<td>boolean<td>Mostrar a barra de deslocação vertical.<tr><td>tabEditable<td>boolean<td>A faixa da aba de folhas pode ser editada.<tr><td>tabNavigationVisible<td>boolean<td>Exibir a navegação da aba de folhas.<tr><td>tabStripPosition<td>number<td>Posição da faixa de registro. Available values: <table><tr><th>Constant<th>Value<th>Description<tr><td> vk tab strip position bottom <td>0<td> Tab strip position is relative to the bottom of the workbook.<tr><td> vk tab strip position left <td>2<td> Tab strip position is relative to the left of the workbook.<tr><td> vk tab strip position right <td>3<td> Tab strip position is relative to the right of the workbook.<tr><td> vk tab strip position top <td>1<td> Tab strip position is relative to the top of the workbook.</table><tr><td>tabStripRatio<td>number<td>Valor percentual (0,x) que especifica quanto do espaço horizontal será alocado para a faixa de registro. O restante da área horizontal (1 - 0,x) será alocado para a barra de rolagem horizontal.<tr><td>tabStripVisible<td>boolean<td>Exibir a faixa de registro da folha.<tr><td>tabStripWidth<td>number<td>Largura da faixa de abas quando a posição é esquerda ou direita. O padrão e o mínimo são 80.<tr><td>useTouchLayout<td>boolean<td>Se deve ser usado o layout de toque para apresentar o componente Spread.</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemplo>Exemplo<a href=#exemplo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p>Para definir a opção allowExtendpasteRange em "ViewProArea":</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain">var $workbookOptions : Object</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$workbookOptions:= New Object</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)</span><br/></span></code></pre></div></div>

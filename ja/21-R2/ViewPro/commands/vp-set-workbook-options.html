@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R2 docs-doc-page docs-doc-id-ViewPro/commands/vp-set-workbook-options" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>VP SET WORKBOOK OPTIONS | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R2 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true name=docsearch:version content=21-R2 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true property=og:title content="VP SET WORKBOOK OPTIONS | 4D Docs"/><meta data-rh=true name=description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><meta data-rh=true property=og:description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/category/extensions","name":"拡張機能","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/category/4d-view-pro","name":"4D View Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/ViewPro/commands","name":"コマンド","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/commands-legacy/S","name":"S","position":4},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options","name":"VP SET WORKBOOK OPTIONS","position":5}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.1ecff214.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R2 docs-doc-page docs-doc-id-ViewPro/commands/vp-set-workbook-options" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>VP SET WORKBOOK OPTIONS | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R2 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true name=docsearch:version content=21-R2 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R2 /><meta data-rh=true property=og:title content="VP SET WORKBOOK OPTIONS | 4D Docs"/><meta data-rh=true name=description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><meta data-rh=true property=og:description content="VP SET WORKBOOK OPTIONS ( vpAreaName Object)"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R2/ViewPro/commands/vp-set-workbook-options hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/category/extensions","name":"拡張機能","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/category/4d-view-pro","name":"4D View Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/ViewPro/commands","name":"コマンド","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/commands-legacy/S","name":"S","position":4},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options","name":"VP SET WORKBOOK OPTIONS","position":5}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.8f88df23.css /><script src=/docs/ja/assets/js/runtime~main.7563aad0.js defer></script><script src=/docs/ja/assets/js/main.f3f52859.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options>21 R2</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/ViewPro/commands/vp-set-workbook-options>21 R3 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/21-R2/ViewPro/commands/vp-set-workbook-options>21 R2</a><li><a class=dropdown__link href=/docs/ja/21/ViewPro/commands/vp-set-workbook-options>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -33,7 +33,7 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 </div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明>説明<a href=#説明 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><code>VP SET WORKBOOK OPTIONS</code> コマンドは、<em>vpAreaName</em> 引数で指定した View Pro エリアのワークブックオプションを設定します。</p>
-<p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。</p>
+<p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>optionObj</em>には、<em>vpAreaName</em> のエリアに対して適用するワークブックオプションを渡します。</p>
 <p><em>optionObj</em> 引数が空の場合、このコマンドは何もしません。</p>
 <p>変更されたワークブックオプションはドキュメントとともに保存されます。</p>
@@ -135,210 +135,210 @@ Opening the default page instead" href=/docs/ja/18/GettingStarted/installation>1
 
 
 
+<table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>allowUserDragMerge<td>boolean<td>ドラッグ＆マージオプションを許可します (複数セルを選択し、選択をドラッグしてセルを結合します)<tr><td>allowAutoCreateHyperlink<td>boolean<td>スプレッドシート内でハイパーリンクの自動作成を有効にします。<tr><td>allowContextMenu<td>boolean<td>ビルトインのコンテキストメニューの使用を許可します。<tr><td>allowCopyPasteExcelStyle<td>boolean<td>スプレッドシートのスタイルを Excel にコピー＆ペーストすることを許可します (逆も可)。<tr><td>allowDynamicArray<td>boolean<td>ワークシート内で動的配列を有効にします。<tr><td>allowExtendPasteRange<td>boolean<td>貼り付けデータが貼り付け先の範囲に収まりきらない場合に、貼り付け先の範囲を拡張します。<tr><td>allowSheetReorder<td>boolean<td>シートの順序変更を許可します。<tr><td>allowUndo<td>boolean<td>編集を元に戻す操作を許可します。<tr><td>allowUserDeselect<td>boolean<td>選択範囲から特定のセルを除外することを許可します。<tr><td>allowUserDragDrop<td>boolean<td>レンジデータのドラッグ＆ドロップを許可します。<tr><td>allowUserDragFill<td>boolean<td>ドラッグ＆フィルを許可します。<tr><td>allowUserEditFormula<td>boolean<td>内容をセル内に収めます。<tr><td>allowUserResize<td>boolean<td>カラムと行のリサイズを許可します。<tr><td>allowUserZoom<td>boolean<td>ズームを許可します (Ctrl + マウスホイール)。<tr><td>autoFitType<td>number<td>セル内やヘッダー内に収まるよう、内容をフォーマットします。 セル内やヘッダー内に収まるよう、内容をフォーマットします。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk auto fit type cell <td>0<td> 内容をセル内に収めます。<tr><td> vk auto fit type cell with header <td>1<td> 内容をセル内・ヘッダー内に収めます。</table><tr><td>backColor<td>string<td>エリアの背景色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")。 backgroundImage を設定している場合、背景色は非表示になります。<tr><td>backgroundImage<td>string / picture / file<td>エリアの背景画像。<tr><td>backgroundImageLayout<td>number<td>背景画像のレイアウト。 利用可能な値: 背景画像のレイアウト。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk image layout center <td>1<td>エリアの中心に配置。<tr><td> vk image layout none <td>3<td>エリアの左上端にオリジナルのサイズで配置。</table><table><tr><th>定数<th>値<th>詳細<tr><td> vk image layout center <td>1<td>エリアの中心に配置。<tr><td> vk image layout none <td>3<td>エリアの左上端にオリジナルのサイズで配置。<tr><td> vk image layout stretch <td>0<td>エリアを埋めるように配置。<tr><td> vk image layout zoom <td>2<td>元々のアスペクト比で表示。</table><tr><td> vk image layout zoom <td>2<td>元々のアスペクト比で表示。</table>
 
 
+calcOnDemand
+boolean
+要求されたときのみフォーミュラを計算します。
 
 
+columnResizeMode
+number
+カラムのリサイズモード。 カラムのリサイズモード。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk resize mode normal <td>0<td> 通常のリサイズモード (残りのカラムに影響します)<tr><td> vk resize mode split <td>1<td> split モード (残りのカラムに影響しません)</table>
 
 
+copyPasteHeaderOptions
+number
+データのコピー/ペースト時に含めるヘッダーについて指定します。 データのコピー/ペースト時に含めるヘッダーについて指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk copy paste header options all headers<td>3<td>データがコピーされる際に選択されたヘッダーを含み、データがペーストされるときに選択されたヘッダーを上書きする。<tr><td> vk copy paste header options column headers <td>2<td>データがコピーされる際に選択されたカラムヘッダーを含み、データがペーストされるときに選択されたカラムヘッダを上書きする。<tr><td> vk copy paste header options no headers<td>0<td>データがコピーされる際にカラム及び行ヘッダーは含まれず、データがペーストされるときにカラムおよび行ヘッダーは上書きされません。<tr><td> vk copy paste header options row headers<td>1<td>データがコピーされる際に選択された行ヘッダーを含み、データがペーストされる際に選択された行ヘッダーを上書きします。</table> vk copy paste header options column headers 2データがコピーされる際に選択されたカラムヘッダーを含み、データがペーストされるときに選択されたカラムヘッダを上書きする。 vk copy paste header options no headers0データがコピーされる際にカラム及び行ヘッダーは含まれず、データがペーストされるときにカラムおよび行ヘッダーは上書きされません。 vk copy paste header options row headers1データがコピーされる際に選択された行ヘッダーを含み、データがペーストされる際に選択された行ヘッダーを上書きします。
 
 
+customList
+collection
+ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 <a href=https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> 参照。
 
 
+cutCopyIndicatorBorderColor
+string
+ユーザーが選択をカットまたはコピーしたときの領域の境界色。
 
 
+cutCopyIndicatorVisible
+boolean
+コピーまたはカットされた際の領域を表示します。
 
 
+defaultDragFillType
+number
+デフォルトのドラッグ＆フィルタイプ。 使用可能な値 : <table><tr><th>定数<th>値<th>説明<tr><td> vk auto fill type auto <td>5<td> 自動でセルをフィルします。 デフォルトのドラッグ＆フィルタイプ。 使用可能な値 : <table><tr><th>定数<th>値<th>説明<tr><td> vk auto fill type auto <td>5<td> 自動でセルをフィルします。 <tr><td> vk auto fill type clear values <td>4<td>セルの値をクリアします。<tr><td> vk auto fill type copycells <td>0<td>値、書式、数式を含め、全てのデータオブジェクトでセルを埋めます。<tr><td> vk auto fill type fill formatting only <td>2<td>書式のみをセルにフィルします。<tr><td> vk auto fill type fill series <td>1<td> セルを系列で埋めます。 <tr><td> vk auto fill type fill without formatting <td>3<td> 値のみでセルをフィルします (フォーマットは除外)。 </table><tr><td> vk auto fill type copycells <td>0<td>値、書式、数式を含め、全てのデータオブジェクトでセルを埋めます。<tr><td> vk auto fill type fill formatting only <td>2<td>書式のみをセルにフィルします。<tr><td> vk auto fill type fill series <td>1<td> セルを系列で埋めます。 <tr><td> vk auto fill type fill without formatting <td>3<td> 値のみでセルをフィルします (フォーマットは除外)。 </table>
 
 
+enableAccessibility
+boolean
+スプレッドシートにおけるアクセシビリティのサポートを有効にします。
 
 
+enableFormulaTextbox
+boolean
+フォーミュラテキストボックスを有効化します。
 
 
+grayAreaBackColor
+string
+グレー領域の背景色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")。
 
 
+highlightInvalidData
+boolean
+無効なデータをハイライト表示します。
 
 
+iterativeCalculation
+boolean
+反復計算を有効にします。 反復計算を有効にします。 <a href=https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> 参照。
 
 
+iterativeCalculationMaximumChange
+numeric
+2つの計算値の最大差。
 
 
+iterativeCalculationMaximumIterations
+numeric
+フォーミュラが反復計算される最大回数。
 
 
+newTabVisible
+boolean
+新規シートを挿入するための特別なタブを表示します。
 
 
+numbersFitMode
+number
+日付/数値データがカラム幅を超える場合の表示モード。 日付/数値データがカラム幅を超える場合の表示モード。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk numbers fit mode mask<td>0<td> データの中身を "###" で置き換え、Tipを表示します。<tr><td> vk numbers fit mode overflow <td>1<td> データの中身を文字列として表示します。 隣のセルが空であれば、はみ出して表示します。</table> 隣のセルが空であれば、はみ出して表示します。
 
 
+pasteSkipInvisibleRange
+boolean
+非表示のレンジへの貼り付けについて指定します。 <ul><li class="">False (デフォルト): データを貼り付けます。<li class="">True: 非表示のレンジはスキップします。</ul>非表示のレンジについての詳細は <a href=https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> を参照ください。
 
 
+referenceStyle
+number
+セルフォーミュラにおける、セルやレンジ参照のスタイル。 利用可能な値: セルフォーミュラにおける、セルやレンジ参照のスタイル。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk reference style A1 <td>0<td>A1 スタイルを使用。</table><table><tr><th>定数<th>値<th>詳細<tr><td> vk reference style A1 <td>0<td>A1 スタイルを使用。<tr><td> vk reference style R1C1 <td>1<td>R1C1 スタイルを使用。</table>
 
 
+resizeZeroIndicator
+number
+行やカラムのサイズが 0 に変更されたときの描画ポリシー。 行やカラムのサイズが 0 に変更されたときの描画ポリシー。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk resize zero indicator default <td>0<td>行またはカラムがゼロにリサイズされた際には現在の描画ポリシーを使用します。<tr><td> vk resize zero indicator enhanced <td>1<td>行またはカラムがゼロにリサイズされた際には2本の短い線を描画します。</table> vk resize zero indicator enhanced 1行またはカラムがゼロにリサイズされた際には2本の短い線を描画します。
 
 
+rowResizeMode
+number
+行のリサイズモード。 使用可能な値は columnResizeMode と同じです。
 
 
+scrollbarAppearance
+number
+スクロールバーの見た目。 スクロールバーの見た目。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk scrollbar appearance mobile<td>1<td> モバイルのスクロールバーの見た目。<tr><td> vk scrollbar appearance skin (デフォルト)<td>0<td>Excel 風のクラシックなスクロールバーの見た目。</table> vk scrollbar appearance skin (デフォルト)0Excel 風のクラシックなスクロールバーの見た目。
 
 
+scrollbarMaxAlign
+boolean
+スクロールバーをアクティブシートの最後の行およびカラムに揃えます。
 
 
+scrollbarShowMax
+boolean
+シートのカラムと行の総数に基づいてスクロールバーを表示します。
 
 
+scrollByPixel
+boolean
+ピクセル単位のスクロールを有効にします。
 
 
+scrollIgnoreHidden
+boolean
+スクロールバーは非表示の行やカラムを無視します。
 
 
+scrollPixel
+integer
+scrollByPixel が true の場合、スクロール毎のピクセル数を指定します。 最終的にスクロールするピクセル数は <code>scrolling delta (スクロールの相対変化値) * scrollPixel</code> によって算出されます。 例: scrolling delta が 3、scrollPixel が 5 の場合、最終的なスクロールピクセル数は 15 です。
 
 
+showDragDropTip
+boolean
+ドラッグ＆ドロップの Tip を表示します。
 
 
+showDragFillSmartTag
+boolean
+ドラッグ＆フィルダイアログを表示します。
 
 
+showDragFillTip
+boolean
+ドラッグ＆フィルの Tip を表示します。
 
 
+showHorizontalScrollbar
+boolean
+横スクロールバーを表示します。
 
 
+showResizeTip
+number
+リサイズ Tip の表示を指定します。 リサイズ Tip の表示を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk show resize tip both <td>3<td>水平方向と垂直方向のリサイズTips が表示されます。<tr><td> vk show resize tip column <td>1<td>水平方向のリサイズ Tips のみ表示されます。<tr><td> vk show resize tip none <td>0<td>リサイズTips は表示されません。<tr><td> vk show resize tip row <td>2<td>垂直方向のリサイズTips のみ表示されます。</table> vk show resize tip column 1水平方向のリサイズ Tips のみ表示されます。 vk show resize tip none 0リサイズTips は表示されません。 vk show resize tip row 2垂直方向のリサイズTips のみ表示されます。
 
 
+showScrollTip
+number
+スクロール Tip の表示を指定します。 スクロール Tip の表示を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk show scroll tip both <td>3<td>水平方向と垂直方向のスクロールTips が表示されます。<tr><td> vk show scroll tip horizontal <td>1<td>水平方向のスクロールTips のみが表示されます。<tr><td> vk show scroll tip none <td>スクロールTips は表示されません。<tr><td> vk show scroll tip vertical <td>2<td>垂直方向のスクロールTips のみが表示されます。</table> vk show scroll tip horizontal 1水平方向のスクロールTips のみが表示されます。 vk show scroll tip none スクロールTips は表示されません。 vk show scroll tip vertical 2垂直方向のスクロールTips のみが表示されます。
 
 
+showVerticalScrollbar
+boolean
+縦スクロールバーを表示します。
 
 
+tabEditable
+boolean
+タブストリップの編集を有効にします。
 
 
+tabNavigationVisible
+boolean
+タブナビゲーションを表示します。
 
 
+tabStripPosition
+number
+タブストリップの位置を指定します。 タブストリップの位置を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk tab strip position bottom <td>0<td>タブストリップの位置は、ワークブックの下に対しての相対位置となります。<tr><td> vk tab strip position left <td>2<td>タブストリップの位置は、ワークブックの左に対しての相対位置となります。<tr><td> vk tab strip position right <td>3<td>タブストリップの位置は、ワークブックの右に対しての相対位置となります。<tr><td> vk tab strip position top <td>1<td>タブストリップの一は、ワークブックの上に対しての相対位置となります。</table> vk tab strip position left 2タブストリップの位置は、ワークブックの左に対しての相対位置となります。 vk tab strip position right 3タブストリップの位置は、ワークブックの右に対しての相対位置となります。 vk tab strip position top 1タブストリップの一は、ワークブックの上に対しての相対位置となります。
 
 
+tabStripRatio
+number
+スプレッドシートエリアの幅において、タブストリップが占める割合を指定します (0.x)。 残るスペース (1 - 0.x) には横スクロールバーが表示されます。
 
 
+tabStripVisible
+boolean
+タブストリップを表示します。
 
 
+tabStripWidth
+number
+タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。
 
 
+useTouchLayout
+boolean
+Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>allowUserDragMerge<td>boolean<td>ドラッグ＆マージオプションを許可します (複数セルを選択し、選択をドラッグしてセルを結合します)<tr><td>allowAutoCreateHyperlink<td>boolean<td>スプレッドシート内でハイパーリンクの自動作成を有効にします。<tr><td>allowContextMenu<td>boolean<td>ビルトインのコンテキストメニューの使用を許可します。<tr><td>allowCopyPasteExcelStyle<td>boolean<td>スプレッドシートのスタイルを Excel にコピー＆ペーストすることを許可します (逆も可)。<tr><td>allowDynamicArray<td>boolean<td>ワークシート内で動的配列を有効にします。<tr><td>allowExtendPasteRange<td>boolean<td>貼り付けデータが貼り付け先の範囲に収まりきらない場合に、貼り付け先の範囲を拡張します。<tr><td>allowSheetReorder<td>boolean<td>シートの順序変更を許可します。<tr><td>allowUndo<td>boolean<td>編集を元に戻す操作を許可します。<tr><td>allowUserDeselect<td>boolean<td>選択範囲から特定のセルを除外することを許可します。<tr><td>allowUserDragDrop<td>boolean<td>レンジデータのドラッグ＆ドロップを許可します。<tr><td>allowUserDragFill<td>boolean<td>ドラッグ＆フィルを許可します。<tr><td>allowUserEditFormula<td>boolean<td>セルへのフォーミュラの入力を許可します。<tr><td>allowUserResize<td>boolean<td>カラムと行のリサイズを許可します。<tr><td>allowUserZoom<td>boolean<td>ズームを許可します (Ctrl + マウスホイール)。<tr><td>autoFitType<td>number<td>セル内やヘッダー内に収まるよう、内容をフォーマットします。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk auto fit type cell <td>0<td> 内容をセル内に収めます。<tr><td> vk auto fit type cell with header <td>1<td> 内容をセル内・ヘッダー内に収めます。</table><tr><td>backColor<td>string<td>エリアの背景色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")。 backgroundImage を設定している場合、背景色は非表示になります。<tr><td>backgroundImage<td>string / picture / file<td>エリアの背景画像。<tr><td>backgroundImageLayout<td>number<td>背景画像のレイアウト。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk image layout center <td>1<td>エリアの中心に配置。<tr><td> vk image layout none <td>3<td>エリアの左上端にオリジナルのサイズで配置。<tr><td> vk image layout stretch <td>0<td>エリアを埋めるように配置。<tr><td> vk image layout zoom <td>2<td>元々のアスペクト比で表示。</table><tr><td>calcOnDemand<td>boolean<td>要求されたときのみフォーミュラを計算します。<tr><td>columnResizeMode<td>number<td>カラムのリサイズモード。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk resize mode normal <td>0<td> 通常のリサイズモード (残りのカラムに影響します)<tr><td> vk resize mode split <td>1<td> split モード (残りのカラムに影響しません)</table><tr><td>copyPasteHeaderOptions<td>number<td>データのコピー/ペースト時に含めるヘッダーについて指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk copy paste header options all headers<td>3<td>データがコピーされる際に選択されたヘッダーを含み、データがペーストされるときに選択されたヘッダーを上書きする。<tr><td> vk copy paste header options column headers <td>2<td>データがコピーされる際に選択されたカラムヘッダーを含み、データがペーストされるときに選択されたカラムヘッダを上書きする。<tr><td> vk copy paste header options no headers<td>0<td>データがコピーされる際にカラム及び行ヘッダーは含まれず、データがペーストされるときにカラムおよび行ヘッダーは上書きされません。<tr><td> vk copy paste header options row headers<td>1<td>データがコピーされる際に選択された行ヘッダーを含み、データがペーストされる際に選択された行ヘッダーを上書きします。</table><tr><td>customList<td>collection<td>ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 <a href=https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> 参照。<tr><td>cutCopyIndicatorBorderColor<td>string<td>ユーザーが選択をカットまたはコピーしたときの領域の境界色。<tr><td>cutCopyIndicatorVisible<td>boolean<td>コピーまたはカットされた際の領域を表示します。<tr><td>defaultDragFillType<td>number<td>デフォルトのドラッグ＆フィルタイプ。 使用可能な値 : <table><tr><th>定数<th>値<th>説明<tr><td> vk auto fill type auto <td>5<td> 自動でセルをフィルします。 <tr><td> vk auto fill type clear values <td>4<td>セルの値をクリアします。<tr><td> vk auto fill type copycells <td>0<td>値、書式、数式を含め、全てのデータオブジェクトでセルを埋めます。<tr><td> vk auto fill type fill formatting only <td>2<td>書式のみをセルにフィルします。<tr><td> vk auto fill type fill series <td>1<td> セルを系列で埋めます。 <tr><td> vk auto fill type fill without formatting <td>3<td> 値のみでセルをフィルします (フォーマットは除外)。 </table><tr><td>enableAccessibility<td>boolean<td>スプレッドシートにおけるアクセシビリティのサポートを有効にします。<tr><td>enableFormulaTextbox<td>boolean<td>フォーミュラテキストボックスを有効化します。<tr><td>grayAreaBackColor<td>string<td>グレー領域の背景色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")。<tr><td>highlightInvalidData<td>boolean<td>無効なデータをハイライト表示します。<tr><td>iterativeCalculation<td>boolean<td>反復計算を有効にします。 <a href=https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> 参照。<tr><td>iterativeCalculationMaximumChange<td>numeric<td>2つの計算値の最大差。<tr><td>iterativeCalculationMaximumIterations<td>numeric<td>フォーミュラが反復計算される最大回数。<tr><td>newTabVisible<td>boolean<td>新規シートを挿入するための特別なタブを表示します。<tr><td>numbersFitMode<td>number<td>日付/数値データがカラム幅を超える場合の表示モード。 使用可能な値: <table><tr><th>定数<th>値<th>説明<tr><td> vk numbers fit mode mask<td>0<td> データの中身を "###" で置き換え、Tipを表示します。<tr><td> vk numbers fit mode overflow <td>1<td> データの中身を文字列として表示します。 隣のセルが空であれば、はみ出して表示します。</table><tr><td>pasteSkipInvisibleRange<td>boolean<td>非表示のレンジへの貼り付けについて指定します。 <ul><li class="">False (デフォルト): データを貼り付けます。<li class="">True: 非表示のレンジはスキップします。</ul>非表示のレンジについての詳細は <a href=https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range target=_blank rel="noopener noreferrer" class="">SpreadJS のドキュメント</a> を参照ください。<tr><td>referenceStyle<td>number<td>セルフォーミュラにおける、セルやレンジ参照のスタイル。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk reference style A1 <td>0<td>A1 スタイルを使用。<tr><td> vk reference style R1C1 <td>1<td>R1C1 スタイルを使用。</table><tr><td>resizeZeroIndicator<td>number<td>行やカラムのサイズが 0 に変更されたときの描画ポリシー。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk resize zero indicator default <td>0<td>行またはカラムがゼロにリサイズされた際には現在の描画ポリシーを使用します。<tr><td> vk resize zero indicator enhanced <td>1<td>行またはカラムがゼロにリサイズされた際には2本の短い線を描画します。</table><tr><td>rowResizeMode<td>number<td>行のリサイズモード。 使用可能な値は columnResizeMode と同じです。<tr><td>scrollbarAppearance<td>number<td>スクロールバーの見た目。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk scrollbar appearance mobile<td>1<td> モバイルのスクロールバーの見た目。<tr><td> vk scrollbar appearance skin (デフォルト)<td>0<td>Excel 風のクラシックなスクロールバーの見た目。</table><tr><td>scrollbarMaxAlign<td>boolean<td>スクロールバーをアクティブシートの最後の行およびカラムに揃えます。<tr><td>scrollbarShowMax<td>boolean<td>シートのカラムと行の総数に基づいてスクロールバーを表示します。<tr><td>scrollByPixel<td>boolean<td>ピクセル単位のスクロールを有効にします。<tr><td>scrollIgnoreHidden<td>boolean<td>スクロールバーは非表示の行やカラムを無視します。<tr><td>scrollPixel<td>integer<td>scrollByPixel が true の場合、スクロール毎のピクセル数を指定します。 最終的にスクロールするピクセル数は <code>scrolling delta (スクロールの相対変化値) * scrollPixel</code> によって算出されます。 例: scrolling delta が 3、scrollPixel が 5 の場合、最終的なスクロールピクセル数は 15 です。<tr><td>showDragDropTip<td>boolean<td>ドラッグ＆ドロップの Tip を表示します。<tr><td>showDragFillSmartTag<td>boolean<td>ドラッグ＆フィルダイアログを表示します。<tr><td>showDragFillTip<td>boolean<td>ドラッグ＆フィルの Tip を表示します。<tr><td>showHorizontalScrollbar<td>boolean<td>横スクロールバーを表示します。<tr><td>showResizeTip<td>number<td>リサイズ Tip の表示を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk show resize tip both <td>3<td>水平方向と垂直方向のリサイズTips が表示されます。<tr><td> vk show resize tip column <td>1<td>水平方向のリサイズ Tips のみ表示されます。<tr><td> vk show resize tip none <td>0<td>リサイズTips は表示されません。<tr><td> vk show resize tip row <td>2<td>垂直方向のリサイズTips のみ表示されます。</table><tr><td>showScrollTip<td>number<td>スクロール Tip の表示を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk show scroll tip both <td>3<td>水平方向と垂直方向のスクロールTips が表示されます。<tr><td> vk show scroll tip horizontal <td>1<td>水平方向のスクロールTips のみが表示されます。<tr><td> vk show scroll tip none <td>スクロールTips は表示されません。<tr><td> vk show scroll tip vertical <td>2<td>垂直方向のスクロールTips のみが表示されます。</table><tr><td>showVerticalScrollbar<td>boolean<td>縦スクロールバーを表示します。<tr><td>tabEditable<td>boolean<td>タブストリップの編集を有効にします。<tr><td>tabNavigationVisible<td>boolean<td>タブナビゲーションを表示します。<tr><td>tabStripPosition<td>number<td>タブストリップの位置を指定します。 利用可能な値: <table><tr><th>定数<th>値<th>詳細<tr><td> vk tab strip position bottom <td>0<td>タブストリップの位置は、ワークブックの下に対しての相対位置となります。<tr><td> vk tab strip position left <td>2<td>タブストリップの位置は、ワークブックの左に対しての相対位置となります。<tr><td> vk tab strip position right <td>3<td>タブストリップの位置は、ワークブックの右に対しての相対位置となります。<tr><td> vk tab strip position top <td>1<td>タブストリップの一は、ワークブックの上に対しての相対位置となります。</table><tr><td>tabStripRatio<td>number<td>スプレッドシートエリアの幅において、タブストリップが占める割合を指定します (0.x)。 残るスペース (1 - 0.x) には横スクロールバーが表示されます。<tr><td>tabStripVisible<td>boolean<td>タブストリップを表示します。<tr><td>tabStripWidth<td>number<td>タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。<tr><td>useTouchLayout<td>boolean<td>Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題>例題<a href=#例題 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p>"ViewProArea" 内で allowExtendpasteRange オプションを設定します:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain">var $workbookOptions : Object</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$workbookOptions:= New Object</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$workbookOptions.allowExtendPasteRange:=True</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)</span><br/></span></code></pre></div></div>
