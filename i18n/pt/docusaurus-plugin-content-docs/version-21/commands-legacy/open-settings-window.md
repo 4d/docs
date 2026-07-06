@@ -46,7 +46,7 @@ O parâmetro *tipoPropriedades* é tido em conta nos bancos configurados no modo
 | ---------------------- | ------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Structure settings     | Inteiro longo | 0     | Acesso ás "Propriedades de estrutura" (valor por padrão se o parâmetro for omitido). Neste modo, os valores do seletor utilizáveis são idênticos aos do modo padrão.                                                                                           |
 | User settings          | Inteiro longo | 1     | Acesso ás "Propriedades usuário". Neste modo, somente algumas chaves são utilizáveis no parâmetro *seletor*.<br/>                                                                                                                                      |
-| User settings for data | Inteiro longo | 2     | Acesso à "Configuração usuário para arquivo de dados, que é, configuração usuário armazenada no mesmo nivel que o arquivo de dados. Neste modo, só certas chaves podem ser utilizadas com o parâmetro *seletor* (mesmo subconjunto que a configuração usuário) |
+| User settings for data file | Inteiro longo | 2     | Acesso à "Configuração usuário para arquivo de dados, que é, configuração usuário armazenada no mesmo nivel que o arquivo de dados. Neste modo, só certas chaves podem ser utilizadas com o parâmetro *seletor* (mesmo subconjunto que a configuração usuário) |
   
   
 Se você passar uma chave inválida, a primeira página da caixa de diálogo Configurações de Banco de Dados é exibida.
@@ -55,58 +55,34 @@ Se você passar uma chave inválida, a primeira página da caixa de diálogo Con
 
 A seguir você vê uma lista de chaves que podem ser usadas no parâmetro *seletor,* quer dizer, com as "Propriedades de estrutura":  
   
-*/4D* 
-*/4D/General*  
-/4D/Structure   
-/4D/Form editor  
-/4D/Method editor  
-/4D/Client-Server  
-/4D/Shortcuts  
-/Database  
-/Database/General  
-/Database/Mover  
-/Database/Interface  
-/Database/Interface/Developper   
-/Database/Interface/User  
-/Database/Interface/Shortcuts  
-/Database/Compiler  
-/Database/Database   
-/Database/Database/Data storage   
-/Database/Database/Memory and cpu   
-/Database/Database/International  
-/Database/Backup  
-/Database/Backup/Scheduler  
-/Database/Backup/Configuration  
-/Database/Backup/Backup and restore   
-/Database/Client-Server  
-*/Database/Client-Server/Network* 
-/Database/Client-Server/IP configuration  
-*/4D* 
-*/4D/General* 
-*/4D/Structure* 
-*/4D/Form editor* 
-*/4D/Method editor* 
-*/4D/Shortcuts* 
-*/Database* 
-*/Database/General* 
-*/Database/Mover* 
-*/Database/Interface* 
-*/Database/Interface/Developper* 
-*/Database/Interface/User* 
-*/Database/Interface/Shortcuts* 
-*/Database/Compiler* 
-*/Database/Database* 
-*/Database/Database/Data storage* 
-*/Database/Database/Memory and cpu* 
-*/Database/Database/International* 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web*  
+```
+
+/4D 
+/4D/General 
+/4D/Structure 
+/4D/Form editor 
+/4D/Method editor 
+/4D/Shortcuts 
+/Database 
+/Database/General 
+/Database/Mover 
+/Database/Interface 
+/Database/Interface/Developper 
+/Database/Interface/User 
+/Database/Interface/Shortcuts 
+/Database/Compiler 
+/Database/Database 
+/Database/Database/Data storage 
+/Database/Database/Memory and cpu 
+/Database/Database/International 
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web  
 /Database/Web/Config  
 /Database/Web/Options 1  
 /Database/Web/Options 2  
@@ -117,34 +93,38 @@ A seguir você vê uma lista de chaves que podem ser usadas no parâmetro *selet
 /Database/php   
 /Database/Compatibility   
 /Database/Security
-
-**Nota de compatibilidade:** O comando continua a funcionar com as chaves definidas para as versões 4D 11, a correspondência é estabelecida automaticamente por 4D. No entanto, é recomendável substituir as chamadas anteriores pelas chaves descritas acima
+```
 
 ### Chaves de rotas (modo Propriedades usuário) 
 
-Estas são as chaves que podem ser usadas no parâmetro *seletor* no modo "Propriedades usuário":
+Estas são as chaves que podem ser usadas no parâmetro *seletor* no modo "Propriedades usuário":  
 
-*/Database* 
-*/Database/Interface* 
-*/Database/Database/Memory and cpu* 
-*/Database/Client-Server* 
-**/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
+``` 
+/Database 
+/Database/Interface 
+/Database/Database/Memory and cpu 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php  
+```
 
 Chaves adicionais em modo "User settings for data":
 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* */Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore*
+```
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore
+```
 
 ## Exemplo 1 
 

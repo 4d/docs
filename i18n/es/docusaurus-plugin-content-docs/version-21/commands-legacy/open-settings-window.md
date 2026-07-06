@@ -46,78 +46,85 @@ El parámetro *tipoPropiedades* se tiene en cuenta en las bases configuradas en 
 | ---------------------- | ------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Structure settings     | Entero largo | 0     | Acceso a las "propiedades estructura" (valor por defecto si el parámetro se omite). En este modo, los valores de *selector* utilizables son idénticos a los del modo estándar.*<br/>*                                                                                |
 | User settings          | Entero largo | 1     | Acceso a las "propiedades usuario". En este modo, sólo ciertas llaves son utilizables en el parámetro *selector*.*<br/>*                                                                                                                                             |
-| User settings for data | Entero largo | 2     | Acceso a "Configuración usuario para archivo de datos, que es, configuración usuario almacenada en el mismo nivel que el archivo de datos. En este modo, sólo ciertas llaves se pueden utilizar con el parámetro *selector* (mismo subconjunto que la configuración usuario) |
+| User settings for data file | Entero largo | 2     | Acceso a "Configuración usuario para archivo de datos, que es, configuración usuario almacenada en el mismo nivel que el archivo de datos. En este modo, sólo ciertas llaves se pueden utilizar con el parámetro *selector* (mismo subconjunto que la configuración usuario) |
 
 Si pasa una llave invalida, se muestra la primera página de la caja de diálogo de Propiedades de la base.
 
 ### Llaves de rutas (modo estándar) 
 
-La siguiente es una lista de llaves que puede utilizarse en el parámetro *selector* en modo estándar, es decir con las "propiedades estructura": 
+La siguiente es una lista de llaves que puede utilizarse en el parámetro *selector* en modo estándar, es decir con las "propiedades estructura":   
 
-*/4D* 
-*/4D/General* 
-*/4D/Structure* 
-*/4D/Form editor* 
-*/4D/Method editor* 
-*/4D/Shortcuts* 
-*/Database* 
-*/Database/General* 
-*/Database/Mover* 
-*/Database/Interface* 
-*/Database/Interface/Developper* 
-*/Database/Interface/User* 
-*/Database/Interface/Shortcuts* 
-*/Database/Compiler* 
-*/Database/Database* 
-*/Database/Database/Data storage* 
-*/Database/Database/Memory and cpu* 
-*/Database/Database/International* 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
-*/Database/Compatibility* 
-*/Database/Security* 
-
+``` 
+/4D 
+/4D/General  
+/4D/Structure 
+/4D/Form editor 
+/4D/Method editor 
+/4D/Shortcuts 
+/Database 
+/Database/General 
+/Database/Mover 
+/Database/Interface 
+/Database/Interface/Developper 
+/Database/Interface/User 
+/Database/Interface/Shortcuts 
+/Database/Compiler 
+/Database/Database 
+/Database/Database/Data storage 
+/Database/Database/Memory and cpu 
+/Database/Database/International 
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php 
+/Database/Compatibility 
+/Database/Security  
+``` 
+  
 **Nota de compatibilidad:** el comando continúa funcionando con las llaves definidas para las versiones 11; la correspondencia es establecida automáticamente por 4D. Sin embargo se recomienda reemplazar las llamadas antiguas por las llaves descritas anteriormente.
 
 ### Llaves de rutas (modo Propiedades Usuario) 
 
-Estas son las llaves que se pueden utilizar en el parámetro *selector* en los modos "Propiedades usuario" y "Propiedades usuario para archivo de datos":
+Estas son las llaves que se pueden utilizar en el parámetro *selector* en los modos "Propiedades usuario" y "Propiedades usuario para archivo de datos":  
 
-*/Database* 
-*/Database/Interface* 
-*/Database/Database/Memory and cpu* 
-**/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
+``` 
+/Database 
+/Database/Interface 
+/Database/Database/Memory and cpu 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php  
+```
 
 Llaves adicionales en modo "Propiedades usuario para archivo de datos":
 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* */Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore*
+```
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore
+```
 
 ## Ejemplo 1 
 

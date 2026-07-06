@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | selector | Text | &#8594;  | Key designating a theme or a page or a group of parameters in the Preferences or Settings dialog box |
 | access | Boolean | &#8594;  | True=Lock the other pages of the dialog box<br/>False or omitted=Leave the other pages of the dialog box active |
-| settingsType | Integer | &#8594;  | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data |
+| settingsType | Integer | &#8594;  | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data file |
 </div>
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ The *settingsType* parameter is taken into account in databases configured in "U
 | ---------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Structure settings     | Integer | 0     | Access to "Structure settings" (default value if parameter omitted). In this mode, values used for *selector* are identical to those in standard mode.                                |
 | User settings          | Integer | 1     | Access to "User settings". In this mode, only certain keys can be used in the *selector* parameter                                                                                    |
-| User settings for data | Integer | 2     | Access to "User settings for data file", that is, user settings stored at the same level as the data file. In this mode, only certain keys can be used with the *selector* parameter. |
+| User settings for data file | Integer | 2     | Access to "User settings for data file", that is, user settings stored at the same level as the data file. In this mode, only certain keys can be used with the *selector* parameter. |
 
 If you pass an invalid key, the first page of the Database Settings dialog box is displayed. 
 
@@ -55,73 +55,73 @@ If you pass an invalid key, the first page of the Database Settings dialog box i
 Here are the keys that can be used in the *selector* parameter in standard mode, in other words with the "Structure settings": 
 
 ```
-*/4D* 
-*/4D/General* 
-*/4D/Structure* 
-*/4D/Form editor* 
-*/4D/Method editor* 
-*/4D/Shortcuts* 
-*/Database* 
-*/Database/General* 
-*/Database/Mover* 
-*/Database/Interface* 
-*/Database/Interface/Developper* 
-*/Database/Interface/User* 
-*/Database/Interface/Shortcuts* 
-*/Database/Compiler* 
-*/Database/Database* 
-*/Database/Database/Data storage* 
-*/Database/Database/Memory and cpu* 
-*/Database/Database/International* 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/Compatibility* 
-*/Database/Security* 
+/4D 
+/4D/General 
+/4D/Structure 
+/4D/Form editor 
+/4D/Method editor 
+/4D/Shortcuts 
+/Database 
+/Database/General 
+/Database/Mover 
+/Database/Interface 
+/Database/Interface/Developper 
+/Database/Interface/User 
+/Database/Interface/Shortcuts 
+/Database/Compiler 
+/Database/Database 
+/Database/Database/Data storage 
+/Database/Database/Memory and cpu 
+/Database/Database/International 
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL  
+/Database/AI   
+/Database/Security   
+/Database/Compatibility 
+ 
 ```
-
-**Compatibility note:** You can still use keys defined for 4D versions 11.x or previous using this command; 4D automatically establishes the correspondence. However, we recommend that you replace the former calls with the keys listed above.
 
 ### Path keys (User settings mode) 
 
 Here are the keys that can be used in the *selector* parameter in "User settings" and "User settings for data" modes:
 
 ```
-*/Database* 
-*/Database/Interface* 
-*/Database/Database/Memory and cpu* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
+/Database 
+/Database/Interface 
+/Database/Database/Memory and cpu 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
 ```
 
-Addtional keys in "User settings for data" mode:
+Additional keys in "User settings for data" mode:
 
 ```
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore*
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore
 ```
 
 ## Example 1 

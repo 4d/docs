@@ -46,78 +46,85 @@ displayed_sidebar: docs
 | ---------------------- | ---- | - | ----------------------------------------------------------------------------------------------------------------------- |
 | Structure settings     | 倍長整数 | 0 | ストラクチャー設定を使用 (引数が省略された際のデフォルト)。このモードでは使用される*selector*の値は標準モードと同じです。                                                     |
 | User settings          | 倍長整数 | 1 | ユーザー設定を使用。このモードでは特定のキーのみを*selector*引数で使用できます。                                                                           |
-| User settings for data | 倍長整数 | 2 | "データファイル用のユーザー設定"へのアクセス。このファイルはデータファイルと同じレベルに保存されているユーザー設定です。このモードでは、*selector*引数に対しては一部のキーのみが使用可能です(ユーザー設定と同じサブセットです)。 |
+| User settings for data file | 倍長整数 | 2 | "データファイル用のユーザー設定"へのアクセス。このファイルはデータファイルと同じレベルに保存されているユーザー設定です。このモードでは、*selector*引数に対しては一部のキーのみが使用可能です(ユーザー設定と同じサブセットです)。 |
 
 無効なキーを渡すと、データベース設定の最初のページが表示されます。
 
 ### キーのパス (標準モード) 
 
-以下は標準モードの*selector*引数 (ストラクチャー設定) で使用可能なキーです: 
+以下は標準モードの*selector*引数 (ストラクチャー設定) で使用可能なキーです:   
 
-*/4D* 
-*/4D/General* 
-*/4D/Structure* 
-*/4D/Form editor* 
-*/4D/Method editor* 
-*/4D/Shortcuts* 
-*/Database* 
-*/Database/General* 
-*/Database/Mover* 
-*/Database/Interface* 
-*/Database/Interface/Developper* 
-*/Database/Interface/User* 
-*/Database/Interface/Shortcuts* 
-*/Database/Compiler* 
-*/Database/Database* 
-*/Database/Database/Data storage* 
-*/Database/Database/Memory and cpu* 
-*/Database/Database/International* 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
-*/Database/Compatibility* 
-*/Database/Security* 
-
+``` 
+/4D 
+/4D/General  
+/4D/Structure 
+/4D/Form editor 
+/4D/Method editor 
+/4D/Shortcuts 
+/Database 
+/Database/General 
+/Database/Mover 
+/Database/Interface 
+/Database/Interface/Developper 
+/Database/Interface/User 
+/Database/Interface/Shortcuts 
+/Database/Compiler 
+/Database/Database 
+/Database/Database/Data storage 
+/Database/Database/Memory and cpu 
+/Database/Database/International 
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php 
+/Database/Compatibility 
+/Database/Security  
+``` 
+  
 **互換性に関する注意:** このコマンドは11.x以前のバージョンのキーでも動作します。対応は自動で4Dが行います。しかしながら以前の呼び出しを、上記のキーで置き換えることを推奨します。
 
 ### キーのパス (ユーザー設定モード) 
 
-以下は "ユーザー設定" および "データファイル用のユーザー設定" モードの*selector*引数で使用できるキーです:
+以下は "ユーザー設定" および "データファイル用のユーザー設定" モードの*selector*引数で使用できるキーです:  
 
-*/Database* 
-*/Database/Interface* 
-*/Database/Database/Memory and cpu* 
-**/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
+``` 
+/Database 
+/Database/Interface 
+/Database/Database/Memory and cpu 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php  
+```
 
 "データファイル用のユーザー設定" モードで使用できる追加のキーです:
 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* */Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore*
+```
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore
+```
 
 ## 例題 1 
 
