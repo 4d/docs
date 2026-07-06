@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](../commands/session) コマンドによって返されます。  このオブジェクトは、カレントセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。
+Session オブジェクトは [`Session`](../commands/session) コマンドによって返されます。  このオブジェクトは、カレントセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。 このオブジェクトは、カレントセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。
 
 :::tip 関連したblog 記事
 
@@ -18,7 +18,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
 - [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、クライアントおよびサーバーから管理される独自のセッションを持ちます。
 - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
 - [**スタンドアロンセッション**](../Desktop/sessions.md#standalone-sessions): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
@@ -128,14 +128,14 @@ $isOK:=Session.clearPrivileges()
 
 #### 説明
 
-`.createOTP()` 関数は、<!-- REF #SessionClass.createOTP().Summary -->セッションの新しいOTP(One Time Passcode、ワンタイムパスワード)を作成し、そのトークンUUID を返します。<!-- END REF --> このトークンはそれが生成されたセッションに固有のものです。
+`.createOTP()` 関数は、<!-- REF #SessionClass.createOTP().Summary -->セッションの新しいOTP(One Time Passcode、ワンタイムパスワード)を作成し、そのトークンUUID を返します。<!-- END REF --> このトークンはそれが生成されたセッションに固有のものです。 このトークンはそれが生成されたセッションに固有のものです。
 
-*lifespan* に秒単位の値を渡すことで、カスタムのタイムアウト時間を設定することができます。 *lifespan* 引数が省略された場合はデフォルトで:
+*lifespan* に秒単位の値を渡すことで、カスタムのタイムアウト時間を設定することができます。 *lifespan* 引数が省略された場合はデフォルトで: *lifespan* 引数が省略された場合はデフォルトで:
 
 - Web セッションの場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。
 - リモートユーザーセッションの場合、トークンは10秒の有効期限を持って作成されます。
 
-Web セッションにおいては、返されたトークンは、サードパーティアプリケーションや他のWebサイトとのやり取りで使用することでセッションを安全に特定することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
+Web セッションにおいては、返されたトークンは、サードパーティアプリケーションや他のWebサイトとのやり取りで使用することでセッションを安全に特定することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
 
 リモートユーザーセッション(あるいはテスト目的でのスタンドアロンセッション)においては、返されたトークンを使用することで、4D が[セッションを共有した](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) Web からのリクエストを特定することができます。
 
@@ -183,7 +183,7 @@ $token := Session.createOTP( 60 ) // トークンは1分間有効
 
 Web プロセス内において *promoteId* で指定した権限が [`.promote()`](#promote) を使用して昇格したものではなかった場合、この関数は何もしません。
 
-Web プロセスに複数の権限が追加されていた場合、 `demote()` 関数はそれぞれの権限に対して適切な *promoteId* を使用して呼び出す必要があります。 権限はプロセスに対して追加された順番でスタックされているため、スタックを解除する場合にはLIFO (*Last In, First Out*) 順で解除することが推奨されます。
+Web プロセスに複数の権限が追加されていた場合、 `demote()` 関数はそれぞれの権限に対して適切な *promoteId* を使用して呼び出す必要があります。 権限はプロセスに対して追加された順番でスタックされているため、スタックを解除する場合にはLIFO (*Last In, First Out*) 順で解除することが推奨されます。 権限はプロセスに対して追加された順番でスタックされているため、スタックを解除する場合にはLIFO (*Last In, First Out*) 順で解除することが推奨されます。
 
 :::note 注記
 
@@ -241,7 +241,7 @@ exposed Function search($search : Text) : Collection
 
 :::
 
-`.expirationDate` プロパティは、<!-- REF #SessionClass.expirationDate.Summary -->セッションcookie の有効期限<!-- END REF -->を返します。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`。
+`.expirationDate` プロパティは、<!-- REF #SessionClass.expirationDate.Summary -->セッションcookie の有効期限<!-- END REF -->を返します。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`。 値は ISO 8601標準に従って文字列で表現されます: `YYYY-MM-DDTHH:MM:SS.mmmZ`。
 
 このプロパティは **読み取り専用** です。 このプロパティは **読み取り専用** です。 [`.idleTimeout`](#idletimeout) プロパティ値が変更された場合、有効期限は自動的に再計算されます。
 
@@ -286,7 +286,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 :::note
 
-この関数は、 [`setPrivileges()`](#setprivileges) 関数を使用してセッションに割り当てられた権限を返します。 昇格した権限は、[roles.json](../ORDA/privileges.md#rolesjson-file) ファイルで追加されたか [`promote()`](#promote) 関数で追加されたかに関わらず、この関数によっては返されません。
+この関数は、 [`setPrivileges()`](#setprivileges) 関数を使用してセッションに割り当てられた権限を返します。 この関数は、 [`setPrivileges()`](#setprivileges) 関数を使用してセッションに割り当てられた権限を返します。 昇格した権限は、[roles.json](../ORDA/privileges.md#rolesjson-file) ファイルで追加されたか [`promote()`](#promote) 関数で追加されたかに関わらず、この関数によっては返されません。
 
 :::
 
@@ -436,7 +436,7 @@ End if
 
 `.id` プロパティは、<!-- REF #SessionClass.id.Summary -->ユーザーセッションの固有のID を格納しています<!-- END REF -->。
 
-4D Server ではこの一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。 サーバー側とクライアント側の、両方の `Session` から利用可能です。
+4D Server ではこの一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。 サーバー側とクライアント側の、両方の `Session` から利用可能です。 サーバー側とクライアント側の、両方の `Session` から利用可能です。
 
 :::tip
 
@@ -499,9 +499,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R5 | 追加 |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 21 R4 | New *unreachableSince* property |
+| 20 R5 | 追加                              |
 
 </details>
 
@@ -517,18 +518,19 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                           |
-| ---------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                              |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                   |
-| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul> |
-| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                  |
-| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                        |
-| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                      |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                             |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                  |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                            |
-| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                               |
+| プロパティ            | 型                                | 説明                                                                                                                                                                                                                                      |
+| ---------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                                                                                                         |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                              |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul>                                                                                            |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                                                                                                             |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                                                                                                                   |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                                                                                                                 |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                                                                                                        |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                             |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                                       |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                                                                                                          |
+| unreachableSince | Integer                          | Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property. |
 
 :::note
 
@@ -573,7 +575,7 @@ End if
 
 :::
 
-.isGuest()` 関数は <!-- REF #SessionClass.isGuest().Summary -->セッション内で`setPrivileges()\` が呼ばれていない、あるいはセッション内で[Qodly logout](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) が実行されたあとである場合には True を返します<!-- END REF -->。
+.isGuest()` 関数は <!-- REF #SessionClass.isGuest().Summary -->セッション内で`setPrivileges()\\` が呼ばれていない、あるいはセッション内で[Qodly logout](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) が実行されたあとである場合には True を返します<!-- END REF -->。
 
 :::note 互換性
 
@@ -623,7 +625,7 @@ End if
 
 `.promote()` 関数は、<!-- REF #SessionClass.promote().Summary -->*privilege* 引数で定義された権限を、呼び出し関数の実行中にカレントプロセスに追加し、昇格した権限の ID を返します<!-- END REF -->。
 
-権限を動的に付与することは、アクセス権が実行コンテキストに依存する場合には有用です。この場合 "roles.json" ファイルだけでは完全に定義しきることはできないからです。 これは、異なるアクセスレベルのユーザーによって同じ関数が実行され得る場合に関連します。 `.promote()` を使用することで、他のプロセスに影響することなく、カレントプロセスにのみ必要な権限が与えられるようにすることができます。
+権限を動的に付与することは、アクセス権が実行コンテキストに依存する場合には有用です。この場合 "roles.json" ファイルだけでは完全に定義しきることはできないからです。 これは、異なるアクセスレベルのユーザーによって同じ関数が実行され得る場合に関連します。 `.promote()` を使用することで、他のプロセスに影響することなく、カレントプロセスにのみ必要な権限が与えられるようにすることができます。 これは、異なるアクセスレベルのユーザーによって同じ関数が実行され得る場合に関連します。 `.promote()` を使用することで、他のプロセスに影響することなく、カレントプロセスにのみ必要な権限が与えられるようにすることができます。
 
 この関数は、以下の場合には何もせずに 0 を返します:
 
@@ -645,7 +647,7 @@ End if
 
 #### 例題
 
-複数のユーザーが、異なるアプリケーションとして振る舞う単一のエンドポイントに接続する場合を考えます。 #1 のアプリケーションからのユーザーは、"VerySensitiveInfo" を作成しないため、 "super_admin" 権限を必要としません。 一方で#2 のアプリケーションからのユーザーは "super_admin" 権限を必要とします。
+複数のユーザーが、異なるアプリケーションとして振る舞う単一のエンドポイントに接続する場合を考えます。 複数のユーザーが、異なるアプリケーションとして振る舞う単一のエンドポイントに接続する場合を考えます。 #1 のアプリケーションからのユーザーは、"VerySensitiveInfo" を作成しないため、 "super_admin" 権限を必要としません。 一方で#2 のアプリケーションからのユーザーは "super_admin" 権限を必要とします。 一方で#2 のアプリケーションからのユーザーは "super_admin" 権限を必要とします。
 
 この場合、*CreateInfo* 関数内において、適切な権限を動的に適用することができます:
 
@@ -692,25 +694,25 @@ End if
 
 #### 説明
 
-The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
 
 このプロパティは **読み取り専用** です。
 
 The following properties of the `4D.QuotaManager` object are available for the session:
 
-| プロパティ                                                                     |              | 型       | Writable | 説明                                                                                |
-| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯        | Maximum allowed number of entity sets in server's memory                          |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯        | Default inactivity timeout for entity sets in memory (seconds) |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯        | Maximum inactivity timeout for entity sets in memory (seconds) |
-| currentValues                                                             |              | Object  | ×        |                                                                                   |
-|                                                                           | nbEntitySets | Integer | ×        | Number of entity sets currently in memory                                         |
+| プロパティ                                                                     |              | 型       | Writable | 説明                                                                                                        |
+| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯        | Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯        | Default inactivity timeout for entity sets in memory (seconds)                         |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯        | Maximum inactivity timeout for entity sets in memory (seconds)                         |
+| currentValues                                                             |              | Object  | ×        |                                                                                                           |
+|                                                                           | nbEntitySets | Integer | ×        | Number of entity sets currently in memory. *Undefined* = no entity set in memory          |
 
 When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
 
 :::tip 関連したblog 記事
 
-[Make your REST server at the top of its game ... Forget throttling or crashing and tune yourself the memory usage](https://blog.4d.com/make-your-rest-server-at-the-top-of-its-game-forget-throttling-or-crashing-and-tune-yourself-the-memory-usage).
+[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
 
 :::
 
@@ -756,7 +758,7 @@ Session.quotas.nbEntitySets:=50
 
 #### 説明
 
-`.restore()` 関数は、<!-- REF #SessionClass.restore().Summary -->カレントのWeb ユーザーセッションを*token* 引数のUUIDに対応したオリジナルのセッションで置き換えます<!-- END REF -->。 セッションのストレージと権限は復元されます。
+`.restore()` 関数は、<!-- REF #SessionClass.restore().Summary -->カレントのWeb ユーザーセッションを*token* 引数のUUIDに対応したオリジナルのセッションで置き換えます<!-- END REF -->。 セッションのストレージと権限は復元されます。 セッションのストレージと権限は復元されます。
 
 オリジナルのセッションが正常に復元された場合、この関数は`true` を返します。
 
@@ -831,15 +833,15 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 - *privileges* には、アクセス権の名称を文字列のコレクションとして渡します。
 - *settings* には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ      | 型                   | 説明                                                                                                        |
-| ---------- | ------------------- | --------------------------------------------------------------------------------------------------------- |
-| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>                                                                 |
-| roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li>                                                                   |
-| userName   | Text                | セッションに関連づけるユーザー名(任意、Web セッションのみ)。 リモートクライアントセッションでは利用できません(無視されます)。 |
+| プロパティ      | 型                   | 説明                                                                                                                                                             |
+| ---------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>                                                                                                                      |
+| roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li>                                                                                                                        |
+| userName   | Text                | セッションに関連づけるユーザー名(任意、Web セッションのみ)。 セッションに関連づけるユーザー名(任意、Web セッションのみ)。 リモートクライアントセッションでは利用できません(無視されます)。 |
 
 :::note
 
-権限とロールは、プロジェクトの [`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) ファイルで定義されます。 詳細については、[**権限**](../ORDA/privileges.md) を参照してください。
+権限とロールは、プロジェクトの [`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) ファイルで定義されます。 詳細については、[**権限**](../ORDA/privileges.md) を参照してください。 詳細については、[**権限**](../ORDA/privileges.md) を参照してください。
 
 :::
 
@@ -899,7 +901,7 @@ End if
 
 `.storage` プロパティは、<!-- REF #SessionClass.storage.Summary -->セッションのすべてのプロセスで利用可能な情報を保存しておける共有オブジェクトを格納します<!-- END REF -->。
 
-`Session` オブジェクトの作成時には、`.storage` プロパティは空です。 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。
+`Session` オブジェクトの作成時には、`.storage` プロパティは空です。 このプロパティは **読み取り専用** ですが、戻り値のオブジェクトは読み書き可能です。 このプロパティは **読み取り専用** です。 このプロパティは **読み取り専用** です。 [`.idleTimeout`](#idletimeout) プロパティ値が変更された場合、有効期限は自動的に再計算されます。
 
 :::note 注記
 
@@ -920,7 +922,7 @@ End if
 
 #### Webセッションの例題
 
-クライアントの IP を `.storage` プロパティに保存します。 `On Web Authentication` データベースメソッドに以下のように書けます: `On Web Authentication` データベースメソッドに以下のように書けます:
+クライアントの IP を `.storage` プロパティに保存します。 `On Web Authentication` データベースメソッドに以下のように書けます: クライアントの IP を `.storage` プロパティに保存します。 `On Web Authentication` データベースメソッドに以下のように書けます: `On Web Authentication` データベースメソッドに以下のように書けます:
 
 ```4d
 If (Session.storage.clientIP=Null) // 最初のアクセス
@@ -959,9 +961,9 @@ End use
 
 #### 説明
 
-`.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
+`.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
-- **Web セッション**: このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
+- **Web セッション**: このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
 - **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](../commands/current-user) コマンドと同じユーザー名を返します。
 - **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](../commands/set-user-alias) コマンドで設定された名前が格納されています。
 

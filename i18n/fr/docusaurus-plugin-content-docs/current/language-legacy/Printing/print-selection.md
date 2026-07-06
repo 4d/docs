@@ -52,6 +52,12 @@ Si **PRINT SELECTION** est appelée au même moment par deux process différents
 
 Pour imprimer une sélection triée avec des sous-totaux ou des ruptures à l'aide de la commande **PRINT SELECTION**, vous devez d'abord trier la sélection. Puis vous devez inclure, dans chaque zone de rupture de l'état, une variable associée à une méthode objet assignant le sous-total à la variable. Vous pouvez aussi utiliser des fonctions statistiques ou arithmétiques telles que [Sum](../commands/sum) et [Average](../commands/average) pour assigner des valeurs aux variables. Pour plus d'informations, reportez-vous à la description des commandes [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) et [ACCUMULATE](../commands/accumulate).
 
+:::note
+
+Vous pouvez utiliser des [commandes statistiques](../../commands/theme/On_a_Series.md) comme [Sum](../commands/sum) et [Average](../commands/average) pour assigner des valeurs aux variables. Lorsque des fonctions statistiques sont utilisées dans un état, elles se comportent de manière spécifique car l'état lui-même doit charger chaque enregistrement. Lorsque vous utilisez ces fonctions dans un état, les valeurs retournées ne sont fiables qu'au niveau de rupture 0, et uniquement lorsque le traitement des ruptures est activé. Cela signifie qu'elles ne sont utiles qu'à la fin d'un état, après que tous les enregistrements ont été traités. Vous utiliserez ces fonctions uniquement dans une méthode objet d'une zone non saisissable incluse dans la zone de rupture B0.
+
+:::
+
 **Attention :** N'utilisez pas la commande [PAGE BREAK](../commands/page-break) avec **PRINT SELECTION**. [PAGE BREAK](../commands/page-break) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form).
 
 Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'impression s'est déroulée correctement. Si l'impression a été interrompue (par exemple l'utilisateur a cliqué sur un bouton Annuler dans les boîtes de dialogue d'impression), la variable OK prend la valeur *0* (zéro).

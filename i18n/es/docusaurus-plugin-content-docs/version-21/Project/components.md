@@ -286,7 +286,7 @@ Si quiere usar la regla de dependencia [**Seguir la versión 4D**](#defining-a-g
 
 - **Versiones LTS**: modelo `x.y.p`, donde `x.y` corresponde a la versión principal de 4D a seguir y `p` (opcional) puede utilizarse para versiones correctivas o actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión LTS *x.y*, el Gestor de dependencias lo resolverá como "la última versión x.\*" si está disponible o "versión inferior a x". Si no existe tal versión, se notificará al usuario. Por ejemplo, "20.4" será resuelto por el gestor de dependencias como "la última versión del componente 20.\* o la versión inferior a 20".
 
-- **Versiones R-Release**: modelo `xRy.p`, donde `x` y `y` corresponden a la versión principal de 4D R-release a seguir y `p` (opcional) puede usarse para versiones correctivas o las actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión *xRy*, el Gestor de dependencias lo resolverá a la "última versión por debajo de xR(y+1)" si está disponible. Si no existe tal versión, se notificará al usuario. Por ejemplo, "20R9" será resuelto por el gestor de dependencias como "la última versión del componente por debajo de 20R10".
+- **Versiones R-Release**: modelo `xRy.p`, donde `x` y `y` corresponden a la versión principal de 4D R-release a seguir y `p` (opcional) puede usarse para versiones correctivas o las actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión *xRy*, el Gestor de dependencias lo resolverá a la "última versión por debajo de xR(y+1)" si está disponible. Si no existe tal versión, se notificará al usuario. Si no existe tal versión, se notificará al usuario.
 
 :::note
 
@@ -501,11 +501,11 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. **Seguir la versión 4D** (opción por defecto, recomendada): descargue la última versión del componente que sea compatible con la versión 4D en ejecución. Esta opción se **recomienda**, en particular para los [componentes desarrollados por 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Última**: permite descargar la versión etiquetada como la más reciente. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
+- **Última**: permite descargar la versión etiquetada como la más reciente. **Atención:** aunque utilizar esta opción puede resultar práctico durante las primeras fases de desarrollo, es mejor evitarla en entornos de producción o en proyectos compartidos, ya que incorpora automáticamente las versiones más recientes, incluidas las versiones beta, lo que puede dar lugar a actualizaciones inesperadas o a cambios que provoquen incompatibilidades.
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 
@@ -513,7 +513,7 @@ La versión actual de la dependencia de GitHub se muestra a la derecha del eleme
 
 #### Modificación del intervalo de versiones de las dependencias GitHub
 
-Puede modificar la [configuración de versión](#defining-a-github-dependency-version-range) para una dependencia de GitHub listada: selecciona la dependencia a modificar y selecciona **Editar la dependencia...** desde el menú contextual. En el cuadro de diálogo "Editar la dependencia", edite el menú Regla de dependencia y haga clic en **Aplicar**.
+Puede modificar la [configuración de versión](#defining-a-github-dependency-version-range) para una dependencia de GitHub listada: selecciona la dependencia a modificar y selecciona **Editar la dependencia...** desde el menú contextual. You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu.
 
 Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de actualización automática y desea bloquear una dependencia a un número de versión específico.
 
@@ -581,7 +581,7 @@ La opción **Actualización automática** está disponible en el menú **opcione
 
 Cuando esta opción está marcada (por defecto), las nuevas versiones de componentes de GitHub que coincidan con su [configuración de versiones de componentes](#defining-a-github-dependency-version-range) se actualizan automáticamente para el siguiente inicio del proyecto. Esta opción facilita la gestión diaria de las actualizaciones de dependencias, al eliminar la necesidad de seleccionar manualmente las actualizaciones.
 
-Cuando esta opción no está marcada, una nueva versión del componente que coincida con su [configuración de versiones del componente](#defining-a-github-dependency-version-range) sólo se indicará como disponible y requerirá una [actualización manual](#updating-dependencies). Desmarque la opción **Actualización automática** si desea controlar con precisión las actualizaciones de las dependencias.
+Cuando esta opción no está marcada, una nueva versión del componente que coincida con su [configuración de versiones del componente](#defining-a-github-dependency-version-range) sólo se indicará como disponible y requerirá una [actualización manual](#updating-dependencies). The Dependency manager checks periodically if component updates are available on the Git hosting platform.
 
 ### Suministrando su token de acceso de GitHub
 

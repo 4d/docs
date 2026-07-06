@@ -31,7 +31,7 @@ Permite al usuario acceder a un menú contextual estándar en el objeto cuando s
 
 Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox-column.md), in addition to standard editing commands, the context menu provides the following commands:
+En el caso de un tipo de texto [multiestilo](properties_Text.md#multi-style), [campo de entrada](input_overview.md) o [columna de listbox](listbox-column.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -251,7 +251,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
 
 #### Gramática JSON
 
@@ -303,14 +303,14 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                           |
-| --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                              |
-| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                |
-| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                            |
-| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                |
-|                 |                |                                                                                                                                                                                                                                                            |
-| shortcutKey     | string         | <li>any character key: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                |
+| --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                   |
+| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                     |
+| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                 |
+| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                     |
+|                 |                |                                                                                                                                                                                                                                                                 |
+| shortcutKey     | string         | <li>toda tecla de caracter: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objetos soportados
 

@@ -11,7 +11,7 @@ Cuando llama a un datastore usando los comandos [`ds`](../commands/ds) u [`Open 
 
 - Las tablas se asignan a [dataclasses](#dataclass).
 - Los campos se asignan a [atributos de almacenamiento](#storage-and-relation-attributes).
-- Relations are mapped to [relation attributes](#storage-and-relation-attributes) - relation names, defined in the [Structure editor](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), are used as relation attribute names.
+- Las relaciones se asignan a los [atributos relacionales](#storage-and-relation-attributes): los nombres de las relaciones, definidos en el [Editor de estructura](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), se utilizan como nombres de los atributos de relación.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
@@ -165,7 +165,7 @@ Además, los siguientes atributos relacionales también estarán disponibles aut
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
+> &#062; La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
 
 Todos los atributos de la dataclass se exponen como propiedades de la dataclass:
 
@@ -179,7 +179,7 @@ Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaCla
 
 ### Entity
 
-Una entidad es el equivalente a un registro. En realidad es un objeto que hace referencia a un registro de la base de datos. Puede verse como una instancia de una [dataclass](#dataclass), como un registro de la tabla correspondiente a la dataclass. Sin embargo, una entidad también contiene datos correlacionados a la base de datos relacionados con el datastore.
+Una entidad es el equivalente a un registro. En realidad es un objeto que hace referencia a un registro de la base de datos. Una entidad es el equivalente a un registro. Sin embargo, una entidad también contiene datos correlacionados a la base de datos relacionados con el datastore.
 
 La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar). Cuando se obtiene una referencia de entidad mediante una selección de entidad, también conserva información sobre la selección de entidad que permite la iteración a través de la selección.
 

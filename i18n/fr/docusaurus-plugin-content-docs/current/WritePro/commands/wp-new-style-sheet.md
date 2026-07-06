@@ -44,7 +44,7 @@ Le paramètre *styleSheetType* vous permet d'indiquer le type de la feuille de s
 - wk type character: Applique les attributs de style aux caractères.
 - wk type paragraph: Applique les attributs de style aux paragraphes (nécessaire si vous souhaitez créer des [feuilles de style de liste hiérarchique](#hierarchical-list-style-sheet)).
 
-Passez un nom pour la feuille de style dans le paramètre *styleSheetName*. Le nom de la feuille de style est stocké avec le document et facilite la réutilisation ou la modification du style. Il peut également être utilisé avec les commandes [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) et [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet). Le nom de la feuille de style doit respecter les règles suivantes :
+Passez un nom pour la feuille de style dans le paramètre *styleSheetName*. Le nom de la feuille de style est stocké avec le document et facilite la réutilisation ou la modification du style. Le nom de la feuille de style doit respecter les règles suivantes : Il peut également être utilisé avec les commandes [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) et [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet).
 
 - il doit commencer par une lettre
 - il peut alors contenir des caractères alphanumériques, des caractères d'espacement, des caractères "-" ou des caractères unicode >= 128

@@ -471,7 +471,7 @@ title: Comandos por nombre
 <a id="I"><b>I</b></a>
 
 [`IDLE`](../commands/idle)<br/>
-[`IMAP New transporter`](../commands/imap-new-transporter) **modified 4D 21 R3**<br/>
+[`IMAP New transporter`](../commands/imap-new-transporter) **modificado 4D 21 R3**<br/>
 [`IMPORT DATA`](../commands/import-data)<br/>
 [`IMPORT DIF`](../commands/import-dif)<br/>
 [`IMPORT STRUCTURE`](../commands/import-structure)<br/>
@@ -875,9 +875,9 @@ title: Comandos por nombre
 [`Printing page`](../commands/printing-page)<br/>
 [`PROCESS 4D TAGS`](../commands/process-4d-tags)<br/>
 [`Process aborted`](../commands/process-aborted)<br/>
-[`Process activity`](../commands/process-activity) - **modified 4D 20 R7**<br/>
-[`Process info`](../commands/process-info) - **new 4D 20 R7**<br/>
-[`Process number`](../commands/process-number) - **modified 4D 20 R7**<br/>
+[`Process activity`](../commands/process-activity) - **modificado 4D 20 R7**<br/>
+[`Process info`](../commands/process-info) - **nuevo 4D 20 R7**<br/>
+[`Process number`](../commands/process-number) - **modificado 4D 20 R7**<br/>
 [`Process state`](../commands/process-state)<br/>
 [`PUSH RECORD`](../commands/push-record)<br/>
 
@@ -1110,7 +1110,7 @@ title: Comandos por nombre
 [`SET UPDATE FOLDER`](../commands/set-update-folder)<br/>
 [`SET USER ALIAS`](../commands/set-user-alias)<br/>
 [`Set user properties`](../commands/set-user-properties)<br/>
-[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **new 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **nuevo 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands/set-window-rect)<br/>
 [`SET WINDOW TITLE`](../commands/set-window-title)<br/>
 [`Shift down`](../commands/shift-down)<br/>
@@ -1217,9 +1217,9 @@ title: Comandos por nombre
 [`Trigger event`](../commands/trigger-event)<br/>
 [`Trigger level`](../commands/trigger-level)<br/>
 [`TRIGGER PROPERTIES`](../commands/trigger-properties)<br/>
-[`Trim`](../commands/trim) **new 4D 21**<br/>
-[`Trim end`](../commands/trim-end) **new 4D 21**<br/>
-[`Trim start`](../commands/trim-start) **new 4D 21**<br/>
+[`Trim`](../commands/trim) **nuevo 4D 21**<br/>
+[`Trim end`](../commands/trim-end) **nuevo 4D 21**<br/>
+[`Trim start`](../commands/trim-start) **nuevo 4D 21**<br/>
 [`True`](../commands/true)<br/>
 [`Trunc`](../commands/trunc)<br/>
 [`TRUNCATE TABLE`](../commands/truncate-table)<br/>
@@ -1277,7 +1277,7 @@ title: Comandos por nombre
 [`WA OPEN WEB INSPECTOR`](../commands/wa-open-web-inspector)<br/>
 [`WA REFRESH CURRENT URL`](../commands/wa-refresh-current-url)<br/>
 [`WA Run offscreen area`](../commands/wa-run-offscreen-area)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context)  **new 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context)  **nuevo 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands/wa-set-external-links-filters)<br/>
 [`WA SET PAGE CONTENT`](../commands/wa-set-page-content)<br/>
 [`WA SET PREFERENCE`](../commands/wa-set-preference)<br/>

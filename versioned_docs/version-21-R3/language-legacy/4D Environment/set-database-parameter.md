@@ -129,7 +129,7 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Possible values**: longint > 1 (seconds)
 
-**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [XML DECODE](../commands/xml-decode) of the Database settings for the session (it is not stored in the Database settings).
+**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [Database page](../../settings/database.md) of the settings for the session (it is not stored in the settings).
 
 
 

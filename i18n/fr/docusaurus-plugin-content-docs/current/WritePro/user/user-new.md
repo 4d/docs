@@ -10,11 +10,11 @@ to import
 
 ## Listes
 
-4D Write Pro supports flat lists (single-level) and multi-level lists.
+4D Write Pro prend en charge les listes plates (à un seul niveau) et les listes à plusieurs niveaux.
 
-### Single-level lists
+### Listes à un seul niveau
 
-4D Write Pro supports two main types of single-level lists:
+4D Write Pro prend en charge deux types principaux de listes à un seul niveau :
 
 - listes non ordonnées : les éléments de la liste sont indiqués par des puces, des puces personnalisées ou des images utilisées comme marqueurs.
 - listes ordonnées : les éléments de la liste sont indiqués par des chiffres ou des lettres
@@ -37,9 +37,9 @@ Lorsque la liste est créée à l'aide de la commande WP SET ATTRIBUTE(../comman
 
 :::
 
-### Multi-level lists
+### Listes multi-niveaux
 
-Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
 When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
 
@@ -61,7 +61,7 @@ Multi-level lists can be managed using:
 
 <!-- END REF -->
 
-<!-- REF multi-level-list.Desc -->
+<!-- REF multi-level-list-style-sheets.Desc -->
 
 ## Multi-level list style sheets
 

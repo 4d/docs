@@ -55,7 +55,7 @@ Even if it is usually not recommended, you can create variables simply by using 
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. Esta flexibilidade não se aplica às variáveis declaradas com a palavra-chave `var` (seu tipo não pode mudar) e em [modo compilado](interpreted.md) onde o tipo nunca pode ser alterado, independentemente de como a variável foi criada.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. Essa linha cria a variável, atribui-lhe o tipo de data (temporária) e um conteúdo.
 
 ## Comandos
 
@@ -132,13 +132,13 @@ For($vlChar;1;Length(vtSomeText))
 Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
-$myText:="hello"
-$myText:=Do_Something($myText) //Chamar o método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Aqui o código do método Do_Something  
+  //Here the code of the method Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 
@@ -249,7 +249,7 @@ Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. As
 
 ## Operadores
 
-Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
+Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. Já está familiarizado com muitos operadores. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo   |
 | -------- | ------------- | --------- |

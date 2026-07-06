@@ -110,7 +110,7 @@ O estado ou formato do arquivo de registro da petição HTTP (HTTPDebugLog_*nn*.
 
 #### Chave de acesso
 
-Defining an access key is mandatory to unlock access to the Web Administration Server through a URL (access via a 4D menu command does not require an access key). Quando nenhuma chave de acesso for definida, não é permitido que nenhum cliente web se conecte através de uma URL a uma interfaz de administração web como a página [Explorador de dados](dataExplorer.md). Uma página de erro é retornada no caso uma solicitação de conexão:
+Quando nenhuma chave de acesso for definida, não é permitido que nenhum cliente web se conecte através de uma URL a uma interfaz de administração web como a página [Explorador de dados](dataExplorer.md). Defining an access key is mandatory to unlock access to the Web Administration Server through a URL (access via a 4D menu command does not require an access key). Uma página de erro é retornada no caso uma solicitação de conexão:
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 

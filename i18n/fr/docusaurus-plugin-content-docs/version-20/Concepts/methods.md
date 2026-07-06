@@ -207,7 +207,7 @@ Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectio
 
 **Notes 4D Server**:
 
-- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
+- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
 - Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes de travail clients n'apparaîtront pas dans le menu, à moins qu'ils n'aient été préalablement "enregistrés" (pour plus d'informations, reportez-vous à la description de la commande [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
 Par défaut, l'option **En local** est sélectionnée. Avec la version mono-utilisateur de 4D, c'est la seule option disponible.
@@ -221,7 +221,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
+Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
@@ -258,6 +258,8 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
     QUERY([Amis et parents];[Amis et parents]Nom=$vsName)
     If(Records in selection([Amis et parents])>0)
        ALERT("Un de mes amis, "+Généalogie de($vsName)+", fait cela pour gagner sa vie !")
+    End if
+ End if
     End if
  End if
 ```

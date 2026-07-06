@@ -14,11 +14,11 @@ title: リストボックス列
 
 ### カラム特有のプロパティ {#column-specific-properties}
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [選択リスト](properties_DataSource.md#選択リスト-静的リスト) - [式](properties_DataSource.md#式) - [幅](properties_CoordinatesAndSizing.md#幅) - [入力可](properties_Entry.md#入力可) - [フォーカス可](properties_Entry.md#フォーカス可) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) - [関連付け](properties_DataSource.md#関連付け) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#d表示タイプ) - [文字フォ－マット](properties_Display.md#文字フォ－マット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ## フォームイベント
 
-| フォームイベント             | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv20/4D/20.6/FORM-Event.301-7487450.en.html) for main properties)                                                                                                                                      | コメント                                                                                                                         |
+| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](https://doc.4d.com/4Dv20/4D/20.6/FORM-Event.301-7487450.ja.html) を参照してください)                                                                                                                                                           | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](./listbox-object#additional-properties)</li><li>[columnName](./listbox-object#additional-properties)</li><li>[row](./listbox-object#additional-properties)</li>                                                                                                                   |                                                                                                                              |
 | On After Keystroke   | <li>[column](./listbox-object#additional-properties)</li><li>[columnName](./listbox-object#additional-properties)</li><li>[row](./listbox-object#additional-properties)</li>                                                                                                                   |                                                                                                                              |
@@ -53,7 +53,7 @@ title: リストボックス列
 
 ### オブジェクト配列カラムの設定
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-INSERT-COLUMN.301-7487606.en.html) command, like with any array-based column. プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
+オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-INSERT-COLUMN.301-7487606.ja.html) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -81,10 +81,10 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 #### valueTypeとデータ表示
 
-リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。 次の valueType の値がサポートされています:
+リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。 次の valueType の値がサポートされています: 次の valueType の値がサポートされています:
 
 - "text": テキスト値
-- "real": for a numeric value that can include separators like a `\<space>`, <.>, or <,>
+- "real": セパレーターを含む数値。セパレーターの例: `<space>`, <.>, <,>
 - "integer": 整数値
 - "boolean": true/false 値
 - "color": 背景色を定義
@@ -147,7 +147,7 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 #### value
 
-セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
+セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
  ARRAY OBJECT(obColumn;0) // カラム配列
@@ -291,7 +291,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
  OB SET($ob;"saveAs";"reference")
- OB SET($ob;"value";2) //displays London by default
+ OB SET($ob;"value";2) // デフォルトでロンドンを表示
  OB SET($ob;"requiredListReference";<>List)
 ```
 
@@ -326,7 +326,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します: 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
 - "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
-- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
 - "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
@@ -354,7 +354,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に true の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。 省略ボタンは自動的にセル内に表示されます。
+セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に true の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。
 
 このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては [イベント管理](#イベント管理) の章を参照ください)。
 
@@ -374,7 +374,7 @@ OB SET($ob;"value";$entry)
 
 "color" valueType を使用すると、色、または色を表すテキストを表示することができます。
 
-- 値が数字の場合、色付けされた長方形がセル内に表示されます。 例:
+- 値が数字の場合、色付けされた長方形がセル内に表示されます。 例: 例:
 
  ```4d
  C_OBJECT($ob4)
@@ -388,7 +388,7 @@ OB SET($ob;"value";$entry)
 
 #### event valueType
 
-"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。 データまたは値を渡す/返すことはできません。 データまたは値を渡す/返すことはできません。
+"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。 データまたは値を渡す/返すことはできません。
 
 オプションとして、"label" 属性を渡すことができます。
 
@@ -412,5 +412,5 @@ OB SET($ob;"label";"Edit...")
   - コンボボックスエリア
   - 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
   - チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
-- **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
-- **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
+- **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+- **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。

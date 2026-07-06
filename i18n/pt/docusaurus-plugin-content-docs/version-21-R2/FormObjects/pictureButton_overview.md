@@ -18,8 +18,8 @@ Os botões imagem podem ser utilizados de duas formas:
   | Switch when Roll Over      | switchWhenRollover     | true  |
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
-- Como botão de imagem que permite ao usuário escolher entre várias opções. Neste caso, pode ser utilizado um botão de imagem em vez de um menu pop-up de imagem. Com [Menu pop-up de imagem](picturePopupMenu_overview.md), todas as escolhas são exibidas simultaneamente (como os itens no menu pop-up), enquanto o botão imagem mostra as opções consecutivas (como o usuário clica no botão).  
-  Aqui está um exemplo de um botão imagem. Suponha que você deseja dar aos usuários de um aplicativo personalizado a oportunidade de escolher o idioma da interface da aplicação. Você implementa a opção como um botão imagem em uma caixa de diálogo de propriedades personalizadas:
+- Como botão de imagem que permite ao usuário escolher entre várias opções. Neste caso, pode ser utilizado um botão de imagem em vez de um menu pop-up de imagem. Como botão de imagem que permite ao usuário escolher entre várias opções.  
+  Neste caso, pode ser utilizado um botão de imagem em vez de um menu pop-up de imagem. Suponha que você deseja dar aos usuários de um aplicativo personalizado a oportunidade de escolher o idioma da interface da aplicação. Você implementa a opção como um botão imagem em uma caixa de diálogo de propriedades personalizadas:
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 

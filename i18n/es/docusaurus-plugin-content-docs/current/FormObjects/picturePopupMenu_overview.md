@@ -13,11 +13,11 @@ Para crear un menú emergente de imágenes, debe [referirse a una imagen](proper
 
 ### Programación
 
-Puede gestionar los menús emergentes de imágenes utilizando métodos. Al igual que con las [rejillas de botones](buttonGrid_overview.md), las variables asociadas a los menús emergentes de imágenes se definen con el valor del elemento seleccionado en el menú emergente de imágenes. Si no se selecciona ningún elemento, el valor es 0. Los elementos están numerados, línea por línea, de izquierda a derecha, empezando por la línea superior.
+Puede gestionar los menús emergentes de imágenes utilizando métodos. Puede gestionar los menús emergentes de imágenes utilizando métodos. Si no se selecciona ningún elemento, el valor es 0. Los elementos están numerados, línea por línea, de izquierda a derecha, empezando por la línea superior.
 
 ### Ir a la página
 
-Puede asignar la [acción estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) `gotoPage` a un menú emergente de imagen. Cuando se selecciona esa acción, 4D mostrará automáticamente la página del formulario que corresponde a la posición de la imagen seleccionada en el array de imágenes. Los elementos se numeran de izquierda a derecha y de arriba a abajo, empezando por la esquina superior izquierda.
+Puede asignar la [acción estándar](/Desktop/standard-actions) `gotoPage` a un menú emergente de imagen. Cuando se selecciona esa acción, 4D mostrará automáticamente la página del formulario que corresponde a la posición de la imagen seleccionada en el array de imágenes. Los elementos se numeran de izquierda a derecha y de arriba a abajo, empezando por la esquina superior izquierda.
 
 Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la página 3 del formulario actual (si existe).
 Si desea gestionar usted mismo el efecto de un clic, seleccione `Sin acción`.

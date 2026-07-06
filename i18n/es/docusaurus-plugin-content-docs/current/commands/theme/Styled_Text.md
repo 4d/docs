@@ -29,11 +29,11 @@ slug: /commands/theme/Styled-Text
 
 Los comandos que pueden utilizarse para manipular objetos de texto por programación no tienen en cuenta ninguna etiqueta de estilo integrada en el texto. Sólo actúan sobre el texto visualizado. Esto afecta a los siguientes comandos:
 
-- [User Interface](./User_Interface.md) theme commands
+- comandos del tema [Interfaz de usuario](./User_Interface.md)
 - [`HIGHLIGHT TEXT`](../../commands/highlight-text)
 - [`GET HIGHLIGHT`](../../commands/get-highlight)
 
-When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+Cuando se utilizan estos comandos con comandos que manipulan cadenas de caracteres, es necesario filtrar los caracteres de formato utilizando el comando [`ST Get plain text`](../../commands/st-get-plain-text):
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -41,17 +41,17 @@ When you use these commands with commands that manipulate character strings, it 
 
 ### Objetos (formularios)
 
-The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../../commands/object-set-font)) apply to the whole object and not to the selection.
+Los comandos que se pueden utilizar para modificar el estilo de los objetos (por ejemplo, [`OBJECT SET FONT`](../../commands/object-set-font)) se aplican a todo el objeto y no a la selección.
 
-If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+Si el objeto no tiene el foco cuando se ejecuta el comando, la modificación se aplica simultáneamente al objeto (el área de texto) y a su variable asociada. Si el objeto tiene el foco, la modificación se aplica al objeto, pero no a la variable asociada. La modificación solo se aplica a la variable cuando el objeto pierde el foco. Tenga presente este principio a la hora de programar áreas de texto.
 
 :::note
 
-If the [**Store with default style tags**](../../FormObjects/properties_Text.md#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+Si la opción [**Guardar con etiquetas de estilo predeterminadas**](../../FormObjects/properties_Text.md#store-with-default-style-tags) está marcada para el objeto, el uso de estos comandos provocará una modificación de las etiquetas guardadas con cada objeto.
 
 :::
 
-Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+Tenga en cuenta también que sólo las propiedades por defecto son afectadas por estos comandos (así como las propiedades guardadas por medio de las etiquetas predeterminadas). Las etiquetas de estilo personalizadas se mantienen tal y como están. Por ejemplo, se da un área de estilo múltiple donde se guardaron las etiquetas predeterminadas:
 
 ![](../../assets/en/FormObjects/multistyle-ex1.png)
 
@@ -67,49 +67,42 @@ Si ejecuta el siguiente código:
 OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 ```
 
-The red color remains:
+El color rojo permanece:
 
 ![](../../assets/en/FormObjects/multistyle-ex2.png)
 
-and code is:
+y el código es:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
 ```
 
-The following commands are concerned:
+Se trata de los siguientes comandos:
 
 - [`OBJECT SET RGB COLORS`](../../commands/object-set-rgb-colors)
 - [`OBJECT SET FONT`](../../commands/object-set-font)
 - [`OBJECT SET FONT STYLE`](../../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../../commands/object-set-font-size)
 
-In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the commands of the "Styled Text" theme.
+En el contexto de las áreas multiestilo, estos comandos sólo deben utilizarse para definir estilos por defecto. Para gestionar los estilos durante la ejecución de la base de datos, recomendamos utilizar los comandos del tema "Texto con estilo".
 
 ### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../../commands/get-edited-text) command returns the text of the current area including any style tags.
+Cuando se utiliza con un área de texto enriquecido, el comando [`Get edited text`](../../commands/get-edited-text) devuelve el texto del área actual, incluidas las etiquetas de estilo.
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+Para recuperar el texto "sin formato" (texto sin etiquetas) que se está editando, debe utilizar el comando [`ST Get plain text`](../../commands/st-get-plain-text):
 
 ```4d
 ST Get plain text(Get edited text)
 ```
 
-### Query and order by commands
+### Consulta y orden por comandos
 
-Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+Las consultas y ordenaciones realizadas entre objetos con varios estilos tienen en cuenta las etiquetas de estilo guardadas en el objeto. Si se ha modificado el estilo de una palabra, la búsqueda de esa palabra no dará resultado.
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command. Por ejemplo:
+Para poder realizar búsquedas y ordenaciones válidas, debe utilizar el comando [`ST Get plain text`](../../commands/st-get-plain-text). Por ejemplo:
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
 ```
 
-## Automatic normalization of line endings
-
-In order to ensure multi-platform compatibility of texts handled in the database, 4D automatically normalizes line endings so that they occupy a single character: `\r` (carriage return). This normalization is carried out at the level of form objects (variables or fields) hosting plain or multi-style text. Line endings that are not native, or that use a mix of several characters (for example `\r\n`), are considered as a single `\r`.
-
-Note that in compliance with the XML standard (multi-style text format), the multi-style text commands also normalize line endings for text variables that are not associated with objects.
-
-This principle makes it easier to use multi-style text commands or commands such as [`HIGHLIGHT TEXT`](../../commands/highlight-text) in a multi-platform context. However, you must take this into account in your processing when you work with texts from heterogeneous sources.

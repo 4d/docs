@@ -499,9 +499,10 @@ End if
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R5       | Añadidos       |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 21 R4       | Nueva propiedad *unreachableSince* |
+| 20 R5       | Añadidos                           |
 
 </details>
 
@@ -517,18 +518,19 @@ La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión<
 
 El objeto `.info` contiene las siguientes propiedades:
 
-| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                        |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                           |
-| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                 |
-| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre de la máquina servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul> |
-| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión del sistema local.</li><ul>                                                                                  |
-| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                            |
-| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                         |
-| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                                |
-| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                             |
-| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                                |
-| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                                    |
+| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                                   |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                                      |
+| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                            |
+| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre de la máquina servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul>            |
+| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión del sistema local.</li><ul>                                                                                             |
+| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                                       |
+| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                                    |
+| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                                           |
+| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                                        |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                                           |
+| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                                               |
+| unreachableSince | Integer       | Sesiones remotas: número de segundos desde que no se puede contactar con el nodo. En 4D Server, este atributo se puede consultar en la propiedad [`Process activity.sessions`](../commands/process-activity). |
 
 :::note
 
@@ -692,25 +694,25 @@ End if
 
 #### Descripción
 
-The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
 
 Esta propiedad es **solo lectura**.
 
-The following properties of the `4D.QuotaManager` object are available for the session:
+Las siguientes propiedades del objeto `4D.QuotaManager` están disponibles para la sesión:
 
-| Propiedad                                                                 |              | Tipo    | Writable | Descripción                                                                       |
-| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí       | Maximum allowed number of entity sets in server's memory                          |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí       | Default inactivity timeout for entity sets in memory (seconds) |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí       | Maximum inactivity timeout for entity sets in memory (seconds) |
-| currentValues                                                             |              | Object  | no       |                                                                                   |
-|                                                                           | nbEntitySets | Integer | no       | Number of entity sets currently in memory                                         |
+| Propiedad                                                                 |              | Tipo    | Writable | Descripción                                                                                                    |
+| ------------------------------------------------------------------------- | ------------ | ------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí       | Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied      |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí       | Default inactivity timeout for entity sets in memory (seconds)                              |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí       | Maximum inactivity timeout for entity sets in memory (seconds)                              |
+| currentValues                                                             |              | Object  | no       |                                                                                                                |
+|                                                                           | nbEntitySets | Integer | no       | Número de conjuntos de entidades actualmente en memoria. *Undefined* = no entity set in memory |
 
 When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
 
 :::tip Entrada de blog relacionada
 
-[Make your REST server at the top of its game ... Forget throttling or crashing and tune yourself the memory usage](https://blog.4d.com/make-your-rest-server-at-the-top-of-its-game-forget-throttling-or-crashing-and-tune-yourself-the-memory-usage).
+[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
 
 :::
 
@@ -726,7 +728,7 @@ Session.quotas.nbEntitySets:=50
 
 #### Ver también
 
-[QuotaManager class](./QuotaManagerClass.md)
+[Clase QuotaManager](./QuotaManagerClass.md)
 
 <!-- REF SessionClass.restore().Desc -->
 

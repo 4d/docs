@@ -11,7 +11,7 @@ title: 動作
 
 二つのドラッグモードが提供されています:
 
-- **カスタム**: このモードでは、オブジェクトに対しておこなわれたドラッグ操作は、当該オブジェクトのコンテキストにおいて `On Begin Drag` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドラッグアクションを管理しなければなりません。   
+- **カスタム**: このモードでは、オブジェクトに対しておこなわれたドラッグ操作は、当該オブジェクトのコンテキストにおいて `On Begin Drag` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドラッグアクションを管理しなければなりません。    
   つまり、カスタムモードにおいては、ドラッグ＆ドロップ操作のすべてが開発者により管理されます。 このモードでは、ドラッグ＆ドロップに基づいたあらゆるインターフェースを実装することができます。 これにはデータの転送を必ずしも伴わないものも含まれ、ファイルを開くや計算をトリガーするなどの任意のアクションを実行することができます。 このモードは専用のプロパティ、イベント、`ペーストボード` テーマのコマンド等の組み合わせに基づいています。
 - **自動**: このモードでは、ドラッグ元のフォームオブジェクトからテキストやピクチャーが 4D によって **コピー** されます。 このコピーは、同じ 4Dエリア内、2つの 4Dエリア間、4D と他のアプリケーション間で使用できます。 たとえば、自動ドラッグ (＆ドロップ) を使用して、プログラムを使用せず、2つのフィールド間で値をコピーできます:  
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
@@ -44,7 +44,7 @@ title: 動作
 
 二つのドロップモードが提供されています:
 
-- **カスタム**: このモードでは、オブジェクトに対しておこなわれたドロップ操作は、当該オブジェクトのコンテキストにおいて `On Drag Over` と `On Drop` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドロップアクションを管理しなければなりません。    
+- **カスタム**: このモードでは、オブジェクトに対しておこなわれたドロップ操作は、当該オブジェクトのコンテキストにおいて `On Drag Over` と `On Drop` フォームイベントを発生させます。 これを利用して、開発者はメソッドを用いてドロップアクションを管理しなければなりません。     
   つまり、カスタムモードにおいては、ドラッグ＆ドロップ操作のすべてが開発者により管理されます。 このモードでは、ドラッグ＆ドロップに基づいたあらゆるインターフェースを実装することができます。 これにはデータの転送を必ずしも伴わないものも含まれ、ファイルを開くや計算をトリガーするなどの任意のアクションを実行することができます。 このモードは専用のプロパティ、イベント、`ペーストボード` テーマのコマンド等の組み合わせに基づいています。
 - **自動**: このモードでは、4D は可能な限り自動で、オブジェクトにドロップされたテキストやピクチャー型データの挿入を管理します (データはオブジェクトにペーストされます)。 このモードでは、`On Drag Over` と `On Drop` フォームイベントは生成されません。 他方、ドロップ中の `On After Edit` とオブジェクトがフォーカスを失った時の `On Data Change` イベントは生成されます。
 
@@ -112,7 +112,7 @@ title: 動作
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Forms](FormEditor/forms.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [フォーム](FormEditor/forms.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [Webエリア](webArea_overview.md)
 
 
 
@@ -184,7 +184,7 @@ title: 動作
 ## 標準アクション
 アクティブオブジェクトにより実行される典型的な処理 (*例*: レコードの入力・取り消し・削除、レコード間の移動、マルチページフォームでのページ間の移動、など) は、4D より標準アクションとして提供されています。 詳細な情報に関しては、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html) の章を参照ください。
 
-フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します。 フォームオブジェクトが無効化されていた場合、関連づけられたメソッドは実行されません。
+フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。 また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します。 フォームオブジェクトが無効化されていた場合、関連づけられたメソッドは実行されません。
 
 このプロパティは `OBJECT SET ACTION` コマンドによって設定することができます。
 

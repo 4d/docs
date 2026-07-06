@@ -18,7 +18,7 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
   - imagen(2)
   - collection
 
-(1) [**Non-streamable objects**](#streaming-support) such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... no pueden almacenarse en **campos objeto**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
+(1) [**Objetos no transmitibles**](#streaming-support), como los objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [selecciones de entidades](ORDA/dsMapping.md#entity-selection), etc.), [referencias a archivos](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... no pueden almacenarse en **campos objeto**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
 
 (2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[object Picture]".
 
@@ -28,7 +28,7 @@ Tenga en cuenta que los nombres de las propiedades distinguen entre mayúsculas 
 
 :::
 
-Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**. Tenga en cuenta que comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` o `ORDER BY ATTRIBUTE`, se pueden utilizar para llevar a cabo el procesamiento en los campos objeto.
+Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**. Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**.
 
 Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Puede utilizar estos valores siempre que se esperen expresiones 4D:
 
@@ -65,7 +65,7 @@ Ejemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
-### operador \\\`{}
+### operador \\\\`{}
 
 El operador `{}` permite crear un **literal de objeto**. Un literal de objeto es una lista separada por semicolumnas de cero o más pares de nombres de propiedades y valores asociados de un objeto, encerrados entre llaves (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
@@ -111,7 +111,7 @@ $col:=$o.col[5] //6
 Puede crear dos tipos de objetos:
 
 - los objetos ordinarios (no compartidos), utilizando el comando [`New object`](../commands/new-object) o la sintaxis literal de los objetos (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- objetos compartidos, utilizando el comando [`New shared object`](../commands/new-shared-object). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
+- Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. objetos compartidos, utilizando el comando [`New shared object`](../commands/new-shared-object).
   Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Propiedades {#properties}
@@ -198,7 +198,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 
@@ -267,21 +267,21 @@ $doc:=Null // liberar recursos ocupados por $doc
 
 Los objetos pueden pertenecer a clases. El uso de una clase permite predefinir el comportamiento y la estructura de un objeto con propiedades y funciones asociadas.
 
-The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. También puede definir y utilizar sus propias [clases de usuario](./classes.md) para organizar su código.
+El lenguaje 4D ofrece varias [clases nativas](../category/class-API-reference/) que puede utilizar para gestionar objetos. También puede definir y utilizar sus propias [clases de usuario](./classes.md) para organizar su código.
 
-## Soporte de streaming
+## Soporte de la serialización
 
-A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
+Una clase serializable (o *streamable*) es una clase cuyos objetos pueden convertirse en una secuencia de bytes (texto o binarios) con el fin de escribirlos en un archivo, enviarlos como parámetros o poder almacenarlos y reconstruirlos posteriormente.
 
 ### Transmisión de texto (`JSON Stringify`)
 
-JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). Soportan objetos, colecciones y clases de usuarios.
+Los comandos JSON que serializan un contenido, tales como [`JSON Stringify`](../commands/json-stringify) y el comando [`Execute on server`](../commands/execute-on-server), le permiten convertir objetos a JSON (texto). Soportan objetos, colecciones y clases de usuarios.
 
-However, text streaming of objects has the following limitations:
+Sin embargo, la serialización de objetos en formar de texto presenta las siguientes limitaciones:
 
 - las referencias circulares (es decir, los objetos que se contienen a sí mismos como propiedad) no son compatibles y devuelven un error,
-- a class object loses its class when it is stringified,
-- native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
+- un objeto de clase pierde su clase cuando se serializa,
+- los objetos de clase 4D nativos como [Entity](../API/EntityClass.md) no pueden ser representados como JSON y son devueltos como "[object \<class>]", por ejemplo "[object Entity]".
 
 ### Serialización binaria (`VARIABLE TO BLOB`)
 
@@ -289,8 +289,8 @@ However, text streaming of objects has the following limitations:
 
 - las referencias circulares son soportadas,
 - los objetos mantienen su clase,
-- an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
-- se pueden transmitir varios objetos nativos de la clase 4D, por ejemplo [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), o [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
+- un rango extendido de objetos son streamable: documentos [4D Write Pro](../WritePro/user-legacy/presentation.md), imágenes como objetos, [objetos blobs](dt_blob.md#blob-types) y punteros como objetos,
+- se pueden transmitir varios objetos nativos de la clase 4D, por ejemplo [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), o [`Vector`](../API/VectorClass.md). Sin embargo, sólo unas pocas clases nativas de 4D son streamables. A menos que se indique explícitamente que "Esta clase es **streamable** en binario", considere que una clase 4D nativa NO es streamable.
 
 ## Ejemplos
 

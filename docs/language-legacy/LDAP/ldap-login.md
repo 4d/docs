@@ -32,6 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGIN.Summary-->The **LDAP LOGIN** command opens a read-only connection to the LDAP server specified in the *url* parameter with the *login* and *password* identifiers provided.<!-- END REF--> If accepted by the server, this connection will be used for any LDAP searches executed subsequently in the current process until the [LDAP LOGOUT](../commands/ldap-logout) command is executed (or until the process is closed). 
 
+:::info
+
+LDAP or *Lightweight Directory Access Protocol* is an open standard for accessing and maintaining distributed information services. For more information, please refer to the [Wikipedia page on LDAP](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) or the [OpenLDAP Software](http://www.openldap.org/) main page.
+
+:::
+
 In *url*, pass the full URL of the LDAP server you want to connect to, including the scheme and port (389 by default). This parameter should be compliant with [rfc2255](https://www.ietf.org/rfc/rfc2255.txt).   
 You can open secure connections over TLS by using a *url* that starts with "ldaps" and uses a specific port number (for example "ldaps://svr.ldap.acme.com:1389"). The LDAP server must have an SSL Certificate (at least for Microsoft Active Directory). Using a TLS connection is highly recommended when the password is sent in plain text (see below).
 
@@ -40,9 +46,9 @@ You can open secure connections over TLS by using a *url* that starts with "ldap
 In *login*, pass the user account on the LDAP server, and in *password*, pass the user password. By default, the *login* can be one of the following login strings, depending on the LDAP Server configuration:
 
 * a Distinguished Name (DN), for example "CN=John Smith,OU=users,DC=example,DC=com"
-* the user name (CN), for example "CN=John Smith"
+* the user name (CN for *Common Name*), for example "CN=John Smith"
 * an e-mail address, for example "johnsmith@4d.fr"
-* an SAM-Account-Name, for example "jsmith".
+* a SAM-Account-Name (*Security Account Manager*, logon name for Active Directory), for example "jsmith".
 
 Note that accepted values for the *login* are related to the password transmission mode as defined by the *digest* parameter. For example, in a default MS Active Directory configuration:
 
@@ -105,7 +111,6 @@ This example tries to connect to an application:
 
 ## See also 
 
-*LDAP*  
 [LDAP LOGOUT](../commands/ldap-logout)  
 
 ## Properties

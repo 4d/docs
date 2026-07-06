@@ -18,8 +18,8 @@ title: OpenAIResult
 | プロパティ        | 型          | 説明                                                                                                         |
 | ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
-| `errors`     | Collection | エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                                           |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                                                                |
+| `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                           |
 | `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
 | `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
 | `usage`      | Object     | Returns usage information (token counts) from the response body if any. |
@@ -41,6 +41,7 @@ See the specific result class documentation for endpoint-specific usage structur
 
 `rateLimit` プロパティはレスポンスヘッダーからのレート制限情報を格納しているオブジェクトを返します。
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
+この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
 レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
 
@@ -59,11 +60,11 @@ See the specific result class documentation for endpoint-specific usage structur
 
 ### `throw()`
 
-`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
+`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
 
 ## 継承クラス
 
-特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

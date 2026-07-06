@@ -15,12 +15,12 @@ https://developers.openai.com/api/reference/resources/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| 引数           | 型                                                   | 説明                                            |
-| ------------ | --------------------------------------------------- | --------------------------------------------- |
-| *input*      | Variant                                             | 分類する入力。 単一のテキストまたはOpenAIMessage のコレクションを渡せます。 |
-| *model*      | Text                                                | 使用したいコンテンツモデレーションモデル。                         |
-| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | リクエスト用の追加のパラメーター。                             |
-| 戻り値          | [OpenAIModerationResult](OpenAIModerationResult.md) | 潜在的な危険性を表すモデレーションの結果。                         |
+| 引数           | 型                                                   | 説明                                                    |
+| ------------ | --------------------------------------------------- | ----------------------------------------------------- |
+| *input*      | Variant                                             | 分類する入力。 分類する入力。 単一のテキストまたはOpenAIMessage のコレクションを渡せます。 |
+| *model*      | Text                                                | 使用したいコンテンツモデレーションモデル。                                 |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | リクエスト用の追加のパラメーター。                                     |
+| 戻り値          | [OpenAIModerationResult](OpenAIModerationResult.md) | 潜在的な危険性を表すモデレーションの結果。                                 |
 
 入力が潜在的に有害かどうかを判断します。
 

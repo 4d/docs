@@ -10,12 +10,13 @@ title: Propriétés des formulaires
 > La propriété de schéma de couleurs n'est appliquée que sur macOS et [Windows avec le thème Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands/get-application-color-scheme)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
 
-> Une palette de couleurs définie ne peut pas être remplacée par un CSS.
+> light - texte foncé sur fond clair
+> &#062; Une palette de couleurs définie ne peut pas être remplacée par un CSS.
 
 #### Grammaire JSON
 
@@ -41,7 +42,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-Nom d'une [classe utilisateur] existante (../Project/code-overview.md#user-classes) à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nom d'une [classe utilisateur] existante (../Project/code-overview.md#user-classes) à associer au formulaire.
 
 L'association d'une classe au formulaire offre les avantages suivants :
 
@@ -79,15 +80,15 @@ Le nom du formulaire est défini par le nom du dossier qui contient le fichier f
 
 ---
 
-## Form Theme on Windows
+## Thème de formulaire sous Windows
 
-This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Cette propriété vous permet de sélectionner explicitement le thème d'interface que vous souhaitez utiliser lorsque le formulaire est exécuté sous Windows. Par défaut, les formulaires héritent des [paramètres globaux du thème du projet](../settings/interface.md) mais vous pouvez remplacer ce paramètre pour chaque formulaire.
 
 Valeurs possibles :
 
-- **Inherited** (default): inherits from the project theme
-- **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **Inherited** (par défaut) : hérite du thème du projet
+- **Classic** : utiliser le thème d'interface classique de Windows
+- **Fluent UI** : utilisez le thème d'interface [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([lorsqu'il est disponible](../FormEditor/forms.md#requirements)).
 
 :::note
 
@@ -141,7 +142,7 @@ Cette propriété désigne le [formulaire à hériter](forms.md#inherited-forms)
 
 Pour hériter d'un formulaire table, définissez la table dans la propriété [Table du formulaire hérité](#inherited-form-table).
 
-Pour supprimer l'héritage, sélectionnez \<Aucun>\` dans la liste des propriétés (ou " " en JSON).
+Pour supprimer l'héritage, sélectionnez \<Aucun>\\` dans la liste des propriétés (ou " " en JSON).
 
 #### Grammaire JSON
 
@@ -155,7 +156,7 @@ Pour supprimer l'héritage, sélectionnez \<Aucun>\` dans la liste des propriét
 
 Cette propriété spécifie la table de la base de données à partir de laquelle [hériter d'un formulaire](forms.md#inherited-forms) dans le formulaire courant.
 
-Fixé à \<Aucun>\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
+Fixé à \<Aucun>\\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
 
 #### Grammaire JSON
 

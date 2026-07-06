@@ -20,11 +20,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 20 R7 | Renamed (Get License info) |
-| 16 R6 | 変更                                            |
-| 16 R4 | Created                                       |
+| リリース  | 内容                                          |
+| ----- | ------------------------------------------- |
+| 20 R7 | 名称変更(旧 Get License info) |
+| 16 R6 | 変更                                          |
+| 16 R4 | Created                                     |
 
 </details>
 </div>
@@ -90,7 +90,7 @@ displayed_sidebar: docs
 | platforms           | collection of strings | ライセンスを使用しているプラットフォーム                                                                                                                        | \["macOS", "windows"\]                                                                      |
 | expirationDate      | object                | 有効期限(オプション)                                                                                                              | {"day":2, "month":6, "year":2026}                                                                 |
 | renewalFailureCount | number                | 少なくとも一つの製品ライセンスに対して自動更新に失敗した回数(オプション)                                                                                    | 3                                                                                                                                                 |
-| products            | Object の Collection   | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表します)。  以下参照。                                                                              |                                                                                                                                                   |
+| products            | Object の Collection   | 製品ライセンスの詳細(各要素が製品ライセンスそれぞれの詳細を表します)。  以下参照。 以下参照。                                                                        |                                                                                                                                                   |
 
 `products` コレクションの各オブジェクトは、以下のプロパティが格納されています:
 

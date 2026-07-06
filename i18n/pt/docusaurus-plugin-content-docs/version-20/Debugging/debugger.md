@@ -189,7 +189,7 @@ Como a página Constantes da janela Explorer, esse tema exibe as constantes pred
 
 #### Semáforos
 
-Este tema lista os semáforos locais definidos atualmente. Para cada semáforo, a coluna Valor fornece o nome do processo que define o semáforo. As expressões deste tema não podem ser modificadas. The expressions from this theme cannot be modified.
+Este tema lista os semáforos locais definidos atualmente. Para cada semáforo, a coluna Valor fornece o nome do processo que define o semáforo. As expressões deste tema não podem ser modificadas. As expressões deste tema não podem ser modificadas.
 
 #### Processos
 
@@ -392,7 +392,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
   * *Tabelas:* apresenta as propriedades da tabela no inspetor da janela de estrutura
   * *Formulários:* apresenta o formulário no editor de formulários
   * *Variáveis* (local, processo, inter-processo ou parâmetro $n): apresenta a linha no método atual ou entre os métodos do compilador onde a variável é declarada
-* **Pesquisar Referências** (também disponível no Editor de Código): procura todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
+* **Pesquisar Referências** (também disponível no Editor de Código): procura todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 * **Copiar**: cópia padrão da expressão selecionada no contêiner de dados.
 * **Copiar para a janela de expressão**: copia a expressão selecionada para a janela de avaliação.
 * **Execute to cursor**:Executa as instruções entre o contador de programas e a linha selecionada do método (onde está o cursor).

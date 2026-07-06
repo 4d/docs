@@ -146,14 +146,14 @@ O arquivo de definições do utilizador padrão é criado automaticamente e colo
 
 ... onde *ProjectFolder* é o nome da pasta que contém o arquivo da estrutura do projeto.
 
-Nas aplicações fusionadas, o arquivo de definições do utilizador é colocado na seguinte localização:
+O arquivo de definições do usuário ligado ao arquivo de dados é automaticamente criado e colocado numa pasta de definições na seguinte localização:
 
 - Nas versões de usuário único: ProjectFolder/Database/Settings/settings.4DSettings
 - Em versões cliente/servidor: ProjectFolder/Server Database/Settings/settings.4DSettings
 
 #### Propriedades usuário para arquivo de dados
 
-O arquivo de definições do usuário ligado ao arquivo de dados é automaticamente criado e colocado numa pasta de definições na seguinte localização:
+Nas aplicações fusionadas, o arquivo de definições do utilizador é colocado na seguinte localização:
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 

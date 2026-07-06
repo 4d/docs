@@ -20,9 +20,9 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md#method-types):
 
 ## Crear las clases
 
-### User classes
+### Clases de usuario
 
-Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase. Por ejemplo, una clase llamada "Polygon" se almacenará en el siguiente archivo:
+Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase. El nombre del archivo es el nombre de la clase.
 
 ```
 Project folder Project Sources Classes Polygon.4dm
@@ -45,11 +45,11 @@ Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 - .
 - No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
 
-### ORDA classes
+### Clases ORDA
 
-[ORDA data model user classes](../ORDA/ordaClasses.md) are high-level class functions created above the data model.
+Las [clases de usuario del modelo de datos ORDA](../ORDA/ordaClasses.md) son funciones de clase de alto nivel creadas sobre el modelo de datos.
 
-An ORDA data model class is defined by adding, at the same location as regular class files (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
+Una clase de modelo de datos ORDA se define añadiendo, en la misma ubicación que los archivos de clase normales (*es decir*, en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
 
 4D crea previa y automáticamente las clases vacías en memoria para cada objeto del modelo de datos disponible.
 
@@ -62,7 +62,7 @@ Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las c
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. 4D creates the class file and add the [`extends`](../Concepts/classes.md#class-extends-classname) code. Por ejemplo, para una clase Entity:
+Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Por ejemplo, para una clase Entity:
 
 ```
 Class extends Entity
@@ -87,7 +87,7 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
   - una función de clase es un bloque de código
   - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
   - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
-  - variables typed as a user or ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
+  - las variables declaradas como un usuario o clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
@@ -104,19 +104,19 @@ Para eliminar un método o clase existente, puede:
 
 ## Comandos de acceso a objetos de diseño
 
-You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
+Puede acceder a los contenidos y rutas de todos los métodos de sus aplicaciones por programación, gracias al [**tema de "Acceso a objetos de diseño"**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). También le permite implementar sistemas avanzados para [documentación de código](../Project/documentation.md), para construir un explorador personalizado o para organizar copias de seguridad programadas del código guardado como archivos de disco.
 
 Se aplican los siguientes principios:
 
 - Cada método y formulario de una aplicación 4D tiene su propia dirección en forma de nombre de ruta. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
-- You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
-- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
-- Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
-- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
+- Puede acceder a objetos en la aplicación 4D utilizando los comandos del tema **"Acceso a objetos de diseño"**, por ejemplo [`METHOD GET NAMES`](../commands/method-get-names) o [`METHOD GET PATHS`](../commands/method-get-paths).
+- La mayoría de los comandos de este tema funcionan tanto en modo [interpretado como compilado](../Concepts/interpreted.md). Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
+- Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. Sin embargo, tenga en cuenta que no puede utilizar ciertos comandos en modo compilado: el objetivo de este tema es crear herramientas de soporte al desarrollo personalizadas. No debe utilizar estos comandos para cambiar dinámicamente el funcionamiento de una base de datos que se esté ejecutando. Por ejemplo, no se puede utilizar [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) para modificar un atributo de método en función del estado del usuario actual.
+- Cuando se ejecuta un comando de este tema desde un [componente](../Project/components.md), por defecto accede a los objetos del componente. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
 
 ### Uso en modo compilado
 
-For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
+Por razones relacionadas con el principio del proceso de compilación, sólo ciertos comandos en este tema pueden ser usados en modo compilado. La siguiente tabla muestra los comandos disponibles en modo compilado:
 
 | Comando                                                                  | Puede utilizarse en modo compilado |
 | ------------------------------------------------------------------------ | ---------------------------------- |
@@ -148,7 +148,7 @@ El error -9762 "El comando no puede ejecutarse en una base de datos compilada." 
 
 ### Creación de rutas
 
-Las rutas generadas para los objetos 4D deben ser compatibles con la gestión de archivos del sistema operativo. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
+Las rutas generadas para los objetos 4D deben ser compatibles con la gestión de archivos del sistema operativo. Los caracteres que están prohibidos a nivel del sistema operativo como ":" son codificados automáticamente en nombres de métodos, para que los archivos generados puedan integrarse automáticamente en un sistema de control de versiones.
 
 Estos son los caracteres codificados:
 

@@ -3,16 +3,16 @@ id: getting-started
 title: はじめに
 ---
 
-4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [コマンド](commands.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
+4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [コマンド](commands.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://developer.mescius.com/spreadjs) に基づいて動作します。<br />
+スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://developer.mescius.com/spreadjs) に基づいて動作します。<br />
 (4D View Pro のツールバー等のインターフェースは SpreadJS 提供のものです。インターフェース上で "テーブル" という用語が使用されますが、4D でテーブルといえばデータベーステーブルを指すため、当マニュアルではこれを便宜上 "表組み" あるいは "表" と呼んで区別します）
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know the SpreadJS version integrated in your 4D release.
+お使いの4D リリースにおいてどのバージョンのSpreaJS が統合されているかを知るためには、[ライブラリの一覧](../Notes/updates.md#ライブラリの一覧-lts) を参照してください。
 
 :::
 
@@ -20,7 +20,7 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 
 ## インストールとアクティベーション
 
-4D View Pro は、プロジェクト内にインストールされている必要があります。 4D View Pro コンポーネントは[**4D-ViewPro github レポジトリ**](https://github.com/4d/4D-ViewPro) から入手できます。
+4D View Pro は、プロジェクト内にインストールされている必要があります。 4D View Pro は、プロジェクト内にインストールされている必要があります。 4D View Pro コンポーネントは[**4D-ViewPro github レポジトリ**](https://github.com/4d/4D-ViewPro) から入手できます。
 
 開いているプロジェクトに4D View Pro をインストールするための最も簡単な方法は、依存関係マネージャーを使用することです:
 
@@ -39,7 +39,7 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 
 ## 4D View Pro エリアを挿入する
 
-4D View Pro ドキュメントは 4D View Pro という名前の [4Dフォームオブジェクト](FormObjects/viewProArea_overview.md) 内に表示され、手動で編集されます。 このオブジェクトを選択するには、オブジェクトバーの最後のツールをクリックします:
+4D View Pro ドキュメントは 4D View Pro という名前の [4Dフォームオブジェクト](FormObjects/viewProArea_overview.md) 内に表示され、手動で編集されます。 このオブジェクトを選択するには、オブジェクトバーの最後のツールをクリックします: このオブジェクトを選択するには、オブジェクトバーの最後のツールをクリックします:
 
 ![](../assets/en/ViewPro/vpArea.png)
 
@@ -78,9 +78,9 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 
 セルが選択されていれば、たとえ挿入カーソルが非表示であってもデータを直接入力することができます。 その場合、入力した内容はセルのコンテンツを上書きします。
 
-**Tab**キーはセルの内容を確定し、一つ右のセルを選択します。 **Shift + Tab**キーの組み合わせでは、セル入力を確定したあと、一つ左のセルを選択します。
+**Tab**キーはセルの内容を確定し、一つ右のセルを選択します。 **Tab**キーはセルの内容を確定し、一つ右のセルを選択します。 **Shift + Tab**キーの組み合わせでは、セル入力を確定したあと、一つ左のセルを選択します。
 
-**キャリッジリターン**キーはセルの入力を確定し、一つ下のセルを選択します。 **Shift + キャリッジリターン**キーの組み合わせで、セル入力を確定したあと、一つ上のセルを選択します。
+**キャリッジリターン**キーはセルの入力を確定し、一つ下のセルを選択します。 **キャリッジリターン**キーはセルの入力を確定し、一つ下のセルを選択します。 **Shift + キャリッジリターン**キーの組み合わせで、セル入力を確定したあと、一つ上のセルを選択します。
 
 方向キー (矢印) を使用すると、矢印の方向へとセルの選択を移動することができます。
 
@@ -99,6 +99,7 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
   - **フィルタリング**: フィルタリングを使用して行を非表示にします ([SpreadJS ドキュメント](https://developer.mescius.com/spreadjs/docs/) の "Filtering rows" を参照ください)
   - **ソート**: 列のコンテンツを並べ替えます。
   - **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:  
+    ![](../assets/en/ViewPro/vpContext2.PNG) コメントが入力されているセルには、小さな赤い三角形が表示されます:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## 4D View Pro コマンドの使い方
@@ -117,7 +118,7 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-ほとんどの 4D View Pro コマンドは、[4D View Pro のフォームエリア名](FormObjects/viewProArea_overview.md) (4Dフォームオブジェクト) を *vpAreaName* 引数として必要とします。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。
+ほとんどの 4D View Pro コマンドは、[4D View Pro のフォームエリア名](FormObjects/viewProArea_overview.md) (4Dフォームオブジェクト) を *vpAreaName* 引数として必要とします。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。
 
 たとえば、"myVpArea" という名前の 4D View Pro エリアの列数を設定するには、次のように書きます:
 
@@ -125,11 +126,11 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 VP SET COLUMN COUNT("myVpArea";5)
 ```
 
-> フォームエリアへの 4D View Pro オブジェクトの読み込みが完了すると、4D は [On VP Ready](../Events/onVpReady.md) フォームイベントを生成します。 エリアを操作する 4D View Pro コードはこのイベント内で実行する必要があります。 そうでない場合はエラーが返されます。
+> フォームエリアへの 4D View Pro オブジェクトの読み込みが完了すると、4D は [On VP Ready](../Events/onVpReady.md) フォームイベントを生成します。 エリアを操作する 4D View Pro コードはこのイベント内で実行する必要があります。 そうでない場合はエラーが返されます。 エリアを操作する 4D View Pro コードはこのイベント内で実行する必要があります。 そうでない場合はエラーが返されます。
 
 ### レンジオブジェクトの使い方
 
-4D View Pro のコマンドの中には、*rangeObj* 引数を必要とするものがあります。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro コマンドを使って、作成したレンジを他のコマンドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。
+4D View Pro のコマンドの中には、*rangeObj* 引数を必要とするものがあります。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro コマンドを使って、作成したレンジを他のコマンドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro コマンドを使って、作成したレンジを他のコマンドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。
 
 たとえば、次のセルに対応するレンジオブジェクトを作成したい場合:
 
@@ -147,7 +148,7 @@ $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 4D View Pro のレンジオブジェクトは、いくつかのプロパティで構成されます:
 
 - area - 4D View Pro エリアの名称
-- ranges - レンジオブジェクトのコレクション。 各レンジオブジェクトで利用できるプロパティは、レンジオブジェクトの種類によって異なります。 たとえば、列のレンジオブジェクトには、*.column* と *.sheet* プロパティしか含まれません。
+- ranges - レンジオブジェクトのコレクション。 各レンジオブジェクトで利用できるプロパティは、レンジオブジェクトの種類によって異なります。 ranges - レンジオブジェクトのコレクション。 各レンジオブジェクトで利用できるプロパティは、レンジオブジェクトの種類によって異なります。 たとえば、列のレンジオブジェクトには、*.column* と *.sheet* プロパティしか含まれません。
 
 | プロパティ  |                                                                                       | 型          | 説明                                                         | 利用可能な対象                                            |
 | ------ | ------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------- | -------------------------------------------------- |

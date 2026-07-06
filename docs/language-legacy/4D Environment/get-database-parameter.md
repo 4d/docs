@@ -46,7 +46,7 @@ The *selector* parameter designates the parameter to get. 4D offers you the foll
 
 **Scope** (legacy network layer only): 4D application if *value* positive
 
-**Kept between two sessions**: Yes if *value* positive
+**Kept after restart:** Yes if *value* positive
 
 **Description**: To be used in very specific cases. Value of the timeout granted by the remote 4D machine to the 4D Server machine. The default timeout value used by 4D in remote mode is set on the "Client-Server/Network options" page of the Database settings dialog box on the remote machine.
 
@@ -61,7 +61,7 @@ The 4D Remote mode timeout selector is only taken into account if you are using 
 
 **Scope**: 4D Server, 4D remote*
 
-* **Kept between two sessions**: No
+* **Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name).
 
@@ -76,7 +76,7 @@ The 4D Remote mode timeout selector is only taken into account if you are using 
 
 **Scope**: 4D application if *value* positive
 
-**Kept between two sessions**: Yes if *value* positive
+**Kept after restart:** Yes if *value* positive
 
 **Possible values**: 0 -> 32 767
 
@@ -95,7 +95,7 @@ If you pass a **positive** value in the *value*parameter, you set a global and p
 
 **Scope**:4D remote machine
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (no synchronization), 1 (auto synchronization) or 2 (ask).
 
@@ -119,11 +119,11 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: longint > 1 (seconds)
 
-**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [XML DECODE](../commands/xml-decode) of the Database settings for the session (it is not stored in the Database settings).
+**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [Database page](../../settings/database.md) of the settings for the session (it is not stored in the settings).
 
 
 
@@ -132,7 +132,7 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Positive longint > 1.
 
@@ -149,7 +149,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -162,7 +162,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Scope**: 4D local, 4D Server.
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Any integer value, 0 = keep all logs
 
@@ -175,7 +175,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 17
 
@@ -188,7 +188,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Scope**:All 4D remote machines
 
-**Kept between two** **sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 to 65535
 
@@ -205,7 +205,7 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 **Scope**: Remote 4D machine 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, attached to file name). 
 
@@ -222,7 +222,7 @@ These text files store various information concerning each request in a simple t
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 18
 
@@ -235,7 +235,7 @@ These text files store various information concerning each request in a simple t
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 15
 
@@ -248,7 +248,7 @@ These text files store various information concerning each request in a simple t
 
 **Scope**:Database 
 
-**Kept between two** **sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 to 65535
 
@@ -267,7 +267,7 @@ When you modify this value, it is necessary to restart the server machine in ord
 
 **Scope**:All 4D remote machines
 
- **Kept between two sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: 0 = Do not record (default), 1 = Record in CLF format, 2 = Record in DLF format, 3 = Record in ELF format, 4 = Record in WLF format.
 
@@ -282,7 +282,7 @@ The operation of this selector is identical to that of selector 29; however, it 
 
 **Scope:** 4D application
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Description**: Starts or stops the sequential recording of programming events **for the current process** in a separated log file. This log is similar to the Debug log recording (selector 34) but focuses on the current process only. The log file name includes the letter "p" and the process number: 4DDebugLog\[\_p*N*_*n*].txt, where N is the process unique ID. 
 
@@ -297,7 +297,7 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 **Scope:** Current process
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
  **Possible values**: String type without time zone (0), String type with time zone (1), Date type (2) (default)
 
@@ -321,7 +321,7 @@ In `Date type` mode (default), only JSON date strings in short format (e.g. "202
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Starts or stops the sequential recording of events occurring at the 4D programming level in the *4DDebugLog\[\_n\].txt* file or *4DDebugLogServer\[\_n\].txt* (where \_n is the segment number of the file and *Server* is added to the file name when generated on the server). Two modes are available:
 
@@ -368,7 +368,7 @@ For any type of interpreted or compiled 4D application (4D all modes, 4D Server,
 
 **Scope:** 4D application 
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Description:** Level(s) of messages to be included in the diagnostic log when enabled (see selector Diagnostic log recording). Each level designates a category of diagnostic messages and automatically includes more important categorie(s). For a description of categories, see *Diagnostic log levels* section on *developer.4d.com*. 
 
@@ -388,7 +388,7 @@ For any type of interpreted or compiled 4D application (4D all modes, 4D Server,
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 Possible values: 0 or 1 (0 = do not record, 1 = record)
 
@@ -427,7 +427,7 @@ For example, if you execute:
 
 **Scope**: 4D application 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Activation mode of Direct2D under Windows.
 
@@ -446,7 +446,7 @@ For example, if you execute:
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -457,7 +457,7 @@ For example, if you execute:
 
 **Scope**:4D application
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -468,7 +468,7 @@ For example, if you execute:
 
 **Scope**:4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -479,7 +479,7 @@ For example, if you execute:
 
 **Scope**:4D application unless value is negative
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Whole value expressing a duration in seconds. The value can be positive (new connections) or negative (existing connections). By default, the value is 20.
 
@@ -500,7 +500,7 @@ This parameter must be set on the client side. Usually, you do not need to chang
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name). By default, the value is 0 (IMAP exchanges not recorded).
 
@@ -548,7 +548,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [*Descriptio
 
 **Scope**: Current 4D machine
 
-**Kept between two sessions**: n/a
+**Kept after restart:** n/a
 
 **Description**: Returns the version number of the LDAP library in the 4D application on the current machine. (Read only)
 
@@ -559,7 +559,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [*Descriptio
 
 **Scope**: Current 4D machine
 
-**Kept between two sessions**: n/a
+**Kept after restart:** n/a
 
 **Description**: Returns the version number of the SASL library in the 4D application on the current machine. (Read only)
 
@@ -570,7 +570,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [*Descriptio
 
 **Scope:** Current 4D machine
 
-**Kept between two sessions:** n/a
+**Kept after restart:** n/a
 
 **Description:** Returns the version number of the libzip library in the 4D application on the current machine. (Read only)
 
@@ -581,7 +581,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [*Descriptio
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: String containing a list of 4D command numbers to record (separated by semi-colons) or "all" to record all the commands or "" (empty string) to record none of them or prefixed by "-" to exclude specific commands. 
 
@@ -605,7 +605,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -616,7 +616,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -627,7 +627,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D Server, 4D Web Server and 4D SQL Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Used to specify the minimum Transport Layer Security (TLS) version, which provides data encryption and authentication between applications and servers. Connection attempts from clients supporting only versions below the minimum will be rejected. The setting is applied globally to the network layer. Once modified, the server must be restarted to use the new value. 
 
@@ -653,7 +653,7 @@ The 4D Internet Commands plugin uses a different network layer, therefore this s
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 17
 
@@ -666,7 +666,7 @@ The 4D Internet Commands plugin uses a different network layer, therefore this s
 
 **Scope**:All 4D remote machines
 
-**Kept between two** **sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 to 65535
 
@@ -683,7 +683,7 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 **Scope**: Remote 4D machine 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, attached to file name). 
 
@@ -698,11 +698,11 @@ These text files store various information concerning each request in a simple t
 ### OpenSSL version (94)
 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 18
 
@@ -711,7 +711,7 @@ These text files store various information concerning each request in a simple t
 
 **Scope**:Current table and process
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
@@ -729,7 +729,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**: 4D application
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (resume logs), 1 (pause logs)
 
@@ -742,7 +742,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Formatted string of the IPv4 type (for example "127.0.0.1") or IPv6 type (for example "2001:0db8:0000:0000:0000:ff00:0042:8329")
 
@@ -757,7 +757,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Positive long integer type value. By default, the value is 8002\. 
 
@@ -771,7 +771,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope:** Current 4D machine
 
-**Kept between two sessions:** n/a
+**Kept after restart:** n/a
 
 **Description:** Returns the version number of the libzip library in the 4D application on the current machine. (Read only)
 
@@ -782,7 +782,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: String containing a list of 4D command numbers to record (separated by semi-colons) or "all" to record all the commands or "" (empty string) to record none of them or prefixed by "-" to exclude specific commands. 
 
@@ -806,7 +806,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -817,7 +817,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -828,7 +828,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D Server, 4D Web Server and 4D SQL Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Used to specify the minimum Transport Layer Security (TLS) version, which provides data encryption and authentication between applications and servers. Connection attempts from clients supporting only versions below the minimum will be rejected. The setting is applied globally to the network layer. Once modified, the server must be restarted to use the new value. 
 
@@ -851,7 +851,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 17
 
@@ -864,7 +864,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**:All 4D remote machines
 
-**Kept between two** **sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 to 65535
 
@@ -881,7 +881,7 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 **Scope**: Remote 4D machine 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, attached to file name). 
 
@@ -896,11 +896,11 @@ These text files store various information concerning each request in a simple t
 ### OpenSSL version (94)
 
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Scope**: All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: See selector 18
 
@@ -909,7 +909,7 @@ These text files store various information concerning each request in a simple t
 
 **Scope**:Current table and process
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
@@ -927,7 +927,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**: 4D application
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (resume logs), 1 (pause logs)
 
@@ -940,7 +940,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Formatted string of the IPv4 type (for example "127.0.0.1") or IPv6 type (for example "2001:0db8:0000:0000:0000:ff00:0042:8329")
 
@@ -955,7 +955,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Positive long integer type value. By default, the value is 8002\. 
 
@@ -969,7 +969,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope:** Current 4D machine
 
-**Kept between two sessions:** n/a
+**Kept after restart:** n/a
 
 **Description:** Returns the version number of the libzip library in the 4D application on the current machine. (Read only)
 
@@ -980,7 +980,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: String containing a list of 4D command numbers to record (separated by semi-colons) or "all" to record all the commands or "" (empty string) to record none of them or prefixed by "-" to exclude specific commands. 
 
@@ -1004,7 +1004,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -1015,7 +1015,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
@@ -1026,7 +1026,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D Server, 4D Web Server and 4D SQL Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Used to specify the minimum Transport Layer Security (TLS) version, which provides data encryption and authentication between applications and servers. Connection attempts from clients supporting only versions below the minimum will be rejected. The setting is applied globally to the network layer. Once modified, the server must be restarted to use the new value. 
 
@@ -1042,7 +1042,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Positive longints
 
@@ -1057,7 +1057,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**: all 4D machines*
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: Returns the version number of the OpenSSL library in use on the machine. (Read only)
 
@@ -1068,7 +1068,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Scope**:Current table and process
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
@@ -1087,7 +1087,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**: 4D application
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (resume logs), 1 (pause logs)
 
@@ -1100,7 +1100,7 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Formatted string of the IPv4 type (for example "127.0.0.1") or IPv6 type (for example "2001:0db8:0000:0000:0000:ff00:0042:8329")
 
@@ -1115,7 +1115,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**:4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Values**: Positive long integer type value. By default, the value is 8002\. 
 
@@ -1130,7 +1130,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope:** 4D local, 4D Server
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values:** 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name). By default, the value is 0 (POP3 exchanges not recorded).
 
@@ -1145,7 +1145,7 @@ For more information on the 4DPOP3Log\_X.txt files, please refer to the *Descrip
 
 **Scope**: 4D local, 4D Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Description**: TCP port ID used by the 4D Web server with 4D in local mode and 4D Server. The default value, which can be set on the "Web/Configuration" page of the Preferences dialog box, is 80\. You can use the constants of the *TCP Port Numbers* theme for the *value* parameter.
 
@@ -1158,7 +1158,7 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 **Scope**:Current process
 
-**Kept between two** **sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (use database configuration), 1 (always use automatic relations) or 2 (use SQL joins if possible).
 
@@ -1176,12 +1176,11 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 
 
-
 ### Query by formula on server (46)
 
 **Scope**: Current table and process
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
@@ -1198,13 +1197,25 @@ Refer to example 2.
 **Note:** If you want to be able to enable "SQL type" joins (see the QUERY BY FORMULA Joins selector), you must always execute formulas on the server so that they have access to the records. Be careful, in this context, the formula must not contain any calls to a method, otherwise it will automatically be switched to the remote machine.
 
 
+### QUIC session timeout (135)
+
+**Scope**: 4D Server application
+
+**Kept after restart:** No
+
+**Possible values**: Positive integer. Default value = 900, minimum value = 60. 
+
+**Description**: Timeout in seconds for client/server sessions in the event of an unexpected disconnection when using the QUIC network layer. This timeout is the period of time allowed for a session during which the connection between the server and the client can be automatically reestablished following an unintended disconnection. If, at the end of this timeout, the connection has not been reestablished, the session is closed.  
+
+This setting can only be set on 4D Server and applies to all new 4D remote sessions (existing sessions timeout value is untouched). 
+
 
 
 ### RDP optimization (133)
 
 **Scope:** 4D application.
 
-**Kept between two sessions:** No.
+**Kept after restart:** No.
 
 **Possible values:** `0`: Disabled (default), `1`: Enabled. 
 
@@ -1216,7 +1227,7 @@ Refer to example 2.
 
 **Scope**: 4D Server application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Positive longint
 
@@ -1231,7 +1242,7 @@ The sleep timeout is applied after a machine running a 4D remote application has
 
 **Scope**: 4D Server
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Positive longint.
 
@@ -1252,7 +1263,7 @@ In order to be taken into account, this parameter must be executed on the server
 
 **Scope**: 4D local, 4D Server*
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name). By default, the value is 0 (SMTP exchanges not recorded).
 
@@ -1267,7 +1278,7 @@ For more information on the 4DSMTPLog\_X.txt files, please refer to the *Descrip
 
 **Scope**: 4D application
 
- **Kept between two sessions**: No
+ **Kept after restart:** No
 
  **Possible values**: 0 (default) = native macOS spellchecker (Hunspell disabled), 1 = Hunspell spellcheck enabled. 
 
@@ -1280,7 +1291,7 @@ For more information on the 4DSMTPLog\_X.txt files, please refer to the *Descrip
 
 **Scope**:Database
 
-**Kept between two** **sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 (deactivation) or 1 (activation)
 
@@ -1295,7 +1306,7 @@ For more information on the 4DSMTPLog\_X.txt files, please refer to the *Descrip
 
 **Scope**: Database
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Possible values**: 0 (case not taken into account) or 1 (case-sensitive)
 
@@ -1312,7 +1323,7 @@ By default, the value is 1 (case-sensitive): the SQL engine differentiates betwe
 
 **Scope**: 4D local, 4D Server.
 
-**Kept between two sessions**: Yes
+**Kept after restart:** Yes
 
 **Description**: Gets or sets the TCP port number used by the integrated SQL server of 4D in local mode or 4D Server. By default, the value is 19812\. When this selector is set, the database setting is updated. You can also set the TCP port number on the "SQL" page of the Database Settings dialog box. 
 
@@ -1327,7 +1338,7 @@ By default, the value is 1 (case-sensitive): the SQL engine differentiates betwe
 
 **Scope**: 4D application
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Sequence of strings separated by colons.
 
@@ -1348,7 +1359,7 @@ To reset the cipher list to its default value (stored permanently in the SLI fil
 
 **Scope**:4D application
 
- **Kept between two sessions**: Yes
+ **Kept after restart:** Yes
 
  **Possible values**: Any longint value.
 
@@ -1363,7 +1374,7 @@ By default, this unique number is set by 4D and corresponds to the order of reco
 
 **Scope:** 4D application.
 
-**Kept between two sessions:** No.
+**Kept after restart:** No.
 
 **Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
 
@@ -1376,7 +1387,7 @@ By default, this unique number is set by 4D and corresponds to the order of reco
 
 **Scope:** 4D local, 4D Server (all processes)
 
-**Kept between two sessions**: No
+**Kept after restart:** No
 
 **Possible values**: Times in seconds (0) (default), Times in milliseconds (1) 
 
@@ -1393,7 +1404,7 @@ In previous releases, time values were converted and stored as number of millise
 
 **Scope:** 4D application
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values:** longint >= 0 (ticks)
 
@@ -1406,7 +1417,7 @@ In previous releases, time values were converted and stored as number of millise
 
 **Scope:** 4D application
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values:** longint >= 60 (ticks)
 
@@ -1419,7 +1430,7 @@ In previous releases, time values were converted and stored as number of millise
 
 **Scope:** 4D application
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values:** 0 = tips disabled, 1 = tips enabled (default)
 
@@ -1432,7 +1443,7 @@ In previous releases, time values were converted and stored as number of millise
 
 **Scope:** 4D application
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values:** 0 = legacy print rendering disabled, 1 = legacy print rendering enabled
 
@@ -1444,7 +1455,7 @@ In previous releases, time values were converted and stored as number of millise
 
 **Scope:** 4D local, 4D Server
 
-**Kept between two sessions:** No
+**Kept after restart:** No
 
 **Possible values**: Any custom string
 

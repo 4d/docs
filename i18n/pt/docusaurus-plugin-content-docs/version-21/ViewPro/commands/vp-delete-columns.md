@@ -27,7 +27,7 @@ Em rangeObj, passe um objeto que contenha um intervalo de colunas a remover. Se 
 - tanto colunas como linhas, apenas as colunas são removidas.
 - apenas linhas, o comando não faz nada.
 
-> As colunas são excluídas da direita para a esquerda.
+> &#062; As colunas são excluídas da direita para a esquerda.
 
 ## Exemplo
 

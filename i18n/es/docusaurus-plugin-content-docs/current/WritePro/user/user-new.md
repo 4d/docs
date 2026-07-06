@@ -10,7 +10,7 @@ para importar
 
 ## Listas
 
-4D Write Pro supports flat lists (single-level) and multi-level lists.
+4D Write Pro soporta listas planas (de un solo nivel) y listas de varios niveles.
 
 ### Listas de un solo nivel
 
@@ -39,7 +39,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Listas de múltiples niveles
 
-Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
 Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
@@ -61,13 +61,13 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 <!-- END REF -->
 
-<!-- REF multi-level-list.Desc -->
+<!-- REF multi-level-list-style-sheets.Desc -->
 
-## Multi-level list style sheets
+## Hojas de estilo para listas de varios niveles
 
-Multi-level list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+Las hojas de estilo para listas de varios niveles se utilizan para crear [listas de varios niveles](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + nvl + índice", por ejemplo "Mylist lvl 2".
 
 To customize multi-level list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
@@ -105,7 +105,7 @@ resultado:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Para eliminar el primer subnivel:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
@@ -115,9 +115,9 @@ resultado:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valores de atributos predefinidos
 
-When created, multi-level list style sheets use predefined values:
+Al crearse, las hojas de estilo de listas de varios niveles utilizan valores predefinidos:
 
 - `wk margin left` = 0,75 cm \* (número de niveles anteriores) o 0,25 pulgadas \* (número de niveles anteriores), dependiendo de la unidad de diseño actual
 - `wk list type` = `wk decimal`

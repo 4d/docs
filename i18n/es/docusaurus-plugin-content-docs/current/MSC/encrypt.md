@@ -38,9 +38,7 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
    The passphrase is used to generate the data encryption key. Una frase secreta es una versión más segura de una contraseña y puede contener un gran número de caracteres. Por ejemplo, puede introducir una frase de paso como "We all came out to Montreux" o "¡Mi primera gran frase de paso!".
-   El indicador de nivel de seguridad puede ayudarle a evaluar la solidez de su frase de contraseña:
-   ![](../assets/en/MSC/MSC_encrypt5.png)
-   (el verde intenso es el nivel más alto)
+   Una frase secreta es una versión más segura de una contraseña y puede contener un gran número de caracteres.
 4. Introduzca para confirmar su frase secreta segura.
 
 A continuación, se inicia el proceso de encriptación. Si el CSM se abrió en modo estándar, la aplicación se reabre en modo mantenimiento.
@@ -110,7 +108,7 @@ El archivo de datos se descifra completamente y se muestra un mensaje de confirm
 
 ## Guardar la llave de encriptación
 
-4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El nombre del archivo debe tener la extensión `.4DKeyChain`, por ejemplo "myKeys.4DKeyChain". El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
+4D le permite guardar la llave de encriptación de datos en un archivo dedicado. 4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El nombre del archivo debe tener la extensión <code>.4DKeyChain</code>, por ejemplo "myKeys.4DKeyChain".
 
 Puede guardar la llave de encriptación cada vez que se proporcione una nueva frase secreta:
 

@@ -5,18 +5,15 @@ title: Signal
 
 Las señales son herramientas que ofrece el lenguaje 4D para gestionar las interacciones y evitar conflictos entre procesos en una aplicación multiproceso. Las señales le permiten asegurarse de que uno o más procesos esperarán a que se complete una tarea específica antes de continuar la ejecución. Todo proceso puede esperar y/o liberar una señal.
 
-> Los semáforos también pueden utilizarse para gestionar las interacciones. Los semáforos permiten asegurarse de que dos o más procesos no modifican el mismo recurso (archivo, registro...) al mismo tiempo. Sólo el proceso que define el semáforo puede eliminarlo.
+:::note
+
+[Semaphores](../Develop/processes.md#semaphores) can also be used to manage interactions. Los semáforos permiten asegurarse de que dos o más procesos no modifican el mismo recurso (archivo, registro...) al mismo tiempo. Sólo el proceso que define el semáforo puede eliminarlo.
+
+:::
 
 ### Objeto signal
 
 Una señal es un objeto compartido que debe ser pasado como parámetro a los comandos que llaman o crean trabajadores o procesos.
-
-Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
-
-- [`.wait()`](#wait)
-- [`.trigger()`](#trigger)
-- [`.signaled`](#signaled)
-- [`.description`](#description).
 
 Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 

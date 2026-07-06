@@ -27,7 +27,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   - [`dataClass.query()`](../API/DataClassClass.md#query)
   - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Por ejemplo, en un [list box de tipo entity selection](#entity-selection-based-list-box), la fase de aprendizaje tiene lugar durante la visualización de la primera línea. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
+- Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
   - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
   - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
   - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
@@ -66,7 +66,7 @@ Puede aumentar los beneficios de la optimización utilizando la propiedad **cont
 
 > También puede crear contextos utilizando la función [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). Todas las funciones ORDA que manejan entity selections soportan la propiedad **context** (por ejemplo [`dataClass.query()`](../API/DataClassClass.md#query) o [`dataClass.all()`](../API/DataClassClass.md#all)). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
+All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). All ORDA functions that handle entity selections support the <strong x-id="1">context</strong> property (for example <a href="../API/DataClassClass.md#query"><code>dataClass.query()</code></a> or <a href="../API/DataClassClass.md#all"><code>dataClass.all()</code></a>). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
 
 > Se implementa un mecanismo similar para las entidades que se cargan, de modo que sólo se solicitan los atributos utilizados (ver la función [`dataClass.get()`](../API/DataClassClass.md#get)).
 
@@ -141,15 +141,15 @@ Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embarg
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
-### Uso de la palabra clave \`local
+### Uso de la palabra clave `local`
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. Sin embargo, puede ocurrir que una función procese datos que ya están en la caché local y sea totalmente ejecutable en el lado del cliente. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+Por defecto, las [funciones del modelo de datos ORDA](../ORDA/ordaClasses.md) se ejecutan en el servidor, lo que suele ofrecer el mejor rendimiento, ya que solo se envían por la red la solicitud de la función y el resultado. Sin embargo, puede ocurrir que una función procese datos que ya están en la caché local y sea totalmente ejecutable en el lado del cliente. En este caso, puede guardar peticiones en el servidor y, por lo tanto, mejorar el rendimiento de la aplicación [usando la palabra clave `local` en la definición de función](../Concepts/classes.md#local).
 
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obtener los estudiantes más jóvenes
+// Utilización inapropiada de la palabra clave local
 local Function getYoungest() : Object
     return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```

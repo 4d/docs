@@ -77,7 +77,7 @@ Cada vez que o 4D realiza uma ação **Salvar tudo** no ambiente de design (expl
 
 No entanto, você precisa prestar atenção às seguintes diferenças de comportamento em comparação com [a arquitetura padrão do projeto](Project/architecture.md):
 
-- the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder. Em vez disso, é uma pasta dedicada, denominada "userPreferences", armazenada na pasta do sistema do projeto (ou seja, o mesmo local em que se abre um projeto .4dz).
+- the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder. the userPreferences.\{username\} folder used by 4D is not the same folder used by 4D Server in the project folder.
 - a pasta usada pelo 4D para dados derivados não é a pasta chamada "DerivedData" na pasta do projeto. Em vez disso, é uma pasta dedicada chamada "DerivedDataRemote" localizada na pasta do sistema do projeto.
 - O arquivo catalog.4DCatalog não é editado pela 4D, mas sim pelo 4D Server. As informações do catálogo são sincronizadas através de pedidos cliente/servidor
 - o arquivo directory.json não é editado por 4D, mas pelo servidor 4D. As informações do diretório são sincronizadas através de pedidos cliente/servidor
@@ -148,3 +148,52 @@ The following table summarizes where the code is executed by default and how to 
 | Object method                                                                                                                                                                                                                                                                                                   | local             | n/a                                                                                                                                                                                                                         |
 | Database methods:<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server            | n/a                                                                                                                                                                                                                         |
 | Database methods:<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                   | client            | n/a                                                                                                                                                                                                                         |
+
+## Management of unreachable peer
+
+When the [QUIC network layer is used](../settings/client-server.md#network-layer), client/server sessions benefit from an **automatic reconnection feature** in case of unexpected disconnections. Unexpected disconnections include for example:
+
+- LAN cable unplug/plug,
+- Handover with a mobile connection,
+- Switch reboot,
+- Small network error.
+
+This feature supports both server-side and client-side management in the event of a lost connection with a peer, and includes configurable timeouts and real-time information.
+
+:::tip Related blog post
+
+[Tired of network errors disrupting your users? 4D 21 R4 has the answer](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+
+:::
+
+### Unreachable event
+
+The QUIC network layer automatically emits an "Unreachable" event to 4D Server when a remote 4D unexpectedly stops responding; conversely, it automatically emits an "Unreachable" event to a remote 4D when the 4D Server unexpectedly stops responding. When the "Unreachable" event is received on either side, it is immediately reflected in the interface and in the machine's [`Session`](./sessions.md) object.
+
+#### Remote stops responding
+
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote client status](../ServerWindow/users.md#list-of-users) is set to **Unreachable**.
+
+![](../assets/en/Desktop/unreachable-status.png)
+
+#### Server stops responding
+
+If 4D Server unexpectedly stops responding, a reconnection dialog box is displayed on the remote machine:
+
+![](../assets/en/Desktop/server-not-responding.png)
+
+#### Session object updated
+
+When the "Unreachable" event is received on either side, an [`info.unreachableSince`](../API/SessionClass.md#info) property is created in the session on the machine receiving the event (on the server, it is readable through the [`Process activity.sessions`](../commands/process-activity) property), and it starts counting seconds since the last communication. You can use this property to implement your own disconnection interface.
+
+### Restoring or closing connection
+
+The QUIC session timeout is automatically used to monitor disconnections:
+
+- If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.
+- If the connection is not restored before the QUIC session timeout is reached, the session is closed.
+  - In case of a remote session closed from the server, a warning entry is written in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
+  - In case of a server session closed from a remote machine, a warning dialog box is displayed so that the user can restart the remote application or quit:
+    ![](../assets/en/Desktop/remote-not-responding.png)
+
+The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.

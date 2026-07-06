@@ -22,7 +22,7 @@ Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via 
 
 Une liste hiérarchique est à la fois un **objet de langage** existant en mémoire et un **objet de formulaire**.
 
-L'**objet de langage** est référencé de manière unique par un identifiant interne, de type Entier long, désigné par *RefListe* dans ce manuel. Cet identifiant est retourné par les commandes permettant de créer des listes `New list`, `Copy list`, `Load list`, `BLOB to list`. Il n’existe qu’une seule instance en mémoire de l’objet de langage et toute modification effectuée sur cet objet est immédiatement répercutée dans tous les endroits où il est utilisé.
+L'**objet de langage** est référencé de manière unique par un identifiant interne, de type Entier long, désigné par *RefListe* dans ce manuel. This ID is returned by the commands that can be used to create lists: [`New list`](../commands/new-list), [`Copy list`](../commands/copy-list), [`Load list`](../commands/load-list), [`BLOB to list`](../commands/blob-to-list). Il n’existe qu’une seule instance en mémoire de l’objet de langage et toute modification effectuée sur cet objet est immédiatement répercutée dans tous les endroits où il est utilisé.
 
 L'**objet de formulaire** n'est pas nécessairement unique : il peut exister plusieurs représentations d’une même liste hiérarchique dans un même formulaire ou dans des formulaires différents. Comme pour les autres objets de formulaire, vous désignez l'objet dans le langage via la syntaxe (\*;"NomListe", etc.).
 
@@ -39,7 +39,7 @@ Chaque représentation de liste dispose de caractéristiques propres et partage 
 - La position du curseur de défilement.
 
 Les autres caractéristiques (police, taille de la police, style, contrôle de saisie, couleur, contenu des listes, icônes, etc.) sont communes à toutes les représentations et ne peuvent pas être modifiées séparément.
-Par conséquent, lorsque vous utilisez des commandes basées sur la configuration déployé/contracté ou l'élément courant, par exemple `Count list items` (lorsque le paramètre `*` final n’est pas passé), il importe de pouvoir désigner sans ambiguïté la représentation à utiliser.
+Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example [`Count list items`](../commands/count-list-items) (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
 
 Vous devez utiliser l'identifiant de type `RefListe` avec les commandes du langage lorsque vous souhaitez désigner la liste hiérarchique résidant en mémoire. Par ailleurs, si vous souhaitez désigner la représentation au niveau du formulaire d'un objet Liste hiérarchique, vous devez utiliser le nom de l'objet (type chaîne) dans la commande, via la syntaxe (\*;"NomListe"...).
 
@@ -54,44 +54,44 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### Prise en compte du @
 
-Comme pour les autres commandes de gestion des propriété d’objets, il est possible d’utiliser le caractère “@” dans le paramètre `NomListe`. En principe, cette syntaxe permet de désigner un ensemble d’objets dans le formulaire. Toutefois, dans le contexte des commandes de liste hiérarchique, ce principe n’est pas applicable dans tous les cas. Cette syntaxe aura deux effets différents en fonction du type de commande :
+As with [other object property management commands](../FormObjects/formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language), it is possible to use the “@” character in the `ListName` parameter. En principe, cette syntaxe permet de désigner un ensemble d’objets dans le formulaire. Toutefois, dans le contexte des commandes de liste hiérarchique, ce principe n’est pas applicable dans tous les cas. Cette syntaxe aura deux effets différents en fonction du type de commande :
 
 - Pour les commandes fixant des propriétés, cette syntaxe désigne tous les objets dont le nom correspond (fonctionnement standard). Par exemple, le paramètre "LH@" désigne tous les objets de type liste hiérarchique dont le nom débute par “LH”
-  - `DELETE FROM LIST`
-  - `INSERT IN LIST`
-  - `SELECT LIST ITEMS BY POSITION`
-  - `SET LIST ITEM`
-  - `SET LIST ITEM FONT`
-  - `SET LIST ITEM ICON`
-  - `SET LIST ITEM PARAMETER`
-  - `SET LIST ITEM PROPERTIES`
+  - [`DELETE FROM LIST`](../commands/delete-from-list)
+  - [`INSERT IN LIST`](../commands/insert-in-list)
+  - [`SELECT LIST ITEMS BY POSITION`](../commands/select-list-items-by-position)
+  - [`SET LIST ITEM`](../commands/set-list-item)
+  - [`SET LIST ITEM FONT`](../commands/set-list-item-font)
+  - [`SET LIST ITEM ICON`](../commands/set-list-item-icon)
+  - [`SET LIST ITEM PARAMETER`](../commands/set-list-item-parameter)
+  - [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties)
 
 - Pour les commandes récupérant des propriétés, cette syntaxe désigne le premier objet dont le nom correspond. Ces commandes sont :
-  - `Count list items`
-  - `Find in list`
-  - `GET LIST ITEM`
-  - `Get list item font`
-  - `GET LIST ITEM ICON`
-  - `GET LIST ITEM PARAMETER`
-  - `GET LIST ITEM PROPERTIES`
-  - `List item parent`
-  - `List item position`
-  - `Selected list items`
+  - [`Count list items`](../commands/count-list-items)
+  - [`Find in list`](../commands/find-in-list)
+  - [`GET LIST ITEM`](../commands/get-list-item)
+  - [`Get list item font`](../commands/get-list-item-font)
+  - [`GET LIST ITEM ICON`](../commands/get-list-item-icon)
+  - [`GET LIST ITEM PARAMETER`](../commands/get-list-item-parameter)
+  - [`GET LIST ITEM PROPERTIES`](../commands/get-list-item-properties)
+  - [`List item parent`](../commands/list-item-parent)
+  - [`List item position`](../commands/list-item-position)
+  - [`Selected list items`](../commands/selected-list-items)
 
 ## Commandes génériques utilisables avec les listes hiérarchiques
 
 Il est possible de modifier l’apparence d’une liste hiérarchique dans un formulaire à l’aide de plusieurs commandes 4D génériques. Vous devez passer à ces commandes soit le nom d’objet de la liste hiérarchique (en utilisant le paramètre \*), soit son nom de variable (contenant la valeur RefListe) :
 
-- `OBJECT SET FONT`
-- `OBJECT SET FONT STYLE`
-- `OBJECT SET FONT SIZE`
-- `OBJECT SET FILTER`
-- `OBJECT SET ENTERABLE`
-- `OBJECT SET SCROLLBAR`
-- `OBJECT SET SCROLL POSITION`
-- `OBJECT SET RGB COLORS`
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+- [`OBJECT SET FILTER`](../commands/object-set-filter)
+- [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
+- [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)
+- [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-> Rappel : A l'exception de la commande `OBJECT SET SCROLL POSITION`, ces commandes modifient toutes les représentations d'une même liste, même si vous désignez une liste via son nom d'objet.
+> Reminder: Except [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position), these commands modify all the representations of the same list, even if you only specify a list via its object name.
 
 ## Priorité des commandes de propriété
 
@@ -101,7 +101,7 @@ Certaines propriétés d’une liste hiérarchique (par exemple l’attribut **s
 2. Commandes générique de propriété d'objet
 3. Propriété formulaire
 
-Ce principe est appliqué quel que soit l’ordre d’appel des commandes. Si une propriété d’élément est modifiée individuellement via une commande de liste hiérarchique, la commande de propriété d’objet équivalente sera sans effet sur cet élément même si elle est appelée ultérieurement. Par exemple, si vous modifiez la couleur d’un élément via la commande `SET LIST ITEM PROPERTIES`, la commande `OBJECT SET COLOR` n’aura aucun effet sur cet élément.
+Ce principe est appliqué quel que soit l’ordre d’appel des commandes. Si une propriété d’élément est modifiée individuellement via une commande de liste hiérarchique, la commande de propriété d’objet équivalente sera sans effet sur cet élément même si elle est appelée ultérieurement. For example, if the color of an item is modified via the [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 ## Gestion des éléments par position ou par référence
 
@@ -121,19 +121,19 @@ Voici quelques astuces quant à l'utilisation du numéro de référence unique :
 1. Vous n'avez pas besoin d'identifier chaque élément de façon unique (niveau débutant).
 
    - Premier exemple : vous construisez par programmation un système d'onglets, par exemple, un carnet d'adresses. Comme le système vous retournera le numéro de l'onglet sélectionné, vous n'aurez probablement pas besoin de davantage d'informations. Dans ce cas, ne vous préoccupez pas des numéros de référence des éléments : passez n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*. Notez que pour un système de carnet d'adresses, vous pouvez prédéfinir une liste A, B,..., Z en mode Développement. Vous pouvez également la créer par programmation afin d'éliminer les lettres pour lesquelles il n'y a pas d'enregistrement.
-   - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. Vous pouvez sauvegarder la liste à la fin de chaque session, en utilisant les commandes `SAVE LIST` ou `LIST TO BLOB`, et la recharger au début de chaque session, à l'aide des commandes `Load list` ou `BLOB to list`. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. En tout état de cause, l'important est que vous ne traitez que l'élément sélectionné (par clic ou glisser-déposer), car la commande `Selected list items`vous retourne la position de l'élément que vous devez traiter. En utilisant cette valeur de position, vous obtenez le libellé de l'élément grâce à la commande `GET LIST ITEM`. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
+   - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. You can save this list at the end of each session by using the [`SAVE LIST`](../commands/save-list) or [`LIST TO BLOB`](../commands/list-to-blob) commands and reload it at the beginning of each new session using the [`Load list`](../commands/load-list) or [`BLOB to list`](../commands/blob-to-list) commands. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. The important thing is that you only process the item selected, because the [`Selected list items`](../commands/selected-list-items) command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the [`GET LIST ITEM`](../commands/get-list-item) command. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
 
 2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).  
-   Vous utilisez le numéro de référence de l'élément pour stocker l'information nécessaire lorsque vous devez agir sur un élément ; ce point est détaillé dans l'exemple de la commande `APPEND TO LIST`. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
+   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the [`APPEND TO LIST`](../commands/append-to-list) command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
 3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).  
-   Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
+   Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Suppose that you create a *hlList* list using the [`APPEND TO LIST`](../commands/append-to-list) command. A ce stade, vous initialisez un compteur *vlhCounter* à 1. Each time you call [`APPEND TO LIST`](../commands/append-to-list) or [`INSERT IN LIST`](../commands/insert-in-list), you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
 
 > Si vous exploitez les Opérateurs sur les bits, vous pouvez également utiliser les numéros de référence des éléments pour stocker des informations qui peuvent être logées dans un Entier long, c'est-à-dire 2 Entiers, des valeurs de 4 octets ou encore 32 Booléens.
 
 ### Quand avez-vous besoin de numéros de référence uniques ?
 
-Dans la plupart des cas, lorsque vous utilisez des listes hiérarchiques pour des besoins d'interface utilisateur, pour lesquels seul l'élément sélectionné (par un clic ou par glisser-déposer) est important, vous n'avez pas besoin d'utiliser les numéros de référence des éléments. Les commandes `Selected list items` et `GET LIST ITEM`vous fournissent toutes les informations nécessaires à la gestion de l'élément sélectionné. De plus, des commandes telles que `INSERT IN LIST` et `DELETE FROM LIST` vous permettent de manipuler la liste de manière "relative" à l'élément sélectionné.
+Dans la plupart des cas, lorsque vous utilisez des listes hiérarchiques pour des besoins d'interface utilisateur, pour lesquels seul l'élément sélectionné (par un clic ou par glisser-déposer) est important, vous n'avez pas besoin d'utiliser les numéros de référence des éléments. Using [`Selected list items`](../commands/selected-list-items) and [`GET LIST ITEM`](../commands/get-list-item) you have all you need to deal with the currently selected item. In addition, commands such as [`INSERT IN LIST`](../commands/insert-in-list) and [`DELETE FROM LIST`](../commands/delete-from-list) allow you to manipulate the list “relatively” with respect to the selected item.
 
 En pratique, vous devez vous préoccuper des numéros de référence d'éléments lorsque vous voulez accéder directement par programmation à n'importe quel élément de la liste, et pas nécessairement à l'élément couramment sélectionné.
 
@@ -149,6 +149,6 @@ Vous pouvez choisir si les éléments de la liste hiérarchique peuvent être mo
 
 [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Multi-selectable](properties_Action.md#multi-selectable) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Supported Events
+## Événements pris en charge
 
 [On After Edit](../Events/onAfterEdit.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Collapse](../Events/onCollapse.md) - [On Data Change](../Events/onDataChange.md) - [On Delete Action](../Events/onDeleteAction.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Expand](../Events/onExpand.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)

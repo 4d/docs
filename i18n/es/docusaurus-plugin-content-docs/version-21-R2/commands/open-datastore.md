@@ -39,7 +39,7 @@ El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conect
 Los intercambios con el almacén de datos remoto se gestionan automáticamente mediante solicitudes REST. La datastore 4D *connectionInfo* debe estar disponible como 4D remoto, es decir:
 
 - su servidor web debe ser lanzado con http y/o https activado,
-- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
+- su datastore debe estar expuesto en REST ([opción **Activar el servicio REST**](REST/configuration.md#starting-the-rest-server)),
 - una licencia de cliente debe estar disponible si es necesario (ver nota).
 
 :::note

@@ -7,7 +7,7 @@ title: 印刷
 
 フォーム毎に用紙設定をおこなうことができます。 この機能は、フォームエディターで印刷ページの境界を表示するのに便利です。
 
-> **互換性に関する注意:** アプリケーションモードでフォームを印刷するときにこれらの設定が考慮されたとしても、プラットフォームおよびドライバー依存性に関する制約から、フォームの印刷設定を保存するのにこの機能を使用することは推奨されません。 It is highly recommended to use the 4D commands [`Print settings to BLOB`](../commands/print-settings-to-blob)/[`BLOB to print settings`](../commands/blob-to-print-settings) which are more powerful.
+> **互換性に関する注意:** アプリケーションモードでフォームを印刷するときにこれらの設定が考慮されたとしても、プラットフォームおよびドライバー依存性に関する制約から、フォームの印刷設定を保存するのにこの機能を使用することは推奨されません。 **互換性に関する注意:** アプリケーションモードでフォームを印刷するときにこれらの設定が考慮されたとしても、プラットフォームおよびドライバー依存性に関する制約から、フォームの印刷設定を保存するのにこの機能を使用することは推奨されません。 It is highly recommended to use the 4D commands [`Print settings to BLOB`](../commands/print-settings-to-blob)/[`BLOB to print settings`](../commands/blob-to-print-settings) which are more powerful.
 
 次の印刷設定が変更できます:
 

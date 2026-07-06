@@ -28,7 +28,7 @@ O comando `VP Column` <!-- REF #_method_.VP Column.Summary -->retorna um novo ob
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro *column* define a primeira coluna do intervalo de colunas. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Se o intervalo contiver várias colunas, você também deverá usar o parâmetro opcional *columnCount*.
+O parâmetro *column* define a primeira coluna do intervalo de colunas. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Passar o índice da coluna (a contagem começa em 0) neste parâmetro.
 
 O parâmetro opcional *columnCount* permite que você defina o número total de colunas do intervalo. *columnCount* deve ser maior que 0. Se for omitido, o valor será definido como 1 por padrão e um intervalo de tipo de coluna será criado.
 

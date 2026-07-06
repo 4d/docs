@@ -79,7 +79,11 @@ Chaque process est identifié par une icône et un type. La couleur et la forme 
 
 > Chaque process client 4D principal et son process base 4D client "jumeau" sont regroupés lorsque l’option **Afficher les process par groupes** est cochée.
 
+:::note
 
+Des icônes et des types de processus similaires sont utilisés dans la [page « Processus » de l'Explorateur d'exécution](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+
+:::
 ## Boutons d’administration
 
 La page comporte cinq boutons de commande permettant d’agir sur le ou les process sélectionné(s). A noter que vous ne pouvez agir que sur les process utilisateurs.

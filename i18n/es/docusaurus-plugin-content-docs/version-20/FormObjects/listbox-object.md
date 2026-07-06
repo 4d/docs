@@ -30,7 +30,7 @@ LIST TO ARRAY("ListName";varCol)
 
 En este tipo de list box, cada columna puede estar asociada a un campo (por ejemplo `[Employees]LastName)` o a una expresión. La expresión puede basarse en uno o más campos (por ejemplo, `[Employees]FirstName+" "[Employees]LastName`) o puede ser simplemente una fórmula (por ejemplo `String(Milliseconds)`). La expresión también puede ser un método proyecto, una variable o un elemento de array. La expresión también puede ser un método proyecto, una variable o un elemento de array.
 
-The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
+El contenido de cada fila se evalúa según una selección de registros: la **selección actual** de una tabla o una **selección temporal**.
 
 En el caso de un list box basado en la selección actual de una tabla, cualquier modificación realizada desde la base de datos se refleja automáticamente en el list box, y viceversa. Por lo tanto, la selección actual es siempre la misma en ambos lugares.
 

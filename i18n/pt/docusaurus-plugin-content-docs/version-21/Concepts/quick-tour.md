@@ -244,7 +244,7 @@ Uma classe pode estender outra classe usando `Class extends <ClassName>`. Las su
 
 ## Operadores
 
-Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
+Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. Já está familiarizado com muitos operadores. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo    |
 | -------- | ------------- | ---------- |
@@ -373,7 +373,7 @@ Insira `//` no início de uma linha ou após uma instrução para adicionar um c
 
 Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
 
-- **As linhas de comentários podem ser inseridos em qualquer parte do código.** Exemplo:
+- Pode manipular objectos e colecções da linguagem 4D utilizando a notação de objeto para obter ou definir os seus valores. Exemplo:
 
 ```4d
 For /* linha de comentário */ ($vCounter;1;100)

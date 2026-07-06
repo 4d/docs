@@ -23,7 +23,7 @@ title: VP Get values
 
 `VP Get values` コマンドは、<!-- REF #_method_.VP Get values.Summary --> *rangeObj* で指定したレンジの値をすべて取得します<!-- END REF -->。
 
-*rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
+*rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
 `VP Get values` によって返されるコレクションは、2次元構造のコレクションです:
 

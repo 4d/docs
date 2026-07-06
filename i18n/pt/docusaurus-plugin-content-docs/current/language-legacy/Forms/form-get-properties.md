@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594; | Tabela do formulário ou tabela por padrão, se for omitido |
+| tabela | Table | &#8594; | Somente formulário de tabela: Tabela do formulário ou tabela por padrão, se for omitido |
 | nomeForm | Text | &#8594; | Nome do formulário |
 | largura | Integer | &#8592; | Largura do formulário (em pixels) |
 | altura | Integer | &#8592; | Altura do formulário (em pixels) |

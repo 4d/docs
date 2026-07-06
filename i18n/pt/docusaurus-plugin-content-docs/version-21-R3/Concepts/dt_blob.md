@@ -26,7 +26,7 @@ Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determin
 | Desempenho ao acessar aos bytes     |   +  |             -            |
 | Tamanho máximo                      |  2GB |          Memória         |
 
-\*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos.
+\*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Al trabajar con métodos, usar objetos blob (`4D.Blob`) es más eficiente, ya que son pasados por referencia.
 
 > Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço está disponível.
 
@@ -80,7 +80,7 @@ Algunos comandos 4D modifican el blob, y por lo tanto no soportan el tipo `4D.Bl
 
 ### Passagem de blobs e objectos blob para métodos
 
-Al trabajar con métodos, usar objetos blob (`4D.Blob`) es más eficiente, ya que son pasados por referencia. Tenha em mente que, ao contrário dos objectos blob, que são passados por referência, as blobs escalares são duplicadas na memória quando são passadas para métodos.
+Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos. Tenha em mente que, ao contrário dos objectos blob, que são passados por referência, as blobs escalares são duplicadas na memória quando são passadas para métodos.
 
 ### Passar um blob escalar por referência usando um ponteiro
 

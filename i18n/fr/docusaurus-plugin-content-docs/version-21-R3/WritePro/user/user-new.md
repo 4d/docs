@@ -8,13 +8,13 @@ to import
 
 <!-- REF lists-WP.Desc -->
 
-## Enumérations
+## Listes
 
-4D Write Pro supports flat lists (single-level) and hierarchical lists (multi-level).
+4D Write Pro prend en charge les listes plats (mono-niveau) et les listes hiérarchiques (multi-niveaux).
 
-### Single-level lists
+### Listes à un seul niveau
 
-4D Write Pro supports two main types of single-level lists:
+4D Write Pro prend en charge deux types principaux de listes à un seul niveau :
 
 - listes non ordonnées : les éléments de la liste sont indiqués par des puces, des puces personnalisées ou des images utilisées comme marqueurs.
 - listes ordonnées : les éléments de la liste sont indiqués par des chiffres ou des lettres
@@ -37,9 +37,9 @@ Lorsque la liste est créée à l'aide de la commande WP SET ATTRIBUTE(../comman
 
 :::
 
-### Multi-level lists
+### Listes multi-niveaux
 
-Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a hierarchical list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Les listes à niveaux multiples sont basées sur des [feuilles de style de liste hiérarchique](../user-legacy/stylesheets.md#hierarchical-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Chaque niveau est rattaché à une feuille de style de liste hiérarchique et représente une profondeur dans la liste (niveau 1, niveau 2, niveau 3, etc.).
 
 When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
 
@@ -55,7 +55,7 @@ Multi-level lists can be managed using:
 
 :::tip Article(s) de blog sur le sujet
 
-[4D Write Pro – Creating Multi-level Bullet or Numbered Lists Using Hierarchical list Style Sheets](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-hierarchical-paragraph-style-sheets)
+[4D Write Pro – Création de listes à puces ou numérotées à plusieurs niveaux à l'aide de feuilles de style de listes hiérarchiques](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-hierarchical-paragraph-style-sheets)
 
 :::
 
@@ -63,36 +63,36 @@ Multi-level lists can be managed using:
 
 <!-- REF hierarchical-list.Desc -->
 
-## Hierarchical list style sheets
+## Feuilles de style de liste hiérarchique
 
-Hierarchical list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+Les feuilles de style de la liste hiérarchique sont utilisées pour créer des [listes à plusieurs niveaux](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+Pour créer une feuille de style de liste hiérarchique, utilisez [WP New style sheet](../commands/wp-new-style-sheet.md) et indiquez dans *listLevelCount* le nombre de niveaux souhaité. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
 
-To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+Pour personnaliser les styles de liste hiérarchique, l'objet de la feuille de style de paragraphe peut être personnalisé en utilisant [attributs de feuille de style](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
-Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
+Les feuilles de style de la liste hiérarchique sont entièrement supportées par les commandes suivantes : [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 
 ### Exemple
 
-The following example creates a three-level hierarchical list style sheet and applies it to paragraphs.
+L'exemple suivant crée une feuille de style de liste hiérarchique à trois niveaux et l'applique aux paragraphes.
 
 ```4d
-// Create 3 hierarchical list style sheets
+// Créer 3 feuilles de style de liste hiérarchique
 WP New style sheet(wpArea; wk type paragraph; "MyList"; 3)
 
-// Retrieve each level
+// Récupérer chaque niveau
 var $level1; $level2; $level3 : Object
 $level1:=WP Get style sheet(wpArea; "MyList"; 1) // Root level
 $level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1st sub-level
 $level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2nd sub-level
 
-// Customize styles
+// Personnaliser les styles
 WP SET ATTRIBUTES($level1; {listStyleType: wk upper latin; fontBold: wk true})
 WP SET ATTRIBUTES($level2; {listConcatStringFormat: True})
 WP SET ATTRIBUTES($level3; {listStringFormatLtr: "(#)"})
 
-// Apply hierarchical style sheets to paragraphs
+// Appliquer des feuilles de style hiérarchiques aux paragraphes
 var $paragraphs : Collection
 $paragraphs:=WP Get elements(wpArea; wk type paragraph)
 
@@ -117,7 +117,7 @@ result:
 
 ### Predefined attribute values
 
-When created, hierarchical list style sheets use predefined values:
+Lors de leur création, les feuilles de style de liste hiérarchique utilisent des valeurs prédéfinies :
 
 - `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`

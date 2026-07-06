@@ -22,7 +22,7 @@ En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a trav
 
 Una lista jerárquica es a la vez un **objeto de lenguaje** existente en memoria y un **objeto de formulario**.
 
-El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por *ListRef* en el manual de Lenguaje 4D. Este ID es devuelto por los comandos que se pueden usar para crear listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Sólo hay una instancia del objeto lenguaje en la memoria y cualquier modificación realizada en este objeto se traslada inmediatamente a todos los lugares donde se utiliza.
+El **objeto de lenguaje** está referenciado por un ID interno único de tipo Entero largo, designado por *ListRef* en el manual de Lenguaje 4D. This ID is returned by the commands that can be used to create lists: [`New list`](../commands/new-list), [`Copy list`](../commands/copy-list), [`Load list`](../commands/load-list), [`BLOB to list`](../commands/blob-to-list). Sólo hay una instancia del objeto lenguaje en la memoria y cualquier modificación realizada en este objeto se traslada inmediatamente a todos los lugares donde se utiliza.
 
 El **objeto de formulario** no es necesariamente único: puede haber varias representaciones de la misma lista jerárquica en el mismo formulario o en otros diferentes. Al igual que con otros objetos formulario, se especifica el objeto en el lenguaje utilizando la sintaxis (\*; "NomLista", etc.).
 
@@ -39,7 +39,7 @@ Cada representación de la lista tiene sus propias características específicas
 - La posición del cursor de desplazamiento.
 
 Las otras características (fuente, tamaño de fuente, estilo, control de entrada, color, contenido de la lista, iconos, etc.) son comunes a todas las representaciones y no se pueden modificar por separado.
-Por consiguiente, cuando se utilizan comandos basados en la configuración expandida/colapsada o en el elemento actual, por ejemplo `Count list items` (cuando no se pasa el parámetro final `*`), es importante poder especificar la representación que se utilizará sin ninguna ambigüedad.
+Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example [`Count list items`](../commands/count-list-items) (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
 
 Debe utilizar el identificador `RefLista` con los comandos del lenguaje cuando quiera especificar la lista jerárquica que se encuentra en la memoria. En cambio, si desea especificar la representación al nivel del formulario de un objeto Lista jerárquica, debe utilizar el nombre del objeto (tipo cadena) en el comando, mediante la sintaxis estándar (\*; "NomLista", etc.).
 
@@ -54,54 +54,54 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### Soporte de @
 
-Al igual que con otros comandos de gestión de propiedades de objetos, es posible utilizar el carácter "@" en el parámetro `NomLista`. Por regla general, esta sintaxis se utiliza para designar un conjunto de objetos del formulario. Sin embargo, en el contexto de los comandos de listas jerárquicas, esto no se aplica en todos los casos. Esta sintaxis tendrá dos efectos diferentes según el tipo de comando:
+As with [other object property management commands](../FormObjects/formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language), it is possible to use the “@” character in the `ListName` parameter. Por regla general, esta sintaxis se utiliza para designar un conjunto de objetos del formulario. Sin embargo, en el contexto de los comandos de listas jerárquicas, esto no se aplica en todos los casos. Esta sintaxis tendrá dos efectos diferentes según el tipo de comando:
 
 - Para los comandos que fijan propiedades, esta sintaxis designa todos los objetos cuyo nombre corresponde (comportamiento estándar). Por ejemplo, el parámetro "LH@" designa todos los objetos del tipo lista jerárquica cuyo nombre empieza por "LH."
-  - `DELETE FROM LIST`
-  - `INSERT IN LIST`
-  - `SELECT LIST ITEMS BY POSITION`
-  - `SET LIST ITEM`
-  - `SET LIST ITEM FONT`
-  - `SET LIST ITEM ICON`
-  - `SET LIST ITEM PARAMETER`
-  - `SET LIST ITEM PROPERTIES`
+  - [`DELETE FROM LIST`](../commands/delete-from-list)
+  - [`INSERT IN LIST`](../commands/insert-in-list)
+  - [`SELECT LIST ITEMS BY POSITION`](../commands/select-list-items-by-position)
+  - [`SET LIST ITEM`](../commands/set-list-item)
+  - [`SET LIST ITEM FONT`](../commands/set-list-item-font)
+  - [`SET LIST ITEM ICON`](../commands/set-list-item-icon)
+  - [`SET LIST ITEM PARAMETER`](../commands/set-list-item-parameter)
+  - [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties)
 
 - Para los comandos que recuperan propiedades, esta sintaxis designa el primer objeto cuyo nombre corresponde:
-  - `Count list items`
-  - `Find in list`
-  - `GET LIST ITEM`
-  - `Get list item font`
-  - `GET LIST ITEM ICON`
-  - `GET LIST ITEM PARAMETER`
-  - `GET LIST ITEM PROPERTIES`
-  - `List item parent`
-  - `List item position`
-  - `Selected list items`
+  - [`Count list items`](../commands/count-list-items)
+  - [`Find in list`](../commands/find-in-list)
+  - [`GET LIST ITEM`](../commands/get-list-item)
+  - [`Get list item font`](../commands/get-list-item-font)
+  - [`GET LIST ITEM ICON`](../commands/get-list-item-icon)
+  - [`GET LIST ITEM PARAMETER`](../commands/get-list-item-parameter)
+  - [`GET LIST ITEM PROPERTIES`](../commands/get-list-item-properties)
+  - [`List item parent`](../commands/list-item-parent)
+  - [`List item position`](../commands/list-item-position)
+  - [`Selected list items`](../commands/selected-list-items)
 
 ## Comandos genéricos utilizables con listas jerárquicas
 
 Es posible modificar la apariencia de una lista jerárquica en un formulario utilizando varios comandos 4D genéricos. Puede pasar a estos comandos el nombre del objeto de la lista jerárquica (utilizando el parámetro \*), o su nombre de variable (que contiene el valor ListRef):
 
-- `OBJECT SET FONT`
-- `OBJECT SET FONT STYLE`
-- `OBJECT SET FONT SIZE`
-- `OBJECT SET FILTER`
-- `OBJECT SET ENTERABLE`
-- `OBJECT SET SCROLLBAR`
-- `OBJECT SET SCROLL POSITION`
-- `OBJECT SET RGB COLORS`
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+- [`OBJECT SET FILTER`](../commands/object-set-filter)
+- [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
+- [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)
+- [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-> Recordatorio: excepto `OBJECT SET SCROLL POSITION`, estos comandos modifican todas las representaciones de una misma lista, aunque sólo se especifique una lista a través de su nombre de objeto.
+> Reminder: Except [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position), these commands modify all the representations of the same list, even if you only specify a list via its object name.
 
 ## Prioridad de los comandos de propiedad
 
-Ciertas propiedades de las listas jerárquicas (por ejemplo, el atributo **editable** o el color) pueden definirse de diferentes maneras: en las propiedades del formulario, mediante un comando del tema "Propiedades de los objetos" o mediante un comando del Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad:
+Ciertas propiedades de las listas jerárquicas (por ejemplo, el atributo **editable** o el color) pueden definirse de diferentes maneras: en las propiedades del formulario, mediante un comando del tema "Propiedades de los objetos" o mediante un comando del Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad: Cuando se utilizan los tres medios para definir las propiedades de la lista, se aplica el siguiente orden de prioridad:
 
 1. Comandos del tema "Lista jerárquica"
 2. Comandos genéricos de propiedad de objeto
 3. Propiedad formulario
 
-Este principio se aplica independientemente del orden de llamada de los comandos. Si una propiedad de un elemento se modifica individualmente a través de un comando de lista jerárquica, el comando de propiedad de objeto equivalente no tendrá ningún efecto sobre este elemento, incluso si se llama posteriormente. Por ejemplo, si el color de un elemento se modifica a través del comando `SET LIST ITEM PROPERTIES`, el comando `OBJECT SET COLOR` no tendrá ningún efecto sobre este elemento.
+Este principio se aplica independientemente del orden de llamada de los comandos. Si una propiedad de un elemento se modifica individualmente a través de un comando de lista jerárquica, el comando de propiedad de objeto equivalente no tendrá ningún efecto sobre este elemento, incluso si se llama posteriormente. For example, if the color of an item is modified via the [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 ## Gestión de los elementos por posición o por referencia
 
@@ -121,19 +121,19 @@ He aquí algunos consejos para utilizar los números de referencia:
 1. No es necesario identificar cada elemento con un número único (nivel principiante).
 
    - Primer ejemplo: se construye por programación un sistema de pestañas, por ejemplo, una libreta de direcciones. Como el sistema devuelve el número de la pestaña seleccionada, probablemente no necesitará más información que ésta. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro *itemRef*. Tenga en cuenta que para un sistema de libreta de direcciones, puede predefinir una lista A, B, ..., Z en el modo Diseño. También se puede crear por programación para eliminar las letras para las que no hay registros.
-   - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
+   - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. You can save this list at the end of each session by using the [`SAVE LIST`](../commands/save-list) or [`LIST TO BLOB`](../commands/list-to-blob) commands and reload it at the beginning of each new session using the [`Load list`](../commands/load-list) or [`BLOB to list`](../commands/blob-to-list) commands. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. The important thing is that you only process the item selected, because the [`Selected list items`](../commands/selected-list-items) command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the [`GET LIST ITEM`](../commands/get-list-item) command. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
 
 2. Necesita identificar parcialmente los elementos de la lista (nivel intermediario).  
-   Se utiliza el número de referencia del elemento para almacenar la información necesaria cuando debe trabajar con el elemento; este punto se detalla en el ejemplo del comando `APPEND TO LIST`. En este ejemplo, utilizamos los números de referencia de los artículos para almacenar los números de registro. Sin embargo, debemos ser capaces de establecer una distinción entre los elementos que corresponden a los registros [Department] y los que corresponden a los registros [Employees].
+   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the [`APPEND TO LIST`](../commands/append-to-list) command. En este ejemplo, utilizamos los números de referencia de los artículos para almacenar los números de registro. Sin embargo, debemos ser capaces de establecer una distinción entre los elementos que corresponden a los registros [Department] y los que corresponden a los registros [Employees].
 
 3. Debe identificar cada los elementos de la lista individualmente (nivel avanzado).  
-   Programe una gestión elaborada de listas jerárquicas en la que es absolutamente necesario poder identificar cada elemento individualmente en cada nivel de la lista. Una forma sencilla de ponerlo en práctica es mantener un contador personal. Suponga que crea una lista *hlList* utilizando el comando `APPEND TO LIST`. En esta etapa, se inicializa un contador *vhlCounter* en 1. Cada vez que se llama a `APPEND TO LIST` o `INSERT IN LIST`, se incrementa este contador `(vhlCounter:=vhlCounter+1)`, y se pasa el número del contador como número de referencia del elemento. El truco consiste en no disminuir nunca el contador cuando se eliminan elementos: el contador sólo puede aumentar. De este modo, se garantiza la unicidad de los números de referencia de los elementos. Como estos números son de tipo Entero largo, puede añadir o insertar más de dos mil millones de elementos en una lista que ha sido reiniciada... (sin embargo, si está trabajando con un número tan grande de elementos, esto suele significar que debe utilizar una tabla en lugar de una lista.)
+   Programe una gestión elaborada de listas jerárquicas en la que es absolutamente necesario poder identificar cada elemento individualmente en cada nivel de la lista. Una forma sencilla de ponerlo en práctica es mantener un contador personal. Suppose that you create a *hlList* list using the [`APPEND TO LIST`](../commands/append-to-list) command. En esta etapa, se inicializa un contador *vhlCounter* en 1. Each time you call [`APPEND TO LIST`](../commands/append-to-list) or [`INSERT IN LIST`](../commands/insert-in-list), you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. El truco consiste en no disminuir nunca el contador cuando se eliminan elementos: el contador sólo puede aumentar. De este modo, se garantiza la unicidad de los números de referencia de los elementos. Como estos números son de tipo Entero largo, puede añadir o insertar más de dos mil millones de elementos en una lista que ha sido reiniciada... (sin embargo, si está trabajando con un número tan grande de elementos, esto suele significar que debe utilizar una tabla en lugar de una lista.)
 
 > Si se utilizan operadores Bitwise, también se pueden utilizar los números de referencia de los elementos para almacenar información que se puede poner en un Entero largo, es decir, 2 enteros, valores de 4 bytes o de nuevo 32 booleanos.
 
 ### ¿Cuándo necesita números de referencia únicos?
 
-En la mayoría de los casos, cuando se utilizan listas jerárquicas con fines de interfaz de usuario y cuando sólo se trata del elemento seleccionado (por un clic o arrastrado), no será necesario utilizar los números de referencia de los elementos en absoluto. Con `Selected list items` y `GET LIST ITEM`, tiene todo lo que necesita para tratar con el elemento seleccionado actualmente. Además, comandos como `INSERT IN LIST` y `DELETE FROM LIST` permiten manipular la lista "relativamente" con respecto al elemento seleccionado.
+En la mayoría de los casos, cuando se utilizan listas jerárquicas con fines de interfaz de usuario y cuando sólo se trata del elemento seleccionado (por un clic o arrastrado), no será necesario utilizar los números de referencia de los elementos en absoluto. Using [`Selected list items`](../commands/selected-list-items) and [`GET LIST ITEM`](../commands/get-list-item) you have all you need to deal with the currently selected item. In addition, commands such as [`INSERT IN LIST`](../commands/insert-in-list) and [`DELETE FROM LIST`](../commands/delete-from-list) allow you to manipulate the list “relatively” with respect to the selected item.
 
 Básicamente, es necesario tratar con los números de referencia de los elementos cuando se quiere acceder directamente a cualquier elemento de la lista de forma programada y no necesariamente al actualmente seleccionado en la lista.
 

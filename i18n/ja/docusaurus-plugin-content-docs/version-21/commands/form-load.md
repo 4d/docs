@@ -23,12 +23,12 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                              |
-| ----- | ----------------------------------------------- |
-| 20    | 変更                                              |
-| 16 R6 | 変更                                              |
-| 14    | Renamed (OPEN PRINTING FORM) |
-| 12    | Created                                         |
+| リリース  | 内容                                             |
+| ----- | ---------------------------------------------- |
+| 20    | 変更                                             |
+| 16 R6 | 変更                                             |
+| 14    | 名称変更 (旧 OPEN PRINTING FORM) |
+| 12    | Created                                        |
 
 </details>
 </div>
@@ -81,7 +81,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 ## 例題 2
@@ -91,7 +91,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // イベントとオブジェクトメソッドの実行
 ```
 
 ## 例題 3
@@ -100,14 +100,14 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ```4d
  FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+  // イベントやメソッドを実行することなくフォームを選択
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
  For($i;1;Size of array(arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… 処理
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD // フォームをunload するのを忘れないこと
 ```
 
 ## 例題 4
@@ -115,14 +115,14 @@ form data オブジェクトについての詳細な情報については、[`DI
 以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY TEXT(objectsArray;0) // フォームのオブジェクトを並べ替えて入れる配列
  ARRAY POINTER(variablesArray;0)
  ARRAY INTEGER(pagesArray;0)
  
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM LOAD("/RESOURCES/OutputForm.json") // フォームを読み込む
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") // オブジェクトの数を返す
 ```
 
 結果は以下のように表示されます:
@@ -131,7 +131,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 例題 5
 
-リストボックスを含んでいるフォームを印刷したい場合を考えます。 そして *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
+リストボックスを含んでいるフォームを印刷したい場合を考えます。 リストボックスを含んでいるフォームを印刷したい場合を考えます。 そして *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
 1\. 印刷メソッド内に、以下のように書きます:
 
@@ -143,12 +143,12 @@ form data オブジェクトについての詳細な情報については、[`DI
  OPEN PRINTING JOB
  $formData:=New object
  $formData.LBcollection:=New collection()
- ... //fill the collection with data
+ ... // コレクションにデータを入れます
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) // $formData 経由でコレクションをフォームに渡します
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // この"LB" はリストボックスで、Form.LBcollectionをデータソースとして持つとします。
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -164,7 +164,7 @@ form data オブジェクトについての詳細な情報については、[`DI
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) // ここでForm.LBcollection は利用可能です
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

@@ -135,8 +135,7 @@ Function add($x : Variant; $y : Integer): Integer
 Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
-    //declaração inválida
-Function myTransform ($x : Integer) -> $x : Integer 
+    //declaração inválida Function myTransform ($x : Integer) -> $x : Integer 
     //erro: $x é declarado duas vezes
 ```
 
@@ -259,7 +258,7 @@ Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à q
 ```
 
 
-Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. Os três primeiros parâmetros podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 and $3 can be of any data type.
+Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. $1, $2 and $3 can be of any data type. Os três primeiros parâmetros podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico.
 
 > O número na declaração tem que ser uma constante e não uma variável.
 
@@ -321,13 +320,13 @@ Função add($x : Variante; $y : Integer)-> $result : Integer
 - Objectos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over` , é tipado pelo compilador se o parâmetro não tiver sido explicitamente declarado. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
 ```4d
- C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
+ If($DataType=Is picture)
        $0:=-1
     End if
+    ...
+    C_LONGINT($0)
+ If(Form event code=On Drag Over)
+    $0:=0
     ...
  End if
 ```
@@ -393,7 +392,7 @@ No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e
 ```
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
-Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve:
+Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve: Escreve:
 
 ```4d
 Result:=MySum("##0.00";125,2;33,5;24)

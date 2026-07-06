@@ -6,7 +6,7 @@ title: Área Web
 ---
 ## Acceder a los métodos 4D
 
-Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio. Para poder llamar a los métodos 4D desde un área Web, debe activar la propiedad de accesibilidad de los métodos 4D ("todos").
+Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio. Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio.
 
 > Esta propiedad solo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 

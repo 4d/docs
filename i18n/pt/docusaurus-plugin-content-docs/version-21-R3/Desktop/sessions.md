@@ -82,7 +82,7 @@ Privileges can only be set from the remote user session on the server. For secur
 
 :::
 
-Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
+Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used. After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared.
 
 :::note
 

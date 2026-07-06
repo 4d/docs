@@ -40,9 +40,9 @@ title: Session
 <!-- REF #_command_.Session.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|戻り値|4D.Session|<-|Session object|
 </div>
 <!-- END REF -->
 
@@ -177,7 +177,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
 |Result|Boolean|<-|True if session has *privilege*, False otherwise|
@@ -307,11 +307,11 @@ End if
 <!-- REF #SessionClass.setPrivileges().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|privilege|Text|->|Privilege name|
-|privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|
+|privilege|Text|->|権限の名前|
+|privileges|Collection|->|権限の名前のコレクション|
+|settings|Object|->|"privileges" プロパティ (文字列またはコレクション) を持つオブジェクト|
 </div>
 <!-- END REF -->
 

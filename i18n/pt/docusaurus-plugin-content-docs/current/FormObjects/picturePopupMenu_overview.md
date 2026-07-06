@@ -3,7 +3,7 @@ id: picturePopupMenuOverview
 title: Menu pop-up imagem
 ---
 
-Um menu pop-up imagem é um menu pop-up que exibe um array de imagens bidimensional. Um menu pop-up imagem pode ser usado em vez de um [botão imagem](pictureButton_overview.md). A criação da imagem a ser usada com um menu pop-up imagem é semelhante à criação de uma imagem para um botão imagem. O conceito é o mesmo das [grades de botões](buttonGrid_overview.md), exceto pelo fato de que o gráfico é usado como um menu pop-up em vez de um objeto do formulário.
+Um menu pop-up imagem é um menu pop-up que exibe um array de imagens bidimensional. Um menu pop-up imagem é um menu pop-up que exibe um array de imagens bidimensional. A criação da imagem a ser usada com um menu pop-up imagem é semelhante à criação de uma imagem para um botão imagem. Um menu pop-up imagem pode ser usado em vez de um [botão imagem](pictureButton_overview.md).
 
 ## Utilizar os menus emergentes de imagens
 
@@ -13,11 +13,11 @@ Para criar um menu pop-up imagem, você precisa [fazer referência a uma imagem]
 
 ### Programação
 
-Pode gerir os menus pop-up de imagens utilizando métodos. Como as [grades dos botões](buttonGrid_overview.md), variáveis associadas aos menus imagem são definidas com o valor do elemento selecionado no menu pop-up imagem. Se nenhum elemento for seleccionado, o valor é 0. Os elementos são numerados, linha a linha, da esquerda para a direita, começando pela linha superior.
+Pode gerir os menus pop-up de imagens utilizando métodos. Pode gerir os menus pop-up de imagens utilizando métodos. Se nenhum elemento for seleccionado, o valor é 0. Os elementos são numerados, linha a linha, da esquerda para a direita, começando pela linha superior.
 
 ### Ir para página
 
-Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) `gotoPage` a um menu pop-up imagem. Quando essa ação for selecionada, 4D exibirá automaticamente a página do formulário que corresponde à posição da imagem selecionada na array de imagens. Os elementos são numerados da esquerda para a direita e de cima para baixo, começando pelo canto superior esquerdo.
+You can assign the `gotoPage` [standard action](/Desktop/standard-actions) to a picture pop-up menu. Quando essa ação for selecionada, 4D exibirá automaticamente a página do formulário que corresponde à posição da imagem selecionada na array de imagens. Os elementos são numerados da esquerda para a direita e de cima para baixo, começando pelo canto superior esquerdo.
 
 Por exemplo, se o usuário selecionar o terceiro elemento, 4D exibirá a terceira página do formulário atual (se existir).
 Si desea gestionar usted mismo el efecto de un clic, seleccione `Sin acción`.

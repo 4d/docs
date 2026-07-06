@@ -24,7 +24,7 @@ title: On After Keystroke
 
 `On After Keystroke` イベントは次の場合には生成されません:
 
-- in [list box columns](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
+- [リストボックス列](FormObjects/listbox-column.md) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
 - キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。 これらのイベントを処理するには [`On After Edit`](onAfterEdit.md) を使用します。
 
 ### キーストロークシーケンス

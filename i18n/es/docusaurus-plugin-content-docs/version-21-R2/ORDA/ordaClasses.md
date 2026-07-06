@@ -314,7 +314,7 @@ Una función class constructor ORDA se activa justo después de que se cree una 
 
 Esta función sólo puede definirse al [nivel de la entidad](#entity-class). Sólo puede haber una función constructor en una class entity (de lo contrario se devuelve un error).
 
-Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this.md). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
+Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this.md). Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this).
 
 :::note
 
@@ -333,7 +333,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \`__STAMP
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Notas
@@ -928,7 +928,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
+Por razones de seguridad, todas las funciones de la clase modelo de datos, incluyendo [atributos calculados](#computed-attributes-1) y los [atributos alias](#alias-attributes-1), así como las [funciones singleton compartidas](../Concepts/classes.md#shared-singleton) **no están expuestas** por defecto a **solicitudes remotas** (privacidad).
 
 Las peticiones remotas son:
 

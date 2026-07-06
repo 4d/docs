@@ -7,7 +7,13 @@ title: Entrada
 
 4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Se pueden verificar las [entradas](input_overview.md) de tipo texto, así como también los documentos [4D Write Pro](writeProArea_overview.md).
 
-La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. También puede ejecutar el comando de lenguaje 4D `SPELL CHECKING` para cada objeto a verificar.
+La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. También puede ejecutar el comando del lenguaje 4D [`SPELL CHECKING`](../commands/spell-checking) para cada objeto que desee revisar.
+
+:::note Herramientas de escritura (macOS)
+
+En macOS, si quiere ofrecer a sus usuarios las herramientas de escritura de Apple Intelligence para que puedan revisar la ortografía de sus documentos mediante IA, podría considerar utilizar la propiedad [Herramientas de escritura](#writing-tools).
+
+:::
 
 #### Gramática JSON
 
@@ -31,7 +37,7 @@ Permite al usuario acceder a un menú contextual estándar en el objeto cuando s
 
 Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox-column.md), in addition to standard editing commands, the context menu provides the following commands:
+En el caso de un tipo de texto [multiestilo](properties_Text.md#multi-style), [campo de entrada](input_overview.md) o [columna de listbox](listbox-column.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -251,7 +257,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
 
 #### Gramática JSON
 
@@ -303,14 +309,14 @@ Para ver una lista de todos los métodos abreviados utilizados en el entorno Dis
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                           |
-| --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                              |
-| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                |
-| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                            |
-| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                |
-|                 |                |                                                                                                                                                                                                                                                            |
-| shortcutKey     | string         | <li>any character key: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                |
+| --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                   |
+| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                     |
+| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                 |
+| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                     |
+|                 |                |                                                                                                                                                                                                                                                                 |
+| shortcutKey     | string         | <li>toda tecla de caracter: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objetos soportados
 
@@ -343,5 +349,55 @@ Cuando esta opción no está activa, los usuarios deben seleccionar primero la l
 #### Comandos
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
+---
+
+## Herramientas de escritura
+
+En macOS, esta propiedad permite a los usuarios finales aplicar las [**Herramientas de escritura** de Apple Intelligence](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) al texto de los objetos de formulario [4D Write Pro](writeProArea_overview.md) y [entrada](input_overview.md) (con soporte para [varias líneas](#multiline)). Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+
+![](../assets/en/FormObjects/writing-tools.png)
+
+:::tip Entrada de blog relacionada
+
+Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**.
+
+:::
+
+When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+
+- if some text is selected, only the selection is replaced,
+- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+
+:::note
+
+Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.
+
+:::
+
+The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+
+:::note
+
+The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+
+:::
+
+La disponibilidad y el valor por defecto de la propiedad dependen del tipo de objeto:
+
+| Object                                        | Disponibilidad en la lista de propiedades                                                | Valor por defecto |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------- |
+| [Entrada](input_overview.md)                  | Sólo cuando la propiedad [Multiline](#multiline) está establecida en "Sí" o "Automático" | False             |
+| [Área 4D Write Pro](writeProArea_overview.md) | Always displayed                                                                         | True              |
+
+#### Gramática JSON
+
+| Nombre       | Tipos de datos | Valores posibles |
+| ------------ | -------------- | ---------------- |
+| writingTools | boolean        | true, false      |
+
+#### Objetos soportados
+
+[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md) ([multiline](#multiline))
 
 

@@ -34,6 +34,24 @@ displayed_sidebar: docs
 
 This command can be used to detect any field deletions, which create gaps in the sequence of field numbers.
 
+## Example
+
+It is possible to delete 4D tables and fields. You must take this possibility into account in algorithms used for counting tables and fields. It is necessary to use algorithms combining the `Get last table number` and `Get last field number`, as well as `Is table number valid` and `Is field number valid` commands. The following is an example of this type of algorithm:
+
+```4d
+ var $thetable; $thefield : Integer
+ For($thetable;1;Get last table number)
+    If(Is table number valid($thetable))
+       For($thefield;1;Get last field number($thetable))
+          If(Is field number valid($thetable;$thefield))
+             ... `The field exists and is valid
+          End if
+       End for
+    End if
+ End for
+```
+
+
 ## See also 
 
 [Last table number](../commands/last-table-number)  

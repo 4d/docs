@@ -46,17 +46,17 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #_command_.POP3 New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|server|object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|object|->|メールサーバー情報|
+|戻り値|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
 
 #### 説明
 
-`POP3 New transporter` コマンドは、 <!-- REF #_command_.POP3 New transporter.Summary -->新規の POP3接続を設定します<!-- END REF -->。この POP3接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
+`POP3 New transporter` コマンドは、 <!-- REF #_command_.POP3 New transporter.Summary -->新規の POP3接続を設定します<!-- END REF -->。 この POP3接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
@@ -107,10 +107,10 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #4D.POP3Transporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|Object|->|メールサーバー情報|
+|戻り値|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -142,7 +142,8 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
     $status:=$transporter.checkConnection()
     If($status.success)
-       ALERT("POP3接続チェックに成功しました。")
+       ALERT("POP3接続チェックに成功しました。
+    ")
     Else
        ALERT("Error: "+$status.statusText)
     End if
@@ -167,9 +168,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message to delete|
+|msgNumber|Integer|->|削除するメッセージの数|
 </div>
 <!-- END REF -->
 
@@ -191,7 +192,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
     $POP3_transporter.delete($mailInfo.number)
  End for each
   // セッションを強制的に終了し、削除フラグを立てたメールを削除します
- CONFIRM("選択されているメッセージは削除されます。";"削除する";"元に戻す")
+ CONFIRM("選択されているメッセージは削除されます。 ";"削除する";"元に戻す")
  If(OK=1) // 削除を選んだ場合
     $POP3_transporter:=Null
  Else
@@ -223,7 +224,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 ##### 説明
 
-`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->対象の [`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
+`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->`.getBoxInfo()` 関数は、<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -247,7 +248,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
   // メールボックス情報
  $boxInfo:=$transporter.getBoxInfo()
- ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。")
+ ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。
 ```
 
 ## .getMail()
@@ -267,17 +268,17 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.getMail().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message in the list |
-|headerOnly|Boolean|->|True to download only the email headers (default is False) |
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+|msgNumber|Integer|->|リスト中のメッセージの番号|
+|headerOnly|Boolean|->|メールヘッダーのみをダウンロードする場合は true (デフォルトは false)|
+|戻り値|Object|<-|[Email object](EmailObjectClass.md#email-object)|
 </div>
 <!-- END REF -->
 
 ##### 説明
 
-`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->`.getMail()` 関数は、<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって `number` プロパティに返されます。
 
@@ -337,10 +338,10 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message in the list |
-|Result|Object|<-|mailInfo object|
+|msgNumber|Integer|->|リスト中のメッセージの番号|
+|戻り値|Object|<-|mailInfo object|
 </div>
 <!-- END REF -->
 
@@ -379,7 +380,8 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
   // メッセージ情報
  $mailInfo:=$transporter.getMailInfo(1) // 先頭メールを取得します
  If($mailInfo #Null)
-    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。")
+    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。
+ ")
  End if
 ```
 
@@ -447,7 +449,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
  $vNum:=$mailInfo.length
  $vSize:=$mailInfo.sum("size")
 
- ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。合計サイズは "+String($vSize)+" バイトです。")
+ ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。 合計サイズは "+String($vSize)+" バイトです。
 ```
 
 ## .getMIMEAsBlob()
@@ -466,16 +468,16 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|msgNumber|Integer|-> |Number of the message in the list|
-|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+|msgNumber|Integer|-> |リスト中のメッセージの番号|
+|戻り値|Blob|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 
 ##### 説明
 
-`.getMIMEAsBlob()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
+`.copy()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->`.getMIMEAsBlob()` 関数は、<!-- END REF -->。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -486,7 +488,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 **返される BLOB**
 
-`.getMIMEAsBlob()` は `BLOB` を返します。この BLOB はデータベースにアーカイブしたり、`MAIL Convert from MIME` コマンドを使用して [`Email` オブジェクト](EmailObjectClass.md#email-object) へと変換したりすることができます。
+`.getMIMEAsBlob()` は `BLOB` を返します。 この BLOB はデータベースにアーカイブしたり、`MAIL Convert from MIME` コマンドを使用して [`Email` オブジェクト](EmailObjectClass.md#email-object) へと変換したりすることができます。
 
 ##### 例題
 

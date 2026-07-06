@@ -13,7 +13,7 @@ title: 階層リスト
 
 階層リストの中身は次の方法で初期化することができます:
 
-- 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
+- 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
 - 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。
 
 どちらの場合においても、階層リストはランタイムでは *ListRef* の参照を通して、4D ランゲージの[階層リスト](../commands/theme/Hierarchical_Lists) のコマンドを使用して管理します。
@@ -22,9 +22,9 @@ title: 階層リスト
 
 階層リストはメモリ上に存在する **ランゲージオブジェクト** であると同時に **フォームオブジェクト** でもあります。
 
-**ランゲージオブジェクト** は倍長整数型のユニークな内部IDで参照されます (4D ランゲージリファレンスでは *ListRef* と表記)。 この ID はリストを作成する `New list`、`Copy list`、`Load list`、`BLOB to list` から返されます。 ランゲージオブジェクトのインスタンスはひとつのみしかメモリ中に存在せず、このオブジェクトに対しておこなわれた変更は、これを使用しているすべての場所に即座に反映されます。
+**ランゲージオブジェクト** は倍長整数型のユニークな内部IDで参照されます (4D ランゲージリファレンスでは *ListRef* と表記)。 This ID is returned by the commands that can be used to create lists: [`New list`](../commands/new-list), [`Copy list`](../commands/copy-list), [`Load list`](../commands/load-list), [`BLOB to list`](../commands/blob-to-list). ランゲージオブジェクトのインスタンスはひとつのみしかメモリ中に存在せず、このオブジェクトに対しておこなわれた変更は、これを使用しているすべての場所に即座に反映されます。
 
-**フォームオブジェクト** はユニークである必要はありません。同じフォームや異なるフォーム上で同一の階層リストを使用することができます。 他のフォームオブジェクト同様、ランゲージ中でオブジェクトを指定するにはシンタックス (\*;"ListName") を使用します。
+**フォームオブジェクト** はユニークである必要はありません。同じフォームや異なるフォーム上で同一の階層リストを使用することができます。 他のフォームオブジェクト同様、ランゲージ中でオブジェクトを指定するにはシンタックス (\*;"ListName") を使用します。 他のフォームオブジェクト同様、ランゲージ中でオブジェクトを指定するにはシンタックス (\*;"ListName") を使用します。
 
 "ランゲージオブジェクト" としての階層リストと、"フォームオブジェクト" としての階層リストは、ListRef の値を格納した中間的な変数により接続されます。 たとえば、mylist [変数](properties_Object.md#変数あるいは式) をフォームオブジェクトに設定した場合には、次のように書けます:
 
@@ -39,9 +39,9 @@ mylist:=New list
 - スクロールカーソルの位置
 
 それ以外の性質 (フォント、フォントサイズ、スタイル、入力制御、カラー、リストの内容、アイコン等)  は他のリストフォームオブジェクトと共有され、個別に変更することはできません。
-したがって、展開/折りたたみ状況に基づくコマンドやカレントの項目に関するコマンド、たとえば `Count list items` を (最後の `*` 引数を渡さずに) 使用するとき、どのフォームオブジェクトに対する処理なのかを明示的に指定することが重要です。
+Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example [`Count list items`](../commands/count-list-items) (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
 
-メモリ中の階層リストを指定するには、ランゲージコマンドで `ListRef` IDを使用しなければなりません。 フォーム上の階層リストオブジェクトを指定する場合は、コマンド中でシンタックス (\*;"ListName") を用いてオブジェクト名 (文字列) を使用します。
+メモリ中の階層リストを指定するには、ランゲージコマンドで `ListRef` IDを使用しなければなりません。 フォーム上の階層リストオブジェクトを指定する場合は、コマンド中でシンタックス (\*;"ListName") を用いてオブジェクト名 (文字列) を使用します。 フォーム上の階層リストオブジェクトを指定する場合は、コマンド中でシンタックス (\*;"ListName") を用いてオブジェクト名 (文字列) を使用します。
 
 > フォームオブジェクト名に基づくシンタックスをプロパティ設定用のコマンドで使用することは、対象を指定オブジェクトに限定する意味ではなく、むしろ指定オブジェクトの状態に基づいてコマンドが動作することを意味します。 複数の階層リスト間で共有されている性質を変更すると、それらすべてに反映されます。
 > たとえば、次のコードを実行すると:
@@ -54,61 +54,61 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### @をサポート
 
-他のオブジェクトプロパティ管理コマンドのように、`ListName` 引数で “@” 文字を使用できます。 このシンタックスは、フォーム上の複数のオブジェクトを指定するために使用されます。 しかし階層リストコマンドのコンテキストにおいては、これはすべての場合に適用されるわけではありません。 コマンドのタイプにより、このシンタックスは 2つの異なる効果があります:
+As with [other object property management commands](../FormObjects/formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language), it is possible to use the “@” character in the `ListName` parameter. このシンタックスは、フォーム上の複数のオブジェクトを指定するために使用されます。 しかし階層リストコマンドのコンテキストにおいては、これはすべての場合に適用されるわけではありません。 コマンドのタイプにより、このシンタックスは 2つの異なる効果があります:
 
 - プロパティ設定用のコマンドにおいて、このシンタックスは該当する名前のオブジェクトを対象とします (標準の動作)。 たとえば、引数 "LH@" は、オブジェクト名が "LH" で始まる階層リストを指定します。
-  - `DELETE FROM LIST`
-  - `INSERT IN LIST`
-  - `SELECT LIST ITEMS BY POSITION`
-  - `SET LIST ITEM`
-  - `SET LIST ITEM FONT`
-  - `SET LIST ITEM ICON`
-  - `SET LIST ITEM PARAMETER`
-  - `SET LIST ITEM PROPERTIES`
+  - [`DELETE FROM LIST`](../commands/delete-from-list)
+  - [`INSERT IN LIST`](../commands/insert-in-list)
+  - [`SELECT LIST ITEMS BY POSITION`](../commands/select-list-items-by-position)
+  - [`SET LIST ITEM`](../commands/set-list-item)
+  - [`SET LIST ITEM FONT`](../commands/set-list-item-font)
+  - [`SET LIST ITEM ICON`](../commands/set-list-item-icon)
+  - [`SET LIST ITEM PARAMETER`](../commands/set-list-item-parameter)
+  - [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties)
 
 - プロパティ取得用のコマンドにおいて、このシンタックスは該当する名前を持つ最初のオブジェクトを対象とします:
-  - `Count list items`
-  - `Find in list`
-  - `GET LIST ITEM`
-  - `Get list item font`
-  - `GET LIST ITEM ICON`
-  - `GET LIST ITEM PARAMETER`
-  - `GET LIST ITEM PROPERTIES`
-  - `List item parent`
-  - `List item position`
-  - `Selected list items`
+  - [`Count list items`](../commands/count-list-items)
+  - [`Find in list`](../commands/find-in-list)
+  - [`GET LIST ITEM`](../commands/get-list-item)
+  - [`Get list item font`](../commands/get-list-item-font)
+  - [`GET LIST ITEM ICON`](../commands/get-list-item-icon)
+  - [`GET LIST ITEM PARAMETER`](../commands/get-list-item-parameter)
+  - [`GET LIST ITEM PROPERTIES`](../commands/get-list-item-properties)
+  - [`List item parent`](../commands/list-item-parent)
+  - [`List item position`](../commands/list-item-position)
+  - [`Selected list items`](../commands/selected-list-items)
 
 ## 階層リストに対し利用できる汎用コマンド
 
 いくつかの 4Dの汎用コマンドを使用して、フォーム上の階層リストオブジェクトの見た目を変更することができます。 これらのコマンドには、\* を用いたシンタックスを使用して階層リストのオブジェクト名を渡すか、あるいは標準シンタックスを使用して階層リストの ListRef 参照を格納している変数を渡します。
 
-- `OBJECT SET FONT`
-- `OBJECT SET FONT STYLE`
-- `OBJECT SET FONT SIZE`
-- `OBJECT SET FILTER`
-- `OBJECT SET ENTERABLE`
-- `OBJECT SET SCROLLBAR`
-- `OBJECT SET SCROLL POSITION`
-- `OBJECT SET RGB COLORS`
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+- [`OBJECT SET FILTER`](../commands/object-set-filter)
+- [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
+- [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)
+- [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-> 注記: `OBJECT SET SCROLL POSITION` コマンドを除き、これらのコマンドでオブジェクト名を指定したとしても、変更は同じリストを使うすべてのオブジェクトに反映されます。
+> Reminder: Except [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position), these commands modify all the representations of the same list, even if you only specify a list via its object name.
 
 ## プロパティコマンドの優先順位
 
-階層リストの特定のプロパティ (たとえば **入力可** 属性やカラーなど) は、3つの異なる方法で設定することができます: デザインモードのプロパティリスト、"オブジェクトプロパティ" テーマのコマンド、"階層リスト" テーマのコマンド。 これら 3つの方法すべてを使ってプロパティを設定した場合、以下の優先順位が適用されます:
+階層リストの特定のプロパティ (たとえば **入力可** 属性やカラーなど) は、3つの異なる方法で設定することができます: デザインモードのプロパティリスト、"オブジェクトプロパティ" テーマのコマンド、"階層リスト" テーマのコマンド。 これら 3つの方法すべてを使ってプロパティを設定した場合、以下の優先順位が適用されます: これら 3つの方法すべてを使ってプロパティを設定した場合、以下の優先順位が適用されます:
 
 1. "階層リスト" テーマのコマンド
 2. 汎用のオブジェクトプロパティコマンド
 3. プロパティリストのパラメーター
 
-この原則は、コマンドが呼び出された順番に関係なく適用されます。 階層リストコマンドを使用して個々に項目のプロパティを変更すると、同等のオブジェクトプロパティコマンドをそのあとに呼び出したとしても、その項目に対しては効果を持たなくなります。 たとえば `SET LIST ITEM PROPERTIES` コマンドを使用して項目のカラーを変更すると、この項目に対して `OBJECT SET COLOR` コマンドは効果を持たなくなります。
+この原則は、コマンドが呼び出された順番に関係なく適用されます。 階層リストコマンドを使用して個々に項目のプロパティを変更すると、同等のオブジェクトプロパティコマンドをそのあとに呼び出したとしても、その項目に対しては効果を持たなくなります。 For example, if the color of an item is modified via the [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 ## 位置あるいは参照による項目の管理
 
 階層リストのコンテンツにアクセスするには、通常は位置または参照のいずれかを使用しておこないます。
 
 - 位置を使用する場合には、4D は画面上に表示されているリスト項目の位置に基づいて項目を特定します。 つまり、結果は階層項目が展開されているか折りたたまれているかにより異なります。 複数のフォームオブジェクトで同一のリストを使用している場合、オブジェクトごとに展開/折りたたみの状態が異なることに注意が必要です。
-- 参照を使用する場合には、リスト項目の *itemRef* IDを参照します。 これにより、それぞれの項目を階層リスト中での位置や表示状態に関わらず特定できます。
+- 階層リストのそれぞれの項目は倍長整数型の参照番号 (*itemRef*) を持ちます。 この値は開発者が使うためのもので、4D は番号を維持するだけです。 これにより、それぞれの項目を階層リスト中での位置や表示状態に関わらず特定できます。
 
 ### 項目参照番号を使用する (itemRef)
 
@@ -121,19 +121,19 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 1. 項目をユニーク値で識別する必要がない場合 (初心者レベル)
 
    - 最初の例として、アドレスブックで使用するタブシステムを構築するとします。 システムは選択されたタブの番号を返すので、それ以上の情報は必要ありません。 この場合、項目参照番号について心配する必要はありません。0以外の値を *itemRef* に渡します。 なお、アドレスブックシステムの場合、デザインモードで A-Z のリストを定義することもできる点に留意してください。 また、プログラムを使えば、レコードがない文字を除いたリストを作成することもできます。
-   - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 このリストはセッション終了時に `SAVE LIST` や `LIST TO BLOB` コマンドで保存され、セッション開始時に `Load list` や `BLOB to list` コマンドで再度読み込まれます。 このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 重要なのは、`Selected list items` コマンドは選択項目の位置を返すため、選択された項目のみを扱うということです。 この位置情報を `GET LIST ITEM` コマンドに渡せば、項目テキストが取得できます。 この例でも、個々の項目を識別する必要がないため、リスト構築の際は *itemRef* 引数に 0以外の任意の数値を渡すことができます。
+   - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 You can save this list at the end of each session by using the [`SAVE LIST`](../commands/save-list) or [`LIST TO BLOB`](../commands/list-to-blob) commands and reload it at the beginning of each new session using the [`Load list`](../commands/load-list) or [`BLOB to list`](../commands/blob-to-list) commands. このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 The important thing is that you only process the item selected, because the [`Selected list items`](../commands/selected-list-items) command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the [`GET LIST ITEM`](../commands/get-list-item) command. この例でも、個々の項目を識別する必要がないため、リスト構築の際は *itemRef* 引数に 0以外の任意の数値を渡すことができます。
 
 2. 部分的にリスト項目を識別する必要がある場合 (中級者レベル)  
-   その項目を処理する際に必要となる情報をあらかじめ項目参照番号に格納することができます。この例は`APPEND TO LIST` コマンドの例題で説明しています。 この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。
+   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the [`APPEND TO LIST`](../commands/append-to-list) command. この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。
 
 3. すべての項目リストを個々に識別する必要がある場合 (上級者レベル)  
-   リストの全レベルにおいて、個々の項目を識別する必要のある複雑な階層リスト管理プログラムを作成する必要があるとします。 これを実装する簡単な方法は独自のカウンターを使用することです。 `APPEND TO LIST` コマンドを使用して *hlList* リストを作成するとします。 ここで *vhlCounter* 変数を1に初期化します。 `APPEND TO LIST` や `INSERT IN LIST` を呼び出すたびに、このカウンターをインクリメントし `(vhlCounter:=vhlCounter+1)`、 カウンター値を項目参照番号に設定します。 項目を削除する場合でもカウンターをデクリメントしないことが重要です。つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 番号は倍長整数型なので、20億以上の項目をリストに追加したり挿入したりできます  (もっとも、こんなにも多くのデータを扱うのであれば、リストではなくテーブルを使用したほうが良いですが)。
+   リストの全レベルにおいて、個々の項目を識別する必要のある複雑な階層リスト管理プログラムを作成する必要があるとします。 これを実装する簡単な方法は独自のカウンターを使用することです。 Suppose that you create a *hlList* list using the [`APPEND TO LIST`](../commands/append-to-list) command. ここで *vhlCounter* 変数を1に初期化します。 Each time you call [`APPEND TO LIST`](../commands/append-to-list) or [`INSERT IN LIST`](../commands/insert-in-list), you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. 項目を削除する場合でもカウンターをデクリメントしないことが重要です。 つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 番号は倍長整数型なので、20億以上の項目をリストに追加したり挿入したりできます  (もっとも、こんなにも多くのデータを扱うのであれば、リストではなくテーブルを使用したほうが良いですが)。
 
-> ビットワイズ演算子を使用して、項目参照番号に情報を格納することもできます。たとえば 2つの整数値、4バイト値、32個のブール値などです。
+> ビットワイズ演算子を使用して、項目参照番号に情報を格納することもできます。 たとえば 2つの整数値、4バイト値、32個のブール値などです。
 
 ### どのような場合にユニークな参照番号が必要ですか?
 
-階層リストをユーザーインタフェースとして使用し、クリックまたはドラッグにより選択された項目のみを処理する場合は、ほとんどの場合項目参照番号を必要としません。 `Selected list items` や `GET LIST ITEM` を使用すれば、現在選択されている項目を扱うことができます。 さらに `INSERT IN LIST` や `DELETE FROM LIST` などのコマンドは、選択された項目との相対位置でリストを操作できます。
+階層リストをユーザーインタフェースとして使用し、クリックまたはドラッグにより選択された項目のみを処理する場合は、ほとんどの場合項目参照番号を必要としません。 Using [`Selected list items`](../commands/selected-list-items) and [`GET LIST ITEM`](../commands/get-list-item) you have all you need to deal with the currently selected item. In addition, commands such as [`INSERT IN LIST`](../commands/insert-in-list) and [`DELETE FROM LIST`](../commands/delete-from-list) allow you to manipulate the list “relatively” with respect to the selected item.
 
 基本的に、項目の選択に関係なく、プログラムで任意のリスト項目にアクセスする必要がある場合に項目参照番号が必要です。
 
@@ -143,7 +143,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 - データソースに関わらず、階層リストフォームオブジェクト全体を [入力可](properties_Entry.md#入力可) プロパティで管理することができます。
 
-- また、リストエディターで作成したリストを用いて階層リストを生成する場合は、リストエディターの **編集可能項目** オプションを使用して、階層リストの項目の修正が可能かどうかを管理することができます。 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.ja.html#1350157) を参照してください。
+- また、リストエディターで作成したリストを用いて階層リストを生成する場合は、リストエディターの **編集可能項目** オプションを使用して、階層リストの項目の修正が可能かどうかを管理することができます。 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.ja.html#1350157) を参照してください。 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.ja.html#1350157) を参照してください。
 
 ## プロパティ一覧
 

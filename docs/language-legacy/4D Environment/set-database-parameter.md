@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R4|Added *QUIC session timeout* |
 |21 R3|Removed support of *Use legacy network layer*, added *Use legacy print rendering* |
 |20 R6|Modified|
 |20 R3|Modified|
@@ -129,7 +130,7 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Possible values**: longint > 1 (seconds)
 
-**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [XML DECODE](../commands/xml-decode) of the Database settings for the session (it is not stored in the Database settings).
+**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [Database page](../../settings/database.md) of the settings for the session (it is not stored in the settings).
 
 
 
@@ -805,6 +806,17 @@ Refer to example 2.
 **Note:** If you want to be able to enable "SQL type" joins (see the QUERY BY FORMULA Joins selector), you must always execute formulas on the server so that they have access to the records. Be careful, in this context, the formula must not contain any calls to a method, otherwise it will automatically be switched to the remote machine.
 
 
+### QUIC session timeout (135)
+
+**Scope**: 4D Server application
+
+**Kept between two sessions**: No
+
+**Possible values**: Positive integer. Default value = 15, minimum value = 1. 
+
+**Description**: Timeout in minutes for client/server sessions in the event of an unexpected disconnection from the QUIC network layer. This timeout is the period of time allowed for a session during which the connection between the server and the client can be automatically reestablished following an unintended disconnection. If, at the end of this timeout, the connection has not been reestablished. 
+
+This setting can only be set on 4D Server and applies to all new 4D remote sessions (existing sessions timeout value is untouched). 
 
 
 ### RDP optimization (133)

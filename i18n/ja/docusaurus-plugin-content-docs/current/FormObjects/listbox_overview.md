@@ -13,7 +13,7 @@ title: リストボックス
 
 ### 基本のユーザー機能
 
-実行中、リストボックスはリストとしてデータを表示し、入力を受け付けます。 セルを編集可能にするには ([その列について入力が許可されていれば](#入力の管理))、セル上で2回クリックします:
+実行中、リストボックスはリストとしてデータを表示し、入力を受け付けます。 実行中、リストボックスはリストとしてデータを表示し、入力を受け付けます。 セルを編集可能にするには ([その列について入力が許可されていれば](#入力の管理))、セル上で2回クリックします:
 
 ![](../assets/en/FormObjects/listbox_edit.png)
 
@@ -21,7 +21,7 @@ title: リストボックス
 
 セルにはブールやピクチャー、日付、時間、数値も表示することができます。 ヘッダーをクリックすると、列の値をソートできます ([標準ソート](#ソートの管理))。 すべての列が自動で同期されます。
 
-またそれぞれの列幅を変更できるほか、ユーザーはマウスを使用して [列](properties_ListBox.md#locked-columns-and-static-columns) や [行](properties_Action.md#movable-rows) の順番を (そのアクションが許可されていれば) 入れ替えることもできます。 リストボックスは [階層モード](#階層リストボックス) で使用することもできます。
+またそれぞれの列幅を変更できるほか、ユーザーはマウスを使用して [列](properties_ListBox.md#locked-columns-and-static-columns) や [行](properties_Action.md#movable-rows) の順番を (そのアクションが許可されていれば) 入れ替えることもできます。 リストボックスは [階層モード](#階層リストボックス) で使用することもできます。 リストボックスは [階層モード](#階層リストボックス) で使用することもできます。
 
 ユーザーは標準のショートカットを使用して 1つ以上の行を選択できます。**Shift+クリック** で連続した行を、**Ctrl+クリック** (Windows) や **Command+クリック** (macOS) で非連続行を選択できます。
 
@@ -36,7 +36,7 @@ title: リストボックス
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
-それぞれが独自のオブジェクト名や固有のプロパティを持ちます。 たとえば、列の数や、交互に使用する行の背景色などはリストボックスオブジェクトのプロパティで指定し、各列の幅は列プロパティ、ヘッダーのフォントはヘッダープロパティで指定します。
+それぞれが独自のオブジェクト名や固有のプロパティを持ちます。 たとえば、カラムの数や、交互に使用する行の背景色などはリストボックスオブジェクトのプロパティで指定し、各列の幅はカラムプロパティ、ヘッダーのフォントはヘッダープロパティで指定します。
 
 リストボックスオブジェクトやリストボックスの各列に対して、オブジェクトメソッドを設定することができます。 オブジェクトメソッドの呼び出しは、次の順でおこなわれます:
 
@@ -47,9 +47,9 @@ title: リストボックス
 
 ### リストボックスの型
 
-リストボックスには複数のタイプがあり、動作やプロパティの点で異なります。 リストボックスの型は [データソースプロパティ](properties_Object.md#データソース) で定義します:
+リストボックスには複数のタイプがあり、動作やプロパティの点で異なります。 リストボックスには複数のタイプがあり、動作やプロパティの点で異なります。 リストボックスの型は [データソースプロパティ](properties_Object.md#データソース) で定義します:
 
-- **配列**: 各列に 4D 配列を割り当てます。 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。
+- **配列**: 各列に 4D 配列を割り当てます。 **配列**: 各列に 4D 配列を割り当てます。 配列タイプのリストボックスは [階層リストボックス](listbox_overview.md#階層リストボックス) として表示することができます。
 - **セレクション** (**カレントセレクション** または **命名セレクション**): 各列に式 (たとえばフィールド) を割り当てます。それぞれの行はセレクションのレコードを基に評価されます。
 - **コレクションまたはエンティティセレクション**: 各列に式を割り当てます。各行の中身はコレクションの要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
 
@@ -59,14 +59,14 @@ title: リストボックス
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。
 
 ## 入力の管理
 
 リストボックスのセルが入力可能であるには、以下の条件を満たす必要があります:
 
 - セルが属する列が [入力可](properties_Entry.md#入力可) に設定されている (でなければ、その列のセルには入力できません)。
-- `On Before Data Entry` イベントで $0 が -1 を返さない。 カーソルがセルに入ると、その列のメソッドで `On Before Data Entry` イベントが生成されます。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 **Tab** や **Shift+Tab** が押された後にイベントが生成された場合には、フォーカスはそれぞれ次あるいは前のセルに移動します。 $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。
+- `On Before Data Entry` イベントで $0 が -1 を返さない。 `On Before Data Entry` イベントで $0 が -1 を返さない。 カーソルがセルに入ると、その列のメソッドで `On Before Data Entry` イベントが生成されます。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 **Tab** や **Shift+Tab** が押された後にイベントが生成された場合には、フォーカスはそれぞれ次あるいは前のセルに移動します。 $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 このイベントのコンテキストにおいて、$0 に -1 を設定すると、そのセルは入力不可として扱われます。 **Tab** や **Shift+Tab** が押された後にイベントが生成された場合には、フォーカスはそれぞれ次あるいは前のセルに移動します。 $0 が -1 でなければ (デフォルトは 0)、列は入力可であり編集モードに移行します。
 
 2つの配列で構築されるリストボックスを考えてみましょう。 1つは日付でもう 1つはテキストです。 日付配列は入力不可ですが、テキスト配列は日付が過去でない場合に入力可とします。
 
@@ -121,7 +121,7 @@ title: リストボックス
 
 選択行の管理は、リストボックスのタイプが配列か、レコードのセレクションか、あるいはコレクション/エンティティセレクションかによって異なります。
 
-- **セレクションリストボックス**: 選択行は、デフォルトで `$ListboxSetX` と呼ばれる変更可能なセットにより管理されます (X は 0 から始まり、フォーム内のリストボックスの数に応じて一つずつ増加していきます)。 このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。 ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。
+- **セレクションリストボックス**: 選択行は、デフォルトで `$ListboxSetX` と呼ばれる変更可能なセットにより管理されます (X は 0 から始まり、フォーム内のリストボックスの数に応じて一つずつ増加していきます)。 このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。 ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。 このセットはリストボックスの[プロパティリスト](properties_ListBox.md#ハイライトセット)で定義します。 このセットは 4D が自動で管理します。 ユーザーがリストボックス中で 1つ以上の行を選択すると、セットが即座に更新されます。 他方、リストボックスの選択をプログラムから更新するために、"セット" テーマのコマンドを使用することができます。
 
 - **コレクション/エンティティセレクションリストボックス**: 選択項目は、専用のリストボックスプロパティを通して管理されます。
   - [カレントの項目](properties_DataSource.md#カレントの項目) は、選択された要素/エンティティを受け取るオブジェクトです。
@@ -148,7 +148,7 @@ title: リストボックス
 
 ### 選択行の見た目のカスタマイズ
 
-リストボックスの [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) プロパティにチェックを入れている場合には、他のインターフェースオプションを活用してリストボックスの選択行を可視化する必要があります。 ハイライトが非表示になっていても選択行は引き続き 4D によって管理されています。つまり:
+リストボックスの [セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) プロパティにチェックを入れている場合には、他のインターフェースオプションを活用してリストボックスの選択行を可視化する必要があります。 ハイライトが非表示になっていても選択行は引き続き 4D によって管理されています。つまり: ハイライトが非表示になっていても選択行は引き続き 4D によって管理されています。つまり:
 
 - 配列タイプのリストボックスの場合、当該リストボックスにリンクしているブール配列変数から選択行を割り出します。
 - セレクションタイプのリストボックスの場合、特定行 (レコード) がリストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定しているセットに含まれているかを調べます。
@@ -159,7 +159,7 @@ title: リストボックス
 
 #### セレクションリストボックス
 
-選択行を特定するには、リストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定されているセットに対象行が含まれているかを調べます: 選択行のアピアランスを定義するには、プロパティリストにて [カラー式またはスタイル式プロパティ](#配列と式の使用) を 1つ以上使います。
+選択行を特定するには、リストボックスの [ハイライトセット](properties_ListBox.md#ハイライトセット) プロパティで指定されているセットに対象行が含まれているかを調べます: 選択行のアピアランスを定義するには、プロパティリストにて [カラー式またはスタイル式プロパティ](#配列と式の使用) を 1つ以上使います。 選択行のアピアランスを定義するには、プロパティリストにて [カラー式またはスタイル式プロパティ](#配列と式の使用) を 1つ以上使います。
 
 次の場合には式が自動的に再評価されることに留意ください:
 
@@ -231,7 +231,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
  $0:=$color
 ```
 
-> 階層リストボックスにおいては、[セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) オプションをチェックした場合には、ブレーク行をハイライトすることができません。 同階層のヘッダーの色は個別指定することができないため、任意のブレーク行だけをプログラムでハイライト表示する方法はありません。
+> 階層リストボックスにおいては、[セレクションハイライトを非表示](properties_Appearance.md#セレクションハイライトを非表示) オプションをチェックした場合には、ブレーク行をハイライトすることができません。 同階層のヘッダーの色は個別指定することができないため、任意のブレーク行だけをプログラムでハイライト表示する方法はありません。 同階層のヘッダーの色は個別指定することができないため、任意のブレーク行だけをプログラムでハイライト表示する方法はありません。
 
 ## ソートの管理
 
@@ -245,14 +245,14 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 標準ソートのサポートは、リストボックスのタイプに依存します:
 
-| リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object の Collection | ◯          | <ul><li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li></ul>                                                                                                                                                                                                                                                                        |
-| スカラー値のコレクション        | ×          | [`orderBy()`](../API/CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                                                                                                                                                                                                                                                                                                                                                             |
-| エンティティセレクション        | ◯          | <ul><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li></ul> |
-| カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                          |
-| 命名セレクション            | ×          |                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object の Collection | ◯          | <ul><li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li></ul>                                                                                                                                                                                                                                                                                                                                                                                           |
+| スカラー値のコレクション        | ×          | [`orderBy()`](../API/CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| エンティティセレクション        | ◯          | <ul><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li></ul> この場合には、[`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li></ul> |
+| カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 命名セレクション            | ×          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ### カスタムソート
 
@@ -269,7 +269,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-`Form.child` 式に紐づいた、エンティティセレクションタイプのリストボックスを設置します。 `On Load` フォームイベントでは、`Form.child:=ds.Child.all()` を実行します。
+`Form.child` 式に紐づいた、エンティティセレクションタイプのリストボックスを設置します。 `Form.child` 式に紐づいた、エンティティセレクションタイプのリストボックスを設置します。 `On Load` フォームイベントでは、`Form.child:=ds.Child.all()` を実行します。
 
 次の 2つの列を表示します:
 
@@ -294,13 +294,14 @@ End if
 
 - 変数が 1 のとき、列は昇順で並べ替えられており、並べ替え矢印が表示されています。
   ![](../assets/en/FormObjects/sorticon1.png)  
+  ![](../assets/en/FormObjects/sorticon1.png)  
   ![](../assets/en/FormObjects/sorticon1.png)
 
 - 変数が 2 のとき、列は降順で並べ替えられており、並べ替え矢印が表示されています。
   ![](../assets/en/FormObjects/sorticon2.png)  
   ![](../assets/en/FormObjects/sorticon2.png)
 
-> 列ヘッダー変数には、宣言された、あるいは動的な [変数](Concepts/variables.md) のみを使用できます。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。
+> 列ヘッダー変数には、宣言された、あるいは動的な [変数](Concepts/variables.md) のみを使用できます。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.sortValue`) はサポートされていません。
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
@@ -334,7 +335,7 @@ End if
 - 行属性について: 列の属性値を受け継ぎます
 - 列属性について: リストボックスの属性値を受け継ぎます
 
-このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます:
+このように、高次のレベルの属性値をオブジェクトに継承させたい場合は、定義するコマンドに `lk inherited` 定数 (デフォルト値) を渡すか、対応する行スタイル/カラー配列の要素に直接渡します。 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます: 以下のような、標準のフォントスタイルで行の背景色が交互に変わる配列リストボックスを考えます:
 
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
@@ -367,22 +368,23 @@ End if
 
 ## リストボックスの印刷
 
-リストボックスの印刷には 2つの印刷モードがあります: フォームオブジェクトのようにリストボックスを印刷する **プレビューモード** と、フォーム内でリストボックスオブジェクトの印刷方法を制御できる **詳細モード** があります。 フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。
+リストボックスの印刷には 2つの印刷モードがあります: フォームオブジェクトのようにリストボックスを印刷する **プレビューモード** と、フォーム内でリストボックスオブジェクトの印刷方法を制御できる **詳細モード** があります。 フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。 フォームエディターで、リストボックスオブジェクトに "印刷" アピアランスを適用できる点に留意してください。
 
 ### プレビューモード
 
-プレビューモードでのリストボックスの印刷は、標準の印刷コマンドや **印刷** メニューを使用して、リストボックスを含むフォームをそのまま出力します。 リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。 とくに、表示されている以上の行を印刷することはできません。
+プレビューモードでのリストボックスの印刷は、標準の印刷コマンドや **印刷** メニューを使用して、リストボックスを含むフォームをそのまま出力します。 リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。 とくに、表示されている以上の行を印刷することはできません。 リストボックスはフォーム上に表示されている通りに印刷されます。 このモードでは、オブジェクトの印刷を細かく制御することはできません。 とくに、表示されている以上の行を印刷することはできません。
 
 ### 詳細モード
 
-このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。
+このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。
 
 このモードでは:
 
 - オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されたオブジェクトのサイズは [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用することで取得することができます。
 - リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。
+  リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。
   これらの設定には印刷される最初の行も含みます。印刷を実行する前に [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
-- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。
+- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。
 
 ## 階層リストボックス
 
@@ -402,7 +404,7 @@ End if
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
+このプロパティを使用してリストボックスの階層表示を設定します。 このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
 
 *階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
@@ -430,13 +432,13 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 - その列の変数が階層を指定するために使用されます。 既に設定されていた変数は置き換えられます。
 - (先頭列を除き) 選択された列はリストボックス内に表示されなくなります。
 
-例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 国、地域、都市が (下図の通り) 選択され、コンテキストメニューから **階層を作成** を選択すると、先頭列に3レベルの階層が作成され、二番目と三番目の列は取り除かれます。人口列が二番目になります:
+例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 例: 左から国、地域、都市、人口列が設定されたリストボックスがあります。 国、地域、都市が (下図の通り) 選択され、コンテキストメニューから **階層を作成** を選択すると、先頭列に3レベルの階層が作成され、二番目と三番目の列は取り除かれます。人口列が二番目になります:
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
 ##### 階層をキャンセル
 
-階層リストボックスとして定義されたリストボックスで先頭列を選択すると、**階層をキャンセル** コマンドを使用できます。 このコマンドを選択すると以下のアクションが実行されます: このコマンドを選択すると以下のアクションが実行されます:
+階層リストボックスとして定義されたリストボックスで先頭列を選択すると、**階層をキャンセル** コマンドを使用できます。 このコマンドを選択すると以下のアクションが実行されます: このコマンドを選択すると以下のアクションが実行されます: このコマンドを選択すると以下のアクションが実行されます:
 
 - そのオブジェクトの **階層リストボックス** オプションの選択が解除されます。
 - 2番目以降の階層レベルが削除され、通常の列としてリストボックスに追加されます。
@@ -522,7 +524,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 > 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
-選択と同様に、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
+選択と同様に、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
 
 *非階層表示:*  
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -534,11 +536,11 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 #### ブレーク行の管理
 
-ユーザーがブレーク行を選択すると、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで:
+ユーザーがブレーク行を選択すると、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで: 以下のケースで:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) コマンドを使用する必要があります。
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) コマンドを使用する必要があります。
 
 ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
@@ -550,7 +552,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 *階層表示:*  
 ![](../assets/en/FormObjects/hierarch13.png)
 
-階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
+階層モードでは `tStyle` や `tColors` 配列で変更されたスタイルは、ブレーク行に適用されません。 ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します: ブレークレベルでカラーやスタイルを変更するには、以下のステートメントを実行します:
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
@@ -567,20 +569,196 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 `On Expand` や `On Collapse` フォームイベントを使用して階層リストボックスの表示を最適化できます。
 
-階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
+階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
-`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
+`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
-- リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません:
+- リストボックスが表示される際、先頭の配列のみ値を埋めます。 リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません:
   ![](../assets/en/FormObjects/hierarch15.png)
 
 - ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドから得られる値を設定します。そして[`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。  
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
+- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
 
+## List boxes and the 4D language
 
+Many commands of the 4D language can be used with list boxes, from the [List box theme](../commands/theme/List_Box.md) but also from [Objects (Forms)](../commands/theme/Objects_Forms.md) and other themes. They can be used with list boxes, or [parts of list boxes](#list-box-parts) such as headers, footers, rows, or columns. Some of them can only be used with specific [list box types](#list-box-types).
 
+### List Box commands
 
+| コマンド                                                                             | List Box Type                | Supported Parts                           |
+| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
+| [`LISTBOX COLLAPSE`](../commands/listbox-collapse)                               | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column)                     | すべて                          | 列                                         |
+| [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)                         | 配列                           | List box, headers, footers, rows, columns |
+| [`LISTBOX DUPLICATE COLUMN`](../commands/listbox-duplicate-column)               | Array, Selection, Collection | 列                                         |
+| [`LISTBOX EXPAND`](../commands/listbox-expand)                                   | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX Get array`](../commands/listbox-get-array)                             | 配列                           | List box, headers, footers, rows, columns |
+| [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)                           | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX Get auto row height`](../commands/listbox-get-auto-row-height)         | 配列                           | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL COORDINATES`](../commands/listbox-get-cell-coordinates)       | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position)             | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX Get column formula`](../commands/listbox-get-column-formula)           | Selection, Collection        | 列                                         |
+| [`LISTBOX Get column width`](../commands/listbox-get-column-width)               | すべて                          | 列                                         |
+| [`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation)   | Array, Selection             | フッター                                      |
+| [`LISTBOX Get footers height`](../commands/listbox-get-footers-height)           | すべて                          | フッター                                      |
+| [`LISTBOX GET GRID`](../commands/listbox-get-grid)                               | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX GET GRID COLORS`](../commands/listbox-get-grid-colors)                 | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX Get headers height`](../commands/listbox-get-headers-height)           | すべて                          | ヘッダー                                      |
+| [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy)                     | 配列                           | List box, headers, footers, rows, columns |
+| [`LISTBOX Get locked columns`](../commands/listbox-get-locked-columns)           | すべて                          | リストボックス                                   |
+| [`LISTBOX Get number of columns`](../commands/listbox-get-number-of-columns)     | すべて                          | リストボックス                                   |
+| [`LISTBOX GET OBJECTS`](../commands/listbox-get-objects)                         | すべて                          | リストボックス                                   |
+| [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information)     | すべて                          | List box, headers, footers, rows, columns |
+| [`LISTBOX Get property`](../commands/listbox-get-property)                       | すべて                          | List box, columns                         |
+| [`LISTBOX Get row color as number`](../commands/listbox-get-row-color-as-number) | 配列                           | 行                                         |
+| [`LISTBOX Get row font style`](../commands/listbox-get-row-font-style)           | 配列                           | 行                                         |
+| [`LISTBOX Get row height`](../commands/listbox-get-row-height)                   | 配列                           | 行                                         |
+| [`LISTBOX Get rows height`](../commands/listbox-get-rows-height)                 | すべて                          | リストボックス                                   |
+| [`LISTBOX Get static columns`](../commands/listbox-get-static-columns)           | すべて                          | リストボックス                                   |
+| [`LISTBOX GET TABLE SOURCE`](../commands/listbox-get-table-source)               | すべて                          | リストボックス                                   |
+| [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column)                     | すべて                          | リストボックス                                   |
+| [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)     | すべて                          | リストボックス                                   |
+| [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows)                         | 配列                           | リストボックス                                   |
+| [`LISTBOX MOVE COLUMN`](../commands/listbox-move-column)                         | すべて                          | 列                                         |
+| [`LISTBOX MOVED COLUMN NUMBER`](../commands/listbox-moved-column-number)         | すべて                          | 列                                         |
+| [`LISTBOX MOVED ROW NUMBER`](../commands/listbox-moved-row-number)               | 配列                           | 行                                         |
+| [`LISTBOX SELECT BREAK`](../commands/listbox-select-break)                       | Hierarchical                 | リストボックス                                   |
+| [`LISTBOX SELECT ROW`](../commands/listbox-select-row)                           | すべて                          | 行                                         |
+| [`LISTBOX SET ARRAY`](../commands/listbox-set-array)                             | 配列                           | List box, columns                         |
+| [`LISTBOX SET AUTO ROW HEIGHT`](../commands/listbox-set-auto-row-height)         | 配列                           | 行                                         |
+| [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula)           | Selection, Collection        | 列                                         |
+| [`LISTBOX SET COLUMN WIDTH`](../commands/listbox-set-column-width)               | すべて                          | 列                                         |
+| [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)   | Array, Selection             | フッター                                      |
+| [`LISTBOX SET FOOTERS HEIGHT`](../commands/listbox-set-footers-height)           | すべて                          | フッター                                      |
+| [`LISTBOX SET GRID`](../commands/listbox-set-grid)                               | すべて                          | リストボックス                                   |
+| [`LISTBOX SET GRID COLOR`](../commands/listbox-set-grid-color)                   | すべて                          | リストボックス                                   |
+| [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)           | すべて                          | ヘッダー                                      |
+| [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy)                     | 配列                           | リストボックス                                   |
+| [`LISTBOX SET LOCKED COLUMNS`](../commands/listbox-set-locked-columns)           | すべて                          | リストボックス                                   |
+| [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)                       | すべて                          | List box, columns                         |
+| [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color)                     | 配列                           | 行                                         |
+| [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style)           | 配列                           | 行                                         |
+| [`LISTBOX SET ROW HEIGHT`](../commands/listbox-set-row-height)                   | 配列                           | 行                                         |
+| [`LISTBOX SET ROWS HEIGHT`](../commands/listbox-set-rows-height)                 | すべて                          | リストボックス                                   |
+| [`LISTBOX SET STATIC COLUMNS`](../commands/listbox-set-static-columns)           | すべて                          | リストボックス                                   |
+| [`LISTBOX SET TABLE SOURCE`](../commands/listbox-set-table-source)               | セレクション                       | リストボックス                                   |
+| [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns)                       | すべて                          | 列                                         |
+
+### Miscellaneous commands
+
+| コマンド                                                         | List Box Type    | Supported Parts                           | コメント                                                                                                                                                                                      |
+| ------------------------------------------------------------ | ---------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`EDIT ITEM`](../commands/edit-item)                         | すべて              | 列                                         | Allows you to pass a cell of a list box object into edit mode                                                                                                                             |
+| [`Get edited text`](../commands/get-edited-text)             | すべて              | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`REDRAW`](../commands/redraw)                               | Array, Selection | リストボックス                                   | When applied to a selection list box, triggers an update of the data displayed in the list box. Not supported with list box of the entity selection type. |
+| [`Displayed line number`](../commands/displayed-line-number) | すべて              | List box, headers, footers, rows, columns | Works in the context of the [`On Display Detail`](../Events/onDisplayDetail.md) form event for a list box object                                                                          |
+| [`Drop position`](../commands/drop-position)                 | すべて              | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Count in array`](../commands/count-in-array)               | すべて              | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Print object`](../commands/print-object)                   | すべて              | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+
+### Object (forms) commands
+
+| コマンド                                                                                       | List Box Type | Supported Parts                                                                                                   |
+| ------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [`OBJECT DUPLICATE`](../commands/object-duplicate)                                         | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT GET BEST SIZE`](../commands/object-get-best-size)                                 | すべて           | 列                                                                                                                 |
+| [`OBJECT Get border style`](../commands/object-get-border-style)                           | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)                             | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get data source`](../commands/object-get-data-source)                             | 配列            | リストボックス                                                                                                           |
+| [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)         | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get enterable`](../commands/object-get-enterable)                                 | すべて           | 列                                                                                                                 |
+| [`OBJECT Get filter`](../commands/object-get-filter)                                       | すべて           | 列                                                                                                                 |
+| [`OBJECT Get focus rectangle invisible`](../commands/object-get-focus-rectangle-invisible) | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get font`](../commands/object-get-font)                                           | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get font size`](../commands/object-get-font-size)                                 | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get font style`](../commands/object-get-font-style)                               | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get format`](../commands/object-get-format)                                       | すべて           | ヘッダー                                                                                                              |
+| [`OBJECT Get help tip`](../commands/object-get-help-tip)                                   | すべて           | Headers, footers                                                                                                  |
+| [`OBJECT Get horizontal alignment`](../commands/object-get-horizontal-alignment)           | すべて           | List box, headers, footers, columns                                                                               |
+| [`OBJECT Get list reference`](../commands/object-get-list-reference)                       | すべて           | 列                                                                                                                 |
+| [`OBJECT Get name`](../commands/object-get-name)                                           | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT Get pointer`](../commands/object-get-pointer)                                     | すべて           | List box, headers, footers, rows, columns (see below)                                          |
+| [`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options)                   | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors)                               | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT GET SCROLL POSITION`](../commands/object-get-scroll-position)                     | すべて           | リストボックス                                                                                                           |
+| [`OBJECT GET SCROLLBAR`](../commands/object-get-scrollbar)                                 | すべて           | リストボックス                                                                                                           |
+| [`OBJECT Get type`](../commands/object-get-type)                                           | すべて           | List box, headers, footers, columns                                                                               |
+| [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment)               | すべて           | List box, headers, footers, columns                                                                               |
+| [`OBJECT MOVE`](../commands/object-move)                                                   | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET COLOR`](../commands/object-set-color)                                         | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)                             | すべて           | リストボックス                                                                                                           |
+| [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)                             | すべて           | リストボックス                                                                                                           |
+| [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)                                 | すべて           | 列                                                                                                                 |
+| [`OBJECT SET EVENTS`](../commands/object-set-events)                                       | すべて           | リストボックス                                                                                                           |
+| [`OBJECT SET FOCUS RECTANGLE INVISIBLE`](../commands/object-set-focus-rectangle-invisible) | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET FONT`](../commands/object-set-font)                                           | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)                                 | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)                               | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET FORMAT`](../commands/object-set-format)                                       | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)                                   | すべて           | Headers, footers                                                                                                  |
+| [`OBJECT SET HORIZONTAL ALIGNMENT`](../commands/object-set-horizontal-alignment)           | すべて           | List box, headers, footers, columns                                                                               |
+| [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)                   | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)                               | すべて           | List box, headers, footers, rows, columns                                                                         |
+| [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)                     | すべて           | リストボックス                                                                                                           |
+| [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)                                 | すべて           | リストボックス. Scrolls the list box rows so that the first selected row or a specified row is displayed |
+| [`OBJECT SET TITLE`](../commands/object-set-title)                                         | すべて           | ヘッダー                                                                                                              |
+| [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)               | すべて           | List box, headers, footers, columns                                                                               |
+| [`OBJECT SET VISIBLE`](../commands/object-set-visible)                                     | すべて           | List box, headers, footers                                                                                        |
+
+When [`OBJECT SET VISIBLE`](../commands/object-set-visible) is used with a header or footer, it is applied on all List box object headers or footers, regardless of the individual element set by the command. For example, the `OBJECT SET VISIBLE(*;"header3";False)` statement will hide all headers in the List box object to which *header3* belongs and not simply this header. Note that in order for you to be able to manage the visibility of these objects using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command, they must have been displayed in the list box properties.
+
+### OBJECT Get pointer
+
+The [`OBJECT Get pointer`](../commands/object-get-pointer) command used with the `Object with focus` or `Object current` constant can be used in the object method of a list box or a list box column. They return a pointer to the list box, the list box column (see note below) or the header variable depending on the type of [form event](../Events/overview.md). The following table details this functioning:
+
+| イベント                                                     | Object with focus                          | Object current                             |
+| -------------------------------------------------------- | ------------------------------------------ | ------------------------------------------ |
+| [`On Clicked`](../Events/onClicked.md)                   | リストボックス                                    | column                                     |
+| [`On Double Clicked`](../Events/onDoubleClicked.md)      | リストボックス                                    | column                                     |
+| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | column                                     | column                                     |
+| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | column                                     | column                                     |
+| [`On After Edit`](../Events/onAfterEdit.md)              | column                                     | column                                     |
+| [`On Getting Focus`](../Events/onGettingFocus.md)        | column or list box (\*) | column or list box (\*) |
+| [`On Losing Focus`](../Events/onLosingFocus.md)          | column or list box (\*) | column or list box (\*) |
+| [`On Drop`](../Events/onDrop.md)                         | list box (source)       | list box (\*)           |
+| [`On Drag Over`](../Events/onDragOver.md)                | list box (source)       | list box (\*)           |
+| [`On Begin Drag Over`](../Events/onBeginDragOver.md)     | リストボックス                                    | list box (\*)           |
+| [`On Mouse Enter`](../Events/onMouseEnter.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Move`](../Events/onMouseMove.md)              | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Leave`](../Events/onMouseLeave.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Data Change`](../Events/onDataChange.md)            | column                                     | column                                     |
+| [`On Selection Change`](../Events/onSelectionChange.md)  | list box (\*\*)         | list box (\*\*)         |
+| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | column                                     | column                                     |
+| [`On Column Moved`](../Events/onColumnMoved.md)          | リストボックス                                    | column                                     |
+| [`On Row Moved`](../Events/onRowMoved.md)                | リストボックス                                    | リストボックス                                    |
+| [`On Column Resize`](../Events/onColumnResize.md)        | リストボックス                                    | column                                     |
+| [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                        | list box (\*\*)         |
+| [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                        | list box (\*\*)         |
+| [`On Header Click`](../Events/onHeaderClick.md)          | リストボックス                                    | header                                     |
+| [`On Footer Click`](../Events/onFooterClick.md)          | リストボックス                                    | footer                                     |
+| [`On After Sort`](../Events/onAfterSort.md)              | リストボックス                                    | header                                     |
+
+(\*) When the focus is modified within a list box, a pointer to the column is returned. When the focus is modified at the overall form level, a pointer to the list box is returned. In the context of a column object method, a pointer to the column is returned.
+(\*\*) Not executed in the context of a column object method.
+
+:::note
+
+When a pointer to a column is returned, the object pointed to depends on the type of list box. With an array type list box, the `OBJECT Get pointer` command returns a pointer to the column of the list box with the focus (i.e. to an array). The 4D pointer mechanism allows you to see the item number of the modified array. For example, supposing a user modified the 5th line of the column col2:
+
+```4d
+ $Column:=OBJECT Get pointer(Object with focus)
+  //$Column contains a pointer to col2
+ $Row:=$Column-> //$Row equals 5
+```
+
+:::
+
+For a selection type list box, the `OBJECT Get pointer` command returns:
+
+- For a column associated with a field, a pointer to the associated field,
+- For a column associated with a variable, a pointer to the variable,
+- For a column associated with an expression, the `Is nil pointer` pointer.

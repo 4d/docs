@@ -52,14 +52,14 @@ End if
 <!-- REF #_command_.ZIP Create archive.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|fileToZip|4D.File|->|File or Folder object to compress|
-|folderToZip|4D.Folder|->|File or Folder object to compress|
-|zipStructure|Object|->|File or Folder object to compress|
-|destinationFile|4D.File|->|Destination file for the archive|
-|options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|<-|Status object|
+|fileToZip|4D.File|->|圧縮する File または Folder オブジェクト|
+|folderToZip|4D.Folder|->|圧縮する File または Folder オブジェクト|
+|zipStructure|Object|->|圧縮する File または Folder オブジェクト|
+|destinationFile|4D.File|->|アーカイブの保存先ファイル|
+|options|Integer|->|*folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう)|
+|戻り値|Object|<-|Status object|
 </div>
 <!-- END REF -->
 
@@ -208,11 +208,11 @@ $err:=ZIP Create archive($zip; $destination)
 <!-- REF #_command_.ZIP Read archive.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|zipFile|4D.File|->|Zip archive file|
-|password|Text|->|ZIP archive password if any|
-|Result|4D.ZipArchive|<-|Archive object|
+|zipFile|4D.File|->|ZIPアーカイブファイル|
+|password|Text|->|ZIPアーカイブのパスワード (必要であれば)|
+|戻り値|4D.ZipArchive|<-|Archive object|
 </div>
 <!-- END REF -->
 
@@ -220,7 +220,7 @@ $err:=ZIP Create archive($zip; $destination)
 
 `ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
-> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
+> このコマンドは ZIPアーカイブを展開することはしません。 その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
 *zipFile* 引数として、圧縮された ZIPアーカイブを参照している `4D.File` オブジェクトを渡します。 ターゲットのアーカイブファイルは `ZIP Read archive` が実行を終えるまで (全コンテンツ/参照が取得/解放されるまで) は開いた状態となり、その後自動的に閉じられます。
 

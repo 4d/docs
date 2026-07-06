@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数      | 型                          |                             | 説明                                                                                                                      |
-| ------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| \*      | 演算子                        | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
-| object  | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula | 4D.Formula | &#8594; | データソースとして割り当てるフォーミュラ                                                                                                    |
+| 引数      | 型                          |                             | 説明                                                                                    |
+| ------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------- |
+| \*      | 演算子                        | &#8594; | 指定時、object はオブジェクト名(文字列) ; 省略時: object は変数またはフィールド |
+| object  | テキスト、変数、フィールド              | &#8594; | オブジェクト名 (\* 指定時) または<br/>フィールドまたは変数 (\* 省略時)    |
+| formula | 4D.Formula | &#8594; | データソースとして割り当てるフォーミュラ                                                                  |
 
 </div>
 <!-- END REF-->
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**OBJECT SET DATA SOURCE FORMULA** コマンドは、<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> *object* 引数と *\** で指定したオブジェクトのデータソースとしてフォーミュラ(式)を割り当てます<!-- END REF-->。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。
+**OBJECT SET DATA SOURCE FORMULA** コマンドは、<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> *object* 引数と *\** で指定したオブジェクトのデータソースとしてフォーミュラ(式)を割り当てます<!-- END REF-->。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 この場合、文字列ではなくてフィールドまたは変数参照を渡します(フィールドまたは変数オブジェクトのみ)。
 

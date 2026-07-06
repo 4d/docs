@@ -19,7 +19,7 @@ Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/
 
 ## Contrôle des accès dans les applications multi-utilisateurs
 
-Les applications desktop multi-utilisateurs sont déployées avec 4D Server. Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
+Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Les applications desktop multi-utilisateurs sont déployées avec 4D Server. Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
 
 Vous initialisez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture, aucun identifiant n'est requis). N'importe quelle partie de l'application peut être ouverte.
 

@@ -39,12 +39,12 @@ displayed_sidebar: docs
 
 En el parámetro *wpDoc*, pasa un documento 4D Write Pro.
 
-The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Hay dos tipos disponibles:
+El parámetro *styleSheetType* le permite designar el tipo de la hoja de estilo, *es decir* la parte del *wpDoc* que se verá afectada por la hoja de estilo. Hay dos tipos disponibles:
 
 - wk type character: aplica atributos de estilo a los caracteres.
 - wk type paragraph: aplica los atributos de estilo a los párrafos (requerido si quiere crear las [hojas de estilo de lista jerárquica](#hierarchical-list-style-sheet)).
 
-Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. El nombre de la hoja de estilo debe cumplir las siguientes reglas:
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. El nombre de la hoja de estilo debe cumplir las siguientes reglas: It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands.
 
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
@@ -52,7 +52,7 @@ Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nomb
 - no debe empezar por "section", que está reservado
 - el "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
+Puede especificar los atributos de la hoja de estilo usando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) o la notación objeto (ver [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). Para consultar la lista de atributos disponibles, ver la sección [Atributos de las hojas de estilo](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
 **Notas**:
 
@@ -105,9 +105,9 @@ var $mainList : Object
 
 $mainList:=WP New style sheet(wpArea; wk type paragraph; "MainList"; 3)
 
-// The command automatically creates:
-// - 1 root-level style sheet ("MainList")
-// - 2 sub-level style sheets ("MainList lvl 2" and "MainList lvl 3")
+// El comando crea automáticamente:
+// - 1 hoja de estilo de nivel raíz («MainList»)
+// - 2 hojas de estilo de nivel secundario («MainList lvl 2» y «MainList lvl 3»)
 
 ```
 

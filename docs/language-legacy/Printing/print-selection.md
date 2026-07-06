@@ -47,7 +47,19 @@ During printing, the output form method and/or the form’s object methods are e
 
 You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](../commands/before-selection) during an On Header event. You can also check for the last footer, by testing [End selection](../commands/end-selection) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](../commands/form-event-code) and [Level](../commands/level).
 
-To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](../commands/sum) and [Average](../commands/average) to assign values to variables. For more information, see the descriptions of [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) and [ACCUMULATE](../commands/accumulate).
+To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. For more information, see the descriptions of [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) and [ACCUMULATE](../commands/accumulate).
+
+
+:::note
+
+You can use [statistical commands](../../commands/theme/On_a_Series.md) like [Sum](../commands/sum) and [Average](../commands/average) to assign values to variables. When statistical functions are used in a report, they behave in a specific way because the report itself must load each record. When you use these functions in a report, the values that are returned are reliable only at break level 0, and only when break processing is turned on. This means that they are useful only at the end of a report, after all the records have been processed. You would use these functions only in an object method for a non-enterable area that is included in the B0 Break area.
+
+
+:::
+
+
+
+
 
 :::warning
 

@@ -10,7 +10,7 @@ title: 文字列
 
 ## 文字列リテラル
 
-文字列リテラル定数は、次のように二重引用符 ("...") で囲んで表します。 文字列定数の例を次に示します:
+文字列リテラル定数は、次のように二重引用符 ("...") 文字列定数の例を次に示します:
 
 ```4d
 "レコード追加"
@@ -24,16 +24,21 @@ title: 文字列
 
 以下のエスケープシーケンスを文字列内で使用できます:
 
-| エスケープシーケンス                              | 意味する文字                      |
-| --------------------------------------- | --------------------------- |
-| \n                                      | LF (行送り) |
-| \t                                      | HT (タブ)  |
-| \r                                      | CR (改行)  |
-| \\\\|\ (バックスラッシュ) |                             |
-| \\"                                   | " (引用符)  |
+| エスケープシーケンス | 意味する文字                      |
+| ---------- | --------------------------- |
+| \n         | LF (行送り) |
+| \t         | HT (タブ)  |
+| \r         | CR (改行)  |
+| \\\\   |                             |
+| \\"      | " (引用符)  |
 
-**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はコードエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br />
-さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのコードエディターに記述する場合は "\\\\\" となる点に注意してください。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。 <br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。
+
+### Automatic normalization of line endings
+
+In order to ensure multi-platform compatibility of texts handled in the database, 4D automatically normalizes line endings so that they occupy a single character: `\r` (carriage return). This normalization is carried out at the level of form objects (variables or fields) hosting plain or multi-style text. Line endings that are not native, or that use a mix of several characters (for example `\r\n`), are considered as a single `\r`. Note that in compliance with the XML standard (multi-style text format), the [multi-style text commands](../commands/theme/Styled_Text.md) also normalize line endings for text variables that are not associated with objects.
+
+This principle makes it easier to use multi-style text commands or commands such as [`HIGHLIGHT TEXT`](../commands/highlight-text) in a multi-platform context. However, you must take this into account in your processing when you work with texts from heterogeneous sources.
 
 ## 文字列演算子
 
@@ -51,7 +56,7 @@ title: 文字列
 |                            |                                           |         | "abc" < "abc"  | false    |
 | 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
 |                            |                                           |         | "abc" >= "abd"                          | false    |
-| 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
+| 以上                         | String <= String | Boolean | "abc" <= "abd" | true     |
 |                            |                                           |         | "abd" <= "abc" | false    |
 | キーワードを含む                   | String % String                           | Boolean | "Alpha Bravo" % "Bravo"                 | true     |
 |                            |                                           |         | "Alpha Bravo" % "ravo"                  | false    |
@@ -59,7 +64,7 @@ title: 文字列
 ## 文字列比較の詳細
 
 - 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
-- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です:
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です: 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。 例えば次の式は `FALSE` です:
 
 ```4d
 Character code("A")=Character code("a")
@@ -85,7 +90,7 @@ Character code("A")=Character code("a")
 "abcdefghij"="abc@"
 ```
 
-ただし、複数の文字を比較する目的のワイルドカード記号は、比較演算子の右側の式で使用しなければなりません。 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に <code>FALSE</code> を返します。 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
 
 ```4d
     "abc@"="abcdefghij"
@@ -101,7 +106,7 @@ Character code("A")=Character code("a")
      "abcdefghij"="@abcde@fghij@"
 ```
 
-一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります: 次の式は `FALSE` になります:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -142,8 +147,8 @@ Character code("A")=Character code("a")
 
 > **注:**
 >
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
-> - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、<a href="https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024">Mecab のサポート(日本語版)</a> を参照ください。
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries> 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
+> - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。
 
 ## 文字参照記号
 
@@ -179,7 +184,7 @@ End if
 
 ### 無効な文字列参照に関する注意
 
-文字列参照記号を使用する際、配列に存在する要素を指定するのと同じ要領で、文字列内に存在する文字を指定しなければなりません。 たとえば、文字列変数の20番目の文字を参照する場合、この変数は必ず、少なくとも20文字以上の長さがなくてはなりません。長さが足りない場合:
+文字列参照記号を使用する際、配列に存在する要素を指定するのと同じ要領で、文字列内に存在する文字を指定しなければなりません。 たとえば、文字列変数の20番目の文字を参照する場合、この変数は必ず、少なくとも20文字以上の長さがなくてはなりません。
 
 - インタープリターモードでは構文エラーは発生しません。
 - コンパイルモードで範囲チェックオプションを無効にしている場合には、メモリ領域を破壊するおそれがあります。

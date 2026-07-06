@@ -32,6 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGIN.Summary-->El comando **LDAP LOGIN** abre una conexión de sólo lectura en el servidor LDAP especificado por el parámetro *url* con los identificadores *login* y *contraseña* suministrados.<!-- END REF--> Si es aceptado por el servidor, esta conexión se utiliza para todas las búsquedas LDAP efectuadas posteriormente en el proceso actual hasta que el comando *RuntimeVLWinFolder* se ejecute (o hasta que el proceso se cierre).
 
+:::info
+
+LDAP o *Lightweight Directory Access Protocol* es un estándar abierto para acceder y mantener servicios de información distribuidos. Para más información, consulte la [página de Wikipedia sobre LDAP](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) o la página principal de [OpenLDAP Software](http://www.openldap.org/).
+
+:::
+
 En *url*, pase el URL completo del servidor LDAP al cual conectarse, incluyendo el esquema y el puerto (389 por defecto). Este parámetro debe ser compatible con la [rfc2255](https://www.ietf.org/rfc/rfc2255.txt).   
   
 Puede abrir conexiones seguras a través de TLS utilizando una mediante el uso de una *url* que empieza comience por "ldaps" y que utilice un número de puerto específico (por ejemplo "ldaps://svr.ldap.acme.com:1389"). El servidor LDAP debe tener un certificado SSL (al menos para Microsoft Active Directory). Es muy recomendable utilizar una conexión TLS cuando se envía la contraseña en texto plano (ver más abajo).
@@ -41,9 +47,9 @@ Puede abrir conexiones seguras a través de TLS utilizando una mediante el uso d
 En *login*, pase la cuenta de usuario en el servidor LDAP, y en *contraseña*, pase la contraseña de usuario. Por defecto, el *login* puede ser una de las siguientes cadenas de inicio de sesión, dependiendo de la configuración del servidor LDAP:
 
 * un Distinguished Name (DN), por ejemplo "CN=John Smith,OU=users,DC=example,DC=com"
-* un nombre de usuario (CN), por ejemplo "CN=John Smith"
+* un nombre de usuario (CN para *Common Name*), por ejemplo "CN=John Smith"
 * una dirección de correo electrónico, por ejemplo "johnsmith@4d.fr"
-* un SAM-Account-Name, por ejemplo "jsmith".
+* un SAM-Account-Name (*Security Account Manager*, nombre de inicio de sesión para Active Directory), por ejemplo "jsmith".
 
 Tenga en cuenta que los valores aceptados para el *login* están relacionadas con el modo de transmisión de la contraseña definido por el parámetro *digest*. Por ejemplo, en una configuración por defecto de MS Active Directory:
 

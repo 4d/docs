@@ -16,7 +16,7 @@ Les actions assignées aux boutons peuvent provenir d'[actions standard](propert
 Les boutons avec des actions standard sont grisés le cas échéant lors de l'exécution du formulaire. Par exemple, si le premier enregistrement d'une table est affiché, un bouton avec l'action standard `firstRecord` apparaît grisé.
 
 Si vous souhaitez qu'un bouton effectue une action qui n'est pas disponible en tant qu'action standard, laissez le champ action standard vide et écrivez une [méthode objet pour spécifier l'action du bouton](../FormObjects/properties_Action.md#method).
-En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
+Si vous souhaitez qu'un bouton effectue une action qui n'est pas disponible en tant qu'action standard, laissez le champ action standard vide et écrivez une [méthode objet pour spécifier l'action du bouton](../FormObjects/properties_Action.md#method). Vous pouvez associer une méthode à n'importe quel bouton.
 
 La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 
@@ -335,6 +335,6 @@ Des propriétés spécifiques supplémentaires sont disponibles, en fonction du 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular : [Bouton par défaut](properties_Appearance.md#default-button)
 
-## Supported Events
+## Événements pris en charge
 
 [On Alternative Click](../Events/onAlternativeClick.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Long Click](../Events/onLongClick.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)

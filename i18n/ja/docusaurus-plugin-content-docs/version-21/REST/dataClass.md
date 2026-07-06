@@ -44,7 +44,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 | __TIMESTAMP | Date   | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
 | __STAMP     | Number | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例: 例:
 
 `GET  /rest/Company/name,address`
 
@@ -143,7 +143,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 返されるデータについての詳細は [\{DataClass\}](#dataclass) を参照ください。
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例: 例:
 
 `GET  /rest/Company[1]/name,address`
 
@@ -186,11 +186,11 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 ### 説明
 
-*dataClass* に加えて *attribute (属性)* および \*value (値)\*を渡すことで、当該エンティティの公開データをすべて取得できます。 指定する値は、その属性において一意のものですが、主キーではありません。
+*dataClass* に加えて *attribute (属性)* および \*value (値)\*を渡すことで、当該エンティティの公開データをすべて取得できます。 指定する値は、その属性において一意のものですが、主キーではありません。 指定する値は、その属性において一意のものですが、主キーではありません。
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例: 例:
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 

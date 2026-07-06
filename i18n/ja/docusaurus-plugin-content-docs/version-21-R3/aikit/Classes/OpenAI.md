@@ -78,11 +78,11 @@ $client.files.create(...)
 $client.model.lists(...)
 ```
 
-## Provider Model Aliases
+## プロバイダーモデルエイリアス
 
-The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
+OpenAI クライアントは、複数のプロバイダーの使用を容易にするための、プロバイダーモデルエイリアスをサポートしています。 完全なドキュメンテーションについては[プロバイダーモデルエイリアス](../provider-model-aliases.md) を参照してください。
 
-You can construct an OpenAI client using a pre-configured provider name. This allows you to easily switch between different AI providers (OpenAI, Anthropic, etc.) without specifying the full configuration each time.
+定義済みのプロバイダー名を使用して、OpenAI クライアントを構築することができます。 これを使用することで、異なるAI プロバイダー(OpenAI、Anthropic、など)を、 毎回完全な設定を指定することなく切り替えることを可能にします。
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})

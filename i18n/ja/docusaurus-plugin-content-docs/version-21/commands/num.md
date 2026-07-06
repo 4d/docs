@@ -55,7 +55,7 @@ displayed_sidebar: docs
 - ハイフンは、数値や指数が負であることを意味します。 ハイフンは負の数字文字列の前、または指数の場合“e”の後ろになければなりません。 “e”をのぞきハイフンが数字の間にあると、それ以降の文字列は無視されます。 例えば、 `Num("123-456")` は123に、しかし `Num("-9")` は-9になります。
 - eまたはEがあると、その右側の数字をすべて指数として解釈します。 eは数字の文字列の間に置かなければなりません。 `Num("123e–2")` は 1.23 になります。  
   文字列に複数の“e”を含んでいる場合、 macOS とWindows で異なる結果になる可能性があるので注意してください。
-- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
+- テキストを[実数値](../Concepts/dt_number.md) に変換する際には、有効桁数13桁に基づいたアルゴリズムを使用します。
 
 #### *separator* 引数
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 *base* 引数(整数値) を使用すると、特定のモードがトリガーされます。このモードでは*expression* 内で文字列として表される数値の基数(底)を指定します。 具体的には、このシンタックスを使用することで16進数の文字列を数値に変換することができます。
 
-*base* 引数には、*expression* 引数の基数の数字を渡します。 ここには2 から36 までの任意の整数値を渡すことができます。
+*base* 引数には、*expression* 引数の基数の数字を渡します。 ここには2 から36 までの任意の整数値を渡すことができます。 ここには2 から36 までの任意の整数値を渡すことができます。
 
 *base* 引数に0 を渡した場合、コマンドは*expression* 引数の値に応じて基数を決定します。 *expression* の値が"0x" で始まる場合、16 進数が使用されます。 それ以外の場合、10 進数が使用されます。
 
@@ -114,8 +114,8 @@ $result:=Num("–123e2") // –12300
 以下の例は、 *\[Client\]Debt* と *$1000* とを比較します。 この比較に適用されるNum コマンドからは1 または0 が返されます。 文字列に1 や0 を乗算するとその文字または空の文字が返されます。 結果として、 *\[Client\]Risk* には"Good"または"Bad"が返されます:
 
 ```4d
-  // If client owes less than 1000, a good risk.
-  // If client owes more than 1000, a bad risk.
+  // 顧客の負債額が、1000より小さいは「Good」
+  // 顧客の負債額が、1000以上は「Bad」
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
@@ -126,10 +126,10 @@ $result:=Num("–123e2") // –12300
 ```4d
  $thestring:="33,333.33"
  $thenum:=Num($thestring)
-  // by default, $thenum equals 33,33333 on a French system
+  // フランスのシステムでは、$thenum は、デフォルトで33,33333と等しい。
  $thenum:=Num($thestring;".")
-  // $thenum will be correctly evaluated regardless of the system;
-  // for example, 33 333,33 on a French system
+  // システムに関係なく、$thenum は正確に評価されます。
+  // 例えば、フランスのシステムでも 33 333.33となります。
 ```
 
 ## 例題 4

@@ -11,15 +11,15 @@ title: OpenAIChatCompletionsResult
 
 ## 計算プロパティ
 
-| プロパティ     | 型            | 説明                                                                                                                   |
-| --------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `choices` | Collection   | Open AI レスポンスから[OpenAIChoice](OpenAIChoice.md) のコレクションを返します。                                                         |
-| `choice`  | OpenAIChoice | choices コレクションの中から最初の[OpenAIChoice](OpenAIChoice.md) を返します。                                                          |
-| `usage`   | Object       | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| プロパティ     | 型            | 説明                                                                              |
+| --------- | ------------ | ------------------------------------------------------------------------------- |
+| `choices` | Collection   | Open AI レスポンスから[OpenAIChoice](OpenAIChoice.md) のコレクションを返します。                    |
+| `choice`  | OpenAIChoice | choices コレクションの中から最初の[OpenAIChoice](OpenAIChoice.md) を返します。                     |
+| `usage`   | Object       | トークン使用状況の情報をかえします([OpenAIResult](OpenAIResult.md) から継承されます)。 |
 
 ### usage
 
-The `usage` property returns an object containing token usage information for chat completions.
+`usage` プロパティはチャット補完のトークン使用状況情報を格納したオブジェクトを返します。
 
 | フィールド                       | 型       | 説明                                                                            |
 | --------------------------- | ------- | ----------------------------------------------------------------------------- |

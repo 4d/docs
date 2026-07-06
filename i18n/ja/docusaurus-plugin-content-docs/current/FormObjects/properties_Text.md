@@ -7,7 +7,7 @@ title: Text
 
 ## ピッカーの使用を許可
 
-このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands/open-font-picker) および [OPEN COLOR PICKER](../commands/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
+このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands/open-font-picker) および [OPEN COLOR PICKER](../commands/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 #### JSON 文法
 
@@ -131,7 +131,7 @@ title: Text
 
 このプロパティは、オブジェクトで使用される **フォントテーマ** または **フォントファミリー** を指定します。
 
-> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
+> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
 
 ### フォントテーマ
 
@@ -146,7 +146,7 @@ title: Text
 3つのフォントテーマが提供されています:
 
 - **normal**: フォームエディター内で作成された新規オブジェクトにデフォルトで適用される自動スタイルです。
-- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
+- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します: これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
 
 ![](../assets/en/FormObjects/FontThemes.png)
 
@@ -221,9 +221,9 @@ title: Text
 
 #### JSON 文法
 
-| 名称       | データタイプ  | とりうる値                                                                             |
-| -------- | ------- | --------------------------------------------------------------------------------- |
-| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 最小値: 0 |
+| 名称       | データタイプ  | とりうる値                                                                                                    |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 最小値: 0 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -332,7 +332,7 @@ Foreground color;Dark shadow color)
 
 リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
 
 例:
 
@@ -514,7 +514,7 @@ End if
 
 ## マルチスタイル
 
-このプロパティは、選択された領域で[特定のスタイル](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html)を使用する可能性を有効にします。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
+このプロパティは、選択された領域で[特定のスタイル](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html)を使用する可能性を有効にします。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -530,7 +530,7 @@ End if
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../ommands/theme/Styled_Text.md)
 
 ### Supported tags
 
@@ -609,6 +609,89 @@ For font color and background color attributes, the color value can be either th
 ![](../assets/en/FormObjects/colors1.png)
 ![](../assets/en/FormObjects/colors2.png)
 
+### Working with text handling commands
+
+#### ユーザーインターフェース
+
+The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+
+- [User Interface](../commands/theme/User_Interface.md) theme commands
+- [`HIGHLIGHT TEXT`](../commands/highlight-text)
+- [`GET HIGHLIGHT`](../commands/get-highlight)
+
+When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../commands/st-get-plain-text) command:
+
+```4d
+ HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
+```
+
+#### オブジェクト (フォーム)
+
+The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../commands/object-set-font)) apply to the whole object and not to the selection.
+
+If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+
+:::note
+
+If the [**Store with default style tags**](#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+
+:::
+
+Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+
+![](../assets/en/FormObjects/multistyle-ex1.png)
+
+The plain text of the area is as follows:
+
+```html
+<span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
+```
+
+以下のコードを実行した場合:
+
+```4d
+OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
+```
+
+The red color remains:
+
+![](../assets/en/FormObjects/multistyle-ex2.png)
+
+and code is:
+
+```html
+<span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
+```
+
+The following commands are concerned:
+
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+
+In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+
+#### Get edited text
+
+When it is used with a rich text area, the [`Get edited text`](../commands/get-edited-text) command returns the text of the current area including any style tags.
+
+To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command:
+
+```4d
+ST Get plain text(Get edited text)
+```
+
+#### Query and order by commands
+
+Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+
+To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. 例:
+
+```4d
+QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
+```
+
 ---
 
 ## 方向
@@ -622,7 +705,7 @@ For font color and background color attributes, the color value can be either th
 | 180                          | ![](../assets/en/FormObjects/orientation3.png) |
 | 270                          | ![](../assets/en/FormObjects/orientation4.png) |
 
-[スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
+[スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
 
 #### JSON 文法
 
@@ -646,7 +729,7 @@ For font color and background color attributes, the color value can be either th
 
 リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -670,7 +753,7 @@ For font color and background color attributes, the color value can be either th
 
 リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 メソッドを使用して配列を作成するためには、[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 メソッドを使用して配列を作成するためには、[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 

@@ -53,13 +53,13 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 - **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 - **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
 
-> &#062; &#062; No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> &#062; &#062; &#062; No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
 Se puede configurar completamente un objeto list box a través de sus propiedades, y también se puede gestionar dinámicamente por programación.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) del manual *Lenguaje 4D*.
+Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) del manual *Lenguaje 4D*. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
 
 ## Gestión de entrada
 
@@ -244,14 +244,14 @@ Puede activar o desactivar la ordenación usuario estándar desactivando la prop
 
 El soporte de ordenación estándar depende del tipo de list box:
 
-| Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Colección de objetos           | Sí                             | <ul><li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad fuente del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Entity selection               | Sí                             | <ul><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li></ul> |
-| Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Selección temporal             | No                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Arrays                         | Sí                             | Las columnas vinculadas a arrays de imágenes y punteros no se pueden ordenar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Colección de objetos           | Sí                             | <ul><li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad fuente del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                        |
+| Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Entity selection               | Sí                             | <ul><li>La [propiedad fuente del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordenaciones en propiedades de atributos de objeto (p. ej. "This.data.city")</li><li>No soportado: ordenaciones en propiedades de atributos de objeto a través de atributos relacionados (p. ej. "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li></ul> |
+| Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Selección temporal             | No                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Arrays                         | Sí                             | Las columnas vinculadas a arrays de imágenes y punteros no se pueden ordenar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ### Ordenación personalizada
 
@@ -378,6 +378,7 @@ En este modo:
 
 - La altura del objeto list box se reduce automáticamente cuando el número de líneas a imprimir es inferior a la altura original del objeto (no se imprimen líneas "vacías"). Por el contrario, la altura no aumenta automáticamente en función del contenido del objeto. El tamaño del objeto realmente impreso puede obtenerse mediante el comando [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information).
 - El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc.
+  El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc.
   Estos parámetros también incluyen la primera línea a imprimir: si llama al comando [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) antes de lanzar la impresión, la primera línea impresa en el list box será la designada por el comando.
 - Un mecanismo automático facilita la impresión de los list box que contienen más líneas de las que es posible mostrar: se pueden realizar llamadas sucesivas a `Print object` para imprimir cada vez un nuevo conjunto de líneas. El comando [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) se puede utilizar para comprobar el estado de la impresión mientras se está realizando.
 
@@ -564,7 +565,7 @@ Resultado:
 
 Puede optimizar la visualización y gestión de los list box jerárquicos utilizando los eventos formulario `On Expand` y `On Collapse`.
 
-Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. Esto dificulta la generación de list box jerárquicos de gran tamaño basados en arrays generados a partir de datos (a través del comando [`SELECTION TO ARRAY`](../commands/selection-to-array)), no solo por la velocidad de visualización sino también por la memoria utilizada.
+Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria.
 
 El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar estas limitaciones: por ejemplo, puede mostrar sólo una parte de la jerarquía y cargar/descargar los arrays sobre la marcha, basándose en las acciones del usuario. En el contexto de estos eventos, el comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devuelve la celda en la que el usuario hizo clic para expandir o contraer una línea.
 
@@ -578,6 +579,182 @@ En este caso, debe llenar y vaciar los arrays por código. Los principios que de
 
 - Cuando un usuario hace clic en un botón de contracción, puede procesar el evento `On Collapse`. El comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devuelve la celda en cuestión: se eliminan tantas líneas como sean necesarias del list box mediante el comando [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
 
+## List boxes y el lenguaje 4D
 
+Muchos comandos del lenguaje 4D se pueden utilizar con list boxes, tanto del [tema List box](../commands/theme/List_Box.md) como de [Objetos (Formularios)](../commands/theme/Objects_Forms.md) y otros temas. Se pueden utilizar con list boxes o con [partes de list boxes](#list-box-parts), como encabezados, pies de página, filas o columnas. Algunos de ellos solo se pueden utilizar con determinados [tipos de list box](#list-box-types).
 
+### Comandos List Box
 
+| Comando                                                                          | List Box Type                | Supported Parts                           |
+| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
+| [`LISTBOX COLLAPSE`](../commands/listbox-collapse)                               | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column)                     | Todos                        | Columnas                                  |
+| [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)                         | Array                        | List box, headers, footers, rows, columns |
+| [`LISTBOX DUPLICATE COLUMN`](../commands/listbox-duplicate-column)               | Array, Selection, Collection | Columnas                                  |
+| [`LISTBOX EXPAND`](../commands/listbox-expand)                                   | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX Get array`](../commands/listbox-get-array)                             | Array                        | List box, headers, footers, rows, columns |
+| [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)                           | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX Get auto row height`](../commands/listbox-get-auto-row-height)         | Array                        | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL COORDINATES`](../commands/listbox-get-cell-coordinates)       | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position)             | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX Get column formula`](../commands/listbox-get-column-formula)           | Selection, Collection        | Columnas                                  |
+| [`LISTBOX Get column width`](../commands/listbox-get-column-width)               | Todos                        | Columnas                                  |
+| [`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation)   | Array, Selection             | Pies                                      |
+| [`LISTBOX Get footers height`](../commands/listbox-get-footers-height)           | Todos                        | Pies                                      |
+| [`LISTBOX GET GRID`](../commands/listbox-get-grid)                               | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX GET GRID COLORS`](../commands/listbox-get-grid-colors)                 | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX Get headers height`](../commands/listbox-get-headers-height)           | Todos                        | Encabezados                               |
+| [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy)                     | Array                        | List box, headers, footers, rows, columns |
+| [`LISTBOX Get locked columns`](../commands/listbox-get-locked-columns)           | Todos                        | List box                                  |
+| [`LISTBOX Get number of columns`](../commands/listbox-get-number-of-columns)     | Todos                        | List box                                  |
+| [`LISTBOX GET OBJECTS`](../commands/listbox-get-objects)                         | Todos                        | List box                                  |
+| [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information)     | Todos                        | List box, headers, footers, rows, columns |
+| [`LISTBOX Get property`](../commands/listbox-get-property)                       | Todos                        | List box, columns                         |
+| [`LISTBOX Get row color as number`](../commands/listbox-get-row-color-as-number) | Array                        | Rows                                      |
+| [`LISTBOX Get row font style`](../commands/listbox-get-row-font-style)           | Array                        | Rows                                      |
+| [`LISTBOX Get row height`](../commands/listbox-get-row-height)                   | Array                        | Rows                                      |
+| [`LISTBOX Get rows height`](../commands/listbox-get-rows-height)                 | Todos                        | List box                                  |
+| [`LISTBOX Get static columns`](../commands/listbox-get-static-columns)           | Todos                        | List box                                  |
+| [`LISTBOX GET TABLE SOURCE`](../commands/listbox-get-table-source)               | Todos                        | List box                                  |
+| [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column)                     | Todos                        | List box                                  |
+| [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)     | Todos                        | List box                                  |
+| [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows)                         | Array                        | List box                                  |
+| [`LISTBOX MOVE COLUMN`](../commands/listbox-move-column)                         | Todos                        | Columnas                                  |
+| [`LISTBOX MOVED COLUMN NUMBER`](../commands/listbox-moved-column-number)         | Todos                        | Columnas                                  |
+| [`LISTBOX MOVED ROW NUMBER`](../commands/listbox-moved-row-number)               | Array                        | Rows                                      |
+| [`LISTBOX SELECT BREAK`](../commands/listbox-select-break)                       | Hierarchical                 | List box                                  |
+| [`LISTBOX SELECT ROW`](../commands/listbox-select-row)                           | Todos                        | Rows                                      |
+| [`LISTBOX SET ARRAY`](../commands/listbox-set-array)                             | Array                        | List box, columns                         |
+| [`LISTBOX SET AUTO ROW HEIGHT`](../commands/listbox-set-auto-row-height)         | Array                        | Rows                                      |
+| [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula)           | Selection, Collection        | Columnas                                  |
+| [`LISTBOX SET COLUMN WIDTH`](../commands/listbox-set-column-width)               | Todos                        | Columnas                                  |
+| [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)   | Array, Selection             | Pies                                      |
+| [`LISTBOX SET FOOTERS HEIGHT`](../commands/listbox-set-footers-height)           | Todos                        | Pies                                      |
+| [`LISTBOX SET GRID`](../commands/listbox-set-grid)                               | Todos                        | List box                                  |
+| [`LISTBOX SET GRID COLOR`](../commands/listbox-set-grid-color)                   | Todos                        | List box                                  |
+| [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)           | Todos                        | Encabezados                               |
+| [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy)                     | Array                        | List box                                  |
+| [`LISTBOX SET LOCKED COLUMNS`](../commands/listbox-set-locked-columns)           | Todos                        | List box                                  |
+| [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)                       | Todos                        | List box, columns                         |
+| [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color)                     | Array                        | Rows                                      |
+| [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style)           | Array                        | Rows                                      |
+| [`LISTBOX SET ROW HEIGHT`](../commands/listbox-set-row-height)                   | Array                        | Rows                                      |
+| [`LISTBOX SET ROWS HEIGHT`](../commands/listbox-set-rows-height)                 | Todos                        | List box                                  |
+| [`LISTBOX SET STATIC COLUMNS`](../commands/listbox-set-static-columns)           | Todos                        | List box                                  |
+| [`LISTBOX SET TABLE SOURCE`](../commands/listbox-set-table-source)               | Selección                    | List box                                  |
+| [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns)                       | Todos                        | Columnas                                  |
+
+### Miscellaneous commands
+
+| Comando                                                      | List Box Type    | Supported Parts                           | Comentarios                                                                                                                                                                               |
+| ------------------------------------------------------------ | ---------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`EDIT ITEM`](../commands/edit-item)                         | Todos            | Columnas                                  | Allows you to pass a cell of a list box object into edit mode                                                                                                                             |
+| [`Get edited text`](../commands/get-edited-text)             | Todos            | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`REDRAW`](../commands/redraw)                               | Array, Selection | List box                                  | When applied to a selection list box, triggers an update of the data displayed in the list box. Not supported with list box of the entity selection type. |
+| [`Displayed line number`](../commands/displayed-line-number) | Todos            | List box, headers, footers, rows, columns | Works in the context of the [`On Display Detail`](../Events/onDisplayDetail.md) form event for a list box object                                                                          |
+| [`Drop position`](../commands/drop-position)                 | Todos            | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Count in array`](../commands/count-in-array)               | Todos            | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Print object`](../commands/print-object)                   | Todos            | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+
+### Object (forms) commands
+
+| Comando                                                                                    | List Box Type | Supported Parts                                                                                                    |
+| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [`OBJECT DUPLICATE`](../commands/object-duplicate)                                         | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET BEST SIZE`](../commands/object-get-best-size)                                 | Todos         | Columnas                                                                                                           |
+| [`OBJECT Get border style`](../commands/object-get-border-style)                           | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)                             | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get data source`](../commands/object-get-data-source)                             | Array         | List box                                                                                                           |
+| [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)         | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get enterable`](../commands/object-get-enterable)                                 | Todos         | Columnas                                                                                                           |
+| [`OBJECT Get filter`](../commands/object-get-filter)                                       | Todos         | Columnas                                                                                                           |
+| [`OBJECT Get focus rectangle invisible`](../commands/object-get-focus-rectangle-invisible) | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font`](../commands/object-get-font)                                           | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font size`](../commands/object-get-font-size)                                 | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font style`](../commands/object-get-font-style)                               | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get format`](../commands/object-get-format)                                       | Todos         | Encabezados                                                                                                        |
+| [`OBJECT Get help tip`](../commands/object-get-help-tip)                                   | Todos         | Headers, footers                                                                                                   |
+| [`OBJECT Get horizontal alignment`](../commands/object-get-horizontal-alignment)           | Todos         | List box, headers, footers, columns                                                                                |
+| [`OBJECT Get list reference`](../commands/object-get-list-reference)                       | Todos         | Columnas                                                                                                           |
+| [`OBJECT Get name`](../commands/object-get-name)                                           | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get pointer`](../commands/object-get-pointer)                                     | Todos         | List box, headers, footers, rows, columns (see below)                                           |
+| [`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options)                   | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors)                               | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET SCROLL POSITION`](../commands/object-get-scroll-position)                     | Todos         | List box                                                                                                           |
+| [`OBJECT GET SCROLLBAR`](../commands/object-get-scrollbar)                                 | Todos         | List box                                                                                                           |
+| [`OBJECT Get type`](../commands/object-get-type)                                           | Todos         | List box, headers, footers, columns                                                                                |
+| [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment)               | Todos         | List box, headers, footers, columns                                                                                |
+| [`OBJECT MOVE`](../commands/object-move)                                                   | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET COLOR`](../commands/object-set-color)                                         | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)                             | Todos         | List box                                                                                                           |
+| [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)                             | Todos         | List box                                                                                                           |
+| [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)                                 | Todos         | Columnas                                                                                                           |
+| [`OBJECT SET EVENTS`](../commands/object-set-events)                                       | Todos         | List box                                                                                                           |
+| [`OBJECT SET FOCUS RECTANGLE INVISIBLE`](../commands/object-set-focus-rectangle-invisible) | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT`](../commands/object-set-font)                                           | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)                                 | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)                               | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FORMAT`](../commands/object-set-format)                                       | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)                                   | Todos         | Headers, footers                                                                                                   |
+| [`OBJECT SET HORIZONTAL ALIGNMENT`](../commands/object-set-horizontal-alignment)           | Todos         | List box, headers, footers, columns                                                                                |
+| [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)                   | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)                               | Todos         | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)                     | Todos         | List box                                                                                                           |
+| [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)                                 | Todos         | List box. Scrolls the list box rows so that the first selected row or a specified row is displayed |
+| [`OBJECT SET TITLE`](../commands/object-set-title)                                         | Todos         | Encabezados                                                                                                        |
+| [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)               | Todos         | List box, headers, footers, columns                                                                                |
+| [`OBJECT SET VISIBLE`](../commands/object-set-visible)                                     | Todos         | List box, headers, footers                                                                                         |
+
+When [`OBJECT SET VISIBLE`](../commands/object-set-visible) is used with a header or footer, it is applied on all List box object headers or footers, regardless of the individual element set by the command. For example, the `OBJECT SET VISIBLE(*;"header3";False)` statement will hide all headers in the List box object to which *header3* belongs and not simply this header. Note that in order for you to be able to manage the visibility of these objects using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command, they must have been displayed in the list box properties.
+
+### OBJECT Get pointer
+
+The [`OBJECT Get pointer`](../commands/object-get-pointer) command used with the `Object with focus` or `Object current` constant can be used in the object method of a list box or a list box column. They return a pointer to the list box, the list box column (see note below) or the header variable depending on the type of [form event](../Events/overview.md). The following table details this functioning:
+
+| Evento                                                   | Object with focus                          | Object current                             |
+| -------------------------------------------------------- | ------------------------------------------ | ------------------------------------------ |
+| [`On Clicked`](../Events/onClicked.md)                   | list box                                   | column                                     |
+| [`On Double Clicked`](../Events/onDoubleClicked.md)      | list box                                   | column                                     |
+| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | column                                     | column                                     |
+| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | column                                     | column                                     |
+| [`On After Edit`](../Events/onAfterEdit.md)              | column                                     | column                                     |
+| [`On Getting Focus`](../Events/onGettingFocus.md)        | column or list box (\*) | column or list box (\*) |
+| [`On Losing Focus`](../Events/onLosingFocus.md)          | column or list box (\*) | column or list box (\*) |
+| [`On Drop`](../Events/onDrop.md)                         | list box (source)       | list box (\*)           |
+| [`On Drag Over`](../Events/onDragOver.md)                | list box (source)       | list box (\*)           |
+| [`On Begin Drag Over`](../Events/onBeginDragOver.md)     | list box                                   | list box (\*)           |
+| [`On Mouse Enter`](../Events/onMouseEnter.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Move`](../Events/onMouseMove.md)              | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Leave`](../Events/onMouseLeave.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Data Change`](../Events/onDataChange.md)            | column                                     | column                                     |
+| [`On Selection Change`](../Events/onSelectionChange.md)  | list box (\*\*)         | list box (\*\*)         |
+| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | column                                     | column                                     |
+| [`On Column Moved`](../Events/onColumnMoved.md)          | list box                                   | column                                     |
+| [`On Row Moved`](../Events/onRowMoved.md)                | list box                                   | list box                                   |
+| [`On Column Resize`](../Events/onColumnResize.md)        | list box                                   | column                                     |
+| [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                        | list box (\*\*)         |
+| [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                        | list box (\*\*)         |
+| [`On Header Click`](../Events/onHeaderClick.md)          | list box                                   | header                                     |
+| [`On Footer Click`](../Events/onFooterClick.md)          | list box                                   | footer                                     |
+| [`On After Sort`](../Events/onAfterSort.md)              | list box                                   | header                                     |
+
+(\*) When the focus is modified within a list box, a pointer to the column is returned. When the focus is modified at the overall form level, a pointer to the list box is returned. In the context of a column object method, a pointer to the column is returned.
+(\*\*) Not executed in the context of a column object method.
+
+:::note
+
+When a pointer to a column is returned, the object pointed to depends on the type of list box. With an array type list box, the `OBJECT Get pointer` command returns a pointer to the column of the list box with the focus (i.e. to an array). The 4D pointer mechanism allows you to see the item number of the modified array. For example, supposing a user modified the 5th line of the column col2:
+
+```4d
+ $Column:=OBJECT Get pointer(Object with focus)
+  //$Column contains a pointer to col2
+ $Row:=$Column-> //$Row equals 5
+```
+
+:::
+
+For a selection type list box, the `OBJECT Get pointer` command returns:
+
+- For a column associated with a field, a pointer to the associated field,
+- For a column associated with a variable, a pointer to the variable,
+- For a column associated with an expression, the `Is nil pointer` pointer.

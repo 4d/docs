@@ -146,7 +146,7 @@ As propriedades de dataclass são objetos de atributo que descrevem os campos ou
  $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Essa sintaxe NÃO retorna valores mantidos dentro do atributo, mas, em vez disso, retorna referências aos próprios atributos [com suas **propriedades de atributo**](../API/DataClassClass.md#attributename). Para manejar os valores, é necessário passar por [Entidades](#entity).
+Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Para manejar os valores, é necessário passar por [Entidades](#entity). Essa sintaxe NÃO retorna valores mantidos dentro do atributo, mas, em vez disso, retorna referências aos próprios atributos [com suas **propriedades de atributo**](../API/DataClassClass.md#attributename).
 
 All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada campo que você deseja ser exposto como um atributo de dataclass.
 
@@ -171,7 +171,7 @@ Além disso, os seguintes atributos de relação também estarão automaticament
 
 *   na dataclass Project: o atributo **theClient**, do tipo "relatedEntity"; há no máximo uma empresa para cada projeto (o cliente)
 *   na dataclass Company: o atributo **companyProjects**, do tipo "relatedEntities"; para cada empresa, há qualquer número de projetos relacionados.
-> > > > > A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+> > > > > > A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 

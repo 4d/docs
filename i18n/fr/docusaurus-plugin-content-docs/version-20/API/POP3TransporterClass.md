@@ -223,7 +223,7 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 ##### Description
 
-La fonction `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->renvoie un objet `boxInfo` correspondant à la boîte aux lettres désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur la boite de réception.
+La fonction `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->La fonction `.getBoxInfo()`<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur la boite de réception.
 
 L'objet `boxInfo` contient les propriété suivantes :
 
@@ -277,9 +277,9 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 ##### Description
 
-La fonction `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->renvoie l'objet `Email ` correspondant au *msgNumber * dans la boîte aux lettres désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
+La fonction `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->La fonction `.getMail()`<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
 
-Passez dans *msgNumber* le numéro du message à récupérer. Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer.
+Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction [`.getMailInfoList()`](#getmailinfolist).
 
 Optionnellement, vous pouvez passer `true` dans le paramètre *headerOnly* pour exclure les parties body de l'objet `Email` renvoyé. Seules les propriétés d'en-têtes ([`header`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) sont alors retournées. Cette option vous permet d'optimiser l'étape de téléchargement lorsque beaucoup d'emails sont sur le serveur.
 
@@ -382,6 +382,7 @@ La fonction retourne **Null** si :
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
  End if
  End if
+ End if
 ```
 
 ## .getMailInfoList()
@@ -476,7 +477,7 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 ##### Description
 
-La fonction `.getMIMEAsBlob()` <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->renvoie un BLOB avec le contenu MIME du message correspondant au *msgNumber* dans la boîte de réception désignée par le [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
+La fonction `.getMIMEAsBlob()` <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->La fonction `.getMIMEAsBlob()`<!-- END REF -->.
 
 Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction [`.getMailInfoList()`](#getmailinfolist).
 

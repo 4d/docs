@@ -37,7 +37,8 @@ Para el segundo parámetro, puede pasar cualquiera de los dos:
 - En *picture*:
   - Campo o variable de imagen
   - Cadena que contiene una ruta a un archivo de imagen almacenado en disco, en la sintaxis del sistema.
-    Si utiliza una cadena, puede pasar un nombre de ruta completo o un nombre de ruta relativo al archivo de estructura de la base de datos. También puede pasar un nombre de archivo, en cuyo caso el archivo debe estar situado junto al archivo de estructura de la base de datos. Si pasa un nombre de archivo, debe indicar la extensión del archivo.
+    Si utiliza una cadena, puede pasar un nombre de ruta completo o un nombre de ruta relativo al archivo de estructura de la base de datos. También puede pasar un nombre de archivo, en cuyo caso el archivo debe estar situado junto al archivo de estructura de la base de datos. También puede pasar un nombre de archivo, en cuyo caso el archivo debe estar situado junto al archivo de estructura de la base de datos.
+
 - En *pictureFile* : un objeto `File` que representa un archivo imagen o una ruta.
 
 Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands/picture-codec-list). Si la imagen encapsula varios formatos (codecs), 4D Write Pro solo mantiene un formato para la visualización y otro para la impresión (si son diferentes) en el documento; los "mejores" formatos se seleccionan automáticamente.

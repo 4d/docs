@@ -3,18 +3,18 @@ id: ordering
 title: Ordenando colecciones y objetos
 ---
 
-To sort a series of data, 4D compares each value against the others by applying comparison criteria defined according to the data type (see [sorting rules](#sorting-rules)). Este proceso se basa en un algoritmo de ordenación que establece un orden total entre todos los elementos. Cuando todos los datos pertenecen al mismo [tipo de datos](./data-types.md), las reglas de comparación son sencillas y están bien definidas.
+Para ordenar una serie de datos, 4D compara cada valor con los demás aplicando criterios de comparación definidos en función del tipo de datos (ver [reglas de ordenación](#sorting-rules)). Este proceso se basa en un algoritmo de ordenación que establece un orden total entre todos los elementos. Cuando todos los datos pertenecen al mismo [tipo de datos](./data-types.md), las reglas de comparación son sencillas y están bien definidas.
 
-However, [collections](./dt_collection.md) and [objects](./dt_object.md), including [entity selections](../ORDA/dsMapping.md#entity-selection), can contain elements and attributes of heterogeneous types: scalar types (text, numbers, booleans, dates) or complex types (objects, blobs, collections). When ordering a collection or object containing heterogeneous values, 4D applies a stratified sorting scheme that first partitions elements by type, then applies comparison rules within each type partition.
+Sin embargo, las [colecciones](./dt_collection.md) y los [objetos](./dt_object.md), incluidas las [selecciones de entidades](../ORDA/dsMapping.md#entity-selection), pueden contener elementos y atributos de tipos heterogéneos: tipos escalares (texto, números, booleanos, fechas) o tipos complejos (objetos, blobs, colecciones). Al ordenar una colección u objeto que contenga valores heterogéneos, 4D aplica un esquema de ordenación estratificada que primero divide los elementos por tipo y, a continuación, aplica reglas de comparación dentro de cada partición de tipo.
 
 ## Funciones de ordenación
 
-The 4D language provides several mechanisms that rely on sorting collection elements, object attributes, or orchestrate sorting to produce an ordered result:
+El lenguaje 4D ofrece varios mecanismos que se basan en ordenar los elementos de una colección o los atributos de un objeto, o que coordinan la ordenación para generar un resultado ordenado:
 
-- **Collection sorting functions**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (multi-criteria sorting with explicit key and order specification), [`collection.orderBy()`](../API/CollectionClass.md#orderby) (sorting by evaluating an expression on each element), [`collection.sort()`](../API/CollectionClass.md#sort) (in-place sorting according to the natural ordering relation),
+- **Funciones de ordenación de colecciones**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (ordenación por múltiples criterios con especificación explícita de clave y orden), [`collection.orderBy()`](../API/CollectionClass.md#orderby) (ordenación mediante la evaluación de una expresión en cada elemento), [`collection.sort()`](../API/CollectionClass.md#sort) (ordenación in situ según la relación de orden natural),
 - **Funciones de ordenación de la selección de entidades**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), que aplica las mismas reglas de ordenación que las colecciones,
-- **Query functions with ordering**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) with the `order by attributePath` keyword, which return results in deterministic order,
-- **Order-dependent statistical functions**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), which rely on the ordering relation to identify extrema,
+- **Funciones de consulta con ordenación**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) con la palabra clave `order by attributePath`, que devuelven los resultados en un orden determinista,
+- **Funciones estadísticas dependientes del orden**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), que se basan en la relación de ordenación para identificar los extremos,
 - [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) comando para ordenar una tabla de base de datos en base a un campo objeto.
 
 ## Reglas de ordenación
@@ -38,10 +38,10 @@ Los tipos se ordenan según la secuencia siguiente, con sus respectivas relacion
 
 ### Valores numéricos especiales
 
-Special floating-point values `+INF` (positive infinity), `-INF` (negative infinity), and `NaN` (Not-a-Number) present in collections and objects are ordered according to the following natural sequence: **NaN < -INF < finite values < +INF**.
+Los valores especiales de punto flotante `+INF` (infinito positivo), `-INF` (infinito negativo) y `NaN` (Not-a-Number) presentes en colecciones y objetos se ordenan según la siguiente secuencia natural: **NaN < -INF < valores finitos < +INF**.
 
 ### Ordenación coherente de las colecciones
 
-Collection sorting functions (see [Ordering functions](#ordering-functions) section above) implement a **consistent sort** for complex types such as objects and collections. By "consistent", we mean that successive calls to the same sorting function (e.g., `collection.orderBy()`) on the same collection produce identical ordering for complex type values. Formally, if a sort expression yields the same comparative result for two elements, the relative order of those elements is preserved.
+Las funciones de ordenación de colecciones (ver la sección [Funciones de ordenación](#ordering-functions) más arriba) implementan una **ordenación coherente** para los tipos complejos, como objetos y colecciones. Por "consistente", queremos decir que las llamadas sucesivas a la misma función de ordenación (por ejemplo, `collection.orderBy()`) en la misma colección producen un orden idéntico para valores complejos de tipo. Formalmente, si una expresión de ordenación arroja el mismo resultado comparativo para dos elementos, se mantiene el orden relativo de dichos elementos.
 
-Other 4D sorting operations do not provide this stability guarantee when comparing complex types.
+Otras operaciones de ordenación 4D no ofrecen esta garantía de estabilidad al comparar tipos complejos.

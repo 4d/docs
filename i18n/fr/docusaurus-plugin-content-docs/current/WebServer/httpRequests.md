@@ -326,7 +326,7 @@ Gardez à l'esprit qu'en HTML, tous les objets sont des objets de texte. Si vous
 Le serveur web 4D fournit plusieurs commandes web de bas niveau vous permettant de développer un traitement personnalisé des requêtes :
 
 - la commande [`WEB GET HTTP BODY`](../commands/web-get-http-body) renvoie le corps du message sous forme de texte brut, ce qui permet de l'analyser si nécessaire
-- la commande [`WEB GET HTTP HEADER`](../commands/web-get-http-header) renvoie les en-têtes de la requête. Elle est utile pour gérer des cookies personnalisés, par exemple (en plus de la commande `WEB SET HTTP HEADER`).
+- Elle est utile pour gérer des cookies personnalisés, par exemple (en plus de la commande `WEB SET HTTP HEADER`). la commande [`WEB GET HTTP HEADER`](../commands/web-get-http-header) renvoie les en-têtes de la requête.
 - les commandes [`WEB GET BODY PART`](../commands/web-get-body-part) et [`WEB Get body part count`](../commands/web-get-body-part-count) pour analyser la partie body d'une requête multi-part et récupérer des valeurs texte, mais aussi des fichiers postés, en utilisant des BLOB.
 
 Ces commandes sont résumées dans le graphique suivant :

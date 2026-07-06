@@ -12,11 +12,11 @@ Controle si el usuario puede arrastrar el objeto y cómo. Por defecto, no se per
 Hay dos modos de arrastrar disponibles:
 
 - **Personalizado**: en este modo, toda operación de arrastrar realizada en el objeto dispara el evento formulario `On Begin Drag` en el contexto del objeto. A continuación, gestiona la acción arrastrar utilizando un método.  
-  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
+  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo.
 - **Automático**: en este modo, 4D **copia** el texto o las imágenes directamente desde el objeto formulario. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)<br/>
-  In this mode, the `On Begin Drag` form event is NOT generated. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opción no está disponible para las imágenes.
+  In this mode, the `On Begin Drag` form event is NOT generated. Puede utilizarse en la misma área 4D, entre dos áreas 4D o entre 4D y otra aplicación. Esta opción no está disponible para las imágenes.
 
 Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) en el manual *Lenguaje 4D*.
 
@@ -47,7 +47,7 @@ Controla si el objeto puede ser el destino de una operación de arrastrar y solt
 Hay dos modos de soltar disponibles:
 
 - **Personalizado**: en este modo, cualquier operación de soltar realizada en el objeto activa los eventos formulario `On Drag Over` y `On Drop` en el contexto del objeto. A continuación, gestiona la acción soltar utilizando un método.  
-  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo se basa en una combinación de propiedades, eventos y comandos específicos del tema `Portapapeles`.
+  En el modo personalizado, básicamente toda la operación de arrastrar y soltar es realizada por el programador. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo. Este modo le permite implementar cualquier interfaz basada en la función de arrastrar y soltar, incluidas las interfaces que no necesariamente transportan datos, sino que pueden realizar cualquier acción como abrir archivos o activar un cálculo.
 - **Automático**: en este modo, 4D gestiona automáticamente, si es posible, la inserción de los datos arrastrados de tipo texto o imagen que se sueltan sobre el objeto (los datos se pegan en el objeto). Los eventos `On Drag Over` y `On Drop` NO se generan. Por otra parte, se generan los eventos `On After Edit` (durante el soltar) y `On Data Change` (cuando el objeto pierde el foco).
 
 Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) en el manual *Lenguaje 4D*.
@@ -114,7 +114,7 @@ Se soportan varios tipos de referencias de métodos:
 
 #### Objetos soportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Forms](FormEditor/forms.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Formularios](FormEditor/forms.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicadores de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -189,15 +189,15 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) de la *manual de Diseño*. También hay [acciones estándar específicas de las áreas 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. They are described in detail in the [Standard actions](/Desktop/standard-actions) section of the *Design Reference*. También hay [acciones estándar específicas de las áreas 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                                                                                                                                                                                       |
-| ------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| action | string         | El nombre de una [acción estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) o de una [acción estándar 4D Write Pro](../WritePro/user-legacy/standard-actions.md) válida. |
+| Nombre | Tipos de datos | Valores posibles                                                                                                                                                           |
+| ------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action | string         | El nombre de una [acción estándar](/Desktop/standard-actions) o de una [acción estándar 4D Write Pro](../WritePro/user-legacy/standard-actions.md) válida. |
 
 #### Objetos soportados
 

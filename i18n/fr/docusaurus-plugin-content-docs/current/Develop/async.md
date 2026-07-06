@@ -64,7 +64,7 @@ Le process appelant envoie un message, puis le workerl'exécute. Le worker peut 
 
 ### Écoute d'événements
 
-Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. Par exemple, lorsqu'un formulaire est affiché à l'aide de la commande [`DIALOG`](../commands/dialog), les actions de l'utilisateur peuvent déclencher des événements que votre code peut traiter. Un clic sur un bouton déclenche le code associé au bouton.
+Dans le cadre d'un développement orienté événements (*event-driven development*), il est évident qu'une partie du code doit être en mesure d'écouter les événements entrants. Les événements peuvent être générés par l'interface utilisateur (comme un clic souris sur un objet ou une touche de clavier enfoncée) ou par toute autre interaction telle qu'une requête http ou la fin d'une autre action. Un clic sur un bouton déclenche le code associé au bouton. Par exemple, lorsqu'un formulaire est affiché à l'aide de la commande [`DIALOG`](../commands/dialog), les actions de l'utilisateur peuvent déclencher des événements que votre code peut traiter.
 
 Dans le contexte de l'exécution asynchrone, les fonctionnalités suivantes placent votre code en mode d'écoute :
 
@@ -88,7 +88,7 @@ En 4D, tout objet est libéré [dès lors qu'il n'y a plus de référence](../Co
 
 Pour les classes asynchrones, une **référence supplémentaire** est toujours maintenue par 4D dans le process qui a instancié l'objet. Cette référence n'est libérée que lorsque l'opération est terminée, c'est-à-dire après le déclenchement de l'événement `onTerminate`. Ce référencement automatique permet à votre objet de survivre même si vous ne l'avez pas référencé spécifiquement dans une variable.
 
-Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement onTerminate\` et libère ainsi l'objet.
+Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement onTerminate\\` et libère ainsi l'objet.
 
 ### Exemples illustrant le concept commun
 

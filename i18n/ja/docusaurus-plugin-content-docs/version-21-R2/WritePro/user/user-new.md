@@ -10,7 +10,7 @@ to import
 
 ## リスト
 
-4D Write Pro supports two main types of lists:
+4D Write Pro は主に2つのタイプのリストをサポートします:
 
 - unordered lists: where list items are marked with bullets, custom bullets, or images used as markers.
 - ordered lists: where list items are marked with numbers or letters
@@ -18,8 +18,8 @@ to import
 They can be created using:
 
 - the toolbar or sidebar of the [4D Write Pro interface](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-- the `listStyleType` or `listStyleImage` [standard actions](../user-legacy/standard-actions.md) ,
-- or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](./commands/wp-set-attributes).
+- `listStyleType` または `listStyleImage` [標準アクション](../user-legacy/standard-actions.md)
+- または [WP SET ATTRIBUTE](./commands/wp-set-attributes) を使用して [プログラムで](../commands-legacy/4d-write-pro-attributes.md#lists) 行う。
 
 When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`).
 

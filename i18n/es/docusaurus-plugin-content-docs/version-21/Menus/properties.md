@@ -64,7 +64,7 @@ Utilizando el lenguaje 4D, puede asociar un método de proyecto utilizando el co
 La opción **Iniciar un nuevo proceso** está disponible para los comandos de menú asociados a los métodos. Puede definirse a través de una casilla de selección en el editor de menús, o a través del parámetro *propiedad* del comando `SET MENU ITEM PROPERTY`.
 
 Cuando la opción **Iniciar un nuevo proceso** está activada, se crea un nuevo proceso cuando se elige el comando de menú.
-Normalmente, un método asociado a un comando de menú se ejecuta en el proceso actual a menos que llame explícitamente a un nuevo proceso en su código. La opción **Iniciar un nuevo proceso** facilita el lanzamiento de un nuevo proceso. Si se activa, 4D creará un nuevo proceso cuando se elija el comando del menú.
+Normalmente, un método asociado a un comando de menú se ejecuta en el proceso actual a menos que llame explícitamente a un nuevo proceso en su código. Normalmente, un método asociado a un comando de menú se ejecuta en el proceso actual a menos que llame explícitamente a un nuevo proceso en su código. Si se activa, 4D creará un nuevo proceso cuando se elija el comando del menú.
 
 En la lista de procesos, 4D asigna al nuevo proceso un nombre por defecto utilizando el formato "ML_NúmeroProceso".
 Los nombres de los procesos iniciados desde un menú se crean combinando el prefijo "ML_" con el número del proceso.
@@ -147,7 +147,7 @@ Para asignar un atajo de teclado utilizando el lenguaje 4D, utilice el comando `
 
 ### Línea activa
 
-En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo. Un comando de menú activo puede ser elegido por el usuario; un comando de menú inactivo está atenuado y no puede ser elegido. Cuando la casilla de selección **Línea activa** está desmarcada, el comando de menú aparece atenuado, lo que indica que no se puede elegir.
+En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo. Un comando de menú activo puede ser elegido por el usuario; un comando de menú inactivo está atenuado y no puede ser elegido. En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo.
 
 A menos que especifique lo contrario, 4D habilita automáticamente cada elemento de menú que añada a un menú personalizado. Puede desactivar un elemento para, por ejemplo, activarlo sólo por programación con los comandos `ENABLE MENU ITEM` y `DISABLE MENU ITEM`.
 

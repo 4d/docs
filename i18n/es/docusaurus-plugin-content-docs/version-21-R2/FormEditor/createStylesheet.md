@@ -210,12 +210,12 @@ Las consultas de medios permiten aplicar estilos basados en condiciones específ
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
-Available media features and values:
+Funcionalidades y valores disponibles para medios:
 
-| Media features         | Valores                                        | Descripción                                                                                                                                                                              |
-| ---------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Esquema de color a utilizar                                                                                                                                                              |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Tema de la plataforma a utilizar (Windows). Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering) |
+| Funcionalidades de medios | Valores                                        | Descripción                                                                                                                                                                              |
+| ------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme`    | <li>**light**</li><li>**dark**</li>            | Esquema de color a utilizar                                                                                                                                                              |
+| `form-theme`              | <li>**fluent-ui**</li><li>**win-classic**</li> | Tema de la plataforma a utilizar (Windows). Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering) |
 
 :::note
 

@@ -24,7 +24,7 @@ title: VP Get sheet name
 
 `VP Get sheet name` コマンドは、<!-- REF #_method_.VP Get sheet name.Summary -->*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF -->
 
-*vpAreaName* には、4D View Pro エリアの名前を渡します。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 *sheet* には、名前を返して欲しいシートのインデックスを渡します。
 

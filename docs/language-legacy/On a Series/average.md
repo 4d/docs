@@ -32,21 +32,21 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the average.
+<!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is a field, the command uses to current selection ot the parent table; if it is indexed, the index is used to find the average.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
 
 This command accepts an optional *attributePath* parameter of the Text type, that you can use if *series* is an object field. It allows you to define the path of the attribute to compute. Use the standard dot notation to define paths to nested attributes, for example "company.address.number". Keep in mind that object attribute names are case-sensitive.   
 Only numeric attribute values are computed. If there are values in the attribute path which are not of a numeric type, they are ignored.
 
-If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
+If the command is correctly executed, the OK system variable is set to 1. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
 
 ## Example 1 
 
 The following example sets the variable *vAverage* that is in the B0 Break area of an output form. The line of code is the object method for *vAverage*. The object method is not executed until the level 0 break:
 
 ```4d
- vAverage:=Average([Employees] Salary)
+ vAverage:=Average([Employees]Salary)
 ```
 
 The following method is called to print the records in the selection and to activate break processing:

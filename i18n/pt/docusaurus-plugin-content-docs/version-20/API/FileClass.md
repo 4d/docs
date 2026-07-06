@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D. File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D. File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -80,13 +80,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |fileConstant|Integer|->|4D file constant|
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
-|Result|4D.File|<-|New file object|
+|Result|4D. File|<-|New file object|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.File`<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D. File`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -145,11 +145,11 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
+**4D. File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer ) : 4D. File<!-- END REF -->
 
 #### Descrição
 
-A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.File`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
+A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D. File`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
@@ -220,10 +220,10 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|destinationFolder|4D. Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut file reference|
+|Result|4D. File|<-|Alias or shortcut file reference|
 </div>
 <!-- END REF -->
 
@@ -310,6 +310,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
+ End if
  End if
 ```
 <!-- END REF -->
@@ -434,9 +435,9 @@ ALERT($info.
 
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
+|destinationFolder|4D. Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
-|Result|4D.File|<-|Moved file|
+|Result|4D. File|<-|Moved file|
 </div>
 <!-- END REF -->
 
@@ -484,7 +485,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |---|---|---|---|
 |mode|Text|->|Opening mode: "read", "write", "append"|
 |options|Object|->|Opening options|
-|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+|Result|[4D. FileHandle](FileHandleClass)|<-|New File handle object|
 </div>
 <!-- END REF -->
 
@@ -557,7 +558,7 @@ $fhandle:=$f.open("read")
 | 17 R5   | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
@@ -566,13 +567,13 @@ $fhandle:=$f.open("read")
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
-|Result|4D.File|<-|Renamed file|
+|Result|4D. File|<-|Renamed file|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o ficheiro com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->A função `.rename()`<!-- END REF -->.
 
 O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 

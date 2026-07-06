@@ -10,13 +10,13 @@ title: Propiedades de los formularios
 > La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands/get-application-color-scheme)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. Esta propiedad define el esquema de colores para el formulario. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
   &#062; A defined color scheme can not be overridden by a CSS.
 
-> El número de caracteres para el título de una ventana está limitado a 31.
+> light - dark text on a light background &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -34,19 +34,19 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                             |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" \\ |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| css    | cadena o colección | Ruta(s) del archivo CSS proporcionada(s) como:<li>una cadena (un archivo para ambas plataformas)</li><li>una colección de cadenas (una lista de archivos para ambas plataformas)</li><li>una colección de objetos {"path":string; media":"mac" &#124; "win"} </li> |
 
 ---
 
 ## Clase de formulario
 
-Name of an existing [user class](../Project/code-overview.md#user-classes) to associate to the form. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+Nombre de una [clase usuario](../Project/code-overview.md#user-classes) existente para asociar al formulario. La clase de usuario puede pertenecer al proyecto host o a un [componente](../Extensions/develop-components.md#sharing-of-classes), en cuyo caso la sintaxis formal es "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 
-- Cuando trabajas en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente*...*). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
+- Cuando trabaja en el [Editor de formularios](../FormEditor/formEditor.md), la clase asociada se utiliza para comprobar con precisión la sintaxis de expresiones como `Form.myProperty` en todas las áreas de la [Lista de propiedades](../FormEditor/formEditor.md#property-list) que soporta [expresiones](../Concepts/quick-tour.md#expressions) (por ejemplo, **Variable o Expresión**, **Expresión de color de fuente*...*). Los errores se muestran en rojo y las advertencias se muestran en amarillo en la columna izquierda de la lista de propiedades y puede pasar el cursor para obtener explicaciones:
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
@@ -82,7 +82,7 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ## Tema del formulario en Windows
 
-Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. Por defecto, los formularios heredan de la [configuración global del tema del proyecto](../settings/interface.md) pero puede anular esta configuración para cada formulario.
 
 Valores disponibles:
 
@@ -204,7 +204,7 @@ Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Ope
 - la página actual,
 - la posición, el tamaño y la visibilidad de cada objeto del formulario (incluyendo el tamaño y la visibilidad de las columnas de list box).
 
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
+> Esta opción no tiene en cuenta objetos generados usando el comando `OBJECT DUPLICATE`. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
 
 Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
 

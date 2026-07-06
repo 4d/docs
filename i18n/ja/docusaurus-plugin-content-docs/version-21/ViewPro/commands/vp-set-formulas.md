@@ -23,7 +23,7 @@ title: VP SET FORMULAS
 
 `VP SET FORMULAS` コマンドは、<!-- REF #_method_.VP SET FORMULAS.Summary -->指定のセルレンジから開始してフォーミュラのコレクションを割り当てていきます<!-- END REF -->。
 
-*rangeObj* には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](vp-cell.md) で作成されたレンジ) を渡します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
+*rangeObj* には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](vp-cell.md) で作成されたレンジ) を渡します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。 *rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
 *formulasCol* 引数は 2次元構造のコレクションです:
 

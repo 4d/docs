@@ -242,12 +242,12 @@ Para agrupar los objetos:
 1. Seleccione los objetos que desea agrupar.
 2. Elija **Agrupar** en el menú Objetos. O
    Haga clic en el botón Agrupar en la barra de herramientas del editor de formularios:<br/>![](../assets/en/FormEditor/group.png)
-   4D marca el límite de los objetos recién agrupados con manijas. No hay marcas que delimiten ninguno de los objetos individuales del grupo. Ahora, al modificar el objeto agrupado, se modifican todos los objetos que componen el grupo.
+   4D marca el límite de los objetos recién agrupados con manijas. O Haga clic en el botón Agrupar en la barra de herramientas del editor de formularios:<br/><img src="../assets/en/FormEditor/group.png" alt="" /> 4D marca el límite de los objetos recién agrupados con manijas. No hay marcas que delimiten ninguno de los objetos individuales del grupo.
 
 Para desagrupar un grupo de objetos:
 
 1. Seleccione el grupo de objetos que desea desagrupar.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D marca los bordes de los objetos individuales con marcas.
+2. Seleccione **Desagrupar** en el menú **Objeto**.<br/>O<br/>Haga clic en el botón **Desagrupar** (variante del botón **Agrupar**) en la barra de herramientas del editor de formularios.<br/>Si la opción **Desagrupar** aparece atenuada, significa que el objeto seleccionado ya está separado en su forma más simple. 4D marca los bordes de los objetos individuales con marcas.
 
 ### Alinear objetos
 
@@ -277,7 +277,7 @@ Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, 
 
 - En las áreas "Alineación izquierda/derecha" y/o "Alineación superior/inferior", haga clic en el icono que corresponda a la alineación que desee realizar. <br>El área de ejemplo muestra los resultados de su selección.
 
-- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**. En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. O:<br/>para alinear los objetos a un objeto específico, seleccione la opción **Alinear en** y seleccione el objeto al que desea que se alineen los demás objetos de la lista de objetos. En este caso, la posición del objeto de referencia no se alterará.
+- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**. En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla.
 
 Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Los objetos se alinean entonces en el editor de formularios, pero como la caja de diálogo permanece en el primer plano, aún puede cancelar o aplicar la alineación.
 
@@ -314,7 +314,7 @@ Para repartir los objetos con igual espacio:
 
 1. Seleccione tres o más objetos y haga clic en la herramienta Distribuir correspondiente.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+2. En la barra de herramientas, haga clic en la herramienta de distribución que corresponda a la distribución que desea aplicar.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>O<br/>Seleccione un comando de distribución del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.
    4D distribuye los objetos consecuentemente. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
 
 Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:

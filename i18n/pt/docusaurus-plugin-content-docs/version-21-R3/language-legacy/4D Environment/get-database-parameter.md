@@ -744,7 +744,7 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 **Valores possíveis**: longint > 1 (segundos)
 
-**Descrição**: Obtém ou estabelece a peridiocidade de esvaziamento da cache atual, expressa em segundos. Modificar este valor sobrepuja a opção **Flush Cache every X Seconds** em [XML DECODE](../commands/xml-decode) das configurações de Bancos de Dados para a sessão (não é armazenada nas configurações do Banco de Dados).
+**Descrição**: Obtém ou estabelece a peridiocidade de esvaziamento da cache atual, expressa em segundos. Modificar este valor sobrepuja a opção **Flush Cache every X Seconds** na [página Banco de dados](../../settings/database.md) das configurações para a sessão (não é armazenada nas configurações).
 
 
 

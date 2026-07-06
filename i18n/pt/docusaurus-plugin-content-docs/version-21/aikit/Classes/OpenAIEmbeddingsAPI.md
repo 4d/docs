@@ -17,12 +17,12 @@ https://developers.openai.com/api/reference/resources/embeddings
 
 Creates an embeddings for the provided input, model and parameters.
 
-| Argumento    | Tipo                                                        | Descrição                                                                                                      |
-| ------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| *entrada*    | Text or Collection of Text                                  | The input to vectorize.                                                                        |
-| *model*      | Text                                                        | The [model to use](https://developers.openai.com/api/docs/guides/embeddings#embedding-models). |
-| *parâmetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request.                                            |
-| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | The embeddings.                                                                                |
+| Argumento    | Tipo                                                        | Descrição                                                                                        |
+| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| *entrada*    | Text or Collection of Text                                  | The input to vectorize.                                                          |
+| *model*      | Text                                                        | Supports [provider:model aliases](../provider-model-aliases.md). |
+| *parâmetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request.                              |
+| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | The embeddings.                                                                  |
 
 #### Example Usages
 

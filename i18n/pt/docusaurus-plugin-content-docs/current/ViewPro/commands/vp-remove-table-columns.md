@@ -34,7 +34,7 @@ title: VP REMOVE TABLE COLUMNS
 
 The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. O comando remove valores e estilos.
 
-O comando remove colunas da tabela *tableName*, NÃO da folha. O número total de colunas da folha não é impactado pelo  comando. Os dados presentes à direita da tabela (se houver) são automaticamente movidos para a esquerda conforme o número de colunas removidas.
+O comando remove colunas da tabela *tableName*, NÃO da folha. O número total de colunas da folha não é impactado pelo  comando. O número total de colunas da folha não é impactado pelo  comando.
 
 Se *tableName* não existir, não acontece nada.
 

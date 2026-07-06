@@ -27,7 +27,7 @@ title: $upload
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します。 リクエストは次のようになります:
+この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します。 リクエストは次のようになります: リクエストは次のようになります:
 
 `POST  /rest/Employee/?$method=update`
 

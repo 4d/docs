@@ -45,7 +45,7 @@ title: テキスト
 選択テキストの線を右斜めに傾けます。
 
 このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
-> これは通常のテキストです。 <br/> *これはイタリックのテキストです。 *
+> これは通常のテキストです。 <br/> **これは太字のテキストです。
 
 #### JSON 文法
 
@@ -137,9 +137,9 @@ title: テキスト
 
 #### JSON 文法
 
-| 名称       | データタイプ  | とりうる値                          |
-| -------- | ------- | ------------------------------ |
-| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 最小値: 0 |
+| 名称       | データタイプ  | とりうる値                                 |
+| -------- | ------- | ------------------------------------- |
+| fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 最小値: 0 最小値: 0 |
 
 #### 対象オブジェクト
 
@@ -228,7 +228,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -251,7 +251,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) (通常、フラット以外のスタイル) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー) - [リストボックスフッター](listbox-header-footer.md#フッター) - [ラジオボタン](radio_overview.md) (通常、フラット以外のスタイル) - [テキスト](text.md)
 
 ---
 
@@ -274,7 +274,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー)
 
 ---
 
@@ -366,7 +366,7 @@ End if
 
 ## マルチスタイル
 
-このプロパティにより、選択エリアで[スタイルタグ](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html#1072408)が使用できるようになります。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
+プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。 このプロパティにより、選択エリアで[スタイルタグ](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html#1072408)が使用できるようになります。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -378,7 +378,7 @@ End if
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -413,7 +413,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -423,7 +423,7 @@ End if
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -433,7 +433,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、[Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、[Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -443,7 +443,7 @@ End if
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 

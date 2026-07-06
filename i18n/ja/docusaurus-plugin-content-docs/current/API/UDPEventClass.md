@@ -3,7 +3,7 @@ id: UDPEventClass
 title: UDPEvent
 ---
 
-`UDPEvent` クラスはUDP ソケットのライフサイクル中に発生するイベントに関する情報を提供します。 これは[UDPSocket](UDPSocketClass.md) が開いた時に生成され、`onData`、`onError`、および `onTerminate` などのコールバックの中で使用されます。
+`UDPEvent` クラスはUDP ソケットのライフサイクル中に発生するイベントに関する情報を提供します。 これは[UDPSocket](UDPSocketClass.md) が開いた時に生成され、`onData`、`onError`、および `onTerminate` などのコールバックの中で使用されます。 これは[UDPSocket](UDPSocketClass.md) が開いた時に生成され、`onData`、`onError`、および `onTerminate` などのコールバックの中で使用されます。
 
 <details><summary>履歴</summary>
 
@@ -46,7 +46,7 @@ title: UDPEvent
 
 #### 説明
 
-`.data` プロパティには、<!-- REF #UDPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF --> が格納されています。 これは"data" 型のイベントにおいてのみ有効です。
+`.data` プロパティには、<!-- REF #UDPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF --> が格納されています。 これは"data" 型のイベントにおいてのみ有効です。 これは"data" 型のイベントにおいてのみ有効です。
 
 <!-- END REF -->
 
@@ -70,7 +70,7 @@ title: UDPEvent
 
 #### 説明
 
-`.type` プロパティには<!-- REF #UDPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されています。 とりうる値:
+`.type` プロパティには<!-- REF #UDPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されています。 とりうる値: とりうる値:
 
 - `"data"`: データが受信されたことを表します。
 - `"error"`: UDPSocket の最中にエラーが発生したことを示します。

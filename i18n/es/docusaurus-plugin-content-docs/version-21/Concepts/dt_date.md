@@ -30,29 +30,29 @@ Una fecha null es especificada por *!00-00-00!*.
 
 ## Operadores de fechas
 
-| Operación         | Sintaxis                              | Devuelve | Expression                                                           | Valor        |
-| ----------------- | ------------------------------------- | -------- | -------------------------------------------------------------------- | ------------ |
-| Diferencia        | Fecha – Fecha                         | Number   | !2017-01-20! - !2017-01-01!                                          | 19           |
-| Adición           | Fecha + Número                        | Fecha    | !2017-01-20! + 9                                                     | !2017-01-29! |
-| Resta             | Fecha - Número                        | Fecha    | !2017-01-20! - 9                                                     | !2017-01-11! |
-| Igual             | Fecha = Fecha                         | Boolean  | !2017-01-20! - !2017-01-01! =!2017-01-01!                            | True         |
-|                   |                                       |          | !2017-01-20! !2017-01-01! =!2017-01-01!                              | False        |
-| Desigualdad       | Fecha # Fecha                         | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!                             | True         |
-|                   |                                       |          | !2017-01-20! !2017-01-20! # !2017-01-20!                             | False        |
-| Mayor que         | Date > Date                           | Boolean  | !2017-01-20! > !2017-01-01!                                          | True         |
-|                   |                                       |          | !2017-01-20! > !2017-01-20!                                          | False        |
-| Menor que         | Date < Date  | Boolean  | !2017-01-20! - !2017-01-01! < !2017-01-20!  | True         |
-|                   |                                       |          | !2017-01-20! < !2017-01-20!                 | False        |
-| Mayor o igual que | Date >= Date                          | Boolean  | !2017-01-20! >=!2017-01-01!                                          | True         |
-|                   |                                       |          | !2017-01-01!>=!2017-01-20!                                           | False        |
-| Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
-|                   |                                       |          | !2017-01-20! <= !2017-01-01!                | False        |
+| Operación         | Sintaxis                              | Devuelve | Expression                                | Valor        |
+| ----------------- | ------------------------------------- | -------- | ----------------------------------------- | ------------ |
+| Diferencia        | Fecha – Fecha                         | Number   | !2017-01-20! - !2017-01-01!               | 19           |
+| Adición           | Fecha + Número                        | Fecha    | !2017-01-20! + 9                          | !2017-01-29! |
+| Resta             | Fecha - Número                        | Fecha    | !2017-01-20! - 9                          | !2017-01-11! |
+| Igual             | Fecha = Fecha                         | Boolean  | !2017-01-20! - !2017-01-01! =!2017-01-01! | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-01! =!2017-01-01!   | False        |
+| Desigualdad       | Fecha # Fecha                         | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20! # !2017-01-20!  | False        |
+| Mayor que         | Date > Date                           | Boolean  | !2017-01-20! !2017-01-20!                 | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |
+| Menor que         | Date < Date  | Boolean  | !2017-01-20! - !2017-01-01! !2017-01-20!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |
+| Mayor o igual que | Date >= Date                          | Boolean  | !2017-01-20! !2017-01-20!                 | True         |
+|                   |                                       |          | !2017-01-01!>=!2017-01-20!                | False        |
+| Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! !2017-01-20!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |
 
 ## Conversión de fechas desde JavaScript
 
 Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON.md) o [Áreas Web](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". Es su responsabilidad convertir este texto en una fecha 4D. Hay dos soluciones disponibles:
+La forma JSON de los objetos Date JavaScript sigue el estándar ISO 8601, por ejemplo "2013-08-23T00:00:00Z". Es su responsabilidad convertir este texto en una fecha 4D. Hay dos soluciones disponibles:
 
 Utilizando el comando [`JSON Parse`](../commands-legacy/json-parse.md):
 

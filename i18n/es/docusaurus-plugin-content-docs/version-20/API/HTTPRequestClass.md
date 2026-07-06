@@ -242,7 +242,7 @@ Este es el contenido de la propiedad `.errors`:
 
 #### Descripción
 
-La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->los `headers` pasados en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene un objeto vacío.
+La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.headers.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -253,7 +253,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 #### Descripción
 
-La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `timeout` pasado en el objeto [`options<`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 

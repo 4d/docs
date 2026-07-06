@@ -99,7 +99,7 @@ When a user class is [defined](../Project/code-overview.md#creating-classes) in 
 
 #### 説明
 
-`.me` プロパティは、<!-- REF #ClassClass.me.Summary -->`cs.className` シングルトンクラスのシングルトンインスタンスを返します<!-- END REF -->。 シングルトンクラスが前もってインスタンス化されていない場合、このプロパティは引数なしでクラスコンストラクターを呼び出し、インスタンスを作成します。 そうでない場合は、既存のシングルトンインスタンスを返します。
+`.me` プロパティは、<!-- REF #ClassClass.me.Summary -->`cs.className` シングルトンクラスのシングルトンインスタンスを返します<!-- END REF -->。 シングルトンクラスが前もってインスタンス化されていない場合、このプロパティは引数なしでクラスコンストラクターを呼び出し、インスタンスを作成します。 そうでない場合は、既存のシングルトンインスタンスを返します。 シングルトンクラスが前もってインスタンス化されていない場合、このプロパティは引数なしでクラスコンストラクターを呼び出し、インスタンスを作成します。 そうでない場合は、既存のシングルトンインスタンスを返します。
 
 `cs.className` が [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) でない場合、`.me` はデフォルトで **未定義** です。
 
@@ -123,7 +123,7 @@ When a user class is [defined](../Project/code-overview.md#creating-classes) in 
 
 #### 説明
 
-`.name` プロパティは、<!-- REF #ClassClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
+`.name` プロパティは、<!-- REF #ClassClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。 クラス名の大文字・小文字は区別されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -157,9 +157,9 @@ When a user class is [defined](../Project/code-overview.md#creating-classes) in 
 
 #### 説明
 
-`.new()` 関数は、<!-- REF #ClassClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF -->。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
+`.new()` 関数は、<!-- REF #ClassClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF -->。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
 
-任意の *param* パラメーターに渡した引数は、当該 *className*クラス定義内の [Class Constructor](Concepts/classes.md#class-constructor) 関数 (あれば) が受け取ります。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。
+任意の *param* パラメーターに渡した引数は、当該 *className*クラス定義内の [Class Constructor](Concepts/classes.md#class-constructor) 関数 (あれば) が受け取ります。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。
 
 :::note 注記
 
@@ -215,7 +215,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 #### 説明
 
-`.superclass` プロパティは、<!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
+`.superclass` プロパティは、<!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
 
 ユーザークラスのスーパークラスを定義するためには、[`extends`](Concepts/classes.md#class-extends-classname) キーワードを次のように使用してください: `Class extends <superclass>`
 

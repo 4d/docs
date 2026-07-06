@@ -40,7 +40,7 @@ title: テキスト、ピクチャー
 
 ## 横方向マージン
 
-ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
+ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
 背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します:
 
@@ -74,7 +74,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox-header-footer.md#headers)
+[\[リストボックスヘッダー\](listbox_overview.md#リストボックスヘッダー)](listbox-header-footer.md#headers)
 
 ---
 
@@ -149,7 +149,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー) - [ラジオボタン](radio_overview.md)
 
 ---
 
@@ -204,7 +204,7 @@ title: テキスト、ピクチャー
 
 ## 縦方向マージン
 
-ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
+ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
 背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します。
 
@@ -224,7 +224,7 @@ title: テキスト、ピクチャー
 
 ## ポップアップメニューあり
 
-このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。このシンボルは、ポップアップメニューが付属することを示します:
+このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。 このシンボルは、ポップアップメニューが付属することを示します:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
@@ -241,7 +241,7 @@ title: テキスト、ピクチャー
 
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
-- ポップアップメニューが **分離** している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。
+- ポップアップメニューが **分離** している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。 このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。
 - ポップアップメニューが **リンク** している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
 
 :::info
@@ -252,7 +252,7 @@ title: テキスト、ピクチャー
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page1006.html)、[`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page542.html) コマンドを使用してこれを処理します。
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。 具体的にはフォームイベントや [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page1006.html)、[`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/ja/page542.html) コマンドを使用してこれを処理します。
 
 #### JSON 文法
 
@@ -262,4 +262,4 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
+[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [カスタムボタン](button_overview.md#カスタム)

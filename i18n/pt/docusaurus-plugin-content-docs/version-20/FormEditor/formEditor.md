@@ -61,7 +61,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/moving.png)          | [Deslocamento](#moving-objects)                           | Alterne para o modo "Mover", onde for possível alcançar qualquer parte do formulário rapidamente usando arrastar e soltar na janela. O cursor assume a forma de uma mão. Este modo de navegação é particularmente útil ao ampliar o formulário.                                                                                                                                 |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                             | Permite modificar a percentagem de visualização do formulário (100% por padrão). Você pode alternar para o modo "Zoom" clicando na lupa ou clicando diretamente na barra desejada. Esta função é descrita em pormenor na secção anterior.                                                                                                                                       |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#aligning-objects)                          | Este botão está ligado a um menu que permite alinhar os objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                         |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                   |
+| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite alinhar os objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                         |
 | ![](../assets/en/FormEditor/level.png)           | [Nível](#layering-objects)                                | Este botão está ligado a um menu que permite alterar o nível dos objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/group.png)           | [Grupo/Ungrupo](#grouping-objects)                        | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                     |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Visualização e gestão de páginas](forms.html#form-pages) | Esta área permite passar de uma página de formulário para outra e adicionar páginas. Para navegar entre páginas de formulários, clique nos botões de seta, ou clique na área central e escolha a página a exibir a partir do menu que aparece. Se clicar no botão da seta para a direita enquanto é exibida a última página do formulário, 4D permite-lhe adicionar uma página. |
@@ -138,7 +138,7 @@ Depois que o objeto for colocado no formulário, você poderá modificar suas ca
 
 - **Objetos estáticos** (linhas, quadros, imagens de fundo, etc.): esses objetos são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Estão disponíveis na barra de objetos do editor de formulários. Você também pode definir seus atributos gráficos (tamanho, cor, fonte, etc.) e suas propriedades de redimensionamento usando a Lista de Propriedades. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
-- **Objetos ativos**: esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável.
+- **Objetos ativos**: esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável. Cada objeto ativo é associado com um campo ou uma variável.
 
 ### Selecção de objectos
 
@@ -155,7 +155,7 @@ Para selecionar um objeto usando a barra de ferramentas:
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual. Para desmarcar um objeto, clicar fora dos limites do objeto ou <**Shift+clique** o objeto.
-> Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
+> > Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
 
 ### Selecção de múltiplos objectos
 
@@ -235,7 +235,7 @@ O agrupamento só afeta os objetos no editor de formulários. Quando o formulár
 Para agrupar objectos:
 
 1. Selecione o objecto agrupado que pretende desagrupar.
-2. Selecione **Grupo** no menu Objeto. OR Click the Group button  in the toolbar of the Form editor:<br/>![](../assets/en/FormEditor/group.png) 4D marks the boundary of the newly grouped objects with handles. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
+2. Selecione **Grupo** no menu Objeto. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo. OR Click the Group button  in the toolbar of the Form editor:<br/>![](../assets/en/FormEditor/group.png) 4D marks the boundary of the newly grouped objects with handles. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo.
 
 Para desagrupar objetos:
 
@@ -269,7 +269,7 @@ Para exibir esta caixa de diálogo, selecione os objetos que você deseja alinha
 
 - Nas áreas "Alinhamento Esquerda/Direita" e/ou "Alinhamento Superior/Inferior", clique no ícone que corresponde ao alinhamento que você deseja executar.<br>A área de exemplo exibe os resultados da sua seleção.
 
-- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Prévia** ou **Aplicar**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. OR:<br/>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. Neste caso, a posição do objeto de referência não será alterada.
+- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Prévia** ou **Aplicar**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. OR:<br/>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora.
 
 
 Pode pré-visualizar os resultados do alinhamento clicando no botão **Pré-visualização**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.

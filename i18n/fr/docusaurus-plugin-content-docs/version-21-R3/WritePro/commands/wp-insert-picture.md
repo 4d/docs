@@ -38,9 +38,10 @@ Pour le deuxième paramètre, vous pouvez passer soit :
   - Champ ou variable d'image
   - Chaîne contenant le chemin d'accès à un fichier d'image stocké sur le disque, dans la syntaxe du système.
     Si vous utilisez une chaîne, vous pouvez fournir soit un chemin d'accès complet, soit un chemin d'accès relatif au fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données.
+
 - Dans *pictureFile* : un objet `File` représentant un fichier image ou un chemin.
 
-N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands/picture-codec-list). Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
+N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands/picture-codec-list).
 
 Dans le paramètre *mode*, passez l'une des constantes suivantes pour indiquer le mode d'insertion à utiliser pour l'image dans le document :
 

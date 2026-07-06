@@ -114,7 +114,7 @@ Método ***OpenForm***:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |description|Text|->|Description for the signal|
-|Result|4D.Signal|<-|Native object encapsulating the signal|
+|Result|4D. Signal|<-|Native object encapsulating the signal|
 </div>
 <!-- END REF -->
 
@@ -211,7 +211,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. . Quando se cria um sinal, `.signaled` é **False**.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. Quando se cria um sinal, `.signaled` é **False**. Quando se cria um sinal, `.signaled` é **False**.
 
 Essa propriedade é **apenas leitura**.
 

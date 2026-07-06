@@ -25,33 +25,4 @@ slug: /commands/theme/XML-SAX
 | [<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax -->](../../commands/sax-open-xml-element-arrays)<br/>               |
 | [<!-- INCLUDE #_command_.SAX SET XML DECLARATION.Syntax -->](../../commands/sax-set-xml-declaration)<br/>                       |
 
-## Visión general de los comandos XML SAX
 
-Consulte la sección [XML, DOM y SAX](../theme/XML.md#xml-dom-and-sax) para obtener una definición de XML SAX.
-
-### Creación, apertura y cierre de documentos XML mediante SAX
-
-Los comandos SAX funcionan con las referencias de documento estándar de 4D (**DocRef**, una referencia de tipo Time). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../../commands/send-packet) or [`Append document`](../../commands/append-document).
-
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../../commands/create-document) and [`Open document`](../../commands/open-document) commands. Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la codificación `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` el encabezado se escribirá automáticamente en el documento.
-
-:::note
-
-Documents read by SAX commands must be opened in read-only mode by the [`Open document`](../../commands/open-document) command. Esto evita cualquier conflicto entre 4D y la biblioteca Xerces cuando se abren documentos "normales" y XML simultáneamente. If you execute a SAX parsing command with a document open in read-write mode, an alert message is displayed and parsing is impossible.
-
-:::
-
-El cierre de un documento XML debe realizarse mediante el comando [`CLOSE DOCUMENT`](../../commands/close-document). If any XML elements were open, they will be closed automatically.
-
-### About end-of-line characters and BOM management
-
-When writing SAX documents, 4D uses the following default settings for end-of-line characters and BOM (byte order mask) usage:
-
-- Caracteres CRLF en Windows y LF en macOS para los caracteres de fin de línea
-- archivos escritos sin BOM.
-
-:::note Compatibilidad
-
-In projects created with 4D versions up to 19.x, by default 4D uses CRLF as end-of-line characters on macOS for SAX and a BOM. You can control the `XML line ending` and `XML BOM` management using the [`XML SET OPTIONS`](../../commands/xml-set-options) command and a [Compatibility setting](../../settings/compatibility.md). Important: Since SAX file lines are written directly at each statement, if you need to set the BOM and/or end-of-line options, you must call the [`XML SET OPTIONS`](../../commands/xml-set-options) command before the first SAX writing command.
-
-:::

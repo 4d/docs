@@ -110,9 +110,9 @@ Puede crear dos tipos de colecciones:
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
-## Assignment
+## Asignación
 
-Collection and [object](./dt_object.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning a collection to a variable (e.g. `$myVar:=[1;2;3]`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original collection is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+Los datos de tipo colección y [object](./dt_object.md) se gestionan en el lenguaje 4D a través de **referencias** (i.., punteros internos), a diferencia de los tipos de datos escalares (entero, fecha, etc.). Por lo tanto, al asignar una colección a una variable (por ejemplo, `$myVar:=[1;2;3]`), lo que se asigna es la **referencia**, no el valor en sí. Por lo tanto, toda modificación posterior de la variable *$myVar* se reflejará en todos los lugares donde se haga referencia a la colección original. Esto sigue el mismo principio que los [punteros](./dt_collection.md), salvo que no es necesario desreferenciar la variable *$myVar*.
 
 Por ejemplo:
 
@@ -120,9 +120,9 @@ Por ejemplo:
 var $col1; $col2 : Collection
 var $o : Object
 
-$col1:=[1;2;3] //a reference to the collection is created
-$col2:=$col1 //both variables share the same collection reference
-$o:={ list:$col1 } //the object stores a reference to the same collection
+$col1:=[1;2;3] //se crea una referencia a la colección
+$col2:=$col1 //ambas variables comparten la misma referencia a la colección
+$o:={ list:$col1 } //el objeto almacena una referencia a la misma colección
 
 $col1.push(4)
 //$col2 = [1,2,3,4]
@@ -139,11 +139,11 @@ $o.list.push(5)
 ASSERT($col1=$col2) //True
 ```
 
-This principle applies wherever objects or collections are assigned, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+Este principio se aplica siempre que se asignan objetos o colecciones, incluso en expresiones de [parámetros](./parameters.md) o de [fórmulas](../commands/formula).
 
 :::note
 
-If you want to create a **deep copy** of a collection, use the [`collection.copy()`](../API/CollectionClass.md#copy) function.
+Si quiere crear una **copia profunda** de una colección, utilice la función [`collection.copy()`](../API/CollectionClass.md#copy).
 
 :::
 

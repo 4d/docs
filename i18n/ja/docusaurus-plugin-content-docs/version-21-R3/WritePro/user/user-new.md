@@ -10,7 +10,7 @@ to import
 
 ## リスト
 
-4D Write Pro supports flat lists (single-level) and hierarchical lists (multi-level).
+4D Write Pro はフラットなリスト(単一レベル) と階層リスト(マルチレベル) をサポートしています。
 
 ### Single-level lists
 
@@ -39,7 +39,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Multi-level lists
 
-Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a hierarchical list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+マルチレベルリストは、[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に基づいています。 Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). 各レベルは階層リストスタイルシートに関連づけられており、またリスト内での深さを表します(レベル 1、 レベル 2、レベル 3、など)。
 
 When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
 
@@ -63,36 +63,36 @@ Multi-level lists can be managed using:
 
 <!-- REF hierarchical-list.Desc -->
 
-## Hierarchical list style sheets
+## 階層リストスタイルシート
 
-Hierarchical list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+階層リストスタイルシートは、[マルチレベルリスト](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) を作成するために使用されます。
 
-To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+階層リストスタイルシートを作成するためには、[WP New style sheet](../commands/wp-new-style-sheet.md) を使用し、必要な階層の数を *listLevelCount* 引数に渡します。 You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
 
-To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+階層リストスタイルをカスタマイズするために、段落スタイルシートオブジェクトは[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) を使用してカスタマイズすることが可能です。
 
-Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
+階層リストスタイルシートは、以下のコマンドによって完全にサポートされています: [`WP Get style sheet`](../commands/wp-get-style-sheet.md)、 [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md)、 [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md)。
 
 ### 例題
 
-The following example creates a three-level hierarchical list style sheet and applies it to paragraphs.
+以下の例は3階層の階層リストスタイルシートを作成し、それを段落へと割り当てます。
 
 ```4d
-// Create 3 hierarchical list style sheets
+// 3階層のスタイルシートを作成
 WP New style sheet(wpArea; wk type paragraph; "MyList"; 3)
 
-// Retrieve each level
+// 各階層を取得
 var $level1; $level2; $level3 : Object
-$level1:=WP Get style sheet(wpArea; "MyList"; 1) // Root level
-$level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1st sub-level
-$level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2nd sub-level
+$level1:=WP Get style sheet(wpArea; "MyList"; 1) // ルート階層
+$level2:=WP Get style sheet(wpArea; "MyList"; 2) // 第1サブレベル
+$level3:=WP Get style sheet(wpArea; "MyList"; 3) // 第2サブレベル
 
-// Customize styles
+// スタイルをカスタマイズする
 WP SET ATTRIBUTES($level1; {listStyleType: wk upper latin; fontBold: wk true})
 WP SET ATTRIBUTES($level2; {listConcatStringFormat: True})
 WP SET ATTRIBUTES($level3; {listStringFormatLtr: "(#)"})
 
-// Apply hierarchical style sheets to paragraphs
+// この階層スタイルシートを段落に対して適用する
 var $paragraphs : Collection
 $paragraphs:=WP Get elements(wpArea; wk type paragraph)
 
@@ -117,7 +117,7 @@ result:
 
 ### Predefined attribute values
 
-When created, hierarchical list style sheets use predefined values:
+階層リストスタイルシートを作成すると、それらは定義済みの値を使用します:
 
 - `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`

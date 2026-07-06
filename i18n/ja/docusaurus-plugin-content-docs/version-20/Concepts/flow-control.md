@@ -14,7 +14,7 @@ title: 制御フロー
     - [`For...End for`](#forend-for)
     - [`For each...End for each`](#for-eachend-for-each)
 
-ループを制御する方法には、条件が満たされるまでループする方法と、指定した回数だけループする方法の2通りがあります。 各ループ構造はいずれの方法にも用いることができますが、`While` ループと `Repeat` ループは条件が満たされるまで繰り返す場合に、`For` ループは指定した回数だけループする場合の利用に適切です。  `For each...End for each` ループは両方を組み合わせることが可能で、オブジェクトやコレクション内でループするために設計されています。
+ループを制御する方法には、条件が満たされるまでループする方法と、指定した回数だけループする方法の2通りがあります。 各ループ構造はいずれの方法にも用いることができますが、`While` ループと `Repeat` ループは条件が満たされるまで繰り返す場合に、`For` ループは指定した回数だけループする場合の利用に適切です。 `For each...End for each` ループは両方を組み合わせることが可能で、オブジェクトやコレクション内でループするために設計されています。
 
 **注:** 4Dはプログラム構造 (If/While/For/Caes of/Repeat/For each) を512レベルまで入れ子で記述できます。
 
@@ -39,13 +39,14 @@ title: 制御フロー
  End if
 ```
 
-`If...Else...End if` 構造は、条件 (ブール式) が true か false かによって、処理の選択肢を2つメソッドに与えます。 ブール式が true の場合は、テストのすぐ後のステートメントを実行し、 ブール式が FALSE の場合には、Else 文のすぐ後のステートメントを実行します。 任意の `Else` が省略されていた場合、`End if` のすぐ後のステートメント (あれば) へと実行が続行されます。
+`If...Else...End if` 構造は、条件 (ブール式) が true か false かによって、処理の選択肢を2つメソッドに与えます。 ブール式が true の場合は、テストのすぐ後のステートメントを実行し、 ブール式が FALSE の場合には、Else 文のすぐ後のステートメントを実行します。 ブール式が FALSE の場合には、Else 文のすぐ後のステートメントを実行します。 任意の `Else` が省略されていた場合、`End if` のすぐ後のステートメント (あれば) へと実行が続行されます。
 
 ブール式は常に全体が評価されるという点に注意してください。 たとえば、以下のような場合:
 
 ```4d
  If(MethodA & MethodB)
     ...
+ ")
  End if
 ```
 
@@ -59,12 +60,13 @@ title: 制御フロー
  End if
 ```
 
-However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+しかしながら、この場合もっともエレガントなソリューションは、 [`&&` 短絡演算子](./operators.md#and-短絡演算子-) を使用し、以下のように書くことです:
 
 ```4d
 If (MethodA && MethodB)
    ...
-End if
+")
+ End if
 ```
 
 上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
@@ -74,12 +76,10 @@ End if
 #### 例題
 
 ```4d
-  // ユーザーに名前の入力を求めます
- $Find:=Request("名前を入力してください")
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("名前が入力されませんでした")
+  For($vlElem;Size of array(anArray);1;-1)
+  // 各配列要素に対する処理 
+    anArray{$vlElem}:=...
+ ")
  End if 
 ```
 
@@ -113,6 +113,9 @@ End if
        。
        。
 
+    。
+       。
+
     :(Boolean_Expression)
        statement(s)
     Else
@@ -129,6 +132,9 @@ End if
        statement(s)
        .
        。
+       。
+
+    。
        。
 
     :(Boolean_Expression)
@@ -154,13 +160,13 @@ End if
 ```4d
  Case of
     :(vResult=1) // 数値が1の場合
-       ALERT("一です。") // 1のアラートボックスを表示します
+       ALERT("一です。 ") // 1のアラートボックスを表示します
     :(vResult=2) // 数値が2の場合
-       ALERT("二です。") // 2のアラートボックスを表示します
+       ALERT("二です。 ") // 2のアラートボックスを表示します
     :(vResult=3) // 数値が3の場合
-       ALERT("三です。") // 3のアラートボックスを表示します
+       ALERT("三です。 ") // 3のアラートボックスを表示します
     Else // 数値が1,2,3のいずれでもない場合
-       ALERT("一、二、三のいずれでもありません。")
+       ALERT("一、二、三のいずれでもありません。
  End case
 ```
 
@@ -168,15 +174,16 @@ End if
 
 ```4d
  If(vResult=1) // 数値が1の場合
-    ALERT("一です。") // 1のアラートボックスを表示します
+    ALERT("一です。 ") // 1のアラートボックスを表示します
  Else
     If(vResult=2) // 数値が2の場合
-       ALERT("二です。") // 2のアラートボックスを表示します
+       ALERT("二です。 ") // 2のアラートボックスを表示します
     Else
        If(vResult=3) // 数値が3の場合
-          ALERT("三です。") // 3のアラートボックスを表示します
+          ALERT("三です。 ") // 3のアラートボックスを表示します
        Else // 数値が1,2,3のいずれでもない場合
-          ALERT("一、二、三のいずれでもありません。")
+          ALERT("一、二、三のいずれでもありません。
+       ")
        End if
     End if
  End if
@@ -189,11 +196,9 @@ End if
 ```4d
  Case of
     :(vResult=1)
-       ...
- // ステートメントなど
+       ... // ステートメントなど
     :((vResult=1) & (vCondition#2)) // このケースが判定されることはありません
-       ...
- // ステートメントなど
+       ... // ステートメントなど
  End case
 ```
 
@@ -202,12 +207,9 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 ```4d
  Case of
     :((vResult=1) & (vCondition#2)) // このケースが先に判定されます
-       ...
- // ステートメントなど
+       ... // ステートメントなど
     :(vResult=1)
-       ...
- 
-// ステートメントなど
+       ... // ステートメントなど
  End case
 ```
 
@@ -219,6 +221,9 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
     :(Boolean_Expression)
     :(Boolean_Expression)
       ...
+
+    。
+       。
 
     :(Boolean_Expression)
        statement(s)
@@ -281,6 +286,7 @@ vResult = 1の判定により他の条件を見る前に分岐するので、第
 
 ```4d
  CONFIRM("新規レコードを追加しますか？")  // ユーザーに確認します
+ ")  // ユーザーに確認します
  ")  // ユーザーに確認します
  ")  // ユーザーに確認します
  ")  // ユーザーに確認します
@@ -369,8 +375,8 @@ End for
 3. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```4d
- For($vlElem;Size of array(anArray);1;-1)
-  // 各配列要素に対する処理 
+ For($vlElem;2;Size of array(anArray);2)
+  // 偶数要素 #2,#4...#2n に対する処理
     anArray{$vlElem}:=...
     End if
  End for 
@@ -472,7 +478,7 @@ End for
  End for
 ```
 
-`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 つまり、 `Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
 ```4d
  $i:=1 // カウンターの初期化
  While($i<=100) // 100回のループ
@@ -492,7 +498,7 @@ End for
 
 :::tip
 
-`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。  したがって、可能な限り `For...End for` ループの使用が推奨されます。
+`Until` 条件は各ループの終わりにテストされます。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 :::
 

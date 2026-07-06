@@ -27,7 +27,7 @@ title: OpenAIChatCompletionsStreamResult
 | プロパティ        | 型       | 説明                                                                                                                                                                                |
 | ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean | ストリーミングデータがオブジェクトとして正常にデコードされた場合には `True` を返します。                                                                                                                                  |
-| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                                                                                  |
+| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                                             |
 | `usage`      | Object  | Returns token usage information from the stream data (only available in the final chunk when `stream_options.include_usage` is set to `True`). |
 
 ### usage

@@ -7,127 +7,133 @@ La page IA vous permet d'ajouter, de supprimer ou de consulter la liste de tous 
 
 :::tip Article(s) de blog sur le sujet
 
-[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centraliser les fournisseurs d'IA et les alias de modèles dans 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 
-## Managing providers
+## Gestion des fournisseurs
 
-4D supports [various AI providers](../aikit/compatible-openai.md) with an OpenAI-like API, each offering unique models and features for database needs.
+4D prend en charge de nombreux [fournisseurs d'IA](../aikit/compatible-openai.md) via une API similaire à celle d'OpenAI, chacun proposant des modèles et des fonctionnalités uniques adaptés aux besoins des bases de données.
 
-By default, the Providers list is empty.
+Par défaut, la liste des fournisseurs est vide.
 
-### Adding a provider
+### Ajouter un fournisseur
 
-To add an AI provider:
+Pour ajouter un fournisseur d'IA :
 
-1. Click on the **+** button at the bottom of the Providers list.
-2. Enter the required [provider's configuration fields](#provider-properties), including credentials.
-3. (optional) Click the **Test connection** button to make sure the provided URL and credentials are valid.
+1. Cliquez sur le bouton **+** en bas de la liste des fournisseurs.
+2. Saisissez les [champs de configuration du fournisseur](#provider-properties) requis, y compris les identifiants.
+3. (facultatif) Cliquez sur le bouton **Tester la connexion** pour vérifier que l'URL et les identifiants fournis sont valides.
 
-If the connection is successful, the number of available models is displayed on the right side of the button:
+Si la connexion est établie, le nombre de modèles disponibles s'affiche à droite du bouton :
 
 ![](../assets/en/settings/ai-connection-ok.png)
 
-If the connection test fails, an error message is displayed (e.g. "Request failed: Not found" or "Request failed: Unauthorized").
+Si le test de connexion échoue, un message d'erreur s'affiche (par exemple : « Échec de la requête : introuvable » ou « Échec de la requête : accès refusé »).
 
-4. Click **OK** to save the new provider, or **Cancel** to revert all modifications.
+4. Cliquez sur **OK** pour enregistrer le nouveau fournisseur, ou sur **Annuler** pour annuler toutes les modifications.
 
-### Editing a provider
+### Modifier un fournisseur
 
-To edit or remove a provider:
+Pour modifier ou supprimer un fournisseur :
 
-1. Select a registered provider in the list.
-2. Edit the provider's information OR to remove a provider, click on the **-** button at the bottom of the Providers list.
-3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+1. Sélectionnez un fournisseur enregistré dans la liste.
+2. Modifiez les informations du fournisseur OU pour supprimer un fournisseur, cliquez sur le bouton **-** en bas de la liste.
+3. Cliquez sur **OK** pour enregistrer les modifications, ou sur **Annuler** pour annuler toutes les modifications.
 
-## Provider properties
+## Propriétés du fournisseur
 
-When you select a provider in the Providers list, several properties are available. Property names in **bold** are mandatory to create a Provider.
+Lorsque vous sélectionnez un fournisseur dans la liste des fournisseurs, plusieurs propriétés sont disponibles. Les noms de propriétés en **gras** sont obligatoires pour créer un fournisseur.
 
 ### Nom
 
-Local name used to identify the provider in your code, for example "claude". The name must be [compliant with property names](../Concepts/identifiers.md) since it will be used in the application's code to reference the provider.
+Nom local utilisé pour identifier le fournisseur dans votre code, par exemple "claude". Le nom doit [respecter les règles relatives aux noms de propriétés](../Concepts/identifiers.md), car il sera utilisé dans le code de l'application pour faire référence au fournisseur.
 
-### Base URL
+### URL de base
 
-Endpoint of the provider's API, for example `https://api.openai.com/v1` or `http://localhost:11434/v1`.
+Point de terminaison de l'API du fournisseur, par exemple `https://api.openai.com/v1` ou `http://localhost:11434/v1`.
 
-The combo box lists the main providers, you can select a value to enter the provider endpoint:
+La liste déroulante répertorie les principaux fournisseurs ; vous pouvez sélectionner une valeur pour accéder au point de terminaison du fournisseur :
 
 ![](../assets/en/settings/ai-base-url.png)
 
-### API Key
+### Clé API
 
-(optional) API key for the provider. For instructions on generating an API key, please refer to your AI provider’s official documentation. Some AI providers may also require additional specific credentials.
+(facultatif) Clé API du fournisseur. Pour savoir comment générer une clé API, veuillez consulter la documentation officielle de votre fournisseur d'IA. Certains fournisseurs de solutions d'IA peuvent également exiger des identifiants spécifiques supplémentaires.
 
-### Organisation
+### Organization
 
-(optional, OpenAI-specific) Organization ID used by the OpenAI API.
+(facultatif, spécifique à OpenAI) Identifiant d'organisation utilisé par l'API OpenAI.
 
 ### Project
 
-(optional, OpenAI-specific) ID of the project. Each OpenAI API key is attached to a project.
+(facultatif, spécifique à OpenAI) Identifiant du projet. Chaque clé API d'OpenAI est associée à un projet.
 
 ### AIProviders.json
 
-The provider configuration is stored in a JSON file named *AIProviders.json* located next to the active *settings.4DSettings file* within the [project folder](../Project/architecture.md), [depending on your deployment configuration](./overview.md#enabling-user-settings).
-
-### Deployment with an API key
-
-When configuring an AI provider, you need to provide your own API key. It requires an external registration for getting API keys/credentials from AI providers.
-
-Using the Settings dialog box, the 4D developer can define a custom **provider name** (for example "open-ai-v1") and use this custom name in the code. They can also test it using their API key.
-
-When the 4D application is deployed with the [User settings enabled](../settings/overview.md#enabling-user-settings), the administrator can configure the User settings by using the **same AI provider name** ("open-ai-v1") and **customize the API key** to use the customer's key. Thanks to the [User settings priority rules](../settings/overview.md#priority-of-settings), the customer settings will automatically override the developer settings.
+La configuration du fournisseur est stockée dans un fichier JSON nommé *AIProviders.json*, situé à côté du fichier *settings.4DSettings* actif dans le [dossier du projet](../Project/architecture.md), [en fonction de votre configuration de déploiement](./overview.md#enabling-user-settings).
 
 :::warning
 
-When using 4D in client/server mode, it is **strongly recommended** to execute AI-related code on the server side to protect API keys and credentials from exposure to remote machines.
+Le fichier *AIProviders.json* contient vos clés API de fournisseurs. Si votre projet est [stocké sur une plate-forme de gestion de version](../Project/overview.md#source-control) telle que GitHub ou GitLab, assurez-vous que le fichier *AIProviders.json* soit [enregistré dans le fichier .gitignore](../Project/architecture.md#gitignore-file-optional), sinon **vos clés pourraient être exposées publiquement**.
 
 :::
 
-## Model Aliases
+### Déploiement avec une clé API
 
-The Model Aliases page allows you to list models from registered Providers that you want to use in your code and to name them with *aliases*. Thanks to model aliases, you avoid hardcoding model names, switch models without changing your code, and keep consistency across environments.
+Lors de la configuration d'un fournisseur d'IA, vous devez fournir votre propre clé API. Pour obtenir des clés API et des identifiants auprès des fournisseurs d'IA, il est nécessaire de s'inscrire auprès d'eux.
 
-When using a model alias:
+À l'aide de la boîte de dialogue des Propriétés, les développeurs 4D peuvent définir un **nom de fournisseur** personnalisé (par exemple "open-ai-v1") et utiliser ce nom personnalisé dans leur code. Ils peuvent également le tester à l'aide de leur clé API.
 
-- The provider is automatically resolved (see [Model resolution](../aikit/Classes/OpenAIProviders.md#model-resolution) in the 4D-AIKit documentation).
-- The model ID is applied.
-- All credentials and endpoints are used.
+Lorsque l'application 4D est déployée avec l'option [Propriétés utilisateur activées](../settings/overview.md#enabling-user-settings), l'administrateur peut configurer les propriétés utilisateur en utilisant le **même nom de fournisseur d'IA** ("open-ai-v1") et **personnaliser la clé API** afin d'utiliser celle du client. Grâce aux [règles de priorité des propriétés utilisateur](../settings/overview.md#priority-of-settings), les paramètres définis par le client prévaudront automatiquement sur ceux définis par le développeur.
 
-### Adding a model alias
+:::warning
+
+Lors de l'utilisation de 4D en mode client/serveur, il est **fortement recommandé** d'exécuter le code lié à l'IA côté serveur afin de protéger les tokens et les informations d'identification de l'API de l'exposition aux machines clientes.
+
+:::
+
+## Alias de modèles
+
+La page Alias de modèles vous permet de lister les modèles des fournisseurs enregistrés que vous voulez utiliser dans votre code et de les nommer avec des *alias*. Grâce aux alias de modèles, vous évitez de coder en dur les noms de modèles, vous pouvez changer de modèle sans modifier votre code et vous garantissez la cohérence entre les différents environnements.
+
+Lorsque vous utilisez un alias de modèle :
+
+- Le fournisseur est résolu automatiquement (voir [Résolution des modèles](../aikit/Classes/OpenAIProviders.md#model-resolution) dans la documentation de 4D-AIKit).
+- L'ID du modèle est appliqué.
+- Tous les identifiants et points de terminaison sont utilisés.
+
+### Ajouter un alias de modèle
 
 :::note
 
-To be able to add a model alias, you must have entered at least one valid provider in the **Providers** tab.
+Pour pouvoir ajouter un alias de modèle, vous devez avoir saisi au moins un fournisseur valide dans l'onglet **Fournisseurs**.
 
 :::
 
-To add a model alias:
+Pour ajouter un alias de modèle :
 
-1. Click on the **+** button at the bottom of the model aliases list.
-2. In the **Name** column, enter the name of the alias.
-3. Click on the corresponding row in the **Provider** column to display the list of available providers ([provider names](#name) you entered in the Providers page), and select the name of the provider.
-4. Click on the corresponding row in the **Model** column to display the list of available models exposed by the selected provider and select the model.
-5. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+1. Cliquez sur le bouton **+** en bas de la liste des alias de modèles.
+2. Dans la colonne **Nom**, saisissez le nom de l'alias.
+3. Cliquez sur la ligne correspondante dans la colonne **Fournisseur** pour afficher la liste des fournisseurs disponibles (les [noms des fournisseurs](#name) que vous avez saisis dans la page Fournisseurs), puis sélectionnez le nom du fournisseur.
+4. Cliquez sur la ligne correspondante dans la colonne **Modèle** pour afficher la liste des modèles disponibles proposés par le fournisseur sélectionné, puis sélectionnez le modèle souhaité.
+5. Cliquez sur **OK** pour enregistrer les modifications, ou sur **Annuler** pour annuler toutes les modifications.
 
 ![](../assets/en/settings/model-alias.png)
 
-### Editing a model alias
+### Modifier un alias de modèle
 
-To edit or remove an alias:
+Pour modifier ou supprimer un alias :
 
-1. Select a model alias in the list.
-2. Edit the alias information OR to remove a alias, click on the **-** button at the bottom of the list.
-3. Click **OK** to save the modifications, or **Cancel** to revert all modifications.
+1. Sélectionnez un alias de modèle dans la liste.
+2. Modifiez les informations d'alias OU pour supprimer un alias, cliquez sur le bouton **-** en bas de la liste.
+3. Cliquez sur **OK** pour enregistrer les modifications, ou sur **Annuler** pour annuler toutes les modifications.
 
-### Using a model alias
+### Utiliser un alias de modèle
 
-You can directly use the model alias name wherever a model name is required (provided that model aliases are supported).
+Vous pouvez utiliser directement le nom d'alias du modèle partout où un nom de modèle est requis (à condition que les alias de modèles soient pris en charge).
 
-For example, in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
+Par exemple, dans 4D-AIKit, vous pouvez faire référence à un modèle à l'aide de la syntaxe suivante : *{model:"ModelName"}*, où *ModelName* correspond à un modèle valide défini dans l'onglet Alias de modèles :
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
@@ -137,4 +143,4 @@ var $result := $client.chat.completions.create($messages; \
 
 ### Voir également
 
-["Provider & Model Aliases"](../aikit/provider-model-aliases.md) in the 4D AIKit documentation.
+["Alias de fournisseurs et de modèles"](../aikit/provider-model-aliases.md) dans la documentation de 4D AIKit.

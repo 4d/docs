@@ -21,21 +21,21 @@ title: VP EXPORT TO BLOB
 
 ## 説明
 
-`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
+`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
 
 *paramObj* には、複数のプロパティを渡せます:
 
-| プロパティ                   | 型                           | 説明                                                                                                                                                         |
-| ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
-| includeAutoMergedCells  | Boolean                     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                          |
-| includeBindingSource    | Boolean                     | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                            |
-| includeCalcModelCache   | Boolean                     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                         |
-| includeEmptyRegionCells | Boolean                     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                         |
-| includeFormulas         | Boolean                     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                |
-| includeStyles           | Boolean                     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                  |
-| includeUnusedNames      | Boolean                     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                         |
-| saveAsView              | Boolean                     | 書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。                                                                                                                   |
+| プロパティ                   | 型                           | 説明                                                                                                                                                                                                               |
+| ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
+| includeAutoMergedCells  | Boolean                     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                                                                                                                                                |
+| includeBindingSource    | Boolean                     | バインドされたソースを含めるかどうか。デフォルトは true。                                                                                                                                                                                  |
+| includeCalcModelCache   | Boolean                     | 計算の追加データを含めるか。 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                                                                                                                                |
+| includeEmptyRegionCells | Boolean                     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                                                                                                                               |
+| includeFormulas         | Boolean                     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                      |
+| includeStyles           | Boolean                     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                        |
+| includeUnusedNames      | Boolean                     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                               |
+| saveAsView              | Boolean                     | 書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。                                                                                                                                                                         |
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
 
@@ -51,7 +51,7 @@ title: VP EXPORT TO BLOB
 
 ## 例題
 
-`VP EXPORT TO BLOB` コマンドは非同期です。 エクスポートの結果を取得するには、コールバックメソッド (この例では *VPBlobCallback* という名前) を作成する必要があります。
+`VP EXPORT TO BLOB` コマンドは非同期です。 エクスポートの結果を取得するには、コールバックメソッド (この例では *VPBlobCallback* という名前) を作成する必要があります。 エクスポートの結果を取得するには、コールバックメソッド (この例では *VPBlobCallback* という名前) を作成する必要があります。
 
 ```4d
 // VPドキュメントをエクスポート

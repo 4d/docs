@@ -94,7 +94,7 @@ Graças a esse princípio, no macOS, as pastas do banco de dados aparecem como p
 
 ### Incluir tokens no arquivo de origem do projeto
 
-Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain [**tokens** for classic language and database objects (constants, commands, tables and fields)](../Concepts/methods.md#language-tokens). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version.
 
 Se você pretende usar VCS ou editores de código externos em seus novos projetos, talvez queira desmarcar essa opção para melhorar a legibilidade do código com essas ferramentas.
 
@@ -120,7 +120,7 @@ Puede definir esta preferencia marcando la opción **Crear el archivo .gitignore
 
 Cuando se crea un proyecto en 4D y esa casilla está marcada, 4D crea un archivo `.gitignore` al mismo nivel que la carpeta `Project` (ver [Arquitectura de un proyecto](Project/architecture.md#gitignore-file-optional)).
 
-Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Isso abrirá o arquivo de configuração .gitignore em seu editor de texto. El contenido de este archivo se utilizará para generar los archivos `.gitignore` en sus nuevos proyectos.
+Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Isso abrirá o arquivo de configuração .gitignore em seu editor de texto. Isso abrirá o arquivo de configuração .gitignore em seu editor de texto.
 
 La [documentación oficial de git](https://git-scm.com/docs/gitignore) es un gran recurso para entender cómo funcionan los archivos `.gitignore`.
 

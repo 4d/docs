@@ -32,8 +32,7 @@ La fenêtre présente les caractéristiques principales suivantes :
   ![](../assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
   - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-  - ou glisser-déposer l'objet de la bibliothèque.
-    L'objet est ensuite ajouté au formulaire.
+  - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
@@ -73,7 +72,7 @@ Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Se
 
 ### Construire une bibliothèque d’objets
 
-Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Ils peuvent provenir soit d’un formulaire soit d’une autre bibliothèque d’objets (y compris la [bibliothèque préconfigurée](#using-the-standard-object-library)). Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
+Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
 
 > Pour que vous puissiez effectuer des glisser-déposer d’objets depuis les formulaires vers des bibliothèques, vous devez sélectionner l’option de déplacement **Commencer un glisser-déposer** dans les Préférences de 4D.
 
@@ -100,7 +99,7 @@ Le copier-coller ou le glisser-déposer de certains objets dans la bibliothèque
 
 Voici la liste des objets dépendants qui seront collés dans la bibliothèque en même temps que l’objet principal qui les utilise (le cas échéant) :
 
-- Enumérations
+- Listes
 - Formats/Filtres
 - Images
 - Messages d’aide (liés à un champ)

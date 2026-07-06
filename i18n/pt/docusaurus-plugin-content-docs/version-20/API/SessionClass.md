@@ -42,7 +42,7 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Result|4D. Session|<-|Session object|
 </div>
 <!-- END REF -->
 

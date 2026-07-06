@@ -64,7 +64,7 @@ Using the 4D language, you can associate a project method using the [`SET MENU I
 La opción **Iniciar un nuevo proceso** está disponible para los comandos de menú asociados a los métodos. Puede definirse a través de una casilla de selección en el editor de menús, o a través del parámetro *propiedad* del comando `SET MENU ITEM PROPERTY`.
 
 Cuando la opción **Iniciar un nuevo proceso** está activada, se crea un nuevo proceso cuando se elige el comando de menú.
-Normalmente, um método ligado a um comando de menu executa-se dentro do processo actual, a menos que chame explicitamente um novo processo no seu código. La opción **Iniciar un nuevo proceso** facilita el lanzamiento de un nuevo proceso. Quando activado, 4D irá criar um novo processo quando o comando do menu for escolhido.
+Normalmente, um método ligado a um comando de menu executa-se dentro do processo actual, a menos que chame explicitamente um novo processo no seu código. Normalmente, um método ligado a um comando de menu executa-se dentro do processo actual, a menos que chame explicitamente um novo processo no seu código. Quando activado, 4D irá criar um novo processo quando o comando do menu for escolhido.
 
 Na lista de processos, 4D atribui ao novo processo um nome padrão usando o formato "ML_ProcessNumber".
 Os nomes dos processos iniciados a partir de um menu são criados através da combinação do prefixo "ML_" com o número do processo.
@@ -147,7 +147,7 @@ Para asignar un atajo de teclado utilizando el lenguaje 4D, utilice el comando `
 
 ### Item habilitado
 
-No editor do menu, pode especificar se um item do menu aparecerá activado ou desactivado. Um comando de menu activado pode ser escolhido pelo utilizador; um comando de menu desactivado é diminuído e não pode ser escolhido. Cuando la casilla de selección **Línea activa** está desmarcada, el comando de menú aparece atenuado, lo que indica que no se puede elegir.
+No editor do menu, pode especificar se um item do menu aparecerá activado ou desactivado. Um comando de menu activado pode ser escolhido pelo utilizador; um comando de menu desactivado é diminuído e não pode ser escolhido. No editor do menu, pode especificar se um item do menu aparecerá activado ou desactivado.
 
 A menos que especifique o contrário, 4D activa automaticamente cada item de menu que acrescenta a um menu personalizado. Puede desactivar un elemento para, por ejemplo, activarlo sólo por programación con los comandos `ENABLE MENU ITEM` y `DISABLE MENU ITEM`.
 
@@ -159,7 +159,7 @@ As marcas de verificação são geralmente utilizadas para itens do menu de acç
 
 ### Font-style
 
-4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
+4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. 4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu.
 
 Como regra geral, aplique estilos de fonte moderadamente aos seus menus - demasiados estilos distrairão o utilizador e darão um aspecto desorganizado à sua aplicação.
 

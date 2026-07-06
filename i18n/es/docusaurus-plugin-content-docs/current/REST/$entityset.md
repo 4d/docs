@@ -11,7 +11,7 @@ Después de [crear un conjunto de entidades]($method.md#methodentityset) mediant
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Recupera un conjunto de entidades existente                                                         |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crea un nuevo conjunto de entidades a partir de la comparación de conjuntos de entidades existentes |
-| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Releases one or more existing entity sets from the 4D Server's cache                                |
+| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Libera uno o varios conjuntos de entidades existentes de la caché del servidor 4D                   |
 
 ## $entityset/\{entitySetID\}
 
@@ -42,7 +42,7 @@ Cree otro conjunto de entidades basado en conjuntos de entidades creados anterio
 
 ### Descripción
 
-Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con `$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`, la propiedad$logicOperator`(cuyos valores se muestran a continuación), y otro entity set (entity set #2) definido por la propiedad`$otherCollection\`. Los dos conjuntos de entidades deben estar en la misma clase de datos.
+&$otherCollection`, la propiedad$logicOperator`(cuyos valores se muestran a continuación), y otro entity set (entity set #2) definido por la propiedad`$otherCollection\`. Después de crear un conjunto de entidades (conjunto de entidades nº 1) con `$method=entityset`, puede crear otro conjunto de entidades con \`$entityset/\{entitySetID\}?$logicOperator... Los dos conjuntos de entidades deben estar en la misma clase de datos.
 
 A continuación, puede crear otro conjunto de entidades que contenga los resultados de esta llamada utilizando el `$method=entityset` al final de la petición REST.
 
@@ -93,7 +93,7 @@ En el siguiente ejemplo creamos un nuevo conjunto de entidades que combina todas
 
 ## $entityset/$release
 
-Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+Libera en o más conjuntos de entidades existentes almacenados en la [caché del servidor 4D](./$info.md).
 
 ### Descripción
 
@@ -101,11 +101,11 @@ You can use this command to release a collection of entity sets, which you creat
 
 ### Ejemplo
 
-Release two entity sets from the server's cache:
+Libera dos conjuntos de entidades de la caché del servidor:
 
 `POST  /rest/Employee/$entityset/$release`
 
-The body must contain a collection with the entity sets ids to release:
+El cuerpo del mensaje debe contener una colección con los identificadores de los conjuntos de entidades que se van a liberar:
 
 **Datos POST**:
 

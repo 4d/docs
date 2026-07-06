@@ -24,7 +24,7 @@ title: VP REMOVE NAME
 
 `VP REMOVE NAME` コマンドは、<!-- REF #_method_.VP REMOVE NAME.Summary -->*name* の命名レンジまたは命名フォーミュラを、定義された *scope* のスコープから削除します<!-- END REF -->。
 
-*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
+*vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。 存在しない名前を渡した場合、エラーが返されます。
 
 *name* には、削除したい命名レンジあるいは命名フォーミュラの名前を渡します。
 

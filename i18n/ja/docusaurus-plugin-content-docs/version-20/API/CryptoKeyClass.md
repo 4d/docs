@@ -10,7 +10,7 @@ title: CryptoKey
 
 :::info こちらもご覧ください
 
-このクラスの包括的な概要については、[**CryptoKey: 暗号化、復号化、署名、検証！**](https://blog.4d.com/ja/cryptokey-encrypt-decrypt-sign-and-verify/) ブログ記事を参照ください。
+このクラスの包括的な概要については、[**CryptoKey: 暗号化、復号化、署名、検証！ **](https://blog.4d.com/ja/cryptokey-encrypt-decrypt-sign-and-verify/) ブログ記事を参照ください。
 
 :::
 
@@ -52,7 +52,7 @@ title: CryptoKey
 </div>
 <!-- END REF -->
 
-`4D.CryptoKey.new()` 関数は、 <!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。この暗号化キーペアは *settings* オブジェクト引数に基づきます。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
+`4D.CryptoKey.new()` 関数は、 <!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。 この暗号化キーペアは *settings* オブジェクト引数に基づきます。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
 
 #### *settings*
 
@@ -70,7 +70,7 @@ title: CryptoKey
 
 #### 例題 1
 
-メッセージが秘密鍵で署名され、その署名は対応する公開鍵で検証されます。 以下のコードは、簡単なメッセージの署名を作成し、検証するものです。
+メッセージが秘密鍵で署名され、その署名は対応する公開鍵で検証されます。 以下のコードは、簡単なメッセージの署名を作成し、検証するものです。 以下のコードは、簡単なメッセージの署名を作成し、検証するものです。
 
 - Bob側:
 
@@ -166,9 +166,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 |引数|型||説明|
 |---|---|----|---|
-|message|Text|->|`options.encodingEncrypted` を使用して暗号化し、復号化されるメッセージ。|  
-|options|Object|->|復号化のオプション|
-|戻り値|Object|<-|Status|
+|message|Text|->|`options.encodingDecrypted` を使用して暗号化し、符号化されるメッセージ。 |  
+|options|Object|->|エンコードのオプション|
+|戻り値|Text|<-|Status|
 </div>
 <!-- END REF -->
 
@@ -339,7 +339,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 </div>
 <!-- END REF -->
 
-`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列またはBlobを署名します。<!-- END REF --> この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
+`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->`options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。<!-- END REF --> utf8 形式の *message* 文字列またはBlobを署名します。 この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 

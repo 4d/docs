@@ -7,7 +7,7 @@ title: Área Web
 
 ## Acceder a los métodos 4D
 
-Puede llamar a métodos 4D y funciones de clase desde el código JavaScript ejecutado en un área Web y obtener valores a cambio. Para poder llamar a los métodos 4D desde un área Web, debe activar la propiedad de accesibilidad de los métodos 4D ("todos").
+Puede llamar a métodos 4D y funciones de clase desde el código JavaScript ejecutado en un área Web y obtener valores a cambio. Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio.
 
 > Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -94,7 +94,7 @@ El motor CEF tiene las siguientes limitaciones:
 
 :::note
 
-Puede personalizar los parámetros del área de CEF creando un [archivo de configuración 4DCEFParameters.json] local (webArea_overview.md#4dcefparametersjson).
+Puede personalizar los parámetros del área de CEF creando un [archivo de configuración local 4DCEFParameters.json](webArea_overview.md#4dcefparametersjson).
 
 :::
 

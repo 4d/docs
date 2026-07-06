@@ -35,7 +35,7 @@ La commande `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro et dans *tableName*, le nom de la table.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée <em x-id="3">name</em> n'est trouvée dans le document, la méthode retourne -1.
 
 La commande retourne un objet de la classe [cs.ViewPro.TableTheme](../classes.md#tabletheme) avec des propriétés et des valeurs qui décrivent le thème de la table courante.
 

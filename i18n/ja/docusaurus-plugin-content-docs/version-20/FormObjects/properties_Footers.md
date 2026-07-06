@@ -5,7 +5,7 @@ title: フッター
 
 ## フッターを表示
 
-This property is used to display or hide [list box column footers](listbox-header-footer.md#footers). 列ごとに 1つのフッターを表示できます。それぞれのフッターは個別に設定できます。
+このプロパティは、 [リストボックスカラムフッター](listbox-header-footer.md#フッター) の表示/非表示を指定します。 カラムごとに 1つのフッターを表示できます。それぞれのフッターは個別に設定できます。
 
 #### JSON 文法
 
@@ -28,8 +28,8 @@ This property is used to display or hide [list box column footers](listbox-heade
 * *行* - 高さは行のフォントサイズに合わせて計算されます。
   * 複数の異なるサイズが設定されている場合、4D はもっとも大きなものを使用します。 たとえば、行に "Verdana 18", "Geneva 12" そして "Arial 9" が設定されている場合、4D は行の高さの決定に "Verdana 18" を使用します。 複数行の場合はこの高さの倍数が使用されます。
   * この計算にはピクチャーのサイズや、フォントに適用されるスタイルは考慮されません。
-  * macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。 この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。
-> This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html) command.
+  * macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。 この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。 > This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html) command.
+> このプロパティは、[LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.ja.html) コマンドを使用することで動的に設定することも可能です。
 
 単位の変換: 単位を変更した場合、4D は自動で値を再計算し、結果をプロパティリストに表示します。 たとえば、使用されるフォントが "Lucida grande 24" で高さが "1 行" に設定されていれば "30 ピクセル" に、高さが "60 ピクセル" なら "2 行" になります。
 
@@ -60,4 +60,4 @@ This property is used to display or hide [list box column footers](listbox-heade
 
 #### 参照
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[ヘッダー](properties_Headers.md) - [リストボックスフッター](listbox-header-footer.md#フッター)

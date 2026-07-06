@@ -107,7 +107,7 @@ Esta función permite actualizar las entidades por separado. Sin embargo, tenga 
 
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save()`](#save).
 
-Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`isNew()`](#isnew) devuelve **True**).
+Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->.
 
 #### Ejemplo 1
 
@@ -915,7 +915,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 #### Descripción
 
-La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. .
+True si la entidad acaba de ser creada y aún no se ha guardado. .
 
 #### Ejemplo
 
@@ -1721,7 +1721,7 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
+La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. . Puede utilizar esta función para determinar si necesita guardar la entidad.
 
 Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 

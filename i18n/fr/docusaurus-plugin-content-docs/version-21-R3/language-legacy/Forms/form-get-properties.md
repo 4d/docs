@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594;  | Formulaire table uniquement : Table du formulaire ou Table par défaut si omis |
 | nomForm | Text | &#8594;  | Nom du formulaire |
 | largeur | Integer | &#8592; | Largeur du formulaire (en pixels) |
 | hauteur | Integer | &#8592; | Hauteur du formulaire (en pixels) |

@@ -86,7 +86,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### 説明
 
-`File` コマンドは、 <!-- REF #_command_.File.Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`File` コマンドは、 <!-- REF #_command_.File.Summary -->`4D.File` 型の新しいオブジェクトを作成して返します 。<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -149,7 +149,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### 説明
 
-`4D.File.new()` 関数は、 <!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`File`](#file) コマンドと同一です。
+`4D.File.new()` 関数は、 <!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します 。<!-- END REF -->。 この関数の機能は、[`File`](#file) コマンドと同一です。
 
 > `4D.File.new()` よりも、短い [`File`](#file) コマンドの使用が推奨されます。
 
@@ -286,7 +286,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->ファイルを削除します<!-- END REF -->。
+`.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->`.delete()` 関数は、<!-- END REF -->。
 
 ファイルがディスク上に存在しない場合、関数は何もしません (エラーは生成されません)。
 
@@ -309,7 +309,8 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
  If($tempo.exists)
     $tempo.delete()
-    ALERT("ユーザーのプリファレンスファイルが削除されました。")
+    ALERT("ユーザーのプリファレンスファイルが削除されました。
+ ")
  End if
 ```
 <!-- END REF -->
@@ -447,7 +448,7 @@ ALERT($info.Copyright)
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-デフォルトでは、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+デフォルトでは、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。
 
 **返されるオブジェクト**
 
@@ -572,7 +573,7 @@ $fhandle:=$f.open("read")
 
 #### 説明
 
-`.rename()` 関数は、 <!-- REF #FileClass.rename().Summary -->ファイル名を *newName* に指定した名称に変更し、名称変更後の `File` オブジェクトを返します<!-- END REF -->。
+`.rename()` 関数は、 <!-- REF #FileClass.rename().Summary -->`.rename()` 関数は、<!-- END REF -->。
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
@@ -622,7 +623,7 @@ $fhandle:=$f.open("read")
 
 **.exe または .dll ファイル用の *info* オブジェクト**
 
-関数に渡されるファイルは、ディスク上に存在する有効な .exe または .dll ファイルでなければなりません。そうでない場合、この関数は何もしません (エラーは生成されません)。
+関数に渡されるファイルは、ディスク上に存在する有効な .exe または .dll ファイルでなければなりません。
 
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。

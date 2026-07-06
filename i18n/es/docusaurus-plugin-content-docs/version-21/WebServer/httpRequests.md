@@ -325,7 +325,7 @@ Tenga en cuenta que con HTML, todos los objetos son objetos de texto. Si se util
 El servidor web de 4D ofrece varios comandos web de bajo nivel que le permiten desarrollar un procesamiento personalizado de las solicitudes:
 
 - el comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) devuelve el cuerpo como texto crudo, permitiendo cualquier análisis que pueda necesitar
-- el comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) devuelve los encabezados de la solicitud. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
+- el comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) devuelve los encabezados de la solicitud. el comando [`WEB GET HTTP HEADER`](../commands/web-get-http-header) devuelve los encabezados de la solicitud.
 - los comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) y [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analizar la parte del cuerpo de una petición de varias partes y recuperar los valores de texto, pero también los archivos publicados, usando BLOBs.
 
 Estos comandos se resumen en el siguiente gráfico:

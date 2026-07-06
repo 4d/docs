@@ -39,7 +39,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Listas de múltiples niveles
 
-Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Cada nivel se adjunta a una hoja de estilo de lista jerárquica y representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.).
+Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
 Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
@@ -67,7 +67,7 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 Las hojas de estilo de listas jerárquicas se utilizan para crear [listas multinivel](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + nvl + índice", por ejemplo "Mylist lvl 2".
 
 To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
@@ -105,7 +105,7 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Para eliminar el primer subnivel:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
@@ -115,7 +115,7 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valores de atributos predefinidos
 
 Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores predefinidos:
 

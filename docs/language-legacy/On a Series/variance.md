@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Variance.Summary-->**Variance** returns the variance for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the variance.
+<!--REF #_command_.Variance.Summary-->**Variance** returns the variance for *series*.<!-- END REF--> If *series* is a field, the command uses to current selection ot the parent table; if it is indexed, the index is used to find the variance.
 
 You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
 

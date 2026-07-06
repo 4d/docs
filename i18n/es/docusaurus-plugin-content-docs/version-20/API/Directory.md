@@ -514,7 +514,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colección de objetos `File` contenidos en la carpeta<!-- END REF -->.
 > Los alias o enlaces simbólicos no se resuelven.
 
-Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección los archivos del primer nivel de la carpeta, así como los archivos o carpetas invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
@@ -535,6 +535,7 @@ Quiere saber si hay archivos invisibles en la carpeta de la base:
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
+ End if
  End if
  End if
 ```

@@ -49,6 +49,12 @@ displayed_sidebar: docs
 
 **PRINT SELECTION** を使用し、小計やブレーク付きでセレクションを印刷するには、まずそのセレクションをソートしなければなりません。次に、レポートの各ブレークエリアに、小計を変数に代入するオブジェクトメソッドを持つ変数を配置します。変数に値を代入する、[Sum](../commands/sum) や [Average](../commands/average) のような統計関数と算術関数を使用することもできます。詳細は[Subtotal](../commands/subtotal)、[BREAK LEVEL](../commands/break-level)、[ACCUMULATE](../commands/accumulate) コマンドの説明を参照してください。
 
+:::note
+
+[Sum](../commands/sum) や [Average](../commands/average) のような[統計コマンド](../../commands/theme/On_a_Series.md)を使用して変数に値を代入することができます。統計関数をレポートで使用する場合、レポート自体が各レコードを読み込む必要があるため、特定の動作をします。これらの関数をレポートで使用すると、返される値が信頼できるのはブレークレベル0のみであり、ブレーク処理が有効になっている場合に限ります。つまり、すべてのレコードが処理された後のレポートの末尾でのみ有効です。これらの関数は、B0ブレークエリアに含まれる非入力エリアのオブジェクトメソッド内でのみ使用してください。
+
+:::
+
 **警告:** **PRINT SELECTION** のコンテキストで [PAGE BREAK](../commands/page-break) コマンドを使用してはいけません。[PAGE BREAK](../commands/page-break) は [Print form](../commands/print-form) のコンテキストで使用します。
 
 **PRINT SELECTION** の呼び出し後、プリントが正常に終了するとシステム変数OKに1がセットされます。プリントが中断された場合には、システム変数OKには0がセットされます（例えばユーザが印刷ダイアログボックスでキャンセルをクリックした場合）。

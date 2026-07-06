@@ -27,7 +27,10 @@ For each user connected to the server, the list provides the following informati
 - **Login date**: Date and time of the remote machine connection.
 - **CPU Time**: CPU time consumed by this user since connecting.
 - **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). 
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Status**: The following values can be displayed:
+    - "Online" - the session is active 
+    - "Sleeping" - the desktop client has switched to sleep mode (see below),
+    - "Unreachable" (with [QUIC network layer](../settings/client-server.md#network-layer) only) - the desktop client is unresponsive and 4D Server will [attempt to reconnect](../Desktop/clientServer.md#management-of-unreachable-peer) during the QUIC session timeout period. 
 
 
 ### Managing sleeping users

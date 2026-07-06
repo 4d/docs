@@ -5,7 +5,7 @@ title: Número (Real, Entero)
 
 Número es un término genérico que significa:
 
-- Los campos, variables o expresiones de tipo real. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- Los campos, variables o expresiones de tipo real. El rango del tipo de datos Real es ±1,7e±308 (de acuerdo con el [estándar IEEE 754 para el formato binario de coma flotante de doble precisión](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Variable o expresión entera. El rango para el tipo de datos Integer es -2^31..(2^31)-1 (Integer de 4 bytes, también conocido como *Long* o *Longint*).
 
 :::info Compatibilidad
@@ -81,7 +81,7 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 ### División entera
 
-The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` es equivalente a `Int(a/b)`. Este operador devuelve valores significativos sólo con números enteros.
+El operador de división entera divide un número entre otro y devuelve la parte entera del resultado, descartando cualquier resto. `a\b` es equivalente a `Int(a/b)`. Este operador devuelve valores significativos sólo con números enteros.
 
 ### Comparación real
 
@@ -133,8 +133,8 @@ Una expresión que utiliza un operador de bits devuelve un valor de tipo Long, e
 | Left Bit Shift                   | <<  | Long << Long  | Long (ver nota 1)    |
 | Right Bit Shift                  | > >                                                   | Long >> Long                                                    | Long (ver nota 1)    |
 | Bit Set                          | ?+                                                    | Long ?+ Long                                                    | Long (ver nota 2)    |
-| Poner el bit en 0                | ?-                                                    | Long ?- Long                                                    | Long (ver nota 2)    |
-| Probar bit                       | ??                                                    | Long ?? Long Long                                               | Boolean (ver nota 2) |
+| Probar bit                       | ?-                                                    | Long ?- Long                                                    | Long (ver nota 2)    |
+| Probar bit                       | ??                                                    | Long ?? Long Long Long                                          | Boolean (ver nota 2) |
 
 #### Notas
 
@@ -151,7 +151,7 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 | Left Bit Shift                   | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la izquierda el número de posiciones indicado por el segundo operando. Los bits de la izquierda se pierden y los nuevos bits de la derecha se ponen en 0. **Nota:** teniendo en cuenta sólo los valores positivos, desplazar a la izquierda N bits es lo mismo que multiplicar por 2^N.                                                                                                                          |
 | Right Bit Shift                  | El valor resultante se ajusta al valor del primer operando, luego los bits resultantes se desplazan a la derecha el número de posición indicado por el segundo operando. Los bits de la derecha se pierden y los nuevos bits de la izquierda se ponen en 0. **Nota:** teniendo en cuenta sólo los valores positivos, desplazar a la derecha N bits es lo mismo que dividir por 2^N.                                                                                                                                    |
 | Bit Set                          | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 1. Los demás bits no se modifican.                                                                                                                                                                                                                                                                                                                                                            |
-| Poner el bit en 0                | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                                                                                                                                                            |
+| Probar bit                       | El valor resultante se establece en el valor del primer operando, luego el bit resultante, cuyo número es indicado por el segundo operando, se coloca en 0. Los demás bits no se modifican.                                                                                                                                                                                                                                                                                                                                                            |
 | Probar bit                       | Devuelve True si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 1. Devuelve False si, en el primer operando, el bit cuyo número indica el segundo operando es igual a 0.                                                                                                                                                                                                                                                                                                                                             |
 
 ### Ejemplos
@@ -164,6 +164,6 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 | Left Bit Shift                   | 0x0000FFFF << 8           | 0x00FFFF00 |
 | Right Bit Shift                  | 0x0000FFFF >> 8                                                             | 0x000000FF |
 | Bit Set                          | 0x00000000 ?+ 16                                                            | 0x00010000 |
-| Poner el bit en 0                | 0x00010000 ?- 16                                                            | 0x00000000 |
-| Probar bit                       | 0x00010000 ?? 16 16                                                         | True       |
+| Probar bit                       | 0x00010000 ?- 16                                                            | 0x00000000 |
+| Probar bit                       | 0x00010000 ?? 16 16 16                                                      | True       |
 

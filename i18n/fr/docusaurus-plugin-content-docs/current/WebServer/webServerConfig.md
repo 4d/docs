@@ -382,7 +382,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`                 | `Web max concurrent processes`                                                                                            |              |
 | Boîte de dialogue des Propriétés | Page [Options (I)/Process Web simultanés maximum](../settings/web.md#maximum-concurrent-web-processes) |              |
 
-Limite haute du nombre de process web pouvant être ouverts simultanément sur le serveur lorsque **Pas de sessions** ou **sessions legacy** sont utilisées (les **sessions extensibles** supportent [un nombre illimité](sessions.md) de process préemptifs). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de process Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Limite haute du nombre de process web pouvant être ouverts simultanément sur le serveur lorsque **Pas de sessions** ou **sessions legacy** sont utilisées (les **sessions extensibles** supportent [un nombre illimité](sessions.md) de process préemptifs). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de process Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -395,7 +395,7 @@ La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
 Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Passer la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.
 
-Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Lorsqu'une requête atteint cette limite, le serveur Web 4D la rejette.
+Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses.
 
 Valeurs possibles: 500 000 - 2147483648.
 

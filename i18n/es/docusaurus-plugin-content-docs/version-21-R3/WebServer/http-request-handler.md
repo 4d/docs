@@ -28,7 +28,7 @@ Since HTTP Request handler functions are called from standard web requests (they
 
 Sin embargo, estas funciones necesitan tener **permisos** apropiados, como todas las peticiones ejecutadas desde procesos web. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Cualquier otro recurso al que se acceda dentro del código (datos, otras funciones...) también deben estar permitidos por los permisos.
 
-In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), if a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
+En [*modo restringido por defecto*](../ORDA/privileges.md#restriction-modes), si un controlador de peticiones HTTP puede abrir una nueva sesión sin autenticar (lo cual ocurre, por ejemplo, cuando su aplicación ofrece la función de **enlaces profundos**), debe asegurarse de que se conceda el privilegio *invitado* para ejecutar la función del controlador y acceder a todos los recursos posteriores.
 
 Si una función HTTP Request handler puede ejecutarse dentro de una sesión ya autenticada, debe asegurarse de que la sesión de usuario está autorizada para ejecutar la función handler y acceder a todos los recursos posteriores. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
 

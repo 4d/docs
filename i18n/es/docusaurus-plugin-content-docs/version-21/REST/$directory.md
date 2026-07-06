@@ -11,7 +11,7 @@ Abre una sesión REST en su aplicación 4D y conecta al usuario.
 
 ### Descripción
 
-Utilice `$directory/login` para abrir una sesión en su aplicación 4D a través de REST y conecte un usuario. También puede modificar el tiempo de espera por defecto de la sesión 4D.
+Llave de encabezado También puede modificar el tiempo de espera por defecto de la sesión 4D.
 
 Todos los parámetros deben pasarse en **encabezados**de un método POST:
 

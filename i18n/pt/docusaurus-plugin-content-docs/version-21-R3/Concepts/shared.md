@@ -12,7 +12,7 @@ Objetos compartilhados e coleções compartilhadas são armazenados em variávei
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
-Para modificar um objeto/coleção compartilhada, a estrutura **Usar... Uso final** deve ser chamada. A leitura de um valor de objeto/coleção compartilhado não requer **Uso...Uso final**.
+A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. O *Shared_object_or_Shared_collection* pode ser qualquer objeto compartilhado ou coleção compartilhada válida.
 
 Um catálogo único e global retornado pelo comando [`Storage`](../commands/storage) está sempre disponível em toda a aplicação e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
 

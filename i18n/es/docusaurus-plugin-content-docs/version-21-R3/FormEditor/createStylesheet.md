@@ -210,12 +210,12 @@ Las consultas de medios permiten aplicar estilos basados en condiciones específ
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
-Available media features and values:
+Funcionalidades y valores disponibles para medios:
 
-| Media features         | Valores                                                                                                  | Descripción                                                                                                                                                                  |
-| ---------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prefers-color-scheme` | <ul><li>**light**</li><li>**dark**</li></ul>                                                             | Esquema de color a utilizar                                                                                                                                                  |
-| `form-theme`           | <ul><li>**fluent-ui**</li><li>**win-classic**</li><li>**liquid-glass**</li><li>**mac-classic**</li></ul> | Tema de la plataforma a utilizar. Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering). |
+| Funcionalidades de medios | Valores                                                                                                  | Descripción                                                                                                                                                                  |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme`    | <ul><li>**light**</li><li>**dark**</li></ul>                                                             | Esquema de color a utilizar                                                                                                                                                  |
+| `form-theme`              | <ul><li>**fluent-ui**</li><li>**win-classic**</li><li>**liquid-glass**</li><li>**mac-classic**</li></ul> | Tema de la plataforma a utilizar. Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering). |
 
 :::note
 
@@ -246,27 +246,27 @@ Este CSS define una combinación de colores para el texto y el fondo del texto e
 ##### Ejemplo 2
 
 ```css
-/* Default style (all themes and modes) */
+/* Estilo por defecto (todos los temas y modos) */
 .textLabel {
     fontFamily: "Segoe UI";
 }
  
-/* Fluent UI theme*/
+/* Tema Fluent UI*/
 @media (form-theme: fluent-ui) {
     .textLabel {
         stroke: #2A2A2A;
         fontSize: 14px;
     }
  
-    /* dark mode */
-    @media (prefers-color-scheme: dark) {
+    /* modo oscuro */
+    @media (prefiere-esquema-de-color: oscuro) {
         .textLabel {
-            stroke: #E0E0E0;
+            trazo: #E0E0E0;
         }
     }
 }
  
-/* Windows classic theme */
+/* Tema clásico de Windows */
 @media (form-theme: win-classic) {
     .textLabel {
         stroke: #000000;

@@ -6,7 +6,7 @@ title: Flujo de control
 Independientemente de la simplicidad o la complejidad de un método o de una función, siempre utilizará uno o varios de los tres tipos de estructuras de programación. Las estructuras de programación determinan el flujo de ejecución, si se ejecutan y el orden de las líneas de instrucciones dentro de un método. Hay tres tipos de estructuras:
 
 - **Secuencial**: una estructura secuencial es una estructura simple y lineal. Una secuencia es una serie de sentencias que 4D ejecuta una tras otra, de la primera a la última. Una instrucción de una línea, utilizada frecuentemente para los métodos de los objetos, es el caso más simple de una estructura secuencial. Por ejemplo: `[People]lastName:=Uppercase([People]lastName)`
-- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de rama es la estructura [`Case of...Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
+- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas.
 - **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para hacer frente a esta necesidad, el lenguaje 4D ofrece las siguientes estructuras de bucle:
 
   - [`While...End while`](#whileend-while)
@@ -14,7 +14,7 @@ Independientemente de la simplicidad o la complejidad de un método o de una fun
   - [`For...End for`](#forend-for)
   - [`For each...End for each`](#for-eachend-for-each)
 
-Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
+Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones. `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
 
 **Nota:** 4D permite anidar estructuras de programación hasta una "profundidad" de 512 niveles.
 
@@ -38,7 +38,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
  End if
 ```
 
-La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. Si la expresión booleana es FALSE, se ejecutan las instrucciones que siguen a la línea Else. El `Else` es opcional; si se omite Else, la ejecución continúa con la primera instrucción (si la hay) que sigue al `End if`.
+La estructura `If...Else...End if` permite a su método elegir entre dos acciones, dependiendo de si una prueba (una expresión booleana) es TRUE o FALSE. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba. Si la expresión booleana es FALSE, se ejecutan las instrucciones que siguen a la línea Else. Cuando la expresión booleana es TRUE, se ejecutan las sentencias que siguen inmediatamente a la prueba.
 
 Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Considere en particular la siguiente prueba:
 
@@ -48,7 +48,7 @@ Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Con
  End if
 ```
 
-La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso si *MethodA* devuelve FALSE, 4D seguirá evaluando *MethodB*, lo que supone una pérdida de tiempo. En este caso, es más interesante utilizar una estructura como:
+La expresión es TRUE sólo si los dos métodos son TRUE. La expresión es TRUE sólo si los dos métodos son TRUE. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)
@@ -146,7 +146,7 @@ Cada expresión booleana va precedida de dos puntos (`:`). Esta combinación de 
 :(bValidate=1)
 ```
 
-Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el siguiente). Si ninguno de los casos es TRUE, no se ejecutará ninguna de las instrucciones (si no se incluye la parte `Else`).
+Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el siguiente). Recuerde que con una estructura `Case of...Else...End case`, solo se ejecuta el primer caso TRUE.
 
 Puede incluir una instrucción Else después del último caso. Si todos los casos son FALSE, se ejecutarán las instrucciones siguientes al `Else`.
 
@@ -185,7 +185,7 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
  End if
 ```
 
-Recuerde que con una estructura `Case of...Else...End case`, solo se ejecuta el primer caso TRUE. Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
+Sólo se ejecutarán las instrucciones que sigan al primer caso TRUE (y hasta el siguiente). Aunque dos o más casos sean TRUE, sólo se ejecutarán las instrucciones que siguen al primer caso TRUE.
 
 En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse de que las declaraciones de condición que están más abajo en el esquema jerárquico aparezcan primero en la secuencia de pruebas. Por ejemplo, si se quiere procesar el caso simple (vResult=1) y el caso complejo (vResult=1) & (vCondition#2) y se estructura el método de la siguiente manera: Por ejemplo, el siguiente código nunca verá detectada su última condición:
 
@@ -552,7 +552,7 @@ La sintaxis de la estructura condicional `For each... End for each` es:
  End for each
 ```
 
-La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each... End for each` puede iterar a través de tres tipos de *Expression*:
+La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. End for each\` puede iterar a través de tres tipos de *Expression*:
 
 - colecciones: bucle en cada elemento de la colección,
 - selecciones de entidades: bucle en cada entidad,
@@ -578,7 +578,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ### Bucle en las colecciones
 
-Cuando `For each...End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
+Cuando `For each...End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable *Current_Item* se le asigne el primer tipo de valor diferente.
 
@@ -637,7 +637,7 @@ Quiere aumentar el salario de todos los empleados británicos en una selección 
 
 ### Bucles en las propiedades de objetos
 
-Cuando se utiliza `For each... End for each` con una *Expression* de tipo Object, el parámetro *Current_Item* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
+End for each\` con una *Expression* de tipo Object, el parámetro *Current_Item* es una variable texto que se llena automáticamente con el nombre de la propiedad actualmente procesada.
 
 Las propiedades del objeto se procesan de acuerdo con su orden de creación. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
@@ -827,14 +827,14 @@ logConsole($message)
 
 </details>
 
-The [`defer`](../commands/defer) command allows you to stack one or more expression(s) that will automatically execute when the current method or function **finishes running**.
+El comando [`defer`](../commands/defer) permite encadenar una o varias expresiones que se ejecutarán automáticamente cuando el método o la función actual **termine de ejecutarse**.
 
 Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
 
 ```4d
-   //make sure some code is executed at exit
+   //Asegurarse de que se ejecute cierto código al salir
 defer(myCleaningMethod)
-   //Do something...
+   //Hacer algo...
 ```
 
-See the [`defer`](../commands/defer) command description for more information.
+Vea la descripción del comando [`defer`](../commands/defer) para más información.

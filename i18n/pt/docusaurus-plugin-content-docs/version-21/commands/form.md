@@ -65,6 +65,7 @@ Para mais informações, consulte a seção *Subformulários de Páginas*.
 **Form** returns the object associated with the table form displayed on screen.\
 **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
+In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 | **Propriedade** | **Tipo** | **Description**                            |

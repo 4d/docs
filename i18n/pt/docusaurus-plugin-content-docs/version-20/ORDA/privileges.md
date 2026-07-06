@@ -170,7 +170,7 @@ Class extends Entity
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. Por exemplo, se você tiver criado uma função "drop" nas classes `cs.CityEntity` e `cs.CitySelection`, precisará dar a elas nomes diferentes, como `dropEntity()` e `dropSelection()`. Em seguida, você pode escrever no arquivo "roles.json":
+It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. Por exemplo, se você tiver criado uma função "drop" nas classes `cs. CityEntity` e `cs. CitySelection`, precisará dar a elas nomes diferentes, como `dropEntity()` e `dropSelection()`. Em seguida, você pode escrever no arquivo "roles.json":
 
 ```json
     "permissions": {
@@ -207,6 +207,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // you can prevent the project to open
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
+ End if
  End if 
 ```
 

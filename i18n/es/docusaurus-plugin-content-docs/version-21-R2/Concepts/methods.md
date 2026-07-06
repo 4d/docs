@@ -67,7 +67,7 @@ Si el código descrito anteriormente fuera un método llamado `MODIFY_CUSTOMER`,
  PRINT SELECTION([Customers])
 ```
 
-Esta posibilidad simplifica enormemente sus métodos. En el ejemplo, no es necesario saber cómo funciona el método `MODIFY_CUSTOMER`, sólo lo que hace. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
+Esta posibilidad simplifica enormemente sus métodos. Esta posibilidad simplifica enormemente sus métodos. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
 
 Si necesita cambiar su método de búsqueda de clientes en este proyecto de ejemplo, tendrá que cambiar sólo un método, no diez. Esta es la siguiente razón para utilizar subrutinas: facilitar los cambios en sus métodos.
 
@@ -161,7 +161,7 @@ La automatización de secuencias de actividades es una capacidad muy poderosa de
 
 ### Métodos de gestión de proceso
 
-Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. El proceso dura sólo mientras el método continúa ejecutándose, excepto si se trata de un proceso Worker. Tenga en cuenta que un método de menú asociado a un comando de menú con la propiedad *Iniciar un nuevo proceso* es también el método de gestión de proceso para el proceso recién creado.
+Un **método proyecto** es un método proyecto que se llama cuando se inicia un proceso. El proceso dura sólo mientras el método continúa ejecutándose, excepto si se trata de un proceso Worker. El proceso dura sólo mientras el método continúa ejecutándose, excepto si se trata de un proceso Worker.
 
 ### Métodos de gestión de eventos y errores
 

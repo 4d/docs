@@ -17,7 +17,7 @@ Puede:
 - designar un mensajes de ayuda existente, previamente especificado en el editor de [mensajes de ayuda](https://doc.4d.com/4Dv20/4D/20.2/Help-tips.200-6750100.en.html) de 4D.
 - o introducir el mensaje de ayuda directamente como una cadena. Esto le permite aprovechar la arquitectura XLIFF. Aquí puede introducir una referencia XLIFF para mostrar un mensaje en el lenguaje de la aplicación (para más información sobre XLIFF, consulte el [Apéndice B: Arquitectura XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html)).
 
-> &#062; In macOS, displaying help tips is not supported in pop-up type windows.
+> &#062; &#062; In macOS, displaying help tips is not supported in pop-up type windows.
 
 #### Gramática JSON
 

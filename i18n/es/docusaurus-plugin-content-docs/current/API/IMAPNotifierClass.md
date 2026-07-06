@@ -46,7 +46,7 @@ $transporter.selectBox("INBOX")
 $transporter.notifier.start()     
 ```
 
-## IMAPNotifier object
+## Objeto IMAPNotifier
 
 Un objeto IMAPNotifier proporciona las siguientes propiedades y funciones:
 

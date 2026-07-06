@@ -38,9 +38,9 @@ O comando `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retorna um novo obje
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro *column* define a primeira coluna do intervalo de células. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Se o intervalo estiver em várias colunas, você também deverá usar o parâmetro *columnCount*.
+O parâmetro *column* define a primeira coluna do intervalo de células. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Passar o índice da coluna (a contagem começa em 0) neste parâmetro.
 
-No parâmetro *linha*, você pode definir a(s) linha(s) da posição da faixa de célula. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo estiver dentro de várias linhas, você também deverá usar o parâmetro *rowCount*.
+No parâmetro *linha*, você pode definir a(s) linha(s) da posição da faixa de célula. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Passar o índice da linha (a contagem começa em 0) neste parâmetro.
 
 O parâmetro *columnCount* permite que você defina o número total de colunas em que o intervalo se encontra. *columnCount* deve ser maior que 0.
 

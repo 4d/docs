@@ -307,6 +307,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 // Class: MyClass
 Class constructor({$parameterName : type; ...})
 // code
+// code
 ```
 
 :::note
@@ -590,6 +591,12 @@ Function getArea()
 // Function definition
 Function getArea()
  var $0 : Integer
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+
  $0:=(This.height)*(This.width)
 
 // Function definition

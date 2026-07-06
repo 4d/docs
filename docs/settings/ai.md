@@ -7,7 +7,7 @@ The AI page allows you to add, remove, or view the list of all your AI providers
 
 :::tip Related blog post
 
-[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 
@@ -79,6 +79,12 @@ The combo box lists the main providers, you can select a value to enter the prov
 ### AIProviders.json
 
 The provider configuration is stored in a JSON file named *AIProviders.json* located next to the active *settings.4DSettings file* within the [project folder](../Project/architecture.md), [depending on your deployment configuration](./overview.md#enabling-user-settings).
+
+:::warning 
+
+The *AIProviders.json* file contains your provider API keys. If your project is [stored on a source control repository tool](../Project/overview.md#source-control) such as GitHub or GitLab, make sure the *AIProviders.json* file is [registered in the .gitignore file](../Project/architecture.md#gitignore-file-optional), otherwise **your keys could be publicly exposed**. 
+
+:::
 
 
 

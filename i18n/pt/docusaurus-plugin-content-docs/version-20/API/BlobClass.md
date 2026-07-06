@@ -32,7 +32,7 @@ A classe Blob permite-lhe criar e manipular [objectos blob](../Concepts/dt_blob.
 | Parameter | Type            |     | Description  |
 | --------- | --------------- | :-: | ------------ |
 | blob      | Blob | ->  | Blob to copy |
-| Result    | 4D.Blob         | <-  | New 4D.Blob  |
+| Result    | 4D. Blob         | <-  | New 4D. Blob  |
 </div>
 <!-- END REF -->
 
@@ -67,9 +67,9 @@ Novo `4D. <!-- REF #Blob.size.Summary -->Blob`|<!-- END REF -->
 
 | Parameter | Type ||Description |
 | --------- | ------- | :-: | --- |
-| start| Real    | ->  | index of the first byte to include in the new `4D.Blob`.               |
-| end| Real    | ->  | index of the first byte that will not be included in the new `4D.Blob` |
-| Result| 4D.Blob | <-  | New `4D.Blob`|
+| start| Real    | ->  | index of the first byte to include in the new `4D. Blob`.               |
+| end| Real    | ->  | index of the first byte that will not be included in the new `4D. Blob` |
+| Result| 4D. Blob | <-  | New `4D.Blob`|
 </div>
 <!-- END REF -->
 

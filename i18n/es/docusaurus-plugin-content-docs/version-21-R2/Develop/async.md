@@ -21,7 +21,7 @@ La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para t
 
 #### Ejecución asíncrona
 
-Asynchronous execution is **event-driven** and allows other operations to complete. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
+La ejecución asincrónica es **event-driven** y permite que otras operaciones se completen. Se basa en **callbacks**, **workers** y **event handlers** para gestionar el flujo de ejecución.
 
 La ejecución asíncrona se utiliza cuando:
 
@@ -60,11 +60,11 @@ Cada worker (o ventana de formulario para [`CALL FORM`](../commands-legacy/call-
 
 ### Comunicación bidireccional mediante mensajes
 
-El proceso llamante envía un mensaje y el worker lo ejecuta. El worker puede publicar a su vez un mensaje (a través de [`CALL WORKER`](../commands-legacy/call-worker.md) o [`CALL FORM`](../commands-legacy/call-form.md)) de vuelta a la persona que llama u otro worker para notificar un evento (finalización de tarea, datos recibidos, error, progreso, etc.). Este mecanismo sustituye al retorno clásico de las llamadas síncronas.
+El proceso llamante envía un mensaje y el worker lo ejecuta. El proceso llamante envía un mensaje y el worker lo ejecuta. Este mecanismo sustituye al retorno clásico de las llamadas síncronas.
 
 ### Escucha de eventos
 
-En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. Por ejemplo, cuando se muestra un formulario utilizando el comando `DIALOG`, las acciones del usuario pueden desencadenar eventos que su código puede procesar. Al hacer clic en un botón se activará el código asociado al botón.
+En el desarrollo dirigido por eventos, es obvio que parte del código debe ser capaz de escuchar los eventos entrantes. Los eventos pueden ser generados por la interfaz de usuario (como un clic del ratón sobre un objeto o la pulsación de una tecla del teclado) o por cualquier otra interacción, como una petición http o el final de otra acción. Por ejemplo, cuando se muestra un formulario utilizando el comando `DIALOG`, las acciones del usuario pueden desencadenar eventos que su código puede procesar. Por ejemplo, cuando se muestra un formulario utilizando el comando [`DIALOG`](../commands/dialog), las acciones del usuario pueden desencadenar eventos que su código puede procesar.
 
 En el contexto de la ejecución asíncrona, las siguientes funcionalidades colocan su código en modo de escucha:
 
@@ -88,7 +88,7 @@ En 4D, todos los objetos son liberados [cuando no existen más referencias](../C
 
 Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. Esta referencia sólo se libera cuando finaliza la operación, es decir, después de que se active el evento `onTerminate`. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
 
-Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\\` así libera el objeto.
+Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\\\` así libera el objeto.
 
 ### Ejemplos que ilustran el concepto común
 
@@ -110,7 +110,7 @@ Varias clases 4D soportan el procesamiento asíncrono:
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 
-Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
+Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. Se recomienda que el objeto *options* sea una instancia de [user class](../Concepts/classes.md) que tenga funciones de retrollamada. Por ejemplo, se puede crear una función `onResponse()` en la clase, se llamará automáticamente de forma asincrónica cuando se dispare un evento *respuesta*.
 
 Recomendamos la siguiente secuencia:
 

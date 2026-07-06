@@ -32,8 +32,7 @@ A janela tem as seguintes características principais:
   ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
   - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
-  - ou arraste e solte o objeto da biblioteca.
-    O objeto é então adicionado ao formulário.
+  - ou arraste e solte o objeto da biblioteca. O objeto é então adicionado ao formulário.
 
 Esta biblioteca é só de leitura. Se quiser editar objetos padrão ou criar sua própria biblioteca de objetos pré-configurados ou formulários projetos, você precisará criar uma biblioteca de objetos personalizada (veja abaixo).
 
@@ -41,7 +40,7 @@ Todos os objetos propostos na biblioteca de objetos padrão estão descritos em 
 
 ## Utilização da biblioteca de objetos padrão
 
-Pode criar e usar bibliotecas de objetos personalizados em 4D. Uma biblioteca de objetos personalizados é um projeto 4D onde você pode armazenar seus objetos favoritos (botões, textos, imagens etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. Uma biblioteca de objetos personalizados é um projeto 4D onde você pode armazenar seus objetos favoritos (botões, textos, imagens etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos. Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
 
 Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. As bibliotecas são montadas e usadas por operações simples de arrastar e soltar ou copiar e colar.
 
@@ -73,7 +72,7 @@ Na realidade, as bibliotecas de objectos personalizados são projectos 4D cláss
 
 ### Construir uma biblioteca de objectos
 
-Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Eles podem vir de um formulário ou de outra biblioteca de objetos (incluindo a [biblioteca padrão](#using-the-standard-object-library)). Nenhum vínculo é mantido com o objeto original: se o original for modificado, o objeto copiado não será afetado.
+Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Os objectos são colocados numa biblioteca de objectos usando o método de arrastar e largar ou uma operação de cortar-copiar-colar. Nenhum vínculo é mantido com o objeto original: se o original for modificado, o objeto copiado não será afetado.
 
 > Para poder arrastar e soltar objetos de formulários para bibliotecas de objetos, você deve se certificar de que a opção **Iniciar arrastar e soltar** nas Preferências 4D esteja selecionada.
 

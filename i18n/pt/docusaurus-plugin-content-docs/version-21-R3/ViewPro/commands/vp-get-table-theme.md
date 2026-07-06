@@ -49,7 +49,6 @@ $param:=cs. ViewPro. TableTheme.new()
 $param.theme:="dark10" //uso de nome de tema nativo VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
 $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
 $result:=Asserted(Value type($vTheme.theme)=Is object) //true
-
 ```
 
 ## Veja também

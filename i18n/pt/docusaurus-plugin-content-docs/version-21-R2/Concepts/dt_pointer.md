@@ -220,7 +220,7 @@ Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça d
 
 ### Indicadores como parâmetros para os métodos
 
-Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por ejemplo, el siguiente método, `takeTwo`, toma dos parámetros que son punteros. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
+Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Pode passar um ponteiro como parâmetro para um método. Altera o objecto referenciado pelo primeiro parâmetro para caracteres maiúsculos, e o objecto referenciado pelo segundo parâmetro para caracteres minúsculos. Aqui está o método do projecto:
 
 ```4d
   //takeTwo project method

@@ -28,7 +28,7 @@ Quando essa propriedade está ativada, a altura de cada linha é calculada autom
 
 * O cálculo da altura da linha ignora:
   * conteúdo da coluna oculta
-  * Fundo
+  * Array estilo linha
 
 :::caution
 
@@ -240,11 +240,11 @@ Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). Por p
 
 #### Veja também
 
-[Array estilo linha](#row-height-array)
+[Array altura linha](#row-height-array)
 
 ---
 
-## Array estilo linha
+## Array altura linha
 
 Essa propriedade é usada para especificar o nome de um array de altura de linha que você deseja associar a list box. Um array de altura de linha deve ser do tipo numérico (longint por defeito).
 

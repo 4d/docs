@@ -16,7 +16,7 @@ title: Etiquetas
 
 :::note
 
-As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md).
 
 :::
 
@@ -62,9 +62,7 @@ You use this area to design your label zone by placing and positioning all the i
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
   If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. O **editor de fórmulas** é então exibido:
-  ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands/string.md):<br/>
+- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area.
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 

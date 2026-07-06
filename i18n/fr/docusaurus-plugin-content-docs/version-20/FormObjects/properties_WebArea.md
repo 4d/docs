@@ -6,7 +6,7 @@ title: Zones Web
 ---
 ## Accéder aux méthodes 4D
 
-Il est possible d’appeler des méthodes 4D depuis le code JavaScript exécuté dans une zone Web et de recevoir des valeurs en retour. Pour pouvoir appeler des méthodes 4D depuis la zone Web, vous devez cocher l'option Accès méthodes 4D pour la zone dans la Liste des propriétés .
+Il est possible d’appeler des méthodes 4D depuis le code JavaScript exécuté dans une zone Web et de recevoir des valeurs en retour. Il est possible d’appeler des méthodes 4D depuis le code JavaScript exécuté dans une zone Web et de recevoir des valeurs en retour.
 
 > Cette propriété n'est disponible que si la zone Web [utilise le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine).
 

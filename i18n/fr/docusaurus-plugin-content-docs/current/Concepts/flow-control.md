@@ -38,7 +38,7 @@ A noter que l'élément `Else` est optionnel, vous pouvez écrire :
  End if
 ```
 
-La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Le `Else` est optionnel ; lorsqu’il est omis, c’est la première ligne d’instructions suivant le `End if` (s’il y en a une) qui est exécutée.
+La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées.
 
 A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
@@ -146,7 +146,7 @@ Chaque expression booléenne débute par le caractère deux points (`:`). La com
 :(bValidate=1)
 ```
 
-Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté.
+Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées. Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées.
 
 Vous pouvez placer une instruction Else après le dernier cas. Seules les instructions suivant le premier cas TRUE (et ce, jusqu’au cas suivant) seront exécutées.
 

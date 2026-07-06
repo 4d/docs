@@ -141,7 +141,7 @@ A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-Para informações sobre códigos de estado SMTP, consulte por favor [esta página](https://www.usps.org/info/smtp_status.html).
+For information about SMTP status codes, please refer to [this page](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml).
 
 #### Exemplo
 
@@ -162,6 +162,9 @@ Para informações sobre códigos de estado SMTP, consulte por favor [esta pági
  $status:=$transporter.checkConnection()
  If($status.success=True)
     ALERT("SMTP connection check successful!")
+ Else
+    ALERT("Error # "+String($status.status)+", "+$status.statusText)
+ End if
  Else
     ALERT("Error # "+String($status.status)+", "+$status.statusText)
  End if

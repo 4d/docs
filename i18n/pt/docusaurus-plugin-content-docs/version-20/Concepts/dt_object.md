@@ -29,7 +29,7 @@ Tenha em atenção que os nomes das propriedades diferenciam entre maiúsculas e
 :::
 
 
-Você gerencia variáveis, campos ou expressões do tipo Object usando a notação de objeto padrão [](#properties) ou os comandos disponíveis no tema **Objects (Language)** . Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** .
+Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** . Você gerencia variáveis, campos ou expressões do tipo Object usando a notação de objeto padrão [](#properties) ou os comandos disponíveis no tema **Objects (Language)** .
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
 
@@ -195,7 +195,7 @@ Ao usar os objetos, o valor **null** é usado por meio do comando **Null** . Ess
 
 ### Valor não definido
 
-A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
+A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor.
 
 Para saber mais, veja a descrição do comando `Null`
 

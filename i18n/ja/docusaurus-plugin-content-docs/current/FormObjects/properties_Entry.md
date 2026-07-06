@@ -7,7 +7,13 @@ title: 入力
 
 4D にはカスタマイズ可能なスペルチェック機能がビルトインされています。 4D にはカスタマイズ可能なスペルチェック機能がビルトインされています。 4D にはカスタマイズ可能なスペルチェック機能がビルトインされています。 スペルチェックはテキスト型の [入力](input_overview.md) オブジェクト、そして [4D Write Pro](writeProArea_overview.md)ドキュメントに対して実行可能です。
 
-自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 この場合、スペルチェックはタイプ中に自動的に実行されます。 自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 チェックしたいオブジェクトそれぞれに対して `SPELL CHECKING` 4Dランゲージコマンドを呼び出して実行することもできます。
+自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 この場合、スペルチェックはタイプ中に自動的に実行されます。 You can also execute the [`SPELL CHECKING`](../commands/spell-checking) 4D language command for each object to be checked.
+
+:::note Writing Tools (macOS)
+
+On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using IA, you might consider using the [Writing Tools](#writing-tools) property.
+
+:::
 
 #### JSON 文法
 
@@ -29,7 +35,7 @@ title: 入力
 
 このプロパティを有効にすると、フォームの実行中にオブジェクトに対して標準のコンテキストメニューが使用できるようになります。
 
-ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
+ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
 
 [マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクト、または[リストボックスカラム](listbox-column.md) の場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
 
@@ -39,7 +45,7 @@ title: 入力
   スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
   このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューは[`WA SET PREFERENCE`](../commands/wa-set-preference) コマンドを使用することでアクセスを管理することが可能です。
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 [Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューは[`WA SET PREFERENCE`](../commands/wa-set-preference) コマンドを使用することでアクセスを管理することが可能です。
 
 #### JSON 文法
 
@@ -97,7 +103,7 @@ title: 入力
 
 ## 入力フィルター
 
-<br /><br /> 入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 たとえば、パーツ番号が常に 2つの文字とそれに続く 3つの数字で構成されるとき、入力フィルターを通してそのパターンを強制することができます。 さらに特定の文字や数字のみを使用するよう制御することもできます。
+入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 たとえば、パーツ番号が常に 2つの文字とそれに続く 3つの数字で構成されるとき、入力フィルターを通してそのパターンを強制することができます。 さらに特定の文字や数字のみを使用するよう制御することもできます。
 
 入力フィルターはデータ入力時にのみ動作します。 オブジェクトの選択をユーザーが解除した後のデータ表示には効果がありません。 通常は、入力フィルターを [表示フォーマット](properties_Display.md) と一緒に使用します。 フィルターはデータ入力を制約し、表示フォーマットはデータ入力後の値の表示を制御します。
 
@@ -155,7 +161,7 @@ title: 入力
 
 ## フォーカス可
 
-オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。  オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
+オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。  オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。 オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
 
 > [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。
 
@@ -192,7 +198,7 @@ title: 入力
 
 ## キーボードレイアウト
 
-このプロパティは [入力](input_overview.md) オブジェクトに対して特定のキーボードレイアウトを関連付けます。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。
+このプロパティは [入力](input_overview.md) オブジェクトに対して特定のキーボードレイアウトを関連付けます。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。
 
 デフォルトでは、オブジェクトはカレントのキーボードレイアウトを使用します。
 
@@ -227,7 +233,7 @@ title: 入力
 #### ×
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
-- テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
+- テキストは常に一行で表示されます。 テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### ◯
@@ -311,7 +317,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 ## ショートカット
 
-[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。  ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。  ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
 
 ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...]  ボタンをクリックします。
 
@@ -363,5 +369,55 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 #### コマンド
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
+---
+
+## Writing Tools
+
+On macOS, this property lets end users apply [Apple Intelligence **Writing Tools**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) to the text of [4D Write Pro](writeProArea_overview.md) and [input](input_overview.md) (with [multiline](#multiline) support) form objects. Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+
+![](../assets/en/FormObjects/writing-tools.png)
+
+:::tip 関連したblog 記事
+
+Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**.
+
+:::
+
+When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+
+- if some text is selected, only the selection is replaced,
+- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+
+:::note
+
+Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.
+
+:::
+
+The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+
+:::note
+
+The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+
+:::
+
+The availability and default value of the property depend on the object type:
+
+| Object                                       | Availability in the Property List                                             | デフォルト値 |
+| -------------------------------------------- | ----------------------------------------------------------------------------- | ------ |
+| [入力](input_overview.md)                      | Only when the [Multiline](#multiline) property is set to "Yes" or "Automatic" | false  |
+| [4D Write Pro エリア](writeProArea_overview.md) | Always displayed                                                              | true   |
+
+#### JSON 文法
+
+| 名称           | データタイプ  | とりうる値       |
+| ------------ | ------- | ----------- |
+| writingTools | boolean | true, false |
+
+#### 対象オブジェクト
+
+[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md) ([multiline](#multiline))
 
 

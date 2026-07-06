@@ -140,7 +140,7 @@ Considerando as propriedades de tabela abaixo:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+|Result|4D. EntitySelection|<-|References on all entities related to the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -247,7 +247,7 @@ $ds. Persons.clearRemoteCache()
 |---------|--- |:---:|------|
 |objectCol |Collection|->|Collection of objects to be mapped with entities|
 |settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+|Result|4D. EntitySelection|<-|Entity selection filled from the collection|
 </div>
 <!-- END REF -->
 
@@ -271,7 +271,7 @@ Para cada objeto de *objectCol*:
   * Se a chave primária for dada (como está) e existir, um erro é enviado.
   * Se a chave primária for dada (como é) e não existir, a entidade é criada
   * Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
-> A propriedade "\_\_KEY" que contém um valor só é tida em conta quando a propriedade "\_\_NEW" está definida como **false** (ou é omitida) e existe uma entidade correspondente. Em todos os outros casos, o valor da propriedade "\_\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
+> > A propriedade "\_\_KEY" que contém um valor só é tida em conta quando a propriedade "\_\_NEW" está definida como **false** (ou é omitida) e existe uma entidade correspondente. Em todos os outros casos, o valor da propriedade "\_\_KEY" é ignorado, o valor da chave primária deve ser passado "tal como está".
 
 **Entidades relacionadas**
 
@@ -447,7 +447,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 |---------|--- |:---:|------|
 |primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
+|Result|4D. Entity|<-|Entity matching the designated primary key|
 </div>
 <!-- END REF -->
 
@@ -572,13 +572,13 @@ $number:=$ds. Persons.getCount()
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
+|Result|cs. DataStore|<-|Datastore of the dataclass|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.new()` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.getDataStore().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -717,20 +717,20 @@ Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                           |
-| ----------- | ---------- | ----------------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                               |
-| stamp       | Integer    | Carimbo da cache.                                                                   |
-| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.  |
-| |           | Collection | Collection | Collection | Contém um objecto de entrada para cada entidade na cache. |
+| Propriedade | Tipo       | Descrição                                                                                        |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                                            |
+| stamp       | Integer    | Carimbo da cache.                                                                                |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas.               |
+| |           | Collection | Collection | Collection | Collection | Contém um objecto de entrada para cada entidade na cache. |
 
 Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                                             |
-| ----------- | ---------- | ----------------------------------------------------- |
-| data        | Object     | Objeto que contém os dados da entrada                 |
-| expired     | Parâmetros | True se a entrada tiver expirado                      |
-| |           | Text       | Text       | Text       | Chave primária da entidade. |
+| Propriedade | Tipo       | Descrição                                                          |
+| ----------- | ---------- | ------------------------------------------------------------------ |
+| data        | Object     | Objeto que contém os dados da entrada                              |
+| expired     | Parâmetros | True se a entrada tiver expirado                                   |
+| |           | Text       | Text       | Text       | Text       | Chave primária da entidade. |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
@@ -792,13 +792,13 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
+|Result|4D. Entity|<-|New entity matching the Dataclass|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.new()` <!-- REF #DataClassClass.new().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.new().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
@@ -841,7 +841,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 |Parameter|Type||Description|
 |---|---|---|---|
 |keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+|Result|4D. EntitySelection|<-|New blank entity selection related to the dataclass|
 </div>
 <!-- END REF -->
 
@@ -858,9 +858,9 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 #### Exemplo
 
 ```4d
- var $USelection; $OSelection : cs.EmployeeSelection
- $USelection:=ds.Employee.newSelection() //criar uma seleção vazia sem ordenação da entidade
- $OSelection:=ds.Employee.newSelection(dk keep ordered) //criar uma seleção de entidade vazia ordenada
+ var $USelection; $OSelection : cs. EmployeeSelection
+ $USelection:=ds. Employee.newSelection() //criar uma seleção vazia sem ordenação da entidade
+ $OSelection:=ds. Employee.newSelection(dk keep ordered) //criar uma seleção de entidade vazia ordenada
 ```
 
 <!-- END REF -->
@@ -890,7 +890,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+|Result|4D. EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
 
@@ -919,7 +919,7 @@ onde:
 
   * **Text**: A string de fórmula deve ser precidida da declaração `eval( )`,para que o parser da pesquisa avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30)"*
   * **Object**: o objeto [formula](FunctionClass.md) é passado como um **placeholder** (ver abaixo). A fórmula deve ter sido criada usando  [`Formula`](FunctionClass.md#formula) ou o comando[`Formula from string`](FunctionClass.md#formula-from-string) command.
-> * Lembre que fórmulas 4D são compatíveis apenas com os símbolos `&` and `|` para operadores lógicos.
+> * > * Lembre que fórmulas 4D são compatíveis apenas com os símbolos `&` and `|` para operadores lógicos.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
 
  Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto é detalhado no parágrafo **Parâmetro fórmula** mais abaixo.
@@ -942,7 +942,7 @@ onde:
  | Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                               |
  | Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                           |
 
-* **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20. Quando usar um valor constante, as regras abaixo devem ser respeitadas:
+* **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20. Quando usar um valor constante, as regras abaixo devem ser respeitadas: Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet.
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   * Valores constantes de tipo **booleano** : **true** ou **false** (diferencia maiuscula de minúscula).
   * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
@@ -1054,23 +1054,19 @@ Ao pesquisar nos atributos de objectos de classe de dados que contêm colecçõe
 
 ```
 Entity 1:
-ds.Class.name: "A"
+ds. Class.name: "A"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
                 "val":1
-            } ] }
-
-Entity 2:
-ds.Class.name: "B"
+            } ] } Entity 2:
+ds. Class.name: "B"
 ds.Class.info:
     { "coll" : [ {
                 "val":1,
                 "val":0
-            } ] }
-
-Entity 3:
-ds.Class.name: "C"
+            } ] } Entity 3:
+ds. Class.name: "C"
 ds.Class.info:
     { "coll" : [ {
                 "val":0,
@@ -1095,7 +1091,7 @@ ds.Class.query(not("info.coll[].val = :1";0))
 Se você quiser implementar uma consulta que encontre entidades em que "pelo menos uma propriedade seja diferente do valor **", você precisará usar uma notação especial usando uma letra no `[]`:
 
 ```4d
-ds.Class.query("info.coll[a].val := :1";0)  
+ds. Class.query("info.coll[a].val := :1";0)  
 // devolve A e B
 // encontra "entidades em que pelo menos uma propriedade val é diferente de 0"
 ```
@@ -1222,7 +1218,7 @@ No exemplo 3 são oferecidos mais exemplos.
 
 #### Parâmetro querySettings
 
-No parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
+No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
 | Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

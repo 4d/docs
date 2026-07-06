@@ -102,7 +102,7 @@ Méthode ***OpenForm*** :
 
 #### Description
 
-La propriété `.description` <!-- REF #SignalClass.description.Summary -->contient une description personnalisée pour l'objet `Signal`<!-- END REF -->.
+La propriété `.description` <!-- REF #SignalClass.description.Summary -->contient une description personnalisée pour l'objet `Signal`<!-- END REF -->..
 
 `.description` peut être définie à la création de l'objet signal ou à tout moment. Notez que comme l'objet `Signal` est un objet partagé, tout accès en mode écriture à la propriété `.description` doit être encadré par les mots-clés `Use...End use`.
 

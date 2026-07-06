@@ -19,7 +19,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 - [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
 - [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> 4D 19 R5 以降、[Windows システムレンダリングエンジン](./webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでは、進捗状況変数が更新されません。
 
 ### Webレンダリングエンジン
 
@@ -42,7 +42,7 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 ### $4dオブジェクトの使用
 
 
-[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。 $4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
@@ -62,7 +62,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `result`: "$0" 式に返される、4Dメソッド実行の戻り値です。 戻り値は JavaScript でサポートされている型 (文字列、数値、配列、オブジェクト) のいずれかになります。 `C_OBJECT` コマンドを使用して、オブジェクトを返すことができます。
 
-> デフォルトとして、4Dは UTF-8 文字コードで動作しています。 (アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。文字コードが UTF-8 でない場合、文字が正しく表示されない可能性があります。 この場合、以下の 1行を HTMLページに追加して文字コードを宣言してください: <br /> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> デフォルトとして、4Dは UTF-8 文字コードで動作しています。 (アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。 この場合、以下の 1行を HTMLページに追加して文字コードを宣言してください: <br /> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### 例題 1
 
@@ -135,7 +135,7 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 ## フォームイベント
 
-特定のフォームイベントは、Webエリアをプログラミングで管理するこを目的としています。すなわち、リンクの起動に関連しています:
+特定のフォームイベントは、Webエリアをプログラミングで管理するこを目的としています。 すなわち、リンクの起動に関連しています:
 
 - [`On Begin URL Loading`](Events/onBeginUrlLoading.md)
 - [`On URL Resource Loading`](Events/onUrlResourceLoading.md)
@@ -178,7 +178,7 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 ### Webエリアと Webサーバーのコンフリクト (Windows)
 
-Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。これをおこなうとコンフリクトが発生し、アプリケーションがフリーズすることがあります。 もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。自身の Webサーバーにアクセスできないということです。
+Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。 もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。 自身の Webサーバーにアクセスできないということです。
 
 ### プロトコルの挿入 (macOS)
 
@@ -204,7 +204,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 詳細は `WA SET PREFERENCE` コマンドの説明を参照してください。
 
-上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。
+上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。 この項目を選択すると、Webインスペクターウィンドウが表示されます。
 
 > このデバッガーの機能の詳細に関しては、Webレンダリングエンジンにより提供されているドキュメントを参照してください。
 
@@ -213,7 +213,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 ## プロパティ一覧
 
-[Access 4D methods](properties_WebArea.md#access-4d-methods) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#css-class) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド) - [URL](properties_WebArea.md#url) - [進捗状況変数](properties_WebArea.md#進捗状況変数) - [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) - [4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) 
 
 
 
