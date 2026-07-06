@@ -9,7 +9,7 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 
 #### Lo más destacado
 
-- IA: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
+- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
 - Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
 - Las hojas de estilo para listas de varios niveles ya son [compatibles con 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), lo que permite a los usuarios crear y gestionar listas estructuradas de varios niveles directamente desde la barra de herramientas y la barra lateral.
 - Nuevo comando [`defer`](../commands/defer) para declarar que un fragmento de código se ejecute siempre al salir de un método o una función; nuevo comando [`Deferred formulas`](../commands/deferred-formulas) para obtener la lista de fórmulas diferidas.

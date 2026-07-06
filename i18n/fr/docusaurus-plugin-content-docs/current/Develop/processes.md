@@ -138,3 +138,4 @@ Des [icônes spécifiques](../ServerWindow/processes#process-type) identifient l
 
 Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.
 
+<!-- INCLUDE develop-semaphores.Desc -->

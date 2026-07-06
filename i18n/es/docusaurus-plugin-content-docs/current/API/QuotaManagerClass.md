@@ -54,11 +54,11 @@ You can change this value dynamically using the [`quotas.defaultEntitySetTimeout
 
 :::note
 
-If you define a value higher than the `maxEntitySetTimeout` property value, it will be aligned with the `maxEntitySetTimeout` value.
+Si se define un valor superior al de la propiedad `maxEntitySetTimeout`, dicho valor se ajustará al de `maxEntitySetTimeout`.
 
 :::
 
-You cannot pass a value <=0 (an error is generated in this case). To reset the property value for the session, pass *undefined*.
+No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablecer el valor de la propiedad para la sesión, pase *undefined*.
 
 #### Ejemplo
 
@@ -92,7 +92,7 @@ http://127.0.0.1/rest/People?$filter=ID>=4&$method=entityset&$timeout=3000
 
 ... then the timeout defined in the request is ignored and the entity set will be released after 40 minutes if not used during this period of time.
 
-You cannot pass a value <=0 (an error is generated in this case). To reset the property value for the session, pass *undefined*.
+No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablecer el valor de la propiedad para la sesión, pase *undefined*.
 
 #### Ejemplo
 
@@ -114,11 +114,11 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session (in seconds)<!-- END REF -->.
 
-By default, there is no limit for entity sets [stored in memory by REST requests](../REST/$info.md) (the value is 0). You can set a limit to control the server payload for a specific session.
+By default, there is no limit for entity sets [stored in memory by REST requests](../REST/$info.md) (the value is 0). Puede definir un límite para controlar la carga útil del servidor para una sesión específica.
 
 When the maximum number of allowed entity sets is reached, a REST request that need to create an entity set will get a [**429** HTTP status code and an error response](../REST/REST_requests.md#rest-status-and-response), until at least one entity set is released. You can release an entity set from the cache using the [`$release` REST command](../REST/$entityset.md#entitysetrelease).
 
-You cannot pass a value <=0 (an error is generated in this case). To reset the property value for the session, pass *undefined*.
+No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablecer el valor de la propiedad para la sesión, pase *undefined*.
 
 #### Ejemplo
 

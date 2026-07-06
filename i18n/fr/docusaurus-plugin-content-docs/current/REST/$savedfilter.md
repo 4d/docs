@@ -7,7 +7,7 @@ Enregistre le filtre défini par $filter lors de la création d'un ensemble d'en
 
 ## Description
 
-Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregistrer le filtre utilisé pour sa création. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$entityset/$release`](./$entityset.md#entitysetrelease)).
+Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregistrer le filtre utilisé pour sa création. Si l'ensemble d'entités que vous avez créé est supprimé du cache du serveur 4D (en raison du délai écoulé, le besoin d'espace du serveur, ou si vous le supprimez en appelant [`$method=release`]($method.md#methodrelease)).
 
 Utilisez `$savedfilter` pour enregistrer le filtre que vous avez défini lors de la création de votre ensemble d'entités, puis passez `$savedfilter` avec votre appel, pour récupérer à chaque fois l'ensemble d'entités.
 

@@ -5,21 +5,21 @@ title: Release Notes
 
 ## 4D 21 R4
 
-Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.
+Lisez [**Les nouveautés de 4D 21 R4**](https://blog.4d.com/fr/whats-new-in-4d-21-r4), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R4.
 
 #### Points forts
 
-- IA: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
-- Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
-- Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
-- New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
-- New session `.quotas` property to configure thresholds for sessions.
-- New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
-- New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
+- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
+- Amélioration de la [prise en charge des déconnexions client/serveur](../Desktop/clientServer.md#management-of-unreachable-peer) avec la couche réseau QUIC : nouveau paramètre de base de données [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135), nouvelle propriété [`unreachableSince` de session.info](../API/SessionClass.md#info).
+- Les feuilles de style pour listes à plusieurs niveaux sont désormais [prises en charge dans 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), ce qui permet aux utilisateurs de créer et de gérer des listes structurées à plusieurs niveaux directement depuis la barre d'outils et la barre latérale.
+- Nouvelle commande [`defer`](../commands/defer) permettant de déclarer du code qui sera toujours exécuté à la sortie d'une méthode ou d'une fonction ; nouvelle commande [`Deferred formulas`](../commands/deferred-formulas) permettant d'obtenir la liste des formules différées.
+- Nouvelle propriété `.quotas` de session permettant de configurer les seuils pour les sessions.
+- Nouvelle classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) permettant de gérer des objets définissant des seuils destinés à protéger le serveur.
+- Nouvelle requête REST [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) permettant de supprimer des entity sets du cache du serveur.
 
 #### Changements de comportement
 
-- The **`GET /Employee/$entityset/<entitySetID>?$method=release`** REST syntax is **deprecated** and should no longer be used. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+- La syntaxe REST **`GET /Employee/$entityset/<entitySetID>?$method=release`** est **obsolète** et ne doit plus être utilisée. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
 
 ## 4D 21 R3
 
@@ -28,7 +28,7 @@ Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-2
 #### Points forts
 
 - La commande [`JSON Validate`](../commands/json-validate) prend désormais en charge le draft du schéma JSON 2020-12.
-- 4D Write Pro now supports [multi-level list style sheets](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
+- 4D Write Pro prend désormais en charge les [feuilles de style pour listes multi-niveaux](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets), ce qui permet de créer et de gérer des [listes à plusieurs niveaux](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) structurées avec numérotation automatique.
 - Possibilité d'utiliser un certificat personnalisé provenant du trousseau de macOS au lieu d'un dossier de certificats local dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Nouvelle classe [`4D.Method`](../API/MethodClass.md) pour créer et exécuter le code d'une méthode 4D à partir d'un texte source. Les commandes [`METHOD Get path`](../commands/method-get-path) et [`METHOD RESOLVE PATH`](../commands/method-resolve-path) prennent charge une nouvelle constante `path volatile method` (128).
 - Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
@@ -36,7 +36,7 @@ Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Nouvelle [page **IA**](../settings/ai.md) dans la boîte de dialogue des Propriétés, permettant de configurer des [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md) qui peuvent être appelés dans le code via le composant 4D AIKit.
 - Composant 4D AIKit : nouvelle classe [Providers](../aikit/Classes/OpenAIProviders.md) pour instancier et gérer les [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md).
 - Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
-- New [printing renderer](../FormEditor/forms.md#print-rendering-engine) for forms on Liquid glass and Fluent UI interfaces. New compatibility options to [enable the renderer on Classic interfaces](../FormEditor/forms.md#legacy-print-renderer).
+- Nouveau [moteur de rendu d'impression](../FormEditor/forms.md#print-rendering-engine) pour les formulaires dans les interfaces Liquid Glass et Fluent UI. Nouvelle option de compatibilité permettant d'[activer le moteur de rendu sur les interfaces classiques](../FormEditor/forms.md#legacy-print-renderer).
 - Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 
@@ -99,7 +99,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit          | WKWebView                              | 19                  |                                                                                                                                                       |
-| Windows App SDK | 2                                      | **21 R4**           | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                            |
+| Windows App SDK | 2                                      | **21 R4**           | Utilisé pour le [rendu Fluent UI](../FormEditor/forms.md#fluent-ui-rendering)                                                                         |
 | Xerces          | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib            | 1.3.1  | 21                  |                                                                                                                                                       |
 

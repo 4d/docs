@@ -116,7 +116,7 @@ Si el parámetro *option* también contiene una propiedad wk factur x, entonces 
 
 :::note
 
-Los archivos PDF adjuntos solo son compatibles con la versión PDF/A-3. Cuando pasas la propiedad wk files, la versión "PDF/A-3" se utiliza automáticamente.
+Los archivos PDF adjuntos solo son compatibles con la versión PDF/A-3. Cuando pasa la propiedad wk files, la versión "PDF/A-3" se utiliza automáticamente.
 
 :::
 

@@ -38,6 +38,7 @@ Para o segundo parâmetro, você também pode passar:
   - Um campo de imagem ou variável
   - Uma string que contém um caminho para um arquivo de imagem armazenado no disco, na sintaxe do sistema.
     Se você usar uma string, você poderá passar um nome completo ou um nome de caminho relativo ao arquivo de estrutura do banco de dados. Você também pode passar um nome de arquivo, neste caso o arquivo deve estar localizado ao lado do arquivo de estrutura de banco de dados. Você também pode passar um nome de arquivo, neste caso o arquivo deve estar localizado ao lado do arquivo de estrutura de banco de dados.
+
 - In *pictureFile* : a `File` object representing a picture file or a path.
 
 Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands/picture-codec-list). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.

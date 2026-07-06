@@ -251,7 +251,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
 
 #### Gramática JSON
 

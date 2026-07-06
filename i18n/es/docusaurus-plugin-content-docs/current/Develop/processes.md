@@ -138,3 +138,4 @@ Todos los procesos worker, excepto el proceso principal, tienen el tipo de proce
 
 Para más información, consulte [este artículo de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sobre cómo utilizar los workers.
 
+<!-- INCLUDE develop-semaphores.Desc -->

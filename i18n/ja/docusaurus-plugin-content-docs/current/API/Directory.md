@@ -556,7 +556,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 > エイリアスまたはシンボリックリンクは解決されません。
 
-*options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます: *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
 | 定数                    | 値 | 説明                                    |
 | --------------------- | - | ------------------------------------- |

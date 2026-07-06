@@ -65,9 +65,9 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 ## Hojas de estilo para listas de varios niveles
 
-Multi-level list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+Las hojas de estilo para listas de varios niveles se utilizan para crear [listas de varios niveles](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + nvl + índice", por ejemplo "Mylist lvl 2".
 
 To customize multi-level list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
@@ -117,7 +117,7 @@ resultado:
 
 ### Valores de atributos predefinidos
 
-When created, multi-level list style sheets use predefined values:
+Al crearse, las hojas de estilo de listas de varios niveles utilizan valores predefinidos:
 
 - `wk margin left` = 0,75 cm \* (número de niveles anteriores) o 0,25 pulgadas \* (número de niveles anteriores), dependiendo de la unidad de diseño actual
 - `wk list type` = `wk decimal`

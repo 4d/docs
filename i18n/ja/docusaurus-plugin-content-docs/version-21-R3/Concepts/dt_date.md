@@ -50,9 +50,9 @@ C_DATE によって宣言された日付は 32767年までの範囲に対応し�
 
 ## JavaScriptからの日付の変換
 
-JavaScript 内での日付はオブジェクトであるため、他のオブジェクト同様、4D に対して日付のJSON 形式を格納したテキストとして送信されます。 この原則は、特に[JSON コマンド](../commands/theme/JSON) あるいは [Web エリア](../FormObjects/webArea_overview.md) を使用した場合に実装されます。 この原則は、特に[JSON コマンド](../commands/theme/JSON) あるいは [Web エリア](../FormObjects/webArea_overview.md) を使用した場合に実装されます。
+JavaScript 内での日付はオブジェクトであるため、他のオブジェクト同様、4D に対して日付のJSON 形式を格納したテキストとして送信されます。 この原則は、特に[JSON コマンド](../commands/theme/JSON) あるいは [Web エリア](../FormObjects/webArea_overview.md) を使用した場合に実装されます。
 
-JavaScript 日付オブジェクトのJSON 形式は、ISO 8601 標準に準拠しています。例: "2013-08-23T00:00:00Z"。 このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です: このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です:
+JavaScript 日付オブジェクトのJSON 形式は、ISO 8601 標準に準拠しています。例: "2013-08-23T00:00:00Z"。 このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です:
 
 [`JSON Parse`](../commands/json-parse) コマンドを使用する:
 

@@ -543,10 +543,10 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|Parámetro|Tipo||Descripción|  
 |---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
+|param|cualquiera|->|Parámetro(s) que se deben pasar al constructor padre|
+|Resultado|Object|<-|Object's parent|
 </div>
 <!-- END REF -->
 

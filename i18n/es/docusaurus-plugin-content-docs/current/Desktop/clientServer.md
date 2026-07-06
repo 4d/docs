@@ -151,11 +151,11 @@ La siguiente tabla resume dónde se ejecuta el código por defecto y cómo cambi
 
 ## Gestión de pares inalcanzables
 
-When the [QUIC network layer is used](../settings/client-server.md#network-layer), client/server sessions benefit from an **automatic reconnection feature** in case of unexpected disconnections. Unexpected disconnections include for example:
+Cuando se utiliza la [capa de red QUIC](../settings/client-server.md#network-layer), las sesiones cliente-servidor se benefician de una **función de reconexión automática** en caso de desconexiones inesperadas. Entre las desconexiones inesperadas se incluyen, por ejemplo:
 
-- Desenchufar y enchufar el cable LAN,
+- desenchufar y enchufar el cable LAN,
 - Transferencia mediante una conexión móvil,
-- Switch reboot,
+- reinicio del conmutador,
 - un pequeño error de red.
 
 This feature supports both server-side and client-side management in the event of a lost connection with a peer, and includes configurable timeouts and real-time information.
@@ -184,11 +184,11 @@ If 4D Server unexpectedly stops responding, a reconnection dialog box is display
 
 #### Objeto Session actualizado
 
-When the "Unreachable" event is received on either side, an [`info.unreachableSince`](../API/SessionClass.md#info) property is created in the session on the machine receiving the event (on the server, it is readable through the [`Process activity.sessions`](../commands/process-activity) property), and it starts counting seconds since the last communication. You can use this property to implement your own disconnection interface.
+When the "Unreachable" event is received on either side, an [`info.unreachableSince`](../API/SessionClass.md#info) property is created in the session on the machine receiving the event (on the server, it is readable through the [`Process activity.sessions`](../commands/process-activity) property), and it starts counting seconds since the last communication. Puede utilizar esta propiedad para implementar su propia interfaz de desconexión.
 
 ### Restablecer o cerrar la conexión
 
-The QUIC session timeout is automatically used to monitor disconnections:
+El tiempo de espera de la sesión QUIC se utiliza automáticamente para supervisar las desconexiones:
 
 - If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.
 - If the connection is not restored before the QUIC session timeout is reached, the session is closed.

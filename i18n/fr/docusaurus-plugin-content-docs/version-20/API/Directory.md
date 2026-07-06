@@ -514,7 +514,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 La fonction `.files()` retourne <!-- REF #directory.files().Summary -->une collection des objets `File` contenus dans le dossier<!-- END REF -->.
 > Les alias ou les liens symboliques ne sont pas résolus.
 
-Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |

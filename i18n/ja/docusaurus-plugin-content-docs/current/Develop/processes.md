@@ -138,3 +138,4 @@ title: プロセスとワーカー
 
 ワーカーの使い方の詳細については、[このブログ記事](https://blog.4d.com/ja/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) を参照ください。
 
+<!-- INCLUDE develop-semaphores.Desc -->

@@ -24,7 +24,7 @@ Si no se selecciona ningún elemento, el valor es 0
 
 ### Ir a la página
 
-You can assign the `gotoPage` [standard action](/Desktop/standard-actions) to a button grid. Cuando se selecciona esta acción, 4D mostrará automáticamente la página del formulario que corresponde al número del botón que está seleccionado en la rejilla de botones. Por ejemplo, si el usuario selecciona el décimo botón de la rejilla, 4D mostrará la décima página del formulario actual (si existe).
+Puede asignar la [acción estándar](/Desktop/standard-actions) `gotoPage` a una rejilla de botones. Cuando se selecciona esta acción, 4D mostrará automáticamente la página del formulario que corresponde al número del botón que está seleccionado en la rejilla de botones. Por ejemplo, si el usuario selecciona el décimo botón de la rejilla, 4D mostrará la décima página del formulario actual (si existe).
 
 ## Propiedades soportadas
 

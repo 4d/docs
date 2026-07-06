@@ -106,10 +106,3 @@ Para poder realizar búsquedas y ordenaciones válidas, debe utilizar el comando
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
 ```
 
-## Normalización automática de los finales de línea
-
-Para garantizar la compatibilidad multiplataforma de los textos gestionados en la base de datos, 4D normaliza automáticamente los finales de línea de modo que ocupen un solo carácter: `\r` (retorno de carro). Esta normalización se lleva a cabo a nivel de los objetos del formulario (variables o campos) que contienen texto sin formato o de varios estilos. Los finales de línea que no sean nativos, o que utilicen una combinación de varios caracteres (por ejemplo, `\r\n`), se consideran como un único `\r`.
-
-Tenga en cuenta que de conformidad con el estándar XML (formato de texto multiestilo), los comandos de texto de estilo múltiple también normalizan los finales de línea para variables de texto que no están asociadas con objetos.
-
-Este principio facilita el uso de comandos de texto con múltiples estilos o de comandos como [`HIGHLIGHT TEXT`](../../commands/highlight-text) en un contexto multiplataforma. Sin embargo, debe tenerlo en cuenta en su procesamiento cuando trabaje con textos de fuentes heterogénicas.

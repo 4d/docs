@@ -34,6 +34,12 @@ title: 文字列
 
 **注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。 <br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。
 
+### Automatic normalization of line endings
+
+In order to ensure multi-platform compatibility of texts handled in the database, 4D automatically normalizes line endings so that they occupy a single character: `\r` (carriage return). This normalization is carried out at the level of form objects (variables or fields) hosting plain or multi-style text. Line endings that are not native, or that use a mix of several characters (for example `\r\n`), are considered as a single `\r`. Note that in compliance with the XML standard (multi-style text format), the [multi-style text commands](../commands/theme/Styled_Text.md) also normalize line endings for text variables that are not associated with objects.
+
+This principle makes it easier to use multi-style text commands or commands such as [`HIGHLIGHT TEXT`](../commands/highlight-text) in a multi-platform context. However, you must take this into account in your processing when you work with texts from heterogeneous sources.
+
 ## 文字列演算子
 
 | 演算                         | シンタックス                                    | 戻り値     | 式                                       | 値        |

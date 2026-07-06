@@ -45,7 +45,7 @@ L’emplacement courant de ce dossier est affiché dans la zone “Actuel :”. 
 
 Trois options d’emplacement sont proposées :
 
-- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](../commands/temporary-folder). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
+- **Système**: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](../commands/temporary-folder). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
 - **Dossier du fichier de données** (option par défaut) : Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier nommé “temporary files” situé au même niveau que le fichier de données de la base.
 - **Défini par l’utilisateur** : Cette option permet de définir un emplacement personnalisé. En cas de modification de cette option, sa prise en compte nécessitera le redémarrage de la base. 4D vérifie que le dossier sélectionné est accessible en écriture. Si ce n’est pas le cas, l’application essaiera les autres options jusqu’à ce qu’un dossier valide soit trouvé.
 
@@ -72,7 +72,7 @@ Trois options d’emplacement sont proposées :
 
   > Il est possible de modifier ce paramètre dans les Préférences de l'application (voir [Page General](../Preferences/general.md)). Dans ce cas, il s'applique à toutes les nouvelles bases créées par 4D.
 
-- \*\*N'utiliser que les caractères non alphanumériques pour les mots-clés \*\* : cette option modifie l'algorithme utilisé par 4D pour identifier les séparateurs de mots-clés et donc construire les index de mots-clés. Par défaut, lorsque cette option n'est pas cochée, 4D utilise un algorithme sophistiqué tenant compte des spécificités linguistiques.
+- **N'utiliser que les caractères non alphanumériques pour les mots-clés** : cette option modifie l'algorithme utilisé par 4D pour identifier les séparateurs de mots-clés et donc construire les index de mots-clés. Par défaut, lorsque cette option n'est pas cochée, 4D utilise un algorithme sophistiqué tenant compte des spécificités linguistiques.
 
   Cet algorithme est semblable à celui utilisé de façon standard par les logiciels de traitement de texte pour déterminer les limites d'une sélection en cas de double-clic dans un mot. Pour plus d’informations sur cet algorithme, reportez-vous à l'adresse `http://userguide.icu-project.org/boundaryanalysis`.
 
@@ -102,7 +102,7 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
   - **Mémoire disponible utilisée pour le cache** : Pourcentage de la mémoire restante allouée par défaut au cache.\
     Pour obtenir la taille allouée par défaut au cache, il suffit donc d’effectuer le calcul suivant : (Mémoire physique -- Mémoire physique à réserver) X Pourcentage de la mémoire utilisé pour le cache. Dans le mode adaptatif, la taille de mémoire cache varie dynamiquement en fonction des besoins de l’application et du système. Vous pouvez fixer les bornes de ces variations à l’aide des deux options suivantes :
   - **Taille minimale** : Quantité minimale de mémoire devant être réservée pour le cache. Cette valeur ne peut être inférieure à 100 Mo.
-  - **Taille maximale** : Quantité maximale de mémoire pouvant être utilisée par le cache. Cette valeur est virtuellement illimitée.\\
+  - **Taille maximale** : Quantité maximale de mémoire pouvant être utilisée par le cache. Cette valeur est virtuellement illimitée.\  
     La définition de bornes est particulièrement utile pour les bases de données distribuées sur des machines dont vous ne connaissez pas a priori la configuration mémoire. Dans ce cas, les bornes vous permettent de garantir des performances minimales dans tous les cas. Le schéma suivant illustre ce fonctionnement :
 
   Exemple de calcul de la mémoire cache :
@@ -114,19 +114,39 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
 
 - **Calcul du cache adaptatif non cochée** :  dans ce mode, vous définissez vous-même la taille de la mémoire cache pour la base. 4D affiche alors une zone de saisie permettant de définir la mémoire cache à utiliser ainsi que les informations relatives à la mémoire physique (mémoire RAM disponible sur la machine), le cache actuel et le cache après redémarrage (tenant compte de vos modifications).
 
-  La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
+La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
 
 - **Ecriture cache toutes les… Minutes/secondes** : spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque.
-  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouvez également appeler la commande [FLUSH CACHE](../commands/flush-cache) pour déclencher l'écriture à tout moment.
+  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouvez également exécuter la commande [`FLUSH CACHE`](../commands/flush-cache) pour déclencher l'écriture du cache à tout moment.
 
-  Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
+Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
 
-  Si chaque opération d’écriture du cache est accompagnée d’un fort ralentissement de la base de données, il faut ajuster la fréquence. Ce symptôme signifie une sauvegarde massive d’enregistrements. Dans ce cas, une fréquence d’écriture plus élevée, donc plus rapide, est plus efficace.
+Si chaque opération d’écriture du cache est accompagnée d’un fort ralentissement de la base de données, il faut ajuster la fréquence. Ce symptôme signifie une sauvegarde massive d’enregistrements. Dans ce cas, une fréquence d’écriture plus élevée, donc plus rapide, est plus efficace.
 
-  Par défaut, 4D affiche une petite fenêtre lors de l'écriture du cache. Si vous ne voulez pas ce rappel visuel, vous pouvez désélectionner l'option **Ecriture du cache** dans la [Page Interface](./interface.md).
+Par défaut, 4D affiche une petite fenêtre lors de l'écriture du cache. Si vous ne voulez pas ce rappel visuel, vous pouvez désélectionner l'option **Ecriture du cache** dans la [Page Interface](./interface.md).
 
 :::note
 
-Vous pouvez modifier temporairement la fréquence d'écriture du cache à l'aide du [sélecteur `Cache flush periodicity` de la commande `SET DATABASE PARAMETER`](../commands/set-database-parameter#cache-flush-periodicity-95).
+Vous pouvez modifier temporairement la fréquence de vidage du cache à l'aide du sélecteur [`Cache flush periodicity` de la commande `SET DATABASE PARAMETER`](../commands/set-database-parameter#cache-flush-periodicity-95).
 
 :::
+
+### Gestion des priorités dans le cache de la base de données
+
+Le cache de la base de données 4D intègre un mécanisme de gestion automatique des priorités qui garantit un haut niveau d'efficacité et de performances pour l'accès aux données. Grâce à ce mécanisme, lorsque de l'espace est nécessaire pour charger de nouvelles données dans le cache, les données mises en cache de faible priorité sont libérées en premier, tandis que celles de priorité plus élevée restent chargées.
+
+Ce mécanisme est entièrement automatique et, en règle générale, vous n'aurez pas à vous en soucier. Toutefois, dans certains cas particuliers, il est possible de le personnaliser à l'aide d'un [ensemble de commandes dédiées du thème "Gestion du cache"](../commands/theme/Cache_Management.md), qui permettent de modifier la priorité des objets soit pour toute la durée d'exécution de la base de données, soit temporairement pour le processus en cours. Notez que ces commandes doivent être utilisées avec précaution, car elles ont une incidence sur les performances de la base de données.
+
+#### Présentation de la gestion des priorités
+
+Le gestionnaire de cache sélectionne, selon les besoins, les données à supprimer du cache à l'aide d'un système de priorités. Les trois types d'objets pouvant être chargés dans le cache ont chacun un niveau de priorité différent :
+
+- **tables** : toutes les données des champs standard (numériques, dates, etc.), à l'exception des blobs (voir ci-dessous). La priorité par défaut est moyenne.
+- **blobs** : toutes les données de type binaire (texte, image, objet et blobs) stockées dans le fichier de données. La priorité par défaut est la plus basse.
+- **index** : tous les index de champs, y compris les index de mots-clés et les index composés. Les index étant fréquemment consultés, ils bénéficient d'un statut particulier dans le cache. La priorité par défaut est la plus élevée.
+
+Les priorités par défaut offrent généralement les meilleures performances. Toutefois, dans certains cas particuliers, vous pouvez personnaliser les priorités du cache à l'aide de deux ensembles de commandes 4D :
+
+- Des commandes permettant de modifier les priorités pour l'ensemble de la session et tous les process : [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority) et [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). Ces commandes doivent être utilisées dans une méthode au démarrage.
+- Des commandes permettant de modifier les priorités pour l'ensemble de la session et tous les process : [`SET TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority) et [`SET BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Utilisez ces commandes pour améliorer les performances d'une opération temporaire sur votre base de données, puis revenez aux priorités initiales une fois l'opération terminée. Ces commandes ne sont disponibles que sur 4D Server ou 4D en mode local.
+

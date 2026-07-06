@@ -41,7 +41,7 @@ displayed_sidebar: docs
 - *styleSheetType* 引数に、削除したいスタイルの([WP New style sheet](../WritePro/commands/wp-new-style-sheet) コマンドで作成された、あるいは[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) コマンドから返された) スタイルシートオブジェクトを渡す
 - *wpDoc* および *styleSheetName* 引数に、4D Write Pro ドキュメントと削除したいスタイルシートの名前を渡す
 
-When the style sheet to delete belongs to a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets), the behavior depends on the level being removed. 以下のものを削除することができます:
+削除したいスタイルシートが[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に属している場合、その時の振る舞いは削除するレベルによって異なります。 以下のものを削除することができます: 以下のものを削除することができます:
 
 - ルートレベルのスタイルシート
 - オプションの *listLevelIndex* 引数を提供することで、特定のサブレベルのスタイルシートを削除できます。

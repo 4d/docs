@@ -110,20 +110,39 @@ UUID バージョン7の詳細な情報については、 [こちらのblog記�
 
 - **起動時にキャッシュサイズを計算オプションがチェックされていない場合**: このモードでは、データベースのキャッシュメモリサイズを開発者が決定します。 4D はキャッシュメモリを設定する入力エリアと、物理メモリに関する情報 (マシンに実装されたRAM)、現在のキャッシュ、そして再起動後のキャッシュサイズを表示します。
 
-  入力されたキャッシュサイズは、マシンのリソース状況にかかわらず、4Dデータベース用に予約されます。 この設定は、メモリ搭載量が分かっているなど、特定の状況で使用できます。 ほとんどのケースで起動時計算モードのキャッシュで良いパフォーマンスが提供されます。
+入力されたキャッシュサイズは、マシンのリソース状況にかかわらず、4Dデータベース用に予約されます。 この設定は、メモリ搭載量が分かっているなど、特定の状況で使用できます。 ほとんどのケースで起動時計算モードのキャッシュで良いパフォーマンスが提供されます。
 
 - **キャッシュをディスクに保存 ... 秒/分**: キャッシュ中のデータを自動的に保存する間隔を設定します。
-  4D はキャッシュ中のデータを定期的に保存します。 この間隔を 1秒から 500分の範囲で設定できます。 デフォルトの設定値は 20秒です。 この保存は、キャッシュがいっぱいになった場合や、アプリケーションを終了する際にもおこなわれます。 また [FLUSH CACHE](../commands/flush-cache) コマンドを呼び出すことで、いつでもフラッシュをトリガーすることができます。
+  4D はキャッシュ中のデータを定期的に保存します。 この間隔を 1秒から 500分の範囲で設定できます。 デフォルトの設定値は 20秒です。 この保存は、キャッシュがいっぱいになった場合や、アプリケーションを終了する際にもおこなわれます。 You can also call the [`FLUSH CACHE`](../commands/flush-cache) command to trigger the flush at any moment.
 
-  大量のデータ入力が予期される場合は、この間隔を短くすることを検討してください。 停電などの理由でマシンが停止すると、前回の保存以降に入力されたデータが失われてしまいます (データログファイルをとっていれば復旧可能です)。
+大量のデータ入力が予期される場合は、この間隔を短くすることを検討してください。 停電などの理由でマシンが停止すると、前回の保存以降に入力されたデータが失われてしまいます (データログファイルをとっていれば復旧可能です)。
 
-  キャッシュがフラッシュされるたびにデータベースの動作が遅くなる場合、周期を調整する必要があります。 動作が遅くなるのは、大量のレコードがディスクにフラッシュされるためです。 フラッシュ周期を短くすることで、各フラッシュ時に保存されるレコード数を減らすことができ、動作も速くなります。
+キャッシュがフラッシュされるたびにデータベースの動作が遅くなる場合、周期を調整する必要があります。 動作が遅くなるのは、大量のレコードがディスクにフラッシュされるためです。 フラッシュ周期を短くすることで、各フラッシュ時に保存されるレコード数を減らすことができ、動作も速くなります。
 
-  デフォルトで 4D はキャッシュがフラッシュされていることを示す小さなウィンドウを表示します。 このウィンドウを表示したくない場合、[インターフェースページ](./interface.md) の **フラッシュの進捗状況** オプションの選択を解除します。
+デフォルトで 4D はキャッシュがフラッシュされていることを示す小さなウィンドウを表示します。 このウィンドウを表示したくない場合、[インターフェースページ](./interface.md) の **フラッシュの進捗状況** オプションの選択を解除します。
 
 :::note
 
-[`SET DATABASE PARAMETER` コマンドの `Cache flush periodicity` セレクター](../commands/set-database-parameter#cache-flush-periodicity-95) を使用して、キャッシュのフラッシュ周期を一時的に変更できます。
+You can modify temporary the cache flush frequency using the [`Cache flush periodicity` selector of the `SET DATABASE PARAMETER` command](../commands/set-database-parameter#cache-flush-periodicity-95).
 
 :::
+
+### Managing priorities in database cache
+
+The 4D database cache includes an automatic priority management mechanism that provides a high level of efficiency and performance for data access. Thanks to this mechanism, when space is needed to load new data in the cache, low priority cached data are released first, while higher priority cached data remain loaded.
+
+This mechanism is fully automatic and usually, you will not have to worry about it. However, for specific cases it can be customized using a [set of dedicated commands from the "Cache Management" theme](../commands/theme/Cache_Management.md), which allow changing the priority of objects for the entire time the database is running, or temporarily for the current process. Note that these commands must be used carefully since they affect database performance.
+
+#### Priority management overview
+
+The Cache manager selects data to remove from the cache as necessary using a priority system. The three kinds of objects that can be loaded in the cache have a different priority:
+
+- **tables**: all standard field data (numeric, dates, etc.), excluding blobs (see below). Default priority is medium.
+- **blobs**: all binary field data (text, picture, object and blobs) stored in the data file. Default priority is the lowest.
+- **indexes**: all field indexes, including keyword indexes and composite indexes. Since indexes are frequently accessed, they have a special status in the cache. Default priority is the highest.
+
+Default priorities usually provide the best performances. However, for specific cases you can customize the cache priorities using two sets of 4D commands:
+
+- Commands that change the priorities for the whole session and all processes: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority), and [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). These commands should be used in a startup database method.
+- Commands that change the priorities only for the current process: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority), and [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Use these commands to improve the performance of a temporary operation on your database and go back to initial priorities after the operation is finished. These commands are available only on 4D Server or 4D in local mode.
 

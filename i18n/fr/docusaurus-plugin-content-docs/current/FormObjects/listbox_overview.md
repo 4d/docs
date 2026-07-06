@@ -579,6 +579,182 @@ Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués p
 
 - Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule concernée : vous supprimez autant de lignes que nécessaire de la zone de liste à l'aide de la commande [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
 
+## List boxes and the 4D language
 
+Many commands of the 4D language can be used with list boxes, from the [List box theme](../commands/theme/List_Box.md) but also from [Objects (Forms)](../commands/theme/Objects_Forms.md) and other themes. They can be used with list boxes, or [parts of list boxes](#list-box-parts) such as headers, footers, rows, or columns. Some of them can only be used with specific [list box types](#list-box-types).
 
+### List Box commands
 
+| Command                                                                          | List Box Type                | Supported Parts                           |
+| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
+| [`LISTBOX COLLAPSE`](../commands/listbox-collapse)                               | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column)                     | Tous                         | Colonnes                                  |
+| [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)                         | Tableau                      | List box, headers, footers, rows, columns |
+| [`LISTBOX DUPLICATE COLUMN`](../commands/listbox-duplicate-column)               | Array, Selection, Collection | Colonnes                                  |
+| [`LISTBOX EXPAND`](../commands/listbox-expand)                                   | Hierarchical                 | List box, headers, footers, rows, columns |
+| [`LISTBOX Get array`](../commands/listbox-get-array)                             | Tableau                      | List box, headers, footers, rows, columns |
+| [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)                           | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX Get auto row height`](../commands/listbox-get-auto-row-height)         | Tableau                      | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL COORDINATES`](../commands/listbox-get-cell-coordinates)       | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position)             | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX Get column formula`](../commands/listbox-get-column-formula)           | Selection, Collection        | Colonnes                                  |
+| [`LISTBOX Get column width`](../commands/listbox-get-column-width)               | Tous                         | Colonnes                                  |
+| [`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation)   | Array, Selection             | Pieds                                     |
+| [`LISTBOX Get footers height`](../commands/listbox-get-footers-height)           | Tous                         | Pieds                                     |
+| [`LISTBOX GET GRID`](../commands/listbox-get-grid)                               | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX GET GRID COLORS`](../commands/listbox-get-grid-colors)                 | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX Get headers height`](../commands/listbox-get-headers-height)           | Tous                         | En-têtes                                  |
+| [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy)                     | Tableau                      | List box, headers, footers, rows, columns |
+| [`LISTBOX Get locked columns`](../commands/listbox-get-locked-columns)           | Tous                         | List box                                  |
+| [`LISTBOX Get number of columns`](../commands/listbox-get-number-of-columns)     | Tous                         | List box                                  |
+| [`LISTBOX GET OBJECTS`](../commands/listbox-get-objects)                         | Tous                         | List box                                  |
+| [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information)     | Tous                         | List box, headers, footers, rows, columns |
+| [`LISTBOX Get property`](../commands/listbox-get-property)                       | Tous                         | List box, columns                         |
+| [`LISTBOX Get row color as number`](../commands/listbox-get-row-color-as-number) | Tableau                      | Lignes                                    |
+| [`LISTBOX Get row font style`](../commands/listbox-get-row-font-style)           | Tableau                      | Lignes                                    |
+| [`LISTBOX Get row height`](../commands/listbox-get-row-height)                   | Tableau                      | Lignes                                    |
+| [`LISTBOX Get rows height`](../commands/listbox-get-rows-height)                 | Tous                         | List box                                  |
+| [`LISTBOX Get static columns`](../commands/listbox-get-static-columns)           | Tous                         | List box                                  |
+| [`LISTBOX GET TABLE SOURCE`](../commands/listbox-get-table-source)               | Tous                         | List box                                  |
+| [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column)                     | Tous                         | List box                                  |
+| [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)     | Tous                         | List box                                  |
+| [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows)                         | Tableau                      | List box                                  |
+| [`LISTBOX MOVE COLUMN`](../commands/listbox-move-column)                         | Tous                         | Colonnes                                  |
+| [`LISTBOX MOVED COLUMN NUMBER`](../commands/listbox-moved-column-number)         | Tous                         | Colonnes                                  |
+| [`LISTBOX MOVED ROW NUMBER`](../commands/listbox-moved-row-number)               | Tableau                      | Lignes                                    |
+| [`LISTBOX SELECT BREAK`](../commands/listbox-select-break)                       | Hierarchical                 | List box                                  |
+| [`LISTBOX SELECT ROW`](../commands/listbox-select-row)                           | Tous                         | Lignes                                    |
+| [`LISTBOX SET ARRAY`](../commands/listbox-set-array)                             | Tableau                      | List box, columns                         |
+| [`LISTBOX SET AUTO ROW HEIGHT`](../commands/listbox-set-auto-row-height)         | Tableau                      | Lignes                                    |
+| [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula)           | Selection, Collection        | Colonnes                                  |
+| [`LISTBOX SET COLUMN WIDTH`](../commands/listbox-set-column-width)               | Tous                         | Colonnes                                  |
+| [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)   | Array, Selection             | Pieds                                     |
+| [`LISTBOX SET FOOTERS HEIGHT`](../commands/listbox-set-footers-height)           | Tous                         | Pieds                                     |
+| [`LISTBOX SET GRID`](../commands/listbox-set-grid)                               | Tous                         | List box                                  |
+| [`LISTBOX SET GRID COLOR`](../commands/listbox-set-grid-color)                   | Tous                         | List box                                  |
+| [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)           | Tous                         | En-têtes                                  |
+| [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy)                     | Tableau                      | List box                                  |
+| [`LISTBOX SET LOCKED COLUMNS`](../commands/listbox-set-locked-columns)           | Tous                         | List box                                  |
+| [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)                       | Tous                         | List box, columns                         |
+| [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color)                     | Tableau                      | Lignes                                    |
+| [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style)           | Tableau                      | Lignes                                    |
+| [`LISTBOX SET ROW HEIGHT`](../commands/listbox-set-row-height)                   | Tableau                      | Lignes                                    |
+| [`LISTBOX SET ROWS HEIGHT`](../commands/listbox-set-rows-height)                 | Tous                         | List box                                  |
+| [`LISTBOX SET STATIC COLUMNS`](../commands/listbox-set-static-columns)           | Tous                         | List box                                  |
+| [`LISTBOX SET TABLE SOURCE`](../commands/listbox-set-table-source)               | Sélections                   | List box                                  |
+| [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns)                       | Tous                         | Colonnes                                  |
+
+### Miscellaneous commands
+
+| Command                                                      | List Box Type    | Supported Parts                           | Commentaires                                                                                                                                                                              |
+| ------------------------------------------------------------ | ---------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`EDIT ITEM`](../commands/edit-item)                         | Tous             | Colonnes                                  | Allows you to pass a cell of a list box object into edit mode                                                                                                                             |
+| [`Get edited text`](../commands/get-edited-text)             | Tous             | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`REDRAW`](../commands/redraw)                               | Array, Selection | List box                                  | When applied to a selection list box, triggers an update of the data displayed in the list box. Not supported with list box of the entity selection type. |
+| [`Displayed line number`](../commands/displayed-line-number) | Tous             | List box, headers, footers, rows, columns | Works in the context of the [`On Display Detail`](../Events/onDisplayDetail.md) form event for a list box object                                                                          |
+| [`Drop position`](../commands/drop-position)                 | Tous             | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Count in array`](../commands/count-in-array)               | Tous             | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+| [`Print object`](../commands/print-object)                   | Tous             | List box, headers, footers, rows, columns |                                                                                                                                                                                           |
+
+### Object (forms) commands
+
+| Command                                                                                    | List Box Type | Supported Parts                                                                                                    |
+| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [`OBJECT DUPLICATE`](../commands/object-duplicate)                                         | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET BEST SIZE`](../commands/object-get-best-size)                                 | Tous          | Colonnes                                                                                                           |
+| [`OBJECT Get border style`](../commands/object-get-border-style)                           | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)                             | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get data source`](../commands/object-get-data-source)                             | Tableau       | List box                                                                                                           |
+| [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)         | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get enterable`](../commands/object-get-enterable)                                 | Tous          | Colonnes                                                                                                           |
+| [`OBJECT Get filter`](../commands/object-get-filter)                                       | Tous          | Colonnes                                                                                                           |
+| [`OBJECT Get focus rectangle invisible`](../commands/object-get-focus-rectangle-invisible) | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font`](../commands/object-get-font)                                           | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font size`](../commands/object-get-font-size)                                 | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get font style`](../commands/object-get-font-style)                               | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get format`](../commands/object-get-format)                                       | Tous          | En-têtes                                                                                                           |
+| [`OBJECT Get help tip`](../commands/object-get-help-tip)                                   | Tous          | Headers, footers                                                                                                   |
+| [`OBJECT Get horizontal alignment`](../commands/object-get-horizontal-alignment)           | Tous          | List box, headers, footers, columns                                                                                |
+| [`OBJECT Get list reference`](../commands/object-get-list-reference)                       | Tous          | Colonnes                                                                                                           |
+| [`OBJECT Get name`](../commands/object-get-name)                                           | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT Get pointer`](../commands/object-get-pointer)                                     | Tous          | List box, headers, footers, rows, columns (see below)                                           |
+| [`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options)                   | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors)                               | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT GET SCROLL POSITION`](../commands/object-get-scroll-position)                     | Tous          | List box                                                                                                           |
+| [`OBJECT GET SCROLLBAR`](../commands/object-get-scrollbar)                                 | Tous          | List box                                                                                                           |
+| [`OBJECT Get type`](../commands/object-get-type)                                           | Tous          | List box, headers, footers, columns                                                                                |
+| [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment)               | Tous          | List box, headers, footers, columns                                                                                |
+| [`OBJECT MOVE`](../commands/object-move)                                                   | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET COLOR`](../commands/object-set-color)                                         | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)                             | Tous          | List box                                                                                                           |
+| [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)                             | Tous          | List box                                                                                                           |
+| [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)                                 | Tous          | Colonnes                                                                                                           |
+| [`OBJECT SET EVENTS`](../commands/object-set-events)                                       | Tous          | List box                                                                                                           |
+| [`OBJECT SET FOCUS RECTANGLE INVISIBLE`](../commands/object-set-focus-rectangle-invisible) | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT`](../commands/object-set-font)                                           | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)                                 | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)                               | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET FORMAT`](../commands/object-set-format)                                       | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)                                   | Tous          | Headers, footers                                                                                                   |
+| [`OBJECT SET HORIZONTAL ALIGNMENT`](../commands/object-set-horizontal-alignment)           | Tous          | List box, headers, footers, columns                                                                                |
+| [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)                   | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)                               | Tous          | List box, headers, footers, rows, columns                                                                          |
+| [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)                     | Tous          | List box                                                                                                           |
+| [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)                                 | Tous          | List box. Scrolls the list box rows so that the first selected row or a specified row is displayed |
+| [`OBJECT SET TITLE`](../commands/object-set-title)                                         | Tous          | En-têtes                                                                                                           |
+| [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)               | Tous          | List box, headers, footers, columns                                                                                |
+| [`OBJECT SET VISIBLE`](../commands/object-set-visible)                                     | Tous          | List box, headers, footers                                                                                         |
+
+When [`OBJECT SET VISIBLE`](../commands/object-set-visible) is used with a header or footer, it is applied on all List box object headers or footers, regardless of the individual element set by the command. For example, the `OBJECT SET VISIBLE(*;"header3";False)` statement will hide all headers in the List box object to which *header3* belongs and not simply this header. Note that in order for you to be able to manage the visibility of these objects using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command, they must have been displayed in the list box properties.
+
+### OBJECT Get pointer
+
+The [`OBJECT Get pointer`](../commands/object-get-pointer) command used with the `Object with focus` or `Object current` constant can be used in the object method of a list box or a list box column. They return a pointer to the list box, the list box column (see note below) or the header variable depending on the type of [form event](../Events/overview.md). The following table details this functioning:
+
+| Evénement                                                | Object with focus                          | Object current                             |
+| -------------------------------------------------------- | ------------------------------------------ | ------------------------------------------ |
+| [`On Clicked`](../Events/onClicked.md)                   | list box                                   | column                                     |
+| [`On Double Clicked`](../Events/onDoubleClicked.md)      | list box                                   | column                                     |
+| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | column                                     | column                                     |
+| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | column                                     | column                                     |
+| [`On After Edit`](../Events/onAfterEdit.md)              | column                                     | column                                     |
+| [`On Getting Focus`](../Events/onGettingFocus.md)        | column or list box (\*) | column or list box (\*) |
+| [`On Losing Focus`](../Events/onLosingFocus.md)          | column or list box (\*) | column or list box (\*) |
+| [`On Drop`](../Events/onDrop.md)                         | list box (source)       | list box (\*)           |
+| [`On Drag Over`](../Events/onDragOver.md)                | list box (source)       | list box (\*)           |
+| [`On Begin Drag Over`](../Events/onBeginDragOver.md)     | list box                                   | list box (\*)           |
+| [`On Mouse Enter`](../Events/onMouseEnter.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Move`](../Events/onMouseMove.md)              | list box (\*\*)         | list box (\*\*)         |
+| [`On Mouse Leave`](../Events/onMouseLeave.md)            | list box (\*\*)         | list box (\*\*)         |
+| [`On Data Change`](../Events/onDataChange.md)            | column                                     | column                                     |
+| [`On Selection Change`](../Events/onSelectionChange.md)  | list box (\*\*)         | list box (\*\*)         |
+| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | column                                     | column                                     |
+| [`On Column Moved`](../Events/onColumnMoved.md)          | list box                                   | column                                     |
+| [`On Row Moved`](../Events/onRowMoved.md)                | list box                                   | list box                                   |
+| [`On Column Resize`](../Events/onColumnResize.md)        | list box                                   | column                                     |
+| [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                        | list box (\*\*)         |
+| [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                        | list box (\*\*)         |
+| [`On Header Click`](../Events/onHeaderClick.md)          | list box                                   | header                                     |
+| [`On Footer Click`](../Events/onFooterClick.md)          | list box                                   | footer                                     |
+| [`On After Sort`](../Events/onAfterSort.md)              | list box                                   | header                                     |
+
+(\*) When the focus is modified within a list box, a pointer to the column is returned. When the focus is modified at the overall form level, a pointer to the list box is returned. In the context of a column object method, a pointer to the column is returned.
+(\*\*) Not executed in the context of a column object method.
+
+:::note
+
+When a pointer to a column is returned, the object pointed to depends on the type of list box. With an array type list box, the `OBJECT Get pointer` command returns a pointer to the column of the list box with the focus (i.e. to an array). The 4D pointer mechanism allows you to see the item number of the modified array. For example, supposing a user modified the 5th line of the column col2:
+
+```4d
+ $Column:=OBJECT Get pointer(Object with focus)
+  //$Column contains a pointer to col2
+ $Row:=$Column-> //$Row equals 5
+```
+
+:::
+
+For a selection type list box, the `OBJECT Get pointer` command returns:
+
+- For a column associated with a field, a pointer to the associated field,
+- For a column associated with a variable, a pointer to the variable,
+- For a column associated with an expression, the `Is nil pointer` pointer.

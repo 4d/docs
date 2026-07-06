@@ -7,7 +7,7 @@ AI ページでは、AI プロバイダーを追加、削除、あるいはそ�
 
 :::tip 関連したblog 記事
 
-[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 

@@ -7,7 +7,7 @@ Guarda el filtro definido por $filter al crear un conjunto de entidades (*por ej
 
 ## Descrição
 
-Ao criar um conjunto de entidades, você pode salvar o filtro usado para criá-lo por motivos de segurança. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$entityset/$release`](./$entityset.md#entitysetrelease)).
+Ao criar um conjunto de entidades, você pode salvar o filtro usado para criá-lo por motivos de segurança. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
 
 Utilice `$savedfilter` para guardar el filtro que definió al crear su conjunto de entidades y luego pase `$savedfilter` junto con su llamada para recuperar cada vez el conjunto de entidades.
 

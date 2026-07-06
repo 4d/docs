@@ -27,7 +27,7 @@ Para cada usuario conectado al servidor, la lista ofrece la siguiente informaci�
 - **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica).
 - **Status**: The following values can be displayed:
   - "Online" - the session is active
-  - "Sleeping" - the desktop client has switched to sleep mode (see below),
+  - "Suspensión" - el cliente de escritorio ha cambiado al modo suspensión (ver abajo),
   - "Unreachable" (with [QUIC network layer](../settings/client-server.md#network-layer) only) - the desktop client is unresponsive and 4D Server will [attempt to reconnect](../Desktop/clientServer.md#management-of-unreachable-peer) during the QUIC session timeout period.
 
 ### Gestión de usuarios dormidos

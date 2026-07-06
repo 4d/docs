@@ -7,11 +7,11 @@ title: Entrada
 
 4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Se pueden verificar las [entradas](input_overview.md) de tipo texto, así como también los documentos [4D Write Pro](writeProArea_overview.md).
 
-La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. You can also execute the [`SPELL CHECKING`](../commands/spell-checking) 4D language command for each object to be checked.
+La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. También puede ejecutar el comando del lenguaje 4D [`SPELL CHECKING`](../commands/spell-checking) para cada objeto que desee revisar.
 
 :::note Herramientas de escritura (macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using IA, you might consider using the [Writing Tools](#writing-tools) property.
+En macOS, si quiere ofrecer a sus usuarios las herramientas de escritura de Apple Intelligence para que puedan revisar la ortografía de sus documentos mediante IA, podría considerar utilizar la propiedad [Herramientas de escritura](#writing-tools).
 
 :::
 
@@ -257,7 +257,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
 
-> También puedes definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [`OBJECT SET PLACEHOLDER`](../commands/object-set-placeholder) y [`OBJECT Get placeholder`](../commands/object-get-placeholder).
 
 #### Gramática JSON
 
@@ -352,9 +352,9 @@ Cuando esta opción no está activa, los usuarios deben seleccionar primero la l
 
 ---
 
-## Writing Tools
+## Herramientas de escritura
 
-On macOS, this property lets end users apply [Apple Intelligence **Writing Tools**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) to the text of [4D Write Pro](writeProArea_overview.md) and [input](input_overview.md) (with [multiline](#multiline) support) form objects. Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+En macOS, esta propiedad permite a los usuarios finales aplicar las [**Herramientas de escritura** de Apple Intelligence](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) al texto de los objetos de formulario [4D Write Pro](writeProArea_overview.md) y [entrada](input_overview.md) (con soporte para [varias líneas](#multiline)). Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
 
 ![](../assets/en/FormObjects/writing-tools.png)
 
@@ -383,12 +383,12 @@ The Writing Tools feature relies on **Apple Intelligence** and is only available
 
 :::
 
-The availability and default value of the property depend on the object type:
+La disponibilidad y el valor por defecto de la propiedad dependen del tipo de objeto:
 
-| Object                                        | Disponibilidad en la lista de propiedades                                     | Valor por defecto |
-| --------------------------------------------- | ----------------------------------------------------------------------------- | ----------------- |
-| [Entrada](input_overview.md)                  | Only when the [Multiline](#multiline) property is set to "Yes" or "Automatic" | False             |
-| [Área 4D Write Pro](writeProArea_overview.md) | Always displayed                                                              | True              |
+| Object                                        | Disponibilidad en la lista de propiedades                                                | Valor por defecto |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------- |
+| [Entrada](input_overview.md)                  | Sólo cuando la propiedad [Multiline](#multiline) está establecida en "Sí" o "Automático" | False             |
+| [Área 4D Write Pro](writeProArea_overview.md) | Always displayed                                                                         | True              |
 
 #### Gramática JSON
 

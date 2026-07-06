@@ -9,13 +9,12 @@ title: Drag and drop
 
 You can also drag and drop objects between 4D forms and other applications, and vice versa. For example, it is possible to drag and drop a .png picture file onto a 4D picture field. It is also possible to select text in a word processing application and drop it onto a 4D text variable or a list box.
 
-Finally, it is possible to drop objects directly onto the application without necessarily having a form in the foreground. The [`On Drop` Database Method](../commands-legacy/on-drop-database-method.md) can be used to manage the drag and drop action in this case. This means, for example, that you can open a 4D Write Pro document by dropping it onto the 4D application icon. 
+Finally, it is possible to drop objects directly onto the application without necessarily having a form in the foreground. The [`On Drop` Database Method](../commands-legacy/on-drop-database-method.md) can be used to manage the drag and drop action in this case. This means, for example, that you can open a 4D Write Pro document by dropping it onto the 4D application icon.
 
 4D provides two drag-and-drop modes:
 
-- a **custom mode**, where the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. 
-- an **automatic mode**, where a drag-and-drop operation automatically copies or moves data from an object to another. This mode is available to text-based objects and (partially) pictures, and can be enabled by simply selecting a property. 
-
+- a **custom mode**, where the whole drag-and-drop operation is handled by the programmer. Esse modo permite que você implemente qualquer interface baseada em arrastar e soltar, incluindo interfaces que não necessariamente transportam dados, mas podem executar qualquer ação, como abrir arquivos ou acionar um cálculo.
+- an **automatic mode**, where a drag-and-drop operation automatically copies or moves data from an object to another. This mode is available to text-based objects and (partially) pictures, and can be enabled by simply selecting a property.
 
 ## Draggable and Droppable Objects
 
@@ -27,28 +26,26 @@ To make an object the destination of a drag and drop operation, you must set its
 
 The following table lists the available properties for draggable and/or droppable objects:
 
-|Form object|Draggable "Custom"|Droppable "Custom"|Draggable "Auto"|Droppable "Auto"|
-|----|----|----|----|----|
-|[4D Write Pro areas](writeProArea_overview.md)|x|x|x|x|
-|[Combo Box](comboBox_overview.md)||x|x|x|
-|[Input](input_overview.md)|x|x|x|x|
-|[Hierarchical List](list_overview.md)|x|x|||
-|[List Box](listbox_overview.md)|x|x|||
-|[Plug-in Area](pluginArea_overview.md)|||x|x|
-|[Button](button_overview.md)||x|||
-|[Picture button](pictureButton_overview.md)||x|||
-
+| Objecto de formulário                          | Draggable "Custom" | Droppable "Custom" | Draggable "Auto" | Droppable "Auto" |
+| ---------------------------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
+| [4D Write Pro areas](writeProArea_overview.md) | x                  | x                  | x                | x                |
+| [Combo Box](comboBox_overview.md)              |                    | x                  | x                | x                |
+| [Entrada](input_overview.md)                   | x                  | x                  | x                | x                |
+| [Lista hierárquica](list_overview.md)          | x                  | x                  |                  |                  |
+| [List Box](listbox_overview.md)                | x                  | x                  |                  |                  |
+| [Área de Plug-in](pluginArea_overview.md)      |                    |                    | x                | x                |
+| [Botão](button_overview.md)                    |                    | x                  |                  |                  |
+| [Picture button](pictureButton_overview.md)    |                    | x                  |                  |                  |
 
 Items of a hierarchical list or rows in a list box can be dragged and dropped. Conversely, you can drag and drop an object onto an item of a hierarchical list or a list box row. However, you cannot drag and drop objects from the detail area of an output form. You can also manage dragging and dropping onto the application, outside of any form, using the [`On Drop` database method](../commands-legacy/on-drop-database-method.md).
 
-:::note Notes
+:::note Notas
 
-- By default, in the case of picture fields and variables, the picture and its reference are both dragged. If you only want to drag the reference, first hold down the **Alt** (Windows) or **Option** (macOS) key. 
+- By default, in the case of picture fields and variables, the picture and its reference are both dragged. If you only want to drag the reference, first hold down the **Alt** (Windows) or **Option** (macOS) key.
 - When the "Custom" Draggable and ["Movable Rows"](../FormObjects/properties_Action.md#movable-rows) properties are both set for an array list box object, the "Movable Rows" property takes priority when a row is moved. Dragging is not possible in this case.
 - An object that is capable of being both dragged and dropped can also be dropped onto itself, unless you reject the operation.
 
 :::
-
 
 ## Custom Drag and Drop
 
@@ -60,20 +57,18 @@ Your implementation will be based upon the following scenario:
 
 1. In the [`On Begin Drag Over`](../Events/onBeginDragOver.md) event of the source object (with ["Custom" **Draggable** property](../FormObjects/properties_Action.md#draggable)), put appropriate data in the pasteboard using [`APPEND DATA TO PASTEBOARD`](../commands/append-data-to-pasteboard), [`SET FILE TO PASTEBOARD`](../commands/set-file-to-pasteboard) or other commands from the [Pasteboard theme](../commands/theme/Pasteboard.md). You can also define a specific cursor icon using [`SET DRAG ICON`](../commands/set-drag-icon) command.
 2. In the [`On Drag Over`](../Events/onDragOver.md) event of the destination object (with ["Custom" **Droppable** property](../FormObjects/properties_Action.md#droppable)), get the data types or data signatures found in the pasteboard using [`GET PASTEBOARD DATA TYPE`](../commands/get-pasteboard-data-type) or [`GET PASTEBOARD DATA`](../commands/get-pasteboard-data) and check if they are compatible with the destination object.
-The [`Drop position`](../commands/drop-position) command returns the element number or the item position of the target element or list item, if the destination object is an array (i.e., scrollable area), a hierarchical list, a text or a combo box, as well as the column number if the object is a list box. 
+   The [`Drop position`](../commands/drop-position) command returns the element number or the item position of the target element or list item, if the destination object is an array (i.e., scrollable area), a hierarchical list, a text or a combo box, as well as the column number if the object is a list box.
 3. The [object method](../Concepts/methods.md#method-types) of the destination object or element must return 0 or -1 to accept or reject the action:
-   - If it is compatible, return **0** to accept the drop and execute the [`On Drop`](../Events/onDrop.md) event when the mouse button is released. 
+   - If it is compatible, return **0** to accept the drop and execute the [`On Drop`](../Events/onDrop.md) event when the mouse button is released.
    - Otherwise, return **-1** to reject the drop.  
-4D automatically handles the interface aspect of this interaction by displaying a cursor depending on whether the drop is accepted or rejected.
+     4D automatically handles the interface aspect of this interaction by displaying a cursor depending on whether the drop is accepted or rejected.
 4. In the [`On Drop`](../Events/onDrop.md) event of the destination object (with ["Custom" **Droppable** property](../FormObjects/properties_Action.md#droppable)), execute any action in response to the drop. If the drag-and-drop operation is intended to copy the dragged data, you simply assign the data to destination object. If the drag and drop is not intended to move data, but is instead a user interface metaphor for a particular operation, you can perform whatever you want, for example getting file paths using [`Get file from pasteboard`](../commands/get-file-from-pasteboard) command.
-
 
 Note that the [`On Begin Drag Over`](../Events/onBeginDragOver.md) event is generated **in the context of the source object of the drag** while [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) events are only sent to the destination object.
 
 In order for the application to process these events, they must be selected in an appropriate manner in the Property List for both the source and destination objects:
 
 ![](../assets/en/Desktop/dragdrop2.png)
-
 
 ## Automatic Drag and Drop
 
@@ -85,20 +80,17 @@ In the case of automatic drag and drop between two 4D areas, the data are moved,
 
 :::
 
-
-[Automatic Draggable](../FormObjects/properties_Action.md#draggable) property and [Automatic Droppable](../FormObjects/properties_Action.md#droppable) property can be configured separately for each form object. 
+[Automatic Draggable](../FormObjects/properties_Action.md#draggable) property and [Automatic Droppable](../FormObjects/properties_Action.md#droppable) property can be configured separately for each form object.
 
 - **Draggable: Automatic**: When this option is selected, the automatic drag mode is activated for the object. In this mode, the [`On Begin Drag`](../Events/onBeginDragOver.md) form event is NOT generated.
-If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action (under macOS, you need to hit the **Option** key *before* you start to drag the item(s)). This option is not available for pictures.
+  If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action (under macOS, you need to hit the **Option** key *before* you start to drag the item(s)). Esta opção não está disponível para as imagens.
 - **Droppable: Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) form events are not generated in this case. On the other hand, the [`On After Edit`](../Events/onAfterEdit.md) (during a drop) and [`On Data Change`](../Events/onDataChange.md) (when the object loses the focus) events are generated.
 
-In the case of data other than text or pictures (another 4D object, file, etc.) or complex data being dropped, the application refers to the value of the "Droppable" option: if it is not "none", the [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) form events are generated; otherwise, the drop is refused. 
+In the case of data other than text or pictures (another 4D object, file, etc.) or complex data being dropped, the application refers to the value of the "Droppable" option: if it is not "none", the [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) form events are generated; otherwise, the drop is refused.
 
+## Exemplos
 
-## Examples
-
-### Array based list box to input text area 
-
+### Array based list box to input text area
 
 In this simple example, we want to fill an input text area with data dragged from an array-based list box:
 
@@ -129,7 +121,6 @@ If(Form event code=On Drop) //Requires Droppable Action enabled from Property Li
  End if
 ```
 
-
 ### Selection based list box to input text area
 
 Combining custom and automatic drag and drop features allows simple and powerful interfaces. In this example, we want to fill an input text area with data dragged from a list box:
@@ -150,14 +141,11 @@ Combining custom and automatic drag and drop features allows simple and powerful
  End case
 ```
 
-
 Moving and formatting data is done through drag and drop:
 
 ![](../assets/en/Desktop/dragdrop5.png)
 
-
-### File path to text area  
-
+### File path to text area
 
 You want the user to select a file on the disk, then drag and drop it on an enterable variable (of type object) so that it displays a json description of the file.
 
@@ -186,13 +174,11 @@ In the object method of the variable, you just write:
  End case
 ```
 
-
-### File paths to list box  
+### File paths to list box
 
 You want the user to select files on the disk, then drag and drop them on a list box so that it displays file paths.
 
 ![](../assets/en/Desktop/dragdrop7.png)
-
 
 In the list box object method, you just write:
 
@@ -222,7 +208,6 @@ In the list box object method, you just write:
  End case
 ```
 
-
 ## Pasteboard commands
 
 The [commands of the "Pasteboard" theme](../commands/theme/Pasteboard.md) can be used both for managing copy/paste actions (**Clipboard management**), as well as inter-application drag and drop actions.
@@ -230,15 +215,15 @@ The [commands of the "Pasteboard" theme](../commands/theme/Pasteboard.md) can be
 4D uses two data pasteboards: one for copied (or cut) data, which is the clipboard, and the other for data being dragged and dropped.
 These two pasteboards are managed using the same commands. You access one or the other depending on the context:
 
-- The drag and drop pasteboard can only be accessed within the [`On Begin Drag Over`](../Events/onBeginDragOver.md), [`On Drag over`](../Events/onDragOver.md) or [`On Drop`](../Events/onDrop.md) form events and in the [**On Drop** database method](../commands-legacy/on-drop-database-method.md). Outside of these contexts, the drag and drop pasteboard is not available.  
+- The drag and drop pasteboard can only be accessed within the [`On Begin Drag Over`](../Events/onBeginDragOver.md), [`On Drag over`](../Events/onDragOver.md) or [`On Drop`](../Events/onDrop.md) form events and in the [**On Drop** database method](../commands-legacy/on-drop-database-method.md). Outside of these contexts, the drag and drop pasteboard is not available.
 - The copy/paste pasteboard can be accessed in all other cases. Unlike the drag and drop pasteboard, it keeps the data that are placed in it during the entire session, so long as they are not cleared or reused.
 
-### Types of Data  
+### Types of Data
 
 During drag and drop actions, different types of data can be placed on and read from the pasteboard. You can access a data type in several ways:
 
-- Via its 4D signature: The 4D signature is a character string indicating a data type referenced by the 4D application. The use of 4D signatures facilitates the development of multi-platform applications since these signatures are identical under Mac OS and Windows. You will find the list of 4D signatures below.  
-- Via a UTI (Uniform Type Identifier, macos only): The UTI standard, specified by Apple, associates a character string with each type of native object. For example, GIF pictures have the UTI type "com.apple.gif". UTI types are published in Apple documentations as well as by the editors concerned.  
+- Via its 4D signature: The 4D signature is a character string indicating a data type referenced by the 4D application. The use of 4D signatures facilitates the development of multi-platform applications since these signatures are identical under Mac OS and Windows. You will find the list of 4D signatures below.
+- Via a UTI (Uniform Type Identifier, macos only): The UTI standard, specified by Apple, associates a character string with each type of native object. For example, GIF pictures have the UTI type "com.apple.gif". UTI types are published in Apple documentations as well as by the editors concerned.
 - Via its number or its format name (Windows only): Under Windows, each native data type is referenced by its number ("3", "12", and so on) and a name ("Rich Text Edit"). By default, Microsoft specifies several native types called standard data formats. In addition, third-party editors can "save" format names in the system, which then attributes them a number in return. For more information about this and about native types, please refer to the Microsoft developer documentation (more particularly at http://msdn2.microsoft.com/en-us/library/ms649013.aspx).
 
 :::note
@@ -255,22 +240,21 @@ All the [commands of the "Pasteboard" theme](../commands/theme/Pasteboard.md) ca
 
 :::
 
-
-### 4D Signatures  
+### 4D Signatures
 
 Here is the list of standard 4D signatures as well as their description:
 
-|Signature|Description|
-|----|----|
-|"com.4d.private.text.native"|Text in native character set|
-|"com.4d.private.text.utf16"|Text in Unicode character set|
-|"com.4d.private.text.rtf"|Enriched text|
-|"com.4d.private.picture.pict"|PICT picture format|
-|"com.4d.private.picture.png"|PNG picture format|
-|"com.4d.private.picture.gif"|GIF picture format|
-|"com.4d.private.picture.jfif"|JPEG picture format|
-|"com.4d.private.picture.emf"|EMF picture format|
-|"com.4d.private.picture.bitmap"|BITMAP picture format|
-|"com.4d.private.picture.tiff"|TIFF picture format|
-|"com.4d.private.picture.pdf"|PDF document|
-|"com.4d.private.file.url"|File pathname|
+| Signature                                                                                       | Descrição                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------- |
+| "com.4d.private.text.native"    | Text in native character set  |
+| "com.4d.private.text.utf16"     | Text in Unicode character set |
+| "com.4d.private.text.rtf"       | Enriched text                 |
+| "com.4d.private.picture.pict"   | PICT picture format           |
+| "com.4d.private.picture.png"    | PNG picture format            |
+| "com.4d.private.picture.gif"    | GIF picture format            |
+| "com.4d.private.picture.jfif"   | JPEG picture format           |
+| "com.4d.private.picture.emf"    | EMF picture format            |
+| "com.4d.private.picture.bitmap" | BITMAP picture format         |
+| "com.4d.private.picture.tiff"   | TIFF picture format           |
+| "com.4d.private.picture.pdf"    | PDF document                  |
+| "com.4d.private.file.url"       | File pathname                 |

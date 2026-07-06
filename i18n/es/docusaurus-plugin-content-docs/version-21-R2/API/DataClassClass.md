@@ -272,11 +272,11 @@ Para cada objeto de *objectCol*:
 
 - Si el objeto contiene una propiedad booleana "\__NEW" establecida en false (o no contiene una propiedad booleana "\__NEW"), la entidad se actualiza o se crea con los valores correspondientes de las propiedades del objeto. No se realiza ninguna comprobación con respecto a la llave primaria:
   - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
-  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 - Si el objeto contiene una propiedad booleana "\_\_NEW" definida como **true**, la entidad se crea con los valores correspondientes de los atributos del objeto. Se realiza una verificación con respecto a la llave primaria:
   - Si se da la llave primaria (tal cual) y existe, se envía un error
-  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
 > La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.

@@ -694,11 +694,11 @@ End if
 
 #### Descripción
 
-La propiedad `.quotas` contiene <!-- REF #SessionClass.quotas.Summary -->un objeto `4D.QuotaManager` con los valores actuales y los valores establecidos para los umbrales del servidor en la sesión actual<!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
 
 Esta propiedad es **solo lectura**.
 
-The following properties of the `4D.QuotaManager` object are available for the session:
+Las siguientes propiedades del objeto `4D.QuotaManager` están disponibles para la sesión:
 
 | Propiedad                                                                 |              | Tipo    | Writable | Descripción                                                                                                    |
 | ------------------------------------------------------------------------- | ------------ | ------- | -------- | -------------------------------------------------------------------------------------------------------------- |

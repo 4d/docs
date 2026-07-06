@@ -94,7 +94,7 @@ Gracias a este principio, en macOS las carpetas de las bases aparecen como paque
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
-Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)). Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain [**tokens** for classic language and database objects (constants, commands, tables and fields)](../Concepts/methods.md#language-tokens). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version.
 
 Si tiene intención de utilizar VCS o los editores de código externos con sus nuevos proyectos, es posible que desee desmarcar esta opción para una mejor legibilidad del código con estas herramientas.
 

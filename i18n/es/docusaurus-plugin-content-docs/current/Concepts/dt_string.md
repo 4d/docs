@@ -34,6 +34,12 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 **Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
 
+### Normalización automática de los finales de línea
+
+Para garantizar la compatibilidad multiplataforma de los textos gestionados en la base de datos, 4D normaliza automáticamente los finales de línea de modo que ocupen un solo carácter: `\r` (retorno de carro). Esta normalización se lleva a cabo a nivel de los objetos del formulario (variables o campos) que contienen texto sin formato o de varios estilos. Los finales de línea que no sean nativos, o que utilicen una combinación de varios caracteres (por ejemplo, `\r\n`), se consideran como un único `\r`. Note that in compliance with the XML standard (multi-style text format), the [multi-style text commands](../commands/theme/Styled_Text.md) also normalize line endings for text variables that are not associated with objects.
+
+Este principio facilita el uso de comandos de texto con múltiples estilos o de comandos como [`HIGHLIGHT TEXT`](../commands/highlight-text) en un contexto multiplataforma. Sin embargo, debe tenerlo en cuenta en su procesamiento cuando trabaje con textos de fuentes heterogénicas.
+
 ## Operadores de cadenas
 
 | Operación              | Sintaxis                                  | Devuelve | Expression                              | Valor    |

@@ -832,9 +832,9 @@ El comando [`defer`](../commands/defer) permite encadenar una o varias expresion
 Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
 
 ```4d
-   //make sure some code is executed at exit
+   //Asegurarse de que se ejecute cierto código al salir
 defer(myCleaningMethod)
-   //Do something...
+   //Hacer algo...
 ```
 
 Vea la descripción del comando [`defer`](../commands/defer) para más información.

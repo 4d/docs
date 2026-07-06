@@ -7,7 +7,7 @@ The AI page allows you to add, remove, or view the list of all your AI providers
 
 :::tip Related blog post
 
-[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centralizing AI Providers and Model Aliases in 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 

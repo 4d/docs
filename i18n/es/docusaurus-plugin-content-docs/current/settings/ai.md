@@ -7,7 +7,7 @@ La página IA le permite añadir, eliminar o consultar la lista de todos sus pro
 
 :::tip Entrada de blog relacionada
 
-[Centralización de proveedores de IA y alias de modelos en 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centralización de proveedores de IA y alias de modelos en 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 

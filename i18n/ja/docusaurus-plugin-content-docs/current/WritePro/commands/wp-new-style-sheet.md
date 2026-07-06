@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 ### 階層リストスタイルシート
 
-If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).
+*styleSheetType* 引数が `wk type paragraph` に設定されていた場合、オプションとして *listLevelCount* 引数を渡すことで[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) を作成することができます。
 
 *listLevelCount* 引数は、階層内のレベルの総レベル数を定義します。 指定された場合(1 以上の値)、コマンドは自動的にルートレベルのスタイルシートと、対応するサブレベルのスタイルシートを自動的に作成します。 指定された場合(1 以上の値)、コマンドは自動的にルートレベルのスタイルシートと、対応するサブレベルのスタイルシートを自動的に作成します。
 
