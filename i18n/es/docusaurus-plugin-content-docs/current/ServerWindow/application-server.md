@@ -5,7 +5,7 @@ title: Página Servidor de aplicación
 
 La página Servidor de aplicaciones agrupa información sobre la aplicación de escritorio publicada por 4D Server y puede utilizarse para gestionar esta publicación.
 
-![](../assets/en/Admin/server-admin-application-page.png)
+![](../assets/en/Admin/server-admin-application-page-2.png)
 
 La parte superior de la página ofrece información sobre el estado actual del servidor de aplicaciones de 4D Server.
 
