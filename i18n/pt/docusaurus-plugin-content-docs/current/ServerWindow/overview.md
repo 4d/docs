@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Janela de administração de 4D Server
+title: 4D Server Window
 ---
 
 Quando o 4D Server é iniciado com interface no Windows ou macOS, uma janela de administração gráfica está disponível, fornecendo muitas ferramentas de análise e controle para a aplicação 4D publicada. Para mostrar la ventana de administración de 4D Server para el proyecto abierto, seleccione el elemento de menú **Window> Administration**, o presione **Ctrl+U**.
