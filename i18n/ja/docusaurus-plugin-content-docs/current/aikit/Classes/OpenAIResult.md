@@ -19,7 +19,7 @@ title: OpenAIResult
 | ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
 | `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                           |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                                                                |
 | `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
 | `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
 | `usage`      | Object     | Returns usage information (token counts) from the response body if any. |
