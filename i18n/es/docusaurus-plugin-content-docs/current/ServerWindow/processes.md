@@ -5,13 +5,13 @@ title: Página Procesos
 
 La página **Procesos** lita todos los procesos en ejecución.
 
-![](../assets/en/Admin/server-admin-process-page.png)
+![](../assets/en/Admin/server-admin-process-page-1.png)
 
 El botón "Procesos" indica, entre paréntesis el número total de procesos en ejecución en el servidor (este número no tiene en cuenta los filtros de visualización aplicados a la ventana ni el estado de la opción **Mostrar los procesos por grupos**).
 
 Puede cambiar el orden de las columnas simplemente arrastrando y soltando las áreas de encabezado de las columnas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
-Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
+Like the Sessions page, this page contains a dynamic [search/filtering area](sessions.md#search-and-filtering) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
 
 También hay tres botones de acceso directo que se pueden utilizar para filtrar por el tipo de proceso que se muestra en la ventana:
 
@@ -87,7 +87,7 @@ Similar icons and process types are used in the [Process page of the Runtime Exp
 
 La página también tiene cinco botones de control que actúan sobre el proceso o procesos seleccionados. Tenga en cuenta que sólo se puede actuar sobre los procesos usuario.
 
-![](../assets/en/Admin/server-process-actions.png)
+![](../assets/en/Admin/server-process-actions-1.png)
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
@@ -99,6 +99,6 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
-- **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
+- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). Este botón se activa cuando se selecciona al menos un proceso de usuario.
 
 
