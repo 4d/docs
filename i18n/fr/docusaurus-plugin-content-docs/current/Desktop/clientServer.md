@@ -149,6 +149,22 @@ Le tableau suivant résume l'emplacement par défaut où le code est exécuté e
 | Méthodes de base de données :<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server               | n/a                                                                                                                                                                                                                                                                                                      |
 | Méthodes de base de données :<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                   | client               | n/a                                                                                                                                                                                                                                                                                                      |
 
+## Management of sleeping client sessions
+
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server remains active.
+
+In this case, the remote application notifies 4D Server before entering sleep mode. The corresponding client session changes to the **Sleeping** status.
+
+![](../assets/en/Admin/server-sleep.png)
+
+This status frees server resources while preserving the session context.
+
+When the remote machine wakes up, the application automatically reconnects and restores the existing session.
+
+A sleeping client session is automatically dropped after 48 hours of inactivity.
+
+You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+
 ## Gestion d'un pair injoignable
 
 Lorsque la [couche réseau QUIC est utilisée](../settings/client-server.md#network-layer), les sessions client/serveur bénéficient d'une **fonctionnalité de reconnexion automatique** en cas de déconnexions imprévues. Parmi les déconnexions imprévues, on peut citer par exemple :
@@ -172,7 +188,7 @@ La couche réseau QUIC envoie automatiquement un événement "Unreachable" ("Inj
 
 #### Le client distant ne répond plus
 
-Lorsqu'un 4D distant cesse inopinément de répondre, sur la [fenêtre d'administration du serveur](../ServerWindow/overview.md), le [statut de la session du client](../ServerWindow/sessions.md#list-of-users) devient **Unreachable**.
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/sessions.md#list-of-sessions) is set to **Unreachable**.
 
 ![](../assets/en/Desktop/unreachable-status.png)
 
@@ -188,6 +204,8 @@ Lorsque l'événement "Unreachable" est reçu de l'un ou l'autre côté, une pro
 
 ### Rétablir ou fermer la connexion
 
+Le délai d'expiration de la session QUIC est de 900 secondes (15 minutes) par défaut ; il peut être modifié à l'aide du sélecteur `QUIC session timeout` de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
+
 Un délai d'expiration de la session QUIC est automatiquement utilisé pour gérer les déconnexions :
 
 - Si la connexion est rétablie avant l'expiration du délai de la session QUIC, la propriété [`info.unreachableSince`](../API/SessionClass.md#info) est automatiquement supprimée de l'objet de session.
@@ -196,4 +214,3 @@ Un délai d'expiration de la session QUIC est automatiquement utilisé pour gér
   - Dans le cas d'une session serveur fermée à partir d'une machine distante, une boîte de dialogue d'avertissement est affichée afin que l'utilisateur puisse redémarrer l'application distante ou quitter :  
     ![](../assets/en/Desktop/remote-not-responding.png)
 
-Le délai d'expiration de la session QUIC est de 900 secondes (15 minutes) par défaut ; il peut être modifié à l'aide du sélecteur `QUIC session timeout` de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
