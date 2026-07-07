@@ -7,7 +7,7 @@ Les signaux sont des outils fournis par le langage 4D pour gérer les interactio
 
 :::note
 
-[Semaphores](../Develop/processes.md#semaphores) can also be used to manage interactions. Les sémaphores permettent de s'assurer que deux ou plusieurs process ne modifient pas la même ressource (fichier, enregistrement...) en même temps. Seul le process qui a posé le sémaphore peut le retirer.
+Les [sémaphores](../Develop/processes.md#semaphores) peuvent également être utilisés pour gérer les interactions. Les sémaphores permettent de s'assurer que deux ou plusieurs process ne modifient pas la même ressource (fichier, enregistrement...) en même temps. Seul le process qui a posé le sémaphore peut le retirer.
 
 :::
 
