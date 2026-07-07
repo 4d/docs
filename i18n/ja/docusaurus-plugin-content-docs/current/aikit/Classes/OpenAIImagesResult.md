@@ -35,7 +35,7 @@ The `usage` property returns an object containing token usage information for im
 | `text_tokens`  | Integer | Number of text tokens in the prompt.                                      |
 | `image_tokens` | Integer | Number of image tokens (for image editing/variations). |
 
-**Example response:**
+**レスポンスの例:**
 
 ```json
 {
