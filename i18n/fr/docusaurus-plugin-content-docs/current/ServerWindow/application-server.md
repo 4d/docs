@@ -5,7 +5,7 @@ title: Page Serveur d’application
 
 La Page Serveur d’application regroupe les informations relatives à la base de données publiée par 4D Server et permet de gérer cette publication.
 
-![](../assets/en/Admin/server-admin-application-page.png)
+![](../assets/en/Admin/server-admin-application-page-2.png)
 
 La partie supérieure de la page fournit des informations sur le statut courant du serveur d’application de 4D Server.
 
