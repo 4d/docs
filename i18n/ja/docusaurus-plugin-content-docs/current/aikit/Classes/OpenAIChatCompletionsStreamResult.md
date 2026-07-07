@@ -22,26 +22,26 @@ title: OpenAIChatCompletionsStreamResult
 | `choice`  | [OpenAIChoice](OpenAIChoice.md) | `delta` メッセージ付きの選択データを返します。                                      |
 | `choices` | Collection                      | `delta` メッセージ付きの[OpenAIChoice](OpenAIChoice.md) データのコレクションを返します。 |
 
-### Overridden properties
+### オーバーライドされたプロパティ
 
-| プロパティ        | 型       | 説明                                                                                                                                                                                |
-| ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `success`    | Boolean | ストリーミングデータがオブジェクトとして正常にデコードされた場合には `True` を返します。                                                                                                                                  |
-| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                                             |
-| `usage`      | Object  | Returns token usage information from the stream data (only available in the final chunk when `stream_options.include_usage` is set to `True`). |
+| プロパティ        | 型       | 説明                                                                                                                  |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| `success`    | Boolean | ストリーミングデータがオブジェクトとして正常にデコードされた場合には `True` を返します。                                                                    |
+| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                    |
+| `usage`      | Object  | ストリームデータからのトークン使用状況を返します(`stream_options.include_usage` が`True` に設定されていた場合には最終チャンクにおいてのみ利用可能です)。 |
 
 ### usage
 
-The `usage` property returns an object containing token usage information, available only in the final streaming chunk when enabled via `stream_options.include_usage: True` in the request parameters.
+`usage` はトークン使用状況を格納したオブジェクトを返し、これはリクエスト引数において`stream_options.include_usage: True` に設定されている場合に最終のストリーミングチャンク内でのみ利用可能です。
 
-The structure is the same as [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage):
+この構造は [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) と同じです:
 
-| フィールド                       | 型       | 説明                                                                            |
-| --------------------------- | ------- | ----------------------------------------------------------------------------- |
-| `prompt_tokens`             | Integer | Number of tokens in the prompt.                               |
-| `completion_tokens`         | Integer | Number of tokens in the completion.                           |
-| `total_tokens`              | Integer | Total tokens used (prompt + completion).   |
-| `prompt_tokens_details`     | Object  | Breakdown of prompt tokens (optional).     |
-| `completion_tokens_details` | Object  | Breakdown of completion tokens (optional). |
+| フィールド                       | 型       | 説明                                           |
+| --------------------------- | ------- | -------------------------------------------- |
+| `prompt_tokens`             | Integer | プロンプト内のトークンの数。                               |
+| `completion_tokens`         | Integer | 補完内でのトークンの数。                                 |
+| `total_tokens`              | Integer | 使用されたトークンの総数(プロンプト + 補完)。 |
+| `prompt_tokens_details`     | Object  | プロンプトトークンの詳細な内訳(オプション)。   |
+| `completion_tokens_details` | Object  | 補完トークンの詳細な内訳(オプション)。      |
 
-> **Note:** To receive usage information in streaming responses, you must set `stream_options: {include_usage: True}` in your request parameters. See [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) for details.
+> **Note:** ストリーミングのレスポンス内に使用状況を受信するためには、リクエストパラメーター内で`stream_options: {include_usage: True}` に設定する必要があります。 詳細については、[OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) を参照してください。
