@@ -5,7 +5,7 @@ title: アプリケーションサーバーページ
 
 アプリケーションサーバーページには、4D Server が公開しているデスクトップアプリケーションについての情報がまとめられていて、公開を管理できます。
 
-![](../assets/en/Admin/server-admin-application-page.png)
+![](../assets/en/Admin/server-admin-application-page-2.png)
 
 ページの上部には、4D Server アプリケーションサーバーの現在の状況が表示されます。
 
