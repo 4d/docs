@@ -5,7 +5,7 @@ title: HTTPサーバーページ
 
 **HTTPサーバー** ページには、4D Server の Webサーバーや SOAPサーバーに関する情報が集められています。 Webサーバーは、HTMLページやピクチャーなどの Webコンテンツの公開を可能にします。 SOAPサーバーは Webサービスの公開を管理します。 これら 2つのサーバーは、4D Server の内部的な HTTPサーバーに依存しています。 Webサーバーは、HTMLページやピクチャーなどの Webコンテンツの公開を可能にします。 SOAPサーバーは Webサービスの公開を管理します。 これら 2つのサーバーは、4D Server の内部的な HTTPサーバーに依存しています。
 
-![](../assets/en/Admin/server-admin-web-page.png)
+![](../assets/en/Admin/server-admin-web-page-1.png)
 
 ページの上部には、4D Server の HTTPサーバーの現在の状況が表示されます。
 
