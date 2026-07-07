@@ -5,7 +5,7 @@ title: Página de seguimiento en tiempo real
 
 La página Monitor en tiempo real supervisa el progreso de las operaciones "largas" realizadas por la aplicación en tiempo real. Estas operaciones son, por ejemplo, consultas secuenciales, ejecución de fórmulas, etc.
 
-![](../assets/en/Admin/server-admin-monitor-page.png)
+![](../assets/en/Admin/server-admin-monitor-page-2.png)
 
 > Esta página está disponible en la ventana de administración de la máquina servidor y también desde una máquina 4D remota. En el caso de un equipo remoto, esta página muestra los datos de las operaciones realizadas en el equipo servidor.
 
@@ -51,7 +51,7 @@ En el modo avanzado (**Mayús+Clic** en la operación), se muestra información 
 
 El botón **Instantánea** permite copiar en el portapapeles todas las operaciones que se muestran en el panel RTM, así como sus detalles relacionados (información de procesos y suboperaciones):
 
-![](../assets/en/Admin/server-admin-monitor-snapshot.png)
+![](../assets/en/Admin/server-admin-monitor-snapshot-1.png)
 
 ## Mostrar operaciones al menos 5 segundos
 
