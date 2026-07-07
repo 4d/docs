@@ -6,7 +6,7 @@ title: Maintenance Page
 
 The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
 
-![](../assets/en/Admin/server-maintenance.png)
+![](../assets/en/Admin/server-maintenance-1.png)
 
 
 ## Last verification/compacting

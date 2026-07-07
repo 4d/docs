@@ -6,7 +6,7 @@ title: Application Server Page
 
 The Application Server page groups together information about the desktop application published by 4D Server and can be used to manage this publication.
 
-![](../assets/en/Admin/server-admin-application-page.png)
+![](../assets/en/Admin/server-admin-application-page-2.png)
 
 
 The upper part of the page provides information about the current status of the 4D Server application server.
