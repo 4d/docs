@@ -46,78 +46,85 @@ Le paramètre *typePropriétés* est pris en compte dans les bases configurées 
 | ---------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Structure settings     | Entier long | 0      | Accès aux "propriétés structure" (valeur par défaut si le paramètre est omis). Dans ce mode, les valeurs de *sélecteur* utilisables sont identiques à celles du mode standard.                                                                                                            |
 | User settings          | Entier long | 1      | Accès aux "propriétés utilisateur". Dans ce mode, seules certaines clés sont utilisables dans le paramètre *sélecteur*.                                                                                                                                                                   |
-| User settings for data | Entier long | 2      | Accès aux "propriétés utilisateur pour données", c'est-à-dire les propriétés utilisateur stockées au même niveau que le fichier de données. Dans ce mode, seules certaines clés peuvent être utilisées avec le paramètre *sélecteur* (même sous-ensemble que les propriétés utilisateur). |
+| User settings for data file | Entier long | 2      | Accès aux "propriétés utilisateur pour données", c'est-à-dire les propriétés utilisateur stockées au même niveau que le fichier de données. Dans ce mode, seules certaines clés peuvent être utilisées avec le paramètre *sélecteur* (même sous-ensemble que les propriétés utilisateur). |
 
 Si vous passez une clé invalide, la première page de la boîte de dialogue des Propriétés de la base est affichée. 
 
 ### Clés de chemins (mode standard) 
 
-Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode standard, c'est-à-dire avec les "propriétés structure" : 
+Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode standard, c'est-à-dire avec les "propriétés structure" :   
 
-*/4D* 
-*/4D/General* 
-*/4D/Structure* 
-*/4D/Form editor* 
-*/4D/Method editor* 
-*/4D/Shortcuts* 
-*/Database* 
-*/Database/General* 
-*/Database/Mover* 
-*/Database/Interface* 
-*/Database/Interface/Developper* 
-*/Database/Interface/User* 
-*/Database/Interface/Shortcuts* 
-*/Database/Compiler* 
-*/Database/Database* 
-*/Database/Database/Data storage* 
-*/Database/Database/Memory and cpu* 
-*/Database/Database/International* 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* 
-*/Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore* 
-*/Database/Client-Server* 
-*/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
-*/Database/Compatibility* 
-*/Database/Security* 
-
+``` 
+/4D 
+/4D/General  
+/4D/Structure 
+/4D/Form editor 
+/4D/Method editor 
+/4D/Shortcuts 
+/Database 
+/Database/General 
+/Database/Mover 
+/Database/Interface 
+/Database/Interface/Developper 
+/Database/Interface/User 
+/Database/Interface/Shortcuts 
+/Database/Compiler 
+/Database/Database 
+/Database/Database/Data storage 
+/Database/Database/Memory and cpu 
+/Database/Database/International 
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php 
+/Database/Compatibility 
+/Database/Security  
+``` 
+  
 **Note de compatibilité :** La commande continue de fonctionner avec les clés définies pour les versions 11.x et précédentes de 4D, la correspondance est établie automatiquement par le programme 4D. Il est toutefois conseillé de remplacer les anciens appels par les clés décrites ci-dessus.
 
 ### Clés de chemins (mode Propriétés utilisateur) 
 
-Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode "propriétés utilisateur" :
+Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode "propriétés utilisateur" :  
 
-*/Database* 
-*/Database/Interface* 
-*/Database/Database/Memory and cpu* 
-*/Database/Client-Server* 
-**/Database/Client-Server/Network* 
-*/Database/Client-Server/IP configuration* 
-*/Database/Web* 
-*/Database/Web/Config* 
-*/Database/Web/Options 1* 
-*/Database/Web/Options 2* 
-*/Database/Web/Log format* 
-*/Database/Web/Log scheduler* 
-*/Database/Web/Webservices* 
-*/Database/SQL* 
-*/Database/php* 
+``` 
+/Database 
+/Database/Interface 
+/Database/Database/Memory and cpu 
+/Database/Client-Server 
+/Database/Client-Server/Network 
+/Database/Client-Server/IP configuration 
+/Database/Web 
+/Database/Web/Config 
+/Database/Web/Options 1 
+/Database/Web/Options 2 
+/Database/Web/Log format 
+/Database/Web/Log scheduler 
+/Database/Web/Webservices 
+/Database/SQL 
+/Database/php  
+```
 
 Clés supplémentaires en mode "Propriétés utilisateur pour fichier de données" :
 
-*/Database/Backup* 
-*/Database/Backup/Scheduler* */Database/Backup/Configuration* 
-*/Database/Backup/Backup and restore*
+```
+/Database/Backup 
+/Database/Backup/Scheduler 
+/Database/Backup/Configuration 
+/Database/Backup/Backup and restore
+```
 
 ## Exemple 1 
 
