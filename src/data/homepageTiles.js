@@ -88,13 +88,13 @@ title: (
           <Translate>Architecture</Translate>
         </Link>
         <Link to="settings/overview" >
-          <Translate>Project Settings</Translate>
+          <Translate>Settings</Translate>
         </Link>
         <Link to="Develop/field-properties">
-          <Translate>Database structure</Translate>
+          <Translate>Database Structure</Translate>
         </Link>
         <Link to="Project/code-overview" >
-          <Translate>Code & Methods</Translate>
+          <Translate>Methods</Translate>
         </Link>
         <Link to="Project/components" >
           <Translate>Dependencies</Translate>
@@ -164,9 +164,6 @@ title: (
         <Link to="category/processes">
           <Translate>Processes</Translate>
         </Link>
-       <Link to="category/database-methods">
-          <Translate>Database Methods</Translate>
-        </Link>
          <Link to="Develop/transactions">
           <Translate>Transactions</Translate>
         </Link>
@@ -175,6 +172,9 @@ title: (
         </Link>
        <Link to="Project/date-time-formats">
           <Translate>Date and Time Formats</Translate>
+        </Link>
+        <Link to="Develop-legacy/xml">
+          <Translate>XML Processing</Translate>
         </Link>
       </div>
     ),
@@ -230,11 +230,17 @@ title: (
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
         </Link>
+        <Link to="Desktop/labels" >
+          <Translate>Labels</Translate>
+        </Link>
+        <Link to="Desktop-legacy/standard-actions" >
+          <Translate>Standard actions</Translate>
+        </Link>
+        <Link to="Desktop/drag-and-drop" >
+          <Translate>Drag and Drop</Translate>
+        </Link>
         <Link to="Menus/overview" >
           <Translate>Menus</Translate>
-        </Link>
-       <Link to="Desktop/labels" >
-          <Translate>Labels</Translate>
         </Link>
         <Link to="Users/overview">
           <Translate>Access Rights</Translate>

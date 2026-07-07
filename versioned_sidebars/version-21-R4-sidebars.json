@@ -44,6 +44,27 @@
         },
         {
           "type": "category",
+          "label": "Settings",
+          "link": {
+            "type": "doc",
+            "id": "settings/overview"
+          },
+          "items": [
+            "settings/general",
+            "settings/interface",
+            "settings/compiler",
+            "settings/database",
+            "settings/backup",
+            "settings/client-server",
+            "settings/web",
+            "settings/sql",
+            "settings/ai",
+            "settings/security",
+            "settings/compatibility"
+          ]
+        },
+        {
+          "type": "category",
           "label": "Database Structure",
           "items": [
             "Develop/field-properties"
@@ -91,27 +112,6 @@
         "code-editor/write-class-method",
         "Project/components",
         "Project/compiler",
-        {
-          "type": "category",
-          "label": "Settings",
-          "link": {
-            "type": "doc",
-            "id": "settings/overview"
-          },
-          "items": [
-            "settings/general",
-            "settings/interface",
-            "settings/compiler",
-            "settings/database",
-            "settings/backup",
-            "settings/client-server",
-            "settings/web",
-            "settings/sql",
-            "settings/ai",
-            "settings/security",
-            "settings/compatibility"
-          ]
-        },
         "Desktop/building",
         {
           "type": "category",
@@ -705,6 +705,11 @@
         },
         {
           "type": "doc",
+          "label": "Drag and Drop",
+          "id": "Desktop/drag-and-drop"
+        },
+        {
+          "type": "doc",
           "label": "Labels",
           "id": "Desktop/labels"
         },
@@ -722,11 +727,6 @@
             "Menus/bars",
             "Menus/sdi"
           ]
-        },
-        {
-          "type": "doc",
-          "label": "Drag and Drop",
-          "id": "Desktop/drag-and-drop"
         },
         {
           "type": "category",
@@ -752,7 +752,7 @@
     },
     {
       "type": "category",
-      "label": "Administration",
+      "label": "Server & Admin",
       "link": {
         "type": "generated-index",
         "title": "Administration",
@@ -765,7 +765,7 @@
       "items": [
         {
           "type": "category",
-          "label": "4D Server Administration Window",
+          "label": "4D Server Window",
           "link": {
             "type": "doc",
             "id": "ServerWindow/overview"

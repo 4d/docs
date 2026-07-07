@@ -43,6 +43,27 @@ module.exports =
             "Project/documentation"
           ]
         },
+       {
+          type: "category",
+          label: "Settings",
+          link: {
+             type: "doc",
+             id: "settings/overview"
+          },
+          items: [
+                "settings/general",
+                "settings/interface",
+                "settings/compiler",
+                "settings/database",
+                "settings/backup",
+                "settings/client-server",
+                "settings/web",
+                "settings/sql",
+                "settings/ai",
+                "settings/security",
+                "settings/compatibility"
+              ]
+        },
         {
           type: "category",
           label: "Database Structure",
@@ -92,28 +113,7 @@ module.exports =
         "code-editor/write-class-method",
         "Project/components",
         "Project/compiler",
-        {
-          type: "category",
-          label: "Settings",
-          link: {
-             type: "doc",
-             id: "settings/overview"
-          },
-          items: [
-                "settings/general",
-                "settings/interface",
-                "settings/compiler",
-                "settings/database",
-                "settings/backup",
-                "settings/client-server",
-                "settings/web",
-                "settings/sql",
-                "settings/ai",
-                "settings/security",
-                "settings/compatibility"
-              ]
-        },
-         "Desktop/building",
+        "Desktop/building",
           {
            type: "category",
            label: "Debugging",
@@ -725,6 +725,11 @@ module.exports =
           label: "Standard actions",
           id: "Desktop-legacy/standard-actions"
         },
+        {
+          type: "doc",
+          label: "Drag and Drop",
+          id: "Desktop/drag-and-drop"
+        },
          {
           type: "doc",
           label: "Labels",
@@ -744,11 +749,6 @@ module.exports =
             "Menus/bars",
             "Menus/sdi"
           ]
-        },
-        {
-          type: "doc",
-          label: "Drag and Drop",
-          id: "Desktop/drag-and-drop"
         },
         {
           type: "category",
@@ -774,7 +774,7 @@ module.exports =
     },
     {
       type: "category",
-      label: "Administration",
+      label: "Server & Admin",
       link: {
         type: "generated-index",
         title: "Administration",
@@ -787,7 +787,7 @@ module.exports =
       items: [
         {
           type: "category",
-          label: "4D Server Administration Window",
+          label: "4D Server Window",
           link: {
             type: "doc",
             id: "ServerWindow/overview"
