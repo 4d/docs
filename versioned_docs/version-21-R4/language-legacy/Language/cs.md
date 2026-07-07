@@ -1,0 +1,32 @@
+---
+id: cs
+title: cs
+slug: /commands/cs
+displayed_sidebar: docs
+---
+
+| Parameter | Type |  | Description |
+|---|---|---|---|
+| classStore | [4D.ClassStore](../../API/ClassStoreClass.md)| &#8592; | User class store for the project or component |
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
+The **cs** keyword is described in the [**Concept page for Classes**](../../Concepts/classes.md#cs).  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1710 |
+| Thread safe | yes |
+
+

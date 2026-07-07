@@ -1,0 +1,29 @@
+---
+id: onAlternativeClick
+title: On Alternative Click
+---
+
+| コード | 呼び出し元                                                                                                                        | 定義                                                                                                               |
+| --- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 38  | [ボタン](FormObjects/button_overview.md) - [リストボックス](FormObjects/listbox-object.md) - [リストボックス列](FormObjects/listbox-column.md) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
+
+## 説明
+
+### ボタン
+
+いくつかのボタンスタイルには、[ポップアップメニュー](FormObjects/properties_TextAndPicture.md#ポップアップメニューあり) をリンクし、矢印を表示させることができます。 この矢印をクリックすると、ボタンの主たるアクションの代わりのアクションを提供するポップアップを表示します。 この矢印をクリックすると、ボタンの主たるアクションの代わりのアクションを提供するポップアップを表示します。
+
+4D では `On Alternative Click` イベントを使用してこの動作を管理できます。 このイベントは、ユーザーが矢印をクリックすると、マウスボタンが押されてすぐに生成されます: このイベントは、ユーザーが矢印をクリックすると、マウスボタンが押されてすぐに生成されます:
+
+- ポップアップメニューが **分離** されている場合、このイベントはボタン中で矢印のあるエリアがクリックされた場合のみ生成されます。 ボタンに適用されている [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html) があったとしても、この場合には実行されないことに留意してください。 Note that the [standard action](/Desktop/standard-actions) assigned to the button (if any) is not executed in this case.
+- ポップアップメニューが **リンク** されている場合、このイベントはボタン上どこをクリックしても生成されます。 このタイプのボタンでは [`On Long Click`](onLongClick.md) イベントが生成されないことに注意してください。 このタイプのボタンでは [`On Long Click`](onLongClick.md) イベントが生成されないことに注意してください。
+
+![](../assets/en/Events/clickevents.png)
+
+### リストボックス
+
+このイベントは [オブジェクト配列型のリストボックス](../FormObjects/listbox-column.md#オブジェクト配列カラムの設定) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
+
+![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
+
+["alternateButton" 属性の説明](../FormObjects/listbox-column.md#alternatebutton) を参照ください。

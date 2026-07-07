@@ -1,0 +1,137 @@
+﻿---
+id: super
+title: Super
+slug: /commands/super
+displayed_sidebar: docs
+---
+
+<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
+
+<!-- REF #_command_.Super.Params -->
+
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción                                                              |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
+| param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
+| Resultado  | Object | <- | Padre del objeto                                                         |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Created        |
+
+</details>
+</div>
+
+La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a la `superclass`, es decir, la clase padre<!-- END REF -->.
+
+`Super` tiene dos propósitos diferentes:
+
+1. Dentro de un código [constructor](../../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. Cuando se utiliza en un constructor, el comando `Super` aparece solo y debe ser usado antes de usar la palabra clave [`This`](../commands/this).
+
+- Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
+- Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.
+- Si se llama a `Super` fuera de un contexto de objeto, o en un objeto cuyo constructor de superclase ya ha sido llamado, se genera el error -10746.
+
+```4d
+// dentro del constructor myClass
+var $text1; $text2 : Texto
+Super($text1) //llamada del constructor de la superclase con un parámetro texto
+Este. aram:=$text2 // usar un segundo parámetro
+```
+
+2. Dentro de una [función de clase](../../Concepts/classes.md#function), `Super` designa el prototipo de la [`superclase`](../../API/ClassClass.md#superclass) y permite llamar a una función de la jerarquía de superclase.
+
+```4d
+Super.doSomething(42) //llama a la función "doSomething"  
+//declarada en superclases
+```
+
+## Ejemplo 1
+
+Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
+
+```4d
+// Clase: Rectángulo
+Class constructor($width : Integer; $height : Integer)
+ This.name:="Rectangle"
+ This.height:=$height
+ This.width:=$width
+
+
+Function sayName()
+ ALERT("Hi, I am a "+This.name+".")
+
+// Definición de la función
+Function getArea() : Integer
+
+ return (This.height)*(This.width)
+```
+
+```4d
+//Class: Square
+
+Class extends Rectangle
+
+Class constructor ($side : Integer)
+
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.name:="Square"
+
+Function getArea() : Integer
+ return This.height*This.width
+```
+
+## Ejemplo 2
+
+Este ejemplo ilustra el uso de `Super` en una función de clase. Ha creado la clase `Rectangle` con una función:
+
+```4d
+//Class: Rectangle
+
+Function nbSides() : Text
+ return "I have 4 sides"
+```
+
+También creó la clase `Square` con una función que llama a la función superclase:
+
+```4d
+//Class: Square
+
+Class extends Rectangle
+
+Function description() : Text
+  return Super.nbSides()+" which are all equal"
+```
+
+Entonces puede escribir en un método proyecto:
+
+```4d
+var $square : Objeto
+var $message : Texto
+$square:=cs.Square.new()
+$message:=$square.description() //tengo 4 lados iguales
+```
+
+## Ver también
+
+[**Concept page for Classes**](../../Concepts/classes.md).
+
+## Propiedades
+
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1706 |
+| Hilo seguro       | sí   |
+
+

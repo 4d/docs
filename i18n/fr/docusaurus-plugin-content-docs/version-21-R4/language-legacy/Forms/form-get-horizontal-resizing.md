@@ -1,0 +1,45 @@
+﻿---
+id: form-get-horizontal-resizing
+title: FORM GET HORIZONTAL RESIZING
+slug: /commands/form-get-horizontal-resizing
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Syntax-->**FORM GET HORIZONTAL RESIZING** ( *redimension* : Boolean {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )<!-- END REF-->
+<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Params-->
+<div class="no-index">
+
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| redimension | Boolean | &#8592; | Vrai : le formulaire est redimensionnable horizontalement, Faux : le formulaire n'est pas redimensionnable horizontalement |
+| largeurMini | Integer | &#8592; | Largeur minimale du formulaire (pixels) |
+| largeurMaxi | Integer | &#8592; | Largeur maximale du formulaire (pixels) |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->La commande **FORM GET HORIZONTAL RESIZING** retourne dans les variables *redimension*, *largeurMini* et *largeurMaxi* les propriétés de redimensionnement horizontal du formulaire courant.<!-- END REF--> Ces propriétés peuvent avoir été définies pour le formulaire dans l’éditeur de formulaires en mode Développement ou pour le process courant via la commande [FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing).
+
+## Voir aussi 
+
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1077 |
+| Thread safe | no |
+
+

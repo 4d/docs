@@ -1,0 +1,38 @@
+﻿---
+id: old-related-many
+title: OLD RELATED MANY
+slug: /commands/old-related-many
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *campo* : Field )<!-- END REF-->
+<!--REF #_command_.OLD RELATED MANY.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| campo | Field | &#8594; | Campo Uno |
+</div>
+<!-- END REF-->
+
+## Descripción 
+
+<!--REF #_command_.OLD RELATED MANY.Summary-->OLD RELATED MANY funciona de la misma forma que [RELATE MANY](relate-many.md "RELATE MANY"), excepto que OLD RELATED MANY utiliza el valor anterior del campo Uno para establecer la relación.<!-- END REF-->OLD RELATED MANY utiliza el valor anterior del campo Muchos, tal como lo devuelve la función [Old](old.md "Old"). Para mayor información, consulte la descripción del comando [Old](old.md "Old").
+
+OLD RELATED MANY cambia la selección de la tabla relacionada y selecciona el primer registro de la selección actual como registro actual.
+
+## Ver también 
+
+[OLD RELATED ONE](../commands/old-related-one)  
+[RELATE MANY](../commands/relate-many)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 263 |
+| Hilo seguro | yes |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+
