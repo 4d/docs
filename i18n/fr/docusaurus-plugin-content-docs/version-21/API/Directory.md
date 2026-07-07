@@ -556,7 +556,7 @@ La fonction `.files()` <!-- REF #directory.files().Summary -->retourne une colle
 
 > Les alias ou les liens symboliques ne sont pas résolus.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
+Par défaut, si vous ne passez pas le paramètre *options*, seuls les fichiers situés au premier niveau du dossier sont renvoyés dans la collection, incluant les fichiers cachés. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
