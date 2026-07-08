@@ -1,0 +1,65 @@
+---
+id: vp-get-cell-style
+title: VP Get cell style
+---
+
+<!-- REF #_method_.VP Get cell style.Syntax -->
+
+**VP Get cell style** (  *rangeObj* : Object ) : Object<!-- END REF -->
+
+<!-- REF #_method_.VP Get cell style.Params -->
+
+<div class="no-index">
+
+| Parâmetro  | Tipo   |                             | Descrição        |
+| ---------- | ------ | --------------------------- | ---------------- |
+| rangeObj   | Object | ->                          | Objeto intervalo |
+| Resultados | Object | <- | Objecto estilo   |
+
+</div>
+<!-- END REF -->
+
+## Descrição
+
+O comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->retorna um [objeto estilo](../configuring.md#style-objects) para a primeira célula no *rangeObj*<!-- END REF -->.
+
+Em *rangeObj*, passe um intervalo que contenha o estilo a ser recuperado.
+
+- Se *rangeObj* contiver um intervalo de células, o estilo da célula será retornado.
+- Se *rangeObj* contiver um intervalo que não seja um intervalo de células, o estilo da primeira célula do intervalo será retornado.
+- Se *rangeObj* contiver vários intervalos, somente o estilo da primeira célula do primeiro intervalo será retornado.
+
+## Exemplo
+
+Para obter os detalhes sobre o estilo na célula selecionada (B2):
+
+![](../../assets/en/ViewPro/cmd_vpGetCellStyle.PNG)
+
+Este código:
+
+```4d
+$cellStyle:=VP Get cell style(VP Get selection("myDoc"))
+```
+
+... devolverá este objecto:
+
+```4d
+{
+  "backColor":"Azure",
+  "borderBottom":
+   {
+     "color":#800080,
+     "style":5
+   }
+  "font":"8pt Arial",
+  "foreColor":"red",
+  "hAlign":1,
+  "isVerticalText":"true",
+  "vAlign":0
+}
+```
+
+## Veja também
+
+[VP GET DEFAULT STYLE](vp-get-default-style.md)<br/>
+[VP SET CELL STYLE](vp-set-cell-style.md)
