@@ -173,7 +173,7 @@ title: (
        <Link to="Project/date-time-formats">
           <Translate>Date and Time Formats</Translate>
         </Link>
-        <Link to="Develop-legacy/xml">
+        <Link to="Develop/XML">
           <Translate>XML Processing</Translate>
         </Link>
       </div>
@@ -233,7 +233,7 @@ title: (
         <Link to="Desktop/labels" >
           <Translate>Labels</Translate>
         </Link>
-        <Link to="Desktop-legacy/standard-actions" >
+        <Link to="Desktop/standard-actions" >
           <Translate>Standard actions</Translate>
         </Link>
         <Link to="Desktop/drag-and-drop" >
