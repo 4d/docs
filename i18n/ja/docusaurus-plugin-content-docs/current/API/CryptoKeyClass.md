@@ -415,7 +415,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 キーのタイプ: "RSA", "ECDSA", "PEM"。
 
 - "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア
-- "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
+- "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
 - "PEM": `settings.pem` を [.pem](#pem) として使った、PEM 形式のキーペア
 
 <!-- REF CryptoKey.verify().Desc -->

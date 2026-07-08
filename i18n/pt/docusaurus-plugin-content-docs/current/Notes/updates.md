@@ -13,9 +13,10 @@ Leia [**O que há de novo no 4D v21 R4**](https://blog.4d.com/whats-new-in-4d-21
 - Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
 - Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
 - New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
-- New session `.quotas` property to configure thresholds for sessions.
+- New session [`.quotas` property](../API/SessionClass.md#quotas) to configure REST thresholds for sessions.
 - New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
 - New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
+- Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).
 
 #### Mudanças de comportamento
 

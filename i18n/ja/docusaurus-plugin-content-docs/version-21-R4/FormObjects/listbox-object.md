@@ -7,7 +7,11 @@ title: リストボックスオブジェクト
 
 配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。 ポインター配列を除きすべてのタイプの配列を使用できま す。 行数は配列の要素数により決定されます。 行数は配列の要素数により決定されます。
 
+<<<<<<<< HEAD:i18n/ja/docusaurus-plugin-content-docs/version-21-R4/FormObjects/listbox-object.md
 デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 これは他のカラムプロパティ同様、 [カラムプロパティ](./listbox-column.md) 内で変更することができます。 それぞれのカラムにおける表示フォーマットは、 [`OBJECT SET FORMAT`](../commands/object-set-format) コマンドを使用することで定義することもできます。 これは他のカラムプロパティ同様、 [カラムプロパティ](./listbox-column.md) 内で変更することができます。 それぞれのカラムにおける表示フォーマットは、 [`OBJECT SET FORMAT`](../commands/object-set-format) コマンドを使用することで定義することもできます。
+========
+デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。 これは他のカラムプロパティ同様、 [カラムプロパティ](./listbox-column.md) 内で変更することができます。 それぞれのカラムにおける表示フォーマットは、 [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) コマンドを使用することで定義することもできます。
+>>>>>>>> l10n_main:i18n/ja/docusaurus-plugin-content-docs/version-21-R2/FormObjects/listbox-object.md
 
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 

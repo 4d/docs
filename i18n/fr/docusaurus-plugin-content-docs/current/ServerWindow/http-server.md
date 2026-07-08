@@ -5,7 +5,7 @@ title: Page Serveur HTTP
 
 La page **HTTP Server** regroupe les informations relatives aux opérations du serveur Web et du serveur SOAP de 4D Server. Le serveur Web permet de publier du contenu Web tel que des pages HTML ou des images à destination de navigateurs Web et gérer des requêtes REST. Le serveur SOAP gère la publication de Web Services. Ces deux serveurs s’appuient sur le serveur HTTP interne de 4D Server.
 
-![](../assets/en/Admin/server-admin-web-page.png)
+![](../assets/en/Admin/server-admin-web-page-1.png)
 
 La partie supérieure de la page fournit des informations sur le statut courant du serveur HTTP de 4D Server.
 

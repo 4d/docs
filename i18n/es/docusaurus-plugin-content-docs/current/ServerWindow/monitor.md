@@ -5,7 +5,7 @@ title: Página Monitor
 
 La página **Monitor** muestra información dinámica relativa al uso de la base de datos, así como información sobre el sistema y la aplicación 4D Server.
 
-![](../assets/en/Admin/server-admin.png)
+![](../assets/en/Admin/server-admin-1.png)
 
 > En Windows, parte de la información del sistema que se muestra en esta página se recupera a través de las herramientas del "Analizador de rendimiento" de Windows. Sólo se puede acceder a estas herramientas cuando el usuario que abrió la sesión donde se lanzó 4D Server tiene la autorización de administración necesaria.
 

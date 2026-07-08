@@ -110,7 +110,7 @@ Statut ou format du fichier de logs des requêtes HTTP (HTTPDebugLog_*nn*.txt, s
 
 #### Clé d'accès
 
-Lorsque aucune clé d'accès n'est définie, il n'est pas possible pour les clients web d'accéder aux interfaces d'administration web telles que l'[Explorateur de données](dataExplorer.md) via des URL. La définition d'une clé d'accès est obligatoire pour déverrouiller l'accès au serveur d'administration Web via une URL (l'accès via une commande de menu 4D ne nécessite pas de clé d'accès). En cas de requête de connexion, une page d'erreur est retournée:
+La définition d'une clé d'accès est obligatoire pour déverrouiller l'accès au serveur d'administration Web via une URL (l'accès via une commande de menu 4D ne nécessite pas de clé d'accès). Lorsqu'aucune clé d'accès n'est définie, il n'est pas possible pour les clients web d'accéder aux interfaces d'administration web telles que l'[Explorateur de données](dataExplorer.md) via des URL. En cas de requête de connexion, une page d'erreur est retournée:
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 

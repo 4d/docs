@@ -5,7 +5,7 @@ title: Página servidor SQL
 
 La página **Servidor SQL** agrupa información sobre el servidor SQL integrado de 4D Server. Também inclui um botão que pode ser usado para controlar a ativação do servidor.
 
-![](../assets/en/Admin/server-admin-sql-page.png)
+![](../assets/en/Admin/server-admin-sql-page-1.png)
 
 A parte superior da página fornece informações sobre o status atual do servidor SQL de 4D Server.
 

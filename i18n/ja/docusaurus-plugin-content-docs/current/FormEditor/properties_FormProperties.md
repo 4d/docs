@@ -43,7 +43,7 @@ title: フォームプロパティ
 
 ## フォームクラス
 
-フォームに割り当てる既存の[ユーザークラス](../Project/code-overview.md#user-classes) の名前。 フォームに割り当てる既存の[ユーザークラス](../Project/code-overview.md#user-classes) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className" となります。
+フォームに割り当てる既存の[ユーザークラス](../Project/code-overview.md#user-classes) の名前。 ユーザークラスはホストプロジェクトのものでも[コンポーネント](../Extensions/develop-components.md#sharing-of-classes) のものでも使用可能です。後者の場合は正式なシンタックスは"[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className" となります。
 
 フォームにクラスを割り当てることで、以下のような利点があります:
 

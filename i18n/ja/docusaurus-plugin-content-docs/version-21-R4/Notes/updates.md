@@ -13,9 +13,10 @@ title: リリースノート
 - Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
 - マルチレベルスタイルシートが、[4D Write Pro インターフェースでサポートされる](../WritePro/writeprointerface#multi-level-list-style-sheets) ようになり、これによりユーザーはツールバーとサイドバーから構造化されたマルチレベルリストを直接作成・管理できるようになりました。
 - 新しい[`defer`](../commands/defer) コマンドが追加され、これによってメソッドまたは関数の終了時に必ず実行される同じコードを宣言することができるようになりました。また新しい[`Deferred formulas`](../commands/deferred-formulas) コマンドを使用することで、遅延されたフォーミュラの一覧を取得することができます。
-- セッションの閾(しきい)値を設定するための、セッションの新しい `.quotas` プロパティ。
+- セッションの REST 閾値を設定するための新しいセッション [`.quotas` プロパティ](../API/SessionClass.md#quotas)。
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
+- 4D Server 管理ウィンドウのセッション情報が改善され、従来の **Users** に代わる新しい [**Sessions**](../ServerWindow/sessions.md) ページが追加されました。
 
 #### 動作の変更
 

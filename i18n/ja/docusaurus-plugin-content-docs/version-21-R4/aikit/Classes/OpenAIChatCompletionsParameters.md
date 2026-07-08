@@ -32,9 +32,9 @@ title: OpenAIChatCompletionsParameters
 
 ### 非同期コールバック用プロパティ
 
-\| プロパティ                   | 型    | 詳細                                                                                       |
+\| Property                   | Type    | Description                                                                                       |
 \|---------------------------|---------|-------------------------|---------------------------------------------------------------------------------------------------|
-\| `onData`<br>(または `formula`)   | 4D.Function | データチャンクを受信した際に非同期で呼び出される関数。<br>*カレントのプロセスが終了しないように注意してください。* |
+\| `onData`<br>(or `formula`)   | 4D.Function | A function to be called asynchronously when receiving data chunk.<br>*カレントプロセスが終了しないように注意してください。* |
 
 `onData` は引数として[OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md) を受け取ります。
 

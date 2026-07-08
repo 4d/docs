@@ -3,7 +3,7 @@ id: ClassClass
 title: Class
 ---
 
-When a user class is [defined](../Project/code-overview.md#creating-classes) in the project, it is loaded in the 4D language environment. クラスとは、それ自身が "Class" クラスのオブジェクトであり、プロパティと関数を持ちます。
+プロジェクトにユーザークラスが [定義](../Project/code-overview.md#creating-classes) されている場合、それは 4D ランゲージ環境に読み込まれます。 クラスとは、それ自身が "Class" クラスのオブジェクトであり、プロパティと関数を持ちます。
 
 ### 概要
 

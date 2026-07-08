@@ -195,7 +195,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
+クラス関数の場合、`Current method name` コマンドは以下のものを返します: `<ClassName>.<FunctionName>` 例えば、 "MyClass.myFunction" 。
 
 アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#引数) を受け取ることができます。  以下のシンタックスがサポートされています: 以下のシンタックスがサポートされています:
 
@@ -736,7 +736,7 @@ shared Function Bar($value : Integer)
 
 :::
 
-クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。   インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
+クラスのシングルトンは、初回の [`cs.<class>.me`](../API/ClassClass.md#me) プロパティの呼び出し時にインスタンス化されます。 インスタンス化されたクラスのシングルトンはその後、[`me`](../API/ClassClass.md#me) プロパティの使用により常に返されます。
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。   この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。 この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
@@ -893,7 +893,7 @@ server Function <functionName>
 
 [クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`local` キーワードは、関数は**呼ばれた場所で実行されなければならない**ということを指定します。
 
-:::note リマインダー
+:::note 注記
 
 `local` キーワードは [共有シングルトンまたはセッションシングルトンの関数](#シングルトンクラス) においては意味を持ちません。これらはデフォルトでローカルに実行されるからです。
 
@@ -923,7 +923,7 @@ End if
 
 [クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`server` キーワードは、関数は**サーバー側で実行されなければならない** ということを意味します。
 
-:::note リマインダー
+:::note 注記
 
 `server` キーワードは、デフォルトでサーバー上で実行される [ORDA データモデル関数](../ORDA/ordaClasses.md) に対しては特に意味を持ちません。
 

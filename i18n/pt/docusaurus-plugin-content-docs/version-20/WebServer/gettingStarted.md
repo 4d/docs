@@ -242,13 +242,13 @@ $password:=$avalues{$indexPassword}
 //look for a user with the entered name in the users table
 $user:=ds.
     WebUsers.query("userId = :1"; $userId).first() If ($user#Null) //a user was found
-        //check the password
+  //check the password
     If (Verify password hash($password; $user.password))
-            //password ok, fill the session
+      //password ok, preencha a sessão
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-            //You can use the user session to store any information
+         //Você pode usar a sessão do usuário para armazenar qualquer informação
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")

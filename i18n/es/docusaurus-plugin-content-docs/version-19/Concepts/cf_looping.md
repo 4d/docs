@@ -30,7 +30,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record?
+ CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record? CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while
@@ -46,7 +46,7 @@ La sintaxis de la estructura condicional `Repeat...Until` es:
     statement(s)
  Until(Boolean_Expression)
 ```
-Un bucle `Repeat...Until` es similar a un bucle [While...End while](#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
+Aquí está el bucle equivalente `While...End while`: Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción.
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
@@ -197,7 +197,7 @@ Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 
  End for
 ```
 
-Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
 ```4d
  $i:=1 //Inicializar el contador
  While($i<=100) //Bucle 100 veces
@@ -304,14 +304,14 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 
 ### Bucle en las colecciones
 
-Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
+La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
 En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expresión_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- End for each</code> se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 - Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables de tipo entero largo).
 
 #### Ejemplo

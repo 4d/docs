@@ -247,7 +247,7 @@ Para agrupar objectos:
 Para desagrupar objetos:
 
 1. Seleccione o objecto ou objectos que pretende duplicar.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D marca os limites dos objetos individuais com alças.
+2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>Se **Desagrupamento** for escurecido, isso significa que o objeto selecionado já está separado em sua forma mais simples. 4D marca os limites dos objetos individuais com alças.
 
 ### Alinhamento de objetos
 

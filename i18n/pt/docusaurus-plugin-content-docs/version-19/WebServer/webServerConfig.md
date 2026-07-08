@@ -577,7 +577,7 @@ Estado de validação de endereço IP para cookies de sessão. Por motivos de se
 
 #### Reutilizar contextos temporários (em modo remoto)
 
-Permite otimizar a operação do 4D Web Server no modo remoto, reutilizando processos da Web criados para processar solicitações anteriores da Web. De fato, o servidor web em 4D precisa de um processo web específico para lidar com cada solicitação web; no modo remoto, quando necessário, esse processo se conecta à máquina 4D Server para acessar os dados e o mecanismo de banco de dados. Assim, ele gera um contexto temporário usando suas próprias variáveis, seleções, etc. Quando o pedido tiver sido tratado, este processo é encerrado.
+Permite otimizar a operação do 4D Web Server no modo remoto, reutilizando processos da Web criados para processar solicitações anteriores da Web. De fato, o servidor web em 4D precisa de um processo web específico para lidar com cada solicitação web; no modo remoto, quando necessário, esse processo se conecta à máquina 4D Server para acessar os dados e o mecanismo de banco de dados. Assim, ele gera um contexto temporário usando suas próprias variáveis, seleções, etc. Quando o pedido tiver sido tratado, este processo é encerrado. Quando o pedido tiver sido tratado, este processo é encerrado.
 
 Quando a opção **Reutilizar Contextos Temporários** é marcada, no modo remoto 4D mantém os processos web específicos e reutiliza-os para solicitações subsequentes. Removendo o estágio de criação do processo, o desempenho do servidor web é melhorado.
 

@@ -96,7 +96,6 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。
 :::
-:::
 
 - [`Last errors`](../commands/last-errors) コマンドは4D アプリケーション内で発生したエラーのカレントのスタックのコレクションを返します。
 - `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。

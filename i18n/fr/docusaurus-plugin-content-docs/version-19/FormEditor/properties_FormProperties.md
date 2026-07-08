@@ -12,7 +12,7 @@ Cette propriété définit la palette de couleurs du formulaire. Par défaut, lo
 
 *   dark - texte clair sur fond foncé
 *   light - texte foncé sur fond clair
-> Une palette de couleurs définie ne peut pas être remplacée par un CSS.
+> light - texte foncé sur fond clair > Une palette de couleurs définie ne peut pas être remplacée par un CSS.
 
 #### Grammaire JSON
 
@@ -158,7 +158,7 @@ Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Cr
 
 *   la page courante,
 *   la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
-> Cette option ne prend pas en compte les objets générés via la commande `OBJECT DUPLICATE`. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
+> > Cette option ne prend pas en compte les objets générés via la commande `OBJECT DUPLICATE`. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
 Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
 

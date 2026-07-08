@@ -53,7 +53,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 | Paramètres | Type                               |                             | Description                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
-| parameter  | Object                             |              ->             | Configuration du serveur de messagerie             |
+| paramètres | Object                             |              ->             | Configuration du serveur de messagerie             |
 | Résultat   | 4D.IMAPTransporter | <- | [Objet transporteur IMAP](#objet-imap-transporter) |
 
 </div>
@@ -683,7 +683,7 @@ End if
 
 #### Description
 
-La fonction `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->supprime tous les messages marqués "deleted" du serveur de messagerie IMAP.<!-- END REF --> Le marqueur "deleted" peut être fixé avec les fonctions [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
+La fonction `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->supprime tous les messages avec le flag "deleted" du serveur de messagerie IMAP.<!-- END REF --> Le flag "deleted" peut être défini avec les méthodes [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
 
 **Objet retourné**
 

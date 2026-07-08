@@ -92,7 +92,7 @@ As variáveis ou expressões podem ser digitáveis ou não digitáveis e podem r
 
 | Nome       | Tipo de dados              | Valores possíveis                                                                                                                                                                                                                                                        |
 | ---------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataSource | string ou array de strings | <li>Variável 4D, nome de campo ou qualquer expressão.</li><li>String vazia para [variáveis dinâmicas](#dynamic-variables).</li><li>Array de strings (coleção de nomes de array) para uma coluna [listbox hierárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
+| dataSource | string ou array de strings | <li>Variável 4D, nome de campo ou qualquer expressão.</li><li>String vazia para [variáveis dinâmicas](#dynamic-variables).</li><li>Array de strings (coleção de nomes de array) para uma coluna [listbox hierárquico](listbox_overview.md#hierarchical-list-boxes)</li> |
 
 ### Expressões
 
@@ -177,8 +177,8 @@ Insira uma expressão que retorne uma coleção ou uma seleção de entidades. G
 
 A coleção ou a seleção da entidade deve estar disponível para o formulário quando for carregada. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
 
-- si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
-- si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
+- se você usou uma coleção de objetos, pode chamar **This** na expressão da fonte de dados para acessar cada valor de propriedade, por exemplo `This.<propertyPath>`.
+- se você usou uma seleção de entidades, pode chamar **This** na expressão da fonte de dados para acessar cada valor de atributo, por exemplo `This.<attributePath>`.
 
 > Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. No entanto, neste caso, você não conseguirá modificar valores ou acessar o objeto atual (veja abaixo).
 

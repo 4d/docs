@@ -5,7 +5,7 @@ title: Página Manutenção
 
 La página **Mantenimiento** de la ventana de administración de 4D Server ofrece información relativa al funcionamiento actual de la aplicación. Ele também fornece acesso às funções básicas de manutenção:
 
-![](../assets/en/Admin/server-maintenance.png)
+![](../assets/en/Admin/server-maintenance-1.png)
 
 ## Última verificação/compactação
 

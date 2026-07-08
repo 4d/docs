@@ -709,7 +709,7 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um
 
 </details>
 
-<!-- REF #DataClassClass.getRemoteCache().Syntax -->**.getRemoteCache**() : Object <!-- END REF -->
+<!-- REF #DataClassClass.getRemoteCache().Syntax -->**.getRemoteCache**() : Objeto <!-- END REF -->
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 

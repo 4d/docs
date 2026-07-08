@@ -27,7 +27,6 @@ title: ラベル
 
 - デザインモードでは、**ツール**メニュー、あるいは4Dツールバーにあるツールボタンのメニューから\*\*ラベル...\*\*を選択します。
   または
-  または
 - アプリケーションモードでは、 [`PRINT LABEL`](../commands/print-label) コマンドを使用します。
 
 ![](../assets/en/Desktop/label-wizard.png)

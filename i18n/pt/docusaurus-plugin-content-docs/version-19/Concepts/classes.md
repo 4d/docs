@@ -24,9 +24,9 @@ Por exemplo, se criar criar uma classe `Pessoa` com a seguinte definição:
 Ou em um método, criar uma "Pessoa":
 
 ```
-var $person : cs.Person //object of Person class  
+var $person : cs. Person //object of Person class  
 var $hello : Text
-$person:=cs.Person.new("John";"Doe")
+$person:=cs. Person.new("John";"Doe")
 // $person:{firstName: "John"; lastName: "Doe" }
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
@@ -169,12 +169,12 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-Não existe uma palavra-chave final para o código de função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+Não existe uma palavra-chave final para o código de função. Não existe uma palavra-chave final para o código de função do construtor de classe.
 
 :::
 
 
-As funções de classe são propriedades específicas da classe. São objetos da classe [4D.Function](../API/FunctionClass.md#about-function-objects).
+As funções de classe são propriedades específicas da classe. São objetos da classe [4D. Function](../API/FunctionClass.md#about-function-objects).
 
 No ficheiro de definição de classe, as declarações de função utilizam a palavra-chave `Função` , e o nome da função. O nome da função deve estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
 
@@ -270,14 +270,14 @@ $area:=$rect.getArea() //5000
 #### Sintaxe
 
 ```4d
-// Class: MyClass
 Class constructor({$parameterName : type; ...})
 // código
+// Class: MyClass
 ```
 
 :::note
 
-Não existe uma palavra-chave final para o código de função do construtor de classe. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
+Não existe uma palavra-chave final para o código de função do construtor de classe. Não existe uma palavra-chave final para o código de função do construtor de classe.
 
 :::
 
@@ -292,16 +292,15 @@ Para uma função class constructor, o comando `Current method name` retorna: `<
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
-Class constructor ($name : Text)
+// Class constructor of MyClass Class constructor ($name : Text)
  This.name:=$name
 ```
 
 ```4d
 // Em um método projeto
 // Você pode instanciar um objeto
-var $o : cs.MyClass
-$o:=cs.MyClass.new("HelloWorld")  
+var $o : cs. MyClass
+$o:=cs. MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}
 ```
 
@@ -317,7 +316,7 @@ A palavra-chave `Class extends` é utilizada na declaração da classe para cria
 
 A extensão de classe deve respeitar as seguintes regras:
 
-- Uma classe de usuário não pode estender uma classe incorporada (excepto as classes 4D.Object e [ORDA](../ORDA/ordaClasses.md) que são estendidas por defeito para as classes de utilizador).
+- Uma classe de usuário não pode estender uma classe incorporada (excepto as classes 4D. Object e [ORDA](../ORDA/ordaClasses.md) que são estendidas por defeito para as classes de utilizador).
 - Uma classe de usuário não pode estender uma classe de usuário de outro projeto ou componente.
 - Uma classe usuário não se pode estender a si própria.
 - Não é possível estender classes de forma circular (ou seja, "a" estende "b" que estende "a").
@@ -333,12 +332,7 @@ Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Po
 ```4d
 //Classe: Square
 
-//path: Classes/Square.4dm 
-
-Class extends Polygon
-
-
-Construtor da classe ($side : Integer)
+//path: Classes/Square.4dm Class extends Polygon Construtor da classe ($side : Integer)
 
  // Chama o construtor da classe pai com comprimentos
  // fornecidos para a largura e altura do Polygon
@@ -377,9 +371,7 @@ A palavra-chave `Super` permite efectuar chamadas para a superclasse ``, ou seja
 
 ```4d
 // dentro do construtor myClass
-var $text1; $text2 : Text
-Super($text1) //chama o construtor da superclasse com um parâmetro de texto
-This.param:=$text2 // usa o segundo parâmetro
+var $text1; $text2 : Text Super($text1) //chama o construtor da superclasse com um parâmetro de texto This.param:=$text2 // usa o segundo parâmetro
 ```
 
 2. No interior de uma função de membro da classe [](#function), `Super` designa o protótipo da superclasse e permite chamar uma função da hierarquia da superclasse.
@@ -394,37 +386,28 @@ Super.doSomething(42) //chamada a função "doSomething"
 Este exemplo ilustra a utilização de `Super` num construtor de classe. O comando é chamado para evitar a duplicação das partes do construtor que são comuns às classes `Rectangle` e `Square` .
 
 ```4d
-// Classe: Rectângulo
-Class constructor($width : Integer; $height : Integer)
+// Classe: Rectângulo Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
- This.width:=$width
-
-
-Function sayName()
+ This.width:=$width Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
 // Definição da função
+
 Function getArea()
  var $0 : Integer
  $0:=(This.height)*(This.width)
 ```
 
 ```4d
-//Classe: Square
-
-Classe extends Rectangle
-
-Construtor da classe ($side : Integer)
+//Classe: Square Classe extends Rectangle Construtor da classe ($side : Integer)
 
  // Chama o construtor da classe pai com comprimentos
  // fornecidos para a largura e altura do Rectangle
  Super($side;$side)
  // Em classes derivadas, Super tem de ser chamado antes de
  // poder usar 'This'
- This.name:="Square"
-
-Function getArea()
+ This.name:="Square" Function getArea()
  C_LONGINT($0)
  $0:=This.height*This.width
 ```
@@ -434,9 +417,7 @@ Function getArea()
 Este exemplo ilustra a utilização de `Super` num método de membro da classe. Criou a classe `Rectangle` com uma função:
 
 ```4d
-//Classe: Rectângulo
-
-Function nbSides()
+//Classe: Rectângulo Function nbSides()
  var $0 : Text
  $0:="I have 4 sides"
 ```
@@ -444,11 +425,7 @@ Function nbSides()
 Também criou a classe `Square` com uma função que chama a função da superclasse:
 
 ```4d
-//Classe: Quadrado
-
-Class extends Rectangle
-
-Function description()
+//Classe: Quadrado Class extends Rectangle Function description()
  var $0 : Text
  $0:=Super.nbSides()+" que são todos iguais"
 ```
@@ -485,9 +462,7 @@ $val:=$o.f() //42
 Quando se utiliza uma função [construtora de classe](#class-constructor) (com a função [`new()`](API/ClassClass.md#new) ), a sua `Esta` está ligada ao novo objecto que está a ser construído.
 
 ```4d
-//Class: ob
-
-Class constructor  
+//Class: ob Class constructor  
 
  // Crie propriedades nisto como
  // desejado ao atribuir-lhes
@@ -534,4 +509,4 @@ Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de class
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instância de` devolve `true` se o objecto `` pertencer à classe `` ou a uma das suas classes herdadas, e `false` caso contrário.
+`OB Instância de` devolve `true` se o objecto `pertencer à classe` ou a uma das suas classes herdadas, e `false` caso contrário.

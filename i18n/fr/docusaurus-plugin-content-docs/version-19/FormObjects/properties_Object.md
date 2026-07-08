@@ -184,7 +184,7 @@ La collection ou l'entity selection doit être disponible pour le formulaire lor
 
 - si vous avez utilisé une collection d'objets, vous pouvez appeler **This** dans l'expression de la source de données pour accéder à chaque valeur de propriété, par exemple `This.<propertyPath>`.
 - si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression de la source de données pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
-> Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
+> > Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
 
 #### Grammaire JSON
 

@@ -45,12 +45,8 @@ Objetos lista drop down são iniciados ao carregar uma lista de valores em um ar
 * Executar código que cria o objeto e as suas propriedades. Por exemplo, se "myList" for a [variable](properties_Object.md#variable-or-expression) associada à lista suspensa, você poderá escrever no evento de formulário [On Load](Events/onLoad.md):
 
 ```4d
-// Form.myDrop é a datasource do objeto do formulário
-
-Form.myDrop:=New object
-Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1 //currentValue é um placeholder
-Form.myDrop.currentValue:="Select a fruit" 
+// Form.myDrop é a datasource do objeto do formulário Form.myDrop:=New object Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
+Form.myDrop.index:=-1 //currentValue é um placeholder Form.myDrop.currentValue:="Select a fruit" 
 ```
 
 A lista suspensa é exibida com a string de placeholder:

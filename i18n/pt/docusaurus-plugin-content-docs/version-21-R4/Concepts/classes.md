@@ -890,7 +890,7 @@ For a overall description of where code is actually executed in client/server, p
 
 In a [client/server architecture](../Desktop/clientServer.md), the `local` keyword specifies that the function must be executed **on the machine from where it is called**.
 
-:::note Reminder
+:::note Lembrete
 
 The `local` keyword is useless for [shared or session singleton functions](#singleton-classes), which are executed locally by default.
 

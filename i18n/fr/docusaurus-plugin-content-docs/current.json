@@ -1622,5 +1622,17 @@
   "sidebar.docs.link.qodly-pro-link2": {
     "message": "4D Qodly Pro",
     "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
+  },
+  "sidebar.docs.category.Commands by theme.link.generated-index.description": {
+    "message": "4D commands by theme",
+    "description": "The generated-index page description for category 'Commands by theme' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Standard actions": {
+    "message": "Actions standard",
+    "description": "The label for the doc item 'Standard actions' in sidebar 'docs', linking to the doc Desktop-legacy/standard-actions"
+  },
+  "sidebar.docs.doc.Drag and Drop": {
+    "message": "Glisser-Déposer",
+    "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
   }
 }

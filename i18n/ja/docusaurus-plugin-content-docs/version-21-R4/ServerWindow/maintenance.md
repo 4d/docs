@@ -5,7 +5,7 @@ title: メンテナンスページ
 
 **メンテナンス** ページには、アプリケーションの現在の動作状況に関する情報が表示されます。 また、基本的なメンテナンス機能にアクセスすることもできます:
 
-![](../assets/en/Admin/server-maintenance.png)
+![](../assets/en/Admin/server-maintenance-1.png)
 
 ## 最新の検査/圧縮:
 

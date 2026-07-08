@@ -78,7 +78,7 @@ macOS上でパッケージファイルを開く:
 --args ~/Documents/myDB.4dbase
 ```
 
-プロジェクトファイルを開く:
+データファイルを指定してプロジェクトファイルを開く:
 
 - macOS:
 
@@ -92,7 +92,7 @@ macOS上でパッケージファイルを開く:
 %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
 
-データファイルを指定してプロジェクトファイルを開く:
+プロジェクトファイルを開く:
 
 - macOS:
 

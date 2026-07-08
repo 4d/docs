@@ -149,6 +149,22 @@ La siguiente tabla resume dónde se ejecuta el código por defecto y cómo cambi
 | Métodos base de datos::<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server                | n/a                                                                                                                                                                                                                                          |
 | Métodos base:<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                                             | client                | n/a                                                                                                                                                                                                                                          |
 
+## Management of sleeping client sessions
+
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server remains active.
+
+In this case, the remote application notifies 4D Server before entering sleep mode. The corresponding client session changes to the **Sleeping** status.
+
+![](../assets/en/Admin/server-sleep.png)
+
+This status frees server resources while preserving the session context.
+
+When the remote machine wakes up, the application automatically reconnects and restores the existing session.
+
+A sleeping client session is automatically dropped after 48 hours of inactivity.
+
+You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+
 ## Gestión de pares inalcanzables
 
 Cuando se utiliza la [capa de red QUIC](../settings/client-server.md#network-layer), las sesiones cliente-servidor se benefician de una **función de reconexión automática** en caso de desconexiones inesperadas. Entre las desconexiones inesperadas se incluyen, por ejemplo:
@@ -172,7 +188,7 @@ The QUIC network layer automatically emits an "Unreachable" event to 4D Server w
 
 #### El cliente remoto deja de responder
 
-When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote client status](../ServerWindow/users.md#list-of-users) is set to **Unreachable**.
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/sessions.md#list-of-sessions) is set to **Unreachable**.
 
 ![](../assets/en/Desktop/unreachable-status.png)
 
@@ -188,6 +204,8 @@ When the "Unreachable" event is received on either side, an [`info.unreachableSi
 
 ### Restablecer o cerrar la conexión
 
+The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
+
 El tiempo de espera de la sesión QUIC se utiliza automáticamente para supervisar las desconexiones:
 
 - If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.
@@ -196,4 +214,3 @@ El tiempo de espera de la sesión QUIC se utiliza automáticamente para supervis
   - In case of a server session closed from a remote machine, a warning dialog box is displayed so that the user can restart the remote application or quit:
     ![](../assets/en/Desktop/remote-not-responding.png)
 
-The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.

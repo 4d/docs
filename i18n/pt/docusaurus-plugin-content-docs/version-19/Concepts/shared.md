@@ -16,7 +16,7 @@ Os objectos e coleções partilhados podem ser definidos como propriedades de ob
 
 :::
 
-Para modificar um objeto/coleção partilhado, é necessário chamar a estrutura **Use...End use** . A leitura de um valor de objeto/coleção partilhado não requer **Use...End use**.
+Para modificar um objeto/coleção partilhado, é necessário chamar a estrutura **Use... End use** . A leitura de um valor de objeto/coleção partilhado não requer **Use... End use**.
 
 Um catálogo único e global devolvido  pelo comando `Storage` está sempre disponível em todo o banco de dados e seus componentes, e pode ser utilizado para armazenar todos os objetos e coleções compartidos.
 
@@ -31,7 +31,7 @@ As modificações podem ser aplicadas a objetos partilhados e coleções partilh
 - adicionar ou remover propriedades de objectos,
 - adicionar ou editar valores (desde que sejam suportados em objetos partilhados), incluindo outros objetos partilhados ou coleções (que criam um grupo partilhado, ver abaixo).
 
-Todas as instruções de modificação num objeto ou coleção partilhados têm de ser protegidas dentro de um bloco [`Use...End use`](#useend-use), caso contrário é gerado um erro.
+Todas as instruções de modificação num objeto ou coleção partilhados têm de ser protegidas dentro de um bloco [`Use... End use`](#useend-use), caso contrário é gerado um erro.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -40,24 +40,22 @@ Todas as instruções de modificação num objeto ou coleção partilhados têm 
  End Use
 ```
 
-Por conveniência, todas as funções de coleção [](../API/CollectionClass.md) que modificam o objeto partilhado ou a coleção inserem um bloco interno `Use...End use` para que não tenha de o codificar. Por exemplo:
+Por conveniência, todas as funções de coleção [](../API/CollectionClass.md) que modificam o objeto partilhado ou a coleção inserem um bloco interno `Use... End use` para que não tenha de o codificar. Por exemplo:
 
 ```4d
 $col:=New shared collection()
 $col.push("alpha") //.push() desencadeia internamente a utilização Use/End, pelo que não é necessário fazê-lo você mesmo
 ```
 
-Se precisar de executar várias modificações na mesma coleção, pode proteger todas as modificações com um único `Use...End use` para que as modificações sejam executadas atomicamente.
+Se precisar de executar várias modificações na mesma coleção, pode proteger todas as modificações com um único `Use... End use` para que as modificações sejam executadas atomicamente.
 
 ```4d
-$col:=Storage.mySharedCollection
-Use($col)
+$col:=Storage.mySharedCollection Use($col)
     $col[0]:="omega" //modificar um elemento tem de ser efetuado dentro de Use/End use
-    $col.push("alpha") //.push() desencadeia internamente Use/End use, mas queremos fazer ambas as modificações atomicamente
-End Use
+    $col.push("alpha") //.push() desencadeia internamente Use/End use, mas queremos fazer ambas as modificações atomicamente End Use
 ```
 
-Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. `Use` bloqueia o objeto/coleção compartido para outras threads, enquanto que o último `End use` desbloqueia todos os objetos e coleções. . A tentativa de modificar um objeto/coleção partilhado sem pelo menos um `Use...End use` gera um erro. Quando um processo chama `Use...End use` num objeto/coleção partilhado que já está a ser utilizado por outro processo, este é simplesmente colocado em espera até que o `End use` o desbloqueie (não é gerado qualquer erro). Consequentemente, as instruções em `Use... End use` estruturas devem ser executadas rapidamente e desbloquear os elementos o mais rapidamente possível. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
+Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. `Use` bloqueia o objeto/coleção compartido para outras threads, enquanto que o último `End use` desbloqueia todos os objetos e coleções. . A tentativa de modificar um objeto/coleção partilhado sem pelo menos um `Use... End use` gera um erro. Quando um processo chama `Use... End use` num objeto/coleção partilhado que já está a ser utilizado por outro processo, este é simplesmente colocado em espera até que o `End use` o desbloqueie (não é gerado qualquer erro). Consequentemente, as instruções em `Use... End use` estruturas devem ser executadas rapidamente e desbloquear os elementos o mais rapidamente possível. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
 
 A atribuição de objectos/colecções partilhados a propriedades ou elementos de outros objectos/colecções partilhados é permitida e cria **grupos partilhados**. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
 
@@ -71,7 +69,7 @@ Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
 Ao chamar a `Use` em um objeto/colección compartido de um grupo se bloquearão as propriedades/elementos de todos os objetos/coleções compartidos que pertençam ao mesmo grupo.
 
-No entanto, é necessário ler um objeto/coleção partilhado em `Use...End use` quando vários valores estão ligados entre si e devem ser lidos de uma só vez, por razões de coerência.
+No entanto, é necessário ler um objeto/coleção partilhado em `Use... End use` quando vários valores estão ligados entre si e devem ser lidos de uma só vez, por razões de coerência.
 
 ### Duplicação
 
@@ -87,7 +85,7 @@ Para mais informações, consulte a descrição do comando `Storage` .
 
 ## Use... End use
 
-A sintaxe formal da estrutura `Use...End use` é a seguinte:
+A sintaxe formal da estrutura `Use... End use` é a seguinte:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
@@ -95,16 +93,16 @@ A sintaxe formal da estrutura `Use...End use` é a seguinte:
  End use
 ```
 
-A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. *Shared_object_or_Shared_collection* pode ser qualquer objeto partilhado ou coleção partilhada válida.
+A estrutura `Use... End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. *Shared_object_or_Shared_collection* pode ser qualquer objeto partilhado ou coleção partilhada válida.
 
-Os objectos partilhados e as colecções partilhadas são concebidos para permitir a comunicação entre processos, em particular, **processos 4D preemptivos**. Podem ser passados por referência como parâmetros de um processo para outro. É obrigatório rodear as modificações em objectos partilhados ou colecções partilhadas pelas palavras-chave `Use...End use` para impedir o acesso simultâneo entre processos.
+Os objectos partilhados e as colecções partilhadas são concebidos para permitir a comunicação entre processos, em particular, **processos 4D preemptivos**. Podem ser passados por referência como parâmetros de um processo para outro. É obrigatório rodear as modificações em objectos partilhados ou colecções partilhadas pelas palavras-chave `Use... End use` para impedir o acesso simultâneo entre processos.
 
 - Quando a linha **Use** é executada com êxito, todas as propriedades/elementos de _Shared_object_or_Shared_collection_ são bloqueados para todos os outros processos com acesso de escrita até que a linha correspondente `End use` seja executada.
 - As declarações __ sequência podem executar qualquer modificação nas propriedades/elementos Shared_object_or_Shared_collection sem risco de acesso simultâneo.
 - Se outro objeto partilhado ou coleção for adicionado como uma propriedade do parâmetro _Shared_object_or_Shared_collection_ , ficam ligados no mesmo grupo partilhado.
-- Se outro processo tentar acessar a uma das propriedades _Shared_object_or_Shared_collection_ ou propriedades ligadas enquanto uma sequência **Use...End use** estiver sendo executada, é automaticamente colocado em espera e aguarda até que a sequência atual seja terminada.
+- Se outro processo tentar acessar a uma das propriedades _Shared_object_or_Shared_collection_ ou propriedades ligadas enquanto uma sequência **Use... End use** estiver sendo executada, é automaticamente colocado em espera e aguarda até que a sequência atual seja terminada.
 - A linha **End use** desbloqueia as propriedades _Shared_object_or_Shared_collection_ e todos os objetos que compartem o mesmo identificador de bloqueio.
-- Várias estruturas **Use...End use** podem ser aninhadas no código 4D. No caso de um grupo, cada **Utilização** aumenta o contador de bloqueio do grupo e cada **Utilização final** diminui-o; todas as propriedades/elementos só serão libertados quando a última chamada **Utilização final** colocar o contador de bloqueio a 0.
+- Várias estruturas **Use... End use** podem ser aninhadas no código 4D. No caso de um grupo, cada **Utilização** aumenta o contador de bloqueio do grupo e cada **Utilização final** diminui-o; todas as propriedades/elementos só serão libertados quando a última chamada **Utilização final** colocar o contador de bloqueio a 0.
 
 :::note
 

@@ -5,7 +5,7 @@ title: Page maintenance
 
 La page **Maintenance** fournit diverses informations relatives au fonctionnement courant de la base. Elle donne également accès aux fonctions de maintenance élémentaires :
 
-![](../assets/en/Admin/server-maintenance.png)
+![](../assets/en/Admin/server-maintenance-1.png)
 
 ## Dernière vérification/dernier compactage
 

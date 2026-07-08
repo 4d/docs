@@ -110,7 +110,7 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 * Si *index* est en-dehors de ces limites, une erreur est retournée.
 * Si *index* correspond à une entité supprimée, une valeur Null est retournée.
-> > **Attention** : `EntitySelection[index]` est une expression non assignable, ce qui signifie qu'elle ne peut pas être utilisée comme référence modifiable d'entité avec des fonctions telles que [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Pour travailler avec l'entité correspondante, vous devez assigner l'expression retournée à une expression assignable, comme une variable. Exemples :
+> > > **Attention** : `EntitySelection[index]` est une expression non assignable, ce qui signifie qu'elle ne peut pas être utilisée comme référence modifiable d'entité avec des fonctions telles que [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Pour travailler avec l'entité correspondante, vous devez assigner l'expression retournée à une expression assignable, comme une variable. Exemples :
 
 ```4d
  $sel:=ds.Employee.all() //creation de l'entity selection
@@ -239,7 +239,7 @@ La fonction `.add()` <!-- REF #EntitySelectionClass.add().Summary -->ajoute l'*e
 
 * Si l'entity selection est ordonnée, le paramètre *entity* est ajouté à la fin de la sélection. Si une référence à la même entité appartient déjà à l'entity selection, elle est dupliquée et une nouvelle référence est ajoutée.
 * Si l'entity selection est non ordonnée, le paramètre *entity* est ajouté n'importe où dans la sélection, sans ordre spécifique.
-> Pour plus d'informations, reportez-vous au paragraphe [Entity selections triées ou non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+> Sommaire
 
 L'entity selection modifiée est retournée par la fonction, afin que les appels vers la fonction puissent être chaînés.
 
@@ -304,8 +304,8 @@ Les appels vers la fonction peuvent être chaînés :
 La fonction `and()` <!-- REF #EntitySelectionClass.and().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* à l'aide de l'opérateur logique ET<!-- END REF -->; elle retourne une nouvelle entity selection non ordonnée qui ne contient que les entités qui sont référencées à la fois dans l'entity selection et le paramètre.
 
 * Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle entity selection contenant uniquement l'entité est retournée. Sinon, une entity selection vide est retournée.
-* Si vous passez *entitySelection* comme paramètre, vous combinez les deux entity selections. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
-> Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
+* Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
+> > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
 Si l'entity selection initiale ou celle du paramètre *entitySelection* est vide, ou si *entity* est Null, une entity selection vide est retournée.
 
@@ -366,7 +366,7 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 
 #### Description
 
-La fonction `.average()` <!-- REF #EntitySelectionClass.average().Summary -->retourne la moyenne arithmétique de toutes les valeurs non nulles de *attributePath* dans l'entity selection<!-- END REF -->.
+La fonction `.average()` <!-- REF #EntitySelectionClass.average().Summary -->La fonction `.average()`<!-- END REF -->.
 
 Passez dans le paramètre *attributePath* le chemin de l'attribut à utiliser pour le calcul.
 
@@ -469,7 +469,7 @@ Si *entity* et l'entity selection n'appartiennent pas à la même dataclass, une
 
 #### Description
 
-La fonction `.count()` <!-- REF #EntitySelectionClass.count().Summary -->retourne le nombre d'entités dans l'entity selection pour lesquelles la valeur de *attributePath* n'est pas null<!-- END REF -->.
+La fonction `.count()` <!-- REF #EntitySelectionClass.count().Summary -->La fonction `.count()`<!-- END REF -->.
 > Seules les valeurs scalaires sont prises en compte. Les valeurs de type objet ou collection sont considérées comme des valeurs null.
 
 Une erreur est retournée si :
@@ -584,7 +584,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 #### Description
 
-La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->renvoie une collection contenant uniquement les valeurs distinctes (différentes) de *attributePath* dans l'entity selection<!-- END REF -->.
+La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->La fonction `.distinct()`<!-- END REF -->.
 
 La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas renvoyées.
 
@@ -712,7 +712,7 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 #### Description
 
-La fonction `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->retourne une collection contenant les valeurs *attributePath* extraites de l'entity selection<!-- END REF -->.
+La fonction `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->La fonction `.extract()`<!-- END REF -->.
 
 *attributePath* peut désigner :
 
@@ -735,7 +735,7 @@ Par défaut, les entités pour lesquelles *attributePath* est *null* ou indéfin
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
+Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif).
 
 Si plusieurs *attributePath* sont renseignés, un *targetPath* doit être fourni pour chacun. Seules les paires \[*attributePath*, *targetPath*] valides sont extraites.
 
@@ -868,7 +868,7 @@ Il existe cependant une différence entre les deux instructions lorsque la séle
 
 #### Description
 
-La fonction `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->retourne la dataclass de l'entity selection<!-- END REF -->.
+La fonction `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->La fonction `.getDataClass()`<!-- END REF -->.
 
 Cette fonction est utile principalement dans le contexte de code générique.
 
@@ -1200,7 +1200,7 @@ La fonction `minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclut d
 
 * Si vous passez *entity* en paramètre, la fonction crée une nouvelle entity selection sans *entity* (si *entity* appartient à l'entity selection). Si *entity* n'était pas incluse dans l'entity selection d'origine, une nouvelle référence à l'entity selection est renvoyée.
 * Si vous passez *entitySelection* en paramètre, la fonction retourne une entity selection contenant les entités appartenant à l"entity selection d'origine, sans les entités appartenant à *entitySelection*.
-> Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
+> > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
 Si l'entity selection initiale ou l'entity selection initiale et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée.
 
@@ -1265,11 +1265,11 @@ Vous voulez avoir une sélection d'employées nommées "Jones" qui vivent à New
 
 La fonction `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* à l'aide de l'opérateur OU logique (non exclusif)<!-- END REF -->; elle retourne une nouvelle entity selection non triée contenant toutes les entités de l'entity selection et du paramètre.
 
-* Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. Sinon, une nouvelle entity selection contenant l'entity selection d'origine et l'entité est retournée.
-* Si vous passez *entitySelection* comme paramètre, vous comparez les deux entity selections. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à *entitySelection* est renvoyée (ou n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résultante).
-> Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
+* Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée.
+* Si l'entity selection d'origine et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à *entitySelection* est renvoyée (ou n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résultante).
+> > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
-Si l'entity selection d'origine et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée. Si l'entity selection d'origine est vide, une référence à *entitySelection* ou une entity selection contenant uniquement *entity* est retournée.
+L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
 
 Si *entitySelection* est vide ou si *entity* est Null, une nouvelle référence à l'entity selection d'origine est renvoyée.
 
@@ -1327,7 +1327,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 La fonction `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->renvoie une nouvelle entity selection triée contenant toutes les entités de l'entity selection dans l'ordre spécifié par le paramètre *pathString* ou *pathObjects*<!-- END REF -->.
 > * Cette fonction ne modifie pas l'entity selection d'origine.
-* Pour plus d'informations, reportez-vous au paragraphe [Entity selections triées ou non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+* Sommaire
 
 Vous devez utiliser un paramètre de critère pour définir la manière dont les entités doivent être triées. Deux paramètres différents sont pris en charge :
 
@@ -1705,10 +1705,10 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
 
 #### Description
 
-La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice (i.e. la position) *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection.  Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
+La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice (i.e. la position) *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
 > Cette fonction ne modifie pas l'entity selection d'origine.
 
-L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
+Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
 
 * Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
 * Si *startFrom >= length*, la fonction retourne une entity selection vide.
@@ -1822,7 +1822,7 @@ $sum:=$sel.sum("salary")
 
 La fonction `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->crée et retourne une collection dans laquelle chaque élément est un objet contenant un ensemble de propriétés et de valeurs <!-- END REF -->correspondant aux noms et valeurs d'attributs de l'entity selection.
 
-Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "*", tous les attributs sont extraits. Les attributs dont la propriété [kind](DataClassClass.md#attributename) est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\_KEY (clé primaire). Les attributs dont la propriété "kind" est "relatedEntities" ne sont pas extraits.
+Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "*", tous les attributs sont extraits. Les attributs dont la propriété "kind" est "relatedEntities" ne sont pas extraits. Les attributs dont la propriété [kind](DataClassClass.md#attributename) est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\_KEY (clé primaire).
 
 Vous pouvez également indiquer les attributs à extraire à l'aide d'un paramètre de filtre. Deux types de filtres sont utilisables :
 

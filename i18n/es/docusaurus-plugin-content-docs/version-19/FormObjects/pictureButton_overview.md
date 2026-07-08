@@ -18,8 +18,8 @@ Los botones imagen pueden utilizarse de dos maneras:
   | Switch when Roll Over      | switchWhenRollover     | true  |
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
-* Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [Menús emergergentes imagen](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que un botón imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).   
-  Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
+* Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Como botón de imagen que permite al usuario elegir entre varias opciones. Con los [Menús emergergentes imagen](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que un botón imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).   
+  Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación.
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
@@ -56,7 +56,7 @@ Hay otros modos disponibles:
 - [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
 - [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Cambiar cada x segundos](./properties_Animation.md#switch-every-x-seconds)
-> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numeración de las imágenes en la tabla empieza por 0.
+> [Cambiar cada x segundos](./properties_Animation.md#switch-every-x-seconds) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

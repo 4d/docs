@@ -513,7 +513,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | webServer オブジェクト | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |      |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |      |
 
-セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
+セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
 
 ## セッションcookie名
 

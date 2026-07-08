@@ -566,9 +566,9 @@ Le diagramme suivant illustre le verrouillage optimiste :
 
 1. Deux process chargent la même entité.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Étant donné qu'ils correspondent, l'entité est enregistrée et sa valeur de marqueur est incrémentée.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'elles correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Comme la valeur du marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est renvoyée.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Puisque la valeur du marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Cela peut également être illustré par le code suivant :
 

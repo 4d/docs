@@ -56,7 +56,7 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。
 
 #### サービスプリンシパル名 (SPN)
 

@@ -57,7 +57,7 @@ Le tableau suivant répertorie tous les motifs pris en charge pour les formats d
 |         |                                                                          | ee            | 02                                                                                                    |
 |         |                                                                          | eee           | mar.                                                                                  |
 |         |                                                                          | eeee          | Mardi                                                                                                 |
-|         |                                                                          | eeeee         | T                                                                                                     |
+|         |                                                                          | eeeee         | M                                                                                                     |
 |         |                                                                          | eeeeee        | ma                                                                                                    |
 | c       | jour local de la semaine seul                                            | c ou cc       | 2                                                                                                     |
 |         |                                                                          | ccc           | mar.                                                                                  |

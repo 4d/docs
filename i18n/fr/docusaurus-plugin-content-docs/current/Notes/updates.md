@@ -9,17 +9,18 @@ Lisez [**Les nouveautés de 4D 21 R4**](https://blog.4d.com/fr/whats-new-in-4d-2
 
 #### Points forts
 
-- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
+- IA : Sous macOS, les utilisateurs finaux peuvent améliorer ou résumer des textes grâce aux **outils d'écriture** d’Apple Intelligence, disponibles sous forme de [propriété](../FormObjects/properties_Entry.md#writing-tools) et d’une [action standard](../Desktop/standard-actions) pour les objets de formulaire [4D Write Pro](../FormObjects/writeProArea_overview.md) et [input](../FormObjects/input_overview.md).
 - Amélioration de la [prise en charge des déconnexions client/serveur](../Desktop/clientServer.md#management-of-unreachable-peer) avec la couche réseau QUIC : nouveau paramètre de base de données [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135), nouvelle propriété [`unreachableSince` de session.info](../API/SessionClass.md#info).
 - Les feuilles de style pour listes à plusieurs niveaux sont désormais [prises en charge dans 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), ce qui permet aux utilisateurs de créer et de gérer des listes structurées à plusieurs niveaux directement depuis la barre d'outils et la barre latérale.
 - Nouvelle commande [`defer`](../commands/defer) permettant de déclarer du code qui sera toujours exécuté à la sortie d'une méthode ou d'une fonction ; nouvelle commande [`Deferred formulas`](../commands/deferred-formulas) permettant d'obtenir la liste des formules différées.
-- Nouvelle propriété `.quotas` de session permettant de configurer les seuils pour les sessions.
+- Nouvelle [propriété `.quotas`](../API/SessionClass.md#quotas) permettant de configurer les seuils REST pour les sessions.
 - Nouvelle classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) permettant de gérer des objets définissant des seuils destinés à protéger le serveur.
 - Nouvelle requête REST [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) permettant de supprimer des entity sets du cache du serveur.
+- Informations de session améliorées dans la fenêtre d'administration du serveur 4D dans une nouvelle page [**Sessions**](../ServerWindow/sessions.md) (anciennement **Utilisateurs**).
 
 #### Changements de comportement
 
-- La syntaxe REST **`GET /Employee/$entityset/<entitySetID>?$method=release`** est **obsolète** et ne doit plus être utilisée. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+- La syntaxe REST **`GET /Employee/$entityset/<entitySetID>?$method=release`** est **obsolète** et ne doit plus être utilisée. Pour supprimer des entity sets, vous devez désormais utiliser [`/$entityset/$release` avec le verbe POST](../REST/$entityset.md).
 
 ## 4D 21 R3
 

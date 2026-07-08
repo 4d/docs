@@ -22,7 +22,7 @@ Quando essa propriedade está ativada, a altura de cada linha é calculada autom
 * O cálculo da altura da linha ignora:
   * conteúdo da coluna oculta
   * Fundo
-> > Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
+> Fundo > > Como requer cálculos adicionais em tempo de execução, a opção de altura automática da linha pode afetar a fluidez da rolagem da sua caixa de listagem, principalmente quando ela contém um grande número de linhas.
 
 #### Gramática JSON
 

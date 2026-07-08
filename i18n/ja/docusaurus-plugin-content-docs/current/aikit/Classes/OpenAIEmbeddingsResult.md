@@ -29,7 +29,7 @@ The `usage` property returns an object containing token usage information for em
 | `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
 | `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
 
-**Example response:**
+**レスポンスの例:**
 
 ```json
 {
