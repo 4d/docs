@@ -1,0 +1,20 @@
+---
+id: openaiembedding
+title: OpenAIEmbedding
+---
+
+# OpenAIEmbedding
+
+La clase `OpenAIEmbedding` representa una codificación vectorial generada por la API OpenAI, que contiene información sobre el vector y su índice en la lista de representaciones vectoriales.
+
+## Propiedades
+
+| Propiedad   | Tipo        | Descripción                                                                                                                                                   |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `index`     | Integer     | El índice de la representación vectorial en la lista de representaciones vectoriales.                                                         |
+| `embedding` | `4D.Vector` | El vector de anidación. La longitud del vector depende del modelo tal como aparece en la guía de la representación vectorial. |
+| `object`    | Text        | Valor del texto "embedding".                                                                                                                  |
+
+## Ver también
+
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)
