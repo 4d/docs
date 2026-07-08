@@ -167,6 +167,7 @@ If (MethodA && MethodB)
        ALERT("三です。 ") // 3のアラートボックスを表示します
     Else // 数値が1,2,3のいずれでもない場合
        ALERT("一、二、三のいずれでもありません。
+ ")
  End case
 ```
 
@@ -309,7 +310,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 `Repeat...Until` ループは、[While...End while](#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 

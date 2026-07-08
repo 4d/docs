@@ -1,0 +1,161 @@
+---
+id: overview
+title: 4D-AIKit
+---
+
+# 4D-AIKit
+
+## 概要
+
+4D AIKit は、サードパーティのAI API との相互通信を可能にするビルトインの4D コンポーネントです。
+
+## OpenAI
+
+[`OpenAI`](Classes/OpenAI.md) クラスを使用すると、[OpenAI API](https://developers.openai.com/api/reference/overview) へのリクエストを行うことが可能になります。
+
+### 設定
+
+最初に、API キーを使用してOpenAI クライアントを初期化します。
+
+```4d
+var $client:=cs.AIKit.OpenAI.new("あなたの API キー")
+```
+
+[互換性のあるプロバイダー](compatible-openai.md) API に対しては、 `baseURL` 引数を設定することでサーバーURL を設定することができます。
+
+```4d
+var $client:=cs.AIKit.OpenAI.new({apiKey: "あなたの API キー"; baseURL: "https://your.server.ai"})
+```
+
+または
+
+```4d
+$client.baseURL:="https://your.server.ai"
+```
+
+### リクエストをする
+
+`OpenAI` はリソースと呼ばれる様々なエンドポイントを提供していて、それぞれが色々な機能を提供しています。
+
+```4d
+var $result:=$client.<resource>.<function>(<parameters...>)
+```
+
+`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
+
+また以下の例題も参照して下さい。
+
+#### チャット
+
+https://developers.openai.com/api/reference/resources/chat
+
+##### チャット補完
+
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
+
+```4d
+var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
+$messages.push({role: "user"; content: "Could you explain me why 42 is a special number"})
+var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
+// $result.choice に結果が戻される
+```
+
+##### チャットヘルパー
+
+このヘルパーを使用すると、ユーザーメッセージの一覧とアシスタントの返答のリストを管理することができます。
+
+```4d
+var $helper:=$client.chat.create("You are a helpful assistant.")
+var $result:=$helper.prompt("Could you explain me why 42 is a special number")
+$result:=$helper.prompt("and could you decompose this number")
+// $helper.messages 内に会話ログあり
+```
+
+##### ビジョンヘルパー
+
+このヘルパーはチャットを通して画像解析を可能にします。
+
+```4d
+var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")
+```
+
+#### 画像
+
+https://developers.openai.com/api/reference/resources/images
+
+```4d
+var $images:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"}).images
+```
+
+#### モデル
+
+https://developers.openai.com/api/reference/resources/models
+
+モデルの完全なリストを取得する例
+
+```4d
+var $models:=$client.models.list().models // その後 `id` を抽出します
+```
+
+IDを使用して一つのモデルの情報を取得する例
+
+```4d
+var $model:=$client.models.retrieve("a model id").model
+```
+
+#### Files
+
+https://developers.openai.com/api/reference/resources/files
+
+他のエンドポイントで使用するファイルのアップロード
+
+```4d
+var $file:=File("/path/to/your/file.jsonl")
+var $result:=$client.files.create($file; "fine-tune")
+var $fileId:=$result.file.id
+```
+
+全てのファイルをリストする
+
+```4d
+var $files:=$client.files.list().files
+```
+
+ファイル情報を取得する
+
+```4d
+var $fileInfo:=$client.files.retrieve($fileId).file
+```
+
+ファイルを削除する
+
+```4d
+var $deleteResult:=$client.files.delete($fileId)
+```
+
+:::tip 関連したblog 記事
+
+[Transform Static Documents into Actionable Knowledge with 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit)
+
+:::
+
+#### モデレーション
+
+https://developers.openai.com/api/reference/resources/moderations
+
+```4d
+var $moderation:=$client.moderations.create("This text contains inappropriate language and offensive behavior.").moderation
+```
+
+#### 非同期コード
+
+リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。 戻り値のオブジェクトはコールバック関数内に受け取られます。 戻り値のオブジェクトはコールバック関数内に受け取られます。
+
+詳細については[例題の詳細なドキュメント](asynchronous-call.md) を参照して下さい。
+
+## 著作権
+
+- 本ライブラリは、いかなる方法においてもOpenAI と提携、支援、あるいは公式な連携をしていません。
+- 「OpenAI」および関連するマークは、OpenAI, LLC の商標または登録商標です。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。
+- このプロジェクトはOpenAI のサービスへのインターフェースを提供するものにすぎず、OpenAIの技術、ブランド、知的財産の所有権を主張するものではありません。
+

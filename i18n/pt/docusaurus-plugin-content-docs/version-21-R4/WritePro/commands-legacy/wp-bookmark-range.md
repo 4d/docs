@@ -1,0 +1,41 @@
+---
+id: wp-bookmark-range
+title: WP Bookmark range
+slug: /WritePro/commands/wp-bookmark-range
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* : Object ; *NomeBK* : Text ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Bookmark range.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| docWP | Object | &#8594;  | Documento 4D Write Pro |
+| NomeBK | Text | &#8594;  | Nome de bookmark cuja faixa quer obter |
+| Resultado | Object | &#8592; | Faixa de bookmark |
+</div>
+<!-- END REF-->
+
+## Descrição 
+
+<!--REF #_command_.WP Bookmark range.Summary-->O comando **WP Bookmark range** devolve um objeto de tipo faixa de texto (objFaixa) que contém a faixa para o marcador com o nome *nombk* em *docWP*.<!-- END REF-->
+
+Se o marcador *nombk* não existir em *wpDoc*, um objeto objFaixa é devolvido.
+
+## Exemplo 
+
+Se quiser mostrar a faixa do marcador "MyBookmark" em seu documento:
+
+```4d
+ var $wpRange : Object
+ $wpRange:=WP Get bookmark range(WParea;"MyBookmark")
+ WP SELECT(WParea;$wpRange)
+```
+
+## Ver também 
+
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  
+[WP NEW BOOKMARK](../commands/wp-new-bookmark)  
+[WP Text range](../commands/wp-text-range)  

@@ -38,7 +38,7 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
  `GET  /rest/Employee/salary/?$compute=$all`
 
 **Respuesta**:
-```js
+**Respuesta**: ```js
 {
     "salary": {
         "count": 4,

@@ -5,7 +5,7 @@ title: クラス
 
 ## 概要
 
-When a class is [defined](../Project/code-overview.md#creating-classes) in the project, it is loaded in the 4D language environment. プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
+4D ランゲージでは **クラス** の概念がサポートされています。プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
 ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
 
@@ -116,7 +116,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 </div>
 <!-- END REF -->
 
-`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   It returns all user classes [defined](../Project/code-overview.md#creating-classes) in the opened project or component. これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。デフォルトでは、[ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 

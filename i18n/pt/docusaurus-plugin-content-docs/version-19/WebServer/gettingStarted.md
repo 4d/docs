@@ -40,6 +40,7 @@ Case of
   WEB SEND TEXT("Hello World!")
  Else 
   // Erro 404 por exemplo
+ End case
  End case 
 ```
 
@@ -231,7 +232,8 @@ $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
 //procurar um usuário com o nome inserido na tabela de usuários
-$user:=ds. WebUsers.query("userId = :1"; $userId).first() If ($user#Null) //a user was found
+$user:=ds.
+    WebUsers.query("userId = :1"; $userId).first() If ($user#Null) //a user was found
   //check the password
     If (Verify password hash($password; $user.password))
       //password ok, preencha a sessão

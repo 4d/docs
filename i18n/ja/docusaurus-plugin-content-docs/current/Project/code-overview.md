@@ -22,7 +22,7 @@ title: メソッドとクラスの管理
 
 ### ユーザークラス
 
-4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 例えば、"Polygon" という名前のクラスは、以下のようなファイル内に保存されます: ファイル名がクラス名になります。 例えば、"Polygon" という名前のクラスは、以下のようなファイル内に保存されます:
+4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 例えば、"Polygon" という名前のクラスは、以下のようなファイル内に保存されます:
 
 ```
 Project フォルダー
@@ -65,7 +65,7 @@ ORDA ユーザークラスは通常のクラスとは異なるアイコンで表
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D はクラスファイルを作成し、[`extends`](../Concepts/classes.md#class-extends-classname) コードを追加します。 たとえば、Entity クラスを継承するクラスの場合は: たとえば、Entity クラスを継承するクラスの場合は:
+ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D はクラスファイルを作成し、[`extends`](../Concepts/classes.md#class-extends-classname) コードを追加します。 たとえば、Entity クラスを継承するクラスの場合は:
 
 ```
 Class extends Entity

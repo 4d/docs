@@ -1,0 +1,245 @@
+---
+id: cli
+title: Interfaz de línea de comando
+---
+
+Puede utilizar el Terminal de macOS o la consola de Windows para manejar sus aplicaciones 4D (4D, 4D Server, aplicación fusionada y [tool4d](#tool4d)) utilizando líneas de comando. Más concretamente,
+esta funcionalidad le permite:
+
+- lanzar una base de
+  datos de forma remota, lo que puede ser especialmente útil para administrar los servidores
+  web.
+- ejecutar pruebas
+  automáticas para sus aplicaciones.
+
+## Información básica
+
+Puede ejecutar
+líneas de comando para las aplicaciones 4D utilizando el terminal macOS o la consola
+Windows.
+
+- En macOS, debe utilizar el comando `open`.
+- En Windows, puede
+  pasar los argumentos directamente.
+
+> En macOS, se pueden
+> pasar los argumentos directamente yendo a la carpeta donde se encuentra la aplicación
+> dentro del paquete (Contents/MacOS), lo que permite direccionar el flujo stderr. Por ejemplo, si el paquete 4D se encuentra en la carpeta `MyFolder`, debe escribir la línea de comandos de la siguiente manera: `/MyFolder/4D.app/Contents/MacOS/4D`. Sin embargo, recomendamos que utilice el comando `open` siempre que no necesite acceder al stream stderr.
+
+Lanzar una
+aplicación 4D
+-------------
+
+A continuación se describen las líneas de comando y los
+argumentos soportados para lanzar aplicaciones 4D.
+
+Sintaxis:
+
+```
+<applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]]
+[--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]  
+[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]  
+[--utility] [--skip-onstartup] [--startup-method <methodName string>]
+```
+
+
+(\*) Algunos diálogos se muestran antes de abrir la base de datos, por lo que es imposible escribir en el [archivo de registro de diagnóstico](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (alerta de licencia, diálogo de conversión, selección de bases de datos, selección de archivos de datos). En este caso, se
+lanza un mensaje de error tanto en el flujo stderr como en el registro de eventos sistema,
+y luego la aplicación se cierra.
+
+### Ejemplos
+
+> La carpeta actual
+> del usuario se alcanza utilizando el comando "~ " en macOS y el comando
+> "%HOMEPATH%" en Windows.
+
+Lance una aplicación 4D almacenada en el escritorio:
+
+- macOS:
+
+```bash
+open ~/Desktop/4D.app
+          open "~/Desktop/4D Server.app"
+```
+
+- Windows:
+
+```bash
+%HOMEPATH%\Desktop\4D\4D.exe
+          %HOMEPATH%\Desktop\"4D Server.exe"
+```
+
+Abra un paquete en macOS:
+
+```bash
+--args ~/Documents/myDB.4dbase
+```
+
+Abra un archivo de proyecto:
+
+- macOS:
+
+```bash
+--args ~/Documents/myProj/Project/myProj.4DProject
+```
+
+- Windows:
+
+```bash
+%HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+```
+
+Abra un archivo de proyecto y un archivo de datos:
+
+- macOS:
+
+```bash
+--args --project ~/Documents/myProj/Project/myProj.4DProject
+          --data ~/Documents/data/myData.4DD
+```
+
+- Windows:
+
+```bash
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+          --data %HOMEPATH%\Documents\data\myData.4DD
+          o:
+          /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data
+          %HOMEPATH%\Documents\data\myData.4DD
+```
+
+Abra un archivo .4DLink:
+
+- macOS:
+
+```bash
+~/Desktop/MyDatabase.4DLink
+```
+
+- Windows:
+
+```bash
+%HOMEPATH%\Desktop\MyDatabase.4DLink
+```
+
+Lance la aplicación en modo compilado y cree un archivo de datos
+si no está disponible:
+
+- macOS:
+
+```bash
+~/Documents/myBase.4dbase --args --opening-mode compiled
+          --create-data true
+```
+
+- Windows:
+
+```bash
+%HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode
+          compiled --create-data true
+```
+
+Lance la aplicación con un archivo proyecto y un archivo de datos
+y pase una cadena como parámetro de usuario:
+
+- macOS:
+
+```bash
+--args --project ~/Documents/myProj/Project/myProj.4DProject
+          --data ~/Documents/data/myData.4DD --user-param "Hello world"
+```
+
+- Windows:
+
+```bash
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+          --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
+```
+
+Apertura sin interfaz (modo headless):
+
+- macOS:
+
+```bash
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless  
+```
+
+- Windows:
+
+```bash
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+          --data %HOMEPATH%\Documents\data\myData.4DD --headless
+```
+
+## tool4d
+
+**tool4d** es una aplicación gratuita, ligera y autónoma que le permite abrir un proyecto 4D en modo sin interfaz y ejecutar código 4D utilizando la lìnea de comando (CLI).
+
+tool4d está disponible en Windows y macOS y siempre está asociado
+a una versión 4D (misma versión y número de compilación). Sólo está disponible en inglés.
+
+tool4d es una herramienta perfecta si desea:
+
+- implementar una cadena CI/CD para su aplicación 4D,
+- utilizar un ejecutable 4D ligero para ejecutar scripts 4D, por
+  ejemplo para ejecutar pruebas unitarias automáticas.
+
+### Uso de tool4d
+
+Puedes obtener tool4d de la [Página de descarga de productos](https://product-download.4d.com/).
+
+Se utiliza tool4d ejecutando una [línea de comandos](#launch-a-4d-application) con un proyecto 4D estándar. Puede utilizar todos los argumentos descritos en la tabla anterior, excepto --`webadmin` ya que este componente está [desactivado en tool4d](#disabled-4d-features). Con tool4d, se lanza la siguiente secuencia específica:
+
+1. La herramienta 4D ejecuta el método base `On Startup` (y todos los métodos "automáticos" como el [método usuario](../Users/handling_users_groups.md#propiedades-del-usuario)), excepto si se pasa el argumento `--skip-onstartup`.
+2. tool4d ejecuta el método designado por el argumento `--startup-method`, si existe.
+3. tool4d ejecuta el método base `On Exit`, excepto si se pasa el argumento `--skip-onstartup`.
+4. tool4d cierra.
+
+En Windows, tool4d es una aplicación de consola, de modo que el stream `stdout` se muestra en el terminal (cmd, powershell...).
+
+:::note Notas
+
+- tool4d siempre se ejecuta sin interfaz (la opción de línea de comandos `headless` es inútil).
+- El comando [`Application type`](../commands/application-type) devuelve el valor 6 ("tool4d") cuando se llama desde la aplicación tool4d.
+- el [archivo de registro de diagnóstico](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) tiene el prefijo "4DDiagnosticLogTool".
+
+:::
+
+### Funcionalidades 4D desactivadas
+
+Tenga en cuenta que tool4d se ejecuta automáticamente en **modo sin interfaz** (ver `--headless` en [esta tabla](#launch-a-4d-application)), y no da acceso al IDE 4D ni a ninguno de sus servidores. En concreto, se desactivan las siguientes funcionalidades:
+
+- servidor de aplicaciones, servidor web, servidor SQL,
+- programador de copias de seguridad,
+- ODBC y SQL pass-through,
+- todos los componentes como 4D View Pro, 4D SVG, 4D NetKit...,
+- corrector ortográfico hunspell,
+- corrector ortográfico japonés (librería *mecab*),
+- WebAdmin
+- CEF,
+- PHP,
+- depurador remoto (depurador local, el comando `TRACE` y los puntos de interrupción se ignoran en las aplicaciones sin interfaz).
+
+## 4D Server en modo utilitario
+
+Puede lanzar una instancia 4D Server en modo utilitario (sin interfaz) utilizando la opción CLI `--utility`. En este caso, se activa el siguiente flujo de trabajo:
+
+1. 4D Server ejecuta el método base `On Startup` (y todos los métodos "automáticos" como el [método usuario](../Users/handling_users_groups.md#user-properties)), excepto si se pasa el parámetro `--skip-onstartup`.
+2. 4D Server ejecuta el método designado por el `--startup-method`, si existe.
+3. El servidor 4D ejecuta el método base `On Exit`, excepto si se pasa el parámetro `--skip-onstartup`.
+4. 4D Server se cierra.
+
+:::info
+
+A diferencia de tool4d, 4D Server en modo utilitario tiene todas
+sus funcionalidades activadas. Sin embargo, el servidor de aplicaciones y el resto de servidores
+no se inician.
+
+:::
+
+:::tip Ver también
+
+Ver [esta publicación de blog](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) para ejemplos de cómo utilizar tool4d y 4D Server en modo utilitario.
+
+:::
+

@@ -101,7 +101,7 @@ As with [other object property management commands](../FormObjects/formObjects_o
 2. 汎用のオブジェクトプロパティコマンド
 3. プロパティリストのパラメーター
 
-この原則は、コマンドが呼び出された順番に関係なく適用されます。 階層リストコマンドを使用して個々に項目のプロパティを変更すると、同等のオブジェクトプロパティコマンドをそのあとに呼び出したとしても、その項目に対しては効果を持たなくなります。 For example, if the color of an item is modified via the [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) command, the `OBJECT SET COLOR` command will have no effect on this item.
+この原則は、コマンドが呼び出された順番に関係なく適用されます。 階層リストコマンドを使用して個々に項目のプロパティを変更すると、同等のオブジェクトプロパティコマンドをそのあとに呼び出したとしても、その項目に対しては効果を持たなくなります。 たとえば、項目のカラーを [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) コマンドで変更した場合、この項目に対して `OBJECT SET COLOR` コマンドは効果を持たなくなります。
 
 ## 位置あるいは参照による項目の管理
 
@@ -127,7 +127,7 @@ As with [other object property management commands](../FormObjects/formObjects_o
    You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the [`APPEND TO LIST`](../commands/append-to-list) command. この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。
 
 3. すべての項目リストを個々に識別する必要がある場合 (上級者レベル)  
-   リストの全レベルにおいて、個々の項目を識別する必要のある複雑な階層リスト管理プログラムを作成する必要があるとします。 これを実装する簡単な方法は独自のカウンターを使用することです。 Suppose that you create a *hlList* list using the [`APPEND TO LIST`](../commands/append-to-list) command. ここで *vhlCounter* 変数を1に初期化します。 Each time you call [`APPEND TO LIST`](../commands/append-to-list) or [`INSERT IN LIST`](../commands/insert-in-list), you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. 項目を削除する場合でもカウンターをデクリメントしないことが重要です。 つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 番号は倍長整数型なので、20億以上の項目をリストに追加したり挿入したりできます  (もっとも、こんなにも多くのデータを扱うのであれば、リストではなくテーブルを使用したほうが良いですが)。
+   リストの全レベルにおいて、個々の項目を識別する必要のある複雑な階層リスト管理プログラムを作成する必要があるとします。 これを実装する簡単な方法は独自のカウンターを使用することです。 `APPEND TO LIST` コマンドを使用して *hlList* リストを作成するとします。 ここで *vhlCounter* 変数を1に初期化します。 `APPEND TO LIST` や `INSERT IN LIST` を呼び出すたびに、このカウンターをインクリメントし `(vhlCounter:=vhlCounter+1)`、 カウンター値を項目参照番号に設定します。 項目を削除する場合でもカウンターをデクリメントしないことが重要です。 つまりカウンターは増え続けるのみです。 この方法で、ユニークな項目参照番号を保証できます。 番号は倍長整数型なので、20億以上の項目をリストに追加したり挿入したりできます  (もっとも、こんなにも多くのデータを扱うのであれば、リストではなくテーブルを使用したほうが良いですが)。
 
 > ビットワイズ演算子を使用して、項目参照番号に情報を格納することもできます。 たとえば 2つの整数値、4バイト値、32個のブール値などです。
 

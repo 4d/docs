@@ -1,102 +1,102 @@
 ---
 id: drag-and-drop
-title: Drag and drop
+title: Glisser-déposer
 ---
 
-## Overview
+## Vue d’ensemble
 
-4D allows built-in drag and drop capability between objects in your forms and applications. You can drag and drop one object to another, in the same window or in another window. In other words, drag and drop can be performed within a process or from one process to another.
+4D intègre une fonctionnalité de glisser-déposer entre objets de vos formulaires et applications. Vous pouvez faire glisser un objet et le déposer sur un autre, dans la même fenêtre ou dans une autre fenêtre. En d'autres termes, le glisser-déposer peut s'effectuer au sein d'un même process ou d'un process à un autre.
 
-You can also drag and drop objects between 4D forms and other applications, and vice versa. For example, it is possible to drag and drop a .png picture file onto a 4D picture field. It is also possible to select text in a word processing application and drop it onto a 4D text variable or a list box.
+Vous pouvez également effectuer des glisser-déposer d'objets entre les formulaires 4D et d'autres applications, et inversement. Par exemple, il est possible de glisser-déposer un fichier image au format .png dans un champ image 4D. Il est également possible de sélectionner du texte dans un logiciel de traitement de texte et de le déposer dans une variable de texte 4D ou une list box.
 
-Finally, it is possible to drop objects directly onto the application without necessarily having a form in the foreground. The [`On Drop` Database Method](../commands-legacy/on-drop-database-method.md) can be used to manage the drag and drop action in this case. This means, for example, that you can open a 4D Write Pro document by dropping it onto the 4D application icon.
+Enfin, il est possible de déposer des objets directement dans l'application sans qu'un formulaire soit nécessairement affiché au premier plan. La [méthode base `On Drop`](../commands-legacy/on-drop-database-method.md) peut être utilisée pour gérer l'action de glisser-déposer dans ce cas. Cela signifie, par exemple, que vous pouvez ouvrir un document 4D Write Pro en le glissant-déposant sur l'icône de l'application 4D.
 
-4D provides two drag-and-drop modes:
+4D fournit deux modes de glisser-déposer :
 
-- a **custom mode**, where the whole drag-and-drop operation is handled by the programmer. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul.
-- an **automatic mode**, where a drag-and-drop operation automatically copies or moves data from an object to another. This mode is available to text-based objects and (partially) pictures, and can be enabled by simply selecting a property.
+- un **mode personnalisé**, dans lequel l'ensemble de l'opération de glisser-déposer est gérée par le développeur. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul.
+- un **mode automatique**, dans lequel une opération de glisser-déposer permet de copier ou de déplacer automatiquement des données d'un objet vers un autre. Ce mode est disponible pour les objets textuels et (en partie) pour les images, et peut être activé simplement en sélectionnant une propriété.
 
-## Draggable and Droppable Objects
+## Objets glissables et déposables
 
-Several form objects can be draggable and/or droppable, in custom and/or automatic mode (see below). By default, newly created form objects can be neither dragged nor dropped ("none" value). It is up to you to set these properties.
+Plusieurs objets de formulaire peuvent être glissés et/ou déposés, en mode personnalisé et/ou automatique (voir ci-dessous). Les objets de formulaire nouvellement créés ne peuvent être ni glissés ni déposés (valeur "none"). C'est à vous de définir ces propriétés.
 
-To drag and drop an object to another object, you must set its [**Draggable** property](../FormObjects/properties_Action.md#draggable) to "Automatic" or "Custom". In a drag-and-drop operation, the object that you drag is the source object.
+Pour glisser-déposer un objet sur un autre, vous devez définir sa [**propriété Glissable**](../FormObjects/properties_Action.md#draggable) sur "Automatique" ou "Personnalisé". Lors d'une opération de glisser-déposer, l'objet que vous faites glisser est l'objet source.
 
-To make an object the destination of a drag and drop operation, you must set its [**Droppable** property](../FormObjects/properties_Action.md#droppable) to "Automatic" or "Custom". In a drag-and-drop operation, the object that receives data is the destination object.
+Pour qu'un objet puisse servir de destination à une opération de glisser-déposer, vous devez définir sa [**propriété Déposable**](../FormObjects/properties_Action.md#droppable) sur "Automatique" ou "Personnalisé". Lors d'une opération de glisser-déposer, l'objet qui reçoit les données est l'objet de destination.
 
-The following table lists the available properties for draggable and/or droppable objects:
+Le tableau suivant répertorie les propriétés disponibles pour les objets glissables et/ou déposables :
 
-| Objet de formulaire                            | Draggable "Custom" | Droppable "Custom" | Draggable "Auto" | Droppable "Auto" |
-| ---------------------------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
-| [4D Write Pro areas](writeProArea_overview.md) | x                  | x                  | x                | x                |
-| [Combo Box](comboBox_overview.md)              |                    | x                  | x                | x                |
-| [Zone de saisie](input_overview.md)            | x                  | x                  | x                | x                |
-| [Hierarchical List](list_overview.md)          | x                  | x                  |                  |                  |
-| [List Box](listbox_overview.md)                | x                  | x                  |                  |                  |
-| [Zone de plugin](pluginArea_overview.md)       |                    |                    | x                | x                |
-| [Bouton](button_overview.md)                   |                    | x                  |                  |                  |
-| [Picture button](pictureButton_overview.md)    |                    | x                  |                  |                  |
+| Objet de formulaire                            | Glissable "Personnalisé" | Déposable "Personnalisé" | Glissable "Auto" | Déposable "Auto" |
+| ---------------------------------------------- | ------------------------ | ------------------------ | ---------------- | ---------------- |
+| [Zones 4D Write Pro](writeProArea_overview.md) | x                        | x                        | x                | x                |
+| [Combo Box](comboBox_overview.md)              |                          | x                        | x                | x                |
+| [Zone de saisie](input_overview.md)            | x                        | x                        | x                | x                |
+| [Hierarchical List](list_overview.md)          | x                        | x                        |                  |                  |
+| [List Box](listbox_overview.md)                | x                        | x                        |                  |                  |
+| [Zone de plugin](pluginArea_overview.md)       |                          |                          | x                | x                |
+| [Bouton](button_overview.md)                   |                          | x                        |                  |                  |
+| [Bouton Image](pictureButton_overview.md)      |                          | x                        |                  |                  |
 
-Items of a hierarchical list or rows in a list box can be dragged and dropped. Conversely, you can drag and drop an object onto an item of a hierarchical list or a list box row. However, you cannot drag and drop objects from the detail area of an output form. You can also manage dragging and dropping onto the application, outside of any form, using the [`On Drop` database method](../commands-legacy/on-drop-database-method.md).
+Les éléments d'une liste hiérarchique ou les lignes d'une list box peuvent être déplacés par glisser-déposer. À l'inverse, vous pouvez glisser-déposer un objet sur un élément d'une liste hiérarchique ou sur une ligne d'une list box. Cependant, vous ne pouvez pas glisser-déposer des objets depuis la zone de détail d'un formulaire de sortie. Vous pouvez également gérer les opérations de glisser-déposer dans l'application, en dehors de tout formulaire, à l'aide de la [méthode base `On Drop`](../commands-legacy/on-drop-database-method.md).
 
 :::note Notes
 
-- By default, in the case of picture fields and variables, the picture and its reference are both dragged. If you only want to drag the reference, first hold down the **Alt** (Windows) or **Option** (macOS) key.
-- When the "Custom" Draggable and ["Movable Rows"](../FormObjects/properties_Action.md#movable-rows) properties are both set for an array list box object, the "Movable Rows" property takes priority when a row is moved. Dragging is not possible in this case.
-- An object that is capable of being both dragged and dropped can also be dropped onto itself, unless you reject the operation.
+- Par défaut, dans le cas des champs d'image et des variables, l'image et sa référence sont toutes deux déplacées. Si vous souhaitez uniquement faire glisser la référence, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) avant de commencer.
+- Lorsque les propriétés Glissable "Personnalisé" et ["Lignes déplaçables"](../FormObjects/properties_Action.md#movable-rows) sont toutes deux définies pour un objet "list box tableau", la propriété "Lignes déplaçables" prévaut lors du déplacement d'une ligne. Dans ce cas, il n'est pas possible de faire glisser l'élément.
+- Un objet pouvant être à la fois glissé et déposé peut également être déposé sur lui-même, à moins que vous ne rejetiez cette opération.
 
 :::
 
-## Custom Drag and Drop
+## Glisser-déposer personnalisé
 
-Implementing a custom drag-and-drop interface means combining properties, events, and commands from the [*Pasteboard* theme](../commands/theme/Pasteboard.md). The following diagram illustrates the key points of a custom drag-and-drop sequence:
+La mise en œuvre d'une interface de glisser-déposer personnalisée implique de combiner des propriétés, des événements et les commandes du [*thème Conteneur de données*](../commands/theme/Pasteboard.md). Le schéma suivant illustre les points clés d'une séquence de glisser-déposer personnalisé :
 
 ![](../assets/en/Desktop/dragdrop1.png)
 
-Your implementation will be based upon the following scenario:
+Votre implémentation sera basée sur le scénario suivant :
 
-1. In the [`On Begin Drag Over`](../Events/onBeginDragOver.md) event of the source object (with ["Custom" **Draggable** property](../FormObjects/properties_Action.md#draggable)), put appropriate data in the pasteboard using [`APPEND DATA TO PASTEBOARD`](../commands/append-data-to-pasteboard), [`SET FILE TO PASTEBOARD`](../commands/set-file-to-pasteboard) or other commands from the [Pasteboard theme](../commands/theme/Pasteboard.md). You can also define a specific cursor icon using [`SET DRAG ICON`](../commands/set-drag-icon) command.
-2. In the [`On Drag Over`](../Events/onDragOver.md) event of the destination object (with ["Custom" **Droppable** property](../FormObjects/properties_Action.md#droppable)), get the data types or data signatures found in the pasteboard using [`GET PASTEBOARD DATA TYPE`](../commands/get-pasteboard-data-type) or [`GET PASTEBOARD DATA`](../commands/get-pasteboard-data) and check if they are compatible with the destination object.
-   The [`Drop position`](../commands/drop-position) command returns the element number or the item position of the target element or list item, if the destination object is an array (i.e., scrollable area), a hierarchical list, a text or a combo box, as well as the column number if the object is a list box.
-3. The [object method](../Concepts/methods.md#method-types) of the destination object or element must return 0 or -1 to accept or reject the action:
-   - If it is compatible, return **0** to accept the drop and execute the [`On Drop`](../Events/onDrop.md) event when the mouse button is released.
-   - Otherwise, return **-1** to reject the drop.  
-     4D automatically handles the interface aspect of this interaction by displaying a cursor depending on whether the drop is accepted or rejected.
-4. In the [`On Drop`](../Events/onDrop.md) event of the destination object (with ["Custom" **Droppable** property](../FormObjects/properties_Action.md#droppable)), execute any action in response to the drop. If the drag-and-drop operation is intended to copy the dragged data, you simply assign the data to destination object. If the drag and drop is not intended to move data, but is instead a user interface metaphor for a particular operation, you can perform whatever you want, for example getting file paths using [`Get file from pasteboard`](../commands/get-file-from-pasteboard) command.
+1. Dans l'événement [`On Begin Drag Over`](../Events/onBeginDragOver.md) de l'objet source (avec la propriété [**Glissable** "Personnalisé"](../FormObjects/properties_Action.md#draggable)), placez les données appropriées dans le presse-papiers à l’aide de [`APPEND DATA TO PASTEBOARD`](../commands/append-data-to-pasteboard), [`SET FILE TO PASTEBOARD`](../commands/set-file-to-pasteboard) ou d’autres commandes du [thème Conteneur de données](../commands/theme/Pasteboard.md). Vous pouvez également définir une icône de curseur spécifique à l'aide de la commande [`SET DRAG ICON`](../commands/set-drag-icon).
+2. Dans l'événement [`On Drag Over`](../Events/onDragOver.md) de l'objet de destination (avec la propriété [**Déposable** "Personnalisé"(../FormObjects/properties_Action.md#droppable)), récupérez les types de données ou les signatures de données présents dans le presse-papiers à l’aide de [`GET PASTEBOARD DATA TYPE`](../commands/get-pasteboard-data-type) ou [`GET PASTEBOARD DATA`](../commands/get-pasteboard-data) et vérifiez s’ils sont compatibles avec l’objet de destination.
+   La commande [`Drop position`](../commands/drop-position) retourne le numéro de l'élément ou la position de l'élément cible ou de liste, si l'objet destination est une liste hiérarchique, un texte ou une liste déroulante, ainsi que le numéro de colonne si l'objet est une list box.
+3. La [méthode objet](../Concepts/methods.md#method-types) de l'objet ou de l'élément de destination doit renvoyer 0 ou -1 pour accepter ou refuser l'action :
+   - Si c'est compatible, retournez **0** pour accepter le déposer et exécuter l'événement [`On Drop`](../Events/onDrop.md) lorsque le bouton de la souris est relâché.
+   - Sinon, retournez **-1** pour rejeter le déposer.  
+     4D gère automatiquement l'aspect graphique de cette interaction en affichant un curseur selon que le glisser-déposer est accepté ou rejeté.
+4. Dans l'événement [`On Drop`](../Events/onDrop.md) de l'objet de destination (avec la propriété [**Déposable** "Personnalisé"](../FormObjects/properties_Action.md#droppable)), exécutez n'importe quelle action en réponse au déposer. Si l'opération de glisser-déposer vise à copier les données déplacées, il suffit d'affecter ces données à l'objet de destination. Si le glisser-déposer n'a pas pour but de déplacer des données, mais constitue plutôt une métaphore de l'interface utilisateur pour une opération particulière, vous pouvez effectuer l'action de votre choix, par exemple récupérer les chemins d'accès aux fichiers à l'aide de la commande [`Get file from pasteboard`](../commands/get-file-from-pasteboard).
 
-Note that the [`On Begin Drag Over`](../Events/onBeginDragOver.md) event is generated **in the context of the source object of the drag** while [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) events are only sent to the destination object.
+Notez que l'événement [`On Begin Drag Over`](../Events/onBeginDragOver.md) est généré **dans le contexte de l'objet source du glisser**, tandis que les événements [`On Drag Over`](../Events/onDragOver.md) et [`On Drop`](../Events/onDrop.md) ne sont envoyés qu'à l'objet de destination.
 
-In order for the application to process these events, they must be selected in an appropriate manner in the Property List for both the source and destination objects:
+Pour que l'application puisse traiter ces événements, ceux-ci doivent être sélectionnés de manière appropriée dans la liste des propriétés, tant pour l'objet source que pour l'objet de destination :
 
 ![](../assets/en/Desktop/dragdrop2.png)
 
-## Automatic Drag and Drop
+## Glisser-déposer automatique
 
-Automatic drag and drop is the movement or copy of a text or picture selection from one area to another by a single click. It can be used in the same 4D area, between two 4D areas, or between 4D and another application.
+Le glisser-déposer automatique est le déplacement ou la copie d'une sélection de texte ou d'une image d'une zone à l'autre par un simple clic. Il peut être utilisé au sein d'une même zone 4D, entre deux zones 4D, ou entre 4D et une autre application.
 
 :::note
 
-In the case of automatic drag and drop between two 4D areas, the data are moved, in other words, they are removed from the source area. If you want to copy the data, hold down the **Ctrl** (Windows) or **Option** (macOS) key during the action (under macOS, you need to hit the **Option** key *after* you start to drag the item(s)).
+Dans le cas d'un glisser-déposer automatique entre deux zones 4D, les données sont déplacées ; en d'autres termes, elles sont supprimées de la zone source. Si vous souhaitez copier les données, maintenez la touche **Ctrl** (Windows) ou **Option** (macOS) enfoncée pendant l'opération (sous macOS, vous devez appuyer sur la touche **Option** *après* avoir commencé à faire glisser le ou les élément(s)).
 
 :::
 
-[Automatic Draggable](../FormObjects/properties_Action.md#draggable) property and [Automatic Droppable](../FormObjects/properties_Action.md#droppable) property can be configured separately for each form object.
+Les propriétés [Glisser automatique](../FormObjects/properties_Action.md#draggable) et [Déposer automatique](../FormObjects/properties_Action.md#droppable) peuvent être configurées séparément pour chaque objet de formulaire.
 
-- **Draggable: Automatic**: When this option is selected, the automatic drag mode is activated for the object. In this mode, the [`On Begin Drag`](../Events/onBeginDragOver.md) form event is NOT generated.
-  If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action (under macOS, you need to hit the **Option** key *before* you start to drag the item(s)). Cette option n'est pas disponible pour les images.
-- **Droppable: Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) form events are not generated in this case. On the other hand, the [`On After Edit`](../Events/onAfterEdit.md) (during a drop) and [`On Data Change`](../Events/onDataChange.md) (when the object loses the focus) events are generated.
+- **Glissable : Automatique** : Lorsque cette option est sélectionnée, le glisser automatique est activé pour l'objet. Dans ce mode, l'événement formulaire [`On Begin Drag`](../Events/onBeginDragOver.md) n'est PAS généré.
+  Si vous souhaitez "forcer" l'utilisation du glisser-déposer personnalisé alors que le glisser-déposer automatique est activé, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant l'action (sous macOS, vous devez appuyer sur la touche **Option** *avant* de commencer le glisser). Cette option n'est pas disponible pour les images.
+- **Déposable : Automatique** : Dans ce mode, 4D gère automatiquement — dans la mesure du possible — l'insertion des données glissées de type texte ou image qui sont déposées sur l'objet (les données sont collées dans l'objet). Les événements formulaire [`On Drag Over`](../Events/onDragOver.md) et [`On Drop`](../Events/onDrop.md) ne sont pas générés dans ce cas. Par contre, les événements [`On After Edit`](../Events/onAfterEdit.md) (pendant un déposer) et [`On Data Change`](../Events/onDataChange.md) (quand l'objet perd le focus) sont générés.
 
-In the case of data other than text or pictures (another 4D object, file, etc.) or complex data being dropped, the application refers to the value of the "Droppable" option: if it is not "none", the [`On Drag Over`](../Events/onDragOver.md) and [`On Drop`](../Events/onDrop.md) form events are generated; otherwise, the drop is refused.
+Dans le cas de données autres que du texte ou des images (un autre objet 4D, un fichier, etc.) ou de données complexes déposées, l'application se réfère à la valeur de l'option "Déposable" : si elle n'est pas sur "Aucun", les événements formulaire [`On Drag Over`](../Events/onDragOver.md) et [`On Drop`](../Events/onDrop.md) sont générés ; sinon, le déposer est refusée.
 
 ## Exemples
 
-### Array based list box to input text area
+### List box tableau vers zone de saisie de texte
 
-In this simple example, we want to fill an input text area with data dragged from an array-based list box:
+Dans cet exemple simple, nous souhaitons remplir une zone de texte de saisie avec des données glissées depuis une list box de type tableau :
 
 ![](../assets/en/Desktop/dragdrop3.png)
 
-The list box object method:
+La méthode objet de la list box :
 
 ```4d
   //Object Method: ListBox
@@ -105,33 +105,33 @@ The list box object method:
  End if
 ```
 
-The input text area object method contains:
+La méthode de l'objet zone de texte contient :
 
 ```4d
 
   // Object Method: label1
-If(Form event code=On Drop) //Requires Droppable Action enabled from Property List
+If(Form event code=On Drop) //Nécessite que l'action Déposable soit activée dans la Liste des propriétés
     ARRAY TEXT($signatures_at;0)
     ARRAY TEXT($nativeTypes_at;0)
     ARRAY TEXT($formatNames_at;0)
     GET PASTEBOARD DATA TYPE($signatures_at;$nativeTypes_at;$formatNames_at)
-    If(Find in array($signatures_at;"com.4d.private.text.native")#-1) // there is 4D text in pasteboard
+    If(Find in array($signatures_at;"com.4d.private.text.native")#-1) // Il y a du texte 4D dans le conteneur de données
        OBJECT Get pointer(Object current)->:=Get text from pasteboard
     End if
  End if
 ```
 
-### Selection based list box to input text area
+### List box de type sélection vers zone de saisie de texte
 
-Combining custom and automatic drag and drop features allows simple and powerful interfaces. In this example, we want to fill an input text area with data dragged from a list box:
+La combinaison de fonctionnalités de glisser-déposer personnalisées et automatiques permet de créer des interfaces à la fois simples et performantes. Dans cet exemple, nous souhaitons remplir un champ de saisie avec des données glissées depuis une list box :
 
 ![](../assets/en/Desktop/dragdrop4.png)
 
-- List box: "Custom" Draggable property and "On Begin Drag Over" event
-- Input text area: "Automatic" Droppable property.
+- List box : propriété Glissable "Personnalisé" et événement "On Begin Drag Over"
+- Zone de saisie : propriété Déposable "Automatique".
 
 ```4d
-  //list box object method
+  //méthode objet list box
  Case of
     :(Form event code=On Begin Drag Over)
        LOAD RECORD([Clients])
@@ -141,29 +141,29 @@ Combining custom and automatic drag and drop features allows simple and powerful
  End case
 ```
 
-Moving and formatting data is done through drag and drop:
+Le déplacement et la mise en forme des données s'effectuent par glisser-déposer :
 
 ![](../assets/en/Desktop/dragdrop5.png)
 
-### File path to text area
+### Chemin d'accès de fichier vers zone de texte
 
-You want the user to select a file on the disk, then drag and drop it on an enterable variable (of type object) so that it displays a json description of the file.
+Vous souhaitez que l'utilisateur glisse un fichier depuis le disque sur une variable saisissable (de type objet) afin qu'une description json du fichier s'affiche.
 
 ![](../assets/en/Desktop/dragdrop6.png)
 
-In the object method of the variable, you just write:
+Dans la méthode objet de la variable, vous écrivez simplement :
 
 ```4d
  #DECLARE -> $result : Integer
  Case of
  
     :(Form event code=On Drag Over)
-  // Accept On Drop event only if the pasteboard contains files, reject otherwise.
-       If(Get file from pasteboard(1)="") //no file in pasteboard
-          $result:=-1 //reject drop
+  // Accepter l'évenement On Drop uniquement si le conteneur de données contient des fichiers, sinon le rejeter.
+       If(Get file from pasteboard(1)="") //pas de fichier dans le conteneur
+          $result:=-1 //rejeter le déposer
        End if
  
-    :(Form event code=On Drop) //Requires Droppable action enabled from Property List
+    :(Form event code=On Drop) //Nécessite que la propriété Déposable soit sélectionnée dans la liste des propriétés
        var $path_t : Text
        var path_o : Object
        $path_t:=Get file from pasteboard(1)
@@ -174,27 +174,27 @@ In the object method of the variable, you just write:
  End case
 ```
 
-### File paths to list box
+### Chemin d'accès vers list box
 
-You want the user to select files on the disk, then drag and drop them on a list box so that it displays file paths.
+Vous souhaitez que l'utilisateur sélectionne des fichiers sur le disque, puis qu'il fasse un glisser-déposer dans une list box afin que celle-ci affiche les chemins d'accès à ces fichiers.
 
 ![](../assets/en/Desktop/dragdrop7.png)
 
-In the list box object method, you just write:
+Dans la méthode objet de la list box, vous pouvez écrire :
 
 ```4d
  #DECLARE -> $result : Integer
  Case of
  
     :(Form event code=On Drag Over)
-  // Accept On Drop event only if the pasteboard contains files, reject otherwise.
-       If(Get file from pasteboard(1)#"") //at least one file dropped
-          $result:=0 //accept drop
-       Else //no file in pasteboard
-          $result:=-1 //reject drop
+  // Accepter l'événement On Drop seulement si le conteneur de données contient des fichiers, le rejeter sinon.
+       If(Get file from pasteboard(1)#"") //au moins un fichier est déposé
+          $result:=0 //accepter le déposer
+       Else //aucun fichier dans le déposer
+          $result:=-1 //rejeter le déposer
        End if
  
-    :(Form event code=On Drop) //Requires Droppable action enabled from Property List
+    :(Form event code=On Drop) //Nécessite que la propriété Déposable soit sélectionnée dans la liste des propriétés
        ARRAY TEXT(importedPath_at;0)
        var $path_t :Text
        var $index_l:=1

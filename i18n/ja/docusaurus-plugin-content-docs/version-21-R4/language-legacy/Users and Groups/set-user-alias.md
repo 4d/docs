@@ -1,0 +1,65 @@
+﻿---
+id: set-user-alias
+title: SET USER ALIAS
+slug: /commands/set-user-alias
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| alias | Text | &#8594; | 4Dユーザーアカウントに対して使用する代理の名前、またはその名前をリセットするためには"" |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.SET USER ALIAS.Summary-->**SET USER ALIAS** コマンドは、カレントのセッションの間、カレントの4D ユーザーアカウント名の代わりに使用できるもう一つのカスタムの名前を定義します。<!-- END REF-->この代わりの名前は、メモリに残されますが、カレントユーザーに対してのみ適用されます。
+
+**注:** このコマンドはクライアントの4Dあるいはシングルユーザー版4Dでのみ呼び出すことが可能です。4D Server では使用は許可されていません。
+
+*alias* 引数には、カレントの4D ユーザー名の代わりに表示させたい代わりの名前を渡します。
+
+コマンドが実行されると、カレントの4D ユーザーアカウントが返される/表示されるところには全て*alias* 引数で指定したエイリアス名が使用されるようになります。具体的には、[Current user](../commands/current-user)、 [Process activity](../commands/process-activity) および [LOCKED BY](../commands/locked-by) などのコマンド、あるいは4D Server 管理ウィンドウの[Users Page](../../ServerWindow/users.md) などです。クライアント/サーバー環境においては、このコマンドは例えば[Current user](../commands/current-user) コマンドなどによって各ユーザーがサーバー上では識別されるように、必ずリモートアプリケーションで使用しなければなりません(例え全てのリモートアプリケーションが同じ4D ユーザーアカウントを使用していたとしてもサーバーでは使用できません)。
+
+カレントの4D ユーザーから*alias* 引数で指定したエイリアスを削除するためには、**SET USER ALIAS**("") という形で呼び出してください。
+
+**注:** [CHANGE CURRENT USER](../commands/change-current-user) コマンドを呼び出すと、カレントユーザーのエイリアス名はリセットされます。
+
+## 例題 
+
+アプリケーションの中で、ユーザーはカスタムのテーブルで管理されており、同じ4D ユーザーアカウントを使用する場合を考えます。それぞれのクライアントマシンで、以下のようなコードを実行することができます:
+
+```4d
+ SET USER ALIAS([myUsers]userName)
+```
+
+## 参照 
+
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[Current user](../commands/current-user)  
+[SET GROUP ACCESS](../commands/set-group-access)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1666 |
+| スレッドセーフである | yes |
+| サーバー上での使用は不可 ||
+
+
+

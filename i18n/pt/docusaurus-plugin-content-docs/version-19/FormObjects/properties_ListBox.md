@@ -55,7 +55,7 @@ Define a ação a ser executada quando um usuário clica duas vezes em uma linha
 *   **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
 *   **Editar registro**: clicar duas vezes em uma linha exibe o registro correspondente no formulário de detalhes definido [para o list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
 *   **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
-> Clicar duas vezes em uma linha vazia é ignorado nos list boxes.
+> > Clicar duas vezes em uma linha vazia é ignorado nos list boxes.
 
 Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
@@ -104,7 +104,7 @@ As colunas bloqueadas e as colunas estáticas são duas funcionalidades separada
 
 *   As colunas bloqueadas sempre são exibidas à esquerda do list box; elas não rolam horizontalmente.
 *   As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
-> É possível definir colunas estáticas e bloqueadas por programação; consulte a seção "List Box" no manual da *linguagem 4D*.
+> > É possível definir colunas estáticas e bloqueadas por programação; consulte a seção "List Box" no manual da *linguagem 4D*.
 
 Estas propriedades interagem da seguinte forma:
 

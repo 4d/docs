@@ -26,6 +26,7 @@ Este exemplo mostra como responder a um evento de fecho de janela com um formul√
           CONFIRM("Este registo foi modificado. Save Changes?")
           Save Changes?")
           Save Changes?")
+          Save Changes?")
           If(OK=1)
              ACCEPT
           Else

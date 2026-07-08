@@ -1,0 +1,50 @@
+﻿---
+id: qr-get-drop-column
+title: QR Get drop column
+slug: /commands/qr-get-drop-column
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| area | Integer | &#8594; | Referência da área |
+| Resultado | Integer | &#8592; | Espaço de soltar |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.QR Get drop column.Summary-->O comando QR Get drop column devolve um valor dependendo de onde se realiza uma ação soltar<!-- END REF--> :
+
+* se o valor for negativo, indica um número de coluna (por exemplo, -3 indica que uma ação soltar se realizou na coluna número 3)
+* se o valor for positivo, indica que a ação de soltar se realizou em um separador situado na frente da coluna (por exemplo, 3 indica que um soltar foi realizado na coluna 2).Lembre que a ação de soltar não é considerada antes de uma coluna existente.
+
+Se passa um número de *area* inválido, se gera o erro -9850.
+
+## Ver também 
+
+[QR DELETE COLUMN](../commands/qr-delete-column)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 747 |
+| Thread-seguro | no |
+| Modificar variáveis | error |
+
+

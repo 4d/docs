@@ -19,18 +19,18 @@ title: OpenAIResult
 | ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
 | `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                           |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                |
 | `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
 | `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
-| `usage`      | Object     | Returns usage information (token counts) from the response body if any. |
+| `usage`      | Object     | レスポンス本文からの使用状況(トークン数)を返します(存在する場合)。 |
 
 ### usage
 
-The `usage` property returns an object containing token usage information from the API response. The structure varies depending on the API endpoint used.
+`usage` プロパティは、API レスポンスに含まれるトークン使用状況のオブジェクトを返します。 構造は使用する API エンドポイントによって異なります。
 
-> **Note:** Different OpenAI-compatible services may return different fields in the usage object. The structure documented here is based on OpenAI's API. Not all fields may be present in responses from other providers.
+> **Note:** OpenAI 互換サービスによっては `usage` オブジェクトのフィールドが異なる場合があります。 ここで示す構造は OpenAI API を基準としています。 すべてのフィールドが常に返るとは限りません。
 
-See the specific result class documentation for endpoint-specific usage structures:
+エンドポイント別の詳細は以下を参照してください:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage

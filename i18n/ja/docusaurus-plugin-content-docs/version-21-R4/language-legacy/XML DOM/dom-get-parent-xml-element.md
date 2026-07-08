@@ -1,0 +1,58 @@
+﻿---
+id: dom-get-parent-xml-element
+title: DOM Get parent XML element
+slug: /commands/dom-get-parent-xml-element
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* : Text {; *parentElemName* : Text {; *parentElemValue* : any}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| elementRef | Text | &#8594; | XML要素参照 |
+| parentElemName | Text | &#8592; | 親XML要素名 |
+| parentElemValue | any | &#8592; | 親XML要素値 |
+| 戻り値 | Text | &#8592; | 親XML要素参照 |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.2|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.DOM Get parent XML element.Summary-->**DOM Get parent XML element**コマンドは、*elementRef*に参照で渡したXML要素の親要素参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。
+
+オプションの*parentElemName* と *parentElemValue*引数が渡されると、それぞれ親要素の名前と値を受け取ります。
+
+*elementRef*にルート要素を渡した場合、コマンドは"#document"参照を返します。このdocumentノードはルート要素の親です。  
+documentノードにこのコマンドを適用すると、コマンドはヌル参照 ("0000000000000000") を返し、OKシステム変数が0に設定されます。
+
+## システム変数およびセット 
+
+コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
+
+## 参照 
+
+[DOM Get first child XML element](../commands/dom-get-first-child-xml-element)  
+[DOM Get last child XML element](../commands/dom-get-last-child-xml-element)  
+[DOM Get root XML element](../commands/dom-get-root-xml-element)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 923 |
+| スレッドセーフである | yes |
+| システム変数を更新する | OK |
+
+

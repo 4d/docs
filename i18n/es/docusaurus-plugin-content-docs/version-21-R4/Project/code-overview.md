@@ -1,0 +1,171 @@
+---
+id: code-overview
+title: Gestión de métodos y clases
+---
+
+El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).
+
+El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. Por lo general, utilizará el [editor integrado de código](../code-editor/write-class-method.md) de 4D para trabajar con su código. También puede utilizar otros editores como **VS Code**, para el que está disponible la [extensión 4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode).
+
+## Creación de métodos
+
+Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta apropiada de la carpeta [`/Project/Sources/`](../Project/architecture.md#sources).
+
+Puede crear [varios tipos de métodos](../Concepts/methods.md#method-types):
+
+- Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
+- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o desde la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method.md#shortcuts).
+- Los **Triggers** también pueden ser creados o abiertos desde el [Editor de estructuras](../Develop-legacy/triggers.md#activating-and-creating-a-trigger).
+- Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
+
+## Crear las clases
+
+### Clases de usuario
+
+Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase. El nombre del archivo es el nombre de la clase.
+
+```
+Project folder Project Sources Classes Polygon.4dm
+```
+
+Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo > Clase...**) o en la página **Métodos** de la ventana **Explorador**. También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
+
+En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
+
+Para crear una nueva clase, puede:
+
+- seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
+- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
+  ![](../assets/en/Concepts/newClass.png)
+- seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
+
+Al nombrar las clases, debe tener en cuenta las siguientes reglas:
+
+- Un [nombre de clase](../Concepts/identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](../Concepts/identifiers.md#object-properties).
+- .
+- No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
+
+### Clases ORDA
+
+Las [clases de usuario del modelo de datos ORDA](../ORDA/ordaClasses.md) son funciones de clase de alto nivel creadas sobre el modelo de datos.
+
+Una clase de modelo de datos ORDA se define añadiendo, en la misma ubicación que los archivos de clase normales (*es decir*, en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
+
+4D crea previa y automáticamente las clases vacías en memoria para cada objeto del modelo de datos disponible.
+
+![](../assets/en/ORDA/ORDA_Classes-3.png)
+
+Por defecto, las clases ORDA vacías no se muestran en el Explorador. Para mostrarlas, debe seleccionar **Mostrar todas las clases de datos** en el menú de opciones del Explorador:
+![](../assets/en/ORDA/showClass.png)
+
+Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las clases vacías se atenúan:
+
+![](../assets/en/ORDA/classORDA2.png)
+
+Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Por ejemplo, para una clase Entity:
+
+```
+Class extends Entity
+```
+
+Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
+
+Para abrir una clase ORDA definida en el editor de código 4D, seleccione o haga doble clic en el nombre de una clase ORDA y utilice **Editar...** en el menú contextual/menú de opciones de la ventana del Explorador:
+
+![](../assets/en/ORDA/classORDA4.png)
+
+Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directamente al código de la clase desde la ventana de estructura 4D:
+
+![](../assets/en/ORDA/classORDA5.png)
+
+### Soporte en IDE 4D
+
+En las diferentes ventanas 4D (editor de código, compilador, depurador, explorador de ejecución), el código de la clase se maneja básicamente como un método proyecto con algunas especificidades:
+
+- En el editor de código:
+  - una clase no puede ser ejecutada
+  - una función de clase es un bloque de código
+  - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
+  - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
+  - las variables declaradas como un usuario o clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
+
+![](../assets/en/ORDA/AutoCompletionEntity.png)
+
+- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
+
+## Eliminar los métodos o las clases
+
+Para eliminar un método o clase existente, puede:
+
+- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
+- en el Explorador 4D, seleccione el método y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
+
+> Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
+
+## Comandos de acceso a objetos de diseño
+
+Puede acceder a los contenidos y rutas de todos los métodos de sus aplicaciones por programación, gracias al [**tema de "Acceso a objetos de diseño"**](../commands/theme/Design_Object_Access.md). Este conjunto de herramientas de código fuente facilita la integración en sus aplicaciones de herramientas de control de código y, más concretamente, de sistemas de control de versiones (VCS). También le permite implementar sistemas avanzados para [documentación de código](../Project/documentation.md), para construir un explorador personalizado o para organizar copias de seguridad programadas del código guardado como archivos de disco.
+
+Se aplican los siguientes principios:
+
+- Cada método y formulario de una aplicación 4D tiene su propia dirección en forma de nombre de ruta. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
+- Puede acceder a objetos en la aplicación 4D utilizando los comandos del tema **"Acceso a objetos de diseño"**, por ejemplo [`METHOD GET NAMES`](../commands/method-get-names) o [`METHOD GET PATHS`](../commands/method-get-paths).
+- La mayoría de los comandos de este tema funcionan tanto en modo [interpretado como compilado](../Concepts/interpreted.md). Sin embargo, los comandos que modifiquen propiedades o accedan a los contenidos ejecutables a partir de métodos sólo pueden utilizarse en modo interpretado (ver la tabla abajo).
+- Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. Sin embargo, tenga en cuenta que no puede utilizar ciertos comandos en modo compilado: el objetivo de este tema es crear herramientas de soporte al desarrollo personalizadas. No debe utilizar estos comandos para cambiar dinámicamente el funcionamiento de una base de datos que se esté ejecutando. Por ejemplo, no se puede utilizar [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) para modificar un atributo de método en función del estado del usuario actual.
+- Cuando se ejecuta un comando de este tema desde un [componente](../Project/components.md), por defecto accede a los objetos del componente. En este caso, para acceder a los objetos del host, basta con pasar un `*` como último parámetro.
+
+### Uso en modo compilado
+
+Por razones relacionadas con el principio del proceso de compilación, sólo ciertos comandos en este tema pueden ser usados en modo compilado. La siguiente tabla muestra los comandos disponibles en modo compilado:
+
+| Comando                                                                  | Puede utilizarse en modo compilado |
+| ------------------------------------------------------------------------ | ---------------------------------- |
+| [Current method path](../commands/current-method-path)                   | Sí                                 |
+| [FORM GET NAMES](../commands/form-get-names)                             | Sí                                 |
+| [METHOD Get attribute](../commands/method-get-attribute)                 | Sí                                 |
+| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | Sí                                 |
+| [METHOD GET CODE](../commands/method-get-code)                           | No                                 |
+| [METHOD GET COMMENTS](../commands/method-get-comments)                   | Sí                                 |
+| [METHOD GET FOLDERS](../commands/method-get-folders)                     | Sí                                 |
+| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | Sí                                 |
+| [METHOD GET NAMES](../commands/method-get-names)                         | Sí                                 |
+| [METHOD Get path](../commands/method-get-path)                           | Sí                                 |
+| [METHOD GET PATHS](../commands/method-get-paths)                         | Sí                                 |
+| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | Sí                                 |
+| [METHOD OPEN PATH](../commands/method-open-path)                         | No                                 |
+| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | Sí                                 |
+| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | Sí                                 |
+| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | No                                 |
+| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | No                                 |
+| [METHOD SET CODE](../commands/method-set-code)                           | No                                 |
+| [METHOD SET COMMENTS](../commands/method-set-comments)                   | No                                 |
+
+:::note
+
+El error -9762 "El comando no puede ejecutarse en una base de datos compilada." se genera cuando el comando se ejecuta en modo compilado.
+
+:::
+
+### Creación de rutas
+
+Las rutas generadas para los objetos 4D deben ser compatibles con la gestión de archivos del sistema operativo. Los caracteres que están prohibidos a nivel del sistema operativo como ":" son codificados automáticamente en nombres de métodos, para que los archivos generados puedan integrarse automáticamente en un sistema de control de versiones.
+
+Estos son los caracteres codificados:
+
+| Caracter                     | Encoding |
+| ---------------------------- | -------- |
+| "                            | %22      |
+| \*                           | %2A      |
+| /                            | %2F      |
+| :            | %3A      |
+| \< | %3C      |
+| \>                          | %3E      |
+| ?                            | %3F      |
+| \|                           | %7C      |
+| \\                         | %5C      |
+| %                            | %25      |
+
+#### Ejemplos
+
+`Form?1` está codificado `Form%3F1`  
+`Button/1` está codificado `Button%2F1`

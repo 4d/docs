@@ -402,10 +402,10 @@ Essa propriedade é **apenas leitura**.
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|Destination folder|
+|destinationFolder |4D. Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|
+|Result|4D. Folder|<-|Copied file or folder|
 </div>
 <!-- END REF -->
 
@@ -432,7 +432,7 @@ O objeto `Folder` copiado.
 Se quiser copiar uma *pasta* Imágens da pasta de documentos do usuário a pasta da Database:
 
 ```4d
-var $userImages; $copiedImages : 4D.Folder
+var $userImages; $copiedImages : 4D. Folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
@@ -460,7 +460,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
+|Result|4D. File|<-|`File` object (null if invalid path)|
 </div>
 <!-- END REF -->
 
@@ -537,6 +537,7 @@ Se quiser saber se há arquivos invisíveis na pasta Database:
  End if
  End if
  End if
+ End if
 ```
 
 #### Exemplo 2
@@ -571,7 +572,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+|Result|4D. Folder|<-|Created folder object (null if invalid *path*)|
 </div>
 <!-- END REF -->
 

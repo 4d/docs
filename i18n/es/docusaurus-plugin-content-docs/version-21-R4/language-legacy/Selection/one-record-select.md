@@ -1,0 +1,44 @@
+﻿---
+id: one-record-select
+title: ONE RECORD SELECT
+slug: /commands/one-record-select
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *tabla* : Table })<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| tabla | Table | &#8594; | Tabla en la cual reducir la selección actual al registro actual o Tabla por defecto si se omite |
+</div>
+<!-- END REF-->
+
+## Descripción 
+
+<!--REF #_command_.ONE RECORD SELECT.Summary-->ONE RECORD SELECT reduce la selección actual de *tabla* al registro actual.<!-- END REF--> Si no existe un registro actual o si el registro actual no está cargado en la memoria (caso particular), ONE RECORD SELECT no tiene ningún efecto.
+
+## Nota 
+
+Este comando fue útil para “reponer” un registro que había sido apilado y desapilado de la pila de registro mientras la selección de la tabla era modificada. [SET QUERY DESTINATION](../commands/set-query-destination) permite efectuar una búsqueda sin tener que cambiar la selección ni el registro actual de una tabla; por lo tanto, no necesita más apilar y desapilar un registro actual para efectuar una búsqueda en su tabla. Por consiguiente, **ONE RECORD SELECT** es menos útil, a menos que quiera expresamente reducir la selección de una tabla al registro actual.
+
+**Atención:** tenga en cuenta que un número de registro puede reutilizarse si se elimina el registro y se crea otro (ver *Acerca de números de registros*).
+
+## Ver también 
+
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
+*Selecciones temporales*  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 189 |
+| Hilo seguro | yes |
+| Modifica el registro actual ||
+| Modifica la selección actual ||
+
+

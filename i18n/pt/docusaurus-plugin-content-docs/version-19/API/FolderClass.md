@@ -64,7 +64,7 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D. Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D. Folder<!-- END REF -->
 
 
 <!-- REF #_command_.Folder.Params -->
@@ -76,7 +76,7 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 |folderConstant|Integer|->|4D folder constant|
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return folder of host database|
-|Result|4D.Folder|<-|New folder object|
+|Result|4D. Folder|<-|New folder object|
 </div>
 <!-- END REF -->
 
@@ -131,7 +131,7 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer ) : 4D.Folder<!-- END REF -->
+**4D. Folder.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D. Folder<br/>**4D. Folder.new** ( *folderConstant* : Integer ) : 4D. Folder<!-- END REF -->
 
 
 #### Descrição
@@ -199,6 +199,7 @@ End if
 Else
  ALERT("Impossível criar uma pasta "+$newFolder.name+".")
 End if
+End if
 ```
 
 <!-- END REF -->
@@ -221,10 +222,10 @@ End if
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|destinationFolder|4D. Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut reference|
+|Result|4D. File|<-|Alias or shortcut reference|
 </div>
 <!-- END REF -->
 
@@ -355,9 +356,9 @@ Quando `Apagar com conteúdo` for aprovado:
 
 |Parameter|Type||Description|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
+|destinationFolder|4D. Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved folder|
-|Result|4D.Folder|<-|Moved folder|
+|Result|4D. Folder|<-|Moved folder|
 </div>
 <!-- END REF -->
 
@@ -414,7 +415,7 @@ Quer mover-se e renomear uma pasta:
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the folder|
-|Result|4D.Folder|<-|Renamed folder|
+|Result|4D. Folder|<-|Renamed folder|
 </div>
 <!-- END REF -->
 

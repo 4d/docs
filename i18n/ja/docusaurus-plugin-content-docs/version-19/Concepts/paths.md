@@ -40,7 +40,7 @@ POSIX シンタックスはすべてのプラットフォームでサポート�
 - 絶対パス名は "/" で始まります。
 - 相対パスにおいて 1階層上に移動するには、パス名の前に "../" を使用します (セキュリティ上の理由から、filesystem から上へは移動できません)。
 
-POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドに `filesystem` パス名を使用します。例:
+POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドに `filesystem` パス名を使用します。
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")

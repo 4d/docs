@@ -139,7 +139,7 @@ Les propriétés de dataclass sont des objets attribut décrivant les champs ou 
  $revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
-Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne renvoie PAS les valeurs contenues dans l'attribut, mais renvoie des références aux attributs eux-mêmes [avec leurs **propriétés**](../API/DataClassClass.md#attributename). Pour gérer les valeurs, vous devez passer par les [Entités](#entite).
+Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Pour gérer les valeurs, vous devez passer par les [Entités](#entite). Cette syntaxe ne renvoie PAS les valeurs contenues dans l'attribut, mais renvoie des références aux attributs eux-mêmes [avec leurs **propriétés**](../API/DataClassClass.md#attributename).
 
 Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs de leur [dataclass](#dataclass) parente. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
 
@@ -163,7 +163,7 @@ En outre, les attributs relationnels suivants seront également disponibles auto
 
 * dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 * dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
-> La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
+> > La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 

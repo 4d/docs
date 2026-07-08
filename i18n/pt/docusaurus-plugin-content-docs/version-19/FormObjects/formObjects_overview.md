@@ -23,6 +23,4 @@ Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 * **Linguagem 4D**: os comandos do tema [Objetos (Formulários)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html), como `OBJECT DUPLICATE` ou `OBJECT SET FONT STYLE`, permitem criar e definir objetos de formulário.
 
 *   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Use a propriedade [type](properties_Object.md#type) para definir o tipo de objeto e, em seguida, defina suas propriedades disponíveis.  Veja a página [Formulários Dinâmicos](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) para informações.  
-  Exemplo de um objeto botão:  
-  ``` ```
-  { "type": "button", "style": "bevel", "text": "OK", "action": "Cancel", "left": 60, "top": 160, "width": 100, "height": 20 }
+  Exemplo de um objeto botão:

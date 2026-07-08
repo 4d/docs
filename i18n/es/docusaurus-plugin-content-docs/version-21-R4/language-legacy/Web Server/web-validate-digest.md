@@ -1,0 +1,81 @@
+﻿---
+id: web-validate-digest
+title: WEB Validate digest
+slug: /commands/web-validate-digest
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUsuario* : Text ; *contraseña* : Text ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| nomUsuario | Text | &#8594; | Nombre del usuario |
+| contraseña | Text | &#8594; | Contraseña del usuario |
+| Resultado | Boolean | &#8592; | True=Autenticación correcta, False=Falla de la autenticación |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
+## Descripción 
+
+<!--REF #_command_.WEB Validate digest.Summary-->El comando **WEB Validate digest** permite verificar la validez de la información de identificación (nombre y contraseña) suministrada por un usuario que se conecta al servidor web.<!-- END REF--> Este comando debe utilizarse en el *Método de base On Web Authentication* en el contexto de una autenticación web en modo Digest (ver la sección ). 
+
+Pase en los parámetros *nomUsuario* y *contraseña*, la información de identificación del usuario almacenada localmente. El comando utiliza esta información para generar un valor que se compare con la información enviada por el navegador web.
+
+Si los valores son idénticos, el comando devuelve True. De lo contrario, devuelve False.
+
+Puede utilizar este mecanismo para administrar y mantener por programación su propio sistema de acceso seguro al servidor web. Note que la validación Digest no puede utilizarse en conjunto con las contraseñas 4D.
+
+**Nota:** si el navegador no soporta la autenticación Digest, se devuelve un error (error de autenticación).
+
+## Ejemplo 
+
+Ejemplo de método de base On Web Authentication en modo Digest:
+
+```4d
+  // Método de base On Web Authentication
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
+
+ var $usuario : Text
+ var $0 : Boolean
+ $result:=False
+ $usuario:=$5
+  //Por razones de seguridad, rechazar los nombres que contengan @
+ If(WithWildcard($usuario))
+    $result:=False
+  //El método WithWildcard se describe en la sección "Método de base On Web Authentication"
+ Else
+    QUERY([WebUsers];[WebUsers]Usuario=$usuario)
+    If(OK=1)
+       $result:=Validate Digest Web Password($usuario;[WebUsers]contraseña)
+    Else
+       $result:=False //Usuario inexistente
+    End if
+ End if
+```
+
+## Ver también 
+
+[Generate digest](../commands/generate-digest)  
+[Validate password](../commands/validate-password)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 946 |
+| Hilo seguro | yes |
+
+

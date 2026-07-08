@@ -1,0 +1,157 @@
+﻿---
+id: register-client
+title: REGISTER CLIENT
+slug: /commands/register-client
+displayed_sidebar: docs
+---
+
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|21|\* 引数は無視されます|
+|11.3|*period* 引数は無視されます|
+
+</details>
+
+
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| clientName | Text | &#8594; | 4Dクライアントセッション名 |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 3|変更|
+|<6|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.REGISTER CLIENT.Summary-->REGISTER CLIENT コマンドは、4Dクライアントステーションを、*clientName*で指定した名前で4D Serverに登録し、他のクライアントもしくは4D Server (ストアドプロシージャから) が登録されたマシン上で、[`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを使ってメソッドを実行できるようにします。<!-- END REF-->一旦登録されると、4Dクライアントは他のクライアント用に1つまたはそれ以上のメソッドを実行することができます。 
+
+**Notes:**
+
+* ストラクチャー設定ダイアログの、「Execute On Client のために起動時にクライアント登録」オプションを使って、4D Serverに接続するクライアントステーションを自動的に登録することができます。
+* ローカルモードの4Dでこのコマンドが使用されても効果はありません。
+* ひとつ以上の4Dクライアントが同じ登録名を持つことができます。
+
+このコマンドが実行されると、クライアントステーション上に*clientName*という名のプロセスが作成されます。このプロセスは[`UNREGISTER CLIENT`](../commands/unregister-client) コマンドによってのみアボート可能です。  
+
+一度コマンドが実行されると、4Dクライアント名を動的に変更することはできません。これを実行するには、UNREGISTERCLIENTコマンドを呼び出し、再度REGISTER CLIENTコマンドを呼び出します。
+
+## 例題 
+
+以下の例題では小さなメッセージングシステムを作成し、クライアントワークステーション間の通信を可能にします。  
+  
+1) このRegistrationメソッドは4Dクライアントを登録して、他の4Dクライアントからのメッセージを受け取ることができるようにします:  
+  
+```4d
+  //他の名前で登録する前に登録解除する必要がある
+ var vPseudoName : Text
+ UNREGISTER CLIENT
+ REPEAT
+    vPseudoName:=Request("名前を入力:";"ユーザ";"OK";"キャンセル")
+ Until((OK=0)|(vPseudoName#""))
+ If(OK=0)
+    ... // 何も行わない
+ Else
+    REGISTER CLIENT(vPseudoName)
+ End if
+```
+  
+  
+2) 以下の指示は、登録されたクライアントのリストを得ることができるようにするものです。これは内に置くことができます:   
+
+```4d
+ var PrClientList : Integer
+ PrClientList:=New process("4D Client List";32000;"List of registered clients")
+ 
+```
+
+3) 以下の4D Client Listメソッドは、メッセージ受信可能な登録済み全4Dクライアントの登録名リストを入手します:   
+  
+```4d
+
+ var $Ref; $p : Integer
+ ARRAY TEXT($ClientList;0)
+ ARRAY LONGINT($ListeCharge;0)
+
+ If(Application type=4D Remote Mode)
+  // 以下のコードはクライアントサーバでのみ有効
+    $Ref:=Open window(100;100;300;400;-(Palette window+Has window title);"List of registered clients")
+    REPEAT
+       GET REGISTERED CLIENTS($ClientList;$ListeCharge)
+  //$ClientListに登録済みクライアントリストを取得
+       ERASE WINDOW($Ref)
+       GOTO XY(0;0)
+       For($p;1;Size of array($ClientList))
+          MESSAGE($ClientList{$p}+Char(Carriage return))
+       End for
+  //毎秒ごとに表示
+       DELAY PROCESS(Current process;60)
+    Until(False) // 無限ループ
+ End if
+ 
+```
+
+ 4) 下記のメソッドは、登録済みの他の4Dクライアントにメッセージを送ります。これは、送られた4DクライアントでDisplay\_Messageメソッドを呼び出します（下記参照）。  
+
+```4d
+ var $Addressee; $Message : Text
+ $Addressee:=Request("メッセージの宛先:";"")
+  // On Startup データベースメソッドで取得した、メッセージ受信可能者リストの名前を指定
+ If(OK#0)
+    $Message:=Request("Message:") // message
+    If(OK#0)
+       EXECUTE ON CLIENT($Addressee;"Display_Message";$Message) // メッセージ送信
+    End if
+ End if
+ 
+ 
+```
+
+5) 以下は、Display\_Messageメソッドです:   
+
+```4d
+ #DECLARE($message : Text)
+ ALERT($message)
+ 
+```
+
+  
+ 6) 最後に、以下のメソッドはクライアントステーションが他の4Dクライアントから見えず、メッセージも受け取れなくなるようにします: 
+
+```4d
+ UNREGISTER CLIENT
+```
+
+## システム変数およびセット 
+
+4Dクライアントが正しく登録されるとOKシステム変数に1が設定されます。4Dクライアントが既に登録されている場合、コマンドはなにも行わずOKは0に設定されます。
+
+## 参照 
+
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 648 |
+| スレッドセーフである | no |
+| システム変数を更新する | OK |
+
+

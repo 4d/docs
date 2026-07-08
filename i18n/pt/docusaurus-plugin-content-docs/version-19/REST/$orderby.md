@@ -8,7 +8,7 @@ Ordena os dados devolvidos pelo atributo e pela ordem de ordenação definidos (
 
 ## Descrição
 
-`$orderby` ordena as entidades devolvidas pelo pedido REST. Para cada atributo, especifica-se a ordem como `ASC` (ou `asc`) para ordem ascendente e `DESC` (`desc`) para ordem descendente. Por defeito, os dados são ordenados por ordem ascendente. By default, the data is sorted in ascending order.
+`$orderby` ordena as entidades devolvidas pelo pedido REST. Para cada atributo, especifica-se a ordem como `ASC` (ou `asc`) para ordem ascendente e `DESC` (`desc`) para ordem descendente. Por defeito, os dados são ordenados por ordem ascendente. Por defeito, os dados são ordenados por ordem ascendente.
 
 
 ## Exemplo

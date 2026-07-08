@@ -1,0 +1,47 @@
+﻿---
+id: wa-open-back-url
+title: WA OPEN BACK URL
+slug: /commands/wa-open-back-url
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *objeto* : Text )<br/>**WA OPEN BACK URL** ( *objeto* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.WA OPEN BACK URL.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.WA OPEN BACK URL.Summary-->O comando WA OPEN BACK URL carrega na área web designada pelos parâmetros *\** e *objeto* a URL antecedente na sequência das URLs abertos.<!-- END REF-->  
+  
+Se não houver um URL antecedente, o comando não faz nada. Pode testar a disponibilidade de uma URL antecedente com a ajuda do comando [WA Back URL available](../commands/wa-back-url-available)
+
+## Ver também 
+
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
+[WA OPEN URL](../commands/wa-open-url)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1021 |
+| Thread-seguro | no |
+
+
