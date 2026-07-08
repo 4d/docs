@@ -68,7 +68,7 @@ When you use this syntax, you guarantee that your formulas will be interpreted c
 This syntax is accepted in all 4D formulas (or 4D expressions) regardless of the calling context:
 
 - 4D formulas executed using the Formula editor or using commands such as [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
-- expressions inserted in [multi-style text areas](../FormObjects/properties_Text.md#supported-tags) (see [`ST INSERT EXPRESSION`]()),
+- expressions inserted in [multi-style text areas](../FormObjects/properties_Text.md#supported-tags) (see [`ST INSERT EXPRESSION`](../commands/st-insert-expression)),
 - expressions calculated in [transformation tags](../Tags/transformation-tags.md),
 - expressions inserted in external areas such as [4D Write Pro areas](../WritePro/managing-formulas.md).
 
