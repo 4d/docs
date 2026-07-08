@@ -880,6 +880,7 @@
     "message": "4D Analyzer"
   },
   "theme.docs.versionDropdown.notAvailable": {
-    "message": "La página no está disponible en esta versión\nEn su lugar, se abrirá la página predeterminada."
+    "message": "La página no está disponible en esta versión\nEn su lugar, se abrirá la página predeterminada.",
+    "description": "Tooltip for version dropdown items where the current page does not exist"
   }
 }
