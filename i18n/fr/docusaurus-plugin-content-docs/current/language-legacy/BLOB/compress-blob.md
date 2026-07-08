@@ -5,7 +5,7 @@ slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* {; *compression*} )<!-- END REF-->
+<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* : Blob {; *compression* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
 <div class="no-index">
 

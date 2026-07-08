@@ -15,14 +15,27 @@ title: OpenAIResult
 
 ## 計算プロパティ
 
-| プロパティ        | 型          | 説明                                                                                |
-| ------------ | ---------- | --------------------------------------------------------------------------------- |
-| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                       |
-| `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。 |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                  |
-| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                         |
-| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                         |
-| `usage`      | Object     | レスポンス本文からの使用状況を返します(あれば)。                                      |
+| プロパティ        | 型          | 説明                                                                                                         |
+| ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
+| `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                |
+| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
+| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
+| `usage`      | Object     | レスポンス本文からの使用状況(トークン数)を返します(存在する場合)。 |
+
+### usage
+
+`usage` プロパティは、API レスポンスに含まれるトークン使用状況のオブジェクトを返します。 構造は使用する API エンドポイントによって異なります。
+
+> **Note:** OpenAI 互換サービスによっては `usage` オブジェクトのフィールドが異なる場合があります。 ここで示す構造は OpenAI API を基準としています。 すべてのフィールドが常に返るとは限りません。
+
+エンドポイント別の詳細は以下を参照してください:
+
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
 
 ### rateLimit
 
@@ -30,7 +43,7 @@ title: OpenAIResult
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
-レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
+レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
 
 `rateLimit` オブジェクトの構造は以下のようになっています:
 

@@ -5,7 +5,7 @@ slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( {*tipoIdioma* : Integer}{;}{*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( { *tipoIdioma* : Integer {; * }}) : Text<br/>**Get database localization** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
 <div class="no-index">
 

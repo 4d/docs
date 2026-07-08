@@ -943,7 +943,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 #### Descripción
 
-La función `.find()` <!-- REF #collection.every().Summary -->La función `.distinct()`<!-- END REF -->.
+La función `.every()` <!-- REF #collection.every().Summary -->La función `.distinct()`<!-- END REF -->.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -1273,7 +1273,7 @@ Quiere filtrar los elementos según su tipo de valor:
 
 #### Descripción
 
-La función `.extract()` <!-- REF #collection.find().Summary -->La función `.extract()`<!-- END REF -->.
+La función `.distinct()` <!-- REF #collection.find().Summary -->La función `.extract()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -2426,7 +2426,7 @@ Ordenar con una ruta de propiedad:
 
 #### Descripción
 
-La función `.reduce()` <!-- REF #collection.orderByMethod().Summary -->La función `.every()`<!-- END REF -->.
+La función `.find()` <!-- REF #collection.orderByMethod().Summary -->La función `.every()`<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
@@ -2773,7 +2773,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 #### Descripción
 
 
-La función `.shift()` <!-- REF #collection.reduce().Summary -->La función `.reduceRight()`<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->La función `.reduceRight()`<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
@@ -3088,7 +3088,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 #### Descripción
 
-La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una nueva colección con todos los elementos de la colección original en orden inverso<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.reverse()` <!-- REF #collection.reverse().Summary -->La función `.reverse()`<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 #### Ejemplo

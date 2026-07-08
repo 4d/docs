@@ -65,8 +65,9 @@ displayed_sidebar: docs
 
 以下のテキストドキュメントが与えられている場合を考えます(フィールドはtabによって分けられています)。
 
-```RAW
-id    name    price    vat3    4D Tags    99    19.6
+```txt
+id    name    price    vat
+3    4D Tags    99    19.6
 ```
 
 以下のコードを実行すると、  

@@ -5,7 +5,7 @@ slug: /commands/object-to-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objetChemin* ) : Text<!-- END REF-->
+<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objetChemin* : Object ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
 <div class="no-index">
 

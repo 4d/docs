@@ -28,7 +28,7 @@ The `OpenAI` class automatically loads provider configurations when instantiated
 var $providers := cs.AIKit.OpenAIProviders.new()
 ```
 
-Creates a new instance that loads provider configuration from the `AIProviders.json` file (see [**Configuration Files**](../provider-model-aliases.md#configuration-files) in the "Provider Model Aliases" page for details on file locations and format).
+Creates a new instance that loads provider configuration from the `AIProviders.json` file. See [Configuration Files](../provider-model-aliases.md#configuration-files) in the Provider Model Aliases documentation for details on file locations and format.
 
 **Important:**
 
@@ -137,7 +137,7 @@ For each ($model; $models)
 End for each
 ```
 
-## Model Resolution
+## モデル解決
 
 Two syntaxes are supported for model resolution:
 
@@ -169,7 +169,7 @@ Use a named model by its bare name from the `models` section of the configuratio
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
-$client.chat.completions.create($messages; {model: ":my-gpt"})
+$client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 This is resolved internally to:
@@ -183,4 +183,3 @@ This is resolved internally to:
 
 - `"my-gpt"` → Use the model alias "my-gpt" (resolves to its configured provider and model)
 - `"my-embedding"` → Use the model alias "my-embedding" for embedding operations
-

@@ -5,7 +5,7 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 <div class="no-index">
 

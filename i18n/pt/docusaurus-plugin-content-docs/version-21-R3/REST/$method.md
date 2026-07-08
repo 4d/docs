@@ -59,19 +59,19 @@ If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$fi
 
 ### Exemplo
 
-To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
+Para criar um conjunto de entidades, que será guardado no cache do 4D Server por duas horas, adicione `$method=entityset` no final do seu pedido REST:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
+Pode criar um conjunto de entidades que será armazenado na cache do 4D Server por apenas dez minutos, passando um novo timeout para `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
+Também é possível guardar o filtro e ordenar por, passando true para `$savedfilter` e `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 
-Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:
+Depois de criar um conjunto de entidades, o primeiro elemento, `__ENTITYSET`, é adicionado ao objeto retornado e indica o URI a ser usado para acessar o conjunto da entidade:
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
@@ -195,7 +195,8 @@ Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado
 
 - **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
 - **Booleanos** son true o false.
-- Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`:::
+- Arquivos carregados usando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objeto retornado no seguinte formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+  :::
 
 ### Exemplo
 

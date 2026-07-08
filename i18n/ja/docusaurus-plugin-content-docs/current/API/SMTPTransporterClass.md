@@ -53,7 +53,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-SMTPステータスコードについての詳細は [こちらのページ](https://www.usps.org/info/smtp_status.html) を参照ください。
+SMTPステータスコードについての詳細は [こちらのページ](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml) を参照ください。
 
 #### 例題
 

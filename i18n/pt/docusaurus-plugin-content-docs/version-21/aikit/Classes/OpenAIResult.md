@@ -29,7 +29,7 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 The `rateLimit` property returns an object containing rate limit information from the response headers.
 This information includes the limits, remaining requests, and reset times for both requests and tokens.
 
-For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers).
 
 The structure of the `rateLimit` object is as follows:
 

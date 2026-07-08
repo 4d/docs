@@ -67,8 +67,9 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 Given the following text document (fields are separated by tabs):
 
-```RAW
-id    name    price    vat3    4D Tags    99    19.6
+```txt
+id    name    price    vat
+3    4D Tags    99    19.6
 ```
 
 When you execute this code:

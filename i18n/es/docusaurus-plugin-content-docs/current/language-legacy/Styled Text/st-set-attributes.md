@@ -5,7 +5,7 @@ slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *objeto* : Text ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Text ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *objeto* : Field, Variable ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Text ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Integer)} )<!-- END REF-->
+<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *objeto* : Text ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Integer ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Integer ; *valorAtrib* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *objeto* : Variable, Field ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Integer ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Integer ; *valorAtrib* : Text, Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 <div class="no-index">
 

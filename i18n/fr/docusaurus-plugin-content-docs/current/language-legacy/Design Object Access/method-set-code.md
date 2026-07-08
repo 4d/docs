@@ -5,7 +5,7 @@ slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *chemin* ; *code* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *chemin* : Text, Text array ; *code* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
 <div class="no-index">
 

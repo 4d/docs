@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* : ポインター, 倍長整数 ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* : Pointer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 <div class="no-index">
 

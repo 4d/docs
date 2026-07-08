@@ -5,7 +5,7 @@ slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*laTable* ;} *formulaire* {; *formUtilisateur*} )<!-- END REF-->
+<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*laTable* : Table ;} *formulaire* : Text, Object {; *formUtilisateur* : Text} )<!-- END REF-->
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 <div class="no-index">
 

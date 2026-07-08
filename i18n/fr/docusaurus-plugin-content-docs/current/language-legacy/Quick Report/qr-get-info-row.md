@@ -5,7 +5,7 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *zone* ; *ligne* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *zone* : Integer ; *ligne* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 <div class="no-index">
 

@@ -58,7 +58,7 @@ title: Entity
 - *attributeName* で指定した属性がストレージ型の場合:
   `.attributeName` は *attributeName* と同じ型の値を返します。
 - *attributeName* で指定した属性が**リレートエンティティ**型の場合:
-  `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname" <em x-id="3">attributeName</em> で指定した属性がリレートエンティティ型の場合: <code>.attributeName</code> はリレートエンティティを返します。
+  `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname" リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em x-id="3">attributeName</em> プロパティに返されます (リレーション名についての <em x-id="3">value</em> および <em x-id="3">otherValue</em> は空になります)。
 - *attributeName* で指定した属性が**リレートエンティティズ型**の場合:
   `.attributeName` はリレートエンティティの新しいエンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 

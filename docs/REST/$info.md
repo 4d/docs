@@ -12,27 +12,28 @@ When you call this request for your project, you retrieve information in the fol
 |---|---|---|
 |cacheSize|	Number	|4D Server's cache size.|
 |usedCache	|Number	|How much of 4D Server's cache has been used.|
-|entitySetCount	|Number	|Number of entity selections.|
-|entitySet	|Collection|A collection in which each object contains information about each entity selection.|
+|entitySetCount	|Number	|Number of entity sets.|
+|entitySet	|Collection|A collection in which each object contains information about each entity set.|
 |ProgressInfo|	Collection	|A collection containing information about progress indicator information.|
 |sessionInfo|	Collection	|A collection in which each object contains information about each user session.|
 |privileges|	Object	|An object with a "privileges" property (collection of objects). Each object of the collection has a "privilege" property with a privilege name of the user session as value.|
 
 
 ### entitySet  
-For each entity selection currently stored in 4D Server's cache, the following information is returned:
+
+For each entity set currently stored in 4D Server's cache, the following information is returned:
 
 
 |Property|	Type|	Description|
 |---|---|---|
 |id|Text|	A UUID that references the entity set.|
 |dataClass|Text	|Name of the dataclass.|
-|selectionSize|	Number|	Number of entities in the entity selection.|
+|selectionSize|	Number|	Number of entities in the entity set.|
 |sorted|Boolean|Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.|
 |refreshed|Date|When the entity set was created or the last time it was used.|
-|expires|Date|When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`.
+|expires|Date|When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property. |
 
-For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
+For information about how to create an entity set, refer to [`$method=entityset`](./$method.md#methodentityset). If you want to remove the entity selection from 4D Server's cache, use [`$entityset/$release`](./$entityset.md#entitysetrelease).
 
 >4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
 

@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ```4d
   // On Web Authentication Database Method
- #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
  $result:=False
  $user:=$5
   //セキュリティに関する理由のため、@を含む名前を拒否する

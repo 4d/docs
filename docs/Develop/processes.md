@@ -145,3 +145,5 @@ All worker processes, except the main process, have the process type `Worker pro
 
 For more information, please see [this blog post](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) about how to use workers.
 
+
+<!-- INCLUDE develop-semaphores.Desc -->

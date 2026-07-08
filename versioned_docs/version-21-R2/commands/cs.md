@@ -6,7 +6,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 |---|---|---|---|
-| classStore | Object | &#8592; | User class store for the project or component |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md)| &#8592; | User class store for the project or component |
 
 <div class="no-index">
 <details><summary>History</summary>

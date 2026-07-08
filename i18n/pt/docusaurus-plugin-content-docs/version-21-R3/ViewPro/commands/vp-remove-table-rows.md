@@ -34,7 +34,7 @@ title: VP REMOVE TABLE ROWS
 
 O comando `VP REMOVER TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->remove uma ou *count* fileira(s) do *tableName* especificado no índice *row* especificado<!-- END REF -->. O comando remove valores e estilos.
 
-Este comando remove linhas da tabela *tableName*, não da folha. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos automaticamente de acordo com o número de linhas removidas.
+Este comando remove linhas da tabela *tableName*, não da folha. O número total de linhas da folha não é impactado pelo  comando. O número total de linhas da folha não é impactado pelo  comando.
 
 If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command removes element(s) from the collection.
 

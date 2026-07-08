@@ -150,13 +150,13 @@ A menos que especifique lo contrario, 4D habilita automáticamente cada elemento
 
 ### Marca de verificación
 
-Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. You can then manage the display of the check mark using language commands `SET MENU ITEM MARK` and `Get menu item mark`.
+Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. A continuación, puede gestionar la visualización de la marca de verificación utilizando los comandos del lenguaje `SET MENU ITEM MARK` y `Get menu item mark`.
 
 Las marcas de verificación se utilizan generalmente para los elementos del menú de acción continua e indican que la acción está en curso.
 
 ### Estilos de fuentes
 
-4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, `SET MENU ITEM STYLE`.
+4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. Puede personalizar sus menús con los estilos Negrita, Cursiva o Subrayado a través de las opciones del editor de Menús, `SET MENU ITEM STYLE`.
 
 Como regla general, aplique los estilos de fuente con moderación a sus menús; demasiados estilos distraerán al usuario y darán un aspecto desordenado a su aplicación.
 > También puede aplicar estilos insertando caracteres especiales en el título del menú (ver [Usar caracteres de control](properties.md#using-control-characters) más arriba).

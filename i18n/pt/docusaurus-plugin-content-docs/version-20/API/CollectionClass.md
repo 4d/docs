@@ -1158,7 +1158,7 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 #### Descrição
 
-A função `.some()` <!-- REF #collection.filter().Summary -->A função `.map()`<!-- END REF -->. Esta função devolve uma ***cópia superficial***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.filter()` <!-- REF #collection.filter().Summary -->A função `.filter()`<!-- END REF -->. Esta função devolve uma ***cópia superficial***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 Pode determinar a chamada de retorno a ser executada para filtrar os elementos de recolha utilizando qualquer um dos dois:
@@ -1345,7 +1345,7 @@ var $c;$c2;$c3 : Collection
 
 #### Descrição
 
-A função `.orderBy()` <!-- REF #collection.findIndex().Summary -->A função `.find()`<!-- END REF -->.
+A função `.findIndex()` <!-- REF #collection.findIndex().Summary -->A função `.findIndex()`<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
@@ -2380,7 +2380,7 @@ Ordenar com uma rota de propriedade:
 
 #### Descrição
 
-A função `.reduce()` <!-- REF #collection.orderByMethod().Summary -->A função `.orderBy()`<!-- END REF -->.
+A função `.orderBy()` <!-- REF #collection.orderByMethod().Summary -->A função `.orderBy()`<!-- END REF -->.
 
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
@@ -2716,7 +2716,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 #### Descrição
 
 
-A função `.sum()` <!-- REF #collection.reduce().Summary -->A função `.reduceRight()`<!-- END REF -->.
+A função `.reduce()` <!-- REF #collection.reduce().Summary -->A função `.reduceRight()`<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
@@ -3030,7 +3030,7 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 #### Descrição
 
-A função `.reverse()` <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.reverse()` <!-- REF #collection.reverse().Summary -->A função `.reverse()`<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 #### Exemplo

@@ -11,7 +11,7 @@ El botón "Procesos" indica, entre paréntesis el número total de procesos en e
 
 Puede cambiar el orden de las columnas simplemente arrastrando y soltando las áreas de encabezado de las columnas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
-Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
+Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
 
 También hay tres botones de acceso directo que se pueden utilizar para filtrar por el tipo de proceso que se muestra en la ventana:
 
@@ -76,6 +76,12 @@ Cada proceso se identifica con un icono y un tipo. El color y la forma del icono
 | ![](../assets/en/Admin/server-icon-25.png) | Proceso worker (apropiativo)                                                                                                                                                                           |
 
 > Cada proceso cliente 4D principal y su proceso base 4D cliente "gemelo" se agrupan cuando se marca la opción **Mostrar los procesos por grupos**.
+
+:::note
+
+Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+
+:::
 
 ## Botones de administración
 

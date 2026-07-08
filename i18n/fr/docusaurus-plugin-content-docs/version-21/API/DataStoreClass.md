@@ -89,7 +89,7 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 #### Description
 
-La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->annule la transaction<!-- END REF --> ouverte par la fonction [`.startTransaction()`](#starttransaction) au niveau correspondant dans le process en cours pour le datastore spécifié.
+La fonction `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->annule la transaction<!-- END REF --> ouverte par la fonction [`.startTransaction()`](#starttransaction) au niveau correspondant dans le process courant pour le datastore spécifié.
 
 La fonction `.cancelTransaction()` annule toutes les modifications apportées aux données durant la transaction.
 

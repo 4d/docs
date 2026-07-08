@@ -100,7 +100,7 @@ Tenga en cuenta que los [privilegios](../ORDA/privileges.md) deben definirse en 
 
 Puede desarrollar esta configuración en su aplicación 4D Developer (monousuario): puede utilizar la [sesión autónoma](#standalone-sessions) para codificar y probar todas las funcionalidades relacionadas con el acceso web, tanto si su aplicación está pensada para un despliegue monousuario o cliente/servidor.
 
-Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). Después de crear un token OTP para la sesión de escritorio en el servidor o en la aplicación monousuario 4D, se añade el token (a través del valor del parámetro `$4DSID`) a las peticiones web enviadas desde las áreas web que contienen páginas Qodly (o desde cualquier navegador web) para que la sesión de usuario en el servidor o en la aplicación monousuario sea identificada y compartida. After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared.
+Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). Después de crear un token OTP para la sesión remota, se añade el token (a través del valor del parámetro `$4DSID`) a las peticiones web enviadas desde las áreas web que contienen páginas Qodly (o desde cualquier navegador web) para que la sesión de usuario en el servidor se identifique y comparta.
 
 :::note
 
@@ -110,8 +110,8 @@ Cuando se crea un token OTP en un entorno cliente/servidor, es necesario ejecuta
 
 :::tip Entrada de blog relacionada
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Integra las páginas Qodly en un área web 4D sin costo adicional](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
+[Mejora su interfaz de escritorio con widgets Web utilizando 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 

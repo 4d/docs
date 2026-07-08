@@ -45,7 +45,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -53,7 +53,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 | Paramètres | Type                               |                             | Description                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
-| paramètres | Object                             |              ->             | Mail server configuration                          |
+| parameter  | Object                             |              ->             | Configuration du serveur de messagerie             |
 | Résultat   | 4D.IMAPTransporter | <- | [Objet transporteur IMAP](#objet-imap-transporter) |
 
 </div>
@@ -158,6 +158,14 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### Voir également
+
+[`.removeFlags()`](#removeflags)
+
+#### Voir également
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -1294,9 +1302,9 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 #### Description
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Cette propriété est en **lecture seule**.
+La propriété `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contient l'objet IMAPNotifier associé au transporteur<!-- END REF -->. Cette propriété est en **lecture seule**.
 
-See [IMAPNotifier](./IMAPNotifierClass.md).
+Voir [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 
@@ -1462,6 +1470,10 @@ If ($status.success)
  End if
 End if
 ```
+
+#### Voir également
+
+[`.addFlags()`](#addflags)
 
 <!-- END REF -->
 

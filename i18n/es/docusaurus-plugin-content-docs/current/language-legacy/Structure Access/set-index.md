@@ -5,7 +5,7 @@ slug: /commands/set-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *unCampo* ; *index* : Boolean, Integer {; *} )<!-- END REF-->
+<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *unCampo* : Field ; *index* : Boolean, Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
 <div class="no-index">
 

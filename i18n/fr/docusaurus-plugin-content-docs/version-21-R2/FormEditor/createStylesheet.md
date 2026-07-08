@@ -206,20 +206,20 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries allow you to apply styles based on specific conditions. 4D supports media queries for **color schemes** and **platform themes**.
+Les requêtes de média vous permettent d'appliquer des styles en fonction de conditions spécifiques. 4D prend en charge les requêtes média pour les **palettes de couleurs** et les **thèmes de plateforme**.
 
 Une media query est composée d'une fonctionnalité média et d'une valeur (`<fonctionnalité média>:<valeur>`).
 
-Available media features and values:
+Fonctionnalités et valeurs disponibles pour les médias :
 
-| Media features         | Valeurs                                        | Description                                                                                                                                                                                        |
-| ---------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                                                |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Thème de plate-forme à utiliser (Windows). Pour plus d'informations sur le thème **fluent-ui**, reportez-vous à [cette section](./forms.md#fluent-ui-rendering) |
+| Fonctionnalités des médias | Valeurs                                        | Description                                                                                                                                                                                        |
+| -------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme`     | <li>**light**</li><li>**dark**</li>            | Schéma de couleurs à utiliser                                                                                                                                                                      |
+| `form-theme`               | <li>**fluent-ui**</li><li>**win-classic**</li> | Thème de plate-forme à utiliser (Windows). Pour plus d'informations sur le thème **fluent-ui**, reportez-vous à [cette section](./forms.md#fluent-ui-rendering) |
 
 :::note
 
-Color schemes are not supported with **win-classic** platform theme.
+Les schémas de couleurs ne sont pas prises en charge avec le thème de plateforme **win-classic**.
 
 :::
 
@@ -246,19 +246,19 @@ Cette CSS définit une combinaison de couleurs pour le texte et l'arrière-plan 
 ##### Exemple 2
 
 ```css
-/* Default style (all themes and modes) */
+/* Style par défaut (tous les thèmes et modes) */
 .textLabel {
     fontFamily: "Segoe UI";
 }
  
-/* Fluent UI theme*/
+/* Thème Fluent UI */
 @media (form-theme: fluent-ui) {
     .textLabel {
         stroke: #2A2A2A;
         fontSize: 14px;
     }
  
-    /* dark mode */
+    /* mode sombre */
     @media (prefers-color-scheme: dark) {
         .textLabel {
             stroke: #E0E0E0;
@@ -266,7 +266,7 @@ Cette CSS définit une combinaison de couleurs pour le texte et l'arrière-plan 
     }
 }
  
-/* Windows classic theme */
+/* Thème classique de Windows */
 @media (form-theme: win-classic) {
     .textLabel {
         stroke: #000000;
@@ -389,7 +389,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 Les chemins de fichiers peuvent être relatifs ou absolus.
 
 - Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
-- For security reasons, only [filesystem paths](../Concepts/paths.md#filesystem-pathnames) are accepted for absolute paths (*e.g.*, "/RESOURCES", "/DATA").
+- Pour des raisons de sécurité, seuls les [chemins du système de fichiers](../Concepts/paths.md#filesystem-pathnames) sont acceptés pour les chemins absolus (*par exemple*, "/RESOURCES", "/DATA").
 
 :::
 

@@ -5,7 +5,7 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *formatDesc* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *formatDesc* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 <div class="no-index">
 

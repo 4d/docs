@@ -77,6 +77,12 @@ Cada processo é identificado por um ícone e por um tipo. A cor e a forma do í
 
 > Cada proceso cliente 4D principal y su proceso base 4D cliente "gemelo" se agrupan cuando se marca la opción **Mostrar los procesos por grupos**.
 
+:::note
+
+Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+
+:::
+
 ## Botões de administração
 
 A página também tem cinco botões de controle que atuam nos processos selecionados. Observe que você só pode agir em processos usuários.

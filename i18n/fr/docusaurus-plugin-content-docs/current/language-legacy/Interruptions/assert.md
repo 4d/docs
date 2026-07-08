@@ -5,7 +5,7 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressionBool* {; *texteMessage*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressionBool* : Boolean {; *texteMessage* : Text} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 <div class="no-index">
 

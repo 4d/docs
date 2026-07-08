@@ -5,7 +5,7 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* : Text ; *url* : Text ; *contenu* : Text, Blob, Picture, Object, Collection ; *réponse* : Text, Blob, Picture, Object, Collection {; *nomsEnTêtes* : Text array ; *valeursEnTêtes* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 <div class="no-index">
 
@@ -67,7 +67,15 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 Par exemple, les chaînes suivantes peuvent être passées :  
 
 ```RAW
-    http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+http://www.myserver.com    
+http://www.myserver.com/path    
+http://www.myserver.com/path?name="jones"        
+https://www.myserver.com/login (*)    
+http://123.45.67.89:8083     
+http://john:smith@123.45.67.89:8083   
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    
+http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
+
 ```
 
 *(\*)* Lors des requêtes https, l’autorité du certificat n’est pas vérifiée.  

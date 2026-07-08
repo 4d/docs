@@ -39,7 +39,7 @@ Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma
 
 Un permiso es la capacidad de realizar una acción sobre un recurso. Por ejemplo, *ejecutar la función ds.miTabla.miFuncion()* representa un **permiso**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
 
-When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
+Cuando **no se haya definido ningún permiso específico** para un recurso, el acceso al mismo puede ser automáticamente **sin restricciones** o **restringido**, dependiendo del [modo predeterminado definido para el proyecto](#restriction-modes).
 
 ### Acciones de autorización
 
@@ -254,7 +254,7 @@ La propiedad `restrictedByDefault` configura cómo cada [recurso](#resources) es
 :::note Compatibilidad
 
 - Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. En un entorno de producción, [se recomienda definir las propiedades `restrictedByDefault` y `forceLogin` en **true**](#recommended-configuration).
-- In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
+- En **proyectos convertidos desde versiones anteriores**, al habilitar el acceso a Qodly Studio mediante el [cuadro de diálogo de configuración con un solo clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), se añade la propiedad `restrictedByDefault` con el valor **true** en el archivo *roles.json*.
 
 :::
 

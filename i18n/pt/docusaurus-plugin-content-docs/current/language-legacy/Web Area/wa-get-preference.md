@@ -5,7 +5,7 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *objeto* : Text ; *seletor* : Integer ; *valor* : Variable )<br/>**WA GET PREFERENCE** ( *objeto* : Field, Variable ; *seletor* : Integer ; *valor* : Variable )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *objeto* : Text ; *seletor* : Integer ; *valor* : Variable )<br/>**WA GET PREFERENCE** ( *objeto* : Variable, Field ; *seletor* : Integer ; *valor* : Variable )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/qr-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*laTable* ;} *nomFichier* {; *nomMéthode*}{; *} )<!-- END REF-->
+<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*laTable* : Table} {; *nomFichier* : Text} {; *nomMéthode* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
 <div class="no-index">
 

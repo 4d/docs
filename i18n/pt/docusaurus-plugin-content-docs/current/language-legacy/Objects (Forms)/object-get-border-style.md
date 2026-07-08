@@ -5,7 +5,7 @@ slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get border style** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get border style** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get border style.Params-->
 <div class="no-index">
 

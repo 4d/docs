@@ -113,9 +113,9 @@ Soit une list box "MyListbox", si vous exécutez l'instruction suivante :
 
 ## Voir également
 
-[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)\
+[LISTBOX SET GRID](../commands/listbox-set-grid.md)\
 [LISTBOX SET PROPERTY](listbox-set-property.md)\
-[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar.md)
 
 ## Propriétés
 

@@ -139,21 +139,21 @@ Cette commande permet d'imprimer des zones et des objets externes (par exemple, 
 L'exemple suivant effectue la même chose que ce que ferait la commande [PRINT SELECTION](../commands-legacy/print-selection.md). Cependant, l'état utilise deux formulaires différents suivant le type d'enregistrement (chèque émis ou dépôt) :
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // Sélectionnez les enregistrements
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // Trier les enregistrements
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // Afficher les boîtes de dialogue d'impression
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // Utilisez un seul formulaire pour les chèques
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // Utilisez un autre formulaire pour les dépôts
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // Assurez-vous que la dernière page est bien imprimée
        End if
     End if
  End if

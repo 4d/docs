@@ -24,7 +24,7 @@ No se puede activar directamente la ejecución de la función de evento. Los eve
 
 :::info Nota de compatibilidad
 
-Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Tenga en cuenta también que, a diferencia de los triggers, los eventos de la entidad ORDA no bloquean toda la tabla subyacente de un dataclass mientras se guardan o se eliminan entidades. Varios eventos pueden ejecutarse en paralelo siempre que afecten a entidades distintas (es decir, registros).
+Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Tenga en cuenta también que, a diferencia de los triggers, los eventos de la entidad ORDA no bloquean toda la tabla subyacente de un dataclass mientras se guardan o se eliminan entidades. Varios eventos pueden ejecutarse en paralelo siempre que afecten a entidades distintas (es decir, registros).
 
 :::
 
@@ -48,7 +48,7 @@ Sin embargo, en la configuración cliente/servidor, la función de evento `touch
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
+Las funciones ORDA [`constructor()`](./ordaClasses.md#class-constructor) se ejecutan siempre localmente.
 
 :::
 
@@ -107,7 +107,7 @@ Cuando ocurre un error en un evento, los otros eventos se detienen en el primer 
 | errCode            | Integer | Igual al comando [`Last errors`](../commands/last-errors)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Sí                                           |
 | message            | Text    | Igual al comando [`Last errors`](../commands/last-errors)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Sí                                           |
 | extraDescription   | Object  | Información libre a definir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Sí                                           |
-| seriousError       | Boolean | Utilizado sólo con eventos de validación (ver abajo). <li>`True`: crea un [error grave (imprevisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) y activa una excepción. Añade el estado `dk status serious validation error`</li><li>`False`: crea sólo un [error silencioso (previsible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Añade el estado `dk status validation failed`.</li> | Sí (por defecto es false) |
+| seriousError       | Boolean | Utilizado sólo con eventos de validación (ver abajo). <li>`True`: crea un [error grave (imprevisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) y activa una excepción. Añade el estado `dk status validation failed`.</li> Añade el estado `dk status serious validation error`</li><li>`False`: crea sólo un [error silencioso (previsible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). | Sí (por defecto es false) |
 | componentSignature | Text    | Siempre "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | No                                           |
 
 - Los [errores críticos](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) están apilados en la colección de la propiedad `errors` del **objeto Result** devuelto por las funciones [`save()`](../API/EntityClass.md#save) o [`drop()`](../API/EntityClass.md#drop).
@@ -135,7 +135,7 @@ Este evento se activa cada vez que se modifica un valor en la entidad.
 
 Este evento se activa tan pronto como el motor de 4D Server / 4D detecta una modificación del valor del atributo que puede deberse a las siguientes acciones:
 
-- en **cliente/servidor con la [palabra clave `local`](../ORDA/ordaClasses.md#local-functions)** o en **4D monousuario**:
+- en **cliente/servidor con la [palabra clave `local`](../Concepts/classes.md#local)** o en **4D monousuario**:
   - el usuario define un valor en un formulario 4D,
   - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - en **cliente/servidor sin la palabra clave `local`**: algún código 4D que hace una asignación con el operador `:=` es [ejecutado en el servidor](../commands/execute-on-server).

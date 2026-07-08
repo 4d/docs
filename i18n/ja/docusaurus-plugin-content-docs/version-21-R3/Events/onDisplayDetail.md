@@ -15,7 +15,7 @@ title: On Display Detail
 
 `DISPLAY SELECTION` や `MODIFY SELECTION` によって、リストフォームでレコードを表示されようとしています。
 
-> このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
+> **出力フォーム**: このイベントは、詳細フォームが閉じられ、ユーザーがリストフォームに戻るときに生成されます。 このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
 
 このコンテキストにおいて、メソッドやフォームイベントが呼び出される順序は以下のとおりです:
 
@@ -26,7 +26,7 @@ title: On Display Detail
 
 > ヘッダーエリアは、[`On Header`](onHeader.md) イベントで処理されます。
 
-`On Display Detail` イベントから、ダイアログボックスを表示する 4Dコマンドを呼び出すことはできません。これはシンタックスエラーを起こします。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。
+`On Display Detail` イベントから、ダイアログボックスを表示する 4Dコマンドを呼び出すことはできません。これはシンタックスエラーを起こします。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。
 
 ### セレクションリストボックス
 
@@ -34,4 +34,4 @@ title: On Display Detail
 
 ### Displayed line number
 
-`Displayed line number` 4Dコマンドは、`On Display Detail` フォームイベントと連動します。 このコマンドは、レコードのリストまたはリストボックスの行が画面に表示されるときに処理されている行の番号を返します。
+`Displayed line number` 4Dコマンドは、`On Display Detail` フォームイベントと連動します。 このコマンドは、レコードのリストまたはリストボックスの行が画面に表示されるときに処理されている行の番号を返します。 このコマンドは、レコードのリストまたはリストボックスの行が画面に表示されるときに処理されている行の番号を返します。

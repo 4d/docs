@@ -5,7 +5,7 @@ title: Release Notes
 
 ## 4D 21 R3
 
-Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), the blog post that lists all new features and enhancements in 4D 21 R3.
+Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-21-r3), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R3.
 
 #### Points forts
 
@@ -13,12 +13,14 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - 4D Write Pro prend en charge les [feuilles de style de liste hiérarchique](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), ce qui permet de créer et de gérer des [listes à plusieurs niveaux](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) structurées avec numérotation automatique.
 - Possibilité d'utiliser un certificat personnalisé provenant du trousseau de macOS au lieu d'un dossier de certificats local dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Nouvelle classe [`4D.Method`](../API/MethodClass.md) pour créer et exécuter le code d'une méthode 4D à partir d'un texte source. Les commandes [`METHOD Get path`](../commands/method-get-path) et [`METHOD RESOLVE PATH`](../commands/method-resolve-path) prennent charge une nouvelle constante `path volatile method` (128).
-- Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifier.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
+- Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
 - Les objets [session](../API/SessionClass.md) distantes sont maintenant [disponibles côté client](../Desktop/sessions.md#availability).
 - Nouvelle [page **IA**](../settings/ai.md) dans la boîte de dialogue des Propriétés, permettant de configurer des [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md) qui peuvent être appelés dans le code via le composant 4D AIKit.
 - Composant 4D AIKit : nouvelle classe [Providers](../aikit/Classes/OpenAIProviders.md) pour instancier et gérer les [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md).
 - Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
+- Nouveau [moteur de rendu d'impression](../FormEditor/forms.md#print-rendering-engine) pour les formulaires dans les interfaces Liquid Glass et Fluent UI. Nouvelle option de compatibilité permettant d'[activer le moteur de rendu sur les interfaces classiques](../FormEditor/forms.md#legacy-print-renderer).
 - Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 
 #### Prise en charge de Liquid glass sur macOS
 
@@ -31,8 +33,8 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - La commande [`JSON Validate`](../commands/json-validate) prend maintenant en compte la clé *$schema* et génère une erreur si une version non prise en charge est déclarée dans le schéma.
 - Pour plus de clarté, les objets formules sont désormais des instances d'une nouvelle classe [`4D.Formula`](../API/FormulaClass.md) qui hérite de la classe générique [`4D.Function`](../API/FunctionClass.md).
 - Dans 4D 21 R3, de nouvelles améliorations du [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) s'appliquent aux commandes du langage (voir [cet article de blog](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Il est possible que des erreurs de syntaxe qui n'étaient pas détectées auparavant soient désormais signalées dans votre code.
-- La page "PHP" a été supprimée de la [boîte de dialogue des Propriétés](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter.
-- The **Legacy** network layer is no longer supported. Les projets et les bases de données binaires qui utilisaient l'ancienne couche réseau sont automatiquement configurés en [**ServerNet**](../settings/client-server.md#network-layer) lors de la mise à niveau vers 4D 21 R3 et versions ultérieures.
+- La page "PHP" a été supprimée de la [boîte de dialogue des Propriétés](../settings/overview.md). Utilisez les [sélecteurs PHP de la commande `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) pour configurer un interpréteur PHP.
+- L'ancienne couche réseau **Legacy** n'est plus prise en charge. Les projets et les bases de données binaires qui utilisaient l'ancienne couche réseau sont automatiquement configurés en [**ServerNet**](../settings/client-server.md#network-layer) lors de la mise à niveau vers 4D 21 R3 et versions ultérieures.
 
 ## 4D 21 R2
 
@@ -77,7 +79,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | ngtcp2       | 1.18.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL      | 3.5.2  | 21                  |                                                                                                                                                       |
 | PDFWriter    | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS     | 18.2.0 | **21 R2**           | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
+| SpreadJS     | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib         | 1.3.1  | 21                  |                                                                                                                                                       |

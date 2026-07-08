@@ -3,7 +3,7 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md). Os objetos Attachment são criados usando o comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
+Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md). Os objetos Attachment permitem fazer referência a arquivos em um objeto [`Email`](EmailObjectClass.md).
 
 ### Objeto anexos
 
@@ -69,7 +69,7 @@ A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> o ID 
 
 #### Descrição
 
-A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho \`Content-Disposition<!-- END REF -->. Dois valores esetão disponíveis:
+A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho \\`Content-Disposition<!-- END REF -->. Dois valores esetão disponíveis:
 
 - "inline": o anexo é renderizado dentro dos conteúdos da mensagem, no local "cid". A renderização depende do cliente mail.
 - "attachment": o anexo é fornecido como um link na mensagem.

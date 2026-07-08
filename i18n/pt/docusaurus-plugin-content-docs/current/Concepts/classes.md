@@ -49,8 +49,8 @@ You can also remove the .4dm class file from the "Classes" folder on your disk.
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs) para o class store de usuário
-- [`4D`](../commands/4d) para o class store integrado
+- [`cs`](../commands/cs) for user classes and component class stores
+- [`4D`](../commands/4d) for built-in classes
 
 #### `cs`
 
@@ -60,14 +60,14 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição                                           |
-| ---------- | ------ | --------------------------- | --------------------------------------------------- |
-| classStore | Object | &#8592; | Class store de usuário para o projeto ou componente |
+| Parâmetro  | Tipo                                                       |                             | Descrição                                           |
+| ---------- | ---------------------------------------------------------- | --------------------------- | --------------------------------------------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store de usuário para o projeto ou componente |
 
 </div>
 <!-- END REF -->
 
-O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](#class-definition) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
+O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis. Ele retorna todas as classes de usuários [definidas](../Project/code-overview.md#creating-classes) no projeto ou componente aberto.
 
 #### Exemplo
 
@@ -85,9 +85,9 @@ $instance:=cs.myClass.new()
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição      |
-| ---------- | ------ | --------------------------- | -------------- |
-| classStore | Object | &#8592; | Class store 4D |
+| Parâmetro  | Tipo                                                       |                             | Descrição      |
+| ---------- | ---------------------------------------------------------- | --------------------------- | -------------- |
+| classStore | [4D.ClassStore](../API/ClassStoreClass.md) | &#8592; | Class store 4D |
 
 </div>
 <!-- END REF -->
@@ -112,7 +112,7 @@ Você deseja listar as classes 4D integradas:
 
 ## Objecto de classe
 
-Quando uma classe é [definida](#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Um objecto classe tem as seguintes propriedades e função:
+Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Quando uma classe é [definida](../Project/code-overview.md#creating-classes) no projeto, ela é carregada no ambiente de linguagem 4D. Um objecto classe tem as seguintes propriedades e função:
 
 - [`name`](API/ClassClass.md#name) string
 - objeto [`superclass`](API/ClassClass.md#superclass) (nulo se não tiver)
@@ -928,7 +928,7 @@ The `server` keyword is useless for [ORDA data model functions](../ORDA/ordaClas
 
 `server` function parameters and result must be [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
 
-This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](#shared-or-session-singleton-functions) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](../Concepts/classes.md#session-singleton) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
 
 By default, shared or session singleton functions are executed locally. Adding the `server` keyword in the class function definition makes 4D use the singleton instance on the server. Note that this can result of an instantiation of the singleton on the server if no instance exists yet.
 

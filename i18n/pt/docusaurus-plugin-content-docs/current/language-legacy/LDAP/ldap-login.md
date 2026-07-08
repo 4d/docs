@@ -32,6 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGIN.Summary-->O comando**LDAP LOGIN** abre uma conexão somente leitura no servidor LDAP especificado pelo parâmetro *url* com os identificadores de *login* e *senha*.<!-- END REF--> Se for aceito pelo servidor, esta ligação é utilizada para todas as pesquisas de LDAP posteriormente introduzidas no processo atual até que o comando *RuntimeVLWinFolder* sejaé executado (ou até que o processo seja fechado).
 
+:::info
+
+LDAP ou *Lightweight Directory Access Protocol* é um padrão aberto para acessar e manter serviços de informação distribuídos. Para mais informações, consulte a [página da Wikipedia sobre LDAP](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) ou a página principal do [OpenLDAP Software](http://www.openldap.org/).
+
+:::
+
 Em *url*, passe a URL completa do servidor LDAP para se conectar, incluindo o esquema e o porto (389 por padrão). Este parâmetro tem de ser compatível com o [rfc2255](https://www.ietf.org/rfc/rfc2255.txt). 
 
 Você pode abrir conexões seguras usando TLS usando uma *url* que começa com "ldaps" e usa um número de porta específico (por exemplo, "ldaps://svr.ldap.acme.com:1389") . O servidor LDAP deve ter um certificado SSL (pelo menos para Microsoft Active Directory). É altamente recomendável usar uma conexão TLS quando a senha for enviada em texto simples (veja abaixo).  
@@ -42,9 +48,9 @@ No *login*, passar a conta de usuário no servidor LDAP, e em *senha*, passe sen
 
   
 * um Distinguished Name (DN), por exemplo, "CN=John Smith,OU=users,DC=example,DC=com"
-* um nome de usuário (CN), por exemplo, "CN = John Smith"
+* um nome de usuário (CN para *Common Name*), por exemplo, "CN = John Smith"
 * endereço de e-mail, por exemplo "johnsmith@4d.fr"
-* uma SAM-Account-Name, por exemplo "jsmith".
+* uma SAM-Account-Name (*Security Account Manager*, nome de início de sessão para Active Directory), por exemplo "jsmith".
 Repare que os valores aceitos para o *login* estão relacionados com o modo de transmissão da senha definido pelo parâmetro *digest*. Por exemplo, em uma configuração padrão do MS Active Directory:  
   
 * Quando o modo de transmissão for LDAP password MD5, o único valor aceito para um início de sessão é a  SAM-Account-Name.

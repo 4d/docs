@@ -5,7 +5,7 @@ slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *zone* ; *type* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *zone* : Integer ; *type* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 <div class="no-index">
 

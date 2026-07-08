@@ -5,7 +5,7 @@ slug: /commands/listbox-get-auto-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height**  ( * ; *objeto* : Text ; *seletor* : Integer {; *unidade* : Integer} )  : Integer<br/>**LISTBOX Get auto row height**  ( *objeto* : Field, Variable ; *seletor* : Integer {; *unidade* : Integer} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height** ( * ; *objeto* : Text ; *seletor* : Integer {; *unidade* : Integer} )  : Integer<br/>**LISTBOX Get auto row height** ( *objeto* : Variable ; *seletor* : Integer {; *unidade* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
 <div class="no-index">
 

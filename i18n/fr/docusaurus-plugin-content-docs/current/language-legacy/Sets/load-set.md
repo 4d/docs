@@ -5,7 +5,7 @@ slug: /commands/load-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* ;} *ensemble* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* : Table ;} *ensemble* : Text ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
 <div class="no-index">
 

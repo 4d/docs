@@ -90,8 +90,37 @@ Activation du fichier d'historique de debug des requêtes HTTP, sans les parties
 
 Voici un exemple d'entrée enregistrée dans le fichier d'historique :
 
-```RAW
-# REQUEST# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089388#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber: 5GET /4DWEBTEST HTTP/1.1Connection: CloseHost: 127.0.0.1User-Agent: 4D_HTTP_Client/0.0.0.0# RESPONSE# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089389 (elapsed time: 1 ms)#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber: 6HTTP/1.1 200 OKAccept-Ranges: bytesConnection: keep-aliveContent-Encoding: gzipContent-Length: 3555Content-Type: text/plain; charset=UTF-8Date: Thu, 20 Apr 2017 10:51:29 GMTExpires: Thu, 20 Apr 2017 10:51:29 GMTServer: 4D/16.0[Body Size: 3555]
+```txt
+# REQUEST
+# SocketID: 1592
+# PeerIP: 127.0.0.1
+# PeerPort: 54912
+# TimeStamp: 39089388
+#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD
+#SequenceNumber: 5
+GET /4DWEBTEST HTTP/1.1
+Connection: Close
+Host: 127.0.0.1
+User-Agent: 4D_HTTP_Client/0.0.0.0
+
+# RESPONSE
+# SocketID: 1592
+# PeerIP: 127.0.0.1
+# PeerPort: 54912
+# TimeStamp: 39089389 (elapsed time: 1 ms)
+#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD
+#SequenceNumber: 6
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Length: 3555
+Content-Type: text/plain; charset=UTF-8
+Date: Thu, 20 Apr 2017 10:51:29 GMT
+Expires: Thu, 20 Apr 2017 10:51:29 GMT
+Server: 4D/16.0
+
+[Body Size: 3555]
 ```
 
 ## Voir aussi 

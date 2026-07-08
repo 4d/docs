@@ -66,6 +66,47 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 }
 ```
 
+## Impresión de formularios
+
+En las aplicaciones de escritorio 4D, los formularios pueden imprimirse utilizando los diferentes [comandos del tema **Imprimir**](../commands/theme/Printing).
+
+### Imprimir motor de renderizado
+
+4D utiliza un motor de renderizado de impresión específico para generar salidas con un diseño adaptado a la impresión. Incluye las siguientes características principales:
+
+- Widgets interactivos como botones, interruptores, desplegables, etc. y los efectos de interfaz de usuario modernos como vidrio, desenfoque o transparencia o efectos de sombra se convierten en representaciones estáticas adaptadas y se aplanan en estilos imprimibles, para que el documento siga siendo legible y profesional una vez impreso.
+- La estructura del diseño, el espaciado y la alineación se conservan para que el documento impreso refleje la estructura lógica del formulario en pantalla.
+- Se produce la misma salida, tanto si el formulario se imprime desde macOS como desde Windows.
+
+Por ejemplo, el siguiente formulario:
+
+![](../assets/en/FormEditor/screen_rendering.png)
+
+... se imprimirá con este renderizado:
+
+![](../assets/en/FormEditor/print_rendering.png)
+
+:::tip Entrada de blog relacionada
+
+[Impresión de interfaces modernas con resultados limpios y coherentes](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+
+:::
+
+### Renderizador de impresión heredado
+
+En versiones anteriores a 4D 21 R3, se utilizaba otro renderizador de impresión. Este renderizador heredado simplemente dibuja los widgets tal y como aparecen en la pantalla. Por motivos de compatibilidad, el renderizador heredado está **activado por defecto** en los proyectos o bases de datos convertidos desde versiones anteriores a 4D 21 R3, de modo que los formularios diseñados con este renderizador sigan imprimiéndose como se espera.
+
+Sin embargo, puede habilitar el moderno motor de procesamiento de impresión en cualquier momento:
+
+- desmarcar la opción **Usar representación de impresión heredada** en la [página Compatibilidad del cuadro de diálogo Parámetros](../settings/compatibility.md) (configuración permanente),
+- o ejecutando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Use legacy print rendering` a 1 (configuración volátil).
+
+:::warning Limitación
+
+Por motivos técnicos, el motor de impresión heredado no está disponible con los formularios que se muestran con [Fluent UI](#fluent-ui-rendering) en Windows o [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) en macOS. En estos contextos, los formularios se **imprimen siempre con el motor de renderizado de impresión moderno**, sea cual sea la opción de compatibilidad.
+
+:::
+
 ## Formulario proyecto y formulario tabla
 
 Hay dos categorías de formularios:
@@ -214,4 +255,4 @@ Para dejar de heredar un formulario, seleccione `\<None>` en la lista de propied
 
 ## Eventos soportados
 
-[On Activate](../Events/onActivate.md) - [On After Edit](../Events/onAfterEdit.md) - [On After Keystroke](../Events/onAfterKeystroke.md) - [On Before Keystroke](../Events/onBeforeKeystroke.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Bound Variable Change](../Events/onBoundVariableChange.md) - [On Clicked](../Events/onClicked.md) - [On Close Box](../Events/onCloseBox.md) - [On Close Detail](../Events/onCloseDetail.md) - [On Data Change](../Events/onDataChange.md) - [On Deactivate](../Events/onDeactivate.md) - [On Display Detail](../Events/onDisplayDetail.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drop](../Events/onDrop.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Load Record](../Events/onLoadRecord.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Menu Selected](../Events/onMenuSelected.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Open Detail](../Events/onOpenDetail.md) - [On Outside Call](../Events/onOutsideCall.md) - [On Page Change](../Events/onPageChange.md) - [On Plug in Area](../Events/onPluginArea.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Resize](../Events/onResize.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Timer](../Events/onTimer.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+[On Activate](../Events/onActivate.md) - [On After Edit](../Events/onAfterEdit.md) - [On After Keystroke](../Events/onAfterKeystroke.md) - [On Before Keystroke](../Events/onBeforeKeystroke.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Bound Variable Change](../Events/onBoundVariableChange.md) - [On Clicked](../Events/onClicked.md) - [On Close Box](../Events/onCloseBox.md) - [On Close Detail](../Events/onCloseDetail.md) - [On Data Change](../Events/onDataChange.md) - [On Deactivate](../Events/onDeactivate.md) - [On Display Detail](../Events/onDisplayDetail.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drop](../Events/onDrop.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Load Record](../Events/onLoadRecord.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Menu Selected](../Events/onMenuSelected.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Open Detail](../Events/onOpenDetail.md) - [On Outside Call](../Events/onOutsideCall.md) - [On Page Change](../Events/onPageChange.md) - [On Plug in Area](../Events/onPlugInArea.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Resize](../Events/onResize.md) - [On Selection Change](../Events/onSelectionChange.md) - [On Timer](../Events/onTimer.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)

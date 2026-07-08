@@ -5,7 +5,7 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objet* {; *typeListe*}; énumération )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objet* {; *typeListe*}; *énumération* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 <div class="no-index">
 

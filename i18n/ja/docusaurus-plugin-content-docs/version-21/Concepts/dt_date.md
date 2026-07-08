@@ -33,7 +33,7 @@ C_DATE によって宣言された日付は 32767年までの範囲に対応し�
 | 演算    | シンタックス                                | 戻り値     | 式                           | 値            |
 | ----- | ------------------------------------- | ------- | --------------------------- | ------------ |
 | 日付の差  | Date – Date                           | Number  | !2017-01-20! - !2017-01-01! | 19           |
-| 日付の加算 | Date + Number                         | Date    | !2017-01-20! !2017-01-20!   | !2017-01-29! |
+| 日付の加算 | Date + Number                         | Date    | !2017-01-20! + 9            | !2017-01-29! |
 | 日付の減算 | Date – Number                         | Date    | !2017-01-20! !2017-01-20!   | !2017-01-11! |
 | 等しい   | Date = Date                           | Boolean | !2017-01-20! = !2017-01-01! | true         |
 |       |                                       |         | !2017-01-20! !2017-01-20!   | false        |
@@ -50,11 +50,11 @@ C_DATE によって宣言された日付は 32767年までの範囲に対応し�
 
 ## JavaScriptからの日付の変換
 
-JavaScript 内での日付はオブジェクトであるため、他のオブジェクト同様、4D に対して日付のJSON 形式を格納したテキストとして送信されます。 この原則は、特に[JSON コマンド](../commands/theme/JSON) あるいは [Web エリア](../FormObjects/webArea_overview.md) を使用した場合に実装されます。 This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
+JavaScript 内での日付はオブジェクトであるため、他のオブジェクト同様、4D に対して日付のJSON 形式を格納したテキストとして送信されます。 この原則は、特に[JSON コマンド](../commands/theme/JSON.md) あるいは [Web エリア](../FormObjects/webArea_overview.md) を使用した場合に実装されます。
 
 JavaScript 日付オブジェクトのJSON 形式は、ISO 8601 標準に準拠しています。例: "2013-08-23T00:00:00Z"。 このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です: このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です:
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+[`JSON Parse`](../commands-legacy/json-parse.md) コマンドを使用する:
 
 ```4d
  var $dateIso : Text // ISO フォーマットの日付を受け取る
@@ -62,7 +62,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
 
-Using the [`Date`](../commands-legacy/date.md) command:
+[`Date`](../commands-legacy/date.md) コマンドを使用する:
 
 ```4d
  var $dateIso : Text // ISO フォーマットの日付を受け取る
@@ -70,10 +70,10 @@ Using the [`Date`](../commands-legacy/date.md) command:
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+これら2つの解決策の違いに注意してください: [`JSON Parse`](../commands-legacy/json-parse.md) は[`SET DATABASE PARAMETER` を使用して設定された変換モード](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) に準拠する(あれば)一方で、[`Date`](../commands-legacy/date.md) コマンドはこれの影響を受けません。 [`Date`](../commands-legacy/date.md) コマンドを使用した変換は常にローカルのタイムゾーンを考慮します。
 
 :::note
 
-When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+カレントの日付保存設定が[`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (デフォルト)だった場合、"YYYY-MM-DD" フォーマットのJSON 日付文字列は[`JSON Parse`](../commands-legacy/json-parse.md) および [`Date`](../commands-legacy/date.md) コマンドの両方において自動的に日付値として管理されます。
 
 :::

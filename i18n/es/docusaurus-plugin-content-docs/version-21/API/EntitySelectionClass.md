@@ -633,7 +633,7 @@ Queremos averiguar el número total de empleados de una empresa sin contar a los
 
 La función `.copy()` <!-- REF #EntitySelectionClass.copy().Summary --> devuelve una copia de la entity selection original<!-- END REF -->.
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Por defecto, si se omite el parámetro *option*, la función devuelve una nueva entity selection alterable (incluso si la función se aplica a una entity selection compartible). Pase la constante `ck shared` en el parámetro *option* si desea crear una entity selection compartible.
 
@@ -1131,7 +1131,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la entity selection<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+Si no hay un [contexto de optimización](../ORDA/client-server-optimization.md) para la entity selection, la función devuelve un texto vacío.
 
 #### Ejemplo
 
@@ -1714,7 +1714,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
 La función `.orderByFormula()` <!-- REF #EntitySelectionClass.orderByFormula().Summary -->devuelve una nueva entity selection ordenada<!-- END REF --> que contiene todas las entidades de la entity selection en el orden definido a través de los parámetros *formulaString* o *formulaObj* y, opcionalmente, *sortOrder* y *settings*.
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Puede utilizar un parámetro *formulaString* o *formulaObj*:
 
@@ -1842,7 +1842,7 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 
 La función `.query()` <!-- REF #EntitySelectionClass.query().Summary -->busca las entidades que cumplan con los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *value*(s) entre todas las entidades de la entity selection<!-- END REF -->, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
@@ -2029,7 +2029,7 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 
 La función `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->devuelve un objeto que describe la(s) posición(es) de *selectedEntities* en la entity selection de origen<!-- END REF -->.
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Pase en el parámetro *selectedEntities* una selección de entidades que contenga entidades de las que desee conocer la posición en la entity selection de origen. *selectedEntities* debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - "La selección de entidades procede de una clase de datos incompatible".
 
@@ -2099,7 +2099,7 @@ $result2:=$invoices.selected($creditSel)
 
 La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelve una parte de una entity selection en una nueva entity selection<!-- END REF -->, seleccionada desde el índice *startFrom* hasta el índice *end* (*end* no se incluye) o hasta la última entidad de la entity selection. Este método devuelve una shallow copy (copia superficial) de la entity selection (utiliza las mismas referencias de entidades).
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 La entity selection devuelta contiene las entidades especificadas por *startFrom* y todas las entidades subsiguientes hasta, pero sin incluir, la entidad especificada por *end*. Si sólo se especifica el parámetro *startFrom*, la entity selection devuelta contiene todas las entidades entre *startFrom* y la última entidad de la entity selection original.
 

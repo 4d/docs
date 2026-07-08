@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 The statement string must be one line. If *statement* is an empty string, **EXECUTE FORMULA** does nothing. The rule of thumb is that if the *statement* can be executed as a one-line method, then it will execute properly. Use **EXECUTE FORMULA** sparingly, as it can slow down execution speed. In a compiled database, the line of code is not compiled. This means that *statement* will be executed, but it will not have been checked by the compiler at compilation time.
 
-**Note:** Executing formulas in compiled mode can be optimized using a cache (see *Cache for formulas in compiled mode* below).
+**Note:** Executing formulas in compiled mode can be optimized using a cache (see [Cache for formulas in compiled mode](#cache-for-formulas-in-compiled-mode) below).
 
 The *statement* can include the following elements:
 
@@ -46,7 +46,7 @@ The *statement* can include the following elements:
 * If *statement* is a project method, it is recommended to use the [EXECUTE METHOD](../commands/execute-method) that allows you to pass parameters.
 * It is not recommend to call any variable declaration in *statement* since it can generate conflicts in the code.
 
-The formula can include process variables and interprocess variables. However, the statement cannot contain control of flow statements (If, While, etc.), because it must be in one line of code.
+The formula can include process variables and interprocess variables. However, the statement cannot contain control of flow statements (If, While, Return, Break, etc.), because it must be in one line of code. These keywords will be ignored. 
 
 To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](../commands/current-time) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
 

@@ -341,7 +341,7 @@ Le tableau ci-dessous montre les formats d'affichage du champ Heure et donne des
 Lorsqu'une [expression booléenne](properties_Object.md#expression-type) est affichée comme suit :
 
 * un texte dans un [objet de saisie](input_overview.md)
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
+* une ["fenêtre contextuelle"](properties_Display.md#display-type) dans une [colonne List box](listbox-column.md),
 
 ... vous pouvez sélectionner le texte à afficher pour chaque valeur :
 

@@ -15,7 +15,7 @@ title: ヘルプ
 これには、次の二つの方法があります:
 
 - 4D の [ヘルプTip](https://doc.4d.com/4Dv20/4D/20.2/Help-tips.200-6750100.ja.html) エディターであらかじめ作成したヘルプTip を指定します。
-- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 XLIFF参照を指定することで、アプリケーションの言語に応じたメッセージを表示させることができます (XLIFF についての詳細は [付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.ja.html) を参照ください)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.ja.html) 参照)。
+- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 XLIFF参照を指定することで、アプリケーションの言語に応じたメッセージを表示させることができます (XLIFF についての詳細は [付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.ja.html) を参照ください)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.ja.html) 参照)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.ja.html) 参照)。
 
 > macOS においては、Pop up window (32) 型のウィンドウはヘルプTips の表示ができません。
 
@@ -27,7 +27,17 @@ title: ヘルプ
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[階層リスト](list_overview.md) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[ラジオボタン](radio_overview.md)
 
 #### 追加のヘルプ機能
 

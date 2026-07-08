@@ -5,7 +5,7 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Text )<br/>**OBJECT SET LIST BY NAME** ( *objeto* : Field, Variable {; *tipoLista* : Integer}; *lista* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Text )<br/>**OBJECT SET LIST BY NAME** ( *objeto* : Variable, Field {; *tipoLista* : Integer}; *lista* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 <div class="no-index">
 

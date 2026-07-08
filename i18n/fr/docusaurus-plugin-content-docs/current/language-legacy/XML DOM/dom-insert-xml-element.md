@@ -5,7 +5,7 @@ slug: /commands/dom-insert-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElémentCible* ; *refElémentSource* ; *indexEnfant* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElémentCible* : Text ; *refElémentSource* : Text ; *indexEnfant* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Insert XML element.Params-->
 <div class="no-index">
 

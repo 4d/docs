@@ -5,7 +5,7 @@ slug: /commands/ob-class
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *objeto* : Object ) : any<!-- END REF-->
+<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *objeto* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.OB Class.Params-->
 <div class="no-index">
 

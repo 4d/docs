@@ -5,7 +5,7 @@ slug: /commands/set-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* ; *taille* )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* : Time ; *taille* : Real )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 <div class="no-index">
 

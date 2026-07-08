@@ -121,7 +121,7 @@ Este botão conecta você à nossa base de dados de clientes e ativa automaticam
 
 ## 4D Online Store
 
-Na loja 4D, pode encomendar, atualizar, ampliar, e/ou gerir produtos 4D. Pode contactar a loja no seguinte endereço: [https://store.4d.com/us/](https://store.4d.com/us/) (terá de seleccionar o seu país).
+Na loja 4D, pode encomendar, atualizar, ampliar, e/ou gerir produtos 4D. Na loja 4D, pode encomendar, atualizar, ampliar, e/ou gerir produtos 4D.
 
 Clique **Login** para entrar usando a sua conta existente ou **Nova Conta** para criar uma nova, depois siga as instruções na tela.
 

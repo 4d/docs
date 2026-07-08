@@ -5,7 +5,7 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *zone* ; *propriété* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *zone* : Integer ; *propriété* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 <div class="no-index">
 

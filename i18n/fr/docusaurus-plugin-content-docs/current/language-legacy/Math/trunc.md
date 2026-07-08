@@ -5,7 +5,7 @@ slug: /commands/trunc
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *nombre* ; *nbDécimales* ) : Real<!-- END REF-->
+<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *nombre* : Real ; *nbDécimales* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
 <div class="no-index">
 

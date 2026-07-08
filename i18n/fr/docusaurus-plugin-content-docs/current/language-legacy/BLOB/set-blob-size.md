@@ -5,7 +5,7 @@ slug: /commands/set-blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* ; *taille* {; *remplisseur*} )<!-- END REF-->
+<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* : Blob ; *taille* : Integer {; *remplisseur* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
 <div class="no-index">
 

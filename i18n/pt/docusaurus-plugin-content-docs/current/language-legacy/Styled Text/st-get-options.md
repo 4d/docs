@@ -5,7 +5,7 @@ slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *objeto* : Text ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer, *valor* : Integer)} )<br/>**ST GET OPTIONS** ( *objeto* : Field, Variable ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer, *valor* : Integer)} )<!-- END REF-->
+<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *objeto* : Text ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer ; *valor* : Integer)} )<br/>**ST GET OPTIONS** ( *objeto* : Variable, Field ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer ; *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *objeto* : Text ; *acao* : Text )<br/>**OBJECT SET ACTION** ( *objeto* : Field, Variable ; *acao* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *objeto* : Text ; *acao* : Text )<br/>**OBJECT SET ACTION** ( *objeto* : Variable, Field ; *acao* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
 <div class="no-index">
 

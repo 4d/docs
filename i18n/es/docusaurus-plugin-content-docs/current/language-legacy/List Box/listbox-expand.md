@@ -5,7 +5,7 @@ slug: /commands/listbox-expand
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *objeto* : Text {; *recursivo* : Boolean {; *selector* : Integer {; *grueso* : Integer {; *columna* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *objeto* : Field, Variable {; *recursivo* : Boolean {; *selector* : Integer {; *grueso* : Integer {; *columna* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *objeto* : Text {; *recursivo* : Boolean {; *selector* : Integer {; *grueso* : Integer {; *columna* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *objeto* : Variable {; *recursivo* : Boolean {; *selector* : Integer {; *grueso* : Integer {; *columna* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 <div class="no-index">
 

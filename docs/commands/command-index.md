@@ -194,6 +194,7 @@ title: Commands by name
 [`DECRYPT BLOB`](../commands/decrypt-blob)<br/>
 [`Decrypt data BLOB`](../commands/decrypt-data-blob)<br/>
 [`DEFAULT TABLE`](../commands/default-table)<br/>
+[`defer`](../commands/defer) **new 4D 21 R4**<br/>
 [`DELAY PROCESS`](../commands/delay-process)<br/>
 [`DELETE DOCUMENT`](../commands/delete-document)<br/>
 [`DELETE FOLDER`](../commands/delete-folder)<br/>

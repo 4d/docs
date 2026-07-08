@@ -5,7 +5,7 @@ slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElément* ; *xPath* {; *tabRefEléments*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElément* : Text ; *xPath* : Text {; *tabRefEléments* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
 <div class="no-index">
 
@@ -68,10 +68,19 @@ La commande retourne la référence XML de(s) élément(s) trouvé(s). Lorsque l
 
 Soit la structure XML suivante :
 
-```RAW
-  Harry Potter  29.99  Apprendre le XML  39.95
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bookstore>
+<book>
+  <title lang="fr">Harry Potter</title>
+  <price>29.99</price>
+</book>
+<book>
+  <title lang="fr">Apprendre le XML</title>
+  <price>39.95</price>
+</book>
+</bookstore>
 ```
-
 Cet exemple permet de rechercher rapidement un élément XML et d’afficher sa valeur :
 
 ```4d
@@ -94,9 +103,17 @@ La même recherche peut également être effectuée ainsi :
 
 Soit la structure XML suivante : 
 
-```RAW
-         aaa      bbb      ccc   
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Racine>
+   <Elem1>
+      <Elem2>aaa</Elem2>
+      <Elem2>bbb</Elem2>
+      <Elem2>ccc</Elem2>
+   </Elem1>
+</Racine>
 ```
+
 
 Le code suivant permet de récupérer la référence de chaque élément Elem2 dans le tableau tAtrouvés :
 

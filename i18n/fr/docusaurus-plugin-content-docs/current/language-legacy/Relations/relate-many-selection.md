@@ -5,7 +5,7 @@ slug: /commands/relate-many-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *leChamp* )<!-- END REF-->
+<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *leChamp* : Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 <div class="no-index">
 

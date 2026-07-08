@@ -24,13 +24,13 @@ Una cadena vacía se especifica con dos comillas sin nada entre ellas ("").
 
 Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
-| Secuencias de escape                           | Carácter reemplazado                  |
-| ---------------------------------------------- | ------------------------------------- |
-| \n                                             | LF (Retorno línea) |
-| \t                                             | HT (Tabulación)    |
-| \r                                             | CR (Retorno carro) |
-| \\\\|\ (Barra invertida) |                                       |
-| \\"                                          | " (Comillas)       |
+| Secuencias de escape | Carácter reemplazado                  |
+| -------------------- | ------------------------------------- |
+| \n                   | LF (Retorno línea) |
+| \t                   | HT (Tabulación)    |
+| \r                   | CR (Retorno carro) |
+| \\\\             |                                       |
+| \\"                | " (Comillas)       |
 
 **Nota:** el carácter \ (barra invertida) se utiliza como separador en las rutas de acceso en Windows. Por lo tanto, debe utilizar una doble barra invertida \\\ en las rutas cuando quiera tener una barra invertida delante de un caracter utilizado en una de las secuencias de escape reconocidas por 4D (por ejemplo, "C:\\MisDocumentos\\\Nuevos.txt").
 

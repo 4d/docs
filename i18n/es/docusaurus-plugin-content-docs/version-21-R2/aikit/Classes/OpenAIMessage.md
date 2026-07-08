@@ -67,18 +67,18 @@ $message.addImageURL("http://example.com/image.jpg"; "high")
 ### Añadir archivo
 
 ```4d
-// Upload a file with user_data purpose
+// Subir un archivo con el objetivo user_data
 var $file:=File("/RESOURCES/document.pdf")
 var $uploadResult:=$client.files.create($file; "user_data")
 
 If ($uploadResult.success)
-    var $uploadedFile:=$uploadResult.file
+    var $uploadedFile:=$uploadResult.archivo
     
-    // Create message and attach the file using its ID
-    var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this document:"})
+    // Crea el mensaje y adjunta el archivo usando su ID
+    var $message:=cs.AIKit.OpenAIMessage.new({role: "usuario"; content: "Por favor, analice este documento:"})
     $message.addFileId($uploadedFile.id)
     
-    // $message.content -> [{type: "text"; text: "Please analyze this document:"}; {type: "file"; file_id: "file-abc123"}]
+    // $message.content -> [{type: "text"; text: "Por favor, analice este documento:"}; {type: "file"; file_id: "archivo-abc123"}]
 End if
 ```
 

@@ -5,7 +5,7 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* ;} *formuleSQL* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* : Table ;} *formuleSQL* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 <div class="no-index">
 
@@ -67,8 +67,9 @@ Pour plus d’informations sur ce point, reportez-vous à la section *Présentat
 
 **QUERY BY SQL** n’utilise pas les liens entre les tables définis dans l’éditeur de structure de 4D. Si vous souhaitez tirer parti des données liées, vous devez ajouter une clause JOIN dans la requête. Par exemple, considérons la structure suivante, dans laquelle un lien N vers 1 relie les champs \[Personnes\]Ville à \[Villes\]Nom :
 
-```RAW
-[Personnes]   Nom   Ville[Villes]   Nom   Population
+```txt
+[Personnes]   Nom   Ville
+[Villes]   Nom   Population
 ```
 
 Avec la commande [QUERY BY FORMULA](../commands/query-by-formula), vous pourriez écrire :

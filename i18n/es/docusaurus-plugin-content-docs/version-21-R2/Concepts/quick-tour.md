@@ -250,7 +250,7 @@ This.name:="Square"
 
 ## Operadores
 
-Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
+Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. Usted ya conoce a la mayoría de los operadores. You are already familiar with many operators.
 
 | Operador | Operación      | Ejemplo    |
 | -------- | -------------- | ---------- |
@@ -428,5 +428,5 @@ Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 
 - los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
 - la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo (número, texto, booleano, fecha, hora, objeto, colección...).
-- the `; *...param* : Type` notation indicates from 0 to an unlimited number of parameters of the same type. Por ejemplo, `.concat( value : any { ;...valueN : any } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
-- the `...(*param* : Type ; *param2* : Type)` notation indicates from 1 to an unlimited number of groups of parameters. Por ejemplo, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` significa que se puede pasar al comando un número ilimitado de valores de pareja de tipo array/texto.
+- la notación `; *...param* : Type` indica de 0 a un número ilimitado de parámetros del mismo tipo. Por ejemplo, `.concat( value : any { ;...valueN : any } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
+- la notación `...(*param* : Type ; *param2* : Type)` indica de 1 a un número ilimitado de grupos de parámetros. Por ejemplo, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` significa que se puede pasar al comando un número ilimitado de valores de pareja de tipo array/texto.

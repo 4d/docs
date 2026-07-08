@@ -1,6 +1,6 @@
 ---
 id: code-overview
-title: Managing Methods and Classes
+title: メソッドとクラスの管理
 ---
 
 プロジェクトで使用される 4D コードは、 [メソッド](../Concepts/methods.md) および [クラス](../Concepts/classes.md) に記述されます。
@@ -15,20 +15,24 @@ title: Managing Methods and Classes
 
 - すべてのメソッドは、**エクスプローラー** ウィンドウから作成または開くことができます ([フォームエディター](../FormEditor/formEditor.md) から管理されるオブジェクトメソッドを除く)。
 - プロジェクトメソッドは、**ファイル** メニューやツールバー (**新規/メソッド...** または **開く/メソッド...**)、[コードエディターウィンドウ](../code-editor/write-class-method.md#ショートカット) のショートカットを使っても作成したり開いたりできます。
-- **Triggers** can also be created or opened from the [Structure editor](../Develop-legacy/triggers.md#activating-and-creating-a-trigger).
+- **トリガ** は[ストラクチャーエディター](../Develop-legacy/triggers.md#トリガの有効化と作成) からも作成したり開いたりできます。
 - フォームメソッドは、[フォームエディター](../FormEditor/formEditor.md) からも作成したり開いたりできます。
 
 ## クラスの作成
 
-### User classes
+### ユーザークラス
 
-4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file: ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file:
+4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 例えば、"Polygon" という名前のクラスは、以下のようなファイル内に保存されます:
 
 ```
-Project フォルダー Project Sources Classes Polygon.4dm
+Project フォルダー
+ Project
+  Sources
+   Classes
+    Polygon.4dm
 ```
 
-You can create a class file from the **File** menu or toolbar (**New > Class...**) or in the **Methods** page of the **Explorer** window. **Ctrl+Shift+Alt+k** ショートカットも使用できます。
+クラスファイルは、**ファイル** メニューやツールバー (**新規 > クラス...**)、あるいは **エクスプローラー** ウィンドウの **メソッド** ページにて作成可能です。 **Ctrl+Shift+Alt+k** ショートカットも使用できます。 **Ctrl+Shift+Alt+k** ショートカットも使用できます。
 
 エクスプローラーの **メソッド** ページにおいて、クラスは **クラス** カテゴリに分類されています。
 
@@ -41,15 +45,15 @@ You can create a class file from the **File** menu or toolbar (**New > Class...*
 
 クラスを命名する際には、次のルールに留意してください:
 
-- A [class name](../Concepts/identifiers.md#classes) must be compliant with [property naming rules](../Concepts/identifiers.md#object-properties).
+- [クラス名](../Concepts/identifiers.md#クラス) は [プロパティ名の命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 - クラス名の大文字・小文字は区別されます。
 - 競合防止のため、データベースのテーブルと同じ名前のクラスを作成するのは推奨されないこと
 
-### ORDA classes
+### ORDAクラス
 
-[ORDA data model user classes](../ORDA/ordaClasses.md) are high-level class functions created above the data model.
+[ORDA データモデルユーザークラス](../ORDA/ordaClasses.md) は、データモデル上に作成される高レベルのクラス関数です。
 
-An ORDA data model class is defined by adding, at the same location as regular class files (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
+ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを通常のクラスファイルと同じ場所 (*つまり*、Project フォルダー内の `/Sources/Classes` フォルダ) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
 
 各データモデルオブジェクトに関わるクラスは、4D によってあらかじめ自動的にメモリ内に作成されます。
 
@@ -61,7 +65,7 @@ ORDA ユーザークラスは通常のクラスとは異なるアイコンで表
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D creates the class file and add the [`extends`](../Concepts/classes.md#class-extends-classname) code. たとえば、Entity クラスを継承するクラスの場合は:
+ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D はクラスファイルを作成し、[`extends`](../Concepts/classes.md#class-extends-classname) コードを追加します。 たとえば、Entity クラスを継承するクラスの場合は:
 
 ```
 Class extends Entity
@@ -86,7 +90,7 @@ Class extends Entity
   - クラスメソッドはコードのブロックです
   - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
   - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
-  - variables typed as a user or ORDA class automatically benefit from autocompletion features. Entity クラス変数の例です:
+  - ユーザークラスまたはORDA クラスとして定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
@@ -101,70 +105,70 @@ Class extends Entity
 
 > オブジェクトメソッドを削除するには、[フォームエディター](../FormEditor/formEditor.md) で、**オブジェクト** メニューから **オブジェクトメソッド消去** を選択します。
 
-## Design Object Access commands
+## デザインオブジェクトアクセスコマンド
 
-You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). This source toolkit facilitates the integration into your applications of code control tools and more particularly version control systems (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
+[**"デザインオブジェクトアクセス" コマンドテーマ**](../commands/theme/Design_Object_Access.md) を使用することで、アプリケーション内のすべてのメソッドのコンテンツとそのパスにプログラミングでアクセスすることができます。 このソースツールキットを使用することでコード管理ツール、具体的にはバージョン管理システム(VCS)を統合することが容易になります。 またこれを使用することで[コードドキュメンテーション](../Project/documentation.md) のための高度なシステムを実装することが可能になり、これによってカスタムのエクスプローラーや、ディスクファイルとして保存されたコードのスケジュールバックアップの構築ができるようになります。 このソースツールキットを使用することでコード管理ツール、具体的にはバージョン管理システム(VCS)を統合することが容易になります。 またこれを使用することで[コードドキュメンテーション](../Project/documentation.md) のための高度なシステムを実装することが可能になり、これによってカスタムのエクスプローラーや、ディスクファイルとして保存されたコードのスケジュールバックアップの構築ができるようになります。
 
-The following principles are implemented:
+以下のような原則が実装されています:
 
-- Each method and form in a 4D application has its own address in the form of a pathname. For example, the trigger method for table 1 can be found at "[trigger]/table_1". Each object pathname is unique in an application.
-- You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
-- Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. However, commands that modify properties or access contents executable from methods can only be used in interpreted mode (see the table below).
-- You can use all the commands of this theme with 4D in local or remote mode. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
-- When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. In this case, to access objects of the host, you just pass a `*` as the last parameter.
+- 4D アプリケーション内のメソッドとフォームは、それぞれアドレスをパス名という形で持っています。 例えば、table_1 のトリガメソッドは "[trigger]/table_1" にあります。 それぞれのオブジェクトパス名はアプリケーション内で固有です。 例えば、table_1 のトリガメソッドは "[trigger]/table_1" にあります。 それぞれのオブジェクトパス名はアプリケーション内で固有です。
+- **デザインオブジェクトアクセス"** コマンドテーマのコマンド、例えば[`METHOD GET NAMES`](../commands/method-get-names) あるいは [`METHOD GET PATHS`](../commands/method-get-paths) などを使用することによって、4D アプリケーション内のオブジェクトにアクセスすることができます。
+- このテーマ内のほとんどのコマンドは、[インタープリタモードとコンパイルモード](../Concepts/interpreted.md) の両方で動作します。 ただし、プロパティを変更するコマンド、またはメソッドから実行可能なコンテンツにアクセスするコマンドはインタープリターモードでのみ使用可能です(以下の表参照)。 ただし、プロパティを変更するコマンド、またはメソッドから実行可能なコンテンツにアクセスするコマンドはインタープリターモードでのみ使用可能です(以下の表参照)。
+- このテーマのコマンドはすべてローカルモードまたはリモートモードの4D で使用することができます。 しかしながら、コンパイルモードでは一部のコマンドを使用することはできないという点に注意してください: このテーマの目的はカスタム開発支援ツールを作成することです。 これらのコマンドを、実行中のデータベースの機能を動的に変更するために使用してはいけません。 例えば、カレントユーザーのステータスに応じてメソッドの属性を変更するために[`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) を使用することはできません。 しかしながら、コンパイルモードでは一部のコマンドを使用することはできないという点に注意してください: このテーマの目的はカスタム開発支援ツールを作成することです。 これらのコマンドを、実行中のデータベースの機能を動的に変更するために使用してはいけません。 例えば、カレントユーザーのステータスに応じてメソッドの属性を変更するために[`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) を使用することはできません。
+- このテーマのコマンドが[コンポーネント](../Project/components.md) から呼び出された場合、デフォルトではそのコマンドはコンポーネントのオブジェクトにアクセスします。 このような場合、ホストのオブジェクトにアクセスするためには、最後の引数として `*` を渡します。 このような場合、ホストのオブジェクトにアクセスするためには、最後の引数として `*` を渡します。
 
-### Use in compiled mode
+### コンパイルモードでの使用
 
-For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
+コンパイルプロセスの原則に関連した理由から、コンパイルモードにおいてはこのテーマ内の一部のコマンドのみ使用することができます。 以下の表は、コンパイルモードでのコマンドの利用可能状況を表したものです: 以下の表は、コンパイルモードでのコマンドの利用可能状況を表したものです:
 
-| コマンド                                                                     | Can be used in compiled mode |
-| ------------------------------------------------------------------------ | ---------------------------- |
-| [Current method path](../commands/current-method-path)                   | ◯                            |
-| [FORM GET NAMES](../commands/form-get-names)                             | ◯                            |
-| [METHOD Get attribute](../commands/method-get-attribute)                 | ◯                            |
-| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | ◯                            |
-| [METHOD GET CODE](../commands/method-get-code)                           | ×                            |
-| [METHOD GET COMMENTS](../commands/method-get-comments)                   | ◯                            |
-| [METHOD GET FOLDERS](../commands/method-get-folders)                     | ◯                            |
-| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | ◯                            |
-| [METHOD GET NAMES](../commands/method-get-names)                         | ◯                            |
-| [METHOD Get path](../commands/method-get-path)                           | ◯                            |
-| [METHOD GET PATHS](../commands/method-get-paths)                         | ◯                            |
-| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | ◯                            |
-| [METHOD OPEN PATH](../commands/method-open-path)                         | ×                            |
-| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | ◯                            |
-| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | ◯                            |
-| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | ×                            |
-| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | ×                            |
-| [METHOD SET CODE](../commands/method-set-code)                           | ×                            |
-| [METHOD SET COMMENTS](../commands/method-set-comments)                   | ×                            |
+| コマンド                                                                     | コンパイルモードで使用可能 |
+| ------------------------------------------------------------------------ | ------------- |
+| [Current method path](../commands/current-method-path)                   | ◯             |
+| [FORM GET NAMES](../commands/form-get-names)                             | ◯             |
+| [METHOD Get attribute](../commands/method-get-attribute)                 | ◯             |
+| [METHOD GET ATTRIBUTES](../commands/method-get-attributes)               | ◯             |
+| [METHOD GET CODE](../commands/method-get-code)                           | ×             |
+| [METHOD GET COMMENTS](../commands/method-get-comments)                   | ◯             |
+| [METHOD GET FOLDERS](../commands/method-get-folders)                     | ◯             |
+| [METHOD GET MODIFICATION DATE](../commands/method-get-modification-date) | ◯             |
+| [METHOD GET NAMES](../commands/method-get-names)                         | ◯             |
+| [METHOD Get path](../commands/method-get-path)                           | ◯             |
+| [METHOD GET PATHS](../commands/method-get-paths)                         | ◯             |
+| [METHOD GET PATHS FORM](../commands/method-get-paths-form)               | ◯             |
+| [METHOD OPEN PATH](../commands/method-open-path)                         | ×             |
+| [METHOD RESOLVE PATH](../commands/method-resolve-path)                   | ◯             |
+| [METHOD SET ACCESS MODE](../commands/method-set-access-mode)             | ◯             |
+| [METHOD SET ATTRIBUTE](../commands/method-set-attribute)                 | ×             |
+| [METHOD SET ATTRIBUTES](../commands/method-set-attributes)               | ×             |
+| [METHOD SET CODE](../commands/method-set-code)                           | ×             |
+| [METHOD SET COMMENTS](../commands/method-set-comments)                   | ×             |
 
 :::note
 
-The error -9762 "The command cannot be executed in a compiled database." is generated when the command is executed in compiled mode.
+コマンドがコンパイルモードで実行された場合にはエラー -9762 "このコマンドはコンパイル済みデータベースでは実行できません。" が生成されます。
 
 :::
 
-### Creation of pathnames
+### パス名の作成
 
-Pathnames generated for 4D objects must be compatible with the file management of the operating system. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
+4D オブジェクトに対して生成されるパス名はオペレーティングシステムのファイル管理と互換性がなければなりません。 ":" など、OS レベルで禁止されている文字はメソッド名内で自動的にエンコードされるため、生成されたファイルはバージョン管理システムに自動的に統合されます。 ":" など、OS レベルで禁止されている文字はメソッド名内で自動的にエンコードされるため、生成されたファイルはバージョン管理システムに自動的に統合されます。
 
-Here are the encoded characters:
+エンコードされる文字は以下の通りです:
 
-| 文字                           | Encoding |
-| ---------------------------- | -------- |
-| "                            | %22      |
-| \*                           | %2A      |
-| /                            | %2F      |
-| :            | %3A      |
-| \< | %3C      |
-| \>                          | %3E      |
-| ?                            | %3F      |
-| ◯                            | %7C      |
-| \\                         | %5C      |
-| %                            | %25      |
+| 文字                           | エンコード |
+| ---------------------------- | ----- |
+| "                            | %22   |
+| \*                           | %2A   |
+| /                            | %2F   |
+| :            | %3A   |
+| \< | %3C   |
+| \>                          | %3E   |
+| ?                            | %3F   |
+| \|                           | %7C   |
+| \\                         | %5C   |
+| %                            | %25   |
 
 #### 例題
 
-`Form?1` is encoded `Form%3F1`  
-`Button/1` is encoded `Button%2F1`
+`Form?1` は `Form%3F1` にエンコードされます  
+`Button/1` は `Button%2F1` にエンコードされます

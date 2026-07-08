@@ -5,7 +5,7 @@ slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjet* ) : any<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjet* : Text ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
 <div class="no-index">
 

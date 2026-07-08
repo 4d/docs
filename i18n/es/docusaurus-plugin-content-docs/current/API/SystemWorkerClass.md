@@ -9,7 +9,7 @@ La clase `SystemWorker` está disponible en el class store `4D`.
 
 ### Programación asíncrona
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Esta clase soporta programación asíncrona en 4D como se describe en la página [Ejecución Asíncrona](../Develop/async.md).
 
 ### Ejemplo
 
@@ -328,7 +328,7 @@ $output:=$worker.response
 
 #### Descripción
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es de **solo lectura**.
 

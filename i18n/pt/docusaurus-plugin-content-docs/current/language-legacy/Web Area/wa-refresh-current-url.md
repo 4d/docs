@@ -5,7 +5,7 @@ slug: /commands/wa-refresh-current-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA REFRESH CURRENT URL.Syntax-->**WA REFRESH CURRENT URL** ( * ; *objeto* : Text )<br/>**WA REFRESH CURRENT URL** ( *objeto* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.WA REFRESH CURRENT URL.Syntax-->**WA REFRESH CURRENT URL** ( * ; *objeto* : Text )<br/>**WA REFRESH CURRENT URL** ( *objeto* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA REFRESH CURRENT URL.Params-->
 <div class="no-index">
 

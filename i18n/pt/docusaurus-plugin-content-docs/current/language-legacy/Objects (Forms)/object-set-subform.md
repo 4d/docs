@@ -5,7 +5,7 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *objeto* : Text {; *aTabela*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *objeto* : Field, Variable {; *aTabela*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *objeto* : Text {; *aTabela* : Table}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *objeto* : Variable, Field {; *aTabela* : Table}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 <div class="no-index">
 

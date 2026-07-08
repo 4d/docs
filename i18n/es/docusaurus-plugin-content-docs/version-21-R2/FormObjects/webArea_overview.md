@@ -11,11 +11,11 @@ Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de
 
 ## Mostrar páginas Qodly
 
-Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
+Las áreas web pueden utilizarse para mostrar [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) y proporcionar a los usuarios de la aplicación de escritorio 4D una moderna interfaz web basada en CSS.
 
-You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+Puede integrar una página Qodly en un área Web y luego actualizar [las fuentes Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) desde 4D llamando a [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
+En las aplicaciones cliente/servidor 4D, las páginas Qodly en las áreas Web pueden [compartir su sesión con el usuario remoto](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) para un alto nivel de seguridad.
 
 :::tip Entrada de blog relacionada
 
@@ -32,7 +32,7 @@ Se pueden asociar dos variables específicas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar la URL mostrada por el área web
 - [`Progression`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> A partir de 4D 19 R5, la variable Progression ya no se actualiza en las Áreas Web que utilizan el [motor de renderizado del sistema Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderización web
 
@@ -134,11 +134,11 @@ En lugar de utilizar un método independiente, también podemos utilizar una fun
 Define una clase usuario 4D "SumCalculator" con una función `calcSum` que recibe parámetros y devuelve su suma:
 
 ```4d
-// SumCalculator user class
+// Clase usuario SumCalculator
 
-Function calcSum(... : Real) -> $sum : Real
-   // receives n Real type parameters
-   // and returns a Real
+Función calcSum(... : Real) -> $sum : Real
+   // recibe n parámetros de tipo Real
+   // y devuelve un Real
   var $i; $n : Integer
   $n := Count parameters
 
@@ -222,11 +222,11 @@ Puede visualizar y utilizar un inspector web dentro de las áreas web de sus for
 
 Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
-  This command can be used directly with onscreen (form object) and offscreen web areas.
+- \*\*Ejecute el comando `WA OPEN WEB INSPECTOR`<br/>
+  Este comando se puede utilizar directamente con áreas web en pantalla (objeto formulario) y fuera de ella.
 
-- **Use the web area context menu**<br/>
-  This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Utilizar el menú contextual del área web**<br/>
+  Esta función sólo puede utilizarse con áreas web en pantalla y requiere que se cumplan las siguientes condiciones:
   - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
   - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
   ```4d
@@ -243,7 +243,7 @@ Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces te
 
 ## Propiedades soportadas
 
-[Access 4D methods](properties_WebArea.md#access-4d-methods) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Acceso a métodos 4D](properties_WebArea.md#access-4d-methods) - [Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Fondo](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Menú contextual](properties_Entry.md#context-menu) - [Altura](properties_CoordinatesAndSizing.md#height) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nombre del objeto](properties_Object.md#nombre-del-objeto) - [Progresión](properties_WebArea.md#progression) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Usar motor de renderizado web incrustado](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 ## 4DCEFParameters.json
 

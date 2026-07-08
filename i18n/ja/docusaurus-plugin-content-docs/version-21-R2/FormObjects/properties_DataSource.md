@@ -11,7 +11,7 @@ title: データソース
 
 このプロパティは次のフォームオブジェクトでサポートされています:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
+- 選択リストと紐づけられている [コンボボックス](comboBox_overview.md) および [リストボックスカラム](listbox-column.md) フォームオブジェクト。
 - 配列またはオブジェクトデータソースにより、紐づけられたリストが生成されている [コンボボックス](comboBox_overview.md) フォームオブジェクト。
 
 たとえば、"France, Germany, Italy" という値を含む選択リストが "Countries" というコンボボックスに関連付けられていた場合を考えます。**自動挿入** のオプションがチェックをされていて、ユーザーが "Spain" という値を入力すると、"Spain" という値が自動的にメモリー内のリストに追加されます:
@@ -28,7 +28,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md)
+[コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -45,8 +45,7 @@ title: データソース
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox-column.md)
+[ドロップダウンリスト](dropdownList_Overview.md)\* [コンボボックス](comboBox_overview.md)
 
 #### コマンド
 
@@ -126,34 +125,34 @@ title: データソース
 
 表示される式のデータタイプを定義します。 このプロパティは次のフォームオブジェクトで使用されます:
 
-- [List box columns](listbox-column.md) of the selection and collection types.
+- セレクションおよびコレクション型の [リストボックスカラム](listbox-column.md)。
 - オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md)。
 
 [式タイプ](properties_Object.md#式の型式タイプ) の章も参照ください。
 
 #### JSON 文法
 
-| 名称                 | データタイプ | とりうる値                                                                                                                                                                                                          |
-| ------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string | <li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 *配列/セレクションリストボックスのみ*: "integer", "object"</li><li>**ドロップダウンリスト:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| 名称                 | データタイプ | とりうる値                                                                                                                                                                                                                                                                                   |
+| ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 <li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 *配列/セレクションリストボックスのみ*: "integer", "object"</li><li>**ドロップダウンリスト:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### 対象オブジェクト
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox-column.md)
+オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 
 ## データタイプ (リスト)
 
-[ドロップダウンリスト](dropdownList_Overview.md) に関連づけられたフィールドまたは変数に保存するデータの種類を定義します。 このプロパティは次のフォームオブジェクトで使用されます:
+[ドロップダウンリスト](dropdownList_Overview.md) に関連づけられたフィールドまたは変数に保存するデータの種類を定義します。 このプロパティは次のフォームオブジェクトで使用されます: このプロパティは次のフォームオブジェクトで使用されます:
 
 - [選択リストと紐づいた](dropdownList_Overview.md#選択リストの使用) ドロップダウンリスト。
 - [階層型の選択リストと紐づいた](dropdownList_Overview.md#階層型選択リストの使用) ドロップダウンリスト
 
 次の値が提供されています:
 
-- **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
-- **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
+- **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
+- **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
 - **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list.md) または [`SET LIST ITEM`](../commands-legacy/set-list-item.md) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
 **選択された項目参照** オプションの使用の際には、以下の点に注意する必要があります:
@@ -186,7 +185,7 @@ title: データソース
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> リストボックス列に [選択リスト](properties_DataSource.md#選択リスト) を定義することもできます。 選択リストは列の各行において選択可能な値の候補として使用されますが、デフォルト値のリストはカラムの各行に上から順に割り当てられます。
+> リストボックス列に [選択リスト](properties_DataSource.md#選択リスト) を定義することもできます。 選択リストは列の各行において選択可能な値の候補として使用されますが、デフォルト値のリストはカラムの各行に上から順に割り当てられます。 選択リストは列の各行において選択可能な値の候補として使用されますが、デフォルト値のリストはカラムの各行に上から順に割り当てられます。
 
 #### JSON 文法
 
@@ -196,20 +195,19 @@ title: データソース
 
 #### 対象オブジェクト
 
-[List Box Column (array type only)](listbox-column.md)
+[リストボックスカラム(配列型のみ)](listbox-column.md)
 
 ---
 
 ## 式
 
-This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes)
-and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
+[セレクション型](FormObjects/listbox_object.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](../FormObjects/listbox-object.md#コレクションまたはエンティティセレクションリストボックス) リストボックス特有のプロパティです。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
 列に割り当てる 4D式です。 以下のものを指定できます:
 
 - **単純な変数** (この場合、コンパイル用に明示的に型宣言されている必要があります)。 BLOB と配列型以外のどんな型の変数も使用することができます。 変数の値は通常 `On Display Detail` イベントで計算されます。
 
-- 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#セレクションリストボックス) のみ)。例: `[Employees]LastName`。 以下の型のフィールドを使用できます:
+- 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#セレクションリストボックス) のみ)。例: `[Employees]LastName`。 以下の型のフィールドを使用できます: 以下の型のフィールドを使用できます:
   - 文字列
   - 数値
   - Date
@@ -230,9 +228,9 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](../commands/this.md) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。
 スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、`This.value` を式として使用します。
 
-[代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
-
 フィールド、変数、あるいは代入可能な式 (*例: Person.lastName*) を使用した場合、[入力可](properties_Entry.md#入力可) プロパティの設定に基づき列への入力可/不可が決定されます。
+
+[代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
 
 #### JSON 文法
 
@@ -242,7 +240,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -275,11 +273,11 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 このプロパティは以下の場合に表示されます:
 
 - オブジェクトに対して [選択リスト](#選択リスト) が割り当てられている
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- [入力](input_overview.md) および [リストボックスカラム](listbox-column.md) の場合には、ユーザーがリスト内の値のみ入力できるように、オブジェクトに対して [指定リスト](properties_RangeOfValues.md#指定リスト) も定義されている (通常は両方のオプションで同じリストを使用しているはずです)。
 
 このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
-- **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
+- **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
 - **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list.md) または [`SET LIST ITEM`](../commands-legacy/set-list-item.md) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
 
 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
@@ -297,7 +295,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md)
 
 ---
 

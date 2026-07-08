@@ -5,7 +5,7 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTabla* ; *objetoJson* : Text )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTabla* : Table ; *objetoJson* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 <div class="no-index">
 

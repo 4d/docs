@@ -25,7 +25,6 @@ The `OpenAIChatAPI` class provides an interface to interact with OpenAI's chat b
 | *systemPrompt*   | Text  | The system prompt to initialize the chat.  |
 | Function result | [OpenAIChatHelper](OpenAIChatHelper.md) | A helper instance for managing chat interactions. |
 
-
 #### Example Usage
 
 ```4D

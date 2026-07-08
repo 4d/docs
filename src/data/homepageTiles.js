@@ -135,7 +135,7 @@ title: (
         <Link to="commands/command-index">
           <Translate>Commands by name</Translate>
         </Link>
-        <Link to="commands/theme/4D-Environment">
+        <Link to="category/themes">
           <Translate>Commands by theme</Translate>
         </Link>
        <Link to="category/class-API-reference" >

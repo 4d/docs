@@ -5,7 +5,7 @@ slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*laTable* ;} *nom* )<!-- END REF-->
+<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*laTable* : Table ;} *nom* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 <div class="no-index">
 

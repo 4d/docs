@@ -47,7 +47,13 @@ Durante a impressão, o método de formulário de saída e os métodos de objeto
 Pode saber se PRINT SELECTION está imprimindo o primeiro cabeçalho provando [Before selection](../commands/before-selection) durante um evento On Header. Igualmente pode verificar o último pé de página, provando End selection durante um evento On Printing Footer. Para maior informação, consulte a descrição destes comandos, como também dos comandos [Form event code](../commands/form-event-code) e [Level ](../commands/level).  
   
 Para imprimir uma seleção ordenada com subtotais ou quebras utilizando PRINT SELECTION, deve primeiro ordenar a seleção. Depois, em cada área de quebra do relatório, incluir uma variável com um método de objeto que atribui o subtotal à variável . Igualmente pode utilizar funções estatísticas e aritméticas como [Sum](../commands/sum) e [Average](../commands/average) para atribuir valores às variáveis. Para maior informação, consulte as descrições de [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) e [ACCUMULATE](../commands/accumulate).  
-  
+
+:::note
+
+Você pode usar [comandos estatísticos](../../commands/theme/On_a_Series.md) como [Sum](../commands/sum) e [Average](../commands/average) para atribuir valores às variáveis. Quando funções estatísticas são usadas em um relatório, elas se comportam de maneira específica porque o próprio relatório precisa carregar cada registro. Quando você usa essas funções em um relatório, os valores retornados são confiáveis apenas no nível de quebra 0, e somente quando o processamento de quebras está ativado. Isso significa que elas são úteis apenas no final de um relatório, após todos os registros terem sido processados. Você usaria essas funções apenas em um método de objeto para uma área não editável incluída na área de quebra B0.
+
+:::
+
 **Aviso**: Não use [PAGE BREAK](../commands/page-break) com o comando PRINT SELECTION. [PAGE BREAK](../commands/page-break) é usada com o comando [Print form](../commands/print-form).  
   
 Depois de um chamado a PRINT SELECTION, a variável OK toma o valor 1 se a impressão for completada. Se a impressão foi interrompida, a variável OK toma o valor 0 (zero) (por exemplo se o usuário clicar em Cancelar nas caixas de diálogo de impressão).  

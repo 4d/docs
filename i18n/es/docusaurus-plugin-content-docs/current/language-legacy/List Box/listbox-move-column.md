@@ -5,7 +5,7 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *objeto* : Text ; *posicionCol* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *objeto* : Field, Variable ; *posicionCol* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *objeto* : Text ; *posicionCol* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *objeto* : Variable ; *posicionCol* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 <div class="no-index">
 

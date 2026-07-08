@@ -5,7 +5,7 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *objeto* : Text ; *titulo* : Text )<br/>**OBJECT SET TITLE** ( *objeto* : Field, Variable ; *titulo* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *objeto* : Text ; *titulo* : Text )<br/>**OBJECT SET TITLE** ( *objeto* : Variable, Field ; *titulo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 <div class="no-index">
 

@@ -540,7 +540,15 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
                     "minimum": 0    
                 },
                 "level": {
-              "description":
+              "description": "Configure diagnostic logs",
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 6
+          }
+            }
+          },
+        "httpDebugLogs": {
+            "description":
 ```
 
 ### Exemplo

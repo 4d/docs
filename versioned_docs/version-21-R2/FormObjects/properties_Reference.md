@@ -98,7 +98,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`hideFocusRing`](properties_Appearance.md#hide-focus-rectangle)|Hides the selection rectangle when the object has the focus.|true, false|
 |[`hideSystemHighlight`](properties_Appearance.md#hide-selection-highlight)|Used to specify hiding highlighted records in the list box.|true, false|
 |[`highlightSet`](properties_ListBox.md#highlight-set)|Name of the set.|  string| 
-|[`horizontalLineStroke`](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"<a id="i"></a>|
+|[`horizontalLineStroke`](properties_Gridlines.md#horizontal-line-color)|Defines the color of the horizontal lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
+|[`horizontalPadding`](./properties_CoordinatesAndSizing.md#horizontal-padding)|Sets a horizontal padding for listbox cells.|Number of pixels (must be >=0)<a id="i"></a>|
 |**i**|||
 |[`icon`](properties_TextAndPicture.md#picture-pathname)|The pathname of the picture used for buttons, check boxes, radio buttons, list box headers.|Relative or filesystem path in POSIX syntax.|
 |[`iconFrames`](properties_TextAndPicture.md#number-of-states)|Sets the exact number of states present in the picture. |minimum: 1|
@@ -216,6 +217,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
 |[`verticalAlign`](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
+|[`verticalPadding`](./properties_CoordinatesAndSizing.md#vertical-padding)|Sets a vertical padding for listbox cells.|Number of pixels (must be >=0)|
 |[`visibility`](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"<a id="w"></a>|
 |**w**|||
 |[`webEngine`](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|

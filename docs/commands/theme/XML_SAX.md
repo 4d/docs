@@ -25,3 +25,5 @@ slug: /commands/theme/XML-SAX
 |[<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT.Syntax -->](../../commands/sax-open-xml-element)<br/>|
 |[<!-- INCLUDE #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax -->](../../commands/sax-open-xml-element-arrays)<br/>|
 |[<!-- INCLUDE #_command_.SAX SET XML DECLARATION.Syntax -->](../../commands/sax-set-xml-declaration)<br/>|
+
+

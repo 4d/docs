@@ -5,7 +5,7 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* ; *image1* ; *opérateur* ; *image2* {; *décalHoriz* ; *décalVert*} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* : Picture ; *image1* : Picture ; *opérateur* : Integer ; *image2* : Picture {; *décalHoriz* : Integer ; *décalVert* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 <div class="no-index">
 

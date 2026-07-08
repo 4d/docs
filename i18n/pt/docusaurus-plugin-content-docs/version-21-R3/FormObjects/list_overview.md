@@ -26,7 +26,7 @@ O **objeto de linguagem** é referenciado por um ID interno único do tipo Longi
 
 O **objeto de formulário** não é necessariamente único: podem existir várias representações da mesma lista hierárquica na mesma forma ou em formas diferentes. Tal como acontece com outros objetos de formulário, especifica-se o objeto na linguagem utilizando a sintaxe (\*; "ListName", etc.).
 
-Você conecta o "objeto de linguagem" lista hierárquica com o "objeto de formulário" lista hierárquica pelo intermediário da variável que contém o valor ListRef. Por exemplo, se você tiver associado a [variable](properties_Object.md#variable-or-expression) mylist ao objeto de formulário, você pode escrever:
+Você conecta o "objeto de linguagem" lista hierárquica com o "objeto de formulário" lista hierárquica pelo intermediário da variável que contém o valor ListRef. Você conecta o "objeto de linguagem" lista hierárquica com o "objeto de formulário" lista hierárquica pelo intermediário da variável que contém o valor ListRef.
 
 ```4d
 $mylist:=New list

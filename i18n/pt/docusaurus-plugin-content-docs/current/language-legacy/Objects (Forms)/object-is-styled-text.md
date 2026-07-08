@@ -5,7 +5,7 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *objeto* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 <div class="no-index">
 

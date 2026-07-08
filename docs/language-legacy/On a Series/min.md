@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Min.Summary-->**Min** returns the minimum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the minimum value.
+<!--REF #_command_.Min.Summary-->**Min** returns the minimum value in *series*.<!-- END REF--> If *series* is a field, the command uses to current selection ot the parent table; if it is indexed, the index is used to find the minimum value.
 
 If the *series* selection is empty, **Min** returns 0.
 

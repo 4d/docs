@@ -63,11 +63,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|commandLine|Text|->|Command line to execute|
-|options|Object|->|Worker parameters|
-|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+|commandLine|Text|->|実行するコマンドライン|
+|options|Object|->|ワーカーパラメーター|
+|戻り値|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
 </div>
 <!-- END REF -->
 
@@ -270,9 +270,9 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 
@@ -442,10 +442,10 @@ $output:=$worker.response
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|message|Text|->|Text to write on the input stream (stdin) of the external process|
-|messageBLOB|Blob|->|Bytes write on the input stream|
+|message|Text|->|外部プロセスの入力ストリーム (stdin) に書き込むテキスト|
+|messageBLOB|Blob|->|入力ストリームに書き込むバイト|
 </div>
 <!-- END REF -->
 
@@ -497,9 +497,9 @@ $output:=$worker.response
 <!-- REF #SystemWorkerClass.terminate().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 
@@ -559,10 +559,10 @@ $output:=$worker.response
 <!-- REF #SystemWorkerClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
+|timeout|Real|->|待機時間(秒)|
+|戻り値|4D.SystemWorker|<-|SystemWorker object|
 </div>
 <!-- END REF -->
 

@@ -5,7 +5,7 @@ slug: /commands/select-list-items-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *liste* ; *réfElément* {; *tabRéfs*} )<!-- END REF-->
+<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *liste* : Integer ; *réfElément* : Integer {; *tabRéfs* : Integer array} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
 <div class="no-index">
 

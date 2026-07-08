@@ -5,7 +5,7 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* ; *obsolète* ; *nouveau* {; *combien*}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *obsolète* : Text ; *nouveau* : Text {; *combien* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 <div class="no-index">
 

@@ -51,7 +51,7 @@ En règle générale, lorsque le code tente de lire ou d'assigner des expression
      $o.a:=$o.b //$o.a=0
 ```
 
-- L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
+- Attribuer une valeur undefined à une propriété d'objet existante réinitialise ou efface sa valeur.
 
 - Une valeur indéfinie passée en paramètre à une méthode projet est automatiquement convertie en 0 ou en "" en fonction de la déclaration du type du paramètre.
 

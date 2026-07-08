@@ -5,7 +5,7 @@ slug: /commands/receive-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* ;} *receiveVar* : Text, Blob ; *stopChar* : 文字, 倍長整数 )<br/>**RECEIVE PACKET** ( {*docRef* ;} *receiveVar* : Text, Blob ; *numBytes* : 文字, 倍長整数 )<!-- END REF-->
+<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *stopChar* : Text )<br/>**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *numBytes* : Integer )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
 <div class="no-index">
 

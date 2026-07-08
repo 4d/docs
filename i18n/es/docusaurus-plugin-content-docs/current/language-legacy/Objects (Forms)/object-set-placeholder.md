@@ -5,7 +5,7 @@ slug: /commands/object-set-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *objeto* : Text ; *textoEjemplo* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *objeto* : Field, Variable ; *textoEjemplo* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *objeto* : Text ; *textoEjemplo* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *objeto* : Variable, Field ; *textoEjemplo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
 <div class="no-index">
 

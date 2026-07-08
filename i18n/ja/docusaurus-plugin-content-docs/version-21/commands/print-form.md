@@ -124,7 +124,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **警告:** このコマンドが [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、 [PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
 
-このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。 エリアはコマンドの実行の際に毎回リセットされます。
+このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。
 
 **警告:** サブフォームは、 **Print form** では印刷はされません。 **警告:** サブフォームは、 **Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](../commands-legacy/print-record.md) を使用して下さい。
 
@@ -140,21 +140,21 @@ form data オブジェクトについての詳細な情報については、[`DI
 以下の例は [PRINT SELECTION](../commands-legacy/print-selection.md)コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します: しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // レコードを選択
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // レコードをソート
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // 印刷設定ダイアログを表示
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // 小切手用のフォーム
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // デポジット用のフォーム
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // 最後のページを印刷
        End if
     End if
  End if

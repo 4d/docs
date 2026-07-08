@@ -46,7 +46,7 @@ Example using *On Web Authentication Database Method* in Digest mode:
 
 ```4d
   // On Web Authentication Database Method
- #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
  $result:=False
  $user:=$5
   //For security reasons, refuse names containing @

@@ -5,7 +5,7 @@ slug: /commands/get-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )<!-- END REF-->
+<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *réfGroupe* : Integer ; *nom* : Text ; *propriétaire* : Integer {; *membres* : Integer array} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 <div class="no-index">
 

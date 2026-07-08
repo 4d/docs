@@ -29,11 +29,11 @@ The easiest way to install 4D View Pro in an opened project is to use the Depend
 1. Open the [Dependency Manager](../Project/components.md) window.
 2. Click on the **+** button to add a component.
 3. Click on the **GitHub** tab.
-4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-github-dependency-version-range), then click **Add**.
+4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-dependency-version-range), then click **Add**.
 
 ![](../assets/en/ViewPro/install.png)
 
-Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-dependency).
+Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-or-gitlab-dependency).
 
 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
 

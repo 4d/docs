@@ -46,7 +46,7 @@ Exemplo de método de base On Web Authentication em modo Digest:
 
 ```4d
   // Método de banco On Web Authentication
- #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
 
  var $usuario : Text
  var $0 : Boolean

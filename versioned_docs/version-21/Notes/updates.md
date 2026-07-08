@@ -3,9 +3,21 @@ id: updates
 title: Release Notes
 ---
 
-## 4D 21 LTS
+:::tip
 
 Read [**What’s new in 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), the blog post that lists all new features and enhancements in 4D 21.
+
+:::
+
+## 4D 21.1 LTS
+
+#### Highlights
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21.1): list of all bugs that have been fixed in 4D 21.1.
+
+
+
+## 4D 21 LTS
 
 #### Highlights
 

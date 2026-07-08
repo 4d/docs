@@ -14,14 +14,14 @@ title: VP Run offscreen area
 | Paramètres | Type   |                             | Description                                                                                                                                                  |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | parameters | Object | ->                          | Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de <code>VP RECOMPUTE FORMULAS</code>, sinon la commande ne fait rien. |
-| Résultat   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value                                                                              |
+| Résultat   | Mixed  | <- | La propriété `.result` de l'objet `.onEvent`, ou Null si aucune valeur n'est retournée                                                                       |
 
 </div>
 <!-- END REF -->
 
 ## Description
 
-The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Summary -->creates an offscreen area in memory which can be used to process 4D View Pro area commands and functions<!-- END REF -->.
+La commande `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area. ummary -->crée une zone hors écran en mémoire qui peut être utilisée pour traiter les commandes et les fonctions de la zone 4D View Pro<!-- END REF -->.
 
 In *parameters* object, pass any of the following optional properties. These properties will be available through the `This` command within the `onEvent` method and reference the instance:
 
@@ -55,11 +55,11 @@ Les commandes suivantes peuvent être utilisées dans la méthode callback (de r
 Vous souhaitez créer une zone 4D View Pro hors écran et lire la valeur d'une cellule :
 
 ```4d
-// cs.OffscreenArea class declaration 
+// Déclaration de la classe cs.OffscreenArea
 Class constructor ($path : Text)
  This.filePath:=$path
  
-// This function will be called on each event of the offscreen area 
+// Cette fonction sera appelée à chaque événement de la zone hors écran 
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
@@ -82,7 +82,7 @@ $result:=VP Run offscreen area($o)
 Vous souhaitez charger un grand document hors écran, attendre que tous les calculs soient terminés et l'exporter au format PDF :
 
 ```4d
-//cs.OffscreenArea class declaration
+// Déclaration de la classe cs.OffscreenArea
 Class constructor($pdfPath : Text)
  This.pdfPath:=$pdfPath
  This.autoQuit:=False
@@ -91,31 +91,31 @@ Class constructor($pdfPath : Text)
 Function onEvent()
  Case of
      :(FORM Event.code=On VP Ready)
- // Document import
+ // Import du document 
    VP IMPORT DOCUMENT(This.area;$largeDocument4VP)
          This.isWaiting:=True
  
- // Start a timer to verify if all calculations are finished.
- // If during this period the "On VP Range Changed" is thrown, the timer will be restarted
- // The time must be defined according to the computer configuration.
+ // Démarrer un minuteur pour vérifier si tous les calculs sont terminés.
+ // Si au cours de cette période, "On VP Range Changed" est exécuté, le minuteur sera redémarré
+ // L'heure doit être définie en fonction de la configuration de l'ordinateur.
    SET TIMER(60)
  
   :(FORM Event.code=On VP Range Changed)
- // End of calculation detected. Restarts the timer
+ // Fin du calcul détectée. Redémarrer le minuteur
          If(This.isWaiting)
            SET TIMER(60)
          End if
  
   :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
+ // Pour être sûr de ne pas redémarrer le minuteur si vous appelez d'autres commandes 4D View après ce point
          This.isWaiting:=False
  
 
 
- // Stop the timer
+ // Stopper le minuteur
    SET TIMER(0)
  
- // Start the PDF export
+ // Démarrer l'export PDF
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
  
      :(FORM Event.code=On URL Loading Error)
@@ -134,4 +134,4 @@ $result:=VP Run offscreen area($o)
 
 ## Voir également
 
-[Blog post: End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[Article de blog : Fin du chargement du document](https://blog.4d.com/4d-view-pro-end-of-document-loading/)

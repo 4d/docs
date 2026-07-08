@@ -5,7 +5,7 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objeto* : Text ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objeto* : Field, Variable ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objeto* : Text ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objeto* : Variable ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 <div class="no-index">
 

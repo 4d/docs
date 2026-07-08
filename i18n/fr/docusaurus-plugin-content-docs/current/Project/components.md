@@ -49,7 +49,7 @@ This section describes how to work with components in the **4D** and **4D Server
 Pour charger un composant dans votre projet 4D, vous pouvez soit :
 
 - copier les fichiers des composants dans le [dossier **Components** de votre projet](architecture.md#components) (les dossiers des composants interprétés doivent être suffixés avec ".4dbase", voir ci-dessus),
-- ou déclarer le composant dans le fichier **dependencies.json** de votre projet ; ceci est fait automatiquement pour les fichiers locaux lorsque vous [**ajoutez une dépendance en utilisant l'interface du Gestionnaire de dépendances**](#adding-a-github-dependency).
+- ou déclarer le composant dans le fichier **dependencies.json** de votre projet ; ceci est fait automatiquement pour les fichiers locaux lorsque vous [**ajoutez une dépendance en utilisant l'interface du Gestionnaire de dépendances**](#adding-a-github-or-gitlab-dependency).
 
 Les composants déclarés dans le fichier **dependencies.json** peuvent être stockés à différents endroits :
 
@@ -213,6 +213,12 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 4. Use the package URL as a release asset link.
 5. Associate it with the same Git tag.
 
+:::tip Tutorial: Create and Use a 4D Component Release with Gitlab
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zgx7MHWh9EE?si=K4oV-M2kzk6v2VSm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+
 #### Déclaration des chemins
 
 You declare components stored on GitHub and GitLab in the [**dependencies.json** file](#dependenciesjson) in the following way:
@@ -256,7 +262,7 @@ When a release is created in GitHub or GitLab, it is associated to a **tag** and
 
 :::note
 
-Si vous sélectionnez la règle de dépendance [**Suivre la version 4D**](#defining-a-github-dependency-version-range), vous devez utiliser une [convention de nommage spécifique pour les tags](#naming-conventions-for-4d-version-tags).
+Si vous sélectionnez la règle de dépendance [**Suivre la version 4D**](#defining-a-dependency-version-range), vous devez utiliser une [convention de nommage spécifique pour les tags](#naming-conventions-for-4d-version-tags).
 
 :::
 
@@ -309,7 +315,7 @@ The Dependency manager checks periodically if component updates are available on
 
 #### Conventions de nommage pour les tags de version 4D
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
+If you want to use the [**Follow 4D Version**](#defining-a-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
 
 - **Versions LTS** : Modèle `x.y.p`, où `x.y` correspond à la version principale de 4D à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version LTS *x.y*, le Gestionnaire de dépendances le résoudra comme "la dernière version x.\*" si elle est disponible ou "une version inférieure à x". Si une telle version n'existe pas, l'utilisateur en sera informé. Par exemple, "20.4" sera résolu par le Gestionnaire de dépendances comme "la dernière version du composant 20.\* ou une version inférieure à 20".
 
@@ -420,7 +426,7 @@ Les étiquettes de statut suivantes sont disponibles :
 - **Dupliqué** : La dépendance n'est pas chargée car une autre dépendance portant le même nom existe au même endroit (et est chargée).
 - **Disponible après redémarrage** : La référence de la dépendance vient d'être ajoutée ou mise à jour [à l'aide de l'interface](#monitoring-project-dependencies), elle sera chargée une fois que l'application aura redémarré.
 - **Déchargé après redémarrage** : La référence à la dépendance vient d'être supprimée [en utilisant l'interface](#removing-a-dependency), elle sera déchargée une fois que l'application aura redémarré.
-- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
+- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-dependency-version-range) has been detected.
 - **Refreshed after restart**: The [component version configuration](#defining-a-dependency-version-range) of the dependency has been modified, it will be adjusted at the next startup.
 - **Recent update**: A new version of the dependency has been loaded at startup.
 
@@ -524,7 +530,7 @@ Once the connection is established, an icon ![dependency-gitlogo](../assets/en/P
 
 :::note
 
-If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
+If the component is stored on a [private repository](#authentication-and-tokens) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
@@ -571,7 +577,7 @@ Les mises à jour des dépendances sont régulièrement vérifiées sur GitHub. 
 
 :::note
 
-Si vous fournissez un [token d'accès](#providing-your-github-access-token), les vérifications sont effectuées plus fréquemment, car GitHub autorise alors une plus grande fréquence de requêtes aux dépôts.
+Si vous fournissez un [token d'accès](#providing-your-access-token), les vérifications sont effectuées plus fréquemment, car GitHub autorise alors une plus grande fréquence de requêtes aux dépôts.
 
 :::
 
@@ -585,7 +591,7 @@ En outre, vous pouvez vérifier les mises à jour à tout moment, pour une seule
 
 ![check components](../assets/en/Project/check-component-all.png)
 
-Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-github-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
+Si une nouvelle version de composant correspondant à votre [règle de version des dépendances](#defining-a-dependency-version-range) est détectée sur GitHub, un statut de dépendance spécifique est affiché :
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 

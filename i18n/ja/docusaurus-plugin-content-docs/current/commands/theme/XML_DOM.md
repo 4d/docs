@@ -42,3 +42,5 @@ slug: /commands/theme/XML-DOM
 | [<!-- INCLUDE #_command_.DOM SET XML DECLARATION.Syntax -->](../../commands/dom-set-xml-declaration)<br/>                           |
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT NAME.Syntax -->](../../commands/dom-set-xml-element-name)<br/>                         |
 | [<!-- INCLUDE #_command_.DOM SET XML ELEMENT VALUE.Syntax -->](../../commands/dom-set-xml-element-value)<br/>                       |
+
+

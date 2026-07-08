@@ -5,7 +5,7 @@ slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomDossier* ;} *typeMéthode* ; *tabChemins* {; *marqueur*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomDossier* : Text ;} *typeMéthode* : Integer ; *tabChemins* : Text array {; *marqueur* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
 <div class="no-index">
 

@@ -26,11 +26,11 @@ La commande **WP Table append row**<!--REF #_command_.WP Table append row.Summar
 
 La commande admet deux syntaxes :
 
-- **Using values as parameters:**
-  Adds as many cells in the row as there are values provided in the *value* parameter(s). Vous pouvez passer n'importe quel nombre de valeurs de différents types.
+- **Utilisation de valeurs comme paramètres:**
+  Ajoute autant de cellules dans la ligne qu'il y a de valeurs fournies dans le(s) paramètre(s) *value*. Vous pouvez passer n'importe quel nombre de valeurs de différents types.
 
-- **Using a collection of values (*valueColl)*:**
-  Fills the row with values from the *valueColl* collection. Chaque élément de la collection correspond à une cellule de la ligne.
+- **Utilisation d'une collection de valeurs (*valueColl)*:**
+  Remplit la ligne avec les valeurs de la collection *valueColl*. Chaque élément de la collection correspond à une cellule de la ligne.
 
   Les types de valeurs suivants sont pris en charge dans les deux syntaxes : Texte, numérique, Heure, Date, Image et Objet (formules ou formules nommées renvoyant un élément de ligne).
 
@@ -51,7 +51,7 @@ La commande renvoie la nouvelle ligne sous la forme d'un objet de plage de ligne
 
 ## Exemple 1
 
-Vous voulez créer une table vide et ajouter plusieurs lignes de différentes tailles. Vous pouvez écrire :
+Vous souhaitez créer un tableau vide et y ajouter plusieurs lignes de tailles différentes. Vous pouvez écrire :
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3 : Object
@@ -66,7 +66,7 @@ Vous voulez créer une table vide et ajouter plusieurs lignes de différentes ta
 
 ## Exemple 2
 
-Vous voulez créer une table vide et ajouter une ligne en utilisant une collection :
+Vous souhaitez créer un tableau vide et ajouter une ligne à l'aide d'une collection :
 
 ```4d
 $table:=WP Insert table(WParea; wk replace; wk include in range)

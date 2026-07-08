@@ -5,7 +5,7 @@ slug: /commands/insert-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* ; *aprèsLigne* ; *libelléElément* {; *sousMenu* {; *process*}}{; *} )<!-- END REF-->
+<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* : Integer, Text ; *aprèsLigne* : Integer ; *libelléElément* : Text {; *sousMenu* : Text {; *process* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 <div class="no-index">
 

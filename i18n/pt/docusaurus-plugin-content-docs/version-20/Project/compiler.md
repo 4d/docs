@@ -60,7 +60,7 @@ A verificação de sintaxe também pode ser iniciada diretamente usando o comand
 
 ### Gerar digitação
 
-O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Os métodos do Compilador são métodos do projeto que agrupam todas as declarações de digitação de variável e array (processo e interprocesso), assim como os [parâmetros dos métodos](../Concepts/parameters.md#compiler-method). Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos.
+O botão **Gerar digitação** cria ou atualiza os métodos do compilador de digitação. Esses métodos, quando eles existem, são usados diretamente pelo compilador durante a compilação de código, resultando em tempos de compilação mais rápidos. Os métodos do Compilador são métodos do projeto que agrupam todas as declarações de digitação de variável e array (processo e interprocesso), assim como os [parâmetros dos métodos](../Concepts/parameters.md#compiler-method).
 
 O nome desses métodos deve começar com `Compiler_`. Você pode definir o nome padrão para cada um dos 5 métodos do compilador na [janela de parâmetros do compilador](#compiler-methods-for). Os métodos do compilador que são gerados e mantidos pelo 4D automaticamente têm o atributo `Invisível`:
 

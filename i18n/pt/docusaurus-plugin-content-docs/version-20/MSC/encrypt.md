@@ -23,7 +23,7 @@ Também pode ler blog post [Um olhar mais profundo sobre a encriptação de dado
 Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessários os seguintes passos:
 
 1. No editor de estruture, marque o atributo **Cifrável** para cada tabela cujos dados pretende encriptar. Ver a secção "Propriedades das tabelas".
-2. Abra a página Encriptar do CSM. Se abrir a página sem definir nenhuma tabela como **Cifrável**, é apresentada a seguinte mensagem na página: ![](../assets/en/MSC/MSC_encrypt1.png) Caso contrário, é apresentada a seguinte mensagem: ![](../assets/en/MSC/MSC_encrypt2.png)<p>
+2. Abra a página Encriptar do CSM. Se abrir a página sem definir nenhuma tabela como **Cifrável**, é apresentada a seguinte mensagem na página: ![](../assets/en/MSC/MSC_encrypt2.png)<p>
 Isto significa que o estado **Cifrável** de pelo menos uma tabela foi modificado e que o ficheiro de dados ainda não foi encriptado.
 **Nota: **A mesma mensagem é apresentada quando o estado **Cifrável** tiver sido modificado num ficheiro de dados já encriptado ou após o ficheiro de dados ter sido descifrado (ver abaixo).</p>
 3. Clique no botão Encriptar imagem.  

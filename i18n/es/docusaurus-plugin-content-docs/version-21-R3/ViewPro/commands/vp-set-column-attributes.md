@@ -42,7 +42,7 @@ Para cambiar el tamaño de la segunda columna y definir el encabezado, se escrib
 ```4d
 var $column; $properties : Object
  
-$column:=VP Column("ViewProArea";1) //column B
+$column:=VP Column("ViewProArea";1) //columna B
 $properties:=New object("width";100;"header";"Hello World")
  
 VP SET COLUMN ATTRIBUTES($column;$properties)

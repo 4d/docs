@@ -107,7 +107,7 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 <!-- REF #_command_.cs.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|---|---|
 |classStore|Object|<-|User class store for the project or component|
 </div>
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---|---|---|---|
 |classStore|Object|<-|4D class store|
 </div>
@@ -537,10 +537,10 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|Paramètre|Type||Description|
 |---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
+|param|any|->|Paramètre(s) à transmettre au constructeur parent|
+|Résultat|Object|<-|Object's parent|
 </div>
 <!-- END REF -->
 
@@ -596,6 +596,12 @@ Function getArea()
 // Function definition
 Function getArea()
  var $0 : Integer
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+
  $0:=(This.height)*(This.width)
 
 // Function definition
@@ -664,9 +670,9 @@ $message:=$square.description() //I have 4 sides which are all equal
 <!-- REF #_command_.This.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|Paramètre|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Current object|
+|Résultat|Object|<-|Current object|
 </div>
 <!-- END REF -->
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *objeto* : Text ; *orientacion* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *objeto* : Field, Variable ; *orientacion* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *objeto* : Text ; *orientacion* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *objeto* : Variable, Field ; *orientacion* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
 <div class="no-index">
 

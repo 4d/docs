@@ -5,7 +5,7 @@ slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTabla* ;} *arrRutas* : Text array {; *filtro* : Text}{; *marcador* : Real}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTabla* : Table ;} *arrRutas* : Text array {; *filtro* : Text}{; *marcador* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 <div class="no-index">
 

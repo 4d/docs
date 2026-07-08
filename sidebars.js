@@ -209,6 +209,17 @@ module.exports =
               "dirName": "language-legacy",
             }
           ],
+          "link": 
+          {
+            "type": "generated-index",
+            "title": "Commands by theme",
+            "description": "4D commands by theme",
+            "slug": "/category/themes",
+            "keywords": [
+              "commands, themes"
+            ],
+            "image": "/img/docusaurus.png"
+          },
         },
         {
           type: "category",
@@ -217,6 +228,7 @@ module.exports =
           items: [
             "API/BlobClass",
             "API/ClassClass",
+            "API/ClassStoreClass",
             "API/CollectionClass",
             "API/CryptoKeyClass",
             "API/DataClassClass",
@@ -238,6 +250,7 @@ module.exports =
             "API/MethodClass",
             "API/OutgoingMessageClass",
             "API/POP3TransporterClass",
+            "API/QuotaManagerClass",
             "API/SessionClass",
             "API/SignalClass",
             "API/SMTPTransporterClass",
@@ -321,7 +334,29 @@ module.exports =
         },
         "Develop-legacy/transactions",
         "Tags/transformation-tags",
-        "Project/date-time-formats"
+        "Project/date-time-formats",
+        "Develop-legacy/xml"
+        /*
+        // not ready yet, needs imports from Design ref for records and selection concepts,
+        {
+            type: "category",
+            label: "Records & Selections (legacy data access)",
+            link: {
+              type: "generated-index",
+            title: "Records & Selections (legacy data access)",
+            description: "Legacy data access based upon records, selections, sets",
+            slug: "/category/records-selections",
+            keywords: [
+              "records",
+              "selections"
+            ],
+            image: "/img/docusaurus.png"              },
+              items: [
+                "Develop-legacy/records",
+                "Develop-legacy/sets",
+                "Develop-legacy/named-selections"
+          ]
+        } */
       ]
     },
     {
@@ -685,6 +720,11 @@ module.exports =
             }
           ]
         },
+        {
+          type: "doc",
+          label: "Standard actions",
+          id: "Desktop-legacy/standard-actions"
+        },
          {
           type: "doc",
           label: "Labels",
@@ -704,6 +744,11 @@ module.exports =
             "Menus/bars",
             "Menus/sdi"
           ]
+        },
+        {
+          type: "doc",
+          label: "Drag and Drop",
+          id: "Desktop/drag-and-drop"
         },
         {
           type: "category",
@@ -877,6 +922,7 @@ module.exports =
             "aikit/overview",
             "aikit/asynchronous-call",
             "aikit/compatible-openai",
+            "aikit/provider-model-aliases",
             {
               type: "category",
               label: "Classes",
@@ -921,6 +967,7 @@ module.exports =
                 "aikit/Classes/openaimoderationresult",
                 "aikit/Classes/openaimoderationsapi",
                 "aikit/Classes/openaiparameters",
+                "aikit/Classes/openaiproviders",
                 "aikit/Classes/openairesult",
                 "aikit/Classes/openaitool",
                 "aikit/Classes/openaivision",

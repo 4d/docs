@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **\*\*** **Los equivalentes tokenizados son elementos* **de estructura* *y del lenguaje 4D en texto sin formato expresados ​​con la sintaxis del token, como se muestra a continuación (consulte también* *Utilizar tokens en fórmulas):* 
 
-```RAW
+```txt
 [Table:1]Field:1+String:C10(1)
 ```
 

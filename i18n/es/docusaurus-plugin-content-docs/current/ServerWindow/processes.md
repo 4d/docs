@@ -5,13 +5,13 @@ title: Página Procesos
 
 La página **Procesos** lita todos los procesos en ejecución.
 
-![](../assets/en/Admin/server-admin-process-page.png)
+![](../assets/en/Admin/server-admin-process-page-1.png)
 
 El botón "Procesos" indica, entre paréntesis el número total de procesos en ejecución en el servidor (este número no tiene en cuenta los filtros de visualización aplicados a la ventana ni el estado de la opción **Mostrar los procesos por grupos**).
 
 Puede cambiar el orden de las columnas simplemente arrastrando y soltando las áreas de encabezado de las columnas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
-Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
+Al igual que la página Sesiones, esta página contiene un [área dinámica de búsqueda/filtrado](sessions.md#search-and-filtering) que puede utilizarse para reducir el número de filas mostradas en la lista a las que correspondan con el texto introducido en el área de búsqueda. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
 
 También hay tres botones de acceso directo que se pueden utilizar para filtrar por el tipo de proceso que se muestra en la ventana:
 
@@ -77,11 +77,17 @@ Cada proceso se identifica con un icono y un tipo. El color y la forma del icono
 
 > Cada proceso cliente 4D principal y su proceso base 4D cliente "gemelo" se agrupan cuando se marca la opción **Mostrar los procesos por grupos**.
 
+:::note
+
+Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+
+:::
+
 ## Botones de administración
 
 La página también tiene cinco botones de control que actúan sobre el proceso o procesos seleccionados. Tenga en cuenta que sólo se puede actuar sobre los procesos usuario.
 
-![](../assets/en/Admin/server-process-actions.png)
+![](../assets/en/Admin/server-process-actions-1.png)
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
@@ -93,6 +99,6 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
-- **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
+- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). Este botón se activa cuando se selecciona al menos un proceso de usuario.
 
 

@@ -21,7 +21,7 @@ La bibliothèque est affichée dans une fenêtre séparée :
 
 :::info
 
-Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+Certains objets de cette bibliothèque ne sont disponibles que si un [composant spécifique] (../Extensions/overview.md#components-developed-by-4d) est chargé dans l'application. Par exemple, les zones 4D Write Pro nécessitent le chargement du composant [4D Write Pro Interface] (https://github.com/4d/4D-WritePro-Interface).
 
 :::
 
@@ -99,7 +99,7 @@ Le copier-coller ou le glisser-déposer de certains objets dans la bibliothèque
 
 Voici la liste des objets dépendants qui seront collés dans la bibliothèque en même temps que l’objet principal qui les utilise (le cas échéant) :
 
-- Enumérations
+- Listes
 - Formats/Filtres
 - Images
 - Messages d’aide (liés à un champ)

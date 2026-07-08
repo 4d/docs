@@ -583,7 +583,7 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Descripción
 
-La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->La función `.getInfo()`<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -975,15 +975,15 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|contextName|Text|->|Name of the context|
-|dataClassName|Text|->|Name of the dataclass|
-|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore. Employee)|
-|attributes|Text|->|Attribute list separated by a comma|
-|attributesColl|Collection|->|Collection of attribute names (text)|
-|contextType|Text|->|If provided, value must be "main" or "currentItem"|
-|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
+|contextName|Text|->|Nombre del contexto|
+|dataClassName|Text|->|Nombre del dataclass|
+|dataClassObject|4D.DataClass|->|Objeto dataclass (ej. datastore.Employee)|
+|attributes|Text|->|Lista de atributos separada por una coma|
+|attributesColl|Collection|->|Colección de nombres de atributos (text)|
+|contextType|Text|->|Si se proporciona, valor debe ser "main" o "currentItem"|
+|pageLength|Integer|->|Longitud de la página de la selección de entidad vinculada al contexto (por defecto es 80)|
 </div>
 <!-- END REF -->
 

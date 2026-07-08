@@ -45,7 +45,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -158,6 +158,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### Ver también
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -675,7 +679,7 @@ End if
 
 #### Descripción
 
-La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con el marcador "deleted" del servidor de correo IMAP.<!-- END REF --> El marcador "deleted" puede definirse con los métodos [`delete()`](#delete) o [`addFlags()`](#addflags).
+La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con la bandera "eliminada" del servidor de correo IMAP.<!-- END REF --> La bandera "deleted" puede definirse con los métodos [`.delete()`](#delete) o [`.addFlags()`](#addflags).
 
 **Objeto devuelto**
 
@@ -822,16 +826,16 @@ En el parámetro opcional `parameters`, pase un objeto que contenga valores para
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
-| Propiedad                                                                            | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | Text    | Nombre del buzón. Devuelto si withBoxProperties=true o withBoxInfo=true                                                                                                                                                                                                                                                                                                      |
-| \[].selectable  | Boolean | Indica si los derechos de acceso permiten o no seleccionar el buzón de correo: <ul><li>true - el buzón puede ser seleccionado</li><li>false - el buzón de correo no puede ser seleccionado</li></ul>	Devuelto si withBoxProperties=true                                                                                                                                      |
-| \[].inferior    | Boolean | Indica si los derechos de acceso permiten o no crear una jerarquía inferior en el buzón: <ul><li>true - se puede crear un nivel inferior</li><li>false - no se puede crear un nivel inferior</li></ul>	Se devuelve si withBoxProperties=true                                                                                                                                 |
-| \[].interesting | Boolean | Indica si el buzón ha sido marcado como "interesante" por el servidor: <ul><li>true - El buzón ha sido marcado como "interesante" por el servidor. Por ejemplo, puede contener nuevos mensajes.</li><li>false - El buzón no ha sido marcado como "interesante" por el servidor.</li></ul>	Devuelto si withBoxProperties=true |
-| [].mailCount     | Number  | Número de mensajes en el buzón. Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                                 |
-| [].mailRecent    | Number  | Número de mensajes marcados como "recent" (indicando nuevos mensajes). Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                       |
-| [].mailUnseen    | Number  | Número de mensajes marcados como "unseen". Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                      |
-| [].id            | Text    | Identificador único del buzón. Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                                  |
+| Propiedad                                                                            | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | Text    | Nombre del buzón. Devuelto si withBoxProperties=true o withBoxInfo=true                                                                                                                                                                                                                                                                                                         |
+| \[].selectable  | Boolean | Indica si los derechos de acceso permiten o no seleccionar el buzón de correo: <ul><li>true - el buzón puede ser seleccionado</li><li>false - el buzón de correo no puede ser seleccionado</li></ul>	Devuelto si withBoxProperties=true                                                                                                                                         |
+| \[].inferior    | Boolean | Indica si los derechos de acceso permiten o no crear una jerarquía inferior en el buzón: <ul><li>true - se puede crear un nivel inferior</li><li>false - no se puede crear un nivel inferior</li></ul>	Se devuelve si withBoxProperties=true                                                                                                                                    |
+| \[].interesting | Boolean | Indica si el buzón ha sido marcado como "interesante" por el servidor: <ul><li>true - El buzón ha sido marcado como "interesante" por el servidor. Por ejemplo, puede contener mensajes nuevos.</li><li>false - El buzón no ha sido marcado como "interesante" por el servidor.</li></ul>	Se devuelve si withBoxProperties=true |
+| [].mailCount     | Number  | Número de mensajes en el buzón. Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                                    |
+| [].mailRecent    | Number  | Número de mensajes marcados como "recent" (indicando nuevos mensajes). Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                          |
+| [].mailUnseen    | Number  | Número de mensajes marcados como "unseen". Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                         |
+| [].id            | Text    | Identificador único del buzón. Devuelto si withBoxInfo=true                                                                                                                                                                                                                                                                                                                     |
 
 Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
@@ -961,7 +965,7 @@ El parámetro opcional *options* permite pasar un objeto que define las instrucc
 
 > - La función genera un error y devuelve **Null** si *msgID* designa un mensaje inexistente,
 > - Si no se selecciona ningún buzón con la función [`.selectBox()`](#selectbox), se genera un error,
-> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\`.
+> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\\`.
 
 #### Resultado
 
@@ -1043,18 +1047,18 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 La segunda sintaxis permite recuperar los mensajes en función de un rango secuencial. Los valores pasados representan la posición de los mensajes en el buzón.
 
-En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 El parámetro opcional *options* permite definir las partes de los mensajes a devolver.
 
 **Options**
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                                                         |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | Boolean | Si True, los mensajes especificados se marcan como "vistos" en el buzón. Si False, los mensajes no se marcan como "vistos". Valor por defecto: True |
-| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True  |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                  |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | Boolean | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: True |
+| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True                                                                           |
 
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
@@ -1148,7 +1152,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 #### Resultado
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` devuelve un `BLOB` que se puede archivar en una base de datos o convertir en un [objeto `Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
 #### Ejemplo
 
@@ -1294,7 +1298,7 @@ Para mover todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contiene el objeto IMAPNotifier asociado al transportador<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 Véase [IMAPNotifier](./IMAPNotifierClass.md).
 
@@ -1331,9 +1335,9 @@ Véase [IMAPNotifier](./IMAPNotifierClass.md).
 
 La función `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convierte los números de secuencia en IDs únicos IMAP para los mensajes en el rango secuencial designado por *startMsg* y *endMsg*<!-- END REF --> en el buzón actualmente seleccionado.
 
-En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 #### Resultado
 
@@ -1459,6 +1463,10 @@ $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
+#### Ver también
+
+[`.addFlags()`](#addflags)
+
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
@@ -1583,7 +1591,7 @@ SearchKey2 = NOT FLAGGED
 SearchKey3 = FLAGGED DRAFT
 ```
 
-> Para obtener la información de un buzón sin cambiar el buzón actual, utilice <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.
+> Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
 - Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
 - Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
@@ -1622,7 +1630,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
-- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*. Por lo tanto, debe convertir la cadena *searchCriteria* al conjunto de caracteres especificado si utiliza la instrucción \[CHARSET] (consulte los comandos `CONVERT FROM TEXT` o `Convert to text`).
+- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*.
   Por defecto, 4D codifica la cadena de criterios searchCriteria en Quotable Printable si contiene los caracteres extendidos.
 
 ```
@@ -1732,10 +1740,10 @@ En el parámetro *name*, pase el nombre del buzón a acceder. El nombre represen
 
 El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Valor | Comentario                                                                                                                                                                                                                                                          |
-| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                             |
-| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Default value: |
+| Constante             | Valor | Comentario                                                                                                                                                                                                                                                              |
+| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                                 |
+| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: |
 
 > - La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
 > - Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.

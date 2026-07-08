@@ -45,7 +45,7 @@ Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporte
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -158,6 +158,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### Veja também
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -675,7 +679,7 @@ End if
 
 #### Descrição
 
-A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->remove todas as mensagens com o sinalizador "deleted" do servidor de e-mail IMAP.<!-- END REF --> O sinalizador "deleted" pode ser definido com os métodos [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
+A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->remove todas as mensagens com a bandeira "deletado" do servidor IMAP.<!-- END REF --> O marcador "apagada" pode ser definida com os métodos .delete() ou .addFlags() .
 
 **Objeto devolvido**
 
@@ -750,7 +754,7 @@ $status:=$transporter.expunge()
 
 A função `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->retorna um objeto `boxInfo` correspondente à maibox atual ou à caixa de correio *name*<!-- END REF -->. Essa função retorna as mesmas informações que [`.selectBox()`](#selectbox) sem alterar a caixa de correio atual.
 
-No parâmetro opcional *name*, passe o nome da caixa de correio a ser acessada. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
 
 Se o *nome* da caixa de correio não for selecionável ou não existir, a função gera um erro e retorna **null**.
 
@@ -822,16 +826,16 @@ No parâmetro opcional `parameters`, passe um objeto que contenha valores para f
 
 Cada objecto da coleção devolvida contém as seguintes propriedades:
 
-| Propriedade                                                                          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | Text       | Nome da nova caixa de correio. Retornado se withBoxProperties=true ou withBoxInfo=true                                                                                                                                                                                                                                                                                                        |
-| \[].selectable  | Parâmetros | Indica se os direitos de acesso permitem ou não que a caixa de correio seja selecionada: <ul><li>true - a caixa de correio pode ser selecionada</li><li>false - a caixa de correio não pode ser selecionada</li></ul>	Retornado se withBoxProperties=true                                                                                                                                     |
-| \[].inferior    | Parâmetros | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - um nível inferior pode ser criado</li><li>false - um nível inferior não pode ser criado</li></ul>	Retornado se withBoxProperties=true                                                                                                                                |
-| \[].interesting | Parâmetros | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. Por exemplo, ela pode conter novas mensagens.</li><li>false - A caixa de correio não foi marcada como "interessante" pelo servidor.</li></ul>Retornado se withBoxProperties=true |
-| [].mailCount     | Number     | Número de mensagens na caixa de entrada. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                        |
-| [].mailRecent    | Number     | Número de mensagens marcadas como "recent" (indicando novas mensagens). Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                      |
-| [].mailUnseen    | Number     | Número de mensagens marcadas como "unseen". Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                     |
-| [].id            | Text       | Identificador exclusivo da caixa de correio. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                    |
+| Propriedade                                                                          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| \[].name        | Text       | Nome da nova caixa de correio. Retornado se withBoxProperties=true ou withBoxInfo=true                                                                                                                                                                                                                                                                                           |
+| \[].selectable  | Parâmetros | Indica se os direitos de acesso permitem ou não que a caixa de correio seja selecionada: <ul><li>true - a caixa de correio pode ser selecionada</li><li>false - a caixa de correio não pode ser selecionada</li></ul>	Retornado se withBoxProperties=true                                                                                                                        |
+| \[].inferior    | Parâmetros | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - um nível inferior pode ser criado</li><li>false - um nível inferior não pode ser criado</li></ul>	Retornado se withBoxProperties=true                                                                                                                   |
+| \[].interesting | Parâmetros | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
+| [].mailCount     | Number     | Número de mensagens na caixa de entrada. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                           |
+| [].mailRecent    | Number     | Número de mensagens marcadas como "recent" (indicando novas mensagens). Retornado se withBoxInfo=true                                                                                                                                                                                                                                                         |
+| [].mailUnseen    | Number     | Número de mensagens marcadas como "unseen". Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                        |
+| [].id            | Text       | Identificador exclusivo da caixa de correio. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                       |
 
 Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
 
@@ -961,7 +965,7 @@ O parâmetro *options* opcional permite que você passe um objeto definindo inst
 
 > - A função gera um erro e retorna **Null** se *msgID* designar uma mensagem inexistente,
 > - Se nenhuma caixa de correio for selecionada com a função [`.selectBox()`](#selectbox), será gerado um erro,
-> - Se não houver uma conexão aberta, `.getMail()` abrirá uma conexão com a última caixa de correio especificada com [`.selectBox()`](#selectbox)\`.
+> - Se não houver uma conexão aberta, `.getMail()` abrirá uma conexão com a última caixa de correio especificada com [`.selectBox()`](#selectbox)\\`.
 
 #### Resultados
 
@@ -1043,9 +1047,9 @@ O parâmetro opcional *options* permite que você defina as partes das mensagens
 
 A segunda sintaxe permite recuperar mensagens com base num intervalo sequencial. Os valores passados representam a posição das mensagens na caixa de correio.
 
-No parâmetro *startMsg*, passe um valor *inteiro* correspondente ao número da primeira mensagem em um intervalo sequencial. Se você passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será usada como o início da sequência.
+No parâmetro *startMsg*, passe um valor inteiro correspondente ao número da primeira mensagem em um intervalo sequencial. Se você passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será usada como o início da sequência.
 
-No parâmetro *endMsg*, passe um valor *inteiro* correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
+No parâmetro *endMsg*, passe um valor inteiro correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
 
 O parâmetro opcional *options* permite que você defina as partes das mensagens a serem retornadas.
 
@@ -1331,9 +1335,9 @@ See [IMAPNotifier](./IMAPNotifierClass.md).
 
 A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converte os números de sequência em IDs exclusivos do IMAP para as mensagens no intervalo sequencial designado por *startMsg* e *endMsg*<!-- END REF --> na caixa de correio selecionada no momento.
 
-No parâmetro *startMsg*, passe um valor inteiro correspondente ao número da primeira mensagem em um intervalo sequencial. Se você passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será usada como o início da sequência.
+No parâmetro *startMsg*, passe um valor *inteiro* correspondente ao número da primeira mensagem em um intervalo sequencial. Se você passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será usada como o início da sequência.
 
-No parâmetro *endMsg*, passe um valor inteiro correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
+No parâmetro *endMsg*, passe um valor *inteiro* correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se você passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será usada como o fim da sequência.
 
 #### Resultados
 
@@ -1458,6 +1462,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
+
+#### Veja também
+
+[`.addFlags()`](#addflags)
 
 <!-- END REF -->
 
@@ -1620,7 +1628,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 No que diz respeito aos dois últimos exemplos, note que o resultado da pesquisa é diferente quando se remove os parênteses da primeira lista de chaves de pesquisa.
 
-- A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Indica o conjunto de caracteres da string *searchCriteria*. Portanto, você deve converter a cadeia de caracteres *searchCriteria* no conjunto de caracteres especificado se usar a especificação \[CHARSET] (consulte os comandos `CONVERT FROM TEXT` ou `Convert to text`).
+- A *searchCriteria* pode incluir a especificação opcional \[CHARSET]. Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Indica o conjunto de caracteres da string *searchCriteria*.
   Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
 
 ```
@@ -1726,7 +1734,7 @@ A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->
 
 > Para obter as informações de uma caixa de correio sem alterar a caixa de correio actual, utilize [`.getBoxInfo()`](#getboxinfo).
 
-No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
+No parâmetro opcional *name*, passe o nome da caixa de correio a ser acessada. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter).
 
 O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os valores possíveis são:
 

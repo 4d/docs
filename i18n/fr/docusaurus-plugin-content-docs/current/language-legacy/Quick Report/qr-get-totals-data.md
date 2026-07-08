@@ -5,7 +5,7 @@ slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *opérateur* ; *texte* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *zone* : Integer ; *numColonne* : Integer ; *numRupture* : Integer ; *opérateur* : Integer ; *texte* : Text )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 <div class="no-index">
 

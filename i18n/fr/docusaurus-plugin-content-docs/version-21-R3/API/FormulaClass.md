@@ -14,7 +14,7 @@ Voir les exemples dans le paragraphe [Exécution du code dans les objets Functio
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Cette classe est [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binaire.
 
 :::
 

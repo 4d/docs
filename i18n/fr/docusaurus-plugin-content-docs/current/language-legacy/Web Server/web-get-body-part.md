@@ -5,7 +5,7 @@ slug: /commands/web-get-body-part
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* ; *contenuPartie* ; *nomPartie* ; *typeMime* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* : Integer ; *contenuPartie* : Blob, Text ; *nomPartie* : Text ; *typeMime* : Text ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
 <div class="no-index">
 

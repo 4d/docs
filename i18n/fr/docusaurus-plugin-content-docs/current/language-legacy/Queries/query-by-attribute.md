@@ -5,7 +5,7 @@ slug: /commands/query-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*laTable*}{;}{*opConj* ;} *champObjet* ; *cheminAttribut* ; *opRech* ; *valeur* {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*laTable* : Table ;}{*opConj* : &, \|, # ;} *champObjet* : Field ; *cheminAttribut* : Text ; *opRech* : Text, >, <, >=, <=, #, =, \|, % ; *valeur* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 <div class="no-index">
 

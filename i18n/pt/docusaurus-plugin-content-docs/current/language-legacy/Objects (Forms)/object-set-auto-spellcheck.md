@@ -5,7 +5,7 @@ slug: /commands/object-set-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *objeto* : Text ; *correAuto* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *objeto* : Field, Variable ; *correAuto* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *objeto* : Text ; *correAuto* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *objeto* : Variable, Field ; *correAuto* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
 <div class="no-index">
 

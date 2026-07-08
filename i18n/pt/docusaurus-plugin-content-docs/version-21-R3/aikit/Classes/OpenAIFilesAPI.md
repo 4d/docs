@@ -5,22 +5,22 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-The `OpenAIFilesAPI` class provides functionalities to manage files using OpenAI's API. Files can be uploaded and used across various endpoints including [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning), [Batch](https://platform.openai.com/docs/api-reference/batch) processing, and Vision.
+The `OpenAIFilesAPI` class provides functionalities to manage files using OpenAI's API. Files can be uploaded and used across various endpoints including [Fine-tuning](https://developers.openai.com/api/reference/resources/fine_tuning), [Batch](https://developers.openai.com/api/reference/resources/batches) processing, and Vision.
 
 > **Note:** This API is only compatible with OpenAI. Other providers listed in the [compatible providers](../compatible-openai.md) documentation do not support file management operations.
 
-API Reference: <https://platform.openai.com/docs/api-reference/files>
+API Reference: <https://developers.openai.com/api/reference/resources/files>
 
 ## File Size Limits
 
 - **Individual files:** up to 512 MB per file
-- **Organization total:** up to 1 TB (cumulative size of all files uploaded by your [organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
+- **Organization total:** up to 1 TB (cumulative size of all files uploaded by your [organization](https://developers.openai.com/api/docs/guides/production-best-practices))
 
 ## Funções
 
 ### create()
 
-**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.OpenAIFileParameters) : cs.OpenAIFileResult
+**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.AIKit.OpenAIFileParameters) : cs.AIKit.OpenAIFileResult
 
 Upload a file that can be used across various endpoints.
 
@@ -37,9 +37,9 @@ Upload a file that can be used across various endpoints.
 
 #### Supported Purposes
 
-- `assistants`: Used in the Assistants API (⚠️ [deprecated by OpenAI](https://platform.openai.com/docs/assistants/whats-new))
-- `batch`: Used in the [Batch API](https://platform.openai.com/docs/api-reference/batch) (expires after 30 days by default)
-- `fine-tune`: Used for [fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)
+- `assistants`: Used in the Assistants API (⚠️ [deprecated by OpenAI](https://developers.openai.com/api/docs/assistants/migration))
+- `batch`: Used in the [Batch API](https://developers.openai.com/api/reference/resources/batches) (expires after 30 days by default)
+- `fine-tune`: Used for [fine-tuning](https://developers.openai.com/api/reference/resources/fine_tuning)
 - `vision`: Images used for vision fine-tuning
 - `user_data`: Flexible file type for any purpose
 - `evals`: Used for eval data sets
@@ -51,7 +51,7 @@ Upload a file that can be used across various endpoints.
 - **Assistants API:** Supports specific file types (see Assistants Tools guide)
 - **Chat Completions API:** PDFs are only supported
 
-#### Sychronous example
+#### Exemplo
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -104,7 +104,7 @@ End if
 
 ### retrieve()
 
-**retrieve**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileResult
+**retrieve**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters) : cs.AIKit.OpenAIFileResult
 
 Returns information about a specific file.
 
@@ -112,8 +112,8 @@ Returns information about a specific file.
 
 | Parâmetro    | Tipo                                    | Descrição                                                                     |
 | ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
-| `fileId`     | Text                                    | **Required.** The ID of the file to retrieve. |
-| `parâmetros` | [OpenAIParameters](OpenAIParameters.md) | Optional parameters for the request.                          |
+| *fileId*     | Text                                    | **Required.** The ID of the file to retrieve. |
+| *parâmetros* | [OpenAIParameters](OpenAIParameters.md) | Optional parameters for the request.                          |
 | Resultado    | [OpenAIFileResult](OpenAIFileResult.md) | The file result                                                               |
 
 **Throws:** An error if `fileId` is empty.
@@ -133,7 +133,7 @@ End if
 
 ### lista()
 
-**list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
+**list**(*parameters* : cs.AIKit.OpenAIFileListParameters) : cs.AIKit.OpenAIFileListResult
 
 Returns a list of files that belong to the user's organization.
 
@@ -141,7 +141,7 @@ Returns a list of files that belong to the user's organization.
 
 | Parâmetro    | Tipo                                                    | Descrição                                                         |
 | ------------ | ------------------------------------------------------- | ----------------------------------------------------------------- |
-| `parâmetros` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Optional parameters for filtering and pagination. |
+| *parâmetros* | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Optional parameters for filtering and pagination. |
 | Resultado    | [OpenAIFileListResult](OpenAIFileListResult.md)         | The file list result                                              |
 
 #### Exemplo
@@ -166,7 +166,7 @@ End if
 
 ### delete()
 
-**delete**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileDeletedResult
+**delete**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters) : cs.AIKit.OpenAIFileDeletedResult
 
 Delete a file.
 
@@ -174,8 +174,8 @@ Delete a file.
 
 | Parâmetro    | Tipo                                                  | Descrição                                                                   |
 | ------------ | ----------------------------------------------------- | --------------------------------------------------------------------------- |
-| `fileId`     | Text                                                  | **Required.** The ID of the file to delete. |
-| `parâmetros` | [OpenAIParameters](OpenAIParameters.md)               | Optional parameters for the request.                        |
+| *fileId*     | Text                                                  | **Required.** The ID of the file to delete. |
+| *parâmetros* | [OpenAIParameters](OpenAIParameters.md)               | Optional parameters for the request.                        |
 | Resultado    | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | The file deletion result                                                    |
 
 **Throws:** An error if `fileId` is empty.

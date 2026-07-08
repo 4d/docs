@@ -197,7 +197,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Indicadores de progreso](progressIndicator.md) - [Regla](ruler.md) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
 
 #### Comandos
 
@@ -293,7 +293,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Combo Box](comboBox_overview.md) - [Lista desplegables](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Pie List Box](listbox-header-footer.md#footers) - [Botón de opción](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
 
 #### Comandos
 
@@ -320,7 +320,7 @@ Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertica
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado List Box](listbox-header-footer.md#headers)
 
 #### Comandos
 
@@ -434,7 +434,167 @@ Por defecto, esta opción no está activa.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) -
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../ommands/theme/Styled_Text.md)
+
+### Etiquetas soportadas
+
+Puede utilizar las siguientes etiquetas en áreas de texto de estilo múltiple 4D.
+
+#### Expresión 4D
+
+```html
+<span style="-d4-ref:'expression'"> </span>
+```
+
+Esta etiqueta inserta una expresión 4D (expresión, método, campo, variable, comando, etc.) en el texto. La expresión se divide en tokens y se evalúa:
+
+- cuando se inserta la expresión
+- cuando se carga el objeto
+- cuando se invoca la acción estándar `computeExpressions` desde un objeto de interfaz o mediante el comando [`INVOKE ACTION`](../commands/invoke-action)
+- cuando se ejecuta el comando [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions)
+- cuando se ejecuta el comando [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions), si se pasa el segundo parámetro `*`.
+
+El valor evaluado de la expresión no se guarda en la etiqueta `<span>`, sino solo su referencia.
+
+Nota: para garantizar que las expresiones se evalúen correctamente independientemente del lenguaje o la versión de 4D que se utilice, recomendamos emplear la sintaxis de tokens para los elementos cuyo nombre pueda variar entre las distintas versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando `Current time`, ingrese `Current time:C178`. Para más información sobre esto, consulte *Utilizar tokens en fórmulas*.
+
+#### URL
+
+```html
+<span><a href="url">Visible label</a></span>
+```
+
+Esta etiqueta inserta una URL en el texto. Ejemplo:
+
+```html
+<span><a href="http://www.4d.com/">Página web de 4D</a></span>
+```
+
+#### Enlace usuario
+
+```html
+<span style="-d4-ref-user:'myUserLink'">Haga clic aquí</span>
+```
+
+Los "enlaces de usuario" tienen el mismo aspecto que las URLs, pero cuando hace clic en ellos, no abren automáticamente la fuente. Puede pasar cualquier cadena que quiera como referencia, y depende del desarrollador programar toda acción personalizada que ocurra cuando se hace clic. Esto significa que puede crear enlaces que no son URLs sino referencias a archivos, Métodos 4D, y así sucesivamente, que se pueden abrir o ejecutar cuando se haga clic. El comando [`ST Get content type`](../commands/st-get-content-type) detecta si se ha hecho clic en un enlace de usuario.
+
+Los enlaces de usuario se definen mediante el comando [`ST SET TEXT`](../commands/st-set-text). Por ejemplo:
+
+```4d
+ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
+```
+
+#### Etiquetas personalizadas
+
+Puede insertar cualquier etiqueta en texto plano, por ejemplo `<img src="http://doc.4d.com/pictures/ja.png">`. Se almacena en el código del texto sin formato, sin que se interprete ni se muestre. Esto resulta especialmente útil en el caso de los correos electrónicos en formato HTML que incluyen imágenes, por ejemplo.
+
+#### Etiquetas de estilo
+
+En este párrafo se enumeran los atributos de las etiquetas \<SPAN> que soporta 4D en las áreas de texto enriquecido. Puede utilizar estas etiquetas para implementar un manejo de estilo personalizado. 4D solo admite las etiquetas que se indican a continuación para las variaciones de estilo.
+
+- Nombre de la fuente: `<SPAN STYLE="font-family: DESDEMONA">... </SPAN>`
+- Tamaño de la fuente: `<SPAN STYLE="font-size: 20pt">... </SPAN>`
+- Estilo de fuente:
+  - Negrita `<SPAN STYLE="font-weight: bold">... </SPAN>`
+  - Itálica `<SPAN STYLE="font-style: italic"> ... </SPAN>`
+  - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
+  - Subrayado `<SPAN STYLE="text-decoration: underline">... </SPAN>`
+  - Tachado `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
+
+*Nota: el estilo "strikethroughh" no está soportado bajo macOS, pero esta etiqueta todavía puede ser administrada por programación.*
+
+- Colores de fuente: `<SPAN STYLE="color:green">... </SPAN>` o `<SPAN STYLE="color:#006CCC">...</SPAN>`
+- Colores de fondo: `<SPAN STYLE="background-color:green">... </SPAN>` o `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
+
+#### Valores de color
+
+En el caso de los atributos de color de fuente y de fondo, el valor del color puede ser bien el código hexadecimal de un color RGB, bien el nombre de uno de los 16 colores HTML definidos por el W3C para el CSS estándar:
+
+![](../assets/en/FormObjects/colors1.png)
+![](../assets/en/FormObjects/colors2.png)
+
+### Trabajando con comandos de manejo de texto
+
+#### Interfaz de usuario
+
+Los comandos que pueden utilizarse para manipular objetos de texto por programación no tienen en cuenta ninguna etiqueta de estilo integrada en el texto. Sólo actúan sobre el texto visualizado. Esto afecta a los siguientes comandos:
+
+- comandos del tema [Interfaz de usuario](../commands/theme/User_Interface.md)
+- [`HIGHLIGHT TEXT`](../commands/highlight-text)
+- [`GET HIGHLIGHT`](../commands/get-highlight)
+
+Cuando se utilizan estos comandos con comandos que manipulan cadenas de caracteres, es necesario filtrar los caracteres de formato utilizando el comando [`ST Get plain text`](../commands/st-get-plain-text):
+
+```4d
+ HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
+```
+
+#### Objetos (formularios)
+
+Los comandos que se pueden utilizar para modificar el estilo de los objetos (por ejemplo, [`OBJECT SET FONT`](../commands/object-set-font)) se aplican a todo el objeto y no a la selección.
+
+Si el objeto no tiene el foco cuando se ejecuta el comando, la modificación se aplica simultáneamente al objeto (el área de texto) y a su variable asociada. Si el objeto tiene el foco, la modificación se aplica al objeto, pero no a la variable asociada. La modificación solo se aplica a la variable cuando el objeto pierde el foco. Tenga presente este principio a la hora de programar áreas de texto.
+
+:::note
+
+Si la opción [**Guardar con etiquetas de estilo predeterminadas**](#store-with-default-style-tags) está marcada para el objeto, el uso de estos comandos provocará una modificación de las etiquetas guardadas con cada objeto.
+
+:::
+
+Tenga en cuenta también que sólo las propiedades por defecto son afectadas por estos comandos (así como las propiedades guardadas por medio de las etiquetas predeterminadas). Las etiquetas de estilo personalizadas se mantienen tal y como están. Por ejemplo, se da un área de estilo múltiple donde se guardaron las etiquetas predeterminadas:
+
+![](../assets/en/FormObjects/multistyle-ex1.png)
+
+El texto sin formato del área es el siguiente:
+
+```html
+<span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
+```
+
+Si ejecuta el siguiente código:
+
+```4d
+OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
+```
+
+El color rojo permanece:
+
+![](../assets/en/FormObjects/multistyle-ex2.png)
+
+y el código es:
+
+```html
+<span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
+```
+
+Se trata de los siguientes comandos:
+
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+
+En el contexto de las áreas multiestilo, estos comandos sólo deben utilizarse para definir estilos por defecto. To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+
+#### Get edited text
+
+Cuando se utiliza con un área de texto enriquecido, el comando [`Get edited text`](../commands/get-edited-text) devuelve el texto del área actual, incluidas las etiquetas de estilo.
+
+Para recuperar el texto "sin formato" (texto sin etiquetas) que se está editando, debe utilizar el comando [`ST Get plain text`](../commands/st-get-plain-text):
+
+```4d
+ST Get plain text(Get edited text)
+```
+
+#### Consulta y orden por comandos
+
+Las consultas y ordenaciones realizadas entre objetos con varios estilos tienen en cuenta las etiquetas de estilo guardadas en el objeto. Si se ha modificado el estilo de una palabra, la búsqueda de esa palabra no dará resultado.
+
+Para poder realizar búsquedas y ordenaciones válidas, debe utilizar el comando [`ST Get plain text`](../commands/st-get-plain-text). Por ejemplo:
+
+```4d
+QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
+```
 
 ---
 

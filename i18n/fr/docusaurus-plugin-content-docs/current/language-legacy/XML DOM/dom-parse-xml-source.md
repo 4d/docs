@@ -5,7 +5,7 @@ slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *nomFichier* {; *validation* {; *dtd* }} ) : Text<br/>**DOM Parse XML source** ( *nomFichier* {; *validation* {; *schéma* }} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *nomFichier* : Text {; *validation* : Boolean {; *dtd* : Text }} ) : Text<br/>**DOM Parse XML source** ( *nomFichier* : Text {; *validation* : Boolean {; *schéma* : Text }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
 <div class="no-index">
 

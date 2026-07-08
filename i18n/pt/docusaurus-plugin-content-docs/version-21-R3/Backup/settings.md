@@ -51,7 +51,7 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
   - o arquivo de histórico atual da aplicação (se houver),
   - a pasta `Settings` completa localizada [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) (se existir), ou seja, os *parâmetros usuário para os dados*.
-- **Estructura**: carpetas y archivos proyecto de la aplicación. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada [no mesmo nível que a pasta Project](../Project/architecture.md#settings-user), ou seja, *os parâmetros usuário*, é backup automaticamente.
+- **Estructura**: carpetas y archivos proyecto de la aplicación. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
   - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
@@ -68,11 +68,11 @@ Para modificar o local onde esses arquivos são armazenados, clique no botão **
 
 ### Gestão do arquivo de histórico
 
-A opção **Utilizar arquivo de histórico**, quando estiver marcada, indica que a aplicação utiliza um arquivo de histórico. O nome do caminho do arquivo de histórico do arquivo de dados atual é especificado abaixo da opção. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. Para obter mais informações sobre o arquivo de histórico, consulte [log file](log.md)
+A opção **Utilizar arquivo de histórico**, quando estiver marcada, indica que a aplicação utiliza um arquivo de histórico. O nome do caminho do arquivo de histórico do arquivo de dados atual é especificado abaixo da opção. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico.
 
 Por padrão, qualquer projeto criado com o 4D utiliza um arquivo de log (opção **Use Log File** marcada na página **General Page** das **Preferences**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar essa opção para o arquivo de dados usado no momento, uma mensagem de aviso informará ser necessário fazer um backup. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
+> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 
 ## Backup e Restauração
 
@@ -88,7 +88,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar o tempo da máquina para o backup das aplicações usadas principalmente para fins de visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
@@ -107,7 +107,7 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 Essas opções se aplicam aos arquivos de cópia de segurança principais e aos arquivos de cópia de segurança do histórico.
 
 - **Tamanho do Segmento (Mb)**
-  4D permite que você segmente arquivos, ou seja, para cortá-lo em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. <strong x-id="1">Segment Size (Mb)</strong> 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.).
+  4D permite que você segmente arquivos, ou seja, para cortá-lo em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. Cada segmento é chamado MyApplication[xxxx-yyyy].4BK, em que xxxx é o número do backup e yyyy é o número do segmento. Por exemplo, os três segmentos do backup do MyApplication são chamados MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK e MyApplication[0006-0003].4BK.
   O menu **Tamanho do Segmento** é uma caixa de combinação que permite que você defina o tamanho em MB para cada segmento do backup. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se você passar 0, nenhum segmento ocorre (isso é o equivalente a passar **Nenhum**).
 
 - **Taxa de Compressão**

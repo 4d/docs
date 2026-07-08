@@ -52,7 +52,7 @@ title: 値の範囲
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md) - [入力](input_overview.md)
 
 ---
 
@@ -71,4 +71,4 @@ title: 値の範囲
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md) - [入力](input_overview.md)

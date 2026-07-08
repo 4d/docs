@@ -45,7 +45,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -158,6 +158,14 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### Ver también
+
+[`.removeFlags()`](#removeflags)
+
+#### Ver también
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -1148,7 +1156,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 #### Resultado
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` devuelve un `BLOB` que se puede archivar en una base de datos o convertir en un [objeto `Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
 #### Ejemplo
 
@@ -1294,7 +1302,7 @@ Para mover todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contiene el objeto IMAPNotifier asociado al transportador<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 Véase [IMAPNotifier](./IMAPNotifierClass.md).
 
@@ -1458,6 +1466,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
+
+#### Ver también
+
+[`.addFlags()`](#addflags)
 
 <!-- END REF -->
 

@@ -5,7 +5,7 @@ title: EntitySelection
 
 Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](../commands/create-entity-selection.md).
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby).
 
 ### Resumo
 
@@ -305,7 +305,7 @@ $sellist2:=$sellist2.add($sellist1)
 A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina a seleção de entidades com um parâmetro *entity* ou *entitySelection* usando o operador lógico AND<!-- END REF -->; ela retorna uma nova seleção de entidades não ordenada que contém apenas as entidades referenciadas na seleção de entidades e no parâmetro.
 
 - Se você passar *entidade* como parâmetro, você combina essa entidade com a seleção de entidade. Se a entidade pertencer à entity selection, se devolve uma nova entity selection que só contém a entidade. Senão, uma seleção de entidades vazia é retornada.
-- Se você passar *entitySeletion* como parâmetro, combinará as duas seleções da entidade. Uma nova seleção de entidade que contenha só as entidades que são referenciadas em ambas as seleções sejam retornadas. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
+- Se você passar *entitySeletion* como parâmetro, combinará as duas seleções da entidade. Se a entidade pertencer à selecção de entidades, é devolvida uma nova referência à selecção de entidades. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
 
 > Para mais informações, por favor consulte [Seleções de entidades ordenadas vs não ordenadas](ORDA/dsMapping.md#seleção-de-entidades-ordenadas-ou-não-ordenadas). A seleção resultante é sempre desordenada.
 
@@ -1650,7 +1650,7 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 
-> Valores null são avaliados como menor que outros valores.
+> Um resultado nullé sempre o menor valor.
 
 Se você passar um caminho de atributo inválido em *pathString* ou *pathObject*, a função retornará uma seleção de entidade vazia.
 
@@ -1717,7 +1717,7 @@ Você pode usar um parâmetro *formulaString* ou *formulaObj*:
 
 O *formulaString* ou *formulaObj* é executado para cada entidade da seleção de entidade e seu resultado é usado para definir a posição da entidade na seleção de entidade retornada. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
 
-> Um resultado nullé sempre o menor valor.
+> Valores null são avaliados como menor que outros valores.
 
 Como padrão, se omitir o parâmetro *sortOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente, você pode passar um dos seguintes valores no parâmetro *sortOrder*:
 
@@ -2217,7 +2217,7 @@ $sum:=$sel.sum("salary")
 
 A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->cria e retorna uma coleção em que cada elemento é um objeto que contém um conjunto de propriedades e valores <!-- END REF -->correspondentes aos nomes e valores dos atributos da seleção da entidade.
 
-Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "\*", todos os atributos são extraídos. Atributos com propriedade [kind](DataClassClass.md#attributename) como "relatedEntity" são extraídos com a forma simples: um objeto com a propriedade \_\_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
+Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "\*", todos os atributos são extraídos. Atributos com propriedade [kind](DataClassClass.md#attributename) como "relatedEntity" são extraídos com a forma simples: um objeto com a propriedade \_\_KEY (chave primária). Os atributos com <a href="DataClassClass.md#attributename">tipo</a> propriedade como "relatedEntity" são extraídos com a forma simples: um objecto com propriedade \_KEY (chave primária).
 
 Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de filtro. Pode usar um destes dois filtros:
 
@@ -2512,7 +2512,7 @@ Retorna:
 
 #### Exemplo 3
 
-Exemplo com extracção de algumas propriedades de uma relatedEntity:
+Exemplo com extracção de algumas propriedades de <code>relatedEntities</code>:
 
 ```4d
 var $employeesCollection : Collection

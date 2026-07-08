@@ -113,8 +113,12 @@ Si se ejecuta el siguiente código:
 
 El documento resultante contendrá:
 
-```RAW
-  //%attributes = {"lang":"en"} comentario añadido y reservado por 4DCase of    : (Form event code=On Load)        ALL RECORDS([Customer])End case
+```txt
+  //%attributes = {"lang":"en"} comentario añadido y reservado por 4D
+Case of
+    : (Form event code=On Load)
+        ALL RECORDS([Customer])
+End case
 ```
 
 Si se ejecuta el siguiente código:
@@ -129,8 +133,11 @@ Si se ejecuta el siguiente código:
 
 El documento resultante contendrá:
 
-```RAW
-  //%attributes = {"lang":"en"} comentario añadido y reservado por 4DCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
+```txt
+  //%attributes = {"lang":"en"} comentario añadido y reservado por 4D
+Case of
+    : (Form event code:C388=On Load:K2:1)
+        ALL RECORDS:C47([Customer:1])µEnd case
 ```
 
 ## Ver también 

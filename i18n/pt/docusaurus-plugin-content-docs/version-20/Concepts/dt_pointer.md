@@ -202,8 +202,10 @@ Pode passar um ponteiro como parâmetro para um método. Dentro do método, voc�
 ```4d
   //takeTwo project method
   //$changeUp – Pointer para um campo de string ou variável. Alterar isto para maiúsculas.
-  Alterar isto para maiúsculas. Mudar isto para minúsculas.
- Mudar isto para minúsculas.
+  //$changeLow – Pointer para um campo de string ou variável. Mudar isto para minúsculas.
+  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
+  $changeUp->:=Uppercase($changeUp->)
+  $changeLow->:=Lowercase($changeLow->)
 ```
 
 A linha seguinte utiliza o método `takeTwo` para alterar um campo para caracteres maiúsculos e para alterar uma variável para caracteres minúsculos:

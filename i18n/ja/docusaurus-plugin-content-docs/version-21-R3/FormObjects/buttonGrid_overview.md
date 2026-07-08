@@ -25,7 +25,7 @@ title: ボタングリッド
 
 ### ページ指定アクション
 
-ボタングリッドにページ指定用の `gotoPage` [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html)を割り当てることができます。 この標準アクションを設定すると、4D はボタングリッドで選択されたボタンの番号に相当するフォームページを自動的に表示します。 たとえばグリッド上の 10 番目のボタンを選択すると、4D は現在のフォームの 10 ページ目を表示します (存在する場合)。
+ボタングリッドにページ指定用の `gotoPage` [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html)を割り当てることができます。 この標準アクションを設定すると、4D はボタングリッドで選択されたボタンの番号に相当するフォームページを自動的に表示します。 たとえばグリッド上の 10 番目のボタンを選択すると、4D は現在のフォームの 10 ページ目を表示します (存在する場合)。 この標準アクションを設定すると、4D はボタングリッドで選択されたボタンの番号に相当するフォームページを自動的に表示します。 たとえばグリッド上の 10 番目のボタンを選択すると、4D は現在のフォームの 10 ページ目を表示します (存在する場合)。
 
 ## プロパティ一覧
 
@@ -48,6 +48,6 @@ title: ボタングリッド
 [ヘルプTips](properties_Help.md#ヘルプtips) -
 [標準アクション](properties_Action.md#標準アクション)
 
-## Supported Events
+## サポートされるイベント
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)

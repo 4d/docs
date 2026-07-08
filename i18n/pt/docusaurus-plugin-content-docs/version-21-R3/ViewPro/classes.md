@@ -13,7 +13,7 @@ As seguintes classes podem ser usadas no 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-A propriedade `.color` é a <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) da borda<!-- END REF -->. Predefinição = black.
+A propriedade `.color` é a <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) da borda<!-- END REF -->. .
 
 ### .style
 
@@ -21,7 +21,7 @@ A propriedade `.color` é a <!-- REF #LineBorder.color.Summary -->[color](config
 
 **.style** : Integer<!-- END REF -->
 
-A propriedade `.style` é a <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) da borda<!-- END REF -->. Predefinição = vazio.
+A propriedade `.style` é a <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) da borda<!-- END REF -->. .
 
 ## TableColumn
 
@@ -57,7 +57,7 @@ A propriedade `.name` <!-- REF #TableColumn.name.Summary -->contém o nome da co
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Padrão = True
+The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. .
 
 ### .bandColumns
 
@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary --> indica se deve exibir um estilo de coluna alternativo<!-- END REF -->. Padrão = False
+A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary --> indica se deve exibir um estilo de coluna alternativo<!-- END REF -->. .
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary --> indi
 
 **.bandRows** : Boolean<!-- END REF -->
 
-A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary --> indica se deve exibir um estilo de linha alternativo<!-- END REF -->. Padrão = True
+A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary --> indica se deve exibir um estilo de linha alternativo<!-- END REF -->. .
 
 ### .highlightLastColumn
 
@@ -81,7 +81,7 @@ A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary --> indica se 
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary --> indica se deve destacar a última coluna<!-- END REF -->. Padrão = False
+A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary --> indica se deve destacar a última coluna<!-- END REF -->. .
 
 ### .highlightFirstColumn
 
@@ -89,7 +89,7 @@ A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser destacada<!-- END REF -->. Padrão = False
+A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser destacada<!-- END REF -->. .
 
 ### .showFooter
 
@@ -97,7 +97,7 @@ A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColum
 
 **.showFooter** : Boolean<!-- END REF -->
 
-A propriedade `.showFooter` <!-- REF #TableOptions.showFooter.Summary --> indica se deve exibir um pied de page<!-- END REF -->. Padrão = False
+A propriedade `.showFooter` <!-- REF #TableOptions.showFooter.Summary --> indica se deve exibir um pied de page<!-- END REF -->. .
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ A propriedade `.showFooter` <!-- REF #TableOptions.showFooter.Summary --> indica
 
 **.showHeader** : Boolean<!-- END REF -->
 
-A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica se deve exibir um cabeçalho<!-- END REF -->. Padrão = True
+A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica se deve exibir um cabeçalho<!-- END REF -->. .
 
 ### .showResizeHandle
 
@@ -113,7 +113,7 @@ A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica 
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-A propriedade `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica se deve exibir o manipulador de redimensionamento para tabelas que não têm *source*<!-- END REF -->. Padrão = False
+A propriedade `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica se deve exibir o manipulador de redimensionamento para tabelas que não têm *source*<!-- END REF -->. .
 
 ### .tableColumns
 
@@ -139,7 +139,7 @@ Consulte los[ temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Padrão = False
+The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. .
 
 ## TableStyle
 

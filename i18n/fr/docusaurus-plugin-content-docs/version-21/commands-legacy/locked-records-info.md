@@ -84,7 +84,25 @@ Si deux enregistrements sont verrouillés dans la table \[Table\], l'objet suiva
 Si le code est exécuté sur 4D Server et que le verrouillage est causé par un poste client distant, l'objet suivant est retourné dans $vOlocked :
 
 ```json
-{    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
+{
+    "records": [
+        {
+            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",
+            "contextAttributes": {
+                "task_id": 2,
+                "user_name": "achim",
+                "user4d_id": 1,
+                "host_name": "achim-pcwin",
+                "task_name": "P_RandomLock",
+                "is_remote_context": true,
+                "client_uid": "0696E66F6CD731468E6XXX581A87554A",
+                "client_version": -268364752
+            },
+            "recordNumber": 1
+        }
+    ]
+}
+
 ```
 
 ## Voir aussi 

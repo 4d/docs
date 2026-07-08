@@ -345,7 +345,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->A função `.sign()`<
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                            |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                                                     |
-| encoding          | text    | Representação a ser usada para a assinatura do resultado. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                     |
+| encoding          | text    | Representação a ser usada para a assinatura do resultado. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                               |
 
 #### *Resultados*
 
@@ -428,7 +428,7 @@ A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assina
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                     |
-| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                             |
+| encoding    | text    | Representação a ser usada para a assinatura do resultado. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                               |
 
 #### *Resultados*
 

@@ -5,7 +5,7 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *laTable* )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *laTable* : Table )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 <div class="no-index">
 

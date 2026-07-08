@@ -68,7 +68,7 @@ Vous pouvez modifier le code du composant dans les conditions suivantes :
 
 - le projet hôte est exécuté en interprété,
 - le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
-- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'on,t pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-dependency)).
+- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'on,t pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
 

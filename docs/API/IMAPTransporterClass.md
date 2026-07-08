@@ -46,7 +46,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
@@ -157,6 +157,16 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### See also
+
+[`.removeFlags()`](#removeflags) 
+
+
+#### See also
+
+[`.removeFlags()`](#removeflags) 
+
 
 <!-- END REF -->
 
@@ -1432,7 +1442,13 @@ $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
+#### See also
+
+[`.addFlags()`](#addflags) 
+
 <!-- END REF -->
+
+
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()

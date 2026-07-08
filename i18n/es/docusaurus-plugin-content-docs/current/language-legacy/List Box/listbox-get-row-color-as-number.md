@@ -5,7 +5,7 @@ slug: /commands/listbox-get-row-color-as-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *objeto* : Text ; *fila* : Integer {; *tipoColor* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *objeto* : Field, Variable ; *fila* : Integer {; *tipoColor* : Integer} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *objeto* : Text ; *fila* : Integer {; *tipoColor* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *objeto* : Variable ; *fila* : Integer {; *tipoColor* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
 <div class="no-index">
 

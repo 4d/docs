@@ -64,7 +64,7 @@ Si 4D donne automatiquement la priorité à la résolution la plus élevée, il 
 
 *(\*) Généralement, macOS = 72 dpi, Windows = 96 dpi*
 
-## Dark mode pictures
+## Images en mode sombre
 
 Vous pouvez définir des images et des icônes spécifiques qui seront utilisées à la place des images standard lorsque [les formulaires utilisent le mode sombre](properties_FormProperties.md#color-scheme).
 
@@ -79,7 +79,7 @@ Au moment de l'exécution, 4D charge automatiquement l'image en mode clair ou so
 
 :::note
 
-The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+Le mode sombre n'est pas disponible sur Windows avec le [Thème classique] (../settings/interface.md#use-fluent-ui-on-windows).
 
 :::
 

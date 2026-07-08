@@ -5,7 +5,7 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *famillePolice* {; *stylePolice*} ) : any<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *famillePolice* : Text {; *stylePolice* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 <div class="no-index">
 

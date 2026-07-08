@@ -28,7 +28,21 @@ title: リストボックスのヘッダーとフッター
 
 ### ヘッダー特有のプロパティ
 
-[Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[タイトル](properties_Object.md#タイトル) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[パス名](properties_TextAndPicture.md#ピクチャーパス名) -
+[アイコンの場所](properties_TextAndPicture.md#アイコンの場所) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[フォント](properties_Text.md#フォント) -
+[太字](properties_Text.md#太字) -
+[イタリック](properties_Text.md#イタリック) -
+[下線](properties_Text.md#下線) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[横揃え](properties_Text.md#横揃え) -
+[縦揃え](properties_Text.md#縦揃え) -
+[ヘルプTips](properties_Help.md#ヘルプtips)
 
 ## フッター
 
@@ -46,5 +60,26 @@ title: リストボックスのヘッダーとフッター
 
 ### フッター特有のプロパティ
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[式の型](properties_Object.md#式の型式タイプ) -
+[変数の計算](properties_Object.md#変数の計算) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[文字フォーマット](properties_Display.md#文字フォーマット) -
+[数値フォーマット](properties_Display.md#数値フォーマット) -
+[日付フォーマット](properties_Display.md#日付フォーマット) -
+[時間フォーマット](properties_Display.md#時間フォーマット) -
+[ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) -
+[ワードラップ](properties_Display.md#ワードラップ) -
+[エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) -
+[背景色](properties_BackgroundAndBorder.md#背景色塗りカラー) -
+[フォント](properties_Text.md#フォント) -
+[太字](properties_Text.md#太字) -
+[イタリック](properties_Text.md#イタリック) -
+[下線](properties_Text.md#下線) -
+[フォントカラー](properties_Text.md#フォントカラー) -
+[横揃え](properties_Text.md#横揃え) -
+[縦揃え](properties_Text.md#縦揃え) -
+[ヘルプTips](properties_Help.md#ヘルプtips)
 

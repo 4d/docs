@@ -30,21 +30,21 @@ title: リストボックス
 
 リストボックスオブジェクトは、以下4つの項目で構成されます:
 
-*   the [list box object](./listbox-object.md) in its entirety,
-*   [columns](./listbox-column.md),
-*   column [headers](./listbox-header-footer.md#headers), and
-*   column [footers](./listbox-header-footer.md#footers).
+*   [リストボックスオブジェクト](./listbox-object.md) の全体
+*   [カラム](./listbox-column.md)
+*   カラムの [ヘッダー](./listbox-header-footer.md#headers)
+*   カラムの [フッター](./listbox-header-footer.md#footers)
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
-それぞれが独自のオブジェクト名や固有のプロパティを持ちます。 たとえば、列の数や、交互に使用する行の背景色などはリストボックスオブジェクトのプロパティで指定し、各列の幅は列プロパティ、ヘッダーのフォントはヘッダープロパティで指定します。
+それぞれが独自のオブジェクト名や固有のプロパティを持ちます。 たとえば、カラムの数や、交互に使用する行の背景色などはリストボックスオブジェクトのプロパティで指定し、各列の幅はカラムプロパティ、ヘッダーのフォントはヘッダープロパティで指定します。
 
 リストボックスオブジェクトやリストボックスの各列に対して、オブジェクトメソッドを設定することができます。 オブジェクトメソッドの呼び出しは、次の順でおこなわれます:
 
 1. 各列のオブジェクトメソッド
 2. リストボックスのオブジェクトメソッド
 
-The column object method gets events that occur in its [header](./listbox-header-footer.md#headers) and [footer](./listbox-header-footer.md#footers).
+[ヘッダー](./listbox-header-footer.md#ヘッダー) と [フッター](./listbox-header-footer.md#フッター) で発生したイベントは、その列のオブジェクトメソッドが受け取ります。
 
 ### リストボックスの型
 
@@ -59,7 +59,7 @@ The column object method gets events that occur in its [header](./listbox-header
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細な情報については、*4D ランゲージリファレンス* 内の[リストボックスコマンド一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.ja.html) を参照して下さい。
 
 
 ## 入力の管理
@@ -302,8 +302,8 @@ End if
 
 リストボックスの背景色、フォントカラー、そしてフォントスタイルを設定するためにはいくつかの方法があります:
 
-* at the level of the [list box object properties](./listbox-object.md),
-* at the level of the [column properties](./listbox-column.md),
+* [リストボックスオブジェクト](./listbox-object.md) のプロパティリストを使用
+* [カラム](./listbox-column.md) のプロパティリストを使用
 * リストボックスまたは列ごとの [配列や式](#配列と式の使用) プロパティを使用
 * セルごとのテキストにて定義 ([マルチスタイルテキスト](properties_Text.md#マルチスタイル) の場合)
 
@@ -389,7 +389,7 @@ End if
 
 * フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 * フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-* Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-HIERARCHY.301-7487634.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-GET-HIERARCHY.301-7487597.en.html) commands, described in the *4D Language Reference* manual.
+* *4D ランゲージリファレンス* マニュアルにある、[LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-HIERARCHY.301-7487634.ja.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-GET-HIERARCHY.301-7487597.ja.html) コマンドを使用する。
 
 #### "階層リストボックス" プロパティによる階層化
 

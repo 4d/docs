@@ -32,6 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LDAP LOGIN.Summary-->**LDAP LOGIN** コマンドは*url* 引数で指定したLDAPサーバーに対し、*login* 引数と *password* 引数に渡された識別子をもって読み込み専用の接続を開きます。<!-- END REF-->サーバーに受け入れられた場合、[LDAP LOGOUT](../commands/ldap-logout) コマンドが実行されるまで(あるいはプロセスが閉じられるまで)、カレントプロセスにおいてその後に実行される全てのLDAP検索にはこの接続が使用されます。
 
+:::info
+
+LDAP (*Lightweight Directory Access Protocol*) は、分散情報サービスへのアクセスおよび維持管理のためのオープンスタンダードです。詳細については、[LDAPに関するWikipediaのページ](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) または [OpenLDAP Software](http://www.openldap.org/) のメインページを参照してください。
+
+:::
+
 *url* 引数には、スキームとポート(デフォルトでは389)を含め、接続するLDAPサーバーへの完全なURLを渡します。この引数は[rfc2255](https://www.ietf.org/rfc/rfc2255.txt)に準拠している必要があります。  
 *url* 引数に対し、"ldaps"で始まる、特定のポート番号(例: "ldaps://svr.ldap.acme.com:1389" 等)を使用した場合、TLS経由の安全な接続を開くことができます。LDAPサーバーは、(少なくともMicrosoft Active Directoryに対する)SSL証明書を持っている必要があります。パスワードが通常のテキストとして送信される場合にはTLS接続の使用が強く推奨 されます(以下を参照して下さい)。
 
@@ -40,9 +46,9 @@ displayed_sidebar: docs
 *login* 引数には、LDAPサーバー上のユーザーアカウントを渡し、*password* 引数にはパスワードを渡します。デフォルトで、*login* 引数にはLDAPサーバーの設定に応じて、以下の文字列のどれかを渡すことができます:
 
 * 識別名(DN)。例えば、"CN=John Smith,OU=users,DC=example,DC=com"
-* ユーザー名(CN)。例えば、"CN=John Smith"
+* ユーザー名(CN、*Common Name*)。例えば、"CN=John Smith"
 * メールアドレス。例えば、"johnsmith@4d.fr"
-* SAM-アカウント名。例えば、"jsmith"
+* SAM-アカウント名 (*Security Account Manager*、Active Directory のログオン名)。例えば、"jsmith"
 
 *login* 引数で受け入れ可能な値は、*digest* 引数で定義された送信モードと関係しているという点に注意して下さい。例えば、MS Active Directoryのデフォルトの設定においては、以下のようになっています:
 

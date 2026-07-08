@@ -41,7 +41,7 @@ Les erreurs générées à l'aide de la commande **throw** sont gérées par le 
 
 La commande prend en charge trois syntaxes :
 
-### **throw(errorCode{; description})**
+### throw(errorCode{; description})
 
 Elle spécifie le code d'erreur et un texte de description facultatif ; l'erreur est immédiatement déclenchée.   
 Si aucune description n'est fournie, elle est remplie par :
@@ -64,7 +64,7 @@ Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last 
 
 **Note :** Il est possible d'appeler la commande plusieurs fois dans la même méthode de projet pour générer plusieurs erreurs. Vous pouvez utiliser l'option **deferred** pour envoyer toutes les erreurs en une seule fois.
 
-### **throw** 
+### throw
 
 Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](../commands/on-err-call) callback.
 
@@ -116,6 +116,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## Voir aussi 
 
 [ASSERT](../commands/assert)  
+[defer](../commands/defer)  
 [Last errors](../commands/last-errors)  
 [ON ERR CALL](../commands/on-err-call)  
 

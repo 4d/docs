@@ -5,7 +5,7 @@ slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resNum* ; *resDonnées* {; *resFichier*} )<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* : Text ; *resNum* : Integer ; *resDonnées* : Blob {; *resFichier* : Time} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
 <div class="no-index">
 

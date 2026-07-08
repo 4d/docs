@@ -10,7 +10,7 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 - [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Générer, partager et utiliser des passcodes à usage unique (OTP) pour les sessions web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
+- [Oubliez les wrappers côté serveur, utilisez les sessions 4D à partir du client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 
@@ -44,6 +44,7 @@ Tous les types de session peuvent gérer des privilèges, mais seul le code exé
 | [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.quotas.Syntax -->](#quotas)<br/><!-- INCLUDE #SessionClass.quotas.Summary -->                                |
 | [<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
@@ -498,9 +499,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Release | Modifications |
-| ------- | ------------- |
-| 20 R5   | Ajout         |
+| Release | Modifications                   |
+| ------- | ------------------------------- |
+| 21 R4   | New *unreachableSince* property |
+| 20 R5   | Ajout                           |
 
 </details>
 
@@ -528,12 +530,15 @@ L'objet `.info` contient les propriétés suivantes:
 | state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                                                      |
 | ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                                                           |
 | persistentID     | Text          | Sessions distantes server/clients : ID persistant de la session                                                                                                                                                                             |
+| unreachableSince | Integer       | Sessions distantes : Nombre de secondes depuis que le pair est injoignable. Sur 4D Server, cet attribut est accessible dans la propriété [`Process activity.sessions`](../commands/process-activity).       |
 
 :::note
 
 `.info` étant une propriété calculée, il est recommandé de l'appeler une fois et de la stocker dans une variable locale si vous souhaitez effectuer un traitement sur ses propriétés.
 
 :::
+
+Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
@@ -672,6 +677,58 @@ End if
 [`.demote()`](#demote)<br/>[`hasPrivilege()`](#hasprivilege)
 
 <!-- END REF -->
+
+<!-- REF SessionClass.quotas.Desc -->
+
+## .quotas
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 21 R4   | Ajout         |
+
+</details>
+
+<!-- REF #SessionClass.quotas.Syntax -->**.quotas** : 4D.QuotaManager<!-- END REF -->
+
+#### Description
+
+La propriété `.quotas` contient <!-- REF #SessionClass.quotas.Summary -->un objet `4D.QuotaManager` contenant les valeurs courantes et les valeurs définies pour les seuils du serveur concernant les requêtes REST dans la session en cours<!-- END REF -->. Les seuils du serveur permettent de réguler les requêtes adressées au serveur et contribuent à éviter une utilisation excessive des ressources (voir la classe [`4D.QuotaManager`](./QuotaManagerClass.md)).
+
+Cette propriété est en **lecture seule**.
+
+Les propriétés suivantes de l'objet `4D.QuotaManager` sont disponibles pour la session :
+
+| Propriété                                                                 |              | Type    | Modifiable | Description                                                                                                          |
+| ------------------------------------------------------------------------- | ------------ | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | oui        | Nombre maximal d'entity sets autorisé dans la mémoire du serveur. *Undefined* = aucun quota appliqué |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | oui        | Délai d'inactivité par défaut pour les entity sets en mémoire (en secondes)                       |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | oui        | Délai d'inactivité maximal pour les entity sets en mémoire (en secondes)                          |
+| currentValues                                                             |              | Object  | non        |                                                                                                                      |
+|                                                                           | nbEntitySets | Integer | non        | Nombre d'entity sets actuellement en mémoire. *Undefined* = aucun entity set en mémoire              |
+
+Lorsque vous modifiez une valeur, celle-ci est immédiatement prise en compte par le serveur (aucun redémarrage n'est nécessaire) et sera appliquée aux prochaines requêtes REST.
+
+:::tip Article(s) de blog sur le sujet
+
+[Assurez-vous que votre serveur REST fonctionne de manière optimale](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
+
+:::
+
+#### Exemple
+
+```4d
+   // Définir le nombre maximal d'entity sets en mémoire
+   // pour la session à 50
+Session.quotas.nbEntitySets := 50
+```
+
+<!-- END REF -->
+
+#### Voir également
+
+[Classe QuotaManager](./QuotaManagerClass.md)
 
 <!-- REF SessionClass.restore().Desc -->
 
@@ -855,7 +912,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette 
 
 En client/serveur, l'objet `.storage` de la session de l'utilisateur distant n'est **pas** le même sur le serveur et sur le client.
 
-Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
+Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
 
 :::tip
 

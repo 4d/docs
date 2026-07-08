@@ -5,7 +5,7 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *objeto* : Text ; *editavel* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *objeto* : Field, Variable ; *editavel* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *objeto* : Text ; *editavel* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *objeto* : Variable, Field, Table ; *editavel* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 <div class="no-index">
 

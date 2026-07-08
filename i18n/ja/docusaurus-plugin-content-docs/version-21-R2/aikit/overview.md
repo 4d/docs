@@ -41,7 +41,7 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
+`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
 
 また以下の例題も参照して下さい。
 
@@ -149,13 +149,13 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 #### 非同期コード
 
-リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。 戻り値のオブジェクトはコールバック関数内に受け取られます。
+リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。 戻り値のオブジェクトはコールバック関数内に受け取られます。 戻り値のオブジェクトはコールバック関数内に受け取られます。
 
 詳細については[例題の詳細なドキュメント](asynchronous-call.md) を参照して下さい。
 
 ## 著作権
 
 - 本ライブラリは、いかなる方法においてもOpenAI と提携、支援、あるいは公式な連携をしていません。
-- 「OpenAI」および関連するマークは、OpenAI, LLC の商標または登録商標です。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。
+- 「OpenAI」および関連するマークは、OpenAI, LLC の商標または登録商標です。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。
 - このプロジェクトはOpenAI のサービスへのインターフェースを提供するものにすぎず、OpenAIの技術、ブランド、知的財産の所有権を主張するものではありません。
 

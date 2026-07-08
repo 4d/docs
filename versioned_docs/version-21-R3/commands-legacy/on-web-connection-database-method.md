@@ -43,7 +43,7 @@ You must declare these parameters as shown below:
 ```4d
   // On Web Connection Database Method
  
-#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text)
+#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text)
  
   // Code for the method
 ```

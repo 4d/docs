@@ -5,7 +5,7 @@ slug: /commands/copy-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomSource* ; *nomDest* {; *nouvNom*} {; *} )<!-- END REF-->
+<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomSource* : Text ; *nomDest* : Text {; *nouvNom* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
 <div class="no-index">
 

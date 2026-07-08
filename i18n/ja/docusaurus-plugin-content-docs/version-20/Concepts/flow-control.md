@@ -60,6 +60,15 @@ title: 制御フロー
  End if
 ```
 
+しかしながら、この場合もっともエレガントなソリューションは、 [`&&` 短絡演算子](./operators.md#and-短絡演算子-) を使用し、以下のように書くことです:
+
+```4d
+If (MethodA && MethodB)
+   ...
+")
+ End if
+```
+
 上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
 
 > **注記:** [三項演算子](../dt_boolean.md#三項演算子) を使うことで、条件式を 1行で書くことができ、[If...Else](../cf_branching.md#ifelseend-if) 文を置き換えることもできます。
@@ -67,13 +76,9 @@ title: 制御フロー
 #### 例題
 
 ```4d
-  // ユーザーに名前の入力を求めます
- $Find:=Request("名前を入力してください")
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("名前が入力されませんでした")
- End if
+  For($vlElem;Size of array(anArray);1;-1)
+  // 各配列要素に対する処理 
+    anArray{$vlElem}:=...
  ")
  End if 
 ```
@@ -371,8 +376,8 @@ End for
 3. テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```4d
- For($vlElem;Size of array(anArray);1;-1)
-  // 各配列要素に対する処理 
+ For($vlElem;2;Size of array(anArray);2)
+  // 偶数要素 #2,#4...#2n に対する処理
     anArray{$vlElem}:=...
     End if
  End for 
@@ -474,7 +479,7 @@ End for
  End for
 ```
 
-`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 つまり、 `Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
+`While...End while` ループ と `Repeat...Until` ループで、同じ処理を実行する方法を調べてみましょう。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
 ```4d
  $i:=1 // カウンターの初期化
  While($i<=100) // 100回のループ
@@ -494,7 +499,7 @@ End for
 
 :::tip
 
-`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。  したがって、可能な限り `For...End for` ループの使用が推奨されます。
+`Until` 条件は各ループの終わりにテストされます。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 :::
 

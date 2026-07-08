@@ -5,7 +5,7 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* : ポインター, 文字 {; *} )<br/>**DELETE INDEX** ( *indexName* : ポインター, 文字 {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* : Pointer, Text {; *} )<br/>**DELETE INDEX** ( *indexName* : Pointer, Text {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 <div class="no-index">
 

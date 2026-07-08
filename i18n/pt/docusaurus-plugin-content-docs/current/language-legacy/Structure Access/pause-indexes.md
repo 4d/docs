@@ -5,7 +5,7 @@ slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTabela* )<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTabela* : Table )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
 <div class="no-index">
 

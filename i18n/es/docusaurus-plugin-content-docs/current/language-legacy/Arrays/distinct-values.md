@@ -5,7 +5,7 @@ slug: /commands/distinct-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *unCampo* ; *array* : Array {; *contArray* : Integer array} )<!-- END REF-->
+<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *unCampo* : Field ; *array* : Array {; *contArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
 <div class="no-index">
 

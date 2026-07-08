@@ -39,12 +39,12 @@ displayed_sidebar: docs
 
 En el parámetro *wpDoc*, pasa un documento 4D Write Pro.
 
-The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Hay dos tipos disponibles:
+El parámetro *styleSheetType* le permite designar el tipo de la hoja de estilo, *es decir* la parte del *wpDoc* que se verá afectada por la hoja de estilo. Hay dos tipos disponibles:
 
 - wk type character: aplica atributos de estilo a los caracteres.
-- wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
+- wk type paragraph: aplica los atributos de estilo a los párrafos (requerido si quiere crear las [hojas de estilo de lista jerárquica](#hierarchical-list-style-sheet)).
 
-Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. El nombre de la hoja de estilo debe cumplir las siguientes reglas: It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands.
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. El nombre de la hoja de estilo debe cumplir las siguientes reglas: También puede usarse con los comandos [WP Get style sheet](../commands/wp-get-style-sheet) y [WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet).
 
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
@@ -52,23 +52,23 @@ Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The sty
 - no debe empezar por "section", que está reservado
 - el "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
+Puede especificar los atributos de la hoja de estilo usando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) o la notación objeto (ver [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). Para consultar la lista de atributos disponibles, ver la sección [Atributos de las hojas de estilo](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
 **Notas**:
 
 - Una hoja de estilo sólo modifica la visualización de un carácter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
 - Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
 
-### Hierarchical list style sheet
+### Hoja de estilo de lista jerárquica
 
 If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
-El parámetro *listLevelCount* define el número total de niveles de la jerarquía. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
+El parámetro *listLevelCount* define el número total de niveles de la jerarquía. Cuando se especifica (valor ≥ 1), el comando crea automáticamente una hoja de estilo de nivel raíz y las hojas de estilo de nivel inferior correspondientes.
 
 Se aplican los siguientes valores predefinidos:
 
 - `wk list style type` se establece en `wk decimal`
-- `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
+- `wk list level index` se asigna automáticamente (1 para el nivel raíz, incrementado para los subniveles)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 - `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
 
@@ -105,15 +105,15 @@ var $mainList : Object
 
 $mainList:=WP New style sheet(wpArea; wk type paragraph; "MainList"; 3)
 
-// The command automatically creates:
-// - 1 root-level style sheet ("MainList")
-// - 2 sub-level style sheets ("MainList lvl 2" and "MainList lvl 3")
+// El comando crea automáticamente:
+// - 1 hoja de estilo de nivel raíz («MainList»)
+// - 2 hojas de estilo de nivel secundario («MainList lvl 2» y «MainList lvl 3»)
 
 ```
 
 Resultado:
 
-- The root style sheet has:
+- La hoja de estilo raíz tiene:
   - `wk list level index` = 1
   - `wk list level count` = 3
   - `wk list style type` = `wk decimal`

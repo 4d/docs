@@ -5,7 +5,7 @@ slug: /commands/longint-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; offset } )<br/>**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; *} )<!-- END REF-->
+<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *entierLong* : Integer ; *blob* : Blob {; *ordreOctet* : Integer}{; *offset* : Variable} )<br/>**LONGINT TO BLOB** ( *entierLong* : Integer ; *blob* : Blob {; *ordreOctet* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 <div class="no-index">
 

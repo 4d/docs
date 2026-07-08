@@ -44,8 +44,8 @@ L'objet renvoyé est la propriété [**.storage**](../API/SessionClass.md#storag
 Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'objet storage d'une session spécifique :
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
+  //Définir l'espace de stockage pour une session
+  //La propriété "Exécuter sur le serveur" de la méthode est définie
  
  #DECLARE($id : Text; $text : Text)
  var $obj : Object

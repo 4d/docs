@@ -5,8 +5,7 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( àChercher ; *laChaîne* {; *début* {; *longTrouvée*}}{; *} ) -> Résultat <br/>
-**Position** ( àChercher ; *laChaîne* ; *début* ; *longTrouvée* ; *options* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *àChercher* : Text ; *laChaîne* : Text {; *début* : Integer {; *longTrouvée* : Integer}}{; *} ) -> Integer<br/>**Position** ( *àChercher* : Text ; *laChaîne* : Text; *début* : Integer ; *longTrouvée* : Integer ; *options* : Integer ) -> Integer<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 <div class="no-index">
 

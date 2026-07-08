@@ -79,6 +79,12 @@ Each process is identified by an icon as well as a type. The color and form of t
 
 > Each main 4D client process and its "twinned" 4D client base process are grouped together when the **Display processes by groups** option is checked.
 
+:::note
+
+Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html). 
+
+:::
+
 
 ## Administration Buttons
 

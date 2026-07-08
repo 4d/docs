@@ -5,7 +5,7 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomsObjets* {; *numPage* }<br/>*FORM GET ENTRY ORDER** ( *nomsObjets* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomsObjets* : Text array {; *numPage* : Integer } )<br/>**FORM GET ENTRY ORDER** ( *nomsObjets* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *fieldPtr* : ポインター, 倍長整数 ) : Text<br/>**Field name** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *fieldPtr* : Pointer ) : Text<br/>**Field name** ( *tableNum* : Integer ; *fieldNum* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 <div class="no-index">
 

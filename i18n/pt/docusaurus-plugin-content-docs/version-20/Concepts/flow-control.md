@@ -59,6 +59,14 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo s
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
 > **Nota:** o [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If.. Else.
@@ -67,14 +75,11 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
 ```4d
   // Ask the user to enter a name
- $Find:=Request(Type a name)
+ $Find:=Request("Type a name")
  If(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if
- End if
- End if
  End if 
 ```
 
@@ -331,9 +336,11 @@ Repeat
     {break}  
     {continue} Until(Boolean_Expression)
 ```
-A outra diferença com um loop <code>Repeat... A outra diferença com um loop `Repeat...</p>
+A outra diferença com um loop <code>Repeat... Until` é que o loop continua até que a expressão booleana seja TRUE.
 
-<p spaces-before="0">A outra diferença com um loop <code>Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
+Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
+
+A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
 Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 
@@ -396,7 +403,7 @@ Os comandos `break` e `continue` são [descritos abaixo](#break-and-continue).
 3. O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
- For($vlChar;1;Length(vtSomeText))
+ For($vlChar;Length(vtSomeText);1;-1)
   //Faz algo com o caractere se for uma TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
@@ -445,10 +452,10 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
 7. O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
- For($vlChar;Length(vtSomeText);1;-1)
-  //Faz algo com o caractere se for uma TAB
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-  //...
+ For (vCounter;1;100)
+    If ($tab{vCounter}="") //se uma condição se tornar verdadeira
+        break //fim do ciclo for
+    End if
     End if
  End for
 ```

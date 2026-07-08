@@ -5,7 +5,7 @@ slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* {; *cible*} )<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *cible* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
 <div class="no-index">
 

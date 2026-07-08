@@ -17,7 +17,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -41,7 +41,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
 
 #### コマンド
 
@@ -71,7 +71,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -121,9 +121,9 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称              | データタイプ     | とりうる値                                                                                                                  |
-| --------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| strokeDashArray | 数値配列または文字列 | 例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
+| 名称              | データタイプ     | とりうる値                                                                                                                                      |
+| --------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| strokeDashArray | 数値配列または文字列 | 例:  例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
 
 #### 対象オブジェクト
 
@@ -208,7 +208,7 @@ title: 背景色と境界線
 
 リストボックスまたはリストボックス列の各行にカスタムの背景色を適用するのに使用する配列名です。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。 同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
 
@@ -219,7 +219,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
+次に、負の値を持つセルの色を濃いオレンジで示したい場合、 次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
@@ -230,7 +230,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) および [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) コマンドを使用することでも同じ結果を得ることができます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。この場合、これらはコマンドによって動的に作成されます。
+[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) および [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) コマンドを使用することでも同じ結果を得ることができます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。この場合、これらはコマンドによって動的に作成されます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。 この場合、これらはコマンドによって動的に作成されます。
 
 #### JSON 文法
 
@@ -240,7 +240,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 

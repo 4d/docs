@@ -5,7 +5,7 @@ slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objeto* : Object, Object ; *propiedad* : Text ; *valor* : Expression {; ...(*propiedad* : Text, *valor* : Expression)} )<!-- END REF-->
+<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objeto* : Object ; *propiedad* : Text ; *valor* : Expression {; ...(*propiedad* : Text ; *valor* : Expression)} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
 <div class="no-index">
 

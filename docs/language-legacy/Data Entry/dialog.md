@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
+<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional), in the last opened window<!-- END REF-->.
 
 This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands/add-record) or [MODIFY RECORD](../commands/modify-record), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
 
-This command is typically called along with the [Open form window](../commands/open-form-window) to display sophisticated forms, as shown in the following example: 
+This command must be called along with the [Open form window](../commands/open-form-window) to display sophisticated forms, as shown in the following example: 
 
 ![](../../assets/en/commands/pict3541609.en.png)
 
@@ -69,7 +69,7 @@ To fill the "form data" object, you have two possibilities:
 
 :::
 
-The dialog is closed by the user either with an "accept" action (triggered by the ak accept standard action, the Enter key, or the [ACCEPT](../commands/accept) command), or with a "cancel" action (triggered by the ak cancel standard action, the Escape key, or the [CANCEL](../commands/cancel) command). An accept action will set the OK system variable to 1, while a cancel action will set OK to 0\. 
+The dialog is closed by the user either with an "accept" action (triggered by the `ak accept` standard action, the Enter key, or the [ACCEPT](../commands/accept) command), or with a "cancel" action (triggered by the `ak cancel` standard action, the Escape key, or the [CANCEL](../commands/cancel) command). An accept action will set the OK [system variable](../../Concepts/variables.md#system-variables) to 1, while a cancel action will set OK to 0. 
 
 Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](../commands/save-record) command to save any data that has been modified. 
 
@@ -78,7 +78,7 @@ This form then reacts “normally” to user actions and is closed using a stand
 
 **Notes:** 
 
-* You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands/call-form) command to establish communication between the forms.
+* You can combine the use of the **DIALOG**(form;\*) syntax with the [`CALL FORM`](../commands/call-form) command to establish communication between the forms.
 * You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
 * When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands/cancel) or [ACCEPT](../commands/accept) command. You do not have to manage the closing of the window itself.
 

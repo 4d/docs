@@ -5,7 +5,7 @@ slug: /commands/on-event-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *méthodeEvén* {; *nomProcess*} )<!-- END REF-->
+<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *méthodeEvén* : Text {; *nomProcess* : Text} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* ;} *nombre* )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* : Table ;} *nombre* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 <div class="no-index">
 

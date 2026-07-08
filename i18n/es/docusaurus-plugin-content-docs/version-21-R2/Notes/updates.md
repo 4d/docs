@@ -15,7 +15,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 - Ahora puede crear y abrir Páginas Qodly desde el [Explorador](../Develop/explorer.md).
 - Puede [personalizar los iconos de sus componentes](../Extensions/develop-components.md#custom-icon).
 - Componente 4D AIKit: nueva clase [File API](../aikit/Classes/OpenAIFilesAPI.md) para implementar las funcionalidades de **carga de archivos**.
-- [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in content**](../Project/search-replace.md#replace-in-content) features can now support editable components.
+- Las funcionalidades [**Buscar en diseño**](../Project/search-replace.md#search-in-components) y [**Reemplazar en el contenido**](../Project/search-replace.md#replace-in-content) ahora admiten componentes editables.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos los bugs que se han corregido en 4D 21 R2.
 
 #### Vista previa para desarrolladores

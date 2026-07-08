@@ -7,7 +7,7 @@ title: OpenAIModel
 
 モデルの詳細。
 
-https://platform.openai.com/docs/api-reference/models/object
+https://developers.openai.com/api/reference/resources/models
 
 ## プロパティ
 

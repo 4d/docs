@@ -58,8 +58,9 @@ El siguiente ejemplo ilustra el tipo de información obtenida utilizando estos c
 
 Después de ejecutar este código, *$vResultPlan* y *$vResultPath* contienen descripciones de las búsquedas realizadas, por ejemplo: 
 
-```RAW
-$vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 registros encontrados en 1  minuto)
+```txt
+$vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000
+$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 registros encontrados en 1  minuto)
 ```
 
 Si la constante Description in XML Format se pasa al comando [Last query path](last-query-path.md "Last query path"), *$vResultPath* contiene la descripción de la búsqueda expresada en XML:

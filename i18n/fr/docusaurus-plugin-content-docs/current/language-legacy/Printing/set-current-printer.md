@@ -5,7 +5,7 @@ slug: /commands/set-current-printer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURRENT PRINTER.Syntax-->**SET CURRENT PRINTER** ( *nomImpr* )<!-- END REF-->
+<!--REF #_command_.SET CURRENT PRINTER.Syntax-->**SET CURRENT PRINTER** ( *nomImpr* : Text )<!-- END REF-->
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
 <div class="no-index">
 

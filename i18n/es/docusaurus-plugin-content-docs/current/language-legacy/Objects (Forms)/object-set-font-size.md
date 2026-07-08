@@ -5,7 +5,7 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *objeto* : Text ; *tamaño* : Integer )<br/>**OBJECT SET FONT SIZE** ( *objeto* : Field, Variable ; *tamaño* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *objeto* : Text ; *tamaño* : Integer )<br/>**OBJECT SET FONT SIZE** ( *objeto* : Variable, Field ; *tamaño* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 <div class="no-index">
 

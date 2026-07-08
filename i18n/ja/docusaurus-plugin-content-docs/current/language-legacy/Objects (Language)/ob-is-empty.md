@@ -5,7 +5,7 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object, Object ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 <div class="no-index">
 

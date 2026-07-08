@@ -13,7 +13,7 @@ Las páginas Cliente-Servidor agrupan los parámetros relacionados con el uso de
 
 Esta opción le permite indicar si la base de datos 4D Server aparecerá o no en la lista de bases de datos publicadas.
 
-- Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña**Disponible**).
+- Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña **Disponible**).
 - Cuando la opción no está marcada, la base de datos no se hace pública y no aparece en la lista de bases de datos publicadas. Para conectarse, los usuarios deben introducir manualmente la dirección de la base de datos en la pestaña **Personalizada** de la caja de diálogo de conexión.
 
 :::note
@@ -79,8 +79,8 @@ Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legac
   - QUIC se conecta automáticamente al puerto 19813 tanto para el servidor de aplicaciones como para el servidor DB4D.
   - Cuando se selecciona la opción de capa QUIC:
     - [los parámetros del tiempo de espera de las conexiones cliente-servidor](#client-server-connections-timeout) están ocultos
-    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
-  - **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
+    - La casilla de verificación [Encriptar comunicación Cliente-Servidor](#encrypt-client-server-communications) está oculta (las comunicaciones QUIC son siempre en TLS, sea cual sea su modo seguro).
+  - \*\*Compatibilidad: necesita desplegar sus aplicaciones cliente/servidor con 4D 20 o superior antes de cambiar a la capa de red QUIC.
 
 :::note
 

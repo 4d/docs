@@ -7,7 +7,7 @@ title: Propriétés des formulaires
 
 ## Schéma de couleurs
 
-> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> La propriété de schéma de couleurs n'est appliquée que sur macOS et [Windows avec le thème Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
 Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
@@ -42,7 +42,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existante à associer au formulaire.
+La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nom d'une [classe utilisateur](../Concepts/classes.md#class-definition) existante à associer au formulaire.
 
 L'association d'une classe au formulaire offre les avantages suivants :
 
@@ -80,19 +80,19 @@ Le nom du formulaire est défini par le nom du dossier qui contient le fichier f
 
 ---
 
-## Form Theme on Windows
+## Thème de formulaire sous Windows
 
-This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+Cette propriété vous permet de sélectionner explicitement le thème d'interface que vous souhaitez utiliser lorsque le formulaire est exécuté sous Windows. Par défaut, les formulaires héritent des [paramètres globaux du thème du projet](../settings/interface.md) mais vous pouvez remplacer ce paramètre pour chaque formulaire.
 
 Valeurs possibles :
 
-- **Inherited** (default): inherits from the project theme
-- **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+- **Inherited** (par défaut) : hérite du thème du projet
+- **Classic** : utiliser le thème d'interface classique de Windows
+- **Fluent UI** : utilisez le thème d'interface [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([lorsqu'il est disponible](../FormEditor/forms.md#requirements)).
 
 :::note
 
-This property is ignored on macOS.
+Cette propriété est ignorée sous macOS.
 
 :::
 
@@ -102,7 +102,7 @@ This property is ignored on macOS.
 | -------- | --------------- | ----------------- |
 | fluentUI | boolean         | true, false       |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propriété n'est pas définie, l'option "inherited" est sélectionnée.
 
 ---
 

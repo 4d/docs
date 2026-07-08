@@ -5,7 +5,7 @@ slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* ; *evenementBase* ; *numTable* ; *numEnreg* )<!-- END REF-->
+<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* : Integer ; *evenementBase* : Integer ; *numTable* : Integer ; *numEnreg* : Integer )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 <div class="no-index">
 

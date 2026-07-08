@@ -5,7 +5,7 @@ slug: /commands/query-by-example
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*laTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*laTable* : Table} {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 <div class="no-index">
 

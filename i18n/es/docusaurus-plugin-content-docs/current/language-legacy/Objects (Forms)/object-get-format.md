@@ -5,7 +5,7 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get format** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get format** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 <div class="no-index">
 

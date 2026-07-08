@@ -5,7 +5,7 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get type** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get type** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( * ; *objeto* : Text ; *fila* : Integer ; *estilo* : Integer )<br/>**LISTBOX SET ROW FONT STYLE** ( *objeto* : Field, Variable ; *fila* : Integer ; *estilo* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( * ; *objeto* : Text ; *fila* : Integer ; *estilo* : Integer )<br/>**LISTBOX SET ROW FONT STYLE** ( *objeto* : Variable ; *fila* : Integer ; *estilo* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 <div class="no-index">
 

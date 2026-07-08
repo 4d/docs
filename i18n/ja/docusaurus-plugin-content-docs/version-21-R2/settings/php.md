@@ -3,11 +3,11 @@ id: php
 title: PHP ページ
 ---
 
-4D では [PHP スクリプトを実行できます](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.ja.html)。 このページでは、そのインタープリターを設定します。
+4D では [PHP スクリプトを実行できます](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.ja.html)。 このページでは、そのインタープリターを設定します。 このページでは、そのインタープリターを設定します。
 
 :::note
 
-これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドを使用することで、各マシンおよび各セッションに対して個別にこれらを書き込みあるいは読み出しすることができます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
+これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドを使用することで、各マシンおよび各セッションに対して個別にこれらを書き込みあるいは読み出しすることができます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
 
 :::
 
@@ -21,7 +21,7 @@ HTTPアドレスが 4D と同じマシン上に存在する必要があること
 
 ### ポート番号
 
-PHPインタープリターのポート番号。 4D はデフォルトでポート 8002 を使用します。
+PHPインタープリターのポート番号。 PHPインタープリターのポート番号。 4D はデフォルトでポート 8002 を使用します。
 
 このアドレスやポートが他のサービスですでに使用されている場合、あるいは同じマシン上で複数のインタープリターが動作する場合、設定を変更する必要があります。
 

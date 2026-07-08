@@ -5,7 +5,7 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *padrao* ; *umaCadeia* ; *posiçao* {; pos_encont ; compr_encont}{; *} ) -> Resultado <br/>
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *padrao* ; *umaCadeia* ; *posiçao* {; *pos_encont* ; *compr_encont*}{; *} ) -> Resultado <br/>
 **Match regex** ( *padrao* ; *umaCadeia* ) -> Resultado<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">

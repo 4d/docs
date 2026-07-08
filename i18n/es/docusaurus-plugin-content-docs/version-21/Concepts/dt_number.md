@@ -5,7 +5,7 @@ title: Número (Real, Entero)
 
 Número es un término genérico que significa:
 
-- Los campos, variables o expresiones de tipo real. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- Los campos, variables o expresiones de tipo real. El rango del tipo de datos Real es ±1,7e±308 (de acuerdo con el [estándar IEEE 754 para el formato binario de coma flotante de doble precisión](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Variable o expresión entera. El rango para el tipo de datos Integer es -2^31..(2^31)-1 (Integer de 4 bytes, también conocido como *Long* o *Longint*).
 
 :::info Compatibilidad
@@ -81,7 +81,7 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 ### División entera
 
-The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` es equivalente a `Int(a/b)`. Este operador devuelve valores significativos sólo con números enteros.
+El operador de división entera divide un número entre otro y devuelve la parte entera del resultado, descartando cualquier resto. `a\b` es equivalente a `Int(a/b)`. Este operador devuelve valores significativos sólo con números enteros.
 
 ### Comparación real
 

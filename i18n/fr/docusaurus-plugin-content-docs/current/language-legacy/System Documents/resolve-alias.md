@@ -5,7 +5,7 @@ slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *cheminAlias* ; *cheminCible* )<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *cheminAlias* : Text ; *cheminCible* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 <div class="no-index">
 

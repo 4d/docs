@@ -45,10 +45,10 @@ title: CryptoKey
 <!-- REF #4D.CryptoKey.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|settings|Object|->|Settings to generate or load a key pair|
-|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|settings|Object|->|キーペアを生成または読み込むための設定|
+|戻り値|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
 </div>
 <!-- END REF -->
 
@@ -164,11 +164,11 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.decrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|Object|->|Decoding options|
-|Result|Object|<-|Status|
+|message|Text|->|`options.encodingDecrypted` を使用して暗号化し、符号化されるメッセージ。 |  
+|options|Object|->|エンコードのオプション|
+|戻り値|Text|<-|Status|
 </div>
 <!-- END REF -->
 
@@ -213,11 +213,11 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.encrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|Object|->|Encoding options|
-|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+|message|Text|->|`options.encodingDecrypted` を使用して暗号化し、符号化されるメッセージ。|  
+|options|Object|->|エンコードのオプション|
+|戻り値|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
 
@@ -254,9 +254,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|Result|Text|<-|Private key in PEM format|
+|戻り値|Text|<-|Private key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -283,9 +283,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPublicKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|Result|Text|<-|Public key in PEM format|
+|戻り値|Text|<-|Public key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -331,15 +331,15 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.sign().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|----|---|---|
-|message|Text OR Blob|->|Message to sign|  
-|options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|message|Text OR Blob|->|署名するメッセージ|  
+|options|Object|->|署名オプション|
+|戻り値|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 </div>
 <!-- END REF -->
 
-`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->`.sign()` 関数は、<!-- END REF --> この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。
+`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->`options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。<!-- END REF --> utf8 形式の *message* 文字列またはBlobを署名します。 この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
@@ -413,12 +413,12 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 <!-- REF #CryptoKey.verify().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
-|message|Text OR Blob|->|Message that was used to produce the signature|  
-|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
+|message|Text OR Blob|->|署名を生成するために使用されたメッセージ|  
+|signature|Text|->|検証する署名、`options.encoding` の値に応じてBase64 または Base64URL 形式|
+|options|Object|->|署名オプション|
+|戻り値|Object|<-|Status of the verification|
 </div>
 <!-- END REF -->
 

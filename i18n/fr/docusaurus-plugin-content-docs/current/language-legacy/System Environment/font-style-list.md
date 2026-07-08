@@ -5,7 +5,7 @@ slug: /commands/font-style-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *famillePolice* ; *listeStylesPolice* ; *listeNomsPolice* )<!-- END REF-->
+<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *famillePolice* : Text ; *listeStylesPolice* : Text array ; *listeNomsPolice* : Text array )<!-- END REF-->
 <!--REF #_command_.FONT STYLE LIST.Params-->
 <div class="no-index">
 

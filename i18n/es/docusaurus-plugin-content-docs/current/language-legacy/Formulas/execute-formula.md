@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 La cadena de instrucción debe ser de una sola línea. Si *instruccion* es una cadena vacía, **EXECUTE FORMULA** no hace nada. La regla es que si la instrucción puede ejecutarse como un método de una línea, entonces se ejecutará correctamente. El comando **EXECUTE FORMULA** debe utilizarse con precaución, ya que disminuye la velocidad de ejecución. En una base compilada, el código de la instrucción no está compilado. Esto significa que la instrucción será ejecutada, pero no será verificada por el compilador en el momento de la compilación.
 
-**Nota:** la ejecución de fórmulas en modo compilado se puede optimizar utilizando una memoria caché (ver *Caché para fórmulas en modo compilado* abajo).
+**Nota:** la ejecución de fórmulas en modo compilado se puede optimizar utilizando una memoria caché (ver [Caché para fórmulas en modo compilado](#cache-para-formulas-en-modo-compilado) abajo).
 
 La *instrucción* puede incluir los siguientes elementos:
 
@@ -41,7 +41,7 @@ La *instrucción* puede incluir los siguientes elementos:
 * una llamada a un comando 4D
 * una tarea
 
-La fórmula puede incluir variables proceso e interproceso. La instrucción no puede contener instrucciones de control de flujo (If, While, etc.), porque la instrucción debe tener sólo una línea de código.
+La fórmula puede incluir variables proceso e interproceso. La instrucción no puede contener instrucciones de control de flujo (If, While, Return, Break, etc.), porque la instrucción debe tener sólo una línea de código. Estas palabras clave se ignorarán.
 
 Para asegurarse de que la *instruccion* sea evaluada correctamente independientemente del lenguaje o versión 4D utilizada, se recomienda utilizar la sintaxis tokenizada para los elementos cuyo nombre puede variar entre las diferentes versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando [Current time](../commands/current-time), introduzca **'Current time:C178'**. Para más información, consulte *Utilizar tokens en fórmulas*.  
 
@@ -50,7 +50,7 @@ Para asegurarse de que la *instruccion* sea evaluada correctamente independiente
 * Si la *instruccion* es un método proyecto, se recomienda utilizar [EXECUTE METHOD](../commands/execute-method) que le permite pasar parámetros.
 * No se recomienda llamar a ningún comando de declaración de variable como *C\_DATE* en *instruccion* ya que puede generar conflictos en el código.
 
-La fórmula puede incluir variables de proceso y variables entre procesos. Sin embargo, la declaración no puede contener el control de las instrucciones de flujo (If, While, etc.), ya que debe estar en una línea de código.
+La fórmula puede incluir variables de proceso y variables entre procesos. Sin embargo, la declaración no puede contener el control de las instrucciones de flujo (If, While, Return, Break, etc.), ya que debe estar en una línea de código. Estas palabras clave se ignorarán.
 
 Para garantizar que la *instrucción* se evalúe correctamente, independientemente del lenguaje 4D o la versión utilizada, se recomienda utilizar la sintaxis del *token* para los elementos cuyo nombre puede variar entre diferentes versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando \[#cmd id="178"/\], introduzca '**Current time:C178**'. Para más información al respecto, consulte *Utilizar tokens en fórmulas*. 
 

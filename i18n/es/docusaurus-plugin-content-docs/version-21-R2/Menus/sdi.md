@@ -65,7 +65,7 @@ Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un m
 
 - el usuario no puede seguir interactuando con la aplicación
 - no hay procesos de usuario en curso
-- Los procesos 4D o workers están esperando un evento
+- los procesos 4D o workers están esperando un evento
 - el servidor web no se ha lanzado
 - el [servidor WebAdmin](../Admin/webAdmin.md) no está iniciado.
 

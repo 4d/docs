@@ -178,7 +178,7 @@ O servidor retorna as entidades, ou seja, os dados, da dataclass Friends:
 }
 ```
 
-Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. Nas suas interfaces da web, você pode facilmente vincular o código javascript ou html com dados retornados. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
+Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. Nas suas interfaces da web, você pode facilmente vincular o código javascript ou html com dados retornados. Nas suas interfaces da web, você pode facilmente vincular o código javascript ou html com dados retornados.
 
 ## Login e sessão
 

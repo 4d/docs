@@ -5,7 +5,7 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** {( *laTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** ( {*laTable* : Table} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 <div class="no-index">
 

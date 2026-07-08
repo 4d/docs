@@ -20,7 +20,7 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 
 Email objects provide the following properties:
 
-> 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the Email object.
+> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the Email object.
 
 ||
 |---|

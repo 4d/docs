@@ -5,7 +5,7 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ *aTable* : テーブル, 演算子 })<br/>**READ ONLY** ({ * })<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ *aTable* : Table })<br/>**READ ONLY** ({ * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 <div class="no-index">
 

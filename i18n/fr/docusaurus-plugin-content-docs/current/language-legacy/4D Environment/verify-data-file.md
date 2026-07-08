@@ -5,7 +5,7 @@ slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *cheminStructure* ; *cheminDonnées* ; *objets* ; *options* ; *méthode* {; *tabTables* {; *tabChamps*}} )<!-- END REF-->
+<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *cheminStructure* : Text ; *cheminDonnées* : Text ; *objets* : Integer ; *options* : Integer ; *méthode* : Text {; *tabTables* : Integer array {; *tabChamps* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 <div class="no-index">
 

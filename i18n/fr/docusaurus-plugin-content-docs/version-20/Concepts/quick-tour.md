@@ -56,7 +56,7 @@ Même si cela est généralement déconseillé, vous pouvez créer des variables
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. Cette flexibilité ne s'applique pas aux variables déclarées avec le mot-clé `var` (leur type ne peut pas changer) et en [mode compilé](interpreted.md) où le type ne peut jamais être modifié, quelle que soit la manière dont la variable a été créée.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu.
 
 ## Commandes
 

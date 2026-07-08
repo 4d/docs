@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *laTable* {;* })<br/>**PRINT SELECTION** ( *laTable* {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*laTable* : Table} {; *} )<br/>**PRINT SELECTION** ( {*laTable* : Table} {; > : >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 <div class="no-index">
 
@@ -51,6 +51,12 @@ Pour plus d'informations, reportez-vous à la description de ces commandes ainsi
 Si **PRINT SELECTION** est appelée au même moment par deux process différents, l'impression déclenchée par le second process attendra que le premier ait terminé.
 
 Pour imprimer une sélection triée avec des sous-totaux ou des ruptures à l'aide de la commande **PRINT SELECTION**, vous devez d'abord trier la sélection. Puis vous devez inclure, dans chaque zone de rupture de l'état, une variable associée à une méthode objet assignant le sous-total à la variable. Vous pouvez aussi utiliser des fonctions statistiques ou arithmétiques telles que [Sum](../commands/sum) et [Average](../commands/average) pour assigner des valeurs aux variables. Pour plus d'informations, reportez-vous à la description des commandes [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) et [ACCUMULATE](../commands/accumulate).
+
+:::note
+
+Vous pouvez utiliser des [commandes statistiques](../../commands/theme/On_a_Series.md) comme [Sum](../commands/sum) et [Average](../commands/average) pour assigner des valeurs aux variables. Lorsque des fonctions statistiques sont utilisées dans un état, elles se comportent de manière spécifique car l'état lui-même doit charger chaque enregistrement. Lorsque vous utilisez ces fonctions dans un état, les valeurs retournées ne sont fiables qu'au niveau de rupture 0, et uniquement lorsque le traitement des ruptures est activé. Cela signifie qu'elles ne sont utiles qu'à la fin d'un état, après que tous les enregistrements ont été traités. Vous utiliserez ces fonctions uniquement dans une méthode objet d'une zone non saisissable incluse dans la zone de rupture B0.
+
+:::
 
 **Attention :** N'utilisez pas la commande [PAGE BREAK](../commands/page-break) avec **PRINT SELECTION**. [PAGE BREAK](../commands/page-break) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form).
 

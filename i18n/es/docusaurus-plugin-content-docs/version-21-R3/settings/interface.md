@@ -35,7 +35,7 @@ Puede definir la [frecuencia de escritura de la caché](database.md#memory-page)
 
 - **Progreso de la impresión**: permite, durante la impresión, activar o desactivar la visualización de la caja de diálogo de progreso de la impresión.
 
-- **Use SDI mode on Windows**: When this option is checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). Al seleccionar esta opción, en Windows el menú **Ejecutar** de la barra de menú de 4D le permite seleccionar el modo en el que desea probar la aplicación:
+- Al seleccionar esta opción, en Windows el menú **Ejecutar** de la barra de menú de 4D le permite seleccionar el modo en el que desea probar la aplicación: **Use SDI mode on Windows**: When this option is checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability).
 
   ![](../assets/en/settings/sdi-mdi.png)
 
@@ -49,7 +49,7 @@ Esta opción puede seleccionarse en macOS, pero se ignorará cuando la aplicaci�
 
 Este menú permite seleccionar la paleta de colores que se utilizará en la aplicación principal. Una paleta de colores define un conjunto global de colores de interfaz para los textos, los fondos, las ventanas, etc., utilizados en sus formularios.
 
-> Esta opción se ignora en Windows con [Tema clásico](#use-fluent-ui-on-windows). In this context, the "Light" scheme is always used.
+> Esta opción se ignora en Windows con [Tema clásico](#use-fluent-ui-on-windows). En este contexto, siempre se utiliza el esquema "Light".
 
 Los siguientes esquemas están disponibles:
 
@@ -68,11 +68,11 @@ El esquema de aplicación principal se aplicará a los formularios por defecto. 
 
 ### Utilizar Fluent UI en Windows
 
-When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). Si no está marcada, se utilizará por defecto el tema de renderizado de Windows Classic UI.
+Cuando esta opción esté marcada, 4D utilizará automáticamente el [tema de visualización Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) para todos sus formularios en Windows, [siempre que esté disponible](../FormEditor/forms.md#requirements). Si no está marcada, se utilizará por defecto el tema de renderizado de Windows Classic UI.
 
 > Esta opción sólo se utiliza en Windows, no tiene ningún efecto en macOS.
 
-This project setting can be overriden at form level by using the [Widget appearance](../FormEditor/propertiesForm.html#widget-appearance) form property (highest priority level).
+Esta configuración del proyecto se puede anular a nivel de formulario utilizando la propiedad [Apariencia del widget](../FormEditor/propertiesForm.html#widget-appearance) del formulario (nivel de prioridad más alto).
 
 > Los temas de renderizado pueden ser manejados usando CSS. Para más información, consulte la sección [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 

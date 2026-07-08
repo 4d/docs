@@ -59,6 +59,14 @@ La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso s
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
 
 > **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..
@@ -66,14 +74,10 @@ El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
 #### Ejemplo
 
 ```4d
-  // Ask the user to enter a name
- $Find:=Request(Type a name)
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("You did not enter a name.")
- End if
- End if
+  For($vlChar;1;Length(vtSomeText))
+  //Hacer algo con el carácter si es un TAB
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+  //...
  End if 
 ```
 
@@ -377,7 +381,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 3. El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
- For($vlChar;1;Length(vtSomeText))
+ For($vlChar;Length(vtSomeText);1;-1)
   //Hacer algo con el carácter si es un TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
@@ -426,10 +430,9 @@ En algunos casos, puede querer tener un bucle cuya variable de contador sea decr
 7. El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
- For($vlChar;Length(vtSomeText);1;-1)
-  //Hacer algo con el carácter si es un TAB
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-  //...
+ For($vlElem;2;Size of array(anArray);2)
+  //Hacer algo con el elemento #2,#4...#2n
+    anArray{$vlElem}:=...
     End if
  End for
 ```

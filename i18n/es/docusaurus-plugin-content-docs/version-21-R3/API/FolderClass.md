@@ -7,7 +7,7 @@ Los objetos `Folder` son creados con el comando [`Folder`](../commands/folder). 
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Esta clase es [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binario.
 
 :::
 

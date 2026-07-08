@@ -28,14 +28,14 @@ Em *rangeObj*, passe um intervalo de células como um objeto para designar as c�
 
 Estão disponíveis os seguintes selectores:
 
-| Selector              | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                  | Disponível com *vPos* | Disponível com *hPos* |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
-| `vk position bottom`  | Alinhamento vertical para o fundo da célula ou linha.                                                                                                                                                                                                                                                                                                                                                      | X                     |                       |
-| `vk position center`  | Alinhamento com o centro. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li>                                                                                                                                                                 | X                     | X                     |
-| `vk position left`    | Alinhamento horizontal à esquerda da célula ou coluna                                                                                                                                                                                                                                                                                                                                                                      |                       | X                     |
-| `vk position nearest` | Alinhamento ao limite mais próximo (superior, inferior, esquerda, direita, centro). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position (top, center, bottom) - cell or row </li><li>Horizontal view position (left, center, right) - cell or column</li> | X                     | X                     |
-| `vk position right`   | Alinhamento horizontal à direita da célula ou coluna                                                                                                                                                                                                                                                                                                                                                                       |                       | X                     |
-| `vk position top`     | Alinhamento vertical ao topo da célula ou linha                                                                                                                                                                                                                                                                                                                                                                            | X                     |                       |
+| Selector              | Descrição                                                                                                                                                                                                                                                  | Disponível com *vPos* | Disponível com *hPos* |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
+| `vk position bottom`  | Alinhamento vertical para o fundo da célula ou linha.                                                                                                                                                                                      | X                     |                       |
+| `vk position center`  | Alinhamento com o centro. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li> | X                     | X                     |
+| `vk position left`    | Alinhamento horizontal à esquerda da célula ou coluna                                                                                                                                                                                                      |                       | X                     |
+| `vk position nearest` | Alinhamento ao limite mais próximo (superior, inferior, esquerda, direita, centro). Alinhamento ao limite mais próximo (superior, inferior, esquerda, direita, centro).              | X                     | X                     |
+| `vk position right`   | Alinhamento horizontal à direita da célula ou coluna                                                                                                                                                                                                       |                       | X                     |
+| `vk position top`     | Alinhamento vertical ao topo da célula ou linha                                                                                                                                                                                                            | X                     |                       |
 
 > Este comando só é eficaz se o reposicionamento da vista for possível. For example, if the *rangeObj* is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if *rangeObj* is in cell C3 and the view is repositioned to the center or the bottom right. A vista mantém-se inalterada.
 
@@ -45,8 +45,7 @@ Você deseja visualizar a célula na coluna AY, linha 51, no centro da área do 
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-// Mova a vista para mostrar a célula
-VP MOS, CÉLLL($displayCell;vk position center;vk position center)
+// Mova a vista para mostrar a célula VP MOS, CÉLLL($displayCell;vk position center;vk position center)
 ```
 
 Resultados:
@@ -57,8 +56,7 @@ O mesmo código com os seletores vertical e horizontal alterados para mostrar a 
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-  // Mova a visualização para mostrar a célula
-VP SHOW CELL($displayCell;vk position top;vk position right)
+  // Mova a visualização para mostrar a célula VP SHOW CELL($displayCell;vk position top;vk position right)
 ```
 
 Resultados:

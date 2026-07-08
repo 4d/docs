@@ -13,14 +13,14 @@ O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.00
 
 Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da forma como podem ser chamados:
 
-| Tipo                                              | Contexto de chamada                                                                                                                   | Aceita parâmetros                     | Descrição                                                                                                                                                                                                                         |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Métodos projeto**                               | Por demanda, quando chamar ao nome do método projeto (ver [Chamando a métodos projeto](#chamando-metodos-projeto)) | Sim                                   | Pode conter qualquer código para executar ações personalizadas Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado.                                      |
-| **Método objeto (widget)**     | Automático, quando um evento envolve a forma a que o método está ligado                                                               | Não                                   | Propriedade de um objecto de formulário (também chamado widget)                                                                                                                                                |
-| **Método formulário**                             | Automático, quando um evento envolve o objecto ao qual o método está ligado                                                           | Não                                   | Propriedade de um formulário. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. |
-| **Trigger** (o *método tabla*) | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar)                        | Não                                   | Propriedade de uma tabela. Os gatilhos/triggers são métodos que podem prevenir operações "ilegais" com os registos da sua base de dados.                                                          |
-| **Método base**                                   | Automático, quando ocorre um evento de sessão de trabalho                                                                             | Sim (pré-definido) | Existem 16 métodos base em 4D.                                                                                                                                                                                    |
-| **Class**                                         | [**Funções de classe**](classes.md#function) são chamadas no contexto de uma instância de objeto                                      | sim                                   | As funções de classe podem ser incorporadas (*por exemplo* `collection.orderBy()` ou `entity.save()`), ou criadas pelo desenvolvedor do 4D. Veja [**Classes**](classes.md)                     |
+| Tipo                                              | Contexto de chamada                                                                                                                   | Aceita parâmetros                     | Descrição                                                                                                                                                                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Métodos projeto**                               | Por demanda, quando chamar ao nome do método projeto (ver [Chamando a métodos projeto](#chamando-metodos-projeto)) | Sim                                   | Pode conter qualquer código para executar ações personalizadas Pode conter qualquer código para executar ações personalizadas Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. |
+| **Método objeto (widget)**     | Automático, quando um evento envolve a forma a que o método está ligado                                                               | Não                                   | Propriedade de um objecto de formulário (também chamado widget)                                                                                                                                                                          |
+| **Método formulário**                             | Automático, quando um evento envolve o objecto ao qual o método está ligado                                                           | Não                                   | Propriedade de um formulário. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins.                           |
+| **Trigger** (o *método tabla*) | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar)                        | Não                                   | Propriedade de uma tabela. Os gatilhos/triggers são métodos que podem prevenir operações "ilegais" com os registos da sua base de dados.                                                                                    |
+| **Método base**                                   | Automático, quando ocorre um evento de sessão de trabalho                                                                             | Sim (pré-definido) | Existem 16 métodos base em 4D.                                                                                                                                                                                                              |
+| **Class**                                         | [**Funções de classe**](classes.md#function) são chamadas no contexto de uma instância de objeto                                      | sim                                   | As funções de classe podem ser incorporadas (*por exemplo* `collection.orderBy()` ou `entity.save()`), ou criadas pelo desenvolvedor do 4D. Veja [**Classes**](classes.md)                                               |
 
 ## Métodos projeto recursivos
 
@@ -67,7 +67,7 @@ Se o código descrito anteriormente fosse um método chamado `MODIFY_CUSTOMER`, 
  PRINT SELECTION([Customers])
 ```
 
-Esta capacidade simplifica dramaticamente os seus métodos. No exemplo, você não precisa saber como o método `MODIFY_CUSTOMER` funciona, apenas o que ele faz. Esta é a segunda razão para a utilização de sub-rotinas para esclarecer os seus métodos. Desta forma, os seus métodos tornam-se extensões à linguagem 4D.
+Esta capacidade simplifica dramaticamente os seus métodos. Esta capacidade simplifica dramaticamente os seus métodos. Esta é a segunda razão para a utilização de sub-rotinas para esclarecer os seus métodos. Desta forma, os seus métodos tornam-se extensões à linguagem 4D.
 
 Se precisar mudar seu método de pesquisa de clientes nesse banco de dados de exemplo, terá que mudar apenas um método, não dez. Este é o próximo motivo para utilizar sub-rotinas para facilitar mudanças nos seus métodos.
 
@@ -158,7 +158,7 @@ A automatização de sequências de actividades é uma capacidade muito poderosa
 
 ### Métodos Processo
 
-Um **método de processo** é um método de projeto que é chamado quando um processo é iniciado. O processo dura apenas enquanto o método do processo continuar a ser executado, excepto se for um processo de Worker. Note-se que um método de menu anexado a um comando de menu com a propriedade *Start a New Process* é também o método de processo para o processo recentemente iniciado.
+Um **método de processo** é um método de projeto que é chamado quando um processo é iniciado. O processo dura apenas enquanto o método do processo continuar a ser executado, excepto se for um processo de Worker. O processo dura apenas enquanto o método do processo continuar a ser executado, excepto se for um processo de Worker.
 
 ### Métodos de captura de eventos e erros
 
@@ -168,10 +168,9 @@ Um **método de apanhar erros** é um método de projecto baseado na interrupç�
 
 ### Execution mode
 
-Os métodos projeto escritos em sua aplicação costumam ser chamados automaticamente durante o uso da aplicação através de comandos de menu, botões, outros métodos, etc. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação.
+Os métodos projeto escritos em sua aplicação costumam ser chamados automaticamente durante o uso da aplicação através de comandos de menu, botões, outros métodos, etc. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação. Para métodos de banco de dados, são executados em relação à eventos específicos que ocorrem na aplicação.
 
-Entretanto, para teste e depuração, 4D deixa que execute métodos de projeto manualmente e certos métodos de banco de dados em modo Design.
-Neste caso é possível executar o método em um novo processo ou diretamente no modo Debug, para verificar sua execução passo a passo.
+Entretanto, para teste e depuração, 4D deixa que execute métodos de projeto manualmente e certos métodos de banco de dados em modo Design. Neste caso é possível executar o método em um novo processo ou diretamente no modo Debug, para verificar sua execução passo a passo.
 
 Pode executar métodos de duas formas:
 

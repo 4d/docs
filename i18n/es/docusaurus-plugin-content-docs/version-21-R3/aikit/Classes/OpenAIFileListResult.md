@@ -49,14 +49,14 @@ $params.limit:=100
 var $result:=$client.files.list($params)
 var $allFiles:=$allFiles.combine($result.files)
 
-// Continue fetching if there are more files
+// Seguir obteniendo si hay más archivos
 While ($result.has_more)
     $params.after:=$result.last_id
     $result:=$client.files.list($params)
     $allFiles:=$allFiles.combine($result.files)
 End while 
 
-// $allFiles now contains all files from the organization
+// $allFiles ahora contiene todos los archivos de la organización
 ```
 
 ## Ver también

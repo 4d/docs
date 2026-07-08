@@ -31,13 +31,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->The **OBJECT Is styled text** command returns **True** when the "Multi-style" option is checked for the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
-The "Multi-style" option lets you use rich test areas including individual style variations. For more information, refer to *Multi-style (Rich text area)* in the *Design Reference* manual. 
+The ["Multi-style" form object property](../../FormObjects/properties_Text.md#multi-style) lets you use rich text areas including individual style variations. 
 
-Multi-style objects can be managed by programming using the commands of the "*Styled Text*" theme. 
+Multi-style objects can be managed by programming using the [commands of the *Styled Text* theme](../../commands/theme/Styled_Text.md). 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only). 
 
-**Note:** The **OBJECT Is styled text** command returns **True** when it is applied to a 4D Write Pro area.
+**Note:** The **OBJECT Is styled text** command returns **True** when it is applied to a [4D Write Pro area](../../FormObjects/writeProArea_overview.md).
 
 ## Example 
 
@@ -53,7 +53,7 @@ A form contains a field represented by two different objects; one of the objects
 
 ## See also 
 
-*Styled Text*  
+[*Styled Text* commands](../../commands/theme/Styled_Text.md)
 
 ## Properties
 

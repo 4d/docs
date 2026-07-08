@@ -5,7 +5,7 @@ slug: /commands/object-set-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *objeto* : Text ; *radio* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *objeto* : Field, Variable ; *radio* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *objeto* : Text ; *radio* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *objeto* : Variable, Field ; *radio* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 <div class="no-index">
 

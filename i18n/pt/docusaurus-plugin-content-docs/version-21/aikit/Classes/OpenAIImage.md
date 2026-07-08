@@ -7,7 +7,7 @@ title: OpenAIImage
 
 A classe 'OpenAIImage' representa uma imagem gerada pela API OpenAI. It provides properties for accessing the generated image in different formats and methods for converting this image to different types.
 
-https://platform.openai.com/docs/api-reference/images/object
+https://developers.openai.com/api/reference/resources/images
 
 ## Propriedades
 

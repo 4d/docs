@@ -60,13 +60,13 @@ Le code suivant permet de charger toutes les commandes 4D valides dans un tablea
  Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+    If(OK=1) //Le numéro de commande existe
+       If(Length($Txt_command)>0) //la commande n'est pas désactivée
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) //fin des commandes existantes
 ```
 
 ## Exemple 2
@@ -94,12 +94,12 @@ Dans la version anglaise de 4D, la liste déroulante contiendra : Sum, Average, 
 Vous souhaitez créer une méthode qui renvoie **True** si la commande, dont le numéro est passé en paramètre, est thread-safe, et **False** dans le cas contraire.
 
 ```4d
-  //Is_Thread_Safe project method
+  //Méthode de projet Is_Thread_Safe
  #declare($command : Integer) : Boolean
  var $threadsafe : Integer
  var $name; $theme : Text
  $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
+ If($threadsafe ?? 0) //si le premier bit est à 1
     return True
  Else
     return False
@@ -110,7 +110,7 @@ Ensuite, pour la commande "SAVE RECORD" (53) par exemple, vous pouvez écrire :
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // retourne True
 ```
 
 ## Exemple 4
@@ -125,11 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) //le deuxième bit est à 1
+            //alors cette commande est obsolète
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
+Until(OK=0) //fin des commandes existantes
 
 ```
 

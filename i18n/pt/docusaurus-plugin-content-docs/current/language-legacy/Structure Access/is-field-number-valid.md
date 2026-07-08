@@ -5,7 +5,7 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *pontTabela* : Inteiro longo, Ponteiro ; *numCampo* : Integer ) : Boolean<br/>**Is field number valid** ( *numTabela* : Inteiro longo, Ponteiro ; *numCampo* : Integer ) : Boolean<!-- END REF--> 
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *pontTabela* : Pointer ; *numCampo* : Integer ) : Boolean<br/>**Is field number valid** ( *numTabela* : Integer ; *numCampo* : Integer ) : Boolean<!-- END REF--> 
 <!--REF #_command_.Is field number valid.Params-->
 <div class="no-index">
 

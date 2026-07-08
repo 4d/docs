@@ -5,7 +5,7 @@ title: OpenAIResult
 
 # OpenAIResult
 
-The `OpenAIResult` class is designed to handle the response from HTTP requests and provides functions to evaluate the success of the request, retrieve body content, and collect any errors that may have occurred during processing.
+La clase `OpenAIResult` está diseñada para gestionar la respuesta de las peticiones HTTP y ofrece funciones para evaluar el éxito de la petición, recuperar el contenido del cuerpo y recoger los errores que se hayan podido producir durante el procesamiento.
 
 ## Propiedades
 
@@ -29,7 +29,7 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 La propiedad `rateLimit` devuelve un objeto que contiene información sobre el límite de velocidad de los encabezados de respuesta.
 Esta información incluye los límites, las peticiones restantes y los tiempos de reinicialización tanto para peticiones como para tokens.
 
-For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+Para obtener más información sobre los límites de tarifas y los encabezados específicos utilizados, consulte [la documentación de límites de tarifa OpenAI](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
 
 La estructura del objeto `rateLimit` es la siguiente:
 

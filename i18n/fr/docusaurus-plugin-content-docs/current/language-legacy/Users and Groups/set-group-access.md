@@ -5,7 +5,7 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *groupes* )}<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *groupes* : Collection })<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 <div class="no-index">
 

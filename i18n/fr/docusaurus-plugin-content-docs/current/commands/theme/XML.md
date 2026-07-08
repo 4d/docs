@@ -11,3 +11,5 @@ slug: /commands/theme/XML
 | [<!-- INCLUDE #_command_.XML GET ERROR.Syntax -->](../../commands/xml-get-error)<br/>     |
 | [<!-- INCLUDE #_command_.XML GET OPTIONS.Syntax -->](../../commands/xml-get-options)<br/> |
 | [<!-- INCLUDE #_command_.XML SET OPTIONS.Syntax -->](../../commands/xml-set-options)<br/> |
+
+

@@ -69,7 +69,7 @@ You can edit a component code as long as the following conditions are met:
 
 - the host project is running interpreted, 
 - the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components) and the source code is available,
-- the component files are stored locally (i.e. they are not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency)).
+- the component files are stored locally (i.e. they are not [downloaded from GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 In this context, you can open, edit, and save your component code in the Code editor on the host project from two places:
 

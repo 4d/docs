@@ -52,7 +52,7 @@ Ver también [ECMA Script standard](https://www.ecma-international.org/ecma-262/
 
 :::note
 
-Se você usar **notação de string** dentro de colchetes, os nomes das propriedades podem conter qualquer caractere (ex: `meuObjeto["1-" First property"]`).
+Se você usar **notação de string** dentro de colchetes, os nomes das propriedades podem conter qualquer caractere (ex: `meuObjeto["1-" First property"]`). First property"]\`).
 
 :::
 
@@ -126,7 +126,7 @@ O nome de uma variável interprocessada pode ter até 31 caracteres, não inclui
 
 - Um nome de variável deve começar com uma letra, um sublinhado, ou um dólar ("$") para [parameters](parameters.md) e [variáveis locais](variables.md#local-variables), ou `<>` para [variáveis interprocesso](variables.md#interprocess-variables) (obsoleto).
 - A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
-- Não use nomes reservados, por exemplo, nomes de comandos 4D (`Date`, `Time`, etc), palavras-chave (`If`, `for`, etc. , nomes de variáveis de sistema (`OK`, `documento`...), ou nomes constantes (`Euro`, `Black`, `, `Friday\`, etc.).
+- Não use nomes reservados, por exemplo, nomes de comandos 4D (`Date`, `Time`, etc), palavras-chave (`If`, `for`, etc. , nomes de variáveis de sistema (`OK`, `documento`...), ou nomes constantes (`Euro`, `Black`, `, `Friday\\`, etc.).
 - O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos <code>&lt;&gt;</code> .
 
 Exemplos:

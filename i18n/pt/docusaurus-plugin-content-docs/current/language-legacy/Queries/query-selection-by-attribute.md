@@ -5,7 +5,7 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*umaTabela*}{;}{*operadorConj* : Operator ;} *campoObj* : Field ; *rotaAtributo* : Text ; *operadorPesq* : Text, Operator ; *valor* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*umaTabela* : Table ;}{*operadorConj* : &, \|, # ;} *campoObj* : Field ; *rotaAtributo* : Text ; *operadorPesq* :  Text, >, <, >=, <=, #, =, \|, % ; *valor* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 <div class="no-index">
 

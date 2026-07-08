@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-`OpenAIChatCompletionsAPI` クラスはOpenAI のAPI でチャット補完を管理するためにデザインされています。 これはチャット補完を作成、取得、更新、削除、そしてリストを表示するメソッドを提供します。
+`OpenAIChatCompletionsAPI` クラスはOpenAI のAPI でチャット補完を管理するためにデザインされています。 これはチャット補完を作成、取得、更新、削除、そしてリストを表示するメソッドを提供します。 これはチャット補完を作成、取得、更新、削除、そしてリストを表示するメソッドを提供します。
 
 https://platform.openai.com/docs/api-reference/chat
 

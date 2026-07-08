@@ -5,7 +5,7 @@ slug: /commands/redraw-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
 <div class="no-index">
 

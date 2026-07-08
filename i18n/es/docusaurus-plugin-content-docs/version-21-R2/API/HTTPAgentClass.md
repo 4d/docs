@@ -63,7 +63,7 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 
 La función `4D.HTTPAgent.new()` <!-- REF #4D.HTTPAgent.new().Summary -->crea un objeto HTTPAgent compartible con las *opciones* definidas, y devuelve un objeto `4D.HTTPAgent`<!-- END REF -->.
 
-El [`objeto HTTPAgent`] devuelto (#httpagent-object) se utiliza para personalizar las conexiones a servidores HTTP.
+El objeto [`HTTPAgent`](#httpagent-object) devuelto se utiliza para personalizar las conexiones a servidores HTTP.
 
 #### Parámetro *options*
 

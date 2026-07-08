@@ -30,8 +30,7 @@ O parâmetro *boolValue* permite que você passe o valor booleano (**True** ou *
 ## Exemplo
 
 ```4d
-//Estabelece o valor da célula como False 
-VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
+//Estabelece o valor da célula como False VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 ```
 
 ## Veja também

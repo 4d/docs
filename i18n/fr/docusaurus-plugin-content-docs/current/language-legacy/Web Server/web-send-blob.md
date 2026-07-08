@@ -5,7 +5,7 @@ slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* ; *type* )<!-- END REF-->
+<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* : Blob ; *type* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
 <div class="no-index">
 

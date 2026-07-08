@@ -47,7 +47,7 @@ title: テキスト、ピクチャー
 
 ## 横方向マージン
 
-ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
+ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
 背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します:
 
@@ -86,7 +86,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[List Box Header](listbox-header-footer.md#headers)
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー)
 
 #### コマンド
 
@@ -171,7 +171,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー) - [ラジオボタン](radio_overview.md)
 
 #### コマンド
 
@@ -215,7 +215,7 @@ title: テキスト、ピクチャー
 
 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
 
-ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
+ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -237,7 +237,7 @@ title: テキスト、ピクチャー
 
 ## 縦方向マージン
 
-ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
+ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
 背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します。
 
@@ -261,7 +261,7 @@ title: テキスト、ピクチャー
 
 ## ポップアップメニューあり
 
-このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。このシンボルは、ポップアップメニューが付属することを示します:
+このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。 このシンボルは、ポップアップメニューが付属することを示します:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
@@ -280,7 +280,7 @@ title: テキスト、ピクチャー
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
 - ポップアップメニューが **分離** している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。
-- ポップアップメニューが **リンク** している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
+- ポップアップメニューが **リンク** している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。
 
 :::info
 
@@ -290,7 +290,7 @@ title: テキスト、ピクチャー
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューの表示とその値は管理者が管理すべきものです。具体的には、[`form events`](../Events/overview.md) および [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) コマンドおよび [`Pop up menu`](../commands-legacy/pop-up-menu.md) コマンドなどを使用して管理しなければなりません。
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューの表示とその値は管理者が管理すべきものです。具体的には、[`form events`](../Events/overview.md) および [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) コマンドおよび [`Pop up menu`](../commands-legacy/pop-up-menu.md) コマンドなどを使用して管理しなければなりません。
 
 #### JSON 文法
 
@@ -300,7 +300,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
+[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [カスタムボタン](button_overview.md#カスタム)
 
 #### コマンド
 

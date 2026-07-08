@@ -5,7 +5,7 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* |; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* ; *numChamp* ; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* : Pointer ; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* : Integer ; *numChamp* : Integer ; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 <div class="no-index">
 

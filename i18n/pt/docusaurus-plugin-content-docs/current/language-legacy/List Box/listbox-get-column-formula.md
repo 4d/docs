@@ -5,7 +5,7 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *objeto* : Text ) : Text<br/>**LISTBOX Get column formula** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *objeto* : Text ) : Text<br/>**LISTBOX Get column formula** ( *objeto* : Variable ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 <div class="no-index">
 

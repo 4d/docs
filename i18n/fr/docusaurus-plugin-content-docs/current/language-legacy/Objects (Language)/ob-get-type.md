@@ -5,7 +5,7 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* ; *propriété* ) : Integer<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* : Object ; *propriété* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 <div class="no-index">
 

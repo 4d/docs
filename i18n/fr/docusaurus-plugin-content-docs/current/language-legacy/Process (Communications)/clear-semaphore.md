@@ -5,7 +5,7 @@ slug: /commands/clear-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* )<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 <div class="no-index">
 

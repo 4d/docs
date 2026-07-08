@@ -30,7 +30,7 @@ No parâmetro opcional *sheet*, pode designar uma planilha específica (a contag
 
 ## Objeto devolvido
 
-O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis Um valor opção pode ter sido modificado pelo usuário ou pelo método [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
+O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis Um valor opção pode ter sido modificado pelo usuário ou pelo método [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
 Para ver a lista completa das opções, consulte [Opções folha](../configuring.md#sheet-options).
 

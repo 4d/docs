@@ -5,7 +5,7 @@ slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *objeto* : Text ; *nuevTexto* {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST SET TEXT** ( *objeto* : Field, Variable ; *nuevTexto* {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *objeto* : Text ; *nuevTexto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST SET TEXT** ( *objeto* : Variable, Field ; *nuevTexto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
 <div class="no-index">
 

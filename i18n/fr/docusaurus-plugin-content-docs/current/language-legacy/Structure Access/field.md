@@ -5,8 +5,7 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp <br/>
-**Field** ( *ptrChamp* ) -> numChamp<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* : Integer ; *numChamp* : Integer ) : Pointer<br/>**Field** ( *ptrChamp* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 <div class="no-index">
 

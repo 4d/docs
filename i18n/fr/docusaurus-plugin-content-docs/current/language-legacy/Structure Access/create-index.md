@@ -5,7 +5,7 @@ slug: /commands/create-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *laTable* ; *tabChamps* ; *typeIndex* ; *nomIndex* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *laTable* : Table ; *tabChamps* : Pointer array ; *typeIndex* : Integer ; *nomIndex* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
 <div class="no-index">
 

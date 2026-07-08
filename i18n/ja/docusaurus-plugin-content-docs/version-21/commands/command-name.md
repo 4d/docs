@@ -60,13 +60,13 @@ displayed_sidebar: docs
  Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+    If(OK=1) // コマンド番号が存在する
+       If(Length($Txt_command)>0) // コマンドが無効化されていない
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) // 既存コマンドの終了
 ```
 
 ## 例題 2
@@ -94,12 +94,12 @@ displayed_sidebar: docs
 番号を引数として渡したコマンドがスレッドセーフである場合には**True** を、そうでない場合には**False** を返す様なメソッドを作成したい場合を考えます。
 
 ```4d
-  //Is_Thread_Safe project method
+  //Is_Thread_Safe プロジェクトメソッド
  #declare($command : Integer) : Boolean
  var $threadsafe : Integer
  var $name; $theme : Text
  $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
+ If($threadsafe ?? 0) // 最初のビットが 1 に設定されていれば
     return True
  Else
     return False
@@ -110,7 +110,7 @@ displayed_sidebar: docs
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // True を返す
 ```
 
 ## 例題 4
@@ -125,12 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) // 2番目のビットが 1 に設定されている
+            // その場合はコマンドは廃止予定となっている
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
-
+Until(OK=0) // 既存のコマンドの終了
 ```
 
 ## 参照

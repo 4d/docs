@@ -5,7 +5,7 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *tableau* ; *valeur* {; *départ*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *tableau* : Array ; *valeur* : Expression {; *départ* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 <div class="no-index">
 

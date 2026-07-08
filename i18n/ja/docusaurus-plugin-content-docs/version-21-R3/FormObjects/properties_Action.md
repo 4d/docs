@@ -74,7 +74,7 @@ title: 動作
 
 ## オブジェクトメソッド実行
 
-このオプションを選択した場合、ユーザーがインジケーターの値を変更すると *同時に* `On Data Change` イベントが生成され、オブジェクトメソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。
+このオプションを選択した場合、ユーザーがインジケーターの値を変更すると *同時に* `On Data Change` イベントが生成され、オブジェクトメソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。 デフォルトでは、*変更後に* メソッドが実行されます。
 
 #### JSON 文法
 
@@ -114,7 +114,30 @@ title: 動作
 
 #### 対象オブジェクト
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Forms](FormEditor/forms.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[フォーム](FormEditor/forms.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ラジオボタン](radio_overview.md) -
+[ルーラー](ruler.md) -
+[スピナー](spinner.md) -
+[スプリッター](splitters.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[タブコントロール](tabControl.md) -
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -122,7 +145,7 @@ title: 動作
 
 `配列型リストボックス`
 
-ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 [セレクション型のリストボックス](listbox_overview.md#セレクションリストボックス) および [階層リストボックス](properties_Hierarchy.md#階層リストボックス) では、このオプションは提供されていません。
+ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 ランタイムにおける行の移動を許可します。 このオプションはデフォルトで選択されています。 [セレクション型のリストボックス](listbox_overview.md#セレクションリストボックス) および [階層リストボックス](properties_Hierarchy.md#階層リストボックス) では、このオプションは提供されていません。
 
 #### JSON 文法
 
@@ -162,7 +185,7 @@ title: 動作
 
 ## ソート可
 
-[リストボックス](listbox_overview.md) ヘッダーのクリックによる列データの並べ替えを有効にします。 このオプションはデフォルトで選択されています。 ピクチャー型配列 (列) はこのメカニズムではソートできません。
+[リストボックス](listbox_overview.md) ヘッダーのクリックによる列データの並べ替えを有効にします。 このオプションはデフォルトで選択されています。 ピクチャー型配列 (列) はこのメカニズムではソートできません。 このオプションはデフォルトで選択されています。 ピクチャー型配列 (列) はこのメカニズムではソートできません。
 
 レコードセレクションに基づくリストボックスの場合、標準のソート機能は以下の場合のみ有効です:
 
@@ -191,7 +214,7 @@ title: 動作
 
 アクティブオブジェクトにより実行される典型的な処理 (例: レコードの入力・取り消し・削除、レコード間の移動、マルチページフォームでのページ間の移動、など)  は、4D より標準アクションとして提供されています。 詳細な情報に関しては、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv21R2/4D/21-R2/Standard-actions.300-7682702.ja.html) の章を参照ください。 また、[4D Write Pro エリア専用の標準アクション](../WritePro/user-legacy/standard-actions.md) もあります。
 
-フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します。 フォームオブジェクトが無効化されていた場合、関連づけられたメソッドは実行されません。
+フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。 また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します。 フォームオブジェクトが無効化されていた場合、関連づけられたメソッドは実行されません。
 
 #### JSON 文法
 

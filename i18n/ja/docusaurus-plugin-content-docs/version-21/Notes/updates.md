@@ -3,9 +3,19 @@ id: updates
 title: リリースノート
 ---
 
-## 4D 21 LTS
+:::tip
 
 [**4D 21 での新機能**](https://blog.4d.com/whats-new-in-4d-21lts/): 4D 21 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+:::
+
+## 4D 21.1 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21.1): 4D 21.1 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+
+## 4D 21 LTS
 
 #### ハイライト
 
@@ -213,7 +223,7 @@ title: リリースノート
 - [制限付エンティティセレクション](../ORDA/entities.md#制限付エンティティセレクション) をサポート。
 - [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#issingleton), [`.me`](../API/ClassClass.md#me).
 - [クラスプロパティを宣言の行において初期化すること](../Concepts/classes.md#initializing-the-property-in-the-declaration-line) がサポートされるようになりました。
-- RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](\(developer.4d.com/qodly/4DQodlyPro/force-login\))。
+- RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート]((developer.4d.com/qodly/4DQodlyPro/force-login))。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - [`Session`](../commands/session.md) オブジェクトはリモートユーザーセッションおよびすトアドプロシージャーセッションにおいても利用可能になりました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。

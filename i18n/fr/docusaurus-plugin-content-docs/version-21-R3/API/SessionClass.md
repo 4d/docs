@@ -10,7 +10,7 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 - [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Générer, partager et utiliser des passcodes à usage unique (OTP) pour les sessions web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
+- [Oubliez les wrappers côté serveur, utilisez les sessions 4D à partir du client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 
@@ -242,7 +242,7 @@ Cette propriété est uniquement disponible avec les sessions web.
 
 La propriété `.expirationDate` contient <!-- REF #SessionClass.expirationDate.Summary -->la date et l'heure d'expiration du cookie de session<!-- END REF -->. La valeur est exprimée sous forme de texte au format ISO 8601 : `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-Cette propriété est en **lecture seule**. Elle est automatiquement recalculée si la valeur de la propriété [`.idleTimeout`](#idletimeout) est modifiée.
+Cette propriété est en **lecture seule**. Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide.
 
 #### Exemple
 
@@ -516,18 +516,18 @@ La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session
 
 L'objet `.info` contient les propriétés suivantes:
 
-| Propriété        | Type          | Description                                                                                                                                                                                                                                                 |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Type de session : "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                                  |
-| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                                                                                                                          |
-| machineName      | Text          | <ul><li>Sessions distantes (serveur) : nom de la machine distante.</li><li>Sessions distantes (client) : nom de la machine locale.</li><li>Session procédures stockées : nom de la machine serveur.</li><li> Session autonome : nom de la machine</li></ul> |
-| systemUserName   | Text          | <ul><li>Sessions distantes (serveur) : nom de la session système ouverte sur la machine distante.</li><li>Sessions distantes (client) : nom de la session système locale</li><ul>                                                                           |
-| IPAddress        | Text          | <ul><li>Sessions distantes (serveur) : Adresse IP de la machine distante.</li><li>Sessions distantes (client) : Adresse IP de la machine locale.</li><li>Session autonome : "localhost"</li></ul>                                                           |
-| hostType         | Text          | Type d'hôte : "windows", "mac" ou "browser"                                                                                                                                                                                                 |
-| creationDateTime | Date ISO 8601 | Date et heure de la création de la session (session autonome : date et heure du démarrage de l'application)                                                                                                              |
-| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                                                      |
-| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                                                           |
-| persistentID     | Text          | Sessions distantes server/clients : ID persistant de la session                                                                                                                                                                             |
+| Propriété        | Type          | Description                                                                                                                                                                                                                              |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Type de session : "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                               |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                                                                                                       |
+| machineName      | Text          | <ul><li>Sessions distantes : nom de la machine distante.</li><li>Sessions client : nom de la machine locale.</li><li>Session de procédures stockées : nom de la machine serveur.</li><li> Session autonome : nom de la machine</li></ul> |
+| systemUserName   | Text          | <ul><li>Sessions distantes : nom de la session système ouverte sur la machine distante.</li><li>Sessions client : nom de la session système locale</li><ul>                                                                              |
+| IPAddress        | Text          | <ul><li>Sessions distantes : Adresse IP de la machine distante.</li><li>Sessions distantes (client) : Adresse IP de la machine locale.</li><li>Session autonome : "localhost"</li></ul>                                                  |
+| hostType         | Text          | Type d'hôte : "windows", "mac" ou "browser"                                                                                                                                                                              |
+| creationDateTime | Date ISO 8601 | Date et heure de la création de la session (session autonome : date et heure du démarrage de l'application)                                                                                           |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                                   |
+| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                                        |
+| persistentID     | Text          | Sessions distantes server/clients : ID persistant de la session                                                                                                                                                          |
 
 :::note
 
@@ -844,7 +844,7 @@ End if
 
 La propriété `.storage` contient <!-- REF #SessionClass.storage.Summary -->un objet partagé qui peut être utilisé pour stocker des informations disponibles pour tous les process de la session<!-- END REF -->.
 
-Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette propriété est elle-même en **lecture seulement** mais elle retourne un objet en lecture-écriture.
+Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette propriété est en **lecture seule**.
 
 :::note Notes
 
@@ -855,7 +855,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Cette 
 
 En client/serveur, l'objet `.storage` de la session de l'utilisateur distant n'est **pas** le même sur le serveur et sur le client.
 
-Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
+Lorsqu'une session utilisateur distante et une session web sont [partagées à l'aide d'un OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), elles partagent également le même objet `.storage` sur le serveur, même si l'OTP a été [créé](#createotp) à partir de la session du côté client.
 
 :::tip
 

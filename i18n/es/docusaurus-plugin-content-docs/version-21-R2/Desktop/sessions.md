@@ -110,8 +110,8 @@ Cuando se crea un token OTP en un entorno cliente/servidor, es necesario ejecuta
 
 :::tip Entrada de blog relacionada
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
+[Integra las páginas Qodly en un área web 4D sin costo adicional](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)<br/>
+[Mejora su interfaz de escritorio con widgets Web utilizando 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 

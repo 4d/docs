@@ -14,7 +14,7 @@ Como os outros tipos de campo que podem reter uma grande quantidade de dados (ta
 Usando a linguagem 4D, há duas maneiras de lidar com um blob:
 
 - **como un valor escalar**: un blob puede ser almacenado en una variable o un campo Blob y puede ser modificado.
-- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se chama [boxing](https://en.wikipedia.org/wiki/Object_type_\(object-oriented_programming\)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
+- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se chama [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
 
 Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determinar qual se adequa às suas necessidades:
 

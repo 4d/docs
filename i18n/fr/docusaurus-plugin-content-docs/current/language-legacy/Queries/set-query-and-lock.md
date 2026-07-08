@@ -5,7 +5,7 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 <div class="no-index">
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Par défaut, les enregistrements trouvés par les recherches ne sont pas verrouillés. Passez **Vrai** dans le paramètre *verrou* pour activer le verrouillage.
 
-Cette commande doit impérativement être utilisée à l’intérieur d’une transaction. Si elle est appelée hors du contexte d’une transaction, une erreur est générée. Ce principe permet un meilleur contrôle du verrouillage des enregistrements. Les enregistrements trouvés restent verrouillés tant que la transaction n’a pas été terminée (qu’elle ait été validée ou annulée). A l’issue de la transaction, tous les enregistrements sont déverrouillés, excepté l'enregistrement courant.
+Cette commande doit impérativement être utilisée à l’intérieur d’une transaction. Si elle est appelée hors du contexte d’une transaction, elle est ignorée. Ce principe permet un meilleur contrôle du verrouillage des enregistrements. Les enregistrements trouvés restent verrouillés tant que la transaction n’a pas été terminée (qu’elle ait été validée ou annulée). A l’issue de la transaction, tous les enregistrements sont déverrouillés, excepté l'enregistrement courant.
 
 Le verrouillage des enregistrements est effectif pour toutes les tables dans la transaction courante.
 

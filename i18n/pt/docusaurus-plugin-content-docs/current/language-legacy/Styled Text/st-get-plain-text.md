@@ -5,7 +5,7 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objeto* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *objeto* : Field, Variable {; *refMode* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objeto* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *objeto* : Variable, Field {; *refMode* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 <div class="no-index">
 
@@ -82,9 +82,10 @@ Você está procurando o texto "muito bem" entre os valores de um campo de texto
 
 Dado o seguinte texto localizado na área multi estilo "MyArea":
 
-```RAW
-It is now   Go to the 4D site or Open a window
+```html
+<span>It is now <span style="-d4-ref:'Current time:C178'"> </span> <a href="http://www.4d.com">Go to the 4D site</a> or <span style="-d4-ref-user:'openW'">Open a window</span></span>
 ```
+
 
 Este texto é mostrado:
 

@@ -30,7 +30,7 @@ title: OpenAIResult
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
-レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
+レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
 
 `rateLimit` オブジェクトの構造は以下のようになっています:
 

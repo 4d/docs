@@ -21,3 +21,4 @@ El cliente permite realizar peticiones HTTP.
 - [OpenAIChatAPI](OpenAIChatAPI.md)
 - [OpenAIImagesAPI](OpenAIImagesAPI.md)
 - [OpenAIModerationsAPI](OpenAIModerationsAPI.md)
+- [OpenAIFilesAPI](OpenAIFilesAPI.md)

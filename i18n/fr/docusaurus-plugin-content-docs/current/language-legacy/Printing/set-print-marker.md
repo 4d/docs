@@ -5,7 +5,7 @@ slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *numTaquet* ; *position* {; *} )<!-- END REF-->
+<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *numTaquet* : Integer ; *position* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET PRINT MARKER.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *objeto* : Text {; *posX* : Integer {; *posY* : Integer {; *ancho* : Integer {; *alto* : Integer}}}} ) : Boolean<br/>**Print object** ( *objeto* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *ancho* : Integer {; *alto* : Integer}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *objeto* : Text {; *posX* : Integer {; *posY* : Integer {; *ancho* : Integer {; *alto* : Integer}}}} ) : Boolean<br/>**Print object** ( *objeto* : Variable, Field {; *posX* : Integer {; *posY* : Integer {; *ancho* : Integer {; *alto* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 <div class="no-index">
 

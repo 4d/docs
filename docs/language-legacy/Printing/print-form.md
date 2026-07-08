@@ -34,7 +34,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. 
+
+**Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. 
 
 In the *form* parameter, you can pass:
 
@@ -44,9 +46,11 @@ In the *form* parameter, you can pass:
 
 Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands/page-break) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands/cancel) command before the [PAGE BREAK](../commands/page-break) command.
 
+### Syntaxes
+
 Three different syntaxes may be used:
 
-* **Detail area printing**
+#### Detail area printing
 
 Syntax:
 
@@ -56,7 +60,7 @@ Syntax:
 
 In this case, **Print form** only prints the Detail area (the area between the Header line and the Detail line) of the form.
 
-* **Form area printing**
+#### Form area printing
 
 Syntax:
 
@@ -92,7 +96,7 @@ In this case, the command will print the section designated by the *marker*. Pas
 | Form header8  | Integer | 208   |
 | Form header9  | Integer | 209   |
 
-* **Section printing**
+#### Section printing
 
 Syntax:
 
@@ -102,36 +106,49 @@ Syntax:
 
 In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
 
-**formData**
+#### formData
 
 Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](../commands/form) command. The form data object is available in the [`On Printing Detail` form event](../../Events/onPrintingDetail.md).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](../commands/dialog) command.
 
 
-**Return value**
+#### Return value
 
 The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands/get-printed-height) command.
+
+
+### Print settings 
 
 The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 * Call [PRINT SETTINGS](../commands/print-settings). In this case, you let the user choose the settings.
 * Call [SET PRINT OPTION](../commands/set-print-option) and [GET PRINT OPTION](../commands/get-print-option). In this case, print settings are specified programmatically.
 
+### Page breaks
+
 **Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands/page-break). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands/page-break) command (except in the context of an [OPEN PRINTING JOB](../commands/open-printing-job), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
 **Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands/open-printing-job), you must NOT call [PAGE BREAK](../commands/page-break) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands/close-printing-job) command. If you call [PAGE BREAK](../commands/page-break) in this case, a blank page is printed.
 
-This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+### Support of form events and form objects
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands/print-record) instead.
+**Print form** only generates the [`On Printing Detail` event](../../Events/onPrintingDetail.md) in the form method.
 
-**Print form** generates only one [`On Printing Detail` event](../../Events/onPrintingDetail.md) for the form method.
+**Print form** prints fields and variables in a [fixed size frame](../../FormObjects/properties_Print.md#print-frame) only. 
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**Print form** prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+
+[Subforms](../../FormObjects/subform_overview.md) are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands/print-record) instead.
+
+:::note 4D Server
+
+This command can be executed on 4D Server within the framework of a stored procedure. In this context:
 
 * Make sure that no dialog box appears on the server machine (except for a specific requirement).
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+
+:::
 
 ## Example 1 
 
@@ -189,6 +206,78 @@ The code that calls the dialog then prints its body:
  DIALOG("Request_obj";$formData)
  $h:=Print form("Request_var";$formData;Form detail)
 ```
+
+## Example 4
+
+You want to print a report with data coming from an entity selection (ORDA) in a project form, using breaks and subtotals. 
+
+The form template is the following:
+
+![](../../assets/en/commands/form-print1.png)
+
+The method that calls the form:
+
+```4d
+var $es : cs.SalesSelection
+var $e : cs.SalesEntity
+
+$es:=ds.Sales.all().orderBy("Region asc, Seller asc")
+$breakRegion:=""
+$breakSeller:=""
+
+
+// Global report header (printed once)
+Print form("testPrintForm1"; $e; Form header)
+For each ($e; $es)
+	
+	// Region break (level 1): close previous seller and region totals, then open new region
+	If ($breakRegion#$e.Region)
+		If ($breakRegion#"")
+			Print form("testPrintForm1"; {totalQuantity: $filteredSeller.sum("Quantity"); totalPrice: $filteredSeller.sum("UnitPrice")}; Form break2)
+			Print form("testPrintForm1"; {totalQuantity: $filtered.sum("Quantity"); totalPrice: $filtered.sum("UnitPrice")}; Form break1)
+		End if 
+		$breakRegion:=$e.Region
+		// Reset seller break so header2 is printed for first seller in this region
+		$breakSeller:=""
+		$filtered:=$es.query("Region=:1"; $breakRegion)
+		Print form("testPrintForm1"; {Region: $e.Region}; Form header1)
+	End if 
+	
+	// Seller break (level 2) inside current region
+	If (($breakSeller#$e.Seller))
+		If ($breakSeller#"")
+			Print form("testPrintForm1"; {totalQuantity: $filteredSeller.sum("Quantity"); totalPrice: $filteredSeller.sum("UnitPrice")}; Form break2)
+		End if 
+		$breakSeller:=$e.Seller
+		// Seller subtotal must be scoped by Region + Seller
+		$filteredSeller:=$es.query("Region=:1 and Seller=:2"; $breakRegion; $breakSeller)
+		Print form("testPrintForm1"; {Seller: $e.Seller}; Form header2)
+	End if 
+	
+	
+	// Detail line
+	Print form("testPrintForm1"; $e; Form detail)
+End for each 
+
+// Close the last seller and region groups after loop
+Print form("testPrintForm1"; {totalQuantity: $filteredSeller.sum("Quantity"); totalPrice: $filteredSeller.sum("UnitPrice")}; Form break2)
+Print form("testPrintForm1"; {totalQuantity: $filtered.sum("Quantity"); totalPrice: $filtered.sum("UnitPrice")}; Form break1)
+
+// Grand totals for the full selection
+Print form("testPrintForm1"; \
+{totalQuantity: $es.sum("Quantity"); totalPrice: $es.sum("UnitPrice"); \
+minQuantity: $es.min("Quantity"); minPrice: $es.min("UnitPrice"); \
+maxQuantity: $es.max("Quantity"); maxPrice: $es.max("UnitPrice")}; \
+Form break0)
+
+// Global report footer (printed once)
+Print form("testPrintForm1"; $e; Form footer)
+```
+
+The resulting printed report:
+
+![](../../assets/en/commands/form-print2.png)
+
 
 ## See also 
 

@@ -5,7 +5,7 @@ slug: /commands/array-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY DATE.Syntax-->**ARRAY DATE** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY DATE.Syntax-->**ARRAY DATE** ( *nomTableau* : Array ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY DATE.Params-->
 <div class="no-index">
 

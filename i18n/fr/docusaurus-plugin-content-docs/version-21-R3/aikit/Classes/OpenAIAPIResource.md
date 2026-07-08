@@ -21,3 +21,4 @@ Le client est autorisé à effectuer des requêtes HTTP.
 - [OpenAIChatAPI](OpenAIChatAPI.md)
 - [OpenAIImagesAPI](OpenAIImagesAPI.md)
 - [OpenAIModerationsAPI](OpenAIModerationsAPI.md)
+- [OpenAIFilesAPI](OpenAIFilesAPI.md)

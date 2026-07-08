@@ -51,7 +51,7 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
      $o.a:=$o.b //$o.a=0
 ```
 
-- La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+- Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor.
 
 - Un valor indefinido pasado como parámetro a un método proyecto se convierte automáticamente en 0 o "" según el tipo de parámetro declarado.
 

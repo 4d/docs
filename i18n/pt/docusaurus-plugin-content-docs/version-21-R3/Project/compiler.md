@@ -221,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Ficheiro Symbol
 
-Se você marcar a opção [**Gerar o arquivo de símbolos**](#symbol-file) nas configurações do compilador, um arquivo de símbolo chamado `ProjectName_symbols. xt` é criado na [pasta Logs](../Project/architecture.md#logs) do projeto durante a compilação. It is divided into several parts:
+Se você marcar a opção [**Gerar o arquivo de símbolos**](#symbol-file) nas configurações do compilador, um arquivo de símbolo chamado `ProjectName_symbols. xt` é criado na [pasta Logs](../Project/architecture.md#logs) do projeto durante a compilação. Está dividido em várias partes:
 
 #### Lista das variáveis processo e interprocesso
 

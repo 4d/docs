@@ -15,21 +15,35 @@ title: OpenAIResult
 
 ## 計算プロパティ
 
-| プロパティ        | 型          | 説明                                                               |
-| ------------ | ---------- | ---------------------------------------------------------------- |
-| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                      |
-| `errors`     | Collection | エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。 |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                      |
-| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                        |
-| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                        |
-| `usage`      | Object     | レスポンス本文からの使用状況を返します(あれば)。                     |
+| プロパティ        | 型          | 説明                                                                                                         |
+| ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
+| `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                           |
+| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
+| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
+| `usage`      | Object     | Returns usage information (token counts) from the response body if any. |
+
+### usage
+
+The `usage` property returns an object containing token usage information from the API response. The structure varies depending on the API endpoint used.
+
+> **Note:** Different OpenAI-compatible services may return different fields in the usage object. The structure documented here is based on OpenAI's API. Not all fields may be present in responses from other providers.
+
+See the specific result class documentation for endpoint-specific usage structures:
+
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
 
 ### rateLimit
 
 `rateLimit` プロパティはレスポンスヘッダーからのレート制限情報を格納しているオブジェクトを返します。
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
+この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
-レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
+レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
 
 `rateLimit` オブジェクトの構造は以下のようになっています:
 
@@ -46,11 +60,11 @@ title: OpenAIResult
 
 ### `throw()`
 
-`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
+`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
 
 ## 継承クラス
 
-特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

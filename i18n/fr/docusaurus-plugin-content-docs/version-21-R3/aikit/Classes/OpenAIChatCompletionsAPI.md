@@ -7,7 +7,7 @@ title: OpenAIChatCompletionsAPI
 
 La classe `OpenAIChatCompletionsAPI` est conçue pour gérer les réponses conversationnelles (*chat completions*) avec l'API OpenAI. Elle fournit des méthodes pour créer, récupérer, mettre à jour, supprimer et lister les réponses conversationnelles.
 
-https://platform.openai.com/docs/api-reference/chat
+https://developers.openai.com/api/reference/resources/chat
 
 ## Fonctions
 
@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/chat
 
 Crée un modèle de réponse pour la conversation donnée.
 
-https://platform.openai.com/docs/api-reference/chat/create
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
 
 #### Exemple d'utilisation
 
@@ -62,7 +62,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 Permet de récupérer une génération de réponse conversationnelle stockée.
 
-https://platform.openai.com/docs/api-reference/chat/get
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/retrieve
 
 ### update()
 
@@ -77,7 +77,7 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 Permet de modifier une génération de réponse conversationnelle stockée.
 
-https://platform.openai.com/docs/api-reference/chat/update
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/update
 
 ### delete()
 
@@ -91,7 +91,7 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 Permet de supprimer une génération de réponse conversationnelle stockée.
 
-https://platform.openai.com/docs/api-reference/chat/delete
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/delete
 
 ### list()
 
@@ -104,4 +104,4 @@ https://platform.openai.com/docs/api-reference/chat/delete
 
 Retourne la liste des réponses conversationnelles stockées.
 
-https://platform.openai.com/docs/api-reference/chat/list
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/list

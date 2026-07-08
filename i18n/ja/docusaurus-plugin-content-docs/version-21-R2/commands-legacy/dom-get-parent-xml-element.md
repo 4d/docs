@@ -5,7 +5,7 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* : Text {; *parentElemName* : Text {; *parentElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* : Text {; *parentElemName* : Text {; *parentElemValue* : any}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594; | XML要素参照 |
 | parentElemName | Text | &#8592; | 親XML要素名 |
-| parentElemValue | Text | &#8592; | 親XML要素値 |
+| parentElemValue | any | &#8592; | 親XML要素値 |
 | 戻り値 | Text | &#8592; | 親XML要素参照 |
 </div>
 <!-- END REF-->

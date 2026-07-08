@@ -5,7 +5,7 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *utilisateur* )} : Text<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** ({ *utilisateur* : Integer }) : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 <div class="no-index">
 

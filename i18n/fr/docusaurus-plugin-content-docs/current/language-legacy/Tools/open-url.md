@@ -5,7 +5,7 @@ slug: /commands/open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *chemin* {; *nomApp*}{; *} )<!-- END REF-->
+<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *chemin* : Text {; *nomApp* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
 <div class="no-index">
 

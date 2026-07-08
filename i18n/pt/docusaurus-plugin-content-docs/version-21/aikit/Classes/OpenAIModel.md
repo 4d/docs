@@ -7,7 +7,7 @@ title: OpenAIModel
 
 A model description.
 
-https://platform.openai.com/docs/api-reference/models/object
+https://developers.openai.com/api/reference/resources/models
 
 ## Propriedades
 

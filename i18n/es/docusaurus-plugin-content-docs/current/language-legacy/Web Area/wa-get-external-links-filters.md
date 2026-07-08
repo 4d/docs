@@ -5,7 +5,7 @@ slug: /commands/wa-get-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA GET EXTERNAL LINKS FILTERS** ( *objeto* : Field, Variable ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
+<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA GET EXTERNAL LINKS FILTERS** ( *objeto* : Variable, Field ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 <div class="no-index">
 

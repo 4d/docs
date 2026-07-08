@@ -9,6 +9,6 @@ title: On Row Moved
 
 ## 説明
 
-このイベントは、ユーザーのドラッグ＆ドロップ ([許可されていれば](FormObjects/properties_Action.md#行の移動可)) で、リストボックス ([配列型のみ](FormObjects/listbox_overview.md#配列リストボックス)) の行が移動されたときに生成されます。 ただし、元の場所にドロップされた場合には生成されません。
+このイベントは、ユーザーのドラッグ＆ドロップ ([許可されていれば](FormObjects/properties_Action.md#行の移動可)) で、リストボックス ([配列型のみ](FormObjects/listbox_overview.md#配列リストボックス)) の行が移動されたときに生成されます。 ただし、元の場所にドロップされた場合には生成されません。 ただし、元の場所にドロップされた場合には生成されません。
 
 `LISTBOX MOVED ROW NUMBER` コマンドは行の新しい位置を返します。

@@ -223,6 +223,11 @@ $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
 
+#### Veja também
+
+[`.removeFlags()`](#removeflags) 
+
+
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.append().Desc -->
@@ -549,7 +554,7 @@ End if
 
 #### Descrição
 
-A função `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->define o marcador "apagado" para as mensagens definidas em `msgsIDs` ou `allMsgs`<!-- END REF -->.
+A função `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->A função `.removeFlags()`<!-- END REF -->.
 
 Pode passar:
 
@@ -1402,7 +1407,7 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 #### Descrição
 
-A função `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->remove flags do `msgIDs` para as `palavras-chave` especificadas<!-- END REF -->.
+A função `.delete()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->define o marcador "apagado" para as mensagens definidas em `msgsIDs` ou `allMsgs`<!-- END REF -->.
 
 No parâmetro `msgIDs` , pode passar qualquer um dos dois:
 
@@ -1464,7 +1469,13 @@ $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
+#### Veja também
+
+[`.addFlags()`](#addflags) 
+
 <!-- END REF -->
+
+
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
@@ -1495,9 +1506,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 A função `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->muda o nome de uma caixa de correio no servidor IMAP<!-- END REF -->. Tentar mudar o nome de uma caixa de correio de um nome de caixa de correio que não existe ou para um nome de caixa de correio que já existe irá gerar um erro.
 
-No parâmetro `currentName`, passar o nome da caixa de correio para renommer.
-
 Passar o novo nome para a caixa de correio no parâmetro `newName`.
+
+No parâmetro `currentName`, passar o nome da caixa de correio para renommer.
 
 **Objeto devolvido**
 
@@ -1573,7 +1584,7 @@ var $server,$boxInfo,$result : Object
 
 > Esta função é baseada na especificação do [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->procura por mensagens que correspondam ao dado *searchCriteria* na caixa de correio actual<!-- END REF -->. *searchCriteria* consiste em uma ou mais chaves de pesquisa.
+A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->procura por mensagens que correspondam ao dado *searchCriteria* na caixa de correio actual<!-- END REF -->. .
 
 *searchCriteria* é um parâmetro de texto que lista uma ou mais chaves de pesquisa (ver [Chaves de pesquisa autorizadas](#authorized-search-keys) abaixo) associadas ou não a valores a procurar. Uma chave de pesquisa pode ser um único ou vários itens. Por exemplo:
 
@@ -1830,7 +1841,8 @@ var $server,$boxInfo,$result : Object
      New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
     // ...
-   End if
+    End for each
+  End if
 ```
 
 <!-- END REF -->

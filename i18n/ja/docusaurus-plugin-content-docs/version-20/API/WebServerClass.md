@@ -73,10 +73,10 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 <!-- REF #_command_.WEB Server.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
-|Result|4D.WebServer|<-|Web server object|
+|option|Integer|->|取得するWeb サーバー(省略時のデフォルト = `Web server database`)|  
+|戻り値|4D.WebServer|<-|Web server object|
 </div>
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 <!-- REF #_command_.WEB Server list.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|Result|Collection|<-|Collection of the available Web server objects|
+|戻り値|Collection|<-|Collection of the available Web server objects|
 </div>
 <!-- END REF -->
 
@@ -230,7 +230,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
- <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ( [`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。 **methods** プロパティは任意です。
+ <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ( [`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。
 
 
 - **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
@@ -677,10 +677,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.start().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-|settings|Object|->|Web server settings to set at startup|  
-|Result|Object|<-|Status of the web server startup|
+|settings|Object|->|開始時の Webサーバー設定|
+|戻り値|Object|<-|Status of the web server startup|
 </div>
 <!-- END REF -->
 
@@ -740,9 +740,9 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.stop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|----|---|
-||||Does not require any parameters|
+||||引数を必要としません|
 </div>
 <!-- END REF -->
 

@@ -5,7 +5,7 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *entête* )<br/>**WEB GET HTTP HEADER** ( *tabChamps* ; *tabValeurs* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *entête* : Text )<br/>**WEB GET HTTP HEADER** ( *tabChamps* : Text array ; *tabValeurs* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 <div class="no-index">
 

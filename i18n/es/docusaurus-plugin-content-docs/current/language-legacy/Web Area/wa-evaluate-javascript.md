@@ -5,7 +5,7 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *objeto* : Text ; *codeJS* : Text {; *type* : Integer} )  : any<br/>**WA Evaluate JavaScript** ( *objeto* : Field, Variable ; *codeJS* : Text {; *type* : Integer} )  : any<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *objeto* : Text ; *codeJS* : Text {; *type* : Integer} ) : any<br/>**WA Evaluate JavaScript** ( *objeto* : Variable, Field ; *codeJS* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 <div class="no-index">
 

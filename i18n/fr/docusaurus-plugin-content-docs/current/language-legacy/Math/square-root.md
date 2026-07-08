@@ -5,7 +5,7 @@ slug: /commands/square-root
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Square root.Syntax-->**Square root** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Square root.Syntax-->**Square root** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
 <div class="no-index">
 

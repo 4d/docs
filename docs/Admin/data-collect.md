@@ -40,7 +40,9 @@ Some data is also collected at regular intervals.
 |classUsage|Object|Number of instances of certain language classes|
 |connectionSystems|Collection|Client OS without the build number (in parenthesis) and number of clients using it|
 |databases[].cacheSize|Number|Cache size in bytes|
+|databases[].compatibilitySettings|Object|Enabled Compatibility settings|
 |databases[].externalDatastoreOpened|Number|Number of calls to `Open datastore`|
+|databases[].fluentUI|Boolean|True if Use Fluent UI on Windows setting is checked|
 |databases[].id|Number|Database ID|
 |databases[].internalDatastoreOpened|Number|Number of times the datastore is opened by an external server|
 |databases[].maxConcurrent4DClients|Number|Maximum number of simultaneous 4D Client sessions (using a 4D Client license) over the collection interval |
@@ -56,6 +58,7 @@ Some data is also collected at regular intervals.
 |databases[].remoteDebugger4DRemoteAttachments|Number|Number of attachments to the remote debugger from a remote 4D|
 |databases[].remoteDebuggerQodlyAttachments|Number|Number of attachments to the remote debugger from Qodly|
 |databases[].remoteDebuggerVSCodeAttachments|Number|Number of attachments to the remote debugger from VS Code|
+|databases[].sdi|Boolean|True if Use SDI mode on Windows setting is checked|
 |databases[].structureHash|Text||
 |databases[].uniqueID|Text (hashed string)|Unique id associated to the database (*Polynomial Rolling hash of the database name*)|
 |databases[].uptime|Number|Time elapsed (in seconds) between two collection events|
@@ -104,6 +107,7 @@ Some data is also collected at regular intervals.
 |numberOfWebServices|Number|Number of methods published as Web Services|
 |ODBCLogin|Number|Number of calls to `SQL LOGIN` using ODBC|
 |phpCall|Number|Number of calls to `PHP execute` |
+|plugins|Collection|List of loaded plugins|
 |QueryBySQL|Number|Number of calls to `QUERY BY SQL`|
 | restServer | Object | Object containing REST server information |
 | restServer.bytesIn | Number | Bytes received by the REST server   |

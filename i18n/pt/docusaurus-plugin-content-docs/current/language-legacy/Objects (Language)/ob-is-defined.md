@@ -5,7 +5,7 @@ slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objeto* : Object, Campo Object {; *propriedade* : Text} ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objeto* : Object {; *propriedade* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
 <div class="no-index">
 

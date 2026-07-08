@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando `Formula` <!-- REF #_command_.Formula.Summary -->cria um objeto `4D Function` com base na expressão *formulaExp*<!-- END REF -->. *formulaExp* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros.
+O comando `Formula` <!-- REF #_command_.Formula.Summary -->cria um objeto `4D Function` com base na expressão *formulaExp*<!-- END REF -->. *formulaExp* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros. Para mais informações sobre o que *formulaExp* pode conter, consulte a descrição do comando [`EXECUTE FORMULA`](../commands/execute-formula).
 
 Ter uma fórmula como se fosse um objeto permite que seja passada como um parâmetro (atributo calculado) para comandos ou métodos, ou para ser executado a partir de vários componentes, sem precisar declará-los como "partilhados por componentes e database host". Quando chamado, o objeto fórmula é avaliado sem o contexto do banco de dados ou componente que o criou.
 

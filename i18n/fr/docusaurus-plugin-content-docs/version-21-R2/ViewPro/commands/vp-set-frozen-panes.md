@@ -14,7 +14,7 @@ title: VP SET FROZEN PANES
 | Paramètres | Type    |    | Description                                                                 |
 | ---------- | ------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
-| paneObj    | Object  | -> | \|                                                                          |
+| paneObj    | Object  | -> | Objet contenant des informations sur les colonnes et lignes figées          |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
 
 </div>

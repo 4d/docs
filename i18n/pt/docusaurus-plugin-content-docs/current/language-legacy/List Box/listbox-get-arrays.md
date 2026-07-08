@@ -5,7 +5,7 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *objeto* : Text ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *objeto* : Field, Variable ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *objeto* : Text ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *objeto* : Variable ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 <div class="no-index">
 

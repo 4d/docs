@@ -5,7 +5,7 @@ slug: /commands/wa-open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( * ; *objeto* : Text ; *url* : Text )<br/>**WA OPEN URL** ( *objeto* : Field, Variable ; *url* : Text )<!-- END REF-->
+<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( * ; *objeto* : Text ; *url* : Text )<br/>**WA OPEN URL** ( *objeto* : Variable, Field ; *url* : Text )<!-- END REF-->
 <!--REF #_command_.WA OPEN URL.Params-->
 <div class="no-index">
 

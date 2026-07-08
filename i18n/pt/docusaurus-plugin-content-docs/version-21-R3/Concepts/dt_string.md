@@ -24,13 +24,13 @@ Uma cadeia vazia é especificada por duas aspas sem nada entre elas ("").
 
 As seguintes sequências de escape podem ser utilizadas em strings de caracteres:
 
-| Escape sequence                                | Carácter substituído                    |
-| ---------------------------------------------- | --------------------------------------- |
-| \n                                             | LF (Avanço de linha) |
-| \t                                             | HT (Tab)             |
-| \r                                             | CR (Carriage return) |
-| \\\\|\ (Barra invertida) |                                         |
-| \\"                                          | " (aspas)            |
+| Escape sequence | Carácter substituído                    |
+| --------------- | --------------------------------------- |
+| \n              | LF (Avanço de linha) |
+| \t              | HT (Tab)             |
+| \r              | CR (Carriage return) |
+| \\\\        |                                         |
+| \\"           | " (aspas)            |
 
 **Observação:** O caractere \ (barra invertida) é usado como separador em nomes de caminho no Windows. Portanto, deve usar uma barra invertida dupla \\\ em caminhos quando quiser ter uma barra invertida à frente de um carácter usado numa das sequências de escape reconhecidas pelo 4D (por exemplo, "C:\\\MyDocuments\\\New.txt").
 

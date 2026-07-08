@@ -41,7 +41,7 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
   - Booleano: False
   - Cadena: ""
   - Número: 0
-  - Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+  - Fecha: !00-00-00! Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
   - Hora: 0 (número de ms)
   - Indefinido, Null: sin cambios
 
@@ -51,7 +51,7 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
      $o.a:=$o.b //$o.a=0
 ```
 
-- La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+- Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor.
 
 - Un valor indefinido pasado como parámetro a un método proyecto se convierte automáticamente en 0 o "" según el tipo de parámetro declarado.
 

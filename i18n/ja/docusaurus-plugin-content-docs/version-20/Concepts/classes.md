@@ -107,7 +107,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 <!-- REF #_command_.cs.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
 |classStore|Object|<-|User class store for the project or component|
 </div>
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---|---|---|---|
 |classStore|Object|<-|4D class store|
 </div>
@@ -535,10 +535,10 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|引数|型||説明|
 |---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
+|param|any|->|親コンストラクターに受け渡す引数|
+|戻り値|Object|<-|Object's parent|
 </div>
 <!-- END REF -->
 
@@ -651,9 +651,9 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 <!-- REF #_command_.This.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|引数|型||説明|
 |---|---|---|---|
-|Result|Object|<-|Current object|
+|戻り値|Object|<-|Current object|
 </div>
 <!-- END REF -->
 

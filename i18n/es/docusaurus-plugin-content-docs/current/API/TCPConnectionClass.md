@@ -30,7 +30,7 @@ Para la depuración y monitorización, puede utilizar el [archivo de registro 4D
 
 ### Programación asíncrona
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Esta clase soporta programación asíncrona en 4D como se describe en la página [Ejecución Asíncrona](../Develop/async.md).
 
 ### Ejemplos
 
@@ -170,7 +170,7 @@ Los objetos TCPConnection ofrecen las siguientes propiedades y funciones:
 
 #### Descripción
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
+La función `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->crea una nueva conexión TCP a la *serverAddress* y *serverPort* especificados, usando las *opciones* definidas, y devuelve un objeto `4D.TCPConnection`<!-- END REF -->.
 
 #### Parámetro *options*
 

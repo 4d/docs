@@ -5,7 +5,7 @@ slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *réfUtilisateur* )<!-- END REF-->
+<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *réfUtilisateur* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
 <div class="no-index">
 

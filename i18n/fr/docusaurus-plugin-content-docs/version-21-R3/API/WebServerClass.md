@@ -7,8 +7,8 @@ La classe `WebServer` vous permet de démarrer et de contrôler un serveur web p
 
 ### Propriétés
 
-- **Streamable**: no
-- **Sharable**: no
+- **Streamable** : non
+- **Partageable** : non
 
 ### Objet Web Server
 
@@ -138,7 +138,7 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
+  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com

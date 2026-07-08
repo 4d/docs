@@ -129,7 +129,7 @@ title: クラス
 
 `.theme` プロパティは、 <!-- REF #TableOptions.theme.Summary -->表のテーマを定義します 表のテーマを定義します  (SpreadJS のネイティブテーマ名のテキスト値も可)<!-- END REF -->。
 
-See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+詳細については[ネイティブ SpreadJS テーマ](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) を参照してください。
 
 
 ### .useFooterDropDownList
@@ -137,7 +137,7 @@ See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/clas
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-`.useFooterDropDownList` プロパティは、 <!-- REF #TableOptions.useFooterDropDownList.Summary -->列の合計値を計算するフッターセルでドロップダウンリストを使用するかを示します<!-- END REF -->。 。
+`.useFooterDropDownList` プロパティは、 <!-- REF #TableOptions.useFooterDropDownList.Summary -->列の合計値を計算するフッターセルでドロップダウンリストを使用するかを示します<!-- END REF -->。 デフォルトは false です。
 
 
 
@@ -266,7 +266,7 @@ The `.borderTop` property is the <!-- REF #TableStyle.borderLeft.Summary -->top 
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
 
 
-`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します<!-- END REF -->。 If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します<!-- END REF -->。 テキストの場合: [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) の名前。
 
 
 
@@ -362,7 +362,7 @@ The `.borderTop` property is the <!-- REF #TableStyle.borderLeft.Summary -->top 
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-`.name` プロパティは、 <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->。
+`.name` プロパティは、 <!-- REF #TableThemeOptions.name.Summary -->[native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) の名前<!-- END REF -->。
 
 ### .secondColumnStripSize
 

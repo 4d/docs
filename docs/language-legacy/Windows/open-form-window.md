@@ -173,7 +173,7 @@ These window types have the following properties:
 |Suitable for scroll bars|No|No|No|
 |Modal|Yes|Yes, but can be moved|Yes, but can be moved|
 
-**Usage**: `DIALOG`, `ADD RECORD(...;...*)` or equivalent. 
+**Usage**: [`DIALOG`](../commands/dialog), `ADD RECORD(...;...*)` or equivalent. 
 
 
 #### Palette form window {#palette-form-window} 
@@ -225,7 +225,7 @@ Sheet windows are specific to macOS. These windows are displayed above the main 
 - Since a sheet window must be drawn above a form, its display is pushed back in the [`On Load` event](../../Events/onLoad.md) of the first form loaded in the window ([see example 3](#example-3)).
 
 
-**Usage**: `DIALOG`, `ADD RECORD(...;...*)` or equivalent, under macOS (not standard under Windows).
+**Usage**: [`DIALOG`](../commands/dialog), `ADD RECORD(...;...*)` or equivalent, under macOS (not standard under Windows).
 
 #### Toolbar form window {#toolbar-form-window}
 
@@ -299,6 +299,7 @@ which displays:
 
 ## See also 
 
+[DIALOG](../commands/dialog)  
 [FORM GET PROPERTIES](../commands/form-get-properties)  
 [Open window](../commands/open-window)  
 

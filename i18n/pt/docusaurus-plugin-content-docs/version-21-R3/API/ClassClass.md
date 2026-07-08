@@ -3,7 +3,7 @@ id: ClassClass
 title: Class
 ---
 
-Quando uma classe de usuário é [defined](Concepts/classes.md#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si mesmo, da classe "Class", que tem propriedades e uma função.
+Quando uma classe de usuário é [defined](../Project/code-overview.md#creating-classes) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si mesmo, da classe "Class", que tem propriedades e uma função.
 
 ### Resumo
 

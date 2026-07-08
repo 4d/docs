@@ -5,7 +5,7 @@ slug: /commands/next-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
 <div class="no-index">
 

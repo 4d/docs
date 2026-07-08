@@ -5,7 +5,7 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : 倍長整数, 文字 )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : 倍長整数, 文字 )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 <div class="no-index">
 

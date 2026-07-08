@@ -24,7 +24,7 @@ Après avoir sélectionné les propriétés d'événement [`On Before Keystroke`
 
 L'événement `On After Keystroke` n'est pas généré :
 
-- in [list box columns](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
+- dans la méthode [des colonnes de list box](FormObjects/listbox-column.md), sauf lorsqu'une cellule est en cours d'édition (cependant elle est générée dans tous les cas dans la méthode de [list box](FormObjects/listbox_overview.md)),
 - lorsque les modifications utilisateur ne sont pas effectuées à l'aide du clavier (coller, glisser-déposer, case à cocher, liste déroulante, combo box). Pour traiter ces événements, vous devez utiliser [`On After Edit`](onAfterEdit.md).
 
 ### Séquence d'entrée

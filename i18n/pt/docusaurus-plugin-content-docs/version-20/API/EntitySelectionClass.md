@@ -304,7 +304,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 #### Descrição
 
-A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->addiciona a *entity* especificada ou *entitySelection* para a selleção de entidade original e retona a seleção de entidade modificada<!-- END REF -->.
+A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 :::info warning
@@ -322,7 +322,7 @@ A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->addiciona a 
 
 *   Se a selecção de entidades estiver ordenada, a sua ordem é mantida e *entitySelection* é adicionado no final da selecção. Se as referências às mesmas entidades de *entitySelection* já pertencerem à selecção de entidades, são duplicadas e são adicionadas novas referências.
 *   Se a seleção de entidade nãofor ordenada, ela fica ordenada.
-> Parâmetros
+> Para mais informação, consulte a seção [Entity selections compartilháveis ou modificáveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 A entity selection modificada é devolvida pela função, de modo que as chamadas à função podem ser encadeados.
 
@@ -400,7 +400,7 @@ A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina a se
 *   Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Se a entidade pertencer à selecção de entidades, é devolvida uma nova referência à selecção de entidades. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
 > > > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). A seleção resultante é sempre desordenada.
 
-Se a entity selection inicial ou o parâmetro *entitySelection* estiverem vazios, ou se *entity* for Null, se devolve uma entity selection vazia.
+Se a seleção de entidade original ou tanto a seleção de entidade quanto o parâmetro *entitySelection* vazios e uma seleção de entidade vazia é retornada.
 
 Se a entity selection inicial e o parâmetro não forem relacionados com a mesma dataclass, se produz um erro.
 
@@ -824,7 +824,7 @@ $jobs:=ds. Employee.all().distinct("jobName";dk count values)
 
 #### Descrição
 
-A função `.distinct()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
+A função `.distinct()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->retorna uma coleção contendo apenas valores diferentes (distintos) em *attributePath* na seleção de entidade<!-- END REF -->.
 
 *attributePath* não se encontra na classe de dados da entity selection.
 
@@ -892,7 +892,7 @@ Se encontrar uma entidade bloqueada durante a execução de `.drop()`, não é e
 
 #### Exemplo
 
-Exemplo sem a opção `dk stop dropping on first error`:
+Exemplo com a opção `dk stop dropping on first error`:
 
 ```4d
  var $employees; $notDropped : cs. EmployeeSelection
@@ -905,7 +905,7 @@ Exemplo sem a opção `dk stop dropping on first error`:
  End if
 ```
 
-Exemplo com a opção `dk stop dropping on first error`:
+Exemplo sem a opção `dk stop dropping on first error`:
 
 ```4d
  EmployeeSelection
@@ -1232,7 +1232,7 @@ $info:=$persons.getRemoteContextAttributes()
 
 A função `.isAlterable()` <!-- REF #EntitySelectionClass.isAlterable().Summary -->retorna True se a seleção de entidade for alterável<!-- END REF -->, e False se a seleção de entidade não for alterável.
 
-Para mais informação, consulte a seção [Entity selections compartilháveis ou modificáveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Para saber mais sobre propriedade compartilhável de entity selections, consulte [Entity selections compartilháveis ou modificáveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### Exemplo
 
@@ -1528,7 +1528,9 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclui da seleção de entidade que é aplicada a *entity* ou as entidaddes de *entitySelection* e retorna a seleção de entidade resultante<!-- END REF -->.
 
 *   Se passar *entity* como parâmetro, a função cria uma nova seleção de entidade sem *entity* (se *entity* pertencer à seleção de entidade). Se *entity* não for incluída na seleção de entidade original, uma nova referência para a seleção de entidade é retornada.
-*   Se a seleção de entidade original e o parâmetro *entitySelection* for vazio, uma seleção de entidade vazia é retornada. > > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+*   Se a seleção de entidade original e o parâmetro *entitySelection* forem vazios, uma seleção de entidade vazia é retornada.
+
+> Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 Como padrão, se omitir o parâmetro *keepOrder* , a seleção de entidade resultado não é ordenada. Se quiser manter a ordem da seleção de entidade original (por exemplo se quiser reutilizar a seleção de entidade em uma interface de usuário) passe a constante `dk keep ordered` em *keepOrder*. Neste caso, o resultado é uma seleção de entidade ordenada e a ordem da seleção de entidade inicial é mantida
 
@@ -1538,7 +1540,7 @@ Se passar `dk keep ordered` em *keepOrder* e removida *entitySelection* contém 
 
 :::
 
-Se a seleção de entidade original ou tanto a seleção de entidade quanto o parâmetro *entitySelection* vazios e uma seleção de entidade vazia é retornada.
+Se *entitySelection* estiver vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
 Se *entitySelection* estiver vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
@@ -1699,7 +1701,7 @@ A ordem na qual os atributos forem passados determina a prioridade de ordenaçã
 Como padrão, atributos são ordenados em ordem ascendente ("descendente" é false)
 
 Pode adicionar quantos objetos quiser nos critérios da coleção.
-> Valores null são avaliados como menor que outros valores.
+> Um resultado nullé sempre o menor valor.
 
 Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*, a função devolve uma selecção de entidade vazia.
 
@@ -1739,7 +1741,7 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 </details>
 
-<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D. EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
@@ -1766,7 +1768,7 @@ Pode usar *formulaString* ou um parâmetro *formulaObj*:
 - *formulaObj*: passa um objeto fórmulada valida criado usando `Formula` ou `Formula from string`.
 
 *formulaString* ou*formulaObj* é executado para cada entidade da seleção de entidade e seu resultado é usado para definir a posição da entidade na seleção de entidade retornada.. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
-> Um resultado nullé sempre o menor valor.
+> Valores null são avaliados como menor que outros valores.
 
 Como padrão, se omitir o parâmetro *keepOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente pode passar um dos valores abaixo no parâmetro *sortOrder*:
 
@@ -1905,11 +1907,11 @@ para informações detalhadas de como usar *queryString*, *value*e *querySetting
 
 #### Exemplo 2
 
-A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`.query()`](DataClassClass.md#query) .
+[`.query()`](DataClassClass.md#query) para dataclass
 
 #### Veja também
 
-[`.query()`](DataClassClass.md#query) para dataclass
+A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`.query()`](DataClassClass.md#query) .
 
 <!-- END REF -->
 
@@ -2074,7 +2076,7 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 #### Descrição
 
-A função `.add()` <!-- REF #EntitySelectionClass.selected().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
+A função `.add()` <!-- REF #EntitySelectionClass.selected().Summary -->addiciona a *entity* especificada ou *entitySelection* para a selleção de entidade original e retona a seleção de entidade modificada<!-- END REF -->.
 > Esta função não modifica a seleção de entidades original.
 
 Passe o parâmetro *selectedEntities* uma seleção de entidade contendo entidades para qual quiser saber a posição na seleção de entidade original. *selectedEntities* deve ser uma seleção de entidade pertencendo a mesma dataclass que a seleção de entidade original, senão acontece um erro 1587 - "The entity selection comes from an incompatible dataclass" .
@@ -2216,7 +2218,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 
 #### Descrição
 
 
-A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retorna a soma de todos os valores *attributePath* na seleção de entidade<!-- END REF -->.
+A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->A função `.sum()`<!-- END REF -->.
 
 `.sum()` retorna 0 se a seleção de entidade for vazia.
 
@@ -2283,14 +2285,14 @@ Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de
 *   *filterCol* - uma coleção de strings contendo caminhos de propriedade: \["propertyPath1", "propertyPath2",...
 
 
-Se for especificado um filtro para um atributo do tipo `relatedEntity` :
+Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 *   propertyPath = "relatedEntity" -> é extraído de forma simples
 *   propertyPath = "relatedEntity.*" -> todas as propriedades foram extraídas
 *   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> só se extraem essas propriedades
 
 
-Se for especificado um filtro para um atributo do tipo `relatedEntities` :
+Se for especificado um filtro para um atributo do tipo `relatedEntity` :
 
 *   propertyPath = "relatedEntities.*" -> se extraem todas as propriedades
 *   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
@@ -2577,7 +2579,7 @@ Retorna:
 
 #### Exemplo 3
 
-Exemplo com extracção de algumas propriedades de uma relatedEntity:
+Exemplo com extracção de algumas propriedades de `relatedEntities`:
 
 ```4d
 var $employeesCollection : Collection
@@ -2605,7 +2607,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemplo 8
 
-Exemplo com extracção de algumas propriedades de `relatedEntities`:
+Exemplo com extracção de algumas propriedades de uma relatedEntity:
 
 ```4d
  var $employeesCollection : Collection

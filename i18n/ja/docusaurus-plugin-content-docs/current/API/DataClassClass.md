@@ -987,7 +987,6 @@ attributePath|formula 比較演算子 値
 | OR  | &#124;,&#124;&#124;, or |
 
 - **order by attributePath**: クエリに "order by attributePath" ステートメント を追加することで、結果をソートすることができます。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。
-  &#062; \* このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については <a href="ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし">エンティティセレクションの順列あり/順列なし</a> を参照ください)。
 
 > このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](../ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
@@ -1225,9 +1224,9 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 | プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                                                                              |
-| metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 以下の(テキストの)定数のいずれか一つを使用することができます:<li>`mk cosine` (省略時にデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>`mk dot`: ベクトル間のドット類似度を計算します。</li><li>`mk euclidean`: ベクトル間のユークリッド距離を計算します。 |
-| threshold | Real                                               | 任意(デフォルト: 0.5)。 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                               |
+| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                                                                              |
+| metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 以下の(テキストの)定数のいずれか一つを使用することができます:<li>`mk cosine` (省略時にデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>`mk dot`: ベクトル間のドット類似度を計算します。</li><li>`mk euclidean`: ベクトル間のユークリッド距離を計算します。</li> |
+| threshold | Real                                               | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                               |
 
 **comparator** 記号の、一部のみがサポートされます。 これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください: これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
@@ -1242,23 +1241,33 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //(例: 4D.AIKit などから)ベクトルを取得するメソッド
-var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
 **order by** 宣言はクエリ文字列でサポートされており、これによって返されるエンティティセレクション内でエンティティは類似度順にソートされます。 例: 例:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
-  // デフォルト順、最初のエンティティは最も類似したもの
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //$results.first() entity is the most similar
 ```
 
-同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
+:::note
+
+You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+
+- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
+- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
+
+:::
+
+You can only order on a single vector field. 同じベクトルがクエリ文字列内に複数回出現した場合、order by は最初のものの結果に適用されます。例:
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
-    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 は order by に使用されます。
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
+    {vector : $myVector1 };{vector : $myVector2 })  
+    //myVectorField > :1 is used for the order by
 ```
 
 詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。
@@ -1266,6 +1275,7 @@ var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 orde
 :::tip 関連したblog 記事
 
 - [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1306,7 +1316,7 @@ var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 orde
 
 | プロパティ         | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString*  または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString*  または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 最大で 128個の *value* 引数を渡すことができます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: ["4Dv17.1","en\/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
 | args          | Object  | フォーミュラに渡す引数。 フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -1632,30 +1642,29 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  // embedding 属性は4D.Vector クラスオブジェクトを格納した4D フィールドに基づいています
-  // デフォルトのmetric (コサイン)での検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
-  // ユークリッド計量での検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
-  // 明示的にコサイン計量を指定し、カスタムのしきい値を用いた検索
-var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
-  // フォーミュラを使用した検索
-var $employees:=ds.Employee.query(Formula(This.embedding.cosineSimilarity($vector)>0.9))
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
+
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
+
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+
+  //search with a formula
+var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### 例題 5
 
-異なるメトリックでのベクトルを使用したベクトル類似度によるクエリを実行し、コサイン類似度で結果を並べ替えたい場合を考えます:
+Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
 
 ```4d
-  // 比較ベクトルを作成
-var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
-var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
-
-  // embedding 属性は、4D.Vector クラスオブジェクトを格納している4D フィールドに基づいています
-ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
-    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
+var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 
+var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by myVectorField, salary desc"; $comparisonVector)
 ```
 
 #### 参照

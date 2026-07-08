@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594; | Tabla del formulario o tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Solo formulario tabla: Tabla del formulario o tabla por defecto, si se omite |
 | nomForm | Text | &#8594; | Nombre del formulario |
 | ancho | Integer | &#8592; | Ancho del formulario (en píxeles) |
 | alto | Integer | &#8592; | Altura del formulario (en píxeles) |

@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *objeto* : Text ) : Text<br/>**WA Get page title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *objeto* : Text ) : Text<br/>**WA Get page title** ( *objeto* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 <div class="no-index">
 

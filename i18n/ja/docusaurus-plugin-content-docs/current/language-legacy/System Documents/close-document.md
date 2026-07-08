@@ -5,7 +5,7 @@ slug: /commands/close-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *DocRef* )<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *DocRef* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 <div class="no-index">
 

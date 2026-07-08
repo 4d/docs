@@ -1,11 +1,11 @@
 ---
 id: openaichatcompletionsparameters
-title: OpenAIChatCompletionParameters
+title: OpenAIChatCompletionsParameters
 ---
 
-# OpenAIChatCompletionParameters
+# OpenAIChatCompletionsParameters
 
-`OpenAIChatCompletionParameters` クラスはOpenAI API を使用したチャット補完に必要な引数を管理するために設計されています。
+`OpenAIChatCompletionsParameters` クラスはOpenAI API を使用したチャット保管に必要な引数を管理するために設計されています。
 
 ## 継承元
 
@@ -21,22 +21,24 @@ title: OpenAIChatCompletionParameters
 | `max_completion_tokens` | Integer    | `0`             | チャット補完の中で生成可能なトークンの最大数。                                                                                                                                                                                                                                     |
 | `n`                     | Integer    | `1`             | 各プロンプトに対して生成するチャット補完の数。                                                                                                                                                                                                                                     |
 | `temperature`           | Real       | `-1`            | 使用するサンプリング温度。0から2の間の値。 値が大きいほど出力はよりランダムになり、値が小さいほど出力はより集中して決まりきったものになります。                                                                                                                                                                                   |
+| `top_p`                 | Real       | `-1`            | ニュークリアス・サンプリングと呼ばれる、温度を用いたサンプリングに代わる手法で、ここではモデルはtop_p 確率質量を持つトークンの結果を考慮します。 つまり、0.1 はトップ10% の確率質量を占めるトークンのみが考慮されるということを意味します。 値が0 より大きい場合にのみ送信されます( `<= 0` の場合には省略され、デフォルトは`-1` です)。                |
 | `store`                 | Boolean    | `false`         | このチャット補完リクエストの出力を保存するかどうか。                                                                                                                                                                                                                                  |
 | `reasoning_effort`      | Text       | `Null`          | 推論モデルにおける推論の努力に対する制約。 推論モデルにおける推論の努力に対する制約。 現在サポートされている値は `"low"`、`"medium"`、および`"high"`です。                                                                                                                                                                 |
 | `response_format`       | Object     | `Null`          | モデルが出力するフォーマットを指定するオブジェクト。 構造化された出力に対応します。 構造化された出力に対応します。                                                                                                                                                                                                  |
 | `ツール`                   | Collection | `Null`          | モデルが呼び出し得るツール([OpenAITool](OpenAITool.md)) の一覧。 "function" 型のみがサポートされます。 "function" 型のみがサポートされます。                                                                                                                                        |
 | `tool_choice`           | Variant    | `Null`          | どのモデルによってどのツール(あれば)が呼び出されるかを管理します。 どのモデルによってどのツール(あれば)が呼び出されるかを管理します。 `"none"`、`"auto"`、`"required"`、または特定のツールを指定することができます。                                                                                           |
 | `prediction`            | Object     | `Null`          | 再生成されているテキストファイルのコンテンツなど、静的に予想される出力内容。                                                                                                                                                                                                                      |
+| `service_tier`          | Text       | `Null`          | リクエスト処理に使用される処理タイプを指定します。 `"auto"`、`"default"`、および `"priority"`。                                                                                                                                                                                |
 
 ### 非同期コールバック用プロパティ
 
-| プロパティ                                       | 型                           | 説明                                                                              |
-| ------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------- |
-| `onData` (または `formula`) | 4D.Function | データチャンクを受信する際に非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。 カレントプロセスが終了しないように注意してください。 |
+| プロパティ                                       | 型           | 説明                                                                                         |
+| ------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------ |
+| `onData` (または `formula`) | 4D.Function | データチャンクを受信した際に非同期で呼び出される関数。 *カレントプロセスが終了しないように注意してください。* |
 
-`onData` は引数として[OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md) を受け取ります。
+`onData` は引数として[OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md) を受け取ります。
 
-他のコールバックプロパティについては[OpenAIParameters](./OpenAIParameters.md) を参照して下さい。
+他のコールバックプロパティについては[OpenAIParameters](OpenAIParameters.md) を参照して下さい。
 
 ## レスポンスフォーマット
 
@@ -49,7 +51,7 @@ title: OpenAIChatCompletionParameters
 デフォルトのレスポンンスフォーマットは標準テキストを開きます:
 
 ```4d
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: {type: "text"} \
 })
@@ -60,13 +62,13 @@ var $params := cs.OpenAIChatCompletionsParameters.new({ \
 モデルが有効なJSON を返すように指定します:
 
 ```4d
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: {type: "json_object"} \
 })
 
 var $messages := [ \
-    cs.OpenAIMessage.new({ \
+    cs.AIKit.OpenAIMessage.new({ \
         role: "system"; \
         content: "You are a helpful assistant that always responds in JSON format." \
     }) \
@@ -96,7 +98,7 @@ var $jsonSchema := { \
     additionalProperties: False \
 }
 
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: { \
         type: "json_schema"; \

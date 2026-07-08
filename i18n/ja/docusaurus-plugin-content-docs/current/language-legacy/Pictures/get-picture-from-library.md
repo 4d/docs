@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef* : 倍長整数, 文字 ; *picture* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *picName* : 倍長整数, 文字 ; *picture* : Picture )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef* : Integer ; *picture* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *picName* : Text ; *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 <div class="no-index">
 

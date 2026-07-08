@@ -66,7 +66,7 @@ displayed_sidebar: docs
  height:=Print form(myTable;myForm;marker)
 ```
 
-この場合コマンドは *marker* で示されるセクションを印刷します。 以下の *Form Area* テーマの定数のうちの1つをmarker 引数に渡します:
+この場合コマンドは *marker* で示されるセクションを印刷します。 この場合コマンドは *marker* で示されるセクションを印刷します。 以下の *Form Area* テーマの定数のうちの1つをmarker 引数に渡します:
 
 | 定数            | 型       | 値   |
 | ------------- | ------- | --- |
@@ -102,7 +102,7 @@ displayed_sidebar: docs
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-この場合、コマンドは *areaStart* および *areaEnd* 引数間に含まれる部分を印刷します。 値はピクセル単位で入力しなければいけません。
+この場合、コマンドは *areaStart* および *areaEnd* 引数間に含まれる部分を印刷します。 値はピクセル単位で入力しなければいけません。 値はピクセル単位で入力しなければいけません。
 
 **formData**
 
@@ -112,18 +112,18 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **戻り値**
 
-**Print form** によって返される値は印刷可能範囲 の高さを表します。 この値は、 [Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。
+**Print form** によって返される値は印刷可能範囲 の高さを表します。 この値は、 [Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。 この値は、 [Get printed height](../commands-legacy/get-printed-height.md) コマンドに自動的に考慮されます。
 
 **Print form** を使用する場合、印刷ダイアログボックス は表示されません。 レポート はデザインモードでフォームに割り当てられた用紙設定を使用しません。 **Print form** を呼び出す前に用紙設定を指定する方法は2通りあります:
 
-- [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。  この場合、ユーザが設定を行います。
-- [SET PRINT OPTION](../commands-legacy/set-print-option.md) と [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。
+- [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。  この場合、ユーザが設定を行います。 この場合、ユーザが設定を行います。
+- [SET PRINT OPTION](../commands-legacy/set-print-option.md) と [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。 この場合、用紙設定はプログラムで指定します。
 
 **Print form** は、印刷するページをそれぞれメモリ 中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
 
 **警告:** このコマンドが [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) で開かれた印刷ジョブのコンテキストで呼び出された場合、 [PAGE BREAK](../commands-legacy/page-break.md) を使用して最後のページを印刷しようとしてはいけません。なぜなら、最後のページは[CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) コマンドによって自動的に印刷されるからです。 この状況で[PAGE BREAK](../commands-legacy/page-break.md) を使用した場合、空のページが印刷されます。
 
-このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。 エリアはコマンドの実行の際に毎回リセットされます。
+このコマンドは外部エリアとオブジェクト(例えば 4D Write や 4D Viewエリアなど) を印刷します。 エリアはコマンドの実行の際に毎回リセットされます。
 
 **警告:** サブフォームは、 **Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](../commands-legacy/print-record.md) を使用して下さい。
 

@@ -46,7 +46,7 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 
@@ -83,13 +83,13 @@ RB-1762-1
 
 *(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルトでの設定ですが、[SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) コマンドを使用することでこの振る舞いを変更することができます。
 
-*(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
+*(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
 
 > 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルトの設定ですが、[SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) コマンドを使用することでこの振る舞いを変更することができます。
 
 ### カスタムフォーマット
 
-カスタムの日付フォーマットは、[**日付と時間のフォーマット**](../Project/date-time-formats.md) ページで説明されている複数のパターンを使用して作成することができます。 例:
+Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. 例:
 
 | パターン        | 例           |
 | ----------- | ----------- |
@@ -104,14 +104,14 @@ RB-1762-1
 
 :::note blankIfNull
 
-- デフォルトでは、 [null 日付](../Concepts/dt_date.md#日付リテラル) は 00/00/00 のように、ゼロとして表示されます。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
-- [List box columns](listbox-column.md) and [list box footers](listbox-header-footer.md#footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
+- デフォルトでは、 [null 日付](../Concepts/dt_date.md#日付リテラル) は 00/00/00 のように、ゼロとして表示されます。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
+- 日付型の [リストボックスのカラム](listbox-column.md) および [リストボックスのフッター](listbox-header-footer.md#フッター) は常に "blankIfNull" (null値は空白表示) の振る舞いをします (解除できません)。
 
 :::
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 
@@ -140,13 +140,13 @@ RB-1762-1
 
 (1) キャレット (^) は、ほとんどのフォントの数字と同じ幅を占めるスペースを生成します。
 
-たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
+たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
 
 ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
 
 > 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。
 
-各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
+各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。 末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
 
 たとえば ##0 というフォーマットを使用して 3桁の数字を表示するものとします。 ユーザーがフィールドに何も入力しないと、フィールドには 0 が表示されます。 26 と入力すると、フィールドには 26 と表示されます。
 
@@ -157,7 +157,7 @@ RB-1762-1
 > Windows 環境下で、テンキーの小数点キーを使用した際、4D はカーソルが位置しているフィールドの型に応じて挙動が変化します:
 >
 > - 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。
-> - それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.)  またはカンマ (,) です。
+> - それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。
 
 ### 小数点とその他の表示文字
 
@@ -187,13 +187,13 @@ RB-1762-1
 
 2つの部分を指定する場合、4D は 1番目のフォーマットを正数とゼロに対して使用し、負数には 2番目のフォーマットを使用します。 3つの部分をすべて指定すると、1番目のフォーマットを正数、2 番目を負数、3 番目をゼロに使用します。
 
-> 3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 `###;###;#` と指定した場合、ゼロ値は "#" と表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。
+> 3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 `###;###;#` と指定した場合、ゼロ値は "#" と表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。
 
 次の数値表示フォーマットの例は、円記号とカンマを表示し、負の数値はカッコ内に入れ、ゼロを表示しません:
 
 ￥###,##0.00;(￥###,##0.00);
 
-2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
+2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。 これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
 
 ￥###,##0.00;(￥###,##0.00)
 
@@ -201,7 +201,7 @@ RB-1762-1
 
 ### 科学的記数法
 
-科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:
+科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると: たとえば次のフォーマットを指定すると:
 
 &3
 
@@ -220,11 +220,11 @@ RB-1762-1
 
 ### XML記法
 
-`&xml` フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
+`&xml` フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
 
 ### 数値を時間として表示する
 
-`&/`の後に数字を指定することにより、数値を時間として (時間フォーマットで) 表示することができます。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。
+`&/`の後に数字を指定することにより、数値を時間として (時間フォーマットで) 表示することができます。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。
 
 たとえば次のフォーマットを指定すると:
 
@@ -276,7 +276,12 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[入力](input_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[進捗インジケーター](progressIndicator.md)
 
 #### コマンド
 
@@ -302,7 +307,7 @@ RB-1762-1
 
 `JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-**トランケート (中央合わせ)** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
+**トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。 上下、および左右のはみ出し量は同じになります。
 
 **トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。
 
@@ -314,7 +319,7 @@ RB-1762-1
 
 `JSON 文法では: "proportionalTopLeft" / "proportionalCenter"`
 
-**スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (中央合わせ・プロポーショナル)** オプションも同様ですが、ピクチャーはエリアの中央に配置されます。
+**スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (中央合わせ・プロポーショナル)** オプションも同様ですが、ピクチャーはエリアの中央に配置されます。
 
 ピクチャーがエリアよりも小さい場合、サイズは変更されません。 ピクチャーがエリアよりも大きい場合、そのエリア内に全体が表示されるよう、比率を保ったままサイズが小さくなります。 比率が保たれるため、ピクチャーは歪むことなく表示されます。
 
@@ -340,7 +345,7 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 
@@ -377,7 +382,7 @@ RB-1762-1
 
 ### カスタムフォーマット
 
-Customized time formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. 例:
+カスタムの日付フォーマットは、[**日付と時間のフォーマット**](../Project/date-time-formats.md) ページで説明されている複数のパターンを使用して作成することができます。 例: 例:
 
 | パターン                       | 例                        |
 | -------------------------- | ------------------------ |
@@ -392,13 +397,13 @@ Customized time formats can be built using several patterns described in the [**
 
 :::note blankIfNull
 
-デフォルトでは、null の時間はゼロで表示されます。例: "00:00:00"。 "blankIfNull" オプションを使用すると、null の時間は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "MM_SS blankIfNull" または "aa hh:mm blankIfNull"
+デフォルトでは、null の時間はゼロで表示されます。例: "00:00:00"。 "blankIfNull" オプションを使用すると、null の時間は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "MM_SS blankIfNull" または "aa hh:mm blankIfNull" "blankIfNull" オプションを使用すると、null の時間は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "MM_SS blankIfNull" または "aa hh:mm blankIfNull"
 
 :::
 
 #### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 
@@ -411,7 +416,7 @@ Customized time formats can be built using several patterns described in the [**
 [ブール式](properties_Object.md#式の型) を次のフォームオブジェクトで表示した場合:
 
 - [入力オブジェクト](input_overview.md) にテキストとして
-- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
+- [リストボックスカラム](listbox-column.md) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
 ... 値の代わりに表示するテキストを指定することができます:
 
@@ -426,7 +431,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md) - [Input](input_overview.md)
+[リストボックスカラム](listbox-column.md) - [入力](input_overview.md)
 
 #### コマンド
 
@@ -450,7 +455,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -502,7 +507,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
+[チェックボックス](checkbox_overview.md) - [リストボックスカラム](listbox-column.md)
 
 #### コマンド
 
@@ -527,7 +532,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md)
+[リストボックスカラム](listbox-column.md)
 
 ---
 
@@ -564,7 +569,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 
@@ -599,7 +604,31 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ラジオボタン](radio_overview.md) -
+[スピナー](spinner.md) -
+[スプリッター](splitters.md) -
+[スタティックピクチャー](staticPicture.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[タブコントロール](tabControl.md) -
+[テキストエリア](text.md)
 
 #### コマンド
 
@@ -619,7 +648,7 @@ Customized time formats can be built using several patterns described in the [**
 
 このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
 
-- 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。下矢印キーを押すことで、エリアの内容をスクロールできます。
+- 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。 下矢印キーを押すことで、エリアの内容をスクロールできます。
 
 - 複数行のカラムやエリアの場合、4Dは自動改行を実行します。
 
@@ -629,7 +658,7 @@ Customized time formats can be built using several patterns described in the [**
 
 `JSON 文法では: "none"`
 
-このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
+このオブションの場合、4D はいっさい自動改行をおこないません。 表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
@@ -658,7 +687,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[入力](input_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター)
 
 #### コマンド
 

@@ -5,7 +5,7 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* : ポインター, 倍長整数 ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* : Pointer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 <div class="no-index">
 

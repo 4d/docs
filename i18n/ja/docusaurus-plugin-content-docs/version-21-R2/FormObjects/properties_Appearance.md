@@ -9,7 +9,7 @@ title: アピアランス
 
 デフォルトボタンは、フォームページごとに一つのみ設定できます。
 
-macOS上では、デフォルトボタンプロパティによってボタンの見た目が変更され、推奨されている選択肢であることをユーザーに対して示し、フォーカスがなくても、自動的に **Enter** キーに関連付けられます。 デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます:
+macOS上では、デフォルトボタンプロパティによってボタンの見た目が変更され、推奨されている選択肢であることをユーザーに対して示し、フォーカスがなくても、自動的に **Enter** キーに関連付けられます。 デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます: デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
@@ -37,7 +37,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 :::note
 
-フォーカスの四角形はmacOS (テキストおよびピクチャーの[入力](input_overview.md)) および [Fluent UI](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されているWindows でのみ利用可能です。 Windows クラシックUI ではサポートされていません。
+フォーカスの四角形はmacOS (テキストおよびピクチャーの[入力](input_overview.md)) および [Fluent UI](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されているWindows でのみ利用可能です。 Windows クラシックUI ではサポートされていません。 Windows クラシックUI ではサポートされていません。
 
 :::
 
@@ -49,10 +49,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[4D Write Pro エリア](writeProArea_overview.md)* [階層リスト](list_overview.md)
-* [入力](input_overview.md)
-* [リストボックス](listbox_overview.md)
-* [サブフォーム](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md)\* [階層リスト](list_overview.md)
 
 #### コマンド
 

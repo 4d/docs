@@ -44,7 +44,7 @@ To access the entity set, you must use `$entityset/\{entitySetID\}`, for example
 
 By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). The timeout is continually being reset to the value defined for its timeout (either the default one or the one you define) each time you use it.
 
-If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
+If you want to remove an entity set from 4D Server's cache, you can use [`$entityset/$release`](./$entityset.md#entitysetrelease).
 
 If you modify any of the entity's attributes in the entity set, the values will be updated. However, if you modify a value that was a part of the query executed to create the entity set, it will not be removed from the entity set even if it no longer fits the search criteria. 
 

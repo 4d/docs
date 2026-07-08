@@ -5,7 +5,7 @@ slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* ; *apparence* {; *icône* {; *hauteurLigne* {; *doubleClic* {; *multiSélection* {; *modifiable*}}}}} )<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* : Integer ; *apparence* : Integer {; *icône* : Integer {; *hauteurLigne* : Integer {; *doubleClic* : Integer {; *multiSélection* : Integer {; *modifiable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 <div class="no-index">
 

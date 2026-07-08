@@ -34,20 +34,31 @@ var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 
 ### prompt()
 
-**prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
+**prompt**(*prompt* : Variant) : OpenAIChatCompletionsResult
 
-| 引数       | 型                                                             | 説明                          |
-| -------- | ------------------------------------------------------------- | --------------------------- |
-| *prompt* | Text                                                          | Open AI チャットに送信するテキストプロンプト。 |
-| 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | チャットから返されたチャット補完結果。         |
+| 引数       | 型                                                             | 説明                                                                                                                      |
+| -------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| *prompt* | Text または [OpenAIMessage](OpenAIMessage.md)                    | OpenAI チャットに送信するテキストプロンプト、またはより複雑なメッセージ(例: 画像またはファイルつきのもの)の場合にはOpenAIMessage オブジェクト。 |
+| 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | チャットから返されたチャット補完結果。                                                                                                     |
 
-ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。
+ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。 単純なテキスト文字列を渡すか、あるいは画像やファイルなどを含むようなより高度なシナリオに対しては [OpenAIMessage](OpenAIMessage.md) オブジェクトを渡すこともできます。
 
 #### 使用例
 
 ```4D
+// 単純なテキストプロンプト
 var $result:=$chatHelper.prompt("Hello, how can I help you today?")
 $result:=$chatHelper.prompt("Why 42?")
+
+// より高度なシナリオ(例: 画像付き)において OpenAIMessage を使用
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "What's in this image?"})
+$message.addImageURL("https://example.com/photo.jpg"; "high")
+$result:=$chatHelper.prompt($message)
+
+// OpenAIMessage を使用してファイルを送信
+var $fileMessage:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Analyze this document"})
+$fileMessage.addFileId($uploadedFile.id)
+$result:=$chatHelper.prompt($fileMessage)
 ```
 
 ### reset()
@@ -65,19 +76,19 @@ $chatHelper.reset()  // 以前のメッセージとツールを全て消去
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : Object)
+**registerTool**(*tool* : Object; *handler* : Variant)
 
-| 引数        | 型      | 説明                                                                                                                                                 |
-| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                                                             |
-| *handler* | Object | ツール呼び出しを管理する関数([4D.Function](../../API/FunctionClass.md) またはオブジェクト)、*tool* 内の *handler* プロパティで定義されている場合にはオプション。 |
+| 引数        | 型      | 説明                                                                                                                  |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                              |
+| *handler* | Object | ツール呼び出しを管理する関数(4D.Function またはオブジェクト)、*tool* 内の *handler* プロパティで定義されている場合にはオプション |
 
 自動ツール呼び出し関数のために、ツールとそのハンドラ関数を登録します。
 
 *handler* 引数には以下のものを渡すことができます:
 
 - **4D.Function**: 直接ハンドラ関数
-- **オブジェクト**: ツール関数名と一致する `formula` プロパティを格納しているオブジェクト
+- **Object**: ツール関数名と一致するフォーミュラプロパティを格納しているオブジェクト
 
 ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
 

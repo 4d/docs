@@ -5,7 +5,7 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *objeto* : Text ; *filtroEntrada* : Text )<br/>**OBJECT SET FILTER** ( *objeto* : Field, Variable ; *filtroEntrada* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *objeto* : Text ; *filtroEntrada* : Text )<br/>**OBJECT SET FILTER** ( *objeto* : Variable, Field ; *filtroEntrada* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 <div class="no-index">
 

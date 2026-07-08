@@ -7,7 +7,7 @@ title: OpenAIModerationsAPI
 
 `OpenAIModerationsAPI` は、入力のテキストまたは画像が、潜在的に有害であるかどうかを判断するためのものです。
 
-https://platform.openai.com/docs/api-reference/moderations
+https://developers.openai.com/api/reference/resources/moderations
 
 ## 関数
 
@@ -24,7 +24,7 @@ https://platform.openai.com/docs/api-reference/moderations
 
 入力が潜在的に有害かどうかを判断します。
 
-https://platform.openai.com/docs/api-reference/moderations/create
+https://developers.openai.com/api/reference/resources/moderations/methods/create
 
 ## 例題
 

@@ -15,7 +15,7 @@ title: 図形
 
 フォーム上に四角を配置することで、視覚的な効果が得られます。 四角で描画できるのは長方形に限られます。
 
-四角のグラフィック属性 (線カラー、線幅、点線タイプ等) やリサイズオプションはプロパティリストにて指定できます。 角の [丸み](properties_CoordinatesAndSizing.md#角の半径) を指定することもできます。
+四角のグラフィック属性 (線カラー、線幅、点線タイプ等) やリサイズオプションはプロパティリストにて指定できます。 四角のグラフィック属性 (線カラー、線幅、点線タイプ等) やリサイズオプションはプロパティリストにて指定できます。 角の [丸み](properties_CoordinatesAndSizing.md#角の半径) を指定することもできます。
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
@@ -118,7 +118,7 @@ title: 図形
 
 ## 楕円
 
-フォーム上に楕円を配置することで、視覚的な効果が得られます。 楕円を使って円を描くことができます ([幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) を同じ値に設定します)。
+フォーム上に楕円を配置することで、視覚的な効果が得られます。 フォーム上に楕円を配置することで、視覚的な効果が得られます。 楕円を使って円を描くことができます ([幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) を同じ値に設定します)。
 
 ![](../assets/en/FormObjects/shape_oval.png)
 

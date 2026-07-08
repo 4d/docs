@@ -63,7 +63,7 @@ Le paramètre *separator* désigne un séparateur décimal personnalisé pour l'
 
 :::note
 
-La commande [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) peut être utilisée pour connaître le séparateur décimal courant ainsi que plusieurs autres paramètres du système régional.
+La commande [`GET SYSTEM FORMAT`](../commands/get-system-format.md) peut être utilisée pour connaître le séparateur décimal courant ainsi que plusieurs autres paramètres du système régional.
 
 :::
 
@@ -149,8 +149,8 @@ $result:=Num("123.20"; 10) // 123 (spécifier base 10 explicitement)
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)  
-[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)  
+[Bool](../commands/bool.md)  
+[GET SYSTEM FORMAT](../commands/get-system-format.md)  
 [String](./string.md)
 
 ## Propriétés

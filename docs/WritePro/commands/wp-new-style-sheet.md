@@ -59,7 +59,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 
 ### Hierarchical list style sheet
 
-If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
+If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [multi-level list style sheet](../user-legacy/stylesheets.md#multi-level-list-style-sheets).
 
 The *listLevelCount* parameter defines the total number of levels in the hierarchy. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
 
@@ -69,6 +69,7 @@ The following predefined values are applied:
 * `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 * `wk list level count` is set to the specified value for all levels
 * `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches * level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
+
 
 
 If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.

@@ -5,7 +5,7 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objeto* : Text ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objeto* : Field, Variable ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objeto* : Text ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objeto* : Variable ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 <div class="no-index">
 

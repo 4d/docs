@@ -39,9 +39,9 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Listas de múltiples niveles
 
-Multi-level lists are based on [hierarchical list style sheets](stylesheets.md#hierarchical-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Cada nivel se adjunta a una hoja de estilo de lista jerárquica y representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.).
+Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
-Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
@@ -49,8 +49,8 @@ Multi-level lists are created with command [WP New style sheet](../commands/wp-n
 
 Listas de varios niveles pueden ser gestionadas usando:
 
-- paragraph [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
+- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
+- [acciones estándar](../user-legacy/standard-actions.md) dedicadas para la gestión de niveles (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
 - dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Entrada de blog relacionada
@@ -65,17 +65,17 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 ## Hojas de estilo de listas jerárquicas
 
-Las hojas de estilo de listas jerárquicas se utilizan para crear [listas multinivel](using-a-4d-write-pro-area.md#multi-level-lists).
+Las hojas de estilo de listas jerárquicas se utilizan para crear [listas multinivel](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + nvl + índice", por ejemplo "Mylist lvl 2".
 
-To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets).
+To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
 Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 
 ### Ejemplo
 
-The following example creates a three-level hierarchical list style sheet and applies it to paragraphs.
+El siguiente ejemplo crea una hoja de estilo de lista jerárquica de tres niveles y la aplica a los párrafos.
 
 ```4d
 // Create 3 hierarchical list style sheets
@@ -105,7 +105,7 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Para eliminar el primer subnivel:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
@@ -115,13 +115,13 @@ resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valores de atributos predefinidos
 
 Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores predefinidos:
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- `wk margin left` = 0,75 cm \* (número de niveles anteriores) o 0,25 pulgadas \* (número de niveles anteriores), dependiendo de la unidad de diseño actual
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` se deriva del nombre de la hoja de estilo raíz (Sólo lectura para subniveles)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 
   - Ejemplo:

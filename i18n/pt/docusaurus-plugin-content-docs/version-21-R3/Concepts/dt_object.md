@@ -28,7 +28,7 @@ Tenha em atenção que os nomes das propriedades diferenciam entre maiúsculas e
 
 :::
 
-Pode gerenciar variáveis, campos ou expressões do tipo Objeto usando a [notação do objeto](#properties) padrão ou os comandos disponíveis no tema **Objetos (Idioma)**. Observe que comandos específicos do tema **Queridos** como `QUERY BY ATTRIBUTE`, `QUERY SELECÇÃO BY ATTRIBUTE`, ou `ORDER BY ATTRIBUTE` podem ser usados para realizar processamento em campos de objeto.
+Pode gerenciar variáveis, campos ou expressões do tipo Objeto usando a [notação do objeto](#properties) padrão ou os comandos disponíveis no tema **Objetos (Idioma)**. Pode gerenciar variáveis, campos ou expressões do tipo Objeto usando a [notação do objeto](#properties) padrão ou os comandos disponíveis no tema **Objetos (Idioma)**.
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
 
@@ -198,7 +198,7 @@ Para mais informações, consulte [Null e Undefined](dt_null_undefined.md).
 
 ### Valor não definido
 
-A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
+A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor.
 
 Para mais informações, consulte [Null e Undefined](dt_null_undefined.md)
 

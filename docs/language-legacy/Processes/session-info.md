@@ -38,7 +38,7 @@ The returned object contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
-|type|Text|Session type: "remote", "storedProcedure", "standalone"|
+|type|Text|Session type: "remote", "storedProcedure", "standalone", "rest", "web"|
 |userName|Text|4D user name (same value as [`Session.userName`](../../API/SessionClass.md#username))|
 |machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine. Standalone session: name of the machine|
 |systemUserName|Text|Remote sessions: name of the system session opened on the remote machine.  |
@@ -48,6 +48,8 @@ The returned object contains the following properties:
 |state|Text|Session state: "active", "postponed", "sleeping"|
 |ID|Text|Session UUID (same value as [`Session.id`](../../API/SessionClass.md#id))|
 |persistentID|Text|Remote sessions: Session's persistent ID|
+|unreachableSince|Integer|Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable through the [`Process activity.sessions[]`](../commands/process-activity) property.|
+
 
 :::note
 
@@ -86,9 +88,9 @@ Here is an example of output object:
 
 ## See also 
 
-[`Session` class](../../API/SessionClass.md)
-[Session](../commands/session)
-[Session storage](../commands/session-storage)  
+[`Session` class](../../API/SessionClass.md)   
+[Session](../commands/session)   
+[Session storage](../commands/session-storage)   
 [Process info](../commands/process-info)  
 
 

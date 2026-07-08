@@ -29,7 +29,7 @@ La classe `OpenAIResult` permet de gérer la réponse des requêtes HTTP et four
 La propriété `rateLimit` renvoie un objet contenant des informations sur la limite de débit à partir des en-têtes de réponse.
 Ces informations comprennent les limites, les requêtes restantes et les délais de réinitialisation des requêtes et des tokens.
 
-Pour plus de détails sur les limites de taux et les en-têtes spécifiques utilisés, se référer à [la documentation sur les limites de taux de l'OpenAI](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+Pour plus de détails sur les limites de taux et les en-têtes spécifiques utilisés, se référer à [la documentation sur les limites de taux de l'OpenAI](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers).
 
 La structure de l'objet `rateLimit` est la suivante :
 

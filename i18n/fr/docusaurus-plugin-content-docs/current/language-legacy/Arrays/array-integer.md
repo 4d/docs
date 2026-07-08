@@ -5,7 +5,7 @@ slug: /commands/array-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *nomTableau* : Array ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY INTEGER.Params-->
 <div class="no-index">
 

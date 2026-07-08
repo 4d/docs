@@ -5,7 +5,7 @@ slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* : Text ; *nomAtrib* : Text ; *valorAtrib* : Text, Boolean, Integer, Real, Time, Date {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Boolean, Integer, Real, Time, Date)} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* : Text ; *nomAtrib* : Text ; *valorAtrib* : any {; ...(*nomAtrib* : Text ; *valorAtrib* : any)} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 <div class="no-index">
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( {*nomClient* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *objeto* : Text ; *valorMax* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *objeto* : Field, Variable ; *valorMax* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *objeto* : Text ; *valorMax* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *objeto* : Variable, Field ; *valorMax* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 <div class="no-index">
 

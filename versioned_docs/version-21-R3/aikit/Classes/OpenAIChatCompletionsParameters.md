@@ -1,11 +1,11 @@
 ---
 id: openaichatcompletionsparameters
-title: OpenAIChatCompletionParameters
+title: OpenAIChatCompletionsParameters
 ---
 
-# OpenAIChatCompletionParameters
+# OpenAIChatCompletionsParameters
 
-The `OpenAIChatCompletionParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
+The `OpenAIChatCompletionsParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
 
 ## Inherits
 
@@ -13,31 +13,32 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 ## Properties
 
-| Property                   | Type    | Default Value           | Description                                                                                       |
-|---------------------------|---------|-------------------------|---------------------------------------------------------------------------------------------------|
-| `model`                 | Text       | `"gpt-4o-mini"` | ID of the model to use. Supports [provider:model aliases](../provider-model-aliases.md) for multi-provider usage (e.g., `"openai:gpt-4o"`, `"anthropic:claude-3-opus"`).  |
-| `stream`                | Boolean    | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.    |
-| `stream_options`        | Object     | `Null`          | Property for stream=True. For example: `{include_usage: True}`   |
+| Property                | Type       | Default Value   | Description                                                                                                                                              |
+| ----------------------- | ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `model`                 | Text       | `"gpt-4o-mini"` | ID of the model to use. Supports [provider:model aliases](../provider-model-aliases.md) for multi-provider usage (e.g., `"openai:gpt-4o"`, `"anthropic:claude-3-opus"`). |
+| `stream`                | Boolean    | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.                                            |
+| `stream_options`        | Object     | `Null`          | Property for stream=True. For example: `{include_usage: True}`                                                                                           |
 | `max_completion_tokens` | Integer    | `0`             | The maximum number of tokens that can be generated in the completion.                                                                                    |
 | `n`                     | Integer    | `1`             | How many completions to generate for each prompt.                                                                                                        |
 | `temperature`           | Real       | `-1`            | What sampling temperature to use, between 0 and 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
+| `top_p`                 | Real       | `-1`            | An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. Only sent when the value is greater than 0 (omitted when `<= 0`, with default `-1`). |
 | `store`                 | Boolean    | `False`         | Whether or not to store the output of this chat completion request.                                                                                      |
-| `reasoning_effort`      | Text       | `Null`          | Constrains effort on reasoning for reasoning models. Currently supported values are `"low"`, `"medium"`, and `"high"`.  |
-| `response_format`       | Object     | `Null`          | An object specifying the format that the model must output. Compatible with structured outputs.   |
-| `tools`                 | Collection | `Null`          | A list of tools ([OpenAITool](OpenAITool.md)) the model may call. Only "function" type is supported. |
-| `tool_choice`           | Variant    | `Null`          | Controls which (if any) tool is called by the model. Can be `"none"`, `"auto"`, `"required"`, or specify a particular tool. |
+| `reasoning_effort`      | Text       | `Null`          | Constrains effort on reasoning for reasoning models. Currently supported values are `"low"`, `"medium"`, and `"high"`.                                   |
+| `response_format`       | Object     | `Null`          | An object specifying the format that the model must output. Compatible with structured outputs.                                                          |
+| `tools`                 | Collection | `Null`          | A list of tools ([OpenAITool](OpenAITool.md)) the model may call. Only "function" type is supported.                                                                    |
+| `tool_choice`           | Variant    | `Null`          | Controls which (if any) tool is called by the model. Can be `"none"`, `"auto"`, `"required"`, or specify a particular tool.                              |
 | `prediction`            | Object     | `Null`          | Static predicted output content, such as the content of a text file that is being regenerated.                                                           |
+| `service_tier`          | Text       | `Null`          | Specifies the processing type used for serving the request. `"auto"`, `"auto"`, `"default"`, and `"priority"`.                                           |
 
 ### Asynchronous Callback Properties
 
-| Property | Type | Description | 
-|----------|------|-----------|
-| `onData` (or `formula`)  | 4D.Function  | A function to be called asynchronously when receiving data chunk. Ensure that the current process does not terminate. |
+| Property                   | Type    | Description                                                                                       |
+|---------------------------|---------|-------------------------|---------------------------------------------------------------------------------------------------|
+| `onData`<br>(or `formula`)   | 4D.Function | A function to be called asynchronously when receiving data chunk.<br>*Ensure that the current process does not terminate.* |
 
-`onData` will receive as argument an [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
+`onData` will receive as argument a [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)
 
-See [OpenAIParameters](./OpenAIParameters.md) for other callback properties.
-
+See [OpenAIParameters](OpenAIParameters.md) for other callback properties.
 
 ## Response Format
 
@@ -50,7 +51,7 @@ The `response_format` parameter allows you to specify the format that the model 
 The default response format returns plain text:
 
 ```4d
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: {type: "text"} \
 })
@@ -61,13 +62,13 @@ var $params := cs.OpenAIChatCompletionsParameters.new({ \
 Forces the model to respond with valid JSON:
 
 ```4d
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: {type: "json_object"} \
 })
 
 var $messages := [ \
-    cs.OpenAIMessage.new({ \
+    cs.AIKit.OpenAIMessage.new({ \
         role: "system"; \
         content: "You are a helpful assistant that always responds in JSON format." \
     }) \
@@ -97,7 +98,7 @@ var $jsonSchema := { \
     additionalProperties: False \
 }
 
-var $params := cs.OpenAIChatCompletionsParameters.new({ \
+var $params := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
     model: "gpt-4o-mini"; \
     response_format: { \
         type: "json_schema"; \

@@ -31,7 +31,7 @@ Una vez habilitado, para ejecutar realmente su aplicación en modo SDI, puede:
 
 :::info
 
-Because the development environment is executed in MDI, switching from design mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+Dado que el entorno de desarrollo se ejecuta en MDI, cambiar del modo diseño al modo de ejecución utilizando el elemento de menú **Probar aplicación en modo SDI** equivale a reiniciar la aplicación.
 
 :::
 
@@ -57,7 +57,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 
 ### Depurador
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
+Cuando se muestra en modo SDI, la [ventana del depurador](../Debugging/debugger.md) no contiene [botones de edición](../Debugging/debugger.md#tool-bar-buttons), ya que para cambiar al entorno de diseño es necesario abortar la ejecución y reiniciar la aplicación en modo MDI.
 
 ### Salida automática
 
@@ -67,7 +67,7 @@ Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un m
 
 - el usuario no puede seguir interactuando con la aplicación
 - no hay procesos de usuario en curso
-- Los procesos 4D o workers están esperando un evento
+- los procesos 4D o workers están esperando un evento
 - el servidor web no se ha lanzado
 - el [servidor WebAdmin](../Admin/webAdmin.md) no está iniciado.
 

@@ -5,7 +5,7 @@ slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*Tabela* ;} *nomeForm* : Text ) : Object<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*Tabela* : Table ;} *nomeForm* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 <div class="no-index">
 

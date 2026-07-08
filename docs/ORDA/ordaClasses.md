@@ -31,7 +31,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 ![](../assets/en/ORDA/api.png)
 
 
-In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object.
+In addition, 4D [automatically pre-creates](../Project/code-overview.md#creating-classes) the classes for each available data model object.
 
 
 ## Architecture
@@ -49,7 +49,7 @@ All ORDA data model classes are exposed as properties of the **`cs`** class stor
 |cs.*DataClassName*Entity|cs.EmployeeEntity|[`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)|
 |cs.*DataClassName*Selection|cs.EmployeeSelection|[`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection`|
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).  
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.  
 
 Also, object instances from ORDA data model user classes benefit from their parent's properties and functions:
 
@@ -289,7 +289,7 @@ End if
 When creating or editing data model classes, you must pay attention to the following rules:
 
 - Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. In particular:
-	- Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
+	- Do not give the same name to a 4D table and to a [user class name](../Project/code-overview.md#creating-classes). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
 	- Do not use a reserved name for a 4D table (e.g., "DataClass").
 
 - When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.

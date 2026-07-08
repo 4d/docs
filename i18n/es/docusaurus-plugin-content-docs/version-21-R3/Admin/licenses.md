@@ -32,7 +32,7 @@ Las licencias de despliegue pueden ser anidadas en el paso de creación por el d
 
 Algunas licencias 4D tienen una fecha de caducidad, después de la cual deben ser renovadas. Cuando la suscripción a la licencia se renueva en 4D Store, sus licencias se actualizan automáticamente en sus aplicaciones 4D al iniciar el proceso [cuando se conecta](GettingStarted/Installation.md) en el Asistente de bienvenida.
 
-In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licenses Manager dialog box.
+En algunos casos, la actualización de la licencia puede requerir que haga clic en el botón [**Refrescar**](#refresh) del cuadro de diálogo Administrador de licencias.
 
 ## Activación de licencias
 
@@ -121,7 +121,7 @@ Este botón lo conecta con nuestra base clientes y activa automáticamente todas
 
 ## 4D Online Store
 
-En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D. Puede llegar a la tienda en la siguiente dirección: [https://store.4d.com/us/](https://store.4d.com/us/) (deberá seleccionar su país).
+En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D. En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D.
 
 Haga clic en **Inicio de sesión** para acceder con su cuenta actual o en **Nueva cuenta** para crear una nueva, y luego siga las instrucciones que aparecen en pantalla.
 

@@ -56,12 +56,12 @@ A barra de ferramentas contém os seguintes elementos:
 | Ícone                                            | Nome                                                 | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Executar o formulário                                | Utilizado para testar a execução do formulário. Ao clicar nesse botão, 4D abre uma nova janela e exibe o formulário em seu contexto (lista de registros para um formulário de lista e página de registro atual para um formulário detalhado). O formulário é executado no processo principal.                                                                |
-| ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de seleção](#selecting-objects)          | Permite selecionar, mover e redimensionar objetos de formulário<br/>: Quando um objeto do tipo Text ou Group Box é selecionado, pressionar a tecla **Enter** permite alternar para o modo de edição.                                                                                                                                                                                            |
+| ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de seleção](#selecting-objects)          | Allows selecting, moving and resizing form objects.<br/>**Nota**: quando um objeto do tipo Texto ou Group Box é selecionado, pressionando a tecla **Enter** permite que você mude para o modo de edição.                                                                                                                                                                        |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Ordem de entrada](#data-entry-order)                | Alterna para o modo "Ordem de entrada", onde é possível visualizar e alterar a ordem de entrada atual do formulário. Observe que os escudos permitem a visualização da ordem de entrada atual, enquanto você ainda trabalha no formulário.                                                                                                                                                      |
 | ![](../assets/en/FormEditor/moving.png)          | [Moving](#objetos-em-movimento)                      | Alterne para o modo "Mover", onde for possível alcançar qualquer parte do formulário rapidamente usando arrastar e soltar na janela. O cursor assume a forma de uma mão. Este modo de navegação é particularmente útil ao ampliar o formulário.                                                                                                                                 |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                        | Permite modificar a percentagem de visualização do formulário (100% por padrão). Você pode alternar para o modo "Zoom" clicando na lupa ou clicando diretamente na barra desejada. Esta função é descrita em pormenor na secção anterior.                                                                                                                    |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#alinhamento-objetos)                  | Este botão está ligado a um menu que permite alinhar os objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                            |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                      |
+| ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                | Este botão está ligado a um menu que permite alinhar os objetos no formulário. It is enabled (or not) depending on the objects selected.<br/>Disabled if one selected object position is locked by a CSS property                                                                                                                                                            |
 | ![](../assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | Este botão está ligado a um menu que permite alterar o nível dos objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                               |
 | ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | Esta área permite passar de uma página de formulário para outra e adicionar páginas. Para navegar entre páginas de formulários, clique nos botões de seta, ou clique na área central e escolha a página a exibir a partir do menu que aparece. Se clicar no botão da seta para a direita enquanto é exibida a última página do formulário, 4D permite-lhe adicionar uma página. |
@@ -90,7 +90,7 @@ A barra de objeto contém todos os objetos ativos e inativos que podem ser usado
 | ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Controle de guia](FormObjects/tabControl.md)                                                                                                                                                                      |   D   |
 | ![](../assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |   X   |
 
-Para desenhar um tipo de objeto, selecione o botão correspondente e, em seguida, trace o objeto no formulário. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. To draw an object type, select the corresponding button and then trace the object in the form. As linhas são restritas à horizontal, 45° ou vertical, os retângulos são restritos a quadrados e as formas ovais são restritas a círculos.
+Para desenhar um tipo de objeto, selecione o botão correspondente e, em seguida, trace o objeto no formulário. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. Para desenhar um tipo de objeto, selecione o botão correspondente e, em seguida, trace o objeto no formulário. As linhas são restritas à horizontal, 45° ou vertical, os retângulos são restritos a quadrados e as formas ovais são restritas a círculos.
 
 A variante atual do tema é o objeto que será inserido no formulário. Ao clicar no lado direito de um botão, você acessa o menu de variantes:
 
@@ -146,11 +146,11 @@ Antes de executar qualquer operação em um objeto (como alterar a largura ou a 
 
 Para selecionar um objeto usando a barra de ferramentas:
 
-1. Clique na ferramenta Seta na barra de ferramentas<br/>![](../assets/en/FormEditor/selection.png)
+1. Click the Arrow tool  in the toolbar.<br/>![](../assets/en/FormEditor/selection.png)
 
 <br/>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
 
-2. Clique no objecto que deseja selecionar. As alças de redimensionamento identificam o objeto selecionado<br/>![](../assets/en/FormEditor/selectResize.png)
+2. Clique no objecto que deseja selecionar. Resizing handles identify the selected object.<br/>../assets/en/FormEditor/selectResize.png
 
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
@@ -242,12 +242,12 @@ Para agrupar objectos:
 1. Selecione o objecto agrupado que pretende desagrupar.
 2. Elija **Agrupar** en el menú Objetos. OU
    Clique no botão Group (Agrupar<br/>) na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
-   4D marca o limite dos objetos recém-agrupados com alças. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
+   4D marca o limite dos objetos recém-agrupados com alças. OR Click the Group button  in the toolbar of the Form editor:<br/><img src="../assets/en/FormEditor/group.png" alt="" /> 4D marks the boundary of the newly grouped objects with handles. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo.
 
 Para desagrupar objetos:
 
 1. Seleccione o objecto ou objectos que pretende duplicar.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D marca os limites dos objetos individuais com alças.
+2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>Se **Desagrupamento** for escurecido, isso significa que o objeto selecionado já está separado em sua forma mais simples. 4D marca os limites dos objetos individuais com alças.
 
 ### Alinhamento de objetos
 
@@ -275,9 +275,9 @@ O Assistente de Alinhamento permite que você execute qualquer tipo de alinhamen
 
 Para exibir essa caixa de diálogo, selecione os objetos que deseja alinhar e escolha o comando **Alinhamento** no submenu **Alinhar** do menu **Objeto** ou no menu de contexto do editor.
 
-- Nas áreas "Alinhamento Esquerda/Direita" e/ou "Alinhamento Superior/Inferior", clique no ícone que corresponde ao alinhamento que você deseja executar.<br>A área de exemplo exibe os resultados da sua seleção.
+- In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<br>A área de exemplo apresenta os resultados da sua seleção.
 
-- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Preview** ou **Apply**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. OU:<br/>Para alinhar objetos a um objeto específico, selecione a opção **Alinhar em** e selecione o objeto ao qual você deseja que os outros objetos sejam alinhados na lista de objetos. Neste caso, a posição do objeto de referência não será alterada.
+- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Preview** ou **Apply**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora.
 
 Você pode visualizar os resultados do alinhamento clicando no botão **Preview**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
 
@@ -325,7 +325,7 @@ Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 3. Nas áreas de Alinhamento Esquerdo/Direita e/ou Topo/Bottom Alinhamento, clique no ícone de distribuição padrão: ![](../assets/en/FormEditor/horizontalDistribution.png) <br/>(ícone padrão de distribuição horizontal)<br/>A área de exemplo exibe os resultados da sua seleção.
 
-4. Para executar uma distribuição que use o esquema padrão, clique em **Preview** ou *Apply*.<br/>Nesse caso, o 4D executará uma distribuição padrão, de modo que os objetos sejam dispostos com uma quantidade igual de espaço entre eles<br/>. OU:<br/>Para executar uma distribuição específica, selecione a opção **Distribute** (por exemplo, se quiser distribuir os objetos com base na distância até o lado direito). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:<br/>
+4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<br/>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<br/>OR:<br/>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opção funciona como um interruptor. If the Distribute check box is selected, the icons located below it perform a different function:<br/>
 
 - Horizontalmente, os ícones correspondem às seguintes distribuições: igualmente com relação aos lados esquerdos, centros (hor.) e os lados direito dos objetos selecionados.
 - Verticalmente, os ícones correspondem às seguintes distribuições: uniformemente em relação às bordas superiores, centros (vert.) e as bordas inferiores dos objetos selecionados.
@@ -336,7 +336,7 @@ Você pode visualizar o resultado real de suas configurações clicando no botã
 
 ### Gerenciar os planos dos objetos
 
-Às vezes, será necessário reorganizar objetos que estejam obstruindo a visualização de outros objetos no formulário. Por exemplo, você pode ter um gráfico que deseja que apareça atrás dos campos em um formulário. You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. Estas camadas também determinam a ordem padrão de entrada (ver modificação de ordem de entrada de dados). A figura abaixo mostra objetos à frente e atrás de outros objetos:
+Às vezes, será necessário reorganizar objetos que estejam obstruindo a visualização de outros objetos no formulário. Por exemplo, você pode ter um gráfico que deseja que apareça atrás dos campos em um formulário. Às vezes, será necessário reorganizar objetos que estejam obstruindo a visualização de outros objetos no formulário. Estas camadas também determinam a ordem padrão de entrada (ver modificação de ordem de entrada de dados). A figura abaixo mostra objetos à frente e atrás de outros objetos:
 
 ![](../assets/en/FormEditor/layering.png)
 
@@ -382,7 +382,7 @@ Em casos como esse, uma ordem de entrada de dados personalizada permite que voc�
 
 Você pode visualizar a ordem de entrada atual usando os escudos "Ordem de entrada" ou usando o modo "Ordem de entrada". No entanto, você só pode modificar a ordem de entrada usando o modo “Ordem de entrada”.
 
-Este parágrafo descreve a visualização e a modificação da ordem de entrada usando o modo "Ordem de entrada". You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode.
+Este parágrafo descreve a visualização e a modificação da ordem de entrada usando o modo "Ordem de entrada". Você pode visualizar a ordem de entrada atual usando os escudos "Ordem de entrada" ou usando o modo "Ordem de entrada".
 
 Para ver ou alterar a ordem de entrada:
 

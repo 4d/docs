@@ -5,7 +5,7 @@ slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( événement )<!-- END REF-->
+<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *événement* : Integer )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 <div class="no-index">
 

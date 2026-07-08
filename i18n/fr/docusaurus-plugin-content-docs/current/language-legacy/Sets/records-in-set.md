@@ -5,7 +5,7 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *ensemble* ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *ensemble* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 <div class="no-index">
 

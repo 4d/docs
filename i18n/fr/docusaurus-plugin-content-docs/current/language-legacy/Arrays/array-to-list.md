@@ -5,7 +5,7 @@ slug: /commands/array-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *tableau* ; *liste* {; *réfEléments*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *tableau* : Array ; *liste* : Text, Integer {; *réfEléments* : Array} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
 <div class="no-index">
 

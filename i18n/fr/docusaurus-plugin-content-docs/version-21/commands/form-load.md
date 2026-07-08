@@ -27,7 +27,7 @@ displayed_sidebar: docs
 | ------- | ----------------------------------------------- |
 | 20      | Modifié                                         |
 | 16 R6   | Modifié                                         |
-| 14      | Renamed (OPEN PRINTING FORM) |
+| 14      | Renommé (OPEN PRINTING FORM) |
 | 12      | Created                                         |
 
 </details>
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
+<!--REF #_command_.FORM LOAD.Summary-->La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
@@ -81,7 +81,7 @@ Appel d'un formulaire projet dans une tâche d'impression :
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+  // exécution des événements et des méthodes objet
 ```
 
 ## Exemple 2
@@ -91,7 +91,7 @@ Appel d'un formulaire table dans une tâche d'impression :
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // exécution des événements et des méthodes objet
 ```
 
 ## Exemple 3
@@ -99,15 +99,15 @@ Appel d'un formulaire table dans une tâche d'impression :
 Analyse du contenu des formulaires pour effectuer des traitements dans les zones de saisie de texte :
 
 ```4d
- FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+ FORM LOAD([People] ; "my_form")
+  // sélection du formulaire sans exécution d'événements ou de méthodes
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
- For($i;1;Size of array(arrObjNames))
+ For($i;1 ;Size of array (arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… traitement
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD //ne pas oublier de décharger le formulaire
 ```
 
 ## Exemple 4
@@ -143,12 +143,12 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
  OPEN PRINTING JOB
  $formData:=New object
  $formData.LBcollection:=New collection()
- ... //fill the collection with data
+ ... //remplir la collection avec des données
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) //stocker collection dans $formData
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // la datasource de la listbox "LB" est Form.LBcollection
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -164,7 +164,7 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) //LBcollection est disponible
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

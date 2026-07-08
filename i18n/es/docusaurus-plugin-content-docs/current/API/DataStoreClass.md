@@ -48,7 +48,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 #### Descripción
 
-Cada dataclass en un datastore está disponible como propiedad del objeto [DataStore](ORDA/dsMapping.md#datastore). El objeto devuelto <!-- REF DataStoreClass.dataclassName.Summary -->contiene una descripción de la clase de datos<!-- END REF -->.
+Cada dataclass en un datastore está disponible como propiedad del [objeto DataStore](ORDA/dsMapping.md#datastore). El objeto devuelto <!-- REF DataStoreClass.dataclassName.Summary -->contiene una descripción de la clase de datos<!-- END REF -->.
 
 #### Ejemplo
 

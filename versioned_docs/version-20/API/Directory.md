@@ -516,7 +516,7 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 >Aliases or symbolic links are not resolved.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
 |Constant| Value| Comment|
 |---|---|---|

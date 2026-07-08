@@ -5,7 +5,7 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *laTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( {*laTable* : Table} ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 <div class="no-index">
 

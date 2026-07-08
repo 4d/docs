@@ -1,9 +1,24 @@
+const fs = require("fs")
+
 const PREPROCESSING_TARGET_SYNTAX = process.env.PREPROCESSING_TARGET_SYNTAX
 let target_syntax = "docs"
 let target_syntax_translate = "current"
 
 if(PREPROCESSING_TARGET_SYNTAX) {
-    target_syntax = "versioned_docs/" + PREPROCESSING_TARGET_SYNTAX
+    const versionDir = "versioned_docs/" + PREPROCESSING_TARGET_SYNTAX
+    if (!fs.existsSync(versionDir)) {
+        const available = fs.existsSync("versioned_docs")
+            ? fs.readdirSync("versioned_docs").filter(n => n.startsWith("version-"))
+            : []
+        console.error(
+            `\x1b[31mERROR\x1b[0m: PREPROCESSING_TARGET_SYNTAX="${PREPROCESSING_TARGET_SYNTAX}" ` +
+            `but folder "${versionDir}" does not exist.\n` +
+            `Available versions: ${available.join(", ") || "(none)"}\n` +
+            `Leave PREPROCESSING_TARGET_SYNTAX unset to build the current (docs/) version.`
+        )
+        process.exit(1)
+    }
+    target_syntax = versionDir
     target_syntax_translate = PREPROCESSING_TARGET_SYNTAX
 }
 

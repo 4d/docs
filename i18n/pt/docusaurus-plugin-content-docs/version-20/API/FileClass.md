@@ -573,7 +573,7 @@ $fhandle:=$f.open("read")
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o ficheiro com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->A função `.rename()`<!-- END REF -->.
 
 O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 

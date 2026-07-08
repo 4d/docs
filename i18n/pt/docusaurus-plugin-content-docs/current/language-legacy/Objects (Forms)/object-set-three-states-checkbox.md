@@ -5,7 +5,7 @@ slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *objeto* : Text ; *tresEsta* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *objeto* : Field, Variable ; *tresEsta* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *objeto* : Text ; *tresEsta* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *objeto* : Variable, Field ; *tresEsta* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 <div class="no-index">
 

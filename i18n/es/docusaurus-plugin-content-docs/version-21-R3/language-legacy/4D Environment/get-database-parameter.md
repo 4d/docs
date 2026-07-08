@@ -123,7 +123,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 
 **Valores posibles:** entero largo > 1 (segundos)
 
-**Descripción**: obtiene o establece la periodicidad del vaciado de la caché, expresado en segundos. La modificación de este valor prevalece sobre la opción **Vaciar caché cada X segundos** en [XML DECODE](../commands/xml-decode) de la configuración de la base para la sesión (que no se almacena en las Propiedades de la base).
+**Descripción**: obtiene o establece la periodicidad del vaciado de la caché, expresado en segundos. La modificación de este valor prevalece sobre la opción **Vaciar caché cada X segundos** en la [página Base de datos](../../settings/database.md) de la configuración para la sesión (que no se almacena en la configuración).
 
 
 

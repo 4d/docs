@@ -5,7 +5,7 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *valHeure* ) : Time<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *valHeure* : Text, Integer ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 <div class="no-index">
 

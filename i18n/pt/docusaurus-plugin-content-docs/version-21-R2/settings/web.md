@@ -19,7 +19,7 @@ Indica se o servidor web vai ou não aceitar conexões não seguras. Ver [Ativar
 
 #### Porta HTTP
 
-Número da porta IP (TCP) de escuta para HTTP. Ver [Puerto HTTP](../WebServer/webServerConfig.md#http-port).
+Número da porta IP (TCP) de escuta para HTTP. Número da porta IP (TCP) de escuta para HTTP.
 
 #### Endereço IP
 
@@ -41,7 +41,7 @@ Define a localização padrão dos arquivos do site e indicar o nível hierárqu
 
 #### Página inicial predefinida
 
-Designar uma página inicial padrão para o servidor Web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
+Designar uma página inicial padrão para o servidor Web. Designar uma página inicial padrão para o servidor Web.
 
 ## Options (I)
 
@@ -49,16 +49,16 @@ Designar uma página inicial padrão para o servidor Web. Ver [Página de inicio
 
 #### Usar o cache Web 4D
 
-Ativar o cache da página Web. Consulte [Cache](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. Ativar o cache da página Web.
 
 #### Tamanho da cache das Páginas
 
-Define o tamanho da cache. Consulte [Cache](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. Ativar o cache da página Web.
 
 #### Limpar cache
 
 A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
-Para fazer isso, você só precisa clicar no botão **Limpar Cache**. A cache é então imediatamente limpa.
+A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache). A cache é então imediatamente limpa.
 
 > Você também pode usar a URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -86,7 +86,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 *Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
-Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP.
 
 Quando selecionada, a opção [Reutilizar Contextos Temporários (4D em modo remoto)](#reuse-temporary-contexts) é marcada automaticamente (e bloqueada).
 
@@ -94,7 +94,7 @@ Quando selecionada, a opção [Reutilizar Contextos Temporários (4D em modo rem
 
 Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Limite estritamente superior de processos Web em simultâneo. Veja [Máximo Processos Web Concorrentes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Limite estritamente superior de processos Web em simultâneo. Limite estritamente superior de processos Web em simultâneo.
 
 #### Reutilização de contextos temporários
 
@@ -114,7 +114,7 @@ Permite processos web preemptivos nas suas aplicações compiladas. Quando **usa
 
 Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
-Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor. Veja [Tempo Limite do Processo Inativo](../WebServer/webServerConfig.md#inactive-process-timeout).
+Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor. Permite que você defina o tempo limite máximo antes de fechar os processos inativos da Web no servidor.
 
 ### Palavras-passe Web
 
@@ -168,7 +168,7 @@ O menu de formato do histórico oferece as seguintes opções:
 
 - **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
 
-- **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
+- **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
   host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
   Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
 
@@ -207,7 +207,7 @@ O menu de formato do histórico oferece as seguintes opções:
 - **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
 **Configuração dos campos**
-Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. You will need to select each field to be included in the log. To do so, check the desired fields.
+Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. Você precisará selecionar cada campo a ser incluído no registro.
 
 **Nota**: Não é possível selecionar o mesmo campo duas vezes.
 
@@ -249,7 +249,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
   - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
-- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
+- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana.
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
 - **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
@@ -265,7 +265,7 @@ Para obter mais informações sobre o suporte de serviços da Web em 4D, consult
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "servidor" de serviços da Web, ou seja, a publicação de métodos projeto na forma de serviços Web.
 
-- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo <em x-id="4">Publicado no WSDL</em>.
 - **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
 - **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
@@ -275,7 +275,7 @@ Essa área contém várias opções relacionadas ao uso de 4D como um "servidor"
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "cliente" de serviços Web, ou seja, a assinatura de serviços publicados na rede.
 
-- **Prefixo do Método do Wizard**: Esta área permite que você altere o prefixo que é adicionado automaticamente por 4D ao nome dos métodos proxy gerados pelo Assistente de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Por padrão, 4D usa o prefixo "proxy_".
+- **Prefixo do Método do Wizard**: Esta área permite que você altere o prefixo que é adicionado automaticamente por 4D ao nome dos métodos proxy gerados pelo Assistente de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web.
 
 ## Funcionalidades Web
 

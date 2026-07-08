@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
 
->4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
+>4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the returned email object.
 
 Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
 

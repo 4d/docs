@@ -5,7 +5,7 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *objeto* : Text ; *alineacion* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *objeto* : Field, Variable ; *alineacion* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *objeto* : Text ; *alineacion* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *objeto* : Variable, Field ; *alineacion* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 <div class="no-index">
 

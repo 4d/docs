@@ -46,7 +46,7 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 
 ```4d
   // Méthode base Sur authentification Web
- #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean
 
  var $utilisateur : Text
  var $0 : Boolean

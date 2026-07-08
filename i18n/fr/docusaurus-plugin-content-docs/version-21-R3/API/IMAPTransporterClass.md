@@ -45,7 +45,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -53,7 +53,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 | Paramètres | Type                               |                             | Description                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
-| paramètres | Object                             |              ->             | Mail server configuration                          |
+| paramètres | Object                             |              ->             | Configuration du serveur de messagerie             |
 | Résultat   | 4D.IMAPTransporter | <- | [Objet transporteur IMAP](#objet-imap-transporter) |
 
 </div>
@@ -158,6 +158,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### Voir également
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -675,7 +679,7 @@ End if
 
 #### Description
 
-La fonction `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->supprime tous les messages marqués "deleted" du serveur de messagerie IMAP.<!-- END REF --> Le marqueur "deleted" peut être fixé avec les fonctions [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
+La fonction `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->supprime tous les messages avec le flag "deleted" du serveur de messagerie IMAP.<!-- END REF --> Le flag "deleted" peut être défini avec les méthodes [`.delete()`](#delete) ou [`.addFlags()`](#addflags).
 
 **Objet retourné**
 
@@ -827,7 +831,7 @@ Chaque objet de la collection retournée contient les propriétés suivantes :
 | \[].name        | Text    | Nom de la boîte de réception. Retourné si withBoxProperties=true ou withBoxInfo=true                                                                                                                                                                                                                                                                                                                                        |
 | \[].selectable  | Boolean | Indique si les droits d'accès permettent ou non de sélectionner la boîte aux lettres : <ul><li>true - la boîte aux lettres peut être sélectionnée</li><li>false - la boîte aux lettres ne peut pas être sélectionnée</li></ul> Retourné si withBoxProperties=true                                                                                                                                                           |
 | \[].inferior    | Boolean | Indique si les droits d'accès permettent ou non de créer une hiérarchie inférieure dans la boîte aux lettres : <ul><li>true - un niveau inférieur peut être créé</li><li>false - un niveau inférieur ne peut pas être créé</li></ul> Retourné si withBoxProperties=true                                                                                                                                                     |
-| \[].interesting | Boolean | Indique si la boîte aux lettres a été marquée comme "intéressante" par le serveur : <ul><li>true - La boîte aux lettres a été marquée comme "intéressante" par le serveur. Par exemple, elle peut contenir de nouveaux messages.</li><li>false - La boîte aux lettres n'a pas été marquée comme "intéressante" par le serveur</li>.</ul> Retourné si withBoxProperties=true |
+| \[].interesting | Boolean | Indique si la boîte aux lettres a été marquée comme "intéressante" par le serveur : <ul><li>true - La boîte aux lettres a été marquée comme "intéressante" par le serveur. Par exemple, elle peut contenir de nouveaux messages.</li><li>faux - la boite de réception n'a pas été marquée comme "intéressante" par le serveur.</li></ul>	Retourné si withBoxProperties=true |
 | [].mailCount     | Number  | Nombre de messages dans la boîte inbox. Retourné si withBoxInfo=true                                                                                                                                                                                                                                                                                                                                                        |
 | [].mailRecent    | Number  | Nombre de messages portant le marqueur "recent" (indiquant les nouveaux messages). Retourné si withBoxInfo=true                                                                                                                                                                                                                                                                                          |
 | [].mailUnseen    | Number  | Nombre de messages marqués "unseen". Retourné si withBoxInfo=true                                                                                                                                                                                                                                                                                                                                                           |
@@ -961,7 +965,7 @@ Le paramètre facultatif *options* vous permet de passer un objet définissant d
 
 > - La fonction génère une erreur et retourne **Null** si *msgID* désigne un message non existant,
 > - Si aucune boite de réception n'est sélectionnée avec la [fonction `.selectBox()`](#selectbox), une erreur est générée,
-> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\`.
+> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\\`.
 
 #### Résultat
 
@@ -1294,9 +1298,9 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 #### Description
 
-The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Cette propriété est en **lecture seule**.
+La propriété `.notifier` <!-- REF #IMAPTransporterClass.notifier.Summary -->contient l'objet IMAPNotifier associé au transporteur<!-- END REF -->. Cette propriété est en **lecture seule**.
 
-See [IMAPNotifier](./IMAPNotifierClass.md).
+Voir [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 
@@ -1463,6 +1467,10 @@ If ($status.success)
 End if
 ```
 
+#### Voir également
+
+[`.addFlags()`](#addflags)
+
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
@@ -1626,14 +1634,14 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
-- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*.
+- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859).
   Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
 
-... signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
+... La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->.
 
 #### Mots-clés de recherche autorisés
 

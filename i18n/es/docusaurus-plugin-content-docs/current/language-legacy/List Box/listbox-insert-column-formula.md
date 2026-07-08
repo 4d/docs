@@ -5,7 +5,7 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objeto* : Text ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objeto* : Field, Variable ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objeto* : Text ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objeto* : Variable ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 <div class="no-index">
 

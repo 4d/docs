@@ -45,7 +45,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *parameter* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
@@ -159,6 +159,14 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.addFlags(IMAP all;$flags)
 ```
+
+#### 参照
+
+[`.removeFlags()`](#removeflags)
+
+#### 参照
+
+[`.removeFlags()`](#removeflags)
 
 <!-- END REF -->
 
@@ -1462,6 +1470,10 @@ $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
 ```
+
+#### 参照
+
+[`.addFlags()`](#addflags)
 
 <!-- END REF -->
 

@@ -15,16 +15,18 @@ Synchronous execution is used when:
 - Task execution must follow a strict order.
 - Performance impact is minimal (e.g., quick operations).
 - Running in a single-threaded context where blocking is acceptable.
-- Synchronous execution blocks the UI and is best suited for quick, ordered tasks where blocking is acceptable.
+
+
+Synchronous execution blocks the UI and is best suited for quick, ordered tasks where blocking is acceptable.
 
 #### Asynchronous Execution
 
-Asynchronous execution is **event-driven** and allows tasks other operations to complete. It relies on **callbacks**, **workers**, and **event handlers** to manage execution flow.
+Asynchronous execution is **event-driven** and allows other operations to complete. It relies on **callbacks**, **workers**, and **event handlers** to manage execution flow.
 
 Asynchronous execution is used when:
 - An operation takes a long time (e.g., waiting for a server response).
 - Responsiveness is critical (e.g., UI interactions).
-- Performing background tasks, network communication, or parallel processing.
+- Background tasks, network communication, or parallel processing are performed.
 
 Choosing Between Synchronous and Asynchronous Execution:
 
@@ -110,7 +112,7 @@ Several 4D classes support asynchronous processing:
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) – Manages WebSocket server connections.
 
-All these classes follow the same rules regarding asynchronous execution. Their constructor accepts an *options* parameter that is used to configure your asynchronous object. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. For example, you can create an `onResponse()` function in the class, it will be automatically called asychronously when a *reponse* event is fired.
+All these classes follow the same rules regarding asynchronous execution. Their constructor accepts an *options* parameter that is used to configure your asynchronous object. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. For example, you can create an `onResponse()` function in the class, it will be automatically called asynchronously when a *response* event is fired.
 
 We recommend the following sequence:
 

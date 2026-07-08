@@ -233,7 +233,7 @@ A tabela a seguir resume os diferentes casos e o valor retornado para o operador
 
 #### Exemplo 1
 
-Digamos que tem uma tabela chamada Employee. Alguns empregados introduziram um número de telefone e outros não. Isso significa que `$emp.phone` poderia ser NULL, e você não pode atribuir NULL a uma variável de texto. Mas pode escrever o seguinte:
+Digamos que tem uma tabela chamada Employee. Alguns empregados introduziram um número de telefone e outros não. Alguns empregados introduziram um número de telefone e outros não. Isso significa que `$emp.phone` poderia ser NULL, e você não pode atribuir NULL a uma variável de texto. Mas pode escrever o seguinte:
 
 ```4d
 var $phone : Text

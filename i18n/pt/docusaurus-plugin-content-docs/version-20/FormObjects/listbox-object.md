@@ -12,7 +12,7 @@ Como padrão, 4D atribui o nome "ColumnX" para cada coluna. Você pode alterá-l
 > Os list boxes do tipo array podem ser exibidos em [modo hierárquico](listbox_overview.md#hierarchical-list-boxes), com mecanismos específicos.
 
 Com list box de tipo array, o valor ingressado ou exibido são gerenciados usando a linguagem 4D. Você também pode associar uma [lista de opções](properties_DataSource.md#choice-list) a uma coluna para controlar a entrada de dados.
-Os valores das colunas são gerenciados através de comandos List box de alto nível (como `LISTBOX INSERT ROWS` ou `LISTBOX DELETE ROWS`), bem como por comandos de manipulação de arrays. Por exemplo, para iniciar os conteúdos da coluna, pode usar a instrução abaixo:
+Os valores das colunas são gerenciados através de comandos List box de alto nível (como `LISTBOX INSERT ROWS` ou `LISTBOX DELETE ROWS`), bem como por comandos de manipulação de arrays. The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands.
 
 ```4d
 ARRAY TEXT(varCol;size)

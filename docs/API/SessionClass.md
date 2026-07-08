@@ -53,6 +53,7 @@ All session types can handle privileges, but only the code executed in a **web c
 |[<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->|
 |[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->|
 |[<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->|
+|[<!-- INCLUDE #SessionClass.quotas.Syntax -->](#quotas)<br/><!-- INCLUDE #SessionClass.quotas.Summary -->|
 |[<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->|
 |[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
@@ -534,6 +535,7 @@ End if
 
 |Release|Changes|
 |---|---|
+|21 R4|New *unreachableSince* property|
 |20 R5|Added|
 
 </details>
@@ -564,12 +566,15 @@ The `.info` object contains the following properties:
 |state|Text|Session state: "active", "postponed", "sleeping"|
 |ID|Text|Session UUID (same value as [`.id`](#id))|
 |persistentID|Text|Remote/client sessions: Session's persistent ID|
+|unreachableSince|Integer|Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property.|
 
 :::note
 
 Since `.info` is a computed property, it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties.
 
 :::
+
+This property is **read only**.
 
 
 <!-- END REF -->
@@ -716,6 +721,61 @@ End if
 
 
 <!-- END REF -->
+
+
+<!-- REF SessionClass.quotas.Desc -->
+## .quotas
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R4|Added|
+
+</details>
+
+<!-- REF #SessionClass.quotas.Syntax -->**.quotas** : 4D.QuotaManager<!-- END REF -->
+
+#### Description
+
+
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+
+This property is **read only**. 
+
+The following properties of the `4D.QuotaManager` object are available for the session:
+
+|Property||Type|Writable|Description|
+|---|---|---|---|---|
+|[nbEntitySets](./QuotaManagerClass.md#nbentitysets)||Integer|yes|Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied|
+|[defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) ||Integer|yes|Default inactivity timeout for entity sets in memory (seconds)|
+|[maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout) ||Integer|yes|Maximum inactivity timeout for entity sets in memory (seconds)|
+|currentValues||Object|no||
+||nbEntitySets|Integer|no|Number of entity sets currently in memory. *Undefined* = no entity set in memory|
+
+When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests. 
+
+:::tip Related blog post
+
+[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
+
+:::
+
+#### Example
+
+```4d
+   //set the maximum number of entity sets in memory
+   //for the session to 50
+Session.quotas.nbEntitySets:=50
+```
+
+<!-- END REF -->
+
+
+#### See also
+
+[QuotaManager class](./QuotaManagerClass.md)
+
 
 
 <!-- REF SessionClass.restore().Desc -->
@@ -903,7 +963,7 @@ When a `Session` object is created, the `.storage` property is empty. This prope
 
 In client/server, the `.storage` object of the remote user session is **not** the same on the server and on the client.
 
-When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
+When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
 
 
 :::tip

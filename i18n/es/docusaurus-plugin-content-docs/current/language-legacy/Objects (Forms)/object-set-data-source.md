@@ -5,7 +5,7 @@ slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *objeto* : Text ; *fuenteDatos* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *objeto* : Field, Variable ; *fuenteDatos* : Pointer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *objeto* : Text ; *fuenteDatos* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *objeto* : Variable, Field ; *fuenteDatos* : Pointer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 <div class="no-index">
 

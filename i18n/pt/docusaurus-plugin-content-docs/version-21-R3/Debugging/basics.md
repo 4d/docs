@@ -19,7 +19,7 @@ Esses erros de digitação geralmente causam erros de sintaxe (na imagem acima, 
 
 ### Erros de sintaxe
 
-Alguns erros só podem ser detectados quando o método for executado. La [ventana de error de sintáxis](#syntax-error-window) aparece cuando ocurre un error durante la ejecución del código. Por exemplo:
+Alguns erros só podem ser detectados quando o método for executado. Alguns erros só podem ser detectados quando o método for executado. Por exemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 

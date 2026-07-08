@@ -37,7 +37,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 :::note
 
-The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. No es compatible con la interfaz clásica de Windows.
+El rectángulo de enfoque solo está disponible en macOS y (para texto e imagen [entradas](input_overview.md)) en Windows con [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) activado. No es compatible con la interfaz clásica de Windows.
 
 :::
 

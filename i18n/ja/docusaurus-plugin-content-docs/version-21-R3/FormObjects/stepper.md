@@ -17,7 +17,8 @@ title: ステッパー
   - [最小](properties_Scale.md#最小) = 28,800 (8\*60\*60)
   - [最大](properties_Scale.md#最大) = 64,800 (18\*60\*60)
   - [ステップ](properties_Scale.md#ステップ) = 600 (10\*60)
-- 日付タイプの値では [ステップ](properties_Scale.md#ステップ) プロパティに入力された値が日数を表します。 最小と最大プロパティは無視されます。
+- 日付タイプの値では [ステップ](properties_Scale.md#ステップ) プロパティに入力された値が日数を表します。 最小と最大プロパティは無視されます。 最小と最大プロパティは無視されます。
+  &#062; 時間や日付変数に対してステッパーを動作させるためには、プロパティリストで型を設定するだけでなく、<a href="https://doc.4d.com/4Dv18/4D/18/C-TIME.301-4505778.ja.html">C_TIME</a> または <a href="https://doc.4d.com/4Dv18/4D/18/C-DATE.301-4505791.ja.html">C_DATE</a> コマンドで明示的に宣言する必要があります。
 
 > 時間や日付変数に対してステッパーを動作させるためには、プロパティリストで型を設定するだけでなく、`Time` または `Date` 型として [明示的に宣言](../Concepts/variables.md#変数の宣言) する必要があります。
 
@@ -27,7 +28,7 @@ title: ステッパー
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) ("整数", "数値", "日付", "時間" のみ) - [CSSクラス](properties_Object.md#cssクラス) - [最小](properties_Scale.md#最小) - [最大](properties_Scale.md#最大) - [ステップ](properties_Scale.md#ステップ) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [ヘルプTips](properties_Help.md#ヘルプtips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
-## Supported Events
+## サポートされるイベント
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Data Change](../Events/onDataChange.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
 

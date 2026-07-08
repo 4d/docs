@@ -33,7 +33,7 @@ Une date nulle s’écrit *!00-00-00!*.
 | Opération           | Syntaxe                               | Retourne | Expression                  | Valeur       |
 | ------------------- | ------------------------------------- | -------- | --------------------------- | ------------ |
 | Différence          | Date - Date                           | Number   | !2017-01-20! - !2017-01-01! | 19           |
-| Addition            | Date + Numérique                      | Date     | !2017-01-20! !2017-01-20!   | !2017-01-29! |
+| Addition            | Date + Numérique                      | Date     | !2017-01-20! + 9            | !2017-01-29! |
 | Soustraction        | Date - Numérique                      | Date     | !2017-01-20! !2017-01-20!   | !2017-01-11! |
 | Egalité             | Date = Date                           | Boolean  | !2017-01-20! = !2017-01-01! | True         |
 |                     |                                       |          | !2017-01-20! !2017-01-20!   | False        |

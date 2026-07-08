@@ -30,7 +30,7 @@ End if
 
 イベントが発生したオブジェクトによっては追加のプロパティが含まれていることがあります。 特に:
 
-- [list boxes](FormObjects/listbox-object.md#supported-form-events) and [list box columns](FormObjects/listbox-column.md#supported-form-events) return [additional properties](FormObjects/listbox-object.md#supported-form-events) such as `columnName` or `isRowSelected`.
+- [リストボックス](FormObjects/listbox-object.md#supported-form-events) and [リストボックスカラム](FormObjects/listbox-column.md#supported-form-events) は`columnName` あるいは `isRowSelected` という[追加のプロパティ](FormObjects/listbox-object.md#supported-form-events) を返します。
 - [4D View Pro エリア](FormObjects/viewProArea_overview.md) は、`sheetName` や `action` といったプロパティを [On After Edit](onAfterEdit.md) イベントオブジェクトに返します。
 
 

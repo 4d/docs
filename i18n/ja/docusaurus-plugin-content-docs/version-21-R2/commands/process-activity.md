@@ -22,10 +22,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                                        |
-| ----- | ----------------------------------------------------------------------------------------- |
-| 21    | Web ユーザーセッションのサポート                                                                        |
-| 20 R7 | <ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul> |
+| リリース  | 内容                                                                         |
+| ----- | -------------------------------------------------------------------------- |
+| 21    | Web ユーザーセッションのサポート                                                         |
+| 20 R7 | <ul><li>*sessionID* 引数のサポート</li><li>名称変更(旧 Get process activity)</li></ul> |
 
 </details>
 </div>

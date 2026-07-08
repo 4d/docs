@@ -20,7 +20,7 @@ Os comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) e 
 
 Objetos de e-mail fornecem as seguintes propriedades:
 
-> 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html) para formatar o objeto Email.
+> 4D segue a [especificação JMAP](https://jmap.io/spec/rfc8621/) para formatar o objeto Email.
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |

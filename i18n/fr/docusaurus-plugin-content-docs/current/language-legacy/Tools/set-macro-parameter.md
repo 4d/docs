@@ -5,7 +5,7 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *sélecteur* ; *paramTexte* )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *sélecteur* : Integer ; *paramTexte* : Text )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 <div class="no-index">
 

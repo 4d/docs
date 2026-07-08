@@ -174,30 +174,30 @@ Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-La instrucción `return` puede utilizarse junto con la sintaxis estándar para los [valores devueltos](#valor-devuelto) (el valor devuelto debe ser del tipo declarado). When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Tenga en cuenta que termina inmediatamente la ejecución del código. Examine los siguientes ejemplos:
+La instrucción `return` puede utilizarse junto con la sintaxis estándar para los [valores devueltos](#valor-devuelto) (el valor devuelto debe ser del tipo declarado). Cuando se ha declarado un parámetro de retorno (por ejemplo, `myFunction() -> $myReturnValue : Text`), `return $x` ejecuta implícitamente `$myReturnValue:=$x`, y devuelve al llamante. Tenga en cuenta que termina inmediatamente la ejecución del código. Examine los siguientes ejemplos:
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
 	return
-	// function returns 10
+	// la función devuelve 10
 	
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// function returns 20
+	// la función devuelve 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// function returns 10
+	// la función devuelve 10
 
 Function getValue -> $v : Integer
 	return "Hello" //error
 
 Function returnHello
 	return "Hello"
-	// function returns "Hello"
+	// la función devuelve "Hello"
 ```
 
 ## Indirección de parámetros (${N})

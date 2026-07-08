@@ -31,7 +31,7 @@ displayed_sidebar: docs
 - 要素(表組 / 行 / セル / 段落 / 本文 / ヘッダー / フッター / セクション / サブセクション / インライン画像)
 - 4D Write Pro ドキュメント
 
-*formula* 引数には、評価される 4D フォーミュラを渡します。 以下のものを渡すことができます:
+*formula* 引数には、評価される 4D フォーミュラを渡します。 以下のものを渡すことができます: 以下のものを渡すことができます:
 
 - [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects)
 - または以下の2つのプロパティを格納しているオブジェクト:

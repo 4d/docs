@@ -68,7 +68,7 @@ Puede editar el código de un componente siempre que se cumplan las siguientes c
 
 - el proyecto host está ejecutando interpretaciones,
 - el componente ha sido [cargado en modo interpretado](../Project/components.md#interpreted-and-compiled-components) y el código fuente está disponible,
-- los archivos de los componentes se almacenan localmente (es decir, no se [descargan de GitHub](../Project/components.md#adding-a-github-dependency)).
+- los archivos de los componentes se almacenan localmente (es decir, no se [descargan de GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 En este contexto, puede abrir, editar y guardar el código de su componente en el Editor de código del proyecto local desde dos lugares:
 

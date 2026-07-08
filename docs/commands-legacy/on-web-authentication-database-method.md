@@ -53,7 +53,7 @@ You must declare these parameters as follows:
 ```4d
   // On Web Authentication Database Method
  
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  
   // Code for the method
 ```
@@ -127,7 +127,7 @@ Example of the On Web Authentication database method in BASIC mode:
 
 ```4d
   //On Web Authentication Database Method
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $ipServerDuser : Boolean
  ARRAY TEXT($users;0)
  ARRAY LONGINT($nums;0)
@@ -172,7 +172,7 @@ Example of the On Web Authentication database method in DIGEST mode:
 
 ```4d
   //On Web Authentication Database Method
- #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ; $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  $result:=False
   //For security reasons, refuse names that contain @
  If(WithWildcard($user))

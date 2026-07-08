@@ -231,7 +231,7 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 ##### Descripción
 
-La función `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al buzón designado por el [`transportador POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+La función `.searchMails()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->La función `.getBoxInfo()`<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 

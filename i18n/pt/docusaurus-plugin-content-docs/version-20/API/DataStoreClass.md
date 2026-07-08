@@ -582,7 +582,7 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Descrição
 
-A função `.getInfo( )` <!-- REF #DataStoreClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo( )` <!-- REF #DataStoreClass.getInfo().Summary -->A função `.getInfo( )`<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 
@@ -656,7 +656,7 @@ Em um armazém de dados remoto:
 
 #### Descrição
 
-O comando `ds` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devolve uma referência ao datastore que corresponde à base de dados 4D actual ou à base de dados designada por *localID*<!-- END REF -->.
+A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary -->devolve informações sobre o contexto remoto associado ao datastore<!-- END REF -->.
 
 Para saber mais sobre como contextos de otimização podem ser criados veja [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
@@ -784,7 +784,7 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 #### Descrição
 
-A função `.isAdminProtected()` <!-- REF #DataStoreClass.locked().Summary -->retorna `True` se [Data Explorer](Admin/dataExplorer.md) acesso for desativado para a sessão de trabalho<!-- END REF -->.
+A função `.locked()` <!-- REF #DataStoreClass.locked().Summary -->retorna `True` se o datastore estiver bloqueado<!-- END REF -->.
 
 Pode bloquear o datastore usando a função [.flushAndLock()](#flushandlock) antes de executar um instantâneo do ficheiro de dados, por exemplo.
 
@@ -937,7 +937,7 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 
 #### Descrição
 
-A função `.startRequestLog()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->inicia o registo dos pedidos ORDA no lado do cliente<!-- END REF -->.
+A função `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->permite ativar ou desativar o acesso aos dados no [web admin port](Admin/webAdmin.md#http-port), incluindo sessões do [Data Explorer](Admin/dataExplorer.md) no `WebAdmin`<!-- END REF -->.
 
 Por padrão, quando não chamar a função, o acesso aos dados se concede sempre no porto de administração web para uma sessão com privilégio `WebAdmin` utilizando o Explorador de Dados. Em algumas configurações, por exemplo, quando o servidor de aplicações estiver alojado em uma máquina de terceiros, é possivel que não quiser que o administrador possaa ver seus dados, mesmo que possa editar a configuração do servidor, incluindo a configuração da [access key](Admin/webAdmin.md#access-key).
 
@@ -1295,7 +1295,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 #### Descrição
 
-A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->A função `.stopRequestLog()`<!-- END REF -->.
+A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->pára qualquer registo de pedidos ORDA na máquina onde é chamada (cliente ou servidor)<!-- END REF -->.
 
 Fecha efetivamente o documento aberto no disco. No lado do cliente, se o registo tiver sido iniciado na memória, é interrompido.
 

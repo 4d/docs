@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )   を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
+システムワーカーを使うことで、4Dコードは同じマシン上で任意の外部プロセス (シェルコマンド、PHPなど )   を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。  を呼び出すことができます。 システムワーカーは非同期で呼び出されます。 コールバックを使用することで、4D は双方向の通信を可能にします。
 
 `SystemWorker` クラスは、`4D` クラスストアにて提供されています。
 
@@ -80,9 +80,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 プロキシオブジェクトの生成中に問題があった場合、この関数は `null` オブジェクトを返し、エラーが生成されます。
 
-*commandLine* には、実行するアプリケーションのファイルのフルパス (POSIX シンタックス)、および必要に応じて追加の引数を渡します。 アプリケーション名だけを渡すと、4Dは 実行ファイルを探すために `PATH` 環境変数を使用します。
+*commandLine* には、実行するアプリケーションのファイルのフルパス (POSIX シンタックス)、および必要に応じて追加の引数を渡します。 アプリケーション名だけを渡すと、4Dは 実行ファイルを探すために `PATH` 環境変数を使用します。 アプリケーション名だけを渡すと、4Dは 実行ファイルを探すために `PATH` 環境変数を使用します。
 
-**警告:** この関数は、実行可能なアプリケーションを起動するだけで、シェル (コマンドインタープリター) の一部である命令を実行することはできません。 たとえば Windows で、このコマンドを使用して `dir` 命令を実行することはできません。
+**警告:** この関数は、実行可能なアプリケーションを起動するだけで、シェル (コマンドインタープリター) の一部である命令を実行することはできません。 たとえば Windows で、このコマンドを使用して `dir` 命令を実行することはできません。 たとえば Windows で、このコマンドを使用して `dir` 命令を実行することはできません。
 
 #### *options* オブジェクト
 
@@ -92,12 +92,12 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | ---------------- | ------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula | undefined | システムワーカーメッセージ用のコールバック。 完全なレスポンスを受け取り次第、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
 | onData           | Formula | undefined | システムワーカーデータ用のコールバック。 システムワーカーがデータを受け取る度に、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                              |
-| onDataError      | Formula | undefined | 外部プロセスエラー用のコールバック (外部プロセスの *stderr*)。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                |
-| onError          | Formula | undefined | 実行エラー用のコールバック。異常なランタイム条件 (システムエラー) の場合にシステムワーカーによって返されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                            |
+| onDataError      | Formula | undefined | 外部プロセスエラー用のコールバック (外部プロセスの *stderr*)。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照) コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                        |
+| onError          | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                                                        |
 | dataType         | Text    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
-| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 取りうる値の一覧については、[`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md) コマンドの詳細を参照して下さい。                                                        |
+| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 取りうる値の一覧については、[`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md) コマンドの詳細を参照して下さい。             |
 | variables        | Object  |           | システムワーカー用のカスタム環境変数を設定します。 シンタックス: `variables.key=value` (`key` は変数名、`value` はその値)。 値は、可能な限り文字列に変換されます。 値に '=' を含めることはできません。 定義されていない場合、システムワーカーは 4D環境を継承します。 |
 | currentDirectory | Folder  |           | プロセスが実行される作業ディレクトリ                                                                                                                                                                              |
 | hideWindow       | Boolean | true      | (Windows) アプリケーションウィンドウを隠す (可能な場合)、または Windowsコンソールを隠す                                                                                                    |
@@ -125,7 +125,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### 戻り値
 
-この関数はシステムワーカーオブジェクトを返します。このオブジェクトに対して、SystemWorker クラスの関数やプロパティを呼び出すことができます。
+このオブジェクトに対して、SystemWorker クラスの関数やプロパティを呼び出すことができます。
 
 #### Windows の例
 
@@ -189,7 +189,7 @@ End if
 
 #### macOS の例
 
-1. テキストファイルを編集します (`cat` はファイルを編集するための macOS コマンドです)。 この例題では、コマンドのフルアクセスパスを渡しています:
+1. テキストファイルを編集します (`cat` はファイルを編集するための macOS コマンドです)。 この例題では、コマンドのフルアクセスパスを渡しています: この例題では、コマンドのフルアクセスパスを渡しています:
 
 ```4d
 
@@ -350,7 +350,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。 とりうる値: "text" または "blob"。
+`.dataType` プロパティは、<!-- REF #SystemWorkerClass.dataType.Summary -->レスポンス本文のデータ型<!-- END REF -->を格納します。 とりうる値: "text" または "blob"。 とりうる値: "text" または "blob"。 とりうる値: "text" または "blob"。
 
 このプロパティは **読み取り専用** です。
 
@@ -364,7 +364,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
+`.encoding` プロパティは、<!-- REF #SystemWorkerClass.encoding.Summary -->レスポンス本文のエンコーディング<!-- END REF -->を格納します。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。 このプロパティは [`dataType`](#datatype) が "text" のときにのみ利用できます。
 
 このプロパティは **読み取り専用** です。
 
@@ -400,7 +400,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
+`.exitCode` プロパティは、<!-- REF #SystemWorkerClass.exitCode.Summary -->外部プロセスから返される終了コード<!-- END REF -->を格納します。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
 
 このプロパティは **読み取り専用** です。
 
@@ -454,7 +454,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。
+`.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。
 
 `.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
 
@@ -574,13 +574,13 @@ $output:=$worker.response
 
 `.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または *timeout* で指定した時間に到達するまで待機します<!-- END REF -->。
 
-`.wait()` 関数は、*timeout* 引数で指定された時間に到達するか(定義されていれば)、エラーが発生した場合を除き、`onTerminate` フォーミュラの処理が終わるまで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。 タイムアウトに達した場合、`SystemWorker` はキルされません。
+`.wait()` 関数は、*timeout* 引数で指定された時間に到達するか(定義されていれば)、エラーが発生した場合を除き、`onTerminate` フォーミュラの処理が終わるまで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。 タイムアウトに達した場合、`SystemWorker` はキルされません。 タイムアウトに達した場合、`SystemWorker` はキルされません。
 
 *timeout* 引数にタイムアウト値を渡していた場合、.wait() は*timeout* 引数で定義されていた時間分だけ外部プロセスを待ちます。
 
 :::note
 
-`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 

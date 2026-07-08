@@ -5,7 +5,7 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCrypter* ; *cléPrivEmetteur* {; *cléPubRécepteur*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCrypter* : Blob ; *cléPrivEmetteur* : Blob {; *cléPubRécepteur* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 <div class="no-index">
 

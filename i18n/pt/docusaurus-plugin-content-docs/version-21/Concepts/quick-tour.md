@@ -244,7 +244,7 @@ Uma classe pode estender outra classe usando `Class extends <ClassName>`. Las su
 
 ## Operadores
 
-Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
+Quando se utiliza a linguagem, é raro que se pretenda apenas um dado. É mais provável que queira fazer algo com esses dados ou a partir deles. Estes cálculos são efectuados com operadores. Os operadores, em geral, pegam em dois dados e efetuam uma operação sobre eles que resulta num novo dado. Já está familiarizado com muitos operadores. Já está familiarizado com muitos operadores. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo    |
 | -------- | ------------- | ---------- |

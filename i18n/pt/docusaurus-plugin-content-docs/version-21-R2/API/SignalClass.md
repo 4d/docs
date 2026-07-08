@@ -102,7 +102,7 @@ Método ***OpenForm*** :
 
 #### Descrição
 
-A propriedade <!-- REF #SignalClass.description.Summary -->contém uma descrição personalizada para o objeto `Signal`<!-- END REF -->.
+A propriedade <!-- REF #SignalClass.description.Summary -->contém uma descrição personalizada para o objeto `Signal`<!-- END REF -->..
 
 `.description` pode ser definida ao criar o objeto signal ou a qualquer momento. Note que uma vez que o objeto `Signal` é um objeto compartilhado, qualquer acesso ao modo de escrita à propriedade `.description` deve estar cercado por uma estrutura `Use...End use`.
 

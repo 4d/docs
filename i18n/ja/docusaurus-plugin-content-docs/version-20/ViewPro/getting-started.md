@@ -13,7 +13,7 @@ title: はじめに
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table-4d-20-lts) to know the SpreadJS version integrated in your 4D release.
+お使いの4D リリースに組み込まれているSpreadJS のバージョンを確認するには、[ライブラリの一覧](../Notes/updates.md#ライブラリの一覧-4d-20-lts) を参照してください。
 
 :::
 

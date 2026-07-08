@@ -5,7 +5,7 @@ slug: /commands/session-info
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
+<!--REF #_command_.Session info.Syntax-->**Session info** ( *sessionId* : Text ) : Object<!-- END REF-->
 
 <!-- REF #_command_.Session info.Params -->
 

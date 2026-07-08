@@ -5,7 +5,7 @@ slug: /commands/month-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* ) : Integer<!-- END REF-->
+<!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
 <div class="no-index">
 

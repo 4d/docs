@@ -5,7 +5,7 @@ slug: /commands/form-screenshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*laTable* ;} *nomFormulaire* ;} *imageForm* {; *pageNum*} )<!-- END REF-->
+<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*laTable* : Table ;} *nomFormulaire* : Text ;} *imageForm* : Picture {; *pageNum* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 <div class="no-index">
 

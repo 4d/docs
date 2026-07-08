@@ -5,7 +5,7 @@ slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *laTable* ; *formule* )<!-- END REF-->
+<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *laTable* : Table ; *formule* : Text )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
 <div class="no-index">
 

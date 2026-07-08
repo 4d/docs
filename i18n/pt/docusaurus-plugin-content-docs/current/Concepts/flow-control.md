@@ -58,6 +58,14 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. No entanto, mesmo s
  End if
 ```
 
+However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 O resultado é semelhante e *MethodB* é avaliado apenas se necessário.
 
 > **Nota:** O [operador ternário](operators.md#ternary-operator) permite escrever expressões condicionais de uma linha e pode substituir uma sequência completa de instruções If..Else.
@@ -808,3 +816,24 @@ logConsole($message)
 
 ```
 
+## defer (expression)
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R4   | Adicionado |
+
+</details>
+
+The [`defer`](../commands/defer) command allows you to stack one or more expression(s) that will automatically execute when the current method or function **finishes running**.
+
+Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
+
+```4d
+   //make sure some code is executed at exit
+defer(myCleaningMethod)
+   //Do something...
+```
+
+See the [`defer`](../commands/defer) command description for more information.

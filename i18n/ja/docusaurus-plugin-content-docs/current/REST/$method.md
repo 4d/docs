@@ -9,9 +9,8 @@ title: $method
 
 | シンタックス                                          | 例題                                                                                      | 説明                                                                 |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | エンティティまたはエンティティセレクションを削除します                                        |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Deletes the current entity, entity collection, or entity set       |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                | 4D Server のキャッシュからエンティティセットを削除します                                  |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | RESTリクエストで定義されたリレートエンティティのコレクションに基づいて、エンティティセットを作成します              |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | 一つ以上のエンティティを更新または作成します                                             |
 
@@ -21,7 +20,7 @@ title: $method
 
 ### 説明
 
-`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`\{dataClass\}(\{key\})`](dataClassD.md#dataclasskey) (*例*: /Employee(22)) のように直接特定したエンティティが対象です。 データを並べ替えるには `$subOrderby` を使います。 並べ替えの基準とする各属性について、並べ替え順を指定します。ASC ( asc) が昇順、DESC (desc) が降順です。 デフォルトでは、データは昇順に並べ替えられます。
+`$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`\{dataClass\}(\{key\})`](dataClassD.md#dataclasskey) (*例*: /Employee(22)) のように直接特定したエンティティが対象です。
 
 [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid) のようにエンティティセットを呼び出して、そこに含まれるエンティティを削除することもできます。
 
@@ -53,9 +52,15 @@ RESTリクエストで定義されたエンティティのコレクションに�
 
 ### 説明
 
-RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/\{entitySetID\}` に渡すと、当該エンティティセットにアクセスできます。 $timeout に値 (秒単位) を渡すことで、有効時間を変更できます。
+RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/\{entitySetID\}` に渡すと、当該エンティティセットにアクセスできます。 デフォルトの有効期限は 2時間ですが、[`$timeout`](./$timeout.md) に値 (秒単位) を渡すことで変更できます。 この値は、[`Session.quotas`](../API/SessionClass.md#quotas) プロパティでセッション単位に変更することもできます。
 
 エンティティセットを作成する際に、`$filter` や `$orderby` と同時に`$savedfilter` や `$savedorderby` も使用していた場合には、4D Server のキャッシュからエンティティセットが削除されていても、同じ参照IDで再作成できます。
+
+:::note
+
+By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+
+:::
 
 ### 例題
 
@@ -75,41 +80,6 @@ RESTでエンティティのコレクションを作成した場合、これを�
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"
-```
-
-## $method=release
-
-4D Server のキャッシュからエンティティセットを削除します。
-
-### 説明
-
-[`$method=entityset`](#methodentityset) によって作成したエンティティセットを、4D Server のキャッシュから削除することができます。
-
-### 例題
-
-既存のエンティティセットを削除します:
-
-`GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
-
-#### レスポンス:
-
-リクエストが成功した場合のレスポンス:
-
-```json
-{
-    "ok": true
-}
-エンティティセットが見つからなかった場合には、エラーが返されます
-
-{
-    "__ERROR": [
-        {
-            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
-        }
-    ]
-}
 ```
 
 ## $method=subentityset
@@ -188,7 +158,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 エンティティをサーバーに保存すると同時にトリガーが実行されます。 レスポンスにはすべてのデータが、サーバー上に存在するとおりに格納されます。
 
-いずれの場合も、リクエストのボディ (**body**) に **POST** データを格納します。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 `$atomic/$atOnce` を使うと、エンティティを作成・更新するリクエストをトランザクション内で実行できます。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 また、`$method=validate` を使うと、作成・更新の前にエンティティを検証することができます。
+いずれの場合も、リクエストのボディ (**body**) に **POST** データを格納します。 `$atomic/$atOnce` を使うと、エンティティを作成・更新するリクエストをトランザクション内で実行できます。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 また、`$method=validate` を使うと、作成・更新の前にエンティティを検証することができます。
 
 エンティティを追加または更新する際に問題が発生すると、その情報を格納したエラーが返されます。
 

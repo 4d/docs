@@ -5,7 +5,7 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 <div class="no-index">
 

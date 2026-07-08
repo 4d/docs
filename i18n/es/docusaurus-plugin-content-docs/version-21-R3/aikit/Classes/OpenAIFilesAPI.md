@@ -5,22 +5,22 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-La clase `OpenAIFilesAPI` ofrece funcionalidades para gestionar archivos utilizando la API de OpenAI. Los archivos pueden cargarse y utilizarse en varios puntos finales, como el procesamiento [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning), [Batch](https://platform.openai.com/docs/api-reference/batch) y Vision.
+La clase `OpenAIFilesAPI` ofrece funcionalidades para gestionar archivos utilizando la API de OpenAI. Los archivos pueden cargarse y utilizarse en varios puntos finales, como el procesamiento [Fine-tuning](https://developers.openai.com/api/reference/resources/fine_tuning), [Batch](https://developers.openai.com/api/reference/resources/batches) y Vision.
 
 > **Nota:** esta API sólo es compatible con OpenAI. Otros proveedores listados en la documentación de [proveedores compatibles](../compatible-openai.md) no soportan operaciones de gestión de archivos.
 
-Referencia API: <https://platform.openai.com/docs/api-reference/files>
+Referencia API: <https://developers.openai.com/api/reference/resources/files>
 
 ## Límites de tamaño de los archivos
 
 - **Archivos individuales:** hasta 512 MB por archivo
-- **Total de la organización:** hasta 1 TB (tamaño acumulado de todos los archivos cargados por su [organización](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
+- **Total de la organización:** hasta 1 TB (tamaño acumulado de todos los archivos cargados por su [organización](https://developers.openai.com/api/docs/guides/production-best-practices))
 
 ## Funciones
 
 ### create()
 
-**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.OpenAIFileParameters) : cs.OpenAIFileResult
+**create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.AIKit.OpenAIFileParameters) : cs.AIKit.OpenAIFileResult
 
 Cargar un archivo que pueda utilizarse en varios puntos de terminación.
 
@@ -37,9 +37,9 @@ Cargar un archivo que pueda utilizarse en varios puntos de terminación.
 
 #### Propósitos soportados
 
-- `assistants`: utilizado en la API Assistants (⚠️ [obsoleto por OpenAI](https://platform.openai.com/docs/assistants/whats-new))
-- `batch`: utilizado en la [API Batch](https://platform.openai.com/docs/api-reference/batch) (caduca a los 30 días por defecto)
-- `fine-tune`: utilizado para [ajuste fino](https://platform.openai.com/docs/api-reference/fine-tuning)
+- `assistants`: utilizado en la API Assistants (⚠️ [obsoleto por OpenAI](https://developers.openai.com/api/docs/assistants/migration))
+- `batch`: utilizado en la [API Batch](https://developers.openai.com/api/reference/resources/batches) (caduca a los 30 días por defecto)
+- `fine-tune`: utilizado para [ajuste fino](https://developers.openai.com/api/reference/resources/fine_tuning)
 - `vision`: imágenes utilizadas para afinar la visión
 - `user_data`: tipo de archivo flexible para cualquier propósito
 - `evals`: se utiliza para evaluar conjuntos de datos
@@ -51,7 +51,7 @@ Cargar un archivo que pueda utilizarse en varios puntos de terminación.
 - **API de Asistentes:** soporta tipos de archivo específicos (ver Guía de herramientas de asistentes)
 - **API de finalización de chat:** sólo se admiten archivos PDF
 
-#### Ejemplo sincrónico
+#### Ejemplo
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -104,7 +104,7 @@ End if
 
 ### retrieve()
 
-**retrieve**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileResult
+**retrieve**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters) : cs.AIKit.OpenAIFileResult
 
 Devuelve información sobre un archivo específico.
 
@@ -112,8 +112,8 @@ Devuelve información sobre un archivo específico.
 
 | Parámetros   | Tipo                                    | Descripción                                                                   |
 | ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
-| `fileId`     | Text                                    | **Requerido.** El ID del archivo a recuperar. |
-| `parámetros` | [OpenAIParameters](OpenAIParameters.md) | Parámetros opcionales para la solicitud.                      |
+| *fileId*     | Text                                    | **Requerido.** El ID del archivo a recuperar. |
+| *parámetros* | [OpenAIParameters](OpenAIParameters.md) | Parámetros opcionales para la solicitud.                      |
 | Resultado    | [OpenAIFileResult](OpenAIFileResult.md) | El resultado del archivo                                                      |
 
 **Arroja:** un error si `fileId` está vacío.
@@ -133,7 +133,7 @@ End if
 
 ### lista()
 
-**list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
+**list**(*parameters* : cs.AIKit.OpenAIFileListParameters): cs.AIKit.OpenAIFileListResult
 
 Devuelve una lista de archivos que pertenecen a la organización del usuario.
 
@@ -141,7 +141,7 @@ Devuelve una lista de archivos que pertenecen a la organización del usuario.
 
 | Parámetros   | Tipo                                                    | Descripción                                                             |
 | ------------ | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `parámetros` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Parámetros opcionales para el filtrado y la paginación. |
+| *parámetros* | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Parámetros opcionales para el filtrado y la paginación. |
 | Resultado    | [OpenAIFileListResult](OpenAIFileListResult.md)         | Lista de los archivos                                                   |
 
 #### Ejemplo
@@ -166,7 +166,7 @@ End if
 
 ### delete()
 
-**delete**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileDeletedResult
+**delete**(*fileId* : Text; *parameters* : cs.AIKit.OpenAIParameters): cs.AIKit.OpenAIFileDeletedResult
 
 Eliminar un archivo.
 
@@ -174,8 +174,8 @@ Eliminar un archivo.
 
 | Parámetros   | Tipo                                                  | Descripción                                                                |
 | ------------ | ----------------------------------------------------- | -------------------------------------------------------------------------- |
-| `fileId`     | Text                                                  | **Requerido.** el ID del archivo a borrar. |
-| `parámetros` | [OpenAIParameters](OpenAIParameters.md)               | Parámetros opcionales para la solicitud.                   |
+| *fileId*     | Text                                                  | **Requerido.** el ID del archivo a borrar. |
+| *parámetros* | [OpenAIParameters](OpenAIParameters.md)               | Parámetros opcionales para la solicitud.                   |
 | Resultado    | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | El resultado de la eliminación del archivo                                 |
 
 **Arroja:** un error si `fileId` está vacío.

@@ -1241,14 +1241,20 @@ var $results := ds.MyClass.query("myVectorField <= :1" ; $comparisonVector)
 L'instruction **order by** est prise en charge dans la chaîne de requête afin que les entités de l'entity selection résultante soient triées par similarité. Par exemple :
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField" ; $comparisonVector)  
-  //ordre par défaut, la première entité est la plus similaire
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
+  //la première entité est la plus similaire
 ```
+
+:::note
+
+L'ordre par défaut est croissant, alors qu'un ordre décroissant soit généralement le plus utile pour les requêtes de similarité vectorielle. Par conséquent, vous devrez généralement ajouter le mot-clé `desc` dans vos chaînes de requête de similarité vectorielle.
+
+:::
 
 Si le même vecteur apparaît plusieurs fois dans la chaîne de requête, l'ordre par sera appliqué aux résultats du premier, par exemple :
 
 ```4d
-var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc ; /
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc" ; /
     {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 est utilisé pour le tri
 ```
 

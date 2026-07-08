@@ -5,7 +5,7 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 <div class="no-index">
 

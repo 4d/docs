@@ -7,7 +7,7 @@ Les objets Attachment (pièce jointe) permettent de référencer des fichiers da
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+Cette classe est [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) en binaire.
 
 :::
 

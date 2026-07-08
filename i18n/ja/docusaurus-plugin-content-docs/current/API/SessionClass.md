@@ -44,6 +44,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 | [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.quotas.Syntax -->](#quotas)<br/><!-- INCLUDE #SessionClass.quotas.Summary -->                                |
 | [<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
@@ -498,9 +499,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R5 | 追加 |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 21 R4 | New *unreachableSince* property |
+| 20 R5 | 追加                              |
 
 </details>
 
@@ -516,24 +518,27 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                           |
-| ---------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                              |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                   |
-| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul> |
-| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                  |
-| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                        |
-| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                      |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                             |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                  |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                            |
-| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                               |
+| プロパティ            | 型                                | 説明                                                                                                                                                                                                                                      |
+| ---------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                                                                                                         |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                              |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul>                                                                                            |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                                                                                                             |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                                                                                                                   |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                                                                                                                 |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                                                                                                        |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                             |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                                       |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                                                                                                          |
+| unreachableSince | Integer                          | Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the [`Process activity.sessions`](../commands/process-activity) property. |
 
 :::note
 
 `.info` は計算プロパティなため、そのプロパティに対して何らかの処理をおこないたい場合は、呼び出し後にローカル変数に保存することが推奨されます。
 
 :::
+
+このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -672,6 +677,58 @@ End if
 [`.demote()`](#demote)<br/>[`hasPrivilege()`](#hasprivilege)
 
 <!-- END REF -->
+
+<!-- REF SessionClass.quotas.Desc -->
+
+## .quotas
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 21 R4 | 追加 |
+
+</details>
+
+<!-- REF #SessionClass.quotas.Syntax -->**.quotas** : 4D.QuotaManager<!-- END REF -->
+
+#### 説明
+
+The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see [`4D.QuotaManager` class](./QuotaManagerClass.md)).
+
+このプロパティは **読み取り専用** です。
+
+The following properties of the `4D.QuotaManager` object are available for the session:
+
+| プロパティ                                                                     |              | 型       | Writable | 説明                                                                                                        |
+| ------------------------------------------------------------------------- | ------------ | ------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯        | Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯        | Default inactivity timeout for entity sets in memory (seconds)                         |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯        | Maximum inactivity timeout for entity sets in memory (seconds)                         |
+| currentValues                                                             |              | Object  | ×        |                                                                                                           |
+|                                                                           | nbEntitySets | Integer | ×        | Number of entity sets currently in memory. *Undefined* = no entity set in memory          |
+
+When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
+
+:::tip 関連したblog 記事
+
+[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
+
+:::
+
+#### 例題
+
+```4d
+   //set the maximum number of entity sets in memory
+   //for the session to 50
+Session.quotas.nbEntitySets:=50
+```
+
+<!-- END REF -->
+
+#### 参照
+
+[QuotaManager class](./QuotaManagerClass.md)
 
 <!-- REF SessionClass.restore().Desc -->
 
@@ -855,7 +912,7 @@ End if
 
 クライアント/サーバーでは、リモートユーザーセッションの `.storage` オブジェクトは、サーバーまたはクライアントのものとは**同じではありません**。
 
-リモートユーザーセッションとWeb セッションが[OTP を使用して共有されていた](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) 場合、これらはたとえOTP がクライアント側のセッションから[作成](#createotp) されていた場合でも、同じ`.storage` オブジェクトをサーバー上で共有します。
+リモートユーザーセッションとWeb セッションが[OTP を使用して共有されていた](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) 場合、これらはたとえOTP がクライアント側のセッションから[作成](#createotp) されていた場合でも、同じ`.storage` オブジェクトをサーバー上で共有します。
 
 :::tip
 

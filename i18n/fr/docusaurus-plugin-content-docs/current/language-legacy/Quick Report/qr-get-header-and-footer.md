@@ -5,7 +5,7 @@ slug: /commands/qr-get-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *zone* ; *sélecteur* ; *titreGauche* ; *titreCentre* ; *titreDroit* ; *hauteur* {; *image* {; *alignementImage*}} )<!-- END REF-->
+<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *zone* : Integer ; *sélecteur* : Integer ; *titreGauche* : Text ; *titreCentre* : Text ; *titreDroit* : Text ; *hauteur* : Integer {; *image* : Picture {; *alignementImage* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 <div class="no-index">
 

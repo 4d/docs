@@ -5,7 +5,7 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *liste* {; > ou <} )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *liste* : Integer {; *order* : >, < } )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 <div class="no-index">
 

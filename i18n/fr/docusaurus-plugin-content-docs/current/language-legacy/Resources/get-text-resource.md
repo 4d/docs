@@ -5,7 +5,7 @@ slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* {; *resFichier*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* : Integer {; *resFichier* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
 <div class="no-index">
 

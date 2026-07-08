@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the form or Default table, if omitted |
+| aTable | Table | &#8594;  | Table form only: Table of the form or Default table, if omitted |
 | formName | Text | &#8594;  | Name of the form |
 | width | Integer | &#8592; | Width of the form (in pixels) |
 | height | Integer | &#8592; | Height of the form (in pixels) |

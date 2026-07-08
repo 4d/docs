@@ -5,9 +5,9 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-`OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)、 [Batch](https://platform.openai.com/docs/api-reference/batch) 処理、そしてVision を含む様々なエンドポイントで使用することができます。
+`OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 `OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://developers.openai.com/api/reference/resources/fine_tuning)、 [Batch](https://developers.openai.com/api/reference/resources/batches) 処理、そしてVision を含む様々なエンドポイントで使用することができます。 `OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)、 [Batch](https://platform.openai.com/docs/api-reference/batch) 処理、そしてVision を含む様々なエンドポイントで使用することができます。
 
-> **注意:** この API はOpenAI としか互換性がありません。 [互換性のあるプロバイダー](../compatible-openai.md) ドキュメンテーションに記載されている他のプロバイダーでは、ファイル管理操作をサポートしていません。
+> **注意:** この API はOpenAI としか互換性がありません。 [互換性のあるプロバイダー](../compatible-openai.md) ドキュメンテーションに記載されている他のプロバイダーでは、ファイル管理操作をサポートしていません。 [互換性のあるプロバイダー](../compatible-openai.md) ドキュメンテーションに記載されている他のプロバイダーでは、ファイル管理操作をサポートしていません。
 
 API 参照: <https://platform.openai.com/docs/api-reference/files>
 
@@ -73,7 +73,7 @@ End if
 
 #### 非同期の例
 
-ファイルアップロードは(特に512 MBまでの大きなファイルの場合)長時間のオペレーションとなり得るため、アプリケーションをブロックするのを避けるために非同期の呼び出しを使用することが推奨されます。 詳細については[非同期呼び出し](../非同期呼び出し.md) を参照してください。
+ファイルアップロードは(特に512 MBまでの大きなファイルの場合)長時間のオペレーションとなり得るため、アプリケーションをブロックするのを避けるために非同期の呼び出しを使用することが推奨されます。 詳細については[非同期呼び出し](../非同期呼び出し.md) を参照してください。 詳細については[非同期呼び出し](../非同期呼び出し.md) を参照してください。
 
 ```4d
 var $file:=File("/RESOURCES/large-training-data.jsonl")

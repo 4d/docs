@@ -28,11 +28,15 @@ $client.baseURL:="https://api.mistral.ai/v1"
 | https://ai.azure.com/ja/                                                                                                                                 | https://YOUR_RESOURCE_NAME.openai.azure.com |
 | [https://www.alibabacloud.com/](https://www.alibabacloud.com/help/en/model-studio/developer-reference/use-qwen-by-calling-api) (qwen) | https://dashscope-intl.aliyuncs.com/compatible-mode/v1                                                |
 | https://www.perplexity.ai/ja/                                                                                                                            | https://api.perplexity.ai/ja                                                                          |
+| https://x.ai/                                                                                                                                                            | https://api.x.ai/v1/ja                                                                                |
+| https://z.ai/                                                                                                                                                            | https://api.z.ai/api/coding/paas/v4                                                                   |
+| http://cohere.com/ja/                                                                                                                                                    | https://api.cohere.ai/compatibility/v1                                                                |
 
 ## ローカル
 
-| プロバイダ                                                   | デフォルトの baseURL                                                                                            | ドキュメント                                                                        |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| https://ollama.com/ja/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
-| https://lmstudio.ai/ja/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |
-| https://localai.io/ja/  | http://127.0.0.1:8080     |                                                                               |
+| プロバイダ                                                              | デフォルトの baseURL                                                                                            | ドキュメント                                                                        |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| https://ollama.com/ja/             | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
+| https://lmstudio.ai/ja/            | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |
+| https://localai.io/ja/             | http://127.0.0.1:8080     |                                                                               |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp) | http://localhost:8080/v1/                                                 | [llama-server](https://github.com/ggml-org/llama.cpp#llama-server)            |

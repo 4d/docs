@@ -7,7 +7,7 @@ title: OpenAIImagesAPI
 
 Le `OpenAIImagesAPI` fournit des fonctionnalités pour générer des images en utilisant l'API d'OpenAI.
 
-https://platform.openai.com/docs/api-reference/images
+https://developers.openai.com/api/reference/resources/images
 
 ## Fonctions
 
@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/images
 
 Crée une image à partir d'une invite.
 
-https://platform.openai.com/docs/api-reference/images/create
+https://developers.openai.com/api/reference/resources/images/methods/generate
 
 ## Exemple
 

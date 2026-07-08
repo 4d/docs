@@ -5,7 +5,7 @@ slug: /commands/break-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *niveau* {; *sautPage*} )<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *niveau* : Integer {; *sautPage* : Integer} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
 <div class="no-index">
 

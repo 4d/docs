@@ -21,10 +21,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                             |
-| ----- | ------------------------------ |
-| 20 R8 | Support of standalone sessions |
-| 20 R7 | 追加                             |
+| リリース  | 内容                |
+| ----- | ----------------- |
+| 20 R8 | スタンドアロンセッションのサポート |
+| 20 R7 | 追加                |
 
 </details>
 </div>
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 | systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                     |
 | IPAddress        | Text                             | リモートマシンの IPアドレス。                                                                                                          |
 | hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                               |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日付と時間。 スタンドアロンセッションの場合: アプリケーション起動の日付と時間                                                          |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日付と時間。 セッション作成の日付と時間。 スタンドアロンセッションの場合: アプリケーション起動の日付と時間                                           |
 | state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                               |
 | ID               | Text                             | セッションUUID ([`Session.id`](../API/SessionClass.md#id) と同じ値)                                             |
 | persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                  |

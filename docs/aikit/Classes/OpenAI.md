@@ -11,8 +11,8 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 | Property Name     | Type  | Description                       | Optional |
 |-------------------|-------|-----------------------------------|----------|
-| `apiKey`          | Text  | Your [OpenAI API Key](https://platform.openai.com/api-keys).              | Can be required by the provider|
-| `baseURL`         | Text  | Base URL for OpenAI API requests. | Yes (if omitted = use OpenAI Platform)|
+| `apiKey`          | Text  | Your [OpenAI API Key](https://developers.openai.com/api/docs/quickstart#create-and-export-an-api-key).              | Can be required by the provider |
+| `baseURL`         | Text  | Base URL for OpenAI API requests. | Yes (if omitted = use OpenAI Platform) |
 | `organization`    | Text  | Your OpenAI Organization ID.      | Yes      |
 | `project`         | Text  | Your OpenAI Project ID.           | Yes      |
 
@@ -69,7 +69,6 @@ The API provides access to multiple resources that allow seamless interaction wi
 | `embeddings`      | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API.  |
 | `files`           | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Access to the Files API.       |
 
-
 ### Example Usage
 
 ```4d
@@ -82,3 +81,9 @@ $client.model.lists(...)
 ## Provider Model Aliases
 
 The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
+
+You can construct an OpenAI client using a pre-configured provider name. This allows you to easily switch between different AI providers (OpenAI, Anthropic, etc.) without specifying the full configuration each time.
+
+```4d
+var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})
+```

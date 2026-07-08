@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* ; *nom* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* : Time ; *nom* : Text ; *valeur* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 <div class="no-index">
 

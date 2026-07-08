@@ -1,6 +1,7 @@
 ---
 id: trim-start
 title: Trim start
+slug: /commands/trim-start
 displayed_sidebar: docs
 ---
 

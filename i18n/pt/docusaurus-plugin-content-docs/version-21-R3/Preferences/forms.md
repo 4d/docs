@@ -24,7 +24,7 @@ Você pode configurar esta opção, dependendo dos seus hábitos de trabalho e d
 
 ### Ativar o alinhamento automático por padrão
 
-Esta opção ativa o alinhamento automático por padrão em cada nova janela do editor de formulário. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
+Esta opção ativa o alinhamento automático por padrão em cada nova janela do editor de formulário. Esta opção ativa o alinhamento automático por padrão em cada nova janela do editor de formulário.
 
 ## Exibição padrão do novo formulário
 

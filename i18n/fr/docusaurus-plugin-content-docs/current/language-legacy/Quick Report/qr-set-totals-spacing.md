@@ -5,7 +5,7 @@ slug: /commands/qr-set-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *zone* ; *sousTotal* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *zone* : Integer ; *sousTotal* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS SPACING.Params-->
 <div class="no-index">
 

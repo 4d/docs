@@ -5,7 +5,7 @@ slug: /commands/object-get-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get enabled** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get enabled** ( *objeto* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enabled.Params-->
 <div class="no-index">
 

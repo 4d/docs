@@ -5,7 +5,7 @@ slug: /commands/save-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *unCampo* )<!-- END REF-->
+<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *unCampo* : Field )<!-- END REF-->
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 <div class="no-index">
 

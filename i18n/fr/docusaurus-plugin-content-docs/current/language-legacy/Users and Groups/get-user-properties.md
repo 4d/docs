@@ -5,7 +5,7 @@ slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *réfUtilisateur* ; *nom* ; *démarrage* ; *motDePasse* ; *nbUtilisations* ; *dernièreUtilisation* {; *adhésions* {; *groupePropriétaire*}} )<!-- END REF-->
+<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *réfUtilisateur* : Integer ; *nom* : Text ; *démarrage* : Text ; *motDePasse* : Text ; *nbUtilisations* : Integer ; *dernièreUtilisation* : Date {; *adhésions* : Integer array {; *groupePropriétaire* : Integer}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 <div class="no-index">
 

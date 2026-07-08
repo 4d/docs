@@ -1650,7 +1650,7 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 
-> Valores null são avaliados como menor que outros valores.
+> Um resultado nullé sempre o menor valor.
 
 Se você passar um caminho de atributo inválido em *pathString* ou *pathObject*, a função retornará uma seleção de entidade vazia.
 
@@ -1717,7 +1717,7 @@ Você pode usar um parâmetro *formulaString* ou *formulaObj*:
 
 O *formulaString* ou *formulaObj* é executado para cada entidade da seleção de entidade e seu resultado é usado para definir a posição da entidade na seleção de entidade retornada. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
 
-> Um resultado nullé sempre o menor valor.
+> Valores null são avaliados como menor que outros valores.
 
 Como padrão, se omitir o parâmetro *sortOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente, você pode passar um dos seguintes valores no parâmetro *sortOrder*:
 
@@ -2510,7 +2510,7 @@ Retorna:
 
 #### Exemplo 3
 
-Exemplo com extracção de algumas propriedades de uma relatedEntity:
+Exemplo com extracção de algumas propriedades de <code>relatedEntities</code>:
 
 ```4d
 var $employeesCollection : Collection

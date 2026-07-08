@@ -5,7 +5,7 @@ slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* : テキスト, オブジェクト ) : Boolean<br/>**Register data key** ( *curDataKey* : テキスト, オブジェクト ) : Boolean<!-- END REF-->
+<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* : Text ) : Boolean<br/>**Register data key** ( *curDataKey* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
 <div class="no-index">
 

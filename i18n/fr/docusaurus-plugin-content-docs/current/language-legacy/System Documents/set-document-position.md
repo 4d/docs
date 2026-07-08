@@ -5,7 +5,7 @@ slug: /commands/set-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* ; *offset* {; *ancre*} )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* : Time ; *offset* : Real {; *ancre* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 <div class="no-index">
 

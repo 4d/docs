@@ -42,7 +42,7 @@ title: VP SET COLUMN ATTRIBUTES
 ```4d
 var $column; $properties : Object
  
-$column:=VP Column("ViewProArea";1) //column B
+$column:=VP Column("ViewProArea";1) // カラム B を取得
 $properties:=New object("width";100;"header";"Hello World")
  
 VP SET COLUMN ATTRIBUTES($column;$properties)

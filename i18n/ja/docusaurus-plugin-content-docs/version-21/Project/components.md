@@ -190,7 +190,7 @@ GitHub に保存されているコンポーネントに関しては、[**depende
 GitHub に保存された 4Dコンポーネントを直接参照して使用するには、GitHubコンポーネントのリポジトリを設定する必要があります。
 
 - ZIP形式でコンポーネントファイルを圧縮します。
-- GitHubリポジトリと同じ名前をこのアーカイブに付けます。
+- GitHubリポジトリと同じ名前をこのアーカイブに付けます。 例えば、"my-4D-Component" というレポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。
 - このリポジトリの [GitHubリリース](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository) にアーカイブを統合します。
 
 これらのステップは、4Dコードや GitHubアクションを使用することで簡単に自動化できます。
@@ -310,7 +310,7 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: Referenced GitHub and GitLab components are downloaded in a local cache folder then loaded in your environment.
+参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます:
 
 - macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -482,7 +482,7 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
+接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
 
 :::note
 
@@ -514,7 +514,7 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 #### GitHub 依存関係バージョン範囲の変更
 
-一覧に表示されたGitHub 依存関係に対して[バージョン設定](#github-依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 In the "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。 You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu.
+一覧に表示されたGitHub 依存関係に対して[バージョン設定](#github-依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
 
@@ -582,7 +582,7 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 このオプションがチェックされている場合(デフォルトでチェック)、GitHub コンポーネントで[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいバージョンは、次回プロジェクト起動時に自動的に更新されます。 このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
+このオプションがチェックされていない場合、[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいコンポーネントバージョンは、利用可能であることが表示されるに止まり、[手動での更新](#依存関係の更新) を必要とします。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
 
 ### GitHubアクセストークンの提供
 

@@ -28,7 +28,7 @@ Gracias a esta funcionalidad, toda la lógica de negocio de su aplicación 4D pu
 
 ![](../assets/en/ORDA/api.png)
 
-Además, 4D [precrea automáticamente](#creating-classes) las clases para cada objeto del modelo de datos disponible.
+Además, 4D [precrea automáticamente](../Project/code-overview.md#orda-classes) las clases para cada objeto del modelo de datos disponible.
 
 ## Arquitectura
 
@@ -45,7 +45,7 @@ Todas las clases de modelo de datos ORDA se exponen como propiedades del class s
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> Las clases usuario ORDA se almacenan como archivos de clase estándar (.4dm) en la subcarpeta Classes del proyecto [(ver más abajo)](#class-files).
+> Las clases usuario ORDA se almacenan como archivos de clase estándar (.4dm) en la subcarpeta Classes del proyecto.
 
 Además, las instancias de objeto de clases usuario de los modelos de datos ORDA se benefician de las propiedades y funciones de sus padres:
 
@@ -60,7 +60,7 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 | Lanzamiento | Modificaciones                                                                                                                                              |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 21 R3       | Support for the `server` keyword.                                                                                                           |
+| 21 R3       | Soporte para la palabra clave `server`.                                                                                                     |
 | 19 R4       | Atributos alias en la Entity Class                                                                                                                          |
 | 19 R3       | Atributos calculados en la Entity Class                                                                                                                     |
 | 18 R5       | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
@@ -269,7 +269,7 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
-  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Project/code-overview.md#user-classes). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
   - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
@@ -315,7 +315,7 @@ Una función class constructor ORDA se activa justo después de que se cree una 
 
 Esta función sólo puede definirse al [nivel de la entidad](#entity-class). Sólo puede haber una función constructor en una class entity (de lo contrario se devuelve un error).
 
-Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
+Esta función class constructor ORDA no recibe ni devuelve parámetros. Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this).
 
 :::note
 
@@ -334,7 +334,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \`__STAMP
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Notas
@@ -346,7 +346,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 #### Configuraciones remotas
 
-When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. Cuando se llama en el cliente, no se dispara de nuevo cuando el cliente intenta guardar la nueva entidad y envía una petición de actualización al servidor para crear en memoria en el servidor.
+Al utilizar configuraciones remotas, hay que tener en cuenta el siguiente principio: en el modelo **cliente/servidor**, la función puede invocarse desde el cliente o desde el servidor, dependiendo de la ubicación del código que la invoca. Cuando se llama en el cliente, no se dispara de nuevo cuando el cliente intenta guardar la nueva entidad y envía una petición de actualización al servidor para crear en memoria en el servidor.
 
 :::warning
 
@@ -425,7 +425,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 
 ```
 
-#### Example 5 (diagram): Qodly - Entity instantiated in a function
+#### Ejemplo 5 (diagrama): Qodly - Entidad instanciada en una función
 
 ```mermaid
 
@@ -467,7 +467,7 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 
 > Los atributos calculados ORDA no están [**expuestos**](#exposed-vs-non-exposed-functions) por defecto. Para exponer un atributo calculado, añada la palabra clave `exposed` a la definición de la función \*\*get \*\*.
 
-> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
+> **Las funciones get y set** pueden tener la propiedad [`local`](../Concepts/classes.md#local) para optimizar el procesamiento cliente/servidor.
 
 ### `Function get <attributeName>`
 
@@ -475,7 +475,7 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 
 ```4d
 {local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
-// code
+// código
 ```
 
 La función *getter* es obligatoria para declarar el atributo calculado *attributeName*. Cada vez que se accede al atributo *attributeName*, 4D evalúa el código `Function get` y devuelve el valor *$result*.
@@ -502,7 +502,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Para más información sobre las palabras clave `local` y `server`, por favor consulte la sección [local y servidor](../Concepts/classes.md#local-and-server).
 
 :::
 
@@ -551,7 +551,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 ```4d
 
 {local | server} Function set <attributeName>($value : type {; $event : Object})
-// code
+// código
 ```
 
 La función *setter* se ejecuta cada vez que se asigna un valor al atributo. Esta función suele procesar los valores de entrada y el resultado se envía entre uno o varios atributos.
@@ -569,7 +569,7 @@ El parámetro *$event* contiene las siguientes propiedades:
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Para más información sobre las palabras clave `local` y `server`, por favor consulte la sección [local y servidor](../Concepts/classes.md#local-and-server).
 
 :::
 
@@ -939,7 +939,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
+Por razones de seguridad, todas las funciones de la clase modelo de datos, incluyendo [atributos calculados](#computed-attributes-1) y los [atributos alias](#alias-attributes-1), así como las [funciones singleton compartidas](../Concepts/classes.md#shared-singleton) **no están expuestas** por defecto a **solicitudes remotas** (privacidad).
 
 Las peticiones remotas son:
 

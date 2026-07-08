@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| コード | 呼び出し元                                                                                                                                     | 定義                                                 |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38  | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
+| コード | 呼び出し元                                                                                                                            | 定義                                                 |
+| --- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38  | [ボタン](FormObjects/button_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox-column.md) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
 
 ## 説明
 
@@ -26,4 +26,4 @@ title: On Alternative Click
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox-column.md#alternatebutton).
+["alternateButton" 属性の説明](FormObjects/listbox-column.md#alternatebutton) を参照ください。

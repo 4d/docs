@@ -5,7 +5,7 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* : Text array )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 <div class="no-index">
 

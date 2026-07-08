@@ -5,7 +5,7 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *objeto* : Text ; *numColuna* : Integer ; *ordenar* : Operator {; ...(*numColuna* : Integer, *ordenar* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *objeto* : Field, Variable ; *numColuna* : Integer ; *ordenar* : Operator {; ...(*numColuna* : Integer, *ordenar* : Operator)} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *objeto* : Text ; *numColuna* : Integer ; *ordenar* : >, < {; ...(*numColuna* : Integer ; *ordenar* : >, <)} )<br/>**LISTBOX SORT COLUMNS** ( *objeto* : Variable ; *numColuna* : Integer ; *ordenar* : >, < {; ...(*numColuna* : Integer ; *ordenar* : >, <)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 <div class="no-index">
 

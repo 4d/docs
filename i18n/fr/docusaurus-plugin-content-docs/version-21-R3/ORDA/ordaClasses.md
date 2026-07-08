@@ -28,11 +28,11 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 ![](../assets/en/ORDA/api.png)
 
-De plus, 4D [crée préalablement et automatiquement](#creating-classes) les classes pour chaque objet de modèle de données disponible.
+De plus, 4D [crée préalablement et automatiquement](../Project/code-overview.md#orda-classes) les classes pour chaque objet de modèle de données disponible.
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -45,7 +45,7 @@ Toutes les classes de modèle de données ORDA sont exposées en tant que propri
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet [(voir ci-dessous)](#class-files).
+> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.
 
 De plus, les instances d'objet de classes utilisateurs du modèles de données ORDA bénéficient des propriétés et fonctions de leurs parents:
 
@@ -269,7 +269,7 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Project/code-overview.md#user-classes) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
   - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
@@ -455,7 +455,7 @@ Un attribut calculé peut également mettre en œuvre une fonction `set`, qui s'
 
 Tout comme les attributs de stockage, les attributs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un attribut calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. Cependant, pour de meilleures performances, notamment en client/serveur, les attributs calculés peuvent implémenter une fonction de requête `query` personnalisée qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
 
-De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les attributs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
+De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée.
 
 ### Comment définir les attributs calculés
 
@@ -489,7 +489,7 @@ La fonction *getter* définit le type de données de l'attribut calculé grâce 
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- \*\*Exemple \*\* : cs.EmployeeSelection
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
@@ -607,7 +607,7 @@ Cette fonction prend en charge trois syntaxes :
   | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
   | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
-La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un attribut calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
+La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 
 > Les fonctionnalités suivantes ne sont pas prises en charge :
 >

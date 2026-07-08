@@ -5,7 +5,7 @@ slug: /commands/split-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Split string.Syntax-->**Split string** ( *chaîneASéparer* ; *séparateur* {; *options*} ) : Collection<!-- END REF-->
+<!--REF #_command_.Split string.Syntax-->**Split string** ( *chaîneASéparer* : Text ; *séparateur* : Text {; *options* : Integer} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
 <div class="no-index">
 

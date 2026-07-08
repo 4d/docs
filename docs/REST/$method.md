@@ -9,13 +9,10 @@ This parameter allows you to define the operation to execute with the returned e
 
 |Syntax|Example|Description|
 |---|---|---|
-|[**$method=delete**](#methoddelete)|`POST /Employee?$filter="ID=11"& $method=delete`|Deletes the current entity, entity collection, or entity selection|
+|[**$method=delete**](#methoddelete)|`POST /Employee?$filter="ID=11"& $method=delete`|Deletes the current entity, entity collection, or entity set|
 |[**$method=entityset**](#methodentityset)|`GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`|Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request|
-|[**$method=release**](#methodrelease)|`GET /Employee/$entityset/<entitySetID>?$method=release`|Releases an existing entity set stored in 4D Server's cache|
 |[**$method=subentityset**](#methodsubentityset)|`GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC`|Creates an entity set based on the collection of related entities defined in the REST request|
 |[**$method=update**](#methodupdate)|`POST /Person/?$method=update`|Updates and/or creates one or more entities|
-
-
 
 
 
@@ -60,9 +57,15 @@ Creates an entity set in 4D Server's cache based on the collection of entities d
 
 ### Description   
 
-When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.
+When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to [`$timeout`](./$timeout.md). It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
 
 If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
+
+:::note
+
+By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property. 
+
+:::
 
 ### Example
 
@@ -85,41 +88,6 @@ __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C7963
 ```
 
 
-
-## $method=release
-
-Releases an existing entity set stored in 4D Server's cache.
-
-### Description  
-
-You can release an entity set, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
-
-### Example  
-
-Release an existing entity set:
-
-`GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
-
-#### Response:
-
-If the request was successful, the following response is returned:
-
-```json
-{
-    "ok": true
-}
-If the entity set wasn't found, an error is returned:
-
-{
-    "__ERROR": [
-        {
-            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
-        }
-    ]
-}
-```
 
 
 ## $method=subentityset

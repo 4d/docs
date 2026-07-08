@@ -5,7 +5,7 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* {; *libelléBoutonOK* {; *libelléBoutonAnn*}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; *libelléBoutonOK* : Text {; *libelléBoutonAnn* : Text}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 <div class="no-index">
 

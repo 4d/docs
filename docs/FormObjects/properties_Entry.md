@@ -7,7 +7,14 @@ title: Entry
 
 4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
-The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the [`SPELL CHECKING`](../commands/spell-checking) 4D language command for each object to be checked.
+
+:::note Writing Tools (macOS)
+
+On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using IA, you might consider using the [Writing Tools](#writing-tools) property.
+
+:::
+
 
 #### JSON Grammar
 
@@ -355,5 +362,55 @@ When this option is not enabled, users must first select the cell row and then c
 #### Commands
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
+---
+
+## Writing Tools
+
+On macOS, this property lets end users apply [Apple Intelligence **Writing Tools**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) to the text of [4D Write Pro](writeProArea_overview.md) and [input](input_overview.md) (with [multiline](#multiline) support) form objects. Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+
+![](../assets/en/FormObjects/writing-tools.png)
+
+:::tip Related blog post
+
+Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**. 
+
+:::
+
+When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+
+- if some text is selected, only the selection is replaced,
+- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+
+:::note
+
+Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.  
+
+:::
+
+The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+
+:::note
+
+The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+
+:::
+
+The availability and default value of the property depend on the object type:
+
+|Object|Availability in the Property List|Default value|
+|---|---|---|
+|[Input](input_overview.md)|Only when the [Multiline](#multiline) property is set to "Yes" or "Automatic"|False|
+|[4D Write Pro area](writeProArea_overview.md)|Always displayed|True|
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|writingTools|boolean |true, false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md) ([multiline](#multiline))
 
 

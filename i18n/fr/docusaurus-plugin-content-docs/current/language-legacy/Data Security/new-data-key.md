@@ -5,7 +5,7 @@ slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New data key.Syntax-->**New data key** ( *phraseSecrète* ) : Object<!-- END REF-->
+<!--REF #_command_.New data key.Syntax-->**New data key** ( *phraseSecrète* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; offset }} )<br/>**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texte* : Text ; *blob* : Blob {; *formatTexte* : Integer {; *offset* : Variable }} )<br/>**TEXT TO BLOB** ( *texte* : Text ; *blob* : Blob {; *formatTexte* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
 <div class="no-index">
 

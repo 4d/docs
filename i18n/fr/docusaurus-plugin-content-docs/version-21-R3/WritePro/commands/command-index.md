@@ -23,15 +23,15 @@ title: Commandes 4D Write Pro
 [`WP DELETE FOOTER`](../commands/wp-delete-footer)<br/>
 [`WP DELETE HEADER`](../commands/wp-delete-header)<br/>
 [`WP DELETE PICTURE`](../commands/wp-delete-picture)<br/>
-[`WP DELETE SECTION`](../commands/wp-delete-section) ***New 4D 20 R7***<br/>
-[`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet) ***Modified 4D 21 R3***<br/>
-[`WP DELETE SUBSECTION`](../commands/wp-delete-subsection) ***Modified 4D 20 R7***<br/>
+[`WP DELETE SECTION`](../commands/wp-delete-section) ***Nouveau 4D 20 R7***<br/>
+[`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet) ***Modifié 4D 21 R3***<br/>
+[`WP DELETE SUBSECTION`](../commands/wp-delete-subsection) ***Modifié 4D 20 R7***<br/>
 [`WP DELETE TEXT BOX`](../commands/wp-delete-text-box)
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](../commands/wp-export-document) **Modified 4D 20 R9**<br/>
-[`WP EXPORT VARIABLE`](../commands/wp-export-variable) **Modified 4D 20 R9**
+[`WP EXPORT DOCUMENT`](../commands/wp-export-document) **Modifié 4D 20 R9**<br/>
+[`WP EXPORT VARIABLE`](../commands/wp-export-variable) **Modifié 4D 20 R9**
 
 <a id="F"><b>F</b></a>
 
@@ -42,7 +42,7 @@ title: Commandes 4D Write Pro
 
 <a id="G"><b>G</b></a>
 
-[`WP GET ATTRIBUTES`](../commands/wp-get-attributes) ***Modified 4D 20 R8***<br/>
+[`WP GET ATTRIBUTES`](../commands/wp-get-attributes) ***Modifié 4D 20 R8***<br/>
 [`WP Get body`](../commands/wp-get-body)<br/>
 [`WP GET BOOKMARKS`](../commands/wp-get-bookmarks)<br/>
 [`WP Get breaks`](../commands/wp-get-breaks)<br/>
@@ -58,7 +58,7 @@ title: Commandes 4D Write Pro
 [`WP Get position`](../commands/wp-get-position)<br/>
 [`WP Get section`](../commands/wp-get-section)<br/>
 [`WP Get sections`](../commands/wp-get-sections)<br/>
-[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modified 4D 21 R3***<br/>
+[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modifié 4D 21 R3***<br/>
 [`WP Get style sheets`](../commands/wp-get-style-sheets)<br/>
 [`WP Get subsection`](../commands/wp-get-subsection)<br/>
 [`WP Get text`](../commands/wp-get-text)<br/>
@@ -66,12 +66,12 @@ title: Commandes 4D Write Pro
 
 <a id="I"><b>I</b></a>
 
-[`WP Import document`](../commands/wp-import-document) ***Modified 4D 20 R8***<br/>
+[`WP Import document`](../commands/wp-import-document) ***Modifié 4D 20 R8***<br/>
 [`WP IMPORT STYLE SHEETS`](../commands/wp-import-style-sheets)<br/>
-[`WP INSERT BREAK`](../commands/wp-insert-break) ***Modified 4D 20 R8***<br/>
-[`WP Insert document body`](../commands/wp-insert-document-body) ***Modified 4D 20 R8***<br/>
-[`WP INSERT FORMULA`](../commands/wp-insert-formula) ***Modified 4D 20 R8***<br/>
-[`WP INSERT PICTURE`](../commands/wp-insert-picture) ***Modified 4D 20 R8***<br/>
+[`WP INSERT BREAK`](../commands/wp-insert-break) ***Modifié 4D 20 R8***<br/>
+[`WP Insert document body`](../commands/wp-insert-document-body) ***Modifié 4D 20 R8***<br/>
+[`WP INSERT FORMULA`](../commands/wp-insert-formula) ***Modifié 4D 20 R8***<br/>
+[`WP INSERT PICTURE`](../commands/wp-insert-picture) ***Modifié 4D 20 R8***<br/>
 [`WP Insert table`](../commands/wp-insert-table)<br/>
 [`WP Is font style supported`](../commands/wp-is-font-style-supported)
 

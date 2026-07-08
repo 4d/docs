@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* : Table {; *} )<br/>**PRINT SELECTION** ( *aTable* : Table {; > : >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*aTable* : Table} {; *} )<br/>**PRINT SELECTION** ( {*aTable* : Table} {; > : >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 <div class="no-index">
 
@@ -47,18 +47,39 @@ During printing, the output form method and/or the form’s object methods are e
 
 You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](../commands/before-selection) during an On Header event. You can also check for the last footer, by testing [End selection](../commands/end-selection) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](../commands/form-event-code) and [Level](../commands/level).
 
-To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](../commands/sum) and [Average](../commands/average) to assign values to variables. For more information, see the descriptions of [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) and [ACCUMULATE](../commands/accumulate).
+To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. For more information, see the descriptions of [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) and [ACCUMULATE](../commands/accumulate).
 
-**Warning:** Do not use the [PAGE BREAK](../commands/page-break) command with the **PRINT SELECTION** command. [PAGE BREAK](../commands/page-break) is to be used with the [Print form](../commands/print-form) command.
+
+:::note
+
+You can use [statistical commands](../../commands/theme/On_a_Series.md) like [Sum](../commands/sum) and [Average](../commands/average) to assign values to variables. When statistical functions are used in a report, they behave in a specific way because the report itself must load each record. When you use these functions in a report, the values that are returned are reliable only at break level 0, and only when break processing is turned on. This means that they are useful only at the end of a report, after all the records have been processed. You would use these functions only in an object method for a non-enterable area that is included in the B0 Break area.
+
+
+:::
+
+
+
+
+
+:::warning
+
+ Do not use the [PAGE BREAK](../commands/page-break) command with the **PRINT SELECTION** command. [PAGE BREAK](../commands/page-break) is to be used with the [Print form](../commands/print-form) command.
+
+:::
 
 After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing has been completed. If the printing was interrupted, the OK variable is set to 0 (zero) (i.e., the user clicked Cancel in the printing dialog box).
 
-**4D Server:** This command can be executed on 4D Server in a stored procedure. In this context:
+:::note 4D Server
+
+This command can be executed on 4D Server in a stored procedure. In this context:
 
 * Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-## Example 
+:::
+
+
+## Example 1
 
 The following example selects all the records in the \[People\] table. It then uses the [DISPLAY SELECTION](../commands/display-selection) command to display the records and allows the user to highlight the records to print. Finally, it uses the selected records with the [USE SET](../commands/use-set) command, and prints them with **PRINT SELECTION**:
 
@@ -69,11 +90,54 @@ The following example selects all the records in the \[People\] table. It then u
  PRINT SELECTION([People]) // Print the records that the user picked
 ```
 
+## Example 2
+
+You want to print a report with breaks and subtotals, using the following form template:
+
+![](../../assets/en/commands/print-selection1.png)
+
+The method called to build the report:
+
+```4d
+ALL RECORDS([Sales])
+ORDER BY([Sales]Region; <; [Sales]Seller; <)
+BREAK LEVEL(2)
+ACCUMULATE([Sales]Quantity; [Sales]UnitPrice)
+PRINT SELECTION([Sales])
+```
+
+In the form method, you calculate the subtotal values thanks to the built-in **PRINT SELECTION** command features, i.e. values processed in the `On printing break` event can be directly evaluated by [`Subtotal`](../commands/subtotal):
+
+```4d
+    //form method
+Case of 
+	: (FORM Event.code=On Printing Break)
+		vBreak:=[Sales]Region
+            //Subtotal uses currently processed values
+            //it can be used in break variables
+		vTotalQuantity:=Subtotal([Sales]Quantity)
+		vTotalPrice:=Subtotal([Sales]UnitPrice)
+        
+            //Min and Max use current selection
+            //they are valid at the final break
+		vMinQuantity:=Min([Sales]Quantity)
+		vMinPrice:=Min([Sales]UnitPrice)
+		vMaxQuantity:=Max([Sales]Quantity)
+		vMaxPrice:=Max([Sales]UnitPrice)
+End case 
+```
+
+The resulting printed report:
+
+![](../../assets/en/commands/print-selection2.png)
+
+
 ## See also 
 
 [ACCUMULATE](../commands/accumulate)  
 [BREAK LEVEL](../commands/break-level)  
 [Level](../commands/level)  
+[Print form](../commands/print-form)
 [Subtotal](../commands/subtotal)  
 
 ## Properties

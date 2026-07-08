@@ -21,4 +21,4 @@ La classe `OpenAIChatCompletionsMessagesAPI` permet d'interagir avec l'API OpenA
 
 La fonction `list()` permet de récupérer les messages associés à un identifiant spécifique de réponse conversationnelle. Une erreur est générée si *completionID* est vide. Si l'argument *parameters* n'est pas une instance de `OpenAIChatCompletionsMessagesParameters`, la fonction en créera une nouvelle en utilisant les paramètres fournis.
 
-https://platform.openai.com/docs/api-reference/chat/getMessages
+https://developers.openai.com/api/reference/resources/chat/subresources/completions/subresources/messages/methods/list

@@ -5,7 +5,7 @@ slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* )<!-- END REF-->
+<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
 <div class="no-index">
 

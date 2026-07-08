@@ -5,13 +5,14 @@ slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* : Field)<!-- END REF-->
+<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( {*...data* : any} )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | data | Field, Variable | &#8594;  | Numeric field or variable on which to accumulate |
+
 </div>
 <!-- END REF-->
 

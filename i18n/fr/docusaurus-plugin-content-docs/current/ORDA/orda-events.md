@@ -135,7 +135,7 @@ Cet événement est déclenché chaque fois qu'une valeur est modifiée dans l'e
 
 Cet événement est déclenché dès que le moteur de 4D Server / 4D détecte une modification de la valeur de l'attribut qui peut être due aux actions suivantes :
 
-- en **client/serveur avec le [mot-clé `local`](../ORDA/ordaClasses.md#local-functions)** ou en **4D mono-utilisateur** :
+- en **client/serveur avec le [mot-clé `local`](../Concepts/classes.md#local)** ou en **4D mono-utilisateur** :
   - l'utilisateur saisit une valeur dans un formulaire 4D,
   - le code 4D effectue une assignation avec l'opérateur `:=`. L'événement est également déclenché en cas d'auto-assignation (`$entity.attribute:=$entity.attribute`).
 - en **client/serveur sans le mot-clé `local`** : du code 4D effectue une assignation avec l'opérateur `:=` est [exécuté sur le serveur](../commands/execute-on-server).

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 | リリース  | 内容                               |
 | ----- | -------------------------------- |
-| 20 R8 | Support of standalone sessions   |
+| 20 R8 | スタンドアロンセッションのサポート                |
 | 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
 | 18 R6 | 追加                               |
 
@@ -112,7 +112,7 @@ flowchart TD
 
 ## 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" 属性を有効にした `action_Session` メソッドを定義したとします。 ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session

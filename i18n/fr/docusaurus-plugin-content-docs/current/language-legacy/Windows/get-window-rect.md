@@ -5,7 +5,7 @@ slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* ; *haut* ; *droite* ; *bas* {; *fenêtre*} )<!-- END REF-->
+<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *fenêtre* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
 <div class="no-index">
 

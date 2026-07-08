@@ -1,0 +1,39 @@
+---
+id: print
+title: Imprimir
+---
+
+## Settings
+
+Permite definir os parâmetros de impressão específicos para o formulário. Esta funcionalidade é útil para visualizar os limites da página de impressão no editor de formulários.
+
+> **Compatibilidad:** aunque estos parámetros se tengan en cuenta cuando se imprime el formulario en modo Aplicación, se desaconseja confiar en esta funcionalidad para almacenar los parámetros de impresión del formulario, debido a las limitaciones relativas It is highly recommended to use the 4D commands [`Print settings to BLOB`](../commands/print-settings-to-blob)/[`BLOB to print settings`](../commands/blob-to-print-settings) which are more powerful. It is highly recommended to use the 4D commands [`Print settings to BLOB`](../commands/print-settings-to-blob)/[`BLOB to print settings`](../commands/blob-to-print-settings) which are more powerful.
+
+Pode modificar os seguintes parâmetros de impressão:
+
+- Formato de papel
+- Orientação do papel
+- Escala de página
+
+> As opções disponíveis dependem da configuração do sistema.
+
+#### Gramática JSON
+
+| Nome        | Tipo de dados | Valores possíveis                                                                                                                                               |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| pageFormat  | object        | Propriedades de impressão disponíveis: paperName, paperWidth, paperHeight, orientation, scale                                                   |
+| paperName   | string        | "A4", "US Letter"...                                                                                            |
+| paperWidth  | string        | Utilizado se não tiver sido encontrado um papel com o nome paperName. Requer sufixo de unidade: pt, in, mm, cm. |
+| paperHeight | string        | Utilizado se não tiver sido encontrado um papel com o nome paperName. Requer sufixo de unidade: pt, in, mm, cm. |
+| orientation | string        | "landscape" (padrão é "retrato")                                                                                                             |
+| scale       | number        | mínimo: 0                                                                                                                                       |
+
+---
+
+
+
+
+
+
+
+

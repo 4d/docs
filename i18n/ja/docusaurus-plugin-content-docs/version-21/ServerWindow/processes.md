@@ -77,6 +77,12 @@ title: プロセスページ
 
 > **グループ毎にプロセスを表示** オプションがチェックされていると、それぞれの 4Dクライアントメインプロセスと、その対である 4Dクライアント基本プロセスは一緒にグループ化されて表示されます。
 
+:::note
+
+Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+
+:::
+
 ## 管理ボタン
 
 このページには、選択されたプロセスに対して動作する 5つのコントロールボタンがあります。 ユーザープロセスに対してのみ使用できる点に注意してください。

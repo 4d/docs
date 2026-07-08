@@ -5,7 +5,7 @@ slug: /commands/object-set-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *objeto* : Text ; *codigoLing* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *objeto* : Field, Variable ; *codigoLing* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *objeto* : Text ; *codigoLing* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *objeto* : Variable, Field ; *codigoLing* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 <div class="no-index">
 

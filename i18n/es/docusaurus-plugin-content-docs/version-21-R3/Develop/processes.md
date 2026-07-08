@@ -33,7 +33,7 @@ Un proceso puede borrarse en las siguientes condiciones (las dos primeras son au
 - Cuando el método proceso termina de ejecutarse
 - Cuando el usuario sale de la aplicación
 - Si detienes el proceso de forma formal o utiliza el botón **Abortar** en el depurador o en el Explorador de Ejecución
-- If you call the [`KILL WORKER`](../commands/kill-worker) command (to delete a worker process only).
+- Si llama al comando [`KILL WORKER`](../commands/kill-worker) (sólo para borrar un proceso worker).
 
 Un proceso puede crear otro proceso. Los procesos no están organizados jerárquicamente: todos los procesos son iguales, independientemente del proceso a partir del cual se hayan creado. Una vez que el proceso "padre" crea un proceso "hijo", el proceso hijo continuará independientemente de si el proceso padre sigue ejecutándose o no.
 
@@ -116,9 +116,9 @@ La siguiente animación ilustra esta secuencia:
 
 A diferencia de un proceso creado con el comando [`New process`](../commands/new-process), un proceso worker **permanece vivo después de que termina la ejecución del método proceso**. Esto significa que todas las ejecuciones del método para el mismo worker se llevarán a cabo en el mismo proceso, que mantiene toda la información de estado del proceso (variables de proceso, registro actual y selección actual...). En consecuencia, los métodos ejecutados sucesivamente tendrán acceso y de este modo compartirán la misma información, lo que permite las comunicaciones entre procesos. El buzón de mensajes del worker maneja las llamadas sucesivas de forma asíncrona.
 
-[`CALL WORKER`](../commands/call-worker) encapsula tanto el nombre del método como los argumentos del comando en un mensaje que se publica en el buzón de mensajes del worker. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. Esto significa que [`CALL WORKER`](../commands/call-worker) normalmente devolverá antes de que el método se ejecute realmente (el procesamiento es asíncrono). Por esta razón, [`CALL WORKER`](../commands/call-worker) no devuelve ningún valor. Si necesita que un worker envíe información de vuelta al proceso que lo llamó (callback), necesita utilizar [`CALL WORKER`](../commands/call-worker) de nuevo para pasar la información necesaria al llamante. Por supuesto, en este caso, el propio llamante debe ser un worker.
+[`CALL WORKER`](../commands/call-worker) encapsula tanto el nombre del método como los argumentos del comando en un mensaje que se publica en el buzón de mensajes del worker. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. Esto significa que [`CALL WORKER`](../commands/call-worker) normalmente devolverá antes de que el método se ejecute realmente (el procesamiento es asíncrono). Por esta razón, [`CALL WORKER`](../commands/call-worker) no devuelve ningún valor. Por supuesto, en este caso, el propio llamante debe ser un worker.
 
-No es posible utilizar [`CALL WORKER`](../commands/call-worker) para ejecutar un método en un proceso creado por el comando [`New process`](../commands/new-process). Sólo los procesos worker tienen un buzón de mensajes y, por tanto, pueden ser llamados por `CALL WORKER`. Tenga en cuenta que un proceso creado por [`New process`](../commands/new-process) puede llamar a un worker, pero no puede volverse a llamar.
+No es posible utilizar [`CALL WORKER`](../commands/call-worker) para ejecutar un método en un proceso creado por el comando [`New process`](../commands/new-process). No es posible utilizar [`CALL WORKER`](../commands/call-worker) para ejecutar un método en un proceso creado por el comando [`New process`](../commands/new-process). Sólo los procesos worker tienen un buzón de mensajes y, por tanto, pueden ser llamados por `CALL WORKER`.
 
 Los procesos worker se pueden crear en 4D Server a través de procedimientos almacenados: por ejemplo, puede utilizar el comando `Execute on server` para ejecutar un método que llama al comando [`CALL WORKER`](../commands/call-worker).
 

@@ -5,7 +5,7 @@ slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *nomFichier* )<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 <div class="no-index">
 

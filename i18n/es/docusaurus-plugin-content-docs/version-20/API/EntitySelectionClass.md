@@ -309,7 +309,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 #### Descripción
 
-La función `.add()` <!-- REF #EntitySelectionClass.add().Summary -->If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.<!-- END REF -->.
+La función `.add()` <!-- REF #EntitySelectionClass.add().Summary -->añade la *entity* o *entitySelection* especificada a la selección de entidades original y devuelve la selección de entidades modificada<!-- END REF -->.
 > Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión `Open datastore`).
 
 :::info warning
@@ -327,7 +327,7 @@ La entity selection debe ser *alterable*, es decir, ha sido creado, por ejemplo,
 
 *   Si la entity selection está ordenada, su orden se mantiene y *entitySelection* se añade al final de la selección. Si las referencias a las mismas entidades de *entitySelection* ya pertenecen a la selección de entidades, se duplican y se añaden nuevas referencias.
 *   Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
-> Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
+> Para más información sobre propiedad compartible de entity selections, consulte la sección [Entity selections compartibles o modificables](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 La entity selection modificada es devuelta por la función, de modo que las llamadas a la función pueden encadenarse.
 
@@ -516,7 +516,7 @@ $emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
 
 #### Descripción
 
-La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->La función `.orderByMethod()`<!-- END REF -->.
+La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->devuelve la media aritmética (promedio) de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
 
 Pase en el parámetro *attributePath* la ruta del atributo a evaluar.
 
@@ -624,7 +624,7 @@ Si *entity* y la entity selection no pertenecen a la misma dataclass, se produce
 
 #### Descripción
 
-La función `.push()` <!-- REF #EntitySelectionClass.count().Summary -->La función `.push()`<!-- END REF -->.
+La función `.count()` <!-- REF #EntitySelectionClass.count().Summary -->devuelve el número de entidades de la selección de entidades<!-- END REF -->.
 > Sólo se tienen en cuenta los valores escalares. Los valores de tipo objeto o colección se consideran valores nulos.
 
 Se devuelve un error si:
@@ -675,11 +675,11 @@ Queremos averiguar el número total de empleados de una empresa sin contar a los
 
 La función `.copy()` <!-- REF #EntitySelectionClass.copy().Summary -->La función `.copy()`<!-- END REF -->.
 
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Por defecto, si se omite el parámetro *option*, la función devuelve una nueva entity selection alterable (incluso si la función se aplica a una entity selection compartible). Pasa la constante `ck shared` en el parámetro *option* si quiere crear una entity selection compartible.
 
-> Para más información sobre propiedad compartible de entity selections, consulte la sección [Entity selections compartibles o modificables](ORDA/entities.md#shareable-or-alterable-entity-selections).
+> Si *howMany* > longitud de la entity selection, el método devuelve (length - *begin*) objetos.
 
 #### Ejemplo
 
@@ -742,7 +742,7 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 #### Descripción
 
-La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->La función `.fill()`<!-- END REF -->.
+La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->devuelve una colección de valores distintos de *attributePath* en la selección de entidades<!-- END REF -->.
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
@@ -835,7 +835,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 #### Descripción
 
-La función `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->devuelve una colección de rutas distintas encontradas en el objeto indexado *attribute* para la selección de entidades<!-- END REF -->.
+La función `.distinct()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->devuelve una colección que contiene sólo valores distintos (diferentes) del *attributePath* en la selección de entidades<!-- END REF -->.
 
 Si *attribute* no es un atributo de objeto indexado, se genera un error.
 
@@ -1548,7 +1548,7 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 La función `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->excluye de la selección de entidades a la que se aplica la *entidad* o las entidades de *entitySelection* y devuelve la selección de entidades resultante<!-- END REF -->.
 
 *   Si se pasa *entity* como parámetro, la función crea una nueva entity selection sin *entity* (si *entity* pertenece a la entity selection). Si *entity* no estaba incluida en la entity selection original, se devuelve una nueva referencia a la entity selection.
-*   Si *howMany* > longitud de la entity selection, el método devuelve (length - *begin*) objetos. > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+*   Si se pasa *entitySelection* como parámetro, la función devuelve una entity selection que contiene las entidades pertenecientes a la entity selection original sin las entidades pertenecientes a *entitySelection*. > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 Por defecto, si se omite el parámetro *keepOrder*, la selección de entidades resultante es desordenada. Si desea mantener el orden de la selección de entidades original (por ejemplo, si desea reutilizar la selección de entidades en una interfaz de usuario), pase la constante `dk keep ordered` en *keepOrder*. En este caso, el resultado es una selección de entidades ordenada y se mantiene el orden de la selección de entidades inicial.
 
@@ -1633,7 +1633,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 La función `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combina la selección de entidades con el parámetro *entity* o *entitySelection* utilizando el operador lógico (no exclusivo) OR<!-- END REF -->; devuelve una nueva selección de entidades no ordenada que contiene todas las entidades de la selección de entidades y el parámetro.
 
 *   Si se pasa como parámetro la *entidad*, se compara esta entidad con la selección de entidades. Se devuelve una nueva selección de entidades que contiene sólo las entidades a las que se hace referencia en ambas selecciones. A new entity selection that contains only the entities that are referenced in both selections is returned.
-*   The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+*   Si se pasa *entitySelection* como parámetro, se compara con la selección de entidades original. Se devuelve una nueva selección de entidades que contiene todas las entidades referenciadas por una u otra selección.
 > > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). La selección resultante es siempre desordenada.
 
 If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
@@ -1780,7 +1780,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 #### Descripción
 
 La función `.orderByFormula()` <!-- REF #EntitySelectionClass.orderByFormula().Summary -->devuelve una nueva selección ordenada de entidades<!-- END REF --> que contiene todas las entidades de la selección de entidades en el orden definido mediante los parámetros *formulaString* o *formulaObj* y, opcionalmente, *sortOrder* y *settings*.
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Puede utilizar un parámetro *formulaString* o un parámetro *formulaObj*:
 
@@ -1907,7 +1907,7 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 #### Descripción
 
 La función `.query()` <!-- REF #EntitySelectionClass.query().Summary -->busca entidades que cumplan los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *valor*(s) entre todas las entidades de la selección de entidades<!-- END REF -->y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
@@ -2096,7 +2096,7 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 #### Descripción
 
 La función `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->devuelve un objeto que describe la(s) posición(es) de *selectedEntities* en la selección original de entidades<!-- END REF -->.
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Pase en el parámetro *selectedEntities* una selección de entidades que contenga entidades de las que desee conocer la posición en la selección de entidades original. *selectedEntities* debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - "La selección de entidades procede de una clase de datos incompatible".
 
@@ -2169,7 +2169,7 @@ $result2:=$invoices.selected($creditSel)
 #### Descripción
 
 La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelve una parte de una selección de entidades en una nueva selección de entidades<!-- END REF -->, seleccionada desde el índice *startFrom* hasta el índice *end* (no se incluye*end* ) o hasta la última entidad de la selección de entidades. Este método devuelve una shallow copy (copia superficial) de la entity selection (utiliza las mismas referencias de entidades).
-> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
+> Esta función no modifica la selección de entidades original.
 
 Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length*(se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 
@@ -2237,7 +2237,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 #### Descripción
 
 
-La función `.average()` <!-- REF #EntitySelectionClass.sum().Summary -->devuelve la media aritmética (promedio) de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
+La función `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->devuelve la suma de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
 
 `.sum()` devuelve 0 si la entity selection está vacía.
 

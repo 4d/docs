@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 ## 説明
 
-`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->[`4D.Folder`](../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->[`4D.Folder`](../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名)(例: "/DATA") を渡すことができます。
+*path* には、フォルダーパス文字列を渡します。 *path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名)(例: "/DATA") を渡すことができます。
 
 > `Folder` コマンドでは絶対パス名のみがサポートされます。
 
@@ -53,24 +53,24 @@ displayed_sidebar: docs
 
 *folderConstant* には、以下の定数のどれか一つを指定して 4Dビルトインの、またはシステムフォルダーを渡します:
 
-| 定数                         | 値   | 説明                                                                                       |
-| -------------------------- | --- | ---------------------------------------------------------------------------------------- |
-| fk applications folder     | 116 |                                                                                          |
-| fk data folder             | 9   | 関連づけられたファイルシステム: "/DATA"                                                 |
-| fk database folder         | 4   | 関連づけられたファイルシステム: "/PACKAGE"                                              |
-| fk desktop folder          | 115 |                                                                                          |
-| fk documents folder        | 117 | ユーザーのドキュメントフォルダー                                                                         |
-| fk home folder             | 118 | ユーザーのカレントホームフォルダー (通常は `/Users/<username>/`)                          |
-| fk licenses folder         | 1   | マシンの 4Dライセンスファイルを格納しているフォルダー                                                             |
-| fk logs folder             | 7   | 関連づけられたファイルシステム: "/LOGS"                                                 |
-| fk mobileApps folder       | 10  |                                                                                          |
-| fk remote database folder  | 3   | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                                     |
-| fk resources folder        | 6   | 関連づけられたファイルシステム: "/RESOURCES"                                            |
-| fk system folder           | 100 |                                                                                          |
-| fk user preferences folder | 0   | ユーザー環境設定ファイルを保存している、ユーザーホームフォルダー内の 4Dフォルダー                                               |
-| fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。 |
+| 定数                         | 値   | 説明                                                                          |
+| -------------------------- | --- | --------------------------------------------------------------------------- |
+| fk applications folder     | 116 |                                                                             |
+| fk data folder             | 9   | 関連づけられたファイルシステム: "/DATA"                                    |
+| fk database folder         | 4   | 関連づけられたファイルシステム: "/PACKAGE"                                 |
+| fk desktop folder          | 115 |                                                                             |
+| fk documents folder        | 117 | ユーザーのドキュメントフォルダー                                                            |
+| fk home folder             | 118 | ユーザーのカレントホームフォルダー (通常は `/Users/<username>/`)             |
+| fk licenses folder         | 1   | マシンの 4Dライセンスファイルを格納しているフォルダー                                                |
+| fk logs folder             | 7   | 関連づけられたファイルシステム: "/LOGS"                                    |
+| fk mobileApps folder       | 10  |                                                                             |
+| fk remote database folder  | 3   | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                        |
+| fk resources folder        | 6   | 関連づけられたファイルシステム: "/RESOURCES"                               |
+| fk system folder           | 100 |                                                                             |
+| fk user preferences folder | 0   | ユーザー環境設定ファイルを保存している、ユーザーホームフォルダー内の 4Dフォルダー                                  |
+| fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。 |
 
-コマンドがコンポーネントから呼び出されている場合、 `*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
+コマンドがコンポーネントから呼び出されている場合、 `*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
 > Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
 

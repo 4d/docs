@@ -354,9 +354,9 @@ title: Transporter クラス
 <!-- REF #transporter.checkConnection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|引数|型||説明|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status of the transporter object connection|
+|戻り値|Object|<-|Status of the transporter object connection|
 </div>
 <!-- END REF -->
 

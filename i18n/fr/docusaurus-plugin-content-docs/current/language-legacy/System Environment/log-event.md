@@ -5,7 +5,7 @@ slug: /commands/log-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*typeSortie* ;} *message* {; *importance*} )<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*typeSortie* : Integer ;} *message* : Text {; *importance* : Integer} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
 <div class="no-index">
 

@@ -5,13 +5,13 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* ;} *nomForm* ; *largeur* ; *hauteur* {; *nbPages* {; *largeurFixe* {; *hauteurFixe* {; *titre*}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* : Table ;} *nomForm* : Text ; *largeur* : Integer ; *hauteur* : Integer {; *nbPages* : Integer {; *largeurFixe* : Boolean {; *hauteurFixe* : Boolean {; *titre* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594;  | Formulaire table uniquement : Table du formulaire ou Table par défaut si omis |
 | nomForm | Text | &#8594;  | Nom du formulaire |
 | largeur | Integer | &#8592; | Largeur du formulaire (en pixels) |
 | hauteur | Integer | &#8592; | Hauteur du formulaire (en pixels) |

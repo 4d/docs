@@ -5,7 +5,7 @@ slug: /commands/save-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *liste* ; *nomListe* )<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *liste* : Integer ; *nomListe* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
 <div class="no-index">
 

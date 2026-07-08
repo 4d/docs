@@ -38,7 +38,7 @@ Vous pouvez accéder à ces boîtes de dialogue en utilisant le menu **Développ
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window) avec le sélecteur *settingsType* approprié.
+Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](../commands/open-settings-window) avec le sélecteur *settingsType* approprié.
 
 La boîte de dialogue Propriétés de structure est identique à la boîte de dialogue Propriétés standard et permet d'accéder à toutes ses propriétés (qui peuvent être écrasées par des propriétés utilisateur).
 
@@ -77,9 +77,9 @@ Lorsque vous modifiez les paramètres dans cette boîte de dialogue, ils sont au
 
 ## `SET DATABASE PARAMETER` et propriétés utilisateur
 
-Certaines propriétés utilisateur sont aussi disponibles via la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter). Pour les propriétés utilisateur, la propriété **Conservé entre deux sessions** est fixée à **Oui**.
+Certaines propriétés utilisateur sont aussi disponibles via la commande [SET DATABASE PARAMETER](../commands/set-database-parameter). Pour les propriétés utilisateur, la propriété **Conservé entre deux sessions** est fixée à **Oui**.
 
-Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propriétés utilisateur modifiées par la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) sont automatiquement stockées dans les Propriétés utilisateurs pour le fichier de données.
+Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propriétés utilisateur modifiées par la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) sont automatiquement stockées dans les Propriétés utilisateurs pour le fichier de données.
 
 > `Table sequence number` est une exception ; cette valeur de paramètre est toujours stockée dans le fichier de données lui-même.
 

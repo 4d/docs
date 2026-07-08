@@ -26,7 +26,7 @@ Para iniciar diretamente a compactação do arquivo de dados, clique no botão d
 
 > Já que a compactação envolve a duplicação do arquivo original, o botão é desativado quando não existir espaço suficiente disponível no disco que contém o arquivo.
 
-Esta operação compacta o arquivo principal, bem como quaisquer arquivos de índice. 4D copia los archivos originales y los coloca en una carpeta llamada **Archivos Reemplazados (Compactando)**, que se crea junto al archivo original. Se tiver efetuado várias operações de compactação, é criada uma nova pasta de cada vez. Será denominado "arquivos substituídos (compactação)_1", "arquivos substituídos (compactação)_2", e assim por diante. Pode modificar a pasta onde os arquivos originais são guardados utilizando o modo avançado.
+Esta operação compacta o arquivo principal, bem como quaisquer arquivos de índice. Esta operação compacta o arquivo principal, bem como quaisquer arquivos de índice. Se tiver efetuado várias operações de compactação, é criada uma nova pasta de cada vez. Será denominado "arquivos substituídos (compactação)_1", "arquivos substituídos (compactação)_2", e assim por diante. Pode modificar a pasta onde os arquivos originais são guardados utilizando o modo avançado.
 
 Quando a operação estiver concluída, os arquivos compactados substituem automaticamente os arquivos originais. O banco de dados fica operacional imediatamente sem outras manipulações.
 

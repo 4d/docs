@@ -14,9 +14,9 @@ O evento `Ao Arrastar Para` é repetidamente enviado para o objeto de destino qu
 - Obtenha os dados e assinaturas encontrados no pasteboard (via o comando `GET PASTEBOARD DATA`).
 - Dependendo da natureza e do tipo de dados na área de transferência, você **aceita** ou **rejeita** o arrastar e soltar.
 
-Para **aceitar** a arraste, o método objeto de destino deve retornar 0 (zero).
 Para **rejeitar** o arraste, o método objeto deve retornar -1 (menos um).
-Durante um evento `Ao Arrastar Exterior`, o 4D trata o método do objeto como uma função. Se nenhum resultado for devolvido, 4D assume que o arrasto é aceite.
+Durante um evento `Ao Arrastar Exterior`, o 4D trata o método do objeto como uma função.
+Para **aceitar** a arraste, o método objeto de destino deve retornar 0 (zero). Se nenhum resultado for devolvido, 4D assume que o arrasto é aceite.
 
 Se aceitar o arrastamento, o objeto de destino é realçado. Se rejeitar o arrastamento, o destino não é realçado. Aceitar a ação de arrastar não significa que os dados arrastados serão inseridos no objeto de destino. Isso significa apenas que se o botão do mouse for solto neste ponto, o objeto de destino aceitaria os dados arrastados e o evento [`On Drop`](onDrop.md) seria disparado.
 

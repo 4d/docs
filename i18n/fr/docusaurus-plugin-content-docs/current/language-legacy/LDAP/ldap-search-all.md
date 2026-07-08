@@ -5,7 +5,7 @@ slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *tabRésultat* ; *filtre* {; *scope* {; *attributs* {; *attributsEnTableau*}}} )<!-- END REF-->
+<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *tabRésultat* : Object array ; *filtre* : Text {; *scope* : Text {; *attributs* : Text array {; *attributsEnTableau* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 <div class="no-index">
 

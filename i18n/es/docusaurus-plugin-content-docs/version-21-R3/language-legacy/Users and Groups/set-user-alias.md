@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 En el parámetro *alias*, pase el nombre alternativo que se mostrará en lugar del nombre de la cuenta de usuario 4D actual.
 
-Una vez que se ejecuta el comando, el *alias* se usa donde se devolvió o mostró la cuenta de usuario 4D actual, en particular en los comandos [Current user](../commands/current-user), [Process activity](../commands/process-activity) y [LOCKED BY](../commands/locked-by), o el [ORDER BY FORMULA](../commands/order-by-formula) de la ventana de administración de 4D Server. En entornos cliente/servidor, este comando debe ejecutarse en aplicaciones remotas para que cada usuario se identifique en el servidor, por ejemplo, mediante el comando [Current user](../commands/current-user), incluso si todas las aplicaciones remotas utilizan la misma cuenta de usuario 4D.
+Una vez que se ejecuta el comando, el *alias* se usa donde se devolvió o mostró la cuenta de usuario 4D actual, en particular en los comandos [Current user](../commands/current-user), [Process activity](../commands/process-activity) y [LOCKED BY](../commands/locked-by), o el [Users Page](../../ServerWindow/users.md) de la ventana de administración de 4D Server. En entornos cliente/servidor, este comando debe ejecutarse en aplicaciones remotas para que cada usuario se identifique en el servidor, por ejemplo, mediante el comando [Current user](../commands/current-user), incluso si todas las aplicaciones remotas utilizan la misma cuenta de usuario 4D.
 
 Para eliminar el *alias* del usuario 4D actual, llame a **SET USER ALIAS**("").
 

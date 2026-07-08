@@ -5,7 +5,7 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *objeto* : Text ; *vPosicao* : Integer {; *hPosicao* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *objeto* : Field, Variable ; *vPosicao* : Integer {; *hPosicao* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *objeto* : Text ; *vPosicao* : Integer {; *hPosicao* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *objeto* : Variable, Field ; *vPosicao* : Integer {; *hPosicao* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 <div class="no-index">
 

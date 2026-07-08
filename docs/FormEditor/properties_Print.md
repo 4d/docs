@@ -8,7 +8,7 @@ title: Print
 
 Allows defining specific print settings for the form. This feature is useful to view printing page limits in the form editor. 
 
-> **Compatibility:** Even if these settings are taken into account when the form is printed in Application mode, it is discouraged to rely on this feature to store print settings for the form, due to limitations regarding the platform and driver dependency. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful. 
+> **Compatibility:** Even if these settings are taken into account when the form is printed in Application mode, it is discouraged to rely on this feature to store print settings for the form, due to limitations regarding the platform and driver dependency. It is highly recommended to use the 4D commands [`Print settings to BLOB`](../commands/print-settings-to-blob)/[`BLOB to print settings`](../commands/blob-to-print-settings) which are more powerful. 
 
 You can modify the following print settings: 
 

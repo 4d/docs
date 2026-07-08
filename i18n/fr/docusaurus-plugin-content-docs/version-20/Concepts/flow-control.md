@@ -59,6 +59,14 @@ L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même 
  End if
 ```
 
+Cependant, la solution la plus élégante consiste alors à utiliser [l'opérateur de court-circuit`&&` ](./operators.md#short-circuit-and-operator-) et à écrire :
+
+```4d
+If (MethodA && MethodB)
+   ...
+End if
+```
+
 Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
 > **Note :** L'[opérateur ternaire](operators.md#ternary-operator) permet d'écrire des expressions conditionnelles sur une seule ligne et peut remplacer une séquence complète d'instructions If...Else.
@@ -66,15 +74,10 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 #### Exemple
 
 ```4d
-  // Ask the user to enter a name
- $Find:=Request(Type a name)
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("You did not enter a name.")
- End if
- End if
- End if
+  For($vlChar;1;Length(vtSomeText))
+  //Faire quelque chose avec le caractère si c'est une tabulation
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+  //...
  End if 
 ```
 
@@ -427,7 +430,7 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 
 ## For...End for
 
-La syntaxe de la structure répétitive `For...End for` est la suivante :
+La structure `For...End for` est une boucle contrôlée par un compteur :
 
 ```4d
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -437,7 +440,7 @@ For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 End for
 ```
 
-La structure `For...End for` est une boucle contrôlée par un compteur :
+La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 - La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
 - La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
@@ -475,7 +478,7 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 3. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
- For($vlChar;1;Length(vtSomeText))
+ For($vlChar;Length(vtSomeText);1;-1)
   //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
@@ -524,10 +527,9 @@ Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de
 7. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
- For($vlChar;Length(vtSomeText);1;-1)
-  //Faire quelque chose avec le caractère si c'est une tabulation
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-  //...
+ For($vlElem;2;Size of array(anArray);2)
+  //Faire quelque chose avec l'élément 2,4...2n
+    anArray{$vlElem}:=...
     End if
  End for
 ```

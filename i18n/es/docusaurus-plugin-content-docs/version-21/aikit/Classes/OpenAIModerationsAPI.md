@@ -7,7 +7,7 @@ title: OpenAIModerationsAPI
 
 La interfaz `OpenAIModerationsAPI` se encarga de clasificar si las entradas de texto y/o imágenes son potencialmente dañinas.
 
-https://platform.openai.com/docs/api-reference/moderations
+https://developers.openai.com/api/reference/resources/moderations
 
 ## Funciones
 
@@ -24,7 +24,7 @@ https://platform.openai.com/docs/api-reference/moderations
 
 Clasifica si la entrada es potencialmente dañina.
 
-https://platform.openai.com/docs/api-reference/moderations/create
+https://developers.openai.com/api/reference/resources/moderations/methods/create
 
 ## Ejemplos
 

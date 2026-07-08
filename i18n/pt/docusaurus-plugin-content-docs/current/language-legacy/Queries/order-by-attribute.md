@@ -5,7 +5,7 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; *>_or_<* : Comparator})} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; *>_or_<* : >, <})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 <div class="no-index">
 

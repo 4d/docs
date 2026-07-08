@@ -170,7 +170,7 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 #### Descrição
 
-A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta no disco de acordo com as propriedades do objecto `Folder`<!-- END REF -->.
+A função `.create()` <!-- REF #FolderClass.create().Summary -->A função `.create()`<!-- END REF -->.
 
 Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 

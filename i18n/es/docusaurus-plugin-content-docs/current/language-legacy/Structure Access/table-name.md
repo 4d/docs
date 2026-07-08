@@ -5,7 +5,7 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabla* : Entero largo, Puntero ) : Text<br/>**Table name** ( *ptrTabla* : Entero largo, Puntero ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabla* : Integer ) : Text<br/>**Table name** ( *ptrTabla* : Pointer ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
 <div class="no-index">
 

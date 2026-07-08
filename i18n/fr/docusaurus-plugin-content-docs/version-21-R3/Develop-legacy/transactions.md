@@ -9,16 +9,16 @@ displayed_sidebar: docs
 
 Les transactions sont une série de modifications effectuées à l'intérieur d'un process sur des données reliées entre elles. Une transaction n'est sauvegardée de façon définitive dans la base que si la transaction est validée. Si une transaction n'est pas complétée, parce qu'elle est annulée ou en raison d'un quelconque événement extérieur, les modifications ne sont pas sauvegardées.
 
-Pendant une transaction, toutes les modifications effectuées sur les données de la base dans le process sont stockées localement dans un buffer temporaire. Si la transaction est acceptée avec [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), les changements sont sauvegardés de façon définitive. Si la transaction est annulée avec [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), les changements ne sont pas sauvegardés. Dans tous les cas, ni la sélection courante ni l'enregistrement courant ne sont modifiés par les commandes de gestion des transactions.
+Pendant une transaction, toutes les modifications effectuées sur les données de la base dans le process sont stockées localement dans un buffer temporaire. Si la transaction est acceptée avec [`VALIDATE TRANSACTION`](../commands/validate-transaction) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), les changements sont sauvegardés de façon définitive. Si la transaction est annulée avec [`CANCEL TRANSACTION`](../commands/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), les changements ne sont pas sauvegardés. Dans tous les cas, ni la sélection courante ni l'enregistrement courant ne sont modifiés par les commandes de gestion des transactions.
 
-4D prend en charge les transactions imbriquées, c'est-à-dire les transactions sur plusieurs niveaux hiérarchiques. Le nombre de sous-transactions autorisées est illimité. La commande [`Transaction level`](../commands-legacy/transaction-level) permet de connaître le niveau courant de transaction dans lequel le code est exécuté. Lorsque vous utilisez des transactions imbriquées, le résultat de chaque sous-transaction dépend de la validation ou de l'annulation de la transaction du niveau supérieur. Si la transaction supérieure est validée, les résultats des sous-transactions sont entérinés (validation ou annulation). En revanche, si la transaction supérieure est annulée, toutes les sous-transactions sont annulées, quels que soient leurs sous-résultats.
+4D prend en charge les transactions imbriquées, c'est-à-dire les transactions sur plusieurs niveaux hiérarchiques. Le nombre de sous-transactions autorisées est illimité. La commande [`Transaction level`](../commands/transaction-level) permet de connaître le niveau courant de transaction dans lequel le code est exécuté. Lorsque vous utilisez des transactions imbriquées, le résultat de chaque sous-transaction dépend de la validation ou de l'annulation de la transaction du niveau supérieur. Si la transaction supérieure est validée, les résultats des sous-transactions sont entérinés (validation ou annulation). En revanche, si la transaction supérieure est annulée, toutes les sous-transactions sont annulées, quels que soient leurs sous-résultats.
 
 
 4D inclut une fonctionnalité vous permettant de [suspendre temporairement et de réactiver des transactions](#suspending-transactions) dans votre code 4D. Lorsqu'une transaction est suspendue, vous pouvez exécuter des opérations indépendantes de la transaction elle-même puis la réactiver afin de la valider ou de l'annuler, de façon classique. 
 
 ### Exemple
 
-L'exemple de cette section s'appuie sur la structure présentée ci-dessous. C'est une base relativement simple de facturation. Les lignes de factures sont stockées dans une table appelée [Invoice Lines], qui est reliée à la table [Invoices] par une relation entre les champs [Invoices]Invoice ID et [Invoice Lines]Invoice ID. Lorsqu'une facture est ajoutée, un numéro unique est calculé avec la commande [`Sequence number`](../commands-legacy/sequence-number). Le lien entre [Invoices] et [Invoice Lines] est du type aller-retour automatique. L'option "Mise à jour auto dans les sous-formulaires" est cochée. La lien entre [Invoice Lines] et [Parts] est manuel.
+L'exemple de cette section s'appuie sur la structure présentée ci-dessous. C'est une base relativement simple de facturation. Les lignes de factures sont stockées dans une table appelée [Invoice Lines], qui est reliée à la table [Invoices] par une relation entre les champs [Invoices]Invoice ID et [Invoice Lines]Invoice ID. Lorsqu'une facture est ajoutée, un numéro unique est calculé avec la commande [`Sequence number`](../commands/sequence-number). Le lien entre [Invoices] et [Invoice Lines] est du type aller-retour automatique. L'option "Mise à jour auto dans les sous-formulaires" est cochée. La lien entre [Invoice Lines] et [Parts] est manuel.
 
 
 ![](../assets/en/Develop/transactions-structure.png)
@@ -36,7 +36,7 @@ Si vous n'utilisez pas une transaction, vous ne pouvez pas garantir l'intégrit�
 
 Il y a plusieurs façons d'effectuer une saisie sous transaction :
 
-1. Vous pouvez gérer les transactions en utilisant les commandes de transaction [`START TRANSACTION`](../commands-legacy/start-transaction), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) et [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction). Vous pouvez par exemple écrire :
+1. Vous pouvez gérer les transactions en utilisant les commandes de transaction [`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](../commands/validate-transaction) et [`CANCEL TRANSACTION`](../commands/cancel-transaction). Vous pouvez par exemple écrire :
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -138,7 +138,7 @@ Si vous cliquez sur le bouton *bOK*, la saisie et la transaction doivent être a
  End case
 ```
 
-Dans le code ci-dessus, quel que soit le bouton sur lequel l'utilisateur a cliqué, nous appelons la commande `CANCEL`. Le nouvel enregistrement n'est pas validé par un appel à [`ACCEPT`](../commands-legacy/accept) mais par [`SAVE RECORD`](../commands-legacy/save-record). De plus, vous remarquez que [`SAVE RECORD`](../commands-legacy/save-record) est appelée juste avant la commande [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction). Ainsi, la sauvegarde de l'enregistrement [Invoices] est partie intégrante de la transaction. Appeler la commande [`ACCEPT`](../commands-legacy/accept) validerait aussi l'enregistrement mais dans ce cas, la transaction serait validée avant le stockage de la facture. Autrement dit, l'enregistrement serait sauvegardé en-dehors de la transaction.
+Dans le code ci-dessus, quel que soit le bouton sur lequel l'utilisateur a cliqué, nous appelons la commande `CANCEL`. Le nouvel enregistrement n'est pas validé par un appel à [`ACCEPT`](../commands/accept) mais par [`SAVE RECORD`](../commands/save-record). De plus, vous remarquez que [`SAVE RECORD`](../commands/save-record) est appelée juste avant la commande [`VALIDATE TRANSACTION`](../commands/validate-transaction). Ainsi, la sauvegarde de l'enregistrement [Invoices] est partie intégrante de la transaction. Appeler la commande [`ACCEPT`](../commands/accept) validerait aussi l'enregistrement mais dans ce cas, la transaction serait validée avant le stockage de la facture. Autrement dit, l'enregistrement serait sauvegardé en-dehors de la transaction.
 
 En fonction de vos besoins, personnalisez votre base à votre convenance, comme dans les exemples précédents. Dans le dernier exemple, la gestion du verrouillage des enregistrements de la table [Parts] pourrait être plus élaborée.
 
@@ -151,9 +151,9 @@ En fonction de vos besoins, personnalisez votre base à votre convenance, comme 
 
 Suspendre une transaction est utile notamment lorsque vous devez, depuis une transaction, lancer certaines opérations qui n'ont pas besoin d'être effectuées sous le contrôle de cette transaction. Par exemple, imaginez le cas d'un client qui passe une commande, donc via une transaction, et qui en profite pour mettre à jour son adresse postale. Finalement, le client se ravise et annule sa commande. La transaction est annulée, mais pour autant vous ne souhaitez pas que la mise à jour de l'adresse le soit également. Ce cas peut typiquement être géré via la suspension de la transaction. Trois commandes permettent de gérer la suspension et la réactivation des transactions :
 
-- [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction): suspend la transaction courante. Tous les enregistrements en cours de mise à jour ou de création restent verrouillés.
-- [`RESUME TRANSACTION`](../commands-legacy/resume-transaction): réactive une transaction suspendue, le cas échéant.
-- [`Active transaction`](../commands-legacy/active-transaction): retourne Faux si la transaction courante est suspendue ou s'il n'y a pas de transaction courante, et Vrai si elle est démarrée ou réactivée.
+- [`SUSPEND TRANSACTION`](../commands/suspend-transaction): suspend la transaction courante. Tous les enregistrements en cours de mise à jour ou de création restent verrouillés.
+- [`RESUME TRANSACTION`](../commands/resume-transaction): réactive une transaction suspendue, le cas échéant.
+- [`Active transaction`](../commands/active-transaction): retourne Faux si la transaction courante est suspendue ou s'il n'y a pas de transaction courante, et Vrai si elle est démarrée ou réactivée.
 
 ### Exemple  
 
@@ -224,9 +224,9 @@ Des fonctionnalités spécifiques ont été ajoutées pour prendre en charge les
 
 #### Transactions suspendues et statut du process 
 
-La commande [`In transaction`](../commands-legacy/in-transaction) retourne Vrai dès qu'une transaction a été démarrée, même si elle a été suspendue. Pour savoir si la transaction courante a été suspendue, vous devez utiliser la commande [`Active transaction`](../commands-legacy/active-transaction) qui retourne Faux dans ce cas. 
+La commande [`In transaction`](../commands/in-transaction) retourne Vrai dès qu'une transaction a été démarrée, même si elle a été suspendue. Pour savoir si la transaction courante a été suspendue, vous devez utiliser la commande [`Active transaction`](../commands/active-transaction) qui retourne Faux dans ce cas. 
 
-Ces deux commandes, cependant, retournent également Faux si aucune transaction n'a été démarrée. Vous pourrez alors avoir besoin d'utiliser la commande [`Transaction level`](../commands-legacy/transaction-level), qui retourne 0 dans ce contexte (pas de transaction démarrée).
+Ces deux commandes, cependant, retournent également Faux si aucune transaction n'a été démarrée. Vous pourrez alors avoir besoin d'utiliser la commande [`Transaction level`](../commands/transaction-level), qui retourne 0 dans ce contexte (pas de transaction démarrée).
 
 Le schéma suivant illustre les différents contextes de transaction et les valeurs correspondantes retournées par les commandes de transaction :
 

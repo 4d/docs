@@ -166,7 +166,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
 
 ## 標準アクション
 
-Webエリアを自動で管理するために、4つの特別な自動アクションを使用できます: `Open Back URL`、 `Open Forward URL`、 `Refresh Current URL` そして`Stop Loading URL` です。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。
+Webエリアを自動で管理するために、4つの特別な自動アクションを使用できます: `Open Back URL`、 `Open Forward URL`、 `Refresh Current URL` そして`Stop Loading URL` です。 ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。 これらのアクションは、[標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) のページに詳細な説明があります。
 
 ## フォームイベント
 
@@ -246,7 +246,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド)
 
-## Supported Events
+## サポートされるイベント
 
 [On Begin URL Loading](../Events/onBeginUrlLoading.md) - [On End URL Loading](../Events/onEndUrlLoading.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Open External Link](../Events/onOpenExternalLink.md) - [On Unload](../Events/onUnload.md) - [On URL Filtering](../Events/onUrlFiltering.md) - [On URL Loading Error](../Events/onUrlLoadingError.md) - [On URL Resource Loading](../Events/onUrlResourceLoading.md) - [On Window Opening Denied](../Events/onWindowOpeningDenied.md)
 

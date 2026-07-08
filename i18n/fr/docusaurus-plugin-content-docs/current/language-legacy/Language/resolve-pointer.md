@@ -5,7 +5,7 @@ slug: /commands/resolve-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *pointeur* ; *nomVar* ; *numTable* ; *numChamp* )<!-- END REF-->
+<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *pointeur* : Pointer ; *nomVar* : Text ; *numTable* : Integer ; *numChamp* : Integer )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
 <div class="no-index">
 

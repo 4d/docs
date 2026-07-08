@@ -5,7 +5,7 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *laTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** ( {*laTable* : Table} ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 <div class="no-index">
 

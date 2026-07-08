@@ -63,11 +63,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|commandLine|Text|->|Command line to execute|
-|options|Object|->|Worker parameters|
-|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+|commandLine|Text|->|Ligne de commande à exécuter|
+|options|Object|->|Paramètres du Worker|
+|Résultat|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
 </div>
 <!-- END REF -->
 
@@ -272,7 +272,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -435,10 +435,10 @@ Cette propriété est en **lecture seule**.
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|message|Text|->|Text to write on the input stream (stdin) of the external process|
-|messageBLOB|Blob|->|Bytes write on the input stream|
+|message|Text|->|Texte à écrire sur le flux d'entrée (stdin) du processus externes|
+|messageBLOB|Blob|->|Octets à écrire sur le flux d'entrée|
 </div>
 <!-- END REF -->
 
@@ -492,7 +492,7 @@ La propriété `.responseError` <!-- REF #SystemWorkerClass.responseError.Summar
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||Ne nécessite aucun paramètre|
 </div>
 <!-- END REF -->
 
@@ -552,10 +552,10 @@ Cette propriété est en **lecture seule**.
 <!-- REF #SystemWorkerClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Paramètre|Type||Description|
 |---------|--- |:---:|------|
-|timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
+|timeout|Real|->|Temps d'attente (en secondes)|
+|Résultat|4D.SystemWorker|<-|SystemWorker object|
 </div>
 <!-- END REF -->
 

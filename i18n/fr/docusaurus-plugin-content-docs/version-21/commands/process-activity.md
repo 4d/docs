@@ -81,18 +81,18 @@ Sur le serveur, la commande `Process activity` renvoie une propriété "session"
 Vous souhaitez obtenir la collection de toutes les sessions utilisateurs :
 
 ```4d
-  //To be executed on the server
+  //À exécuter sur le serveur
  
  var $o : Object
  var $i : Integer
  var $processName;$userName : Text
 
  
- $o:=Process activity //Get process & session info
- For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
+ $o:=Process activity //Obtenir des informations sur le processus et la session
+ For($i;0;($o.processes.length)-1) //Parcourir la collection "processes"
     $processName:=$o.processes[$i].name
-    $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-  //use String because session object might be undefined
+    $userName:=String($o.processes[$i].session.userName) //Accès facile à userName
+  //Utilisez String, car l'objet session pourrait ne pas être défini
  End for
 ```
 

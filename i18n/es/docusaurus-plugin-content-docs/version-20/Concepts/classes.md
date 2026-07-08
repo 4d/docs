@@ -543,10 +543,10 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|Parámetro|Tipo||Descripción|  
 |---|---|---|---|
-|param|any|->|Parameter(s) to pass to the parent constructor|
-|Result|Object|<-|Object's parent|
+|param|cualquiera|->|Parámetro(s) que se deben pasar al constructor padre|
+|Resultado|Object|<-|Object's parent|
 </div>
 <!-- END REF -->
 
@@ -592,18 +592,11 @@ Class constructor ($side : Integer)
  // pueda utilizar 'This'
  This.
 
-//Class: Square
+ame:="Square"
 
-Class extends Rectangle
-
-Class constructor ($side : Integer)
-
- // Llama al class constructor de la clase padre con longitudes
- // proporcionadas para el ancho y alto del rectángulo
- Super($side;$side)
- // En las clases derivadas, Super debe ser llamado antes de que 
- // pueda utilizar 'This'
- This.
+Function getArea()
+ C_LONGINT($0)
+ $0:=This.height*This.width
 ```
 
 ```4d
@@ -618,11 +611,18 @@ Class constructor ($side : Integer)
  Super($side;$side)
  // En las clases derivadas, Super debe ser llamado antes de que 
  // pueda utilizar 'This'
- This. ame:="Square"
+ This. //Class: Square
 
-Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
+Class extends Rectangle
+
+Class constructor ($side : Integer)
+
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
+ Super($side;$side)
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
+ This.
 ```
 
 #### Ejemplo 2

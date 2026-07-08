@@ -25,7 +25,7 @@ In both cases, you manage a hierarchical list at runtime through its *ListRef* r
 
 A hierarchical list is both a **language object** existing in memory and a **form object**.
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
+The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: [`New list`](../commands/new-list), [`Copy list`](../commands/copy-list), [`Load list`](../commands/load-list), [`BLOB to list`](../commands/blob-to-list). There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
 
 The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
 
@@ -42,7 +42,7 @@ Each representation of the list has its own specific characteristics and shares 
 - The position of the scrolling cursor.
 
 The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately.
-Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
+Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example [`Count list items`](../commands/count-list-items) (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
 
 You must use the `ListRef` ID with language commands when you want to specify the hierarchical list found in memory. On the other hand, if you want to specify the representation of a hierarchical list object at the form level, you must use the object name (string type) in the command, via the standard syntax (*;"ListName", etc.).
 
@@ -57,45 +57,45 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### Support of @
 
-As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. As a rule, this syntax is used to designate a set of objects in the form. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
+As with [other object property management commands](../FormObjects/formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language), it is possible to use the “@” character in the `ListName` parameter. As a rule, this syntax is used to designate a set of objects in the form. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
 
 - For commands that set properties, this syntax designates all the objects whose name corresponds (standard behavior). For example, the parameter "LH@" designates all objects of the hierarchical list type whose name begins with “LH.”
-	- `DELETE FROM LIST`
-	- `INSERT IN LIST`
-	- `SELECT LIST ITEMS BY POSITION`
-	- `SET LIST ITEM`
-	- `SET LIST ITEM FONT`
-	- `SET LIST ITEM ICON`
-	- `SET LIST ITEM PARAMETER`
-	- `SET LIST ITEM PROPERTIES`
+	- [`DELETE FROM LIST`](../commands/delete-from-list)
+	- [`INSERT IN LIST`](../commands/insert-in-list)
+	- [`SELECT LIST ITEMS BY POSITION`](../commands/select-list-items-by-position)
+	- [`SET LIST ITEM`](../commands/set-list-item)
+	- [`SET LIST ITEM FONT`](../commands/set-list-item-font)
+	- [`SET LIST ITEM ICON`](../commands/set-list-item-icon)
+	- [`SET LIST ITEM PARAMETER`](../commands/set-list-item-parameter)
+	- [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties)
 
 - For commands retrieving properties, this syntax designates the first object whose name corresponds:
-	- `Count list items`
-	- `Find in list`
-	- `GET LIST ITEM`
-	- `Get list item font` 
-	- `GET LIST ITEM ICON` 
-	- `GET LIST ITEM PARAMETER` 
-	- `GET LIST ITEM PROPERTIES` 
-	- `List item parent`
-	- `List item position`
-	- `Selected list items`
+	- [`Count list items`](../commands/count-list-items)
+	- [`Find in list`](../commands/find-in-list)
+	- [`GET LIST ITEM`](../commands/get-list-item)
+	- [`Get list item font`](../commands/get-list-item-font)
+	- [`GET LIST ITEM ICON`](../commands/get-list-item-icon)
+	- [`GET LIST ITEM PARAMETER`](../commands/get-list-item-parameter)
+	- [`GET LIST ITEM PROPERTIES`](../commands/get-list-item-properties)
+	- [`List item parent`](../commands/list-item-parent)
+	- [`List item position`](../commands/list-item-position)
+	- [`Selected list items`](../commands/selected-list-items)
 
 
 ## Generic commands to use with hierarchical lists
 
 It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. You can pass to these commands either the object name of the hierarchical list (using the * parameter), or its variable name (containing the ListRef value):
 
-- `OBJECT SET FONT`
-- `OBJECT SET FONT STYLE`
-- `OBJECT SET FONT SIZE`
-- `OBJECT SET FILTER`
-- `OBJECT SET ENTERABLE`
-- `OBJECT SET SCROLLBAR`
-- `OBJECT SET SCROLL POSITION`
-- `OBJECT SET RGB COLORS`
+- [`OBJECT SET FONT`](../commands/object-set-font)
+- [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
+- [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
+- [`OBJECT SET FILTER`](../commands/object-set-filter)
+- [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)
+- [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)
+- [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)
+- [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-> Reminder: Except `OBJECT SET SCROLL POSITION`, these commands modify all the representations of the same list, even if you only specify a list via its object name. 
+> Reminder: Except [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position), these commands modify all the representations of the same list, even if you only specify a list via its object name. 
 
 ## Priority of property commands  
 
@@ -105,7 +105,7 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 2. Generic object property commands
 3. Form property
 
-This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
+This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the [`SET LIST ITEM PROPERTIES`](../commands/set-list-item-properties) command, the `OBJECT SET COLOR` command will have no effect on this item.
 
 
 ## Management of items by position or by reference 
@@ -127,19 +127,19 @@ Here are a few tips for using reference numbers:
 1. You do not need to identify each item with a unique number (beginner level).
 
 	- First example: you build a system of tabs by programming, for example, an address book. Since the system returns the number of the tab selected, you will probably not need more information than this. In this case, do not worry about item reference numbers: pass any value (except 0) in the *itemRef* parameter. Note that for an address book system, you can predefine a list A, B, ..., Z in Design mode. You can also create it by programming in order to eliminate any letters for which there are no records.
-	- Second example: while working with a database, you progressively build a list of keywords. You can save this list at the end of each session by using the `SAVE LIST` or `LIST TO BLOB` commands and reload it at the beginning of each new session using the `Load list` or `BLOB to list` commands. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. The important thing is that you only process the item selected, because the `Selected list items` command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the `GET LIST ITEM` command. Here again, you do not need to identify each item individually; you can pass any value (except 0) in the *itemRef* parameter.  
+	- Second example: while working with a database, you progressively build a list of keywords. You can save this list at the end of each session by using the [`SAVE LIST`](../commands/save-list) or [`LIST TO BLOB`](../commands/list-to-blob) commands and reload it at the beginning of each new session using the [`Load list`](../commands/load-list) or [`BLOB to list`](../commands/blob-to-list) commands. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. The important thing is that you only process the item selected, because the [`Selected list items`](../commands/selected-list-items) command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the [`GET LIST ITEM`](../commands/get-list-item) command. Here again, you do not need to identify each item individually; you can pass any value (except 0) in the *itemRef* parameter.  
 
 2. You need to partially identify the list items (intermediary level).  
-You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. In this example, we use the item reference numbers to store record numbers. However, we must be able to establish a distinction between items that correspond to the [Department] records and those that correspond to the [Employees] records.
+You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the [`APPEND TO LIST`](../commands/append-to-list) command. In this example, we use the item reference numbers to store record numbers. However, we must be able to establish a distinction between items that correspond to the [Department] records and those that correspond to the [Employees] records.
 
 3. You need to identify all the list items individually (advanced level).  
-You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. A simple way of implementing this is to maintain a personal counter. Suppose that you create a *hlList* list using the `APPEND TO LIST` command. At this stage, you initialize a counter *vhlCounter* to 1. Each time you call `APPEND TO LIST` or `INSERT IN LIST`, you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. The trick consists in never decrementing the counter when you delete items — the counter can only increase. In this way, you guarantee the uniqueness of the item reference numbers. Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
+You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. A simple way of implementing this is to maintain a personal counter. Suppose that you create a *hlList* list using the [`APPEND TO LIST`](../commands/append-to-list) command. At this stage, you initialize a counter *vhlCounter* to 1. Each time you call [`APPEND TO LIST`](../commands/append-to-list) or [`INSERT IN LIST`](../commands/insert-in-list), you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. The trick consists in never decrementing the counter when you delete items — the counter can only increase. In this way, you guarantee the uniqueness of the item reference numbers. Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
 
 > If you use Bitwise Operators, you can also use item reference numbers for storing information that can be put into a Longint, i.e. 2 Integers, 4-byte values or, yet again, 32 Booleans.
 
 ### When do you need unique reference numbers?  
 
-In most cases, when using hierarchical lists for user interface purposes and when only dealing with the selected item (the one that was clicked or dragged), you will not need to use item reference numbers at all. Using `Selected list items` and `GET LIST ITEM` you have all you need to deal with the currently selected item. In addition, commands such as `INSERT IN LIST` and `DELETE FROM LIST` allow you to manipulate the list “relatively” with respect to the selected item.
+In most cases, when using hierarchical lists for user interface purposes and when only dealing with the selected item (the one that was clicked or dragged), you will not need to use item reference numbers at all. Using [`Selected list items`](../commands/selected-list-items) and [`GET LIST ITEM`](../commands/get-list-item) you have all you need to deal with the currently selected item. In addition, commands such as [`INSERT IN LIST`](../commands/insert-in-list) and [`DELETE FROM LIST`](../commands/delete-from-list) allow you to manipulate the list “relatively” with respect to the selected item.
 
 Basically, you need to deal with item reference numbers when you want direct access to any item of the list programmatically and not necessarily the one currently selected in the list.
 
