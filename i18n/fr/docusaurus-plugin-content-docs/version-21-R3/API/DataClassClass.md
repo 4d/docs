@@ -1235,33 +1235,33 @@ Par exemple, vous souhaitez renvoyer les entités de MyClass dont la similarité
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
-var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
-var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+$myVector := getVector //méthode pour obtenir un vecteur, par exemple à partir de 4D.AIKit
+var $comparisonVector := {vector : $myVector; metric : mk cosine; threshold : 1.2}
+var $results := ds.MyClass.query("myVectorField <= :1" ; $comparisonVector)
 ```
 
 L'instruction **order by** est prise en charge dans la chaîne de requête afin que les entités de l'entity selection résultante soient triées par similarité. Par exemple :
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //$results.first() entity is the most similar
+  //$results.first() : l'entité est celle qui présente la plus grande similitude
 ```
 
 :::note
 
-You will generally want vector similarity query results to be sorted from "most similar" to "least similar." By default, results returned with an **order by** clause are sorted in ascending order. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+En règle générale, vous souhaiterez que les résultats d'une requête de similarité vectorielle soient classés du « plus similaire » au « moins similaire ». Par défaut, les résultats renvoyés avec une clause **order by** sont triés par ordre croissant. En fonction de la mesure de similarité utilisée, vous devrez peut-être ajuster le sens du tri pour obtenir le classement correct :
 
-- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
-- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
+- en ce qui concerne la similarité [**cosinus**](./VectorClass.md#cosinesimilarity) et [**dot**](./VectorClass.md#dotsimilarity), des valeurs plus élevées indiquent une plus grande similarité. Par conséquent, vous devrez généralement inclure le mot-clé `desc` dans la chaîne de requête.
+- en ce qui concerne la similarité mesurée par la [**distance euclidienne**](./VectorClass.md#euclideandistance), plus la valeur est faible, plus la similarité est grande. Dans ce cas, l'ordre croissant par défaut (ou l'utilisation explicite du mot-clé `asc`) convient.
 
 :::
 
-You can only order on a single vector field. Si le même vecteur apparaît plusieurs fois dans la chaîne de requête, l'ordre par sera appliqué aux résultats du premier, par exemple :
+On ne peut ordonner que sur un seul champ vectoriel. Si le même vecteur apparaît plusieurs fois dans la chaîne de requête, l'ordre par sera appliqué aux résultats du premier, par exemple :
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  
-    //myVectorField > :1 is used for the order by
+    //myVectorField > :1 est utilisé pour le tri
 ```
 
 Voir [plus d'exemples ci-dessous](#example-4-2) (exemples 4 et 5).
@@ -1269,7 +1269,7 @@ Voir [plus d'exemples ci-dessous](#example-4-2) (exemples 4 et 5).
 :::tip Articles de blog sur le sujet
 
 - [4D AI : Recherche d'entités par similarité vectorielle en 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
-- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
+- [4D AI : Tri des résultats d'une requête en fonction de la similarité vectorielle](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1636,25 +1636,25 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //l'attribut d'embedding est basé sur un champ 4D stockant des objets de classe 4D.Vector
 
-  //search with default metric (cosine)
+  //Recherche avec métrique par défaut (cosine)
 var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
 
-  //search with euclidean metric 
+  //Recherche avec métrique euclidienne
 var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
 
-  //search with explicit cosine metric and custom threshold
+  //Recherche avec métrique cosinus explicite et seuil personnalisé
 var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
 
-  //search with a formula
+  //Recherche avec une formule
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### Exemple 5
 
-Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
+Le tri sémantique basé sur des vecteurs peut être combiné avec les filtres ORDA traditionnels dans une même requête.
 
 ```4d
 var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 
