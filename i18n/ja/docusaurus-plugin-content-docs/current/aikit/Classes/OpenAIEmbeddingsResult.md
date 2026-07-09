@@ -22,12 +22,12 @@ title: OpenAIEmbeddingsResult
 
 ### usage
 
-The `usage` property returns an object containing token usage information for embeddings.
+`usage` プロパティは埋め込みのトークン使用状況情報を格納したオブジェクトを返します。
 
-| フィールド           | 型       | 説明                                                                                                                |
-| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
-| `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
-| `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
+| フィールド           | 型       | 説明                                                                             |
+| --------------- | ------- | ------------------------------------------------------------------------------ |
+| `prompt_tokens` | Integer | 入力テキスト内のトークンの数。                                                                |
+| `total_tokens`  | Integer | 使用されたトークンの総数(埋め込みの prompt_tokens と同じ)。 |
 
 **レスポンスの例:**
 
@@ -38,7 +38,7 @@ The `usage` property returns an object containing token usage information for em
 }
 ```
 
-> **Note:** Embeddings only consume prompt tokens (there is no completion), so `total_tokens` equals `prompt_tokens`.
+> **注意:** 埋め込みはプロンプトトークンのみを消費する(補完はありません)ため、`total_tokens` と `prompt_tokens` は同じです。
 
 ## 参照
 

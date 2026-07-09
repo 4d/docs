@@ -7,13 +7,13 @@ title: OpenAIProviders
 
 ## 概要
 
-The `OpenAIProviders` class manages AI provider configurations by loading configuration and handling resolution of model strings in the `provider:model` format.
+`OpenAIProviders` クラスは、設定をロードし、`provider:model` フォーマットのモデル文字列の解決を管理することで、AI プロバイダー設定を管理します。
 
-For complete usage documentation, see [Provider Model Aliases](../provider-model-aliases.md).
+完全な使用法のドキュメンテーションについては、[プロバイダーモデルエイリアス](../provider-model-aliases.md) の章を参照してください。
 
 ## 説明
 
-This class enables multi-provider support by:
+このクラスを使用すると、以下の様な方法でマルチプロバイダーのサポートを可能にします:
 
 - Loading provider configurations from a single JSON file
 - Loading named model aliases that map to providers and model IDs

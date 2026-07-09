@@ -499,10 +499,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                   |
-| ------- | ------------------------------- |
-| 21 R4   | New *unreachableSince* property |
-| 20 R5   | Ajout                           |
+| Release | Modifications                         |
+| ------- | ------------------------------------- |
+| 21 R4   | Nouvelle propriété *unreachableSince* |
+| 20 R5   | Ajout                                 |
 
 </details>
 
@@ -518,18 +518,18 @@ La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session
 
 L'objet `.info` contient les propriétés suivantes:
 
-| Propriété        | Type          | Description |
-| ---------------- | ------------- | ----------- |
-| type             | Text          | Type de session : "remote", "storedProcedure", "standalone", "rest", "web" |
-| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username)) |
-| machineName      | Text          | <ul><li>Sessions distantes : nom de la machine distante.</li><li>Sessions client : nom de la machine locale.</li><li>Session de procédures stockées : nom de la machine serveur.</li><li> Session autonome : nom de la machine</li></ul> |
-| systemUserName   | Text          | <ul><li>Sessions distantes : nom de la session système ouverte sur la machine distante.</li><li>Sessions client : nom de la session système locale</li><ul> |
-| IPAddress        | Text          | <ul><li>Sessions distantes : Adresse IP de la machine distante.</li><li>Sessions distantes (client) : Adresse IP de la machine locale.</li><li>Session autonome : "localhost"</li></ul> |
-| hostType         | Text          | Type d'hôte : "windows", "mac" ou "browser" |
-| creationDateTime | Date ISO 8601 | Date et heure de la création de la session (session autonome : date et heure du démarrage de l'application) |
-| state            | Text          | État de la session : "active", "postponed", "sleeping" |
-| ID               | Text          | UUID de session (même valeur que [`.id`](#id)) |
-| persistentID     | Text          | Sessions distantes server/clients : ID persistant de la session |
+| Propriété        | Type          | Description                                                                                                                                                                                                                                           |
+| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Type de session : "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                            |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`.userName`](#username))                                                                                                                                                                    |
+| machineName      | Text          | <ul><li>Sessions distantes : nom de la machine distante.</li><li>Sessions client : nom de la machine locale.</li><li>Session de procédures stockées : nom de la machine serveur.</li><li> Session autonome : nom de la machine</li></ul>              |
+| systemUserName   | Text          | <ul><li>Sessions distantes : nom de la session système ouverte sur la machine distante.</li><li>Sessions client : nom de la session système locale</li><ul>                                                                                           |
+| IPAddress        | Text          | <ul><li>Sessions distantes : Adresse IP de la machine distante.</li><li>Sessions distantes (client) : Adresse IP de la machine locale.</li><li>Session autonome : "localhost"</li></ul>                                                               |
+| hostType         | Text          | Type d'hôte : "windows", "mac" ou "browser"                                                                                                                                                                                           |
+| creationDateTime | Date ISO 8601 | Date et heure de la création de la session (session autonome : date et heure du démarrage de l'application)                                                                                                        |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                                                |
+| ID               | Text          | UUID de session (même valeur que [`.id`](#id))                                                                                                                                                                                     |
+| persistentID     | Text          | Sessions distantes server/clients : ID persistant de la session                                                                                                                                                                       |
 | unreachableSince | Integer       | Sessions distantes : Nombre de secondes depuis que le pair est injoignable. Sur 4D Server, cet attribut est accessible dans la propriété [`Process activity.sessions`](../commands/process-activity). |
 
 :::note
@@ -700,13 +700,13 @@ Cette propriété est en **lecture seule**.
 
 Les propriétés suivantes de l'objet `4D.QuotaManager` sont disponibles pour la session :
 
-| Propriété                                                                 |              | Type    | Modifiable | Description |
-| ------------------------------------------------------------------------- | ------------ | ------- | ---------- | ----------- |
+| Propriété                                                                 |              | Type    | Modifiable | Description                                                                                                          |
+| ------------------------------------------------------------------------- | ------------ | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | oui        | Nombre maximal d'entity sets autorisé dans la mémoire du serveur. *Undefined* = aucun quota appliqué |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | oui        | Délai d'inactivité par défaut pour les entity sets en mémoire (en secondes) |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | oui        | Délai d'inactivité maximal pour les entity sets en mémoire (en secondes) |
-| currentValues                                                             |              | Object  | non        | |
-|                                                                           | nbEntitySets | Integer | non        | Nombre d'entity sets actuellement en mémoire. *Undefined* = aucun entity set en mémoire |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | oui        | Délai d'inactivité par défaut pour les entity sets en mémoire (en secondes)                       |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | oui        | Délai d'inactivité maximal pour les entity sets en mémoire (en secondes)                          |
+| currentValues                                                             |              | Object  | non        |                                                                                                                      |
+|                                                                           | nbEntitySets | Integer | non        | Nombre d'entity sets actuellement en mémoire. *Undefined* = aucun entity set en mémoire              |
 
 Lorsque vous modifiez une valeur, celle-ci est immédiatement prise en compte par le serveur (aucun redémarrage n'est nécessaire) et sera appliquée aux prochaines requêtes REST.
 
