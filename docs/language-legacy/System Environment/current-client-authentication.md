@@ -31,9 +31,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current client authentication.Summary-->The **Current client authentication** command asks the Windows Active Directory server to authenticate the current client and, if successful, returns the Windows login name for this client (session identifier).<!-- END REF--> If the authentication failed, an empty string is returned. 
 
-This command can only be used in the context of an SSO implementation on Windows with 4D Server. For more information, please refer to the *Single Sign On (SSO) on Windows* section.
+This command can only be used in the context of an [SSO implementation on Windows with 4D Server](../../server/sso.md). 
 
-Usually, both the client and the server must be managed by the same Active Directory. However, different configurations can be supported, as described in the *Requirements for SSO* section. 
+Usually, both the client and the server must be managed by the same Active Directory. However, different configurations can be supported, as described in the [Requirements for SSO](../../server/sso.md#requirements-for-sso) section. 
 
 The returned login string must be passed to your 4D identification module to grant access rights to the client based upon the Windows session login; if you managed to remove the 4D Server login dialog by setting a "Default user", you can implement an interface where the user does not need to reenter any IDs (see example). 
 
@@ -53,7 +53,7 @@ The security level of the authentication (i.e., how much you can trust the user 
 | Empty     | Empty      | Empty        | Command was unable to get authentication information about the logged user                                                                                                                                                                                                                                                       |
 | Filled    | Empty      | NTLM         | ID returned is the local one, which has been defined on the local computer                                                                                                                                                                                                                                                       |
 | Filled    | Filled     | NTLM         | ID returned has been authenticated using the NTLM protocol in the Domain returned in the *domain* parameter. In this case, you must check the Domain to increase the security level. Since some architectures have a Domain forest, you need to make sure that the Domain where the user was authenticated was the expected one. |
-| Filled    | Filled     | Kerberos     | ID returned has been authenticated with the Kerberos protocol in the expected Domain. This configuration provides the highest level of security.                                                                                                                                                                                 |
+| Filled    | Filled     | Kerberos     | ID returned has been authenticated with the Kerberos protocol in the expected Domain. This configuration provides the highest level of security.   |
 
 For more information on these requirements, please refer to the paragraph.
 
@@ -68,22 +68,32 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 
 ```4d
   //On Server Open Connection database method
- var $0;$1;$2;$3 : Integer
- $login:=Current client authentication($domain;$protocol)
- If($login #"") //a login was returned
+#DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
+var $domain;$protocol : Text
+var $login:=Current client authentication($domain;$protocol)
+If($login #"") //a login was returned
   //call your custom authentication method
-    $0:=CheckCredentials($login)
+    $result:=CheckCredentials($login)
   //should return 0 in case of success or -1 for error
  Else
-    $0:=-1 //reject the connection
+    $result:=-1 //reject the connection
  End if
 ```
 
-**Note:** This example shows a basic scenario that must be adapted to your solutions. The 4D user custom authentication method (CheckCredentials in the above example) could be based on one of the following implementations:
+
+:::note
+
+This example shows a basic scenario that must be adapted to your solutions. The 4D user custom authentication method (CheckCredentials in the above example) could be based on one of the following implementations:
 
 * replicate the Active directory names in the 4D user and group names, for an automatic mapping,
 * map returned information to a custom \[users\] table,
 * use LDAP features to get user credentials.
+
+:::
+
+## See also
+
+[Single Sign On (SSO) on Windows](../../server/sso.md)
 
 
 ## Properties

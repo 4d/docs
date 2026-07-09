@@ -779,7 +779,8 @@ module.exports =
                   "ServerWindow/remote-admin"
                 ]
               },
-            "server/exit",
+            "server/menus",
+            "server/sso",
             "server/exit"
           ]
         },

@@ -58,11 +58,11 @@ To update any other client machines that are not connected, you just need to ent
 
 #### Authentication of user with domain server
 
-This option allows you to implement SSO (*Single Sign On*) capabilities in your 4D Server database on Windows. When you check this option, 4D transparently connects to the Active directory of the Windows domain server and gets the available authentication tokens. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.en.html) section.
+This option allows you to implement SSO (*Single Sign On*) capabilities in your 4D Server database on Windows. When you check this option, 4D transparently connects to the Active directory of the Windows domain server and gets the available authentication tokens. This option is described in the [Single Sign On (SSO) on Windows](../server/sso.md) page.
 
 #### Service Principal Name
 
-When Single Sign On (SSO) is enabled (see above), you must fill in this field if you want to use Kerberos as your authentication protocol. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.en.html) section.
+When Single Sign On (SSO) is enabled (see above), you must fill in this field if you want to use Kerberos as your authentication protocol. This option is described in the [Enablig Kerberos](../server/sso.md#enabling-kerberos) section.
 
 #### Network Layer
 
@@ -168,4 +168,8 @@ By default, no connection restrictions are applied by 4D Server: the first row o
 
 For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
 
-Compatibility note: IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+:::note Compatibility 
+
+IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+
+:::
