@@ -149,21 +149,21 @@ Le tableau suivant résume l'emplacement par défaut où le code est exécuté e
 | Méthodes de base de données :<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server               | n/a                                                                                                                                                                                                                                                                                                      |
 | Méthodes de base de données :<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                   | client               | n/a                                                                                                                                                                                                                                                                                                      |
 
-## Management of sleeping client sessions
+## Gestion des sessions de clients en veille
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server remains active.
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active.
 
-In this case, the remote application notifies 4D Server before entering sleep mode. The corresponding client session changes to the **Sleeping** status.
+Dans ce cas, l'application distante avertit 4D Server avant de passer en mode veille. La session client correspondante passe au statut **Sleeping**.
 
 ![](../assets/en/Admin/server-sleep.png)
 
-This status frees server resources while preserving the session context.
+Ce statut libère les ressources du serveur tout en préservant le contexte de la session.
 
-When the remote machine wakes up, the application automatically reconnects and restores the existing session.
+Lorsque la machine distante sort du mode veille, l'application se reconnecte automatiquement et rétablit la session en cours.
 
-A sleeping client session is automatically dropped after 48 hours of inactivity.
+Une session client inactive est automatiquement fermée après 48 heures d'inactivité.
 
-You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+Vous pouvez modifier ce délai d'expiration à l'aide de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter) avec le sélecteur `Remote connection sleep timeout`.
 
 ## Gestion d'un pair injoignable
 
@@ -188,7 +188,7 @@ La couche réseau QUIC envoie automatiquement un événement "Unreachable" ("Inj
 
 #### Le client distant ne répond plus
 
-When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/sessions.md#list-of-sessions) is set to **Unreachable**.
+Lorsqu'un 4D distant cesse inopinément de répondre, sur la [fenêtre d'administration du serveur](../ServerWindow/overview.md), le [statut de la session distante](../ServerWindow/sessions.md#list-of-users) devient **Unreachable**.
 
 ![](../assets/en/Desktop/unreachable-status.png)
 

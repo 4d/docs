@@ -17,6 +17,7 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 - Nueva clase [`4D.QuotaManager`](../API/QuotaManagerClass.md) para manejar objetos umbrales para proteger el servidor.
 - Nueva petición REST [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) para eliminar conjuntos de entidades de la caché del servidor.
 - Información de sesión mejorada en la ventana de administración de 4D Server con una nueva página [**Sessions**](../ServerWindow/sessions.md) (antes **Users**).
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R4): lista de todos los bugs que se han corregido en 4D 21 R4.
 
 #### Cambios de comportamiento
 

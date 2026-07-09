@@ -499,10 +499,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                   |
-| ------- | ------------------------------- |
-| 21 R4   | New *unreachableSince* property |
-| 20 R5   | Ajout                           |
+| Release | Modifications                         |
+| ------- | ------------------------------------- |
+| 21 R4   | Nouvelle propriété *unreachableSince* |
+| 20 R5   | Ajout                                 |
 
 </details>
 
