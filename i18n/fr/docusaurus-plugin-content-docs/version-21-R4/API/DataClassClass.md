@@ -50,24 +50,24 @@ Les objets renvoyés ont des propriétés que vous pouvez lire pour obtenir des 
 
 Les objets attributs retournés contiennent les propriétés suivantes :
 
-| Propriété        | Type    | Description |
-| ---------------- | ------- | ----------- |
-| autoFilled       | Boolean | Vrai si la valeur est remplie automatiquement par 4D. |
-| exposed          | Boolean | Vrai si l'attribut est exposé en REST. |
-| fieldNumber      | integer | Numéro interne du champ 4D correspondant. |
-| fieldType        | Integer | Type de champ 4D selon kind. |
-| indexed          | Boolean | Vrai s'il existe un index B-tree ou Cluster B-tree. |
-| inverseName      | Text    | Nom de l'attribut inverse de la relation. |
-| keywordIndexed   | Boolean | Vrai s'il existe un index de mots-clés. |
-| kind             | Text    | storage, calculated, alias, relatedEntity, relatedEntities. |
-| obligatoire      | Boolean | Vrai si la saisie de valeur null est rejetée. |
-| name             | Text    | Nom de l'attribut. |
-| path             | Text    | Chemin d'un attribut alias basé sur une relation. |
-| readOnly         | Boolean | Vrai si l'attribut est en lecture seule. |
-| relatedDataClass | Text    | Nom de la dataclass liée pour les relations. |
-| type             | Text    | Type conceptuel de la valeur selon kind. |
-| unique           | Boolean | Vrai si la valeur doit être unique. |
-| classID          | Text    | Nom de classe si type object et classe définie. |
+| Propriété        | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autoFilled       | Boolean | Vrai si la valeur de l'attribut est automatiquement remplie par 4D. Correspond aux propriétés de champs 4D suivantes : "Autoincrement" pour les champs de type numérique et "UUID Auto" pour les champs UUID (alpha). Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| exposed          | Boolean | Vrai si l'attribut est exposé en REST                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| fieldNumber      | integer | Numéro interne du champ 4D correspondant à l'attribut. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| fieldType        | Integer | Type de champ de la base de données 4D de l'attribut. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : type de champ 4D correspondant, voir [`Value type`](../commands/value-type)</li><li>si `.kind` = "relatedEntity" : 38 (`is object`)</li><li>si `.kind` = "relatedEntities" : 42 (`is collection`)</li><li>si `.kind` = "calculated" ou "alias" = même chose que ci-dessus, en fonction de la valeur résultante (type de champ, relatedEntity ou relatedEntities)</li>                                                                                                                                                                                                               |
+| indexed          | Boolean | Vrai s'il existe un index B-tree ou Cluster B-tree sur l'attribut. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| inverseName      | Text    | Nom de l'attribut qui se trouve à l'autre côté de la relation. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| keywordIndexed   | Boolean | Vrai s'il existe un index de mots-clés sur l'attribut. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| kind             | Text    | Catégorie de l'attribut. Valeurs possibles :<li>"storage" : attribut de stockage (ou scalaire), c'est-à-dire attribut stockant une valeur et non une référence à un autre attribut</li><li>"calculated" : attribut calculé, c'est-à-dire défini par une [fonction `get`](../ORDA/ordaClasses.md#function-get-attributename)</li><li>"alias" : attribut construit sur [un autre attribut](../ORDA/ordaClasses.md#alias-attributes-1)</li><li>"relatedEntity" : attribut de relation N -> 1 (référence à une entité)</li><li>"relatedEntities" : attribut de relation 1->N (référence à une entity selection)</li>                                                                                        |
+| obligatoire      | Boolean | Vrai si la saisie d'une valeur null est rejetée pour l'attribut. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities". Attention : Cette propriété correspond à la propriété du champ "Reject NULL value input" au niveau de la base de données 4D. Elle n'est pas liée à la propriété "Mandatory" existante qui est une option de contrôle de la saisie de données pour une table.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| name             | Text    | Nom de l'attribut sous forme de chaîne                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| path             | Text    | Chemin d'un [attribut alias](../ORDA/ordaClasses.md#alias-attributes-1) basé sur une relation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| readOnly         | Boolean | Vrai si l'attribut est en lecture seule. Par exemple, les attributs calculés sans la fonction [`set`](../ORDA/ordaClasses.md#function-set-attributename) sont en lecture seule.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris duration ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la dataClass liée + suffixe "Selection</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li> |
+| unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| classID          | Text    | Disponible uniquement si `.type = "object"` et si une classe a été spécifiée dans l'éditeur de structure. </br>Retourne le nom de la classe utilisée pour instancier l'objet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 :::tip
 
@@ -476,7 +476,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 :::info
 
-Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête de valeur d'attribut est envoyée directement au serveur (le [cache ORDA](.. /ORDA/client-server-optimization.md#orda-cache) n'est pas utilisé). Par contre, lorsque vous appelez `.get()` **avec** un `context` passé dans le paramètre *settings*, les valeurs des attributs sont récupérées à partir du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
+Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête de valeur d'attribut est envoyée directement au serveur (le [cache ORDA](../ORDA/client-server-optimization.md#orda-cache) n'est pas utilisé). Par contre, lorsque vous appelez `.get()` **avec** un `context` passé dans le paramètre *settings*, les valeurs des attributs sont récupérées à partir du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
 
 :::
 
@@ -721,7 +721,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 #### Description
 
-La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->.
+La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
 
 Si elle est appelée depuis une application 4D monoposte, la fonction retourne `Null`.
 
@@ -1024,18 +1024,18 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
 
 1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
 
-```4d
- $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
+  $result:=$col.query($vquery)
+ ```
 
 Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone *myname* une chaîne du type *"smith OR status='private'*, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
 
 Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
@@ -1043,10 +1043,10 @@ Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *m
 
 3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 ### Recherche de valeurs null
 
@@ -1128,7 +1128,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 // trouve "les entités dont au moins une propriété val est différente de 0"
 ```
 
-Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]` .
+Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]`.
 
 ### Lier les critères de recherche pour les attributs de collections
 
@@ -1694,7 +1694,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### Description
 
-La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
+La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->..
 
 Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 

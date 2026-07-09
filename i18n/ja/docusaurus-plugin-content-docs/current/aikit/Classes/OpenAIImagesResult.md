@@ -19,21 +19,21 @@ title: OpenAIImagesResult
 
 ### usage
 
-The `usage` property returns an object containing token usage information for image generation (when supported by the provider).
+`usage` プロパティは画像生成のトークン使用状況を格納したオブジェクトを返します(プロバイダーからサポートされていれば)。
 
-| フィールド                  | 型       | 説明                                                                          |
-| ---------------------- | ------- | --------------------------------------------------------------------------- |
-| `total_tokens`         | Integer | Total tokens used.                                          |
-| `input_tokens`         | Integer | Number of tokens in the input (prompt).  |
-| `output_tokens`        | Integer | Number of tokens for the output (image). |
-| `input_tokens_details` | Object  | Breakdown of input tokens (optional).    |
+| フィールド                  | 型       | 説明                                   |
+| ---------------------- | ------- | ------------------------------------ |
+| `total_tokens`         | Integer | 使用されたトークンの総数。                        |
+| `input_tokens`         | Integer | 入力(プロンプト)でのトークン数。 |
+| `output_tokens`        | Integer | 出力(画像)でのトークン数。    |
+| `input_tokens_details` | Object  | 入力トークンの詳細(オプション)。 |
 
 #### input_tokens_details
 
-| フィールド          | 型       | 説明                                                                                        |
-| -------------- | ------- | ----------------------------------------------------------------------------------------- |
-| `text_tokens`  | Integer | Number of text tokens in the prompt.                                      |
-| `image_tokens` | Integer | Number of image tokens (for image editing/variations). |
+| フィールド          | 型       | 説明                                          |
+| -------------- | ------- | ------------------------------------------- |
+| `text_tokens`  | Integer | プロンプト内でのテキストトークン数。                          |
+| `image_tokens` | Integer | 画像トークンの数(画像編集/バリエーション用)。 |
 
 **レスポンスの例:**
 
@@ -49,7 +49,7 @@ The `usage` property returns an object containing token usage information for im
 }
 ```
 
-> **Note:** Image generation usage may not be available from all providers. The structure may vary depending on the specific image API endpoint used.
+> **注意:** 画像生成使用状況は、全てのプロバイダーにおいて利用可能とは限りません。 この構造は、使用している特定の画像API エンドポイントによっては異なる場合があります。
 
 ## 関数
 

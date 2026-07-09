@@ -17,6 +17,7 @@ title: リリースノート
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
 - Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 #### 動作の変更
 
@@ -37,7 +38,7 @@ title: リリースノート
 - 新しい[データベース設定の新しい **AI** ページ](../settings/ai.md) を使うことで、4D AIKit コンポーネントを使用したコード内から呼び出し可能な、 [プロバイダーモデルエイリアス](../aikit/provider-model-aliases.md) を設定することができるようになりました。
 - 4D AIKit コンポーネント: 新しい[Providers](../aikit/Classes/OpenAIProviders.md) クラスを使用して [プロバイダーとモデルエイリアス](../aikit/provider-model-aliases.md) をインスタンス化して管理することができます。
 - ORDA データモデル関数および共有/セッションシングルトン関数における [`server` キーワード](../Concepts/classes.md#server) のサポート。
-- Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
+- Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
 - 依存関係: [GitLab レポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
 
@@ -52,8 +53,8 @@ title: リリースノート
 - [`JSON Validate`](../commands/json-validate) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
 - 分かりやすさのために、フォーミュラオブジェクトは、汎用的な [`4D.Function`](../API/FunctionClass.md) クラスを継承する [`4D.Formula`](../API/FormulaClass.md) クラスの新しいインスタンスになりました。
 - 4D 21 R3 では、[コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) にもたらされた新しい改良が、ランゲージコマンドに対しても適用されます([こちらのblog 記事](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)を参照してください)。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。
-- [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
-- **旧式** ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
+- [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
+- **旧式* ネットワークレイヤーはサポートされなくなりました。 \**&#x65E7;式\* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
 
 ## 4D 21 R2
 

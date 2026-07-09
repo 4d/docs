@@ -476,7 +476,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 :::info
 
-Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête de valeur d'attribut est envoyée directement au serveur (le [cache ORDA](.. /ORDA/client-server-optimization.md#orda-cache) n'est pas utilisé). Par contre, lorsque vous appelez `.get()` **avec** un `context` passé dans le paramètre *settings*, les valeurs des attributs sont récupérées à partir du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
+Lorsque vous appelez la fonction `.get()` **sans** paramètre *settings*, une requête de valeur d'attribut est envoyée directement au serveur (le [cache ORDA](../ORDA/client-server-optimization.md#orda-cache) n'est pas utilisé). Par contre, lorsque vous appelez `.get()` **avec** un `context` passé dans le paramètre *settings*, les valeurs des attributs sont récupérées à partir du cache ORDA correspondant au contexte. Dans ce cas, il peut être conseillé d'appeler [`reload()`](EntityClass.md#reload) pour s'assurer que les données les plus récentes sont récupérées depuis le serveur.
 
 :::
 
@@ -1126,7 +1126,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 // trouve "les entités dont au moins une propriété val est différente de 0"
 ```
 
-Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]` .
+Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]`.
 
 ### Lier les critères de recherche pour les attributs de collections
 
