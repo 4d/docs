@@ -65,14 +65,14 @@ Lorsque vous utilisez cette syntaxe, vous avez la garantie que vos formules sero
 
 Cette syntaxe est acceptée dans toutes les formules 4D (ou expressions 4D), quel que soit leur contexte d'appel :
 
-- Formules 4D exécutées à l'aide de l'éditeur de formules ou à l'aide de commandes telles que [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
-- expressions insérées dans des [zones de texte multi-styles](../FormObjects/properties_Text.md#supported-tags) (voir ST INSERT EXPRESSION),
-- expressions calculated in [transformation tags](../Tags/transformation-tags.md),
-- expressions inserted in external areas such as [4D Write Pro areas](../WritePro/managing-formulas.md).
+- formules 4D exécutées à l'aide de l'éditeur de formules ou à l'aide de commandes telles que [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
+- expressions insérées dans des [zones de texte multi-styles](../FormObjects/properties_Text.md#supported-tags) (voir [`ST INSERT EXPRESSION`](../commands/st-insert-expression)),
+- expressions calculées dans les [balises de transformation](../Tags/transformation-tags.md),
+- expressions insérées dans des zones externes telles que les [zones 4D Write Pro](../WritePro/managing-formulas.md).
 
-#### Where to find the element numbers?
+#### Où trouver les numéros des éléments ?
 
-The token syntax requires the addition of the reference numbers of various elements. The location of these references depends on the type of element.
+La syntaxe du token nécessite l'ajout des numéros de référence des différents éléments. L'emplacement de ces références dépend du type d'élément.
 
-- **4D commands:** Command numbers can be found in the documentation ("Properties" area) as well as on the Commands page of the Explorer.
-- **Tables and fields**: Table and field numbers can be obtained using the [`Table`](../commands/table) and [`Field`](../commands/field) commands. They are also displayed in the Inspector palette of the Structure editor.
+- **Commandes 4D :** Les numéros des commandes figurent dans la documentation (section "Propriétés") ainsi que sur la page Commandes de l'Explorateur.
+- **Tables et champs** : Les numéros de tables et de champs peuvent être obtenus en utilisant les commandes [`Table`](../commands/table) et [`Field`](../commands/field). Ils sont également affichés dans la palette Inspecteur de l'éditeur Structure.

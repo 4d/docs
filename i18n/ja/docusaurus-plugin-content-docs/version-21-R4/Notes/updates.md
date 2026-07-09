@@ -17,6 +17,7 @@ title: リリースノート
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
 - 4D Server 管理ウィンドウのセッション情報が改善され、従来の **Users** に代わる新しい [**Sessions**](../ServerWindow/sessions.md) ページが追加されました。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 #### 動作の変更
 
