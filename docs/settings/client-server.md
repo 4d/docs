@@ -134,7 +134,7 @@ This setting can be used to globally set the updating mode for the local instanc
 -   **Never**: The local **Resources** folder is not updated during the session. The notification sent by the server is ignored. The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 -   **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
 -   **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
-    The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Automatic or manual mechanisms can be used to notify each client when the contents of this folder have been modified. For more information, please refer to the [Managing the Resources folder](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html) section.
+    The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Automatic or manual mechanisms can be used to notify each client when the contents of this folder have been modified. For more information, please refer to the [Managing the Resources folder](../Desktop/clientServer.md#managing-the-resources-folder) section.
 
 
 ## IP configuration page
