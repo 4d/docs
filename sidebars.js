@@ -781,6 +781,7 @@ module.exports =
               },
             "server/menus",
             "server/sso",
+            "server/service",
             "server/exit"
           ]
         },
