@@ -47,7 +47,7 @@ The standard Open dialog appears.
 
 :::note
 
-You can also launch 4D projects without any interface thanks to the [CLI (Command Line Interface)](../Admin/cli.md).
+You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
 
 :::
 
