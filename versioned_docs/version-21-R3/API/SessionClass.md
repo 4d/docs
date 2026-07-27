@@ -801,7 +801,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 </details>
 
-<!-- REF #SessionClass.setPrivileges().Syntax -->**.setPrivileges**( *privilege* : Text ) : Boolean<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object ) : Boolean<!-- END REF -->
+<!-- REF #SessionClass.setPrivileges().Syntax -->**.setPrivileges**( *privilege* : Text ) : Boolean<br/>**.setPrivileges**( *privileges* : Collection ) : Boolean<br/>**.setPrivileges**( *settings* : Object ) : Boolean<!-- END REF -->
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
