@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594; | ディレクトリ、フォルダまたはドキュメントへのパス名 |
+| pathname | Text | &#8594; | ディレクトリ、フォルダまたはドキュメントへのパス名 (システムシンタックス) |
 | 戻り値 | Integer | &#8592; | 1=パス名は既存のドキュメントを表す 0=パス名は既存のディレクトリまたはフォルダを表す <0=無効のパス名、OSファイルマネージャエラーコード |
 </div>
 <!-- END REF-->
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Test path name.Summary-->**Test path name**コマンドは、引数*pathname*に渡された名前またはパス名を持つドキュメントまたはフォルダーが、ディスク上に存在するかどうかをチェックします。<!-- END REF-->相対的なパス名または絶対的なパス名のいずれかをカレントシステムのシンタックスで表して渡します。
+<!--REF #_command_.Test path name.Summary-->**Test path name**コマンドは、引数*pathname*に渡された名前またはパス名を持つドキュメントまたはフォルダーが、ディスク上に存在するかどうかをチェックします。<!-- END REF-->相対的なパス名または絶対的なパス名のいずれかを[カレントシステムのシンタックス](../../Concepts/paths.md#platform-specific-syntax)で表して渡します。
 
 ドキュメントが見つかれば**Test path name**は1を返します。フォルダーが見つかれば**Test path name**は0を返します。
 
@@ -44,11 +44,11 @@ displayed_sidebar: docs
 
 ## 例題 
 
-以下の例では、“Journal” というドキュメントがデータベースのフォルダにあるかどうかをテストし、見つからない場合にはこれを作成します。
+Windows上で、以下の例では“Journal.txt” というドキュメントがプロジェクトの“Data”フォルダにあるかどうかをテストし、見つからない場合にはこれを作成します。
 
 ```4d
- If(Test path name("Journal")#Is a document)
-    $vhDocRef:=Create document("Journal")
+ If(Test path name("\\Data\\Journal.txt")#Is a document)
+    $vhDocRef:=Create document("\\Data\\Journal.txt")
     If(OK=1)
        CLOSE DOCUMENT($vhDocRef)
     End if

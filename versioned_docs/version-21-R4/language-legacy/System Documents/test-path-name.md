@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | Pathname to directory, folder or document |
+| pathname | Text | &#8594;  | Pathname to directory, folder or document (system syntax) |
 | Function result | Integer | &#8592; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
 </div>
 <!-- END REF-->
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the syntax of the current system.
+<!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the [syntax of the current system](../../Concepts/paths.md#platform-specific-syntax).
 
-If a document is found, **Test path name** returns 1\. If a folder found, **Test path name** returns 0.
+If a document is found, **Test path name** returns 1. If a folder is found, **Test path name** returns 0.
 
 The following predefined constants are provided by 4D:
 
@@ -43,11 +43,11 @@ If no document nor folder is found, **Test path name** returns a negative value 
 
 ## Example 
 
-The following tests if the document “Journal” is present in the folder of the database, then creates it if it was not found: 
+On Windows, the following tests if the document "Journal.txt" is present in the "Data" folder of the project, then creates it if it was not found: 
 
 ```4d
- If(Test path name("Journal")#Is a document)
-    $vhDocRef:=Create document("Journal")
+ If(Test path name("\\Data\\Journal.txt")#Is a document)
+    $vhDocRef:=Create document("\\Data\\Journal.txt")
     If(OK=1)
        CLOSE DOCUMENT($vhDocRef)
     End if
