@@ -5,13 +5,13 @@ title: Page Process
 
 La page **Process** liste les process en cours d’exécution.
 
-![](../assets/en/Admin/server-admin-process-page.png)
+![](../assets/en/Admin/server-admin-process-page-1.png)
 
 Le bouton "Process" indique entre parenthèses le nombre total de process en cours d’exécution sur le serveur (ce nombre ne tient pas compte des éventuels filtres d’affichage appliqués à la fenêtre ni de l’état de l’option \*\*Afficher les process par groupe
 
 Vous pouvez modifier l’ordre des colonnes par simple glisser-déposer de la zone d’en-tête des colonnes. Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquant sur son en-tête.
 
-Tout comme la Page Utilisateurs, cette page contient une [zone de recherche/filtrage](users.md#searchfiltering-area) dynamique, permettant de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de rec La recherche/le filtrage est effectué(e) dans les colonnes Session et Nom de process. La recherche/le filtrage est effectué(e) dans les colonnes Session et Nom de process.
+Like the Sessions page, this page contains a dynamic [search/filtering area](sessions.md#search-and-filtering) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. La recherche/le filtrage est effectué(e) dans les colonnes Session et Nom de process.
 
 Vous disposez également de trois boutons-raccourcis permettant de filtrer par famille les process affichés dans la fenêtre :
 
@@ -87,7 +87,7 @@ Similar icons and process types are used in the [Process page of the Runtime Exp
 
 La page comporte cinq boutons de commande permettant d’agir sur le ou les process sélectionné(s). A noter que vous ne pouvez agir que sur les process utilisateurs.
 
-![](../assets/en/Admin/server-process-actions.png)
+![](../assets/en/Admin/server-process-actions-1.png)
 
 - **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
 
@@ -99,6 +99,6 @@ La page comporte cinq boutons de commande permettant d’agir sur le ou les proc
 
 > Vous pouvez déboguer un process directement, sans afficher la boîte de dialogue de confirmation : pour cela, appuyez sur la touche **Alt** avant de cliquer sur le bouton.
 
-- **Voir utilisateurs** : permet d’afficher dans la [page Utilisateurs](users.md) tous les process du ou des utilisateur(s) sélectionné(s). Le bouton est actif lorsqu’un process utilisateur au moins est sélectionné.
+- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). Le bouton est actif lorsqu’un process utilisateur au moins est sélectionné.
 
 

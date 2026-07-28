@@ -141,7 +141,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-SMTPステータスコードについての詳細は [こちらのページ](https://www.usps.org/info/smtp_status.html) を参照ください。
+For information about SMTP status codes, please refer to [this page](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml).
 
 #### 例題
 

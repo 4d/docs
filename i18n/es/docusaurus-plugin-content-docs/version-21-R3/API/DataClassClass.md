@@ -272,11 +272,11 @@ Para cada objeto de *objectCol*:
 
 - Si el objeto contiene una propiedad booleana "\__NEW" establecida en false (o no contiene una propiedad booleana "\__NEW"), la entidad se actualiza o se crea con los valores correspondientes de las propiedades del objeto. No se realiza ninguna comprobación con respecto a la llave primaria:
   - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
-  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 - Si el objeto contiene una propiedad booleana "\_\_NEW" definida como **true**, la entidad se crea con los valores correspondientes de los atributos del objeto. Se realiza una verificación con respecto a la llave primaria:
   - Si se da la llave primaria (tal cual) y existe, se envía un error
-  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
 > La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.
@@ -1241,7 +1241,7 @@ Por ejemplo, se desea devolver entidades de MyClass donde la similaridad con un 
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+$myVector := getVector ///método para obtener un vector, por ejemplo a partir de 4D.AIKit
 var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
@@ -1250,14 +1250,14 @@ La instrucción **orden by** es soportada en la cadena de consulta para que las 
 
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc"; $comparisonVector)  
-  //$results.first() entity is the most similar
+  //$results.first() la entidad es la más similar
 ```
 
 :::note
 
 You will generally want vector similarity query results to be sorted from "most similar" to "least similar." Por defecto, los resultados devueltos con una cláusula **order by** se ordenan en orden ascendente. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
 
-- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Therefore, you will typically need to include the `desc` keyword in the query string.
+- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Por lo tanto, normalmente deberá incluir la palabra clave `desc` en la cadena de consulta.
 - for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
 
 :::
@@ -1267,7 +1267,7 @@ Solo se puede ordenar en un único campo vectorial. Si el mismo vector aparece v
 ```4d
 var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField desc"; /
     {vector : $myVector1 };{vector : $myVector2 })  
-    //myVectorField > :1 is used for the order by
+    //myVectorField > :1 se utiliza para la ordenación
 ```
 
 Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).

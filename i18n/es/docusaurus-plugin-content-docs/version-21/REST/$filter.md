@@ -80,7 +80,7 @@ El comparador debe ser uno de los siguientes valores:
 
 ## Similitud vectorial
 
-If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to only store 4D.Vector class objects](../Develop/field-properties.md#class)), you can filter the dataclass using **vectors**, aka **embeddings**.
+Si el atributo almacena [**objetos vectoriales**](../API/VectorClass.md) (ver cómo [configurar un campo 4D para almacenar sólo objetos de la clase 4D.Vector](../Develop/field-properties.md#class)), puede filtrar el nivel de datos utilizando **vectores**, igualmente llamados **embeddings**.
 
 Para obtener más información sobre las búsquedas de similitudes vectoriales, consulte la sección [Consulta por similitud vectorial](../API/DataClassClass.md#query-by-vector-similarity).
 

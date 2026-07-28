@@ -87,7 +87,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record
+|Result|4D. Entity|<-|New entity referencing the record
 |
 </div>
 <!-- END REF -->
@@ -117,8 +117,8 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 If you don't want the new entity to share object-type attribute references, you must copy them.
 
 ```4d
- var $emp; $empCloned : cs.EmployeeEntity
- $emp:=ds.Employee.all().first()
+ var $emp; $empCloned : cs. EmployeeEntity
+ $emp:=ds. Employee.all().first()
  $empCloned:=$emp.clone()
  $empCloned.objectAtt:=OB Copy($emp.objectAtt)
 ```
@@ -144,7 +144,7 @@ If you don't want the new entity to share object-type attribute references, you 
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
+|entityToCompare|4D. Entity|->|Entity to be compared with the original entity|
 |attributesToCompare|Collection|-> |Name of attributes to be compared |
 |Result|Collection|<-|Differences between the entities|
 </div>
@@ -455,7 +455,7 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+|Result|4D. Entity|<-|Reference to first entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -583,7 +583,7 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+|Result|4D. DataClass|<-|DataClass object to which the entity belongs|
 </div>
 <!-- END REF -->
 
@@ -765,7 +765,7 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
+|entitySelection|4D. EntitySelection|->|Position of the entity is given according to this entity selection|
 |Result|Integer|<-|Position of the entity in an entity selection|
 </div>
 <!-- END REF -->
@@ -856,7 +856,7 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+|Result|4D. Entity|<-|Reference to last entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1009,7 +1009,7 @@ Exemplo com a opção `dk reload if stamp changed`:
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+|Result|4D. Entity|<-|Reference to next entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1053,7 +1053,7 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+|Result|4D. Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1212,7 +1212,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6     | (Somente se a opção `dk auto merge` for usada) A opção de mesclagem automática falhou ao salvar a entidade.**statusText associado**: "Falhou a mesclagem"                                                                                                             |
+| `dk status automerge failed`              | 6     | (Somente se a opção `dk auto merge` for usada) A opção de mesclagem automática falhou ao salvar a entidade.**statusText associado**:                                                                                                                                  |
 | `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, esse erro pode ser retornado quando a opção `dk force drop if stamp changed` for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
 | `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                            |
@@ -1591,7 +1591,7 @@ A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se
 
 Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
-Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. Por exemplo, após executar `$id:=ds.Employee.ID` para uma nova entidade (assumindo que o atributo de ID tem a propriedade "Autoincrement"), `.touched()` retorna True.
+Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. Por exemplo, após executar `$id:=ds. Employee.ID` para uma nova entidade (assumindo que o atributo de ID tem a propriedade "Autoincrement"), `.touched()` retorna True.
 
 
 #### Exemplo

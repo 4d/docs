@@ -81,7 +81,7 @@ Chaque process est identifié par une icône et un type. La couleur et la forme 
 
 :::note
 
-Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+Des icônes et des types de processus similaires sont utilisés dans la [page « Processus » de l'Explorateur d'exécution](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
 
 :::
 ## Boutons d’administration

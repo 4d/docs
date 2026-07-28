@@ -56,7 +56,7 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.ja.html) を参照ください。
 
 #### サービスプリンシパル名 (SPN)
 
@@ -73,7 +73,7 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
   **注**:
 
   - このオプションを設定すると、 [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
-  - You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands-legacy/application-info.md) command.
+  - 4Dアプリケーションが QUICネットワークレイヤーで動作しているかどうかは、 [Application info](../commands-legacy/application-info.md) コマンドで確認できます。
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
   - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
   - QUICレイヤーオプションを選択すると:

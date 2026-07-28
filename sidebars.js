@@ -43,6 +43,27 @@ module.exports =
             "Project/documentation"
           ]
         },
+       {
+          type: "category",
+          label: "Settings",
+          link: {
+             type: "doc",
+             id: "settings/overview"
+          },
+          items: [
+                "settings/general",
+                "settings/interface",
+                "settings/compiler",
+                "settings/database",
+                "settings/backup",
+                "settings/client-server",
+                "settings/web",
+                "settings/sql",
+                "settings/ai",
+                "settings/security",
+                "settings/compatibility"
+              ]
+        },
         {
           type: "category",
           label: "Database Structure",
@@ -92,28 +113,7 @@ module.exports =
         "code-editor/write-class-method",
         "Project/components",
         "Project/compiler",
-        {
-          type: "category",
-          label: "Settings",
-          link: {
-             type: "doc",
-             id: "settings/overview"
-          },
-          items: [
-                "settings/general",
-                "settings/interface",
-                "settings/compiler",
-                "settings/database",
-                "settings/backup",
-                "settings/client-server",
-                "settings/web",
-                "settings/sql",
-                "settings/ai",
-                "settings/security",
-                "settings/compatibility"
-              ]
-        },
-         "Desktop/building",
+        "Desktop/building",
           {
            type: "category",
            label: "Debugging",
@@ -250,6 +250,7 @@ module.exports =
             "API/MethodClass",
             "API/OutgoingMessageClass",
             "API/POP3TransporterClass",
+            "API/QuotaManagerClass",
             "API/SessionClass",
             "API/SignalClass",
             "API/SMTPTransporterClass",
@@ -333,7 +334,29 @@ module.exports =
         },
         "Develop-legacy/transactions",
         "Tags/transformation-tags",
-        "Project/date-time-formats"
+        "Project/date-time-formats",
+        "Develop-legacy/xml"
+        /*
+        // not ready yet, needs imports from Design ref for records and selection concepts,
+        {
+            type: "category",
+            label: "Records & Selections (legacy data access)",
+            link: {
+              type: "generated-index",
+            title: "Records & Selections (legacy data access)",
+            description: "Legacy data access based upon records, selections, sets",
+            slug: "/category/records-selections",
+            keywords: [
+              "records",
+              "selections"
+            ],
+            image: "/img/docusaurus.png"              },
+              items: [
+                "Develop-legacy/records",
+                "Develop-legacy/sets",
+                "Develop-legacy/named-selections"
+          ]
+        } */
       ]
     },
     {
@@ -697,6 +720,16 @@ module.exports =
             }
           ]
         },
+        {
+          type: "doc",
+          label: "Standard actions",
+          id: "Desktop-legacy/standard-actions"
+        },
+        {
+          type: "doc",
+          label: "Drag and Drop",
+          id: "Desktop/drag-and-drop"
+        },
          {
           type: "doc",
           label: "Labels",
@@ -741,7 +774,7 @@ module.exports =
     },
     {
       type: "category",
-      label: "Administration",
+      label: "Server & Admin",
       link: {
         type: "generated-index",
         title: "Administration",

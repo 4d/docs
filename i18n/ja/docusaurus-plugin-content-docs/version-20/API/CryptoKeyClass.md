@@ -58,7 +58,7 @@ title: CryptoKey
 
 | プロパティ           | 型       | 説明                                                                                           |
 | --------------- | ------- | -------------------------------------------------------------------------------------------- |
-| [type](#type)   | text    | 作成するキーのタイプを定義します: <li>"RSA": [.size](#size) に指定されたサイズを使って、RSA キーペアを生成します。</li><li>"ECDSA": [.curve](#curve) に指定された曲線を用いて、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) を使ったキーペアを生成します。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。</li><li>"PEM": [.pem](#pem) を使って、PEM 形式のキーペアをロードします。</li> |
+| [type](#type)   | text    | 作成するキーのタイプを定義します: <li>"RSA": [.size](#size) に指定されたサイズを使って、RSA キーペアを生成します。</li><li>"ECDSA": <code>settings.curve</code> に指定された曲線を <a href="#curve">.curve</a> として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア。 "ECDSA": [.curve](#curve) に指定された曲線を用いて、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) を使ったキーペアを生成します。</li><li>"PEM": [.pem](#pem) を使って、PEM 形式のキーペアをロードします。</li> |
 | [curve](#curve) | text    | ECDSA 曲線名                                                                                    |
 | [pem](#pem)     | text    | ロードする PEM 形式の暗号化キー                                                                           |
 | [size](#size)   | integer | RSA キーのサイズ (ビット単位)                                                                           |
@@ -391,7 +391,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 
 - "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア
-- "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
+- ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。 "ECDSA": \[.curve\](#curve) に指定された曲線を用いて、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) を使ったキーペアを生成します。
 - "PEM": `settings.pem` を [.pem](#pem) として使った、PEM 形式のキーペア
 
 

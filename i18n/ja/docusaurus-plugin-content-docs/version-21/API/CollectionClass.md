@@ -921,7 +921,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 引数に矛盾がある場合、次のように解釈されます:
 
-- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 - *end* < 0 の場合、それは *end:=end+length* として再計算されます。
 - 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
@@ -1778,7 +1778,7 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 オプションとして、*startFrom* 引数を渡すことで、逆順検索を開始するコレクション要素のインデックスを指定することができます。
 
 - *startFrom* が、コレクションの length から 1を引いた数字 (coll.length-1) 以上の場合、コレクション全体が検索されます (デフォルト)。
-- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 計算結果も負の値である場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。 計算結果も負の値である場合、-1 が返されます。 これはコレクションが検索されていないことを意味します。
   **注:** *startFrom* が負の値であっても、コレクションは右から左へと検索されます。
 - *startFrom* = 0 の場合、-1 が返されます。これはコレクションが検索されていないことを意味します。
 
@@ -2240,7 +2240,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-オブジェクトのコレクションをプロパティパスで並べ替えます:
+オブジェクトのコレクションを、<em x-id="3">pathObjects</em> コレクションを使用して並べ替えます:
 
 ```4d
  var $c; $c2 : Collection
@@ -2253,7 +2253,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 #### 例題 3
 
-オブジェクトのコレクションを、<em x-id="3">pathObjects</em> コレクションを使用して並べ替えます:
+オブジェクトのコレクションをプロパティパスで並べ替えます:
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -3215,7 +3215,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a ne
 
 戻り値のコレクションには、*startFrom* 引数で指定した要素 (含まれる) から、*end* 引数で指定した要素まで (含まれない) の全要素が格納されます。 戻り値のコレクションには、*startFrom* 引数で指定した要素 (含まれる) から、*end* 引数で指定した要素まで (含まれない) の全要素が格納されます。 *startFrom* 引数のみを渡した場合には、*startFrom* 引数で指定した要素から最後の要素までが戻り値のコレクションに格納されます。
 
-- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。
+- *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (コレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 - 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
 - *end* < 0 の場合、それは *end:=end+length* として再計算されます。
 - 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。

@@ -19,7 +19,7 @@ title: Document Class
 
 #### Descripción
 
-La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->la fecha de creación del archivo<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->La propiedad `.creationDate` devuelve<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -161,7 +161,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->siempre true para un archivo<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->La función `.copyTo()`<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -181,7 +181,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->siempre false para un archivo<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->siempre true para un archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -231,7 +231,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->la fecha de la última modificación del archivo<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->La propiedad `.modificationDate` devuelve<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -251,7 +251,7 @@ Esta propiedad es **de sólo lectura**.
 
 ##### Descripción
 
-La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->la hora de la última modificación del archivo<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
+La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->La propiedad `.modificationTime` devuelve<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**.
 
@@ -316,7 +316,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto de la carpeta padre del archivo<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->La propiedad `.parent` devuelve<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -336,7 +336,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->La propiedad `.path` devuelve<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -356,7 +356,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->la ruta del archivo expresada con la sintaxis de la plataforma actual<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->La propiedad `.platformPath` devuelve<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -409,7 +409,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La función `.copyTo()` <!-- REF #document.copyTo().Summary -->copia el objeto `File` en la carpeta *destinationFolder* especificada <!-- END REF -->.
+La función `.copyTo()` <!-- REF #document.copyTo().Summary -->La propiedad `.isFolder` devuelve <!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 

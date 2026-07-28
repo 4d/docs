@@ -139,7 +139,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
  $revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスで返されるのは、属性内に保管されている値ではなく、[**属性のプロパティ**](../API/DataClassClass.md#attributename)を含む、属性自身の参照である点に留意してください。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
+このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。 このシンタックスで返されるのは、属性内に保管されている値ではなく、[**属性のプロパティ**](../API/DataClassClass.md#attributename)を含む、属性自身の参照である点に留意してください。
 
 テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
@@ -162,7 +162,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 これに加えて、以下のリレーション属性もまた自動的に利用可能になります:
 
 * Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。 各 Project (クライアント) に対して最大 1つの Companyが あります。
-* Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。
+* Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。 > データベースリレーションの手動あるいは自動プロパティは、ORDA においては何の効力も持ちません。
 > データベースリレーションの手動あるいは自動プロパティは、ORDA においては何の効力も持ちません。
 
 すべてのデータクラス属性はデータクラスのプロパティとして公開されています:

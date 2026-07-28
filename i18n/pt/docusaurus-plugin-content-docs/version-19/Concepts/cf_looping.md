@@ -46,7 +46,7 @@ A sintaxe formal da estrutura de fluxo de controle `Repeat... Until` é:
     statement(s)
  Until(Boolean_Expression)
 ```
-Um ciclo `Repeat...Until` é como um ciclo [While...End while](#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. A outra diferença com um loop `Repeat...</p>
+Until</code> é como um ciclo [While... End while](#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. A outra diferença com um loop `Repeat... A outra diferença com um loop `Repeat...</p>
 
 <p spaces-before="0">A outra diferença com um loop <code>Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
@@ -129,7 +129,7 @@ A estrutura `For... End for` é um loop controlado por um contador:
 
 A maioria dos loops `For... End for` que você irá escrever em seus projetos terá a aparência dos listados nestes exemplos.
 
-### Diminuir a variável contador
+### Incrementar a variável do contador em mais de um
 
 Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para fazer isso, deve especificar *Start_Expression* maior que *End_Expression* e *Increment_Expression* deve ser negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
 
@@ -174,7 +174,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-### Incrementar a variável do contador em mais de um
+### Diminuir a variável contador
 
 Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo valor absoluto seja maior que um.
 
@@ -197,7 +197,7 @@ Vamos voltar para o primeiro exemplo `For... End for`. O seguinte exemplo execut
  End for
 ```
 
-Aqui está o loop `Repeat... Until` équivalente:
+Aqui está o equivalente ao loop `While... End while`:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -206,7 +206,7 @@ Aqui está o loop `Repeat... Until` équivalente:
  End while
 ```
 
-Aqui está o equivalente ao loop `While... End while`:
+Aqui está o loop `Repeat... Until` équivalente:
 ```4d
  $i:=1 //Initializa o contador
  Repeat

@@ -94,7 +94,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 ### Project ソースファイルにトークンを含める
 
-このオプションを有効にすると、新規の 4Dプロジェクトで保存された [メソッドのソースファイル](../Project/architecture.md#sources) には、クラシックランゲージおよびデータベースオブジェクト (定数、コマンド、テーブル、フィールド) 用の **トークン** が含まれます。 トークンとは、ソースコードファイルに挿入される `:C10` や `:5` などの追加文字で、テーブルやフィールドの名前を変更したり、4Dバージョンに関係なく要素を識別したりすることを可能にします ([フォーミュラ内でのトークンの使用](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.ja.html) を参照ください）。
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain [**tokens** for classic language and database objects (constants, commands, tables and fields)](../Concepts/methods.md#language-tokens). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version.
 
 バージョン管理システムや外部のコードエディターを新規プロジェクトで使用したい場合、これらのツールでのコードの可読性のために、このオプションのチェックを外すことができます。
 
@@ -151,7 +151,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 4Dがドキュメントのページを探す場所を設定します。
 
-- チェックされている場合 (デフォルト)、4D はまずローカルフォルダーでページを探します (後述参照)。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 見つからない場合、4D は自動でオンラインドキュメントの Webサイトを参照します。 この場合インターネットに接続されていない環境でも、ローカルのドキュメントが参照できます。
+- チェックされている場合 (デフォルト)、4D はまずローカルフォルダーでページを探します (後述参照)。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 この場合インターネットに接続されていない環境でも、ローカルのドキュメントが参照できます。
 - チェックされていない場合、4D はオンラインドキュメントの Webサイトに直接アクセスし、カレントブラウザーでページを表示します。 ページが見つからない場合、4D はブラウザーにエラーメッセージを表示します。
 
 ### ローカルフォルダー

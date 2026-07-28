@@ -35,6 +35,7 @@ title: ループ構造
  ")  // ユーザーに確認します
  ")  // ユーザーに確認します
  ")  // ユーザーに確認します
+ ")  // ユーザーに確認します
  While(OK=1) // 利用者が望む限りループします
     ADD RECORD([aTable]) // 新規にレコードを追加します
  End while // ループは必ず End while によって終わります
@@ -50,7 +51,7 @@ title: ループ構造
     statement(s)
  Until(Boolean_Expression)
 ```
-`Repeat...Until` ループは、[While...End while](#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
+`Repeat...Until` ループは、[While...End while](flow-control.md#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 `Repeat...Until` ループは、[While...End while](#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
 

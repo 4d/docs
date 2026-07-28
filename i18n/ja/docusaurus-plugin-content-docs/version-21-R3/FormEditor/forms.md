@@ -66,7 +66,7 @@ title: Forms
 }
 ```
 
-## Printing forms
+## フォームを印刷する
 
 In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
 

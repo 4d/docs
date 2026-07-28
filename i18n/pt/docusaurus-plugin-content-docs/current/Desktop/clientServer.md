@@ -149,6 +149,22 @@ The following table summarizes where the code is executed by default and how to 
 | Database methods:<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server            | n/a                                                                                                                                                                                                                         |
 | Database methods:<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                   | client            | n/a                                                                                                                                                                                                                         |
 
+## Management of sleeping client sessions
+
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server remains active.
+
+In this case, the remote application notifies 4D Server before entering sleep mode. The corresponding client session changes to the **Sleeping** status.
+
+![](../assets/en/Admin/server-sleep.png)
+
+This status frees server resources while preserving the session context.
+
+When the remote machine wakes up, the application automatically reconnects and restores the existing session.
+
+A sleeping client session is automatically dropped after 48 hours of inactivity.
+
+You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+
 ## Management of unreachable peer
 
 When the [QUIC network layer is used](../settings/client-server.md#network-layer), client/server sessions benefit from an **automatic reconnection feature** in case of unexpected disconnections. Unexpected disconnections include for example:
@@ -172,7 +188,7 @@ The QUIC network layer automatically emits an "Unreachable" event to 4D Server w
 
 #### Remote stops responding
 
-When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote client status](../ServerWindow/users.md#list-of-users) is set to **Unreachable**.
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/sessions.md#list-of-sessions) is set to **Unreachable**.
 
 ![](../assets/en/Desktop/unreachable-status.png)
 
@@ -188,6 +204,8 @@ When the "Unreachable" event is received on either side, an [`info.unreachableSi
 
 ### Restoring or closing connection
 
+The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
+
 The QUIC session timeout is automatically used to monitor disconnections:
 
 - If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.
@@ -196,4 +214,3 @@ The QUIC session timeout is automatically used to monitor disconnections:
   - In case of a server session closed from a remote machine, a warning dialog box is displayed so that the user can restart the remote application or quit:
     ![](../assets/en/Desktop/remote-not-responding.png)
 
-The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.

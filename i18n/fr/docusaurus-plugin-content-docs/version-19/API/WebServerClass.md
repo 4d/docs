@@ -232,7 +232,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 Contient le <!-- REF #WebServerClass.CORSSettings.Summary -->liste des hôtes et méthodes autorisés pour le service CORS<!-- END REF --> (voir propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
 
-- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
+- **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs syntaxes sont supportées :
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.*
@@ -571,7 +571,7 @@ Le <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèqu
 
 *Propriété en lecture seulement.*
 
-Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->Le disponibilité de PFS sur le serveur<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -605,7 +605,7 @@ Contient <!-- REF #WebServerClass.scalableSession.Summary -->`True` si les sessi
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.sessionCookieDomain.Summary -->champ "domain" du cookie de session<!-- END REF -->. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
+Le <!-- REF #WebServerClass.sessionCookieDomain.Summary -->Le<!-- END REF -->. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
 
 <!-- END REF -->
 
@@ -629,7 +629,7 @@ Le <!-- REF #WebServerClass.sessionCookieName.Summary -->nom du cookie utilisé 
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie de session<!-- END REF -->. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Le<!-- END REF -->. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 <!-- END REF -->
 

@@ -8,7 +8,7 @@ Pode utilizar esta página para encriptar ou *decriptar* (ou seja, remover a enc
 
 :::info
 
-Para informação detalhada sobre encriptação de dados em 4D, por favor consulte a secção [Cifrar dados](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) no manual de *Desenho*. Também pode ler blog post [Um olhar mais profundo sobre a encriptação de dados 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+Também pode ler blog post [Um olhar mais profundo sobre a encriptação de dados 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/). Para informação detalhada sobre encriptação de dados em 4D, por favor consulte a secção [Cifrar dados](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) no manual de *Desenho*.
 
 :::
 

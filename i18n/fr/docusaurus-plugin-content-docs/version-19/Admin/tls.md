@@ -13,7 +13,7 @@ Tous les serveurs 4D peuvent communiquer en mode sécurisé via le protocole TLS
 
 Le protocole TLS (successeur du SSL) a pour but de sécuriser les informations de données entre deux applications—principalement entre un serveur web et un navigateur. Ce protocole est largement répandu et compatible avec la plupart des navigateurs web.
 
-Au niveau de l'architecture réseau, le protocole de sécurité s'insère entre la couche TCP/IP (bas niveau) et le protocole de haut niveau HTTP, pour lequel il est principalement destiné.
+Au niveau de l'architecture réseau, le protocole de sécurité s'insère entre la couche TCP/IP (bas niveau) et le protocole de haut niveau HTTP, pour lequel il est principalement destiné. pour lequel il est principalement destiné.
 
 Configuration réseau avec TSL :
 
@@ -57,7 +57,7 @@ Pour des raisons de sécurité, la clé privée doit toujours être gardée secr
 
 3. Envoyez la demande de certificat à l’autorité de certification que vous avez choisie. Pour remplir la demande de certificat, il vous sera peut-être nécessaire de contacter l’autorité de certification. Les autorités de certification vérifient la réalité des informations qui leur ont été transmises. La demande de certificat est générée dans un BLOB au format PKCS encodé en base64 (format PEM). Ce principe autorise le copier-coller des clés sous forme de texte et leur envoi par E-mail en toute sécurité, sans risque d’altération de leur contenu. Vous pouvez donc par exemple sauvegarder le BLOB contenant la demande de certificat dans un document texte (à l’aide de `BLOB VERS DOCUMENT`), puis l’ouvrir et copier-coller son contenu dans un E-mail ou un formulaire Web destiné à l’autorité de certification.
 
-4. Une fois que vous avez reçu votre certificat, créez un fichier texte que vous nommerez “cert.pem” et copiez dans ce fichier le contenu du certificat. Vous pouvez recevoir votre certificat sous plusieurs formes (généralement via un E-mail ou un formulaire HTML). 4D accepte tous les formats de texte de la plate-forme pour les certificats (macOS, PC, Linux, etc.). En revanche, le certificat doit être au format PEM, c'est-à-dire PKCS encodé en base64.
+4. Une fois que vous avez reçu votre certificat, créez un fichier texte que vous nommerez “cert.pem” et copiez dans ce fichier le contenu du certificat. Vous pouvez recevoir votre certificat sous plusieurs formes (généralement via un E-mail ou un formulaire HTML). 4D accepte tous les formats de texte de la plate-forme pour les certificats (macOS, PC, Linux, etc.). 4D accepte tous les formats de texte de la plate-forme pour les certificats (macOS, PC, Linux, etc.).
 > Les caractères de fins de ligne CR ne sont pas pris en charge. Vous devez utiliser CRLF ou LF.
 
 5. Placez le fichier “cert.pem” à [l'emplacement adéquat](#installation-and-activation).

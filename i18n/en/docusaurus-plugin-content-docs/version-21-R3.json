@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "21 R3 BETA",
+    "message": "21 R3",
     "description": "The label for version 21-R3"
   },
   "sidebar.docs.category.Getting Started": {
@@ -806,5 +806,13 @@
   "sidebar.docs.doc.Data Collection": {
     "message": "Data Collection",
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.category.Commands by theme.link.generated-index.title": {
+    "message": "Commands by theme",
+    "description": "The generated-index page title for category 'Commands by theme' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Commands by theme.link.generated-index.description": {
+    "message": "4D commands by theme",
+    "description": "The generated-index page description for category 'Commands by theme' in sidebar 'docs'"
   }
 }

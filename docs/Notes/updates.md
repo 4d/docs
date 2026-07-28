@@ -9,12 +9,15 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 
 #### Highlights
 
+- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
 - Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property. 
 - Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
 - New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas. 
-- New session `.quotas` property to configure thresholds for sessions. 
+- New session [`.quotas` property](../API/SessionClass.md#quotas) to configure REST thresholds for sessions. 
 - New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
 - New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
+- Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).  
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R4): list of all bugs that have been fixed in 4D 21 R4.  
 
 #### Behavior changes
 
@@ -93,7 +96,6 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|BoringSSL|664a985|**21 R4**|Used for QUIC|
 |CEF|7258|21|Chromium 139|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|77.1|21|This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
@@ -103,8 +105,8 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 |Libuv |1.52.1|**21 R4**|Used for QUIC|
 |libZip|1.11.4|21|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.8.1|21||
-|ngtcp2|1.23.0|**21 R4**|Used for QUIC|
-|OpenSSL|4.0|**21 R4**||
+|ngtcp2|1.24.0|**21 R4**|Used for QUIC|
+|OpenSSL|4.0.1|**21 R5**||
 |PDFWriter|4.7.0|21|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |SpreadJS|18.2.0|21 R2|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) for an overview of the new features|
 |webKit|WKWebView|19||

@@ -31,16 +31,16 @@ displayed_sidebar: docs
 
 When a project is opened, 4D loads the valid components:
 
-* found in the [Components folder of your project](../../Project/architecture.md#components).
-* declared in the [**dependencies.json** file of your project](../../Project/components.md#dependenciesjson-and-environment4djson).
+* found in the [Components folder of your project](../Project/architecture.md#components).
+* declared in the [**dependencies.json** file of your project](../Project/components.md#dependenciesjson-and-environment4djson).
 
-**Reminder:** If the same component is installed at different locations, a [priority order](../../Project/components.md#priority) is applied.
+**Reminder:** If the same component is installed at different locations, a [priority order](../Project/components.md#priority) is applied.
 
 This command can be called from the host project or from a component. If the project does not use any components, the *componentsArray* array is returned empty.
 
 The names of the components are the names of the structure files of the matrix databases (.4db, .4dc or .4dbase). This command can be used for setting up architectures and modular interfaces that offer additional functionalities according to the presence of components.
 
-For more information about 4D components, please refer to [this page](../../Concepts/components.md).
+For more information about 4D components, please refer to [this page](../Concepts/components.md).
 
 ## See also 
 

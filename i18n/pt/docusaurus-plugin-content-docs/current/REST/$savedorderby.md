@@ -7,7 +7,7 @@ Guarda el filtro definido por `$orderby` al crear un conjunto de entidades (*por
 
 ## Descrição
 
-Quando se cria um conjunto de entidades, é possível gravar a ordem de ordenação com o filtro utilizado para o criar, como medida de segurança. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$entityset/$release`](./$entityset.md#entitysetrelease)).
+Quando se cria um conjunto de entidades, é possível gravar a ordem de ordenação com o filtro utilizado para o criar, como medida de segurança. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
 
 Utilice `$savedorderby` para guardar el orden que definió al crear su conjunto de entidades, luego pase `$savedorderby` junto con su llamada para recuperar cada vez el conjunto de entidades.
 

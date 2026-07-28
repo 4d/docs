@@ -28,7 +28,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ![](../assets/en/ORDA/api.png)
 
-In addition, 4D [automatically pre-creates](../Project/code-overview.md#orda-classes) the classes for each available data model object.
+各データモデルオブジェクトに関わるクラスは、4D によって [あらかじめ自動的に作成](../Project/code-overview.md#ordaクラス) されます。
 
 ## アーキテクチャー
 
@@ -274,7 +274,7 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に: 特に:
-  - Do not give the same name to a 4D table and to a [user class name](../Project/code-overview.md#user-classes). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+  - 4D テーブルと [ユーザークラス名](../Project/code-overview.md#ユーザークラス) に同じ名前を使用してはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
   - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
 - クラス定義の際、[`Class extends`](../Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。

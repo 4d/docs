@@ -347,7 +347,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |libZip|1.11.4|**21**|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.8.1|**21**||
 |ngtcp2|1.18.0|**21**|Used for QUIC|
-|OpenSSL|3.5.2|**21**||
+|OpenSSL|3.5.7|**21**||
 |PDFWriter|4.7.0|**21**|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||

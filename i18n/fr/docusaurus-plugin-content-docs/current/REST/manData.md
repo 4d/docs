@@ -37,7 +37,7 @@ Pour accéder à l'ensemble d'entités, vous devez utiliser `$entityset/\N{entit
 
 Par défaut, un ensemble d'entités est stocké pendant deux heures ; cependant, vous pouvez modifier le délai de timeout en passant une nouvelle valeur à [`$timeout`]($timeout.md). Le timeout est continuellement réinitialisé à la valeur définie (soit par défaut soit à celle que vous définissez) chaque fois que vous l'utilisez.
 
-If you want to remove an entity set from 4D Server's cache, you can use [`$entityset/$release`](./$entityset.md#entitysetrelease).
+Si vous souhaitez supprimer un ensemble d'entités du cache de 4D Server, vous pouvez utiliser [`$method=release`]($method.md#methodrelease).
 
 Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche.
 

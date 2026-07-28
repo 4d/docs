@@ -7,7 +7,7 @@ La page IA vous permet d'ajouter, de supprimer ou de consulter la liste de tous 
 
 :::tip Article(s) de blog sur le sujet
 
-[Centraliser les fournisseurs d'IA et les alias de modèles dans 4D](https://blog.4d.com/centralizing-ai-providers-and-model-aliases-in-4d)
+[Centraliser les fournisseurs d'IA et les alias de modèles dans 4D](https://blog.4d.com/centralizing-ai-providers-information-in-4d)
 
 :::
 

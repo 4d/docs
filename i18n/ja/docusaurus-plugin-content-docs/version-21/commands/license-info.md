@@ -20,11 +20,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 20 R7 | Renamed (Get License info) |
-| 16 R6 | 変更                                            |
-| 16 R4 | Created                                       |
+| リリース  | 内容                                          |
+| ----- | ------------------------------------------- |
+| 20 R7 | 名称変更(旧 Get License info) |
+| 16 R6 | 変更                                          |
+| 16 R4 | Created                                     |
 
 </details>
 </div>

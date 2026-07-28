@@ -2236,7 +2236,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $c; $c2 : Collection
@@ -2859,7 +2859,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collections en une seule :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection
@@ -2948,7 +2948,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collections en une seule :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection

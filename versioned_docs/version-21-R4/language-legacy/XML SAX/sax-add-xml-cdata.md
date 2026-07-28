@@ -1,0 +1,99 @@
+﻿---
+id: sax-add-xml-cdata
+title: SAX ADD XML CDATA
+slug: /commands/sax-add-xml-cdata
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* : Time ; *data* : Blob, Text )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML CDATA.Params-->
+<div class="no-index">
+
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| document | Time | &#8594;  | Reference of open document |
+| data | Blob, Text | &#8594;  | Text or BLOB to insert in the document between CData tags |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.SAX ADD XML CDATA.Summary-->In the XML document referenced by *document*, the SAX ADD XML CDATA command adds *data* of the text or BLOB type.<!-- END REF--> This *data* will be automatically framed between the *<!\[CDATA\[* and *\]\]> tags.*
+
+The text included in a CData section is ignored by the XML interpreter. 
+
+If you want to encode the contents of data, you must use the [BASE64 ENCODE](../commands/base64-encode) command. In this case, of course, you must pass a BLOB in *data*. 
+
+In order for this command to operate correctly, an element must be open. Otherwise, an error will be generated. 
+
+## Example 
+
+You want to insert the following lines in your XML document:
+
+```XML
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+      {
+      return 1
+      }
+else
+      {
+      return 0
+      }
+}
+```
+
+To do this, you just need to execute the following code:
+
+```4d
+ var vtMytext : Text
+ ... // place the text in the vtMytext variable here
+ SAX ADD XML CDATA($DocRef;vtMytext)
+```
+
+The result will thus be:
+
+```XML
+<![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+   {
+   return 1
+   }
+else
+   {
+   return 0
+   }
+}
+]]>
+```
+
+## System variables and sets 
+
+If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
+
+## See also 
+
+[SAX GET XML CDATA](../commands/sax-get-xml-cdata)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 856 |
+| Thread safe | yes |
+| Modifies variables | OK |
+
+

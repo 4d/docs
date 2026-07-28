@@ -34,8 +34,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -170,8 +169,7 @@ $transporter.send($email)
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 

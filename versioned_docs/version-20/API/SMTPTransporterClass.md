@@ -140,7 +140,7 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+For information about SMTP status codes, please refer to [this page](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml).
 
 #### Example
 

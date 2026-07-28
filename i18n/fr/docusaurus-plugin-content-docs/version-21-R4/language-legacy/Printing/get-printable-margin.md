@@ -1,0 +1,65 @@
+﻿---
+id: get-printable-margin
+title: GET PRINTABLE MARGIN
+slug: /commands/get-printable-margin
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE MARGIN.Params-->
+<div class="no-index">
+
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| gauche | Integer | &#8592; | Marge gauche |
+| haut | Integer | &#8592; | Marge supérieure |
+| droite | Integer | &#8592; | Marge droite |
+| bas | Integer | &#8592; | Marge inférieure |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->La commande **GET PRINTABLE MARGIN** retourne les valeurs courantes des différentes marges définies lors de l’utilisation des commandes [Print form](../commands/print-form), [PRINT SELECTION](../commands/print-selection) et [PRINT RECORD](../commands/print-record).<!-- END REF-->
+
+Les valeurs sont retournées en pixels par rapport au bord du papier. 
+
+Il est possible d’obtenir la taille du papier à l’aide de la fonction [GET PRINTABLE AREA](../commands/get-printable-area), et ainsi de calculer la zone imprimable.
+
+### Gestion des marges d’impression 
+
+Par défaut, dans 4D le calcul des impressions est effectué sur la base des “marges imprimante”. L’avantage de ce système est que les formulaires s’adaptent automatiquement aux nouvelles imprimantes (puisque positionnés dans la partie imprimable). En revanche, dans le cas des formulaires pré-imprimés, il n’est pas possible de positionner précisément les éléments à imprimer car un changement d’imprimante peut modifier les marges imprimante.
+
+Il est possible de baser l’impression des formulaires effectuée à l’aide des commandes [Print form](../commands/print-form), [PRINT SELECTION](../commands/print-selection) et [PRINT RECORD](../commands/print-record) sur une marge fixe et identique sur chaque imprimante : la marge papier, c’est-à-dire les limites physiques de la feuille. Pour cela, il suffit d’utiliser les commandes [GET PRINTABLE MARGIN](../commands/get-printable-margin), [SET PRINTABLE MARGIN](../commands/set-printable-margin) et [GET PRINTABLE AREA](../commands/get-printable-area).
+
+## Terminologie des impressions 
+
+* **Marge papier** : la marge papier correspond aux limites physiques de la feuille.
+* **Marge imprimante** : la marge imprimante est la marge au-dela de laquelle l’imprimante est incapable d’imprimer (pour des raisons physiques : galets d’impression, fin de course de la tête d’impression...). Elle varie d’une imprimante à l’autre et d’un format à l’autre.
+* **Marge morte** : c’est la zone située entre la marge papier et la marge imprimante.  
+![](../../assets/en/commands/pict28491.fr.png)
+
+## Voir aussi 
+
+[GET PRINTABLE AREA](../commands/get-printable-area)  
+[Print form](../commands/print-form)  
+[SET PRINTABLE MARGIN](../commands/set-printable-margin)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 711 |
+| Thread safe | no |
+
+

@@ -11,41 +11,41 @@ title: OpenAIChatCompletionsResult
 
 ## 計算プロパティ
 
-| プロパティ     | 型            | 説明                                                                                                                   |
-| --------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `choices` | Collection   | Open AI レスポンスから[OpenAIChoice](OpenAIChoice.md) のコレクションを返します。                                                         |
-| `choice`  | OpenAIChoice | choices コレクションの中から最初の[OpenAIChoice](OpenAIChoice.md) を返します。                                                          |
-| `usage`   | Object       | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| プロパティ     | 型            | 説明                                                                              |
+| --------- | ------------ | ------------------------------------------------------------------------------- |
+| `choices` | Collection   | Open AI レスポンスから[OpenAIChoice](OpenAIChoice.md) のコレクションを返します。                    |
+| `choice`  | OpenAIChoice | choices コレクションの中から最初の[OpenAIChoice](OpenAIChoice.md) を返します。                     |
+| `usage`   | Object       | トークン使用状況の情報をかえします([OpenAIResult](OpenAIResult.md) から継承されます)。 |
 
 ### usage
 
-The `usage` property returns an object containing token usage information for chat completions.
+`usage` プロパティはチャット補完のトークン使用状況情報を格納したオブジェクトを返します。
 
-| フィールド                       | 型       | 説明                                                                            |
-| --------------------------- | ------- | ----------------------------------------------------------------------------- |
-| `prompt_tokens`             | Integer | Number of tokens in the prompt.                               |
-| `completion_tokens`         | Integer | Number of tokens in the completion.                           |
-| `total_tokens`              | Integer | Total tokens used (prompt + completion).   |
-| `prompt_tokens_details`     | Object  | Breakdown of prompt tokens (optional).     |
-| `completion_tokens_details` | Object  | Breakdown of completion tokens (optional). |
+| フィールド                       | 型       | 説明                                           |
+| --------------------------- | ------- | -------------------------------------------- |
+| `prompt_tokens`             | Integer | プロンプト内のトークンの数。                               |
+| `completion_tokens`         | Integer | 補完内でのトークンの数。                                 |
+| `total_tokens`              | Integer | 使用されたトークンの総数(プロンプト + 補完)。 |
+| `prompt_tokens_details`     | Object  | プロンプトトークンの詳細な内訳(オプション)。   |
+| `completion_tokens_details` | Object  | 補完トークンの詳細な内訳(オプション)。      |
 
 #### prompt_tokens_details
 
-| フィールド           | 型       | 説明                                                                         |
-| --------------- | ------- | -------------------------------------------------------------------------- |
-| `cached_tokens` | Integer | Number of tokens served from cache.                        |
-| `audio_tokens`  | Integer | Number of audio tokens (if applicable). |
+| フィールド           | 型       | 説明                                      |
+| --------------- | ------- | --------------------------------------- |
+| `cached_tokens` | Integer | キャッシュから提供されたトークンの数。                     |
+| `audio_tokens`  | Integer | オーディオトークンの数(該当する場合)。 |
 
 #### completion_tokens_details
 
-| フィールド                        | 型       | 説明                                                                                                              |
-| ---------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
-| `reasoning_tokens`           | Integer | Tokens used for reasoning (e.g., o1 models). |
-| `audio_tokens`               | Integer | Number of audio tokens (if applicable).                                      |
-| `accepted_prediction_tokens` | Integer | Tokens from accepted predictions.                                                               |
-| `rejected_prediction_tokens` | Integer | Tokens from rejected predictions.                                                               |
+| フィールド                        | 型       | 説明                                                                |
+| ---------------------------- | ------- | ----------------------------------------------------------------- |
+| `reasoning_tokens`           | Integer | リーズニング(例: o1 モデルなど)に使用されたトークン。 |
+| `audio_tokens`               | Integer | オーディオトークンの数(該当する場合)。                           |
+| `accepted_prediction_tokens` | Integer | 受け入れられた予測からのトークン。                                                 |
+| `rejected_prediction_tokens` | Integer | 却下された予測からのトークン。                                                   |
 
-**Example response:**
+**レスポンスの例:**
 
 ```json
 {
@@ -65,7 +65,7 @@ The `usage` property returns an object containing token usage information for ch
 }
 ```
 
-> **Note:** The `*_tokens_details` objects may not be present in all responses or from all providers.
+> **注意:** `*_tokens_details` オブジェクトは全てのレスポンスにいるとは限らず、また全てのプロバイダーから返されるとも限りません。
 
 ## 参照
 

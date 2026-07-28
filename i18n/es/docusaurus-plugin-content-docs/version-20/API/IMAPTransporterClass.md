@@ -72,18 +72,18 @@ El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summa
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                               | Valor por defecto (si se omite)                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena de texto u objeto token que representa las credenciales de autorización OAuth2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                             |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
-| .**password**: Text<br/>Contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                  | ninguno                                                             |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                 |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                               | Valor por defecto (si se omite)                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena de texto u objeto token que representa las credenciales de autorización OAuth2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
+| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                      |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
+| .**password**: Text<br/>Contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                  | ninguno                                                                  |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                      |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
 #### Resultado
@@ -986,7 +986,7 @@ Caracter delimitador del nombre del buzón.
 
 #### Descripción
 
-La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->La función `.getMail()`<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
 En el primer parámetro, puede pasar:
 
@@ -1597,7 +1597,7 @@ End if
 
 > Esta función se basa en la especificación del [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual<!-- END REF -->. .
+busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual <!-- REF #IMAPTransporterClass.searchMails().Summary -->La función `.searchMails()`<!-- END REF -->. .
 
 *searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves-de-búsqueda-autorizadas](#authorized-search-keys) más abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
 
@@ -1737,7 +1737,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 #### Descripción
 
-La función `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona el buzón *name* como el buzón actual<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+selecciona el buzón *name* como el buzón actual <!-- REF #IMAPTransporterClass.selectBox().Summary -->La función `.selectBox()`<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 > Para obtener la información de un buzón sin cambiar el buzón actual, utilice [`.getBoxInfo()`](#getboxinfo).
 
 En el parámetro *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).

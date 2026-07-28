@@ -76,7 +76,7 @@ title: 依存関係
 
 #### environment4d.json
 
-**environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
+**environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
 
 このアーキテクチャーの主な利点は次のとおりです:
 
@@ -188,7 +188,7 @@ GitHub またはGitLab に保存された 4Dコンポーネントを直接参照
 #### GitHubリポジトリの設定
 
 1. ZIP形式でコンポーネントファイルを圧縮します。
-2. GitHubリポジトリと同じ名前をこのアーカイブに付けます。 例えば、"my-4D-Component" というレポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。 例えば、"my-4D-Component" というレポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。
+2. GitHubリポジトリと同じ名前をこのアーカイブに付けます。 例えば、"my-4D-Component" というレポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。
 
 - このリポジトリの [GitHubリリース](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository) にアーカイブを統合します。
 
@@ -266,7 +266,7 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 :::
 
-- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば:
 
 ```json title="dependencies.json"
 {
@@ -343,7 +343,7 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHub およびGitLab コンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます: ローカルキャッシュフォルダーは以下の場所に保存されます:
+参照された GitHub およびGitLab コンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます:
 
 - macOS: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -558,7 +558,7 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 
 #### 依存関係バージョン範囲の変更
 
-一覧に表示された依存関係に対して[バージョン設定](#依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
+一覧に表示された依存関係に対して[バージョン設定](#依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
 
@@ -613,7 +613,7 @@ If a new component version matching your [component versioning configuration](#d
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-dependency-version-range).
+どちらの場合においても、現在の依存関係ステータスに関わらず、依存関係が更新される前にGitHub 上で自動チェックが実行されます。これによって[コンポーネントバージョン設定基づいた](#github-依存関係のバージョン範囲を定義) 最新のバージョンが取得されるようにします。
 
 更新コマンドを選択すると:
 
@@ -624,9 +624,9 @@ In any cases, whatever the current dependency status, an automatic checking is d
 
 依存関係マネージャウィンドウの下部の**オプション**メニューから、**自動アップデート** オプションを選択することができます。
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
+このオプションがチェックされている場合 (デフォルト)、[コンポーネントバージョン設定](#依存関係のバージョン範囲を定義) に合致する新しい GitHub または GitLab コンポーネントバージョンは、次回プロジェクト起動時に自動更新されます。 このオプションは手動で更新を選択する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
+このオプションがチェックされていない場合、[コンポーネントバージョン設定](#依存関係のバージョン範囲を定義) に合致している新しいコンポーネントバージョンは、利用可能であることが表示されるに止まり、[手動での更新](#依存関係の更新) を必要とします。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
 
 ### アクセストークンの提供
 

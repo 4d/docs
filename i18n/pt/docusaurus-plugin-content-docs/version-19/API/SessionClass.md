@@ -38,7 +38,7 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Result|4D. Session|<-|Session object|
 </div>
 <!-- END REF -->
 
@@ -176,10 +176,8 @@ Se quiser comprovar se o privilégio "WebAdmin" está associado à sessão:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //O acesso é concedido, não faça nada
-Else
- //Exibir uma página de autenticação
-End if
+ //O acesso é concedido, não faça nada Else
+ //Exibir uma página de autenticação End if
 ```
 
 <!-- END REF -->
@@ -214,11 +212,9 @@ Essa propriedade é**apenas escrita**.
 ```4d
 If (Session.isGuest())
   // Uma sessão de convidado será fechada após 60 minutos de inatividade
- Session.idleTimeout:=60
-Else
+ Session.idleTimeout:=60 Else
   // Outras sessões serão fechadas após 120 minutos de inatividade
- Session.idleTimeout:=120
-End if
+ Session.idleTimeout:=120 End if
 
 ```
 
@@ -257,8 +253,7 @@ No método base `On Web Connection`:
 
 ```4d
 If (Session.isGuest())
- //Fazer algo para o usuário convidado
-End if
+ //Fazer algo para o usuário convidado End if
 ```
 
 <!-- END REF -->

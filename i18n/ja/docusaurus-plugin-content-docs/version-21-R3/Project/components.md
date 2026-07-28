@@ -614,7 +614,7 @@ If a new component version matching your [component versioning configuration](#d
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-dependency-version-range).
+どちらの場合においても、現在の依存関係ステータスに関わらず、依存関係が更新される前にGitHub 上で自動チェックが実行されます。これによって[コンポーネントバージョン設定基づいた](#github-依存関係のバージョン範囲を定義) 最新のバージョンが取得されるようにします。
 
 更新コマンドを選択すると:
 
@@ -627,7 +627,7 @@ In any cases, whatever the current dependency status, an automatic checking is d
 
 When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
 
-When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-dependency-version-range) are automatically updated for the next project startup. 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
+このオプションがチェックされていない場合、[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいコンポーネントバージョンは、利用可能であることが表示されるに止まり、[手動での更新](#依存関係の更新) を必要とします。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
 
 ### アクセストークンの提供
 

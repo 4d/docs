@@ -80,7 +80,7 @@ El comparador debe ser uno de los siguientes valores:
 
 ## Similitud vectorial
 
-If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to only store 4D.Vector class objects](../Develop/field-properties.md#class)), you can filter the dataclass using **vectors**, aka **embeddings**.
+Si el atributo almacena [**objetos vectoriales**](../API/VectorClass.md) (ver cómo [configurar un campo 4D para almacenar sólo objetos de la clase 4D.Vector](../Develop/field-properties.md#class)), puede filtrar el nivel de datos utilizando **vectores**, igualmente llamados **embeddings**.
 
 Para obtener más información sobre las búsquedas de similitudes vectoriales, consulte la sección [Consulta por similitud vectorial](../API/DataClassClass.md#query-by-vector-similarity).
 
@@ -96,7 +96,7 @@ El parámetro *vectorComparison* es una colección de los siguientes elementos:
 | [].metric    | Text                 | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. Valores soportados:<li>"cosine" (por defecto si omitido): calcula la similitud del coseno entre los vectores.</li><li>"dot": calcula la similitud de puntos de los vectores.</li><li>"euclídea": calcula la distancia euclidiana entre vectores. |
 | [].threshold | Real                 | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                               |
 
-Only a subset of **comparator** symbols is supported with vector comparisons. Tenga en cuenta que comparan los resultados con el valor umbral:
+Solo un subconjunto de símbolos **comparadores** es soportado con comparaciones vectoriales. Tenga en cuenta que comparan los resultados con el valor umbral:
 
 | Comparador        | Símbolo(s) | Comentario                  |
 | ----------------- | ----------------------------- | --------------------------- |

@@ -953,7 +953,7 @@ Caracter delimitador del nombre del buzón.
 
 #### Descripción
 
-La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
 En el primer parámetro, puede pasar:
 
@@ -1156,7 +1156,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 #### Resultado
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` devuelve un `BLOB` que se puede archivar en una base de datos o convertir en un [objeto `Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
 #### Ejemplo
 

@@ -67,7 +67,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 </div>
 <!-- END REF -->
 
-`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   It returns all user classes [defined](../Project/code-overview.md#creating-classes) in the opened project or component. It returns all user classes [defined](../Project/code-overview.md#creating-classes in the opened project or component. デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+`cs` コマンドは、<!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。   It returns all user classes [defined](../Project/code-overview.md#creating-classes) in the opened project or component. 開いているプロジェクトまたはコンポーネント内で[定義されている](../Project/code-overview.md#creating-classes) 全てのユーザークラスを返します。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 
@@ -112,7 +112,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## Class オブジェクト
 
-When a class is [defined](../Project/code-overview.md#creating-classes in the project, it is loaded in the 4D language environment. クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
+クラスがプロジェクト内で[定義されて](../Project/code-overview.md#creating-classes) いれば、それは4D ランゲージ環境に読み込まれます。 クラスとは、それ自身が ["Class" クラス](API/ClassClass.md) のオブジェクトです。 Class オブジェクトは次のプロパティや関数を持ちます:
 
 - [`name`](API/ClassClass.md#name) 文字列
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)

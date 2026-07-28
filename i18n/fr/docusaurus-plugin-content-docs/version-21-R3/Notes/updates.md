@@ -18,7 +18,7 @@ Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Nouvelle [page **IA**](../settings/ai.md) dans la boîte de dialogue des Propriétés, permettant de configurer des [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md) qui peuvent être appelés dans le code via le composant 4D AIKit.
 - Composant 4D AIKit : nouvelle classe [Providers](../aikit/Classes/OpenAIProviders.md) pour instancier et gérer les [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md).
 - Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
-- New [printing renderer](../FormEditor/forms.md#print-rendering-engine) for forms on Liquid glass and Fluent UI interfaces. New compatibility options to [enable the renderer on Classic interfaces](../FormEditor/forms.md#legacy-print-renderer).
+- Nouveau [moteur de rendu d'impression](../FormEditor/forms.md#print-rendering-engine) pour les formulaires dans les interfaces Liquid Glass et Fluent UI. Nouvelle option de compatibilité permettant d'[activer le moteur de rendu sur les interfaces classiques](../FormEditor/forms.md#legacy-print-renderer).
 - Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 

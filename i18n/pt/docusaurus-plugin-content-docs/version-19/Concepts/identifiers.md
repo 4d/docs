@@ -29,7 +29,7 @@ O nome de funções devem estar em conformidade com as [regras normais de nomea�
 
 Um nome de objeto de formulário pode conter até 255 caracteres.
 
-As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .

@@ -42,29 +42,29 @@ Dans ce court exemple, vous verrez comment créer et appeler une macro qui ajout
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
-	
-	var $btnHello : Object
-	
-	// Créer un bouton "Hello"
-	$btnHello:=New object("type"; "button"; \
-	"text"; "Hello World!"; \
-	"method"; New object("source"; "ALERT(\"Hello World!\")"); \
-	"events"; New collection("onClick"); \
-	"width"; 120; \
-	"height"; 20; \
-	"top"; 0; \
-	"left"; 0)	
-	
-	// Ajouter le bouton dans la page courante
-	$editor.editor.currentPage.objects.btnHello:=$btnHello	
-	
-	// Sélectionner le nouveau bouton dans l'éditeur de formulaires
-	$editor.editor.currentSelection.clear() //unselect elements
-	$editor.editor.currentSelection.push("btnHello")	
-	
-	// Notifier l'éditeur de formulaires de la modification
-	$result:=New object("currentSelection"; $editor.editor.currentSelection;\  
-		"currentPage"; $editor.editor.currentPage)
+
+    var $btnHello : Object
+
+    // Créer un bouton "Hello"
+    $btnHello:=New object("type"; "button"; \
+    "text"; "Hello World!"; \
+    "method"; New object("source"; "ALERT(\"Hello World!\")"); \
+    "events"; New collection("onClick"); \
+    "width"; 120; \
+    "height"; 20; \
+    "top"; 0; \
+    "left"; 0)  
+
+    // Ajouter le bouton dans la page courante
+    $editor.editor.currentPage.objects.btnHello:=$btnHello  
+
+    // Sélectionner le nouveau bouton dans l'éditeur de formulaires
+    $editor.editor.currentSelection.clear() //unselect elements
+    $editor.editor.currentSelection.push("btnHello")    
+
+    // Notifier l'éditeur de formulaires de la modification
+    $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
+        "currentPage"; $editor.editor.currentPage)
 ```
 
 You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
@@ -228,9 +228,8 @@ Voici les propriétés que vous pouvez passer dans l'objet `$result` si vous vou
 Par exemple, si des objets de la page courante et des groupes ont été modifiés, vous pouvez écrire ce qui suit :
 
 ```4d
- 	$result:=New object("currentPage"; $editor.editor.currentPage ; \ 
-			"editor"; New object("groups"; $editor.editor.form.editor.groups))
-
+ $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
+            "editor"; New object("groups"; $editor.editor.form.editor.groups))
 
 ```
 
@@ -282,6 +281,10 @@ Function onInvoke($editor : Object)->$result : Object
  End if 
 
  // Notify to 4D the modification
+ $result:=New object("currentPage"; $editor.editor.currentPage)
+ End if 
+
+ //  Notifier la modification à 4D
  $result:=New object("currentPage"; $editor.editor.currentPage)
  End if 
 
