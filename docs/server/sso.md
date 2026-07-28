@@ -1,6 +1,6 @@
 ---
 id: sso
-title: Single Sign On (SSO) on Windows
+title: Single Sign On (SSO)
 ---
 
 
