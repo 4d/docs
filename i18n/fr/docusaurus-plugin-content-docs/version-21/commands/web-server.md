@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                         |                             | Description                                                                          |
-| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
-| option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
+| Paramètres              | Type                         |                             | Description                                                                          |
+| ----------------------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option                  | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Résultat de la fonction | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
 
 </div>
 <!-- END REF-->

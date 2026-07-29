@@ -434,7 +434,7 @@ Por defecto, esta opción no está activa.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../ommands/theme/Styled_Text.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - [tema "Styled Text"](../commands/theme/Styled_Text.md)
 
 ### Etiquetas soportadas
 
@@ -574,7 +574,7 @@ Se trata de los siguientes comandos:
 - [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
 
-En el contexto de las áreas multiestilo, estos comandos sólo deben utilizarse para definir estilos por defecto. To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+En el contexto de las áreas multiestilo, estos comandos sólo deben utilizarse para definir estilos por defecto. Para gestionar los estilos durante la ejecución de la base de datos, recomendamos usar el [comando del tema "Texto con estilo"](../commands/theme/Styled_Text.md).
 
 #### Get edited text
 

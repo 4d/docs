@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字列
+title: String
 ---
 
 文字列とは、以下を示す総称です:
@@ -32,13 +32,13 @@ title: 文字列
 | \\\\   |                             |
 | \\"      | " (引用符)  |
 
-**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。 <br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。
 
-### Automatic normalization of line endings
+### 行末の自動正規化
 
-In order to ensure multi-platform compatibility of texts handled in the database, 4D automatically normalizes line endings so that they occupy a single character: `\r` (carriage return). This normalization is carried out at the level of form objects (variables or fields) hosting plain or multi-style text. Line endings that are not native, or that use a mix of several characters (for example `\r\n`), are considered as a single `\r`. Note that in compliance with the XML standard (multi-style text format), the [multi-style text commands](../commands/theme/Styled_Text.md) also normalize line endings for text variables that are not associated with objects.
+データベース内で管理されているテキストが複数のプラットフォームで正常に処理されるようにするため、4D は改行文字を自動的に正規化し、それらが単一の文字( `\r` 、キャリッジリターン)に収まる様にします。 この正規化は、標準テキストまたはマルチスタイルテキストをホストするフォームオブジェクト(変数またはフィールド)レベルにおいて実行されます。 ネイティブではない改行文字、あるいは複数の改行文字の混用(例えば `\r\n` など)は、単一の `\r` とみなされます。 なお、XML 標準(マルチスタイルテキストフォーマット)に準拠するため、[スタイル付きテキストコマンド](../commands/theme/Styled_Text.md) は、オブジェクトに割り当てられていないテキスト変数の行末文字も正規化するという点に注意してください。
 
-This principle makes it easier to use multi-style text commands or commands such as [`HIGHLIGHT TEXT`](../commands/highlight-text) in a multi-platform context. However, you must take this into account in your processing when you work with texts from heterogeneous sources.
+この原則により、マルチプラットフォームのコンテキストにおいて[`HIGHLIGHT TEXT`](../commands/highlight-text) などのマルチスタイルテキスト系のコマンドを使用するのが用意になります。 ただし、様々な異なるソースからのテキストを処理しようとする場合には、この原則を公領する必要があります。
 
 ## 文字列演算子
 
@@ -56,7 +56,7 @@ This principle makes it easier to use multi-style text commands or commands such
 |                            |                                           |         | "abc" < "abc"  | false    |
 | 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
 |                            |                                           |         | "abc" >= "abd"                          | false    |
-| 以上                         | String <= String | Boolean | "abc" <= "abd" | true     |
+| 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
 |                            |                                           |         | "abd" <= "abc" | false    |
 | キーワードを含む                   | String % String                           | Boolean | "Alpha Bravo" % "Bravo"                 | true     |
 |                            |                                           |         | "Alpha Bravo" % "ravo"                  | false    |
@@ -64,7 +64,7 @@ This principle makes it easier to use multi-style text commands or commands such
 ## 文字列比較の詳細
 
 - 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
-- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です: 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。 例えば次の式は `FALSE` です:
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。 たとえば、次の式は `FALSE` です:
 
 ```4d
 Character code("A")=Character code("a")
@@ -106,7 +106,7 @@ Character code("A")=Character code("a")
      "abcdefghij"="@abcde@fghij@"
 ```
 
-一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります: 次の式は `FALSE` になります:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -147,7 +147,7 @@ Character code("A")=Character code("a")
 
 > **注:**
 >
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries> 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
 > - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。
 
 ## 文字参照記号

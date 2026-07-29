@@ -15,11 +15,11 @@ https://developers.openai.com/api/reference/resources/chat
 
 **create**(*messages* : Collection of [OpenAIMessage](OpenAIMessage.md) ; *parameters* : [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)) : Object
 
-| Paramètres   | Type                                                                  | Description                                                                                |
-| ------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| *messages*   | Collection de [OpenAIMessage](OpenAIMessage.md)                       | Les messages de chat à inclure dans la requête.                            |
-| *parameters* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Les paramètres pour la requête de génération de réponse conversationnelle. |
-| Résultat     | Object                                                                | Le résultat de la requête de génération de réponse conversationnelle.      |
+| Paramètres              | Type                                                                  | Description                                                                                |
+| ----------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| *messages*              | Collection de [OpenAIMessage](OpenAIMessage.md)                       | Les messages de chat à inclure dans la requête.                            |
+| *parameters*            | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Les paramètres pour la requête de génération de réponse conversationnelle. |
+| Résultat de la fonction | Object                                                                | Le résultat de la requête de génération de réponse conversationnelle.      |
 
 Crée un modèle de réponse pour la conversation donnée.
 
@@ -54,11 +54,11 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 **retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                                       |
-| -------------- | --------------------------------------- | ----------------------------------------------------------------- |
-| *completionID* | Text                                    | L'ID de la réponse conversationnelle à récupérer. |
-| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.       |
-| Résultat       | Object                                  | L'objet réponse conversationnelle obtenu.         |
+| Paramètres              | Type                                    | Description                                                       |
+| ----------------------- | --------------------------------------- | ----------------------------------------------------------------- |
+| *completionID*          | Text                                    | L'ID de la réponse conversationnelle à récupérer. |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.       |
+| Résultat de la fonction | Object                                  | L'objet réponse conversationnelle obtenu.         |
 
 Permet de récupérer une génération de réponse conversationnelle stockée.
 
@@ -68,12 +68,12 @@ https://developers.openai.com/api/reference/resources/chat/subresources/completi
 
 **update**(*completionID* : Text; *metadata* : Object; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                                           |
-| -------------- | --------------------------------------- | --------------------------------------------------------------------- |
-| *completionID* | Text                                    | L'ID de la réponse conversationnelle à mettre à jour. |
-| *metadata*     | Object                                  | Métadonnées à utiliser pour mettre à jour la réponse. |
-| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.           |
-| Résultat       | Object                                  | L'objet réponse conversationnelle mis à jour.         |
+| Paramètres              | Type                                    | Description                                                           |
+| ----------------------- | --------------------------------------- | --------------------------------------------------------------------- |
+| *completionID*          | Text                                    | L'ID de la réponse conversationnelle à mettre à jour. |
+| *metadata*              | Object                                  | Métadonnées à utiliser pour mettre à jour la réponse. |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.           |
+| Résultat de la fonction | Object                                  | L'objet réponse conversationnelle mis à jour.         |
 
 Permet de modifier une génération de réponse conversationnelle stockée.
 
@@ -83,11 +83,11 @@ https://developers.openai.com/api/reference/resources/chat/subresources/completi
 
 **delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                                            |
-| -------------- | --------------------------------------- | ---------------------------------------------------------------------- |
-| *completionID* | Text                                    | L'ID de la réponse conversationnelle à supprimer.      |
-| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.            |
-| Résultat       | Boolean                                 | Indique si la suppression a été effectuée avec succès. |
+| Paramètres              | Type                                    | Description                                                            |
+| ----------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| *completionID*          | Text                                    | L'ID de la réponse conversationnelle à supprimer.      |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.            |
+| Résultat de la fonction | Boolean                                 | Indique si la suppression a été effectuée avec succès. |
 
 Permet de supprimer une génération de réponse conversationnelle stockée.
 
@@ -97,10 +97,10 @@ https://developers.openai.com/api/reference/resources/chat/subresources/completi
 
 **list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
-| Paramètres   | Type                                                                          | Description                                                             |
-| ------------ | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| *parameters* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Paramètres pour lister les réponses conversationnelles. |
-| Résultat     | Collection                                                                    | Collection des réponses conversationnelle stockées.     |
+| Paramètres              | Type                                                                          | Description                                                             |
+| ----------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| *parameters*            | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Paramètres pour lister les réponses conversationnelles. |
+| Résultat de la fonction | Collection                                                                    | Collection des réponses conversationnelle stockées.     |
 
 Retourne la liste des réponses conversationnelles stockées.
 

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                               |                             | Description                                                                      |
-| ---------- | ---------------------------------- | --------------------------- | -------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
-| Résultat   | 4D.SMTPTransporter | &#8592; | [Objet SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Paramètres              | Type                               |                             | Description                                                                      |
+| ----------------------- | ---------------------------------- | --------------------------- | -------------------------------------------------------------------------------- |
+| server                  | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
+| Résultat de la fonction | 4D.SMTPTransporter | &#8592; | [Objet SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 </div>
 <!-- END REF-->

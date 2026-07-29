@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                |
-| ---------- | ---------- | --------------------------- | ------------------------------------------ |
-| value      | any        | &#8594; | Valeur(s) de collection |
-| Résultat   | Collection | &#8592; | New collection                             |
+| Paramètres              | Type       |                             | Description                                |
+| ----------------------- | ---------- | --------------------------- | ------------------------------------------ |
+| value                   | any        | &#8594; | Valeur(s) de collection |
+| Résultat de la fonction | Collection | &#8592; | New collection                             |
 
 </div>
 <!-- END REF-->

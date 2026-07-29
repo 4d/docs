@@ -11,7 +11,7 @@ title: プロセスページ
 
 列ヘッダーをドラッグ＆ドロップして、列の順番を入れ替えることができます。 また、ヘッダーをクリックすると、リストの値が並べ替えられます。
 
-ユーザーページと同様にこのページにも、検索欄に入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができる動的な [検索/フィルターエリア](sessions.md#search-and-filtering) があります。 検索/フィルターはセッションとプロセス名の列に対して実行されます。
+Like the Sessions page, this page contains a dynamic [search/filtering area](sessions.md#search-and-filtering) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. 検索/フィルターはセッションとプロセス名の列に対して実行されます。
 
 ウィンドウに表示されるプロセスを、タイプ毎にフィルターするためのボタンが 3つあります:
 
@@ -48,7 +48,7 @@ title: プロセスページ
 
 プロセスタイプはアイコンで識別できます。 アイコンの色や形に対応するプロセスタイプは以下のとおりです:
 
-| icon                                       | type                                                                                                                       |
+| アイコン                                       | タイプ                                                                                                                        |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                                                               |
 | ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                                                                   |
@@ -79,7 +79,7 @@ title: プロセスページ
 
 :::note
 
-Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+同様のアイコンとプロセスタイプは、[ランタイムエクスプローラーのプロセスページ](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.ja.html) でも使用されています。
 
 :::
 
@@ -99,6 +99,6 @@ Similar icons and process types are used in the [Process page of the Runtime Exp
 
 > 確認ダイアログなしに選択したプロセスをデバッグするには、**Alt**キーを押しながらこのボタンをクリックします。
 
-- **セッションを表示**: 選択されたセッションのすべてのプロセスを [セッションページ](sessions.md) に表示するために使用します。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
+- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
 
 

@@ -1,7 +1,7 @@
 ---
 id: Forms_theme
-title: Forms
-sidebar_label: Forms
+title: フォーム
+sidebar_label: フォーム
 slug: /commands/theme/Forms
 ---
 

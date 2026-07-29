@@ -9,19 +9,19 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 
 #### Lo más destacado
 
-- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
-- Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
+- IA: en macOS, los usuarios finales pueden mejorar o resumir textos gracias a las **herramientas de escritura** de Apple Intelligence, disponibles como [propiedad](../FormObjects/properties_Entry.md#writing-tools) y como [acción estándar](../Desktop/standard-actions) para los objetos de formulario [4D Write Pro](../FormObjects/writeProArea_overview.md) e [input](../FormObjects/input_overview.md).
+- Se ha mejorado la [gestión de las desconexiones cliente/servidor](../Desktop/clientServer.md#management-of-unreachable-peer) con la capa de red QUIC: nuevo parámetro de base de datos [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) y nueva propiedad [`unreachableSince` de session.info](../API/SessionClass.md#info).
 - Las hojas de estilo para listas de varios niveles ya son [compatibles con 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), lo que permite a los usuarios crear y gestionar listas estructuradas de varios niveles directamente desde la barra de herramientas y la barra lateral.
 - Nuevo comando [`defer`](../commands/defer) para declarar que un fragmento de código se ejecute siempre al salir de un método o una función; nuevo comando [`Deferred formulas`](../commands/deferred-formulas) para obtener la lista de fórmulas diferidas.
-- New session [`.quotas` property](../API/SessionClass.md#quotas) to configure REST thresholds for sessions.
+- Nueva [propiedad `.quotas`](../API/SessionClass.md#quotas) para configurar los límites REST para las sesiones.
 - Nueva clase [`4D.QuotaManager`](../API/QuotaManagerClass.md) para manejar objetos umbrales para proteger el servidor.
 - Nueva petición REST [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) para eliminar conjuntos de entidades de la caché del servidor.
-- Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).
+- Se ha mejorado la información sobre las sesiones en la ventana de administración del servidor 4D, en una nueva página [**Sessions**](../ServerWindow/sessions.md) (antes **Users**).
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R4): lista de todos los bugs que se han corregido en 4D 21 R4.
 
 #### Cambios de comportamiento
 
-- La sintaxis REST **`GET /Employee/$entityset/<entitySetID>?$method=release`** está **en desuso** y ya no debe utilizarse. To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+- La sintaxis REST **`GET /Employee/$entityset/<entitySetID>?$method=release`** está **en desuso** y ya no debe utilizarse. Para eliminar entity sets, ahora debe usar [`/$entityset/$release` con el verbo POST](../REST/$entityset.md).
 
 ## 4D 21 R3
 

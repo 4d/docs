@@ -205,6 +205,7 @@ Lorsque l'événement "Unreachable" est reçu de l'un ou l'autre côté, une pro
 ### Rétablir ou fermer la connexion
 
 Le délai d'expiration de la session QUIC est de 900 secondes (15 minutes) par défaut ; il peut être modifié à l'aide du sélecteur `QUIC session timeout` de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
+
 Un délai d'expiration de la session QUIC est automatiquement utilisé pour gérer les déconnexions :
 
 - Si la connexion est rétablie avant l'expiration du délai de la session QUIC, la propriété [`info.unreachableSince`](../API/SessionClass.md#info) est automatiquement supprimée de l'objet de session.

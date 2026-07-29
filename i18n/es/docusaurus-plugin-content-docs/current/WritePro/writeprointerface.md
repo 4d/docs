@@ -19,7 +19,7 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 ## Asistente de tablas
 
-El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases d utilizando contextos, fuentes de datos y fórmulas.
+El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases de datos utilizando contextos, fuentes de datos y fórmulas.
 
 El asistente de tablas, accesible a los usuarios finales, carga plantillas suministradas y configuradas por los desarrolladores de 4D. Esto permite a los desarrolladores personalizar la plantilla según los casos de uso específicos y los requisitos empresariales de los usuarios.
 
@@ -316,7 +316,7 @@ La interfaz de 4D Write Pro utiliza OpenAI, para lo cual necesita suministrar su
 
 :::note Herramientas de escritura (macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can proofread, rewrite, summarize, or change the tone of text directly within their documents, you might consider using the [Writing Tools feature](../FormObjects/properties_Entry.md#writing-tools).
+En macOS, si quiere ofrecer a sus usuarios las herramientas de redacción de Apple Intelligence para que puedan corregir, reescribir, resumir o modificar el tono de un texto directamente en sus documentos, quizá le interese utilizar la [función Herramientas de escritura](../FormObjects/properties_Entry.md#writing-tools).
 
 :::
 

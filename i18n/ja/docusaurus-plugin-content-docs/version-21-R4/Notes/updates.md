@@ -9,19 +9,19 @@ title: リリースノート
 
 #### ハイライト
 
-- AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
-- Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
+- AI: macOS では、Apple Inteligence **Writing Tools** のおかげで、テキストを改善したり要約したりといったことができるようになりました。これは[4D Write Pro](../FormObjects/writeProArea_overview.md) および[入力](../FormObjects/input_overview.md) フォームオブジェクトにおいて、[プロパティ](../FormObjects/properties_Entry.md#writing-tools) および [標準アクション](../Desktop/standard-actions) として利用可能です。
+- QUIC ネットワークレイヤーにおける、改善された[クライアント/サーバーの接続切断のサポート](../Desktop/clientServer.md#到達不能なピアの管理): 新しい [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) データベースパラメーター、新しい [`unreachableSince` session.info](../API/SessionClass.md#info) プロパティ。
 - マルチレベルスタイルシートが、[4D Write Pro インターフェースでサポートされる](../WritePro/writeprointerface#multi-level-list-style-sheets) ようになり、これによりユーザーはツールバーとサイドバーから構造化されたマルチレベルリストを直接作成・管理できるようになりました。
 - 新しい[`defer`](../commands/defer) コマンドが追加され、これによってメソッドまたは関数の終了時に必ず実行される同じコードを宣言することができるようになりました。また新しい[`Deferred formulas`](../commands/deferred-formulas) コマンドを使用することで、遅延されたフォーミュラの一覧を取得することができます。
-- セッションの REST 閾値を設定するための新しいセッション [`.quotas` プロパティ](../API/SessionClass.md#quotas)。
+- セッションのREST しきい値を設定するための、セッションオブジェクトの新しい[`.quotas` プロパティ](../API/SessionClass.md#quotas)。
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
-- 4D Server 管理ウィンドウのセッション情報が改善され、従来の **Users** に代わる新しい [**Sessions**](../ServerWindow/sessions.md) ページが追加されました。
+- 改善された4D Server 管理ウィンドウ内にて、セッションの情報を表示するための[**Sessions**](../ServerWindow/sessions.md) ページ(旧**Users**ページ)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 #### 動作の変更
 
-- **`GET /Employee/$entityset/<entitySetID>?$method=release`** のREST シンタックスは**廃止予定** となり、今後使用されるべきではありません。 To delete entity sets, you must now use [`/$entityset/$release` with a POST verb](./$entityset.md).
+- **`GET /Employee/$entityset/<entitySetID>?$method=release`** のREST シンタックスは**廃止予定** となり、今後使用されるべきではありません。 エンティティセットを削除するには、今後は [`/$entityset/$release` とPOST 動詞(メソッド)](../REST/$entityset.md) を組み合わせて使用してください。
 
 ## 4D 21 R3
 
@@ -32,19 +32,19 @@ title: リリースノート
 - [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
 - 4D Write Pro は[マルチレベルスタイルシート](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets) サポートするようになり、これにより自動ナンバリングつきの、構造化された[マルチレベルのリスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) の作成と管理が可能になりました。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
-- テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
+- テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
 - IMAP transporter は、[4D.IMAPNotifier](../API/IMAPNotifierClass.md) クラスの、[notifier オブジェクト](../API/IMAPTransporterClass.md#notifier) を通して、IDLE プロトコルを使用したメールボックスイベント通知イベントをサポートするようになりました。またこのクラスは [IMAP New transporter](../commands/imap-new-transporter) の `listener` プロパティを通して設定することができます。
 - リモートの[session](../API/SessionClass.md) オブジェクトは、[クライアント側でも利用可能](../Desktop/sessions.md#availability) になりました。
 - 新しい[データベース設定の新しい **AI** ページ](../settings/ai.md) を使うことで、4D AIKit コンポーネントを使用したコード内から呼び出し可能な、 [プロバイダーモデルエイリアス](../aikit/provider-model-aliases.md) を設定することができるようになりました。
 - 4D AIKit コンポーネント: 新しい[Providers](../aikit/Classes/OpenAIProviders.md) クラスを使用して [プロバイダーとモデルエイリアス](../aikit/provider-model-aliases.md) をインスタンス化して管理することができます。
 - ORDA データモデル関数および共有/セッションシングルトン関数における [`server` キーワード](../Concepts/classes.md#server) のサポート。
-- Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
+- Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
 - 依存関係: [GitLab レポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
 
 #### macOS におけるLiquid glass のサポート
 
-- macOS 26 Tahoe 上での4D における、[**Liquid glass** インターフェース](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) の自動サポート。 詳細な情報については、[こちらの blog 記事](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) を参照してください。 詳細な情報については、[こちらの blog 記事](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) を参照してください。
+- macOS 26 Tahoe 上での4D における、[**Liquid glass** インターフェース](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) の自動サポート。 詳細な情報については、[こちらの blog 記事](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) を参照してください。
 - [`FORM Theme`](../commands/form-theme) コマンド　および [CSS メディアクエリ](../FormEditor/createStylesheet.md#media-queries)から返される新しい値。
 - 開発者がインターフェースを徐々に適合していけるようにするために、アプリケーションの*Info.plist* ファイル内の"UIDesignRequiresCompatibility" キーを使用して**4D 組み込みのアプリケーションにおいてLiquid glass を無効化する機能** ([このキーに関するApple のドキュメンテーション](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility) を参照のこと)。
 
@@ -52,9 +52,9 @@ title: リリースノート
 
 - [`JSON Validate`](../commands/json-validate) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
 - 分かりやすさのために、フォーミュラオブジェクトは、汎用的な [`4D.Function`](../API/FunctionClass.md) クラスを継承する [`4D.Formula`](../API/FormulaClass.md) クラスの新しいインスタンスになりました。
-- 4D 21 R3 では、[コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) にもたらされた新しい改良が、ランゲージコマンドに対しても適用されます([こちらのblog 記事](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)を参照してください)。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。
+- 4D 21 R3 では、[コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) にもたらされた新しい改良が、ランゲージコマンドに対しても適用されます([こちらのblog 記事](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)を参照してください)。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。
 - [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
-- **旧式* ネットワークレイヤーはサポートされなくなりました。 \**&#x65E7;式\* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
+- \**旧式* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
 
 ## 4D 21 R2
 

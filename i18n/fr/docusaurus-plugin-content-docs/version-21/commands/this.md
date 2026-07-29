@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description              |
-| ---------- | ------ | --------------------------- | ------------------------ |
-| Résultat   | Object | &#8592; | Élément ou objet courant |
+| Paramètres              | Type   |                             | Description              |
+| ----------------------- | ------ | --------------------------- | ------------------------ |
+| Résultat de la fonction | Object | &#8592; | Élément ou objet courant |
 
 </div>
 <!-- END REF-->

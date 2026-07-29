@@ -19,7 +19,7 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 ## Asistente de tablas
 
-El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases d utilizando contextos, fuentes de datos y fórmulas.
+El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases de datos utilizando contextos, fuentes de datos y fórmulas.
 
 El asistente de tablas, accesible a los usuarios finales, carga plantillas suministradas y configuradas por los desarrolladores de 4D. Esto permite a los desarrolladores personalizar la plantilla según los casos de uso específicos y los requisitos empresariales de los usuarios.
 

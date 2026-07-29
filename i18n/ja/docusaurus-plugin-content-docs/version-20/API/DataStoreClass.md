@@ -1113,7 +1113,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 #### 説明
 
-`.startRequestLog()` 関数は、 <!-- REF #DataStoreClass.startRequestLog().Summary -->`.startRequestLog()` 関数は、<!-- END REF -->。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。
+`.startRequestLog()` 関数は、 <!-- REF #DataStoreClass.startRequestLog().Summary -->クライアント側またはサーバー側で ORDAリクエストのログを開始します<!-- END REF -->。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。
 
 :::info
 
@@ -1259,28 +1259,11 @@ If($person#Null)
 End if
 ...
  ...
- var $connect; $status : Object
-var $person : cs.PersonsEntity
-var $ds : 4D.DataStoreImplementation
-var $choice : Text
-var $error : Boolean
-
-Case of
-    :($choice="local")
-       $ds:=ds
-    :($choice="remote")
-       $connect:=New object("hostname";"111.222.3.4:8044")
-       $ds:=Open datastore($connect;"myRemoteDS")
-End case
-
-$ds.startTransaction()
-$person:=$ds.Persons.query("lastname=:1";"Peters").first()
-
-If($person#Null)
-    $person.lastname:="Smith"
-    $status:=$person.save()
-End if
-...
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
+ End if
 ```
 
 <!-- END REF -->
@@ -1311,7 +1294,7 @@ End if
 
 #### 説明
 
-`.stopRequestLog()` 関数は、 <!-- REF #DataStoreClass.stopRequestLog().Summary -->`.stopRequestLog()` 関数は、<!-- END REF -->。
+`.stopRequestLog()` 関数は、 <!-- REF #DataStoreClass.stopRequestLog().Summary -->クライアント側またはサーバー側の ORDAリクエストのログをすべて停止します<!-- END REF -->。
 
 実際には、ディスク上で開かれているドキュメントを閉じます。 クライアント側で、メモリ上でログの記録が開始されていた場合、そのログを停止します。
 

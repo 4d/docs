@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                   |                             | Description                                                                              |
-| ---------- | ---------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
-| expression | Text, Boolean, Integer | &#8594; | Chaîne à convertir en numérique ou Booléen à convertir en 0 ou 1 ou Expression numérique |
-| separator  | Text                   | &#8594; | Séparateur décimal                                                                       |
-| base       | Integer                | &#8594; | Valeur comprise entre 2 et 36 qui représente le radix                                    |
-| Résultat   | Real                   | &#8592; | Forme numérique du paramètre expression                                                  |
+| Paramètres              | Type                   |                             | Description                                                                              |
+| ----------------------- | ---------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| expression              | Text, Boolean, Integer | &#8594; | Chaîne à convertir en numérique ou Booléen à convertir en 0 ou 1 ou Expression numérique |
+| separator               | Text                   | &#8594; | Séparateur décimal                                                                       |
+| base                    | Integer                | &#8594; | Valeur comprise entre 2 et 36 qui représente le radix                                    |
+| Résultat de la fonction | Real                   | &#8592; | Forme numérique du paramètre expression                                                  |
 
 </div>
 <!-- END REF-->

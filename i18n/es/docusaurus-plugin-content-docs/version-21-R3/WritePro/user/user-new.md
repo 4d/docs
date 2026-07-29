@@ -25,37 +25,37 @@ Pueden crearse utilizando:
 - las [acciones estándar](./standard-actions) `listStyleType` o `listStyleImage`,
 - o [por programación](../commands-legacy/4d-write-pro-attributes.md#lists) utilizando [WP SET ATTRIBUTE](../commands/wp-set-attributes).
 
-Cuando se crea una lista utilizando una acción estándar (`listStyleType` o `listStyleImage`) o la barra de herramientas/barra lateral, 4D Write Pro inserta automáticamente un margen antes del texto para que el marcador se sitúe en él. El valor del margen insertado corresponde al desplazamiento de la pestaña por defecto (`wk tab default`).
+Cuando se crea una lista utilizando una acción estándar (`listStyleType` o `listStyleImage`) o la barra de herramientas/barra lateral, 4D Write Pro inserta automáticamente un margen antes del texto para que el marcador se sitúe en él. El valor del margen insertado corresponde al desplazamiento de la tabulación por defecto (`wk tab default`).
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 
-When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. El desarrollador puede añadir un margen personalizado si es necesario.
+Cuando la lista se crea usando [el comando WP SET ATTRIBUTE](../commands-legacy/4d-write-pro-attributes.md#lists), no se gestiona ningún margen específico, por defecto se añade el marcador en el límite izquierdo del párrafo. El desarrollador puede añadir un margen personalizado si es necesario.
 
 :::tip Entrada de blog relacionada
 
-[4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
+[4D Write Pro - Añadir un margen automáticamente cuando las viñetas se definen con acciones estándar](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
 
 ### Listas de múltiples niveles
 
-Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
+Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Multi-level lists are based on [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
 Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. Cuando añade o elimina un elemento en su lista de nivel múltiple, los números se ajustan automáticamente.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+Las listas de varios niveles se crean con el comando [WP New style sheet](../commands/wp-new-style-sheet.md) y se pueden aplicar a un párrafo mediante [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
 Listas de varios niveles pueden ser gestionadas usando:
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
+- el párrafo [atributos de la hoja de estilo](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (como `wk list level index`, `wk list level count` y `wk list concat string format`)
 - [acciones estándar](../user-legacy/standard-actions.md) dedicadas para la gestión de niveles (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- acciones estándar específicas para la gestión de marcadores de numeración (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Entrada de blog relacionada
 
-[4D Write Pro – Creating Multi-level Bullet or Numbered Lists Using Hierarchical list Style Sheets](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-hierarchical-paragraph-style-sheets)
+[4D Write Pro - Creación de listas con viñetas o numeradas de varios niveles usando hojas de estilo de listas jerárquicas](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-hierarchical-paragraph-style-sheets)
 
 :::
 
@@ -67,9 +67,9 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 Las hojas de estilo de listas jerárquicas se utilizan para crear [listas multinivel](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + nvl + índice", por ejemplo "Mylist lvl 2".
+Para crear una hoja de estilo de lista jerárquica, utilice [WP New style sheet](../commands/wp-new-style-sheet.md) e introduzca en *listLevelCount* el número de niveles que desee. A continuación, se define una jerarquía de hojas de estilo de párrafo relacionadas: una hoja de estilo de **nivel raíz** y una o varias hojas de estilo de **subnivel** vinculadas a ella. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) y se llama automáticamente "Nombre de nivel raíz + lvl + índice", por ejemplo "Mylist lvl 2".
 
-To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+Para personalizar los estilos de lista jerarquica, se puede personalizar el objeto de hoja de estilos de párrafo utilizando [los atributos de la hoja de estilos](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
 Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 

@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres        | Type                      |                             | Description                                             |
-| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------- |
-| mergedApp         | 4D.Folder | &#8594; | Dossier contenant l'application fusionnée               |
-| autoLicenseTarget | Integer                   | &#8594; | Licence cible pour l'intégration automatique de licence |
-| buildLicense      | 4D.File   | &#8594; | Licence requise pour générer la licence intégrée        |
-| oemLicense        | 4D.File   | &#8594; | Licence de clé XML OEM 4D si licence serveur            |
-| Résultat          | Object                    | &#8592; | Statut                                                  |
+| Paramètres              | Type                      |                             | Description                                             |
+| ----------------------- | ------------------------- | --------------------------- | ------------------------------------------------------- |
+| mergedApp               | 4D.Folder | &#8594; | Dossier contenant l'application fusionnée               |
+| autoLicenseTarget       | Integer                   | &#8594; | Licence cible pour l'intégration automatique de licence |
+| buildLicense            | 4D.File   | &#8594; | Licence requise pour générer la licence intégrée        |
+| oemLicense              | 4D.File   | &#8594; | Licence de clé XML OEM 4D si licence serveur            |
+| Résultat de la fonction | Object                    | &#8592; | Statut                                                  |
 
 </div>
 <!-- END REF-->

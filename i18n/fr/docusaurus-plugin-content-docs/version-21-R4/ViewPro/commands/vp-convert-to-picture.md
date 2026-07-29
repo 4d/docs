@@ -48,7 +48,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 
 > La visibilité du quadrillage dépend de l'attribut du document défini avec [VP SET PRINT INFO](vp-set-print-info.md).
 
-## Résultat
+## Résultat de la fonction
 
 La commande retourne une image au format SVG.
 

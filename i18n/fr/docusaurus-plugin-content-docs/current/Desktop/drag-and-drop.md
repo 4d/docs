@@ -208,53 +208,53 @@ Dans la méthode objet de la list box, vous pouvez écrire :
  End case
 ```
 
-## Pasteboard commands
+## Commandes du presse-papiers
 
-The [commands of the "Pasteboard" theme](../commands/theme/Pasteboard.md) can be used both for managing copy/paste actions (**Clipboard management**), as well as inter-application drag and drop actions.
+Les [commandes du thème "Conteneur de données"](../commands/theme/Pasteboard.md) peuvent être utilisées aussi bien pour gérer les actions de copier/coller (**gestion du presse-papier**) que pour les actions de glisser-déposer entre applications.
 
-4D uses two data pasteboards: one for copied (or cut) data, which is the clipboard, and the other for data being dragged and dropped.
-These two pasteboards are managed using the same commands. You access one or the other depending on the context:
+4D utilise deux conteneurs de données : l'un pour les données copiées (ou coupées), qui correspond au presse-papiers, et l'autre pour les données glissées-déposées.
+Ces deux conteneurs de données sont gérés à l'aide des mêmes commandes. Vous accédez à l'un ou à l'autre selon le contexte :
 
-- The drag and drop pasteboard can only be accessed within the [`On Begin Drag Over`](../Events/onBeginDragOver.md), [`On Drag over`](../Events/onDragOver.md) or [`On Drop`](../Events/onDrop.md) form events and in the [**On Drop** database method](../commands-legacy/on-drop-database-method.md). Outside of these contexts, the drag and drop pasteboard is not available.
-- The copy/paste pasteboard can be accessed in all other cases. Unlike the drag and drop pasteboard, it keeps the data that are placed in it during the entire session, so long as they are not cleared or reused.
+- L'accès au conteneur de glisser-déposer n'est possible que dans le cadre des événements formulaire [`On Begin Drag Over`](../Events/onBeginDragOver.md), [`On Drag over`](../Events/onDragOver.md) ou [`On Drop`](../Events/onDrop.md), ainsi que dans la [**méthode base On Drop**](../commands-legacy/on-drop-database-method.md). En dehors de ces contextes, le conteneur de glisser-déposer n'est pas disponible.
+- Le conteneur de copier/coller est accessible dans tous les autres cas. Contrairement au presse-papiers de glisser-déposer, il conserve les données qui y sont placées pendant toute la durée de la session, à condition qu'elles ne soient pas effacées ou réutilisées.
 
-### Types of Data
+### Types de données
 
-During drag and drop actions, different types of data can be placed on and read from the pasteboard. You can access a data type in several ways:
+Lors d'opérations de glisser-déposer, différents types de données peuvent être placés dans le conteneur ou extraits de celui-ci. Il existe plusieurs façons d'accéder à un type de données :
 
-- Via its 4D signature: The 4D signature is a character string indicating a data type referenced by the 4D application. The use of 4D signatures facilitates the development of multi-platform applications since these signatures are identical under Mac OS and Windows. You will find the list of 4D signatures below.
-- Via a UTI (Uniform Type Identifier, macos only): The UTI standard, specified by Apple, associates a character string with each type of native object. For example, GIF pictures have the UTI type "com.apple.gif". UTI types are published in Apple documentations as well as by the editors concerned.
-- Via its number or its format name (Windows only): Under Windows, each native data type is referenced by its number ("3", "12", and so on) and a name ("Rich Text Edit"). By default, Microsoft specifies several native types called standard data formats. In addition, third-party editors can "save" format names in the system, which then attributes them a number in return. For more information about this and about native types, please refer to the Microsoft developer documentation (more particularly at http://msdn2.microsoft.com/en-us/library/ms649013.aspx).
-
-:::note
-
-In 4D commands, the Windows format numbers are handled as text.
-
-:::
-
-All the [commands of the "Pasteboard" theme](../commands/theme/Pasteboard.md) can work with each one of these data types. You can find out which data types are present in the pasteboard in each of these formats using the [`GET PASTEBOARD DATA TYPE`](../commands/get-pasteboard-data-type) command.
+- Via sa signature 4D : la signature 4D est une chaîne de caractères indiquant un type de données référencé par l'application 4D. L'utilisation de signatures 4D facilite le développement d'applications multiplateformes, car ces signatures sont identiques sous macOS et Windows. Vous trouverez ci-dessous la liste des signatures 4D.
+- Via un UTI (Uniform Type Identifier, macOS uniquement) : la norme UTI, définie par Apple, associe une chaîne de caractères à chaque type d'objet natif. Par exemple, les images GIF ont le type UTI « com.apple.gif ». Les types UTI sont publiés dans la documentation d'Apple ainsi que par les éditeurs concernés.
+- Via son numéro ou son nom de format (Windows uniquement) : sous Windows, chaque type de données natives est référencé par son numéro ("3", "12", etc.) et par un nom ("Rich Text Edit"). Par défaut, Microsoft spécifie plusieurs types natifs appelés formats de données standard. En outre, les éditeurs tiers peuvent "enregistrer" des noms de format dans le système, qui leur attribue un numéro en retour. Pour plus d'informations à ce sujet et sur les types natifs, veuillez consulter la documentation pour les développeurs de Microsoft (plus particulièrement à l'adresse http://msdn2.microsoft.com/en-us/library/ms649013.aspx).
 
 :::note
 
-4-character types (TEXT, PICT or custom types) are supported for compatibility with prior versions of 4D.
+Dans les commandes 4D, les numéros au format Windows sont traités comme du texte.
 
 :::
 
-### 4D Signatures
+Toutes les [commandes du thème "Conteneur de données"](../commands/theme/Pasteboard.md) peuvent fonctionner avec chacun de ces types de données. Vous pouvez déterminer quels types de données sont présents dans le conteneur pour chacun de ces formats à l'aide de la commande [`GET PASTEBOARD DATA TYPE`](../commands/get-pasteboard-data-type).
 
-Here is the list of standard 4D signatures as well as their description:
+:::note
 
-| Signature                                                                                       | Description                   |
-| ----------------------------------------------------------------------------------------------- | ----------------------------- |
-| "com.4d.private.text.native"    | Text in native character set  |
-| "com.4d.private.text.utf16"     | Text in Unicode character set |
-| "com.4d.private.text.rtf"       | Enriched text                 |
-| "com.4d.private.picture.pict"   | PICT picture format           |
-| "com.4d.private.picture.png"    | PNG picture format            |
-| "com.4d.private.picture.gif"    | GIF picture format            |
-| "com.4d.private.picture.jfif"   | JPEG picture format           |
-| "com.4d.private.picture.emf"    | EMF picture format            |
-| "com.4d.private.picture.bitmap" | BITMAP picture format         |
-| "com.4d.private.picture.tiff"   | TIFF picture format           |
-| "com.4d.private.picture.pdf"    | PDF document                  |
-| "com.4d.private.file.url"       | File pathname                 |
+Les types à 4 caractères (TEXT, PICT ou types personnalisés) sont pris en charge pour assurer la compatibilité avec les versions antérieures de 4D.
+
+:::
+
+### Signatures 4D
+
+Voici la liste des signatures 4D standard ainsi que leur description :
+
+| Signature                                                                                       | Description                             |
+| ----------------------------------------------------------------------------------------------- | --------------------------------------- |
+| "com.4d.private.text.native"    | Texte dans le jeu de caractères natif   |
+| "com.4d.private.text.utf16"     | Texte dans le jeu de caractères Unicode |
+| "com.4d.private.text.rtf"       | Texte enrichi                           |
+| "com.4d.private.picture.pict"   | Format d'image PICT                     |
+| "com.4d.private.picture.png"    | Format d'image PNG                      |
+| "com.4d.private.picture.gif"    | Format d'image GIF                      |
+| "com.4d.private.picture.jfif"   | Format d'image JPEG                     |
+| "com.4d.private.picture.emf"    | Format d'image EMF                      |
+| "com.4d.private.picture.bitmap" | Format d'image BITMAP                   |
+| "com.4d.private.picture.tiff"   | Format d'image TIFF                     |
+| "com.4d.private.picture.pdf"    | Document PDF                            |
+| "com.4d.private.file.url"       | Chemin de fichier                       |

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                  |
-| ---------- | ---------- | --------------------------- | -------------------------------------------- |
-| Résultat   | Collection | &#8592; | Collection des objets Web Server disponibles |
+| Paramètres              | Type       |                             | Description                                  |
+| ----------------------- | ---------- | --------------------------- | -------------------------------------------- |
+| Résultat de la fonction | Collection | &#8592; | Collection des objets Web Server disponibles |
 
 </div>
 <!-- END REF-->

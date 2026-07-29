@@ -3,12 +3,12 @@ id: ClassStoreClass
 title: ClassStore
 ---
 
-`4D.ClassStore` properties are available classes and class stores.
+`4D.ClassStore` プロパティはクラスとクラスストアにおいて利用可能です。
 
-4D exposes two [class stores](../Concepts/classes.md#class-stores):
+4D は二つの[クラスストア](../Concepts/classes.md#class-stores) を公開しています:
 
-- [`cs`](../commands/cs) for user classes and component class stores
-- [`4D`](../commands/4d) for built-in classes
+- ユーザークラスとコンポーネントクラスストアのための [`cs`](../commands/cs)
+- ビルトインクラスのための [`4D`](../commands/4d)
 
 ### 概要
 
@@ -23,13 +23,13 @@ title: ClassStore
 
 #### 説明
 
-Each <!-- REF ClassStoreClass.classClassName.Summary -->exposed [`4D.Class`](./ClassClass.md) class in the class store<!-- END REF --> is available as a property of the class store.
+<!-- REF ClassStoreClass.classClassName.Summary -->クラス内で公開されたそれぞれの[`4D.Class`](./ClassClass.md) クラス<!-- END REF --> は、クラスストアのプロパティとして利用可能です。
 
 #### 例題
 
 ```4d
 var $myclass:=cs.EmployeeEntity
-	//$myclass is a class from the cs class store
+	//$myclass はcs クラスストアからのクラス
 
 ```
 
@@ -39,13 +39,13 @@ var $myclass:=cs.EmployeeEntity
 
 #### 説明
 
-Each <!-- REF ClassStoreClass.classStoreName.Summary -->`4D.ClassStore` published by a component<!-- END REF --> is available as a property of the class store.
+<!-- REF ClassStoreClass.classStoreName.Summary -->コンポーネントによって公開されたそれぞれの`4D.ClassStore`<!-- END REF --> は、クラスストアのプロパティとして利用可能です。
 
-The name of the class store exposed by a component is the component namespace as [declared in the component's Settings page](../Extensions/develop-components.md#declaring-the-component-namespace).
+コンポーネントによって公開されるクラスストアの名前とは、[コンポーネントの設定ページにおいて宣言されている](../Extensions/develop-components.md#declaring-the-component-namespace) コンポーネントの名前空間です。
 
 #### 例題
 
 ```4d
 var $classtore:=cs.AiKit
-	//$classtore is the class store of the 4D AIKit component
+	//$classtore は4D AIKit コンポーネントのクラスストア
 ```

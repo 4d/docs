@@ -5,7 +5,7 @@ title: メソッド
 
 メソッドとは、1つ以上の動作を実行するコードのことです。 メソッドは、1つ以上のステートメントで構成されます。
 
-ステートメントは 1つの命令を実行し、単純な場合もあれば複雑な場合もあります。 ステートメントは 1つの命令を実行し、単純な場合もあれば複雑な場合もあります。 ステートメントとは通常、メソッドの 1行のことを指します (必要に応じて [`\` 文字を使って行を分割](quick-tour.md#行を分割する) することができます。
+ステートメントは 1つの命令を実行し、単純な場合もあれば複雑な場合もあります。 ステートメントとは通常、メソッドの 1行のことを指します (必要に応じて [`\` 文字を使って行を分割](quick-tour.md#行を分割する) することができます。
 
 メソッドは最大 2GBのテキストまたは、32000行まで記述できます。
 
@@ -13,28 +13,28 @@ title: メソッド
 
 4D ランゲージにおいて、数種類のメソッドが存在します。 その呼び出し方によって、メソッドは区別されます:
 
-| 型                                           | 自動呼び出しのコンテキスト                                                                                                                         | 引数の受け取り                     | 説明                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **プロジェクトメソッド**                              | On demand, when the project method name [is called](../Project/project-method-properties.md)                                          | ◯                           | 任意のアクションを実行するためのコードです。 作成されたプロジェクトメソッドは、そのプロジェクトのランゲージの一部となります。                                                                                                                                                                                                                                                                                                                          |
-| **オブジェクト (ウィジェット) メソッド** | メソッドが設定されたフォームオブジェクトに関連したイベント発生時に                                                                                                     | ×                           | フォームオブジェクト (ウィジェットとも呼びます) のプロパティです。                                                                                                                                                                                                                                                                                                                                   |
-| **フォームメソッド**                                | メソッドが設定されたフォームに関連したイベント発生時に                                                                                                           | ×                           | フォームのプロパティです。 フォームメソッドを使用してデータとオブジェクトを管理することができます。 ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。                                                                                                                                                                                                                                                                                        |
-| **トリガー** (別名 *テーブルメソッド*) | テーブルのレコード操作 (追加・削除・修正) の度に                                                                                         | ×                           | テーブルのプロパティです。 トリガーは、データベースのレコードに対して「不正な」操作がおこなわれることを防ぎます。                                                                                                                                                                                                                                                                                                                                |
-| **データベースメソッド**                              | 作業セッションのイベント発生時に                                                                                                                      | ○ (既定)   | 4D には 16のデータベースメソッドがあります。                                                                                                                                                                                                                                                                                                                                                                |
-| **クラス**                                     | クラスのオブジェクトがインスタンス化されたとき、あるいは他のメソッドや[データベースフィールド](../Develop/field-properties.md#class) 内においてオブジェクトインスタンス上でクラスの関数が実行されたときに自動的に呼び出されます。 | ◯(クラス関数) | オブジェクトのクラスの[constructor](./classes.md#class-constructor), [properties](./classes.md#property) と[関数](./classes.md#function) を宣言および設定するためには、**Class** が使用されます。 [**クラス**](classes.md) 参照。 See [**Classes**](classes.md) and [**Function** class](../API/FunctionClass.md). See [**Classes**](classes.md) and [**Function** class](../API/FunctionClass.md). |
+| 型                                           | 自動呼び出しのコンテキスト                                                                                                                         | 引数の受け取り                     | 説明                                                                                                                                                                                                                                    |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **プロジェクトメソッド**                              | プロジェクトメソッド名が[呼び出された時](../Project/project-method-properties.md) に応じて                                                                   | ◯                           | 任意のアクションを実行するためのコードです。 作成されたプロジェクトメソッドは、そのプロジェクトのランゲージの一部となります。                                                                                                                                                                       |
+| **オブジェクト (ウィジェット) メソッド** | メソッドが設定されたフォームオブジェクトに関連したイベント発生時に                                                                                                     | ×                           | フォームオブジェクト (ウィジェットとも呼びます) のプロパティです。                                                                                                                                                                                |
+| **フォームメソッド**                                | メソッドが設定されたフォームに関連したイベント発生時に                                                                                                           | ×                           | フォームのプロパティです。 フォームメソッドを使用してデータとオブジェクトを管理することができます。 ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。                                                                                                                                     |
+| **トリガー** (別名 *テーブルメソッド*) | テーブルのレコード操作 (追加・削除・修正) の度に                                                                                         | ×                           | テーブルのプロパティです。 トリガーは、データベースのレコードに対して「不正な」操作がおこなわれることを防ぎます。                                                                                                                                                                             |
+| **データベースメソッド**                              | 作業セッションのイベント発生時に                                                                                                                      | ○ (既定)   | 4D には 16のデータベースメソッドがあります。                                                                                                                                                                                                             |
+| **クラス**                                     | クラスのオブジェクトがインスタンス化されたとき、あるいは他のメソッドや[データベースフィールド](../Develop/field-properties.md#class) 内においてオブジェクトインスタンス上でクラスの関数が実行されたときに自動的に呼び出されます。 | ◯(クラス関数) | オブジェクトのクラスの[constructor](./classes.md#class-constructor), [properties](./classes.md#property) と[関数](./classes.md#function) を宣言および設定するためには、**Class** が使用されます。 [**クラス**](classes.md) および[**Function** クラス](../API/FunctionClass.md) 参照。 |
 
-## Language tokens
+## ランゲージトークン
 
-4D's language includes a unique tokenization system for constants, commands, tables, fields and keywords names that are used in the code. Tokenizing these names means that as you type in the code editor they are stored internally as absolute references (numbers) and then restored as text during execution or display depending on the context. This allows you to guarantee that the code will always be interpreted correctly, even if you rename your tables or fields, or when 4D language commands are renamed over the course of different application versions.
+4Dランゲージでは、コード内で使用される全てのオブジェクト名(定数、コマンド、テーブル、フィールドそしてキーワード) 全てに対してユニークな トークナイゼーションシステムというものを持っています。 これらの名前をトークナイズするということは、それらをコードエディターにタイプする際に内部で絶対参照(数値)と して保存され、実行時、あるいは表示時にコンテキストに応じてテキストとして復元されるということを意味します。 これにより、コードは常に正しく解釈され るということが保証され、テーブルやフィールドの名前を変更した場合でも、4Dランゲージコマンドが異なるアプリケーションのバージョンに置いて改名され た場合等でも正しく解釈されます。
 
-**Note:** This also ensures automatic translation of the code when you have enabled the ["Use regional system settings" preference](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) and open your databases with 4D versions in different languages.
+**注意:** これは環境設定のメソッドページの["リージョンシステム設定を使用"オプション](../Preferences/methods.md#4dプログラミングランゲージ-リージョンシステム設定を使う) を有効化し、お使いの4D を異なる言語設定でデータベースを開いた際にも、コードの自動翻訳が正確であることを保証します。
 
-Tokenisation is completely transparent for 4D developers when working in the [4D code editor](../code-editor/write-class-method.md), and you generally won't need to worry about it. However, there are two cases where you might need to take action regarding tokenization: if you want to disable it, and if you want to use tokenization in your formulas.
+トークナイゼーションは4D デベロッパーからは[4D コードエディター](../code-editor/write-class-method.md) 上では通常は完全に透過で心配することは何もありません。 しかしながら、トークナイゼーションに対してアクションを取る必要がある場合が2つ考えられます。それを無効化したい場合、それからフォーミュラ内でトークナイゼーションを使用したい場合です。
 
-### Disabling tokenization
+### トークナイゼーションの無効化
 
-When your project is stored on a version control system (VCS) such as GitHub or GitLab, you may want to disable tokenization to make the code more readable on the external platform. To do this, you can deselect the [**Include tokens in project source files**](../Preferences/general.md#include-tokens-in-project-source-files) preference to prevent tokens from being stored in your **new projects**.
+あなたのプロジェクトがGitHub やGitLab などのバージョン管理システム(VCS) を使用している場合、外部プラットフォームにおいてコードをより読みやすくするために、トークナイゼーションを無効化したい場合があるかもしれません。 これを行うためには、[**Project ソースファイルにトークンを含める**](../Preferences/general.md#project-ソースファイルにトークンを含める) 設定をオフにすることで**新規プロジェクト** 内にトークンが保存されることを防ぐことができます。
 
-You can configure your **existing projects** to save code without tokens by inserting the following key in the `<applicationName>.4DProject` file using a text editor:
+**既存のプロジェクト** においては、テキストエディタを使用して以下のキーを`<applicationName>.4DProject` ファイル内に挿入することで、コードをトークンなしで保存するように設定することができます:
 
 ```json
 "tokenizedText": false
@@ -42,37 +42,37 @@ You can configure your **existing projects** to save code without tokens by inse
 
 この設定は、メソッドが保存されるときにのみ考慮されます。 つまり、再保存しない限り、プロジェクト内の既存メソッドはそのまま残されます。
 
-### Using tokens in formulas
+### フォーミュラ内でのトークンの使用
 
-A text-based 4D [formula](../commands/theme/Formulas.md) is a text that is interpreted at runtime, and not as it is typed. In fact, this is the case as soon as 4D code is expressed as raw text, more specifically when code is exported and then imported using the [`METHOD GET CODE`](../commands/method-get-code) and [`METHOD SET CODE`](../commands/method-set-code) commands, copied/pasted or [interpreted from 4D HTML tags](../Tags/transformation-tags.md).
-To benefit from tokenization mechanisms in these contexts, you just need to use an explicit syntax which consists in preceding object names in the language by their token.
+テキストベースの4D [フォーミュラ](../commands/theme/Formulas.md) とは、入力された時ではなく、実行時に解釈されるテキストのことです。 これは、4D コードが標準テキストとして表現された場合と同じです。具体的には、コードが[`METHOD GET CODE`](../commands/method-get-code) and [`METHOD SET CODE`](../commands/method-set-code) コマンドを使用してエクスポート/インポートされた場合、コピー・ペースト、または[4D HTMLタグから解釈されたとき](../Tags/transformation-tags.md) などが該当します。
+これらのコンテキストにおいてトークナイゼーション機構を引き続き使用するためには、以下にある、ランゲージ内でオブジェクト名の後にトークンを付けると言う明示的なシンタックスを使用する必要があります。
 
-### Token syntax
+### トークンシンタックス
 
-For tokenizable named elements contained in expressions, 4D offers a special syntax you can use to reference the tokens directly: you just need to add a specific suffix after the element name to indicate its type (command, field, etc.), followed by its reference. The token syntax is detailed in this table:
+式の中でトークナイズ可能な名前付き要素に対して、4D はトークンを直接参照するための特別な信託巣を提供しています。要素名の後に型(コマンド、フィールド、など)を指定する特定の接頭辞を追加し、そのあとに参照を追加します。 以下の表にこのトークンシンタックスについての詳細がまとめてあります:
 
-| 機能          | Example (standard syntax)                        | Suffix                                  | Example (token syntax)                                                               | コメント                                                                                                   |
-| ----------- | ------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 4D Command  | String(a)                                        | :Cxx                    | String:C10(a)                                                        | xx is the command number                                                                               |
-| 4D Constant | Pi                                                                  | :Kxx:yy | Pi:K30:1                                                                | xx is the ID of the constant group and yy is its index (position) within this group |
-| Table       | [Employees]     | :xx                     | [Employees:1]                       | xx is the table number                                                                                 |
-| フィールド       | [Employees]Name | :xx                     | [Employees:1]Name:2 | xx is the field number                                                                                 |
-| 4D Plugin   | PV PRINT(area)                                   | :Pxx:yy | PV PRINT:P13000:229(area)                            | xx is the plug-in ID and yy is the index of the command                                                |
+| 機能       | 使用例(標準のシンタックス)                                   | 接尾辞                                     | 使用例(トークンシンタックス)                                                                      | コメント                                                      |
+| -------- | ------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| 4D コマンド  | String(a)                                        | :Cxx                    | String:C10(a)                                                        | xx はコマンド番号です                                              |
+| 4D 定数    | Pi                                                                  | :Kxx:yy | Pi:K30:1                                                                | xx は定数グループのIDで、yy はグループ内でのインデックス(位置)です |
+| テーブル     | [Employees]     | :xx                     | [Employees:1]                       | xx はテーブル番号です                                              |
+| フィールド    | [Employees]Name | :xx                     | [Employees:1]Name:2 | xx はフィールド番号です                                             |
+| 4D プラグイン | PV PRINT(area)                                   | :Pxx:yy | PV PRINT:P13000:229(area)                            | xx はプラグインIDで、yy はコマンドのインデックスです                            |
 
-**Note:** Uppercase letters (C, P) must be used in the suffixes; otherwise, they will not be interpreted correctly.
+**注意:** 接頭辞には大文字(C, P)を使用しなければなりません。そうでない場合には正常に解釈されません。
 
-When you use this syntax, you guarantee that your formulas will be interpreted correctly even in the case of renaming or when the database is executed in a different language.
+このシンタックスを使用することにより、フォーミュラの名前が変更された場合でも、データベースが異なる言語において実行された場合でも、フォーミュラが正しく解釈される事を保証します。
 
-This syntax is accepted in all 4D formulas (or 4D expressions) regardless of the calling context:
+このシンタックスは、呼び出しコンテキストに関係なく、全ての4D フォーミュラ(または4D 式)において受け入れられます:
 
-- 4D formulas executed using the Formula editor or using commands such as [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
-- expressions inserted in [multi-style text areas](../FormObjects/properties_Text.md#supported-tags) (see [`ST INSERT EXPRESSION`](../commands/st-insert-expression)),
-- expressions calculated in [transformation tags](../Tags/transformation-tags.md),
-- expressions inserted in external areas such as [4D Write Pro areas](../WritePro/managing-formulas.md).
+- フォーミュラエディター、または[`EXECUTE FORMULA`](../commands/execute-formula),、[`APPLY TO SELECTION`](../commands/apply-to-selection)、[`QUERY BY FORMULA`](../commands/query-by-formula)、[`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) などのコマンドを使用して実行された4Dフォーミュラ。
+- [リッチテキストエリア](../FormObjects/properties_Text.md#サポートされているタグ) 内に挿入された式([`ST INSERT EXPRESSION`](../commands/st-insert-expression) を参照して下さい)
+- [変換タグ](../Tags/transformation-tags.md) 内で計算された式
+- [4D Write Pro エリア](../WritePro/managing-formulas.md) などの外部エリア内に挿入された式。
 
-#### Where to find the element numbers?
+#### 要素番号を調べるためには
 
-The token syntax requires the addition of the reference numbers of various elements. The location of these references depends on the type of element.
+トークンシンタックスでは様々な要素の、それぞれの参照番号を必要とします。 これらの参照番号は、要素の型に応じて異なる場所に表示されています。
 
-- **4D commands:** Command numbers can be found in the documentation ("Properties" area) as well as on the Commands page of the Explorer.
-- **Tables and fields**: Table and field numbers can be obtained using the [`Table`](../commands/table) and [`Field`](../commands/field) commands. They are also displayed in the Inspector palette of the Structure editor.
+- **4Dコマンド:** コマンド番号は、ランゲージリファレンスマニュアル(の"プロパティ"エリア)内にある他、エクスプローラーのコマンド内でも見つける事ができます。
+- **テーブルとフィールド**: テーブルとフィールド番号は、それぞれ[`Table`](../commands/table) と[`Field`](../commands/field) コマンドを使用する事によって取得可能です。 これらの番号はまた、ストラクチャーエディターのインスペクターパレット内にも表示されています。

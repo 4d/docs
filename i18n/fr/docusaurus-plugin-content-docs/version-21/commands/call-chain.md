@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                                           |
-| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
-| Résultat   | Collection | &#8592; | Collection d'objets décrivant la chaîne d'appels au sein d'un process |
+| Paramètres              | Type       |                             | Description                                                           |
+| ----------------------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
+| Résultat de la fonction | Collection | &#8592; | Collection d'objets décrivant la chaîne d'appels au sein d'un process |
 
 </div>
 <!-- END REF-->

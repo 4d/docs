@@ -3,7 +3,7 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 For more information on 4D policy regarding personal data protection, please visit [this page](https://us.4d.com/privacy-policy).
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 個人データ保護に関する4D ポリシーの詳細については、[こちらのページ](https://us.4d.com/privacy-policy)を参照してください。
 
 以下の章では次のようなことを説明しています:
 
@@ -43,7 +43,7 @@ title: データ収集
 | databases[].internalDatastoreOpened           | Number                            | 外部サーバーによってデータストアが開かれた回数                                                                                     |
 | databases[].maxConcurrent4DClients            | Number                            | 回収期間の中での、(4D クライアントライセンスを使用した)同時4Dクライアントセッションの最大数                                        |
 | databases[].maxConcurrentRestSessions         | Number                            | 回収期間の中での同時REST セッション最大数                                                                                     |
-| databases[].maxConcurrentWebSessions          | Number                            | 回収期間の中での同時Web セッション(4DACTIPN およびSOAP)の最大数                                                |
+| databases[].maxConcurrentWebSessions          | Number                            | 回収期間の中での同時 Webセッション(4DACTION およびSOAP)の最大数                                                |
 | databases[].maximum4DClientConnections        | Number                            | サーバーへのクライアントの最大接続数                                                                                          |
 | databases[].numberOfDistinctClients           | Number                            | 回収期間の中で見られた永続的なクライアントUUID の固有数                                                                              |
 | databases[].numberOfFields                    | Number                            | フィールドの数                                                                                                     |
@@ -87,7 +87,7 @@ title: データ収集
 | indexSize                                                                                                         | Number                            | インデックスのサイズ (バイト単位)                                                                       |
 | isCompiled                                                                                                        | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
 | isEncrypted                                                                                                       | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
-| isEngined                                                                                                         | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
+| isEngined                                                                                                         | Boolean                           | アプリケーションに 4D Volume Desktop が組み込まれている場合は true                                                               |
 | isProjectMode                                                                                                     | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
 | LDAPLogin                                                                                                         | Number                            | `LDAP LOGIN` の呼び出し回数                                                                                        |
 | license.sffPrimaryKey                                                                             | Number                            | サーバーのマスタープロダクト番号                                                                                            |

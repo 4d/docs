@@ -412,7 +412,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control.md#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action.
+La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control.md#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
@@ -582,7 +582,7 @@ Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 f
  End for
 ```
 
-La boucle `Repeat...Until` est semblable à la boucle [While...End while](#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
+Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action. Voici la boucle `While...End while` équivalente :
 ```4d
  $i :=1 // Initialisation du compteur
 While ($i<=100) // Boucle 100 fois

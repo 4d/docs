@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                               |                             | Description                                                                       |
-| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
-| Résultat   | 4D.POP3Transporter | &#8592; | [Object POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) |
+| Paramètres              | Type                               |                             | Description                                                                       |
+| ----------------------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server                  | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
+| Résultat de la fonction | 4D.POP3Transporter | &#8592; | [Object POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
 </div>
 <!-- END REF-->

@@ -160,7 +160,8 @@ For more information about what is returned for each dataclass and its attribute
                     "name": "employer",
                     "kind": "relatedEntity",
                     "scope": "public",
-                    "type":
+                    "type": "Company",
+                    "path":
 ```
 
 ## $catalog/\{dataClass\}

@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                            |
-| ---------- | ---------- | --------------------------- | ------------------------------------------------------ |
-| value      | any        | &#8594; | Valeur(s) de la collection partagée |
-| Résultat   | Collection | &#8592; | New shared collection                                  |
+| Paramètres              | Type       |                             | Description                                            |
+| ----------------------- | ---------- | --------------------------- | ------------------------------------------------------ |
+| value                   | any        | &#8594; | Valeur(s) de la collection partagée |
+| Résultat de la fonction | Collection | &#8592; | New shared collection                                  |
 
 </div>
 <!-- END REF-->

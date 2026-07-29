@@ -44,7 +44,7 @@ El parámetro *styleSheetType* le permite designar el tipo de la hoja de estilo,
 - wk type character: aplica atributos de estilo a los caracteres.
 - wk type paragraph: aplica los atributos de estilo a los párrafos (requerido si quiere crear las [hojas de estilo de lista jerárquica](#hierarchical-list-style-sheet)).
 
-Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. El nombre de la hoja de estilo debe cumplir las siguientes reglas: También puede usarse con los comandos [WP Get style sheet](../commands/wp-get-style-sheet) y [WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet).
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. El nombre de la hoja de estilo se almacena con el documento y facilita la reutilización o la modificación del estilo. El nombre de la hoja de estilo debe cumplir las siguientes reglas: It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands.
 
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128

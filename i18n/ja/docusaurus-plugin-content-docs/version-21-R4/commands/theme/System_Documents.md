@@ -43,95 +43,95 @@ slug: /commands/theme/System-Documents
 
 :::info 互換性
 
-Legacy commands from this theme can usually be usefully replaced by commands of the [*File and Folder*](./File_and_Folder.md) theme and their associated [File](../../API/FileClass.md), [Folder](../../API/FolderClass.md), [ZipFile](../../API/ZipFileClass.md) and [ZipFolder](../../API/ZipFolderClass.md) classes, allowing you to handle files and folders as objects.
+このテーマの旧式のコマンドは、通常は[*File および Folder*](./File_and_Folder.md) テーマ、およびそれに割り当てられた[File](../../API/FileClass.md)、[Folder](../../API/FolderClass.md)、 [ZipFile](../../API/ZipFileClass.md) そして [ZipFolder](../../API/ZipFolderClass.md) クラスを使用して有効的に置き換えることができます。これらのコマンドによりファイルやフォルダをオブジェクトとして扱うことができます。
 
 :::
 
-## Document reference number
+## ドキュメント参照番号
 
-You open a document with the [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) and [`Append document`](../../commands/append-document) commands. Once a document is open, you can read and write characters from and to the document using commands such as [`RECEIVE PACKET`](../../commands/receive-packet) and [`SEND PACKET`](../../commands/send-packet). When you are finished with the document, you usually close it using the `CLOSE DOCUMENT` command.
+[`Open document`](../../commands/open-document)、 [`Create document`](../../commands/create-document) そして [`Append document`](../../commands/append-document) コマンドを使用してドキュメントを開きます。 ドキュメントを開いたら、[`RECEIVE PACKET`](../../commands/receive-packet) および [`SEND PACKET`](../../commands/send-packet) などのコマンドを使用して、ドキュメントからの/への文字の読み出し、書き込みができます。 ドキュメントでの作業が終了したら、通常 `CLOSE DOCUMENT` コマンドを使用してドキュメントを閉じます。
 
-All open documents returned by these commands are referred to using a **document reference number** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. All commands working with open documents expect *DocRef* as a parameter. If you pass an incorrect *DocRef* to one of these commands, a file manager error occurs.
+全ての開かれたドキュメントは、これらのコマンドから返された**ドキュメント参照番号** (*DocRef*) を使用して参照されます。 *DocRef* は開かれたドキュメントを固有に識別します。 これは正式には**時間**タイプの式です。 開かれたドキュメントを操作する全てのコマンドは、引数として*DocRef* を受け取ります。 誤った*DocRef* をこれらのコマンドの１つに渡すと、ファイルマネージャエラーが発生 します。
 
-A document can be opened in **read/write** mode by only one process at a time. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
+ドキュメントは、一つのプロセスにつき一つのドキュメントのみ**読み/書き**モードで開くことができます。 **読み込み専用** モードでは、単一のプロセス内で複数のドキュメントを開くこともできますし、複数のプロセスが複数のドキュメントを必要な数だけ開くこともできます。ただし読み/書きモードでは、一度に同じドキュメントを2つ開くことはできません。 `Create document` と `Append document` コマンドは、自動的にドキュメントを読み/書きモードで開きます。 `Open document` コマンドを使用する場合のみ、開くモードを選択できます。
 
 :::note
 
-When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. When it is called from a cooperative process, a *DocRef* reference can be used from any other cooperative process.
+コマンドが[プリエンプティブプロセス](../../Develop/preemptive.md) から呼び出された場合、その*DocRef* 参照はそのプリエンプティブプロセスからしか使用することはできません。 コマンドがコオペラティブプロセスからコールされた場合、その *DocRef* 参照は別のコオペラティブプロセスでも使用可能です。
 
 :::
 
-## The Document system variable
+## Documentシステム変数
 
-[`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document), [`Append document`](../../commands/append-document`) and [`Select document`](../../commands/select-document) commands enable you to access a document using the standard Open or Save file dialog boxes. When you access a document through a standard dialog, 4D returns the full pathname of the document in the [`Document` system variable](../../Concepts/variables.md#system-variables). This system variable has to be distinguished from the *document* parameter that appears in the parameter list of the commands.
+[`Open document`](../../commands/open-document)、 [`Create document`](../../commands/create-document)、 [`Append document`](../../commands/append-document`) および [`Select document`](../../commands/select-document) コマンドを使用すると、標準的なファイルを開くまたは保存するダイアログボックス経由でドキュメントへアクセスすることができます。 標準ダイアログを通してドキュメントにアクセスすると、[`Document` システム変数](../../Concepts/variables.md#system-variables) にドキュメントの完全なパス名が返されます。 このシステム変数は、コマンドの引数リストに表示される引数*document* と区別されなければなりません。
 
-## Absolute or relative pathname
+## 相対パス名および絶対パス名について
 
-Most of the routines of this section accept **document names**, **relative pathnames** or **absolute pathnames**.
+この章のルーチンのほとんどは、**ドキュメント名**、**相対パス名**、あるいは**絶対パス名**を受け付けます:
 
-- **Relative pathnames** define a location with respect to a folder located on disk. Passing only a document name is considered as using a relative pathname. In 4D, a relative pathname is usually expressed with respect to the [project folder](../../Project/architecture.md#project-folder), i.e. the folder containing the .project file. Relative pathnames are especially useful when deploying applications in heterogenous environments.
-- **Absolute pathnames** define a location with respect to the root of the volume and so they do not depend on the current location of the project folder.
+- **相対パス名** はディスク上の任意のディレクトリを起点とし、そこから目的のファイルやフォルダーまでの位置関係を記述するものです。 ドキュメント名のみを渡した場合、それは相対パス名を使用しているとみなされます。 4Dの場合、通常相対パスの起点は[project フォルダー](../../Project/architecture.md#project-フォルダー),、つまり.project ファイルが格納されているフォルダーとなります。 相対パス名は異なる環境に対してアプリケーションを配布する場合に特に有用です。
+- **絶対パス名** はボリュームのルートを起点として場所を記述します。データベースフォルダーの所在場所に依存しません。
 
-To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
+コマンドに渡されるパス名が相対・絶対どちらで解釈されるべきかを決定するため、4Dは各プラットフォームごとに特定のアルゴリズムを適用します。
 
 ### Windows
 
-- If the parameter contains only two characters and if the second one is a ':'
-- or if the text contains ':' and '\' as the second and third character,
-- or if the text starts with "\\",
-- then the pathname is absolute.
+- パス名が二文字だけで構成され、二文字目がコロンの場合 ':'
+- パス名の二文字目と三文字目がそれぞれ':'とバックスラッシュ (円マーク) の場合
+- パス名が "\\" で始まる場合
+- これらの場合にはパス名は絶対パスと解釈されます。
 
-In all other cases, the pathname is relative.
+その他のケースはすべて相対パスと解釈されます。
 
-Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
+[`CREATE FOLDER`](../../commands/create-folder) コマンドの例題:
 
 ```4d
- CREATE FOLDER("lundi") // relative path
- CREATE FOLDER("\Monday") // relative path
- CREATE FOLDER("\Monday\Tuesday") // relative path
- CREATE FOLDER("c:") // absolute path
- CREATE FOLDER("d:\Monday") // absolute path
- CREATE FOLDER("\\srv-Internal\temp") // absolute path
+ CREATE FOLDER("lundi") // 相対パス
+ CREATE FOLDER("\Monday") // 相対パス
+ CREATE FOLDER("\Monday\Tuesday") // 相対パス
+ CREATE FOLDER("c:") // 絶対パス
+ CREATE FOLDER("d:\Monday") // 絶対パス
+ CREATE FOLDER("\\srv-Internal\temp") // 絶対パス
 ```
 
 :::note
 
-The code editor of 4D allows the use of [escape sequences](../../Concepts/quick-tour.md#escape-sequences). An escape sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the Tab character.
+4D のコードエディターで[エスケープシークエンス](../../Concepts/quick-tour.md#escape-sequences) はの使用が可能です。 エスケープシークエンスはバックスラッシュ`\` (日本語フォント環境では円マークから始まり、その後に文字が続きます。 たとえば、`\t` はTab 文字のエスケープシークエンスです。
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the method editor by replacing single backslashes `\` with double backslashes `\\`. For example, `C:\Folder` will become `C:\\Folder`.
+`\` 文字は、Windows においてはパス名の区切り文字としても使用されます。 ほとんどの場合において 4D は、シングルバックスラッシュ `\` をダブルバックスラッシュ `\\` に置き換えることにより、コードエディターに入力された Windows のパス名を正確に判断します。 たとえば、`C:\Folder` は `C:\\Folder` となります。
 
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). 従って、4D のエスケープシーケンスで使用される文字の前にバックスラッシュを挿入したいときは、<code>\</code> となるよう手入力しなければなりません。
+しかし、`C:\MyDocuments\New` と入力した場合、4D は `C:\\MyDocuments\New` と表示します。 この場合、二つ目の `\` は、誤って `\N` (存在するエスケープシーケンス) と認識されています。 従って、4D のエスケープシーケンスで使用される文字の前にバックスラッシュを挿入したいときは、`\\` となるよう手入力しなければなりません。
 
 :::
 
 ### macOS
 
-- If the text starts with a folder separator ':',
-- or if does not contain any,
-- then the path is relative.
+- パス名がディレクトリ区切り文字 ':' で始まる場合
+- パス名がディレクトリ区切り文字を含まない場合
+- これらの場合にはパス名は相対パスと解釈されます。
 
-In all other cases, it is absolute.
+それ以外のケースはすべて絶対パスと見なされます。
 
-Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
+[`CREATE FOLDER`](../../commands/create-folder) コマンドの例題:
 
 ```4d
 
- CREATE FOLDER("Monday") // relative path
- CREATE FOLDER("macintosh hd:") // absolute path
- CREATE FOLDER("Monday:Tuesday") // absolute path (a volume must be called Monday)
- CREATE FOLDER(":Monday:Tuesday") // relative path
+ CREATE FOLDER("Monday") // 相対パス
+ CREATE FOLDER("macintosh hd:") // 絶対パス
+ CREATE FOLDER("Monday:Tuesday") // 絶対パス (Mondayがボリューム名)
+ CREATE FOLDER(":Monday:Tuesday") // 相対パス
 ```
 
 :::note
 
-See also [**Absolute and relative pathnames** in the Concepts section](../../Concepts/paths.md#absolute-and-relative-pathnames).
+[コンセプトの章内の**相対パス及び絶対パスについて**](../../Concepts/paths.md#相対パス名および絶対パス名について) も参照してください。
 
 :::
 
-## Extracting pathname contents
+## パス名の中身の抽出
 
-You can handle pathname contents using the [`Path to object`](../../commands/path-to-object) and [`Object to path`](../../commands/object-to-path) commands. In particular, using these commands, you can extract from a pathname:
+[`Path to object`](../../commands/path-to-object) および [`Object to path`](../../commands/object-to-path) コマンドを使用することでパス名の中身を管理することができます。 具体的には、パス名からは以下のものを取得することができます:
 
-- a file name,
-- the parent folder path,
-- the file or folder extension.
+- ファイル名
+- 親フォルダパス
+- ファイルあるいはフォルダの拡張子。

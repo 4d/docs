@@ -15,32 +15,31 @@ title: OpenAIResult
 
 ## 計算プロパティ
 
-| プロパティ        | 型          | 説明                                                                                                         |
-| ------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                                                                |
-| `errors`     | Collection | エラーのコレクションを返します。 エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。                          |
-| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                |
-| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                                                  |
-| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                                                  |
-| `usage`      | Object     | レスポンス本文からの使用状況(トークン数)を返します(存在する場合)。 |
+| プロパティ        | 型          | 説明                                                                       |
+| ------------ | ---------- | ------------------------------------------------------------------------ |
+| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                              |
+| `errors`     | Collection | エラーのコレクションを返します。 これらはネットワークエラーまたは OpenAI から返されたエラーである可能性があります。           |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                              |
+| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                                |
+| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                                |
+| `usage`      | Object     | レスポンス本文から使用状況の情報(トークン数)を返します(あれば)。 |
 
 ### usage
 
-`usage` プロパティは、API レスポンスに含まれるトークン使用状況のオブジェクトを返します。 構造は使用する API エンドポイントによって異なります。
+`usage` プロパティは、API レスポンスから、トークン使用状況を格納したオブジェクトを返します。 この構造は、使用しているAPI エンドポイントによって異なります。
 
-> **Note:** OpenAI 互換サービスによっては `usage` オブジェクトのフィールドが異なる場合があります。 ここで示す構造は OpenAI API を基準としています。 すべてのフィールドが常に返るとは限りません。
+> **注意:** 異なるOpenAI 互換サービスの場合には、usage オブジェクト内に異なるフィールドを返す可能性があります。 ここで示されている構造は、OpenAI のAPI の場合に基づいています。 他のプロバイダーの場合には全てのフィールドが含まれていない場合もあります。
 
-エンドポイント別の詳細は以下を参照してください:
+エンドポイント特有のusage オブジェクトの構造については、それぞれの戻り値のクラスのドキュメンテーションを参照してください:
 
-- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
-- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
-- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
-- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - チャット補完の usage
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - ストリーミングチャットの usage
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - 埋め込みの usage
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - 画像生成の usage
 
 ### rateLimit
 
 `rateLimit` プロパティはレスポンスヘッダーからのレート制限情報を格納しているオブジェクトを返します。
-この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
 レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://developers.openai.com/api/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
@@ -53,18 +52,18 @@ title: OpenAIResult
 | `limit.tokens`      | Integer | 許可されたトークン数。            |
 | `remaining.request` | Integer | 残りのリクエスト数。             |
 | `remaining.tokens`  | Integer | 残りのトークン数。              |
-| `reset.request`     | 文字列     | リクエストの制限がリセットされるまでの時間。 |
-| `reset.tokens`      | 文字列     | トークンの制限がリセットされるまでの時間。  |
+| `reset.request`     | String  | リクエストの制限がリセットされるまでの時間。 |
+| `reset.tokens`      | String  | トークンの制限がリセットされるまでの時間。  |
 
 ## 関数
 
 ### `throw()`
 
-`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
+`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
 
 ## 継承クラス
 
-特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 以下は `OpenAIResult` クラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

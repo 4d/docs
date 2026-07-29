@@ -10,20 +10,20 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type       |                             | Description                                |
-| ----------- | ---------- | --------------------------- | ------------------------------------------ |
-| targetObj   | Object     | &#8594; | Plage ou élément ou document 4D Write Pro  |
-| attribName  | Text       | &#8594; | Nom de l'attribut à récupérer              |
-| attribValue | Variable   | &#8592; | Valeur courante de l'attribut              |
-| attribColl  | Collection | &#8594; | Collection de noms d'attributs à récupérer |
-| Résultat    | Object     | &#8592; | Noms et valeurs des attributs              |
+| Paramètres              | Type       |                             | Description                                |
+| ----------------------- | ---------- | --------------------------- | ------------------------------------------ |
+| targetObj               | Object     | &#8594; | Plage ou élément ou document 4D Write Pro  |
+| attribName              | Text       | &#8594; | Nom de l'attribut à récupérer              |
+| attribValue             | Variable   | &#8592; | Valeur courante de l'attribut              |
+| attribColl              | Collection | &#8594; | Collection de noms d'attributs à récupérer |
+| Résultat de la fonction | Object     | &#8592; | Noms et valeurs des attributs              |
 
 </div>
 <!-- END REF-->
 
 ## Description
 
-La commande **WP Get attributes**<!--REF #_command_.WP Get attributes.Summary--> renvoie la valeur de n'importe quel attribut d'une plage, d'un en-tête, d'un corps, d'un pied de page, d'un tableau ou d'un document de 4D Write Pro.<!-- END REF--> Cette commande permet d'accéder à tous les types d'attributs internes de 4D Write Pro : caractère, paragraphe, document, tableau ou image.
+La commande **WP Get attributes**<!--REF #_command_.WP Get attributes.Summary--> renvoie la valeur de n'importe quel attribut de plage, en-tête, corps, pied de page, tableau ou document de 4D Write Pro.<!-- END REF--> Cette commande vous donne accès à tout type d'attribut interne 4D Write Pro : caractère, paragraphe, document, tableau ou image.
 
 Dans *targetObj*, vous pouvez passer:
 

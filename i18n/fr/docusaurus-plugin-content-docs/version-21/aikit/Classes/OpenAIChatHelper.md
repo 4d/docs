@@ -36,10 +36,10 @@ Cette méthode crée un nouvel assistant de conversation avec l'invite système 
 
 **prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
 
-| Paramètres | Type                                                          | Description                                                                |
-| ---------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| *prompt*   | Text                                                          | Texte d'invite à envoyer au modèle de conversation OpenAI. |
-| Résultat   | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                      |
+| Paramètres              | Type                                                          | Description                                                                |
+| ----------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| *prompt*                | Text                                                          | Texte d'invite à envoyer au modèle de conversation OpenAI. |
+| Résultat de la fonction | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                      |
 
 Envoie une invite utilisateur au modèle de conversation et retourne la réponse générée.
 

@@ -29,7 +29,7 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 
 ### Gestion des utilisateurs endormis
 
-4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. On the server, the connected user changes to a **Sleeping** status:
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut **Sleeping** :
 
 ![](../assets/en/Admin/server-sleep.png)
 
@@ -65,7 +65,7 @@ Ce bouton permet de visualiser directement les process du ou des utilisateur(s) 
 
 ### Déconnecter
 
-Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte s'affiche pour vous permettre de confirmer ou d'annuler cette opération (maintenez la touche **Alt** enfoncée tout en cliquant sur le bouton **Drop user** pour déconnecter directement le ou les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
 
 > Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md).
 

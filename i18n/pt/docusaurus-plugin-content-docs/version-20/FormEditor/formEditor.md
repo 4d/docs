@@ -171,7 +171,7 @@ A figura abaixo mostra um marque sendo desenhado para selecionar dois objetos:
 
 ![](../assets/en/FormEditor/selectMultiple.png)
 
-Para desmarcar um objeto, clicar fora dos limites do objeto ou <**Shift+clique** o objeto. Os outros objetos permanecem selecionados. Para desmarcar todos os objetos selecionados, clique fora dos limites de todos os objetos.
+Para desmarcar um objecto, clicar fora dos limites do objecto ou **Shift+click** o objecto. Os outros objetos permanecem selecionados. Para desmarcar todos os objetos selecionados, clique fora dos limites de todos os objetos.
 
 ### Duplicação de objectos
 

@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Puede ser llamado por                                                                                                                       | Definición                                                                                                                                                                                                        |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox-object.md) - [Columna de List Box ](FormObjects/listbox-column.md) | <li>Botones: se hace clic en el área de "flecha" de un botón</li><li>Listas desplegables: en una columna de un array de objetos, se hace clic en un botón de puntos suspensivos (atributo "alternateButton")</li> |
+| Code | Puede ser llamado por                                                                                                                       | Definición                                                                                                                                                                                               |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox-object.md) - [Columna de List Box ](FormObjects/listbox-column.md) | <li>Botones: se hace clic en el área de "flecha" de un botón</li><li>List boxes: en una columna de un array de objetos, se hace clic en un botón de puntos suspensivos (atributo "alternateButton")</li> |
 
 ## Descripción
 
@@ -22,7 +22,7 @@ Algunos estilos de botón pueden ser [vinculados a un menú emergente](FormObjec
 
 ### List box
 
-Este evento se genera en las columnas de [list box de tipo array objeto](../FormObjects/listbox-column.md#object-arrays-in-columns), cuando el usuario hace clic en un botón de selección de widget (atributo "alternateButton").
+Este evento se genera en las columnas de [list box de tipo array objeto](../FormObjects/listbox-column.md#object-arrays-in-columns), cuando el usuario hace clic en un botón de puntos suspensivos (...) del widget (atributo "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

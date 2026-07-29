@@ -11,11 +11,11 @@ title: VP Get sheet index
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                             |
-| ---------- | ------- | --------------------------- | --------------------------------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
-| name       | Text    | ->                          | Nom de la feuille                       |
-| Résultat   | Integer | <- | Indice de la feuille                    |
+| Paramètres              | Type    |                             | Description                             |
+| ----------------------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName              | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| name                    | Text    | ->                          | Nom de la feuille                       |
+| Résultat de la fonction | Integer | <- | Indice de la feuille                    |
 
 </div>
 <!-- END REF -->

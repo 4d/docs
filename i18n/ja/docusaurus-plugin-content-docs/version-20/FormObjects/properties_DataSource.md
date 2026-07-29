@@ -189,7 +189,7 @@ title: データソース
 
 ## 式
 
-This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes) and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
+[セレクション型](FormObjects/listbox_overview.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](FormObjects/listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) リストボックスのプロパティです。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
 列に割り当てる 4D式です。 以下のものを指定できます:
 
@@ -198,18 +198,18 @@ This description is specific to [selection](FormObjects/listbox-object.md#select
 - 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#selection-list-boxes) のみ)。 例: `[Employees]LastName`。 以下の型のフィールドを使用できます:
   - 文字列
   - 数値
-  - Date
-  - Time
-  - Picture
+  - 日付
+  - 時間
+  - ピクチャー
   - ブール  
     マスターテーブルおよび他のテーブルのフィールドを指定できます。
 
 - **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 式は、セレクション型リストボックスではマスターテーブルの (カレントまたは命名) セレクションの各レコードごとに、コレクション型リストボックスではコレクションの各要素ごとに、エンティティセレクション型リストボックスではセレクションのエンティティごとに評価されます。 空の場合、列には何も表示されません。 以下の型の式がサポートされています:
   - 文字列
   - 数値
-  - Date
-  - Picture
-  - Boolean
+  - 日付
+  - ピクチャー
+  - ブール
 
  コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。    
 コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\&#060;propertyPath&#062;` (ここでの `\&#060;propertyPath&#062;` はコレクションのプロパティパス、あるいはエンティティ 属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。 スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、`This.value` を式として使用します。

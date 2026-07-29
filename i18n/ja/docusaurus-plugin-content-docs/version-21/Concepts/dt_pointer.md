@@ -15,12 +15,12 @@ title: Pointer
 
 | 型      | 参照時                                                                                         | 使用時                                         | 代入時                                         |
 | ------ | ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
+| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"           |
 | 変数     | vpVar:=->Variable                                                           | ALERT(vpVar->)           | vpVar->:="John"             |
 | 配列     | vpArr:=->Array                                                              | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}                                                          | ALERT (vpElem->)         | vpElem->:="John"            |
-| Object | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
+| オブジェクト | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
 
 ## ポインターの使用例
 
@@ -47,7 +47,7 @@ $MyPointer->
 
 前述の式は、"Hello" という文字列を返します。 ポインター記号 (->) をポインターの後につけると、参照先の値を取得することができます。 これをデリファレンス (参照外し) と呼びます。
 
-ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 つまり、変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。 たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します: たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
+ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。 つまり、オリジナルの変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。 たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
 
 ```4d
 ALERT($MyPointer->)
@@ -94,7 +94,7 @@ $MyVar:="Goodbye"
 
 :::warning Null ポインター
 
-null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例: 例:
+null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。  例:
 
 ```4d
 var $p : Pointer // 初期化されていないポインター (Nil 値)
@@ -263,9 +263,9 @@ takeTwo(->[myTable]myField;->$MyVar)
 - $PointerTwo:=->$PointerOne
   \--> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入します。
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。  つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
+  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。  つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
 - ALERT (($PointerTwo->)->)
-  \--> 先の説明と同様に $PointerTwo-> は $PointerOne の中身を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
+  \--> 先の説明と同様に $PointerTwo-> は $PointerOne の中身を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 

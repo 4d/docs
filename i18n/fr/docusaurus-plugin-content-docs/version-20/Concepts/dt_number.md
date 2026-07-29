@@ -5,7 +5,7 @@ title: Numérique (Réel, Entier, Entier long)
 
 Numérique est un terme générique utilisé pour :
 
-- Les champs, variables ou expression de type Réel. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- Les champs, variables ou expression de type Réel. La plage du type de données Réel est comprise entre ±1,7e±308 (conformément à la [norme IEEE 754 relative au format binaire à virgule flottante double précision](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Les champs, variables ou expression de type Entier long. Les nombres de type Entier long (4 octets) sont compris dans l'intervalle -2^31..(2^31)-1.
 - Les champs, variables ou expression de type Entier. Les nombres de type Entier (2 octets) sont compris dans l'intervalle -32 768..32 767.
 

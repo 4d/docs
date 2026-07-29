@@ -9,16 +9,16 @@ title: Object
 
 - プロパティ値は以下のどれかの型で表現されます:
   - 数値 (実数、整数、等)
-  - text
+  - テキスト
   - null
-  - boolean
+  - ブール
   - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
   - 日付 (日付型あるいは ISO日付フォーマット文字列)
   - オブジェクト(1) (オブジェクトは入れ子にすることができます)
   - ピクチャー(2)
-  - collection
+  - コレクション
 
-(1) [\*\* ストリーム不可能なオブジェクト\*\*](#ストリーミングサポート) である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) [\*\* ストリーム不可能なオブジェクト\*\*](#ストリーミングサポート) である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -47,7 +47,7 @@ title: Object
 
 :::info
 
-いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
@@ -69,7 +69,7 @@ title: Object
 
 `{}` 演算子を使って、**オブジェクトリテラル** を作成することができます。 オブジェクトリテラルとは、オブジェクトのプロパティ名とその値のペアが 0組以上含まれたセミコロン区切りのリストを中括弧 `{}` で囲んだものです。 オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
 
-プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。  また、**コレクションリテラル** を作成し、参照することもできます。
+プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。
 
 例:
 
@@ -110,14 +110,13 @@ $col:=$o.col[5] // 6
 
 二種類のオブジェクトを作成することができます:
 
-- [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
 - [`New shared object`](../commands/new-shared-object) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
-  詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
   詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
-## Assignment
+## 代入
 
-Object and [collection](./dt_collection.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning an object or a collection to a variable (e.g. `$myVar:={ a:2 }`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original object is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+オブジェクトと[コレクション](./dt_collection.md) データ型は、スカラーデータ型(数値、日付、など)とは異なり、4D ランゲージ内においては**参照** (つまり内部的なポインター) を通して管理されます。 結果として、変数へオブジェクトを代入する場合(例' `$myVar:={ a:2 }`)、代入されているのは値自身ではなく、**参照** が代入されています。 そのため *$myVar* 変数にそのあと加えた変更は、元のオブジェクトが参照されている箇所全てにおいて反映されてしまうことになります。 これは[ポインター](./dt_collection.md) と同じ原理に基づいていますが、*$myVar* 変数は逆参照する必要がないという点において異なります。
 
 例:
 
@@ -125,23 +124,23 @@ Object and [collection](./dt_collection.md) data types are handled in the 4D lan
 var $o1; $o2 : Object
 var $col : Collection
 
-$col:=[1;2;3] //a reference to the collection is created
-$o1:={ a:2 ; b:$col } //a reference to the object is created
-$o2:=$o1 //both variables $o1 and $o2 share the reference to the same object
+$col:=[1;2;3] // コレクションへの参照が作成された
+$o1:={ a:2 ; b:$col } // オブジェクトへの参照が作成された
+$o2:=$o1 // $o1 and $o2 は両方とも同じオブジェクトへの参照を共有する
 
-$o1.a:=10 //$o2 = {"a":10,"b":[1,2,3]}
-$o2.a:=20 //$o1 = {"a":20,"b":[1,2,3]}
+$o1.a:=10 // $o2 = {"a":10,"b":[1,2,3]}
+$o2.a:=20 // $o1 = {"a":20,"b":[1,2,3]}
 $col.push(4) 
-//$o1 = {"a":20,"b":[1,2,3,4]}
-//$o2 = {"a":20,"b":[1,2,3,4]}
-ASSERT($o1=$o2) //True
+// $o1 = {"a":20,"b":[1,2,3,4]}
+// $o2 = {"a":20,"b":[1,2,3,4]}
+ASSERT($o1=$o2) // True
 ```
 
-This principle applies wherever objects or collections are used, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+この原理は[引数](./parameters.md) あるいは [formula](../commands/formula) 式も含めて、オブジェクトまたはコレクションが使用される場所全てにおいて適用されます。
 
 :::note
 
-If you want to create a **deep copy** of an object, use the [`OB COPY`](../commands/ob-copy) command.
+オブジェクトの**ディープコピー** を作成したい場合には、[`OB COPY`](../commands/ob-copy) コマンドを使用してください。
 
 :::
 
@@ -181,7 +180,6 @@ If you want to create a **deep copy** of an object, use the [`OB COPY`](../comma
 
 - **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの)。
   例:
-  例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -193,16 +191,12 @@ If you want to create a **deep copy** of an object, use the [`OB COPY`](../comma
 
 - オブジェクトを返す **4D コマンド**。
   例:
-  例:
-  例:
-  例:
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - オブジェクトを返す **プロジェクトメソッド** または **関数**。
-  例:
   例:
 
 ```4d
@@ -223,7 +217,7 @@ If you want to create a **deep copy** of an object, use the [`OB COPY`](../comma
 
 ### Null 値
 
-オブジェクトを使用するにあたって、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。 例: このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。 例:
+オブジェクトを使用するにあたって、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。 例:
 
 ```4d
  myObject.address.zip:=Null
@@ -282,13 +276,13 @@ var $o3:=$o1 // 同じインスタンスへの参照
 | 異なる | objectRef # objectRef | Boolean | $o1 # $o3 | false |
 |     |                       |         | $o1 # $o2 | true  |
 
-## Resources
+## リソース
 
 オブジェクトは、ドキュメント、エンティティロック、そしてメモリなどの *リソース* を使用します。 オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
 
 たとえば、[`$entity.lock()`](../API/EntityClass.md#lock) でロックしたエンティティへの参照がなくなると、4D はメモリを解放すると同時に、関連するロックも自動で解放するため、[`$entity.unlock()`](../API/EntityClass.md#unlock) の呼び出しは不要です。
 
-オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例: 例: 例: 例:
+オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例:
 
 ```4d
 

@@ -2196,7 +2196,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
   Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
-Si la colección contiene elementos de diferentes [tipos](../Concepts/data-types.md), se ordenarán según los [principios de ordenación de 4D](../Concepts/ordering.md).
+Si la colección contiene elementos de diferentes [tipos](../Concepts/data-types.md), se ordenarán según los [principios de ordenación 4D](../Concepts/ordering.md).
 
 #### Ejemplo 1
 

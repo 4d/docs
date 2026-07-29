@@ -232,7 +232,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 Contém <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitidos e métodos para o serviço CORS<!-- END REF --> (ver propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
 
 
-- **host** (texto, obrigatório): Nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
+- **host** (texto, obrigatório): Nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Se *host* não estiver presente ou vazio, o objeto é ignorado. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.*
@@ -607,7 +607,7 @@ Contém <!-- REF #WebServerClass.scalableSession.Summary -->`True` se forem util
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->O<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
+O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->campo "domínio" do cookie da sessão<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 <!-- END REF -->
 
@@ -631,7 +631,7 @@ O <!-- REF #WebServerClass.sessionCookieName.Summary -->nome do cookie utilizado
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.sessionCookiePath.Summary -->O<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
+O <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "caminho" do cookie da sessão<!-- END REF -->. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
 
 <!-- END REF -->
 

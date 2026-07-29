@@ -291,7 +291,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->A função `.getMail()`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. Passe em *msgNumber* o número da mensagem a recuperar.
+Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pela função [`.getMailInfoList()`](#getmailinfolist).
 
 Opcionalmente, pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objecto devolvido `Email`. Apenas as propriedades dos cabeçalhos ([`cabeçalhos`](EmailObjectClass.md#headers), [`a`](EmailObjectClass.md#to), [`de`](EmailObjectClass.md#from)...) são então devolvidas. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 

@@ -474,7 +474,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### Descripción
 
-La función `.concat()` <!-- REF #collection.concat().Summary -->devuelve una nueva colección que contiene los elementos de la colección original con todos los elementos del parámetro *valor* añadidos al final<!-- END REF -->.
+La función `.pop()` <!-- REF #collection.concat().Summary -->elimina el último elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Si *value* es una colección, todos sus elementos se añaden al final de la colección original. Si *value* no es una colección, se añade ella misma como un nuevo elemento.
@@ -627,11 +627,6 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
  ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
- ALERT($col[0].alpha+" "+$col2[1].beta) //muestra "Hello World!"
-
- $what:="You!"
- $col3:=$col2.copy(ck resolve pointers)
- ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
 ```
 
 
@@ -721,7 +716,7 @@ Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. 
 
 #### Descripción
 
-La propiedad `.length` <!-- REF #collection.countValues().Summary -->devuelve el número de elementos de la colección<!-- END REF -->.
+La función `.concat()` <!-- REF #collection.countValues().Summary -->devuelve una nueva colección que contiene los elementos de la colección original con todos los elementos del parámetro *valor* añadidos al final<!-- END REF -->.
 
 Puede pasar en *value*:
 
@@ -1050,7 +1045,7 @@ El contenido de la colección devuelta depende del parámetro *targetPath*:
     Por defecto, los elementos cuya *propertyPath* es null o indefinida se ignoran en la colección resultante. Puede pasar la constante `ck keep null` en el parámetro *option* para incluir estos valores como elementos nulos en la colección devuelta.
 
 
-*   In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
+*   Si se pasan uno o más parámetros *targetPath* (correspondientes a uno o más parámetros *propertyPath*), `.extract()` rellena la nueva colección con las propiedades *propertyPath* y cada elemento de la nueva colección es un objeto con las propiedades *targetPath* llenadas con las propiedades *propertyPath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
 
 
 #### Ejemplo 1
@@ -1560,7 +1555,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1720,7 +1715,7 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 #### Descripción
 
-La función `.push()` <!-- REF #collection.indexOf().Summary -->añade uno o más *elemento*(s) al final de la instancia de la colección y devuelve la colección editada<!-- END REF -->.
+La función `.extract()` <!-- REF #collection.indexOf().Summary -->busca la expresión *toSearch* entre los elementos de la colección y devuelve el índice de la primera ocurrencia encontrada, o -1 si no se encontró<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
@@ -2051,7 +2046,7 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
 
 #### Descripción
 
-La función `.fill()` <!-- REF #collection.length.Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
+La propiedad `.length` <!-- REF #collection.length.Summary -->devuelve el número de elementos de la colección<!-- END REF -->.
 
 La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eliminar elementos actualiza la longitud, si es necesario. Esta propiedad es **sólo lectura** (no se puede utilizar para definir el tamaño de la colección).
 
@@ -2109,7 +2104,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en *param* (opcional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2279,7 +2274,7 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 #### Descripción
 
-La función `.orderByMethod()` <!-- REF #collection.orderBy().Summary -->devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
+La función `.fill()` <!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
@@ -2586,7 +2581,7 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 #### Descripción
 
-La función `.insert()` <!-- REF #collection.push().Summary -->inserta *element* en la posición *índice* especificada en la instancia de la colección y devuelve la colección editada<!-- END REF -->.
+La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *elemento*(s) al final de la instancia de la colección y devuelve la colección editada<!-- END REF -->.
 > Esta función modifica la colección original.
 
 
@@ -2695,10 +2690,6 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
- $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
-
- $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
- $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 Este ejemplo devuelve las personas cuyo nombre contiene "in":
@@ -2727,7 +2718,7 @@ Este ejemplo devuelve las personas contratadas hace más de 90 días:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si hoy es 01/10/2018 si hoy es 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si hoy es 01/10/2018
 ```
 
 
@@ -2961,7 +2952,7 @@ Con el siguiente método ***Flatten***:
 
 #### Descripción
 
-La función `.pop()` <!-- REF #collection.remove().Summary -->elimina el último elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
+La función `.insert()` <!-- REF #collection.remove().Summary -->inserta *element* en la posición *índice* especificada en la instancia de la colección y devuelve la colección editada<!-- END REF -->.
 > Esta función modifica la colección original.
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
@@ -3132,7 +3123,7 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->La función `
 
 #### Descripción
 
-La función `.every()` <!-- REF #collection.shift().Summary -->The `.every()` function<!-- END REF -->.
+La función `.shift()` <!-- REF #collection.shift().Summary -->elimina el primer elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 > Esta función modifica la colección original.
 
 Si la colección está vacía, este método no hace nada.
@@ -3428,7 +3419,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 
 #### Descripción
 
-La función `.average()` <!-- REF #collection.sum().Summary -->devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
+La función `.orderByMethod()` <!-- REF #collection.sum().Summary -->devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 

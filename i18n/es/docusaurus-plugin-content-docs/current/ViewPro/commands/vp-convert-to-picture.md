@@ -60,7 +60,7 @@ Quiere convertir un área 4D View Pro en SVG, previsualizar el resultado y envia
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
+$vPict:=VP Convertir a imagen($vpAreaObj) //exportar toda el área
 ```
 
 ## Ver también

@@ -84,7 +84,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`4D.Folder` 型の新しいオブジェクトを作成して返します <!-- REF #_command_.Folder.Summary -->`Folder` コマンドは、<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`Folder` コマンドは、 <!-- REF #_command_.Folder.Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -139,7 +139,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`Folder` コマンドは、<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
+`4D.Folder.new()` 関数は、 <!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
 
 > `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。
 
@@ -170,7 +170,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`.create()` 関数は、 <!-- REF #FolderClass.create().Summary -->`Folder` オブジェクトのプロパティに基づいてディスク上にフォルダーを作成します 。<!-- END REF -->。
+`.create()` 関数は、 <!-- REF #FolderClass.create().Summary -->`.create()` 関数は、<!-- END REF -->。
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 フォルダーがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
@@ -304,7 +304,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 `Delete with contents` を渡した場合:
 
 * フォルダーと、その中身がすべて削除されます。 **警告**: フォルダーまたはその中身がロックされている、あるいは読み取り専用に設定されていたとしても、カレントユーザーが適切なアクセス権を持っていた場合には、フォルダーはその中身ごと削除されます。
-* このフォルダー、またはその中のフォルダーのどいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 削除が中止された場合、`GET LAST ERROR STACK` コマンドを使用して原因となったファイルの名前とパスを取得することができます。
+* このフォルダー、またはその中に含まれるファイルのいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 削除が中止された場合、`GET LAST ERROR STACK` コマンドを使用して原因となったファイルの名前とパスを取得することができます。
 * フォルダーが存在しない場合、コマンドは何もせず、エラーは返されません。 <br /><br /> (*) Windowsの場合: -54 (ロックされたファイルを書き込みのために開こうとした)<br /> macOSの場合: -45 (ファイルはロックされていたか不正なパス名)
 
 <!-- END REF -->
@@ -422,7 +422,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 説明
 
-`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します 。<!-- END REF -->。
+`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->。
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 

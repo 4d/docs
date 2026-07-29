@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type    |                             | Description                                      |
-| -------------- | ------- | --------------------------- | ------------------------------------------------ |
-| wpDoc          | Object  | &#8594; | Document 4D Write Pro                            |
-| styleSheetName | Text    | &#8594; | Nom de la feuille de style                       |
-| listLevelIndex | Integer | &#8594; | Niveau de la feuille de style dans la hiérarchie |
-| Résultat       | Object  | &#8592; | Objet feuille de style                           |
+| Paramètres              | Type    |                             | Description                                      |
+| ----------------------- | ------- | --------------------------- | ------------------------------------------------ |
+| wpDoc                   | Object  | &#8594; | Document 4D Write Pro                            |
+| styleSheetName          | Text    | &#8594; | Nom de la feuille de style                       |
+| listLevelIndex          | Integer | &#8594; | Niveau de la feuille de style dans la hiérarchie |
+| Résultat de la fonction | Object  | &#8592; | Objet feuille de style                           |
 
 </div>
 <!-- END REF-->

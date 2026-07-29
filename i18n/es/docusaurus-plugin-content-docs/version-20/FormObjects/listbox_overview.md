@@ -44,7 +44,7 @@ Es posible añadir un método objeto al objeto list box y/o a cada columna del l
 1. Método objeto de cada columna
 2. Método objeto del list box
 
-The column object method gets events that occur in its [header](./listbox-header-footer.md#headers) and [footer](./listbox-header-footer.md#footers).
+El método objeto de columna obtiene los eventos que ocurren en su [encabezado](./listbox-header-footer.md#headers) y su [pie de página](./listbox-header-footer.md#footers).
 
 ### Tipos de list box
 
@@ -53,13 +53,13 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 * **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 * **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 * **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
-> > > > No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
 Se puede configurar completamente un objeto list box a través de sus propiedades, y también se puede gestionar dinámicamente por programación.
 
-El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Consulte la página [Resumen de los comandos List Box](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) de la *referencia del lenguaje 4D* para más información.
 
 
 ## Gestión de entrada
@@ -451,14 +451,14 @@ Cuando se incluyen valores del tipo fecha u hora en un list box jerárquico, se 
 
 #### Ordenación en list box jerárquicos
 
-Cuando se incluyen valores del tipo fecha u hora en un list box jerárquico, se muestran en el formato del sistema corto.
+En un list box en modo jerárquico, una ordenación estándar (que se realiza haciendo clic en el encabezado de una columna del list box) siempre se estructura de la siguiente manera:
 
 * En primer lugar, todos los niveles de la columna jerárquica (primera columna) se clasifican automáticamente por orden ascendente.
 * La ordenación se realiza por orden ascendente o descendente (según la acción del usuario) sobre los valores de la columna en la que se ha hecho clic.
 * Todas las columnas son sincronizadas.
 * En las siguientes ordenaciones realizadas en columnas no jerárquicas del list box, sólo se ordena el último nivel de la primera columna. Es posible modificar la ordenación de esta columna haciendo clic en su encabezado.
 
-Cuando se incluyen valores del tipo fecha u hora en un list box jerárquico, se muestran en el formato del sistema corto.
+Por ejemplo, el siguiente list box, en el que no se especifica ningún tipo específico:
 
 ![](../assets/en/FormObjects/hierarch3.png)
 

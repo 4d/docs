@@ -357,7 +357,7 @@ Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de
 
 L'exécution du code d'initialisation ou de fermeture se fait au moyen de la méthode base `On Host Database Event`.
 
-> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler.
+> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'[option **Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés.
 
 
 ## Protection des composants : la compilation

@@ -44,4 +44,4 @@ title: OpenAIChatCompletionsStreamResult
 | `prompt_tokens_details`     | Object  | プロンプトトークンの詳細な内訳(オプション)。   |
 | `completion_tokens_details` | Object  | 補完トークンの詳細な内訳(オプション)。      |
 
-> **Note:** ストリーミングのレスポンス内に使用状況を受信するためには、リクエストパラメーター内で`stream_options: {include_usage: True}` に設定する必要があります。 詳細については、[OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) を参照してください.
+> **Note:** ストリーミングのレスポンス内に使用状況を受信するためには、リクエストパラメーター内で`stream_options: {include_usage: True}` に設定する必要があります。 詳細については、[OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) を参照してください。

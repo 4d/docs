@@ -1,35 +1,35 @@
 ---
 id: provider-model-aliases
-title: Provider & Model Aliases
+title: プロバイダー & モデルエイリアス
 ---
 
-# Provider & Model Aliases
+# プロバイダー & モデルエイリアス
 
-The OpenAI client supports provider and model aliases, allowing you to define provider configurations and named model aliases in JSON files and reference them using simple syntaxes.
+OpenAI クライアントはプロバイダーとモデルエイリアスをサポートし、これによりプロバイダー設定や名前付けされたモデルエイリアスをJSON ファイル内に定義して、シンプルなシンタックスを使用してそれらを参照することができます。
 
 ## 概要
 
-Instead of hard-coding API endpoints and credentials in your code, you can:
+API エンドポイントと認証情報をコード内にハードコーディングするのではなく、以下の様なことを行うことができます:
 
-- Define provider configurations in a JSON file
-- Use the `provider:model` syntax to specify a provider and model directly
-- Define named model aliases that map to a provider and a model ID
-- Use a named model alias by bare name (e.g., `my-gpt`)
-- Switch between providers (OpenAI, Anthropic, local Ollama, etc.) easily
+- プロバイダー設定をJSON ファイル内で定義する
+- `provider:model` シンタックスを使用してプロバイダーとモデルを直接指定する
+- 名前付けされたモデルエイリアスを定義し、プロバイダーとモデルID にマップする
+- 名前付けされたモデルエイリアスを名前(例: `my-gpt`) だけで使用する
+- プロバイダー間(OpenAI、Anthropic、ローカルな Ollama、など)を 簡単に切り替える
 
-## Configuration Files
+## 設定ファイル
 
-The client automatically loads provider configurations from the first existing file found (in priority order):
+クライアントは、既存のファイルから(優先度順で)最初に見つかったプロバイダー設定ファイルを自動的に読み込みます:
 
-| 優先順位                     | 場所        | File Path                                    |
+| 優先順位                     | 場所        | ファイルパス                                       |
 | ------------------------ | --------- | -------------------------------------------- |
 | 1 (高) | userData  | `<data folder>/Settings/AIProviders.json`    |
 | 2                        | user      | `<package folder>/Settings/AIProviders.json` |
 | 3 (低) | structure | `/SOURCES/AIProviders.json`                  |
 
-**Important:** Only the **first existing file** is loaded. There is no merging of multiple files.
+**重要:** **既存のファイルの最初のもの** のみがロードされます。 複数のファイルが結合されることはありません。
 
-### Configuration File Format
+### 設定ファイルフォーマット
 
 ```json
 {
@@ -50,23 +50,23 @@ The client automatically loads provider configurations from the first existing f
 }
 ```
 
-### Provider Fields
+### プロバイダーフィールド
 
-| フィールド     | 型    | 必須 | 説明                                                             |
-| --------- | ---- | -- | -------------------------------------------------------------- |
-| `baseURL` | Text | ◯  | API endpoint URL                                               |
-| `apiKey`  | Text | ×  | API key value                                                  |
-| `組織`      | Text | ×  | Organization ID (optional, OpenAI-specific) |
-| `project` | Text | ×  | Project ID (optional, OpenAI-specific)      |
+| フィールド          | 型    | 必須 | 説明                                            |
+| -------------- | ---- | -- | --------------------------------------------- |
+| `baseURL`      | Text | ◯  | API エンドポイント URL                               |
+| `apiKey`       | Text | ×  | API キーの値                                      |
+| `organization` | Text | ×  | 組織の ID (オプション、OpenAI特有)    |
+| `project`      | Text | ×  | プロジェクト ID (オプション、OpenAI特有) |
 
-### Model Alias Fields
+### モデルエイリアスフィールド
 
-| フィールド   | 型    | 必須 | 説明                                                                  |
-| ------- | ---- | -- | ------------------------------------------------------------------- |
-| `プロバイダ` | Text | ◯  | Name of the provider (must exist in `providers`) |
-| `model` | Text | ◯  | Model ID used by the provider                                       |
+| フィールド      | 型    | 必須 | 説明                                                      |
+| ---------- | ---- | -- | ------------------------------------------------------- |
+| `provider` | Text | ◯  | プロバイダー名(`providers` 内に存在している必要があります) |
+| `model`    | Text | ◯  | プロバイダーによって使用されているモデル ID                                 |
 
-### Example Configuration
+### 設定例
 
 ```json
 {
@@ -102,157 +102,157 @@ The client automatically loads provider configurations from the first existing f
 }
 ```
 
-## Usage in API Calls
+## API呼び出しの使用状況
 
-### Model Parameter Formats
+### モデルパラメーターのフォーマット
 
-Two syntaxes are supported:
+二つのシンタックスがサポートされています:
 
-| シンタックス                | 説明                                                                                 |
-| --------------------- | ---------------------------------------------------------------------------------- |
-| `provider:model_name` | Provider alias — specify provider and model directly                               |
-| `model_alias`         | Model alias — reference a named model from the `models` configuration by bare name |
+| シンタックス                | 説明                                            |
+| --------------------- | --------------------------------------------- |
+| `provider:model_name` | プロバイダーエイリアス - プロバイダーとモデルを直接指定します              |
+| `model_alias`         | モデルエイリアス — 命名されたモデルを`models` 設定から名前を使用して参照します |
 
-#### Provider alias syntax
+#### プロバイダーエイリアスシンタックス
 
-Use the `provider:model_name` syntax in any API call that accepts a model parameter:
+`provider:model_name` シンタックスを、モデル引数を受け取る任意のAPI 呼び出し内で使用します:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Chat completions
+// チャット補完
 var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
 var $result := $client.chat.completions.create($messages; {model: "local:llama3"})
 
-// Embeddings
+// 埋め込み
 var $result := $client.embeddings.create("text"; "openai:text-embedding-3-small")
 var $result := $client.embeddings.create("text"; "local:nomic-embed-text")
 
-// Image generation
+// 画像生成
 var $result := $client.images.generate("prompt"; {model: "openai:dall-e-3"})
 ```
 
-#### Model alias syntax
+#### モデルエイリアスシンタックス
 
-Use a bare model name to reference a named model defined in the `models` section of the configuration file. The provider, model ID, and credentials are resolved automatically:
+設定ファイル内の`models` セクション内で定義されている名前付けされたモデルを、単純に名前だけを使用して参照します。 プロバイダー、モデルID、そして認証情報は、自動的に解決されます:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use a named model alias
+// 名前付けされたモデルエイリアスを使用
 var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
 var $result := $client.chat.completions.create($messages; {model: "my-claude"})
 
-// Embeddings with a named model alias
+// 名前づけされたモデルエイリアスでの埋め込み
 var $result := $client.embeddings.create("text"; "my-embedding")
 ```
 
-### How It Works
+### 動作する仕組み
 
-#### Provider alias (`provider:model`)
+#### プロバイダーエイリアス(`provider:model`)
 
-When you use the `provider:model` syntax, the client automatically:
+`provider:model` シンタックスを使用するとき、クライアントは以下の様なことを自動的に行っています:
 
-1. **Parses** the model string to extract provider name and model name
-   - Example: `"openai:gpt-5.1"` → provider=`"openai"`, model=`"gpt-5.1"`
+1. モデル文字列を**解析**し、プロバイダー名とモデル名を取得します
+   - 例: `"openai:gpt-5.1"` → provider=`"openai"`, model=`"gpt-5.1"`
 
-2. **Looks up** the provider configuration from the loaded JSON file
-   - Retrieves `baseURL`, `apiKey`, `organization`, `project`
+2. ロードされたJSON ファイル内で、プロバイダー設定を**検索** します
+   - `baseURL`、 `apiKey`、 `organization`、 `project`といった情報を取得します
 
-3. **Makes the API request** using the resolved configuration
-   - Sends request to the provider's `baseURL` with the correct `apiKey`
+3. 解決された設定を使用して**API リクエストを作成** します
+   - 正しい`apiKey` で、プロバイダーの`baseURL` にリクエストを送信します
 
-#### Model alias (bare name)
+#### モデルエイリアス(単に名前)
 
-When you use a bare model name that matches a configured alias, the client automatically:
+設定エイリアスに合致した単純なモデル名を使用する場合、クライアントは以下の様なことを自動的に行っています:
 
-1. **Looks up** the model alias in the `models` section of the configuration
-   - Example: `"my-gpt"` → finds entry with `provider: "openai"`, `model: "gpt-5.1"`
+1. 設定の`models` セクション内からモデルエイリアスを**検索** します
+   - 例: `"my-gpt"` → `provider: "openai"`, `model: "gpt-5.1"` であるエントリーを探します
 
-2. **Resolves** the associated provider to get `baseURL` and `apiKey`
+2. 割り当てられたプロバイダーを**解決** し、`baseURL` および `apiKey` を取得します
 
-3. **Makes the API request** using the provider's endpoint and the stored model ID
+3. プロバイダーのエンドポイントと、保存されたモデルID を使用して**API リクエストを作成** します
 
-### Using Plain Model Names
+### 単純なモデル名を使用する
 
-If you specify a model name **without** a provider prefix, the client uses the configuration from its constructor:
+プロバイダーの接頭辞を**使用せずに**モデル名を指定した場合、クライアントはコンストラクターの設定を使用します:
 
 ```4d
-// Use constructor configuration
+// コンストラクターの設定を使用
 var $client := cs.AIKit.OpenAI.new({apiKey: "sk-..."; baseURL: "https://api.openai.com/v1"})
 var $result := $client.chat.completions.create($messages; {model: "gpt-5.1"})
 
-// Override with provider alias
+// プロバイダーエイリアスを上書きする
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
 
-// Override with model alias (bare name)
+// モデルエイリアスを上書きする(単純な名前)
 var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
 ## 例題
 
-### Multi-Provider Chat Application
+### 複数のプロバイダーを使用したチャットアプリケーション
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 var $messages := []
 $messages.push({role: "user"; content: "What is the capital of France?"})
 
-// Try OpenAI
+// OpenAI を使用
 var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 
-// Try Anthropic
+// Anthropic を使用
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-5-sonnet"})
 
-// Try local Ollama
+// ローカルの Ollama を使用
 var $result := $client.chat.completions.create($messages; {model: "local:llama3.2"})
 ```
 
-### Embeddings with Multiple Providers
+### 複数のプロバイダーを使用した埋め込み
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 var $text := "Hello world"
 
-// Use OpenAI embeddings
+// OpenAI 埋め込みを使用
 var $embedding1 := $client.embeddings.create($text; "openai:text-embedding-3-small")
 
-// Use local embeddings
+// ローカルな埋め込みを使用
 var $embedding2 := $client.embeddings.create($text; "local:nomic-embed-text")
 ```
 
-## Configuration Management
+## 設定管理
 
-Provider configurations can be managed through [4D Settings](https://developer.4d.com/docs/settings/ai) or by directly editing JSON files.
+プロバイダー設定はまた、[4D ストラクチャー設定](https://developer.4d.com/docs/settings/ai) を使用するか、またはJSON ファイルを直接編集することでも管理することができます。
 
-**To add or modify providers:**
+**プロバイダーの追加または編集:**
 
-1. Use 4D Settings interface (recommended), or
-2. Edit the appropriate JSON file (userData, user, or structure)
-3. Restart your application or create a new OpenAI client instance to load changes
+1. 4Dストラクチャー設定を使用する(推奨)、または
+2. 適切なJSON ファイル(userData、user、またh structure)を編集する
+3. アプリケーションを再起動し、変更を読み込むために新しいOpenAI クライアントインスタンスを作成する
 
-**Recommended file location:**
+**推奨されるファイルの場所:**
 
-- **For user-specific configs:** `<data folder>/Settings/AIProviders.json`
-- **For application defaults:** `/SOURCES/AIProviders.json`
+- **ユーザー特有の設定:** `<data folder>/Settings/AIProviders.json`
+- **アプリケーションのデフォルト設定:** `/SOURCES/AIProviders.json`
 
-### No Reload Capability
+### リロード機能はなし
 
-Once a client is instantiated, it cannot reload provider configurations. To pick up configuration changes:
+クライアントが一度インスタンス化されてしまったら、プロバイダー設定をリロードすることはできません。 設定の変更を反映させるためには:
 
 ```4d
-// Configuration changed - create new client
+// 設定が変更された - 新しいクライアントを作成
 var $client := cs.AIKit.OpenAI.new()
 ```
 
-## Security Considerations
+## セキュリティ上の注意事項
 
-When using 4D in client/server mode, it is **strongly recommended** to execute AI-related code on the server side to protect API tokens and credentials from exposure to client machines.
+4D をクライアント/サーバーモードで使用している場合、API トークンおよび資格情報をクライアントマシンに漏れることから保護するために、AI 関連のコードは全てサーバー側で実行することが **強く推奨されます**。
 
-## Common Use Cases
+## 一般的な使用例
 
-### Local Development with Ollama
+### Ollama を使用したローカルな開発
 
 ```json
 {
@@ -269,9 +269,9 @@ var $client := cs.AIKit.OpenAI.new()
 var $result := $client.chat.completions.create($messages; {model: "local:llama3.2"})
 ```
 
-### Named Model Aliases
+### 名前付けされたモデルエイリアス
 
-Define models once, use them everywhere by name:
+モデルを一度定義すれば、名前だけでどこからでもそれを使用することができます:
 
 ```json
 {
@@ -305,21 +305,21 @@ Define models once, use them everywhere by name:
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use named model aliases — no need to remember provider or model ID
+// 名前付けされたモデルエイリアスを使用 — プロバイダーやモデルIDを覚えておく必要はありません
 var $result := $client.chat.completions.create($messages; {model: "chat"})
 var $result := $client.chat.completions.create($messages; {model: "fast"})
 var $embedding := $client.embeddings.create("text"; "embedding")
 ```
 
-### List All Configured Models
+### 設定されたモデルを全て表示
 
 ```4d
 var $providers := cs.AIKit.OpenAIProviders.new()
 var $models := $providers.modelAliases()
-// Returns: [{name: "chat", provider: "openai", model: "gpt-5.1"}, ...]
+// [{name: "chat", provider: "openai", model: "gpt-5.1"}, ...] を返します
 ```
 
-### Production with Multiple Cloud Providers
+### 複数のクラウドプロバイダーを使用したプロダクション
 
 ```json
 {
@@ -340,7 +340,7 @@ var $models := $providers.modelAliases()
 }
 ```
 
-### Provider-Specific Organizations
+### プロバイダー特有の組織
 
 ```json
 {
@@ -358,13 +358,13 @@ var $models := $providers.modelAliases()
 ```
 
 ```4d
-// Route to different organizations
+// 別々の組織へルーティング
 var $resultA := $client.chat.completions.create($messages; {model: "openai-team-a:gpt-5.1"})
 var $resultB := $client.chat.completions.create($messages; {model: "openai-team-b:gpt-5.1"})
 ```
 
-## Related Documentation
+## 関連するドキュメンテーション
 
-- [OpenAI Class](Classes/OpenAI.md) - Main client class
-- [OpenAIProviders Class](Classes/OpenAIProviders.md) - Provider configuration management
-- [Compatible OpenAI APIs](compatible-openai.md) - List of compatible providers
+- [OpenAI Class](Classes/OpenAI.md) - メインのクライアントクラス
+- [OpenAIProviders Class](Classes/OpenAIProviders.md) - プロバイダー設定管理用
+- [Compatible OpenAI APIs](compatible-openai.md) - 互換性のあるプロバイダーの一覧

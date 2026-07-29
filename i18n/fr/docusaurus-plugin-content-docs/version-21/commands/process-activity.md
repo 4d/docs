@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                                                                                                      |
-| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| sessionID  | Text    | &#8594; | ID de session                                                                                                    |
-| options    | Integer | &#8594; | Options de retour                                                                                                |
-| Résultat   | Object  | &#8592; | Aperçu des process en cours d'exécution et/ou (4D Server uniquement) des sessions utilisateur |
+| Paramètres              | Type    |                             | Description                                                                                                      |
+| ----------------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| sessionID               | Text    | &#8594; | ID de session                                                                                                    |
+| options                 | Integer | &#8594; | Options de retour                                                                                                |
+| Résultat de la fonction | Object  | &#8592; | Aperçu des process en cours d'exécution et/ou (4D Server uniquement) des sessions utilisateur |
 
 </div>
 <!-- END REF-->

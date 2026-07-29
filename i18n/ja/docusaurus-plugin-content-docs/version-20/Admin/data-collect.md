@@ -48,7 +48,7 @@ title: データ収集
 | encryptedConnections    | Boolean        | クライアント/サーバー接続が暗号化されている場合は True                                                           |
 | encrypted               | Boolean        | データファイルが暗号化されていれば true                                                                   |
 | compiled                | Boolean        | アプリケーションがコンパイル済みの場合は true                                                                |
-| isEngined               | Boolean        | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                            |
+| isEngined               | Boolean        | アプリケーションに 4D Volume Desktop が組み込まれている場合は true                                            |
 | projectMode             | Boolean        | アプリケーションがプロジェクトの場合は true                                                                 |
 | mobile                  | Collection     | モバイルセッションに関する情報                                                                          |
 

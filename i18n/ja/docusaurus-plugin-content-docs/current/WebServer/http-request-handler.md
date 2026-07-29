@@ -1,6 +1,6 @@
 ---
 id: http-request-handler
-title: HTTP Request handler
+title: HTTPリクエストハンドラー
 ---
 
 デフォルトで、4D Web サーバーで受信されたHTTP リクエストは[ビルトイン処理機能](httpRequests.md) または[REST サーバー](../REST/REST_requests.md) で管理されます。

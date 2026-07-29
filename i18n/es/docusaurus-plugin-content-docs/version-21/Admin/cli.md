@@ -94,7 +94,7 @@ Abra un paquete en macOS:
 --args ~/Documents/myDB.4dbase
 ```
 
-Abra un archivo de proyecto y un archivo de datos:
+Abra un archivo de proyecto:
 
 - macOS:
 
@@ -108,7 +108,7 @@ Abra un archivo de proyecto y un archivo de datos:
 %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
 
-Abra un archivo de proyecto:
+Abra un archivo de proyecto y un archivo de datos:
 
 - macOS:
 

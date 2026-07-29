@@ -12,7 +12,7 @@ Esta página contiene varias opciones para configurar el funcionamiento general 
 Esta opción permite configurar la visualización por defecto de 4D al inicio, cuando el usuario lanza únicamente la aplicación.
 
 - **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
-- **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
+- **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, que le permite seleccionar un proyecto local.
 - **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
   > Para forzar la visualización de la caja de diálogo de apertura cuando se selecciona esta opción, mantenga presionada la tecla **Alt** (Windows) u **Option** (macOS) mientras lanza el proyecto.
 - **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
@@ -47,7 +47,7 @@ En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas
 
 Hay tres opciones disponibles:
 
-- **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
+- **Según las Preferencias del sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias del sistema de macOS (En pantalla completa, Siempre o Manualmente).
 - **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
 - **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
@@ -60,8 +60,8 @@ Este menú permite seleccionar la combinación de colores que se utilizará para
 Hay tres opciones disponibles:
 
 - **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
-- **Claro**: utilizar el tema claro
-- **Sombra**: utilizar el tema Sombra
+- **Claro**: utilizar el tema Claro
+- **Oscuro**: utilizar el tema Oscuro
 
 > Esta preferencia sólo es compatible en macOS. En Windows, se utiliza siempre el esquema "Light".
 
@@ -94,7 +94,7 @@ Gracias a este principio, en macOS las carpetas de las bases aparecen como paque
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain [**tokens** for classic language and database objects (constants, commands, tables and fields)](../Concepts/methods.md#language-tokens). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version.
+Cuando esta opción está marcada, los [archivos fuente de métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos de 4D contendrán [**tokens** para los objetos clásicos del lenguaje y de la base de datos (constantes, comandos, tablas y campos)](../Concepts/methods.md#language-tokens). Los tokens son caracteres adicionales, como `:C10` o `:5`, que se insertan en los archivos de código fuente y permiten renombrar tablas y campos, así como identificar elementos, independientemente de la versión de 4D.
 
 Si tiene intención de utilizar VCS o los editores de código externos con sus nuevos proyectos, es posible que desee desmarcar esta opción para una mejor legibilidad del código con estas herramientas.
 
@@ -104,7 +104,7 @@ Si tiene intención de utilizar VCS o los editores de código externos con sus n
 
 #### Exclusión de los tokens en los proyectos existentes
 
-Puede configurar sus proyectos existentes para guardar código **sin tokens** insertando la siguiente llave en el archivo [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) utilizando un editor de texto:
+Puede configurar sus proyectos existentes para guardar código **sin tokens** insertando la siguiente clave en el archivo [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) utilizando un editor de texto:
 
 ```
 "tokenizedText": false
@@ -120,7 +120,7 @@ Puede definir esta preferencia marcando la opción **Crear el archivo .gitignore
 
 Cuando se crea un proyecto en 4D y esa casilla está marcada, 4D crea un archivo `.gitignore` al mismo nivel que la carpeta `Project` (ver [Arquitectura de un proyecto](Project/architecture.md#gitignore-file-optional)).
 
-Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Esto abrirá el archivo de configuración .gitignore en su editor de texto. Esto abrirá el archivo de configuración .gitignore en su editor de texto.
+Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Esto abrirá el archivo de configuración .gitignore en su editor de texto. El contenido de este archivo se utilizará para generar los archivos `.gitignore` en sus nuevos proyectos.
 
 La [documentación oficial de git](https://git-scm.com/docs/gitignore) es un gran recurso para entender cómo funcionan los archivos `.gitignore`.
 
@@ -143,7 +143,7 @@ Esta área configura el acceso a la documentación HTML de 4D mostrada en su nav
 
 ### Lenguaje de la documentación
 
-Lenguaje de la documentación HTML a mostrar. Puede seleccionar una documentación en un idioma distinto del idioma de la aplicación.
+Idioma de la documentación HTML a mostrar. Puede seleccionar una documentación en un idioma distinto del idioma de la aplicación.
 
 ### Primero buscar en la carpeta local
 
@@ -151,7 +151,7 @@ Lenguaje de la documentación HTML a mostrar. Puede seleccionar una documentaci�
 
 Define dónde buscará 4D las páginas de documentación.
 
-- Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. Si se encuentra, 4D muestra la página en el navegador actual. Esto permite acceder a la documentación incluso cuando se está desconectado.
+- Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. Si no es así, 4D lo busca automáticamente en el sitio web de la documentación en línea. Esto permite acceder a la documentación incluso cuando se está desconectado.
 - Cuando no está marcada, 4D busca la página deseada directamente en el sitio web de documentación en línea y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
 
 ### Carpeta local

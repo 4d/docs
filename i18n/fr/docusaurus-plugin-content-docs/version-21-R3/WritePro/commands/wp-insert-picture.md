@@ -10,14 +10,14 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type                                                    |                             | Description                                                            |
-| ----------- | ------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
-| targetObj   | Object                                                  | &#8594; | Plage ou élément ou document 4D Write Pro                              |
-| picture     | Picture                                                 | &#8594; | Champ image ou variable, ou chemin vers le fichier image sur le disque |
-| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | Objet File représentant un fichier image ou Chemin d'accès             |
-| mode        | Integer                                                 | &#8594; | Mode d'insertion                                                       |
-| rangeUpdate | Integer                                                 | &#8594; | Mode de mise à jour de la plage                                        |
-| Résultat    | Object                                                  | &#8592; | Objet référençant l'image                                              |
+| Paramètres              | Type                                                    |                             | Description                                                            |
+| ----------------------- | ------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| targetObj               | Object                                                  | &#8594; | Plage ou élément ou document 4D Write Pro                              |
+| picture                 | Picture                                                 | &#8594; | Champ image ou variable, ou chemin vers le fichier image sur le disque |
+| pictureFile             | [4D.File](../../API/FileClass.md), Text | &#8594; | Objet File représentant un fichier image ou Chemin d'accès             |
+| mode                    | Integer                                                 | &#8594; | Mode d'insertion                                                       |
+| rangeUpdate             | Integer                                                 | &#8594; | Mode de mise à jour de la plage                                        |
+| Résultat de la fonction | Object                                                  | &#8592; | Objet référençant l'image                                              |
 
 </div>
 <!-- END REF-->
