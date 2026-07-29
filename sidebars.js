@@ -795,14 +795,14 @@ module.exports =
           items: [
             {
                 type: "category",
-                label: "4D Server Window",
+                label: "Administration Window",
                 link: {
                   type: "doc",
                   id: "ServerWindow/overview"
                 },
                 items: [
                   "ServerWindow/monitor",
-                  "ServerWindow/users",
+                  "ServerWindow/sessions",
                   "ServerWindow/processes",
                   "ServerWindow/maintenance",
                   "ServerWindow/application-server",
@@ -816,7 +816,7 @@ module.exports =
             "server/exit",
               {
                 type: "category",
-                label: "Windows OS Features",
+                label: "Windows Features",
                 items: [
                   "server/sso",
                   "server/service",

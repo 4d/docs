@@ -1,6 +1,6 @@
 ---
 id: menus
-title: 4D Server Menus
+title: Menus
 ---
 
 
