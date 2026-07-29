@@ -596,11 +596,6 @@ Function getArea()
 // Function definition
 Function getArea()
  var $0 : Integer
- $0:=(This.height)*(This.width)
-
-// Function definition
-Function getArea()
- var $0 : Integer
 
  $0:=(This.height)*(This.width)
 

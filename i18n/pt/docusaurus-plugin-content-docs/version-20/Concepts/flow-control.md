@@ -74,12 +74,10 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 #### Exemplo
 
 ```4d
-  // Ask the user to enter a name
- $Find:=Request("Type a name")
- If(OK=1)
-    QUERY([People];[People]LastName=$Find)
- Else
-    ALERT("You did not enter a name.")
+  For($vlChar;1;Length(vtSomeText))
+  //Faz algo com o caractere se for uma TAB
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+  //...
  End if 
 ```
 
@@ -473,7 +471,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-#### Diminuir a variável contador
+#### Incrementar a variável do contador em mais de um
 
 Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo valor absoluto seja maior que um.
 
@@ -528,7 +526,7 @@ Aqui está o loop `Repeat... Until` équivalente:
 
 :::tip
 
-Aqui está o equivalente ao loop `While... Portanto, use o loop <code>For... End for` sempre que possível.
+Here is the equivalent `While... Portanto, use o loop <code>For... End for` sempre que possível.
 
 :::
 

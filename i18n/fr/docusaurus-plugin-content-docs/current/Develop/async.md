@@ -88,7 +88,7 @@ En 4D, tout objet est libéré [dès lors qu'il n'y a plus de référence](../Co
 
 Pour les classes asynchrones, une **référence supplémentaire** est toujours maintenue par 4D dans le process qui a instancié l'objet. Cette référence n'est libérée que lorsque l'opération est terminée, c'est-à-dire après le déclenchement de l'événement `onTerminate`. Ce référencement automatique permet à votre objet de survivre même si vous ne l'avez pas référencé spécifiquement dans une variable.
 
-Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement `onTerminate` et libère ainsi l'objet.
+Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement onTerminate\\` et libère ainsi l'objet.
 
 ### Exemples illustrant le concept commun
 

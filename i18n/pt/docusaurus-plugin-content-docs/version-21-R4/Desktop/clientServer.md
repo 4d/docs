@@ -164,6 +164,7 @@ When the remote machine wakes up, the application automatically reconnects and r
 A sleeping client session is automatically dropped after 48 hours of inactivity.
 
 You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+
 ## Management of unreachable peer
 
 When the [QUIC network layer is used](../settings/client-server.md#network-layer), client/server sessions benefit from an **automatic reconnection feature** in case of unexpected disconnections. Unexpected disconnections include for example:
@@ -204,6 +205,7 @@ When the "Unreachable" event is received on either side, an [`info.unreachableSi
 ### Restoring or closing connection
 
 The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
+
 The QUIC session timeout is automatically used to monitor disconnections:
 
 - If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.

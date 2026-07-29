@@ -354,32 +354,32 @@ Cuando esta opción no está activa, los usuarios deben seleccionar primero la l
 
 ## Herramientas de escritura
 
-En macOS, esta propiedad permite a los usuarios finales aplicar las [**Herramientas de escritura** de Apple Intelligence](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) al texto de los objetos de formulario [4D Write Pro](writeProArea_overview.md) y [entrada](input_overview.md) (con soporte para [varias líneas](#multiline)). Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+En macOS, esta propiedad permite a los usuarios finales aplicar las [**Herramientas de escritura** de Apple Intelligence](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) al texto de los objetos de formulario [4D Write Pro](writeProArea_overview.md) y [entrada](input_overview.md) (con soporte para [varias líneas](#multiline)). Las herramientas de escritura utilizan IA para revisar, reescribir, resumir o cambiar el tono del texto directamente en su aplicación 4D.
 
 ![](../assets/en/FormObjects/writing-tools.png)
 
 :::tip Entrada de blog relacionada
 
-Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**.
+Consulte la entrada del blog [Herramientas de escritura de Apple: ya disponibles en 4D Write Pro y Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) para **ver las herramientas de escritura en acción**.
 
 :::
 
-When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+Cuando se activa la propiedad y se ejecuta el formulario, se añade una opción de menú llamada **Mostrar herramientas de escritura** al [menú contextual](#context-menu) del objeto. Cuando el usuario selecciona una acción en las Herramientas de escritura, el texto se sustituye por la modificación resultante:
 
-- if some text is selected, only the selection is replaced,
-- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+- si hay algún texto seleccionado, solo se sustituye la selección,
+- si no hay ninguna selección, se utiliza todo el contenido del área (en el caso de un área [4D Write Pro](writeProArea_overview.md), todo el contenido del contenedor actual). El contexto utilizado por las Herramientas de Escritura es el contenedor en el que se encuentra el cursor (encabezado, pie de página, cuerpo o cuadro de texto) junto con la selección actual.
 
 :::note
 
-Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.
+Normalmente, los estilos se conservan al utilizar las herramientas de escritura; sin embargo, con algunas funciones de IA podrían sustituirse.
 
 :::
 
-The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+Las herramientas de escritura también se pueden mostrar mediante la [acción estándar](properties_Action.md#standard-action) **writingTools**, que se puede asignar a un botón o a una opción de menú.
 
 :::note
 
-The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+La funcionalidad Herramientas de escritura se basa en **Apple Intelligence** y sólo está disponible en ordenadores macOS compatibles cuando *Apple Intelligence & Siri* está habilitado en la Configuración del sistema. En Windows, o cuando Apple Intelligence no está activado, la propiedad sigue estando disponible en la lista de propiedades, pero la función y la acción estándar **WritingTools** asociada quedan desactivadas en tiempo de ejecución (si la acción se invoca por programación, no realiza ninguna acción).
 
 :::
 
@@ -388,7 +388,7 @@ La disponibilidad y el valor por defecto de la propiedad dependen del tipo de ob
 | Object                                        | Disponibilidad en la lista de propiedades                                                | Valor por defecto |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------- |
 | [Entrada](input_overview.md)                  | Sólo cuando la propiedad [Multiline](#multiline) está establecida en "Sí" o "Automático" | False             |
-| [Área 4D Write Pro](writeProArea_overview.md) | Always displayed                                                                         | True              |
+| [Área 4D Write Pro](writeProArea_overview.md) | Siempre visible                                                                          | True              |
 
 #### Gramática JSON
 
@@ -398,6 +398,6 @@ La disponibilidad y el valor por defecto de la propiedad dependen del tipo de ob
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md) ([multiline](#multiline))
+[Área 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) ([multilínea](#multiline))
 
 

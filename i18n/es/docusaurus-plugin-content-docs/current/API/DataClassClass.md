@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son <!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -279,7 +279,7 @@ Para cada objeto de *objectCol*:
   - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
-> La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. En todos los demás casos, el valor de la propiedad "\_\_KEY" se ignora, el valor de la llave primaria debe pasarse "tal cual".
 
 **Entidades relacionadas**
 
@@ -466,7 +466,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 La función `.get()` <!-- REF #DataClassClass.get().Summary -->consulta la clase de datos para recuperar la entidad que coincide con el parámetro *primaryKey*<!-- END REF -->.
 
-En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto).
+En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). También puede asegurarse de que el valor de la llave primaria siempre se devuelva como Texto utilizando la función [`.getKey()`](EntityClass.md#getkey) con el parámetro `dk key as string`.
 
 Si no se encuentra ninguna entidad con *primaryKey*, se devuelve una entidad **Null**.
 
@@ -761,7 +761,7 @@ Los datos relativos a las entidades relacionadas se almacenan en la caché del o
 
 #### Ejemplo
 
-En el siguiente ejemplo, `$ds.Persons.all()` carga la primera entidad con todos sus atributos. A continuación, se activa el optimizado de la solicitud, de modo que sólo se cargan `firstname` y `address.city`.
+En el siguiente ejemplo, `$ds.Persons.all()` carga la primera entidad con todos sus atributos. A continuación, se activa la optimización de la consulta, de modo que sólo se cargan `firstname` y `address.city`.
 
 Tenga en cuenta que `address.city` se carga en la caché de la dataclass `Persons`.
 
@@ -826,7 +826,7 @@ El objeto entidad se crea en memoria y no se guarda en la base de datos hasta qu
 
 Todos los atributos de la entidad se inicializan con el valor **null**.
 
-> Los atributos se pueden inicializar con valores por defecto si se selecciona la opción **Traducir los NULL a valores vacíos** al nivel de la estructura de la base 4D.
+> Los atributos se pueden inicializar con valores por defecto si se selecciona la opción **Asignar valores NULL a valores en blanco** al nivel de la estructura de la base 4D.
 
 #### Ejemplo
 
@@ -873,7 +873,7 @@ La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary --
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades.
+Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Para más información, consulte [Selecciones de entidades ordenadas frente a no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelection.length` devuelve 0). Este método permite construir gradualmente selecciones de entidades haciendo llamadas posteriores a la función [`add()`](EntitySelectionClass.md#add).
 
@@ -893,12 +893,12 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                   |
-| ----------- | ------------------------------------------------ |
-| 21          | Soporte de los objetos 4D.Vector |
-| 17 R6       | Soporte de los parámetros Formula                |
-| 17 R5       | Soporte de los marcadores para los valores       |
-| 17          | Añadidos                                         |
+| Lanzamiento | Modificaciones                                         |
+| ----------- | ------------------------------------------------------ |
+| 21          | Soporte de los objetos 4D.Vector       |
+| 17 R6       | Soporte de los parámetros Formula                      |
+| 17 R5       | Soporte de los marcadores de posición para los valores |
+| 17          | Añadidos                                               |
 
 </details>
 
@@ -939,7 +939,7 @@ donde:
 
 - **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
-> \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
+> \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores de posición, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
 
 - **formula**: una fórmula válida pasada como `Text` u `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
 
@@ -970,7 +970,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |                                    |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |                                    |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá en 20.
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá en 20.
   Al utilizar un valor constante, deben respetarse las siguientes reglas:
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
@@ -1222,11 +1222,11 @@ Si *attributePath* designa un atributo que almacena [**objetos vectores**](../AP
 
 En este caso, el parámetro *value* debe ser un **objeto vectorial de comparación** que contenga las siguientes propiedades:
 
-| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. El vector a comparar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| metric    | Text                                               | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the [cosine similarity](./VectorClass.md#cosinesimilarity) between vectors.</li><li>`mk dot`: calculates the [dot similarity](VectorClass.md#dotsimilarity) of vectors.</li><li>`mk euclidean`: calculates the [Euclidean distance](./VectorClass.md#euclideandistance) between vectors. |
-| threshold | Real                                               | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                                                                                                                                                                                             |
+| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. El vector a comparar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| metric    | Text                                               | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. Puede utilizar una de las siguientes constantes (de texto):<li>`mk cosine` (valor por defecto si no se especifica): calcula la [similitud coseno](./VectorClass.md#cosinesimilarity) entre vectores.</li><li>`mk dot`: calcula la [similitud escalar](VectorClass.md#dotsimilarity) de los vectores.</li><li>`mk euclidean`: calcula la [distancia euclidiana](./VectorClass.md#euclideandistance) entre vectores. |
+| threshold | Real                                               | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                                                                                                                                                                                                                    |
 
 Sólo se admite un subconjunto de símbolos **comparadores**. Tenga en cuenta que comparan los resultados con el valor umbral:
 
@@ -1255,10 +1255,10 @@ var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField desc
 
 :::note
 
-You will generally want vector similarity query results to be sorted from "most similar" to "least similar." Por defecto, los resultados devueltos con una cláusula **order by** se ordenan en orden ascendente. Depending on the similarity metric used, you may need to adjust the sorting direction to obtain the correct ranking:
+Generalmente querrá que los resultados de la consulta de similitudes vectoriales se ordenen de "más similares" a "menos similar". Por defecto, los resultados devueltos con una cláusula **order by** se ordenan en orden ascendente. Dependiendo de la métrica de similitud utilizada, puede que necesite ajustar la dirección de clasificación para obtener la clasificación correcta:
 
-- for [**cosine**](./VectorClass.md#cosinesimilarity) and [**dot**](./VectorClass.md#dotsimilarity) similarity, higher values indicate greater similarity. Por lo tanto, normalmente deberá incluir la palabra clave `desc` en la cadena de consulta.
-- for [**euclidean distance**](./VectorClass.md#euclideandistance) similarity, lower values indicate greater similarity. In this case, the default ascending order (or explicitly using the `asc` keyword) is appropriate.
+- en el caso de la similitud [**coseno**](./VectorClass.md#cosinesimilarity) y [**punto**](./VectorClass.md#dotsimilarity), los valores más altos indican una mayor similitud. Por lo tanto, normalmente deberá incluir la palabra clave `desc` en la cadena de consulta.
+- en cuanto a la similitud basada en la [**distancia euclidiana**](./VectorClass.md#euclideandistance), los valores más bajos indican una mayor similitud. En este caso, lo más adecuado es el orden ascendente por defecto (o utilizar explícitamente la palabra clave `asc`).
 
 :::
 
@@ -1275,7 +1275,7 @@ Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).
 :::tip Entradas de blog relacionadas
 
 - [4D AI: Búsqueda de entidades por similaridad vectorial en 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
-- [4D AI: Sorting Query Results by Vector Similarity](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
+- [4D AI: ordenación de los resultados de una consulta en función de la similitud vectorial](https://blog.4d.com/4d-ai-sorting-query-results-by-vector-similarity/)
 - [Por qué su Pila de búsqueda está rota y cómo lo soluciona la búsqueda vectorial](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
@@ -1642,25 +1642,25 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //El atributo de incrustación se basa en un campo 4D que almacena objetos de clase 4D.vector
 
-  //search with default metric (cosine)
+  //búsqueda con métrica predeterminada (coseno)
 var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector : $vector})
 
-  //search with euclidean metric 
+  //búsqueda con métrica euclidiana 
 var $employees:=ds.Employee.query("embedding < :1 order by embedding"; {vector: $vector; metric: mk euclidean})
 
-  //search with explicit cosine metric and custom threshold
+  //búsqueda con métrica cosena explícita y umbral personalizado
 var $employees:=ds.Employee.query("embedding > :1 order by embedding desc"; {vector: $vector; metric: mk cosine; threshold: 0.9})
 
-  //search with a formula
+  //búsqueda con una fórmula
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### Ejemplo 5
 
-Vector-based semantic ordering can be combined with traditional ORDA filters in the same query.
+La ordenación semántica basada en vectores se puede combinar con los filtros ORDA tradicionales en la misma búsqueda.
 
 ```4d
 var $comparisonVector := {vector: $myVector; metric: mk cosine; threshold: 0.4} 

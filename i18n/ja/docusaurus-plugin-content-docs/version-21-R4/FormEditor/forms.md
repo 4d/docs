@@ -1,6 +1,6 @@
 ---
 id: forms
-title: Forms
+title: フォーム
 ---
 
 フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 フォームを使用することで、ユーザーはデータベースのデータをやり取りし、レポートを印刷します。 フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
@@ -18,7 +18,7 @@ title: Forms
 
 - **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
-- To simply print some part of a form, use the [`Print form`](../commands/print-form) command. 例:
+- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources) に保存します。 例:
 
 ```
 {
@@ -163,7 +163,7 @@ In 4D desktop applications, forms can be printed using the various [commands of 
 
 You can use forms to print data, either as page or as list.
 
-- To print a form within a printing job to process data during printing, use [`FORM LOAD`](../commands/form-load) and [`Print object`](../commands/print-object) commands. 例:
+- To simply print some part of a form, use the [`Print form`](../commands/print-form) command. 例:
 
 ```4d
 var $formData:={}
@@ -245,7 +245,7 @@ There are several other ways to use forms in the 4D applications, including:
 
 ## フォームのページ
 
-Each form is made of at least two pages:
+各フォームは、少なくとも 2つのページで構成されています:
 
 - ページ1: デフォルトで表示されるメインページ
 - ページ0: 背景ページ。このページ上に置かれたオブジェクトはすべてのページで表示されます
@@ -271,7 +271,7 @@ Fluent UI のサポートは現在デベロッパープレビューのフェー�
 
 :::
 
-Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
+Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
 
 Fluent UI レンダリングは現代的かつ魅力的なコントロールを提供するだけでなく、ダーク/ライトシステムテーマのサポート、高解像度ディスプレイのために最適化されたよりスムーズなレンダリング、そして最近のMicrosoft アプリケーションに沿った、一貫したユーザーエクスペリエンスを提供します。
 
@@ -281,7 +281,7 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 :::info 利用可能性
 
-この機能は、**Windows の4D プロジェクト内** で使用可能です。 macOS や、Windows のバイナリー4D データベースなどではご利用いただけません。 macOS や、Windows のバイナリー4D データベースなどではご利用いただけません。
+この機能は、**Windows の4D プロジェクト内** で使用可能です。 macOS や、Windows のバイナリー4D データベースなどではご利用いただけません。
 
 :::
 
@@ -294,15 +294,15 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 ### 要件
 
-Fluent UI レンダリングを使用するには、 **Windows App SDK** がマシン上にインストールされている必要があります。 フォームを表示するためには、この SDK がWindows マシンにインストールされているか確認する必要があります。 フォームを表示するためには、この SDK がWindows マシンにインストールされているか確認する必要があります。
+Fluent UI レンダリングを使用するには、 **Windows App SDK** がマシン上にインストールされている必要があります。 フォームを表示するためには、この SDK がWindows マシンにインストールされているか確認する必要があります。
 
-[必要であれば](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)、 Windows App SDK をインストールすることができます。 利便性のために、4D インストーラーは、Windows App SDK インストーラーをダウンロードするための [リンクを提供しています](../GettingStarted/Installation.md#ディスクへのインストール) 。 また、 [Microsoft ダウンロードページ](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) からダウンロードすることもできます。 推奨されるのは、4D インストーラーから提供されるバージョンを使用することです。こちらのほうが、最適な互換性を得られます。 利便性のために、4D インストーラーは、Windows App SDK インストーラーをダウンロードするための [リンクを提供しています](../GettingStarted/Installation.md#ディスクへのインストール) 。 また、 [Microsoft ダウンロードページ](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) からダウンロードすることもできます。 推奨されるのは、4D インストーラーから提供されるバージョンを使用することです。こちらのほうが、最適な互換性を得られます。
+[必要であれば](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)、 Windows App SDK をインストールすることができます。 利便性のために、4D インストーラーは、Windows App SDK インストーラーをダウンロードするための [リンクを提供しています](../GettingStarted/Installation.md#ディスクへのインストール) 。 また、 [Microsoft ダウンロードページ](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) からダウンロードすることもできます。 推奨されるのは、4D インストーラーから提供されるバージョンを使用することです。こちらのほうが、最適な互換性を得られます。
 
-Windows App SDK が適切にインストールされていない場合、4D は全てのフォームをクラシックモードで何のエラーもなく表示し、また [診断ログ](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) に以下のメッセージが記録されます: "Fluent UI が必要ですが利用不可です。 アプリケーションはClassic Windows テーマで実行されます。" アプリケーションはClassic Windows テーマで実行されます。"
+Windows App SDK が適切にインストールされていない場合、4D は全てのフォームをクラシックモードで何のエラーもなく表示し、また [診断ログ](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) に以下のメッセージが記録されます: "Fluent UI が必要ですが利用不可です。 アプリケーションはClassic Windows テーマで実行されます。"
 
 ### Fluent UI レンダリングを有効化する
 
-Fluent UI レンダリングモードは、アプリケーションレベルまたはフォームレベルで有効化することができます。 フォームでの設定の方がアプリケーションの設定より優先されます。 フォームでの設定の方がアプリケーションの設定より優先されます。
+Fluent UI レンダリングモードは、アプリケーションレベルまたはフォームレベルで有効化することができます。 フォームでの設定の方がアプリケーションの設定より優先されます。
 
 #### アプリケーション設定
 
@@ -320,7 +320,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 #### フォーム設定
 
-それぞれのフォームは、 **Widget appearance** プロパティによって独自のレンダリング設定を定義することができます。 次のオプションから選択することができます: 次のオプションから選択することができます:
+それぞれのフォームは、 **Widget appearance** プロパティによって独自のレンダリング設定を定義することができます。 次のオプションから選択することができます:
 
 - **継承**: グローバルなアプリケーション設定を継承します(デフォルト)
 - **クラシック**: クラシック Windows スタイルを使用します
@@ -338,7 +338,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
 - [`Application info`](../commands/application-info) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
 - [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
@@ -349,7 +349,7 @@ Fluent UI で4D フォームを使用する場合、以下の点に注意を払�
 
 ## 継承フォーム
 
-4D では "継承フォーム" を使用することができます。これはつまり、*フォームA* の全オブジェクトが *フォームB* で使用可能であるということです。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。
+4D では "継承フォーム" を使用することができます。これはつまり、*フォームA* の全オブジェクトが *フォームB* で使用可能であるということです。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。
 
 継承フォームへの参照は常にアクティブです。そのため、継承フォームの要素が変更されると (たとえば、ボタンスタイル)、この要素を使用する全フォームが自動的に変更されます。
 

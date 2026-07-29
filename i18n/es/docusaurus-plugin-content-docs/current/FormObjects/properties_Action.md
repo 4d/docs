@@ -98,7 +98,8 @@ Se soportan varios tipos de referencias de métodos:
   `ObjectMethods/objectName.4dm`\
   ... donde `objectName` es el [nombre del objeto](properties_Object.md#object-name). Este tipo de referencia indica que el archivo del método se encuentra en la ubicación por defecto ("sources/forms/*formName*/ObjectMethods/"). En este caso, 4D maneja automáticamente el método objeto cuando se ejecutan operaciones en el objeto formulario (renombrar, duplicar, copiar/pegar...)
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for object operations.
+- un nombre de método proyecto: nombre de un método proyecto existente sin extensión de archivo, es decir: `myMethod`
+  En este caso, 4D no soporta automáticamente las operaciones objeto.
 
 - una ruta de archivo de métodos personalizados que incluya la extensión .4dm, por ejemplo:
   `../../CustomMethods/myMethod.4dm`
@@ -189,7 +190,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. They are described in detail in the [Standard actions](/Desktop/standard-actions) section of the *Design Reference*. También hay [acciones estándar específicas de las áreas 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](/Desktop/standard-actions) del *manual de Diseño*. También hay [acciones estándar específicas de las áreas 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 

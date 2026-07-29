@@ -91,7 +91,7 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
+- En el explorador de tiempo de ejecución y en el depurador, las funciones de clase se muestran con el `<ClassName>` constructor o `<ClassName>.<FunctionName>` el formato.
 
 ## Eliminar los métodos o las clases
 

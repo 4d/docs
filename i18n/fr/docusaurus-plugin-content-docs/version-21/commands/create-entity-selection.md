@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                               |                             | Description                                                                                          |
-| ---------- | ---------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| dsTable    | Table                              | &#8594; | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
-| settings   | Object                             | &#8594; | Option de création : contexte                                                        |
-| Résultat   | 4D.EntitySelection | &#8592; | Nouvelle entity selection liée à la dataclass de la table                                            |
+| Paramètres              | Type                               |                             | Description                                                                                          |
+| ----------------------- | ---------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| dsTable                 | Table                              | &#8594; | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
+| settings                | Object                             | &#8594; | Option de création : contexte                                                        |
+| Résultat de la fonction | 4D.EntitySelection | &#8592; | Nouvelle entity selection liée à la dataclass de la table                                            |
 
 </div>
 <!-- END REF-->

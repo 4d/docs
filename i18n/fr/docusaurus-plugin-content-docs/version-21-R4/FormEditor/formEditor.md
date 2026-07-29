@@ -247,7 +247,7 @@ Pour grouper les objets :
 Pour dégrouper un groupe d’objets :
 
 1. Sélectionnez le groupe que vous souhaitez dégrouper.
-2. Choisissez **Dégrouper** dans le menu **Objet**.<br/>OU<br/>Cliquez sur le bouton **Dégrouper** (variante du bouton **Groupe**) dans la barre d'outils de l'éditeur de formulaire.<br/>Si **Dégrouper** est estompé, cela signifie que l'objet sélectionné est déjà séparé dans sa forme la plus simple. 4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
+2. Choisissez **Ungroup** dans le menu **Object**.<br/>OU<br/>Cliquez sur le bouton **Ungroup** (variante du bouton **Group**) dans la barre d'outils de l'éditeur de formulaires.<br/>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple. 4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
 
 ### Aligner des objets
 
@@ -275,9 +275,9 @@ La boîte de dialogue d’alignement vous permet d’appliquer tout type d’ali
 
 Pour afficher cette boîte de dialogue, vous devez sélectionner les objets que vous souhaitez aligner puis choisir la commande **Alignement...** dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l’éditeur.
 
-- Dans les zones “Alignement droite/gauche” et/ou “Alignement haut/bas”, cliquez sur l’icône correspondant à l'alignement que vous souhaitez effectuer.<br>La zone d'exemple affiche les résultats de votre sélection.
+- Dans les zones “Alignement droite/gauche” et/ou “Alignement haut/bas”, cliquez sur l’icône correspondant à l'alignement que vous souhaitez effectuer.<br>La zone d’exemple illustre le principe de l’opération sélectionnée.
 
-- Pour effectuer un alignement standard des objets sélectionnés, cliquez sur le bouton **Prévisualisation** ou **Appliquer**. Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite du groupe. Dans ce cas, la position de l’objet de référence ne variera pas.
+- Pour effectuer un alignement standard des objets sélectionnés, cliquez sur le bouton **Prévisualisation** ou **Appliquer**. Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite du groupe. Dans ce cas, 4D utilisera l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite du groupe.
 
 Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation**. Les objets sont ensuite alignés dans l'éditeur de formulaires, mais comme la boîte de dialogue ne disparaît pas, vous pouvez toujours annuler ou appliquer l'alignement.
 
@@ -314,7 +314,7 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1. Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2. Dans la barre d'outils, cliquez sur l'outil de distribution qui correspond à la distribution que vous souhaitez appliquer.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/> OU<br/>Sélectionnez une commande de distribution dans le sous-menu **Aligner** du menu **Objet** ou dans le menu contextuel de l'éditeur.
+2. Dans la barre d'outils, cliquez sur l'outil de distribution correspondant à la distribution que vous souhaitez appliquer.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OU<br/>Sélectionnez une commande de menu de distribution dans le sous-menu **Aligner** dans le menu **Objet** ou dans le menu contextuel de l'éditeur.
    4D distribue les objets en conséquence. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
@@ -325,7 +325,7 @@ Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et r
 
 3. Dans les zones Alignement gauche/droite et/ou haut/bas, cliquez sur l'icône de distribution standard : ![](../assets/en/FormEditor/horizontalDistribution.png) <br/>(icône standard de distribution horizontale)<br/>La zone d'exemple affiche les résultats de votre sélection.
 
-4. Pour effectuer une distribution qui utilise le schéma standard, cliquez sur **Aperçu** ou *Appliquer*.<br/>Dans ce cas, 4D effectuera une distribution standard, de sorte que les objets soient répartis avec une quantité d'espace égale entre eux.<br/>OU :<br/>Pour exécuter une distribution spécifique, sélectionnez l'option **Distribuer** (par exemple, si vous souhaitez distribuer les objets en fonction de la distance par rapport à leur côté droit). Cette option agit comme un interrupteur. Si la case à cocher Répartir est sélectionnée, les icônes situées en dessous effectuent une fonction différente:<br/>
+4. Pour effectuer une distribution qui utilise le schéma standard, cliquez sur **Aperçu** ou *Appliquer*.<br/>Dans ce cas, 4D effectuera une distribution standard, de sorte que les objets soient définis avec une quantité égale d'espace entre eux.<br/>OU :<br/>Pour effectuer une distribution spécifique, sélectionnez l'option **Distribuer** (par exemple, si vous souhaitez distribuer les objets en fonction de la distance qui les sépare de leur côté droit). Cette option agit comme un interrupteur. Si la case à cocher Répartir est sélectionnée, les icônes situées en dessous effectuent une fonction différente:<br/>
 
 - Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
 - Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
@@ -390,7 +390,7 @@ Pour visualiser ou modifier l’ordre de saisie :
 
    Le pointeur prend la forme d’un pointeur d’ordre, et 4D dessine une ligne qui permet de visualiser la séquence de l’ordre de saisie courant. Visualiser et modifier l’ordre de saisie sont les seules opérations que vous pouvez réaliser dans ce mode.
 
-2. Pour changer l’ordre de saisie, positionnez le pointeur sur un objet dans le formulaire et, tout en maintenant le bouton de la souris enfoncé, faites glisser le pointeur vers l'objet que vous souhaitez ensuite dans l'ordre de saisie des données.<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D ajustera automatiquement l'ordre de saisie.
+2. Pour changer l’ordre de saisie, positionnez le pointeur sur un objet dans le formulaire et, tout en maintenant le bouton de la souris enfoncé, faites glisser le pointeur vers l'objet que vous souhaitez ensuite dans l'ordre de saisie des données.<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D ajustera l'ordre d'entrée en conséquence.
 
 3. Répétez l’étape 2 autant de fois que nécessaire pour obtenir le nouvel ordre de saisie.
 

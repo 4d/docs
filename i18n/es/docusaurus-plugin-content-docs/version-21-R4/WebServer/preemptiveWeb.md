@@ -52,7 +52,7 @@ Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere 
 
 - [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
-For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
+Para cada una de estas partes de métodos y de código, el compilador verificará si [se respetan las reglas de hilo seguro entre subprocesos](../Develop/preemptive.md#writing-a-thread-safe-method) y devolverá errores en caso de que se detecten problemas.
 
 ## Código web 4D hilo seguro
 

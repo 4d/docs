@@ -3,7 +3,7 @@ id: data-collect
 title: Collecte des données
 ---
 
-Pour nous aider à améliorer sans cesse nos produits, nous collectons automatiquement des données concernant les statistiques d'utilisation des applications 4D Server. Les données collectées sont transférées sans incidence sur l'expérience utilisateur. Aucune information personnelle n'est collectée. For more information on 4D policy regarding personal data protection, please visit [this page](https://us.4d.com/privacy-policy).
+Pour nous aider à améliorer sans cesse nos produits, nous collectons automatiquement des données concernant les statistiques d'utilisation des applications 4D Server. Les données collectées sont transférées sans incidence sur l'expérience utilisateur. Aucune information personnelle n'est collectée. Pour plus d'informations sur la politique de 4D en matière de protection des données personnelles, veuillez consulter [cette page](https://fr.4d.com/politique-de-protection-des-donnees-personnelles).
 
 La section ci-dessous explique :
 

@@ -3,9 +3,9 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-The `4D.QuotaManager` class provides you with an interface to configure and monitor some usage limits you apply to your 4D application. Thresholds are useful for example to protect the server from poorly optimized requests or excessive use of server resources. Typically, the quota manager allows you to provide thresholds to ORDA resources a REST server session can access.
+La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar algunos límites de uso que aplica a su aplicación 4D. Los umbrales son útiles, por ejemplo, para proteger el servidor frente a solicitudes mal optimizadas o al uso excesivo de los recursos del servidor. Por lo general, el gestor de cuotas le permite ofrecer límites a los recursos ORDA a los que una sesión de servidor REST puede acceder.
 
-`4D.QuotaManager` objects can be instantiated by the [`quotas` property of a session](./SessionClass.md#quotas) object.
+Los objetos `4D.QuotaManager` pueden instanciarse mediante la [propiedad `quotas` de un objeto sesión](./SessionClass.md#quotas).
 
 <details><summary>Historia</summary>
 
@@ -17,7 +17,7 @@ The `4D.QuotaManager` class provides you with an interface to configure and moni
 
 ### Objeto QuotaManager
 
-4D.QuotaManager objects provide the following properties:
+Los objetos 4D.QuotaManager ofrecen las siguientes propiedades:
 
 |                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ The `4D.QuotaManager` class provides you with an interface to configure and moni
 
 #### Descripción
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->the current values related to the defined quotas properties<!-- END REF -->. This object is automatically updated by the server.
+La propiedad `.currentValues` contiene <!-- REF #QuotaManagerClass.currentValues.Summary -->los valores actuales relacionados con las propiedades de cuotas definidas<!-- END REF -->. Este objeto es actualizado automáticamente por el servidor.
 
 <!-- END REF -->
 
@@ -46,11 +46,11 @@ The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues
 
 #### Descripción
 
-The `.defaultEntitySetTimeout` property contains <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->the default inactivity timeout for REST entity sets stored in memory during the current session (in seconds)<!-- END REF -->.
+La propiedad `.defaultEntitySetTimeout` contiene <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->el tiempo de espera predeterminado por inactividad para los conjuntos de entidades REST almacenados en memoria durante la sesión actual (en segundos)<!-- END REF -->.
 
-By default, this value is 2 hours (7200 seconds). It can also be defined at the entity set creation using the [`$timeout` REST API](../REST/$timeout.md).
+Por defecto, este valor es de 2 horas (7200 segundos). También se puede definir al crear el conjunto de entidades mediante la [API REST `$timeout`](../REST/$timeout.md).
 
-You can change this value dynamically using the [`quotas.defaultEntitySetTimeout` property of the Session](./SessionClass.md#quotas), so that it will be used for any entity set created afterwards in the session (existing entity set default timeout values are not modified).
+Puede modificar este valor de forma dinámica mediante la propiedad [`quotas.defaultEntitySetTimeout` de la sesión](./SessionClass.md#quotas), de modo que se aplique a cualquier conjunto de entidades que se cree posteriormente en la sesión (los valores de tiempo de espera predeterminados de los conjuntos de entidades existentes no se modifican).
 
 :::note
 
@@ -78,19 +78,19 @@ Session.quotas.defaultEntitySetTimeout:=1200
 
 #### Descripción
 
-The `.maxEntitySetTimeout` property contains <!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->the maximum inactivity timeout value for REST entity sets stored in memory during the current session (in seconds)<!-- END REF -->.
+La propiedad `.maxEntitySetTimeout` contiene <!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->el valor máximo del tiempo de espera por inactividad para los conjuntos de entidades REST almacenados en memoria durante la sesión actual (en segundos)<!-- END REF -->.
 
-You can set this value using the [`quotas.maxEntitySetTimeout` property of the Session](./SessionClass.md#quotas), so that it will be used for any entity set created afterward in the session (existing entity set maximum timeout values are not modified).
+Puede definir este valor utilizando la [propiedad `quotas.maxEntitySetTimeout` de la Sesión](./SessionClass.md#quotas), para que se utilice para cualquier conjunto de entidades creado después en la sesión (los valores máximos de tiempo de espera de los conjuntos de entidades existentes no se modifican).
 
-Once the `.maxEntitySetTimeout` property is set, any entity set created afterward in the session could not have a timeout value longer than the `.maxEntitySetTimeout` value.
+Una vez configurada la propiedad `.maxEntitySetTimeout`, ningún conjunto de entidades creado posteriormente en la sesión podrá tener un tiempo de espera superior al valor de `.maxEntitySetTimeout`.
 
-For example, assuming the maximum inactivity timeout is set to 40 minutes (2400 seconds), if an entity set is created with a required timeout which exceeds the maximum value:
+Por ejemplo, supongamos que el tiempo de espera por inactividad máximo está fijado en 40 minutos (2400 segundos); si se crea un conjunto de entidades con un tiempo de espera obligatorio que supera el valor máximo:
 
 ```
 http://127.0.0.1/rest/People?$filter=ID>=4&$method=entityset&$timeout=3000
 ```
 
-... then the timeout defined in the request is ignored and the entity set will be released after 40 minutes if not used during this period of time.
+... entonces el tiempo de espera definido en la solicitud es ignorado y el conjunto de entidades será liberado después de 40 minutos si no se utiliza durante este período de tiempo.
 
 No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablecer el valor de la propiedad para la sesión, pase *undefined*.
 
@@ -112,11 +112,11 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### Descripción
 
-The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session (in seconds)<!-- END REF -->.
+La propiedad `.nbEntitySets` contiene <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->el número máximo de conjuntos de entidades REST permitidos en memoria para la sesión actual (en segundos)<!-- END REF -->.
 
-By default, there is no limit for entity sets [stored in memory by REST requests](../REST/$info.md) (the value is 0). Puede definir un límite para controlar la carga útil del servidor para una sesión específica.
+Por defecto, no hay límite para conjuntos de entidades [almacenados en memoria por solicitudes REST](../REST/$info.md) (el valor es 0). Puede definir un límite para controlar la carga útil del servidor para una sesión específica.
 
-When the maximum number of allowed entity sets is reached, a REST request that need to create an entity set will get a [**429** HTTP status code and an error response](../REST/REST_requests.md#rest-status-and-response), until at least one entity set is released. You can release an entity set from the cache using the [`$release` REST command](../REST/$entityset.md#entitysetrelease).
+Cuando se alcanza el número máximo de conjuntos de entidades permitidas, una solicitud REST que necesita crear un entity set obtendrá un [**status code HTTP 429** y una respuesta de error](../REST/REST_requests.md#rest-status-and-response), hasta que al menos un entity set sea liberado. Puede liberar un conjunto de entidades de la caché mediante el [comando `$release` REST](../REST/$entityset.md#entitysetrelease).
 
 No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablecer el valor de la propiedad para la sesión, pase *undefined*.
 
@@ -125,7 +125,7 @@ No se puede pasar un valor <=0 (en ese caso se produce un error). Para restablec
 En un código 4D de un proceso REST:
 
 ```4d
-	//max 50 entity sets
+	//máximo 50 conjuntos de entidades
 Session.quotas.nbEntitySets:=50
 ```
 

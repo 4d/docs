@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字列
+title: String
 ---
 
 文字列とは、以下を示す総称です:
@@ -32,7 +32,7 @@ title: 文字列
 | \\\\   |                             |
 | \\"      | " (引用符)  |
 
-**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。 <br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。
 
 ## 文字列演算子
 
@@ -50,7 +50,7 @@ title: 文字列
 |                            |                                           |         | "abc" < "abc"  | false    |
 | 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
 |                            |                                           |         | "abc" >= "abd"                          | false    |
-| 以上                         | String <= String | Boolean | "abc" <= "abd" | true     |
+| 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
 |                            |                                           |         | "abd" <= "abc" | false    |
 | キーワードを含む                   | String % String                           | Boolean | "Alpha Bravo" % "Bravo"                 | true     |
 |                            |                                           |         | "Alpha Bravo" % "ravo"                  | false    |
@@ -58,7 +58,7 @@ title: 文字列
 ## 文字列比較の詳細
 
 - 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
-- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です: 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。 例えば次の式は `FALSE` です:
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。 たとえば、次の式は `FALSE` です:
 
 ```4d
 Character code("A")=Character code("a")
@@ -100,7 +100,7 @@ Character code("A")=Character code("a")
      "abcdefghij"="@abcde@fghij@"
 ```
 
-一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります: 次の式は `FALSE` になります:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -141,7 +141,7 @@ Character code("A")=Character code("a")
 
 > **注:**
 >
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries> 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
 > - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。
 
 ## 文字参照記号

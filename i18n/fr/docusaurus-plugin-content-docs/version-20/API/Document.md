@@ -461,7 +461,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Description
 
-La fonction `.getContent()`  <!-- REF #document.getContent().Summary -->La fonction `.getContent()`<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.getContent()`  <!-- REF #document.getContent().Summary -->renvoie un objet `4D.Blob` contenant le contenu entier d'un fichier<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 **Valeur retournée**
 

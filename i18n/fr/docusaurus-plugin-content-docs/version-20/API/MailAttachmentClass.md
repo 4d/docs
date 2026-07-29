@@ -43,12 +43,11 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 |file|4D.File|->|Fichier joint|
 |zipFile|4D.ZipFile|->|Fichier Zip joint|
 |blob|4D.Blob|->|BLOB contenant le fichier joint|
-|path|Text|->|Chemin d'accès au fichier joint|
+|path|Text|->|Chemin d'accès au fichier joint||
 |name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
 |cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
 |type|Text|->|Valeur de l'en-tête content-type|
-|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
-|Résultat|4D.MailAttachment|<-|Objet pièce jointe|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".| |Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -191,12 +190,11 @@ $transporter.send($email)
 |file|4D.File|->|Fichier joint|
 |zipFile|4D.ZipFile|->|Fichier Zip joint|
 |blob|4D.Blob|->|BLOB contenant le fichier joint|
-|path|Text|->|Chemin d'accès au fichier joint|
+|path|Text|->|Chemin d'accès au fichier joint||
 |name|Text|->|Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe|
 |cid|Text|->|ID de la pièce jointe (messages HTML uniquement), ou " " si aucun cid n'est requis|
 |type|Text|->|Valeur de l'en-tête content-type|
-|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".|
-|Résultat|4D.MailAttachment|<-|Objet pièce jointe|
+|disposition|Text|->|Valeur de l'en-tête content-disposition : "inline" ou "attachment".| |Résultat|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -293,7 +291,7 @@ La propriété `.platformPath` retourne <!-- REF #MailAttachmentClass.platformPa
 
 #### Description
 
-La propriété `.disposition` contient <!-- REF #MailAttachmentClass.size.Summary -->la valeur de l'en-tête `Content-Disposition`<!-- END REF -->. .
+La propriété `.size` contient <!-- REF #MailAttachmentClass.size.Summary -->la valeur de l'en-tête `size` du fichier joint<!-- END REF -->. La propriété `.size` est renvoyée lorsque le message MIME définit un en-tête de taille dans la partie pièce jointe.
 
 
 ## .type

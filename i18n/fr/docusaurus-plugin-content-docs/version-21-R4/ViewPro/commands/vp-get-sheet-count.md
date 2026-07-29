@@ -11,10 +11,10 @@ title: VP Get sheet count
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                             |
-| ---------- | ------- | --------------------------- | --------------------------------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
-| Résultat   | Integer | <- | Nombre de feuilles                      |
+| Paramètres              | Type    |                             | Description                             |
+| ----------------------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName              | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| Résultat de la fonction | Integer | <- | Nombre de feuilles                      |
 
 </div>
 <!-- END REF -->

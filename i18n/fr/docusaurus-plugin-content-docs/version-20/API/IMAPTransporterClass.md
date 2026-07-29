@@ -805,7 +805,7 @@ $status:=$transporter.expunge()
 
 #### Description
 
-La fonction `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte de réception courante<!-- END REF -->. La fonction `.searchMails()`
+La fonction `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->renvoie un objet `boxInfo` correspondant à la maibox courante ou à la mailbox nommée *name*<!-- END REF -->. Cette fonction retourne les mêmes informations que [`.selectBox()`](#selectbox) mais sans modifier la boite de réception courante.
 
 Dans le paramètre *name* passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
 
@@ -1158,8 +1158,8 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Numéro de séquence du message|
 |msgID|Text|-> |Identifiant unique du message|
-|updateSeen|Boolean|->|Si la valeur est True, le message est marqué comme « lu » dans la boîte de réception. Si la valeur est False, le message reste inchangé.|
-|Résultat|BLOB|<-|BLOB de la chaîne MIME renvoyée par le serveur de messagerie|
+|updateSeen|Boolean|->|Si la valeur est True, le message est marqué comme « lu » dans la boîte de réception. Si la valeur est « False », le message reste inchangé.| Si la valeur est « False », le message reste inchangé.|
+|Résultat|BLOB|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 
@@ -1600,7 +1600,7 @@ End if
 
 > Cette fonction est basée sur la spécification du [protocole IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte de réception courante <!-- REF #IMAPTransporterClass.searchMails().Summary -->copie les messages définis par *msgsIDs* ou *allMsgs* dans la *destinationBox* sur le serveur IMAP<!-- END REF -->. .
+recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte de réception courante <!-- REF #IMAPTransporterClass.searchMails().Summary -->La fonction `.searchMails()`<!-- END REF -->. .
 
 *searchCriteria* est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
 

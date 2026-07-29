@@ -36,7 +36,7 @@ displayed_sidebar: docs
 - [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects)
 - または以下の2つのプロパティを格納しているオブジェクト:
 
-| **プロパティ** | **型**  | **Description**                                                                                                                                                           |
+| **プロパティ** | **型**  | **説明**                                                                                                                                                                    |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                     |
 | formula   | Object | [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects) |

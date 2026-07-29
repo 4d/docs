@@ -58,7 +58,7 @@ Con otras configuraciones remotas (p. ej. [aplicaciones Qodly](https://developer
 
 La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
-| Evento                          | Nivel    | Nombre de la función                                    |                  (C/S) Execution                 | Puede detener la acción devolviendo un error |
+| Evento                          | Nivel    | Nombre de la función                                    |                  Ejecución (C/S)                 | Puede detener la acción devolviendo un error |
 | :------------------------------ | :------- | :------------------------------------------------------ | :-----------------------------------------------------------------: | -------------------------------------------- |
 | Instanciación de entidades      | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                local                                | no                                           |
 | Atributo tocado                 | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../Concepts/classes.md#local) | no                                           |

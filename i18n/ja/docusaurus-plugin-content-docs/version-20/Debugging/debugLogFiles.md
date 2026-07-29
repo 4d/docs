@@ -258,19 +258,19 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 イベントによって、タスク、ソケットなど様々な他のフィールドを記録に含めることができます。
 
-### ファイルを有効化する方法
+### 診断ログレベル
 
 *4DDiagnosticLog.txt* ファイルは、`ERROR` (最も重要) から `TRACE` (あまり重要でない) まで、異なるレベルのメッセージをログに記録することができます。 デフォルトでは、`INFO` レベルが設定されており、エラーや予期せぬ結果などの重要なイベントのみを記録します (後述参照)。
 
 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) コマンドの `Diagnostic log level` セレクターを使用して、必要に応じてメッセージのレベルを選択することができます。 あるレベルを選択すると、その上のレベル (より重要なもの) も暗黙のうちに選択されます。 次のレベルが利用可能です:
 
-| 定数          | 説明                                            | 選択時に次を含みます                                                    |
-| ----------- | --------------------------------------------- | ------------------------------------------------------------- |
-| `Log error` | ログセッション内で固有かつシーケンシャルなオペレーション番号                | `Log error`                                                   |
-| `Log warn`  | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms) | `Log error`, `Log warn`                                       |
-| `Log info`  | 4DプロセスID                                      | `Log error`, `Log warn`, `Log info`                           |
-| `Log debug` | 固有プロセスID                                      | `Log error`, `Log warn`, `Log info`, `Log debug`              |
-| `Log trace` | その他の内部情報 (4Dテクニカルサービス用)                       | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+| 定数          | 説明                                    | 選択時に次を含みます                                                    |
+| ----------- | ------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | アプリケーションの一部が動作しない                     | `Log error`                                                   |
+| `Log warn`  | 潜在的なエラー、非推奨関数の使用、不適切な使用、望ましくない/予期せぬ状況 | `Log error`, `Log warn`                                       |
+| `Log info`  | 4DプロセスID                              | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | アプリケーションフローの詳細 (4Dテクニカルサービス用)         | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | その他の内部情報 (4Dテクニカルサービス用)               | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
 例:
 

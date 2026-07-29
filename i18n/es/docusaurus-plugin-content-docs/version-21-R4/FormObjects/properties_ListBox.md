@@ -31,7 +31,7 @@ Especifica el formulario que se utilizará para modificar o mostrar los registro
 
 Se muestra el formulario especificado:
 
-- when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](/Desktop/standard-actions)),
+- cuando se utilizan las acciones estándar `Add Subrecord` y `Edit Subrecord` aplicadas al list box (ver [Utilización de las acciones estándar](/Desktop/standard-actions)),
 - cuando se hace doble clic en una línea y la propiedad [Doble clic en la línea ](#double-click-on-row)está definida en "Editar registro" o "Mostrar registro".
 
 #### Gramática JSON

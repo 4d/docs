@@ -241,7 +241,7 @@ Hay otras formas de utilizar los formularios en las aplicaciones de 4D, entre el
 
 - un formulario puede ser [heredado](#inherited-forms) de otro formulario,
 - un formulario puede ser [asociado a un listbox](../FormObjects/properties_ListBox.md#detail-form-name) en respuesta a una acción de usuario para mostrar una fila utilizando un botón de edición o un doble clic,
-- the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
+- el [editor de etiquetas puede utilizar un formulario](../Desktop/labels.md#form-to-use) como plantilla para imprimir etiquetas.
 
 ## Páginas formulario
 

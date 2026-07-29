@@ -1,13 +1,13 @@
 ---
 id: propertiesText
-title: Text
+title: テキスト
 ---
 
 ---
 
 ## ピッカーの使用を許可
 
-このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands/open-font-picker) および [OPEN COLOR PICKER](../commands/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
+このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands/open-font-picker) および [OPEN COLOR PICKER](../commands/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 #### JSON 文法
 
@@ -27,6 +27,7 @@ title: Text
 
 このプロパティは[**OBJECT SET FONT STYLE**](../commands/object-set-font-style) コマンドを使用しても設定することができます。
 
+> これは通常のテキストです。<br/>
 > これは通常のテキストです。<br/>
 > **これは太字のテキストです。**
 
@@ -131,7 +132,7 @@ title: Text
 
 このプロパティは、オブジェクトで使用される **フォントテーマ** または **フォントファミリー** を指定します。
 
-> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
+> **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。 フォントテーマは、サイズを含めたフォント属性を定めます。 フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
 
 ### フォントテーマ
 
@@ -146,7 +147,7 @@ title: Text
 3つのフォントテーマが提供されています:
 
 - **normal**: フォームエディター内で作成された新規オブジェクトにデフォルトで適用される自動スタイルです。
-- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します: これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
+- **main** および **additional** フォントテーマは [テキストエリア](text.md) と [入力](input_overview.md) オブジェクトでのみサポートされています。 これらのテーマは、おもにダイアログボックスのデザインを目的に提供されています。 インターフェースウィンドウにおいて main フォントテーマは本文用、additional テーマは詳細情報を追記するためのものです。 下に macOS および Windows にてこれらのフォントテーマを使ったダイアログボックスの例を示します:
 
 ![](../assets/en/FormObjects/FontThemes.png)
 
@@ -332,7 +333,7 @@ Foreground color;Dark shadow color)
 
 リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
 
 例:
 
@@ -514,7 +515,7 @@ End if
 
 ## マルチスタイル
 
-このプロパティは、選択された領域で[特定のスタイル](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html)を使用する可能性を有効にします。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
+このプロパティは、選択された領域で[特定のスタイル](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html)を使用する可能性を有効にします。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -609,17 +610,17 @@ For font color and background color attributes, the color value can be either th
 ![](../assets/en/FormObjects/colors1.png)
 ![](../assets/en/FormObjects/colors2.png)
 
-### Working with text handling commands
+### テキスト管理コマンドの使い方
 
 #### ユーザーインターフェース
 
-The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+テキストオブジェクトをプログラミングで操作するために使用されるコマンドは、テキストに埋め込まれたスタイルタグを考慮しません。 これらは表示されるテキストに対してのみ動作します。 これは以下のコマンドに対して関係します:
 
-- [User Interface](../commands/theme/User_Interface.md) theme commands
+- [ユーザーインターフェース](../commands/theme/User_Interface.md) テーマコマンド
 - [`HIGHLIGHT TEXT`](../commands/highlight-text)
 - [`GET HIGHLIGHT`](../commands/get-highlight)
 
-When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../commands/st-get-plain-text) command:
+これらのコマンドを文字列を操作するコマンドと組み合わせて使用した場合、[`ST Get plain text`](../commands/st-get-plain-text) コマンドを使用して書式設定文字列を除去する必要があります:
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -627,21 +628,21 @@ When you use these commands with commands that manipulate character strings, it 
 
 #### オブジェクト (フォーム)
 
-The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../commands/object-set-font)) apply to the whole object and not to the selection.
+オブジェクトのスタイルを変更するのに使用されるコマンド([`OBJECT SET FONT`](../commands/object-set-font) など)は選択範囲ではなく、オブジェクト全体に対して適用されます。
 
-If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+コマンドが実行された時にオブジェクトにフォーカスが入っていなければ、その変更はオブジェクト(テキストエリア)とそれに割り当てられた変数の両方に同時に適用されます。 オブジェクトにフォーカスが入っている場合、変更はオブジェクトに対しては適用されますが、割り当てられた変数には適用されません。 その後、オブジェクトがフォーカスを失ったとき、変数に対しても変更が適用されます。 テキストエリアに対するプログラムを行う際は、この原則を忘れないでください。
 
 :::note
 
-If the [**Store with default style tags**](#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+[**デフォルトスタイルタグを格納**](#デフォルトスタイルタグを格納) がオブジェクトに対して選択されている場合にこれらのコマンドを使用すると、オブジェクトに保存されているタグが更新されます。
 
 :::
 
-Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+またデフォルトのプロパティもこれらのコマンドの影響を受けるという点に注意してください(またデフォルトタグによって保存されたあらゆるプロパティも同様です)。 カスタムのスタイルタグはそのままの状態を維持します。 例えば、以下の様なマルチスタイルエリアにデフォルトのタグが保存されていた場合を考えます:
 
 ![](../assets/en/FormObjects/multistyle-ex1.png)
 
-The plain text of the area is as follows:
+このエリアのプレーンテキストは以下のようになります:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
@@ -653,24 +654,24 @@ The plain text of the area is as follows:
 OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 ```
 
-The red color remains:
+赤の文字カラーはそのまま残ります:
 
 ![](../assets/en/FormObjects/multistyle-ex2.png)
 
-and code is:
+コードは以下の様になります:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
 ```
 
-The following commands are concerned:
+これには以下のコマンドが適用されます:
 
 - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 - [`OBJECT SET FONT`](../commands/object-set-font)
 - [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
 
-In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
 
 #### Get edited text
 
@@ -682,9 +683,9 @@ To retrieve the "plain" text (text without tags) being edited, you must use the 
 ST Get plain text(Get edited text)
 ```
 
-#### Query and order by commands
+#### クエリおよび並び替えコマンド
 
-Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+マルチスタイルオブジェクトに対して行われるクエリや並び替えは、オブジェクトに保存されたスタイルタグを考慮に入れます。 単語中でスタイルの変更が行われた場合、その単語の検索は失敗します。
 
 To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. 例:
 
@@ -705,7 +706,7 @@ QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
 | 180                          | ![](../assets/en/FormObjects/orientation3.png) |
 | 270                          | ![](../assets/en/FormObjects/orientation4.png) |
 
-[スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
+[スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
 
 #### JSON 文法
 

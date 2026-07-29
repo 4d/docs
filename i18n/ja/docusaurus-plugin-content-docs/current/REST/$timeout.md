@@ -7,7 +7,7 @@ title: $timeout
 
 ## 説明
 
-[`$method=entityset`]($method.md#methodentityset) を使って作成するエンティティセットについてタイムアウトを指定するには任意の秒数を `$timeout` に渡します。 たとえば、20分のタイムアウトを設定するには、1200を渡します。 デフォルトのタイムアウトは 2時間です。 たとえば、20分のタイムアウトを設定するには、1200を渡します。 デフォルトのタイムアウトは 2時間です。
+[`$method=entityset`]($method.md#methodentityset) を使って作成するエンティティセットについてタイムアウトを指定するには任意の秒数を `$timeout` に渡します。 たとえば、20分のタイムアウトを設定するには、1200を渡します。 デフォルトのタイムアウトは 2時間です。
 
 一旦タイムアウトが定義されると、(`$method=entityset` によって) エンティティセットが呼び出される度に現時刻とタイムアウトに基づいて有効期限が再計算されます。
 
@@ -15,7 +15,7 @@ title: $timeout
 
 :::note
 
-The timeout can also be modified for a session using the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+タイムアウトは、[`Session.quotas`](../API/SessionClass.md#quotas) プロパティを使用して、セッションに対して変更することもできます。
 
 :::
 

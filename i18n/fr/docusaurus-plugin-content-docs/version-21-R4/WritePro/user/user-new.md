@@ -39,23 +39,23 @@ Lorsque la liste est créée à l'aide de la commande WP SET ATTRIBUTE(../comman
 
 ### Listes multi-niveaux
 
-Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Les listes multi-niveaux sont basées sur des [feuilles de style de liste multi-niveaux](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Les listes multi-niveaux contiennent une feuille de style de niveau racine et une ou plusieurs feuilles de style de sous-niveau. Chaque niveau est associé à une feuille de style de liste multi-niveaux et représente une profondeur dans la liste (niveau 1, niveau 2, niveau 3, etc.).
 
-When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+Lorsqu'un nouveau sous-niveau est créé, la numérotation du niveau recommence à 1. Lorsque vous ajoutez ou supprimez un élément dans votre liste multi-niveaux, la numérotation est automatiquement mise à jour.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+Les listes multi-niveaux sont créées à l'aide de la commande [WP New style sheet](../commands/wp-new-style-sheet.md) et peuvent être appliquées à un paragraphe à l'aide de [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
-Multi-level lists can be managed using:
+Les listes multi-niveaux peuvent être gérées en utilisant :
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- les [attributs de feuille de style](../commands-legacy/4d-write-pro-attributes.md#style-sheets) de paragraphe (tels que `wk list level index`, `wk list level count` et `wk list concat string format`)
+- les [actions standard](../user-legacy/standard-actions.md) dédiées à la gestion des niveaux (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
+- les actions standard dédiées à la gestion des marqueurs de numérotation (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Article(s) de blog sur le sujet
 
-[4D Write Pro – Creating Multi-level Bullet or Numbered Lists Using Multi-level list Style Sheets](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-multi-level-paragraph-style-sheets)
+[4D Write Pro – Création de listes à puces ou numérotées multi-niveaux à l'aide de feuilles de style](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-multi-level-paragraph-style-sheets)
 
 :::
 
@@ -63,36 +63,36 @@ Multi-level lists can be managed using:
 
 <!-- REF multi-level-list-style-sheets.Desc -->
 
-## Multi-level list style sheets
+## Feuilles de style de liste multi-niveaux
 
-Multi-level list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+Les feuilles de style de liste multi-niveaux permettent de créer des listes [multi-niveaux](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
 
-To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+Pour créer une feuille de style de liste multi-niveaux, utilisez la commande [WP New style sheet](../commands/wp-new-style-sheet.md) et passez dans *listLevelCount* le nombre de niveaux souhaité. Vous définissez ensuite une hiérarchie de feuilles de style de paragraphe liées : une feuille de style **racine** et une ou plusieurs feuilles de style **sous-niveau** qui lui sont liées. Chaque niveau représente une profondeur dans la liste (niveau 1, niveau 2, niveau 3, etc.) et reçoit automatiquement un nom au format "nom du niveau racine + lvl + index", par exemple "MyList lvl 2".
 
-To customize multi-level list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+Pour personnaliser le style des listes multi-niveaux, l'objet de la feuille de style de paragraphe peut être personnalisé en utilisant [attributs de feuille de style](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
-Multi-level list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
+Les feuilles de style de liste multi-niveaux sont entièrement supportées par les commandes suivantes : [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 
 ### Exemple
 
-The following example creates a three-level multi-level list style sheet and applies it to paragraphs.
+L'exemple suivant crée une feuille de style de liste multi-niveaux à trois niveaux et l'applique à des paragraphes.
 
 ```4d
-// Create 3 multi-level list style sheets
+// Créer une feuille de style de liste multi-niveaux à 3 niveaux
 WP New style sheet(wpArea; wk type paragraph; "MyList"; 3)
 
-// Retrieve each level
+// Récupérer chaque niveau
 var $level1; $level2; $level3 : Object
-$level1:=WP Get style sheet(wpArea; "MyList"; 1) // Root level
-$level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1st sub-level
-$level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2nd sub-level
+$level1:=WP Get style sheet(wpArea; "MyList"; 1) // Niveau racine
+$level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1er sous-niveau
+$level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2e sous-niveau
 
-// Customize styles
+// Personnaliser les styles
 WP SET ATTRIBUTES($level1; {listStyleType: wk upper latin; fontBold: wk true})
 WP SET ATTRIBUTES($level2; {listConcatStringFormat: True})
 WP SET ATTRIBUTES($level3; {listStringFormatLtr: "(#)"})
 
-// Apply multi-level style sheets to paragraphs
+// Appliquer des feuilles de style multi-niveaux aux paragraphes
 var $paragraphs : Collection
 $paragraphs:=WP Get elements(wpArea; wk type paragraph)
 
@@ -101,34 +101,34 @@ WP SET ATTRIBUTES($paragraphs[1]; wk style sheet; $level2)
 WP SET ATTRIBUTES($paragraphs[2]; wk style sheet; $level3)
 ```
 
-result:
+résultat :
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+Pour supprimer le premier sous-niveau :
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
 ```
 
-result:
+résultat :
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### Valeurs d'attribut prédéfinies
 
-When created, multi-level list style sheets use predefined values:
+Lors de la création, les feuilles de style de listes multi-niveaux utilisent des valeurs prédéfinies :
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- `wk margin left` = 0,75 cm \* (nombre de niveaux précédents) ou 0,25 pouce \* (nombre de niveaux précédents), selon l'unité de mise en page courante
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` est dérivé du nom de la feuille de style racine (lecture seule pour les sous-niveaux)
 - `wk list level count` est fixé à la valeur spécifiée pour tous les niveaux
 
   - Exemple :
 
-    - Root level: `"MyList"`
-    - First sub-level: `"MyList lvl 2"`
-    - Second sub-level: `"MyList lvl 3"`
+    - Niveau racine : `"MyList"`
+    - Premier sous-niveau: `"MyList lvl 2"`
+    - Deuxième sous-niveau: `"MyList lvl 3"`
 
 <!-- END REF -->
 

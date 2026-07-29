@@ -18,7 +18,7 @@ Les boutons image peuvent être utilisés de deux manières :
   | Bascule sur passage du curseur | switchWhenRollover     | true   |
   | Dernière imagette si désactivé | useLastFrameAsDisabled | true   |
 
-* Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
+* Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
@@ -55,7 +55,7 @@ Les autres modes disponibles sont les suivants :
 - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
 - [Défilement toutes les n secondes](./properties_Animation.md#switch-every-x-seconds)
-> [Défilement toutes les n secondes](./properties_Animation.md#switch-every-x-seconds) > La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
+> La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge
 

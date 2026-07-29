@@ -721,7 +721,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 #### Description
 
-La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->.
+La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
 
 Si elle est appelée depuis une application 4D monoposte, la fonction retourne `Null`.
 
@@ -1024,18 +1024,18 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
 
 1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
 
-```4d
- $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
+  $result:=$col.query($vquery)
+ ```
 
 Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone *myname* une chaîne du type *"smith OR status='private'*, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
 
 Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
@@ -1043,10 +1043,10 @@ Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *m
 
 3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 ### Recherche de valeurs null
 
@@ -1216,11 +1216,11 @@ Si *attributePath* désigne un attribut stockant des [**objets vecteurs**](../AP
 
 Dans ce cas, le paramètre *value* doit être un **objet vecteur de comparaison** contenant les propriétés suivantes :
 
-| Propriété | Type                                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | Obligatoire. Le vecteur à comparer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| metric    | Text                                               | Optionnel. [Calcul vectoriel](../API/VectorClass.md#understanding-the-different-vector-computations) à utiliser pour la recherche. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the [cosine similarity](./VectorClass.md#cosinesimilarity) between vectors.</li><li>`mk dot`: calculates the [dot similarity](VectorClass.md#dotsimilarity) of vectors.</li><li>`mk euclidean`: calculates the [Euclidean distance](./VectorClass.md#euclideandistance) between vectors. |
-| threshold | Real                                               | Facultatif (valeur par défaut : 0,5). Valeur seuil utilisée pour filtrer les comparaisons de vecteurs sur la base de leur score de similarité cosinus, point ou euclidienne selon la "métrique" sélectionnée. Il est fortement recommandé de choisir une similitude qui corresponde le mieux à votre cas d'utilisation spécifique pour des résultats optimaux.                                                                                                                                                                                                                                                                    |
+| Propriété | Type                                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vector    | [4D.Vector](../API/VectorClass.md) | Obligatoire. Le vecteur à comparer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| metric    | Text                                               | Optionnel. [Calcul vectoriel](../API/VectorClass.md#understanding-the-different-vector-computations) à utiliser pour la recherche. Vous pouvez utiliser l'une des constantes (Text) suivantes :<li>`mk cosine` (valeur par défaut si non spécifiée) : calcule la [similarité cosinus](./VectorClass.md#cosinesimilarity) entre deux vecteurs.</li><li>`mk dot` : calcule la [similarité par produit scalaire](VectorClass.md#dotsimilarity) entre des vecteurs.</li><li>`mk euclidean` : calcule la [distance euclidienne](./VectorClass.md#euclideandistance) entre deux vecteurs. |
+| threshold | Real                                               | Facultatif (valeur par défaut : 0,5). Valeur seuil utilisée pour filtrer les comparaisons de vecteurs sur la base de leur score de similarité cosinus, point ou euclidienne selon la "métrique" sélectionnée. Il est fortement recommandé de choisir une similitude qui corresponde le mieux à votre cas d'utilisation spécifique pour des résultats optimaux.                                                                                                                                                                                                                                                                                                                         |
 
 Seul un sous-ensemble de symboles **comparateurs** est pris en charge. Notez qu'ils comparent les résultats à la valeur de seuil (threshold) :
 
@@ -1694,7 +1694,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### Description
 
-La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
+La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->..
 
 Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 

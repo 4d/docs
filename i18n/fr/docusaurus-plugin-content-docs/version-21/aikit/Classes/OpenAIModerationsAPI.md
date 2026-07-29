@@ -15,12 +15,12 @@ https://developers.openai.com/api/reference/resources/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| Paramètres   | Type                                                | Description                                                                                                                                                        |
-| ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| *input*      | Variant                                             | Entrée (ou entrées) à évaluer et classer. Il peut s'agir d'un texte unique ou d'une collection d'OpenAIMessage. |
-| *model*      | Text                                                | Le modèle de modération de contenu que vous souhaitez utiliser.                                                                                    |
-| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | Paramètres supplémentaires pour la requête.                                                                                                        |
-| Résultat     | [OpenAIModerationResult](OpenAIModerationResult.md) | Le résultat de la modération, indiquant un danger potentiel.                                                                                       |
+| Paramètres              | Type                                                | Description                                                                                                                                                        |
+| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *input*                 | Variant                                             | Entrée (ou entrées) à évaluer et classer. Il peut s'agir d'un texte unique ou d'une collection d'OpenAIMessage. |
+| *model*                 | Text                                                | Le modèle de modération de contenu que vous souhaitez utiliser.                                                                                    |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md)             | Paramètres supplémentaires pour la requête.                                                                                                        |
+| Résultat de la fonction | [OpenAIModerationResult](OpenAIModerationResult.md) | Le résultat de la modération, indiquant un danger potentiel.                                                                                       |
 
 Détermine si l'entrée est potentiellement dangereuse.
 

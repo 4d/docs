@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                        |
-| ---------- | ------- | --------------------------- | ---------------------------------- |
-| command    | Integer | &#8594; | Numéro de commande                 |
-| info       | Integer | &#8592; | Propriété de la commande à évaluer |
-| theme      | Text    | &#8592; | Thème du langage de la commande    |
-| Résultat   | Text    | &#8592; | Nom de la commande                 |
+| Paramètres              | Type    |                             | Description                        |
+| ----------------------- | ------- | --------------------------- | ---------------------------------- |
+| command                 | Integer | &#8594; | Numéro de commande                 |
+| info                    | Integer | &#8592; | Propriété de la commande à évaluer |
+| theme                   | Text    | &#8592; | Thème du langage de la commande    |
+| Résultat de la fonction | Text    | &#8592; | Nom de la commande                 |
 
 </div>
 <!-- END REF-->

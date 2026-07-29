@@ -38,7 +38,7 @@ Por razones de seguridad, en las áreas de entrada [multiestilo](./properties_Te
 
 | Lanzamiento | Modificaciones                           |
 | ----------- | ---------------------------------------- |
-| 20 R4       | Support of Writing Tools property        |
+| 20 R4       | Soporte de la propiedad Writing Tools    |
 | 19 R7       | Soporte de la propiedad Radio de esquina |
 
 </details>

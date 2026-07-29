@@ -10,13 +10,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type       |                             | Description                                |
-| ----------- | ---------- | --------------------------- | ------------------------------------------ |
-| targetObj   | Object     | &#8594; | Plage ou élément ou document 4D Write Pro  |
-| attribName  | Text       | &#8594; | Nom de l'attribut à récupérer              |
-| attribValue | Variable   | &#8592; | Valeur courante de l'attribut              |
-| attribColl  | Collection | &#8594; | Collection de noms d'attributs à récupérer |
-| Résultat    | Object     | &#8592; | Noms et valeurs des attributs              |
+| Paramètres              | Type       |                             | Description                                |
+| ----------------------- | ---------- | --------------------------- | ------------------------------------------ |
+| targetObj               | Object     | &#8594; | Plage ou élément ou document 4D Write Pro  |
+| attribName              | Text       | &#8594; | Nom de l'attribut à récupérer              |
+| attribValue             | Variable   | &#8592; | Valeur courante de l'attribut              |
+| attribColl              | Collection | &#8594; | Collection de noms d'attributs à récupérer |
+| Résultat de la fonction | Object     | &#8592; | Noms et valeurs des attributs              |
 
 </div>
 <!-- END REF-->

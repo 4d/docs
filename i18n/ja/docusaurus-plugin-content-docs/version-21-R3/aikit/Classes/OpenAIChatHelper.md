@@ -101,7 +101,7 @@ var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
 
-// Example 2: プロパティを持つtool オブジェクトを使用(この場合第2に引数は不要です)
+// Example 2: プロパティを持つtool オブジェクトを使用(この場合第2引数は不要です)
 var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
 $chatHelper.registerTool($tool)
 

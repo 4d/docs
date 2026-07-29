@@ -519,10 +519,7 @@ A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas pa
 - Se `Super` for chamado fora do âmbito de um objecto ou num objecto cujo construtor de superclasse já tenha sido chamado, é gerado o erro -10746.
 
 ```4d
-// dentro do construtor myClass
-var $text1; $text2 : Text
-Super($text1) //chama o construtor da superclasse com um parâmetro de texto
-This.param:=$text2 // usa o segundo parâmetro
+Parâmetros
 ```
 
 2. No interior de uma função de membro da classe [](#function), `Super` designa o protótipo da superclasse e permite chamar uma função da hierarquia da superclasse.
@@ -616,12 +613,7 @@ $val:=$o.f() //42
 Quando se utiliza uma função [construtora de classe](#class-constructor) (com a função [`new()`](API/ClassClass.md#new) ), a sua `Esta` está ligada ao novo objecto que está a ser construído.
 
 ```4d
-//Class: ob
-Class constructor
-
- // Crie propriedades nisto como
- // desejado ao atribuir-lhes
- This.a:=42
+For a class constructor function, the <code>Current method name</code> command returns:  <code><ClassName>:constructor</code>, for example "MyClass:constructor".
 ```
  command returns:  <ClassName>:constructor, for example "MyClass:constructor".
 </code>

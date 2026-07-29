@@ -709,7 +709,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-reescreve todo o conteúdo do ficheiro utilizando os dados armazenados no BLOB *content* <!-- REF #FileClass.setContent().Summary -->A função `.setContent( )`<!-- END REF -->. .
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do ficheiro utilizando os dados armazenados no BLOB *content*<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 

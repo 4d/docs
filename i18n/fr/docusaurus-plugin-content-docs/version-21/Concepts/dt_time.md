@@ -35,11 +35,11 @@ Une heure nulle s’écrit ?00:00:00?
 | ------------------- | --------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | Addition            | Heure + Heure                           | Time     | ?02:03:04? + ?01:02:03?                          | ?03:05:07? |
 | Soustraction        | Heure – Heure                           | Time     | ?02:03:04? ?01:02:03?                            | ?01:01:01? |
-| Addition            | Heure + Nombre                          | Number   | ?02:03:04? + 65                            | 7449                                       |
-| Soustraction        | Heure – Nombre                          | Number   | ?02:03:04? - 65                            | 7319                                       |
-| Multiplication      | Heure \* Nombre                         | Number   | ?02:03:04? * 2                            | 14768                                      |
-| Division            | Heure / Nombre                          | Number   | ?02:03:04? / 2                            | 3692                                       |
-| Division entière    | Heure \ Nombre                          | Number   | ?02:03:04? \ 2                            | 3692                                       |
+| Addition            | Heure + Nombre                          | Number   | ?02:03:04? + 65                                                                  | 7449                                       |
+| Soustraction        | Heure – Nombre                          | Number   | ?02:03:04? ?01:02:03?                            | 7319                                       |
+| Multiplication      | Heure \* Nombre                         | Number   | ?02:03:04? ?01:02:03?                            | 14768                                      |
+| Division            | Heure / Nombre                          | Number   | ?02:03:04? ?01:02:03?                            | 3692                                       |
+| Division entière    | Heure \ Nombre                          | Number   | ?02:03:04? ?02:03:04?                            | 3692                                       |
 | Modulo              | Heure % Heure                           | Time     | ?20:10:00? % ?04:20:00?                          | ?02:50:00? |
 | Modulo              | Heure % Nombre                          | Number   | ?02:03:04? % 2                                                                   | 0                                          |
 | Egalité             | Heure = Heure                           | Boolean  | ?01:02:03? &#062;=?01:02:03? | True                                       |

@@ -3,4 +3,4 @@ id: users
 title: Página Usuarios
 ---
 
-The **Users** page has been renamed [**Sessions**](sessions.md) as of 4D 21 R4.
+A partir de la versión 4D 21 R4, la página **Usuarios** ha pasado a llamarse [**Sesiones**](sessions.md).

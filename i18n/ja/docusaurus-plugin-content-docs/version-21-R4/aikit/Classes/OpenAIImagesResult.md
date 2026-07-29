@@ -14,7 +14,7 @@ title: OpenAIImagesResult
 | プロパティ    | 型                                     | 説明                                                                              |
 | -------- | ------------------------------------- | ------------------------------------------------------------------------------- |
 | `images` | [OpenAIImage](OpenAIImage.md) のコレクション | OpenAIImage オブジェクトのコレクションを返します。                                                 |
-| `ピクチャー`  | [OpenAIImage](OpenAIImage.md)         | コレクションから最初のOpenAIImage を返します。                                                   |
+| `image`  | [OpenAIImage](OpenAIImage.md)         | コレクションから最初のOpenAIImage を返します。                                                   |
 | `usage`  | Object                                | トークン使用状況の情報をかえします([OpenAIResult](OpenAIResult.md) から継承されます)。 |
 
 ### usage

@@ -4,18 +4,18 @@ title: WP Import document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Import document.Syntax-->**WP Import document** ( *filePath* : Text {; *option* : Integer, Object} ) : Object<br/>**WP Import document** ( *fileObj* : 4D.File {; *option* : Integer, Object} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Import document.Syntax-->**WP Import document** ( *filePath* : Text { ; *option* : Integer, Object} ) : Object<br/>**WP Import document** ( *fileObj* : 4D.File { ; *option* : Integer, Object} ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Import document.Params-->
 
 <div class="no-index">
 
-| Paramètres | Type                                              |                             | Description                                                                                                                                                                                                                                                                   |
-| ---------- | ------------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filePath   | Text                                              | &#8594; | Chemin d'accès : un document 4D Write (.4w7 ou .4wt) ou un document 4D Write Pro (.4wp) ou un document .docx (.docx) |
-| fileObj    | [4D.File](../../API/FileClass.md) | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                                   |
-| option     | Integer, Object                                   | &#8594; | (Integer) Option d'importation pour les expressions HTML, (object) Options d'importation pour les documents .docx                                                                                                       |
-| Résultat   | Object                                            | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                            |
+| Paramètres              | Type                                              |                             | Description                                                                                                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filePath                | Text                                              | &#8594; | Chemin d'accès : un document 4D Write (.4w7 ou .4wt) ou un document 4D Write Pro (.4wp) ou un document .docx (.docx) |
+| fileObj                 | [4D.File](../../API/FileClass.md) | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                                   |
+| option                  | Integer, Object                                   | &#8594; | (Integer) Option d'importation pour les expressions HTML, (object) Options d'importation pour les documents .docx                                                                                                       |
+| Résultat de la fonction | Object                                            | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                            |
 
 </div>
 <!-- END REF-->

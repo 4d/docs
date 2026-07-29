@@ -11,10 +11,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                                                                      |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------- |
-| version    | Integer | &#8594; | Version de l'UUID : 4 (par défaut) ou 7       |
-| Résultat   | Text    | &#8592; | Nouvel UUID sous forme de texte non canonique (32 caractères) |
+| Paramètres              | Type    |                             | Description                                                                      |
+| ----------------------- | ------- | --------------------------- | -------------------------------------------------------------------------------- |
+| version                 | Integer | &#8594; | Version de l'UUID : 4 (par défaut) ou 7       |
+| Résultat de la fonction | Text    | &#8592; | Nouvel UUID sous forme de texte non canonique (32 caractères) |
 
 </div>
 <!-- END REF-->

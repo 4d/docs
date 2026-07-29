@@ -58,7 +58,7 @@ La expresión es TRUE sólo si los dos métodos son TRUE. La expresión es TRUE 
  End if
 ```
 
-However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+Sin embargo, la solución más elegante es utilizar el [operador de cortocircuito `&&`](./operators.md#short-circuit-and-operator-) y escribir:
 
 ```4d
 If (MethodA && MethodB)

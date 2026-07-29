@@ -30,12 +30,12 @@ title: OpenAIParameters
 
 ### ネットワークプロパティ
 
-| プロパティ          | 型         | 説明                                                                                     |
-| -------------- | --------- | -------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | クライアントレベルのリクエストのデフォルトのタイムアウトをオーバーライドします(秒単位)。 デフォルトは0です。 デフォルトは0です。 |
-| `httpAgent`    | HTTPAgent | クライアントレベルのリクエストのデフォルトのHTTP エージェントをオーバーライドします。                                          |
-| `maxRetries`   | Integer   | リクエストのリトライの最大回数。 (コードが非同期でない場合、つまり関数が提供されていない場合のみ)                  |
-| `extraHeaders` | Object    | リクエストに付随して送信する追加のヘッダー。                                                                 |
+| プロパティ          | 型         | 説明                                                                          |
+| -------------- | --------- | --------------------------------------------------------------------------- |
+| `timeout`      | Real      | クライアントレベルのリクエストのデフォルトのタイムアウトをオーバーライドします(秒単位)。 デフォルトは0です。 |
+| `httpAgent`    | HTTPAgent | クライアントレベルのリクエストのデフォルトのHTTP エージェントをオーバーライドします。                               |
+| `maxRetries`   | Integer   | リクエストのリトライの最大回数。 (コードが非同期でない場合、つまり関数が提供されていない場合のみ)       |
+| `extraHeaders` | Object    | リクエストに付随して送信する追加のヘッダー。                                                      |
 
 ### OpenAPIプロパティ
 
@@ -51,7 +51,7 @@ title: OpenAIParameters
 
 ## 継承クラス
 
-特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 `OpenAIParameters` 以下はクラスを拡張するクラスの一部です:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 以下は `OpenAIParameters` クラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)

@@ -24,7 +24,7 @@ title: OpenAIParameters
 | `onResponse` | 4D.Function | リクエストが**正常に**終了した場合に非同期で呼び出される関数。 <br>*カレントプロセスが終了しないように注意してください。*  |
 | `onError`    | 4D.Function | リクエストが**エラーで**終了した場合に非同期で呼び出される関数。 <br>*カレントプロセスが終了しないように注意してください。* |
 
-> コールバック関数は、同期コード内での関数によって返される結果のオブジェクト型([OpenAIResult](OpenAIResult.md) 子クラスのうちのいずれか)と同じものを受け取ります。 以下の例を参照.
+> コールバック関数は、同期コード内での関数によって返される結果のオブジェクト型([OpenAIResult](OpenAIResult.md) 子クラスのうちのいずれか)と同じものを受け取ります。
 
 詳細な情報については [非同期コードに関するドキュメンテーション](../asynchronous-call.md) を参照してください。
 
@@ -51,7 +51,7 @@ title: OpenAIParameters
 
 ## 継承クラス
 
-特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 `OpenAIParameters` 以下はクラスを拡張するクラスの一部です:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 以下は `OpenAIParameters` クラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)
