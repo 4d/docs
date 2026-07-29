@@ -893,7 +893,8 @@ module.exports =
             "Backup/backup",
             "Backup/settings",
             "Backup/log",
-            "Backup/restore"
+            "Backup/restore",
+            "Backup/mirror"
           ]
         },
         {
