@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the [syntax of the current system](../../Concepts/paths.md#platform-specific-syntax).
+<!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the syntax of the current system.
 
 If a document is found, **Test path name** returns 1\. If a folder found, **Test path name** returns 0.
 

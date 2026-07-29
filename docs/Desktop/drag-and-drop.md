@@ -29,14 +29,14 @@ The following table lists the available properties for draggable and/or droppabl
 
 |Form object|Draggable "Custom"|Droppable "Custom"|Draggable "Auto"|Droppable "Auto"|
 |----|----|----|----|----|
-|[4D Write Pro areas](writeProArea_overview.md)|x|x|x|x|
-|[Combo Box](comboBox_overview.md)||x|x|x|
-|[Input](input_overview.md)|x|x|x|x|
-|[Hierarchical List](list_overview.md)|x|x|||
-|[List Box](listbox_overview.md)|x|x|||
-|[Plug-in Area](pluginArea_overview.md)|||x|x|
-|[Button](button_overview.md)||x|||
-|[Picture button](pictureButton_overview.md)||x|||
+|[4D Write Pro areas](../FormObjects/writeProArea_overview.md)|x|x|x|x|
+|[Combo Box](../FormObjects/comboBox_overview.md)||x|x|x|
+|[Input](../FormObjects/input_overview.md)|x|x|x|x|
+|[Hierarchical List](../FormObjects/list_overview.md)|x|x|||
+|[List Box](../FormObjects/listbox_overview.md)|x|x|||
+|[Plug-in Area](../FormObjects/pluginArea_overview.md)|||x|x|
+|[Button](../FormObjects/button_overview.md)||x|||
+|[Picture button](../FormObjects/pictureButton_overview.md)||x|||
 
 
 Items of a hierarchical list or rows in a list box can be dragged and dropped. Conversely, you can drag and drop an object onto an item of a hierarchical list or a list box row. However, you cannot drag and drop objects from the detail area of an output form. You can also manage dragging and dropping onto the application, outside of any form, using the [`On Drop` database method](../commands-legacy/on-drop-database-method.md).

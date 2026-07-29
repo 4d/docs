@@ -30,7 +30,7 @@ This command closes all the windows of the 4D Server application. Note that in t
 
 ### Register Current Application as Service/Unregister Current Application/Unregister All Server Services  
 
-(Commands available under Windows) These commands are used to manage the [registering of the application as a Service](). 
+(Commands available under Windows) These commands are used to manage the [registering of the application as a Service](./service.md). 
 
 
 ### Flush Data Buffers  
