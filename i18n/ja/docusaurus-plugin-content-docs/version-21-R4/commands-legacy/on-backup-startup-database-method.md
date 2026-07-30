@@ -30,5 +30,5 @@ displayed_sidebar: docs
 **Note:** データベースメソッドで*$0* 引数 (倍長整数) を宣言しなければなりません:
 
 ```4d
- var $0 : Integer.
+ var $0 : Integer
 ```

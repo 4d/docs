@@ -98,7 +98,7 @@ displayed_sidebar: docs
 
 ## 例題 4 
 
-ローカルのドキュメントにのみアクセスを許可 (C://doc フォルダ内):   
+ローカルのドキュメントにのみアクセスを許可 (C://doc フォルダー内):   
 
 ```4d
  ARRAY TEXT($filters;0)
