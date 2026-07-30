@@ -115,7 +115,7 @@ When a timeout is selected, the server will close the connection of a client if 
 
 #### Register Clients at Startup For Execute On Client  
 
-When this option is checked, all the 4D remote machines connecting to the database can execute methods remotely. This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
+When this option is checked, all the 4D remote machines connecting to the database can execute methods remotely. This mechanism is detailed in the section [Stored procedures on client machines](../Desktop/clientServer.md#stored-procedures-on-client-machines).
 
 #### Encrypt Client-Server Communications  
 

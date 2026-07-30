@@ -129,7 +129,7 @@ This feature is designed for small-size development teams who are used to work o
 
 :::
 
-## Development rules
+## Client/Server Development
 
 ### Code execution location 
 
@@ -308,6 +308,20 @@ Client user processes (processes running on a client machine) can read and write
 
 Important: "Intermachine" process communication, provided by the commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure.
 
+#### Stored procedures on client machines  
+
+Stored procedures can be executed on one or several 4D client machines. Stored procedures on client machines are executed the same as way as stored procedures on the server, except that on the client they can invoke data entry with legacy commands such as [`ADD RECORD`](../commands/add-record). 
+
+Any client machine executing stored procedures triggered by a server or another client machine, should explicitly be registered for this session. There are two ways to register a client: it can automatically be registered when connecting or through programming.
+
+- Registering automatically each 4D client machine connecting to 4D Server: check the [**Register Clients at Startup For Execute On Client**](../settings/client-server.md#register-clients-at-startup-for-execute-on-client) box in the Settings dialog box. When this option is checked, each 4D client machine connecting to the application is automatically referenced with 4D Server as being able to execute stored procedures. A 4D Client type process named according to the client machine is created on the server. An equivalent process is also created on each client machine.
+
+- Registering 4D Client through programming: you can register one or several client machines using programming, allowing you to select the client machines that needs to be registered and to define their registration name. Use the [`REGISTER CLIENT`](../commands/register-client) command which allows you to register a client machine under any name.
+
+- Unregistering 4D Client: No matter how the client machines have been registered, you can unregister them for the current session using the [`UNREGISTER CLIENT`](../commands/unregister-cient) command for a given client. The registration process (named according to the client) disappears from the user process group on the server machine as well as on the client.
+
+You can get the list and the task distribution (number of methods still to be executed) for the clients registered for a given session using the [`GET REGISTERED CLIENTS`](../commands/get-registered-clients) command.
+
 
 ### Variables
 
@@ -339,6 +353,56 @@ The following table indicates the principles concerning the visibility of named 
 x = visible
 
 You need to keep this visibility matrix in mind depending on the operations you want to perform. For example, if you want to do a [`DIFFERENCE`](../commands/difference), [`INTERSECTION`](../commands/intersection) or [`UNION`](../commands/union) type operation, make sure that all the sets are visible on the machine that is carrying out the operation.
+
+### Execute on Server attribute
+
+The **Execute on Server** project method attribute can be set using the batch setting of attributes dialog box as well as the [Method Properties dialog box](../Project/project-method-properties.md#execute-on-server). When this option is checked, the project method is always executed on the server, regardless of how it is called.
+
+#### Execution Context  
+
+When this attribute is checked, the execution context of the project method is comparable to that of [triggers](#triggers): the method on the server shares the same database context as the corresponding context on the client side for locking records and for transactions, but not the same language context (process variables, sets, current selections). However, unlike a trigger, a method executed on the server does not share the current record with the client context.
+All the [parameters of the method](../Concepts/parameters.md) are sent to the server and the return value, if any, is returned to the client.
+
+Unlike the [`Execute on server`](../commands/execute-on-server) command, this option does not create a process on the server. 4D Server uses the "twin" process of the client process that requested the execution. Moreover, this option simplifies the principle of delegating the execution of a method on the server since the transfer of parameters is automatically carried out in both directions, as with a "normal" method call. The [`Execute on server`](../commands/execute-on-server) command functions asynchronously, therefore it requires more programming and makes use of [semaphores](../Develop/processes.md#semaphores) for reading the results.
+
+#### Usable Commands  
+
+Methods with "Execute on Server" attribute are subject to the same rules as the [stored procedures](#stored-procedures) as far as the use of 4D language commands is concerned. 
+
+#### Pointers  
+
+If you pass a pointer to a variable (simple variable, array or array element), the pointed value is also sent to the server. If the pointed value is modified on the server by the method, the modified value is returned to the client in order to update the corresponding variable on the client side.
+Pointers to a table or field are sent as references (table number, field number). The current record value is not automatically exchanged.
+
+:::note
+
+This option works the same way in [interpreted mode as in compiled mode](../Concepts/interpreted.md).
+
+:::
+
+#### Example
+
+Here is the code for the *MyAppli* project method which has the "Execute on Server" attribute:
+
+```4d
+ #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
+ 
+  `Search and send back values for each record
+ QUERY($table->;$field->=$search)
+ While(Not(End selection($table->)))
+    APPEND TO ARRAY($array->;myFormula($table))
+    NEXT RECORD($table->)
+ End while
+ UNLOAD RECORD($table->)
+ $result:=Records in selection($table->)
+```
+
+On the client side, the method is called as follows:
+
+```4d
+ ARRAY TEXT(myArray;0)
+ var $vlnum:=MyAppli(->[Table_1] ;->[Table_1]Field_1 ;->myArray;"to find")
+```
 
 
 ## Managing the Resources folder
