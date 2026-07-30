@@ -96,7 +96,7 @@ displayed_sidebar: docs
     End for
   // テキストイメージをペーストボードに置く
     SET TEXT TO PASTEBOARD($vtRecordData)
-  // Temporary フォルダのスクラップファイル名
+  // Temporary フォルダーのスクラップファイル名
     $vsDocName:=Temporary folder+"Scrap"+String(1+(Random%99))
   // スクラップファイルがあれば削除する (ここでエラーをテストすべき)
     DELETE DOCUMENT($vsDocName)
@@ -150,7 +150,7 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
        :(Pasteboard data size("4Drc")>0)
   // 含まれていればペーストボードの中身を取り出す
           GET PASTEBOARD DATA("4Drc";$vxPasteboardData)
-  // Temporary フォルダ内のスクラップファイル名
+  // Temporary フォルダー内のスクラップファイル名
           $vsDocName:=Temporary folder+"Scrap"+String(1+(Random%99))
   // スクラップファイルが存在すれば削除する (ここでエラーをテストすべき)
           DELETE DOCUMENT($vsDocName)

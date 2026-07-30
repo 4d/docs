@@ -29,10 +29,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.RESOLVE ALIAS.Summary-->RESOLVE ALIASコマンドは、目的のファイルまたはエイリアス(Windowsではショートカットと呼ばれる) のフォルダへの完全なパスを返します。<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Summary-->RESOLVE ALIASコマンドは、目的のファイルまたはエイリアス(Windowsではショートカットと呼ばれる) のフォルダーへの完全なパスを返します。<!-- END REF-->
 
 エイリアスへの完全なパスを*aliasPath*に渡します。  
-このコマンドが実行されると、*targetPath*変数にはエイリアスのターゲットファイルまたはフォルダへの完全なパスが格納され、OKシステム変数に1が代入されます。  
+このコマンドが実行されると、*targetPath*変数にはエイリアスのターゲットファイルまたはフォルダーへの完全なパスが格納され、OKシステム変数に1が代入されます。  
 *aliasPath*に渡されたパスがエイリアスではなくファイルである場合、*targetPath*はそのファイルのパスを返し、OKシステム変数に0が代入されます。
 
 ## システム変数およびセット 

@@ -81,7 +81,7 @@ BLOBに含まれるデータのタイプは *type* によって示されます�
 | .gz    | application/x-gzip       |
 | .tar   | application/x-tar        |
 
-**注:** 4D HTTPサーバーでサポートされているMIMEタイプは、4Dアプリケーションの以下のフォルダの中にある、 "MimeTypes.xml" の中に保存されています: *\[Contents\]\\Native components\\HTTPServer.bundle\\Contents\\Resources*. 
+**注:** 4D HTTPサーバーでサポートされているMIMEタイプは、4Dアプリケーションの以下のフォルダーの中にある、 "MimeTypes.xml" の中に保存されています: *\[Contents\]\\Native components\\HTTPServer.bundle\\Contents\\Resources*. 
 
 ページ内の4D 変数や *4DSCRIPT* 型タグへの参照は常に解析されます。
 

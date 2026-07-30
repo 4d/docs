@@ -56,7 +56,7 @@ displayed_sidebar: docs
  MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\DocName")
 ```
 
-**Note:** 最後の2つの例では、移動先のフォルダ*"C:\\\\FOLDER2"* が存在していなければなりません。MOVE DOCUMENTコマンド は、ドキュメントを移動させるだけで、フォルダを作成しません。
+**Note:** 最後の2つの例では、移動先のフォルダー*"C:\\\\FOLDER2"* が存在していなければなりません。MOVE DOCUMENTコマンド は、ドキュメントを移動させるだけで、フォルダーを作成しません。
 
 ## 参照 
 
