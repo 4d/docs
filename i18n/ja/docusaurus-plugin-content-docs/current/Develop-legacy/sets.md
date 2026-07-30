@@ -38,7 +38,7 @@ A set "remembers" which record was the current record at the time the set was cr
 |Number per table|1|0 to many|
 |Sortable|Yes|No|
 |Can be saved on disk|No|Yes|
-|RAM per record(in bytes)|Number of	selected records * 4|Total number of records/8|
+|RAM per record (in bytes)|Number of selected records * 4|Total number of records/8|
 |Combinable|	No|	Yes|
 |Contains current record|	Yes|	Yes, as of the time the set was created|
 
@@ -135,7 +135,7 @@ As an alternative to immediately deleting records at the end of the method, you 
 
 4D maintains a system set named `UserSet`, which automatically stores the most recent selection of records highlighted on screen by the user. Thus, you can display a group of records with [`MODIFY SELECTION`](../commands/modify-selection) or [`DISPLAY SELECTION`](../commands/display-selection), ask the user to select from among them and turn the results of that manual selection into a selection or into a set that you name.
 
-::info 4D Server
+:::info 4D Server
 
 Although its name does not begin with the character "$", the `UserSet` system set is a client set. So, when using [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) and [`DIFFERENCE`](../commands/difference), make sure you compare `UserSet` only to client sets. 
 

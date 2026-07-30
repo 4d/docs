@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | pathname | Text | &#8594;  | 表示するアイテムのパス名 |
-| * | 演算子 | &#8594;  | アイテムがフォルダの場合、その内容を表示 |
+| * | 演算子 | &#8594;  | アイテムがフォルダーの場合、その内容を表示 |
 </div>
 <!-- END REF-->
 
@@ -28,10 +28,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SHOW ON DISK.Summary-->SHOW ON DISKコマンドは、オペレーティングシステムの標準ウィンドウ上に、引数*pathname* に渡したパス名を持つファイルまたはフォルダを表示します。<!-- END REF-->   
-ユーザのインターフェースでは、このコマンドを使用して、特定のファイルやフォルダの場所を指定します。
+<!--REF #_command_.SHOW ON DISK.Summary-->SHOW ON DISKコマンドは、オペレーティングシステムの標準ウィンドウ上に、引数*pathname* に渡したパス名を持つファイルまたはフォルダーを表示します。<!-- END REF-->   
+ユーザのインターフェースでは、このコマンドを使用して、特定のファイルやフォルダーの場所を指定します。
 
-デフォルトで、*pathname*がフォルダを指定する場合、コマンドはフォルダ自体のレベルを表示します。任意の引数 *\** を渡すと、コマンド はフォルダを開き、その内容をウィンドウで表示します。*pathname* がファイルを指定すると、引数 *\** は無視されます。 
+デフォルトで、*pathname*がフォルダーを指定する場合、コマンドはフォルダー自体のレベルを表示します。任意の引数 *\** を渡すと、コマンド はフォルダーを開き、その内容をウィンドウで表示します。*pathname* がファイルを指定すると、引数 *\** は無視されます。 
 
 ## 例題 
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
 ![](../assets/en/commands/pict35007.ja.png)
 
 ```4d
- SHOW ON DISK("c:\\MyFolder\\Folder2") //指定されたフォルダを表示する。
+ SHOW ON DISK("c:\\MyFolder\\Folder2") //指定されたフォルダーを表示する。
 ```
 
 ![](../assets/en/commands/pict35008.ja.png)
 
 ```4d
- SHOW ON DISK("c:\\MyFolder\\Folder2";*) //指定されたフォルダの内容を表示する。
+ SHOW ON DISK("c:\\MyFolder\\Folder2";*) //指定されたフォルダーの内容を表示する。
 ```
 
 ![](../assets/en/commands/pict35009.ja.png)

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 | 引数                | 型                         |                             | 説明                              |
 | ----------------- | ------------------------- | --------------------------- | ------------------------------- |
-| mergedApp         | 4D.Folder | &#8594; | 組み込みアプリを格納しているフォルダ              |
+| mergedApp         | 4D.Folder | &#8594; | 組み込みアプリを格納しているフォルダー              |
 | autoLicenseTarget | Integer                   | &#8594; | 自動ライセンス埋め込み用のターゲットライセンス         |
 | buildLicense      | 4D.File   | &#8594; | 埋め込みライセンスを生成するのに必要なライセンス        |
 | oemLicense        | 4D.File   | &#8594; | サーバーライセンスの場合は4D OEM XML キーライセンス |
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは*mergedApp* 引数のビルドアプリケーションのLicenses フォルダ内に埋め込みライセンスファイルを作成します。<!-- END REF-->*mergedApp* 引数で指定したフォルダ内にLicenses フォルダが存在しない場合、このコマンドによって作成されます。
+<!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは*mergedApp* 引数のビルドアプリケーションのLicenses フォルダー内に埋め込みライセンスファイルを作成します。<!-- END REF-->*mergedApp* 引数で指定したフォルダー内にLicenses フォルダーが存在しない場合、このコマンドによって作成されます。
 
-*mergedApp* 引数には、ライセンスを埋め込みたいビルドアプリケーションを格納しているフォルダへの参照を格納した[4D.Folder](../API/FolderClass.md) オブジェクトを渡します。
+*mergedApp* 引数には、ライセンスを埋め込みたいビルドアプリケーションを格納しているフォルダーへの参照を格納した[4D.Folder](../API/FolderClass.md) オブジェクトを渡します。
 
 第二引数によって、ターゲットに対して[使用するライセンスを4D に自動的に決めさせる](#automatic-license-selection) か、または[使用するライセンスを指定](#designating-the-licenses-to-use) します。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 *license* 引数には、埋め込みライセンスを生成するのに使用したライセンスファイルへの参照を格納した[4D.File](../API/FileClass.md) オブジェクトを渡します。
 
-非自動モードにおいて、ビルドに特定のOEM ライセンス(*4D OEM XML キー*)が必要で、そのようなライセンスがLicenses フォルダ内にすでにインストールされていない場合には、*oemLicense* 引数を使用してそれを渡す必要があります。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。
+非自動モードにおいて、ビルドに特定のOEM ライセンス(*4D OEM XML キー*)が必要で、そのようなライセンスがLicenses フォルダー内にすでにインストールされていない場合には、*oemLicense* 引数を使用してそれを渡す必要があります。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。
 
 ### 戻り値
 

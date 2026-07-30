@@ -47,7 +47,7 @@ LIST TO BLOBや[BLOB to list](blob-to-list.md "BLOB to list")は、 BLOBに格�
 
 ### 注 
 
-**互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com でのの *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
+**互換性に関する注意:** このコマンドは引数として渡されたBlob を変更するため、Blob オブジェクト(4D.Blob 型)はサポートしません。developer.4d.com で *Passing blobs and blob objects to 4D commands* のページを参照して下さい。
 
 ## 例題 
 

@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Average.Summary-->**Average**は、*series*の平均値を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合には、平均値を求めるためにインデックスが使用されます。
+<!--REF #_command_.Average.Summary-->**Average**は、*series*の平均値を返します。<!-- END REF-->*series*がインデックスフィールドの場合には、平均値を求めるためにインデックスが使用されます。
 
 *series*に (1または2次元の) 配列を渡すこともできます。この場合配列は整数、倍長整数、または実数型でなければなりません。
 

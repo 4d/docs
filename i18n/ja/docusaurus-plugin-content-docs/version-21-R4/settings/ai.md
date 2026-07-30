@@ -71,7 +71,7 @@ AI プロバイダーを追加するには:
 
 ### AIProviders.json
 
-プロバイダーの設定は *AIProviders.json* という名前のJSON ファイル内に保存されています。このファイルは[運用設定に応じて](./overview.md#enabling-user-settings)、[project フォルダ](../Project/architecture.md) 内の、アクティブな *settings.4DSettings ファイル* の隣に置かれています。
+プロバイダーの設定は *AIProviders.json* という名前のJSON ファイル内に保存されています。このファイルは[運用設定に応じて](./overview.md#enabling-user-settings)、[project フォルダー](../Project/architecture.md) 内の、アクティブな *settings.4DSettings ファイル* の隣に置かれています。
 
 :::warning
 

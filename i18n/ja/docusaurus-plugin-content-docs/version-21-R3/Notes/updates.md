@@ -11,7 +11,7 @@ title: リリースノート
 
 - [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
 - 4D Write Pro は[階層リストスタイルシート](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets) サポートするようになり、これにより自動ナンバリングつきの、構造化された[マルチレベルのリスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) の作成と管理が可能になりました。
-- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
+- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダーの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
 - テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
 - IMAP transporter は、[4D.IMAPNotifier](../API/IMAPNotifierClass.md) クラスの、[notifier オブジェクト](../API/IMAPTransporterClass.md#notifier) を通して、IDLE プロトコルを使用したメールボックスイベント通知イベントをサポートするようになりました。またこのクラスは [IMAP New transporter](../commands/imap-new-transporter) の `listener` プロパティを通して設定することができます。
 - リモートの[session](../API/SessionClass.md) オブジェクトは、[クライアント側でも利用可能](../Desktop/sessions.md#availability) になりました。

@@ -43,7 +43,7 @@ slug: /commands/theme/System-Documents
 
 :::info 互換性
 
-このテーマの旧式のコマンドは、通常は[*File および Folder*](./File_and_Folder.md) テーマ、およびそれに割り当てられた[File](../../API/FileClass.md)、[Folder](../../API/FolderClass.md)、 [ZipFile](../../API/ZipFileClass.md) そして [ZipFolder](../../API/ZipFolderClass.md) クラスを使用して有効的に置き換えることができます。これらのコマンドによりファイルやフォルダをオブジェクトとして扱うことができます。
+このテーマの旧式のコマンドは、通常は[*File および Folder*](./File_and_Folder.md) テーマ、およびそれに割り当てられた[File](../../API/FileClass.md)、[Folder](../../API/FolderClass.md)、 [ZipFile](../../API/ZipFileClass.md) そして [ZipFolder](../../API/ZipFolderClass.md) クラスを使用して有効的に置き換えることができます。これらのコマンドによりファイルやフォルダーをオブジェクトとして扱うことができます。
 
 :::
 
@@ -133,5 +133,5 @@ slug: /commands/theme/System-Documents
 [`Path to object`](../../commands/path-to-object) および [`Object to path`](../../commands/object-to-path) コマンドを使用することでパス名の中身を管理することができます。 具体的には、パス名からは以下のものを取得することができます:
 
 - ファイル名
-- 親フォルダパス
-- ファイルあるいはフォルダの拡張子。
+- 親フォルダーパス
+- ファイルあるいはフォルダーの拡張子。

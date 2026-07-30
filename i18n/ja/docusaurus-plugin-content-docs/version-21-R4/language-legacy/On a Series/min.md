@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Min.Summary-->**Min**は、*series*中の最小値を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合には、最小値を求めるためにインデックスが使用されます。
+<!--REF #_command_.Min.Summary-->**Min**は、*series*中の最小値を返します。<!-- END REF-->*series*がインデックスフィールドの場合には、最小値を求めるためにインデックスが使用されます。
 
 *series*セレクションが空の場合、**Min**は0を返します。
 

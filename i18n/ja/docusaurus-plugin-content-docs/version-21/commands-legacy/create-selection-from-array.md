@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | セレクションを作成するテーブル |
 | recordArray | Integer, Boolean array | &#8594;  | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
-| selectionName | Text | &#8594;  | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
+| selectionName | Text | &#8594;  | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレントセレクションに適用する |
 </div>
 <!-- END REF-->
 

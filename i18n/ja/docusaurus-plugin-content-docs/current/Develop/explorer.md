@@ -21,7 +21,7 @@ title: エクスプローラー
 
 このセクションではプロジェクトで定義されているQodly ページの一覧を見ることができます。 またページを追加、または開くことができます。
 
-Qodly ページのセクションに表示されいてるページは、プロジェクトのSources フォルダ内の [**WebForm** サブフォルダ](../Project/architecture.md#webforms) に格納されています。
+Qodly ページのセクションに表示されいてるページは、プロジェクトのSources フォルダー内の [**WebForm** サブフォルダー](../Project/architecture.md#webforms) に格納されています。
 
 :::note
 

@@ -59,7 +59,7 @@ macOSではアプリケーション名を渡すこともできます。4Dは環�
 
 ## macOSでの例題 
 
-Application/UtilitiesフォルダにあるmacOS ターミナルを使用します。
+Application/UtilitiesフォルダーにあるmacOS ターミナルを使用します。
 
 1\. ファイルに対してパーミッションを変更する(*chmod* はファイルアクセスを変更するために使用するmacOS コマンドです)
 
@@ -75,7 +75,7 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
  LAUNCH EXTERNAL PROCESS("/bin/cat /folder/myfile.txt";input;output)
 ```
 
-3\. "Users" フォルダの内容を取得する(*ls -l*はDOSの*dir* コマンド に相当するmacOS コマンドです)
+3\. "Users" フォルダーの内容を取得する(*ls -l*はDOSの*dir* コマンド に相当するmacOS コマンドです)
 
 ```4d
  var $In;$Out : Text

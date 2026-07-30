@@ -171,7 +171,6 @@ $val:=$o.f() //8
 
 ![](../../assets/en/commands/pict3872844.en.png)
 
-注:
 
 - *This.ID*、*This.Title* および *This.Date* は、ds.Event データクラス内の対応する属性を直接参照します。
 - *This.meetings* は(1対N リレーション名に基づいた)リレーション属性であり、ds.Meeting データクラスのエンティティセレクションを返します。

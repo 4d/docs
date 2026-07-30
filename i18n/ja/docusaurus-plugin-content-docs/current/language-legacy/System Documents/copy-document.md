@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | sourceName | Text | &#8594; | コピーするファイルやフォルダーのパス名 |
 | destinationName | Text | &#8594; | ファイルやフォルダーコピーの配置先名またはパス名 |
-| newName | Text | &#8594; | コピーされたファイルまたはフォルダの新しい名前 |
+| newName | Text | &#8594; | コピーされたファイルまたはフォルダーの新しい名前 |
 | * | 演算子 | &#8594; | 存在する場合、既存のドキュメントを上書きする |
 </div>
 <!-- END REF-->
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-次の例を使用して、そのドキュメントがあるフォルダ内でドキュメントを複製します。
+次の例を使用して、そのドキュメントがあるフォルダー内でドキュメントを複製します。
 
 ```4d
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-次の例を使用して、ドキュメントをデータベースフォルダにコピーします(表示されているC:\\\\FOLDERは、データベースフォルダではありません) 。
+次の例を使用して、ドキュメントをデータベースフォルダーにコピーします(表示されているC:\\\\FOLDERは、データベースフォルダーではありません) 。
 
 ```4d
  COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 ## 例題 4 
 
-次の例を使用して、そのドキュメントがあるフォルダ内で既存のコピーを上書きして、ドキュメントを複製します。
+次の例を使用して、そのドキュメントがあるフォルダー内で既存のコピーを上書きして、ドキュメントを複製します。
 
 ```4d
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
@@ -124,7 +124,7 @@ displayed_sidebar: docs
   //"folder2/new" という名前のファイルを作成します(name2は無視されます)。
  
  COPY DOCUMENT("folder1\\" ; "folder2\\")
-  //"folder2/folder1/" という名前のフォルダを作成します。
+  //"folder2/folder1/" という名前のフォルダーを作成します。
  
  COPY DOCUMENT("folder1\\" ; "folder2\\" ; "new")
   //"folder2/new/" という名前のファイルを作成します。

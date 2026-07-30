@@ -540,7 +540,7 @@
     "description": "The label for category 'Entry Control' in sidebar 'docs'"
   },
   "sidebar.docs.category.File and Folder": {
-    "message": "ファイルとフォルダ",
+    "message": "ファイルとフォルダー",
     "description": "The label for category 'File and Folder' in sidebar 'docs'"
   },
   "sidebar.docs.category.form-events-commands": {

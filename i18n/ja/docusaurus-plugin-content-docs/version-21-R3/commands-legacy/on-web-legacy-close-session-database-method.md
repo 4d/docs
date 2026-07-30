@@ -38,7 +38,7 @@ displayed_sidebar: docs
 * セッションプロセスのタイムアウトに達したとき (デフォルトで480分 = 8時間、[WEB SET OPTION](../commands/web-set-option)コマンドで変更可能)
 * [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)コマンドが呼び出された場合
 
-こ のデータベースメソッドが呼び出された時点で、セッションのコンテキスト (プロセス変数の値やカレントセレクション) は有効です。そのセッションに関連するデータ (変数の値やセレクション) を退避し、後で同じcookie値でリクエストを受信したときにそれらを再利用することができます。
+こ のデータベースメソッドが呼び出された時点で、セッションのコンテキスト (プロセス変数の値やカレントセレクション) は有効です。そのセッションに関連するデータ (変数の値やセレクション) を退避し、後で同じcookie値でリクエストを受信したときに、特に[On Web Connectionデータベースメソッド](../commands/on-web-connection-database-method)においてそれらを再利用することができます。
 
 **注:** (複数のプロセスを生成可能な)4D Mobileセッションのコンテキストにおいて、**On Web Legacy Close Session database method**は閉じられる各Webプロセス毎に呼び出されるので、4D Mobileセッションプロセス中に生成された全てのタイプのデータ(変数、セレクション、等)を保存する事ができます。
 

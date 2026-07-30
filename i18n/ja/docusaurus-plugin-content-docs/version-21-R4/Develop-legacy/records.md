@@ -31,7 +31,7 @@ The sequence number is a unique non-repeating number that may be assigned to a f
 - 4D does not carry out any check when you modify the automatic number internal counter of a table using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command. If you decrement this counter, the new records created may have numbers that have already been assigned.
 - Sequence numbers are not recommended to fill unique ID primary key fields for records. To create unique record IDs, it is strongly recommended to use UUIDs. 
 
-::: 
+:::
 
 ### Example
 
@@ -131,7 +131,7 @@ Each process has its own record stack for each table. 4D maintains the record st
 
 [`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) are useful when you want to examine records in the same file during data entry. To do this, you push the record, search and examine records in the file (copy fields into variables, for example), and finally pop the record to restore the record.
 
-While entering a record, if you have to check a multiple field unique value, use the [`SET QUERY DESTINATION`](../commands/set-quer-destination) command. This will save you the calls to [`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) that you were making before and after the call to QUERY in order to preserve the data entered in the current record. [`SET QUERY DESTINATION`](../commands/set-quer-destination) allows you to make a query that does not change the selection nor the current record.
+While entering a record, if you have to check a multiple field unique value, use the [`SET QUERY DESTINATION`](../commands/set-query-destination) command. This will save you the calls to [`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) that you were making before and after the call to QUERY in order to preserve the data entered in the current record. [`SET QUERY DESTINATION`](../commands/set-query-destination) allows you to make a query that does not change the selection nor the current record.
 
 ## Record locking
 
@@ -207,17 +207,13 @@ When modifications to be made to a record are finished, the record must be relea
 
 :::note
 
-When it is used in a transaction, the [`UNLOAD RECORD`](../commands/unload-record) command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or cancelled).
+When it is used in a transaction, the [`UNLOAD RECORD`](../commands/unload-record) command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or canceled).
 
 :::
 
 Use the [`LOCKED BY`](../commands/locked-by) command to see which user and/or process have locked a record.
 
-:::
-
 A good practice is to place all tables in read-only mode when each process is started (using the syntax [`READ ONLY(*)`](../commands/read-only)) then put each table in read/write mode only when necessary. Access to tables in read-only mode is faster and more memory-efficient. Moreover, changing the state of a table is optimized in client/server mode because it does not cause any additional network traffic: information is only sent to the server when executing a command that requires adequate access to the table.
-
-:::
 
 ### Loops to Load Unlocked Records
 
@@ -243,9 +239,9 @@ The following example uses the previous loop to load an unlocked record and modi
  Repeat //Loop until the record is unlocked
     LOAD RECORD([Inventory]) //Load record and set it to locked
  Until(Not(Locked([Inventory])))
- [Inventory]Part Qty:=[Inventory]Part Qty 1 //Modify the record
+ [Inventory]Part Qty:=[Inventory]Part Qty-1 //Modify the record
  SAVE RECORD([Inventory]) //Save the record
- UNLOAD RECORD([Inventory]) //Let other users modfiy it
+ UNLOAD RECORD([Inventory]) //Let other users modify it
  READ ONLY([Inventory])
 ```
 

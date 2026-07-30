@@ -576,7 +576,7 @@
     "description": "The label for category 'Entry Control' in sidebar 'docs'"
   },
   "sidebar.docs.category.File and Folder": {
-    "message": "ファイルとフォルダ",
+    "message": "ファイルとフォルダー",
     "description": "The label for category 'File and Folder' in sidebar 'docs'"
   },
   "sidebar.docs.category.Formulas": {
@@ -880,7 +880,7 @@
     "description": "The generated-index page title for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder.link.generated-index.title": {
-    "message": "ファイルとフォルダ",
+    "message": "ファイルとフォルダー",
     "description": "The generated-index page title for category File and Folder in sidebar docs"
   },
   "sidebar.docs.category.Form Events.link.generated-index.title": {
@@ -1364,7 +1364,7 @@
     "description": "The label for category 'Entry Control' in sidebar 'docs'"
   },
   "sidebar.docs.category.File-and-Folder-key": {
-    "message": "ファイルとフォルダ",
+    "message": "ファイルとフォルダー",
     "description": "The label for category 'File and Folder' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form-Events-key": {

@@ -399,7 +399,7 @@ title: Document クラス
 
 |引数|型||説明|
 |---------|--- |:---:|------|
-|destinationFolder | 4D.Folder |->|コピー先フォルダ|
+|destinationFolder | 4D.Folder |->|コピー先フォルダー|
 |newName|Text|->|コピーの新しい名前|
 |overwrite|Integer|->|既存の要素を上書きするためには `fk overwrite`|
 |戻り値|4D.File|<-|Copied file|

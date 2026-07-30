@@ -36,7 +36,7 @@ HTTP リクエストハンドラー関数はすでに認証されているセッ
 
 以下の方法でHTTP リクエストハンドラーを宣言することができます:
 
-- プロジェクトの[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存されている**HTTPHandlers.json** という名前の設定ファイルを使用する。 HTTP リクエストハンドラーは、Web サーバーが起動したときにロードされて適用されます。 HTTP リクエストハンドラーは、Web サーバーが起動したときにロードされて適用されます。
+- プロジェクトの[`Project/Sources`](../Project/architecture.md#sources) フォルダー内に保存されている**HTTPHandlers.json** という名前の設定ファイルを使用する。 HTTP リクエストハンドラーは、Web サーバーが起動したときにロードされて適用されます。 HTTP リクエストハンドラーは、Web サーバーが起動したときにロードされて適用されます。
 - 任意のWeb サーバーオブジェクトに対して、[start()](../API/WebServerClass.md#start) 関数の*settings* 引数内で設定された[`.handlers`](../API/WebServerClass.md#handlers) プロパティを使用する:
 
 ```4d
