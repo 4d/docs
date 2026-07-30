@@ -40,7 +40,7 @@ displayed_sidebar: docs
 Notes:
 
 * 受信したパケットがBLOB型の場合、コマンドは [USE CHARACTER SET](use-character-set.md) コマンドで指定された文字セットを考慮しません。BLOBには変更されないデータが返されます。
-* テキスト型のパケットを受信した場合、 RECEIVE PACKET コ マンドはByte Order Marks (BOM) をサポートします。この場合、カレントの文字セットがUnicodeタイプ (UTF-8, UTF-16またはUTF-32) であれば、4Dは受信した先頭のバイトでBOMの識別を試みます。BOMが検知されると、それは*receiveVar*変数から取り除かれ、4Dは現在の文字セットではなくBOMで指定された文字セットを使用します。
+* テキスト型のパケットを受信した場合、 RECEIVE PACKET コマンドはByte Order Marks (BOM) をサポートします。この場合、カレントの文字セットがUnicodeタイプ (UTF-8, UTF-16またはUTF-32) であれば、4Dは受信した先頭のバイトでBOMの識別を試みます。BOMが検知されると、それは*receiveVar*変数から取り除かれ、4Dは現在の文字セットではなくBOMで指定された文字セットを使用します。
 
 特定の文字数まで読み込むためには、*numBytes*にその数を渡します。*receiveVar*がテキスト型の場合、一回の呼び出しで、Unicodeモードでは2GB (理論的な値) までのテキストを読み込めます。
 

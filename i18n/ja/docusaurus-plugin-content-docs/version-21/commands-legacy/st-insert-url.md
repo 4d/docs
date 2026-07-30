@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 *urlText* 引数には、オブジェクト内で表示される、リンクの表示テキストを渡します。例えば、 "4D Web Site" や "Follow this link for more information" などのテキストラベルです。"http://www.4d.com" のような、アドレスそのものを指定することもできます。
 
-*urlAddress* 引数には、 "http://www.4D.com" のように、ブラウザに表示させたいWebサイトの完全なアドレスを渡します。
+*urlAddress* 引数には、 "http://www.4D.com" のように、ブラウザーに表示させたいWebサイトの完全なアドレスを渡します。
 
 任意の *startSel* 引数と *endSel* 引数は*object* 内のテキストの選択範囲を指定します。 *startSel* と *endSel* は標準テキストのみをカウントし、スタイルタグは文字数としてはカウントされません。参照は一文字としてカウントされるということに注意して下さい。
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 **Note:** もし *startSel* 引数が *endSel* 引数より大きい場合、コマンドは何も行わず、*OK* 変数は0に設定されます(ただし *endSel* が0である場合を除く)。
 
-リンクは挿入されれば既に有効になっています。ラベルを、 Windows では **Ctrl+クリック**、 macOS では**Command+クリック** することによって既定のブラウザで*urlAddress* で指定したページを開くことができます。
+リンクは挿入されれば既に有効になっています。ラベルを、 Windows では **Ctrl+クリック**、 macOS では**Command+クリック** することによって既定のブラウザーで*urlAddress* で指定したページを開くことができます。
 
 ## 例題 
 
