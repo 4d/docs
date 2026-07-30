@@ -295,4 +295,4 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 [4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。
 
-エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 最終アプリケーションにおいて[エラー処理メソッド](#installing-an-error-handling-method) を使用してエラーへの割り込みと処理ををする場合、[`Last errors`](../commands/last-errors.md) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。
+エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 最終アプリケーションにおいて[エラー処理メソッド](#installing-an-error-handling-method) を使用してエラーへの割り込みと処理をする場合、[`Last errors`](../commands/last-errors.md) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。

@@ -70,22 +70,22 @@ title: フォーム
 
 2つのカテゴリーのフォームが存在します:
 
-- **プロジェクトフォーム** - テーブルに属さない独立したフォームです。 このタイプのフォームは、おもにインターフェースダイアログボックスやコンポーネントを作成するのに使用されます。 プロジェクトフォームを使用してより簡単に OS標準に準拠するインターフェースを作成できます。 このタイプのフォームは、おもにインターフェースダイアログボックスやコンポーネントを作成するのに使用されます。 プロジェクトフォームを使用してより簡単に OS標準に準拠するインターフェースを作成できます。
+- **プロジェクトフォーム** - テーブルに属さない独立したフォームです。 このタイプのフォームは、おもにインターフェースダイアログボックスやコンポーネントを作成するのに使用されます。 プロジェクトフォームを使用してより簡単に OS標準に準拠するインターフェースを作成できます。
 
-- **テーブルフォーム** - 特定のテーブルに属していて、それによりデータベースに基づくアプリケーションの開発に便利な自動機能の恩恵を得ることができます。 通常、テーブルには入力フォームと出力フォームが別々に存在します。 通常、テーブルには入力フォームと出力フォームが別々に存在します。
+- **テーブルフォーム** - 特定のテーブルに属していて、それによりデータベースに基づくアプリケーションの開発に便利な自動機能の恩恵を得ることができます。 通常、テーブルには入力フォームと出力フォームが別々に存在します。
 
 フォームを作成する際にフォームカテゴリーを選択しますが、後から変更することも可能です。
 
-## Using forms
+## フォームの使用
 
-Forms are called using specific commands of the 4D Language. In your 4D desktop applications, forms can be used in various ways, depending on their status within your interface needs. A form can be:
+フォームは、4D ランゲージの特定のコマンドを使用して呼び出します。 4D デスクトップアプリケーションにおいては、インターフェースで必要な用途に応じて、様々な方法で使用することができます。 フォームの用途の一例です:
 
-- used in its own window for data viewing, processing, editing, or to display on-screen information to the user,
-- used embedded in another form (subform),
-- used as template for printing,
-- or called by specific features like the Label editor.
+- 独自のウィンドウで使用し、データの閲覧、処理、編集をしたり、ユーザーに対してスクリーン上に情報を表示する。
+- 他のフォーム内に埋め込んで使用する(サブフォーム)。
+- 印刷用のテンプレートとして使用する。
+- ラベルエディターなどの特定の要素から呼び出す。
 
-### Using a project form in a window
+### ウィンドウ内でプロジェクトフォームを使用
 
 When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
 

@@ -71,28 +71,28 @@ Para crear una hoja de estilo de lista jerárquica, utilice [WP New style sheet]
 
 Para personalizar los estilos de lista jerarquica, se puede personalizar el objeto de hoja de estilos de párrafo utilizando [los atributos de la hoja de estilos](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
-Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
+Las hojas de estilo de lista jerárquica están totalmente soportadas por los siguientes comandos: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 
 ### Ejemplo
 
 El siguiente ejemplo crea una hoja de estilo de lista jerárquica de tres niveles y la aplica a los párrafos.
 
 ```4d
-// Create 3 hierarchical list style sheets
-WP New style sheet(wpArea; wk type paragraph; "MyList"; 3)
+// Crear 3 hojas de estilo de lista jerárquica
+Nueva hoja de estilo WP (wpArea; párrafo de tipo wk; "MyList"; 3)
 
-// Retrieve each level
-var $level1; $level2; $level3 : Object
-$level1:=WP Get style sheet(wpArea; "MyList"; 1) // Root level
-$level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1st sub-level
-$level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2nd sub-level
+// Recuperar cada nivel
+var $level1; $level2; $level3 : Objeto
+$level1:=WP Get style sheet (wpArea; "MyList"; 1) // Nivel raíz
+$level2:=WP Get style sheet (wpArea; "MyList"; 2) // Primer subnivel
+$level3:=WP Get style sheet (wpArea; "MyList"; 3) // Segundo subnivel
 
-// Customize styles
+// Personaliza los estilos
 WP SET ATTRIBUTES($level1; {listStyleType: wk upper latin; fontBold: wk true})
 WP SET ATTRIBUTES($level2; {listConcatStringFormat: True})
 WP SET ATTRIBUTES($level3; {listStringFormatLtr: "(#)"})
 
-// Apply hierarchical style sheets to paragraphs
+// Aplicar hojas de estilo de lista jerárquica a los párrafos
 var $paragraphs : Collection
 $paragraphs:=WP Get elements(wpArea; wk type paragraph)
 

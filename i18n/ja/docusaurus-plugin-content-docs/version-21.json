@@ -12,23 +12,23 @@
     "description": "The generated-index page title for category 'Getting Started' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project & IDE": {
-    "message": "Project & IDE",
+    "message": "プロジェクト & IDE",
     "description": "The label for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project & IDE.link.generated-index.title": {
-    "message": "Project & IDE",
+    "message": "プロジェクト & IDE",
     "description": "The generated-index page title for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Dababase structure": {
-    "message": "Dababase structure",
+    "message": "データベース・ストラクチャー",
     "description": "The label for category 'Dababase structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.Code & Methods": {
-    "message": "Code & Methods",
+    "message": "コード & メソッド",
     "description": "The label for category 'Code & Methods' in sidebar 'docs'"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "設定",
     "description": "The label for category 'Settings' in sidebar 'docs'"
   },
   "sidebar.docs.category.Debugging": {
@@ -36,7 +36,7 @@
     "description": "The label for category 'Debugging' in sidebar 'docs'"
   },
   "sidebar.docs.category.Application Preferences": {
-    "message": "Application Preferences",
+    "message": "環境設定",
     "description": "The label for category 'Application Preferences' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language": {
@@ -56,7 +56,7 @@
     "description": "The label for category 'Data Types' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands by theme": {
-    "message": "Commands by theme",
+    "message": "コマンド(テーマ別)",
     "description": "The label for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.category.Classes": {
@@ -176,7 +176,7 @@
     "description": "The generated-index page description for category 'Desktop Applications' in sidebar 'docs'"
   },
   "sidebar.docs.category.Forms": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Editor": {
@@ -260,7 +260,7 @@
     "description": "The generated-index page title for category 'Extensions' in sidebar 'docs'"
   },
   "sidebar.docs.category.Extending 4D applications": {
-    "message": "Extending 4D applications",
+    "message": "4D アプリケーションの拡張",
     "description": "The label for category 'Extending 4D applications' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D View Pro": {
@@ -468,7 +468,7 @@
     "description": "The label for the doc item 'Licenses' in sidebar 'docs', linking to the doc Admin/licenses"
   },
   "sidebar.docs.doc.Log Files": {
-    "message": "Log Files",
+    "message": "ログファイル",
     "description": "The label for the doc item 'Log Files' in sidebar 'docs', linking to the doc Debugging/debugLogFiles"
   },
   "sidebar.docs.doc.Data Collection": {
@@ -476,7 +476,7 @@
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.title": {
-    "message": "Commands by theme",
+    "message": "コマンド(テーマ別)",
     "description": "The generated-index page title for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Environment": {
@@ -548,7 +548,7 @@
     "description": "The label for category 'Form Events' in sidebar 'docs'"
   },
   "sidebar.docs.category.form-commands": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.Formulas": {
@@ -672,7 +672,7 @@
     "description": "The label for category 'Relations' in sidebar 'docs'"
   },
   "sidebar.docs.category.Resources": {
-    "message": "Resources",
+    "message": "リソース",
     "description": "The label for category 'Resources' in sidebar 'docs'"
   },
   "sidebar.docs.category.SQL": {
@@ -724,7 +724,7 @@
     "description": "The label for category 'System Environment' in sidebar 'docs'"
   },
   "sidebar.docs.category.Table": {
-    "message": "Table",
+    "message": "テーブル",
     "description": "The label for category 'Table' in sidebar 'docs'"
   },
   "sidebar.docs.category.Tools": {
