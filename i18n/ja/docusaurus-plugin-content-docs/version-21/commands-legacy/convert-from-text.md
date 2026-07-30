@@ -193,7 +193,7 @@ CONVERT FROM TEXTと[Convert to text](convert-to-text.md "Convert to text")コ�
 
 コマンドを実行した後、*convertedBLOB* BLOBには変換されたテキストが返されます。このBLOBは、[Convert to text](convert-to-text.md "Convert to text")コマンドで読み込むことができます。
 
-**注:** IANAに定義されていない特別な文字セット (1258=x-mac-japanese) を使用することができます。これはWindows上ではコードページ10001に、Mac上ではkTextEncodingMacJapaneseにマッ プされています。 
+**注:** IANAに定義されていない特別な文字セット (1258=x-mac-japanese) を使用することができます。これはWindows上ではコードページ10001に、Mac上ではkTextEncodingMacJapaneseにマップされています。 
 
 ## システム変数およびセット 
 

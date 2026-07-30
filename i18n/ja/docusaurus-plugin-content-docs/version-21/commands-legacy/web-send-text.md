@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| htmlText | Text | &#8594;  | Webブラウザへ送られるHTMLテキストフィールド または変数 |
+| htmlText | Text | &#8594;  | Webブラウザーへ送られるHTMLテキストフィールド または変数 |
 | type | Text | &#8594;  | MIME型 |
 </div>
 <!-- END REF-->

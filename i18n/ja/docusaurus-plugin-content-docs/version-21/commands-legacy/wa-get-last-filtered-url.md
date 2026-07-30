@@ -34,7 +34,7 @@ displayed_sidebar: docs
 URLは以下のいずれかの理由でフィルタされることがあります:
 
 * URLがフィルタにより拒否された ([WA SET URL FILTERS](wa-set-url-filters.md "WA SET URL FILTERS") コマンド)。
-* デフォルトブラウザでリンクが開かれる ([WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md "WA SET EXTERNAL LINKS FILTERS") コマンド)。
+* デフォルトブラウザーでリンクが開かれる ([WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md "WA SET EXTERNAL LINKS FILTERS") コマンド)。
 * URLがポップアップウィンドウを開こうとしている。
 
 フィルタされたURLを知るためには、On URL Filtering、On Open External Link、そしてOn Window Opening Deniedフォームイベントのコンテキストでこのコマンドを呼び出すことをお勧めします。

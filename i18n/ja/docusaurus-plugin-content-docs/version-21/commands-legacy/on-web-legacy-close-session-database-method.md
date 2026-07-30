@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **On Web Legacy Close Session database method** はWebセッションが閉じられる直前に、4D Webサーバーから呼び出されます。4Dは以下のような場合にWebセッション (セッションを管理するWebプロセス) を閉じます:
 
-* セッ ションを管理するWebプロセス数の最大値 (デフォルトで100、[WEB SET OPTION](web-set-option.md)コマンドで変更可能) に達している状態で、さらに新しいWebセッションを作成する必要があるとき (4Dは一番古いWebセッションプロセスを自動で破棄します)
+* セッションを管理するWebプロセス数の最大値 (デフォルトで100、[WEB SET OPTION](web-set-option.md)コマンドで変更可能) に達している状態で、さらに新しいWebセッションを作成する必要があるとき (4Dは一番古いWebセッションプロセスを自動で破棄します)
 * セッションプロセスのタイムアウトに達したとき (デフォルトで480分 = 8時間、[WEB SET OPTION](web-set-option.md)コマンドで変更可能)
 * [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)コマンドが呼び出された場合
 
