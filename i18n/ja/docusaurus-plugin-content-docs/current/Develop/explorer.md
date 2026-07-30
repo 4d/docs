@@ -31,7 +31,7 @@ Qodly ページはエクスプローラーの **ホーム** ページからは�
 
 ### 要件
 
-Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) において作成および編集されます。 4D からQodly Studio にアクセスするためには [特定の設定](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#要件) を設定する必要があり、これは [ワンクリックで設定可能です](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#ワンクリック設定)。
+Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) において作成および編集されます。 4D からQodly Studio にアクセスするためには [特定の設定](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#要件) を行う必要があり、これは [ワンクリックで設定可能です](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#ワンクリック設定)。
 
 ### Qodlyページを追加または開く
 

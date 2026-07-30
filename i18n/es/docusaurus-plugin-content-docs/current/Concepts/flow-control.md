@@ -829,7 +829,7 @@ logConsole($message)
 
 El comando [`defer`](../commands/defer) permite encadenar una o varias expresiones que se ejecutarán automáticamente cuando el método o la función actual **termine de ejecutarse**.
 
-Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
+Tanto si gestiona el cierre de documentos, como si reinicia indicadores entre procesos o libera recursos, las palabras clave `defer` le permiten garantizar que sus tareas de mantenimiento se ejecuten a la perfección, independientemente de cómo o dónde finalice su función.
 
 ```4d
    //Asegurarse de que se ejecute cierto código al salir

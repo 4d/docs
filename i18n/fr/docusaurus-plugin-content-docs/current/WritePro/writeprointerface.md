@@ -417,7 +417,7 @@ The History area lists all your prompts sent to the AI. You can hide/show this a
 
 The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box.
 
-## Multi-level list style sheets
+## Feuilles de style de liste multi-niveaux
 
 4D Write Pro Interface allows users to create and manage [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) directly from both the toolbar and widget sidebar.
 

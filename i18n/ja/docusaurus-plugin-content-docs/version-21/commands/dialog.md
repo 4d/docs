@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 表示や取得しなければならない情報が複雑で、[ALERT](../commands-legacy/alert.md)、 [CONFIRM](../commands-legacy/confirm.md) または [Request](../commands-legacy/request.md) などのコマンドで処理しきれない場合、**DIALOG** を代わりに使用して置き換えることができます。
 
-*form* 引数には、以下のいづれかを渡すことができます:
+*form* 引数には、以下のいずれかを渡すことができます:
 
 - 使用するフォーム名(プロジェクトフォームあるいはテーブルフォーム)
 - 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス)

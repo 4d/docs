@@ -56,7 +56,7 @@ title: 非同期実行
 
 ### イベントキュー(メールボックス)
 
-それぞれのワーカー(または [`CALL FORM`](../commands-legacy/call-form.md) の場合にはフォームウィンドウ)は、独自のメッセージキューを持っています。 [`CALL WORKER`](../commands/call-worker) あるいは [`CALL FORM`](../commands/call-form) コマンドは、メッセージをそのキューへと送信します。 ワーカーは、独自のコンテキスト内において、メッセージを一つずつ受信した順番で管理していきます。 プロセス変数、カレンとレクション、などは保持されます。 [`CALL WORKER`](../commands-legacy/call-worker.md) あるいは [`CALL FORM`](../commands-legacy/call-form.md) コマンドは、メッセージをそのキューへと送信します。 ワーカーは、独自のコンテキスト内において、メッセージを一つずつ受信した順番で管理していきます。 プロセス変数、カレンとレクション、などは保持されます。 [`CALL WORKER`](../commands-legacy/call-worker.md) あるいは [`CALL FORM`](../commands-legacy/call-form.md) コマンドは、メッセージをそのキューへと送信します。 ワーカーは、独自のコンテキスト内において、メッセージを一つずつ受信した順番で管理していきます。 プロセス変数、カレントレクション、などは保持されます。
+それぞれのワーカー(または [`CALL FORM`](../commands-legacy/call-form.md) の場合にはフォームウィンドウ)は、独自のメッセージキューを持っています。 [`CALL WORKER`](../commands-legacy/call-worker.md) あるいは [`CALL FORM`](../commands-legacy/call-form.md) コマンドは、メッセージをそのキューへと送信します。 ワーカーは、独自のコンテキスト内において、メッセージを一つずつ受信した順番で管理していきます。 プロセス変数、カレントレクション、などは保持されます。
 
 ### メッセージを介した双方向通信
 

@@ -45,13 +45,13 @@ Lorsqu'un nouveau sous-niveau est créé, la numérotation du niveau recommence 
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+Les listes multi-niveaux sont créées à l'aide de la commande [WP New style sheet](../commands/wp-new-style-sheet.md) et peuvent être appliquées à un paragraphe à l'aide de [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
-Multi-level lists can be managed using:
+Les listes multi-niveaux peuvent être gérées en utilisant :
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- [actions standard](../user-legacy/standard-actions.md) dédiées à la gestion des niveaux (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- les [attributs de feuille de style](../commands-legacy/4d-write-pro-attributes.md#style-sheets) de paragraphe (tels que `wk list level index`, `wk list level count` et `wk list concat string format`)
+- les [actions standard](../user-legacy/standard-actions.md) dédiées à la gestion des niveaux (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
+- les actions standard dédiées à la gestion des marqueurs de numérotation (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Article(s) de blog sur le sujet
 
@@ -119,9 +119,9 @@ résultat :
 
 Lors de leur création, les feuilles de style de liste hiérarchique utilisent des valeurs prédéfinies :
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- `wk margin left` = 0,75 cm \* (nombre de niveaux précédents) ou 0,25 pouce \* (nombre de niveaux précédents), selon l'unité de mise en page courante
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` est dérivé du nom de la feuille de style racine (lecture seule pour les sous-niveaux)
 - `wk list level count` est fixé à la valeur spécifiée pour tous les niveaux
 
   - Exemple :

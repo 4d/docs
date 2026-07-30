@@ -39,23 +39,23 @@ Lorsque la liste est créée à l'aide de la commande WP SET ATTRIBUTE(../comman
 
 ### Listes multi-niveaux
 
-Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Les listes multi-niveaux sont basées sur des [feuilles de style de liste multi-niveaux](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Les listes multi-niveaux contiennent une feuille de style de niveau racine et une ou plusieurs feuilles de style de sous-niveau. Chaque niveau est associé à une feuille de style de liste multi-niveaux et représente une profondeur dans la liste (niveau 1, niveau 2, niveau 3, etc.).
 
-When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+Lorsqu'un nouveau sous-niveau est créé, la numérotation du niveau recommence à 1. Lorsque vous ajoutez ou supprimez un élément dans votre liste multi-niveaux, la numérotation est automatiquement mise à jour.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+Les listes multi-niveaux sont créées à l'aide de la commande [WP New style sheet](../commands/wp-new-style-sheet.md) et peuvent être appliquées à un paragraphe à l'aide de [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
-Multi-level lists can be managed using:
+Les listes multi-niveaux peuvent être gérées en utilisant :
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- [actions standard](../user-legacy/standard-actions.md) dédiées à la gestion des niveaux (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- les [attributs de feuille de style](../commands-legacy/4d-write-pro-attributes.md#style-sheets) de paragraphe (tels que `wk list level index`, `wk list level count` et `wk list concat string format`)
+- les [actions standard](../user-legacy/standard-actions.md) dédiées à la gestion des niveaux (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
+- les actions standard dédiées à la gestion des marqueurs de numérotation (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Article(s) de blog sur le sujet
 
-[4D Write Pro – Creating Multi-level Bullet or Numbered Lists Using Multi-level list Style Sheets](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-multi-level-paragraph-style-sheets)
+[4D Write Pro – Création de listes à puces ou numérotées multi-niveaux à l'aide de feuilles de style](https://blog.4d.com/4d-write-pro-creating-multi-level-bullet-or-numbered-lists-using-multi-level-paragraph-style-sheets)
 
 :::
 
@@ -119,9 +119,9 @@ résultat :
 
 Lors de la création, les feuilles de style de listes multi-niveaux utilisent des valeurs prédéfinies :
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- `wk margin left` = 0,75 cm \* (nombre de niveaux précédents) ou 0,25 pouce \* (nombre de niveaux précédents), selon l'unité de mise en page courante
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` est dérivé du nom de la feuille de style racine (lecture seule pour les sous-niveaux)
 - `wk list level count` est fixé à la valeur spécifiée pour tous les niveaux
 
   - Exemple :

@@ -1624,7 +1624,7 @@
     "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.description": {
-    "message": "4D commands by theme",
+    "message": "Comandos 4D por tema",
     "description": "The generated-index page description for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Standard actions": {
