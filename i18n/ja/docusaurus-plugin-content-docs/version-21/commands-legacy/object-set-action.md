@@ -72,8 +72,8 @@ displayed_sidebar: docs
 | ak next page                     | nextPage           |                                                      |
 | ak next record                   | nextRecord         |                                                      |
 | ak none                          | ""                 |                                                      |
-| ak open back url                 | openBackURL        | Webエリア内にてユーザーによって実行されたブラウザシークエンスで前に読み込まれたURLを開きます。   |
-| ak open forward url              | openForwardURL     | Webエリア内にてユーザーによって実行されたブラウザシークエンスでの次のURLを開きます。        |
+| ak open back url                 | openBackURL        | Webエリア内にてユーザーによって実行されたブラウザーシークエンスで前に読み込まれたURLを開きます。   |
+| ak open forward url              | openForwardURL     | Webエリア内にてユーザーによって実行されたブラウザーシークエンスでの次のURLを開きます。        |
 | ak paste                         | paste              | このアクションのターゲットは常にキーボードのフォーカスが入っているオブジェクトです。           |
 | ak previous page                 | previousPage       |                                                      |
 | ak previous record               | previousRecord     |                                                      |

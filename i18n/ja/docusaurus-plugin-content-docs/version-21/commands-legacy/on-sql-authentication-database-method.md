@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.On SQL Authentication database method.Summary-->**On SQL Authenticationデータベースメソッド**は4Dに統合されたSQLサーバへ送られたリクエストを選別します。<!-- END REF-->この選別は、名前とパスワー ド、そしてユーザのIPアドレス (オプション) に基づいて実行されます。開発者は独自のユーザーテーブルや、4Dのユーザーテーブルを使用して、接続を識別できます。接続を認証したら、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出して、4Dのデータベース内のリクエストへのアクセスをコントロールしなければなりません。
+<!--REF #_command_.On SQL Authentication database method.Summary-->**On SQL Authenticationデータベースメソッド**は4Dに統合されたSQLサーバへ送られたリクエストを選別します。<!-- END REF-->この選別は、名前とパスワード、そしてユーザのIPアドレス (オプション) に基づいて実行されます。開発者は独自のユーザーテーブルや、4Dのユーザーテーブルを使用して、接続を識別できます。接続を認証したら、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出して、4Dのデータベース内のリクエストへのアクセスをコントロールしなければなりません。
 
 **On SQL Authenticationデータベースメソッド**が存在する場合、4Dまたは4D ServerのSQLサーバに外部からSQL接続が行われると、自動的にこのメソッドが呼び出されます。4Dユーザを管理する内部システムは起動しません。データベースメソッドが$resultに[True](../commands/true)を返しかつ、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER")コマンドの実行が成功した場合のみ、接続が受け入れられます。これらの条件を満たさない場合リクエストは拒否されます。
 
