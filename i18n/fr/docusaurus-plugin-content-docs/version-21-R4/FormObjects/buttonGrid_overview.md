@@ -24,7 +24,7 @@ Si aucun élément n'est sélectionné, la valeur est de 0
 
 ### Aller à page
 
-You can assign the `gotoPage` [standard action](/Desktop/standard-actions) to a button grid. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant au numéro du bouton sélectionné dans la grille de boutons. Par exemple, si l’utilisateur clique sur le 10e bouton de la grille, 4D affichera la page 10 du formulaire courant (si elle existe).
+Vous pouvez assigner l'[action standard](/Desktop/standard-actions) `gotoPage` à une grille de boutons. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant au numéro du bouton sélectionné dans la grille de boutons. Par exemple, si l’utilisateur clique sur le 10e bouton de la grille, 4D affichera la page 10 du formulaire courant (si elle existe).
 
 ## Propriétés prises en charge
 

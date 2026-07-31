@@ -36,34 +36,34 @@ Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 	}
 ```
 
-### Accessing form objects using their name or their data source in the 4D language
+### Accès aux objets de formulaire via leur nom ou leur source de données dans le langage 4D
 
-Many commands handling form objects such as commands from [Objects (Forms)](../commands/theme/Objects_Forms.md), [List Box](../commands/theme/List_Box.md), or [Styled Text](../commands/theme/Styled_Text.md) themes share the same generic syntaxes described here:
+De nombreuses commandes traitant des objets de formulaire telles que les commandes du thème [Objets (Formulaires)](../commands/theme/Objects_Forms.md), [List Box](../commands/theme/List_Box.md), ou [Styled Text](../commands/theme/Styled_Text.md) partagent les mêmes syntaxes génériques suivantes :
 
 ```4d
-COMMAND NAME( * ; *object* : Text { ; *additional parameters* } )
-//or
-COMMAND NAME( *object* : Variable, Field { ; *additional parameters* })
+COMMAND NAME( * ; *object* : Text { ; *paramètres supplémentaires* } )
+//ou
+COMMAND NAME( *object* : Variable, Field { ; *paramètres supplémentaires* })
 ```
 
-If you specify the \* parameter, you indicate that *object* is the [name of the object](./properties_Object.md#object-name) (a string). If you don't pass the \*, you indicate that *object* is a field or a variable, i.e. its [data source](./properties_Object.md#variable-or-expression).
+Si vous spécifiez le paramètre \*, vous indiquez que *object* est le [nom de l'objet](./properties_Object.md#object-name) (une chaîne). Si vous ne passez pas le \*, vous indiquez que *object* est un champ ou une variable, c'est-à-dire sa [source de données](./properties_Object.md#variable-or-expression).
 
-When using the [object name](./properties_Object.md#object-name), you can rely on the @ character within that name if you want to address several objects of the form in one call. The following table shows examples of object names you can specify to this command.
+Lors de l'utilisation du [nom de l'objet](./properties_Object.md#object-name), vous pouvez tirer parti du caractère @ dans ce nom si vous voulez traiter plusieurs objets du formulaire en un seul appel. Le tableau suivant montre des exemples de noms d'objets que vous pouvez spécifier avec cette commande.
 
-| Object Names                       | Objects affected by the call                                                   |
+| Noms d'objets                      | Objets affectés par l'appel                                                    |
 | ---------------------------------- | ------------------------------------------------------------------------------ |
-| mainGroupBox                       | Only the object mainGroupBox.                                  |
-| main@                 | The objects whose name starts with “main”.                     |
-| @GroupBox             | The objects whose name ends with “GroupBox”.                   |
-| @Groupe@ | The objects whose name contains “Group”.                       |
-| main@Btn              | The objects whose name starts with “main” and ends with “Btn”. |
-| @                     | All the objects present in the form.                           |
+| zoneGroupe                         | Uniquement l'objet zoneGroupe.                                 |
+| zone@                 | Les objets dont le nom commence par “zone”.                    |
+| @zoneGroupe           | Les objets dont le nom finit par “zoneGroupe”.                 |
+| @Groupe@ | Les objets dont le nom contient “Groupe”.                      |
+| zone@Btn              | Les objets dont le nom commence par “zone” et finit par “Btn”. |
+| @                     | Tous les objets présents dans le formulaire.                   |
 
-Form object names can contain up 255 bytes, allowing you to define and apply custom naming rules, such as "xxxx_Button" or "xxx_Mac".
+Les noms d'objets de formulaires peuvent contenir jusqu'à 255 octets, permettant la définition et l'application de règles de nommage personnalisées, par exemple "xxxx_Bouton" ou "xxx_Mac".
 
 :::warning
 
-You can [configure the way the @ character is interpreted](../settings/database.md#text-comparison) when it is included in a character string. This option affects the functioning of the form object commands.
+Vous pouvez [configurer la façon dont le caractère @ est interprété] (../settings/database.md#text-comparison) lorsqu'il est inclus dans une chaîne de caractères. Cette option influe sur le fonctionnement des commandes d'objets.
 
 :::
 

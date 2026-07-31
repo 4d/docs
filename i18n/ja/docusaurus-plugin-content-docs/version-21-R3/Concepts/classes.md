@@ -474,7 +474,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 :::note
 
-[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) は計算属性の拡張された実装ににおいて[二つの追加された関数](../ORDA/ordaClasses.md#computed-attributes-1)の恩恵を受けることができます: `query` と`orderBy` です。
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) は計算属性の拡張された実装において[二つの追加された関数](../ORDA/ordaClasses.md#computed-attributes-1)の恩恵を受けることができます: `query` と`orderBy` です。
 
 :::
 

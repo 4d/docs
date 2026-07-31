@@ -281,9 +281,9 @@ Le style de bouton Rond apparaît comme un bouton système circulaire.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+Ce style de bouton est pris en charge sous macOS et sous [Windows avec Fluent UI](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
 
-On Windows Classic UI theme, this style is not supported.
+Sous Windows avec le thème UI classique, ce style n'est pas pris en charge.
 
 #### Exemple JSON :
 

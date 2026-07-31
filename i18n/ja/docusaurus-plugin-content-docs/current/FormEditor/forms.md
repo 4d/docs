@@ -87,7 +87,7 @@ title: フォーム
 
 ### ウィンドウ内でプロジェクトフォームを使用
 
-When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
+フォームをスクリーン上のダイアログとして使用したい場合、(1) まずウィンドウを作成し、(2) フォームをウィンドウ内にロードし、イベントループを使用してユーザーアクションを処理します。 The straighforward steps to display a form on screen are:
 
 1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
 2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs.

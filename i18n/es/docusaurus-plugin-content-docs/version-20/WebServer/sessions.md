@@ -67,7 +67,7 @@ Una sesión web escalable se cierra cuando:
 
 La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que significa que el servidor web cerrará automáticamente las sesiones inactivas después de 60 minutos.
 
-Este tiempo de espera se puede establecer utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos).
+Este tiempo de espera se puede establecer mediante la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos).
 
 Cuando se cierra una sesión web escalable, si después se llama al comando [`Session`](API/SessionClass.md#session):
 

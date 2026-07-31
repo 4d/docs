@@ -55,7 +55,7 @@ title: 依存関係
 
 - 4Dプロジェクトのパッケージフォルダーと同じ階層 (デフォルトの場所です)
 - マシン上の任意の場所 (コンポーネントパスは **environment4d.json** ファイル内で宣言する必要があります)
-- GitHub あるいは [GitLab](https://blog.4d.com/integrate-4d-components-directly-from-gitlab) レポジトリ: コンポーネントのパスは**dependencies.json** ファイルまたは**environment4d.json** ファイル、またはその両方のファイルで宣言することができます(その場合は[ローカルキャッシュ](#依存関係のローカルキャッシュ) が自動的に管理されます)。
+- GitHub あるいは [GitLab](https://blog.4d.com/integrate-4d-components-directly-from-gitlab) リポジトリ: コンポーネントのパスは**dependencies.json** ファイルまたは**environment4d.json** ファイル、またはその両方のファイルで宣言することができます(その場合は[ローカルキャッシュ](#依存関係のローカルキャッシュ) が自動的に管理されます)。
 
 同じコンポーネントが異なる場所にインストールされている場合、[優先順位](#優先順位) が適用されます。
 
@@ -188,7 +188,7 @@ GitHub またはGitLab に保存された 4Dコンポーネントを直接参照
 #### GitHubリポジトリの設定
 
 1. ZIP形式でコンポーネントファイルを圧縮します。
-2. GitHubリポジトリと同じ名前をこのアーカイブに付けます。 例えば、"my-4D-Component" というレポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。
+2. GitHubリポジトリと同じ名前をこのアーカイブに付けます。 例えば、"my-4D-Component" というリポジトリに対しては、アーカイブは"my-4D-Component.zip" という名前をつけなければなりません。
 
 - このリポジトリの [GitHubリリース](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository) にアーカイブを統合します。
 
@@ -241,7 +241,7 @@ GitHub およびGitLab に保存されているコンポーネントは [**depen
 }
 ```
 
-- (GitLab 依存関係のみ) "host" プロパティを使用してプライベートなGitLab のセルフホストインスタンスを宣言します。 "gitlab" プロパティのみを使用する場合、それはhttps://gitlab.com にホストされているGitLab レポジトリであるということを意味します。
+- (GitLab 依存関係のみ) "host" プロパティを使用してプライベートなGitLab のセルフホストインスタンスを宣言します。 "gitlab" プロパティのみを使用する場合、それはhttps://gitlab.com にホストされているGitLab リポジトリであるということを意味します。
 - "myGitHubComponent1" は宣言とパス定義の両方がされていますが、"myComponent2" は宣言されているだけです。 そのため、[**environment4d.json**](#environment4djson) ファイルにパスを定義する必要があります:
 
 ```json title="environment4d.json"

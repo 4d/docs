@@ -805,7 +805,7 @@ $status:=$transporter.expunge()
 
 #### Descripción
 
-La función `.searchMails()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual<!-- END REF -->. .
+La función `.searchMails()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al buzón actual, o el *name* del buzón<!-- END REF -->. .
 
 En el parámetro opcional *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 

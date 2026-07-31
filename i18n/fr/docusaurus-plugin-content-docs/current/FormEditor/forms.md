@@ -80,32 +80,32 @@ En règle générale, vous sélectionnez la catégorie de formulaire lorsque vou
 
 Les formulaires sont appelés à l'aide de commandes spécifiques du langage 4D. Dans vos applications de bureau 4D, les formulaires peuvent être utilisés de différentes manières, en fonction de leur statut par rapport à vos besoins d'interface. Un formulaire peut être :
 
-- used in its own window for data viewing, processing, editing, or to display on-screen information to the user,
-- used embedded in another form (subform),
-- used as template for printing,
-- or called by specific features like the Label editor.
+- utilisé dans sa propre fenêtre pour la visualisation de données, le traitement, l'édition ou l'affichage à l'écran d'informations à l'utilisateur,
+- utilisé dans un autre formulaire (sous-formulaire),
+- utilisé comme modèle pour l'impression,
+- ou appelé par des fonctionnalités spécifiques comme l'éditeur d'étiquettes.
 
-### Utilisation d'un formulaire de projet dans une fenêtre
+### Utilisation d'un formulaire projet dans une fenêtre
 
-When you want to use a form as on-screen dialog, you need to (1) create a window and (2) load the form within the window, along with an event loop to process user actions. The straighforward steps to display a form on screen are:
+Lorsque vous voulez utiliser un formulaire comme boîte de dialogue à l'écran, vous devez (1) créer une fenêtre et (2) charger le formulaire dans la fenêtre, avec une boucle d'événements pour traiter les actions de l'utilisateur. Les principales étapes pour afficher un formulaire à l'écran sont les suivantes :
 
-1. Call the [`Open form window`](../commands/open-form-window) command to create and preconfigure a window tailored for your form. Note that the command only draws an empty window, it does **not** display anything.
-2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs.
-3. (optional) Use the [`Form`](../commands/form) command from within the form context to access form data.
+1. Appelez la commande [`Open form window`](../commands/open-form-window) pour créer et préconfigurer une fenêtre adaptée à votre formulaire. Notez que la commande dessine uniquement une fenêtre vide, elle n'affiche **rien**.
+2. Dans la même méthode, appelez la commande [`DIALOG`](../commands/dialog) pour effectivement charger le formulaire dans la fenêtre formulaire ouverte, prêt à l'interaction avec l'utilisateur. [`DIALOG`](../commands/dialog) charge les données du formulaire et place votre code en [mode d'écoute des événements utilisateur](../Develop/async.md#event-listening). Lorsque vous appelez cette commande sans astérisque (\*), la boîte de dialogue restera à l'écran et l'exécution du code sera bloquée jusqu'à ce qu'un événement se produise.
+3. (facultatif) Utilisez la commande [`Form`](../commands/form) depuis le contexte du formulaire pour accéder aux données du formulaire.
 
 :::note Compatibilité
 
-All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY RECORD`](../commands/add-record) merge all steps in a single call. These legacy commands can still be used for prototyping or basic developments but are not adapted to modern, fully controlled interfaces. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
+Les commandes tout-en-un telles que [`ADD RECORD`](../commands/add-record) ou [`MODIFY RECORD`](../commands/add-record) fusionnent toutes les étapes en un seul appel. Ces commandes anciennes peuvent toujours être utilisées pour le prototypage ou les développements simples, mais ne sont pas adaptées aux interfaces modernes nécessitant un contrôle granulaire. Elles s'appuient directement sur la base de données 4D et les fonctionnalités historiques telles que les [formulaires tables](#project-form-and-table-form) et ne bénéficient pas de la puissance et de la flexibilité des [fonctionnalités ORDA](../ORDA/overview.md). Hormis pour des besoins spécifiques, il est recommandé d'utiliser des formulaires projet pour vos interfaces d'applications de bureau 4D.
 
 :::
 
 #### Exemple simple
 
-Vous créez le formulaire de base suivant dans l'[éditeur de formulaire] (./formEditor.md ) :
+Vous créez le formulaire de base suivant dans l'[éditeur de formulaires](./formEditor.md) :
 
 ![](../assets/en/FormEditor/example-form-1.png)
 
-Le formulaire est [associé à une classe "myForm"](./properties_FormProperties.md#form-class), défini comme suit :
+Le formulaire est [associé à une classe "myForm"](./properties_FormProperties.md#form-class), définie comme suit :
 
 ```4d
     //cs.myForm
@@ -117,28 +117,28 @@ Class constructor
   This.age:=0
 ```
 
-La classe de formulaire est automatiquement instanciée par 4D une fois que le formulaire est chargé. Si vous exécutez la méthode de projet suivante :
+La classe du formulaire est automatiquement instanciée par 4D une fois que le formulaire est chargé. Si vous exécutez la méthode projet suivante :
 
 ```4d
-    // Instantiate a form object that will host form data and UI logic
+    // Instancie un objet formulaire qui va héberger les données du formulaire et la logique UI
 var $formObject:=cs.myForm.new()
 
-    //Prepare default value within the form object
+    //Prépare les valeurs par défaut dans l'objet formulaire
 $formObject.name:="Smith"
 $formObject.age:=42
 
-    // Create an empty window with ad-hoc settings that fits the desired form dimensions, resizing properties,
-    // and window type (this does not render the form)
+    // Crée une fenêtre vide avec des paramètres ad hoc correspondant aux propriétés de dimensions et de redimensionnement souhaitées,
+    // ainsi que de type de fenêtre (le formulaire n'est pas dessiné)
 var $win:=Open form window("myForm"; Movable form dialog box; Horizontally centered; Vertically centered)
 
-    //Render the form, and provide $formObject's data. Dialog also activates the form event loop
+    //Dessine le formulaire et fournit les données de $formObject. Active également la boucle d'événements du formulaire
 DIALOG("myForm"; $formObject)
 
-    //Without asterisk to Dialog statement, the form waits for a closing action from the user 
-    //before executing the rest of the code. Calling Close window is just a good practice 
-CLOSE WINDOW($win) //releases reference
+    //Sans astérisque à DIALOG, le formulaire attend une action de fermeture de l'utilisateur 
+    //avant d'exécuter le reste du code. Appeler CLOSE WINDOW est juste une bonne pratique 
+CLOSE WINDOW($win) //libère la référence
 
-    //Display data modified by the user, if any/
+    //Affiche les données modifiées par l'utilisateur, le cas échéant
 ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ```
@@ -149,15 +149,15 @@ ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ### Utilisation de formulaires comme sous-formulaires
 
-Un formulaire peut être intégré dans un autre formulaire, auquel cas il devient un [objet sous-formulaire] (../FormObjects/subform_overview.md) qui suit des règles spécifiques. Un sous-formulaire est automatiquement utilisé lorsque son formulaire parent est [affiché dans une fenêtre] (#using-a-project-form-in-a-window).
+Un formulaire peut être intégré dans un autre formulaire, auquel cas il devient un [objet sous-formulaire](../FormObjects/subform_overview.md) qui suit des règles spécifiques. Un sous-formulaire est automatiquement utilisé lorsque son formulaire parent est [affiché dans une fenêtre](#using-a-project-form-in-a-window).
 
 De la même manière que vous passez un objet à un formulaire avec la commande [`DIALOG`](../commands/dialog), vous pouvez également passer un objet à une zone de sous-formulaire en utilisant la liste des propriétés. Vous pouvez ensuite l'utiliser dans le sous-formulaire avec la commande [`Form`](../commands/form). Dans cet exemple, l'objet "InvoiceAddress" est lié au sous-formulaire :
 
 ![](../assets/en/FormEditor/subform-example.png)
 
-### Utilisation des formulaires à imprimer
+### Utilisation de formulaires pour l'impression
 
-Dans les applications de bureau 4D, les formulaires peuvent être imprimés à l'aide des différentes [commandes du thème **Imprimer**](../commands/theme/Printing).
+Dans les applications de bureau 4D, les formulaires peuvent être imprimés à l'aide des différentes [commandes du thème **Printing**](../commands/theme/Printing).
 
 #### Exemples
 
@@ -198,13 +198,13 @@ var $h:=Print form("Request_var";$formData;Form detail)
  CLOSE PRINTING JOB
 ```
 
-#### Print rendering engine
+#### Moteur de rendu d'impression
 
-4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+4D utilise un moteur de rendu d'impression dédié pour générer des états avec un design adapté à l'impression. Il inclut les principales fonctionnalités suivantes :
 
-- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
-- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
-- The same output is produced, whether the form is printed from macOS or Windows.
+- Les widgets interactifs tels que boutons, boutons radio, listes déroulantes, etc. et les effets des interfaces utilisateur modernes tels que le verre, le flou, la transparence ou les effets d'ombre sont convertis en représentations statiques adaptées et mis à plat sous forme de styles imprimables, afin que le document reste lisible et d'apparence professionnelle une fois imprimé.
+- La structure, l'espacement et l'alignement sont conservés de sorte que le document imprimé reflète la structure logique du fomulaire à l'écran.
+- Le même rendu est produit que le formulaire soit imprimé à partir de macOS ou Windows.
 
 Par exemple, le formulaire suivant :
 
@@ -216,32 +216,32 @@ Par exemple, le formulaire suivant :
 
 :::tip Article(s) de blog sur le sujet
 
-[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+[Impression d'interfaces modernes avec une sortie sobre et cohérente](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
 
 :::
 
-#### Legacy print renderer
+#### Ancien moteur de rendu d'impression
 
-In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+Dans les versions antérieures à 4D 21 R3, un autre moteur de rendu d'impression était utilisé. Cet ancien moteur de rendu dessine simplement les widgets tels qu'ils apparaissent à l'écran. Pour des raisons de compatibilité, cet ancien moteur de rendu est **activé par défaut** dans les projets ou les bases de données converti(e)s depuis des versions antérieures à 4D 21 R3, afin que les formulaires conçus avec ce moteur de rendu continuent d'être imprimés comme précédemment.
 
-You can however enable the modern print rendering engine at any moment by:
+Vous pouvez cependant activer le moteur de rendu d'impression moderne à tout moment :
 
-- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- soit en désélectionnant l'option **Utiliser l'ancien rendu d'impression** dans la [page Compatibilité des propriétés](../settings/compatibility.md) (paramétrage permanent),
+- soit en exécutant la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter) avec le sélecteur `Use legacy print rendering` à 1 (paramétrage volatile).
 
 :::warning Limitation
 
-For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+Pour des raisons techniques, l'ancien rendu d'impression n'est pas disponible avec les formulaires affichés avec [Fluent UI](#fluent-ui-rendering) sur Windows et [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) sur macOS. Dans ces contextes, les formulaires sont **toujours imprimés avec le moteur de rendu d'impression moderne**, quelle que soit l'option de compatibilité.
 
 :::
 
-### Autres utilisations du formulaire
+### Autres utilisations des formulaires
 
-There are several other ways to use forms in the 4D applications, including:
+Il y a plusieurs autres façons d'utiliser les formulaires dans les applications 4D, en particulier :
 
-- a form can be [inherited](#inherited-forms) from another form,
-- a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
-- the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
+- un formulaire peut être [hérité](#inherited-forms) d'un autre formulaire,
+- un formulaire peut être [associé à une listbox](../FormObjects/properties_ListBox.md#detail-form-name) pour afficher une ligne en réponse à une action utilisateur via un bouton d'édition ou un double-clic,
+- l'[éditeur d'étiquettes peut utiliser un formulaire](../Desktop/labels.md#form-to-use) comme modèle pour imprimer des étiquettes.
 
 ## Pages formulaire
 

@@ -39,7 +39,7 @@ title: リリースノート
 - 4D AIKit コンポーネント: 新しい[Providers](../aikit/Classes/OpenAIProviders.md) クラスを使用して [プロバイダーとモデルエイリアス](../aikit/provider-model-aliases.md) をインスタンス化して管理することができます。
 - ORDA データモデル関数および共有/セッションシングルトン関数における [`server` キーワード](../Concepts/classes.md#server) のサポート。
 - Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
-- 依存関係: [GitLab レポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
+- 依存関係: [GitLab リポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
 
 #### macOS におけるLiquid glass のサポート

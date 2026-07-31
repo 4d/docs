@@ -62,9 +62,9 @@ La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur 
 
 Les règles suivantes sont pris en charge :
 
-- les séparateurs de dossiers sont "\"
-- le texte contient " :" et "\" comme deuxième et troisième caractère,
-- le texte commence par "\".
+- les séparateurs de dossiers sont "\\"
+- le texte contient ":" et "\\" comme deuxième et troisième caractère,
+- le texte commence par "\\\".
 
 Exemples avec [`Folder`](../API/FolderClass.md#folder) :
 
