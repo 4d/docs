@@ -53,7 +53,7 @@ Define o texto selecionado como ligeiramente inclinado para a direita.
 Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**](../commands/object-set-font-style).
 
 > Este é um texto normal.<br/>
-> *Este é o texto em itálico.*
+> Este é um texto normal.<br/>
 
 #### Gramática JSON
 

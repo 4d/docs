@@ -58,7 +58,7 @@ La expresión es TRUE sólo si los dos métodos son TRUE. La expresión es TRUE 
  End if
 ```
 
-However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+Sin embargo, la solución más elegante es utilizar el [operador de cortocircuito `&&`](./operators.md#short-circuit-and-operator-) y escribir:
 
 ```4d
 If (MethodA && MethodB)
@@ -829,7 +829,7 @@ logConsole($message)
 
 El comando [`defer`](../commands/defer) permite encadenar una o varias expresiones que se ejecutarán automáticamente cuando el método o la función actual **termine de ejecutarse**.
 
-Whether you are managing document closings, resetting interprocess flags, or freeing up resources, ensuring that your housekeeping tasks execute flawlessly no matter how or where your function terminates can be handled by `defer` keywords.
+Tanto si gestiona el cierre de documentos, como si reinicia indicadores entre procesos o libera recursos, las palabras clave `defer` le permiten garantizar que sus tareas de mantenimiento se ejecuten a la perfección, independientemente de cómo o dónde finalice su función.
 
 ```4d
    //Asegurarse de que se ejecute cierto código al salir

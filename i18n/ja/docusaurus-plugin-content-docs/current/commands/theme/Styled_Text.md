@@ -23,17 +23,17 @@ slug: /commands/theme/Styled-Text
 | [<!-- INCLUDE #_command_.ST SET PLAIN TEXT.Syntax -->](../../commands/st-set-plain-text)<br/>           |
 | [<!-- INCLUDE #_command_.ST SET TEXT.Syntax -->](../../commands/st-set-text)<br/>                       |
 
-## Working with text handling commands
+## テキスト管理コマンドの使い方
 
 ### ユーザーインターフェース
 
-The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+テキストオブジェクトをプログラミングで操作するために使用されるコマンドは、テキストに埋め込まれたスタイルタグを考慮しません。 これらは表示されるテキストに対してのみ動作します。 これは以下のコマンドに対して関係します:
 
-- [User Interface](./User_Interface.md) theme commands
+- [ユーザーインターフェース](./User_Interface.md) テーマコマンド
 - [`HIGHLIGHT TEXT`](../../commands/highlight-text)
 - [`GET HIGHLIGHT`](../../commands/get-highlight)
 
-When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+これらのコマンドを文字列を操作するコマンドと組み合わせて使用した場合、[`ST Get plain text`](../../commands/st-get-plain-text) コマンドを使用して書式設定文字列を除去する必要があります:
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -41,21 +41,21 @@ When you use these commands with commands that manipulate character strings, it 
 
 ### オブジェクト (フォーム)
 
-The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../../commands/object-set-font)) apply to the whole object and not to the selection.
+オブジェクトのスタイルを変更するのに使用されるコマンド([`OBJECT SET FONT`](../../commands/object-set-font) など)は選択範囲ではなく、オブジェクト全体に対して適用されます。
 
-If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+コマンドが実行された時にオブジェクトにフォーカスが入っていなければ、その変更はオブジェクト(テキストエリア)とそれに割り当てられた変数の両方に同時に適用されます。 オブジェクトにフォーカスが入っている場合、変更はオブジェクトに対しては適用されますが、割り当てられた変数には適用されません。 その後、オブジェクトがフォーカスを失ったとき、変数に対しても変更が適用されます。 テキストエリアに対するプログラムを行う際は、この原則を忘れないでください。
 
 :::note
 
-If the [**Store with default style tags**](../../FormObjects/properties_Text.md#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+[**デフォルトスタイルタグを格納**](../../FormObjects/properties_Text.md#デフォルトスタイルタグを格納) がオブジェクトに対して選択されている場合にこれらのコマンドを使用すると、オブジェクトに保存されているタグが更新されます。
 
 :::
 
-Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+またデフォルトのプロパティもこれらのコマンドの影響を受けるという点に注意してください(またデフォルトタグによって保存されたあらゆるプロパティも同様です)。 カスタムのスタイルタグはそのままの状態を維持します。 例えば、以下の様なマルチスタイルエリアにデフォルトのタグが保存されていた場合を考えます:
 
 ![](../../assets/en/FormObjects/multistyle-ex1.png)
 
-The plain text of the area is as follows:
+このエリアのプレーンテキストは以下のようになります:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
@@ -67,40 +67,40 @@ The plain text of the area is as follows:
 OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 ```
 
-The red color remains:
+赤の文字カラーはそのまま残ります:
 
 ![](../../assets/en/FormObjects/multistyle-ex2.png)
 
-and code is:
+コードは以下の様になります:
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
 ```
 
-The following commands are concerned:
+これには以下のコマンドが適用されます:
 
 - [`OBJECT SET RGB COLORS`](../../commands/object-set-rgb-colors)
 - [`OBJECT SET FONT`](../../commands/object-set-font)
 - [`OBJECT SET FONT STYLE`](../../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../../commands/object-set-font-size)
 
-In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the commands of the "Styled Text" theme.
+マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 データベースの実行中にスタイルを管理するためには、"スタイル付きテキスト" テーマ内のコマンドを使用することが推奨されます。
 
 ### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../../commands/get-edited-text) command returns the text of the current area including any style tags.
+[`Get edited text`](../../commands/get-edited-text) コマンドがリッチテキストエリアで使用されると、コマンドはあらゆるスタイルタグを含む現在のエリアのテキストを返します。
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+編集されている"生の"テキスト(タグなしのテキスト) を取り出すには、[`ST Get plain text`](../../commands/st-get-plain-text) コマンドを使用しなければなりません:
 
 ```4d
 ST Get plain text(Get edited text)
 ```
 
-### Query and order by commands
+### クエリおよび並び替えコマンド
 
-Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+マルチスタイルオブジェクトに対して行われるクエリや並び替えは、オブジェクトに保存されたスタイルタグを考慮に入れます。 単語中でスタイルの変更が行われた場合、その単語の検索は失敗します。
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command. 例:
+有効な検索や並び替えを行うには、[`ST Get plain text`](../../commands/st-get-plain-text) コマンドを使用します。 例:
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")

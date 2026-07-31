@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | Text | &#8594; | Rota ao diretório, pasta ou documento |
+| nomeRota | Text | &#8594; | Rota ao diretório, pasta ou documento (sintaxe do sistema) |
 | resultado | Integer | &#8592; | 1 - rota de acesso do documento existente, 0 - rota do diretório ou pasta existente, <0 - rota inválida, código de erro do gestor de arquivo OS |
 </div>
 <!-- END REF-->
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Test path name.Summary-->A função Test path name verifica se um documento ou pasta cujo nome ou via de acesso se passa em *viaAcesso* está presente no disco.<!-- END REF--> Pode passar uma via de acesso relativa ou absoluta, expressada na sintaxes do sistema atual. 
+<!--REF #_command_.Test path name.Summary-->A função Test path name verifica se um documento ou pasta cujo nome ou via de acesso se passa em *viaAcesso* está presente no disco.<!-- END REF--> Pode passar uma via de acesso relativa ou absoluta, expressada na [sintaxe do sistema atual](../../Concepts/paths.md#platform-specific-syntax).
 
-Se encontrado um documento, Test path name devolve 1\. Se encontrada uma pasta, Test path name devolve 0.
+Se encontrado um documento, Test path name devolve 1. Se encontrada uma pasta, Test path name devolve 0.
 
 4D oferece as seguintes constantes predefinidas:
 
@@ -44,11 +44,11 @@ Se não se encontra nenhum documento ou pasta, Test path name devolve um valor n
 
 ## Exemplo 
 
-O seguinte exemplo prova a presença do documento “Diário” na pasta da base, e o cria se não for encontrado:
+No Windows, o seguinte exemplo prova a presença do documento "Journal.txt" na pasta "Data" do projeto, e o cria se não for encontrado:
 
 ```4d
- If(Test path name("Diario")&NBSP;#&NBSP;Is a document)
-    $vhDocRef:=Create document("Diario")
+ If(Test path name("\Data\Journal.txt")#Is a document)
+    $vhDocRef:=Create document("\Data\Journal.txt")
     If(OK=1)
        CLOSE DOCUMENT($vhDocRef)
     End if

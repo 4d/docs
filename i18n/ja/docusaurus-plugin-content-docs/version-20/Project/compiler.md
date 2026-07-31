@@ -123,7 +123,7 @@ title: コンパイル
 
 #### Symbolファイルを生成
 
-Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。
+Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `プロジェクト名_symbols.txt` という名前で作成されます。
 
 #### エラーファイルを生成
 

@@ -129,7 +129,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. A method can return a single value in a parameter, which have to be declared.
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $myText:="hello"

@@ -16,7 +16,7 @@ title: OpenAIChatHelper
 | `numberOfMessages`    | Integer                                                               | 15                                                     | チャット履歴に保持するメッセージの最大数。                       |
 | `parameters`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。                 |
 | `messages`            | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | そのチャットセッション内でやりとりされたメッセージのコレクション。           |
-| `tools`               | [OpenAITool](OpenAITool.md) のコレクション                                   | [] | 関数呼び出し用に登録されたOpenAI ツールの一覧。                 |
+| `ツール`                 | [OpenAITool](OpenAITool.md) のコレクション                                   | [] | 関数呼び出し用に登録されたOpenAI ツールの一覧。                 |
 | `autoHandleToolCalls` | Boolean                                                               | true                                                   | 登録されたツールを使用してツール呼び出しを自動的に管理するかどうかをあらわすブール値。 |
 | `lastErrors`          | Collection                                                            | -                                                      | チャット操作中に発生した最後のエラーを格納したコレクション。              |
 
@@ -101,7 +101,7 @@ var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
 
-// Example 2: プロパティを持つtool オブジェクトを使用(この場合第2に引数は不要です)
+// Example 2: プロパティを持つtool オブジェクトを使用(この場合第2引数は不要です)
 var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
 $chatHelper.registerTool($tool)
 

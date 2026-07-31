@@ -11,7 +11,7 @@ El botón "Procesos" indica, entre paréntesis el número total de procesos en e
 
 Pode alterar a ordem das colunas simplesmente arrastando e largando as áreas de cabeçalho das colunas. Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçalho.
 
-Como a página Sessões, esta página contém uma área dinâmica de [pesquisa/filtragem](sessions.md#search-and-filtering) que pode ser usada para reduzir o número de linhas exibidas na lista àquelas que correspondem ao texto inserido na área de pesquisa. A pesquisa/filtragem é efetuada nas colunas Nome da sessão e Nome do processo.
+Like the Sessions page, this page contains a dynamic [search/filtering area](sessions.md#search-and-filtering) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. A pesquisa/filtragem é efetuada nas colunas Nome da sessão e Nome do processo.
 
 Existem também três botões de atalho que podem ser utilizados para filtrar o tipo de processo apresentado na janela:
 
@@ -99,6 +99,6 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
-- **Watch session**: permite visualizar, na [página Sessões](sessions.md), todos os processos da(s) sessão(ões) selecionada(s). Este botão está ativo quando pelo menos um processo do utilizador for selecionado.
+- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). Este botão está ativo quando pelo menos um processo do utilizador for selecionado.
 
 

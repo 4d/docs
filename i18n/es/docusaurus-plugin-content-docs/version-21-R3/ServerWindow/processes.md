@@ -3,11 +3,11 @@ id: processes
 title: Página Procesos
 ---
 
-La página **Procesos** lita todos los procesos en ejecución.
+La página **Procesos** lista todos los procesos en ejecución.
 
 ![](../assets/en/Admin/server-admin-process-page.png)
 
-El botón "Procesos" indica, entre paréntesis el número total de procesos en ejecución en el servidor (este número no tiene en cuenta los filtros de visualización aplicados a la ventana ni el estado de la opción **Mostrar los procesos por grupos**).
+El botón "Procesos" indica, entre paréntesis, el número total de procesos en ejecución en el servidor (este número no tiene en cuenta los filtros de visualización aplicados a la ventana ni el estado de la opción **Mostrar los procesos por grupos**).
 
 Puede cambiar el orden de las columnas simplemente arrastrando y soltando las áreas de encabezado de las columnas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
@@ -17,13 +17,13 @@ También hay tres botones de acceso directo que se pueden utilizar para filtrar 
 
 ![](../assets/en/Admin/server-process-buttons.png)
 
-- **Procesos usuarios**: procesos generados por y para las sesiones usuarios. Estos procesos van precedidos de un icono en forma de una persona.
+- **Procesos de usuario**: procesos generados por y para las sesiones de usuario. Estos procesos van precedidos de un icono en forma de una persona.
 - **Procesos 4D**: procesos generados por el motor de 4D Server. Estos procesos van precedidos de un icono en forma de rueda dentada.
 - **Procesos de reserva**: procesos inactivos pero que se mantienen temporalmente y que pueden reutilizarse en cualquier momento. Este mecanismo optimiza la reactividad de 4D Server. Estos procesos van precedidos de un icono en forma de figura atenuada.
 
 La opción **Mostrar los procesos por grupos** le permite agrupar los procesos internos de 4D Server así como los procesos cliente, para una mejor legibilidad. Cuando seleccione esta opción:
 
-- los procesos cliente 4D "gemelos" (proceso cliente 4D principal y proceso base cliente 4D, véase [Tipo de proceso ](#process-type)) se agrupan como uno solo,
+- los procesos cliente 4D "gemelos" (proceso cliente 4D principal y proceso base cliente 4D, ver [Tipo de proceso](#process-type)) se agrupan como uno solo,
 - se crea un grupo "Gestores de tareas", que incluye los procesos internos dedicados al reparto de tareas (Shared balancer, Net session manager, Exclusive pool worker),
 - se crea un grupo "Gestores de clientes", que incluye varios procesos internos clientes.
 
@@ -79,7 +79,7 @@ Cada proceso se identifica con un icono y un tipo. El color y la forma del icono
 
 :::note
 
-Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+Íconos similares y tipos de proceso se utilizan en la [Página de proceso del Explorador de ejecución](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
 
 :::
 

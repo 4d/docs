@@ -1,6 +1,6 @@
 ---
 id: text
-title: Texte
+title: Text
 ---
 
 Un objet texte vous permet d'afficher du contenu écrit statique (ex : instructions, libellés, étiquettes, etc.) dans un formulaire. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques.

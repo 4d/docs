@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "次へ",
+    "message": "開発中",
     "description": "The label for version current"
   },
   "sidebar.docs.category.Getting Started": {
@@ -32,7 +32,7 @@
     "description": "The label for category 'Debugging' in sidebar 'docs'"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "設定",
     "description": "The label for category 'Settings' in sidebar 'docs'"
   },
   "sidebar.docs.category.Preferences": {
@@ -116,7 +116,7 @@
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
@@ -212,7 +212,7 @@
     "description": "The label for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.title": {
-    "message": "Classe",
+    "message": "クラス",
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
@@ -692,7 +692,7 @@
     "description": "The label for category 'Relations' in sidebar 'docs'"
   },
   "sidebar.docs.category.Resources": {
-    "message": "Resources",
+    "message": "リソース",
     "description": "The label for category 'Resources' in sidebar 'docs'"
   },
   "sidebar.docs.category.SQL": {
@@ -744,7 +744,7 @@
     "description": "The label for category 'System Environment' in sidebar 'docs'"
   },
   "sidebar.docs.category.Table": {
-    "message": "Table",
+    "message": "テーブル",
     "description": "The label for category 'Table' in sidebar 'docs'"
   },
   "sidebar.docs.category.Tools": {
@@ -888,7 +888,7 @@
     "description": "The generated-index page title for category Form Events in sidebar docs"
   },
   "sidebar.docs.category.Forms.link.generated-index.title": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The generated-index page title for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Formulas.link.generated-index.title": {
@@ -1016,7 +1016,7 @@
     "description": "The generated-index page title for category Relations in sidebar docs"
   },
   "sidebar.docs.category.Resources.link.generated-index.title": {
-    "message": "Resources",
+    "message": "リソース",
     "description": "The generated-index page title for category Resources in sidebar docs"
   },
   "sidebar.docs.category.SQL.link.generated-index.title": {
@@ -1068,7 +1068,7 @@
     "description": "The generated-index page title for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table.link.generated-index.title": {
-    "message": "Table",
+    "message": "テーブル",
     "description": "The generated-index page title for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools.link.generated-index.title": {
@@ -1128,7 +1128,7 @@
     "description": "The generated-index page title for category XML in sidebar docs"
   },
   "sidebar.docs.category.Dababase structure": {
-    "message": "Dababase structure",
+    "message": "データベース・ストラクチャー",
     "description": "The label for category 'Dababase structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D AIKit": {
@@ -1148,27 +1148,27 @@
     "description": "The label for the doc item 'Labels' in sidebar 'docs', linking to the doc Desktop/labels"
   },
   "sidebar.docs.category.Project & IDE": {
-    "message": "Project & IDE",
+    "message": "プロジェクト & IDE",
     "description": "The label for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project & IDE.link.generated-index.title": {
-    "message": "Project & IDE",
+    "message": "プロジェクト & IDE",
     "description": "The generated-index page title for category 'Project & IDE' in sidebar 'docs'"
   },
   "sidebar.docs.category.Code & Methods": {
-    "message": "Code & Methods",
+    "message": "コード & メソッド",
     "description": "The label for category 'Code & Methods' in sidebar 'docs'"
   },
   "sidebar.docs.category.Application Preferences": {
-    "message": "Application Preferences",
+    "message": "環境設定",
     "description": "The label for category 'Application Preferences' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands by theme": {
-    "message": "Commands by theme",
+    "message": "コマンド(テーマ別)",
     "description": "The label for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.title": {
-    "message": "Commands by theme",
+    "message": "コマンド(テーマ別)",
     "description": "The generated-index page title for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.category.Extensions.link.generated-index.title": {
@@ -1176,7 +1176,7 @@
     "description": "The generated-index page title for category 'Extensions' in sidebar 'docs'"
   },
   "sidebar.docs.category.Extending 4D applications": {
-    "message": "Extending 4D applications",
+    "message": "4D アプリケーションの拡張",
     "description": "The label for category 'Extending 4D applications' in sidebar 'docs'"
   },
   "sidebar.docs.category.Document Elements": {
@@ -1204,7 +1204,7 @@
     "description": "The label for link 'Build4D' in sidebar 'docs', linking to 'https://github.com/4d/Build4D'"
   },
   "sidebar.docs.doc.Log Files": {
-    "message": "Log Files",
+    "message": "ログファイル",
     "description": "The label for the doc item 'Log Files' in sidebar 'docs', linking to the doc Debugging/debugLogFiles"
   },
   "sidebar.docs.category.form-events-commands": {
@@ -1212,7 +1212,7 @@
     "description": "The label for category 'Form Events' in sidebar 'docs'"
   },
   "sidebar.docs.category.form-commands": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.import-export-commands": {
@@ -1256,7 +1256,7 @@
     "description": "The label for category 'Web Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.form-editor": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.form-events-events": {
@@ -1292,15 +1292,15 @@
     "description": "The label for the doc item 'Sessions' in sidebar 'docs', linking to the doc Desktop/desktop-sessions"
   },
   "sidebar.docs.category.Exploring Projects": {
-    "message": "Exploring Projects",
+    "message": "プロジェクトについて",
     "description": "The label for category 'Exploring Projects' in sidebar 'docs'"
   },
   "sidebar.docs.category.Database Structure": {
-    "message": "Database Structure",
+    "message": "データベース・ストラクチャー",
     "description": "The label for category 'Database Structure' in sidebar 'docs'"
   },
   "sidebar.docs.category.Methods & Classes": {
-    "message": "Methods & Classes",
+    "message": "メソッド & クラス",
     "description": "The label for category 'Methods & Classes' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D-Environment-key": {
@@ -1372,7 +1372,7 @@
     "description": "The label for category 'Form Events' in sidebar 'docs'"
   },
   "sidebar.docs.category.Forms-key": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.Formulas-key": {
@@ -1496,7 +1496,7 @@
     "description": "The label for category 'Relations' in sidebar 'docs'"
   },
   "sidebar.docs.category.Resources-key": {
-    "message": "Resources",
+    "message": "リソース",
     "description": "The label for category 'Resources' in sidebar 'docs'"
   },
   "sidebar.docs.category.Secured-Protocol-key": {
@@ -1548,7 +1548,7 @@
     "description": "The label for category 'System Environment' in sidebar 'docs'"
   },
   "sidebar.docs.category.Table-key": {
-    "message": "Table",
+    "message": "テーブル",
     "description": "The label for category 'Table' in sidebar 'docs'"
   },
   "sidebar.docs.category.Tools-key": {
@@ -1624,7 +1624,7 @@
     "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.description": {
-    "message": "4D commands by theme",
+    "message": "コマンド(テーマ別)",
     "description": "The generated-index page description for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Standard actions": {

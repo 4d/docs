@@ -334,10 +334,10 @@ Los caracteres especiales, como las comillas simples o los retornos de carro, de
 
 Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
-````4d
+```4d
 //urlQuery.mdcode = ```4d
 $test:=Length($r.urlQuery.mdcode) //5
-````
+```
 
 :::note
 

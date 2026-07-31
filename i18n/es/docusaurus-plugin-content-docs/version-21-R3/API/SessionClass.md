@@ -522,7 +522,7 @@ El objeto `.info` contiene las siguientes propiedades:
 | userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                              |
 | machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre del equipo servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul> |
 | systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión sistema local</li><ul>                                                                                    |
-| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Standalone session: "localhost"</li></ul>                                                                      |
+| IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                         |
 | hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                      |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                             |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                          |
@@ -855,7 +855,7 @@ Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Esta p
 
 En cliente/servidor, el objeto `.storage` de la sesión de usuario remota **no** es el mismo en el servidor y en el cliente.
 
-When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
+Cuando una sesión de usuario remoto y una sesión web se [comparten mediante una OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), también comparten el mismo objeto `.storage` en el servidor, incluso si la OTP se [creó](#createotp) a partir de la sesión en el lado del cliente.
 
 :::tip
 

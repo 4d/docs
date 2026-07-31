@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type                      |                             | Description                  |
-| ----------- | ------------------------- | --------------------------- | ---------------------------- |
-| Description | Text                      | &#8594; | Description du signal        |
-| Résultat    | 4D.Signal | &#8592; | Object encapsulant le signal |
+| Paramètres              | Type                      |                             | Description                  |
+| ----------------------- | ------------------------- | --------------------------- | ---------------------------- |
+| Description             | Text                      | &#8594; | Description du signal        |
+| Résultat de la fonction | 4D.Signal | &#8592; | Object encapsulant le signal |
 
 </div>
 <!-- END REF-->

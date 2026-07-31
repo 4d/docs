@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type      |                             | Description                                     |
-| ---------- | --------- | --------------------------- | ----------------------------------------------- |
-| name       | Text      | &#8594; | Nom du process duquel obtenir le numéro         |
-| id         | Text      | &#8594; | ID du process duquel récupérer le numéro        |
-| \*         | Opérateur | &#8594; | Renvoyer le numéro du process depuis le serveur |
-| Résultat   | Integer   | &#8592; | Process number                                  |
+| Paramètres              | Type      |                             | Description                                     |
+| ----------------------- | --------- | --------------------------- | ----------------------------------------------- |
+| name                    | Text      | &#8594; | Nom du process duquel obtenir le numéro         |
+| id                      | Text      | &#8594; | ID du process duquel récupérer le numéro        |
+| \*                      | Opérateur | &#8594; | Renvoyer le numéro du process depuis le serveur |
+| Résultat de la fonction | Integer   | &#8592; | Process number                                  |
 
 </div>
 <!-- END REF-->

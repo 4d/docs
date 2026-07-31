@@ -7,7 +7,7 @@ Las señales son herramientas que ofrece el lenguaje 4D para gestionar las inter
 
 :::note
 
-[Semaphores](../Develop/processes.md#semaphores) can also be used to manage interactions. Los semáforos permiten asegurarse de que dos o más procesos no modifican el mismo recurso (archivo, registro...) al mismo tiempo. Sólo el proceso que define el semáforo puede eliminarlo.
+Los [semáforos](../Develop/processes.md#semaphores) también se pueden utilizar para gestionar las interacciones. Los semáforos permiten asegurarse de que dos o más procesos no modifican el mismo recurso (archivo, registro...) al mismo tiempo. Sólo el proceso que define el semáforo puede eliminarlo.
 
 :::
 

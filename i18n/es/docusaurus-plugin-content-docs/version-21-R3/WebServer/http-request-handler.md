@@ -7,7 +7,7 @@ Por defecto, las peticiones HTTP recibidas por el servidor web 4D se gestionan a
 
 Además, 4D soporta la implementación de **gestores de peticiones HTTP personalizadas**, permitiéndole interceptar peticiones HTTP entrantes específicas y procesarlas utilizando su propio código.
 
-Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, se procesa directamente y no hay otras funcionalidades de procesamiento (por ejemplo, son llamados métodos base [On Web authentication](./authentication.md#on-web-authentication) o [On Web connection](./httpRequests.md#on-web-connection).
+Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, se procesa directamente y no hay otras funcionalidades de procesamiento (por ejemplo, no se llaman los métodos base [On Web authentication](./authentication.md#on-web-authentication) o [On Web connection](./httpRequests.md#on-web-connection)).
 
 Los gestores de peticiones HTTP personalizados satisfacen diversas necesidades, entre ellas:
 
@@ -24,13 +24,13 @@ Los manejadores de peticiones HTTP personalizadas están soportados en el siguie
 
 ### Autenticación y privilegios
 
-Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
+Dado que las funciones de gestión de peticiones HTTP se invocan desde las peticiones web estándar (no contienen el patrón `/rest/xxx` como las solicitudes REST), no están sujetas a las normas de [**Inicio de sesión obligatorio**](../REST/authUsers.md#force-login-mode). Esto significa que pueden ejecutarse sin autenticación previa, es decir, sin llamar a [`setPrivileges()`](../API/SessionClass.md#setprivileges) en la sesión, en cuyo caso se ejecutarán en una sesión *invitado*.
 
-Sin embargo, estas funciones necesitan tener **permisos** apropiados, como todas las peticiones ejecutadas desde procesos web. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Cualquier otro recurso al que se acceda dentro del código (datos, otras funciones...) también deben estar permitidos por los permisos.
+Sin embargo, estas funciones necesitan tener **permisos** apropiados, como todas las peticiones ejecutadas desde procesos web. Cuando se invoca la función de gestión, los **privilegios** de su sesión web deben permitir que el código se ejecute correctamente. Cualquier otro recurso al que se acceda dentro del código (datos, otras funciones...) también deben estar permitidos por los permisos.
 
 En [*modo restringido por defecto*](../ORDA/privileges.md#restriction-modes), si un controlador de peticiones HTTP puede abrir una nueva sesión sin autenticar (lo cual ocurre, por ejemplo, cuando su aplicación ofrece la función de **enlaces profundos**), debe asegurarse de que se conceda el privilegio *invitado* para ejecutar la función del controlador y acceder a todos los recursos posteriores.
 
-Si una función HTTP Request handler puede ejecutarse dentro de una sesión ya autenticada, debe asegurarse de que la sesión de usuario está autorizada para ejecutar la función handler y acceder a todos los recursos posteriores. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
+Si una función HTTP Request handler puede ejecutarse dentro de una sesión ya autenticada, debe asegurarse de que la sesión de usuario está autorizada para ejecutar la función handler y acceder a todos los recursos posteriores. Tenga en cuenta que esto también puede ocurrir con un enlace profundo si copia/pega el enlace en un navegador donde ya está autenticado para la aplicación y la sesión todavía está activa.
 
 ## Cómo definir los gestores
 
@@ -75,7 +75,7 @@ Debe reiniciar el servidor Web para que se tengan en cuenta las modificaciones r
 
 ## Definición del gestor
 
-Un manejador está definido por:
+Un gestor está definido por:
 
 - un patrón de URL a interceptar
 - una función y su clase donde se implementa el código para manejar el patrón URL escuchado
@@ -176,7 +176,7 @@ He aquí un ejemplo detallado de un archivo HTTPHandlers.json:
 
 [
    {
-        "clase": "GeneralHandling",
+        "class": "GeneralHandling",
         "method": "handle",
         "pattern": "info", //prefijo URL 
         "verbs": "GET"
@@ -223,7 +223,7 @@ He aquí un ejemplo detallado de un archivo HTTPHandlers.json:
 
 En este ejemplo, debe implementar las siguientes funciones:
 
-- *funciónhandle* en la clase \*GeneralHandling
+- Función *handle* en la clase \*GeneralHandling\*
 - *manageAccount* en la clase *UsersHandling*
 - *handleInvoices* en la clase *FinancialHandling*
 - *handleDocs* en la clase *DocsHandling*
@@ -250,7 +250,7 @@ Ejemplos de URL que activan los gestores personalizados:
 
 ### Configuración de funciones
 
-El código del gestor de peticiones HTTP debe implementarse en una función de una clase [**Compartida**](../Concepts/classes.md#shared-singleton) [**clase singleton**](../Concepts/classes.md#singleton-classes).
+El código del gestor de peticiones HTTP debe implementarse en una función de una clase [**compartida**](../Concepts/classes.md#shared-) y [**singleton**](../Concepts/classes.md#singleton-classes).
 
 Si el singleton no se encuentra o no está compartido, el servidor devuelve un error "No se puede encontrar singleton". Si la clase o la función [definida como manejador](#handler-definition) en el archivo HTTPHandlers.json no se encuentra, el servidor devuelve un error "No se puede encontrar la función singleton".
 
@@ -258,7 +258,7 @@ Las funciones del gestor de peticiones no son necesariamente compartidas, a meno
 
 :::note
 
-**no es recomendado** exponer las funciones del gestor de solicitudes a llamadas REST externas usando las palabras claves [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) o [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
+**No se recomienda** exponer las funciones del gestor de solicitudes a llamadas REST externas usando las palabras claves [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) o [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

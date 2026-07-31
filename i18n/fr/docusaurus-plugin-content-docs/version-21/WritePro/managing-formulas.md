@@ -141,7 +141,7 @@ Lorsque la commande [**Current time**](../commands-legacy/current-time.md), une 
 
 ## Prise en charge de la structure virtuelle
 
-Les expressions de tables et de champs insérées dans les documents de 4D Write Pro prennent en charge la définition de structure virtuelle de la base de données. La structure virtuelle exposée aux formules est définie par les commandes [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) et [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*).
+Les expressions de tables et de champs insérées dans les documents de 4D Write Pro prennent en charge la définition de structure virtuelle de la base de données. Les expressions de tables et de champs insérées dans les documents de 4D Write Pro prennent en charge la définition de structure virtuelle de la base de données.
 
 Quand une structure virtuelle est définie :
 

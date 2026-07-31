@@ -57,9 +57,9 @@ Platform-specific syntax depends on the operating system on which the command is
 
 The following patterns are supported:
 
-- folder separators are "\"
+- folder separators are "\\"
 - the text contains ':' and '\' as the second and third character,
-- the text starts with "\\".
+- the text starts with "\\\".
 
 Examples with [`Folder`](../API/FolderClass.md#folder):
 

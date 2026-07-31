@@ -52,7 +52,7 @@
     "description": "The label of footer link with label=Downloads linking to https://us.4d.com/product-download"
   },
   "link.item.label.Resources": {
-    "message": "Resources",
+    "message": "リソース",
     "description": "The label of footer link with label=Resources linking to https://us.4d.com/resources"
   },
   "link.item.label.Get Support": {
@@ -80,7 +80,7 @@
     "description": "The footer copyright"
   },
   "link.item.label.Documentation download": {
-    "message": "Documentation download",
+    "message": "ドキュメントのダウンロード",
     "description": "The label of footer link with label=Documentation download linking to https://github.com/4d/docs/releases/tag/latest"
   },
   "link.item.label.Learn 4D": {
@@ -88,7 +88,7 @@
     "description": "The label of footer link with label=Learn 4D linking to https://learn.4d.com"
   },
   "link.item.label.4D Doc Center (legacy documentation web site) ": {
-    "message": "4D Doc Center (legacy documentation web site) ",
+    "message": "4D Doc Center (旧ドキュメントサイト)",
     "description": "The label of footer link with label=4D Doc Center (legacy documentation web site)  linking to https://doc.4d.com"
   }
 }

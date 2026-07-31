@@ -11,11 +11,11 @@ title: OpenAIVisionHelper
 
 **prompt**(*prompt*: Test; *parameters* : OpenAIChatCompletionsParameters)
 
-| Paramètres   | Type                                                                  | Description                                                                  |
-| ------------ | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| *prompt*     | Text                                                                  | Texte d'invite à envoyer au chat de l'OpenAI.                |
-| *parameters* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Paramètres optionnels pour la requête de complétion du chat. |
-| Résultat     | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | Le résultat de la vision.                                    |
+| Paramètres              | Type                                                                  | Description                                                                  |
+| ----------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| *prompt*                | Text                                                                  | Texte d'invite à envoyer au chat de l'OpenAI.                |
+| *parameters*            | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Paramètres optionnels pour la requête de complétion du chat. |
+| Résultat de la fonction | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | Le résultat de la vision.                                    |
 
 Envoie une invite à l'API de chat OpenAI avec une URL d'image associée, et accepte éventuellement les paramètres pour la complétion du chat.
 

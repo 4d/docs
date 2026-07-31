@@ -514,7 +514,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 `.files()` 関数は、 <!-- REF #directory.files().Summary -->フォルダーに格納されている `File` オブジェクトのコレクションを返します<!-- END REF -->。
 > エイリアスまたはシンボリックリンクは解決されません。
 
-*options* 引数を省略した場合、デフォルトではフォルダーの第一階層にあるファイル (不可視ファイルを含む) のみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
 | 定数                    | 値 | 説明                                    |
 | --------------------- | - | ------------------------------------- |

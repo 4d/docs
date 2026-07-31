@@ -59,7 +59,7 @@ La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso s
  End if
 ```
 
-However, the most elegant solution is then to use the [`&&` short-circuit operator](./operators.md#short-circuit-and-operator-) and to write:
+Sin embargo, la solución más elegante es entonces utilizar [el operador de cortocircuito` &&`](./operators.md#short-circuit-and-operator-) y escribir:
 
 ```4d
 If (MethodA && MethodB)
@@ -315,7 +315,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción.
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
@@ -485,7 +485,7 @@ Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 
  End for
 ```
 
-Un bucle `Repeat...Until` es similar a un bucle [While...End while](#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
+Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
 ```4d
  $i:=1 //Inicializar el contador
  While($i<=100) //Bucle 100 veces

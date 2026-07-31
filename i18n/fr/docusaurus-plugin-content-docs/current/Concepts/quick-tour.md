@@ -127,7 +127,7 @@ For($vlChar;1;Length(vtSomeText))
  End for
 ```
 
-Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Une méthode peut renvoyer une seule valeur dans un paramètre, qui doit être déclaré. Lorsque vous appelez une méthode, vous saisissez simplement son nom : Les paramètres sont directement disponibles dans la méthode appelée s'ils ont été déclarés.
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont directement disponibles dans la méthode appelée s'ils ont été déclarés. Une méthode peut renvoyer une seule valeur dans un paramètre, qui doit être déclaré. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```4d
 $myText:="hello"

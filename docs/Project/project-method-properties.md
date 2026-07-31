@@ -302,7 +302,7 @@ For more information about components, refer to the [Developing and installing 4
 
 This attribute is only taken into account for a 4D application in client-server mode. When this option is checked, the project method is always executed on the server, regardless of how it is called. 
 
-For more information on this option, refer to [Execute on Server attribute](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.en.html).
+For more information on this option, refer to [Execute on Server attribute](../Desktop/clientServer.md#execute-on-server-attribute).
 
 ### Execution mode  
 

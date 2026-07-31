@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type |                             | Description      |
-| ---------- | ---- | --------------------------- | ---------------- |
-| aString    | Text | &#8594; | Texte à tronquer |
-| Résultat   | Text | &#8592; | Texte tronqué    |
+| Paramètres              | Type |                             | Description      |
+| ----------------------- | ---- | --------------------------- | ---------------- |
+| aString                 | Text | &#8594; | Texte à tronquer |
+| Résultat de la fonction | Text | &#8592; | Texte tronqué    |
 
 </div>
 <!-- END REF-->

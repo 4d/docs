@@ -13,7 +13,7 @@ title: クラス
 <!-- REF #LineBorder.color.Syntax -->
 **.color** : Text<!-- END REF -->
 
-`.color` プロパティは、 <!-- REF #LineBorder.color.Summary -->境界線の [色](configuring.md#境界線) を指定します<!-- END REF -->。 。
+`.color` プロパティは、 <!-- REF #LineBorder.color.Summary -->境界線の [色](configuring.md#境界線) を指定します<!-- END REF -->。 デフォルト = black
 
 
 ### .style
@@ -21,7 +21,7 @@ title: クラス
 <!-- REF #LineBorder.style.Syntax -->
 **.style** : Integer<!-- END REF -->
 
-`.style` プロパティは、 <!-- REF #LineBorder.style.Summary -->境界線の [スタイル](configuring.md#境界線) を指定します<!-- END REF -->。 。
+`.style` プロパティは、 <!-- REF #LineBorder.style.Summary -->境界線の [スタイル](configuring.md#境界線) を指定します<!-- END REF -->。 デフォルト = empty。
 
 
 ## TableColumn
@@ -57,7 +57,7 @@ title: クラス
 <!-- REF #TableOptions.allowAutoExpand.Syntax -->
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-`.allowAutoExpand` プロパティは、 <!-- REF #TableOptions.allowAutoExpand.Summary -->隣接する空のセルに値が追加されたとき、表の列または行を拡張するかどうかを示します<!-- END REF -->。 。
+`.allowAutoExpand` プロパティは、 <!-- REF #TableOptions.allowAutoExpand.Summary -->隣接する空のセルに値が追加されたとき、表の列または行を拡張するかどうかを示します<!-- END REF -->。 デフォルト = true
 
 
 ### .bandColumns
@@ -65,7 +65,7 @@ title: クラス
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-`.bandColumns` プロパティは、 <!-- REF #TableOptions.bandColumns.Summary -->列において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 。
+`.bandColumns` プロパティは、 <!-- REF #TableOptions.bandColumns.Summary -->列において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 
 ### .bandRows
@@ -73,7 +73,7 @@ title: クラス
 <!-- REF #TableOptions.bandRows.Syntax -->
 **.bandRows** : Boolean<!-- END REF -->
 
-`.bandRows` プロパティは、 <!-- REF #TableOptions.bandRows.Summary -->行において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 。
+`.bandRows` プロパティは、 <!-- REF #TableOptions.bandRows.Summary -->行において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 デフォルト = true
 
 
 ### .highlightLastColumn
@@ -81,14 +81,14 @@ title: クラス
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-`.highlightLastColumn` プロパティは、 <!-- REF #TableOptions.highlightLastColumn.Summary -->最後の列をハイライト表示するかどうかを示します<!-- END REF -->。 。
+`.highlightLastColumn` プロパティは、 <!-- REF #TableOptions.highlightLastColumn.Summary -->最後の列をハイライト表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-`.highlightFirstColumn` プロパティは、 <!-- REF #TableOptions.highlightFirstColumn.Summary -->先頭の列をハイライト表示するかどうかを示します<!-- END REF -->。 。
+`.highlightFirstColumn` プロパティは、 <!-- REF #TableOptions.highlightFirstColumn.Summary -->先頭の列をハイライト表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 
 ### .showFooter
@@ -96,21 +96,21 @@ title: クラス
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter** : Boolean<!-- END REF -->
 
-`.showFooter` プロパティは、 <!-- REF #TableOptions.showFooter.Summary -->フッターを表示するかどうかを示します<!-- END REF -->。 。
+`.showFooter` プロパティは、 <!-- REF #TableOptions.showFooter.Summary -->フッターを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 ### .showHeader
 
 <!-- REF #TableOptions.showHeader.Syntax -->
 **.showHeader** : Boolean<!-- END REF -->
 
-`.showHeader` プロパティは、 <!-- REF #TableOptions.showHeader.Summary -->ヘッダーを表示するかどうかを示します<!-- END REF -->。 。
+`.showHeader` プロパティは、 <!-- REF #TableOptions.showHeader.Summary -->ヘッダーを表示するかどうかを示します<!-- END REF -->。 デフォルト = true
 
 ### .showResizeHandle
 
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->*source* を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 。
+`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->*source* を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
 
 ### .tableColumns
 

@@ -20,10 +20,10 @@ La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la f
 
 **create**(*systemPrompt* : Text) : OpenAIChatHelper
 
-| Paramètres     | Type                                    | Description                                                                            |
-| -------------- | --------------------------------------- | -------------------------------------------------------------------------------------- |
-| *systemPrompt* | Text                                    | L'invite du système pour initialiser la discussion.                    |
-| Résultat       | [OpenAIChatHelper](OpenAIChatHelper.md) | Une instance du helper pour gérer les interactions dans la discussion. |
+| Paramètres              | Type                                    | Description                                                                            |
+| ----------------------- | --------------------------------------- | -------------------------------------------------------------------------------------- |
+| *systemPrompt*          | Text                                    | L'invite du système pour initialiser la discussion.                    |
+| Résultat de la fonction | [OpenAIChatHelper](OpenAIChatHelper.md) | Une instance du helper pour gérer les interactions dans la discussion. |
 
 #### Exemple d'utilisation
 

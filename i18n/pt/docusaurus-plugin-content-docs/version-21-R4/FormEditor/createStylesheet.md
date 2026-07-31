@@ -361,27 +361,27 @@ Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguint
 
 - ou uma lista de arquivos por plataforma:
 
-```json
-"css": "<path>" 
-```
+ ```json
+ "css": "<path>" 
+ ```
 
 - um arquivo para ambas plataformas:
 
-```json
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```json
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - ou uma lista de arquivos para ambas plataformas:
 
-```json
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```json
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 :::note
 

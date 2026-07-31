@@ -39,7 +39,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 ### Multi-level lists
 
-マルチレベルリストは、[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に基づいています。 Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). 各レベルは階層リストスタイルシートに関連づけられており、またリスト内での深さを表します(レベル 1、 レベル 2、レベル 3、など)。
+マルチレベルリストは、[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に基づいています。 Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). 各レベルは階層リストスタイルシートに関連づけられており、またリスト内での深さを表します(レベル 1、 レベル 2、レベル 3、など)。
 
 When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Chemin d'accès à un dossier ou un document |
+| cheminAccès | Text | &#8594;  | Chemin d'accès à un dossier ou un document (syntaxe système) |
 | Résultat | Integer | &#8592; | 1= cheminAccès est un document existant 0 = cheminAccès est un dossier existant <0 = chemin d'accès invalide, code d'erreur du gestionnaire de fichiers du système |
 </div>
 <!-- END REF-->
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Test path name.Summary-->La fonction **Test path name** vérifie si le document ou le dossier dont vous avez passé le chemin d'accès et le nom dans *cheminAccès* est présent sur le disque.<!-- END REF--> Vous pouvez passer un chemin d'accès relatif ou absolu, exprimé dans la syntaxe du système courant. 
+<!--REF #_command_.Test path name.Summary-->La fonction **Test path name** vérifie si le document ou le dossier dont vous avez passé le chemin d'accès et le nom dans *cheminAccès* est présent sur le disque.<!-- END REF--> Vous pouvez passer un chemin d'accès relatif ou absolu, exprimé dans la [syntaxe du système courant](../../Concepts/paths.md#platform-specific-syntax).
 
-Si un document est trouvé, **Test path name** retourne 1\. Si un dossier est trouvé, **Test path name** retourne 0.
+Si un document est trouvé, **Test path name** retourne 1. Si un dossier est trouvé, **Test path name** retourne 0.
 
 4D propose les constantes prédéfinies suivantes :
 
@@ -43,11 +43,11 @@ Si aucun document ou dossier n'est trouvé, **Test path name** retourne une vale
 
 ## Exemple 
 
-L'exemple suivant teste la présence du document “Journal” dans le dossier de la base et le crée s'il n'existe pas :
+Sous Windows, l'exemple suivant teste la présence du document "Journal.txt" dans le dossier "Data" du projet et le crée s'il n'existe pas :
 
 ```4d
- If(Test path name("Journal") # Is a document)
-    $vhDocRef:=Create document("Journal")
+ If(Test path name("\Data\Journal.txt")#Is a document)
+    $vhDocRef:=Create document("\Data\Journal.txt")
     If(OK=1)
        CLOSE DOCUMENT($vhDocRef)
     End if

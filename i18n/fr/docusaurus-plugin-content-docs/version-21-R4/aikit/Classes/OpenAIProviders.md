@@ -70,10 +70,10 @@ var $names := $providers.list()
 
 Obtenir la configuration d'un fournisseur par son nom.
 
-| Paramètres | Type   | Description                                                            |
-| ---------- | ------ | ---------------------------------------------------------------------- |
-| *name*     | Text   | Le nom du fournisseur                                                  |
-| Résultat   | Object | Objet de configuration du fournisseur, ou `Null` s'il n'est pas trouvé |
+| Paramètres              | Type   | Description                                                            |
+| ----------------------- | ------ | ---------------------------------------------------------------------- |
+| *name*                  | Text   | Le nom du fournisseur                                                  |
+| Résultat de la fonction | Object | Objet de configuration du fournisseur, ou `Null` s'il n'est pas trouvé |
 
 #### Exemple
 
@@ -93,9 +93,9 @@ End if
 
 Obtenir les noms de tous les fournisseurs.
 
-| Paramètres | Type       | Description                        |
-| ---------- | ---------- | ---------------------------------- |
-| Résultat   | Collection | Collection de noms de fournisseurs |
+| Paramètres              | Type       | Description                        |
+| ----------------------- | ---------- | ---------------------------------- |
+| Résultat de la fonction | Collection | Collection de noms de fournisseurs |
 
 #### Exemple
 
@@ -114,9 +114,9 @@ End for each
 
 Récupère tous les alias de modèle configurés.
 
-| Paramètres | Type       | Description                            |
-| ---------- | ---------- | -------------------------------------- |
-| Résultat   | Collection | Collection d'objets d'alias de modèles |
+| Paramètres              | Type       | Description                            |
+| ----------------------- | ---------- | -------------------------------------- |
+| Résultat de la fonction | Collection | Collection d'objets d'alias de modèles |
 
 Chaque objet de la collection contient :
 

@@ -55,8 +55,8 @@ Se ofrecen tres opciones de ubicación:
 
 > Si cambia una de estas opciones, tiene que salir y volver a abrir la base para que el cambio surta efecto. Una vez reabierta la base, se vuelven a indexar automáticamente todos sus índices.
 
-- **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en
-  Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier caracter (ver [Caracter comodín (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
+- **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en una palabra.
+  Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier carácter (ver [Carácter comodín (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
 
   Cuando la opción está marcada, la arroba se considera un caracter simple si se encuentra dentro de una palabra. Esta posibilidad es especialmente útil cuando se buscan direcciones de correo electrónico, donde el signo @ se utiliza internamente. Esta opción influye en las búsquedas, ordenaciones, comparaciones de cadenas de caracteres, así como en los datos almacenados en las tablas y los que se encuentran en memoria, como los arrays. Los campos y variables de tipo alfa (indexados o no) y texto se ven afectados por como se interpreta el caracter @ en las búsquedas y ordenaciones.
 
@@ -66,13 +66,13 @@ Se ofrecen tres opciones de ubicación:
   - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](../commands/theme/Objects_Forms) que aceptan el caracter comodín ("@") en el parámetro objeto.
   - Por razones de seguridad, sólo el Administrador o Diseñador de la base de datos puede modificar este parámetro.
 
-- **Lenguaje del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
+- **Idioma del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
 
   Así, un proyecto 4D puede funcionar en un lenguaje distinto del del sistema. Cuando se abre un proyecto, el motor de 4D detecta el lenguaje utilizado por el archivo de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las efectúa el motor del proyecto o el lenguaje, se hacen en el mismo idioma.
 
   > Puede modificar esta configuración en las Preferencias de la aplicación (ver [Página general](../Preferences/general.md)). En este caso, la configuración se aplica a todas las nuevas bases creadas por 4D.
 
-- **Considerar sólo caracteres no alfanuméricos para las palabras claves**: modifica el algoritmo utilizado por 4D para identificar los separadores de palabras claves y crear así sus índices. Por defecto, cuando esta opción no está marcada, 4D utiliza un sofisticado algoritmo que tiene en cuenta las características lingüísticas.
+- **Considerar sólo caracteres no alfanuméricos para las palabras claves**: modifica el algoritmo utilizado por 4D para identificar los separadores de palabras clave y crear así sus índices. Por defecto, cuando esta opción no está marcada, 4D utiliza un sofisticado algoritmo que tiene en cuenta las características lingüísticas.
 
   Este algoritmo es similar al que utilizan los programas de tratamiento de textos para determinar los límites al seleccionar una palabra sobre la que se hace doble clic. Para más información sobre este algoritmo, consulte la siguiente dirección: `http://userguide.icu-project.org/boundaryanalysis`.
 
@@ -96,7 +96,7 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
 
 ### Parámetros de la caché para la base
 
-- **Cálculo de la caché adaptable**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
+- **Cálculo de la caché adaptativa**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
 
   - **Memoria a reservar para el sistema y las otras aplicaciones**: parte de la memoria RAM a reservar para el Sistema y las otras aplicaciones. Este valor aumenta para la optimización cuando otras aplicaciones se ejecutan en la misma máquina que 4D.
   - **Porcentaje de memoria disponible utilizada para la caché**: porcentaje de la memoria restante asignada por defecto a la caché.\

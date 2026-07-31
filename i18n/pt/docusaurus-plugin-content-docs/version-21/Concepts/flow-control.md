@@ -436,7 +436,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-#### Diminuir a variável contador
+#### Incrementar a variável do contador em mais de um
 
 Se precisar, pode usar uma Increment_Expression (positiva ou negativa) cujo valor absoluto seja maior que um.
 

@@ -21,7 +21,7 @@ title: VP EXPORT TO BLOB
 
 ## 説明
 
-`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
+`VP EXPORT TO BLOB` コマンドは、<!-- REF #_method_.VP EXPORT TO BLOB.Summary -->*vpAreaName* で指定した 4D View Pro エリアの 4D View Pro ドキュメントを、*paramObj* で指定したとおりに 4D.Blob に書き出します。<!-- END REF --> エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。 エクスポートされた Blob は、コールバックを通して利用可能です。 4D View Pro エリアを Blob でエクスポートおよびインポートすることは高速で、メモリ効率に優れています。
 
 *paramObj* には、複数のプロパティを渡せます:
 

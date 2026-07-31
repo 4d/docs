@@ -55,8 +55,8 @@ Se ofrecen tres opciones de ubicación:
 
 > Si cambia una de estas opciones, tiene que salir y volver a abrir la base para que el cambio surta efecto. Una vez reabierta la base, se vuelven a indexar automáticamente todos sus índices.
 
-- **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en
-  Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier caracter (ver [Caracter comodín (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
+- **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en una palabra.
+  Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier carácter (ver [Carácter comodín (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
 
   Cuando la opción está marcada, la arroba se considera un caracter simple si se encuentra dentro de una palabra. Esta posibilidad es especialmente útil cuando se buscan direcciones de correo electrónico, donde el signo @ se utiliza internamente. Esta opción influye en las búsquedas, ordenaciones, comparaciones de cadenas de caracteres, así como en los datos almacenados en las tablas y los que se encuentran en memoria, como los arrays. Los campos y variables de tipo alfa (indexados o no) y texto se ven afectados por como se interpreta el caracter @ en las búsquedas y ordenaciones.
 
@@ -66,13 +66,13 @@ Se ofrecen tres opciones de ubicación:
   - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](../commands/theme/Objects_Forms) que aceptan el caracter comodín ("@") en el parámetro objeto.
   - Por razones de seguridad, sólo el Administrador o Diseñador de la base de datos puede modificar este parámetro.
 
-- **Lenguaje del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
+- **Idioma del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
 
   Así, un proyecto 4D puede funcionar en un lenguaje distinto del del sistema. Cuando se abre un proyecto, el motor de 4D detecta el lenguaje utilizado por el archivo de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las efectúa el motor del proyecto o el lenguaje, se hacen en el mismo idioma.
 
   > Puede modificar esta configuración en las Preferencias de la aplicación (ver [Página general](../Preferences/general.md)). En este caso, la configuración se aplica a todas las nuevas bases creadas por 4D.
 
-- **Considerar sólo caracteres no alfanuméricos para las palabras claves**: modifica el algoritmo utilizado por 4D para identificar los separadores de palabras claves y crear así sus índices. Por defecto, cuando esta opción no está marcada, 4D utiliza un sofisticado algoritmo que tiene en cuenta las características lingüísticas.
+- **Considerar sólo caracteres no alfanuméricos para las palabras claves**: modifica el algoritmo utilizado por 4D para identificar los separadores de palabras clave y crear así sus índices. Por defecto, cuando esta opción no está marcada, 4D utiliza un sofisticado algoritmo que tiene en cuenta las características lingüísticas.
 
   Este algoritmo es similar al que utilizan los programas de tratamiento de textos para determinar los límites al seleccionar una palabra sobre la que se hace doble clic. Para más información sobre este algoritmo, consulte la siguiente dirección: `http://userguide.icu-project.org/boundaryanalysis`.
 
@@ -96,7 +96,7 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
 
 ### Parámetros de la caché para la base
 
-- **Cálculo de la caché adaptable**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
+- **Cálculo de la caché adaptativa**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
 
   - **Memoria a reservar para el sistema y las otras aplicaciones**: parte de la memoria RAM a reservar para el Sistema y las otras aplicaciones. Este valor aumenta para la optimización cuando otras aplicaciones se ejecutan en la misma máquina que 4D.
   - **Porcentaje de memoria disponible utilizada para la caché**: porcentaje de la memoria restante asignada por defecto a la caché.\
@@ -117,7 +117,7 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
 El tamaño de la memoria caché que introduzca se reservará para la base 4D, independientemente del estado de los recursos de la máquina. Esta configuración puede utilizarse en determinadas configuraciones específicas, o cuando la base está diseñada para utilizarse en sistemas disímiles en cuanto a memoria. En la mayoría de los casos, la caché adaptativa ofrece un mejor rendimiento.
 
 - **Escritura caché cada... Segundos/Minutos**: especifica el periodo de tiempo entre cada guardado automático de la caché de datos, es decir, su escritura en el disco.
-  4D guarda los datos colocados en la caché a intervalos regulares. Puede especificar todo intervalo de tiempo entre 1 segundo y 500 minutos. Por defecto, 4D guarda sus datos cada 20 segundos. La aplicación también guarda sus datos en el disco cada vez que cambia a otro entorno o sale de la aplicación. You can also call the [`FLUSH CACHE`](../commands/flush-cache) command to trigger the flush at any moment.
+  4D guarda los datos colocados en la caché a intervalos regulares. Puede especificar todo intervalo de tiempo entre 1 segundo y 500 minutos. Por defecto, 4D guarda sus datos cada 20 segundos. La aplicación también guarda sus datos en el disco cada vez que cambia a otro entorno o sale de la aplicación. También puede llamar al comando [`FLUSH CACHE`](../commands/flush-cache) para activar la escritura en cualquier momento.
 
 Cuando prevea una entrada de muchos datos, considere la posibilidad de establecer un intervalo de tiempo breve entre guardados. En caso de corte del suministro eléctrico, sólo perderá los datos introducidos desde el último almacenamiento (si la base de datos funciona sin archivo de historial).
 
@@ -127,26 +127,26 @@ Por defecto, 4D muestra una pequeña ventana cuando se vacía la caché. Si no d
 
 :::note
 
-You can modify temporary the cache flush frequency using the [`Cache flush periodicity` selector of the `SET DATABASE PARAMETER` command](../commands/set-database-parameter#cache-flush-periodicity-95).
+Puede modificar temporalmente la frecuencia de vaciado de la caché mediante el selector [`Cache flush periodicity` del comando `SET DATABASE PARAMETER`](../commands/set-database-parameter#cache-flush-periodicity-95).
 
 :::
 
-### Managing priorities in database cache
+### Gestión de prioridades en la caché de la base de datos
 
-The 4D database cache includes an automatic priority management mechanism that provides a high level of efficiency and performance for data access. Thanks to this mechanism, when space is needed to load new data in the cache, low priority cached data are released first, while higher priority cached data remain loaded.
+La caché de la base de datos 4D incluye un mecanismo de gestión automático de prioridades que ofrece un alto nivel de eficiencia y rendimiento en el acceso a los datos. Gracias a este mecanismo, cuando se necesita espacio para cargar nuevos datos en la caché, los datos almacenados en la caché con menor prioridad se liberan en primer lugar, mientras que los datos almacenados en la caché con mayor prioridad permanecen cargados.
 
-This mechanism is fully automatic and usually, you will not have to worry about it. However, for specific cases it can be customized using a [set of dedicated commands from the "Cache Management" theme](../commands/theme/Cache_Management.md), which allow changing the priority of objects for the entire time the database is running, or temporarily for the current process. Note that these commands must be used carefully since they affect database performance.
+Este mecanismo es totalmente automático y, por lo general, no tendrá que preocuparse por él. Sin embargo, para casos específicos se puede personalizar usando un [conjunto de comandos dedicados del tema "Gestión de caché"](../commands/theme/Cache_Management.md), que permiten cambiar la prioridad de los objetos durante todo el tiempo que la base de datos está ejecutando, o temporalmente para el proceso actual. Note que estos comandos deben ser utilizados cuidadosamente, ya que afectan al rendimiento de la base de datos.
 
-#### Priority management overview
+#### Presentación de la gestión de prioridades
 
-The Cache manager selects data to remove from the cache as necessary using a priority system. The three kinds of objects that can be loaded in the cache have a different priority:
+El gestor de caché selecciona los datos que deben eliminarse de la caché según sea necesario, utilizando un sistema de prioridades. Los tres tipos de objetos que se pueden cargar en la caché tienen una prioridad diferente:
 
-- **tables**: all standard field data (numeric, dates, etc.), excluding blobs (see below). Default priority is medium.
-- **blobs**: all binary field data (text, picture, object and blobs) stored in the data file. Default priority is the lowest.
-- **indexes**: all field indexes, including keyword indexes and composite indexes. Since indexes are frequently accessed, they have a special status in the cache. Default priority is the highest.
+- **tablas**: todos los datos de campo estándar (numéricos, fechas, etc.), excepto los blobs (ver abajo). La prioridad por defecto es media.
+- **blobs**: todos los datos de tipo binario (texto, imágenes, objetos y blobs) almacenados en el archivo de datos. La prioridad por defecto es la más baja.
+- **índices**: todos los índices de campos, incluidos los índices de palabras clave y los índices compuestos. Dado que se accede con frecuencia a los índices, estos tienen un estatus especial en la caché. La prioridad por defecto es la más alta.
 
-Default priorities usually provide the best performances. However, for specific cases you can customize the cache priorities using two sets of 4D commands:
+Las prioridades por defecto suelen ofrecer los mejores rendimientos. No obstante, en casos concretos, puede personalizar las prioridades de la caché utilizando dos conjuntos de comandos 4D:
 
-- Commands that change the priorities for the whole session and all processes: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority), and [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). These commands should be used in a startup database method.
-- Commands that change the priorities only for the current process: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority), and [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Use these commands to improve the performance of a temporary operation on your database and go back to initial priorities after the operation is finished. These commands are available only on 4D Server or 4D in local mode.
+- Los comandos que modifican las prioridades para toda la sesión y todos los procesos: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority) y [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). Estos comandos deben utilizarse en un método al inicio.
+- Comandos que modifican las prioridades únicamente para el proceso actual: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority) y [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Utilice estos comandos para mejorar el rendimiento de una operación temporal en su base de datos y volver a las prioridades iniciales una vez finalizada la operación. Estos comandos solo están disponibles en 4D Server o en 4D en modo local.
 

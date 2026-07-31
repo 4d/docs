@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type                                       |                             | Description                                                                                          |
-| -------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
-| localID        | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
+| Paramètres              | Type                                       |                             | Description                                                                                          |
+| ----------------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo          | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID                 | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat de la fonction | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
 
 </div>
 <!-- END REF-->

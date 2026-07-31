@@ -10,7 +10,7 @@ Lea [**Novedades en 4D 21 R3**](https://blog.4d.com/es/whats-new-in-4d-21-r3/), 
 #### Lo más destacado
 
 - El comando [`JSON Validate`](../commands/json-validate) ahora es compatible con el borrador 2020-12 del esquema JSON.
-- 4D Write Pro now supports [hierarchical list style sheets](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
+- 4D Write Pro ahora soporta [hojas de estilo de lista jerárquica](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), activando la creación y la gestión de [listas multinivel](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) estructuradas con númeración automática.
 - Posibilidad de utilizar un certificado personalizado del llavero de macOS en lugar de una carpeta de certificados local en las clases [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) y [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Nueva clase [`4D.Method`](../API/MethodClass.md) para crear y ejecutar un código de método 4D a partir de una fuente de texto. Los comandos [`METHOD Get path`](../commands/method-get-path) y [`METHOD RESOLVE PATH`](../commands/method-resolve-path) soportan una nueva constante `path volatile method` (128).
 - El transportador IMAP ahora admite notificaciones de eventos del buzón mediante el protocolo IDLE a través de un [objeto notificador](../API/IMAPTransporterClass.md#notifier) de la clase [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable mediante la propiedad `listener` del [nuevo transportador IMAP](../commands/imap-new-transporter).

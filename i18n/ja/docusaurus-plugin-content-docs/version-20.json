@@ -68,7 +68,7 @@
     "description": "The label for category 'Debugging' in sidebar 'docs'"
   },
   "sidebar.docs.category.Settings": {
-    "message": "Settings",
+    "message": "設定",
     "description": "The label for category 'Settings' in sidebar 'docs'"
   },
   "sidebar.docs.category.Preferences": {
@@ -208,7 +208,7 @@
     "description": "The generated-index page description for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.category.Forms": {
-    "message": "Forms",
+    "message": "フォーム",
     "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Editor": {

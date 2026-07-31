@@ -7,11 +7,11 @@ title: $entityset
 
 ## 使用可能なシンタックス
 
-| シンタックス                                                                                                                                                                                       | 例題                                                                           | 説明                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                                                   |
-| [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します                                    |
-| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Releases one or more existing entity sets from the 4D Server's cache |
+| シンタックス                                                                                                                                                                                       | 例題                                                                           | 説明                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------ |
+| [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | 既存のエンティティセットを取得します                         |
+| [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します          |
+| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | 4D Server のキャッシュから、一つ以上の既存のエンティティセットを削除します |
 
 ## $entityset/\{entitySetID\}
 
@@ -42,7 +42,7 @@ title: $entityset
 
 ### 説明
 
-`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
@@ -93,7 +93,7 @@ title: $entityset
 
 ## $entityset/$release
 
-Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+[4D Server のキャッシュ](./$info.md) から、一つ以上の既存のエンティティセットを削除します).
 
 ### 説明
 
@@ -101,11 +101,11 @@ You can use this command to release a collection of entity sets, which you creat
 
 ### 例題
 
-Release two entity sets from the server's cache:
+サーバーのキャッシュから 2つのエンティティセットを解放します:
 
 `POST  /rest/Employee/$entityset/$release`
 
-The body must contain a collection with the entity sets ids to release:
+本文には、開放するエンティティセットID を持つコレクションを含める必要があります:
 
 **POST データ**:
 

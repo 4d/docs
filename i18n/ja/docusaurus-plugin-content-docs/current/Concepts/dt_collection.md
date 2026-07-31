@@ -13,7 +13,7 @@ title: Collection
 collectionRef[expression]
 ```
 
-*expression* には正の整数を返す有効な 4D 式であればどんなものでも渡すことができます。 例: 例:
+*expression* には正の整数を返す有効な 4D 式であればどんなものでも渡すことができます。 例:
 
 ```4d
  myCollection[5]  // コレクションの 6番目の要素にアクセス
@@ -51,7 +51,7 @@ collectionRef[expression]
 
 :::info
 
-いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Monitored Activity`](../commands/monitored-activity) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Monitored Activity`](../commands/monitored-activity) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
@@ -73,7 +73,7 @@ collectionRef[expression]
 
 `[]` 演算子を使って、**コレクションリテラル** を作成することができます。 コレクションリテラルとは、コレクション要素を表す式が 0個以上含まれたセミコロン区切りのリストを大括弧 `[]` で囲んだものです。 コレクションリテラルを使ってコレクションを作成すると、指定された値を要素としてインスタンス化され、その長さは指定された要素の数になります。
 
-要素は式とみなされるため、要素に `[]` を使ってサブコレクションを作成することができます。  また、**オブジェクトリテラル** を作成し、参照することもできます。  また、**オブジェクトリテラル** を作成し、参照することもできます。
+要素は式とみなされるため、要素に `[]` を使ってサブコレクションを作成することができます。  また、**オブジェクトリテラル** を作成し、参照することもできます。
 
 要素が未定義の場合、コレクションにおいては Null となります。
 
@@ -105,14 +105,14 @@ $users:=[{name: "Alice"; \
 
 二種類のコレクションを作成することができます:
 
-- [`New collection`](../../commands/new-collection) コマンド、またはコレクションリテラルのシンタックス `[]` を使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- [`New shared collection`](../../commands/new-shared-collection) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
+- [`New collection`](../../commands/new-collection) コマンド、またはコレクションリテラルのシンタックス `[]` を使用して作成する通常 (非共有) コレクション。 通常のコレクションは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared collection`](../../commands/new-shared-collection) コマンドを使用して作成する共有コレクション。 共有コレクションはプロセス間 (プリエンティブ・スレッド含む) で共有可能なコレクションです。 共有コレクションへのアクセスは [`Use...End use`](Concepts/shared.md#useend-use) 構造によって管理されています。
 
 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
-## Assignment
+## 代入
 
-Collection and [object](./dt_object.md) data types are handled in the 4D language through **references** (i.e., internal pointers), unlike scalar data types (integer, date, etc.). As a result, when assigning a collection to a variable (e.g. `$myVar:=[1;2;3]`), it is the **reference** that is assigned, not the value itself. Any subsequent modification of the *$myVar* variable will therefore be reflected everywhere the original collection is referenced. This follows the same principle as [pointers](./dt_collection.md), except that the *$myVar* variable does not need to be dereferenced.
+コレクションと[オブジェクト](./dt_object.md) データ型は、スカラーデータ型(数値、日付、など)とは異なり、4D ランゲージ内においては**参照** (つまり内部的なポインター) を通して管理されます。 結果として、変数へコレクションを代入する場合(例' `$myVar:=[1;2;3]`)、代入されているのは値自身ではなく、**参照** が代入されています。 そのため *$myVar* 変数にそのあと加えた変更は、元のコレクションが参照されている箇所全てにおいて反映されてしまうことになります。 これは[ポインター](./dt_collection.md) と同じ原理に基づいていますが、*$myVar* 変数は逆参照する必要がないという点において異なります。
 
 例:
 
@@ -120,36 +120,36 @@ Collection and [object](./dt_object.md) data types are handled in the 4D languag
 var $col1; $col2 : Collection
 var $o : Object
 
-$col1:=[1;2;3] //a reference to the collection is created
-$col2:=$col1 //both variables share the same collection reference
-$o:={ list:$col1 } //the object stores a reference to the same collection
+$col1:=[1;2;3] // コレクションへの参照が作成される
+$col2:=$col1 // 両方の変数とも同じコレクション参照を共有する
+$o:={ list:$col1 } // オブジェクトは同じコレクションへの参照を保存する
 
 $col1.push(4)
-//$col2 = [1,2,3,4]
-//$o = {"list":[1,2,3,4]}
+// $col2 = [1,2,3,4]
+// $o = {"list":[1,2,3,4]}
 
 $col2[0]:=10
-//$col1 = [10,2,3,4]
-//$o = {"list":[10,2,3,4]}
+// $col1 = [10,2,3,4]
+// $o = {"list":[10,2,3,4]}
 
 $o.list.push(5)
-//$col1 = [10,2,3,4,5]
-//$col2 = [10,2,3,4,5]
+// $col1 = [10,2,3,4,5]
+// $col2 = [10,2,3,4,5]
 
-ASSERT($col1=$col2) //True
+ASSERT($col1=$col2) // True になる
 ```
 
-This principle applies wherever objects or collections are assigned, including in [parameters](./parameters.md) or [formula](../commands/formula) expressions.
+この原理は[引数](./parameters.md) あるいは [formula](../commands/formula) 式も含めて、オブジェクトまたはコレクションが代入される場所全てにおいて適用されます。
 
 :::note
 
-If you want to create a **deep copy** of a collection, use the [`collection.copy()`](../API/CollectionClass.md#copy) function.
+コレクションの**ディープコピー** を作成したい場合には、[`collection.copy()`](../API/CollectionClass.md#copy) 関数を使用してください。
 
 :::
 
 ## コレクション関数
 
-4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](../API/CollectionClass.md) にまとめられています。
+4D コレクションへの参照は、コレクションの *メンバー関数* と呼ばれる特別なクラス関数を利用することができます。 コレクション関数は [クラス API リファレンス](../API/CollectionClass.md) にまとめられています。
 
 例:
 
@@ -167,7 +167,7 @@ $col.push(10;100) // 10 と 100 をコレクションに追加
 
 ### propertyPath 引数
 
-いくつかのコレクション関数は引数として *propertyPath* を受け入れます。 この引数は以下のように用いることができます: この引数は以下のように用いることができます:
+いくつかのコレクション関数は引数として *propertyPath* を受け入れます。 この引数は以下のように用いることができます:
 
 - オブジェクトプロパティ名、 例えば "lastName"
 - オブジェクトプロパティパス (ドット文字で繋げられたサブプロパティの階層シーケンスなど)。 例: "employee.children.firstName"

@@ -36,7 +36,7 @@ displayed_sidebar: docs
 - [**Formula**](../../commands/formula) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects)
 - または以下の2つのプロパティを格納しているオブジェクト:
 
-| **プロパティ** | **型**  | **Description**                                                                                                                                                        |
+| **プロパティ** | **型**  | **説明**                                                                                                                                                                 |
 | --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                  |
 | formula   | Object | [**Formula**](../../commands/formula) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects) |
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 | wk prepend | Integer | 1 | コンテンツをターゲットの始めに挿入する  |
 | wk replace | Integer | 0 | ターゲットのコンテンツを置き換える    |
 
-- *targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいづれか一つを渡すことで挿入された*formula* 引数のフォーミュラが結果のレンジに含まれるかどうかを指定することができます:
+- *targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいずれか一つを渡すことで挿入された*formula* 引数のフォーミュラが結果のレンジに含まれるかどうかを指定することができます:
 
 | 定数                    | 型       | 値 | 説明                                                |
 | --------------------- | ------- | - | ------------------------------------------------- |

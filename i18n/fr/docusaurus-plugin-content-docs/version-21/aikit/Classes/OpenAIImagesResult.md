@@ -22,11 +22,11 @@ title: OpenAIImagesResult
 
 **saveImagesToDisk**(*folder* : 4D.Folder; *prefix* : Text) : Boolean
 
-| Paramètres | Type                      | Description                                                                     |
-| ---------- | ------------------------- | ------------------------------------------------------------------------------- |
-| *folder*   | 4D.Folder | Dossier dans lequel les images seront enregistrées.             |
-| *prefix*   | Text                      | Préfixe des noms des fichiers d'images enregistrés.             |
-| Résultat   | Boolean                   | Retourne `True` si les images ont été sauvegardées avec succès. |
+| Paramètres              | Type                      | Description                                                                     |
+| ----------------------- | ------------------------- | ------------------------------------------------------------------------------- |
+| *folder*                | 4D.Folder | Dossier dans lequel les images seront enregistrées.             |
+| *prefix*                | Text                      | Préfixe des noms des fichiers d'images enregistrés.             |
+| Résultat de la fonction | Boolean                   | Retourne `True` si les images ont été sauvegardées avec succès. |
 
 Enregistre les images sur disque dans le dossier spécifié.
 

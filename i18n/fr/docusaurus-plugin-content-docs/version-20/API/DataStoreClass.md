@@ -1116,7 +1116,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 #### Description
 
-La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->La fonction `startRequestLog()`<!-- END REF -->. Elle est conçue à des fins de débogage dans les configurations client/serveur.
+La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->démarre l'enregistrement des requêtes ORDA côté client ou côté serveur<!-- END REF -->. Elle est conçue à des fins de débogage dans les configurations client/serveur.
 
 :::info
 
@@ -1263,28 +1263,11 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
  End if
  ...
  ...
- var $connect; $status : Object
- var $person : cs.PersonsEntity
- var $ds : 4D.DataStoreImplementation
- var $choice : Text
- var $error : Boolean
-
- Case of
-    :($choice="local")
-       $ds:=ds
-    :($choice="remote")
-       $connect:=New object("hostname";"111.222.3.4:8044")
-       $ds:=Open datastore($connect;"myRemoteDS")
- End case
-
- $ds.startTransaction()
- $person:=$ds.Persons.query("lastname=:1";"Peters").first()
-
- If($person#Null)
-    $person.lastname:="Smith"
-    $status:=$person.save()
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
  End if
- ...
 ```
 
 <!-- END REF -->
@@ -1315,7 +1298,7 @@ Paramètre|Type||Description|
 
 #### Description
 
-La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->La fonction `stopRequestLog()`<!-- END REF -->.
+La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stoppe toute journalisation des requêtes ORDA sur la machine d'appel (client ou serveur)<!-- END REF -->.
 
 Cela ferme en fait le document ouvert sur le disque. Côté client, si le journal a été démarré en mémoire, il est arrêté.
 

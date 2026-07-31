@@ -36,10 +36,10 @@ Cette méthode crée un nouvel assistant de conversation avec l'invite système 
 
 **prompt**(*prompt* : Variant) : OpenAIChatCompletionsResult
 
-| Paramètres | Type                                                          | Description                                                                                                                                                                                   |
-| ---------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *prompt*   | Text or [OpenAIMessage](OpenAIMessage.md)                     | The text prompt to send to OpenAI chat, or an OpenAIMessage object for more complex messages (e.g., with images or files). |
-| Résultat   | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                                                                                                                                         |
+| Paramètres              | Type                                                          | Description                                                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *prompt*                | Text or [OpenAIMessage](OpenAIMessage.md)                     | The text prompt to send to OpenAI chat, or an OpenAIMessage object for more complex messages (e.g., with images or files). |
+| Résultat de la fonction | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                                                                                                                                         |
 
 Envoie une invite utilisateur au modèle de conversation et retourne la réponse générée. You can pass either a simple text string or an [OpenAIMessage](OpenAIMessage.md) object for more advanced scenarios like including images or files.
 

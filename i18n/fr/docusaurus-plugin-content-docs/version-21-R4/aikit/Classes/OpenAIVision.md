@@ -13,10 +13,10 @@ Assistance pour les questions de vision.
 
 \**create*(*imageURL* : Text) : OpenAIVisionHelper
 
-| Paramètres | Type                                        | Description                                                    |
-| ---------- | ------------------------------------------- | -------------------------------------------------------------- |
-| *imageURL* | Text                                        | L'URL de l'image à analyser.                   |
-| Résultat   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
+| Paramètres              | Type                                        | Description                                                    |
+| ----------------------- | ------------------------------------------- | -------------------------------------------------------------- |
+| *imageURL*              | Text                                        | L'URL de l'image à analyser.                   |
+| Résultat de la fonction | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
 
 #### Exemple d'utilisation
 
@@ -29,10 +29,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 \**fromFile*(*imageFile* : 4D.File) : OpenAIVisionHelper
 
-| Paramètres  | Type                                        | Description                                                    |
-| ----------- | ------------------------------------------- | -------------------------------------------------------------- |
-| *imageFile* | 4D.File                     | Le fichier image à analyser.                   |
-| Résultat    | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
+| Paramètres              | Type                                        | Description                                                    |
+| ----------------------- | ------------------------------------------- | -------------------------------------------------------------- |
+| *imageFile*             | 4D.File                     | Le fichier image à analyser.                   |
+| Résultat de la fonction | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
 
 #### Exemple d'utilisation
 
@@ -45,10 +45,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 \**fromPicture*(*image* : Picture) : OpenAIVisionHelper
 
-| Paramètres | Type                                        | Description                                                    |
-| ---------- | ------------------------------------------- | -------------------------------------------------------------- |
-| *image*    | Picture                                     | L'image à analyser.                            |
-| Résultat   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
+| Paramètres              | Type                                        | Description                                                    |
+| ----------------------- | ------------------------------------------- | -------------------------------------------------------------- |
+| *image*                 | Picture                                     | L'image à analyser.                            |
+| Résultat de la fonction | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Une instance d'aide pour l'analyse de l'image. |
 
 #### Exemple d'utilisation
 

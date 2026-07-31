@@ -86,7 +86,7 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier `Compiled Database
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, 4D Volume Desktop (applications fusionnées) et 4D.
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, 4D Volume Desktop (applications fusionnées) et 4D.
 
 > Lors de la génération de fichiers .4dz, 4D utilise par défaut un format zip **standard**. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. Si vous ne souhaitez pas utiliser ce format standard, ajoutez la clé XML `UseStandardZipFormat` avec la valeur `False` dans votre fichier [`buildApp.4DSettings`](#buildapp4dsettings) (pour plus d'informations, voir le manuel [4D XML Keys Backup](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
@@ -332,12 +332,12 @@ Vous pouvez cocher l'option **Permettre la mise à jour automatique...** pour le
 
 Pour cela, vous devez cliquer sur le bouton **[...]** et désigner l'emplacement sur votre disque du fichier à utiliser pour la mise à jour. Le fichier à sélectionner dépend de la plate-forme courante du serveur :
 
-| Plateforme du serveur courant | Fichier requis                                               | Détails                                                                                                                                                                                                                                                                                        |
-| ----------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | By default, you can select the `4D Volume Desktop` application for Windows. However, **it is recommended** to select a `.4darchive` file previously built on Windows for proper icon management and to preserve a signed .exe after updates. To do so, press **Shift** while clicking on [...] |
-| Windows                       | macOS client update archive                                  | Sélectionnez un fichier `.4darchive` signé, précédemment créé sur macOS                                                                                                                                                                                                                        |
+| Plateforme du serveur courant | Fichier requis                                               | Détails                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Par défaut, vous pouvez sélectionner l'application `4D Volume Desktop` pour Windows. Cependant, **il est recommandé** de sélectionner un fichier `.4darchive` précédemment compilé sous Windows pour une gestion correcte des icônes et pour préserver un .exe signé après les mises à jour. Pour cela, maintenez la touche **Maj** enfoncée tout en cliquant sur [...] |
+| Windows                       | macOS client update archive                                  | Sélectionnez un fichier `.4darchive` signé, précédemment créé sur macOS                                                                                                                                                                                                                                                                                                 |
 
-You can build a specific `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
+Vous pouvez construire un fichier `.4darchive` spécifique pour la plate-forme concurrente en sélectionnant uniquement [**Construire application cliente**](#build-client-application) et l'option [**Permettre la mise à jour automatique...**](#copie-des-applications-clientes-dans-lapplication-serveur) adéquate.
 
 #### Comment proposer une mise à jour ?
 
@@ -406,7 +406,7 @@ Des éléments doivent être installés :
 
 4D permet d'intégrer une structure compilée dans une application cliente. Cette fonctionnalité peut être utilisée, par exemple, pour fournir aux utilisateurs une application "portail" donnant accès aux différentes applications serveur, via la commande `OPEN DATABASE` exécutant un fichier `.4dlink`.
 
-Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Dans le fichier *buildApp.4DSettings* de l'application client-serveur, utilisez la ou les clés xml suivantes pour indiquer le chemin du dossier contenant l'application compilée monoposte :
+Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Lorsque l'une de ces clés est présente, le processus de génération de l'application cliente génère une application monoposte : la structure compilée, au lieu du fichier *EnginedServer.4Dlink*, est placée dans le dossier "Database".
 
 * Si un dossier de données par défaut existe dans l'application monoposte, une licence est intégrée.
 * Si aucun dossier de données par défaut n'existe dans l'application monoposte, celle-ci sera exécutée sans fichier de données et sans licence.

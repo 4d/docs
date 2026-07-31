@@ -48,7 +48,7 @@ title: プロセスページ
 
 プロセスタイプはアイコンで識別できます。 アイコンの色や形に対応するプロセスタイプは以下のとおりです:
 
-| icon                                       | type                                                                                                                       |
+| アイコン                                       | タイプ                                                                                                                        |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                                                               |
 | ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                                                                   |
@@ -79,7 +79,7 @@ title: プロセスページ
 
 :::note
 
-Similar icons and process types are used in the [Process page of the Runtime Explorer](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.en.html).
+同様のアイコンとプロセスタイプは、[ランタイムエクスプローラーのプロセスページ](https://doc.4d.com/4Dv21/4D/21/Process-page.300-7676748.ja.html) でも使用されています。
 
 :::
 

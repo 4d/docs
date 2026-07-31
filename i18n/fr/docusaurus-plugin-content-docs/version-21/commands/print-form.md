@@ -10,14 +10,14 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type         |                             | Description                                                                                                                                                                                           |
-| ---------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Table        | &#8594; | Table du formulaire, ou table par défaut si omis                                                                                                                                                      |
-| form       | Text, Object | &#8594; | Nom (chaîne) du formulaire, ou chemin POSIX (chaîne) vers un fichier .json décrivant le formulaire, ou objet décrivant le formulaire à imprimer |
-| formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                                      |
-| areaStart  | Integer      | &#8594; | Marqueur d'impression ou zone de démarrage (si areaEnd est spécifié)                                                                                                               |
-| areaEnd    | Integer      | &#8594; | Zone de fin (si areaStart est spécifié)                                                                                                                                            |
-| Résultat   | Integer      | &#8592; | Hauteur de la section imprimée                                                                                                                                                                        |
+| Paramètres              | Type         |                             | Description                                                                                                                                                                                           |
+| ----------------------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable                  | Table        | &#8594; | Table du formulaire, ou table par défaut si omis                                                                                                                                                      |
+| form                    | Text, Object | &#8594; | Nom (chaîne) du formulaire, ou chemin POSIX (chaîne) vers un fichier .json décrivant le formulaire, ou objet décrivant le formulaire à imprimer |
+| formData                | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                                      |
+| areaStart               | Integer      | &#8594; | Marqueur d'impression ou zone de démarrage (si areaEnd est spécifié)                                                                                                               |
+| areaEnd                 | Integer      | &#8594; | Zone de fin (si areaStart est spécifié)                                                                                                                                            |
+| Résultat de la fonction | Integer      | &#8592; | Hauteur de la section imprimée                                                                                                                                                                        |
 
 </div>
 <!-- END REF-->

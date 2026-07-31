@@ -78,7 +78,7 @@ Abrir um ficheiro de pacote em macOS:
 --args ~/Documents/myDB.4dbase
 ```
 
-Abrir um ficheiro de projecto e um ficheiro de dados:
+Abrir um ficheiro de projecto:
 
 - macOS:
 
@@ -92,7 +92,7 @@ Abrir um ficheiro de projecto e um ficheiro de dados:
 %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
 
-Abrir um ficheiro de projecto:
+Abrir um ficheiro de projecto e um ficheiro de dados:
 
 - macOS:
 

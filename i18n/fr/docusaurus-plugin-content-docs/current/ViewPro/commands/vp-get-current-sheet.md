@@ -11,10 +11,10 @@ title: VP Get current sheet
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                             |
-| ---------- | ------- | --------------------------- | --------------------------------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
-| Résultat   | Integer | <- | Indice de la feuille courante           |
+| Paramètres              | Type    |                             | Description                             |
+| ----------------------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName              | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| Résultat de la fonction | Integer | <- | Indice de la feuille courante           |
 
 </div>
 <!-- END REF -->

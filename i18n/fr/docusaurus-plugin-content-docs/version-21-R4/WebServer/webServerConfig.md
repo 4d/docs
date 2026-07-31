@@ -629,6 +629,6 @@ Deux options permettent de définir le mode de fonctionnement des connexions per
 - **Nombre de requêtes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises lors d'une connexion persistante. Limiter le nombre de requêtes par connexion permet d'éviter la saturation du serveur, provoquée par un trop grand nombre de requêtes entrantes (technique utilisée par les pirates informatiques).<p>
   La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le serveur Web 4D.</p>
 
-- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Une fois cette période terminée, le serveur ferme la connexion.<p>
+- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web.
   Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
 

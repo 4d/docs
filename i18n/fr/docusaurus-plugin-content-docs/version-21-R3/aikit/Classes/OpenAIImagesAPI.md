@@ -15,11 +15,11 @@ https://developers.openai.com/api/reference/resources/images
 
 **generate**(*prompt* : Text; *parameters* : OpenAIImageParameters) : OpenAIImagesResult
 
-| Paramètres   | Type                                              | Description                                                      |
-| ------------ | ------------------------------------------------- | ---------------------------------------------------------------- |
-| *prompt*     | Text                                              | L'invite à utiliser pour la génération d'image.  |
-| *parameters* | [OpenAIImageParameters](OpenAIImageParameters.md) | Paramètres pour la génération d'images.          |
-| Résultat     | [OpenAIImagesResult](OpenAIImagesResult.md)       | Le résultat contenant la ou les images générées. |
+| Paramètres              | Type                                              | Description                                                      |
+| ----------------------- | ------------------------------------------------- | ---------------------------------------------------------------- |
+| *prompt*                | Text                                              | L'invite à utiliser pour la génération d'image.  |
+| *parameters*            | [OpenAIImageParameters](OpenAIImageParameters.md) | Paramètres pour la génération d'images.          |
+| Résultat de la fonction | [OpenAIImagesResult](OpenAIImagesResult.md)       | Le résultat contenant la ou les images générées. |
 
 Crée une image à partir d'une invite.
 

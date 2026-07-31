@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type |                             | Description                             |
-| ---------- | ---- | --------------------------- | --------------------------------------- |
-| Résultat   | Text | &#8592; | Chemin complet du fichier journal fermé |
+| Paramètres              | Type |                             | Description                             |
+| ----------------------- | ---- | --------------------------- | --------------------------------------- |
+| Résultat de la fonction | Text | &#8592; | Chemin complet du fichier journal fermé |
 
 </div>
 <!-- END REF-->

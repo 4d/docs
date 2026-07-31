@@ -20,7 +20,7 @@ Los comandos [`MAIL Convert from MIME`](#mail-convert-from-mime) y [`MAIL Conver
 
 Los objetos Email ofrecen las siguientes propiedades:
 
-> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the Email object.
+> El formato de los objetos Email de 4D sigue la [especificación JMAP](https://jmap.io/spec/rfc8621/).
 
 |                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -477,7 +477,7 @@ $status:=$transporter.send($email)
 El comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convierte un objeto de correo electrónico en texto MIME<!-- END REF -->. Este comando es llamado internamente por [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) para formatear el objeto de correo electrónico antes de enviarlo. Se puede utilizar para analizar el formato MIME del objeto.
 
 En *mail*, pase el contenido y los detalles de la estructura del correo electrónico a convertir. Esto incluye información como las direcciones de correo electrónico (remitente y destinatario(s)), el propio mensaje y el tipo de visualización del mensaje.
-> 4D follows the [JMAP specification](https://jmap.io/spec/rfc8621/) to format the email object.
+> El formato de los objetos email de 4D sigue la [especificación JMAP](https://jmap.io/spec/rfc8621/).
 
 En *options*, puede configurar la codificación y el charset del mail. Las siguientes propiedades están disponibles:
 

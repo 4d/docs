@@ -15,12 +15,12 @@ title: OpenAIProviders
 
 このクラスを使用すると、以下の様な方法でマルチプロバイダーのサポートを可能にします:
 
-- Loading provider configurations from a single JSON file
-- Loading named model aliases that map to providers and model IDs
-- Resolving `provider:model` syntax to full API configurations
-- Resolving named model aliases by bare name to full provider + model configurations
+- 単一のJSON ファイルからプロバイダー設定をロードする
+- プロバイダーやモデルID にマップされる、名前付けされたモデルをロードする
+- `provider:model` シンタックスを完全なAPI 設定へと解決する
+- 単純に名前だけで名前付けされたモデルエイリアスを完全なプロバイダー + モデル設定に解決する
 
-The `OpenAI` class automatically loads provider configurations when instantiated.
+`OpenAI` クラスはインスタンス化された際に自動的にプロバイダー設定をロードします。
 
 ## コンストラクター
 
@@ -28,38 +28,38 @@ The `OpenAI` class automatically loads provider configurations when instantiated
 var $providers := cs.AIKit.OpenAIProviders.new()
 ```
 
-Creates a new instance that loads provider configuration from the `AIProviders.json` file. See [Configuration Files](../provider-model-aliases.md#configuration-files) in the Provider Model Aliases documentation for details on file locations and format.
+`AIProviders.json` ファイルからプロバイダー設定をロードする、新しいインスタンスを作成します。 ファイルの場所とフォーマットについての詳細に関しては、プロバイダーエイリアスのドキュメンテーション内の[設定ファイル](../provider-model-aliases.md#設定ファイル) の章を参照してください。
 
-**Important:**
+**重要:**
 
-- Only the first existing file is loaded. There is no merging of multiple files.
-- The configuration is read once at instantiation time. If the `AIProviders.json` file is modified afterward, those changes will not be reflected in the existing instance. You must create a new instance of `OpenAIProviders` to reload the updated configuration.
+- 最初の既存ファイルのみがロードされます。 複数のファイルが結合されることはありません。
+- 設定はインスタンス化時に一度だけ読み込まれます。 `AIProviders.json` ファイルがインスタンス化後に変更された場合、その変更は既存のインスタンスには反映されません。 更新された設定をリロードするためには、`OpenAIProviders` のインスタンスを新しく作成する必要があります。
 
 ## 効果
 
-### Integration with OpenAI Class
+### OpenAIクラスとの統合
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use model aliases with provider:model syntax
+// provider:model シンタックスのモデルエイリアスを使用する
 var $result := $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
 var $result := $client.chat.completions.create($messages; {model: "local:llama3"})
 ```
 
-### Direct Provider Access
+### プロバイダーへの直接アクセス
 
 ```4d
 var $providers := cs.AIKit.OpenAIProviders.new()
 
-// Get a specific provider configuration
+// 特定のプロバイダー設定を取得
 var $config := $providers.get("openai")
-// Returns: {baseURL: "...", apiKey: "...", modelAliases: [...], ...} or Null
+// {baseURL: "...", apiKey: "...", modelAliases: [...], ...} あるいは Null を返す
 
-// Get all provider names
+// 全てのプロバイダー名を取得
 var $names := $providers.list()
-// Returns: ["openai", "anthropic", "mistral", "local"]
+// ["openai", "anthropic", "mistral", "local"] を返す
 ```
 
 ## 関数
@@ -68,21 +68,21 @@ var $names := $providers.list()
 
 **get**(*name* : Text) : Object
 
-Get a provider configuration by name.
+名前で指定してプロバイダー設定を取得します。
 
-| 引数   | 型      | 説明                                                    |
-| ---- | ------ | ----------------------------------------------------- |
-| *名称* | Text   | The provider name                                     |
-| 戻り値  | Object | Provider configuration object, or `Null` if not found |
+| 引数     | 型      | 説明                                     |
+| ------ | ------ | -------------------------------------- |
+| *name* | Text   | プロバイダー名                                |
+| 戻り値    | Object | プロバイダー設定オブジェクト、あるいは見つからなかった場合には `Null` |
 
 #### 例題
 
 ```4d
 var $config := $providers.get("openai")
 If ($config # Null)
-    // Use $config.baseURL, $config.apiKey, etc.
+    // $config.baseURL、 $config.apiKey、 などを使用
 
-    // We could build a client with it
+    // それを使用してクライアントをビルド可能
     var $client:=cs.AIKit.OpenAI.new($config)
 End if
 ```
@@ -91,17 +91,17 @@ End if
 
 **list**() : Collection
 
-Get all provider names.
+全てのプロバイダー名を取得します。
 
-| 引数  | 型          | 説明                           |
-| --- | ---------- | ---------------------------- |
-| 戻り値 | Collection | Collection of provider names |
+| 引数  | 型          | 説明             |
+| --- | ---------- | -------------- |
+| 戻り値 | Collection | プロバイダー名のコレクション |
 
 #### 例題
 
 ```4d
 var $names := $providers.list()
-// Returns: ["openai", "anthropic", ...]
+// Returns: ["openai", "anthropic", ...] を返します
 
 For each ($name; $names)
     var $config := $providers.get($name)
@@ -112,25 +112,25 @@ End for each
 
 **modelAliases**() : Collection
 
-Get all configured model aliases.
+設定されたモデルエイリアスを全て取得します。
 
-| 引数  | 型          | 説明                                |
-| --- | ---------- | --------------------------------- |
-| 戻り値 | Collection | Collection of model alias objects |
+| 引数  | 型          | 説明                    |
+| --- | ---------- | --------------------- |
+| 戻り値 | Collection | モデルエイリアスオブジェクトのコレクション |
 
-Each object in the collection contains:
+コレクションの各オブジェクトは以下のプロパティを格納しています:
 
-| プロパティ   | 型    | 説明                                |
-| ------- | ---- | --------------------------------- |
-| `名称`    | Text | Model alias name                  |
-| `プロバイダ` | Text | Provider name                     |
-| `model` | Text | Model ID to use with the provider |
+| プロパティ      | 型    | 説明                  |
+| ---------- | ---- | ------------------- |
+| `name`     | Text | モデルエイリアス名           |
+| `provider` | Text | プロバイダー名             |
+| `model`    | Text | プロバイダーに対して使用するモデルID |
 
 #### 例題
 
 ```4d
 var $models := $providers.modelAliases()
-// Returns: [{name: "my-gpt", provider: "openai", model: "gpt-5.1"}, ...]
+// [{name: "my-gpt", provider: "openai", model: "gpt-5.1"}, ...] を返します
 
 For each ($model; $models)
     // $m.name, $m.provider, $m.model
@@ -139,47 +139,47 @@ End for each
 
 ## モデル解決
 
-Two syntaxes are supported for model resolution:
+モデル解決には二つのシンタックスがサポートされています:
 
-### Provider alias (`provider:model`)
+### プロバイダーエイリアス(`provider:model`)
 
-Specify the provider and model name directly:
+プロバイダーとモデル名を直接指定します:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 $client.chat.completions.create($messages; {model: "openai:gpt-5.1"})
 ```
 
-This is resolved internally to:
+これは内部的には以下の様に解決されます:
 
-1. Split `"openai:gpt-5.1"` into provider=`"openai"` and model=`"gpt-5.1"`
-2. Look up the `"openai"` provider configuration
-3. Extract `baseURL` and `apiKey`
-4. Make the API request using the resolved configuration
+1. `"openai:gpt-5.1"` を provider=`"openai"` および model=`"gpt-5.1"` へと分解します
+2. `"openai"` プロバイダー設定を検索します
+3. `baseURL` と `apiKey`を取得します
+4. 解決された設定を使用してAPI リクエストを作成します
 
 **例題:**
 
-- `"openai:gpt-5.1"` → Use OpenAI provider with gpt-5.1 model
-- `"anthropic:claude-3-opus"` → Use Anthropic provider with claude-3-opus
-- `"local:llama3"` → Use local provider with llama3 model
+- `"openai:gpt-5.1"` → OpenAI プロバイダーのgpt-5.1 モデルを使用せよ
+- `"anthropic:claude-3-opus"` → Anthropic プロバイダーのclaude-3-opus を使用せよ
+- `"local:llama3"` → local プロバイダーのllama3 モデルを使用せよ
 
-### Model alias (bare name)
+### モデルエイリアス(単に名前)
 
-Use a named model by its bare name from the `models` section of the configuration:
+設定のセクションから単に名前だけを使用して名前付きモデルを指定:
 
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 $client.chat.completions.create($messages; {model: "my-gpt"})
 ```
 
-This is resolved internally to:
+これは内部的には以下の様に解決されます:
 
-1. Look up `"my-gpt"` in the `models` configuration
-2. Find its `provider` (e.g., `"openai"`) and `model` (e.g., `"gpt-5.1"`)
-3. Resolve the provider to get `baseURL` and `apiKey`
-4. Make the API request using the resolved configuration
+1. `"my-gpt"` を`models` 設定内で検索します
+2. その`provider` (例: `"openai"`) および`model` (例: `"gpt-5.1"`) を探します
+3. プロバイダーを解決して、`baseURL` および `apiKey` を取得します
+4. 解決された設定を使用してAPI リクエストを作成します
 
 **例題:**
 
-- `"my-gpt"` → Use the model alias "my-gpt" (resolves to its configured provider and model)
-- `"my-embedding"` → Use the model alias "my-embedding" for embedding operations
+- `"my-gpt"` → モデルエイリアス "my-gpt" を使用(それに設定されたプロバイダーとモデルへと解決します)
+- `"my-embedding"` → 埋め込みの操作に "my-embedding" のモデルエイリアスを使用します

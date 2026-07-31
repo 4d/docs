@@ -45,6 +45,12 @@ The standard Open dialog appears.
 	* *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
 	* *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
+:::note
+
+You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
+
+:::
+
 ### Options
 
 In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
@@ -67,6 +73,12 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
   * Set the **At startup** general preference to **Open last used project**.
 
 * using a `.4DLink` file.
+
+:::note
+
+On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).  
+
+:::
 
 ### Opening a Project with a 4DLink file
 

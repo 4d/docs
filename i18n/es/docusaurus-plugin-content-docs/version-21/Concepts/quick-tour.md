@@ -129,7 +129,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Un método puede devolver un único valor en un parámetro, que debe ser declarado. Cuando se llama a un método, sólo hay que escribir su nombre: Los parámetros están disponibles directamente en el método llamado si se han declarado.
+Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles directamente en el método llamado si se han declarado. Un método puede devolver un único valor en un parámetro, que debe ser declarado. Cuando se llama a un método, sólo hay que escribir su nombre:
 
 ```4d
 $myText:="hello"

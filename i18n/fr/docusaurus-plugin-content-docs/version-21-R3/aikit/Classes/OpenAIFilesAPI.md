@@ -26,12 +26,12 @@ Téléverser un fichier qui peut être utilisé par différents points de termin
 
 **Endpoint:** `POST https://api.openai.com/v1/files`
 
-| Paramètres   | Type                                                                                                                                             | Description                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `file`       | [4D.File](https://developer.4d.com/docs/API/FileClass) ou [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | L'objet Fichier ou Blob (et non nom du fichier) à téléverser. |
-| `purpose`    | Text                                                                                                                                             | **Obligatoire.** L'objectif visé du fichier téléversé.           |
-| `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Paramètres optionnels incluant la politique d'expiration.                        |
-| Résultat     | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | Le résultat du fichier                                                                           |
+| Paramètres              | Type                                                                                                                                             | Description                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `file`                  | [4D.File](https://developer.4d.com/docs/API/FileClass) ou [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | L'objet Fichier ou Blob (et non nom du fichier) à téléverser. |
+| `purpose`               | Text                                                                                                                                             | **Obligatoire.** L'objectif visé du fichier téléversé.           |
+| `parameters`            | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Paramètres optionnels incluant la politique d'expiration.                        |
+| Résultat de la fonction | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | Le résultat du fichier                                                                           |
 
 **Erreur:** Génère une erreur si `file` n'est pas un 4D.File ou un 4D.Blob, ou si `purpose` est vide.
 
@@ -110,11 +110,11 @@ Retourne des informations sur un fichier spécifique.
 
 **Endpoint:** `GET https://api.openai.com/v1/files/{file_id}`
 
-| Paramètres   | Type                                    | Description                                                                   |
-| ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
-| *fileId*     | Text                                    | **Obligatoire.** L'ID du fichier à récupérer. |
-| *parameters* | [OpenAIParameters](OpenAIParameters.md) | Paramètres optionnels pour la requête.                        |
-| Résultat     | [OpenAIFileResult](OpenAIFileResult.md) | Le résultat du fichier                                                        |
+| Paramètres              | Type                                    | Description                                                                   |
+| ----------------------- | --------------------------------------- | ----------------------------------------------------------------------------- |
+| *fileId*                | Text                                    | **Obligatoire.** L'ID du fichier à récupérer. |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md) | Paramètres optionnels pour la requête.                        |
+| Résultat de la fonction | [OpenAIFileResult](OpenAIFileResult.md) | Le résultat du fichier                                                        |
 
 **Erreur:** Génère une erreur si `fileId` est vide.
 
@@ -139,10 +139,10 @@ Renvoie une liste de fichiers appartenant à l'organisation de l'utilisateur.
 
 **Endpoint:** `GET https://api.openai.com/v1/files`
 
-| Paramètres   | Type                                                    | Description                                                              |
-| ------------ | ------------------------------------------------------- | ------------------------------------------------------------------------ |
-| *parameters* | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Paramètres optionnels pour le filtrage et la pagination. |
-| Résultat     | [OpenAIFileListResult](OpenAIFileListResult.md)         | Liste des fichiers                                                       |
+| Paramètres              | Type                                                    | Description                                                              |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------ |
+| *parameters*            | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Paramètres optionnels pour le filtrage et la pagination. |
+| Résultat de la fonction | [OpenAIFileListResult](OpenAIFileListResult.md)         | Liste des fichiers                                                       |
 
 #### Exemple
 
@@ -172,11 +172,11 @@ Supprime un fichier.
 
 **Endpoint:** `DELETE https://api.openai.com/v1/files/{file_id}`
 
-| Paramètres   | Type                                                  | Description                                                                   |
-| ------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------- |
-| *fileId*     | Text                                                  | **Obligatoire.** L'ID du fichier à supprimer. |
-| *parameters* | [OpenAIParameters](OpenAIParameters.md)               | Paramètres optionnels pour la requête.                        |
-| Résultat     | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | Le résultat de la suppression du fichier                                      |
+| Paramètres              | Type                                                  | Description                                                                   |
+| ----------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------- |
+| *fileId*                | Text                                                  | **Obligatoire.** L'ID du fichier à supprimer. |
+| *parameters*            | [OpenAIParameters](OpenAIParameters.md)               | Paramètres optionnels pour la requête.                        |
+| Résultat de la fonction | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | Le résultat de la suppression du fichier                                      |
 
 **Erreur:** Génère une erreur si `fileId` est vide.
 
