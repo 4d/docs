@@ -130,7 +130,7 @@ var $text : Text
 | 大きい | Undefined `>` string, Date, Time, number  | Boolean | a.undefinedProp `>` "abc"        | false |
 | 小さい | Undefined `<` string, Date, Time, number  | Boolean | a.undefinedProp `<` "abc"        | false |
 | 以上  | Undefined `>=` string, Date, Time, number | Boolean | a.undefinedProp `>=` "abc"       | false |
-| 以上  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"       | false |
+| 以下  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"       | false |
 
 *その他の値* は、未定義でも null でもない値を持つ任意の型の式です。
 

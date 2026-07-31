@@ -23,9 +23,9 @@ https://developers.openai.com/api/reference/resources/images
 
 **asBlob**() : 4D.Blob
 
-| Paramètres | Type                    | Description                                                                                                  |
-| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Résultat   | 4D.Blob | Convertit l'image générée au format blob sur la base de son URL ou du JSON encodé en base64. |
+| Paramètres              | Type                    | Description                                                                                                  |
+| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Résultat de la fonction | 4D.Blob | Convertit l'image générée au format blob sur la base de son URL ou du JSON encodé en base64. |
 
 #### Exemple d'utilisation
 
@@ -37,9 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-| Paramètres | Type    | Description                                                                |
-| ---------- | ------- | -------------------------------------------------------------------------- |
-| Résultat   | Picture | Crée un objet image à partir de l'image convertie en blob. |
+| Paramètres              | Type    | Description                                                                |
+| ----------------------- | ------- | -------------------------------------------------------------------------- |
+| Résultat de la fonction | Picture | Crée un objet image à partir de l'image convertie en blob. |
 
 #### Exemple d'utilisation
 
@@ -51,10 +51,10 @@ var $picture:=$image.asPicture()
 
 **saveToDisk**(*file* : 4D.File) : Boolean
 
-| Paramètres | Type                    | Description                                                               |
-| ---------- | ----------------------- | ------------------------------------------------------------------------- |
-| *file*     | 4D.File | L'objet File dans lequel l'image sera enregistrée.        |
-| Résultat   | Boolean                 | Retourne `True` si l'image a été sauvegardée avec succès. |
+| Paramètres              | Type                    | Description                                                               |
+| ----------------------- | ----------------------- | ------------------------------------------------------------------------- |
+| *file*                  | 4D.File | L'objet File dans lequel l'image sera enregistrée.        |
+| Résultat de la fonction | Boolean                 | Retourne `True` si l'image a été sauvegardée avec succès. |
 
 Enregistre l'image sur le disque, en essayant d'abord de la télécharger s'il s'agit d'une URL. Renvoie `False` s'il n'a pas été possible de récupérer les données de l'image.
 

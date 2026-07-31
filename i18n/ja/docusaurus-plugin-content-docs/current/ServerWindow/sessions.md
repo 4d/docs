@@ -15,7 +15,7 @@ You can also sort the list by clicking a column header. Click repeatedly to togg
 
 ![](../assets/en/Admin/server-sessions-sort-1.png)
 
-## List of Sessions
+## セッションの一覧
 
 Each row represents one active session.
 

@@ -403,7 +403,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 |引数|型||説明|
 |---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|コピー先フォルダ|
+|destinationFolder |4D.Folder |->|コピー先フォルダー|
 |newName|Text|->|コピーの新しい名前|
 |overwrite|Integer|->|既存の要素を上書きするためには `fk overwrite`|
 |戻り値|4D.Folder|<-|Copied file or folder|
@@ -514,7 +514,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 `.files()` 関数は、 <!-- REF #directory.files().Summary -->フォルダーに格納されている `File` オブジェクトのコレクションを返します<!-- END REF -->。
 > エイリアスまたはシンボリックリンクは解決されません。
 
-*options* 引数を省略した場合、デフォルトではフォルダーの第一階層にあるファイル (不可視ファイルを含む) のみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
 | 定数                    | 値 | 説明                                    |
 | --------------------- | - | ------------------------------------- |
@@ -614,7 +614,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 |引数|型||説明|
 |---|----|---|---|
-|options|Integer|->|フォルダリスト用のオプション|
+|options|Integer|->|フォルダーリスト用のオプション|
 |戻り値|Collection|<-|Collection of children folder objects|
 </div>
 <!-- END REF -->

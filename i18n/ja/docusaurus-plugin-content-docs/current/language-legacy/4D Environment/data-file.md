@@ -37,7 +37,7 @@ Windows上
 例えば、ボリュームG上の\\DOCS\\MyCDsに配置されたデータベースMyCDsを使って作業している場合、この関数はG:\\DOCS\\MyCDs\\MyCDs.4DDを返します（データベース作成時にデフォルトの場所と名前を使用した場合）。
 
 Macintosh上  
-例えば、ハードディスクMacintosh HD上のDocuments:MyCDsフォルダに配置されたデータベースを使って作業している場合、この関数はMacintosh HD:Documents:MyCDs:MyCDs.4DDを返します（データベース作成時にデフォルトの場所と名前を使用した場合）。
+例えば、ハードディスクMacintosh HD上のDocuments:MyCDsフォルダーに配置されたデータベースを使って作業している場合、この関数はMacintosh HD:Documents:MyCDs:MyCDs.4DDを返します（データベース作成時にデフォルトの場所と名前を使用した場合）。
 
 **警告:** リモートモードの4Dからこのコマンドを呼び出した場合、ロング名ではなくデータファイル名のみが返されます。
 

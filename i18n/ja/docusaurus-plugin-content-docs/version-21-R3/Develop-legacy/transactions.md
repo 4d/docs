@@ -11,7 +11,7 @@ Transactions are a series of related data modifications made to a database or da
 
 During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands/validate-transaction) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands/cancel-transaction) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
 
-4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands/transaction-level) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is cancelled, all the subtransactions are cancelled, regardless of their respective results.
+4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands/transaction-level) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is canceled, all the subtransactions are canceled, regardless of their respective results.
 
 4D includes a feature allowing you to [suspend and resume transactions](#suspending-transactions) within your 4D code. When a transaction is suspended, you can execute operations independently from the transaction itself and then resume the transaction to validate or cancel it as usual. 
 
@@ -140,7 +140,7 @@ Depending on your needs, you can customize your database, as shown in these exam
 
 ### Principle
 
-Suspending a transaction is useful when you need to perform, from within a transaction, certain operations that do not need to be executed under the control of this transaction. For example, imagine the case where a customer places an order, thus within a transaction, and also updates their address. Next the customer changes their mind and cancels the order. The transaction is cancelled, but you do not want the address change to be reverted. This is a typical example where suspending the transaction is useful. Three commands are used to suspend and resume transactions:
+Suspending a transaction is useful when you need to perform, from within a transaction, certain operations that do not need to be executed under the control of this transaction. For example, imagine the case where a customer places an order, thus within a transaction, and also updates their address. Next the customer changes their mind and cancels the order. The transaction is canceled, but you do not want the address change to be reverted. This is a typical example where suspending the transaction is useful. Three commands are used to suspend and resume transactions:
 
 - [`SUSPEND TRANSACTION`](../commands/suspend-transaction): pauses current transaction. Any updated or added records remain locked.
 - [`RESUME TRANSACTION`](../commands/resume-transaction): reactivates a suspended transaction.
@@ -202,7 +202,7 @@ These implementations are summarized in the following graphic:
 ![](../assets/en/Develop/transactions-schema1.png)
 
 
-*Values edited during transaction A (ID1 record gets Val11) are not available in a new transaction (B) created during the "suspended" period. Values edited during the "suspended" period (ID2 record gets Val22 and ID3 record gets Val33) are saved even after transaction A is cancelled.*
+*Values edited during transaction A (ID1 record gets Val11) are not available in a new transaction (B) created during the "suspended" period. Values edited during the "suspended" period (ID2 record gets Val22 and ID3 record gets Val33) are saved even after transaction A is canceled.*
 
 Specific features have been added to handle errors:
 

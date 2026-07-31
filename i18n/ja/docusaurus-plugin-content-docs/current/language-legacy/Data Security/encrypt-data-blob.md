@@ -48,7 +48,7 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 
 ## 例題 
 
-データベースのRESOURCES フォルダ内にあるテキストファイルを暗号化する場合を考えます:
+データベースのRESOURCES フォルダー内にあるテキストファイルを暗号化する場合を考えます:
 
 ```4d
  var $fileToEncrypt;$encryptedFile : 4D.File

@@ -9,7 +9,7 @@
     "message": "プロジェクトを開発する"
   },
   "homepage.sections.core-development.title": {
-    "message": "Project & IDE"
+    "message": "プロジェクト & IDE"
   },
   "homepage.sections.language.title": {
     "message": "4Dランゲージ"
@@ -30,13 +30,13 @@
     "message": "デバッガー"
   },
   "Settings": {
-    "message": "Settings"
+    "message": "設定"
   },
   "Preferences": {
     "message": "環境設定"
   },
   "homepage.administration.title": {
-    "message": "Server & Admin"
+    "message": "サーバー & 管理"
   },
   "4D Server Administration Window": {
     "message": "4D Server 管理ウィンドウ"
@@ -111,7 +111,7 @@
     "message": "クライアント/サーバー"
   },
   "Forms": {
-    "message": "Forms"
+    "message": "フォーム"
   },
   "Form Properties": {
     "message": "フォームプロパティ"
@@ -135,7 +135,7 @@
     "message": "アプリケーションビルド"
   },
   "homepage.sections.more.title": {
-    "message": "More docs"
+    "message": "その他のドキュメント"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
@@ -635,11 +635,11 @@
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View all authors",
+    "message": "すべての作成者を表示",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "この作成者による投稿はまだありません。",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -651,21 +651,21 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "下書きページ",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "このページは下書きです。開発環境でのみ表示され、本番ビルドからは除外されます。",
     "description": "The draft content banner message"
   },
   "4D AIKit": {
     "message": "4D AIKit"
   },
   "4D at a glance": {
-    "message": "4D at a glance"
+    "message": "4Dの概要"
   },
   "homepage.sections.ide.title": {
-    "message": "Project & IDE"
+    "message": "プロジェクト & IDE"
   },
   "Creating or opening a project": {
     "message": "プロジェクトの作成・開始"
@@ -674,13 +674,13 @@
     "message": "アーキテクチャー"
   },
   "Project Settings": {
-    "message": "Project Settings"
+    "message": "プロジェクト設定"
   },
   "Database structure": {
-    "message": "Database structure"
+    "message": "データベース・ストラクチャー"
   },
   "Code & Methods": {
-    "message": "Code & Methods"
+    "message": "コード & メソッド"
   },
   "Dependencies": {
     "message": "依存関係"
@@ -692,16 +692,16 @@
     "message": "アプリケーションビルダー"
   },
   "Application Preferences": {
-    "message": "Application Preferences"
+    "message": "環境設定"
   },
   "Concepts": {
     "message": "コンセプト"
   },
   "Commands by name": {
-    "message": "Commands by name"
+    "message": "コマンド(名前順)"
   },
   "Commands by theme": {
-    "message": "Commands by theme"
+    "message": "コマンド(テーマ別)"
   },
   "Classes": {
     "message": "クラス"
@@ -731,22 +731,22 @@
     "message": "ラベル"
   },
   "homepage.sections.administration.title": {
-    "message": "Server & Admin"
+    "message": "サーバー & 管理"
   },
   "4D Server Window": {
-    "message": "4D Server Window"
+    "message": "4D Server ウィンドウ"
   },
   "WebAdmin & Data Explorer": {
-    "message": "WebAdmin & Data Explorer"
+    "message": "WebAdmin & データエクスプローラー"
   },
   "TLS": {
     "message": "TLS"
   },
   "Log Files": {
-    "message": "Log Files"
+    "message": "ログファイル"
   },
   "Extending 4D applications": {
-    "message": "Extending 4D applications"
+    "message": "4D アプリケーションの拡張"
   },
   "4D QPDF": {
     "message": "4D QPDF"
@@ -755,22 +755,22 @@
     "message": "Build4D"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "システムモード",
     "description": "The name for the system color mode"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "ドロップダウンを展開する",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "ドロップダウンを折りたたむ",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "Sessions": {
     "message": "セッション"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(新しいタブで開く)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.SearchModal.searchBox.placeholderText": {
@@ -778,11 +778,11 @@
     "description": "The placeholder text for the main search input field"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAi": {
-    "message": "Ask another question...",
+    "message": "別の質問をする...",
     "description": "The placeholder text when in AI question mode"
   },
   "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
-    "message": "Answering...",
+    "message": "回答中...",
     "description": "The placeholder text for search box when AI is streaming an answer"
   },
   "theme.SearchModal.searchBox.enterKeyHint": {
@@ -798,35 +798,35 @@
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "キーワード検索に戻る",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "キーワード検索に戻る",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "最近の会話",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
-    "message": "Remove this conversation from history",
+    "message": "この会話を履歴から削除する",
     "description": "The title for remove recent conversation button"
   },
   "theme.SearchModal.resultsScreen.askAiPlaceholder": {
-    "message": "Ask AI: ",
+    "message": "AI に質問: ",
     "description": "The placeholder text for Ask AI input"
   },
   "theme.SearchModal.askAiScreen.disclaimerText": {
-    "message": "Answers are generated with AI which can make mistakes. Verify responses.",
+    "message": "回答はAIによって生成されており、誤りがある可能性があります。必ず内容を確認してください。",
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "関連情報",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {
-    "message": "Thinking...",
+    "message": "考え中……",
     "description": "The text when AI is thinking"
   },
   "theme.SearchModal.askAiScreen.copyButtonText": {
@@ -842,35 +842,35 @@
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "いいね",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "低評価",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
-    "message": "Thanks for your feedback!",
+    "message": "ご意見ありがとうございました！",
     "description": "The text for thanks for feedback"
   },
   "theme.SearchModal.askAiScreen.preToolCallText": {
-    "message": "Searching...",
+    "message": "検索中...",
     "description": "The text before tool call"
   },
   "theme.SearchModal.askAiScreen.duringToolCallText": {
-    "message": "Searching for ",
+    "message": "検索中：",
     "description": "The text during tool call"
   },
   "theme.SearchModal.askAiScreen.afterToolCallText": {
-    "message": "Searched for",
+    "message": "検索完了：",
     "description": "The text after tool call"
   },
   "theme.SearchModal.footer.submitQuestionText": {
-    "message": "Submit question",
+    "message": "質問を送信する",
     "description": "The submit question text for footer"
   },
   "theme.SearchModal.footer.backToSearchText": {
-    "message": "Back to search",
+    "message": "検索に戻る",
     "description": "The back to search text for footer"
   },
   "REST API": {
@@ -880,7 +880,7 @@
     "message": "4D Analyzer"
   },
   "theme.docs.versionDropdown.notAvailable": {
-    "message": "Page not available in this version\nOpening the default page instead",
+    "message": "このバージョンでは、このページは利用できません\n代わりにデフォルトのページが表示されます",
     "description": "Tooltip for version dropdown items where the current page does not exist"
   }
 }

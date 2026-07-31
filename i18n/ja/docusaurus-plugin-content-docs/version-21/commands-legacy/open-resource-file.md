@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open resource file.Summary-->**Open resource file**コマンドは、*resFileName*に渡した名前またはパス名を持つリソースファイルを開きます。<!-- END REF--> 
 
-ファイル名を渡す場合、そのファイルはデータベースのストラクチャファイルと同階層に配置されていなければなりません。他のフォルダ内に配置されているリソースを開くには、フルパス名を渡します。
+ファイル名を渡す場合、そのファイルはデータベースのストラクチャファイルと同階層に配置されていなければなりません。他のフォルダー内に配置されているリソースを開くには、フルパス名を渡します。
 
 *resFileName*に空の文字列を渡すと、ファイルを開くダイアログボックスが表示されます。このダイアログボックスでリソースファイルを選択し、開くことができます。ダイアログボックスを取り消すと、リソースファイルは開かれません。この場合、**Open resource file**はヌルのDocRefを返し、システム変数OKに0を設定します。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-Windows上で、以下の例はデータベースフォルダに配置された“MyPrefs.res”リソースファイルを開きます: 
+Windows上で、以下の例はデータベースフォルダーに配置された“MyPrefs.res”リソースファイルを開きます: 
 
 ```4d
  $vhResFile:=Open resource file("MyPrefs";"res ")
@@ -68,7 +68,7 @@ Macintosh上で、この例は“MyPrefs”ファイルを開きます。
 
 ## 例題 2 
 
-Windows上で、以下の例はデータベースフォルダに配置された“MyPrefs.rsr”リソースファイルを開きます: 
+Windows上で、以下の例はデータベースフォルダーに配置された“MyPrefs.rsr”リソースファイルを開きます: 
 
 ```4d
  $vhResFile:=Open resource file("MyPrefs";"rsr")

@@ -110,7 +110,7 @@ Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il es
 Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vous pouvez exécuter les actions suivantes :
 
 - ajouter, dupliquer, supprimer, modifier/sauvegarder les [méthodes et classes](../Project/code-overview.md)
-- preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
+- prévisualiser le code, afficher/modifier la [documentation](../Project/documentation.md), afficher/modifier les [propriétés des méthodes](../Project/project-method-properties.md),
 - exécuter des méthodes,
 - restaurer à partir de la corbeille ou vider la corbeille.
 

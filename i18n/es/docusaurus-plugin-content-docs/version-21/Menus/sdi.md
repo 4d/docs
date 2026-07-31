@@ -1,6 +1,6 @@
 ---
 id: sdi
-title: Mode SDI bajo Windows
+title: SDI mode on Windows
 ---
 
 En Windows, los desarrolladores 4D pueden probar y configurar sus aplicaciones fusionadas 4D para que funcionen como aplicaciones SDI (Single-Document Interface). En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
@@ -16,7 +16,7 @@ El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las
 El modo SDI sólo está disponible en los siguientes entornos de ejecución:
 
 - Windows
-- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
+- Aplicación 4D fusionada [monopuesto](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
 - [**Funcionalidad de prueba de la aplicación**](bars.md#previewing-menu-bars) disponible desde el menú **Ejecutar**.
 
 ## Activación del modo SDI
@@ -55,7 +55,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 
 ### Depurador
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
+Cuando se muestra en modo SDI, la [ventana del depurador](../Debugging/debugger.md) no contiene [botones de edición](../Debugging/debugger.md#tool-bar-buttons), porque cambiar al entorno de diseño requiere abortar la ejecución y reiniciar la aplicación en modo MDI.
 
 ### Salida automática
 

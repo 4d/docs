@@ -40,7 +40,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 
 #### Descripción
 
-Los atributos de las clases de datos son<!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
+Los atributos de las clases de datos son <!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 
@@ -279,7 +279,7 @@ Para cada objeto de *objectCol*:
   - Si se da la llave primaria (tal cual) y no existe, se crea la entidad
   - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
-> La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. En todos los demás casos, el valor de la propiedad "\_\_KEY" se ignora, el valor de la llave primaria debe pasarse "tal cual".
 
 **Entidades relacionadas**
 
@@ -466,7 +466,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 La función `.get()` <!-- REF #DataClassClass.get().Summary -->consulta la clase de datos para recuperar la entidad que coincide con el parámetro *primaryKey*<!-- END REF -->.
 
-En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto).
+En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). También puede asegurarse de que el valor de la llave primaria siempre se devuelva como Texto utilizando la función [`.getKey()`](EntityClass.md#getkey) con el parámetro `dk key as string`.
 
 Si no se encuentra ninguna entidad con *primaryKey*, se devuelve una entidad **Null**.
 
@@ -761,7 +761,7 @@ Los datos relativos a las entidades relacionadas se almacenan en la caché del o
 
 #### Ejemplo
 
-En el siguiente ejemplo, `$ds.Persons.all()` carga la primera entidad con todos sus atributos. A continuación, se activa el optimizado de la solicitud, de modo que sólo se cargan `firstname` y `address.city`.
+En el siguiente ejemplo, `$ds.Persons.all()` carga la primera entidad con todos sus atributos. A continuación, se activa la optimización de la consulta, de modo que sólo se cargan `firstname` y `address.city`.
 
 Tenga en cuenta que `address.city` se carga en la caché de la dataclass `Persons`.
 
@@ -826,7 +826,7 @@ El objeto entidad se crea en memoria y no se guarda en la base de datos hasta qu
 
 Todos los atributos de la entidad se inicializan con el valor **null**.
 
-> Los atributos se pueden inicializar con valores por defecto si se selecciona la opción **Traducir los NULL a valores vacíos** al nivel de la estructura de la base 4D.
+> Los atributos se pueden inicializar con valores por defecto si se selecciona la opción **Asignar valores NULL a valores en blanco** al nivel de la estructura de la base 4D.
 
 #### Ejemplo
 
@@ -873,7 +873,7 @@ La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary --
 
 > Para obtener información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades.
+Si desea crear una selección de entidades ordenada, pase el selector `dk keep ordered` en el parámetro *keepOrder*. Por defecto, si se omite este parámetro, o si se pasa el selector `dk non ordered`, el método crea una selección de entidades no ordenada. Las selecciones de entidades desordenadas son más rápidas pero no se puede confiar en las posiciones de las entidades. Para más información, consulte [Selecciones de entidades ordenadas frente a no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelection.length` devuelve 0). Este método permite construir gradualmente selecciones de entidades haciendo llamadas posteriores a la función [`add()`](EntitySelectionClass.md#add).
 
@@ -939,7 +939,7 @@ donde:
 
 - **attributePath**: ruta del atributo sobre el que se quiere ejecutar la búsqueda. Este parámetro puede ser un nombre simple (por ejemplo, "país") o cualquier ruta de atributo válida (por ejemplo, "país.nombre"). En el caso de una ruta de atributo cuyo tipo es `Collection`, se utiliza la notación `[]` para manejar todas las ocurrencias (por ejemplo `children[].age`).
 
-> \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
+> \*No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores de posición, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver **Uso de marcadores de posición** *a continuación*)
 
 - **formula**: una fórmula válida pasada como `Text` u `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
 
@@ -970,8 +970,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |                                    |
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |                                    |
 
-- **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20.
-  Tenga en cuenta que, en caso de discordancia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** en el tipo de datos de atributo siempre que sea posible, para una gestión más fácil de los valores procedentes de Internet.
+- Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá en 20.
   Al utilizar un valor constante, deben respetarse las siguientes reglas:
   - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
@@ -1011,7 +1010,7 @@ Puede utilizar paréntesis en la búsqueda para dar prioridad al cálculo. Por e
 
 ### Uso de marcadores de posición
 
-4D le permite utilizar marcadores de posición para los argumentos *attributePath*, *formula* y *value* en el parámetro *queryString*. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda. El valor de los marcadores se evalúa una vez al principio de la búsqueda; no se evalúa para cada elemento.
+4D le permite utilizar marcadores de posición para los argumentos *attributePath*, *formula* y *value* en el parámetro *queryString*. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda. El valor de los marcadores de posición se evalúa una sola vez al inicio de la consulta; no se evalúa para cada elemento.
 
 Se pueden utilizar dos tipos de marcadores de posición: **marcadores de posición indexados** y **marcadores de posición con nombre**:
 

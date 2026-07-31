@@ -1052,7 +1052,7 @@ Una función con la palabra clave `onHTTPGet` puede devolver cualquier valor de 
 
 :::info
 
-Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para beneficiarse de las propiedades y funciones para definir el encabezado, el cuerpo y el estado de la respuesta.
+Puede devolver un valor de la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para aprovechar las propiedades y funciones que permiten configurar el encabezado, el cuerpo y el estado de la respuesta.
 
 :::
 
@@ -1169,7 +1169,7 @@ End if
 
 ### Archivos de clase (class files)
 
-Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
+Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
 
 ### Crear las clases
 

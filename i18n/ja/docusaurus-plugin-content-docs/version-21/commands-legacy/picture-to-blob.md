@@ -50,7 +50,7 @@ Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg�
  var $BLOB : Blob
  var $path : Text
  
- $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+"Sunrise.psd" //Resources フォルダー内の画像フォルダにあるピクチャーを探す
+ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+"Sunrise.psd" //Resources フォルダー内の画像フォルダーにあるピクチャーを探す
  READ PICTURE FILE($path;$picture) //ピクチャーをピクチャー変数へと代入
  
  PICTURE TO BLOB($picture;$BLOB;".gif") //ピクチャーを".gif" フォーマットへと変換

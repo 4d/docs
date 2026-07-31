@@ -14,7 +14,7 @@ displayed_sidebar: docs
 - [ボタン](../FormObjects/button_overview.md) や [チェックボックス](../FormObjects/checkbox_overview.md)、[ポップアップ/ドロップダウンリスト](../FormObjects/dropdownList_Overview.md) などのフォームオブジェクトのアクションとして。アクションは、フォームエディターのプロパティリストで、または [OBJECT SET ACTION](../commands/object-set-action) コマンドを使用してフォームオブジェクトに割り当てることができます。
 - メニューコマンドのアクションとして。メニューエディターで割り当てるか ([メニューのアクションの指定](../Menus/properties.md) 参照)、または [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) コマンドを使用して割り当てることができます。
 - リスト項目のアクションとして (リストがポップアップ/ドロップダウンリストや階層ポップアップメニューに関連付けられている場合に使用)。リストエディターで割り当てるか ([リストの作成と変更](https://doc.4d.com/4Dv21/4D/21/Creating-and-modifying-lists.300-7676826.en.html) 参照)、または [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) コマンドを使用して割り当てることができます。
-- [INVOKE ACTION](../commands/invoke-action) および [Action info](../commands/ction-info) コマンドのパラメーターとして。
+- [INVOKE ACTION](../commands/invoke-action) および [Action info](../commands/action-info) コマンドのパラメーターとして。
 
 フォームオブジェクトやメニューコマンドには、標準アクションとメソッドの両方を割り当てることができます。この場合、標準アクションはメソッドの後に常に実行されます (`deleteRecord` アクションを除く。以下参照)。
 

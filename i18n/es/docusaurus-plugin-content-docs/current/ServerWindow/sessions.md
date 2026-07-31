@@ -1,123 +1,123 @@
 ---
 id: sessions
-title: Sessions Page
+title: Página Sesiones
 ---
 
-The **Sessions** page lists all active sessions connected to the server, including Client, Web, REST, and SOAP sessions.
+La página **Sesiones** muestra todas las sesiones activas conectadas al servidor, incluidas las sesiones de cliente, web, REST y SOAP.
 
 ![](../assets/en/Admin/server-sessions-1.png)
 
-The **Sessions** button indicates, in parentheses, the total number of active sessions (this number does not take into account any display filters applied to the window).
+El botón **Sesiones** indica, entre paréntesis, el número total de sesiones activas (esta cifra no tiene en cuenta los filtros de visualización aplicados a la ventana).
 
-The page contains a dynamic search area, filtering controls, and administration buttons. Puede modificar el orden de las columnas arrastrando y soltando sus áreas de encabezados.
+La página contiene un área de búsqueda dinámica, controles de filtrado y botones de administración. Puede modificar el orden de las columnas arrastrando y soltando sus áreas de encabezados.
 
-You can also sort the list by clicking a column header. Click repeatedly to toggle between ascending and descending order.
+También puede ordenar la lista haciendo clic en el encabezado de una columna. Haga clic repetidamente para alternar entre orden ascendente y descendente.
 
 ![](../assets/en/Admin/server-sessions-sort-1.png)
 
-## List of Sessions
+## Lista de sesiones
 
-Each row represents one active session.
+Cada fila representa una sesión activa.
 
-The list provides the following information:
+La lista ofrece la siguiente información:
 
-- Icon representing the type of session (Apple for macOS Client sessions, Windows for Windows Client sessions, globe for Web, REST, and SOAP sessions). And an additional visual indicator shows whether the session is authenticated.
-- **Origin**: Type of session (Client, Web, REST, or SOAP).
-- **User Name**: Name of the connected 4D user, or the alias defined using the [`SET USER ALIAS`](../commands/set-user-alias) command when applicable. For Web, REST, or SOAP sessions, no user name is displayed unless one has been associated with the session using the `userName` property of the [`setPrivileges()`](../API/SessionClass.md#setprivileges) function.
-- **Login Date**: Date and time when the session was established.
-- **CPU Time**: CPU time consumed by the session since it was created.
-- **Activity**: Percentage of server activity currently devoted to the session (dynamic value).
-- **Status**: Status of the session. Client sessions can be **Online**, **[Sleeping](../Desktop/clientServer.md#management-of-sleeping-client-sessions)**, or **[Unreachable](../Desktop/clientServer.md#management-of-unreachable-peer)**. Web, REST, and SOAP sessions always have the **Online** status.
+- Icono que representa el tipo de sesión (Apple para sesiones de cliente de macOS, Windows para sesiones de cliente de Windows y un globo terráqueo para sesiones web, REST y SOAP). Además, un indicador visual adicional muestra si la sesión está autenticada.
+- **Origen**: tipo de sesión (cliente, web, REST o SOAP).
+- **Nombre de usuario**: nombre del usuario 4D conectado o el alias definido mediante el comando [`SET USER ALIAS`](../commands/set-user-alias), cuando corresponda. En el caso de las sesiones web, REST o SOAP, no se muestra ningún nombre de usuario a menos que se haya asociado uno a la sesión mediante la propiedad `userName` de la función [`setPrivileges()`](../API/SessionClass.md#setprivileges).
+- **Fecha de inicio de sesión**: fecha y hora en las que se inició la sesión.
+- **Tiempo de CPU**: tiempo de CPU consumido por la sesión desde su creación.
+- **Actividad**: porcentaje de la actividad del servidor dedicada actualmente a la sesión (valor dinámico).
+- **Estado**: estado de la sesión. Las sesiones con los clientes pueden ser **en línea**, **[en reposo](../Desktop/clientServer.md#management-of-sleeping-client-sessions)** o **[inalcanzables](../Desktop/clientServer.md#management-of-unreachable-peer)**. Las sesiones Web, REST y SOAP siempre tienen el estado **En línea**.
 
-Additional information is available in the detail panel when a session is selected.
+Cuando se selecciona una sesión, se muestra información adicional en el panel de detalles.
 
-## Session detail panel
+## Panel de detalles de la sesión
 
-Selecting a session displays additional information in the lower panel.
+Al seleccionar una sesión, se muestra información adicional en el panel inferior.
 
-### Client sessions
+### Sesiones cliente
 
-The following information is available:
+La siguiente información está disponible:
 
-- **System username**: Name of the operating system session opened on the remote machine.
-- **IP address**: IP address of the remote machine that opened the session.
+- **Nombre de usuario del sistema**: nombre de la sesión del sistema operativo abierta en el equipo remoto.
+- **Dirección IP**: dirección IP de la máquina remota que abrió la sesión.
 - **Nombre de máquina**: Nombre de la máquina remota.
-- **4D Write Pro**: Indicates whether the session user belongs to a group that grants access to 4D Write Pro.
-- **4D View Pro**: Indicates whether the session user belongs to a group that grants access to 4D View Pro.
+- **4D Write Pro**: indica si el usuario de la sesión pertenece a un grupo que le concede acceso a 4D Write Pro.
+- **4D View Pro**: indica si el usuario de la sesión pertenece a un grupo que le concede acceso a 4D View Pro.
 
-### REST, Web, and SOAP sessions
+### Sesiones REST, web y SOAP
 
-The detail panel displays information such as:
+El panel de detalles muestra información como:
 
-- **Guest status**: Indicates whether the session is a Guest session. Guest sessions are unauthenticated Web sessions.
-- **Privileges**: List of privileges associated with the session.
-- **IP address**: IP address of the remote machine that opened the session.
-- **User agent**: Identifies the client application, browser, or service that initiated the session.
+- **Estado de invitado**: indica si la sesión es una sesión de invitado. Las sesiones de invitado son sesiones web sin autenticar.
+- **Privilegios**: lista de privilegios asociados a la sesión.
+- **Dirección IP**: dirección IP de la máquina remota que abrió la sesión.
+- **Agente de usuario**: identifica la aplicación cliente, el navegador o el servicio que ha iniciado la sesión.
 
-### IP Lookup button
+### Botón de búsqueda IP
 
-IP Lookup button is enabled when a public IP address is displayed. You can click on the button to retrieve the geolocation of the selected session.
+El botón de búsqueda IP está activado cuando se muestra una dirección IP pública. Puede hacer clic en el botón para recuperar la geolocalización de la sesión seleccionada.
 
-If the information is available, the location is displayed next to the IP Lookup button in the format **City, Country**. Otherwise **Not found** is displayed.
+Si la información está disponible, la ubicación se muestra junto al botón de búsqueda IP en el formato **Ciudad, País**. De lo contrario, se muestra el mensaje **No encontrado**.
 
-## Search and Filtering
+## Búsqueda y Filtros
 
-### Search bar
+### Barra de búsqueda
 
-The search field can be used to reduce the number of rows displayed in the list to those that correspond to the text entered. The search is performed on the **User Name**, **Machine name**, **Session name**, and **IP address** columns.
+El campo de búsqueda permite reducir el número de filas que se muestran en la lista a aquellas que coincidan con el texto introducido. La búsqueda se realiza en las columnas **Nombre de usuario**, **Nombre del equipo**, **Nombre de la sesión** y **Dirección IP**.
 
-The list is updated in real time as you enter text.
+La lista se actualiza en tiempo real al introducir texto.
 
-You can search for multiple values by separating them with a semicolon (`;`). In this case, the values are combined using the **OR** operator.
+Puede buscar varios valores separándolos con un punto y coma (`;`). En este caso, los valores se combinan mediante el operador **OR**.
 
-For example, if you enter:
+Por ejemplo, si ingresa:
 
 ```
 John;Mary;REST
 ```
 
-only rows containing **John**, **Mary**, or **REST** in the searchable columns are displayed.
+solo se muestran las filas que contienen **John**, **Mary** o **REST** en las columnas en las que se puede realizar la búsqueda.
 
-### Session Type Filters
+### Filtros por tipo de sesión
 
-The Sessions page also provides quick filters to display only specific session types.
+La página Sesiones también ofrece filtros rápidos para mostrar solo tipos de sesión específicos.
 
-The following filters are available:
+Están disponibles los siguientes filtros:
 
-- **Counted sessions**:  includes only sessions counted for floating license consumption.
-- **Clients**: includes only desktop client sessions.
-- **Web**: includes only Web and SOAP sessions.
-- **REST**: includes only REST sessions.
+- **Sesiones contadas**: sólo incluye sesiones contadas para consumo de licencias flotantes.
+- **Clientes**: incluye únicamente las sesiones cliente de escritorio.
+- **Web**: incluye únicamente sesiones web y SOAP.
+- **REST**: incluye únicamente sesiones REST.
 
-Filters can be enabled or disabled independently, or combined with other filters, and are applied immediately to the session list.
+Los filtros se pueden activar o desactivar de forma independiente, o combinarse con otros filtros, y se aplican inmediatamente a la lista de sesiones.
 
 ## Botones de administración
 
-There are three administration buttons: **Send message** is available when one or more Client sessions are selected. **Watch Processes** is available when a single session of any type is selected, and **Drop session** is available when one or more sessions of any type are selected.
-You can select several rows by holding down the **Shift** key for an adjacent selection or the **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Hay tres botones de administración: **Enviar mensaje** está disponible cuando se seleccionan una o más sesiones cliente. **Ver procesos** está disponible cuando se selecciona una sola sesión de cualquier tipo, y **Desconectar sesión** está disponible cuando una o más sesiones de cualquier tipo se seleccionan.
+Puede seleccionar varias líneas manteniendo presionada la tecla **Mayús** para una selección adyacente o la tecla **Ctrl** (Windows) / **Comando** (macOS) para una selección no adyacente.
 
 ### Enviar mensaje
 
-This button can be used to send a message to the selected **Client** session(s). If no Client session is selected, the button is not active. When you click this button, a dialog box appears that lets you enter the message. The dialog box also indicates the number of Client sessions that will receive the message:
+Este botón sirve para enviar un mensaje a la(s) sesión(es) **Cliente** seleccionada(s). Si no hay ninguna sesión cliente seleccionada, el botón no está activo. Al hacer clic en este botón, aparece un diálogo que le permite introducir el mensaje. El cuadro de diálogo también indica el número de sesiones de cliente que recibirán el mensaje:
 
 ![](../assets/en/Admin/server-message.png)
 
-The message is displayed as an alert on the corresponding remote machines.
+El mensaje se muestra como una alerta en los equipos remotos correspondientes.
 
-You can perform the same action programmatically using the [`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user) command.
+Puede realizar la misma acción por programación utilizando el comando [`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user).
 
-### Visualizar procesos
+### Ver procesos
 
-This button can be used to directly show the processes associated with the selected session on the [**Processes** page](processes.md).
+Este botón se puede utilizar para mostrar directamente los procesos asociados con la sesión seleccionada en la [página **Procesos**](processes.md).
 
-The process list is automatically filtered using the selected session UUID.
+La lista de procesos se filtra automáticamente utilizando el UUID de la sesión seleccionada.
 
-When multiple sessions are selected, this button is disabled.
+Cuando se seleccionan varias sesiones, este botón aparece desactivado.
 
-### Drop session
+### Desconectar sesión
 
-This button can be used to force the selected Client session(s) to disconnect.
+Este botón permite forzar la desconexión de las sesiones de cliente seleccionadas.
 
-A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
+Antes de desconectar la sesión, aparece un cuadro de diálogo de confirmación para confirmar o cancelar esta operación (mantenga pulsada la tecla **Alt** mientras hace clic en **Desconectar usuario** para desconectarse inmediatamente sin que aparezca el cuadro de diálogo de confirmación).
 
-You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+Puede realizar la misma acción por programación utilizando el comando [`DROP REMOTE USER`](../commands/drop-remote-user).

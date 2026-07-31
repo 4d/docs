@@ -502,10 +502,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF #directory.files().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+|opciones|Integer|->|Opciones de lista de archivos|
+|Resultado|Collection|<-|Collection of children file objects|
 </div>
 <!-- END REF -->
 
@@ -514,7 +514,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colección de objetos `File` contenidos en la carpeta<!-- END REF -->.
 > Los alias o enlaces simbólicos no se resuelven.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, including invisible files. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
+Por defecto, si omite el parámetro *options,*, sólo los archivos del primer nivel de la carpeta se devuelven en la colección, incluyendo archivos invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |

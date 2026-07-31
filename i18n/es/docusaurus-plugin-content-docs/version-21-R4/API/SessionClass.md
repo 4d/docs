@@ -522,8 +522,8 @@ El objeto `.info` contiene las siguientes propiedades:
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                                      |
 | userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                            |
-| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre de la máquina servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul>            |
-| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión del sistema local.</li><ul>                                                                                             |
+| machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre del equipo servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul>               |
+| systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión sistema local</li><ul>                                                                                                  |
 | IPAddress        | Text          | <ul><li>Sesiones remotas: dirección IP de la máquina remota.</li><li>Sesiones cliente: dirección IP de la máquina local.</li><li>Sesión autónoma: "localhost"</li></ul>                                                                                       |
 | hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                                                    |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                                           |
@@ -694,33 +694,33 @@ End if
 
 #### Descripción
 
-The `.quotas` property contains <!-- REF #SessionClass.quotas.Summary -->a `4D.QuotaManager` object with current values and set values for server thresholds regarding REST requests in the current session<!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
+La propiedad `.quotas` contiene <!-- REF #SessionClass.quotas.Summary -->un objeto `4D.QuotaManager` con los valores actuales y los valores definidos para los límites del servidor con respecto a las peticiones REST en la sesión actual <!-- END REF -->. Los límites del servidor se utilizan para controlar las solicitudes dirigidas al servidor y ayudan a evitar un uso excesivo de los recursos (ver la clase [`4D.QuotaManager`](./QuotaManagerClass.md)).
 
 Esta propiedad es **solo lectura**.
 
 Las siguientes propiedades del objeto `4D.QuotaManager` están disponibles para la sesión:
 
-| Propiedad                                                                 |              | Tipo    | Writable | Descripción                                                                                                    |
-| ------------------------------------------------------------------------- | ------------ | ------- | -------- | -------------------------------------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí       | Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied      |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí       | Default inactivity timeout for entity sets in memory (seconds)                              |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí       | Maximum inactivity timeout for entity sets in memory (seconds)                              |
-| currentValues                                                             |              | Object  | no       |                                                                                                                |
-|                                                                           | nbEntitySets | Integer | no       | Número de conjuntos de entidades actualmente en memoria. *Undefined* = no entity set in memory |
+| Propiedad                                                                 |              | Tipo    | Modificable | Descripción                                                                                                                           |
+| ------------------------------------------------------------------------- | ------------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí          | Número máximo permitido de conjuntos de entidades en la memoria del servidor. *Undefined* = no se aplican cuotas      |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí          | Tiempo de espera predeterminado por inactividad para los conjuntos de entidades en memoria (segundos)              |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí          | Tiempo máximo de espera por inactividad para los conjuntos de entidades en memoria (segundos)                      |
+| currentValues                                                             |              | Object  | no          |                                                                                                                                       |
+|                                                                           | nbEntitySets | Integer | no          | Número de conjuntos de entidades actualmente en memoria. *Undefined* = no hay ningún conjunto de entidades en memoria |
 
-When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.
+Cuando modifique un valor, es tomado inmediatamente en cuenta por el servidor (no es necesario reiniciar) y se aplicará a otras solicitudes REST.
 
 :::tip Entrada de blog relacionada
 
-[Keep your rest server performing at its best](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
+[Manténga su servidor rest funcionando al máximo rendimiento](https://blog.4d.com/keep-your-rest-server-performing-at-its-best).
 
 :::
 
 #### Ejemplo
 
 ```4d
-   //set the maximum number of entity sets in memory
-   //for the session to 50
+   //Definir el número máximo de conjuntos de entidades en memoria
+   //para la sesión en 50
 Session.quotas.nbEntitySets:=50
 ```
 
@@ -912,7 +912,7 @@ Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Esta p
 
 En cliente/servidor, el objeto `.storage` de la sesión de usuario remota **no** es el mismo en el servidor y en el cliente.
 
-When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
+Cuando una sesión de usuario remoto y una sesión web se [comparten mediante una OTP](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses), también comparten el mismo objeto `.storage` en el servidor, incluso si la OTP se [creó](#createotp) a partir de la sesión en el lado del cliente.
 
 :::tip
 

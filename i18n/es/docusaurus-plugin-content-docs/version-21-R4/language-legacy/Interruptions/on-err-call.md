@@ -56,7 +56,7 @@ Para desinstalar un método de gestión de errores, llame a **ON ERR CALL** de n
 
 Puede identificar errores leyendo la variable sistema Error, la cual contiene el número de código del error. Los códigos de errores se listan en el tema *Códigos de error*. Por ejemplo, puede ver la sección *Errores de sintaxis*. El valor de la variable Error es significativo sólo en el método de gestión de errores; si necesita el código del error en el método que provocó el error, copie la variable Error en su propia variable proceso. También puede acceder a las variables sistema Error method, Error line y Error formula las cuales contienen respectivamente, el nombre del método, el número de línea y el texto de la fórmula donde ocurrió el error (ver [Gestión de errores dentro del método](../../Concepts/error-handling.md#handling-errors-within-the-method)).
 
-Puede utilizar el comando [Last errors](../commands/last-errors) o [Last errors](../commands/last-errors)  para obtener la secuencia de errores (la "pila" de errores) en el origen de la interrupción.
+Puede utilizar el comando [Last errors](../commands/last-errors) para obtener la secuencia de errores (la "pila" de errores) en el origen de la interrupción.
 
 El método de gestión de errores debe tratar los errores de manera apropiada o mostrar un mensaje de error al usuario. Los errores pueden ser generados durante los procesos efectuados por:
 
@@ -194,9 +194,8 @@ El siguiente método de gestión de errores ignora las interrupciones del usuari
 ## Ver también 
 
 [ABORT](../commands/abort)  
-*Gestión de errores*  
-[Last errors](../commands/last-errors)   
-[Last errors](../commands/last-errors)  
+[Error handling](../../Concepts/error-handling.md)  
+[Last errors](../commands/last-errors)     
 [Method called on error](../commands/method-called-on-error)  
 *Variables sistema*  
 

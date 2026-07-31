@@ -28,7 +28,7 @@ API 参照: <https://developers.openai.com/api/reference/resources/files>
 
 | 引数           | 型                                                                                                                                                  | 説明                                                         |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `ファイル`       | [4D.File](https://developer.4d.com/docs/API/FileClass) あるいは [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | アップロードするファイルあるいはBlob オブジェクト(ファイル名ではない)。 |
+| `file`       | [4D.File](https://developer.4d.com/docs/API/FileClass) あるいは [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | アップロードするファイルあるいはBlob オブジェクト(ファイル名ではない)。 |
 | `purpose`    | Text                                                                                                                                               | **必須。** アップロードされたファイルの目的。                                  |
 | `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                    | 失効期限のポリシーを含めた、オブションの引数。                                    |
 | 戻り値          | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                            | ファイルの結果                                                    |
@@ -73,7 +73,7 @@ End if
 
 #### 非同期の例
 
-ファイルアップロードは(特に512 MBまでの大きなファイルの場合)長時間のオペレーションとなり得るため、アプリケーションをブロックするのを避けるために非同期の呼び出しを使用することが推奨されます。 詳細については[非同期呼び出し](../非同期呼び出し.md) を参照してください。
+ファイルアップロードは(特に512 MBまでの大きなファイルの場合)長時間のオペレーションとなり得るため、アプリケーションをブロックするのを避けるために非同期の呼び出しを使用することが推奨されます。 詳細については[非同期呼び出し](../asynchronous-call.md) を参照してください。
 
 ```4d
 var $file:=File("/RESOURCES/large-training-data.jsonl")

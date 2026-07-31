@@ -62,9 +62,9 @@ La sintaxis específica de la plataforma depende del sistema operativo en el que
 
 Se soportan los siguientes modelos:
 
-- los separadores de carpetas son "\"
-- el texto contiene ":" y "\" como segundo y tercer caracter,
-- el texto comienza con "\\".
+- los separadores de carpetas son "\\"
+- el texto contiene ":" y "\\" como segundo y tercer carácter,
+- el texto comienza por "\\\".
 
 Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
@@ -97,7 +97,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
+Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. For example, the following code is not allowed:
 
 ```4d
     //ERROR

@@ -11,11 +11,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type                    |                             | Description                                                   |
-| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
-| projectFile | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
-| options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
-| Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
+| Paramètres              | Type                    |                             | Description                                                   |
+| ----------------------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
+| projectFile             | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
+| options                 | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
+| Résultat de la fonction | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
 
 </div>
 <!-- END REF-->
@@ -75,7 +75,7 @@ Le paramètre *options* est un objet. Voici les options de compilation disponibl
 
 **Note:** Lorsque l'attribut *warnings* n'est pas défini dans l'objet *options*, la commande **Compile project** utilise les statuts de génération de warnings par défaut définis dans les paramètres.
 
-### Résultat
+### Résultat de la fonction
 
 L'objet renvoyé par **Compile project** possède jusqu'à trois propriétés :
 

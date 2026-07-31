@@ -1,6 +1,6 @@
 ---
 id: string
-title: 文字列
+title: String
 ---
 
 文字列とは、以下を示す総称です:
@@ -33,7 +33,7 @@ title: 文字列
 | \\\     | \ (バックスラッシュ) |
 | \\"      | " (引用符)       |
 
-**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。 <br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。
 
 ## 文字列演算子
 
@@ -51,7 +51,7 @@ title: 文字列
 |          |                  |         | "abc" < "abc"           | false    |
 | 以上       | String >= String | Boolean | "abd" >= "abc"          | true     |
 |          |                  |         | "abc" >= "abd"          | false    |
-| 以上       | String <= String | Boolean | "abc" <= "abd"          | true     |
+| 以下       | String <= String | Boolean | "abc" <= "abd"          | true     |
 |          |                  |         | "abd" <= "abc"          | false    |
 | キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
 |          |                  |         | "Alpha Bravo" % "ravo"  | false    |

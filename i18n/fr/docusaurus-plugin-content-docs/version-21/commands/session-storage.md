@@ -10,10 +10,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                |
-| ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| id         | Text   | &#8594; | Identifiant unique (UUID) de la session |
-| Résultat   | Object | &#8592; | Objet de stockage de la session                            |
+| Paramètres              | Type   |                             | Description                                                |
+| ----------------------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id                      | Text   | &#8594; | Identifiant unique (UUID) de la session |
+| Résultat de la fonction | Object | &#8592; | Objet de stockage de la session                            |
 
 </div>
 <!-- END REF-->

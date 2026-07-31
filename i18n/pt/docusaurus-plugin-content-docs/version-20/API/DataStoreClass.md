@@ -656,7 +656,7 @@ Em um armazém de dados remoto:
 
 #### Descrição
 
-A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary -->devolve informações sobre o contexto remoto associado ao datastore<!-- END REF -->.
+A função `.isAdminProtected()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> retorna `True` se [Data Explorer](Admin/dataExplorer.md) acesso for desativado para a sessão de trabalho<!-- END REF -->.
 
 Para saber mais sobre como contextos de otimização podem ser criados veja [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
@@ -784,7 +784,7 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 #### Descrição
 
-A função `.locked()` <!-- REF #DataStoreClass.locked().Summary -->retorna `True` se o datastore estiver bloqueado<!-- END REF -->.
+A função `.setAdminProtection()` <!-- REF #DataStoreClass.locked().Summary -->permite desativar qualquer acesso de dados em [web admin port](Admin/webAdmin.md#http-port), incluindo as sessões [Data Explorer](Admin/dataExplorer.md) in `WebAdmin`<!-- END REF -->.
 
 Pode bloquear o datastore usando a função [.flushAndLock()](#flushandlock) antes de executar um instantâneo do ficheiro de dados, por exemplo.
 
@@ -937,7 +937,7 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 
 #### Descrição
 
-A função `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->permite ativar ou desativar o acesso aos dados no [web admin port](Admin/webAdmin.md#http-port), incluindo sessões do [Data Explorer](Admin/dataExplorer.md) no `WebAdmin`<!-- END REF -->.
+A função `.stopRequestLog()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->pára qualquer registo de pedidos ORDA na máquina a que é chamado (cliente ou servidor)<!-- END REF -->.
 
 Por padrão, quando não chamar a função, o acesso aos dados se concede sempre no porto de administração web para uma sessão com privilégio `WebAdmin` utilizando o Explorador de Dados. Em algumas configurações, por exemplo, quando o servidor de aplicações estiver alojado em uma máquina de terceiros, é possivel que não quiser que o administrador possaa ver seus dados, mesmo que possa editar a configuração do servidor, incluindo a configuração da [access key](Admin/webAdmin.md#access-key).
 
@@ -1113,7 +1113,7 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 #### Descrição
 
-A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->A função `.startRequestLog()`<!-- END REF -->. Foi criado para depuração em configurações de cliente/servidor.
+A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia o registo dos pedidos ORDA no lado do cliente ou no lado do servidor<!-- END REF -->. Foi criado para depuração em configurações de cliente/servidor.
 
 :::info
 
@@ -1295,7 +1295,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 #### Descrição
 
-A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->pára qualquer registo de pedidos ORDA na máquina onde é chamada (cliente ou servidor)<!-- END REF -->.
+A função `.startRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->inicia o registo dos pedidos ORDA no lado do cliente<!-- END REF -->.
 
 Fecha efetivamente o documento aberto no disco. No lado do cliente, se o registo tiver sido iniciado na memória, é interrompido.
 

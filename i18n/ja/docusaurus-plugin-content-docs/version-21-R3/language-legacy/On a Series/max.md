@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Max.Summary-->**Max**は、*series*中の最大値を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合には、最大値を求めるためにインデックスが使用されます。
+<!--REF #_command_.Max.Summary-->**Max**は、*series*中の最大値を返します。<!-- END REF-->*series*がインデックスフィールドの場合には、最大値を求めるためにインデックスが使用されます。
 
 *series*に (1または2次元の) 配列を渡すこともできます。この場合配列は整数、倍長整数、実数型、または日付型でなければなりません。
 

@@ -3,7 +3,7 @@ id: IMAPNotifierClass
 title: IMAPNotifier
 ---
 
-The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a selected mailbox.
+`IMAPNotifier` クラスを使用すると、選択されたメールボックスに対してIMAP IDLE 通知を管理することができます。
 
 <details><summary>履歴</summary>
 
@@ -13,11 +13,11 @@ The `IMAPNotifier` class allows you to manage IMAP IDLE notifications for a sele
 
 </details>
 
-The `IMAPNotifier` class is available from the `4D` class store.
+`IMAPNotifier` クラスは、`4D` クラスストアから利用可能です。
 
-An `IMAPNotifier` object is associated with an [IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) and provides access to mailbox notification management.
+`IMAPNotifier` オブジェクトは[IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) と関連づけられており、メールボックス通知管理へのアクセスを提供します。
 
-All `IMAPNotifier` class functions are thread-safe.
+`IMAPNotifier` クラス関数は全てスレッドセーフです。
 
 :::tip 関連したBlog 記事
 
@@ -28,7 +28,7 @@ All `IMAPNotifier` class functions are thread-safe.
 ### 例題
 
 ```4d
-// Define listener callbacks
+// リスナーコールバックを定義
 var $parameter : Object
 var $transporter : 4D.IMAPTransporter
 
@@ -46,9 +46,9 @@ $transporter.selectBox("INBOX")
 $transporter.notifier.start()     
 ```
 
-## IMAPNotifier object
+## IMAPNotifier オブジェクト
 
-An IMAPNotifier object provides the following properties and functions:
+IMAPNotifier オブジェクトは以下のプロパティと関数を提供します:
 
 |                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------ |
@@ -64,15 +64,15 @@ An IMAPNotifier object provides the following properties and functions:
 
 <!-- REF #4D.IMAPNotifier.new().params -->
 
-| 引数  | 型                               |                             | 説明                      |
-| --- | ------------------------------- | --------------------------- | ----------------------- |
-| 戻り値 | 4D.IMAPNotifier | <- | New IMAPNotifier object |
+| 引数  | 型                               |                             | 説明                     |
+| --- | ------------------------------- | --------------------------- | ---------------------- |
+| 戻り値 | 4D.IMAPNotifier | <- | 新規 IMAPNotifier オブジェクト |
 
 <!-- END REF -->
 
 #### 説明
 
-The `4D.IMAPNotifier.new()` function <!-- REF #4D.IMAPNotifier.new().Summary -->creates a new IMAPNotifier object<!-- END REF -->.
+`4D.IMAPNotifier.new()` 関数は<!-- REF #4D.IMAPNotifier.new().Summary -->新しいIMAPNotifier オブジェクトを作成します<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -84,7 +84,7 @@ The `4D.IMAPNotifier.new()` function <!-- REF #4D.IMAPNotifier.new().Summary -->
 
 #### 説明
 
-The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates whether the notifier is started (`true`) or stopped (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.isStarted` プロパティは <!-- REF #IMAPNotifier.isStarted.Summary -->通知が開始されたか(`true`) 停止されたか(`false`) を表します<!-- END REF -->。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -96,38 +96,38 @@ The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates 
 
 <!-- REF #IMAPNotifier.start().params -->
 
-| 引数  | 型      |                             | 説明               |
-| --- | ------ | :-------------------------: | ---------------- |
-| 戻り値 | Object | <- | Operation status |
+| 引数  | 型      |                             | 説明           |
+| --- | ------ | :-------------------------: | ------------ |
+| 戻り値 | Object | <- | オペレーションステータス |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.start()` function <!-- REF #IMAPNotifier.start().Summary -->starts the subscription to server notifications and activates IMAP listener callbacks<!-- END REF -->.
+`.start()` 関数は<!-- REF #IMAPNotifier.start().Summary -->サーバー通知への登録を開始し、IMAP リスナーコールバックを起動します<!-- END REF -->。
 
-A mailbox must be selected using [`selectBox()`](./IMAPTransporterClass.md#selectbox) before calling `.start()`.
+メールボックスは`.start()` を呼び出す前に[`selectBox()`](./IMAPTransporterClass.md#selectbox) を使用して選択しておく必要があります。
 
-Callback functions are executed in the worker where `.start()` is called.
+コールバック関数は、`.start()` が呼び出されたワーカー内で実行されます。
 
 :::note 注記
 
-- When the notifier is started, other transporter functions (such as `getMail()` or `send()`) are not available. You must call `.stop()` before using these functions, then call `.start()` again to resume notifications.
+- 通知が開始されたら、(`getMail()` あるいは `send()` などの) 他のトランスポーター関数は利用できなくなります。 これらの関数を使用するためにはその前に`.stop()` を呼び出し、そして通知を再開するためには`.start()` をまた呼び出す必要があります。
 
-- IMAP IDLE notifications indicate that a change has occurred but do not provide updated mailbox data. To refresh the mailbox state, you must stop the notifier, retrieve the updated data (for example using `getMail()`), and then restart it.
+- IMAP IDLE 通知は、変化が起きたということを表しますが、更新されたメールボックスのデータは提供しません。 メールボックスの状態を更新するためには、通知を停止し、更新されたデータを取得し(例えばを`getMail()` 使用するなど)、その後に通知を再開する必要があります。
 
 :::
 
 #### 返されるオブジェクト
 
-| プロパティ      |                                                                                             | 型          | 説明                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| success    |                                                                                             | Boolean    | 処理が正常に終わった場合には true、それ以外は false                                                   |
-| statusText |                                                                                             | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー                                |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received) |
-|            | \[].errcode            | Number     | 4Dエラーコード                                                                          |
-|            | \[].message            | Text       | エラーの詳細                                                                            |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                |
+| プロパティ      |                                                                                             | 型          | 説明                                                       |
+| ---------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------- |
+| success    |                                                                                             | Boolean    | 処理が正常に終わった場合には true、それ以外は false                          |
+| statusText |                                                                                             | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー       |
+| errors     |                                                                                             | Collection | 4D エラースタック(サーバーレスポンスが受信できた場合には返されません) |
+|            | \[].errcode            | Number     | 4Dエラーコード                                                 |
+|            | \[].message            | Text       | エラーの詳細                                                   |
+|            | \[].componentSignature | Text       | エラーを返したコンポーネントの署名                                        |
 
 <!-- END REF -->
 
@@ -139,26 +139,26 @@ Callback functions are executed in the worker where `.start()` is called.
 
 <!-- REF #IMAPNotifier.stop().params -->
 
-| 引数  | 型      |                             | 説明               |
-| --- | ------ | :-------------------------: | ---------------- |
-| 戻り値 | Object | <- | Operation status |
+| 引数  | 型      |                             | 説明           |
+| --- | ------ | :-------------------------: | ------------ |
+| 戻り値 | Object | <- | オペレーションステータス |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notification subscription<!-- END REF -->. Calling `.stop()` is required before using other transporter functions (such as `getMail()` or `send()`).
+`.stop()` 関数は<!-- REF #IMAPNotifier.stop().Summary -->通知の登録を停止します<!-- END REF -->。 他のトランスポーター関数(`getMail()` あるいは `send()`など) を呼び出す前に、`.stop()` 関数を呼び出す必要があります。
 
 #### 返されるオブジェクト
 
-| プロパティ      |                                                                                             | 型          | 説明                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| success    |                                                                                             | Boolean    | 処理が正常に終わった場合には true、それ以外は false                                                   |
-| statusText |                                                                                             | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー                                |
-| errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received) |
-|            | \[].errcode            | Number     | 4Dエラーコード                                                                          |
-|            | \[].message            | Text       | エラーの詳細                                                                            |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                |
+| プロパティ      |                                                                                             | 型          | 説明                                                       |
+| ---------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------- |
+| success    |                                                                                             | Boolean    | 処理が正常に終わった場合には true、それ以外は false                          |
+| statusText |                                                                                             | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー       |
+| errors     |                                                                                             | Collection | 4D エラースタック(サーバーレスポンスが受信できた場合には返されません) |
+|            | \[].errcode            | Number     | 4Dエラーコード                                                 |
+|            | \[].message            | Text       | エラーの詳細                                                   |
+|            | \[].componentSignature | Text       | エラーを返したコンポーネントの署名                                        |
 
 <!-- END REF -->
 

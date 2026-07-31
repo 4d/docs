@@ -45,7 +45,7 @@ title: データ収集
 | databases[].internalDatastoreOpened           | Number                            | 外部サーバーによってデータストアが開かれた回数                                                                                     |
 | databases[].maxConcurrent4DClients            | Number                            | 回収期間の中での、(4D クライアントライセンスを使用した)同時4Dクライアントセッションの最大数                                        |
 | databases[].maxConcurrentRestSessions         | Number                            | 回収期間の中での同時REST セッション最大数                                                                                     |
-| databases[].maxConcurrentWebSessions          | Number                            | 回収期間の中での同時Web セッション(4DACTIPN およびSOAP)の最大数                                                |
+| databases[].maxConcurrentWebSessions          | Number                            | 回収期間の中での同時 Webセッション(4DACTION およびSOAP)の最大数                                                |
 | databases[].maximum4DClientConnections        | Number                            | サーバーへのクライアントの最大接続数                                                                                          |
 | databases[].numberOfDistinctClients           | Number                            | 回収期間の中で見られた永続的なクライアントUUID の固有数                                                                              |
 | databases[].numberOfFields                    | Number                            | フィールドの数                                                                                                     |
@@ -56,7 +56,7 @@ title: データ収集
 | databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガの数                                                                                 |
 | databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガの数                                                                                  |
 | databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガの数                                                                                |
-| databases[].sdi                               | Boolean                           | Windows でSDI モードを使用 設定がチェックされている場合にはあTrue                                                                   |
+| databases[].sdi                               | Boolean                           | Windows で SDIモードを使用 設定がチェックされている場合には True                                                                   |
 | databases[].structureHash                     | Text                              |                                                                                                             |
 | databases[].uniqueID                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | databases[].uptime                            | Number                            | 二つの回収イベント間での経過時間(秒単位)                                                                    |
@@ -90,7 +90,7 @@ title: データ収集
 | indexSize                                                                                                         | Number                            | インデックスのサイズ (バイト単位)                                                                       |
 | isCompiled                                                                                                        | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
 | isEncrypted                                                                                                       | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
-| isEngined                                                                                                         | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
+| isEngined                                                                                                         | Boolean                           | アプリケーションに 4D Volume Desktop が組み込まれている場合は true                                                               |
 | isProjectMode                                                                                                     | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
 | LDAPLogin                                                                                                         | Number                            | `LDAP LOGIN` の呼び出し回数                                                                                        |
 | license.sffPrimaryKey                                                                             | Number                            | サーバーのマスタープロダクト番号                                                                                            |

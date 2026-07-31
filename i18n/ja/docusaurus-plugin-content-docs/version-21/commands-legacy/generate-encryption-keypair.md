@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **GENERATE ENCRYPTION KEYPAIR** で使用するRSA暗号方 式は、秘密鍵と公開鍵という二重鍵暗号システムに基づいています。その名が示す通り、公開鍵は第三者に渡され、情報の復号に使用されます。公開鍵は情報の暗号化に使われるユニークな秘密鍵と一対です。このように、秘密鍵は暗号化に使用され、公開鍵は復号に使用されます (またはその逆)。一方の鍵を使って暗号化された情報は、もう一方の鍵を使用しなければ解読することはできません。
 
-TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、証明書に納められた公開鍵がブラウザに送信されます。(詳細は[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)の節を参照)。
+TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、証明書に納められた公開鍵がブラウザーに送信されます。(詳細は[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)の節を参照)。
 
 この暗号化モードは、[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の1番目のシンタックスでも使用されています。このシンタックスで用いる公開鍵は極秘に発行してください。  
 特定の受信者を復号可能な唯一の人とし、かつ送信者が暗号化を行った人であることを保証するために、2人の公開鍵と秘密鍵を合わせて情報の暗号化を行うことができます。この原理は[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の2番目のシンタックスで示されています。

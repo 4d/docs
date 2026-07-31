@@ -171,7 +171,7 @@ Las rutas se expresan en sintaxis POSIX como se describe en [este párrafo](../C
 
 Las rutas relativas son relativas al archivo [`environment4d.json`](#environment4djson). Las rutas absolutas están vinculadas a la máquina del usuario.
 
-Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que ofrecen flexibilidad y portabilidad de la arquitectura de componentes, especialmente si el proyecto está alojado en una herramienta de control de código fuente. Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
+Utilizar rutas relativas es **recomendable** en la mayoría de los casos, ya que aportan flexibilidad y portabilidad a la arquitectura de componentes, especialmente si el proyecto está alojado en una herramienta de control de código fuente. Las rutas absolutas sólo deben utilizarse para componentes específicos de una máquina y un usuario.
 
 ### Componentes almacenados en plataformas de alojamiento Git {#components-stored-on-git-hosting-platforms}
 

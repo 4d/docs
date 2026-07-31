@@ -1,6 +1,6 @@
 ---
 id: sdi
-title: Mode SDI bajo Windows
+title: Modo SDI en Windows
 ---
 
 En Windows, los desarrolladores 4D pueden probar y configurar sus aplicaciones fusionadas 4D para que funcionen como aplicaciones SDI (Single-Document Interface). En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
@@ -16,7 +16,7 @@ El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las
 El modo SDI sólo está disponible en los siguientes entornos de ejecución:
 
 - Windows
-- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
+- Aplicación 4D fusionada [monopuesto](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
 - [**Funcionalidad de prueba de la aplicación**](bars.md#previewing-menu-bars) disponible desde el menú **Ejecutar**.
 
 ## Activación del modo SDI
@@ -55,7 +55,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 
 ### Depurador
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
+Cuando se muestra en modo SDI, la [ventana del depurador](../Debugging/debugger.md) no contiene [botones de edición](../Debugging/debugger.md#tool-bar-buttons), porque cambiar al entorno de diseño requiere abortar la ejecución y reiniciar la aplicación en modo MDI.
 
 ### Salida automática
 
@@ -64,7 +64,7 @@ Cuando se ejecuta en modo MDI, una aplicación 4D simplemente se cierra cuando e
 Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un mecanismo para salir automáticamente (llamando al comando `QUIT 4D`) cuando se cumplen las siguientes condiciones:
 
 - el usuario no puede seguir interactuando con la aplicación
-- no hay procesos de usuario en curso
+- no hay procesos de usuario activos
 - los procesos 4D o workers están esperando un evento
 - el servidor web no se ha lanzado
 - el [servidor WebAdmin](../Admin/webAdmin.md) no está iniciado.
@@ -82,7 +82,7 @@ Aunque es manejado de forma transparente por 4D, el modo SDI introduce pequeñas
 | Comando/funcionalidad             | Especificidad en el modo SDI en Windows                                                                                                                                                                                                                                                                                                                                   |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Open form window`                | Opciones para soportar las ventanas flotantes en SDI (`Controller form window`) y para eliminar la barra de menú (`Form has no menu bar`)                                                                                                                                                                                           |
-| `Menu bar height`                 | Devuelve la altura en píxeles de una línea de barra de menú única, incluso si la barra de menú se ha envuelto en dos o más líneas. Devuelve 0 cuando el comando es llamado desde un proceso sin ventana formulario                                                                                                                                        |
+| `Menu bar height`                 | Devuelve la altura en píxeles de una línea de barra de menú única, incluso si la barra de menú se ha distribuido en dos o más líneas. Devuelve 0 cuando el comando es llamado desde un proceso sin ventana formulario                                                                                                                                     |
 | `SHOW MENU BAR` / `HIDE MENU BAR` | Se aplica sólo a la ventana formulario actual (desde donde se ejecuta el código)                                                                                                                                                                                                                                                                       |
 | `MAXIMIZE WINDOW`                 | La ventana se maximiza al tamaño de la pantalla                                                                                                                                                                                                                                                                                                                           |
 | `CONVERT COORDINATES`             | `XY Screen` es el sistema de coordenadas global donde la pantalla principal se sitúa en (0,0). Las pantallas situadas a su izquierda o arriba pueden tener coordenadas negativas y las situadas a su derecha o debajo pueden tener coordenadas mayores que los valores devueltos por `Screen height` o `Screen width`. |

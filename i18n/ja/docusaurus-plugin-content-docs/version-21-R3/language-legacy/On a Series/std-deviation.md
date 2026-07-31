@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Std deviation.Summary-->**Std deviation**は、*series*の標準偏差を返します。<!-- END REF-->*series*がインデックスフィ－ルドの場合に、標準偏差を求めるためにインデックスが使用されます。
+<!--REF #_command_.Std deviation.Summary-->**Std deviation**は、*series*の標準偏差を返します。<!-- END REF-->*series*がインデックスフィールドの場合に、標準偏差を求めるためにインデックスが使用されます。
 
 *series*に (1または2次元の) 配列を渡すこともできます。この場合配列は整数、倍長整数、または実数型でなければなりません。
 

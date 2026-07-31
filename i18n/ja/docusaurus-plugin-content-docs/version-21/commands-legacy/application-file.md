@@ -33,7 +33,7 @@ Windows
 例えば、ボリュームE上の\\PROGRAMS\\4Dに配置された4Dを使用している場合、この関数は、E:\\PROGRAMS\\4D\\4D.EXEを返します。
 
 Macintosh  
-例えば、Macintosh HDディスク上のProgramsフォルダの中にある4Dを使用している場合、この関数は、Macintosh HD:Programs:4D.appを返します。
+例えば、Macintosh HDディスク上のProgramsフォルダーの中にある4Dを使用している場合、この関数は、Macintosh HD:Programs:4D.appを返します。
 
 ## 例題 
 

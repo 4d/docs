@@ -49,7 +49,7 @@ Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 
 Las [clases de usuario del modelo de datos ORDA](../ORDA/ordaClasses.md) son funciones de clase de alto nivel creadas sobre el modelo de datos.
 
-Una clase de modelo de datos ORDA se define añadiendo, en la misma ubicación que los archivos de clase normales (*es decir*, en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
+Una clase de modelo de datos ORDA se define añadiendo, en la misma ubicación que los archivos de clase normales (*es decir*, en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
 
 4D crea previa y automáticamente las clases vacías en memoria para cada objeto del modelo de datos disponible.
 
@@ -91,7 +91,7 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
+- En el explorador de tiempo de ejecución y en el depurador, las funciones de clase se muestran con el `<ClassName>` constructor o `<ClassName>.<FunctionName>` el formato.
 
 ## Eliminar los métodos o las clases
 

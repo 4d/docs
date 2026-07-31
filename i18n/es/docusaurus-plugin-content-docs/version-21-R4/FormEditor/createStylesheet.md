@@ -362,27 +362,27 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 - un archivo para ambas plataformas:
 
-```json
-"css": "<path>" 
-```
+ ```json
+ "css": "<path>" 
+ ```
 
 - o una lista de archivos para ambas plataformas:
 
-```json
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```json
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - o una lista de archivos por plataforma:
 
-```json
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```json
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 :::note
 

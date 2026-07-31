@@ -985,7 +985,7 @@ $status:=$transporter.expunge()
 
 #### 説明
 
-`.getMail()` 関数は、 <!-- REF #IMAPTransporterClass.getMail().Summary -->`.getMail()` 関数は、<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 <!-- REF #IMAPTransporterClass.getMail().Summary -->`IMAP_transporter` が指定するメールボックス内の、*msgNumber* または *msgID* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関数を使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 最初の引数として、次のいずれかを渡すことができます:
 
@@ -1509,8 +1509,6 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 `.renameBox()` 関数は、 <!-- REF #IMAPTransporterClass.renameBox().Summary -->IMAPサーバー上でメールボックスの名称を変更します 。<!-- END REF -->。 存在しないメールボックスの名称を変更しようとしたり、すでに使われているメールボックス名に変更しようとしたりすると、エラーが生成されます。
 
-`currentName` には、名称変更するメールボックスの名前を渡します。
-
 メールボックスの新しい名称は `newName` に渡します。
 
 `currentName` には、名称変更するメールボックスの名前を渡します。
@@ -1731,7 +1729,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 説明
 
-*name* に指定したメールボックスをカレントメールボックスとして選択します <!-- REF #IMAPTransporterClass.selectBox().Summary -->`.selectBox()` 関数は、<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
+`.selectBox()` 関数は、 <!-- REF #IMAPTransporterClass.selectBox().Summary -->*name* に指定したメールボックスをカレントメールボックスとして選択します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 > カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
 
 *name* には、アクセスするメールボックスの名前を渡します。 この名称は明確な左から右への階層を表し、特定の区切り文字でレベルを区分けします。 この区切り文字は [`.getDelimiter()`](#getdelimiter) 関数で調べることができます。

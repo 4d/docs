@@ -150,7 +150,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | proxyAuthentication    | [authentication オブジェクト](#authentication-オブジェクト) | プロキシ認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | serverAuthentication   | [authentication オブジェクト](#authentication-オブジェクト) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | returnResponseBody     | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                           | true        |
-| timeout                | Real                                            | タイムアウト (秒単位) タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                 | 未定義         |
+| timeout                | Real                                            | タイムアウト (秒単位)。 タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                | 未定義         |
 | validateTLSCertificate | Boolean                                         | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                             | true        |
 
 
@@ -306,7 +306,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `returnResponseBody` を格納します<!-- END REF -->。 。
+`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `returnResponseBody` を格納します<!-- END REF -->。 (省略された場合は true)。
 
 <!-- END REF -->
 

@@ -39,7 +39,7 @@ Le sous-formulaire en page utilise le formulaire entrée désigné par la propri
 
 ### Utilisation de la variable ou de l'expression liée
 
-Vous pouvez lier [une variable ou une expression] (properties_Object.md#variable-or-expression) à un objet conteneur de sous-formulaire. Cette fonction est très utile pour synchroniser les valeurs du formulaire parent et de son/ses sous-formulaire(s).
+Vous pouvez lier [une variable ou une expression](properties_Object.md#variable-or-expression) à un objet conteneur de sous-formulaire. Cette fonction est très utile pour synchroniser les valeurs du formulaire parent et de son/ses sous-formulaire(s).
 
 Par défaut, 4D crée une variable ou une expression de [type d'objet](properties_Object.md#expression-type) pour un conteneur de sous-formulaire, ce qui vous permet de partager des valeurs dans le contexte du sous-formulaire à l'aide de la commande `Form`. Cependant, vous pouvez utiliser une variable ou une expression de n'importe quel type scalaire (time, integer, etc.) surtout si vous n'avez besoin de partager qu'une seule valeur :
 
@@ -52,7 +52,7 @@ Relier la même variable ou expression au conteneur du sous-formulaire et à d'a
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-formulaire) **ont la même valeur que *Variable ou expression***. Il peut s'agir d'une variable (par exemple `parisTime`), ou d'une expression (par exemple `Form.parisTime`).
+Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-formulaire) **ont la même valeur de *Variable ou expression***. Il peut s'agir d'une variable (par exemple `parisTime`), ou d'une expression (par exemple `Form.parisTime`).
 
 :::info
 

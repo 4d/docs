@@ -53,7 +53,7 @@ Fait pencher le texte sélectionné légèrement vers la droite.
 Vous pouvez également définir cette propriété via la commande [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > Ceci est un texte normal.<br/>
-> Ceci est un texte normal.<br/>
+> *Ceci est un texte en italique.*
 
 #### Grammaire JSON
 

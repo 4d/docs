@@ -22,7 +22,7 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 
 
 
-## Resources
+## リソース
 
 プロジェクト内の以下のリソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
 
@@ -123,16 +123,16 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 | プロパティ名      |                 |               | 型                          | 必須 | 説明                                                                 |
 | ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------ |
-| privileges  |                 |               | `privilege` オブジェクトのコレクション  | X  | 定義された権限のリスト                                                        |
+| privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                        |
 |             | \[].privilege  |               | Text                       |    | アクセス権の名称                                                           |
 |             | \[].includes   |               | String の Collection        |    | 内包する権限名のリスト                                                        |
 | roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
 |             | \[].role       |               | Text                       |    | ロール名                                                               |
 |             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
-| permissions |                 |               | Object                     | X  | 設定されたパーミッションのリスト                                                   |
+| permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
 |             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
-|             |                 | \[].applyTo  | Text                       | X  | 対象の [リソース](#リソース) 名                                                |
-|             |                 | \[].type     | Text                       | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
+|             |                 | \[].applyTo  | Text                       | ○  | 対象の [リソース](#リソース) 名                                                |
+|             |                 | \[].type     | Text                       | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
 |             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                            |

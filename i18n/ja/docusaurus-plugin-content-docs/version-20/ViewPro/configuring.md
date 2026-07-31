@@ -37,15 +37,15 @@ title: 4D View Pro エリアの設定
 
 リボン型、ツールバー型のいずれのインターフェースでも、関連機能はタブにグループ分けされます:
 
-| タブ       | アクション           | リボン型インターフェース | ツールバー型インターフェース |
-| -------- | --------------- |:------------:|:--------------:|
-| File     | ファイル操作          |      X       |                |
-| ホーム      | テキストの書式など       |      X       |       X        |
-| 挿入       | アイテムの追加         |      X       |       X        |
-| フォーミュラ   | フォーミュラの計算とライブラリ |      X       |       X        |
-| データ      | データ操作           |      X       |       X        |
-| 表示       | 表示の設定           |      X       |       X        |
-| Settings | スプレッドシートの設定     |      X       |                |
+| タブ     | アクション           | リボン型インターフェース | ツールバー型インターフェース |
+| ------ | --------------- |:------------:|:--------------:|
+| ファイル   | ファイル操作          |      ○       |                |
+| ホーム    | テキストの書式など       |      ○       |       ○        |
+| 挿入     | アイテムの追加         |      ○       |       ○        |
+| フォーミュラ | フォーミュラの計算とライブラリ |      ○       |       ○        |
+| データ    | データ操作           |      ○       |       ○        |
+| 表示     | 表示の設定           |      ○       |       ○        |
+| 設定     | スプレッドシートの設定     |      ○       |                |
 
 ## フォームイベント
 
@@ -293,9 +293,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | T  | 現在の時刻                      | printInfo.headerLeft:="時刻は &T です"                                      | 時刻は 16:30:36 です                                      |
 | G  | ピクチャー                      | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S  | 打ち消し線                      | printInfo.headerLeft:="&Sこれはテキストです"                                    | ~~これはテキストです~~                                        |
-| U  | 下線                         | printInfo.headerLeft:="&Uこれはテキストです"                                    | これはテキストです (下線) (下線) (下線)                             |
-| B  | 太字                         | printInfo.headerLeft:="&Bこれはテキストです"                                    | **これはテキストです (下線) (下線)**                              |
-| I  | イタリック                      | printInfo.headerLeft:="&Iこれはテキストです"                                    | *これはテキストです (下線) (下線)*                                |
+| U  | 下線                         | printInfo.headerLeft:="&Uこれはテキストです"                                    | これはテキストです (下線)                                       |
+| B  | 太字                         | printInfo.headerLeft:="&Bこれはテキストです"                                    | **これはテキストです**                                        |
+| I  | イタリック                      | printInfo.headerLeft:="&Iこれはテキストです"                                    | *これはテキストです*                                          |
 | "  | フォント指定                     | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K  | 文字カラー指定                    | printInfo.headerLeft:="&KFF0000これはテキストです"                              | これはテキストです (赤字)。                                      |
 | F  | ワークブック名                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
@@ -434,18 +434,18 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 #### 境界線
 
-| プロパティ                                                                      |       | 型       | 説明                               | とりうる値                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------- | ----- | ------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object  | それぞれに対応する境界線を定義します。              |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text    | 境界線のカラーを定義します。 。                 | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                    |
-|                                                                            | style | longint | 境界線のスタイルを定義します。 。 デフォルト = empty。 | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| プロパティ                                                                      |       | 型       | 説明                                                     | とりうる値                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------- | ----- | ------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object  | それぞれに対応する境界線を定義します。                                    |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text    | 境界線のカラーを定義します。 デフォルト = black                           | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                    |
+|                                                                            | style | longint | 境界線のスタイルを定義します。 デフォルト = empty。 null または未定義をとることはできません。 | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### フォントとテキスト
 
 | プロパティ           |            | 型       | 説明                                                                                                                                                                                                                                                                            | とりうる値                                                                                                                                                                                                   |
 | --------------- | ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | font            |            | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 例: "14pt Century Gothic"。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 ("") で括られる必要があります。 | CSS fontショートハンド。 4D ではフォントの特徴をオブジェクトとして管理するためのユーティリティコマンドを提供しています: [`VP Font to object`](method-list.md#vp-font-to-object) および [`VP Object to font`](method-list.md#vp-object-to-font)                  |
-| formatter       |            | text    | 値や日時に対するパターン                                                                                                                                                                                                                                                                  | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                   |
+| formatter       |            | text    | 値や日時に対するパターン。                                                                                                                                                                                                                                                                 | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                   |
 | isVerticalText  |            | boolean | テキストの向きを指定します。                                                                                                                                                                                                                                                                | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                       |
 | labelOptions    |            | object  | セルラベルのオプションを定義します (ウォーターマークオプション)                                                                                                                                                                                                                                             |                                                                                                                                                                                                         |
 |                 | alignment  | longint | セルラベルの位置を指定します。 任意プロパティです。                                                                                                                                                                                                                                                    | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right` |

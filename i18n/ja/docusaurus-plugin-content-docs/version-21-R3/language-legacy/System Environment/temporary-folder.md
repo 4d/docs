@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 戻り値 | Text | &#8592; | テンポラリフォルダへのパス名 |
+| 戻り値 | Text | &#8592; | テンポラリフォルダーへのパス名 |
 </div>
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Temporary folder.Summary-->Temporary folderコマンドは、システムによって設定される現在のテンポラリフォルダへのパス名を返します。<!-- END REF-->
+<!--REF #_command_.Temporary folder.Summary-->Temporary folderコマンドは、システムによって設定される現在のテンポラリフォルダーへのパス名を返します。<!-- END REF-->
 
 ## 例題 
 

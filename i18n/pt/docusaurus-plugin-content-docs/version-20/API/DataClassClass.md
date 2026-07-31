@@ -131,7 +131,7 @@ Considerando as propriedades de tabela abaixo:
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->Diferente de<!-- END REF -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #DataClassClass.all().Params -->
@@ -437,7 +437,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->Pode usar parêntesis na pesquisa para dar prioridade ao cálculo Por exemplo, pode organizar uma pesquisa da seguinte maneira: Por exemplo, pode organizar uma pesquisa da seguinte maneira:<!-- END REF -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D. Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #DataClassClass.get().Params -->
@@ -878,7 +878,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->Parâmetros <!-- END REF -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D. EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D. EntitySelection <!-- END REF -->
 
 
 <!-- REF #DataClassClass.query().Params -->
@@ -1107,7 +1107,7 @@ Esse recurso só está disponível em consultas sobre classes de dados e seleç�
 
 :::
 
-Para tal, é necessário ligar argumentos de consulta a elementos de coleção, de modo a que apenas sejam encontrados elementos individuais que contenham argumentos ligados. Ao pesquisar nos atributos de objetos de classe de dados que contêm coleções usando vários argumentos de consulta unidos pelo operador AND, você pode querer garantir que somente as entidades que contêm elementos que correspondem a todos os argumentos sejam retornadas, e não as entidades em que os argumentos podem ser encontrados em elementos diferentes.
+Ao pesquisar nos atributos de objetos de classe de dados que contêm coleções usando vários argumentos de consulta unidos pelo operador AND, você pode querer garantir que somente as entidades que contêm elementos que correspondem a todos os argumentos sejam retornadas, e não as entidades em que os argumentos podem ser encontrados em elementos diferentes. Para tal, é necessário ligar argumentos de consulta a elementos de coleção, de modo a que apenas sejam encontrados elementos individuais que contenham argumentos ligados.
 
 Por exemplo, com as duas entidades abaixo:
 

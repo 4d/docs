@@ -805,7 +805,7 @@ $status:=$transporter.expunge()
 
 #### Descripción
 
-La función `.searchMails()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual<!-- END REF -->. .
+La función `.searchMails()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al buzón actual, o el *name* del buzón<!-- END REF -->. .
 
 En el parámetro opcional *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 
@@ -986,7 +986,7 @@ Caracter delimitador del nombre del buzón.
 
 #### Descripción
 
-La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->La función `.getMail()`<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
 
 En el primer parámetro, puede pasar:
 
@@ -1597,7 +1597,7 @@ End if
 
 > Esta función se basa en la especificación del [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual <!-- REF #IMAPTransporterClass.searchMails().Summary -->La función `.searchMails()`<!-- END REF -->. .
+La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual<!-- END REF -->. .
 
 *searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves-de-búsqueda-autorizadas](#authorized-search-keys) más abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
 
@@ -1737,7 +1737,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 #### Descripción
 
-selecciona el buzón *name* como el buzón actual <!-- REF #IMAPTransporterClass.selectBox().Summary -->La función `.selectBox()`<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+La función `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona el buzón *name* como el buzón actual<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 > Para obtener la información de un buzón sin cambiar el buzón actual, utilice [`.getBoxInfo()`](#getboxinfo).
 
 En el parámetro *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).

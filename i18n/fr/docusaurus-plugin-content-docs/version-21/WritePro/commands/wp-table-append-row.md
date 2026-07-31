@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                                      |                             | Description                                          |
-| ---------- | ----------------------------------------- | --------------------------- | ---------------------------------------------------- |
-| tableRef   | Object                                    | &#8594; | Référence du tableau                                 |
-| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valeur(s) à définir dans la ligne |
-| valueColl  | Collection                                | &#8594; | Collection de valeurs à définir dans la ligne        |
-| Résultat   | Object                                    | &#8592; | Objet plage ligne                                    |
+| Paramètres              | Type                                      |                             | Description                                          |
+| ----------------------- | ----------------------------------------- | --------------------------- | ---------------------------------------------------- |
+| tableRef                | Object                                    | &#8594; | Référence du tableau                                 |
+| value                   | Text, Number, Time, Date, Picture, Object | &#8594; | Valeur(s) à définir dans la ligne |
+| valueColl               | Collection                                | &#8594; | Collection de valeurs à définir dans la ligne        |
+| Résultat de la fonction | Object                                    | &#8592; | Objet plage ligne                                    |
 
 </div>
 <!-- END REF-->

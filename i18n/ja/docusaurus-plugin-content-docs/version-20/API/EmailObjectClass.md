@@ -51,13 +51,13 @@ Email オブジェクトは次のプロパティを提供します:
 
 メールアドレスを格納するプロパティ ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) はすべて、テキスト・オブジェクト・コレクション型の値を受け付けます。
 
-#### Text
+#### テキスト
 
 - 単一のメールアドレス: "somebody@domain.com"
 - 単一の表示名+メールアドレス: "Somebody <somebody@domain.com>"
 - 複数のメールアドレス: "Somebody <somebody@domain.com>,me@home.org"
 
-#### Object
+#### オブジェクト
 
 2つのプロパティを持つオブジェクト:
 
@@ -66,7 +66,7 @@ Email オブジェクトは次のプロパティを提供します:
 | name  | Text | 表示名 (null も可能) |
 | email | Text | メールアドレス        |
 
-#### Collection
+#### コレクション
 
 アドレスオブジェクトのコレクション
 
@@ -190,7 +190,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 - sender ドメインは、受信側のメールサーバーがセッションを開いたときに受け取るドメインです。
 - from アドレスは、受信者から見えるアドレスです。
 
-混乱を避けるため、sender および from アドレスには同じアドレスを使用することが推奨されます。
+配信性向上のため、sender および from アドレスには同じアドレスを使用することが推奨されます。
 
 ## .headers
 
@@ -324,7 +324,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 - sender ドメインは、受信側のメールサーバーがセッションを開いたときに受け取るドメインです。
 - from アドレスは、受信者から見えるアドレスです。
 
-混乱を避けるため、sender および from アドレスには同じアドレスを使用することが推奨されます。
+配信性向上のため、sender および from アドレスには同じアドレスを使用することが推奨されます。
 
 ## .size
 

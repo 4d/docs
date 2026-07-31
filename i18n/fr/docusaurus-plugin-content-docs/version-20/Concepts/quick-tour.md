@@ -32,7 +32,7 @@ $myHour:=?08:12:55? //assigne une heure littérale
 
 Vous devez impérativement distinguer l'opérateur d'affectation := des autres opérateurs. Plutôt que de combiner des expressions dans une nouvelle expression, l'opérateur d'affectation copie la valeur de l'expression à droite de l'opérateur d'affectation dans la variable ou le champ situé à gauche de l'opérateur.
 
-**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). Un opérateur d'affectation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.
+**Important :** Ne confondez pas l’opérateur d’assignation (:=) avec le signe égal (=). Un opérateur d'assignation différent (et non pas =) a été choisi délibérément pour éviter les problèmes et la confusion qui surviennent souvent avec == ou === dans d'autres langages de programmation. De telles erreurs sont souvent difficiles à reconnaître pour le compilateur et conduisent à un dépannage fastidieux.
 
 ## Variables
 
@@ -131,7 +131,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Une méthode peut renvoyer une seule valeur dans un paramètre, qui doit être déclaré. Lorsque vous appelez une méthode, vous saisissez simplement son nom : Les paramètres sont directement disponibles dans la méthode appelée s'ils ont été déclarés.
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont directement disponibles dans la méthode appelée s'ils ont été déclarés. Une méthode peut renvoyer une seule valeur dans un paramètre, qui doit être déclaré. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```4d
 $myText:="hello"
@@ -330,7 +330,7 @@ Form.pageNumber:=10 //assigne 10 à Form.pageNumber
 //Form.pageTotal-Form.pageNumber n'est pas assignable :
 Form.pageTotal- Form.pageNumber:=10 //erreur, non assignable
 ```
-En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne] Prénom " " +[Personne]Nom` n'est pas assignable.
+En général, les expressions qui utilisent un opérateur ne sont pas assignables. Par exemple, `[Personne]Prénom " " +[Personne]Nom` n'est pas assignable.
 
 
 ## Pointeurs

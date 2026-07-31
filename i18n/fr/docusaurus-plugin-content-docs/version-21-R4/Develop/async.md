@@ -60,11 +60,7 @@ Chaque worker (ou fenêtre de formulaire pour [`CALL FORM`](../commands/call-for
 
 ### Communication bidirectionnelle par messages
 
-<<<<<<<< HEAD:i18n/fr/docusaurus-plugin-content-docs/version-21-R4/Develop/async.md
 Le process appelant envoie un message, puis le workerl'exécute. Le worker peut à son tour renvoyer un message (via [`CALL WORKER`](../commands/call-worker) ou [`CALL FORM`](../commands/call-form)) à l'appelant ou à un autre worker pour notifier un événement (fin de tâche, données reçues, erreur, progression, etc.). Ce mécanisme remplace le retour classique des appels synchrones.
-========
-Le process appelant envoie un message, puis le worker l'exécute. Ce mécanisme remplace le retour classique des appels synchrones.
->>>>>>>> l10n_main:i18n/fr/docusaurus-plugin-content-docs/version-21-R2/Develop/async.md
 
 ### Écoute d'événements
 
@@ -92,7 +88,7 @@ En 4D, tout objet est libéré [dès lors qu'il n'y a plus de référence](../Co
 
 Pour les classes asynchrones, une **référence supplémentaire** est toujours maintenue par 4D dans le process qui a instancié l'objet. Cette référence n'est libérée que lorsque l'opération est terminée, c'est-à-dire après le déclenchement de l'événement `onTerminate`. Ce référencement automatique permet à votre objet de survivre même si vous ne l'avez pas référencé spécifiquement dans une variable.
 
-Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement `onTerminate` et libère ainsi l'objet.
+Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction `.shutdown()` ou `terminate()` ; elle déclenche l'événement onTerminate\\` et libère ainsi l'objet.
 
 ### Exemples illustrant le concept commun
 

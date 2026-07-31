@@ -14,7 +14,7 @@ title: OpenAIImagesResult
 | プロパティ    | 型                                     | 説明                                                                              |
 | -------- | ------------------------------------- | ------------------------------------------------------------------------------- |
 | `images` | [OpenAIImage](OpenAIImage.md) のコレクション | OpenAIImage オブジェクトのコレクションを返します。                                                 |
-| `ピクチャー`  | [OpenAIImage](OpenAIImage.md)         | コレクションから最初のOpenAIImage を返します。                                                   |
+| `image`  | [OpenAIImage](OpenAIImage.md)         | コレクションから最初のOpenAIImage を返します。                                                   |
 | `usage`  | Object                                | トークン使用状況の情報をかえします([OpenAIResult](OpenAIResult.md) から継承されます)。 |
 
 ### usage
@@ -59,11 +59,11 @@ title: OpenAIImagesResult
 
 | 引数       | 型                         | 説明                            |
 | -------- | ------------------------- | ----------------------------- |
-| *folder* | 4D.Folder | 画像が保存されるフォルダ。                 |
+| *folder* | 4D.Folder | 画像が保存されるフォルダー。                 |
 | *prefix* | Text                      | 保存された画像ファイル名につける接頭辞。          |
 | 戻り値      | Boolean                   | 画像が正常に保存された場合には、`True` を返します。 |
 
-画像を指定されたディスクフォルダに保存します。
+画像を指定されたディスクフォルダーに保存します。
 
 ## 参照
 

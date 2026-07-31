@@ -27,7 +27,7 @@ title: リリースノート
   - Web サーバーオブジェクトには新しい[`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) プロパティが含まれます。
 - 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
 - `roles.json` ファイル内での、明確な許可のないアクセスをデフォルトで全てブロックする新しい[`restrictedByDefault` プロパティ](../ORDA/privileges.md#制限モード) のサポート。
-- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
+- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダーの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
 - [Sessions API](../API/SessionClass.md) は全ての[デスクトップセッション](../Desktop/sessions.md) をサポートするようになり、[デスクトップセッションとWeb アクセスを共有する](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ことが可能になりました。これにより、Web エリア内にQodly ページを使用するアプリケーションの開発が容易になりました。
 - [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
 - プロジェクトを閉じたり再起動したりすることなく、4D エクスプローラーから[ホストプロジェクトから直接コンポーネントを作成](../Extensions/develop-components.md#コンポーネントの作成)したり、あるいは[専用のタブからコンポーネントのコードを編集する](../Extensions/develop-components.md#全てのコンポーネントコードを編集) ことができるようになりました。

@@ -195,7 +195,7 @@ $transporter.send($email)
 
 #### Descrição
 
-A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
+A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 
 ## .cid

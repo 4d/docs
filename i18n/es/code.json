@@ -842,11 +842,11 @@
     "description": "The title for copy button"
   },
   "theme.SearchModal.askAiScreen.likeButtonTitle": {
-    "message": "Like",
+    "message": "Me gusta",
     "description": "The title for like button"
   },
   "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
-    "message": "Dislike",
+    "message": "No me gusta",
     "description": "The title for dislike button"
   },
   "theme.SearchModal.askAiScreen.thanksForFeedbackText": {

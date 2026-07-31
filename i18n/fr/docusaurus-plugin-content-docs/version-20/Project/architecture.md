@@ -114,7 +114,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 | ------------- | ------------------------------------------------------------------------------------------------------ | ------ |
 | table_*n*.4dm | Méthodes trigger définies dans le projet. Un fichier de trigger par table (n étant le numéro de table) | text   |
 
-**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. Il est compatible avec les outils de contrôle de version.
+**Note :** L'extension de fichier .4dm est un format de fichier texte contenant le code d'une méthode 4D. Il est compatible avec les outils de contrôle de version.
 
 
 ### `Trash`
@@ -160,7 +160,7 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 | data.journal | Créé uniquement lorsque la base de données utilise un fichier journal. Le fichier journal est utilisé pour assurer la sécurité des données entre les sauvegardes. Toutes les opérations effectuées sur les données sont enregistrées séquentiellement dans ce fichier. Par conséquent, chaque opération sur les données entraîne deux actions simultanées : la première sur les données (l'instruction est exécutée normalement) et la seconde dans le fichier journal (une description de l'opération est enregistrée). Le fichier journal est construit indépendamment, sans perturber ni ralentir le travail de l'utilisateur. Une base de données ne peut fonctionner qu'avec un seul fichier journal à la fois. Le fichier journal enregistre des opérations telles que des ajouts, des modifications ou des suppressions d'enregistrements, des transactions, etc. Il est généré par défaut lors de la création d'une base de données. | binary |
 | data.match   | (interne) UUID correspondant au numéro de la table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | XML    |
 
-(*) Lorsque le projet est créé depuis une base binaire .4b, le fichier de données demeure inchangé. Ainsi, il peut être nommé différemment et placé dans un autre emplacement.
+(*) Lorsque le projet est créé depuis une base binaire .4db, le fichier de données demeure inchangé. Ainsi, il peut être nommé différemment et placé dans un autre emplacement.
 
 ### `Settings` (user data)
 
@@ -189,7 +189,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 ## `Settings` (user)
 
-Ce dossier contient les [paramètres utilisateur****](../Desktop/user-settings.md#user-settings) utilisés pour l'administration de l'application.
+Ce dossier contient les [**paramètres utilisateur**](../Desktop/user-settings.md#user-settings) utilisés pour l'administration de l'application.
 
 > Ces paramètres ont la priorité sur les [paramètres de structure](#sources). Toutefois, s'il existe des [paramètres utilisateur pour les données](#settings-user-data), ils ont la priorité sur ces paramètres utilisateur. Voir aussi [Priorité des paramètres](../Desktop/user-settings.md#priorite-des-parametres).
 
@@ -222,7 +222,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 
 Ce dossier contient les composants qui seront disponibles dans le projet d'application. Il doit être stocké au même niveau que le dossier Project.
 
-> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - à des fins de déploiement : [créer le composant](Desktop/building.md#build-component) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de l'application hôte.
+> Un projet d'application peut être lui-même un composant : - pour le développement : insérer un alias du fichier .4dproject dans le dossier Components du projet hôte. - à des fins de déploiement : [créer le composant](Desktop/building.md#build-component) et insérer le fichier .4dz résultant dans un dossier .4dbase dans le dossier Components de l'application hôte.
 
 
 ## `Plugins`

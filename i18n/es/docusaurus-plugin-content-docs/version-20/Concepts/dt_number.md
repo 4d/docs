@@ -5,7 +5,7 @@ title: Número (Real, Entero largo, Entero)
 
 Número es un término genérico que significa:
 
-- Los campos, variables o expresiones de tipo real. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- Los campos, variables o expresiones de tipo real. El rango para el tipo de datos Real es ±1.7e±308 (siguiendo el estándar [IEEE 754 para formato de punto flotante binario de doble precisión](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Los campos, variables o expresiones de tipo Entero largo. El rango para el tipo de datos Entero largo (4 bytes) es -2^31..(2^31)-1.
 - Los campos, variables o expresiones de tipo Entero. El rango para el tipo de datos Entero (2 bytes) es -32.768..32.767 (2^15..(2^15)-1).
 

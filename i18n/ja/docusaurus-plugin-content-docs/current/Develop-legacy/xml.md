@@ -12,9 +12,9 @@ displayed_sidebar: docs
 
 The [**XML** theme](../commands/theme/XML.md) groups together the generic XML "utilities" commands of 4D. These are option- and error-management commands. 
 
-4D also offers two separate sets of XML commands: [**DOM**](../commands/theme/XML_DOM.md) (Document Object Model) and [**SAX**](../commands/theme/XML_SAX.md) (Simple API XML) are two different parsing modes for XML documents.
+4D also offers two separate sets of XML commands: [**DOM**](../commands/theme/XML_DOM.md) (Document Object Model) and [**SAX**](../commands/theme/XML_SAX.md) (Simple API for XML) are two different parsing modes for XML documents.
 
-- The DOM mode parses an XML source and builds its structure (its "tree") in memory. Because of this, access to each element of the source is extremely fast. However, since the entire tree structure is stored in memory, the processing of large XML documents may lead to the memory capacity being exceeded and thus provoke errors.
+- The DOM mode parses an XML source and builds its structure (its "tree") in memory. Because of this, access to each element of the source is extremely fast. However, since the entire tree structure is stored in memory, the processing of large XML documents may lead to the memory capacity being exceeded and cause errors.
 - The SAX mode does not build a tree structure in memory. In this mode, "events" (such as the start and end of an element) are generated when parsing the source. This mode lets you parse XML documents of any size, regardless of the amount of memory available.
 
 ### References
@@ -24,7 +24,7 @@ http://www.w3schools.com/xml/
 
 :::note
 
-For XML support, 4D uses the [Xerces.dll library](../Notes/updates.md#library-table) developed by the Apache Foundation company. 
+For XML support, 4D uses the [Xerces.dll library](../Notes/updates.md#library-table) developed by the Apache Software Foundation. 
 
 :::
 
@@ -64,7 +64,7 @@ This non-exhaustive list details the main XML concepts used by the commands and 
 - **Validation**: An XML document is “validated” by the parser when it is “well-formed” and in compliance with the DTD specifications. 
 - **Well-formed**: An XML document is declared “well-formed” by the parser when it complies with the generic XML specifications. 
 - **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. The XML language is based on the use of tags and a specific syntax, in keeping with the HTML language. However, unlike the latter, the XML language allows the definition of customized tags.
-- **XSL**: eXtensible Stylesheet Language. A language permitting the definition of style sheets used to process and display the contents of an XSL document.
+- **XSL**: eXtensible Stylesheet Language. A language permitting the definition of style sheets used to process and display the contents of an XML document.
 
 
 ## XML DOM Commands
@@ -133,7 +133,7 @@ In addition, the reference returned in this case is a sequence of 32 zero "0" ch
 
 The [XML SAX commands](../commands/theme/XML_SAX.md) work with the standard document references of 4D (**DocRef**, a Time type reference). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../commands/send-packet) or [`Append document`](../commands/append-document).
 
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../commands/create-document) and [`Open document`](../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. For instance, the `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` header will be written automatically in the document.
+The creation and opening of XML documents by programming is carried out using the [`Create document`](../commands/create-document) and [`Open document`](../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. For instance, the `<?xml version="1.0" encoding="UTF-8" standalone="no"?>` header will be written automatically in the document.
 
 :::note
 

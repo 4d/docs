@@ -7,7 +7,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`étendre`](#class-extends-classname) une autre classe, et hérite ensuite de ses [fonctions](#function) et propriétés ([déclarées](#property) et [calculées](#function-get-and-function-set)).
+Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Chaque objet est une instance de sa classe.
 
 > Les modèles de classe 4D et JavaScript sont similaires, et basés sur une chaîne de prototypes.
 

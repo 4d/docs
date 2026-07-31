@@ -18,7 +18,7 @@ Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquan
 Pour chaque utilisateur connecté à la base, la liste fournit les informations suivantes :
 
 - Système de la machine cliente (macOS ou Windows) sous forme d’icône.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](../commands/set-user-alias) command on the user machine. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
+- **Utilisateur 4D** : Nom de l'utilisateur 4D, ou alias s'il a été défini à l'aide de la commande [`SET USER ALIAS`](../commands/set-user-alias) sur la machine de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
 - **Nom de machine** : Nom de la machine distante.
 - **Nom de session** : Nom de la session ouverte sur la machine distante.
 - **Adresse IP** : Adresse IP de la machine distante.
@@ -29,7 +29,7 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 
 ### Gestion des utilisateurs endormis
 
-4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. On the server, the connected user changes to a **Sleeping** status:
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut **Sleeping** :
 
 ![](../assets/en/Admin/server-sleep.png)
 
@@ -37,7 +37,7 @@ Ce statut libère les ressources sur le serveur. En outre, l'application 4D dist
 
 Le scénario suivant est pris en charge : un utilisateur distant cesse de travailler durant un certain laps de temps, par exemple durant la pause déjeuner, mais garde ouverte la connexion au serveur. La machine passe en mode veille. Au retour de l'utilisateur, la machine sort du mode veille et l'application 4D distante récupère automatiquement sa connexion au serveur ainsi que son contexte de session.
 
-> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce délai d'expiration par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter) avec le sélecteur `Remote connection sleep timeout`.
 
 ## Zone de recherche/filtrage
 
@@ -65,7 +65,7 @@ Ce bouton permet de visualiser directement les process du ou des utilisateur(s) 
 
 ### Déconnecter
 
-Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte s'affiche pour vous permettre de confirmer ou d'annuler cette opération (maintenez la touche **Alt** enfoncée tout en cliquant sur le bouton **Drop user** pour déconnecter directement le ou les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
 
 > Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`DROP REMOTE USER`](../commands/drop-remote-user).
 

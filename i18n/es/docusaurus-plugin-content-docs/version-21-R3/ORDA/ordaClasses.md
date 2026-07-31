@@ -1063,7 +1063,7 @@ Una función con la palabra clave `onHTTPGet` puede devolver cualquier valor de 
 
 :::info
 
-Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para beneficiarse de las propiedades y funciones para definir el encabezado, el cuerpo y el estado de la respuesta.
+Puede devolver un valor de la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para aprovechar las propiedades y funciones que permiten configurar el encabezado, el cuerpo y el estado de la respuesta.
 
 :::
 

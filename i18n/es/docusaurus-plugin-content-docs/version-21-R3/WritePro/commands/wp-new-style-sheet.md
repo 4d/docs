@@ -61,7 +61,7 @@ Puede especificar los atributos de la hoja de estilo usando el comando [WP SET A
 
 ### Hoja de estilo de lista jerárquica
 
-If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
+Si el parámetro *styleSheetType* se define en `wk type paragraph`, puede, si lo desea, pasar el parámetro *listLevelCount* para crear una [hoja de estilo de lista jerárquica](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
 El parámetro *listLevelCount* define el número total de niveles de la jerarquía. Cuando se especifica (valor ≥ 1), el comando crea automáticamente una hoja de estilo de nivel raíz y las hojas de estilo de nivel inferior correspondientes.
 

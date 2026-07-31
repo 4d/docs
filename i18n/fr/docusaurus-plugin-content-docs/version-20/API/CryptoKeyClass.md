@@ -165,10 +165,9 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 <div class="no-index">
 
 |Paramètre|Type||Description|
-|---|---|----|---|
-|message|Text|->|Chaîne de message à décoder en utilisant `options.encodingEncrypted` puis à déchiffrer.|
-|options|Object|->|Options de décodage|
-|Résultat|Object|<-|Statut|
+|---||----|---|
+|message|Text|->|Chaîne de message à décoder en utilisant `options.encodingEncrypted` et decrypted.| |options|Object|->|Options de décodage|
+|Résultat|Object|<-|Status|
 </div>
 <!-- END REF -->
 
@@ -214,10 +213,9 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 <div class="no-index">
 
 |Paramètre|Type||Description|
-|---|---|----|---|
-|message|Text|->|Chaîne de message à encoder en utilisant `options.encodingDecrypted` puis à chiffrer.|
-|options|Object|->|Options d'encodage|
-|Résultat|Text|<-|Message chiffré et encodé avec `options.encodingEncrypted`|
+|---||----|---|
+|message|Text|->|Chaîne de message à encoder en utilisant `options.encodingDecrypted` et encrypted.| |options|Object|->|Options d'encodage|
+|Résultat|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
 
@@ -339,7 +337,7 @@ La valeur retournée est la clé publique.
 </div>
 <!-- END REF -->
 
-La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->La fonction `sign()`<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. à l'aide des clés objet `CryptoKey` et des *options* fournies.
+La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 d'une chaîne ou d'un Blob *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
 `CryptoKey` doit contenir une clé **privée** valide.
 

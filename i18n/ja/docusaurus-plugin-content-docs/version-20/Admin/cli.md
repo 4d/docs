@@ -45,7 +45,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 | `--webadmin-settings-file`  | ファイルパス                                           | [WebAdmin Webサーバー](webAdmin.md) 用のカスタム WebAdmin `.4DSettings` ファイルのパス。 [tool4d](#tool4d) の場合には利用できません。                                                                                                                                                                                                                                                                                                                                                                                     |
 | `--webadmin-access-key`     | Text                                             | [WebAdmin Webサーバー](webAdmin.md) 用のアクセスキー。 [tool4d](#tool4d) の場合には利用できません。                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `--webadmin-auto-start`     | Boolean                                          | [WebAdmin Webサーバー](webAdmin.md) 用の自動スタートアップ設定の状態。 [tool4d](#tool4d) の場合には利用できません。                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `--webadmin-store-settings` |                                                  | アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの [`WebAdmin.4DSettings`](webAdmin.md#webadmin-設定) ファイル、または `--webadmin-settings-path` パラメーターで指定されたカスタムファイル) に保存します。 アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの [`WebAdmin.4DSettings`](webAdmin.md#webadmin-設定) ファイル、または `--webadmin-settings-path` パラメーターで指定されたカスタムファイル) に保存します。 [tool4d](#tool4d) の場合には利用できません。                                                                                                                        |
+| `--webadmin-store-settings` |                                                  | アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの [`WebAdmin.4DSettings`](webAdmin.md#webadmin-設定) ファイル、または `--webadmin-settings-path` パラメーターで指定されたカスタムファイル) に保存します。 必要に応じて `--webadmin-store-settings` 引数を使用して、これらの設定を保存します。 [tool4d](#tool4d) の場合には利用できません。                                                                                                                                                                                                                                 |
 | `--utility`                 |                                                  | 4D Server の場合のみ利用可能です。 [4D Server をユーティリティモードで起動](#ユーティリティモードの-4d-server) します。                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `--skip-onstartup`          |                                                  | `On Startup` および `On Exit` データベースメソッドを含む "自動" メソッドを一切実行せずにプロジェクトを起動します。                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `--startup-method`          | プロジェクトメソッド名 (文字列)                                | (`--skip-onstartup` でスキップされていない場合) `On Startup` データベースメソッドの直後に実行するプロジェクトメソッドです。                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -81,7 +81,7 @@ macOS上でパッケージファイルを開く:
 --args ~/Documents/myDB.4dbase
 ```
 
-データファイルを指定してプロジェクトファイルを開く:
+プロジェクトファイルを開く:
 
 *   macOS:
 
@@ -100,7 +100,7 @@ macOS上でパッケージファイルを開く:
 
 
 
-プロジェクトファイルを開く:
+データファイルを指定してプロジェクトファイルを開く:
 
 *   macOS:
 

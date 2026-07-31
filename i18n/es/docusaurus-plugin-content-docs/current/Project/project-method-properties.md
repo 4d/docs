@@ -66,7 +66,7 @@ Incluso para alguien que no conozca el proyecto, está claro lo que hace este c�
 
 Puede encapsular los métodos de su proyecto en objetos **fórmula** y llamarlos desde sus objetos.
 
-The [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) commands allow you to create [native formula objects](../API/FormulaClass.md) that you can encapsulate in object properties. Permite implementar métodos objetos personalizados.
+Los comandos [`Formula`](../commands/formula) o [`Formula from string`](../commands/formula-from-string) le permiten crear [objetos de fórmula nativos](../API/FormulaClass.md) que puede encapsular en las propiedades de los objetos. Permite implementar métodos objetos personalizados.
 
 Para ejecutar un método almacenado en una propiedad objeto, utilice el operador **()** después del nombre de la propiedad. Por ejemplo:
 

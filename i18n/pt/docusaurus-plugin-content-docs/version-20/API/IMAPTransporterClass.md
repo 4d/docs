@@ -1820,29 +1820,27 @@ A função devolve um objecto que descreve o estado IMAP:
 Para subscrever a caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw; $name : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Obrigatório
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //cria transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
 
-  //seleciona mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+$transporter:=IMAP New transporter($options)
 
-  If($boxInfo.mailCount>0)
-  // recupera cabeçalhos das últimas 20 mensagens sem marcá-las como lidas
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-    // ...
-    End for each
-  End if
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.subscribe($name) If ($status.success)
+   ALERT("Mailbox subscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1895,24 +1893,28 @@ A função devolve um objecto que descreve o estado IMAP:
 Para cancelar a subscrição da caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
-var $pw; $name : text
+var $pw : text
 var $options; $transporter; $status : object
 
 $options:=New object
 
 $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
+
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.subscribe($name) If ($status.success)
-   ALERT("Mailbox subscription successful!")
+// renomear caixa de correio
+$status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success)
+   ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
    Else
    ALERT("Error: "+$status.statusText)
    End if
-   End if
+End if
 ```
 
 <!-- END REF -->

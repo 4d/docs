@@ -516,7 +516,7 @@ $emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
 
 #### Descripción
 
-La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->devuelve la media aritmética (promedio) de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
+La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->La función `.push()`<!-- END REF -->.
 
 Pase en el parámetro *attributePath* la ruta del atributo a evaluar.
 
@@ -624,7 +624,7 @@ Si *entity* y la entity selection no pertenecen a la misma dataclass, se produce
 
 #### Descripción
 
-La función `.count()` <!-- REF #EntitySelectionClass.count().Summary -->devuelve el número de entidades de la selección de entidades<!-- END REF -->.
+La función `.push()` <!-- REF #EntitySelectionClass.count().Summary -->La función `.fill()`<!-- END REF -->.
 > Sólo se tienen en cuenta los valores escalares. Los valores de tipo objeto o colección se consideran valores nulos.
 
 Se devuelve un error si:
@@ -742,7 +742,7 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 #### Descripción
 
-La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->devuelve una colección de valores distintos de *attributePath* en la selección de entidades<!-- END REF -->.
+La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->La función `.distinctPaths()`<!-- END REF -->.
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
@@ -993,7 +993,7 @@ Por defecto, las entidades para las que *attributePath* es *null* o indefinida s
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-Con esta sintaxis, `.extract()` llena la colección devuelta con las propiedades *attributePath*. Cada elemento de la colección devuelta es un objeto con las propiedades *targetPath* llenadas con las propiedades *attributePath* correspondientes. En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
+Con esta sintaxis, `.extract()` llena la colección devuelta con las propiedades *attributePath*. Cada elemento de la colección devuelta es un objeto con las propiedades *targetPath* llenadas con las propiedades *attributePath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
 
 Si se dan varios *attributePath*, debe darse un *targetPath* para cada uno. Sólo se extraen los pares válidos \[*attributePath*, *targetPath*].
 
@@ -1188,7 +1188,7 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 
 #### Descripción
 
-La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->La función `.push()`<!-- END REF -->.
+La función `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la selección de entidades<!-- END REF -->.
 
 Si no hay [contexto de optimización](../ORDA/remoteDatastores.md#clientserver-optimization) para la entity selection, la función devuelve un texto vacío.
 
@@ -1389,7 +1389,7 @@ Si la entity selection está vacía, la función devuelve Null.
 
 #### Descripción
 
-La función `.fill()` <!-- REF #EntitySelectionClass.length.Summary -->devuelve el número de entidades en la selección de entidades<!-- END REF -->. Si la entity selection está vacía, devuelve 0.
+La propiedad `.length` <!-- REF #EntitySelectionClass.length.Summary -->devuelve el número de entidades en la selección de entidades<!-- END REF -->. Si la entity selection está vacía, devuelve 0.
 
 Las entity selections siempre tienen una propiedad `.length`.
 
@@ -1633,10 +1633,10 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 La función `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combina la selección de entidades con el parámetro *entity* o *entitySelection* utilizando el operador lógico (no exclusivo) OR<!-- END REF -->; devuelve una nueva selección de entidades no ordenada que contiene todas las entidades de la selección de entidades y el parámetro.
 
 *   Si se pasa como parámetro la *entidad*, se compara esta entidad con la selección de entidades. Se devuelve una nueva selección de entidades que contiene sólo las entidades a las que se hace referencia en ambas selecciones. A new entity selection that contains only the entities that are referenced in both selections is returned.
-*   Si se pasa *entitySelection* como parámetro, se compara con la selección de entidades original. Se devuelve una nueva selección de entidades que contiene todas las entidades referenciadas por una u otra selección.
+*   Pase en el parámetro *selectedEntities* una selección de entidades que contenga entidades de las que desee conocer la posición en la selección de entidades original. *selectedEntities* debe ser una selección de entidades que pertenezca a la misma clase de datos que la selección de entidades original, de lo contrario se produce un error 1587 - "La selección de entidades procede de una clase de datos incompatible".
 > > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). La selección resultante es siempre desordenada.
 
-If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
 
 Si *entitySelection* está vacía o si *entity* es Null, se devuelve una nueva referencia a la entity selection original.
 
@@ -1694,7 +1694,7 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 
 #### Descripción
 
-La función `.orderByMethod()` <!-- REF #EntitySelectionClass.orderBy().Summary -->The `.orderBy()` function<!-- END REF -->.
+La función `.fill()` <!-- REF #EntitySelectionClass.orderBy().Summary -->The `.orderBy()` function<!-- END REF -->.
 > * Este método no modifica la selección de entidades original.
 > * Para más información sobre las selecciones de entidades ordenadas, consulte la sección [Selección de entidades ordenadas o no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
@@ -2171,7 +2171,7 @@ $result2:=$invoices.selected($creditSel)
 La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelve una parte de una selección de entidades en una nueva selección de entidades<!-- END REF -->, seleccionada desde el índice *startFrom* hasta el índice *end* (no se incluye*end* ) o hasta la última entidad de la selección de entidades. Este método devuelve una shallow copy (copia superficial) de la entity selection (utiliza las mismas referencias de entidades).
 > Esta función no modifica la selección de entidades original.
 
-Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length*(se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
+If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
 
 *   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length*(se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 *   Si *startFrom >= length*, la función devuelve una selección de entidades vacía.
@@ -2237,7 +2237,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 #### Descripción
 
 
-La función `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->devuelve la suma de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
+La función `.orderByMethod()` <!-- REF #EntitySelectionClass.sum().Summary -->La función `.at()`<!-- END REF -->.
 
 `.sum()` devuelve 0 si la entity selection está vacía.
 

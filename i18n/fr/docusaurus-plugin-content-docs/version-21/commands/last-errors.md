@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                |
-| ---------- | ---------- | --------------------------- | -------------------------- |
-| Résultat   | Collection | &#8592; | Collection d'objets erreur |
+| Paramètres              | Type       |                             | Description                |
+| ----------------------- | ---------- | --------------------------- | -------------------------- |
+| Résultat de la fonction | Collection | &#8592; | Collection d'objets erreur |
 
 </div>
 <!-- END REF-->

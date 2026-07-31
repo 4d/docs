@@ -34,6 +34,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-  
+[Go Mobile with 4D](https://developer.4d.com/go-mobile/)  
 [MOBILE APP REFRESH SESSIONS](../commands/mobile-app-refresh-sessions)  
 [On Mobile App Action データベースメソッド](../commands/on-mobile-app-action-database-method)  

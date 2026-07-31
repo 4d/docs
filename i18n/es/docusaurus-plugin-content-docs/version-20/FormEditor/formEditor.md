@@ -457,7 +457,7 @@ Un valor de atributo definido en una hoja de estilo puede ser anulado en la desc
 | Icono                                         | Descripción                                                                                                                                                                     |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/cssIcon.png)      | Indica que un valor de atributo ha sido definido en una hoja de estilo                                                                                                          |
-| ![](../assets/en/FormEditor/cssImportant.png) | Indica que un valor de atributo ha sido definido en una hoja de estilo con la declaración `!important`                                                                          |
+| ![](../assets/en/FormEditor/cssImportant.png) | Indica que un valor de atributo se ha definido en una hoja de estilo con la declaración `!important`                                                                            |
 | ![](../assets/en/FormEditor/cssIconMixed.png) | Se muestra cuando un valor de atributo definido en una hoja de estilo para al menos un elemento de un grupo o una selección de varios objetos es diferente de los demás objetos |
 
 ## Creación de list box

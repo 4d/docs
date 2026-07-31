@@ -39,7 +39,7 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 | 18 R4   | Adicionado |
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->`CryptoKey` deve conter uma chave válida **privada**.<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->`CryptoKey` deve conter uma chave válida **publica**.<!-- END REF -->
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
@@ -334,7 +334,7 @@ O valor devolvido é a chave pública.
 </div>
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->A função `.sign()`<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. utilizando o `CryptoKey` chaves-objecto e forneceu *opções*.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de um * $var:=OBJECT Get pointer(Object named;"tstart") * string ou Blob<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 

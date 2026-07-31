@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | ------ | -------------------------------------------------- | --------------------------- | --------------- |
 | winRef | Integer                                            | &#8594; | ウィンドウ参照番号       |
 | image  | Picture                                            | &#8594; | カスタムアイコン        |
-| file   | 4D.File, [4D.Folder](../API/FolderClass.md)  | &#8594; | ファイルパスまたはフォルダパス |
+| file   | 4D.File, [4D.Folder](../API/FolderClass.md)  | &#8594; | ファイルパスまたはフォルダーパス |
 
 </div>
 <!-- END REF-->

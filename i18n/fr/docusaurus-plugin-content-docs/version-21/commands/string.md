@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type          |                             | Description                                                                                                                                  |
-| ---------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| expression | Expression    | &#8594; | Expression à convertir en chaîne (peut être de type Réel, Integer, Date, Heure, Alpha, Texte, Booléen, Undefined ou Null) |
-| format     | Integer, Text | &#8594; | Format d'affichage                                                                                                                           |
-| addTime    | Time          | &#8594; | Heure à combiner si *expression* est une date                                                                                                |
-| base       | Integer       | &#8594; | Valeur comprise entre 2 et 36 qui représente la base si *expression* est un nombre                                                           |
-| Résultat   | Text          | &#8592; | expression convertie en chaîne alphanumérique                                                                                                |
+| Paramètres              | Type          |                             | Description                                                                                                                                  |
+| ----------------------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| expression              | Expression    | &#8594; | Expression à convertir en chaîne (peut être de type Réel, Integer, Date, Heure, Alpha, Texte, Booléen, Undefined ou Null) |
+| format                  | Integer, Text | &#8594; | Format d'affichage                                                                                                                           |
+| addTime                 | Time          | &#8594; | Heure à combiner si *expression* est une date                                                                                                |
+| base                    | Integer       | &#8594; | Valeur comprise entre 2 et 36 qui représente la base si *expression* est un nombre                                                           |
+| Résultat de la fonction | Text          | &#8592; | expression convertie en chaîne alphanumérique                                                                                                |
 
 </div>
 <!-- END REF-->

@@ -1340,7 +1340,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en <em x-id="3">param</em> (opcional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1864,7 +1864,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada se llama con los parámetros pasados en <em x-id="3">param</em> (opcional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2588,7 +2588,7 @@ Puede utilizar paréntesis en la búsqueda para dar prioridad al cálculo. Por e
 
 #### Uso de marcadores de posición
 
-4D le permite utilizar marcadores de posición para los argumentos *propertyPath* y *value* dentro del parámetro *queryString*. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda. El valor de los marcadores se evalúa una vez al principio de la búsqueda; no se evalúa para cada elemento.
+4D le permite utilizar marcadores de posición para los argumentos *propertyPath* y *value* dentro del parámetro *queryString*. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda. El valor de los marcadores de posición se evalúa una sola vez al inicio de la consulta; no se evalúa para cada elemento.
 
 Se pueden utilizar dos tipos de marcadores de posición: **marcadores de posición indexados** y **marcadores de posición con nombre**.
 

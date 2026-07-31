@@ -19,9 +19,9 @@ title: エクスプローラー
 
 ![](../assets/en/Develop/explorer-qodly.png)
 
-このセクションではプロジェクトで定義されているQodly ページの一覧を見ることができます。 またページを追加、または開くことができます。 またページを追加、または開くことができます。
+このセクションではプロジェクトで定義されているQodly ページの一覧を見ることができます。 またページを追加、または開くことができます。
 
-Qodly ページのセクションに表示されいてるページは、プロジェクトのSources フォルダ内の [**WebForm** サブフォルダ](../Project/architecture.md#webforms) に格納されています。
+Qodly ページのセクションに表示されいてるページは、プロジェクトのSources フォルダー内の [**WebForm** サブフォルダー](../Project/architecture.md#webforms) に格納されています。
 
 :::note
 
@@ -31,11 +31,11 @@ Qodly ページはエクスプローラーの **ホーム** ページからは�
 
 ### 要件
 
-Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) において作成および編集されます。 4D からQodly Studio にアクセスするためには [特定の設定](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#要件) を設定する必要があり、これは [ワンクリックで設定可能です](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#ワンクリック設定)。 4D からQodly Studio にアクセスするためには [特定の設定](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#要件) を設定する必要があり、これは [ワンクリックで設定可能です](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#ワンクリック設定)。
+Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) において作成および編集されます。 4D からQodly Studio にアクセスするためには [特定の設定](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#要件) を行う必要があり、これは [ワンクリックで設定可能です](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#ワンクリック設定)。
 
 ### Qodlyページを追加または開く
 
-4D エクスプローラーからQodly ページを直接追加または開くことができます。 4D エクスプローラーからQodly ページを直接追加または開くことができます。 [要件](#要件) を満たしていた場合、ページは[Qodly Studio のページエディター](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) で開かれます。
+4D エクスプローラーからQodly ページを直接追加または開くことができます。 [要件](#要件) を満たしていた場合、ページは[Qodly Studio のページエディター](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) で開かれます。
 
 ページを追加するには:
 
@@ -57,7 +57,7 @@ Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](h
 
 ### Qodlyページを名称変更するか削除する
 
-Qodly ページの名称変更または削除は、[Qodly Studio のページエディタ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) から行うことができます。
+Qodly ページの名称変更または削除は、[Qodly Studio のページエディター](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) から行うことができます。
 
 ページを名称変更するためにはペンアイコンをクリックします:<br/>
 ![](../assets/en/Develop/qodly-rename.png)
@@ -65,7 +65,7 @@ Qodly ページの名称変更または削除は、[Qodly Studio のページエ
 ページを削除するには、オプションボタンをクリックして、 **削除** を選択します:<br/>
 ![](../assets/en/Develop/qodly-delete.png)
 
-確認用のダイアログボックスが表示されます。 **OK** をクリックします。
+確認用のダイアログボックスが表示されます。
 
 
 

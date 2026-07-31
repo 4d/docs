@@ -1118,7 +1118,7 @@ End case
 
 #### Descripción
 
-La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->La función `.startRequestLog()`<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
+La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de peticiones ORDA del lado del cliente o del lado del servidor<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
 :::info
 
@@ -1265,28 +1265,11 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
  End if
  ...
  ...
- var $connect; $status : Object
- var $person : cs.PersonsEntity
- var $ds : 4D.DataStoreImplementation
- var $choice : Text
- var $error : Boolean
-
- Case of
-    :($choice="local")
-       $ds:=ds
-    :($choice="remote")
-       $connect:=New object("hostname";"111.222.3.4:8044")
-       $ds:=Open datastore($connect;"myRemoteDS")
- End case
-
- $ds.startTransaction()
- $person:=$ds.Persons.query("lastname=:1";"Peters").first()
-
- If($person#Null)
-    $person.lastname:="Smith"
-    $status:=$person.save()
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
  End if
- ...
 ```
 
 <!-- END REF -->
@@ -1317,7 +1300,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 #### Descripción
 
-La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->La función `.stopRequestLog()`<!-- END REF -->.
+La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->detiene todo registro de peticiones ORDA en la máquina a la que se llama (cliente o servidor)<!-- END REF -->.
 
 En realidad, cierra el documento abierto en el disco. Del lado del cliente, si el registro se inició en memoria, se detiene.
 

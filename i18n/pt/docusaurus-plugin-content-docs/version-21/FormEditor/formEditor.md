@@ -277,7 +277,7 @@ Para exibir essa caixa de diálogo, selecione os objetos que deseja alinhar e es
 
 - In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<br>A área de exemplo apresenta os resultados da sua seleção.
 
-- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Preview** ou **Apply**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. Neste caso, a posição do objeto de referência não será alterada.
+- Para executar um alinhamento que use o esquema de âncora padrão, clique em **Preview** ou **Apply**. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. Nesse caso, 4D usa o objeto que está mais distante na direção do alinhamento como âncora e alinha os outros objetos a esse objeto. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora.
 
 Você pode visualizar os resultados do alinhamento clicando no botão **Preview**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
 

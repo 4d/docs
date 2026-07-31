@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description     |
-| ---------- | ------ | --------------------------- | --------------- |
-| Résultat   | Object | &#8592; | Objet événement |
+| Paramètres              | Type   |                             | Description     |
+| ----------------------- | ------ | --------------------------- | --------------- |
+| Résultat de la fonction | Object | &#8592; | Objet événement |
 
 </div>
 <!-- END REF-->

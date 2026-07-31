@@ -166,7 +166,8 @@ Para saber mais sobre o que se devolve para cada classe de dados e seus atributo
                     "name": "employer",
                     "kind": "relatedEntity",
                     "scope": "public",
-                    "type":
+                    "type": "Company",
+                    "path":
 ````
 
 

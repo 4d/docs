@@ -11,10 +11,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                                         |
-| ---------- | ---------- | --------------------------- | ------------------------------------------------------------------- |
-| data       | Text, Blob | &#8594; | Données à analyser                                                  |
-| Résultat   | Object     | &#8592; | Objet dont chaque propriété est une partie des données multiparties |
+| Paramètres              | Type       |                             | Description                                                         |
+| ----------------------- | ---------- | --------------------------- | ------------------------------------------------------------------- |
+| data                    | Text, Blob | &#8594; | Données à analyser                                                  |
+| Résultat de la fonction | Object     | &#8592; | Objet dont chaque propriété est une partie des données multiparties |
 
 </div>
 <!-- END REF-->

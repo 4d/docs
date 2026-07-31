@@ -62,9 +62,9 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 
 São suportados os seguintes padrões:
 
-- os separadores de pasta são "\"
-- o texto contém ":" e "\" como o segundo e terceiro caractere,
-- o texto começa por "\\".
+- os separadores de pasta são "\\"
+- the text contains ":" and "\\" as the second and third character,
+- o texto começa por "\\\".
 
 Exemplos com [`Folder`](../API/FolderClass.md#folder):
 

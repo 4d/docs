@@ -10,13 +10,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type   |                             | Description                                                        |
-| ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
-| targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                          |
-| formula     | Object | &#8594; | Objet de formule OU Objet avec des propriétés de formule et de nom |
-| mode        | Real   | &#8594; | Mode d'insertion                                                   |
-| rangeUpdate | Real   | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
-| Résultat    | Object | &#8592; | Objet de plage de texte représentant le résultat de la formule     |
+| Paramètres              | Type   |                             | Description                                                        |
+| ----------------------- | ------ | --------------------------- | ------------------------------------------------------------------ |
+| targetObj               | Object | &#8594; | Plage ou élément ou document 4D Write Pro                          |
+| formula                 | Object | &#8594; | Objet de formule OU Objet avec des propriétés de formule et de nom |
+| mode                    | Real   | &#8594; | Mode d'insertion                                                   |
+| rangeUpdate             | Real   | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
+| Résultat de la fonction | Object | &#8592; | Objet de plage de texte représentant le résultat de la formule     |
 
 </div>
 <!-- END REF-->

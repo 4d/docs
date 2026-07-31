@@ -1027,7 +1027,7 @@ Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
     Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos null na coleção retornada.
 
 
-*   *methodName* toma cada elemento da coleção e realiza todas as operações desejadas para acumular o resultado em *$1.accumulator*, que se devolve em *$1.value*. Em *methodName*, passe o nome do método para usar para avaliar elementos da coleção, com o(s) seu(s) parâmetro(s) em param (opcional).
+*   Se um ou mais parâmetros *targetPath* forem passados (correspondentes a um ou mais parâmetros *propertyPath*), `.extract()` preenche a nova coleção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Se mantém os valores null (o parámetro *option* se ignora) com esta sintaxe.
 
 
 #### Exemplo 1
@@ -1097,7 +1097,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### Descrição
 
-A função `.insert()` <!-- REF #collection.fill().Summary -->retorna o índice, na coleção, do primeiro valor para o qual *methodName*, aplicado em cada elemento, retorna **true**<!-- END REF -->.
+A função `.insert()` <!-- REF #collection.fill().Summary -->insere *elementos* no *índice* posição na instância de coleção e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 *   Se o parâmetro *startFrom* for omitido, *value* é estabelecido para todos os elementos coleção (*startFrom*=0).
@@ -1158,7 +1158,7 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 #### Descrição
 
-A função `.filter()` <!-- REF #collection.filter().Summary -->A função `.filter()`<!-- END REF -->. Esta função devolve uma ***cópia superficial***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.map()` <!-- REF #collection.filter().Summary -->A função `.map()`<!-- END REF -->. Esta função devolve uma ***cópia superficial***, o que significa que os objectos ou colecções de ambas as colecções partilham a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 Pode determinar a chamada de retorno a ser executada para filtrar os elementos de recolha utilizando qualquer um dos dois:
@@ -1345,7 +1345,7 @@ var $c;$c2;$c3 : Collection
 
 #### Descrição
 
-A função `.findIndex()` <!-- REF #collection.findIndex().Summary -->A função `.findIndex()`<!-- END REF -->.
+A função `.fill()` <!-- REF #collection.findIndex().Summary -->A função `.find()`<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
@@ -2056,7 +2056,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 #### Descrição
 
-A função `.map()` <!-- REF #collection.map().Summary -->cria uma nova colecção com base no resultado da chamada da fórmula ** 4D function ou *methodName* method em cada elemento da colecção original<!-- END REF -->. *methodName* pode realizar qualquer teste, com ou sem os parâmetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+A função `.some()` <!-- REF #collection.map().Summary -->cria uma nova colecção com base no resultado da chamada da fórmula ** 4D function ou *methodName* method em cada elemento da colecção original<!-- END REF -->. *methodName* pode realizar qualquer teste, com ou sem os parâmetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 > Essa função não modifica a coleção original.
 
 
@@ -2124,7 +2124,7 @@ var $1 : Object
 A função `.max()` <!-- REF #collection.max().Summary -->devolve o elemento com o maior valor na colecção<!-- END REF --> (o último elemento da colecção como seria classificado em ordem ascendente utilizando a função [.sort()``](#sort)).
 > Essa função não modifica a coleção original.
 
-var $c : Collection $c:=New collection $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45)) $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!)) $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36)) $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null)) $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
 
 
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
@@ -2442,7 +2442,7 @@ $strings2:=$strings1.orderByMethod(Formula(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-*methodName* estabelece os parâmetros abaixo:
+Com o método ***Multiply***:
 
 ```4d
 var$1Object
@@ -2537,7 +2537,7 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 #### Descrição
 
-A função `.remove()` <!-- REF #collection.push().Summary -->insere elementos no *índice* posição na instância de coleção e devolve a coleção editada<!-- END REF -->.
+A função `.find()` <!-- REF #collection.push().Summary -->The `.indexOf()` function<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 
@@ -2670,7 +2670,7 @@ Este exemplo devolve as pessoas contratadas há mais de 90 dias:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] se hoje é 01/10/2018 se hoje é 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] se hoje é 01/10/2018
 ```
 
 
@@ -2724,13 +2724,13 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName* estabelece os parâmetros abaixo:
 
-Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
+*methodName* estabelece os parâmetros abaixo:
 
 Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator>* começa com *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-*   *methodName* recebe os seguintes parâmetros:
+*   With the following *NumberGreaterThan0* method:
 *   em *$2: param*
 *   *methodName* estabelece os parâmetros abaixo:
 
@@ -2765,7 +2765,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Com o seguinte método *NumberGreaterThan0*:
+*methodName* estabelece os parâmetros abaixo:
 
 ```4d
  If($1.accumulator=Null)
@@ -2819,13 +2819,13 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName* estabelece os parâmetros abaixo:
 
-Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
+*methodName* estabelece os parâmetros abaixo:
 
 Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator>* começa com *Undefined*.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-*   *methodName* recebe os seguintes parâmetros:
+*   With the following *NumberGreaterThan0* method:
 *   em *$2: param*
 *   *methodName* estabelece os parâmetros abaixo:
 
@@ -2863,7 +2863,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
  $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
 ```
 
-Com o seguinte método *NumberGreaterThan0*:
+*methodName* estabelece os parâmetros abaixo:
 
 ```4d
     If(Value type($1.value)=Is real)
@@ -2903,7 +2903,7 @@ Com o seguinte método *NumberGreaterThan0*:
 
 #### Descrição
 
-A função `.shift()` <!-- REF #collection.remove().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF -->.
+A função `.remove()` <!-- REF #collection.remove().Summary -->insere elementos no *índice* posição na instância de coleção e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
@@ -3076,7 +3076,7 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->A função `.r
 
 #### Descrição
 
-A função `.resize()` <!-- REF #collection.shift().Summary -->define o comprimento da coleção para o novo tamanho especificado e devolve a coleção redimensionada<!-- END REF -->.
+A função `.shift()` <!-- REF #collection.shift().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 Se a colecção estiver vazia, este método não faz nada.
@@ -3200,7 +3200,7 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 
 A chamada de retorno recebe os seguintes parâmetros:
 
-*   *methodName* recebe os seguintes parâmetros:
+*   With the following *NumberGreaterThan0* method:
 *   em *$2: param*
 *   *methodName* estabelece os parâmetros abaixo:
 

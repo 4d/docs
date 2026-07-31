@@ -22,19 +22,19 @@ En el lenguaje 4D, hay varias categorías de métodos. La categoría depende de 
 | **Método base**                                   | Automático, cuando se produce un evento de la sesión de trabajo                                                                                                                                                                                                   | Sí (predefinido)        | Hay 16 métodos base en 4D.                                                                                                                                                                                                                                                                     |
 | **Class**                                         | Se llama automáticamente cuando un objeto de la clase es instanciado o cuando una función de la clase es ejecutada en una instancia de un objeto en cualquier otro método o en un [campo de base de datos](../Develop/field-properties.md#class). | sí (funciones de clase) | Una **Clase** se utiliza para declarar y configurar la clase [constructor](./classes.md#class-constructor), [propiedades](./classes.md#property) y [funciones](./classes.md#function) de objetos. Ver [**Clases**](classes.md) y [clase **Función**](../API/FunctionClass.md). |
 
-## Language tokens
+## Tokens de lenguaje
 
-4D's language includes a unique tokenization system for constants, commands, tables, fields and keywords names that are used in the code. Tokenizing these names means that as you type in the code editor they are stored internally as absolute references (numbers) and then restored as text during execution or display depending on the context. This allows you to guarantee that the code will always be interpreted correctly, even if you rename your tables or fields, or when 4D language commands are renamed over the course of different application versions.
+El lenguaje 4D incluye un sistema único de tokenización para las constantes, los comandos, las tablas, los campos y los nombres de las palabras clave que se utilizan en el código. La tokenización de estos nombres implica que, a medida que se escriben en el editor de código, se almacenan internamente como referencias absolutas (números) y, posteriormente, se restauran como texto durante la ejecución o la visualización, según el contexto. Esto le permite garantizar que el código siempre será interpretado correctamente, incluso si renombra sus tablas o campos, o cuando los comandos del lenguaje 4D se renombran en el curso de las diferentes versiones de la aplicación.
 
-**Note:** This also ensures automatic translation of the code when you have enabled the ["Use regional system settings" preference](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) and open your databases with 4D versions in different languages.
+**Nota:** esto también garantiza la traducción automática del código cuando se ha activado la [preferencia "Utilizar la configuración regional del sistema"](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) y se abren bases de datos con versiones de 4D en diferentes lenguajes.
 
-Tokenisation is completely transparent for 4D developers when working in the [4D code editor](../code-editor/write-class-method.md), and you generally won't need to worry about it. However, there are two cases where you might need to take action regarding tokenization: if you want to disable it, and if you want to use tokenization in your formulas.
+La tokenización es totalmente transparente para los desarrolladores de 4D cuando trabajan en el [editor de código de 4D](../code-editor/write-class-method.md), y, por lo general, no tendrá que preocuparse por ello. Sin embargo, hay dos casos en los que podría ser necesario tomar medidas con respecto a la tokenización: si quiere desactivarla y si quiere utilizar la tokenización en sus fórmulas.
 
-### Disabling tokenization
+### Desactivación de la tokenización
 
-When your project is stored on a version control system (VCS) such as GitHub or GitLab, you may want to disable tokenization to make the code more readable on the external platform. To do this, you can deselect the [**Include tokens in project source files**](../Preferences/general.md#include-tokens-in-project-source-files) preference to prevent tokens from being stored in your **new projects**.
+Cuando su proyecto se almacena en un sistema de control de versiones (VCS) como GitHub o GitLab, puede deshabilitar la tokenización para hacer el código más legible en la plataforma externa. Para hacer esto, puede deseleccionar la opción [**Incluir los tokens en los archivos fuente del proyecto**](../Preferences/general.md#include-tokens-in-project-source-files) para evitar que los tokens se almacenen en sus **nuevos proyectos**.
 
-You can configure your **existing projects** to save code without tokens by inserting the following key in the `<applicationName>.4DProject` file using a text editor:
+Puede configurar sus **proyectos existentes** para guardar código sin tokens insertando la siguiente llave en el archivo `<applicationName>.4DProject`utilizando un editor de texto:
 
 ```json
 "tokenizedText": false
@@ -42,37 +42,37 @@ You can configure your **existing projects** to save code without tokens by inse
 
 Este parámetro sólo se tiene en cuenta cuando se guardan los métodos. Los métodos existentes en sus proyectos no se modifican, a menos que los vuelva a guardar.
 
-### Using tokens in formulas
+### Uso de tokens en fórmulas
 
-A text-based 4D [formula](../commands/theme/Formulas.md) is a text that is interpreted at runtime, and not as it is typed. In fact, this is the case as soon as 4D code is expressed as raw text, more specifically when code is exported and then imported using the [`METHOD GET CODE`](../commands/method-get-code) and [`METHOD SET CODE`](../commands/method-set-code) commands, copied/pasted or [interpreted from 4D HTML tags](../Tags/transformation-tags.md).
-To benefit from tokenization mechanisms in these contexts, you just need to use an explicit syntax which consists in preceding object names in the language by their token.
+Una [fórmula 4D](../commands/theme/Formulas.md) de tipo texto es un texto que se interpreta en tiempo de ejecución, y no a medida que se escribe. De hecho, esto ocurre cuando el código 4D se expresa como texto sin formato, más concretamente cuando el código se exporta y luego se importa mediante los comandos [`METHOD GET CODE`](../commands/method-get-code) y [`METHOD SET CODE`](../commands/method-set-code), se copia y pega o se [interpreta a partir de etiquetas HTML 4D](../Tags/transformation-tags.md).
+Para beneficiarse de los mecanismos de tokenización en estos contextos, sólo necesita usar una sintaxis explícita que consiste en preceder nombres de objetos en el lenguaje por su token.
 
-### Token syntax
+### Sintaxis tokenizada
 
-For tokenizable named elements contained in expressions, 4D offers a special syntax you can use to reference the tokens directly: you just need to add a specific suffix after the element name to indicate its type (command, field, etc.), followed by its reference. The token syntax is detailed in this table:
+Para los elementos tokenizables contenidos en las expresiones, 4D ofrece una sintaxis especial que se puede utilizar para referenciar los tokens directamente: solo debe añadir un sufijo específico después del nombre del elemento para indicar su tipo (comando, campo, etc.), seguido de su referencia. La sintaxis tokenizada se detalla en esta tabla:
 
-| Elemento    | Example (standard syntax)                        | Suffix                                  | Example (token syntax)                                                               | Comentarios                                                                                            |
-| ----------- | ------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 4D Command  | String(a)                                        | :Cxx                    | String:C10(a)                                                        | xx is the command number                                                                               |
-| 4D Constant | Pi                                                                  | :Kxx:yy | Pi:K30:1                                                                | xx is the ID of the constant group and yy is its index (position) within this group |
-| Tabla       | [Employees]     | :xx                     | [Employees:1]                       | xx is the table number                                                                                 |
-| Campo       | [Employees]Name | :xx                     | [Employees:1]Name:2 | xx is the field number                                                                                 |
-| 4D Plugin   | PV PRINT(area)                                   | :Pxx:yy | PV PRINT:P13000:229(area)                            | xx is the plug-in ID and yy is the index of the command                                                |
+| Elemento     | Ejemplo (sintaxis estándar)                      | Sufijo                                  | Ejemplo (sintaxis tokenizada)                                                        | Comentarios                                                                                                            |
+| ------------ | ------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Comando 4D   | String(a)                                        | :Cxx                    | String:C10(a)                                                        | xx es el número del comando                                                                                            |
+| Constante 4D | Pi                                                                  | :Kxx:yy | Pi:K30:1                                                                | xx corresponde al identificador del grupo de constantes y yy es su índice (posición) en dicho grupo |
+| Tabla        | [Employees]     | :xx                     | [Employees:1]                       | xx corresponde al número de tabla                                                                                      |
+| Campo        | [Employees]Name | :xx                     | [Employees:1]Name:2 | xx corresponde al número del campo                                                                                     |
+| 4D Plugin    | PV PRINT(area)                                   | :Pxx:yy | PV PRINT:P13000:229(area)                            | xx es el identificador del plug-in y yy es el índice del comando                                                       |
 
-**Note:** Uppercase letters (C, P) must be used in the suffixes; otherwise, they will not be interpreted correctly.
+**Nota:** en los sufijos deben utilizarse letras mayúsculas (C, P); de lo contrario, no se interpretarán correctamente.
 
-When you use this syntax, you guarantee that your formulas will be interpreted correctly even in the case of renaming or when the database is executed in a different language.
+Cuando utiliza esta sintaxis, garantiza que sus fórmulas se interpretarán correctamente incluso en el caso de renombrar o cuando la base de datos se ejecuta en un lenguaje diferente.
 
-This syntax is accepted in all 4D formulas (or 4D expressions) regardless of the calling context:
+Esta sintaxis es válida en todas las fórmulas 4D (o expresiones 4D), independientemente del contexto en el que se utilicen:
 
-- 4D formulas executed using the Formula editor or using commands such as [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
-- expressions inserted in [multi-style text areas](../FormObjects/properties_Text.md#supported-tags) (see [`ST INSERT EXPRESSION`](../commands/st-insert-expression)),
-- expressions calculated in [transformation tags](../Tags/transformation-tags.md),
-- expressions inserted in external areas such as [4D Write Pro areas](../WritePro/managing-formulas.md).
+- fórmulas 4D ejecutadas usando el editor de fórmulas o utilizando comandos como [`EXECUTE FORMULA`](../commands/execute-formula), [`APPLY TO SELECTION`](../commands/apply-to-selection), [`QUERY BY FORMULA`](../commands/query-by-formula), [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula), etc.
+- expresiones insertadas en [áreas de texto multiestilos](../FormObjects/properties_Text.md#supported-tags) (ver [`ST INSERT EXPRESSION`](../commands/st-insert-expression)),
+- expresiones calculadas en [etiquetas de transformación](../Tags/transformation-tags.md),
+- expresiones insertadas en áreas externas, como las [áreas 4D Write Pro](../WritePro/managing-formulas.md).
 
-#### Where to find the element numbers?
+#### ¿Dónde se pueden encontrar los números de los elementos?
 
-The token syntax requires the addition of the reference numbers of various elements. The location of these references depends on the type of element.
+La sintaxis de token requiere la adición de los números de referencia de diferentes elementos. La ubicación de estas referencias depende del tipo de elemento.
 
-- **4D commands:** Command numbers can be found in the documentation ("Properties" area) as well as on the Commands page of the Explorer.
-- **Tables and fields**: Table and field numbers can be obtained using the [`Table`](../commands/table) and [`Field`](../commands/field) commands. They are also displayed in the Inspector palette of the Structure editor.
+- **Comandos 4D:** los números de comando se pueden encontrar en la documentación (sección "Propiedades") así como en la página de Comandos del Explorador.
+- **Tablas y campos**: los números de tablas y de campos se pueden obtener utilizando los comandos [`Table`](../commands/table) y [`Field`](../commands/field). También se muestran en la paleta Inspector del editor Estructura.

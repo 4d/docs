@@ -68,15 +68,15 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 
 ## Impression de formulaires
 
-Dans les applications de bureau 4D, les formulaires peuvent être imprimés à l'aide des différentes [commandes du thème **Imprimer**](../commands/theme/Printing).
+Dans les applications de bureau 4D, les formulaires peuvent être imprimés à l'aide des différentes [commandes du thème **Printing**](../commands/theme/Printing).
 
-### Print rendering engine
+### Moteur de rendu d'impression
 
-4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+4D utilise un moteur de rendu d'impression dédié pour générer des états avec un design adapté à l'impression. Il inclut les principales fonctionnalités suivantes :
 
-- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
-- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
-- The same output is produced, whether the form is printed from macOS or Windows.
+- Les widgets interactifs tels que boutons, boutons radio, listes déroulantes, etc. et les effets des interfaces utilisateur modernes tels que le verre, le flou, la transparence ou les effets d'ombre sont convertis en représentations statiques adaptées et mis à plat sous forme de styles imprimables, afin que le document reste lisible et d'apparence professionnelle une fois imprimé.
+- La structure, l'espacement et l'alignement sont conservés de sorte que le document imprimé reflète la structure logique du fomulaire à l'écran.
+- Le même rendu est produit que le formulaire soit imprimé à partir de macOS ou Windows.
 
 Par exemple, le formulaire suivant :
 
@@ -88,22 +88,22 @@ Par exemple, le formulaire suivant :
 
 :::tip Article(s) de blog sur le sujet
 
-[Printing Modern Interfaces with Clean, Consistent Output](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
+[Impression d'interfaces modernes avec une sortie sobre et cohérente](https://blog.4d.com/printing-modern-interfaces-with-clean-consistent-output)
 
 :::
 
-### Legacy print renderer
+### Ancien moteur de rendu d'impression
 
-In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+Dans les versions antérieures à 4D 21 R3, un autre moteur de rendu d'impression était utilisé. Cet ancien moteur de rendu dessine simplement les widgets tels qu'ils apparaissent à l'écran. Pour des raisons de compatibilité, cet ancien moteur de rendu est **activé par défaut** dans les projets ou les bases de données converti(e)s depuis des versions antérieures à 4D 21 R3, afin que les formulaires conçus avec ce moteur de rendu continuent d'être imprimés comme précédemment.
 
-You can however enable the modern print rendering engine at any moment by:
+Vous pouvez cependant activer le moteur de rendu d'impression moderne à tout moment :
 
-- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- soit en désélectionnant l'option **Utiliser l'ancien rendu d'impression** dans la [page Compatibilité des propriétés](../settings/compatibility.md) (paramétrage permanent),
+- soit en exécutant la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter) avec le sélecteur `Use legacy print rendering` à 1 (paramétrage volatile).
 
 :::warning Limitation
 
-For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+Pour des raisons techniques, l'ancien rendu d'impression n'est pas disponible avec les formulaires affichés avec [Fluent UI](#fluent-ui-rendering) sur Windows et [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) sur macOS. Dans ces contextes, les formulaires sont **toujours imprimés avec le moteur de rendu d'impression moderne**, quelle que soit l'option de compatibilité.
 
 :::
 

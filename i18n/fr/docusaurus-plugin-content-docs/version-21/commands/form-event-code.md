@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                      |
-| ---------- | ------- | --------------------------- | -------------------------------- |
-| Résultat   | Integer | &#8592; | Numéro d'événement du formulaire |
+| Paramètres              | Type    |                             | Description                      |
+| ----------------------- | ------- | --------------------------- | -------------------------------- |
+| Résultat de la fonction | Integer | &#8592; | Numéro d'événement du formulaire |
 
 </div>
 <!-- END REF-->

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type           |                             | Description                                                                                                                         |
-| ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
-| object     | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                   |
-| property   | Integer        | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
-| Résultat   | any            | &#8592; | Valeur courante (Entier, Texte)                                                                                  |
+| Paramètres              | Type           |                             | Description                                                                                                                         |
+| ----------------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| \*                      | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
+| object                  | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                   |
+| property                | Integer        | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
+| Résultat de la fonction | any            | &#8592; | Valeur courante (Entier, Texte)                                                                                  |
 
 </div>
 <!-- END REF-->
