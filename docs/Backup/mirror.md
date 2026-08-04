@@ -3,7 +3,7 @@ id: mirror
 title: Logical mirror
 ---
 
-4D Server offers an integrated solution that allows the setting up of a backup system via a logical mirror. This solution is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+4D Server offers an integrated solution that allows the setting up of a backup system via a logical mirror. 
 
 ## What is a logical mirror?  
 
@@ -27,7 +27,7 @@ A mirror solution only reflects changes made to the **data**. This backup mode i
 
 ## How it works  
 
-Setting up a backup system using a logical mirror is based on two new commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file). 
+Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file). 
 
 The following principles are implemented:
 
