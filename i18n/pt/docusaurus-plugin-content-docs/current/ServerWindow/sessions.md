@@ -121,3 +121,69 @@ This button can be used to force the selected Client session(s) to disconnect.
 A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
 
 You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+
+## Management of sleeping client sessions
+
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server remains active.
+
+In this case, the remote application notifies 4D Server before entering sleep mode. The corresponding client session changes to the **Sleeping** status.
+
+![](../assets/en/Admin/server-sleep.png)
+
+This status frees server resources while preserving the session context.
+
+When the remote machine wakes up, the application automatically reconnects and restores the existing session.
+
+A sleeping client session is automatically dropped after 48 hours of inactivity.
+
+You can modify this timeout using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with the `Remote connection sleep timeout` selector.
+
+## Management of unreachable peer
+
+When the [QUIC network layer is used](../settings/client-server.md#network-layer), client/server sessions benefit from an **automatic reconnection feature** in case of unexpected disconnections. Unexpected disconnections include for example:
+
+- LAN cable unplug/plug,
+- Handover with a mobile connection,
+- Switch reboot,
+- Small network error.
+
+This feature supports both server-side and client-side management in the event of a lost connection with a peer, and includes configurable timeouts and real-time information.
+
+:::tip Related blog post
+
+[Tired of network errors disrupting your users? 4D 21 R4 has the answer](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+
+:::
+
+### Unreachable event
+
+The QUIC network layer automatically emits an "Unreachable" event to 4D Server when a remote 4D unexpectedly stops responding; conversely, it automatically emits an "Unreachable" event to a remote 4D when the 4D Server unexpectedly stops responding. When the "Unreachable" event is received on either side, it is immediately reflected in the interface and in the machine's [`Session`](./sessions.md) object.
+
+#### Remote stops responding
+
+When a remote 4D unexpectedly stops responding, on the [Server administration window](../ServerWindow/overview.md), the [remote session status](../ServerWindow/sessions.md#list-of-sessions) is set to **Unreachable**.
+
+![](../assets/en/Desktop/unreachable-status.png)
+
+#### Server stops responding
+
+If 4D Server unexpectedly stops responding, a reconnection dialog box is displayed on the remote machine:
+
+![](../assets/en/Desktop/server-not-responding.png)
+
+#### Session object updated
+
+When the "Unreachable" event is received on either side, an [`info.unreachableSince`](../API/SessionClass.md#info) property is created in the session on the machine receiving the event (on the server, it is readable through the [`Process activity.sessions`](../commands/process-activity) property), and it starts counting seconds since the last communication. You can use this property to implement your own disconnection interface.
+
+### Restoring or closing connection
+
+The QUIC session timeout is 900 seconds (15 minutes) by default, it can be modified using the `QUIC session timeout` selector of the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
+
+The QUIC session timeout is automatically used to monitor disconnections:
+
+- If the connection is restored before the QUIC session timeout is reached, the [`info.unreachableSince`](../API/SessionClass.md#info) property is automatically removed from the session object.
+- If the connection is not restored before the QUIC session timeout is reached, the session is closed.
+  - In case of a remote session closed from the server, a warning entry is written in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
+  - In case of a server session closed from a remote machine, a warning dialog box is displayed so that the user can restart the remote application or quit:
+    ![](../assets/en/Desktop/remote-not-responding.png)
+

@@ -57,11 +57,11 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 
 #### Autenticación del usuario con el servidor de dominio
 
-Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles.
+Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles. This option is described in the [Single Sign On (SSO) on Windows](../server/sso.md) page.
 
 #### Service Principal Name
 
-Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar este campo si desea utilizar Kerberos como protocolo de autenticación. Al marcar esta opción, 4D se conecta de forma transparente al directorio Active del servidor de dominio Windows y obtiene los tokens de autenticación disponibles.
+Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar este campo si desea utilizar Kerberos como protocolo de autenticación. This option is described in the [Enablig Kerberos](../server/sso.md#enabling-kerberos) section.
 
 #### Capa de red
 
@@ -116,17 +116,17 @@ Cuando se selecciona un tiempo de espera, el servidor cerrará la conexión de u
 
 #### Registrar los clientes al Inicio para Execute On Client
 
-Cuando esta opción está marcada, todas las máquinas remotas 4D que se conectan a la base de datos pueden ejecutar métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
+Cuando esta opción está marcada, todas las máquinas remotas 4D que se conectan a la base de datos pueden ejecutar métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
 
 #### Cifrar las comunicaciones Cliente-Servidor
 
 :::note
 
-Esta opción no está disponible cuando se selecciona la opción capa de red [QUIC](#network-layer).
+Esta opción no está disponible cuando se selecciona la opción capa de red [QUIC](#network-layer). QUIC communications are always in TLS, whatever your secured mode is.
 
 :::
 
-Esta opción permite activar el modo seguro para las comunicaciones entre la máquina servidor y las máquinas remotas 4D. Esta opción se detalla en la sección [Cifrar las de conexiones cliente/servidor](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html).
+This option activates the [secured mode for communications](../Admin/tls.md#enabling-tls-with-the-other-servers) between the server machine and the 4D remote machines with ServerNet netword layer.
 
 #### Actualizar la carpeta Resources durante una sesión
 
@@ -135,7 +135,7 @@ Este parámetro puede utilizarse para definir globalmente el modo de actualizaci
 - **Nunca**: la carpeta local **Resources** no se actualiza durante la sesión. La notificación enviada por el servidor es ignorada. La carpeta **Resources** local puede actualizarse manualmente mediante el comando **Update Local Resources** del menú de acción (ver [Uso del explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Siempre**: la sincronización de la carpeta local **Resources** se realiza automáticamente durante la sesión cada vez que el servidor envía una notificación.
 - **Preguntar**: cuando la notificación es enviada por el servidor, se muestra una caja de diálogo en las máquinas cliente, indicando la modificación. A continuación, el usuario puede aceptar o rechazar la sincronización de la carpeta local **Resources**.\
-  La carpeta **Resources** centraliza los archivos personalizados necesarios para la interfaz de la base (archivos de traducción, imágenes, etc.). Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta. Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta.
+  La carpeta **Resources** centraliza los archivos personalizados necesarios para la interfaz de la base (archivos de traducción, imágenes, etc.). Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta. Para más información, consulte la sección [Gestión de la carpeta Resources](../Desktop/clientServer.md#managing-the-resources-folder).
 
 ## Página Configuración IP
 
@@ -156,3 +156,20 @@ El funcionamiento de la tabla de configuración es el siguiente:
 
 Por defecto, 4D Server no aplica ninguna restricción de conexión: la primera línea de la tabla contiene la etiqueta Autorizar y el caracter \* (todas las direcciones).
 
+### Support of IPv6
+
+4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
+
+|                     | 4D remote IPv4 only | 4D remote IPv6 only | 4D remote both |
+| ------------------- | ------------------- | ------------------- | -------------- |
+| 4D Server IPv4 only | IPv4                | *not supported*     | IPv4           |
+| 4D Server IPv6 only | *not supported*     | IPv6                | IPv6           |
+| 4D Server both      | IPv4                | IPv6                | IPv6           |
+
+For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
+
+:::note Compatibilidad
+
+IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+
+:::

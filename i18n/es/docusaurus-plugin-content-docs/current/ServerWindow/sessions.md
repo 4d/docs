@@ -121,3 +121,69 @@ Este botón permite forzar la desconexión de las sesiones de cliente selecciona
 Antes de desconectar la sesión, aparece un cuadro de diálogo de confirmación para confirmar o cancelar esta operación (mantenga pulsada la tecla **Alt** mientras hace clic en **Desconectar usuario** para desconectarse inmediatamente sin que aparezca el cuadro de diálogo de confirmación).
 
 Puede realizar la misma acción por programación utilizando el comando [`DROP REMOTE USER`](../commands/drop-remote-user).
+
+## Gestión de sesiones de clientes inactivas
+
+4D Server gestiona específicamente los casos en los que una máquina que ejecuta una aplicación remota 4D pasa al modo de reposo mientras su conexión al servidor permanece activa.
+
+En este caso, la aplicación remota avisa a 4D Server antes de entrar en modo de suspensión. La sesión del cliente correspondiente pasa al estado **Inactivo**.
+
+![](../assets/en/Admin/server-sleep.png)
+
+Este estado libera los recursos del servidor al tiempo que conserva el contexto de la sesión.
+
+Cuando la máquina remota se enciende, la aplicación se vuelve a conectar y restaura automáticamente la sesión existente.
+
+Una sesión cliente inactiva se cierra automáticamente tras 48 horas de inactividad.
+
+Puede modificar este tiempo de espera utilizando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Remote connection sleep timeout`.
+
+## Gestión de pares inalcanzables
+
+Cuando se utiliza la [capa de red QUIC](../settings/client-server.md#network-layer), las sesiones cliente-servidor se benefician de una **función de reconexión automática** en caso de desconexiones inesperadas. Entre las desconexiones inesperadas se incluyen, por ejemplo:
+
+- desenchufar y enchufar el cable LAN,
+- Transferencia mediante una conexión móvil,
+- reinicio del conmutador,
+- un pequeño error de red.
+
+Esta funcionalidad permite la gestión tanto del lado del servidor como del lado del cliente en caso de pérdida de conexión con un par, e incluye tiempos de espera configurables e información en tiempo real.
+
+:::tip Entrada de blog relacionada
+
+¿Cansado de los errores de red que interrumpen a sus usuarios? [4D 21 R4 tiene la respuesta](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+
+:::
+
+### Evento Unreachable
+
+La capa de red QUIC emite automáticamente un evento "Unreachable" a 4D Server cuando inesperadamente un 4D remoto deja de responder; por el contrario, emite automáticamente un evento "Unreachable" a un 4D remoto cuando 4D Server inesperadamente deja de responder. Cuando se recibe el evento "Unreachable" en cualquiera de los lados, se refleja inmediatamente en la interfaz y en el objeto de la [`Session`](./sessions.md) de la máquina.
+
+#### El cliente remoto no responde
+
+Cuando un 4D remoto deja de responder de forma inesperada, en la [ventana de administración del servidor](../ServerWindow/overview.md), el [estado de la sesión remota](../ServerWindow/sessions.md#list-of-sessions) pasa a ser **Unreachable**.
+
+![](../assets/en/Desktop/unreachable-status.png)
+
+#### El servidor deja de responder
+
+Si 4D Server deja de responder de forma inesperada, aparece un cuadro de diálogo de reconexión en el equipo remoto:
+
+![](../assets/en/Desktop/server-not-responding.png)
+
+#### Objeto Session actualizado
+
+Cuando el evento "Unreachable" es recibido en ambos lados, una propiedad [`info.ureachableSince`](../API/SessionClass.md#info) es creada en la sesión de la máquina que recibe el evento (en el servidor, es legible a través de la propiedad [`Process activity.sessions`](../commands/process-activity), y comienza a contar segundos desde la última comunicación. Puede utilizar esta propiedad para implementar su propia interfaz de desconexión.
+
+### Restablecer o cerrar la conexión
+
+El tiempo de espera de la sesión QUIC es de 900 segundos (15 minutos) por defecto, pero se puede modificar utilizando el selector `QUIC session timeout` del comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
+
+El tiempo de espera de la sesión QUIC se utiliza automáticamente para supervisar las desconexiones:
+
+- Si la conexión se restablece antes de que se agote el tiempo de espera de la sesión QUIC, la propiedad [`info.unreachableSince`](../API/SessionClass.md#info) se elimina automáticamente del objeto de sesión.
+- Si la conexión no se restablece antes de que se agote el tiempo de espera de la sesión QUIC, la sesión se cierra.
+  - En caso de que el servidor cierre una sesión remota, se registra una entrada de advertencia en el [registro de diagnóstico](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
+  - En caso de que se cierre una sesión del servidor desde un equipo remoto, aparece un cuadro de diálogo de advertencia para que el usuario pueda reiniciar la aplicación remota o salir:
+    ![](../assets/en/Desktop/remote-not-responding.png)
+

@@ -235,7 +235,7 @@ $o["custom_Alert"]() // "Hello world!" と表示します
 4D内での再帰呼び出しの代表的な使用方法は以下のとおりです:
 
 - 例題と同じく、互いに関連するテーブル内でのレコードの取り扱い。
-- [`FOLDER LIST`](../commands/folder-list) および [`DOCUMENT LIST`](document-list) などのコマンドを使用して、ディスク上のドキュメントやフォルダーをブラウズする。 フォルダーにはフォルダーとドキュメントが含まれており、サブフォルダーはまたフォルダーとドキュメントを含むことができます。
+- [`FOLDER LIST`](../commands/folder-list) および [`DOCUMENT LIST`](document-list) などのコマンドを使用して、ディスク上のドキュメントやフォルダをブラウズする。 フォルダーにはフォルダーとドキュメントが含まれており、サブフォルダーはまたフォルダーとドキュメントを含むことができます。
 
 :::warning
 
@@ -296,7 +296,7 @@ $o["custom_Alert"]() // "Hello world!" と表示します
 
 この属性は、クライアント/サーバーモードの 4Dアプリケーションでのみ考慮されます。 このオプションが選択されていると、そのプロジェクトメソッドは呼び出し方に関わらず常にサーバー上で実行されます。
 
-このオプションに関する詳細は、4D Serverリファレンスマニュアルの [サーバー上で実行属性](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.ja.html) を参照ください。
+For more information on this option, refer to [Execute on Server attribute](../Desktop/clientServer.md#execute-on-server-attribute).
 
 ### 実行モード
 

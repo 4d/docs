@@ -121,3 +121,69 @@ This button can be used to force the selected Client session(s) to disconnect.
 A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
 
 You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+
+## Gestion des sessions de clients en veille
+
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active.
+
+Dans ce cas, l'application distante avertit 4D Server avant de passer en mode veille. La session client correspondante passe au statut **Sleeping**.
+
+![](../assets/en/Admin/server-sleep.png)
+
+Ce statut libère les ressources du serveur tout en préservant le contexte de la session.
+
+Lorsque la machine distante sort du mode veille, l'application se reconnecte automatiquement et rétablit la session en cours.
+
+Une session client inactive est automatiquement fermée après 48 heures d'inactivité.
+
+Vous pouvez modifier ce délai d'expiration à l'aide de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter) avec le sélecteur `Remote connection sleep timeout`.
+
+## Gestion d'un pair injoignable
+
+Lorsque la [couche réseau QUIC est utilisée](../settings/client-server.md#network-layer), les sessions client/serveur bénéficient d'une **fonctionnalité de reconnexion automatique** en cas de déconnexions imprévues. Parmi les déconnexions imprévues, on peut citer par exemple :
+
+- le débranchement/rebranchement d'un câble LAN,
+- le transfert à une connexion mobile,
+- le redémarrage du commutateur,
+- une erreur réseau minime.
+
+Cette fonctionnalité prend en charge la gestion tant côté serveur que côté client en cas de perte de connexion avec un pair, et inclut des délais d'attente configurables ainsi que des informations en temps réel.
+
+:::tip Article(s) de blog sur le sujet
+
+[Fatigué des erreurs réseau perturbant vos utilisateurs ? 4D 21 R4 a la réponse](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+
+:::
+
+### Événement Unreachable
+
+La couche réseau QUIC envoie automatiquement un événement "Unreachable" ("Injoignable") à 4D Server lorsqu'un 4D distant cesse inopinément de répondre ; inversement, elle envoie automatiquement un événement "Unreachable" à un 4D distant lorsque 4D Server cesse inopinément de répondre. Lorsque l'événement "Unreachable" est reçu de l'un ou l'autre côté, il est immédiatement pris en compte dans l'interface et dans l'objet [`Session`](./sessions.md) de la machine.
+
+#### Le client distant ne répond plus
+
+Lorsqu'un 4D distant cesse inopinément de répondre, sur la [fenêtre d'administration du serveur](../ServerWindow/overview.md), le [statut de la session distante](../ServerWindow/sessions.md#list-of-users) devient **Unreachable**.
+
+![](../assets/en/Desktop/unreachable-status.png)
+
+#### Le serveur ne répond plus
+
+Si 4D Server arrête inopinément de répondre, une boîte de dialogue de reconnexion s'affiche sur la machine distante :
+
+![](../assets/en/Desktop/server-not-responding.png)
+
+#### Objet Session mis à jour
+
+Lorsque l'événement "Unreachable" est reçu de l'un ou l'autre côté, une propriété [`info.unreachableSince`](../API/SessionClass.md#info) est créée dans la session sur la machine qui reçoit l'événement (sur le serveur, elle est accessible via la propriété [`Process activity.sessions`](../commands/process-activity)), et elle commence à compter les secondes écoulées depuis la dernière communication. Vous pouvez utiliser cette propriété pour implémenter votre propre interface de déconnexion.
+
+### Rétablir ou fermer la connexion
+
+Le délai d'expiration de la session QUIC est de 900 secondes (15 minutes) par défaut ; il peut être modifié à l'aide du sélecteur `QUIC session timeout` de la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
+
+Un délai d'expiration de la session QUIC est automatiquement utilisé pour gérer les déconnexions :
+
+- Si la connexion est rétablie avant l'expiration du délai de la session QUIC, la propriété [`info.unreachableSince`](../API/SessionClass.md#info) est automatiquement supprimée de l'objet de session.
+- Si la connexion n'est pas rétablie avant l'expiration du délai de la session QUIC, celle-ci est fermée.
+  - Dans le cas d'une session distante fermée depuis le serveur, une ligne de warning est enregistrée dans le [journal de diagnostic](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
+  - Dans le cas d'une session serveur fermée à partir d'une machine distante, une boîte de dialogue d'avertissement est affichée afin que l'utilisateur puisse redémarrer l'application distante ou quitter :  
+    ![](../assets/en/Desktop/remote-not-responding.png)
+

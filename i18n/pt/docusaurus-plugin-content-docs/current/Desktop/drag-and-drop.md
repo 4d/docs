@@ -26,16 +26,16 @@ To make an object the destination of a drag and drop operation, you must set its
 
 The following table lists the available properties for draggable and/or droppable objects:
 
-| Objecto de formulário                          | Draggable "Custom" | Droppable "Custom" | Draggable "Auto" | Droppable "Auto" |
-| ---------------------------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
-| [4D Write Pro areas](writeProArea_overview.md) | x                  | x                  | x                | x                |
-| [Combo Box](comboBox_overview.md)              |                    | x                  | x                | x                |
-| [Entrada](input_overview.md)                   | x                  | x                  | x                | x                |
-| [Lista hierárquica](list_overview.md)          | x                  | x                  |                  |                  |
-| [List Box](listbox_overview.md)                | x                  | x                  |                  |                  |
-| [Área de Plug-in](pluginArea_overview.md)      |                    |                    | x                | x                |
-| [Botão](button_overview.md)                    |                    | x                  |                  |                  |
-| [Picture button](pictureButton_overview.md)    |                    | x                  |                  |                  |
+| Objecto de formulário                                         | Draggable "Custom" | Droppable "Custom" | Draggable "Auto" | Droppable "Auto" |
+| ------------------------------------------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
+| [4D Write Pro areas](../FormObjects/writeProArea_overview.md) | x                  | x                  | x                | x                |
+| [Combo Box](../FormObjects/comboBox_overview.md)              |                    | x                  | x                | x                |
+| [Entrada](../FormObjects/input_overview.md)                   | x                  | x                  | x                | x                |
+| [Lista hierárquica](../FormObjects/list_overview.md)          | x                  | x                  |                  |                  |
+| [List Box](../FormObjects/listbox_overview.md)                | x                  | x                  |                  |                  |
+| [Área de Plug-in](../FormObjects/pluginArea_overview.md)      |                    |                    | x                | x                |
+| [Botão](../FormObjects/button_overview.md)                    |                    | x                  |                  |                  |
+| [Picture button](../FormObjects/pictureButton_overview.md)    |                    | x                  |                  |                  |
 
 Items of a hierarchical list or rows in a list box can be dragged and dropped. Conversely, you can drag and drop an object onto an item of a hierarchical list or a list box row. However, you cannot drag and drop objects from the detail area of an output form. You can also manage dragging and dropping onto the application, outside of any form, using the [`On Drop` database method](../commands-legacy/on-drop-database-method.md).
 

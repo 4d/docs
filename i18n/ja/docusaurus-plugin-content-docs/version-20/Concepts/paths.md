@@ -62,9 +62,9 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 以下のパターンがサポートされています:
 
-- folder separators are "\\"
-- the text contains ":" and "\\" as the second and third character,
-- the text starts with "\\\".
+- フォルダーは "\\" で区切られます。
+- パスは 2番目と 3番目の文字にそれぞれ ":" と "\\" を含みます。
+- パスは "\\\" で始まります。
 
 [`Folder`](../API/FolderClass.md#folder) を使用した例:
 

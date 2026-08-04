@@ -296,7 +296,7 @@ Para más información sobre los componentes, consulte el capítulo [Desarrollo 
 
 Este atributo sólo se tiene en cuenta para una aplicación 4D en modo cliente-servidor. Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
 
-Para más información sobre esta opción, consulte [Atributo Ejecutar en el servidor](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.en.html).
+Para más información sobre esta opción, consulte [Atributo Ejecutar en el servidor](../Desktop/clientServer.md#execute-on-server-attribute).
 
 ### Modo Ejecución
 

@@ -48,15 +48,15 @@ title: コンポーネントの開発
 - ファイルメニューから**ファイル > 新規 > コンポーネント...** オプションを使用する
 - あるいはツールバーから**新規 > コンポーネント...** ボタンをクリックする
 
-この操作でフォルダー選択ダイアログが開き、ここから[コンポーネントパッケージ](../Project/components.md#packageフォルダー) を保存する場所を選択することができます。
+この操作でフォルダ選択ダイアログが開き、ここから[コンポーネントパッケージ](../Project/components.md#packageフォルダ) を保存する場所を選択することができます。
 
-- デフォルトの場所: 最初にコンポーネントを作成しようとすると、4D は[プロジェクトパッケージ内の**Components** フォルダー](../Project/architecture.md#components)をサジェストします。 それ以降は最後に使用したフォルダーが自動的に記憶されてあらかじめ選択されます。
+- デフォルトの場所: 最初にコンポーネントを作成しようとすると、4D は[プロジェクトパッケージ内の**Components** フォルダ](../Project/architecture.md#components)をサジェストします。 それ以降は最後に使用したフォルダが自動的に記憶されてあらかじめ選択されます。
 - コンポーネントを**プロジェクトパッケージの隣** に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加します。
-- コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダー内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
+- コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダ内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
 
 :::note
 
-コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダーの外** に保存することはできません。
+コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダの外** に保存することはできません。
 
 :::
 
@@ -96,7 +96,7 @@ title: コンポーネントの開発
 
 ![tab-component](../assets/en/Project/tab-component.png)
 
-- フォルダー、メソッド、クラスおよびフォーム(プレビューのみ)を含むホーム
+- フォルダ、メソッド、クラスおよびフォーム(プレビューのみ)を含むホーム
 - プロジェクトメソッド
 - データベースメソッド([On Web Connection](../commands-legacy/on-web-connection-database-method.md)、[On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)、[On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
 - クラス
@@ -447,7 +447,7 @@ SAVE RECORD($tablepointer->)
 
 ## Info.plist
 
-コンポーネントは、その[root フォルダー](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
+コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
 
 :::note
 

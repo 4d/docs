@@ -26,16 +26,16 @@ Pour qu'un objet puisse servir de destination à une opération de glisser-dépo
 
 Le tableau suivant répertorie les propriétés disponibles pour les objets glissables et/ou déposables :
 
-| Objet de formulaire                            | Glissable "Personnalisé" | Déposable "Personnalisé" | Glissable "Auto" | Déposable "Auto" |
-| ---------------------------------------------- | ------------------------ | ------------------------ | ---------------- | ---------------- |
-| [Zones 4D Write Pro](writeProArea_overview.md) | x                        | x                        | x                | x                |
-| [Combo Box](comboBox_overview.md)              |                          | x                        | x                | x                |
-| [Zone de saisie](input_overview.md)            | x                        | x                        | x                | x                |
-| [Hierarchical List](list_overview.md)          | x                        | x                        |                  |                  |
-| [List Box](listbox_overview.md)                | x                        | x                        |                  |                  |
-| [Zone de plugin](pluginArea_overview.md)       |                          |                          | x                | x                |
-| [Bouton](button_overview.md)                   |                          | x                        |                  |                  |
-| [Bouton Image](pictureButton_overview.md)      |                          | x                        |                  |                  |
+| Objet de formulaire                                           | Glissable "Personnalisé" | Déposable "Personnalisé" | Glissable "Auto" | Déposable "Auto" |
+| ------------------------------------------------------------- | ------------------------ | ------------------------ | ---------------- | ---------------- |
+| [Zones 4D Write Pro](../FormObjects/writeProArea_overview.md) | x                        | x                        | x                | x                |
+| [Combo Box](../FormObjects/comboBox_overview.md)              |                          | x                        | x                | x                |
+| [Zone de saisie](../FormObjects/input_overview.md)            | x                        | x                        | x                | x                |
+| [Hierarchical List](../FormObjects/list_overview.md)          | x                        | x                        |                  |                  |
+| [List Box](../FormObjects/listbox_overview.md)                | x                        | x                        |                  |                  |
+| [Zone de plugin](../FormObjects/pluginArea_overview.md)       |                          |                          | x                | x                |
+| [Bouton](../FormObjects/button_overview.md)                   |                          | x                        |                  |                  |
+| [Bouton Image](../FormObjects/pictureButton_overview.md)      |                          | x                        |                  |                  |
 
 Les éléments d'une liste hiérarchique ou les lignes d'une list box peuvent être déplacés par glisser-déposer. À l'inverse, vous pouvez glisser-déposer un objet sur un élément d'une liste hiérarchique ou sur une ligne d'une list box. Cependant, vous ne pouvez pas glisser-déposer des objets depuis la zone de détail d'un formulaire de sortie. Vous pouvez également gérer les opérations de glisser-déposer dans l'application, en dehors de tout formulaire, à l'aide de la [méthode base `On Drop`](../commands-legacy/on-drop-database-method.md).
 

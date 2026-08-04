@@ -108,7 +108,7 @@ Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md#ci
 
 Para usar TLS com o servidor de aplicações 4D (aplicações cliente-servidor de desktop) ou o servidor SQL, você só precisa ativar comunicações TLS e o servidor automaticamente configura as conexões na inicialização.
 
-- Com o servidor de aplicações, selecione a opção **Encriptar comunicações cliente-servidor** na página ["Opções cliente-servidor/rede" da caixa de diálogo Parâmetros](.../settings/client-server#encrypt-client-server-communications).
+- With the application server when [QUIC network layer](../settings/client-server.md#network-layer) is enabled, you don't have anything to do: QUIC communications are always in TLS. When ServerNet network layer is enabled select the **Encrypt Client-Server Communications** option in the ["Client-server/Network options" page of the Settings dialog box](../settings/client-server#encrypt-client-server-communications).
 - Com o servidor SQL, selecione a opção **Habilitar TLS** na página ["SQL" na caixa de diálogo Parâmetros](../settings/sql#sql-server-publishing).
 
 ## Como obter o certificado RSA? (tutorial)

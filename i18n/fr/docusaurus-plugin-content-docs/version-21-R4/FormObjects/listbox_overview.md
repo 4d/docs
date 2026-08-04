@@ -29,10 +29,10 @@ L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourci
 
 Une list box est composée de quatre parties distinctes :
 
-- the [list box object](./listbox-object.md) in its entirety,
-- [columns](./listbox-column.md),
-- column [headers](./listbox-header-footer.md#headers), and
-- column [footers](./listbox-header-footer.md#footers).
+- l'objet [list box](./listbox-object.md) dans son intégralité,
+- les [colonnes](./listbox-column.md)
+- les [en-têtes](./listbox-header-footer.md#headers) de colonnes, et
+- les [pieds](./listbox-header-footer.md#footers) de colonnes.
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
@@ -59,7 +59,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes [`EDIT ITEM`](../commands/edit-item) et [`Displayed line number`](../commands/displayed-line-number) peuvent également être utilisées. Refer to the [List boxes and the 4D Language](#list-boxes-and-the-4d-language) paragraph.
 
 ## Gestion de la saisie
 

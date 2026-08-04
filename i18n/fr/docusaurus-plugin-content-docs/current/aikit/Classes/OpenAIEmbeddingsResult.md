@@ -11,14 +11,14 @@ title: OpenAIEmbeddingsResult
 
 ## Propriétés calculées
 
-| Propriété    | Type                                  | Description                                                                                                          |
-| ------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `model`      | Text                                  | Retourne le modèle utilisé pour calculer la représentation vectorielle                                               |
-| `vector`     | `4D.Vector`                           | Retourne le premier `4D.Vector` de la collection `vectors`.                                          |
-| `vectors`    | Collection                            | Retourne une collection de `4D.Vector`.                                                              |
-| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Retourne le premier [OpenAIEmbedding](OpenAIEmbedding.md) de la collection `embeddings`.             |
-| `embeddings` | Collection                            | Retourne une collection de [OpenAIEmbedding](OpenAIEmbedding.md).                                    |
-| `usage`      | Object                                | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| Propriété    | Type                                  | Description                                                                                                                       |
+| ------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `model`      | Text                                  | Retourne le modèle utilisé pour calculer la représentation vectorielle                                                            |
+| `vector`     | `4D.Vector`                           | Retourne le premier `4D.Vector` de la collection `vectors`.                                                       |
+| `vectors`    | Collection                            | Retourne une collection de `4D.Vector`.                                                                           |
+| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Retourne le premier [OpenAIEmbedding](OpenAIEmbedding.md) de la collection `embeddings`.                          |
+| `embeddings` | Collection                            | Retourne une collection de [OpenAIEmbedding](OpenAIEmbedding.md).                                                 |
+| `usage`      | Object                                | Renvoie les informations d'utilisation des tokens (hérité de [OpenAIResult](OpenAIResult.md)). |
 
 ### usage
 
@@ -29,7 +29,7 @@ The `usage` property returns an object containing token usage information for em
 | `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
 | `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
 
-**Example response:**
+**Exemple de réponse :**
 
 ```json
 {

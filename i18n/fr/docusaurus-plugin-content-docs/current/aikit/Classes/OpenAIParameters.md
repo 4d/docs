@@ -9,7 +9,7 @@ La classe `OpenAIParameters` permet de gérer les paramètres d'exécution et de
 
 ## Propriétés
 
-### Propriétés du callback asynchrone
+### Propriétés de la callback asynchrone
 
 Utilisez cette propriété de callback (*rappel*) pour recevoir le résultat, qu'il s'agisse d'un succès ou d'une erreur :
 

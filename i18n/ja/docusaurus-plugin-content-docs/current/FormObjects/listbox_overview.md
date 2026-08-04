@@ -59,7 +59,7 @@ title: リストボックス
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細な情報については、*4D ランゲージリファレンス* の[リストボックスコマンドの一覧](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) のページを参照してください。
+The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object (properties)" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Refer to the [List boxes and the 4D Language](#list-boxes-and-the-4d-language) paragraph.
 
 ## 入力の管理
 

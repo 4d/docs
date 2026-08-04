@@ -121,3 +121,69 @@ This button can be used to force the selected Client session(s) to disconnect.
 A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
 
 You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+
+## スリープしたクライアントセッションの管理
+
+4D Server は、サーバーマシンへの接続がアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。
+
+この場合、リモートアプリケーションはスリープする前に4D Server へと自動的に知らせます。 対応するクライアントセッションはステータスは**Sleeping** へと変更されます。
+
+![](../assets/en/Admin/server-sleep.png)
+
+このステータスはセッションのコンテキストを保持しつつ、サーバー側のリソースを一部解放します。
+
+リモートマシンがスリープモードから復帰した時、アプリケーションは再接続し、既存のセッションを復元します。
+
+スリープ状態のクライアントセッションは、48時間活動がなかった場合には自動的にドロップされます。
+
+この\タイムアウトを変更するには、[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドの `Remote connection sleep timeout` セレクターを使用します。
+
+## 到達不能なピアの管理
+
+[QUIC ネットワークレイヤーが使用されている](../settings/client-server.md#ネットワークレイヤー) 場合、クライアント/サーバーせションでは予期せぬ接続切断の場合に **自動再接続機能** の恩恵を受けることができます。 予期せぬ接続切断とは、例えば以下の様な場合を含みます:
+
+- LAN ケーブルの抜き差し
+- モバイル接続の移行
+- スイッチの再起動
+- 小さなネットワークエラー。
+
+この機能はピアとの接続が切断された場合の、サーバー側とクライアント側との両方をサポートしており、また設定可能なタイムアウトとリアルタイム情報も含みます。
+
+:::tip 関連したblog 記事
+
+[Tired of network errors disrupting your users? 4D 21 R4 has the answer](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+
+:::
+
+### 到達不能イベント
+
+QUIC ネットワークレイヤーは、リモート4D が予期せず対応できない状態になったときには、自動的に"到達不能"イベントを4D Server に送信します。逆に、4D Server が予期せず対応できない状態になったときには、リモート4D に"到達不能"イベントを自動的に送信します。 どちらか側で"到達不能" イベントが受信されると、その情報はインターフェース内とマシンの[`Session`](./sessions.md) オブジェクト内にて即座に反映されます。
+
+#### リモート4D側が応答を停止した場合
+
+リモート4D が予期せず応答を停止した場合、[サーバー管理ウィンドウ](../ServerWindow/overview.md) 上では、[リモートセッションのステータス](../ServerWindow/sessions.md#セッションの一覧) が**到達不能** に設定されます。
+
+![](../assets/en/Desktop/unreachable-status.png)
+
+#### サーバーが応答を停止した場合
+
+4D Server が予期せず応答を停止した場合、リモートマシン上では再接続ダイアログボックスが表示されます:
+
+![](../assets/en/Desktop/server-not-responding.png)
+
+#### セッションオブジェクトの更新
+
+どちらかで"Unreachable" イベントが受信された時、イベントを受信したマシン上のセッション内にて[`info.unreachableSince`](../API/SessionClass.md#info) プロパティが作成され(サーバー上ではこれは[`Process activity.sessions`](../commands/process-activity) プロパティを通して読み出し可能です)、また最後の通信からの秒数をカウントし始めます。 このプロパティを使用して独自の接続解除インターフェースを実装することができます。
+
+### 接続の復元または解除
+
+QUIC セッションのタイムアウトはデフォとでは900 秒(15分) となっており、これは[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドの`QUIC session timeout` セレクターを使用することで変更することができます。
+
+QUIC セッションタイムアウトは、接続解除をモニターするために以下の様に自動的に使用されます:
+
+- 接続がQUIC セッションタイムアウトに達する前に復元された場合、[`info.unreachableSince`](../API/SessionClass.md#info) プロパティはセッションオブジェクトから自動的に削除されます。
+- 接続がQUIC セッションタイムアウトに達するまでに復元されなかった場合、セッションは閉じられます。
+  - サーバーマシン上でリモートセッションが閉じられた場合、警告エントリーが[診断ログ](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) 内に書き込まれます。
+  - リモートマシンにおいてサーバーセッションが閉じられた場合、警告ダイアログが表示され、ユーザーはリモートアプリケーションを再起動するか終了するかを選択することができます:
+    ![](../assets/en/Desktop/remote-not-responding.png)
+

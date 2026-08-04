@@ -786,7 +786,7 @@ Este é o cenário para atualizar um servidor ou aplicação mesclada usuário �
 2. Na aplicação em produção, você chama o comando `SET UPDATE FOLDER`: este comando designa a localização da pasta onde a atualização "pendente" da aplicação atual é encontrada. Opcionalmente, você pode copiar nesta pasta os elementos personalizados da versão em produção (arquivos do usuário).
 3. Na aplicação em produção, chama o comando `RESTART 4D`: este comando aciona automaticamente a execução de um programa de utilidade chamado "atualizador" que sai do aplicativo atual, substitui usando a atualização "pendente" se for especificada e reinicia o aplicativo com o arquivo de dados atual. A versão anterior é renomeada.
 
-> Esta sequência é compatível com aplicações servidor Windows executadas como um Serviço.
+> This sequence is compatible with Windows server applications [run as a Service](../server/service.md).
 
 ### Histórico de atualização
 

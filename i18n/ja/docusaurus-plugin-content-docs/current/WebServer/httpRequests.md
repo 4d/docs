@@ -140,7 +140,7 @@ var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- // Resources フォルダー内のImages フォルダーからピクチャーを検索します
+ // Resources フォルダ内のImages フォルダからピクチャーを検索します
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$url+".psd"
 
 READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に渡します

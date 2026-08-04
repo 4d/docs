@@ -45,6 +45,12 @@ OS によって許可されている名称であれば使用可能です。 し�
    - *ショートカットファイル*: `.4DLink` 拡張子 - プロジェクトやアプリケーションを起動する際に必要な追加のパラメーターを格納しています (アドレス、認証情報、他)
    - *バイナリーファイル*: `.4db` または `.4dc` 拡張子 - 従来の 4D データベース形式
 
+:::note
+
+You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
+
+:::
+
 ### オプション
 
 標準のシステムオプションに加え、4D が提供する *開く* ダイアログボックスには、*開く* と**データファイル** という、2つのオプションがあります。
@@ -67,6 +73,12 @@ OS によって許可されている名称であれば使用可能です。 し�
   - 4D 環境設定の **開始時** オプションに **最後に使用したデータベースを開く** を指定します。
 
 - `.4DLink` ファイルを使用
+
+:::note
+
+On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).
+
+:::
 
 ### 4DLinkファイルを使ってプロジェクトを開く
 

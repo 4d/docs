@@ -11,11 +11,11 @@ title: OpenAIImagesResult
 
 ## Propriétés calculées
 
-| Propriété | Type                                        | Description                                                                                                          |
-| --------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `images`  | Collection de [OpenAIImage](OpenAIImage.md) | Renvoie une collection d'objets OpenAIImage.                                                         |
-| `image`   | [OpenAIImage](OpenAIImage.md)               | Renvoie la première image OpenAIImage de la collection.                                              |
-| `usage`   | Object                                      | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| Propriété | Type                                        | Description                                                                                                                       |
+| --------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `images`  | Collection de [OpenAIImage](OpenAIImage.md) | Renvoie une collection d'objets OpenAIImage.                                                                      |
+| `image`   | [OpenAIImage](OpenAIImage.md)               | Renvoie la première image OpenAIImage de la collection.                                                           |
+| `usage`   | Object                                      | Renvoie les informations d'utilisation des tokens (hérité de [OpenAIResult](OpenAIResult.md)). |
 
 ### usage
 
@@ -35,7 +35,7 @@ The `usage` property returns an object containing token usage information for im
 | `text_tokens`  | Integer | Number of text tokens in the prompt.                                      |
 | `image_tokens` | Integer | Number of image tokens (for image editing/variations). |
 
-**Example response:**
+**Exemple de réponse :**
 
 ```json
 {

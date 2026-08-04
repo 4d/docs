@@ -95,7 +95,7 @@ Il est possible de modifier l’apparence d’une liste hiérarchique dans un fo
 
 ## Priorité des commandes de propriété
 
-Certaines propriétés d’une liste hiérarchique (par exemple l’attribut **saisissable** ou la couleur) peuvent être définies de trois manières : via la Liste des propriétés en mode Développement, via une commande du thème “Propriétés des objets” ou via une  Lorsque ces trois moyens sont utilisés pour définir les propriétés d’une liste, l’ordre de priorité suivant est appliqué : Lorsque ces trois moyens sont utilisés pour définir les propriétés d’une liste, l’ordre de priorité suivant est appliqué :
+Certaines propriétés d’une liste hiérarchique (par exemple l’attribut **saisissable** ou la couleur) peuvent être définies de trois manières : via la Liste des propriétés en mode Développement, via une commande du thème “Propriétés des objets” ou via une commande du thème “Liste hiérarchique”. Lorsque ces trois moyens sont utilisés pour définir les propriétés d’une liste, l’ordre de priorité suivant est appliqué :
 
 1. Commandes du thème “Liste hiérarchique”
 2. Commandes générique de propriété d'objet

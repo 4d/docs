@@ -45,6 +45,12 @@ Aparece a caixa de diálogo padrão Abrir.
    - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
    - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
+:::note
+
+You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
+
+:::
+
 ### Opções
 
 Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
@@ -67,6 +73,12 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
   - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
 
 - utilizando un archivo `.4DLink`.
+
+:::note
+
+On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).
+
+:::
 
 ### Abrir um projeto com um ficheiro 4DLink
 

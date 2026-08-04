@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-Los comandos [`File`](../commands/file.md) y [`Folder`](../commands/folder.md) sólo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. For example, the following code is not allowed:
+Los comandos [`File`](../commands/file.md) y [`Folder`](../commands/folder.md) sólo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no está permitido:
 
 ```4d
 //ERROR

@@ -58,11 +58,11 @@ O 4D Server usa três portas TCP para comunicações entre servidores internos e
 
 #### Autenticação do usuário com o servidor de domínio
 
-Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis.
+Esta opción le permite implementar las funcionalidades SSO (*Single Sign On*) en su base de datos 4D Server en Windows. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis. This option is described in the [Single Sign On (SSO) on Windows](../server/sso.md) page.
 
 #### Service Principal Name
 
-Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preencher esse campo se quiser usar o Kerberos como protocolo de autenticação. Quando você marca essa opção, 4D se conecta de forma transparente ao Active Directory do servidor de domínio do Windows e obtém os tokens de autenticação disponíveis.
+Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preencher esse campo se quiser usar o Kerberos como protocolo de autenticação. This option is described in the [Enablig Kerberos](../server/sso.md#enabling-kerberos) section.
 
 #### Camada de rede
 
@@ -117,17 +117,17 @@ Quando um tempo limite for selecionado, o servidor fechará a conexão de um cli
 
 #### Registrar clientes na inicialização para Execute On Client
 
-Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
+Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
 
 #### Encriptar as comunicações cliente-servidor
 
 :::note
 
-This option is not available when the [QUIC](#network-layer) network layer option is selected.
+This option is not available when the [QUIC](#network-layer) network layer option is selected. QUIC communications are always in TLS, whatever your secured mode is.
 
 :::
 
-Essa opção permite que você ative o modo seguro para comunicações entre a máquina do servidor e as máquinas remotas 4D. Esta opción se detalla en la sección [Cifrar las de conexiones cliente/servidor](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html).
+This option activates the [secured mode for communications](../Admin/tls.md#enabling-tls-with-the-other-servers) between the server machine and the 4D remote machines with ServerNet netword layer.
 
 #### Atualizar a pasta Resources durante uma sessão
 
@@ -136,7 +136,7 @@ Essa configuração pode ser usada para definir globalmente o modo de atualizaç
 - **Nunca**: a pasta local **Resources** não é atualizada durante a sessão. A notificação enviada pelo servidor é ignorada. A pasta local **Resources** pode ser atualizada manualmente com o comando do menu de ação **Update Local Resources** (consulte [Usando o explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Sempre**: a sincronização da pasta **Resources** local é realizada automaticamente durante a sessão sempre que a notificação é enviada pelo servidor.
 - **Perguntar**: quando a notificação for enviada pelo servidor, uma caixa de diálogo é exibida nas máquinas de cliente, indicando a modificação. O usuário pode então aceitar ou recusar a sincronização da pasta local **Resources**.\
-  A pasta **Resources** centraliza os arquivos personalizados necessários para a interface do banco de dados (arquivos de tradução, imagens, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado.
+  A pasta **Resources** centraliza os arquivos personalizados necessários para a interface do banco de dados (arquivos de tradução, imagens, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](../Desktop/clientServer.md#managing-the-resources-folder).
 
 ## Página Configuração IP
 
@@ -157,3 +157,20 @@ O comportamento da tabela de configuração é o seguinte:
 
 Por padrão, nenhuma restrição de conexão é aplicada pelo 4D Server: a primeira linha da tabela contém o rótulo Allow e o caractere \* (todos os endereços).
 
+### Support of IPv6
+
+4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
+
+|                     | 4D remote IPv4 only | 4D remote IPv6 only | 4D remote both |
+| ------------------- | ------------------- | ------------------- | -------------- |
+| 4D Server IPv4 only | IPv4                | *não suportado*     | IPv4           |
+| 4D Server IPv6 only | *não suportado*     | IPv6                | IPv6           |
+| 4D Server both      | IPv4                | IPv6                | IPv6           |
+
+For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
+
+:::note Compatibidade
+
+IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+
+:::
