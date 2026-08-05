@@ -49,7 +49,11 @@ displayed_sidebar: docs
 ```4d  
  $res:=Choose(True;"red1";"blue"+2) //error  
 ```
+:::note
 
+このコマンドを使って2つの *value* 引数を比較する場合は、[三項演算子](../../Concepts/operators.md#ternary-operator)の使用も検討してください。コードをより簡潔で効率的にすることができます。
+
+:::
 ## 例題 1 
 
 ブール型条件を用いた、このコマンドの典型的な使用例を以下に示します。
@@ -91,6 +95,9 @@ displayed_sidebar: docs
  End case
 ```
 
+## See also
+
+[Ternary operator](../../Concepts/operators.md#ternary-operator)
 
 ## プロパティ
 

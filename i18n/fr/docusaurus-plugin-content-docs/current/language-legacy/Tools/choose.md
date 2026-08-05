@@ -49,7 +49,11 @@ Cette commande permet de générer du code concis en remplacement des tests du t
 ```4d  
  $res:=Choose(True;"red1";"blue"+2) //erreur  
 ```
+:::note
 
+Si vous utilisez cette commande pour comparer deux paramètres *valeur*, vous pourriez également envisager d'utiliser l'[opérateur ternaire](../../Concepts/operators.md#ternary-operator), qui peut rendre votre code plus concis et efficace.
+
+:::
 ## Exemple 1 
 
 Voici une utilisation type de la commande avec un critère booléen :
@@ -91,6 +95,10 @@ Ce code est strictement équivalent à :
  End case
 ```
 
+
+## Voir aussi
+
+[Opérateur ternaire](../../Concepts/operators.md#ternary-operator)
 
 ## Propriétés
 

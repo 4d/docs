@@ -50,6 +50,12 @@ This command can be used to generate concise code that replaces tests of the “
  $res:=Choose(True;"red1";"blue"+2) //error  
 ```
 
+:::note
+
+If you use this command to compare two *value* parameters, you might also want to consider using the [ternary operator](../../Concepts/operators.md#ternary-operator), which can make your code more concise and efficient.
+
+:::
+
 ## Example 1 
 
 Here is an example of the typical use of this command with a Boolean type criterion:
