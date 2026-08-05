@@ -63,7 +63,7 @@ Three location options are provided:
     
      **Notes:**
     -   For searches, if the search criteria begins or ends with @, the "@" character will be treated as a wildcard. Only if the "@" character is placed in the middle of a word (for example: bill@cgi.com) does 4D treat it differently.
-    -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](../commands/theme/Objects_Forms) theme that accept the wildcard character ("@") in the object parameter.
+    -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](../commands/theme/Objects-Forms) theme that accept the wildcard character ("@") in the object parameter.
     -   For security reasons, only the Administrator or Designer of the database can modify this parameter. 
 
 -   **Current data language:** Used to configure the language used for character string processing and comparison. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default, 4D uses the system language.

@@ -83,9 +83,9 @@ In a template of a letter, you want to add a text box to display the address of 
  WP SET ATTRIBUTES($textBox;wk vertical align;wk center)
  
   // #3: define the formulas inside the text box
- WP INSERT FORMULA($textBox;Formula(This.data.fullName);wk append)
+ WP Insert formula($textBox;Formula(This.data.fullName);wk append)
  WP INSERT BREAK($textBox;wk paragraph break;wk append)
- WP INSERT FORMULA($textBox;Formula(This.data.fullAddress);wk append)
+ WP Insert formula($textBox;Formula(This.data.fullAddress);wk append)
  
   // #4: Style the content of the text box
  WP SET ATTRIBUTES($textBox;wk font;"Arial";wk font bold;wk true;wk font size;"18pt")

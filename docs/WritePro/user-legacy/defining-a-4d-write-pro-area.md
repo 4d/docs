@@ -72,5 +72,5 @@ The page view mode can be configured by means of the area pop-up menu:
 
 **Note:** The page view mode is not stored with the document. 
 
-For areas embedded in 4D forms, the view mode can also be set by default using the Property List. In this case, the view mode is stored as a property of the 4D Write Pro form object (for more information, please refer to the *Configuring View properties* paragraph). 
+For areas embedded in 4D forms, the view mode can also be [set by default using the Property List](#view-properties). In this case, the view mode is stored as a property of the 4D Write Pro form object. 
 

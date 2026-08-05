@@ -86,7 +86,7 @@ You can see an expression's reference in the picture tip(\*):
 
 (\*)As there is no text associated with an anchored image, its expression reference cannot be displayed.
 
-All image attributes can be applied to picture expressions (wk image and wk image url attributes can only be read). Note however, that since pictures have specific attributes, 4D Write Pro must evaluate the expression at least once to detect that its result is a picture and handle it as a picture expression. It means that when a picture expression is inserted with [WP INSERT FORMULA](./commands/wp-insert-formula), [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) must be called before setting any picture attributes. 
+All image attributes can be applied to picture expressions (wk image and wk image url attributes can only be read). Note however, that since pictures have specific attributes, 4D Write Pro must evaluate the expression at least once to detect that its result is a picture and handle it as a picture expression. It means that when a picture expression is inserted with [WP Insert formula](./commands/wp-insert-formula), [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) must be called before setting any picture attributes. 
 
 **Note**: As with other expressions, picture expressions are also impacted by the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) and [WP FREEZE FORMULAS](./commands/wp-freeze-formulas) commands.
 
@@ -109,19 +109,19 @@ Calling the [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) command with w
 
 ### Inline pictures 
 
-Inline picture expressions are added with the [WP INSERT FORMULA](./commands/wp-insert-formula) command.
+Inline picture expressions are added with the [WP Insert formula](./commands/wp-insert-formula) command.
 
 Examples:
 
 ```4d
   //Insert a picture variable
- WP INSERT FORMULA(wpRange;Formula($vpict);wk prepend)
+ WP Insert formula(wpRange;Formula($vpict);wk prepend)
  
   //Insert a field
- WP INSERT FORMULA(wpRange;Formula([DOC]SamplePict);wk prepend)
+ WP Insert formula(wpRange;Formula([DOC]SamplePict);wk prepend)
  
   //Insert a 4D method
- WP INSERT FORMULA(wpRange;Formula(M_ComputeChart);wk prepend)
+ WP Insert formula(wpRange;Formula(M_ComputeChart);wk prepend)
 ```
 
 ### Empty pictures 
@@ -134,7 +134,7 @@ You can remove these black rectangles from the current view using:
 
 * the "Show empty or unsupported images" option of the Property list (see *Configuring View properties*), or
 * the [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) command with the wk visible empty images selector, or
-* the *visibleEmptyImage* standard action (see *Using 4D Write Pro standard actions*).
+* the *visibleEmptyImage* [standard action](./standard-actions).
 
 You can also use the wk visible empty images selector with the [WP EXPORT DOCUMENT](./commands/wp-export-document) and [WP EXPORT VARIABLE](./commands/wp-export-variable) commands to remove the black rectangles from exported contents.
 
@@ -142,11 +142,10 @@ Note that when this option is set, missing image elements will not be displayed 
 
 ## Picture properties 
 
-All pictures have properties (attributes) such as height, width, borders, display mode, etc., that can be get or set via the 4D Write Pro language ([WP GET ATTRIBUTES](./commands/wp-get-attributes) and [WP SET ATTRIBUTES](./commands/wp-set-attributes)) or standard actions.
+All pictures have properties (attributes) such as height, width, borders, display mode, etc., that can be get or set via the 4D Write Pro language ([WP GET ATTRIBUTES](./commands/wp-get-attributes) and [WP SET ATTRIBUTES](./commands/wp-set-attributes)) or [standard actions](./standard-actions).
 
-* The full list of properties available for pictures is provided on the [4D Write Pro Attributes](../4d-write-pro-attributes) page.
-* The *Image* section contains attributes that are specific to pictures only.
-* The *Using 4D Write Pro standard actions* page also lists available image properties.
+* The full list of properties available for pictures is provided on the [4D Write Pro Attributes](./4d-write-pro-attributes) page.
+* The [Image](./4d-write-pro-attributes#image) section contains attributes that are specific to pictures only.
 
 ### Picture reference or picture URL 
 

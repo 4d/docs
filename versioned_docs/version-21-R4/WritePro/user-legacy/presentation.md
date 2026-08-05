@@ -47,7 +47,7 @@ The **Variable or Expression** property can be used in the language as a referen
 
 * **Enterable**: enables you to lock/unlock the area in order to allow or prevent editing
 * **Auto Spellcheck**: available for 4D Write Pro areas
-* **Context Menu**: allows you to enable/disable the context menu when the form is executed at runtime (see the [Using a 4D Write Pro area](./using-a-4d-write-pro-area.md))
+* **Context Menu**: allows you to enable/disable the [context menu](./configuring-4d-write-pro-areas#context-menu) when the form is executed at runtime
 * **Selection always visible**: handles text selection as in standard text areas.
 
 ### Using 4D Write Pro Interface 
