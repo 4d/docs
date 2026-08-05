@@ -15,27 +15,27 @@ La classe `OpenAIResult` permet de gérer la réponse des requêtes HTTP et four
 
 ## Propriétés calculées
 
-| Propriété    | Type       | Description                                                                                                                          |
-| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `success`    | Boolean    | Un booléen indiquant si la requête HTTP a réussi.                                                                    |
-| `errors`     | Collection | Renvoie une collection d'erreurs. Il peut s'agir d'erreurs réseau ou d'erreurs renvoyées par OpenAI. |
-| `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                                 |
-| `headers`    | Object     | Renvoie les en-têtes de la réponse sous forme d'objet.                                                               |
-| `rateLimit`  | Object     | Renvoie les informations relatives à la limite de débit contenues dans les en-têtes de la réponse.                   |
-| `usage`      | Object     | Returns usage information (token counts) from the response body if any.                           |
+| Propriété    | Type       | Description                                                                                                                                |
+| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `success`    | Boolean    | Un booléen indiquant si la requête HTTP a réussi.                                                                          |
+| `errors`     | Collection | Renvoie une collection d'erreurs. Il peut s'agir d'erreurs réseau ou d'erreurs renvoyées par OpenAI.       |
+| `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                                       |
+| `headers`    | Object     | Renvoie les en-têtes de la réponse sous forme d'objet.                                                                     |
+| `rateLimit`  | Object     | Renvoie les informations relatives à la limite de débit contenues dans les en-têtes de la réponse.                         |
+| `usage`      | Object     | Renvoie les informations d'utilisation (nombre de tokens) depuis le body de la réponse, le cas échéant. |
 
 ### usage
 
-The `usage` property returns an object containing token usage information from the API response. The structure varies depending on the API endpoint used.
+La propriété `usage` renvoie un objet contenant des informations sur l'utilisation des tokens depuis la réponse de l'API. La structure varie en fonction du point de terminaison de l'API utilisé.
 
-> **Note:** Different OpenAI-compatible services may return different fields in the usage object. The structure documented here is based on OpenAI's API. Not all fields may be present in responses from other providers.
+> **Note :** Différents services compatibles OpenAI peuvent retourner différents champs dans l'objet usage. La structure documentée ici est basée sur l'API d'OpenAI. Tous les champs peuvent ne pas être présents dans les réponses d'autres fournisseurs.
 
-See the specific result class documentation for endpoint-specific usage structures:
+Consultez la documentation relative à la classe de résultats correspondante pour connaître les structures d'usage spécifiques à chaque point de terminaison :
 
-- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - Chat completions usage
-- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - Streaming chat usage
-- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - Embeddings usage
-- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - Image generation usage
+- [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md#usage) - usage en réponses conversationnelles
+- [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md#usage) - usage en conversation continue
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md#usage) - usage en embedding
+- [OpenAIImagesResult](OpenAIImagesResult.md#usage) - usage en génération d'images
 
 ### rateLimit
 

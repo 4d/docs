@@ -13,6 +13,6 @@ La restitution d’une application après incident peut s’effectuer automatiqu
 
 En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d’historique](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. Vous pouvez visualiser à tout moment le contenu du fichier d’historique. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
 
-With 4D Server, you can also implement a [logical mirror](./mirror.md) for replicating and synchronizing data in order to maintain identical versions of applications for backup purposes.
+Avec 4D Server, vous pouvez également implémenter un [miroir logique](./mirror.md) pour la réplication et la synchronisation des données afin de maintenir des versions identiques des applications à des fins de sauvegarde.
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.

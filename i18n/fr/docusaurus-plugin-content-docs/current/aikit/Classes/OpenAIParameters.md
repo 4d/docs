@@ -13,16 +13,16 @@ La classe `OpenAIParameters` permet de gérer les paramètres d'exécution et de
 
 Utilisez cette propriété de callback (*rappel*) pour recevoir le résultat, qu'il s'agisse d'un succès ou d'une erreur :
 
-| Propriété                                          | Type                        | Description                                                                                                                                                      |
-| -------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onTerminate`<br>(ou `formula`) | 4D.Function | Une fonction à appeler de manière asynchrone lorsqu'elle est terminée. <br>*Ensure that the current process does not terminate.* |
+| Propriété                                          | Type                        | Description                                                                                                                                                         |
+| -------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onTerminate`<br>(ou `formula`) | 4D.Function | Une fonction à appeler de manière asynchrone lorsqu'elle est terminée. <br>*Assurez-vous que le process courant ne se termine pas.* |
 
 Utilisez ces propriétés de callback pour un contrôle plus granulaire de la gestion des succès et des erreurs :
 
-| Propriété    | Type                        | Description                                                                                                                                                                                |
-| ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `onResponse` | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec succès**. <br>*Ensure that the current process does not terminate.*      |
-| `onError`    | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec des erreurs**. <br>*Ensure that the current process does not terminate.* |
+| Propriété    | Type                        | Description                                                                                                                                                                                   |
+| ------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec succès**. <br>*Assurez-vous que le process courant ne se termine pas.*      |
+| `onError`    | 4D.Function | Une fonction à appeler de manière asynchrone lorsque la requête se termine **avec des erreurs**. <br>*Assurez-vous que le process courant ne se termine pas.* |
 
 > La fonction de callback recevra le même type d'objet de résultat (l'une des classes enfant de [OpenAIResult](OpenAIResult.md)) que celui qui serait renvoyé par la fonction dans un code synchrone.
 

@@ -376,7 +376,7 @@ Here is the code for the *MyAppli* project method which has the "Execute on Serv
 ```4d
  #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
  
-  `Search and send back values for each record
+  //Search and send back values for each record
  QUERY($table->;$field->=$search)
  While(Not(End selection($table->)))
     APPEND TO ARRAY($array->;myFormula($table))

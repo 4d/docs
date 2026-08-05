@@ -157,53 +157,53 @@ Los [triggers](../Develop/triggers) se ejecutan en la máquina donde está el mo
 
 :::note
 
-En el servidor, un trigger se ejecuta en el proceso responsable de la acción asociada (crear/actualizar/eliminar). If the action was triggered from a [preemptive process on the server](../Develop/preemptive.md) (e.g. a stored procedure, a http request in scalable session mode), then the trigger will be executed in the same preemptive process. But, if the action was triggered from a 4D remote, then the trigger will be executed in the twinned process, which is always in cooperative mode (a twinned process is shared for all calls of a user).
+En el servidor, un trigger se ejecuta en el proceso responsable de la acción asociada (crear/actualizar/eliminar). Si la acción se activó desde un [proceso preventivo en el servidor](../Develop/preemptive.md) (por ejemplo, un procedimiento almacenado, una solicitud HTTP en modo de sesión escalable), entonces el trigger se ejecutará en el mismo proceso preventivo. Pero si la acción se activó desde un 4D remoto, el trigger se ejecutará en el proceso gemelo, el cual está siempre en modo cooperativo (un proceso gemelo se comparte para todas las llamadas de un usuario).
 
 :::
 
-### Stored procedures
+### Procedimientos almacenados
 
-A 4D stored procedure is project method executing a process method in a process running on the server machine (or on any registered client machine), instead of on the client machine which has launched the method.
+Un procedimiento almacenado en 4D es un método de proyecto que lanza un método proceso en un proceso que se ejecuta en la máquina del servidor (o en cualquier máquina cliente registrada), en lugar de en la máquina cliente que ha iniciado el método.
 
-With 4D in local mode, when you use a command, such as [`New process`](../commands/new-process), you can start a user process in which you can run a method. This method is called a [process method](../Project/project-method-properties.md#process-methods). You can do the same with 4D Server, on a client machine. In addition, using the [`Execute on server`](../commands/execute-on-server) command on the server machine, you can start a user process in which you can run a method. Moreover, when using the [`EXECUTE ON CLIENT`](../commands/execute-on-client) command, you can run a method in another process on a different client. In both cases, the method is called a **stored procedure**, and (by analogy) the process started on the server machine or another client is also called a stored procedure.
+Con 4D en modo local, cuando utiliza un comando, como [`New process`](../commands/new-process), puede iniciar un proceso de usuario para ejecutar un método. Este método se llama [método proceso](../Project/project-method-properties.md#process-methods). Puede hacer lo mismo con 4D Server, en una máquina cliente. Además, con el comando [`Execute on server`](../commands/execute-on-server) puede iniciar un proceso de usuario en la máquina servidor para ejecutar un método. Además, al usar el comando [`EXECUTE ON CLIENT`](../commands/execute-on-client), puede ejecutar un método en otro proceso en un cliente diferente. En ambos casos, el método se llama **procedimiento almacenado**, y (por analogía) el proceso iniciado en la máquina servidor u otro cliente también se llama procedimiento almacenado.
 
 :::note
 
-All stored procedures running on the server [share the same virtual user session](./sessions.md#stored-procedure-sessions).
+Todos los procedimientos almacenados en el servidor [comparten la misma sesión de usuario virtual](./sessions.md#stored-procedure-sessions).
 
 :::
 
 #### Arquitectura
 
-Like a regular process, a stored procedure has its own environment:
+Como un proceso regular, un procedimiento almacenado tiene su propio entorno:
 
-- Current selection per table: Each stored procedure has a separate current selection. One table can have a different current selection in different stored procedures.
-- Current record per table: Each table can have a different current record in each stored procedure.
-- Variables: Every stored procedure has its own process variables. Process variables are recognized only within the domain of their native stored procedure.
-- Default table: Each stored procedure has its own default table.
-- Process sets: Each stored procedure has its own process sets.
-- On Error Call: Each stored procedure has its own error-handling method.
-- Debugger window: Each stored procedure can have its own Debugger window.
+- Una selección actual por tabla: cada procedimiento almacenado tiene una selección actual separada. Una tabla puede tener una selección actual diferente en diferentes procedimientos almacenados.
+- Un registro actual por tabla: cada tabla puede tener un registro actual diferente en cada procedimiento almacenado.
+- Variables: cada procedimiento almacenado tiene sus propias variables proceso. Las variables de proceso solo se reconocen dentro del dominio de su procedimiento almacenado nativo.
+- Tabla por defecto: cada procedimiento almacenado tiene su propia tabla por defecto.
+- Conjuntos de proceso: cada procedimiento almacenado tiene sus propios conjuntos de proceso.
+- On Error Call: cada procedimiento almacenado tiene su propio método de gestión de errores.
+- Ventana de depuración: cada procedimiento almacenado puede tener su propia ventana de depuración.
 
-In terms of user interface, a stored procedure can open windows and display data (i.e., [`DISPLAY RECORD`](../commands/display-records)). A stored procedure executed on a 4D client machine allow data entry. On the other hand, a stored procedure executed on the server cannot invoke data entry interface; there is no data entry kernel on the server machine.
+En términos de interfaz de usuario, un procedimiento almacenado puede abrir ventanas y mostrar datos (por ejemplo, [`DISPLAY RECORD`](../commands/display-records)). Un procedimiento almacenado ejecutado en una máquina cliente 4D permite la entrada de datos. Por otro lado, un procedimiento almacenado ejecutado en el servidor no puede invocar la interfaz de entrada de datos, ya que no existe un motor de entrada de datos en la máquina servidor.
 
-You can start as many as stored procedures as the system authorizes (hardware and memory). In fact, the 4D Server machine should be viewed as a machine that not only replies to 4D clients and web browsers, but also one that executes processes that interact with other processes running on the server machine and on remote 4D machines.
+Puede iniciar tantos procedimientos almacenados como permitan el hardware y la memoria del sistema. De hecho, la máquina servidor 4D debe verse como un equipo que no solo responde a clientes 4D y navegadores web, sino que también ejecuta procesos que interactúan con otros procesos en ejecución en el servidor y en máquinas 4D remotas.
 
 :::note
 
-The [**Execute on Server** method property](../Project/project-method-properties.md#execute-on-server) can also be used to execute a method in a process on the server, but the method uses the "twinned" process of the client process in this case, which means more particularly that it can take advantage of the environment of this client process. In this case, it is not a 4D stored procedure.
+La propiedad de método [**Ejecutar en el servidor**](../Project/project-method-properties.md#execute-on-server) también se puede usar para ejecutar un método en un proceso en el servidor, pero en este caso el método utiliza el proceso gemelo del proceso cliente, lo que significa, en particular, que puede aprovechar el entorno de dicho proceso cliente. En este caso, no se trata de un procedimiento almacenado 4D.
 
 :::
 
-#### What a Stored Procedure Does?
+#### ¿Qué hace un procedimiento almacenado?
 
-Aside from data entry for stored procedures executed on the server, almost every capabilities of processes and 4D language applies to stored procedures.
+A excepción de la entrada de datos para procedimientos almacenados ejecutados en el servidor, casi todas las capacidades de los procesos y del lenguaje 4D se aplican a los procedimientos almacenados.
 
-A stored procedure can add, query, order by, update or delete data. A stored procedure can access documents on disk, work with BLOBs, print records and so on. Just think that instead of doing something on a local 4D machine, you are doing it on the server machine or on one or several 4D client machines.
+Un procedimiento almacenado puede añadir, consultar, ordenar, actualizar o eliminar datos. Un procedimiento almacenado puede acceder a documentos en disco, trabajar con BLOBs, imprimir registros, entre otras funciones. Considere que, en lugar de realizar algo en una máquina 4D local, lo está haciendo en la máquina servidor o en una o varias máquinas cliente 4D.
 
-One obvious advantage of stored procedures executed on the server is that indeed a stored procedure executes locally on the server machine, the machine where the database engine is located. For example, an [`APPLY TO SELECTION`](../commands/apply-to-selection) is not efficient over the network, but it is from within a stored procedure.
+Una ventaja evidente de los procedimientos almacenados ejecutados en el servidor es que se ejecutan localmente en la máquina servidor, la máquina donde se encuentra el motor de la base de datos. Por ejemplo, un comando [`APPLY TO SELECTION`](../commands/apply-to-selection) no resulta eficiente a través de la red, pero sí lo es cuando se ejecuta desde un procedimiento almacenado.
 
-Stored procedures executed on one or several client machines allows to optimize the task repartition and the communication between several client machines. Refer to the command [`REGISTER CLIENT`](../commands/register-client) for an example of a stored procedures executed on several clients.
+Los procedimientos almacenados ejecutados en una o varias máquinas cliente permiten optimizar la distribución de tareas y la comunicación entre los distintos clientes. Refer to the command [`REGISTER CLIENT`](../commands/register-client) for an example of a stored procedures executed on several clients.
 
 However, the most important advantage of the stored procedure architecture is the additional dimension it gives to 4D Server. Using stored procedures, you can implement your own custom 4D Server services. The only limit is your imagination.
 
@@ -376,7 +376,7 @@ Here is the code for the *MyAppli* project method which has the "Execute on Serv
 ```4d
  #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
  
-  `Search and send back values for each record
+  //Search and send back values for each record
  QUERY($table->;$field->=$search)
  While(Not(End selection($table->)))
     APPEND TO ARRAY($array->;myFormula($table))

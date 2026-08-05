@@ -29,10 +29,10 @@ La classe `OpenAIMessage` représente un message structuré contenant un rôle, 
 
 **addImageURL**(*imageURL* : Text; *detail* : Text)
 
-| Paramètres | Type | Description                                                                              |
-| ---------- | ---- | ---------------------------------------------------------------------------------------- |
-| *imageURL* | Text | L'URL de l'image à ajouter au message.                                   |
-| *detail*   | Text | The detail level of the image: "auto", "low", or "high". |
+| Paramètres | Type | Description                                                                               |
+| ---------- | ---- | ----------------------------------------------------------------------------------------- |
+| *imageURL* | Text | L'URL de l'image à ajouter au message.                                    |
+| *detail*   | Text | Le niveau de détail de l'image: "auto", "low", ou "high". |
 
 Ajoute une URL d'image au contenu du message. Si le contenu est actuellement du texte, il sera converti en un format de collection.
 

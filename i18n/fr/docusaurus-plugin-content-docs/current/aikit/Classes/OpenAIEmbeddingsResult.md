@@ -22,12 +22,12 @@ title: OpenAIEmbeddingsResult
 
 ### usage
 
-The `usage` property returns an object containing token usage information for embeddings.
+La propriété `usage` retourne un objet contenant des informations d'utilisation des tokens pour les embeddings.
 
-| Champ           | Type    | Description                                                                                                       |
-| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
-| `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
-| `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
+| Champ           | Type    | Description                                                                                                                        |
+| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `prompt_tokens` | Integer | Nombre de tokens dans le(s) texte(s) d'entrée.                               |
+| `total_tokens`  | Integer | Total des tokens utilisés (identique à prompt_tokens pour les embeddings). |
 
 **Exemple de réponse :**
 
@@ -38,7 +38,7 @@ The `usage` property returns an object containing token usage information for em
 }
 ```
 
-> **Note:** Embeddings only consume prompt tokens (there is no completion), so `total_tokens` equals `prompt_tokens`.
+> **Note :** Les emneddings ne consomment que des tokens d'invite (il n'y a pas de réponse), donc `total_tokens` équivaut à `prompt_tokens`.
 
 ## Voir également
 

@@ -280,35 +280,35 @@ title: クライアント/サーバー
 
 #### ストアドプロシージャーとユーザプロセス間のインタープロセス通信について
 
-Stored procedures can communicate between themselves using:
+ストアドプロシージャー間の通信には、次の方法を使用します:
 
-- the [`session.storage`](../API/SessionClass.md#storage) shared object of the [Stored Procedures Session](../Desktop/sessions.md#stored-procedure-sessions)
-- local or global [semaphores](../Develop/processes.md#semaphores)
-- records
-- commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable)
-- (*deprecated*) interprocess variables, interprocess sets and interprocess named selections
+- [ストアドプロシージャセッション](../Desktop/sessions.md#stored-procedure-sessions) の共有オプジェクトの[`session.storage`](../API/SessionClass.md#storage)
+- ローカルセマフォーまたはグローバル[セマフォー](../Develop/processes.md#semaphores)
+- レコード
+- [`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンド
+- (*非推奨*) インタープロセスセットおよびインタープロセス命名セレクション
 
-Keep in mind that the 4D commands act within the scope of the server machine which is executing the stored procedure (server or clients) in the same way as they act in the scope of a client machine.
+4Dコマンドは、クライアントマシンのスコープ内で動作する場合と同様に、ストアドプ ロシージャーを実行するサーバーまたはクライアントマシンのスコープ内で動作することに注意してください。
 
 :::note
 
-The [`POST OUTSIDE CALL`](../commands/post-outside-call) and [`Outside call`](../commands/outside-call) mechanism has no meaning on the server machine, because stored procedures do not have a user interface with data entry.
+[`POST OUTSIDE CALL`](../commands/post-outside-call) および [`Outside call`](../commands/outside-call) メカニズムは、サーバーマシン上では意味がありません。ストアドプロシージャーには、データ入力のためのユーザーインタフェースがないためです。
 
 :::
 
-Client user processes (processes running on a client machine) can read and write the process variables (\*) of a stored procedure, using the commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable).
+クライアントユーザープロセス (クライアントマシンで実行されるプロセス) は、[`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンドを使用して、ストアドプロシージャーのプロセス変数 (\*) を読み込んだり、書き込むことができます。
 
-(\*) as well as the server machine interprocess variable.
+(\*) サーバーマシンのインタープロセス変数も同様。
 
-Important: "Intermachine" process communication, provided by the commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure.
+重要: [`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンドを使用して行う“マシン間”のプロセス通信は、クライアントからサーバーに対してのみ可能です。 ストアドプロシージャーの変数を読み込んだり、書き込んだりするのは常にクライアントのプロセスです。
 
-#### Stored procedures on client machines
+#### クライアントマシン上でのストアドプロシージャ
 
-Stored procedures can be executed on one or several 4D client machines. Stored procedures on client machines are executed the same as way as stored procedures on the server, except that on the client they can invoke data entry with legacy commands such as [`ADD RECORD`](../commands/add-record).
+ストアドプロシージャを1つあるいは複数の4D マシン上で実行できます。 クライアント上のストアドプロシージャは、サーバ上のそれとおなじように実行されますが、クライアント上では[`ADD RECORD`](../commands/add-record) などの従来のコマンドを使用してデータ入力を行うことができます。
 
-Any client machine executing stored procedures triggered by a server or another client machine, should explicitly be registered for this session. There are two ways to register a client: it can automatically be registered when connecting or through programming.
+サーバまたは他のクライアントマシンによって起こされた、どのようなクライアントマシンで実行されているストアードプロシージャも、明示的にこのセッションに登録されなければなりません。 4D クライアントを登録するには2つの方法があります。接続時に自動登録またはプログラミングによる登録です。
 
-- Registering automatically each 4D client machine connecting to 4D Server: check the [**Register Clients at Startup For Execute On Client**](../settings/client-server.md#register-clients-at-startup-for-execute-on-client) box in the Settings dialog box. When this option is checked, each 4D client machine connecting to the application is automatically referenced with 4D Server as being able to execute stored procedures. A 4D Client type process named according to the client machine is created on the server. An equivalent process is also created on each client machine.
+- 4D Server へ接続する各4D クライアントマシンを自動的に登録する: データベース設定のクライアント-サーバーページ中、公開オプションタブの[**Execute On Client のために起動時にクライアント登録**](../settings/client-server.md#execute-on-clientのために起動時にクライアント登録)チェックボックスを利用します。 When this option is checked, each 4D client machine connecting to the application is automatically referenced with 4D Server as being able to execute stored procedures. A 4D Client type process named according to the client machine is created on the server. An equivalent process is also created on each client machine.
 - Registering 4D Client through programming: you can register one or several client machines using programming, allowing you to select the client machines that needs to be registered and to define their registration name. Use the [`REGISTER CLIENT`](../commands/register-client) command which allows you to register a client machine under any name.
 - Unregistering 4D Client: No matter how the client machines have been registered, you can unregister them for the current session using the [`UNREGISTER CLIENT`](../commands/unregister-cient) command for a given client. The registration process (named according to the client) disappears from the user process group on the server machine as well as on the client.
 
@@ -377,7 +377,7 @@ Here is the code for the *MyAppli* project method which has the "Execute on Serv
 ```4d
  #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
  
-  `Search and send back values for each record
+  //Search and send back values for each record
  QUERY($table->;$field->=$search)
  While(Not(End selection($table->)))
     APPEND TO ARRAY($array->;myFormula($table))
