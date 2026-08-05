@@ -1,4 +1,4 @@
----
+﻿---
 id: using-a-4d-write-pro-area
 title: Properties & Layout
 displayed_sidebar: docs
@@ -157,7 +157,7 @@ You can then enter any static contents, which will be repeated automatically on 
 
 ![](../../assets/en/WritePro/pict2995027.en.png)
 
-You can insert dynamic contents such as the page number or the page count using the [ST INSERT EXPRESSION](../../commands/st-insert-expression) command (for more information, please refer to the *Inserting document and page expressions* paragraph). 
+You can insert dynamic contents such as the page number or the page count using the [ST INSERT EXPRESSION](../commands/st-insert-expression) command (for more information, please refer to the *Inserting document and page expressions* paragraph). 
 
 **Note:** You can also handle footers and headers by programming using specific commands such as [WP Get header](./commands/wp-get-header) and [WP Get footer](./commands/wp-get-footer).
 
@@ -340,9 +340,9 @@ Hyperlinks can also be activated from within 4D Write Pro documents using the **
 
 | Link Type | Description |
 |-----------|-------------|
-| `url`     | Links to web pages or to any document, opens the associated application when activated (\*). Activating a URL link to a 4D Write Pro document (`.4wp`, `.4w7`) replaces the current document in the 4D Write Pro area.<br>(\*) Just like the [OPEN URL](../../commands/open-url) command. |
+| `url`     | Links to web pages or to any document, opens the associated application when activated (\*). Activating a URL link to a 4D Write Pro document (`.4wp`, `.4w7`) replaces the current document in the 4D Write Pro area.<br>(\*) Just like the [OPEN URL](../commands/open-url) command. |
 | `bookmark`| Links to bookmarks in the document |
-| `method`  | Activating a link to a 4D method executes the method (provided it is registered by the [SET ALLOWED METHODS](../../commands/set-allowed-methods) method). |
+| `method`  | Activating a link to a 4D method executes the method (provided it is registered by the [SET ALLOWED METHODS](../commands/set-allowed-methods) method). |
 
 Hyperlinks are managed through the following commands:
 
@@ -386,7 +386,7 @@ or
 
 ## Using commands from the Objects (Forms) theme 
 
-The following 4D commands from the [Objects (Forms)](../../commands/theme/Objects_Forms) theme support 4D Write Pro form objects:
+The following 4D commands from the [Objects (Forms)](../commands/theme/Objects_Forms) theme support 4D Write Pro form objects:
 
 
 

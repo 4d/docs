@@ -1,4 +1,4 @@
----
+﻿---
 id: exporting-to-svg-format
 title: Exporting to SVG format
 displayed_sidebar: docs
@@ -59,7 +59,7 @@ Imported Google fonts override native fonts when the SVG is rendered. If you int
 
 ### Example 
 
-This example exports a document page to SVG format and creates an image preview using [SVG EXPORT TO PICTURE](../../commands/svg-export-to-picture).
+This example exports a document page to SVG format and creates an image preview using [SVG EXPORT TO PICTURE](../commands/svg-export-to-picture).
 
 ```4d
  var $preview : Picture

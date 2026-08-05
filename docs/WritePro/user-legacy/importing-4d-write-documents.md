@@ -1,4 +1,4 @@
----
+﻿---
 id: importing-4d-write-documents
 title: Importing 4D Write documents
 displayed_sidebar: docs
@@ -63,7 +63,7 @@ Note however that a few differences can be seen, which are not considered as bug
 | View HScrollbar           | Not imported (use hor. scrollbar object property)                  |
 | View VScrollbar           | Not imported (use vert. scrollbar object property)                 |
 | View invisible characters | Not imported (use object property)                                 |
-| View references           | Not imported (use [ST SET OPTIONS](../../commands/st-set-options)) |
+| View references           | Not imported (use [ST SET OPTIONS](../commands/st-set-options)) |
 | View column separators    | Available (starting with v17)                                      |
 | View H Splitter           | Not available                                                      |
 | View V Splitter           | Not available                                                      |
@@ -84,7 +84,7 @@ Note however that a few differences can be seen, which are not considered as bug
 | URL color            | Not available                                                    |
 | URL visited color    | Not available                                                    |
 
-**Note:** The system separator (as returned by [GET SYSTEM FORMAT](../../commands/get-system-format)) is used as decimal separator for decimal tabs. You can change this parameter using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. 
+**Note:** The system separator (as returned by [GET SYSTEM FORMAT](../commands/get-system-format)) is used as decimal separator for decimal tabs. You can change this parameter using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. 
 
 ### Document pagination parameters 
 
@@ -201,7 +201,7 @@ Note however that a few differences can be seen, which are not considered as bug
 | **Parameters** | **4D Write plug-in**| **4D Write Pro**|                                                                                                                                                                                                                                                                           
 | -------------- | ------------------- | --------------- |
 | $1 | Longint - 4D Write area reference | Text - 4D Write Pro area name |                                                                                                                                                                                                                                                             
-| $2 | Text - Link label  | Object - Link description:.method - Link's method name. Must be be allowed with the [SET ALLOWED METHODS](../../commands/set-allowed-methods) command. .parameter - User parameter value passed to the method (if used).range - Range of the link's label. See *Range handling commands* | 
+| $2 | Text - Link label  | Object - Link description:.method - Link's method name. Must be be allowed with the [SET ALLOWED METHODS](../commands/set-allowed-methods) command. .parameter - User parameter value passed to the method (if used).range - Range of the link's label. See *Range handling commands* | 
 | $3 | Longint - User parameter (methodRef) | \- |                                                                                                                                                                                                                                                                                       
 
 ### 4D expressions 

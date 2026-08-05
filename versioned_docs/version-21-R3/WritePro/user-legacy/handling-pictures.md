@@ -1,4 +1,4 @@
----
+﻿---
 id: handling-pictures
 title: Pictures
 displayed_sidebar: docs
@@ -11,7 +11,7 @@ slug: /WritePro/pictures
 Adding pictures to a 4D Write Pro document can be accomplished in multiple ways and depend on your needs:
 
 * to add a **background picture**, use the wk background image or wk background image url attribute with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command
-* to add an **inline picture**, *i.e.* inserted in the text flow just like a character, use the [WP INSERT PICTURE](./commands/wp-insert-picture) or the [ST INSERT EXPRESSION](../../commands/st-insert-expression) command
+* to add an **inline picture**, *i.e.* inserted in the text flow just like a character, use the [WP INSERT PICTURE](./commands/wp-insert-picture) or the [ST INSERT EXPRESSION](../commands/st-insert-expression) command
 * to add an **anchored picture** in the page (behind or in front of the text), use the [WP Add picture](./commands/wp-add-picture) command.
 
 The way you add a picture determines the layer it is positioned in, as illustrated in the diagram below: 
