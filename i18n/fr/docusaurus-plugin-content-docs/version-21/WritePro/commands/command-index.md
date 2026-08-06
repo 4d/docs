@@ -66,12 +66,12 @@ title: Commandes 4D Write Pro
 
 <a id="I"><b>I</b></a>
 
-[`WP Import document`](wp-import-document.md) ***Modifié 4D 20 R8***<br/>
+[`WP Import document`](wp-import-document.md) ***Modified 4D 20 R8***<br/>
 [`WP IMPORT STYLE SHEETS`](../commands-legacy/wp-import-style-sheets.md)<br/>
-[`WP INSERT BREAK`](wp-insert-break.md) ***Modifié 4D 20 R8***<br/>
-[`WP Insert document body`](wp-insert-document-body.md) ***Modifié 4D 20 R8***<br/>
-[`WP INSERT FORMULA`](wp-insert-formula.md) ***Modifié 4D 20 R8***<br/>
-[`WP INSERT PICTURE`](wp-insert-picture.md) ***Modifié 4D 20 R8***<br/>
+[`WP INSERT BREAK`](wp-insert-break.md) ***Modified 4D 20 R8***<br/>
+[`WP Insert document body`](wp-insert-document-body.md) ***Modified 4D 20 R8***<br/>
+[`WP Insert formula`](wp-insert-formula.md) ***Modified 4D 20 R8***<br/>
+[`WP INSERT PICTURE`](wp-insert-picture.md) ***Modified 4D 20 R8***<br/>
 [`WP Insert table`](../commands-legacy/wp-insert-table.md)<br/>
 [`WP Is font style supported`](../commands-legacy/wp-is-font-style-supported.md)
 

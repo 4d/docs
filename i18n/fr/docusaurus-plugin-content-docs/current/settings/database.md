@@ -63,7 +63,7 @@ Trois options d’emplacement sont proposées :
   **Notes :**
 
   - En ce qui concerne les recherches, il est important de noter que si le critère de recherche commence ou se termine par @, le caractère @ est toujours considéré comme un joker. Seul le fait que ce caractère soit placé à l’intérieur d’un mot (exemple : bill@cgi.com) entraîne un traitement différent de la part de 4D.
-  - Cette option peut également avoir une influence sur le comportement des commandes du thème [Objets (Formulaires)](../commands/theme/Objects_Forms) qui acceptent le caractère générique ("@") dans le paramètre objet.
+  - Cette option peut également avoir une influence sur le comportement des commandes du thème [Objets (Formulaires)](../commands/theme/Objects-Forms) qui acceptent le caractère générique ("@") dans le paramètre objet.
   - Pour des raisons de sécurité, seuls l’Administrateur et le Super_Utilisateur de la base peuvent modifier ce paramètre.
 
 - **Langue du fichier de données courant :** cette option permet de paramétrer la langue utilisée pour le traitement et la comparaison des chaînes de caractères pour la base de données ouverte. Le choix d’une langue de comparaison influe sur le tri et la recherche des textes ainsi que le passage en minuscules/majuscules mais n’a pas d’incidence sur la traduction des libellés ou sur les formats de dates, d’heure ou monétaires qui restent, eux, dans la langue du système. Par défaut, 4D utilise la langue du système.

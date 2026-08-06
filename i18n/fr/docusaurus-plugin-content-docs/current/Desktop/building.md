@@ -781,7 +781,7 @@ Voici le scénario pour la mise à jour d'un serveur ou d'une application mono-u
 2. Dans l'application en production, vous appelez la commande `SET UPDATE FOLDER` : cette commande désigne l'emplacement du dossier où se trouve la mise à jour "en attente" de l'application actuelle. Facultativement, vous pouvez copier dans ce dossier les éléments personnalisés de la version en production (fichiers utilisateur).
 3. Dans l'application en production, appelez la commande `RESTART 4D` : cette commande déclenche automatiquement l'exécution d'un programme utilitaire nommé "updater" qui ferme l'application en cours, la remplace en utilisant la mise à jour "en attente" si elle est spécifiée, et redémarre l'application avec le fichier de données courant. La version précédente est renommée.
 
-> This sequence is compatible with Windows server applications [run as a Service](../server/service.md).
+> Cette séquence est compatible avec les applications Windows Server [exécutées en tant que Service](../server/service.md).
 
 ### Journal des mises à jour
 

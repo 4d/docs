@@ -47,7 +47,7 @@ La boîte de dialogue standard Ouvrir apparaît.
 
 :::note
 
-You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
+Vous pouvez également ouvrir des projets 4D sans aucune interface graphique via l'[interface  en ligne de commande](../Admin/cli.md) (CLI).
 
 :::
 
@@ -76,7 +76,7 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
 
 :::note
 
-On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).
+Sous Windows, un projet 4D Server peut être lancé automatiquement au démarrage de la session s'il est [enregistré en tant que Service](../server/service.md).
 
 :::
 

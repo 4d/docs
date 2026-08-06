@@ -6,9 +6,9 @@ slug: /WritePro/formulas
 
 ## Visão Geral
 
-4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Specific information such as the page number can also be referenced through formulas (see [Inserting document and page expressions](#inserting-date-and-time-formulas) below).
+4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Specific information such as the page number can also be referenced through formulas (see below).
 
-Inserting formulas in 4D Write Pro areas is done with the [**WP INSERT FORMULA**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. Eles também são devolvidos pelo comando [**WP Get text**](commands-legacy/wp-get-text.md).
+Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. Eles também são devolvidos pelo comando [**WP Get text**](commands-legacy/wp-get-text.md).
 
 As fórmulas são avaliadas:
 
@@ -46,7 +46,7 @@ Você deseja substituir a seleção em uma área do 4D Write Pro pelo conteúdo 
  $sel:=WP Selection range(4DWPArea)
  Case of
     :(Form event code=On Clicked)
-       WP INSERT FORMULA($sel;Formula(fullName);wk replace)
+       WP Insert formula($sel;Formula(fullName);wk replace)
  End case
 ```
 
@@ -86,9 +86,9 @@ Por exemplo, para inserir o número da página na área do rodapé:
 
 ```4d
  $footer:=WP Get footer(4DWP;1)
- WP INSERT FORMULA($footer;Formula(This.pageNumber);wk append)
-  //Usando Formula(myMethod) com myMethod processando This.pageNumber
-  //não funcionaria corretamente
+ WP Insert formula($footer;Formula(This.pageNumber);wk append)
+  //Using Formula(myMethod) with myMethod processing This.pageNumber
+  //would not work correctly
 ```
 
 ## Table formula context object
@@ -111,7 +111,7 @@ In any other contexts, these expressions will return *undefined*.
 
 :::note
 
-For more information about formula insertion, see [WP INSERT FORMULA](./commands/wp-insert-formula).
+For more information about formula insertion, see [WP Insert formula](./commands/wp-insert-formula).
 
 :::
 
@@ -202,7 +202,7 @@ Neste caso, você pode exibir referências de fórmula como símbolos ![](../ass
 Para exibir referências de fórmulas como símbolos, você pode:
 
 - marcar a opção **Exibir fonte de fórmula como símbolo** na lista de propriedades (consulte *Configuração das propriedades da visualização*) ou
-- usar a ação padrão de FormulaAsSymbol (veja *Usando as ações 4D Write Pro*), ou
+- use the displayFormulaAsSymbol standard action , or
 - use o comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) com o seletor `wk display formula as symbol` como **True**.
 
 ### Referências como nomes
@@ -220,10 +220,10 @@ Se você atribuir nomes de fórmulas, eles serão exibidos em vez de textos:
 Para atribuir um nome a uma fórmula, você precisa usar o comando [WP Insert formula](commands/wp-insert-formula.md) com um parâmetro objeto. Por exemplo:
 
 ```4d
-  //insere o dia anterior no documento
- $o:=New object("formula";Formula(Current date-1); "name"; "Yesterday")
+  //inserts the previous day in the document
+ $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
- WP INSERT FORMULA($range;$o;wk append)
+ WP Insert formula($range;$o;wk append)
  
 ```
 

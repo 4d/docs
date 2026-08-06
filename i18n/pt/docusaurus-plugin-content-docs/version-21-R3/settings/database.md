@@ -63,7 +63,7 @@ São oferecidos três opções de localização:
   **Notas:**
 
   - Para pesquisas, se os critérios de pesquisa iniciam ou terminam com @, o caractere "@" será tratado como um caractere curinga. Somente se o caractere "@" for colocado no meio de uma palavra (por exemplo: bill@cgi.com) é tratado por 4D de maneira diferente.
-  - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](../commands/theme/Objects_Forms) que aceptan el caracter comodín ("@") en el parámetro objeto.
+  - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](../commands/theme/Objects-Forms) que aceptan el caracter comodín ("@") en el parámetro objeto.
   - Por razões de segurança, apenas o Administrador ou Designer da base de dados podem modificar este parâmetro.
 
 - **Lenguaje del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.

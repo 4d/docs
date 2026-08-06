@@ -309,41 +309,41 @@ Any client machine executing stored procedures triggered by a server or another 
 
 - Registering automatically each 4D client machine connecting to 4D Server: check the [**Register Clients at Startup For Execute On Client**](../settings/client-server.md#register-clients-at-startup-for-execute-on-client) box in the Settings dialog box. When this option is checked, each 4D client machine connecting to the application is automatically referenced with 4D Server as being able to execute stored procedures. A 4D Client type process named according to the client machine is created on the server. An equivalent process is also created on each client machine.
 - Registering 4D Client through programming: you can register one or several client machines using programming, allowing you to select the client machines that needs to be registered and to define their registration name. Use the [`REGISTER CLIENT`](../commands/register-client) command which allows you to register a client machine under any name.
-- Unregistering 4D Client: No matter how the client machines have been registered, you can unregister them for the current session using the [`UNREGISTER CLIENT`](../commands/unregister-cient) command for a given client. The registration process (named according to the client) disappears from the user process group on the server machine as well as on the client.
+- Unregistering 4D Client: No matter how the client machines have been registered, you can unregister them for the current session using the [`UNREGISTER CLIENT`](../commands/unregister-cient) command for a given client. El proceso de registro (nombrado según el cliente) desaparece del grupo de procesos de usuario tanto en la máquina servidor como en la máquina cliente.
 
-You can get the list and the task distribution (number of methods still to be executed) for the clients registered for a given session using the [`GET REGISTERED CLIENTS`](../commands/get-registered-clients) command.
+Puede obtener la lista y la distribución de tareas (número de métodos por ejecutar) para los clientes registrados en una sesión específica utilizando el comando [`GET REGISTERED CLIENTS`](../commands/get-registered-clients).
 
 ### Variables
 
-Like all processes, each stored procedure, database method and trigger has its own table of process variables. These process variables can be created and used dynamically during each phase of execution.
+Como todos los procesos, cada procedimiento almacenado, método base de datos y trigger tiene su propia tabla de variables de proceso. Estas variables de proceso se pueden crear y utilizar dinámicamente durante cada fase de ejecución.
 
-4D Server maintains one table of [interprocess variables](../Concepts/variables.md#interprocess-variables) (*deprecated*). The scope of these variables is the server machine. When running a compiled database, the interprocess variable table definition is common between the server and all the clients machines, each machine having its own instance.
+4D Server mantiene una tabla de [variables interproceso](../Concepts/variables.md#interprocess-variables) (*obsoleto*). El alcance de estas variables es la máquina servidor. Cuando se ejecuta una base compilada, la definición de la tabla de variables interproceso es común entre el servidor y todas las máquinas cliente, pero cada máquina tiene su propia instancia.
 
-### Sets and Named Selections
+### Conjuntos y selecciones temporales
 
-- Process sets/named selections: A process object can only be accessed by the process in which it has been created and, if it has been created in a client process, by the "twinned" process created on the server. Los conjuntos proceso se borran en cuanto termina el método proceso. Process objects do not need any special prefix in the name.
-- Interprocess sets/named selections (*deprecated*): An interprocess object is visible for all the processes on the machine (client or server) where it was created. A set or named selection is an interprocess object if the name of the set is preceded by the symbols (\<>) — a “less than” sign followed by a “greater than” sign.
-- Local/Client sets/named selections: A local/client object is only visible in the process where it was created. The name of a local/client object is preceded by the dollar sign ($).
-  Note: Although its name does not begin with a `$`, the `UserSet` system set is a local/client set.
+- Conjuntos y selecciones temporales de proceso: a un objeto de proceso solo se puede acceder desde el proceso en el que fue creado y, si se creó en un proceso cliente, desde el proceso gemelo creado en el servidor. Los conjuntos proceso se borran en cuanto termina el método proceso. Los objetos de proceso no necesitan ningún prefijo especial en el nombre.
+- Conjuntos/Selecciones temporales interproceso (*obsoleto*): un objeto interproceso es visible para todos los procesos en la máquina (cliente o servidor) en la que fue creado. Un conjunto o selección temporal es un objeto interproceso si el nombre del conjunto está precedido por los símbolos (\<>) — un signo "menor que" seguido de un signo "mayor que".
+- Conjuntos/Selecciones temporales locales/clientes: un objeto local/cliente solo es visible en el proceso donde se creó. El nombre de un objeto local/cliente está precedido por el signo de dólar ($).
+  Nota: aunque su nombre no comienza por `$`, el sistema `UserSet` es un conjunto local/cliente.
 
-The following table indicates the principles concerning the visibility of named selections and sets according to where they are created (the table is identical for both types of objects):
+La siguiente tabla indica los principios de visibilidad de las selecciones temporales y los conjuntos según donde se creen (la tabla es idéntica para ambos tipos de objetos):
 
-|                                 | Client Process | Other client processes | Server process                 | Other server processes |
-| ------------------------------- | -------------- | ---------------------- | ------------------------------ | ---------------------- |
-| **Created in a client process** |                |                        |                                |                        |
-| `$test`                         | x              |                        |                                |                        |
-| `test`                          | x              |                        | x (Trigger) |                        |
-| `<>test`                        | x              | x                      |                                |                        |
-| **Created in a server process** |                |                        |                                |                        |
-| `$test`                         |                |                        | x                              |                        |
-| `test`                          |                |                        | x                              |                        |
-| `<>test`                        |                |                        | x                              | x                      |
+|                                   | Proceso cliente | Otros procesos cliente | Proceso servidor               | Otros procesos servidor |
+| --------------------------------- | --------------- | ---------------------- | ------------------------------ | ----------------------- |
+| **Creado en un proceso cliente**  |                 |                        |                                |                         |
+| `$test`                           | x               |                        |                                |                         |
+| `test`                            | x               |                        | x (Trigger) |                         |
+| `<>test`                          | x               | x                      |                                |                         |
+| **Creado en un proceso servidor** |                 |                        |                                |                         |
+| `$test`                           |                 |                        | x                              |                         |
+| `test`                            |                 |                        | x                              |                         |
+| `<>test`                          |                 |                        | x                              | x                       |
 
 x = visible
 
-You need to keep this visibility matrix in mind depending on the operations you want to perform. For example, if you want to do a [`DIFFERENCE`](../commands/difference), [`INTERSECTION`](../commands/intersection) or [`UNION`](../commands/union) type operation, make sure that all the sets are visible on the machine that is carrying out the operation.
+Tenga en cuenta esta matriz de visibilidad dependiendo de las operaciones que vaya a realizar. Por ejemplo, si quiere hacer una operación de tipo [`DIFFERENCE`](../commands/difference), [`INTERSECTION`](../commands/intersection) o [`UNION`](../commands/union), asegúrese de que todos los conjuntos sean visibles en la máquina que está ejecutando la operación.
 
-### Execute on Server attribute
+### Atributo Ejecutar en el servidor
 
 The **Execute on Server** project method attribute can be set using the batch setting of attributes dialog box as well as the [Method Properties dialog box](../Project/project-method-properties.md#execute-on-server). Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
 
