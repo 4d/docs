@@ -6,7 +6,7 @@ slug: /WritePro/formulas
 
 ## 概要
 
-4D Write Pro ドキュメントには、変数、フィールド、式、プロジェクトメソッドあるいは4D コマンドなどの4D フォーミュラへの参照を含めることができます。 ページ番号などの特定の情報もフォーミュラを通して参照することができます(以下の[ドキュメントとページ式を挿入](#inserting-date-and-time-formulas) を参照してください)。 Specific information such as the page number can also be referenced through formulas (see below).
+4D Write Pro ドキュメントには、変数、フィールド、式、プロジェクトメソッドあるいは4D コマンドなどの4D フォーミュラへの参照を含めることができます。 Specific information such as the page number can also be referenced through formulas (see below).
 
 Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. また、[**WP Get text**](commands-legacy/wp-get-text.md) コマンドを使用することでも返されます。
 
@@ -79,7 +79,7 @@ Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**
 
 :::
 
-(\*) **重要**: **This.pageNumber**、**This.pageIndex** および **This.pageCount** は4D Write Pro フォーミュラの中で直接的にのみ使用することができます( *formula.source* 文字列の中に記入されている必要があります)。 これらはフォーミュラから呼び出されたメソッド内の4D ランゲージで使用された場合には不正確な値を返します。 ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます: これらはフォーミュラから呼び出されたメソッド内の4D ランゲージで使用された場合には不正確な値を返します。 ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます:
+(\*) **重要**: **This.pageNumber**、**This.pageIndex** および **This.pageCount** は4D Write Pro フォーミュラの中で直接的にのみ使用することができます( *formula.source* 文字列の中に記入されている必要があります)。 これらはフォーミュラから呼び出されたメソッド内の4D ランゲージで使用された場合には不正確な値を返します。 ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます:
 
 - この使い方は動作します: « *formatNumber(This.pageNumber)* »
 - この使い方は動作**しません**: « *formatNumber* » (*formatNumber* メソッド内部で*This.pageNumber* を処理する)
@@ -124,7 +124,7 @@ For more information about formula insertion, see [WP Insert formula](../command
 
 ## バーチャルストラクチャーのサポート
 
-4D Write Pro ドキュメントに挿入されたテーブルおよびフィールドの式はデータベースのバーチャルストラクチャー定義をサポートします。  フォーミュラに公開されるバーチャルストラクチャーは[**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) および [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*) コマンドを通して定義されます。 フォーミュラに公開されるバーチャルストラクチャーは[**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) および [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*) コマンドを通して定義されます。
+4D Write Pro ドキュメントに挿入されたテーブルおよびフィールドの式はデータベースのバーチャルストラクチャー定義をサポートします。  フォーミュラに公開されるバーチャルストラクチャーは[**SET FIELD TITLES**](../commands/set-field-titles)(...;\*) および [**SET TABLE TITLES**](../commands/set-table-titles)(...;\*) コマンドを通して定義されます。
 
 バーチャルストラクチャーが定義されている場合:
 
@@ -147,7 +147,7 @@ For more information about formula insertion, see [WP Insert formula](../command
 
 ### 参照か値か
 
-デフォルトでは、4D フォーミュラは値として表示されます。 デフォルトでは、4D フォーミュラは値として表示されます。 4D フォーミュラを挿入すると、4D Write Pro はカレントの値を計算して表示します。   どのフォーミュラが表示されているのか知りたい場合には、これを参照として表示する必要があります。  どのフォーミュラが表示されているのか知りたい場合には、これを参照として表示する必要があります。
+デフォルトでは、4D フォーミュラは値として表示されます。 4D フォーミュラを挿入すると、4D Write Pro はカレントの値を計算して表示します。   どのフォーミュラが表示されているのか知りたい場合には、これを参照として表示する必要があります。
 
 フォーミュラを参照として表示するためには、以下の方法があります:
 
@@ -191,7 +191,7 @@ For more information about formula insertion, see [WP Insert formula](../command
 
 ### 参照を名前で表示
 
-フォーミュラには名前を割り当てることができ、これによって4D Write Proテンプレートドキュメントをエンドユーザーがより読みやすく理解しやすいようにすることができます。 フォーミュラが参照として表示されている場合(そして記号として表示されていない場合)で、フォーミュラに対して名前を定義している場合、フォーミュラ名が表示されます。 フォーミュラが参照として表示されている場合(そして記号として表示されていない場合)で、フォーミュラに対して名前を定義している場合、フォーミュラ名が表示されます。
+フォーミュラには名前を割り当てることができ、これによって4D Write Proテンプレートドキュメントをエンドユーザーがより読みやすく理解しやすいようにすることができます。 フォーミュラが参照として表示されている場合(そして記号として表示されていない場合)で、フォーミュラに対して名前を定義している場合、フォーミュラ名が表示されます。
 
 例えば、以下のフォーミュラ参照はデフォルトではソーステキストとして表示されます:
 

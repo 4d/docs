@@ -203,19 +203,19 @@ Un procedimiento almacenado puede añadir, consultar, ordenar, actualizar o elim
 
 Una ventaja evidente de los procedimientos almacenados ejecutados en el servidor es que se ejecutan localmente en la máquina servidor, la máquina donde se encuentra el motor de la base de datos. Por ejemplo, un comando [`APPLY TO SELECTION`](../commands/apply-to-selection) no resulta eficiente a través de la red, pero sí lo es cuando se ejecuta desde un procedimiento almacenado.
 
-Los procedimientos almacenados ejecutados en una o varias máquinas cliente permiten optimizar la distribución de tareas y la comunicación entre los distintos clientes. Refer to the command [`REGISTER CLIENT`](../commands/register-client) for an example of a stored procedures executed on several clients.
+Los procedimientos almacenados ejecutados en una o varias máquinas cliente permiten optimizar la distribución de tareas y la comunicación entre los distintos clientes. Consulte el comando [`REGISTER CLIENT`](../commands/register-client) para un ejemplo de procedimientos almacenados ejecutados en varios clientes.
 
-However, the most important advantage of the stored procedure architecture is the additional dimension it gives to 4D Server. Using stored procedures, you can implement your own custom 4D Server services. The only limit is your imagination.
+Sin embargo, la ventaja más importante de la arquitectura de procedimientos almacenados es la dimensión adicional que da a 4D Server. Gracias a los procedimientos almacenados, puede implementar sus propios servicios 4D Server. El único límite es su imaginación.
 
-#### What a stored procedure does not do?
+#### ¿Qué no puede hacer un procedimiento almacenado?
 
-Generally speaking, stored procedures executed on the server should not deal with interface items (such as menus, windows, forms...). Indeed the interface is not managed on the server's side.
+En general, los procedimientos almacenados ejecutados en el servidor no deberían tratar con elementos de interfaz (como menús, ventanas, formularios...). De hecho, la interfaz no se gestiona del lado del servidor.
 
-All commands that are likely to generate modal dialog boxes on the server machine (e.g. [`Open document`](../commands/open-document) with an empty string as first parameter) should be avoided. Keep in mind that there isn't always a user in front of a server screen, and the display of a modal dialog box requiring a user action can lead to the application being blocked for some time.
+Todos los comandos que puedan generar cuadros de diálogo modales en la máquina servidor (por ejemplo [`Open document`](../commands/open-document) con una cadena vacía como primer parámetro) se deben evitar. Tenga en cuenta que no siempre hay un usuario frente a la pantalla del servidor, por lo que la visualización de un cuadro de diálogo modal que requiere una acción del usuario puede hacer que la aplicación quede bloqueada.
 
-#### Forbidden commands on the server
+#### Comandos no permitidos en el servidor
 
-Here is the list of the commands that should NOT be used within stored procedures executed on the server. If one of the following commands is used within a stored procedure, an alert will be displayed indicating that this command cannot be executed on 4D Server. The error #67 is returned; it can be intercepted through a method installed in the [`ON ERR CALL`](../commands/on-err-call) command.
+Esta es la lista de los comandos que NO deben utilizarse en los procedimientos almacenados ejecutados en el servidor. Si uno de los siguientes comandos se utiliza en un procedimiento almacenado, se mostrará una alerta que indica que este comando no se puede ejecutar en 4D Server. Se devuelve el error #67; puede interceptarse mediante un método instalado con el comando [`ON ERR CALL`](../commands/on-err-call).
 
 [`ADD RECORD`](../commands/add-record)
 [`APPEND MENU ITEM`](../commands/append-menu-item)
@@ -251,8 +251,8 @@ Here is the list of the commands that should NOT be used within stored procedure
 [`SET USER ALIAS`](../commands/set-user-alias)
 [`SHOW MENU BAR`](../commands/show-menu-bar)
 
-Commands with no effect on the server
-The following commands have no effect when they are executed within a stored procedure on the server. No specific error code is returned.
+Comandos sin efecto en el servidor
+Los siguientes comandos no tienen efecto cuando se ejecutan en un procedimiento almacenado en el servidor. No se devuelve ningún código de error específico.
 
 [`GRAPH`](../commands/graph)
 [`MESSAGES OFF`](../commands/messages-off)
@@ -260,42 +260,42 @@ The following commands have no effect when they are executed within a stored pro
 [`SET MENU BAR`](../commands/set-menu-bar)
 [`SHOW TOOL BAR`](../commands/show-tool-bar)
 
-#### How to Start a Stored Procedure
+#### Cómo lanzar un procedimiento almacenado
 
-From 4D, you can manually start a stored procedure in the **Execute Method** dialog box:
+Desde 4D, puede lanzar manualmente un procedimiento almacenado en el cuadro de diálogo **Ejecutar método**:
 
 ![](../assets/en/Desktop/execute-method.png)
 
-You can execute it on 4D Server or on another 4D client machine. Note that to display the 4D client machines in this list, they should have been first [registered](#stored-procedures-on-client-machines).
+Puede ejecutarlo en 4D Server o en otra máquina cliente 4D. Tenga en cuenta que para mostrar las máquinas cliente 4D en esta lista, deben haberse [registradas](#stored-procedures-on-client-machines) previamente.
 
-- Also on 4D, you can programmatically start a stored procedure using the commands [`Execute on server`](../commands/execute-on-server) or [`EXECUTE ON CLIENT`](../commands/execute-on-client).
-- A method executed on 4D Server (database method, method with the **Execute on Server** attribute or stored procedure) can start a stored procedure using [`Execute on server`](../commands/execute-on-server), [`New process`](../commands/new-process), or [`EXECUTE ON CLIENT`](../commands/execute-on-client).
-
-:::note
-
-It is not possible to use the process management commands [`DELAY PROCESS`](../commands/delay-process), [`PAUSE PROCESS`](../commands/pause-process) and [`RESUME PROCESS`](../commands/resume-process) from a remote 4D with stored procedures on the server.
-
-:::
-
-#### Communication Between Stored Procedures and User Processes
-
-Stored procedures can communicate between themselves using:
-
-- the [`session.storage`](../API/SessionClass.md#storage) shared object of the [Stored Procedures Session](../Desktop/sessions.md#stored-procedure-sessions)
-- local or global [semaphores](../Develop/processes.md#semaphores)
-- records
-- commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable)
-- (*deprecated*) interprocess variables, interprocess sets and interprocess named selections
-
-Keep in mind that the 4D commands act within the scope of the server machine which is executing the stored procedure (server or clients) in the same way as they act in the scope of a client machine.
+- También en 4D, puede iniciar programáticamente un procedimiento almacenado utilizando los comandos [`Execute on server`](../commands/execute-on-server) o [`EXECUTE ON CLIENT`](../commands/execute-on-client).
+- Un método ejecutado en 4D Server (método base de datos, método con el atributo **Execute on Server** o procedimiento almacenado) puede iniciar un procedimiento almacenado con [`Execute on server`](../commands/execute-on-server), [`New process`](../commands/new-process) o [`EXECUTE ON CLIENT`](../commands/execute-on-client).
 
 :::note
 
-The [`POST OUTSIDE CALL`](../commands/post-outside-call) and [`Outside call`](../commands/outside-call) mechanism has no meaning on the server machine, because stored procedures do not have a user interface with data entry.
+No es posible usar los comandos de gestión de procesos [`DELAY PROCESS`](../commands/delay-process), [`PAUSE PROCESS`](../commands/pause-process) y [`RESUME PROCESS`](../commands/resume-process) desde un 4D remoto en procedimientos almacenados en el servidor.
 
 :::
 
-Client user processes (processes running on a client machine) can read and write the process variables (\*) of a stored procedure, using the commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable).
+#### Comunicación entre los procedimientos almacenados y los procesos usuario
+
+Los procedimientos almacenados se pueden comunicar entre ellos mediante:
+
+- el objeto compartido [`session.storage`](../API/SessionClass.md#storage) de la [sesión de procedimientos almacenados](../Desktop/sessions.md#stored-procedure-sessions)
+- [sémaforos](../Develop/processes.md#semaphores) globales o locales
+- registros
+- comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE A VARIABLE`](../commands/variable-to-variable)
+- (*obsoleto*) variables, conjuntos y selecciones temporales interprocesos
+
+Tenga en cuenta que los comandos 4D actúan en el entorno de la máquina que ejecuta el procedimiento almacenado (servidor o cliente) de la misma manera en que actúan en el entorno de una máquina cliente.
+
+:::note
+
+El mecanismo [`POST OUTSIDE CALL`](../commands/post-outside-call) y [`Outside call`](../commands/outside-call) no tiene efecto en la máquina servidor, ya que los procedimientos almacenados no tienen una interfaz de usuario para la entrada de datos.
+
+:::
+
+Los procesos de usuario de un cliente (procesos que se ejecutan en una máquina cliente) pueden leer y escribir las variables de proceso (\*) de un procedimiento almacenado mediante los comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE TO VARIABLE`](../commands/variable-to-variable).
 
 (\*) as well as the server machine interprocess variable.
 
@@ -345,22 +345,22 @@ Tenga en cuenta esta matriz de visibilidad dependiendo de las operaciones que va
 
 ### Atributo Ejecutar en el servidor
 
-The **Execute on Server** project method attribute can be set using the batch setting of attributes dialog box as well as the [Method Properties dialog box](../Project/project-method-properties.md#execute-on-server). Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
+El atributo de método proyecto **Ejecutar en el servidor** se puede definir utilizando el cuadro de diálogo de configuración por lotes de atributos así como el [cuadro de diálogo Propiedades](../Project/project-method-properties.md#execute-on-server) de los métodos. Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
 
-#### Execution Context
+#### Contexto de ejecución
 
-When this attribute is checked, the execution context of the project method is comparable to that of [triggers](#triggers): the method on the server shares the same database context as the corresponding context on the client side for locking records and for transactions, but not the same language context (process variables, sets, current selections). However, unlike a trigger, a method executed on the server does not share the current record with the client context.
-All the [parameters of the method](../Concepts/parameters.md) are sent to the server and the return value, if any, is returned to the client.
+Cuando se marca este atributo, el contexto de ejecución del método proyecto es comparable al de los [triggers](#triggers): el método en el servidor comparte el mismo contexto de base de datos que el correspondiente del lado del cliente para el bloqueo de registros y transacciones, pero no el mismo contexto de lenguaje (variables de proceso, conjuntos, selecciones actuales). Sin embargo, a diferencia de un trigger, un método que se ejecuta en el servidor no comparte el registro actual con el contexto del cliente.
+Todos los [parámetros del método](../Concepts/parameters.md) se envían al servidor y el valor devuelto, si lo hay, se retorna al cliente.
 
-Unlike the [`Execute on server`](../commands/execute-on-server) command, this option does not create a process on the server. 4D Server uses the "twin" process of the client process that requested the execution. Moreover, this option simplifies the principle of delegating the execution of a method on the server since the transfer of parameters is automatically carried out in both directions, as with a "normal" method call. The [`Execute on server`](../commands/execute-on-server) command functions asynchronously, therefore it requires more programming and makes use of [semaphores](../Develop/processes.md#semaphores) for reading the results.
+A diferencia del comando [`Execute on server`](../commands/execute-on-server), esta opción no crea un proceso en el servidor. 4D Server utiliza el proceso gemelo del proceso cliente que solicitó la ejecución. Además, esta opción simplifica el principio de delegar la ejecución de un método en el servidor, ya que la transferencia de parámetros se realiza automáticamente en ambas direcciones, como en una llamada normal a un método. El comando [`Execute on server`](../commands/execute-on-server) funciona de forma asíncrona; por lo tanto, requiere más programación y hace uso de [semáforos](../Develop/processes.md#semaphores) para la lectura de resultados.
 
-#### Usable Commands
+#### Comandos utilizables
 
-Methods with "Execute on Server" attribute are subject to the same rules as the [stored procedures](#stored-procedures) as far as the use of 4D language commands is concerned.
+Los métodos con el atributo "Ejecutar en el servidor" están sujetos a las mismas reglas que los [procedimientos almacenados](#stored-procedures) en lo que se refiere al uso de comandos del lenguaje 4D.
 
 #### Punteros
 
-If you pass a pointer to a variable (simple variable, array or array element), the pointed value is also sent to the server. If the pointed value is modified on the server by the method, the modified value is returned to the client in order to update the corresponding variable on the client side.
+Si pasa un puntero a una variable (variable simple, array o elemento de array), el valor referenciado también se envía al servidor. If the pointed value is modified on the server by the method, the modified value is returned to the client in order to update the corresponding variable on the client side.
 Pointers to a table or field are sent as references (table number, field number). The current record value is not automatically exchanged.
 
 :::note
@@ -376,7 +376,7 @@ Here is the code for the *MyAppli* project method which has the "Execute on Serv
 ```4d
  #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
  
-  //Search and send back values for each record
+  //Buscar y devolver valores para cada registro
  QUERY($table->;$field->=$search)
  While(Not(End selection($table->)))
     APPEND TO ARRAY($array->;myFormula($table))
@@ -386,7 +386,7 @@ Here is the code for the *MyAppli* project method which has the "Execute on Serv
  $result:=Records in selection($table->)
 ```
 
-On the client side, the method is called as follows:
+Del lado del cliente, el método se llama de la siguiente manera:
 
 ```4d
  ARRAY TEXT(myArray;0)

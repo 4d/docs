@@ -118,7 +118,7 @@ Les principes suivants sont mis en œuvre :
 
 For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
 
-| Command                                                                  | Can be used in compiled mode |
+| Commande                                                                 | Can be used in compiled mode |
 | ------------------------------------------------------------------------ | ---------------------------- |
 | [Current method path](../commands/current-method-path)                   | Oui                          |
 | [FORM GET NAMES](../commands/form-get-names)                             | Oui                          |
