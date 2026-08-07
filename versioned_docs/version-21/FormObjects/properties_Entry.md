@@ -35,7 +35,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox-column.md), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
+- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the [`SET RECENT FONTS`](../commands/set-recent-fonts) and [`FONT LIST`](../commands/font-list) commands.
 - commands for supported style modifications: font, size, style, color and background color.
 When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
