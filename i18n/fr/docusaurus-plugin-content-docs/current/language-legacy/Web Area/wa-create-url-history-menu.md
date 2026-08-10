@@ -5,7 +5,7 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *objet* {; *direction*} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *objet* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *objet* : Variable, Field {; *direction* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 <div class="no-index">
 

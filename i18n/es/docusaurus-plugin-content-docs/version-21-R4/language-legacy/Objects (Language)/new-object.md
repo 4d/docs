@@ -5,7 +5,7 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** ( *propiedad* : Text ; *valor* : any {; ...(*propiedad* : Text, *valor* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** ( { ...(*propiedad* : Text ; *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 <div class="no-index">
 

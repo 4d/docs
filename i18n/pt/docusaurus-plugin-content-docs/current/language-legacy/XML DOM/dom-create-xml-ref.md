@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* : Text {; *nomeEspaço* : Text} {; *nSNome* : Text ; *nSValor* : Text} {; ...(*nSNome* : Text, *nSValor* : Text)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* : Text {; *nomeEspaço* : Text} {; ...(*nSNome* : Text ; *nSValor* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 <div class="no-index">
 

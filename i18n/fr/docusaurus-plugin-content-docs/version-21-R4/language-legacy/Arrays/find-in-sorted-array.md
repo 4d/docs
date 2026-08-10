@@ -5,7 +5,7 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *tableau* ; *valeur* ; > ou < {; *posDébut* {; *posFin*}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *tableau* : Array ; *valeur* : Expression ; *sensDuTri* : >, < {; *posDébut* : Integer {; *posFin* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tableau | Array | &#8594;  | Tableau dans lequel effectuer la recherche |
 | valeur | Expression | &#8594;  | Valeur (de même type que le tableau) à rechercher dans le tableau |
-| > ou < | Opérateur | &#8594;  | > si le tableau est trié par ordre croissant, < s'il est trié par ordre décroissant |
+| sensDuTri | >, < | &#8594;  | > si le tableau est trié par ordre croissant, < s'il est trié par ordre décroissant |
 | posDébut | Integer | &#8592; | Si la valeur est trouvée, position de sa première occurrence ; sinon, position où la valeur devrait être insérée |
 | posFin | Integer | &#8592; | Si la valeur est trouvée, position de sa dernière occurrence ; sinon, identique à posDébut |
 | Résultat | Boolean | &#8592; | Vrai si au moins un élément du tableau correspond à la valeur recherchée, sinon Faux |
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in sorted array.Summary-->La commande **Find in sorted array** retourne **vrai** si au moins un élément du *tableau* trié correspond à *valeur*, et optionnellement retourne la position du ou des élément(s) trouvé(s).<!-- END REF--> A la différence de [Find in array](../commands/find-in-array), **Find in sorted array** travaille uniquement avec un *tableau* trié et fournit des informations sur la position des occurrences, ce qui permet d'insérer des éléments si nécessaire.
 
-Le *tableau* doit être déjà trié conformément au tri défini par le paramètre *\> ou <* (symbole "supérieur à" pour l'ordre croissant et symbole "inférieur à" pour l'ordre décroissant). La commande **Find in sorted array** tire pleinement parti de ce tri et utilise un algorithme de recherche par dichotomie, qui est généralement plus efficace pour les tableaux de grande taille (pour plus d'informations, vous pouvez consulter la [page consacrée à la dichotomie sur Wikipedia](http://fr.wikipedia.org/wiki/Dichotomie)). Cependant, si le tableau n'est pas correctement trié, le résultat pourra être incorrect.
+Le *tableau* doit être déjà trié conformément au tri défini par le paramètre *sensDuTri* (symbole "supérieur à" pour l'ordre croissant et symbole "inférieur à" pour l'ordre décroissant). La commande **Find in sorted array** tire pleinement parti de ce tri et utilise un algorithme de recherche par dichotomie, qui est généralement plus efficace pour les tableaux de grande taille (pour plus d'informations, vous pouvez consulter la [page consacrée à la dichotomie sur Wikipedia](http://fr.wikipedia.org/wiki/Dichotomie)). Cependant, si le tableau n'est pas correctement trié, le résultat pourra être incorrect.
 
 **Note :** Lorsque vous utilisez cette commande avec un tableau trié de type Object, vous ne pouvez passer qu'une référence d'objet en valeur. 
 

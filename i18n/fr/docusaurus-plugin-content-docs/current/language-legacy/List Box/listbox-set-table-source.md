@@ -5,15 +5,20 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nomSurlignage*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *tempo* {; *nomSurlignage*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *objet* : Text ; *numTable* : Integer {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objet* : Variable ; *numTable* : Integer {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( * ; *objet* : Text ; *tempo* : Text {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objet* : Variable ; *tempo* : Text {; *nomSurlignage* : Text} )
+
+
+
+**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nomSurlignage*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *tempo* {; *nomSurlignage*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| * | Operator | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
 | objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numTable &#124; tempo | Entier long, Chaîne | &#8594;  | Numéro de la table de laquelle utiliser la sélection courante ou Nom de la sélection temporaire à utiliser |
+| numTable | Integer | &#8594;  | Numéro de la table de laquelle utiliser la sélection courante |
+| tempo | Text | &#8594;  | Nom de la sélection temporaire à utiliser |
 | nomSurlignage | Text | &#8594;  | Nom de l’ensemble de surlignage |
 </div>
 <!-- END REF-->

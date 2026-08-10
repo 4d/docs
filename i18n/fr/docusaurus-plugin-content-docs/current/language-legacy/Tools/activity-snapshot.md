@@ -5,13 +5,14 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** (* tabActivités* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *tabActivités* : Object array {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* : Text array ; *tabDébut* : Text array ; *tabDurée* : Integer array ; *tabInfo* : Text array {; *tabDétails* : Object array}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabActivités &#124; tabUUID | Tableau objet, Tableau texte | &#8592; | Description complète des opérations (tableau objet) ouUUIDs des opérations (tableau texte) |
+| tabActivités | Object array | &#8592; | Description complète des opérations  |
+| tabUUID | Text array | &#8592; | UUIDs des opérations |
 | tabDébut | Text array | &#8592; | Heures de démarrage des opérations |
 | tabDurée | Integer array | &#8592; | Durées des opérations en millisecondes |
 | tabInfo | Text array | &#8592; | Description |

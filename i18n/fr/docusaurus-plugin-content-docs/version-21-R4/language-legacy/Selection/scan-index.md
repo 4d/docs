@@ -5,7 +5,7 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *leChamp* ; *nombre* {; > ou <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *leChamp* : Field ; *nombre* : Integer {; *débutScan* : >, <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 <div class="no-index">
 
@@ -13,14 +13,14 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | leField | Field | &#8594;  | Champ indexé avec lequel "scanner" les enregistrements |
 | nombre | Integer | &#8594;  | Nombre d'enregistrements à retourner |
-| > ou < | Opérateur | &#8594;  | > à partir du début de l'index < à partir de la fin de l'index |
+| débutScan | >, < | &#8594;  | > à partir du début de l'index < à partir de la fin de l'index |
 </div>
 <!-- END REF-->
 
 ## Description 
 
 <!--REF #_command_.SCAN INDEX.Summary-->La commande **SCAN INDEX** retourne une sélection de *nombre* enregistrements de la table du champ *leChamp*.<!-- END REF--> Cette commande est extrêmement rapide car elle utilise l'index.  
-Si vous passez *<*, **SCAN INDEX** retourne *nombre* enregistrements à partir de la fin de l'index (valeurs supérieures). Si vous passez *\>*, **SCAN INDEX** retourne *nombre* enregistrements à partir du début de l'index (valeurs inférieures). Si vous ne passez pas le dernier paramètre, la commande retourne *nombre* enregistrements à partir du début de l'index (équivaut à passer *\>*).
+Si vous passez \< dans *débutScan*, **SCAN INDEX** retourne *nombre* enregistrements à partir de la fin de l'index (valeurs supérieures). Si vous passez \>, **SCAN INDEX** retourne *nombre* enregistrements à partir du début de l'index (valeurs inférieures). Si vous ne passez pas le paramètre *débutScan*, la commande retourne *nombre* enregistrements à partir du début de l'index (équivaut à passer *\>*).
 
 **Note :** La sélection obtenue n'est pas triée.   
   

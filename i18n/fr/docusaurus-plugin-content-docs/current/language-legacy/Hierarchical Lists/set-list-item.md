@@ -5,15 +5,15 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *liste* ; *refElément* ; *libelléElément* ; *nouvelRéf* {; *sous_Liste* ; *déployée*} )<br/>**SET LIST ITEM** ( * ; *liste* ; * ; *libelléElément* ; *nouvelRéf* {; *sous_Liste* ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( * ; *liste* : Text ; *refElément* : Integer,  Operator ; *libelléElément* : Text ; *nouvelRéf* : Integer {; *sous_Liste* : Integer ; *déployée* : Boolean} )<br/>**SET LIST ITEM** ( *liste* : Integer ; *refElément* : Integer,  Operator ; *libelléElément* : Text ; *nouvelRéf* : Integer {; *sous_Liste* : Integer ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| * | Operator | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| refElément | Integer, Operator| &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
 | libelléElément | Text | &#8594;  | Nouveau libellé d'élément |
 | nouvelRéf | Integer | &#8594;  | Nouveau numéro de référence d'élément |
 | sous_Liste | Integer | &#8594;  | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |

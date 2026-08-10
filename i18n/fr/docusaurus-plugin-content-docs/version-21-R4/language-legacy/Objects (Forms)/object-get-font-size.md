@@ -5,14 +5,14 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get font size** ( *objet* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | Résultat | Integer | &#8592; | Taille de la police en points |
 </div>
 <!-- END REF-->

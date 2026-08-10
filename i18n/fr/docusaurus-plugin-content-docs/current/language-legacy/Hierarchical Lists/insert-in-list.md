@@ -5,15 +5,15 @@ slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* ; *avantElément* ; *libelléElément* ; *réfElément* {; *sous_Liste* ; *déployée*} )<br/>**INSERT IN LIST** ( * ; *liste* ; * ; *libelléElément* ; *réfElément* {; *sous_Liste* ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* : Integer, Text ; *avantElément* : Integer, Operator ; *libelléElément* : Text ; *réfElément* : Integer {; *sous_Liste* : Integer ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| * | Operator | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| avantElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
+| avantElément | Integer, Operator | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
 | libelléElément | Text | &#8594;  | Libellé du nouvel élément |
 | réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
 | sous_Liste | Integer | &#8594;  | Sous-liste optionnelle rattachée au nouvel élément |

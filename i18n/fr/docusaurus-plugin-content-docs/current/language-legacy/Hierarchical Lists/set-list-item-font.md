@@ -5,15 +5,15 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *liste* ; *refElément * ; *police* )<br/>**SET LIST ITEM FONT** ( * ; *liste* ; * ; *police* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( * ; *liste* : Text ; *refElément* : Integer, Operator ; *police* : Text, Integer )<br/>**SET LIST ITEM FONT** ( *liste* : Integer ; *refElément* : Integer, Operator ; *police* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| * | Operator | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| refElément | Integer, Operator | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
 | police | Text, Integer | &#8594;  | Nom ou numéro de police |
 </div>
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( *numTable* : Integer ) : Pointer<br/>**Table** ( *ptrTable* : Pointer ) : Integer<br/>**Table** ( *ptrChamp* : Pointer ) : Integer : any<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *numTable* : Integer ) : Pointer<br/>**Table** ( *ptrTable* : Pointer ) : Integer<br/>**Table** ( *ptrChamp* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 <div class="no-index">
 

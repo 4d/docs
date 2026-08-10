@@ -5,7 +5,7 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *nomFichier* ; *verrouillé* ; *invisible* ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *nomFichier* : Text ; *verrouillé* : Boolean ; *invisible* : Boolean ; *créé le* : Date ; *créé à* : Time ; *modifié le* : Date ; *modifié à* : Time )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 <div class="no-index">
 

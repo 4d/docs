@@ -5,15 +5,14 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *tableau* {; *sensDuTri*}{; *tableau2* ; *sensDuTri2* ; ... ; *tableauN* ; *sensDuTriN*} ) <br/>
-**MULTI SORT ARRAY** ( *tabPointeurs* ; *tabTris* )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( ...(*tableau* : Array {; *sensDuTri* : >, <}) )<br/>**MULTI SORT ARRAY** ( *tabPointeurs* : Pointer array ; *tabTris* : Integer array )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594;  | Tableau(x) à trier |
-| sensDuTri | * | &#8594;  | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
+| sensDuTri | >, < | &#8594;  | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
 | tabPointeurs | Pointer array | &#8594;  | Tableau de pointeurs de tableaux |
 | tabTris | Integer array | &#8594;  | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
 </div>

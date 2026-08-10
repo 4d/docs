@@ -5,7 +5,7 @@ slug: /commands/variable-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* ; *varDestination* ; *varSource* {; *varDestination2* ; *varSource2* ; ... ; *varDestinationN* ; *varSourceN*} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* : Integer ; *varDestination* : Variable ; *varSource* : Variable {; ...(*varDestination* : Variable ; *varSource* : Variable)} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO VARIABLE.Params-->
 <div class="no-index">
 

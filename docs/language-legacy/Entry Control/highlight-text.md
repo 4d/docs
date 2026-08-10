@@ -23,18 +23,13 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21|Support in subforms|
 |12|Modified|
 |<6|Created|
 
 </details>
 </div>
 
-<details><summary>History</summary>
-|Release|Changes|
-|---|---|
-|21|Support in subforms|
-
-</details>
 
 ## Description 
 

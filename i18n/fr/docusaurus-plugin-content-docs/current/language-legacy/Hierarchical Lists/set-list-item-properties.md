@@ -5,15 +5,15 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *liste* ; *refElément* ; *saisissable* ; *style* {; *icône* {; *couleur*}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *liste* ; * ; *saisissable* ; *style* {; *icône* {; *couleur*}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( * ; *liste* : Text ; *refElément* : Integer, Operator ; *saisissable* : Boolean ; *style* : Integer {; *icône* : Text, Integer {; *couleur* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( *liste* : Integer ; *refElément* : Integer, Operator ; *saisissable* : Boolean ; *style* : Integer {; *icône* : Text, Integer {; *couleur* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| * | Operator | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| refElément | Integer, Operator | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
 | saisissable | Boolean | &#8594;  | Vrai = Saisissable, Faux = Non-saisissable |
 | style | Integer | &#8594;  | Style de police pour l'élément |
 | icône | Text, Integer | &#8594;  | Nom ou numéro d'image ("" ou 0 pour ne pas associer d'icône) |

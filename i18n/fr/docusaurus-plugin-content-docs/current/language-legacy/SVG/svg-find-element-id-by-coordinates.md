@@ -5,14 +5,14 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetImage* ; *x* ; *y* ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( * ; *objetImage* : Text ; *x* : Integer ; *y* : Integer ) : Text<br/>**SVG Find element ID by coordinates** ( *objetImage* : Variable, Field ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d’objet (chaîne) Si omis, objetImage est un champ ou une variable |
-| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| objetImage | Text, Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
 | x | Integer | &#8594;  | Coordonnée X en pixels |
 | y | Integer | &#8594;  | Coordonnée Y en pixels |
 | Résultat | Text | &#8592; | ID de l’élément se trouvant à l’emplacement x,y |

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type           |                             | Description                                                                                                                         |
-| ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Paramètres | Type           | | Description |
+| ---------- | -------------- | ----- | ---------- |
 | \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
 | object     | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                   |
-| property   | Integer        | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
-| Résultat   | any            | &#8592; | Valeur courante (Entier, Texte)                                                                                  |
+| property   | Integer   | &#8594; | Propriété dont vous voulez obtenir la valeur  |
+| Résultat   | any    | &#8592; | Valeur courante (Entier, Texte) |
 
 </div>
 <!-- END REF-->
@@ -113,9 +113,9 @@ Soit une list box "MyListbox", si vous exécutez l'instruction suivante :
 
 ## Voir également
 
-[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)\
+[LISTBOX SET GRID](../commands/listbox-set-grid)\
 [LISTBOX SET PROPERTY](listbox-set-property.md)\
-[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 ## Propriétés
 

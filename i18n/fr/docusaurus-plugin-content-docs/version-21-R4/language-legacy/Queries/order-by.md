@@ -5,15 +5,15 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*laTable* ;}{ *leChamp* }{; > ou < }{; *leChamp2* ; > ou <2 ; ... ; *leChampN* ; > ou <N}{; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*laTable* : Table} {; ...(*leChamp* : Field {; *sensDuTri* : >, <}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle réordonner la sélection courante ou Table par défaut si ce paramètre est omis |
-| leField | Field | &#8594;  | Champ sur lequel effectuer le tri pour chaque niveau |
-| > ou < | Opérateur | &#8594;  | Sens du tri pour chaque niveau : > demander un tri croissant ou < demander un tri décroissant |
+| leChamp | Field | &#8594;  | Champ sur lequel effectuer le tri pour chaque niveau |
+| sensDuTri | >, < | &#8594;  | Sens du tri pour chaque niveau : > demander un tri croissant ou < demander un tri décroissant |
 | * | Opérateur | &#8594;  | Attente d'exécution du tri |
 </div>
 <!-- END REF-->
@@ -42,7 +42,7 @@ Si vous ne passez ni le paramètre *leChamp*, ni les paramètres *\>*, *<* ou *\
 Pour plus d'informations sur l'utilisation de cet éditeur, reportez-vous au manuel *Mode Développement* de 4D.  
 L'utilisateur construit le tri puis clique sur le bouton **Trier**. Si le tri est correctement effectué, la variable système OK prend la valeur *1*. Si l'utilisateur clique sur **Annuler**, aucun tri n'est effectué et la variable OK prend la valeur *0* (zéro).
 
-Si vous spécifiez les paramètres *leChamp* et *\> ou <*, la boîte de dialogue standard de Tri ne s'affiche pas et le tri est entièrement défini par programmation. Vous pouvez trier la sélection courante sur un plusieurs niveaux. Pour chaque niveau de tri, vous passez un champ dans le paramètre *leChamp* et un ordre de tri dans *\> ou <*. Si vous passez le paramètre “supérieur à ” (>), l'ordre est croissant. Si vous passez le paramètre “inférieur à ” (<), l'ordre est décroissant. Si vous omettez le paramètre d'ordre *\> ou <*, le tri est croissant par défaut.
+Si vous spécifiez les paramètres *leChamp* et *sensDuTri*, la boîte de dialogue standard de Tri ne s'affiche pas et le tri est entièrement défini par programmation. Vous pouvez trier la sélection courante sur un plusieurs niveaux. Pour chaque niveau de tri, vous passez un champ dans le paramètre *leChamp* et un ordre de tri dans *sensDuTri*. Si vous passez le paramètre “supérieur à ” (>), l'ordre est croissant. Si vous passez le paramètre “inférieur à ” (<), l'ordre est décroissant. Si vous omettez le paramètre *sensDuTri*, le tri est croissant par défaut.
 
 Si un seul champ est spécifié (tri sur un niveau) et s'il est indexé, le tri tire parti de l'index. Si le champ n'est pas indexé ou si plus d'un champ est utilisé, le tri est effectué de manière séquentielle (hors index composites). Le champ peut appartenir à la table de la sélection que vous triez ou à une table 1 liée à *laTable* par un lien automatique. Dans ce cas, le tri est toujours séquentiel.   
 Si les champs triés sont inclus dans un index composite, **ORDER BY** tire parti de l'index. 

@@ -5,7 +5,7 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** ( *propriedade* : Text ; *valor* : any {; ...(*propriedade* : Text, *valor* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** ( { ...(*propriedade* : Text ; *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 <div class="no-index">
 

@@ -5,13 +5,14 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *tableN* {; *discriminant*} )<br/>**RELATE ONE** ( *champN* {; *discriminant*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *tableN* : Table )<br/>**RELATE ONE** ( *champN* : Field {; *discriminant* : Field} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableN &#124; champN | Table, Champ | &#8594;  | Table pour laquelle définir tous les liens automatiques ou Champ avec lien manuel partant vers la table 1 |
+| tableN | Table | &#8594;  | Table pour laquelle définir tous les liens automatiques |
+| champN | Champ | &#8594;  | Champ avec lien manuel partant vers la table 1 |
 | discriminant | Field | &#8594;  | Champ discriminant de la table 1 |
 </div>
 <!-- END REF-->

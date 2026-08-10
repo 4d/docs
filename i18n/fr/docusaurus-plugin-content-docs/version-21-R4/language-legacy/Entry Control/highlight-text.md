@@ -5,14 +5,14 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *objet* ; *débutSél* ; *finSél* )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( * ; *objet* : Text ; *débutSél* : Integer ; *finSél* : Integer )<br/>**HIGHLIGHT TEXT** ( *objet* : Variable, Field ; *débutSél* : Integer ; *finSél* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
-| objet | Field, Variable, any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
+| objet | Text, Variable, Field| &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
 | débutSél | Integer | &#8594;  | Nouvelle position de début de sélection de texte |
 | finSél | Integer | &#8594;  | Nouvelle position de fin de sélection de texte |
 </div>
@@ -23,6 +23,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21|Prise en charge dans les sous-formulaires|
 |12|Modifié|
 |<6|Créé|
 

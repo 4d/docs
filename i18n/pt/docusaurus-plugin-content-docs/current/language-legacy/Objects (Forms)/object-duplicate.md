@@ -5,7 +5,7 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *novoNome* : Text {; *novaVar* : Pointer {; *relacionadoA* : Text {; *moverH* : Integer {; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *objeto* : Field, Variable {; *novoNome* : Text {; *novaVar* : Pointer {; *relacionadoA* : Text {; *moverH* : Integer {; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *novoNome* : Text}{; *novaVar* : Pointer}{; *relacionadoA* : Text}{; *moverH* : Integer} {; *moverV* : Integer} {; *redimH* : Integer} {; *redimV* : Integer} )<br/>**OBJECT DUPLICATE** ( *objeto* : Variable, Field {; *novoNome* : Text} {; *novaVar* : Pointer} {; *relacionadoA* : Text} {; *moverH* : Integer} {; *moverV* : Integer} {; *redimH* : Integer} {; *redimV* : Integer} )<br/>**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *novoNome* : Text}{; *novaVar* : Pointer}{; *relacionadoA* : Text}; *moverH* : Integer; *moverV* : Integer; *redimH* : Integer; *redimV* : Integer ; * )<br/>**OBJECT DUPLICATE** ( *objeto* : Variable, Field {; *novoNome* : Text} {; *novaVar* : Pointer} {; *relacionadoA* : Text}; *moverH* : Integer; *moverV* : Integer; *redimH* : Integer; *redimV* : Integer; * )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 <div class="no-index">
 

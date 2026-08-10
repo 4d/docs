@@ -5,7 +5,7 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *laTable* {; *nomFichier* {; * }} )<br/>**PRINT LABEL** ( *laTable*{; *nomFichier* {; >}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( { *laTable* : Table }{; > : >}{; * } )<br/>**PRINT LABEL** ({ *laTable* : Table }{; *nomFichier* : Text {; > : >}}{; * } )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 <div class="no-index">
 
@@ -13,7 +13,8 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table à imprimer ou Table par défaut si ce paramètre est omis |
 | nomFichier | Text | &#8594;  | Nom de fichier d'étiquettes sur disque |
-| * &#124; > |Operator| &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
+| * |Operator| &#8594;  | Supprimer les boîtes de dialogue d'impression |
+| > |>| &#8594;  | Ne pas réinitialiser les paramètres d'impression |
 </div>
 <!-- END REF-->
 

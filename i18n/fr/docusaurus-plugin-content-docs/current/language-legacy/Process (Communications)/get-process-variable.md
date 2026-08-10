@@ -5,7 +5,7 @@ slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* ; *varSource* ; *varDestination* {; *varSource2* ; *varDestination2* ; ... ; *varSourceN* ; *varDestinationN*} )<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *varSource* : Variable ; *varDestination* : Variable {; ...(*varSource* : Variable ; *varDestination* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 <div class="no-index">
 

@@ -5,8 +5,7 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *patron* ; *laCadena* ; *inicio* {; pos_encont. ; long_encont.}{; *} ) -> Resultado <br/>
-**Match regex** ( *patron* ; *laCadena* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *patron* : Text ; *laCadena* : Text ) : Boolean<br/>**Match regex** ( *patron* : Text ; *laCadena* : Text ; *inicio* : Integer {; *pos_encont.* : Integer } {; *long_encont.* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *patron* : Text ; *laCadena* : Text ; *inicio* : Integer {; *pos_encont.* : Integer array } {; *long_encont.* : Integer array }{; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">
 

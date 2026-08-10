@@ -5,14 +5,14 @@ slug: /commands/st-set-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( {* ;} *objet* ; *nouvTexte* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( * ; *objet* : Text ; *nouvText* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST SET PLAIN TEXT** ( *objet* : Variable, Field ; *nouvText* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | nouvText | Text | &#8594;  | Texte brut à insérer |
 | débutSél | Integer | &#8594;  | Début de la sélection |
 | finSél | Integer | &#8594;  | Fin de la sélection |

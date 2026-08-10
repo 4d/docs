@@ -5,14 +5,14 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *objet* ; *nbColonnes* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *objet* : Text ; *nbColonnes* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *objet* : Variable ; *nbColonnes* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | Text, VariableText, Variable | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | nbColonnes | Integer | &#8594;  | Nombre de colonnes à verrouiller |
 </div>
 <!-- END REF-->

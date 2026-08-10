@@ -5,14 +5,14 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *objet* ; *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *objet* : Text ; *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<br/>**OBJECT GET COORDINATES** ( *objet* : Variable, Field ; *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
 | gauche | Integer | &#8592; | Coordonnée gauche de l’objet |
 | haut | Integer | &#8592; | Coordonnée supérieure de l’objet |
 | droite | Integer | &#8592; | Coordonnée droite de l’objet |

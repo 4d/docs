@@ -5,7 +5,7 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*tabla* : Table }{;}{ *criterioBusqueda* : Expression {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( *tabla* : Table {; *criterioBusqueda* : Expression } {; *} )<br/>**QUERY SELECTION** ( *criterioBusqueda* : Expression {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 <div class="no-index">
 

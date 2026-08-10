@@ -5,7 +5,7 @@ slug: /commands/listbox-collapse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *objeto* : Text {; *recursivo* : Boolean {; *seletor* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *objeto* : Field, Variable {; *recursivo* : Boolean {; *seletor* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *objeto* : Text {; *recursivo* : Boolean {; *seletor* : Integer {; *linha &#124; nivel* : Integer {; *coluna* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *objeto* : Variable {; *recursivo* : Boolean {; *seletor* : Integer {; *linha &#124; nivel* : Integer {; *coluna* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 <div class="no-index">
 

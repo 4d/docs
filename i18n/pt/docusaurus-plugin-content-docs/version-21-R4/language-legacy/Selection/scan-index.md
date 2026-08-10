@@ -5,7 +5,7 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *campo* : Field ; *numero* : Integer {; > ou <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *campo* : Field ; *numero* : Integer {; *> ou <* : >, <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 <div class="no-index">
 

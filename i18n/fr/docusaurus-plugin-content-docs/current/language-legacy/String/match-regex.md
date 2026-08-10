@@ -5,24 +5,18 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* ; *laChaîne* ; *début* {; *pos_trouvée* ; *long_trouvée*}{; *} ) -> Résultat <br/>
-**Match regex** ( *motif* ; *laChaîne* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* : Text ; *laChaîne* : Text ) : Boolean<br/>**Match regex** ( *motif* : Text ; *laChaîne* : Text ; *début* : Integer {; *pos_trouvée* : Integer } {; *long_trouvée* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *motif* : Text ; *laChaîne* : Text ; *début* : Integer {; *pos_pos_trouvéefound* : Integer array } {; *long_trouvée* : Integer array }{; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motif | Text | &#8594;  | Expression régulière |
+| motif | Text | &#8594;  | Expression régulière (égalité complète avec syntaxe à deux paramètres)  |
 | laChaîne | Text | &#8594;  | Chaîne dans laquelle s’effectue la recherche |
 | début | Integer | &#8594;  | Position dans laChaîne où doit débuter la recherche |
 | pos_trouvée | Integer array, Integer | &#8592; | Position de l’occurence |
 | long_trouvée | Integer array, Integer | &#8592; | Longueur de l’occurence |
 | * | Opérateur | &#8594;  | Si passé : rechercher uniquement à la position indiquée |
-| Résultat | Boolean | &#8592; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
-| Match regex ( motif ; laChaîne ) -> Résultat |
-| Paramètre | Type | Description |
-| motif | Text | &#8594;  | Expression régulière (égalité complète) |
-| laChaîne | Text | &#8594;  | Chaîne dans laquelle s'effectue la recherche |
 | Résultat | Boolean | &#8592; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
 </div>
 <!-- END REF-->

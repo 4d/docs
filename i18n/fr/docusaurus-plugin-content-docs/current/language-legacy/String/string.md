@@ -261,11 +261,11 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)  
-[Date](../commands-legacy/date.md)  
+[Bool](../commands/bool)  
+[Date](../commands/date)  
 [Num](num.md)  
-[Time string](../commands-legacy/time-string.md)  
-[Timestamp](../commands-legacy/timestamp.md)
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)
 
 ## Propriétés
 

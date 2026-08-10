@@ -5,7 +5,7 @@ slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; *element_ID* ; *attrName* : Text ; *attribValue* : Text, Integer {; ...(*attrName* : Text, *attribValue* : Text, Integer)} {; *})<!-- END REF-->
+<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; ...(*attrName* : Text ; *attribValue* : Text, Integer, Boolean) {; *})<br/>**SVG SET ATTRIBUTE** (  *pictureObject* : Variable, Field; *element_ID* : Text ;...(*attrName* : Text ; *attribValue* : Text, Integer, Boolean) {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 <div class="no-index">
 

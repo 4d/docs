@@ -5,14 +5,14 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *objet* ; *colonne* ; *ligne* ; *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *objet* : Text ; *colonne* : Integer ; *ligne* : Integer ; *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *objet* : Variable ; *colonne* : Integer ; *ligne* : Integer ; *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | colonne | Integer | &#8594;  | Numéro de colonne |
 | ligne | Integer | &#8594;  | Numéro de ligne |
 | gauche | Integer | &#8592; | Coordonnée gauche de l'objet |

@@ -5,7 +5,7 @@ slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *objetoImagen* ; *id* : Text {; *margen* : Integer} )<!-- END REF-->
+<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( * ; *objetoPicture* : Text ; *id* : Text {; *margen* : Integer} )<br/>**SVG SHOW ELEMENT** ( *objetoPicture* : Variable, Field ; *id* : Text {; *margen* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 <div class="no-index">
 

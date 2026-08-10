@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* ; *xChemin* {; *tabNomsAttributs* ; *tabValeursAttributs*} {; *tabNomsAttributs2* ; *tabValeursAttributs2* ; ... ; *tabNomsAttributsN* ; *tabValeursAttributsN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* : Text ; *xChemin* : Text {; ...(*tabNomsAttributs* : Text array ; *tabValeursAttributs* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 <div class="no-index">
 

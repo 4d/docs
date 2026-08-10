@@ -5,16 +5,16 @@ slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( {* ;} *objet* ; *sélecteur* ; *info* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *objet* : Text ; *sélecteur* : Integer ; *info* : Integer, Boolean )<br/>**LISTBOX GET PRINT INFORMATION** ( *objet* : Variable ; *sélecteur* : Integer ; *info* : Integer, Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| objet | Text, Variable | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
 | sélecteur | Integer | &#8594;  | Information à obtenir |
-| info | Integer | &#8592; | Valeur courante |
+| info | Integer, Boolean | &#8592; | Valeur courante |
 </div>
 <!-- END REF-->
 

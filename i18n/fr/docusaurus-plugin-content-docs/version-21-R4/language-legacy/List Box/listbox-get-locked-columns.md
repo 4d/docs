@@ -5,14 +5,14 @@ slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( * ; *objet* : Text ) : Integer<br/>**LISTBOX Get locked columns** ( *objet* : Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Nombre de colonnes verrouillées |
 </div>
 <!-- END REF-->

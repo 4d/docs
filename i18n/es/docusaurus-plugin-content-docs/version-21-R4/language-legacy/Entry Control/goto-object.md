@@ -5,7 +5,7 @@ slug: /commands/goto-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objeto* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( * ; *objeto* : Text )<br/>**GOTO OBJECT** ( *objeto* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
 <div class="no-index">
 

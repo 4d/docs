@@ -5,14 +5,14 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objet* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get action** ( *objet* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Text | &#8592; | Nom de l'action standard associée et (s'il existe) son paramètre chaîne. |
 </div>
 <!-- END REF-->

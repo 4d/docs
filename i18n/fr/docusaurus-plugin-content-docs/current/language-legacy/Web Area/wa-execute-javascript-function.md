@@ -5,18 +5,18 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; *résultat* {; *param*}{; *param2* ; ... ; *paramN*} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; * {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objet* : Text ; *fonctionJS* : Text {; *résultat* : Variable} {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objet* : Variable, Field ; *fonctionJS* : Text {; *résultat* : Variable } {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objet* : Text ; *fonctionJS* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objet* : Variable, Field ; *fonctionJS* : Text ; * {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Operator | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou Variable ou champ (si * est omis) |
 | fonctionJS | Text | &#8594;  | Nom de la fonction JavaScript à exécuter |
-| résultat &#124; * | Variable | &#8594;  | * pour une fonction sans résultat ou |
-| &#8592; | Résultat de la fonction (si attendu) |
-| param | Text, Number, Date, Object, Collection | &#8594;  | Paramètre(s) à passer à la fonction |
+| résultat | Variable | &#8592;  | Résultat de la fonction (si attendu) |
+| * | Operator | &#8594;  |Fonction sans résultat |
+| param | any | &#8594;  | Paramètre(s) à passer à la fonction |
 </div>
 <!-- END REF-->
 

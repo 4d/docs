@@ -5,7 +5,7 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*laTable* ;} *champObjet* ; *cheminAttribut* ; > ou < {; *champObjet2* ; *cheminAttribut2* ; > ou <2 ; ... ; *champObjetN* ; *cheminAttributN* ; > ou <N} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*laTable* : Table ;} {; ...(*champObjet* : Field ; *cheminAttribut* : Text  {; *sensDuTri* : >, <})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | laTable | Table | &#8594;  | Table dans laquelle la sélection est triée ou Table par défaut si ce paramètre est omis |
 | champObjet | Object | &#8594;  | Champ objet dont les attributs sont à utiliser pour le tri |
 | cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
-| > ou < | Opérateur | &#8594;  | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
+| sensDuTri | >, < | &#8594;  | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
 | * | Opérateur | &#8594;  | Attente d'exécution du tri |
 </div>
 <!-- END REF-->
@@ -53,7 +53,7 @@ Si la valeur d'un attribut de champ est **null** pour des enregistrements (c'est
 * Si l'ordre est **ascendant** (>), les enregistrements avec valeur **null** seront placés au début de la sélection.
 * Si l'ordre est **descendant** (<), les enregistrements avec valeur **null** seront placés à la fin de la sélection.
 
-Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau de tri, vous précisez un *champObjet*, un *cheminAttribut* et un ordre de tri *\> ou <*. Si vous passez le symbole "plus grand que" (>), le tri sera ascendant. Si vous passez le symble "plus petit que" (<), le tri sera descendant. Si vous ne spécifiez pas d'ordre de tri, le tri sera ascendant par défaut.  
+Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau de tri, vous précisez un *champObjet*, un *cheminAttribut* et un *sensDuTri* *\> ou <*. Si vous passez le symbole "plus grand que" (>), le tri sera ascendant. Si vous passez le symble "plus petit que" (<), le tri sera descendant. Si vous ne spécifiez pas d'ordre de tri, le tri sera ascendant par défaut.  
 Si un seul champ est précisé (un niveau de tri) et que celui-ci est indexé, l'index est utilisé pour le tri. Si le champ n'est pas indexé ou que vous utilisez plus d'un champ, le tri est exécuté séquentiellement.
 
 Pour les tris multiples (tris sur plusieurs champs), vous pouvez appeler la commande **ORDER BY ATTRIBUTE** autant de fois que nécessaire et utiliser le paramètre optionnel *\**, excepté pour le dernier appel de **ORDER BY ATTRIBUTE**, qui lance l'opération de tri. Cette fonctionnalité est utile pour la gestion du multi-tri dans des interfaces utilisateurs personnalisées. Notez que vous pouvez combiner les appels à la commande **ORDER BY ATTRIBUTE** avec les appels à la commande [ORDER BY](../commands/order-by).

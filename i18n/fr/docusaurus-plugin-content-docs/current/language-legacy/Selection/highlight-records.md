@@ -5,7 +5,7 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*laTable* }{;}{ *nomEnsemble* {; *}} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*laTable* : Table} {; *nomEnsemble* : Text} {; *} )<br/>**HIGHLIGHT RECORDS** ( *nomEnsemble* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 <div class="no-index">
 

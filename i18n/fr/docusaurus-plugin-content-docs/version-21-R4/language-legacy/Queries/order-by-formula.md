@@ -5,7 +5,7 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *laTable* ; *formule* {; > ou <}{; *formule2* ; > ou <2 ; ... ; *formuleN* ; > ou <N} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *laTable* : Table ; { ...(*formule* : Expression {; *sensDuTri* : >, <})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle trier la sélection d'enregistrements |
 | formule | Expression | &#8594;  | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
-| > ou < | Opérateur | &#8594;  | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
+| sensDuTri | >, < | &#8594;  | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
 </div>
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Notez que vous devez spécifier *laTable*. Vous ne pouvez pas utiliser une table par défaut.
 
-Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau, vous passez une expression dans *expression* et un ordre de tri dans *\> ou <*. Si vous passez le symbole “supérieur à” (*\>*), l'ordre est croissant. Si vous passez le symbole “inférieur à” (*<*), l'ordre est décroissant. Si vous ne passez pas ce paramètre, l'ordre est par défaut croissant.
+Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau, vous passez une expression dans *expression* et un ordre de tri dans *sensDuTri*. Si vous passez le symbole “supérieur à” (*\>*), l'ordre est croissant. Si vous passez le symbole “inférieur à” (*<*), l'ordre est décroissant. Si vous ne passez pas ce paramètre, l'ordre est par défaut croissant.
 
 Le paramètre *formule* peut être de type Alpha, Réel, Entier, Entier long, Date, Heure ou Booléen.
 

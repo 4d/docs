@@ -5,14 +5,14 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *objet* {; *positionLigne* {; *positionH*}}{; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *objet* : Text {; *positionLigne* : Integer {; *positionH* : Integer}}{; *} )<br/>**OBJECT SET SCROLL POSITION** ( *objet* : Variable, Field, Table {; *positionLigne* : Integer {; *positionH* : Integer}}{; *} )<br/><!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne)Si omis, objet est une table, un champ ou une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Table, champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d’objet (si * est spécifié) ou Table, champ ou variable (si * est omis) |
 | positionLigne | Integer | &#8594;  | Numéro de ligne à afficher ou Défilement vertical en pixels (images) |
 | positionH | Integer | &#8594;  | Numéro de colonne à afficher (list box) ou<br/>Défilement horizontal en pixels (images) |
 | * | Opérateur | &#8594;  | Afficher la ligne (et la colonne si le paramètre positionH est passé) en première position après défilement (listes)Appliquer un défilement relatif (images) |

@@ -5,7 +5,7 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<br/>**OBJECT SET COORDINATES** ( *object* : Variable, Field ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 <div class="no-index">
 

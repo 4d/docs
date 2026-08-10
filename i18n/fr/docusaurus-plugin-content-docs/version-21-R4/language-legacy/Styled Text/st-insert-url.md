@@ -5,14 +5,14 @@ slug: /commands/st-insert-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *objet* ; *texteURL* ; *adresseURL* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( * ; *objet* : Text ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST INSERT URL** ( *objet* : Variable, Field ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | texteURL | Text | &#8594;  | Libellé visible de l’URL |
 | adresseURL | Text | &#8594;  | Adresse de l’URL |
 | débutSél | Integer | &#8594;  | Début de la sélection |

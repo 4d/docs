@@ -5,17 +5,17 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *objetImage* ; *id_Element* ; *nomAttribut* ; *valeurAttribut* )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( * ; *objetImage* : Text ; *id_Element* : Text ; *nomAttribut* : Text ; *valeurAttribut* : Text, Integer, Boolean )<br/>**SVG GET ATTRIBUTE** ( *objetImage* : Variable, Field ; *id_Element* : Text ; *nomAttribut* : Text ; *valeurAttribut* : Text, Integer, Boolean )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
-| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| objetImage | Text, Variable, Field | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
 | id_Element | Text | &#8594;  | ID de l'élément dont vous souhaitez connaître une valeur d'attribut |
 | nomAttribut | Text | &#8594;  | Nom d’attribut |
-| valeurAttribut | Text, Integer | &#8592; | Valeur courante de l'attribut |
+| valeurAttribut | Text, Integer, Boolean | &#8592; | Valeur courante de l'attribut |
 </div>
 <!-- END REF-->
 

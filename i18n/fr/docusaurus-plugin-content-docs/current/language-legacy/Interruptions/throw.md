@@ -5,8 +5,7 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *description*} ) <br/>
-*throw* {( *errorObj* )}<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ({ *errorObj* : Object })<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 <div class="no-index">
 
@@ -14,8 +13,6 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | errorCode | Integer | &#8594;  | Code d'erreur |
 | description | Text | &#8594;  | Description de l'erreur |
-| throw {( errorObj )} |
-| Paramètre | Type | Description |
 | errorObj | Object | &#8594;  | Propriétés de l'erreur à construire |
 </div>
 <!-- END REF-->

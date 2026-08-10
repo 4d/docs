@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* ; *nomElément* ; *indice* ; *valeurElément* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* : Text ; *nomElément* : Text ; *indice* : Integer {; *valeurElément* : Variable {; *nomsAttr* : Text array {; *valeursAttr* : Text array }}}) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 <div class="no-index">
 
@@ -15,6 +15,8 @@ displayed_sidebar: docs
 | nomElément | Text | &#8594;  | Nom de l’élément à lire |
 | indice | Integer | &#8594;  | Numéro d’indice de l’élément à lire |
 | valeurElément | Variable | &#8592; | Valeur de l’élément |
+| nomsAttr | Text array | &#8592;  | Noms d'attributs |
+| valeurEvaleursAttrlément | Text array | &#8592; | Valeurs d'attributs |
 | Résultat | Text | &#8592; | Référence de l’élément XML (16 caractères) |
 </div>
 <!-- END REF-->

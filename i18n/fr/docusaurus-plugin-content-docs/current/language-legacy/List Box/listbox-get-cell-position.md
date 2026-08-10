@@ -5,14 +5,14 @@ slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( {* ;} *objet* {; *x* ; *y* }; *colonne* ; *ligne* {; *varCol*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *objet* : Text {; *x* : Real ; *y* : Real }; *colonne* : Integer ; *ligne* : Integer {; *varCol* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *objet* : Variable {; *x* : Real ; *y* : Real }; *colonne* : Integer ; *ligne* : Integer {; *varCol* : Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne)<br/> Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | x | Real | &#8594;  | Coordonnée horizontale de la souris |
 | y | Real | &#8594;  | Coordonnée verticale de la souris |
 | colonne | Integer | &#8592; | Numéro de colonne |

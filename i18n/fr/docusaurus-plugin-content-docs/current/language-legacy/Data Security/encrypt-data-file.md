@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvellePhraseSecrète* {; *dossierArchive* {; *phraseSecrèteCour* {; *nomMéthode*}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvelleCléDonnées* {; *dossierArchive* {; *cléDonnéesCour* {; *nomMéthode*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvellePhraseSecrète* : Text {; *dossierArchive* : Text, 4D.Folder {; *phraseSecrèteCour* : Text {; *nomMéthode* : Text}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvelleCléDonnées* : Object {; *dossierArchive* : Text, 4D.Folder {; *cléDonnéesCour* : Object {; *nomMéthode* : Text}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvellePhraseSecrète* : Text {; *dossierArchive* : Text, 4D.Folder {; *cléDonnéesCour* : Object {; *nomMéthode* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 <div class="no-index">
 
@@ -13,9 +13,11 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure |
 | cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données |
-| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &#8594;  | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
-| dossierArchive | Text | &#8594;  | Chemin d'accès du dossier dans lequel placer le fichier de données original |
-| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594;  | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
+| nouvellePhraseSecrète | Texte | &#8594;  | En cas de remplacement : nouvelle phrase secrète |
+| nouvelleCléDonnées | Object | &#8594;  | En cas de remplacement : nouvelle clé de chiffrement|
+| dossierArchive | Text, 4D.Folder | &#8594;  | Chemin d'accès du dossier dans lequel placer le fichier de données original |
+| phraseSecrèteCour| Text | &#8594;  | Phrase secrète courante |
+| cléDonnéesCour | Object | &#8594;  | Clé de chiffrement courante|
 | nomMéthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
 | Résultat | Text | &#8592; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
 </div>

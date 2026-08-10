@@ -5,7 +5,7 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *> or <*} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *> or <* : >, < } )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 <div class="no-index">
 

@@ -5,14 +5,14 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get type** ( *objet* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Type d’objet |
 </div>
 <!-- END REF-->

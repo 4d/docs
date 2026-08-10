@@ -5,7 +5,7 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* : Array {; *sort* : Operator}{; ...*array* : Array ; ...*sort* : Operator} )<br/>**MULTI SORT ARRAY** ( *ptrArrayName* : Pointer array ; *sortArrayName* : Integer array )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( ...(*array* : Array {; *ordem* : >, <}) )<br/>**MULTI SORT ARRAY** ( *ptrArrayNome* : Pointer array ; *sortArrayNome* : Integer array )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 <div class="no-index">
 

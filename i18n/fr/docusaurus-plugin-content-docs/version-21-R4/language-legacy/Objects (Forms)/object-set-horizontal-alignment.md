@@ -5,14 +5,14 @@ slug: /commands/object-set-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( {* ;} *objet* ; *alignement* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *objet* : Text ; *alignement* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *objet* : Variable, Field ; *alignement* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
 | alignement | Integer | &#8594;  | Code d’alignement |
 </div>
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( {* ;} *objet* )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *objet* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *objet* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
 <div class="no-index">
 

@@ -5,17 +5,17 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *objetSousForm* ; *nomMéthode* {; *retour* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *objetSousForm* : Text ; *formule* : Object, Text {; *retour* : Variable {; *...param* : Expression}} )<br/>**EXECUTE METHOD IN SUBFORM** ( *objetSousForm* : Text ; *formule* : Object, Text {; * {; *...param* : Expression}} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | objetSousForm | Text | &#8594;  | Nom de l’objet sous-formulaire |
-| nomMéthode | Object, Text | &#8594;  | Nom de la méthode projet à exécuter |
-| retour | *, Variable | &#8594;  | * si la méthode ne retourne pas de valeur |
-| &#8592; | Valeur retournée par la méthode |
-| param | Expression | &#8594;  | Paramètre(s) à passer à la méthode |
+| formule | Object, Text | &#8594;  | Objet formule ou Nom de la méthode projet à exécuter |
+| retour | Variable | &#8592;  | Valeur retournée par la formule (le cas échéant) |
+| * | Operator | &#8594; | Valeur retournée par la méthode |
+| param | Expression | &#8594;  | Paramètre(s) à passer à la formule |
 </div>
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->La commande **EXECUTE METHOD IN SUBFORM** permet d’exécuter le code désigné dans *formule* dans le contexte de l’objet de sous-formulaire *objetSousForm*.<!-- END REF--> 
 
-Le code appelé peut recevoir de 1 à N paramètres dans *param* et retourner une valeur dans *retour*. Passez \* dans le paramètre *retour* si le code ne retourne pas de paramètres. 
+Le code appelé peut recevoir de 1 à N paramètres dans *param* et retourner une valeur dans *retour*. Passez \* si le code ne retourne pas de paramètres. 
 
 Dans *formule*, le code 4D à exécuter dans le contexte de *subformObject* doit être désigné. Vous pouvez passer soit :
 
