@@ -586,7 +586,7 @@ If a license is not valid, a message will warn you.
 
 You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
 
->Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+>Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
