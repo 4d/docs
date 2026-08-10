@@ -33,7 +33,7 @@ title: コンポーネントの開発
 
 :::note
 
-コンテキストがサポートされていれば、インタープリタ版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
+コンテキストがサポートされていれば、インタープリター版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
 
 :::
 
@@ -465,7 +465,7 @@ SAVE RECORD($tablepointer->)
 
 2. アイコンファイルをコンポーネントの [**Resources フォルダー**](../Project/architecture.md#resources) にコピーします。
 
-このロゴファイルは、コンポーネントがインタープリタ版か [ビルトされている](../Desktop/building.md#コンポーネントをビルド) かに関わらず、プロジェクト依存関係ウィンドウ内においてそのコンポーネントに対して使用されます。
+このロゴファイルは、コンポーネントがインタープリター版か[ビルドされている](../Desktop/building.md#コンポーネントをビルド)かに関わらず、プロジェクト依存関係ウィンドウ内においてそのコンポーネントに対して使用されます。
 
 ![](../assets/en/Develop/icon-comp.png)
 
@@ -477,7 +477,7 @@ SAVE RECORD($tablepointer->)
 
 ## Info.plist
 
-コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
+コンポーネントは、その [root フォルダー](../Project/architecture.md) にシステム (macOS のみ) と[依存関係マネージャー](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、`Info.plist` ファイルを持っています。
 
 :::note
 

@@ -32,7 +32,7 @@ title: $info
 | refreshed     | Date    | エンティティセットが最後に使用された日付または作成日。                                                                                                                                                                                                                            |
 | expires       | Date    | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 デフォルトのタイムアウトは2時間ですが、`$timeout` を使って指定することもできます。 また、[`Session.quotas`](../API/SessionClass.md#quotas) プロパティを使用してセッションに対して変更することもできます。 |
 
-エンティティセットを作成する方法についての詳細は [`$method=entityset`](./$method.md#methodentityset) を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には [`$method=release`]($method.md#methodrelease) を使います。
+エンティティセットを作成する方法についての詳細は [`$method=entityset`](./$method.md#methodentityset) を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には [`$entityset/$release`](./$entityset.md#entitysetrelease) を使います。
 
 > 最適化のため、4D は独自のエンティティセットを生成します。つまり、`$method=entityset` で作成した以外のエンティティセットも返されます。
 

@@ -34,7 +34,7 @@ Para una imagen de tipo [entrada](input_overview.md), además de los comandos de
 En el caso de un tipo de texto [multiestilo](properties_Text.md#multi-style), [campo de entrada](input_overview.md) o [columna de listbox](listbox-column.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
-- **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
+- **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. You can manage this list using the [`SET RECENT FONTS`](../commands/set-recent-fonts) and [`FONT LIST`](../commands/font-list) commands.
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
   Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 

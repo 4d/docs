@@ -99,7 +99,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 [コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md) すると、ホストプロジェクトはその機能を利用できるようになります。
 
-アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持 *Components* フォルダーを自動的に作成します:
+アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持つ *Components* フォルダーを自動的に作成します:
 
 `<destination_folder>/Components/MyComponent.4dbase/Contents/`
 

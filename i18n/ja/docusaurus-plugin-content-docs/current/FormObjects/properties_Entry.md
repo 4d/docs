@@ -11,7 +11,7 @@ title: 入力
 
 :::note Writing Tools (macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using IA, you might consider using the [Writing Tools](#writing-tools) property.
+On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using AI, you might consider using the [Writing Tools](#writing-tools) property.
 
 :::
 
@@ -40,7 +40,7 @@ On macOS, if you want to provide your users with Apple Intelligence Writing Tool
 [マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクト、または[リストボックスカラム](listbox-column.md) の場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
 
 - **フォント...**: フォントシステムダイアログボックスを表示させます。
-- **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
+- **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは [`SET RECENT FONTS`](../commands/set-recent-fonts) と [`FONT LIST`](../commands/font-list) コマンドを使用して管理することができます。
 - スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
   このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 

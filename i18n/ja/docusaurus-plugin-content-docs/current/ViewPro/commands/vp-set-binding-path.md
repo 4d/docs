@@ -33,8 +33,8 @@ title: VP SET BINDING PATH
 
 *rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
 
-- *rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
 - *rangeObj* のレンジが複数セルを含む場合、コマンドは最初のセルに属性をバインドします。
+- *rangeObj* 引数が複数のレンジを含む場合、コマンドは最初のレンジの最初のセルに属性をバインドします。
 
 *dataContextAttribute* には、*rangeObj* にバインドする属性の名称を渡します。 *dataContextAttribute* が空の文字列だった場合、関数は属性のバインドを解除します。
 
