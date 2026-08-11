@@ -11,7 +11,7 @@ La propriété Correction orthographique active la vérification orthographique 
 
 :::note Outils d'écriture (macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using AI, you might consider using the [Writing Tools](#writing-tools) property.
+SOus macOS, si vous voulez fournir à vos utilisateurs les Outils d'écriture Apple Intelligence pour qu'ils puissent vérifier l'orthographe de leurs documents en utilisant l'IA, vous pouvez utiliser la propriété [Outils d'écriture](#writing-tools).
 
 :::
 
@@ -40,7 +40,7 @@ Pour une [zone de saisie](input_overview.md) de type image, en plus des commande
 Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox-column.md) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
 - **Polices...** : affiche la boîte de dialogue système de police
-- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. You can manage this list using the [`SET RECENT FONTS`](../commands/set-recent-fonts) and [`FONT LIST`](../commands/font-list) commands.
+- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes [`SET RECENT FONTS`](../commands/set-recent-fonts) et [`FONT LIST`](../commands/font-list).
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
   Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 

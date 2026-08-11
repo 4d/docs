@@ -572,7 +572,7 @@ Si la licence est invalide, un message vous le signale.
 
 Vous pouvez désigner autant de fichiers valides que vous voulez. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
 
-> Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
+> Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-").
 
 Après la création d'une application sous licence, un nouveau fichier de licence de déploiement est automatiquement inclus dans le dossier Licenses à côté de l'application exécutable (Windows) ou dans le paquet (macOS).
 

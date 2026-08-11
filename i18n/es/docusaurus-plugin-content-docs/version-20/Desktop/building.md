@@ -203,7 +203,7 @@ Una aplicación autónoma requiere una licencia de despliegue. Puede ser anidada
 | ---------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | *4D OEM Desktop*       | Licencia personalizada incorporada, contacte al equipo de ventas 4D para obtener información | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
 | *4D Unlimited Desktop* | **Descontinuado** - Licencia personalizada integrada                                         | [Página Licencias](#licenses) del diálogo Crear aplicación                                |
-| *4D Desktop*           | Licencia por usuario, que permite utilizar aplicaciones 4D independientes                    | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
+| *4D Desktop*           | Per-computer license, allowing to use stand-alone 4D applications                            | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
 
 
 
@@ -536,7 +536,7 @@ Una vez seleccionado un archivo, la lista indicará las características de la l
 Si una licencia no es válida, un mensaje le avisará.
 
 Puede designar tantos archivos válidos como desee. Al generar una aplicación ejecutable, 4D utilizará la licencia más apropiada disponible.
-> Se necesitan licencias "R" dedicadas para generar aplicaciones basadas en las versiones "R-release" (los números de licencia de los productos "R" empiezan por "R-4DDP").
+> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 Una vez generada la aplicación, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
 

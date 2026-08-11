@@ -18,7 +18,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)<br/>
   Dans ce mode, l'événement formulaire `On Begin Drag` n'est PAS généré. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Cette option n'est pas disponible pour les images.
 
-For more information, refer to the [Drag and Drop](../Desktop/drag-and-drop.md) section.
+Pour plus d'informations, reportez-vous à la section [Glisser-Déposer](../Desktop/drag-and-drop.md).
 
 #### Grammaire JSON
 
@@ -50,7 +50,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
   En mode personnalisé, l'ensemble de l'opération de glisser-déposer est géré par le développeur. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul.
 - Un mode **automatique**, dans lequel 4D gère automatiquement — si possible — l’insertion des données glissées de type texte ou image et déposées sur l’objet (les données sont collées dans l’objet). Les événements `Sur glisser` et `Sur déposer` ne sont pas générés. En revanche, les événements `Sur après modification` (lors du déposer) et `Sur données modifiées` (lorsque l'objet perd le focus) sont générés.
 
-For more information, refer to the [Drag and Drop](../Desktop/drag-and-drop.md) section.
+Pour plus d'informations, reportez-vous à la section [Glisser-Déposer](../Desktop/drag-and-drop.md).
 
 #### Grammaire JSON
 
@@ -191,7 +191,7 @@ Dans d'autres cas (list box basées sur des sélections nommées, colonnes assoc
 
 ## Action standard
 
-Les actions types effectuées par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de passer d'un enregistrement à l'autre ou d'une page à l'autre dans un formulaire à plusieurs pages, etc.) ont été prédéfinies par 4D comme des actions standard. They are described in detail in the [Standard actions](/Desktop/standard-actions) section. Il existe également des [actions standard spécifiques aux zones 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
+Les actions types effectuées par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de passer d'un enregistrement à l'autre ou d'une page à l'autre dans un formulaire à plusieurs pages, etc.) ont été prédéfinies par 4D comme des actions standard. Elles sont décrites en détail dans la section [Actions standard](/Desktop/standard-actions). Il existe également des [actions standard spécifiques aux zones 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
 
 Vous pouvez associer à la fois une action standard et une méthode projet à un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
 

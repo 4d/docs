@@ -405,9 +405,9 @@ The **サーバー上で実行** プロジェクトメソッド属性は属性�
 さらに、サーバデータベース上の**Resources** フォルダの内容が開発者によりセッション中に更新されたとき、クライアントマシンはその通知を受け取ることもできます。 この通知は以下をトリガとして行われます:
 
 - クライアントから最新の更新が行われてから2分後、サーバが自動で行う (この遅延は多数のファイルがコピーされた場合の不適切な通知を避けるためのものです)。
-- or manually via the **Notify clients** command in the action menu of the [**Resources explorer**][Using the Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html) on the Toolbox of the client machine at the origin of the modification.
-- or by programming, via a [`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands/notify-resources-folder-notification) command. This command is useful when the contents of the **Resources** folder are modified on the server machine via a stored procedure.
+- または更新を行ったクライアントマシン上の[**リソースエクスプローラー**](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.ja.html) のアクションメニューから[**クライアントに通知コマンド**]を選択する。
+- または[`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands/notify-resources-folder-notification) コマンドを使用してプログラミングで行う。 このコマンドは**Resources** フォルダの内容がストアドプロシージャを使用してサーバ上で更新された場合に便利です。
 
-On the client side, the way the notification of any modifications will be handled depending on the [**Update "Resources" folder during a session**](../settings/client-server.md#update-resources-folder-during-a-session) setting value. This can also be set individually via the [`Auto synchro resources folder` selector of the `SET DATABASE PARAMETER`](../commands/set-database-parameter#auto-synchro-resources-folder-48) command. Three choices are available: **no synchronization**, **auto synchronization** or **ask**. For more information, please refer to the [**Network and Client-Server options** section](../settings/client-server.md#update-resources-folder-during-a-session).
+クライアント側では、環境設定の[**セッション中に"Resources"フォルダを更新**](../settings/client-server.md#update-resources-folder-during-a-session) の設定に基づき、この通知に対する処理が決定されます。 この設定は[`SET DATABASE PARAMETER` コマンドの`Auto synchro resources folder` セレクター](../commands/set-database-parameter#auto-synchro-resources-folder-48) を使用して、個々に設定することもできます。 3つの選択肢があります: **同期しない**、 **自動で同期する** そして **その都度指定**。 詳細はネットワーク/クライアント-サーバー通信 [**ネットワーク/クライアント-サーバー通信** の節](../settings/client-server.md#update-resources-folder-during-a-session) を参照してください。
 
-Lastly, each client machine can synchronize itself with the server at any time via the **Update Local Resources** command in the action menu of the [Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Resources-explorer.200-6750091.en.html).
+最後に、それぞれのクライアントマシンはいつでも[リソースエクスプローラ](https://doc.4d.com/4Dv20/4D/20.2/Resources-explorer.200-6750091.ja.html) のアクションメニューの**ローカルリソースを更新**コマンドを使用してサーバと同期できます。

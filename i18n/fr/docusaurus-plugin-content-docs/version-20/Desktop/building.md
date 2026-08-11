@@ -203,7 +203,7 @@ Une application autonome nécessite une licence de déploiement. Elle peut être
 | ---------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | *4D OEM Desktop*       | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page Licences](#licenses) de la boîte de dialogue du Build application                                          |
 | *4D Unlimited Desktop* | **Arrêtée** - Licence personnalisée intégrée                                                   | [Page Licences](#licenses) de la boîte de dialogue du Build application                                          |
-| *4D Desktop*           | Licence par utilisateur, lui permettant d'utiliser des applications 4D autonomes               | [Première boîte de dialogue d'activation](../Admin/licenses.md#first-activation) sur la machine de l'utilisateur |
+| *4D Desktop*           | Per-computer license, allowing to use stand-alone 4D applications                              | [Première boîte de dialogue d'activation](../Admin/licenses.md#first-activation) sur la machine de l'utilisateur |
 
 
 
@@ -536,7 +536,7 @@ Une fois que vous avez sélectionné un fichier, la liste indique les caractéri
 Si la licence est invalide, un message vous le signale.
 
 Vous pouvez désigner autant de fichiers valides que vous voulez. Lors de la génération de l’application exécutable, 4D utilisera les licences les plus appropriées.
-> Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-4DDP").
+> Des licences "R" dédiées sont requises pour générer des applications basées sur des versions "R-release" (les numéros de licence des produits "R" débutent par "R-").
 
 A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
 

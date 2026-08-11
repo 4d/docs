@@ -573,7 +573,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に、4D は最も適切なライセンスを使用します。
 
-> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-4DDP" から始まる番号です)。
+> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 ライセンスつきのアプリケーションがビルドされると、実行可能アプリケーションの隣(Windows)、あるいはパッケージの中(macOS) にあるLicenses フォルダー内に配布ライセンスファイルが自動的に配置されます。
 

@@ -99,7 +99,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 
 [コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md) すると、ホストプロジェクトはその機能を利用できるようになります。
 
-アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持 *Components* フォルダーを自動的に作成します:
+アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持つ *Components* フォルダーを自動的に作成します:
 
 `<destination_folder>/Components/MyComponent.4dbase/Contents/`
 
@@ -542,7 +542,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 このオプションを使用すると、利用可能な[運用ライセンス](../Admin/licenses.md#運用ライセンス) を自動的に埋め込んだ、すぐに使用できるアプリケーション(スタンドアロンまたはクライアントサーバー)をビルドすることができます。
 
-アプリケーションをビルドする際、4D は、マシンの[Licenses フォルダー](../commands/get-4d-folder#licenses-folder) 内にある必要なライセンスを自動的に統合します。 もし有効なライセンスが複数見つかった場合、4D は以下の順番に基づいて、最も適切なものを使用します:
+アプリケーションをビルドする際、4D は、マシンの[Licenses フォルダ](../commands/get-4d-folder#licenses-folder) 内にある必要なライセンスを自動的に統合します。 もし有効なライセンスが複数見つかった場合、4D は以下の順番に基づいて、最も適切なものを使用します:
 
 1. OEM ライセンス
 2. 4D Desktop Business ライセンス
@@ -573,7 +573,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に、4D は最も適切なライセンスを使用します。
 
-> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-4DDP" から始まる番号です)。
+> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 ライセンスつきのアプリケーションがビルドされると、実行可能アプリケーションの隣(Windows)、あるいはパッケージの中(macOS) にあるLicenses フォルダー内に配布ライセンスファイルが自動的に配置されます。
 

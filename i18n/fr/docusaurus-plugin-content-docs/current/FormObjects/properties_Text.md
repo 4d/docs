@@ -293,7 +293,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (tous styles excepté Regular et Flat) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Header](listbox-header-footer.md#headers) - [List Box Footer](listbox-header-footer.md#footers) - [Radio Button](radio_overview.md) (tous styles excepté Regular et Flat) - [Text Area](text.md)
 
 #### Commandes
 
@@ -436,94 +436,94 @@ Par défaut, cette option n'est pas activée.
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../commands/theme/Styled_Text.md)
 
-### Supported tags
+### Balises prises en charge
 
-You can use the following tags in 4D multi-style text areas.
+Vous pouvez utiliser les balises suivantes dans les zones de texte multi-styles 4D.
 
-#### 4D Expression
+#### Expression 4D
 
 ```html
 <span style="-d4-ref:'expression'"> </span>
 ```
 
-This tag inserts a 4D expression (expression, method, field, variable, command, etc.) in the text. The expression is tokenized and evaluated:
+Cette balise insère une expression 4D (expression, méthode, champ, variable, commande, etc.) dans le texte. L’expression est stockée sous forme de référence (token) et est évaluée :
 
-- when the expression is inserted
-- when the object is loaded
-- when the `computeExpressions` standard action is called from an interface object or by the [`INVOKE ACTION`](../commands/invoke-action) command
-- when the [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) command is executed
-- when the [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) command is executed, if the second `*` parameter is passed.
+- à l’insertion de l’expression
+- au chargement de l’objet
+- lorsque l'action standard `computeExpressions` est appelée depuis un objet d'interface ou par la commande [`INVOKE ACTION`](../commands/invoke-action)
+- à l’exécution de la commande [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions)
+- à l’exécution de la commande [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) si le deuxième paramètre `*` est passé.
 
-The evaluated value of the expression is not saved in the `<span>` tag, only its reference is.
+La valeur évaluée de l'expression n'est pas enregistrée dans la balise `<span>`, seule sa référence l'est.
 
-Note: To ensure that expressions will be evaluated correctly regardless of the 4D language or version used, we recommend using the token syntax for elements whose name might vary between different versions (commands, tables, fields, constants). Par exemple, pour insérer la commande `Current time`, entrez `Current time:C178`. For more information about this, refer to *Using tokens in formulas*.
+Note : Pour assurer une évaluation correcte de l'expression quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe tokenisée pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande `Current time`, entrez `Current time:C178`. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 
 #### Variable URL
 
 ```html
-<span><a href="url">Visible label</a></span>
+<span><a href="url">Libellé visible</a></span>
 ```
 
-This tag inserts a URL in the text. Exemple :
+Cette balise insère une URL dans le texte. Exemple :
 
 ```html
-<span><a href="http://www.4d.com/">4D Web Site</a></span>
+<span><a href="http://www.4d.com/">Site Web de 4D</a></span>
 ```
 
-#### User link
+#### Lien utilisateur
 
 ```html
-<span style="-d4-ref-user:'myUserLink'">Click here</span>
+<span style="-d4-ref-user:'myUserLink'">Cliquez ici</span>
 ```
 
-"User links" look the same as URLs, but when you click them, they do not automatically open the source. You can pass any string you want as reference, and it is up to the developer to program any custom actions that occur when it is clicked. This means you can create links which are not URLs but references to files, 4D methods, and so on, that you can open or execute when they are clicked. The [`ST Get content type`](../commands/st-get-content-type) command detects if a user link has been clicked.
+Les "liens utilisateurs" sont des liens ayant le même rendu visuel que les URLs, à la différence qu’un clic ne déclenche pas automatiquement l’ouverture de la source. Vous pouvez passer la chaîne que vous voulez comme référence, et il vous revient de programmer toute action personnalisée en réponse au clic. Ce principe vous permet de créer des liens qui ne sont pas des URLs mais des références de fichiers, de méthodes 4D, etc., que vous pouvez ouvrir ou exécuter en cas de clic. La commande [`ST Get content type`](../commands/st-get-content-type) détecte si un lien utilisateur a été cliqué.
 
-User links are defined using the [`ST SET TEXT`](../commands/st-set-text) command. Par exemple :
+Les liens utilisateur sont définis en utilisant la commande [`ST SET TEXT`](../commands/st-set-text). Par exemple :
 
 ```4d
-ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
+ST SET TEXT(txtVar;"Ceci est un lien utilisateur : <span style=\"-d4-ref-user:'UserLink'\">Lien utilisateur</span>";$start;$end)
 ```
 
-#### Custom tags
+#### Balises personnalisées
 
-You can insert any tag in plain text, for example `<img src="http://doc.4d.com/pictures/ja.png">`. It is stored in the code of the plain text without being interpreted or displayed. This is particularly useful in the context of e-mails in HTML format and including pictures for example.
+Vous pouvez insérer n'importe quelle balise en texte brut, par exemple `<img src="http://doc.4d.com/pictures/ja.png">`. Elles ne seront ni interprétées ni affichées mais conservées dans le code du texte brut. Ceci est particulièrement utile dans le contexte des courriers électroniques en format HTML et incluant des images.
 
-#### Style tags
+#### Balises de style
 
-This paragraph lists the attributes of \<SPAN> tags that are supported by 4D in rich text areas. You can use these tags to implement custom style handling. Only the tags listed below are supported by 4D for style variations.
+Ce paragraphe liste les attributs des balises \<SPAN> qui sont prise en charge par 4D dans les zones de texte multistyle. Vous pouvez utiliser ces balises pour mettre en place une gestion personnalisée des styles. Seules les balises listées ci-dessous sont prises en charge par 4D pour les variations de style.
 
-- Font name: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
-- Font size: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
-- Style de police:
-  - Bold `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
-  - Italic `<SPAN STYLE="font-style: italic"> ... </SPAN>`
+- Nom de police : `<SPAN STYLE="font-family: DESDEMONA">... </SPAN>`
+- Taille de police : `<SPAN STYLE="font-size: 20pt">... </SPAN>`
+- Style de police :
+  - Gras `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
+  - Italique `<SPAN STYLE="font-style: italic"> ... </SPAN>`
   - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
-  - Underline `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
-  - Strikethrough `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
+  - Souligné `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
+  - Barré `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
 
-*Note: The "strikethrough" style is not supported under macOS, but this tag can still be managed by programming.*
+*Note: Le style "barré" n'est pas pris en charge sous macOS, mais cette balise peut toujours être gérée par la programmation.*
 
-- Font colors: `<SPAN STYLE="color:green"> ... </SPAN>` or `<SPAN STYLE="color:#006CCC">...</SPAN>`
-- Background colors: `<SPAN STYLE="background-color:green"> ... </SPAN>` or `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
+- Couleurs de police : `<SPAN STYLE="color:green"> ... </SPAN>` ou `<SPAN STYLE="color:#006CCC">...</SPAN>`
+- Couleurs de fond : `<SPAN STYLE="background-color:green"> ... </SPAN>` ou `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
 
-#### Color values
+#### Valeurs de couleurs
 
-For font color and background color attributes, the color value can be either the hexadecimal code for an RGB color, or the name of one of the 16 HTML colors defined for standard CSS by the W3C:
+Pour les attributs de couleur de police et couleur de fond, la valeur de couleur peut être soit le code hexadécimal des couleurs RVB, soit le nom d’une des 16 couleurs HTML définies pour le standard CSS par le W3C :
 
 ![](../assets/en/FormObjects/colors1.png)
 ![](../assets/en/FormObjects/colors2.png)
 
-### Working with text handling commands
+### Travailler avec des commandes de gestion de texte
 
 #### Interface utilisateur
 
-The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+Les commandes qui peuvent être utilisées pour manipuler des objets texte par programmation ne prennent pas en compte les balises de style intégrées dans le texte. Elles agissent uniquement sur le texte à l'écran. Ceci concerne les commandes suivantes :
 
-- [User Interface](../commands/theme/User_Interface.md) theme commands
+- Commandes du thème [Interface utilisateur](../commands/theme/User_Interface.md)
 - [`HIGHLIGHT TEXT`](../commands/highlight-text)
 - [`GET HIGHLIGHT`](../commands/get-highlight)
 
-When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../commands/st-get-plain-text) command:
+Lorsque vous utilisez ces commandes avec des commandes qui manipulent des chaînes de caractères, il est nécessaire de filtrer les caractères de formatage en utilisant la commande [`ST Get plain text`](../commands/st-get-plain-text) :
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -531,21 +531,21 @@ When you use these commands with commands that manipulate character strings, it 
 
 #### Objets (Formulaires)
 
-The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../commands/object-set-font)) apply to the whole object and not to the selection.
+Les commandes qui peuvent être utilisées pour modifier le style des objets (par exemple, [`OBJECT SET FONT`](../commands/object-set-font)) s'appliquent à l'objet entier et non à la sélection.
 
-If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+Si l'objet n'a pas le focus lorsque la commande est exécutée, la modification est appliquée simultanément à l'objet (la zone de texte) et à sa variable associée. Si l'objet a le focus, la modification est effectuée sur l'objet mais pas sur la variable associée. La modification n'est appliquée à la variable que lorsque l'objet perd le focus. Gardez ce principe à l'esprit lors de la programmation des zones de texte.
 
 :::note
 
-If the [**Store with default style tags**](#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+Si l'option [**Stocker les balises par défaut**](#store-with-default-style-tags) est cochée pour l'objet, l'utilisation de ces commandes provoquera une modification des balises enregistrées avec chaque objet.
 
 :::
 
-Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+Notez aussi que seules les propriétés par défaut sont affectées par ces commandes (ainsi que toutes les propriétés enregistrées par les balises par défaut). Les balises de style personnalisé restent telles quelles. Par exemple, dans une zone multi-style où les balises par défaut ont été enregistrées :
 
 ![](../assets/en/FormObjects/multistyle-ex1.png)
 
-The plain text of the area is as follows:
+Le texte brut de la zone est le suivant :
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
@@ -557,40 +557,40 @@ Si vous exécutez le code suivant :
 OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 ```
 
-The red color remains:
+La couleur rouge reste :
 
 ![](../assets/en/FormObjects/multistyle-ex2.png)
 
-and code is:
+et le code est :
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
 ```
 
-The following commands are concerned:
+Les commandes suivantes sont concernées :
 
 - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 - [`OBJECT SET FONT`](../commands/object-set-font)
 - [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
 
-In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+Dans le contexte des zones de texte multistyles, les commandes génériques doivent être utilisées pour définir les styles par défaut uniquement. Pour gérer les styles lors de l'exécution de la base de données, nous vous recommandons d'utiliser les [commandes du thème "Texte multistyle"](../commands/theme/Styled_Text.md).
 
 #### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../commands/get-edited-text) command returns the text of the current area including any style tags.
+Lorsqu’elle est utilisée avec une zone de texte riche, la commande [`Get edited text`](../commands/get-edited-text) retourne le texte de la zone courante en incluant les éventuelles balises de style.
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command:
+Pour récupérer le texte "brut" (texte sans balises) en cours d’édition, vous devez utiliser la commande [`ST Get plain text`](../commands/st-get-plain-text) :
 
 ```4d
 ST Get plain text(Get edited text)
 ```
 
-#### Query and order by commands
+#### Commandes de recherche et de tri
 
-Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+Les recherches et les tris effectués parmi des objets multistyles tiennent compte des éventuelles balises de style enregistrées dans l’objet. Si une modification de style a été apportée à l’intérieur d’un mot, une recherche sur ce mot sera infructueuse.
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. Par exemple :
+Pour pouvoir effectuer des recherches et des tris valides, vous devez utiliser la commande [`ST Get plain text`](../commands/st-get-plain-text). Par exemple :
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
