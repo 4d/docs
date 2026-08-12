@@ -40,16 +40,29 @@ For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` whe
 For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation. 
 
 
->When inserting quotes (') or double quotes ("), you must escape them using using their character code:
->
-><li>Quotes ('): \u0027</li>
-><li>Double quotes ("): \u0022</li>
->
->For example, you can write the following when passing a value with a quote when using the *params* property:  
->`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
->
-> If you pass the value directly, you can write the following:
+
+
+:::note
+
+The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries). 
+
+:::
+
+
+:::note
+
+When inserting quotes (') or double quotes ("), you must escape them using using their character code:
+
+- Quotes ('): \u0027
+- Double quotes ("): \u0022
+
+For example, you can write the following when passing a value with a quote when using the *params* property:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+If you pass the value directly, you can write the following:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 
 

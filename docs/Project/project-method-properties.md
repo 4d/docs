@@ -96,7 +96,7 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
-Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`](../commands/add-record) command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the 4D programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
 
