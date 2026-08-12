@@ -53,9 +53,9 @@ title: データ収集
 | databases[].numberOfRecordsMax                | Number                            | レコードの総数                                                                                                     |
 | databases[].numberOfTables                    | Number                            | テーブルの総数                                                                                                     |
 | databases[].qodly.webforms    | Number                            | Qodly Webフォームの数                                                                                             |
-| databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガの数                                                                                 |
-| databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガの数                                                                                  |
-| databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガの数                                                                                |
+| databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガーの数                                                                                |
+| databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガーの数                                                                                 |
+| databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガーの数                                                                               |
 | databases[].sdi                               | Boolean                           | Windows で SDIモードを使用 設定がチェックされている場合には True                                                                   |
 | databases[].structureHash                     | Text                              |                                                                                                             |
 | databases[].uniqueID                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |

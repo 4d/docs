@@ -18,7 +18,7 @@ title: クライアント-サーバーページ
 
 :::note
 
-この設定を変更した場合、変更を反映するためサーバデータベースを再起動する必要があります。
+この設定を変更した場合、変更を反映するためサーバーデータベースを再起動する必要があります。
 
 :::
 
@@ -133,7 +133,7 @@ This option activates the [secured mode for communications](../Admin/tls.md#enab
 
 - **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
 - **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
-- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインタフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 For more information, please refer to the [Managing the Resources folder](../Desktop/clientServer.md#managing-the-resources-folder) section.
+- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインターフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 For more information, please refer to the [Managing the Resources folder](../Desktop/clientServer.md#managing-the-resources-folder) section.
 
 ## IP設定ページ
 

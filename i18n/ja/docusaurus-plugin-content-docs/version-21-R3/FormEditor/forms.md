@@ -16,7 +16,7 @@ title: フォーム
 
 4Dフォームの追加や変更は、以下の要素を使っておこないます:
 
-- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
+- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラー** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
 - **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources) に保存します。 例:
 
@@ -68,21 +68,21 @@ title: フォーム
 
 ## フォームを印刷する
 
-In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
+4D デスクトップアプリケーションでは、[**印刷** テーマの様々なコマンド](../commands/theme/Printing) を使用することで、フォームを印刷することができます。
 
 ### 印刷レンダリングエンジン
 
-4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+4D は印刷用に特化したデザインの出力を生成するための専用の印刷レンダリングエンジンを使用します。 このレンダリングには以下の様な機能を含んでいます:
 
-- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
-- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
-- The same output is produced, whether the form is printed from macOS or Windows.
+- ボタン、トグル、ドロップダウンなどの操作可能なウィジェット、およびグラス、ぼかし、透明、またはシャドウエフェクトなどの現代的なUI エフェクトは、その静的な表現へと変換され、また印刷可能なスタイルへと平面化されます。その結果としてドキュメントは印刷時にも読みやすく、またプロフェッショナルな見た目を維持します。
+- レイアウト構造、間隔、および配置は、印刷されたドキュメントが画面上のフォームの論理的な構造を反映する様に保持されます。
+- これによりmacOS またはWindows で印刷されても、同じ出力が生成されます。
 
-For example, the following form:
+例えば、以下のフォームにおいて:
 
 ![](../assets/en/FormEditor/screen_rendering.png)
 
-... will be printed with this rendering:
+... 印刷すると、レンダリングは以下の様になります:
 
 ![](../assets/en/FormEditor/print_rendering.png)
 
@@ -94,16 +94,16 @@ For example, the following form:
 
 ### 旧式印刷レンダラー
 
-In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+4D 21 R3 以前のリリースでは、別の印刷レンダリングが使用されていました。 旧式レンダラーは単純にウィジェットをスクリーン上の見た目のまま描画します。 互換性のため、旧式レンダラーは4D 21 R3 以前のバージョンから変換されたプロジェクトまたはデータベースにおいては**デフォルトで有効化されており**、そのためこのレンダラー環境下でデザインされたフォームがそのデザイン通りに印刷される様にすることができます。
 
-You can however enable the modern print rendering engine at any moment by:
+しかし以下の方法によって、いつでも新しい印刷レンダリングエンジンを有効化することができます:
 
-- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- [データベース設定ダイアログボックス内の互換性ページ](../settings/compatibility.md) 内の**旧式印刷レンダリングを使用** のチェックを外す (恒久的な設定)
+- または[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドを実行して`Use legacy print rendering` セレクターを1 に設定する (一時的な設定)
 
 :::warning 制限
 
-For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+技術的な理由から、Windows 上で[Fluent UI](#fluent-ui-レンダリング) またはmacOS 上で[Liquid Glass](../Notes/updates.md#macOS-におけるliquid-glass-のサポート) を使用して表示されているフォームでは、旧式印刷レンダラーを使用することはできません。 これらのコンテキストにおいては、互換性オプションの設定に関わらず、フォームは**常に新しい印刷レンダリングエンジンを使用して印刷されます**。
 
 :::
 

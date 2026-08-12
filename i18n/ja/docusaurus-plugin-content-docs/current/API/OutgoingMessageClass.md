@@ -5,9 +5,9 @@ title: OutgoingMessage
 
 `4D.OutgoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
 
-通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
+通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザーを介して任意のコンテンツタイプを受信するために使用されます。
 
-このクラスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
+このクラスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザーに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
 
 <details><summary>履歴</summary>
 

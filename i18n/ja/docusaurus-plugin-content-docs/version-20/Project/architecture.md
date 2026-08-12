@@ -21,7 +21,7 @@ title: プロジェクトのアーキテクチャー
     - `userPreferences.username`
     - `WebFolder`
 
-> バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
+> バイナリーデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
 
 ## `Project` フォルダー
@@ -63,8 +63,8 @@ title: プロジェクトのアーキテクチャー
 | lists.json              | 定義されたリスト                                                                                                                                                                                                                                                                                                                                                        | JSON |
 | filters.json            | 定義されたフィルター                                                                                                                                                                                                                                                                                                                                                      | JSON |
 | styleSheets.css         | CSS スタイルシート                                                                                                                                                                                                                                                                                                                                                     | CSS  |
-| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                            | CSS  |
-| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                        | CSS  |
+| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリーデータベースより)                                                                                                                                                                                                                                                                                                                           | CSS  |
+| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリーデータベースより)                                                                                                                                                                                                                                                                                                                       | CSS  |
 
 
 #### `DatabaseMethods`
@@ -147,7 +147,7 @@ Resources フォルダーには、追加のカスタムプロジェクトリソ�
 | *item*                | プロジェクトリソースファイルとフォルダー                                                      | 様々      |
 | Images/Library/*item* | ピクチャーライブラリの個別ピクチャーファイル(*)。 各アイテムの名称がファイル名となります。 名称が重複する場合には、名称に番号が追加されます。 | picture |
 
-(*) .4db バイナリデータベースから変換されたプロジェクトの場合のみ
+(*) .4db バイナリーデータベースから変換されたプロジェクトの場合のみ
 
 
 ## `Data`

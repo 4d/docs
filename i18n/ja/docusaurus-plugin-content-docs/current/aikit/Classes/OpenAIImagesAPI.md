@@ -18,7 +18,7 @@ https://developers.openai.com/api/reference/resources/images
 | 引数           | 型                                                 | 説明               |
 | ------------ | ------------------------------------------------- | ---------------- |
 | *prompt*     | Text                                              | 画像の生成に使用するプロンプト。 |
-| *parameters* | [OpenAIImageParameters](OpenAIImageParameters.md) | 画像生成のためのパラメータ。   |
+| *parameters* | [OpenAIImageParameters](OpenAIImageParameters.md) | 画像生成のためのパラメーター。  |
 | 戻り値          | [OpenAIImagesResult](OpenAIImagesResult.md)       | 生成された画像を格納する結果。  |
 
 プロンプトを与えられると画像を作成します。

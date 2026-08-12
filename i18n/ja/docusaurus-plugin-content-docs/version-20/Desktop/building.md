@@ -86,7 +86,7 @@ title: アプリケーションビルド
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
-.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
+.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリーデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
 > .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 標準圧縮形式を使用しない場合、 [`buildApp.4DSettings`](#buildapp4dsettings) ファイルの`UseStandardZipFormat` XML キーに値 `False` を設定してください (詳細は [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) リファレンスを参照してください)。
 
@@ -536,7 +536,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 ライセンスが有効でない場合、警告が表示されます。
 
 必要なだけ有効なファイルを選択することができます。 実行可能アプリケーションをビルドする際に、4D は最も適切なライセンスを使用します。
-> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
+> "R-リリース" バージョンのアプリケーションをビルドするには、専用の "R" ライセンスが必要です ("R" 製品用のライセンス番号は "R-" から始まる番号です)。
 
 アプリケーションビルド後、配布ライセンスファイルは実行可能ファイルと同階層 (Windows) やパッケージ内 (macOS) に自動でコピーされます。
 

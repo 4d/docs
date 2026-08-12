@@ -94,7 +94,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```4d
  // このコマンドはメソッド (関数) またはフォーミュラを受け取ります
 QUERY BY FORMULA([aTable];Special query)
- // このコマンドはメソッド (プロシージャ) またはステートメントを受け取ります
+ // このコマンドはメソッド (プロシージャー) またはステートメントを受け取ります
 APPLY TO SELECTION([Employees];INCREASE SALARIES)
  // このコマンドはメソッド名を文字列で受け取ります
 ON EVENT CALL("HANDLE EVENTS")

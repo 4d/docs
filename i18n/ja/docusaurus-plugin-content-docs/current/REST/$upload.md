@@ -15,7 +15,7 @@ title: $upload
 
 エンティティのピクチャー属性を更新するために、画像をアップロードしたい場合を考えます。
 
-画像 (または任意のバイナリファイル) をアップロードするには、まずクライアントアプリケーションにてファイルを選択する必要があります。 ファイル自体はリクエストの **ボディ** に渡す必要があります。
+画像 (または任意のバイナリーファイル) をアップロードするには、まずクライアントアプリケーションにてファイルを選択する必要があります。 ファイル自体はリクエストの **ボディ** に渡す必要があります。
 
 次に、下のようなリクエストを使用して、選択した画像を 4D Server にアップロードします:
 
@@ -82,7 +82,7 @@ $url:="localhost:80/rest/$upload?$binary=true" // RESTリクエストの準備
 $headerNames{1}:="Content-Type"
 $headerValues{1}:="application/octet-stream"
 
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリの読み込み
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリーの読み込み
 
  // ファイルをアップロードするための 1つ目の POSTリクエスト
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)

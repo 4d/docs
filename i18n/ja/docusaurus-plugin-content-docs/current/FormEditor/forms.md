@@ -16,7 +16,7 @@ title: フォーム
 
 4Dフォームの追加や変更は、以下の要素を使っておこないます:
 
-- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
+- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラー** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
 - **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources) に保存します。 例:
 
@@ -89,23 +89,23 @@ title: フォーム
 
 フォームをスクリーン上のダイアログとして使用したい場合、(1) まずウィンドウを作成し、(2) フォームをウィンドウ内にロードし、イベントループを使用してユーザーアクションを処理します。 フォームをスクリーン上に表示するための最も単純な方法は、以下の通りです:
 
-1. [`Open form window`](../commands/open-form-window) コマンドを呼び出し、フォームに合わせた、設定済みのウィンドウを作成します。 Note that the command only draws an empty window, it does **not** display anything.
-2. In the same method, call the [`DIALOG`](../commands/dialog) command to actually load the form in the opened form window, ready for user interaction. [`DIALOG`](../commands/dialog) loads form data and places your code in [listening mode to user events](../Develop/async.md#event-listening). When you call this command without asterisk (\*), the dialog will stay on screen and the code execution is frozen until an event occurs.
-3. (optional) Use the [`Form`](../commands/form) command from within the form context to access form data.
+1. [`Open form window`](../commands/open-form-window) コマンドを呼び出し、フォームに合わせた、設定済みのウィンドウを作成します。 このコマンドは空のウィンドウを開くだけで、何かを表示する訳**ではない**ことに注意してください。
+2. 同じメソッド内で、[`DIALOG`](../commands/dialog) コマンドを呼び出して開いたフォームウィンドウに実際にフォームをロードし、ユーザーからの操作の受け入れ準備が整います。 [`DIALOG`](../commands/dialog) コマンドはフォームデータをロードし、書かれたコードを[ユーザーイベントをリッスンできる](../Develop/async.md#イベントリスニング) ようにします。 このコマンドをアスタリスク(\*)なしで呼び出した場合、ダイアログはスクリーン上に表示されたまま、イベントが発生するまでコードの実行は待機されます。
+3. (オプション) [`Form`](../commands/form) コマンドをフォームのコンテキスト内から使用することで、フォームデータにアクセスすることができます。
 
 :::note 互換性
 
-All-in-one commands such as [`ADD RECORD`](../commands/add-record) or [`MODIFY RECORD`](../commands/add-record) merge all steps in a single call. These legacy commands can still be used for prototyping or basic developments but are not adapted to modern, fully controlled interfaces. They directly rely on the 4D database and legacy features such as [table forms](#project-form-and-table-form) and do not benefit from the power and flexibility of [ORDA features](../ORDA/overview.md). Unless specific needs, it is recommended to use project forms for your 4D desktop application interfaces.
+[`ADD RECORD`](../commands/add-record) あるいは [`MODIFY RECORD`](../commands/add-record) などの"オールインワン"コマンドは、これらのステップを単一の呼び出しへと合併します。 従来のコマンドはプロトタイピングや基本的な開発には引き続き使用できますが、現代的な、完全に管理されたインターフェースには使用できません。 これらは4D データベースと[テーブルフォーム](#プロジェクトフォームとテーブルフォーム) などの従来の機能に依存しており、[ORDA 機能](../ORDA/overview.md) の威力と柔軟性の恩恵を受けることはできません。 特定のニーズがない限り、4D デスクトップアプリケーションにおいてはプロジェクトフォームを使用することが推奨されます。
 
 :::
 
-#### Simple example
+#### 単純な例
 
-You create the following basic form in the [Form editor](./formEditor.md):
+以下の様な基本的なフォームを[フォームエディター](./formEditor.md) を使用して作成します:
 
 ![](../assets/en/FormEditor/example-form-1.png)
 
-The form is [associated with a "myForm" class](./properties_FormProperties.md#form-class), defined as follow:
+フォームは、以下の様に定義されている["myForm" クラスに関連づけられています](./properties_FormProperties.md#form-class):
 
 ```4d
     //cs.myForm
@@ -117,53 +117,53 @@ Class constructor
   This.age:=0
 ```
 
-The form class is automatically instantiated by 4D once the form is loaded. If you execute the following project method:
+このフォームクラスは、フォームがロードされる際に4D によって自動的にインスタンス化されます。 以下のプロジェクトメソッドを実行した場合:
 
 ```4d
-    // Instantiate a form object that will host form data and UI logic
+    // フォームデータとUI ロジックをホストするためのフォームオブジェクトをインスタンス化
 var $formObject:=cs.myForm.new()
 
-    //Prepare default value within the form object
+    // フォームオブジェクト内のデフォルト値を準備
 $formObject.name:="Smith"
 $formObject.age:=42
 
-    // Create an empty window with ad-hoc settings that fits the desired form dimensions, resizing properties,
-    // and window type (this does not render the form)
+    // 想定されたフォーム位置、フォームサイズ、リサイズプロパティ、ウィンドウタイプを持った
+    // 空のウィンドウを作成 (これはフォームを表示する訳ではありません)
 var $win:=Open form window("myForm"; Movable form dialog box; Horizontally centered; Vertically centered)
 
-    //Render the form, and provide $formObject's data. Dialog also activates the form event loop
+    // フォームをレンダリングし、$formObject のデータを提供。Dialog はフォームイベントループも起動する
 DIALOG("myForm"; $formObject)
 
-    //Without asterisk to Dialog statement, the form waits for a closing action from the user 
-    //before executing the rest of the code. Calling Close window is just a good practice 
-CLOSE WINDOW($win) //releases reference
+    // Dialog を呼び出すのにアスタリスクをつけなかったので、フォームは残りのコードを実行するためにはユーザーからの閉じるアクションが行われるのを待ちます
+    // Close window コマンドを呼び出すのは良い習慣
+CLOSE WINDOW($win) // 参照を解放
 
-    //Display data modified by the user, if any/
+    // ユーザーによって編集されたデータを(あれば)表示する
 ALERT($formObject.name+" is "+String($formObject.age)+" years old!")
 
 ```
 
-4D displays:
+4D は以下の様に表示します:
 
 ![](../assets/en/FormEditor/example-form-2.png)
 
-### Using forms as subforms
+### フォームをサブフォームとして使用
 
-A form can be embedded within another form, in which case it becomes a [subform object](../FormObjects/subform_overview.md) which follows specific rules. A subform is automatically used when its parent form is [displayed in a window](#using-a-project-form-in-a-window).
+フォームは他のフォーム内に埋め込むことができ、その場合は特殊なルールに従う[サブフォームオブジェクト](../FormObjects/subform_overview.md) となります。 サブフォームはその親フォームが[ウィンドウに表示された](#ウィンドウ内でプロジェクトフォームを使用) 際に自動的に使用されます。
 
-In the same way that you pass an object to a form with the [`DIALOG`](../commands/dialog) command, you can also pass an object to a subform area using the property list. Then, you can use it in the subform with the [`Form`](../commands/form) command. In this example, the "InvoiceAddress" object is bound to the subform:
+[`DIALOG`](../commands/dialog) コマンドを通してフォームにオブジェクトを渡すのと同じ様に、プロパティリストを使用することでサブフォームにもオブジェクトを渡すことができます。 その後、[`Form`](../commands/form) コマンドを使用してサブフォームでそれを使用することができます。 この例では、"InvoiceAddress" オブジェクトがサブフォームにバインドされています:
 
 ![](../assets/en/FormEditor/subform-example.png)
 
-### Using forms to be printed
+### 印刷するフォームを使用する
 
-In 4D desktop applications, forms can be printed using the various [commands of the **Printing** theme](../commands/theme/Printing).
+4D デスクトップアプリケーションでは、[**印刷** テーマの様々なコマンド](../commands/theme/Printing) を使用することで、フォームを印刷することができます。
 
 #### 例題
 
-You can use forms to print data, either as page or as list.
+フォームを使用して、ページとしてまたはリストとして印刷することもできます。
 
-- To simply print some part of a form, use the [`Print form`](../commands/print-form) command. 例:
+- 単純にフォームの一部を印刷したい場合には[`Print form`](../commands/print-form) コマンドを使用します。 例:
 
 ```4d
 var $formData:={}
@@ -173,7 +173,7 @@ $formData.request:="I need more COFFEE"
 var $h:=Print form("Request_var";$formData;Form detail)
 ```
 
-- To print a form within a printing job to process data during printing, use [`FORM LOAD`](../commands/form-load) and [`Print object`](../commands/print-object) commands. 例:
+- 印刷中にデータを処理するための印刷ジョブ内でフォームを印刷するためには、[`FORM LOAD`](../commands/form-load) および [`Print object`](../commands/print-object) コマンドを使用します。 例:
 
 ```4d
  var $formData : Object
@@ -183,12 +183,12 @@ var $h:=Print form("Request_var";$formData;Form detail)
  OPEN PRINTING JOB
  $formData:={}
  $formData.LBcollection:=[]
- ... //fill the collection with data
+ ... // コレクションにデータを入れる
  
  FORM LOAD("GlobalForm";$formData) 
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // この"LB" リストボックスのデータソースはForm.LBcollection
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -200,17 +200,17 @@ var $h:=Print form("Request_var";$formData;Form detail)
 
 #### 印刷レンダリングエンジン
 
-4D uses a dedicated print rendering engine to generate outputs with a design adapted for printing. It includes the following main features:
+4D は印刷用に特化したデザインの出力を生成するための専用の印刷レンダリングエンジンを使用します。 このレンダリングには以下の様な機能を含んでいます:
 
-- Interactive widgets such as buttons, toggles, dropdowns, etc. and modern UI effects such as glass, blur, transparency, or shadow effects are converted into adapted static representations and flattened into printable styles, so that the document remains readable and professional once printed.
-- Layout structure, spacing, and alignment, are preserved so that the printed document reflects the logical structure of the on-screen form.
-- The same output is produced, whether the form is printed from macOS or Windows.
+- ボタン、トグル、ドロップダウンなどの操作可能なウィジェット、およびグラス、ぼかし、透明、またはシャドウエフェクトなどの現代的なUI エフェクトは、その静的な表現へと変換され、また印刷可能なスタイルへと平面化されます。その結果としてドキュメントは印刷時にも読みやすく、またプロフェッショナルな見た目を維持します。
+- レイアウト構造、間隔、および配置は、印刷されたドキュメントが画面上のフォームの論理的な構造を反映する様に保持されます。
+- これによりmacOS またはWindows で印刷されても、同じ出力が生成されます。
 
-For example, the following form:
+例えば、以下のフォームにおいて:
 
 ![](../assets/en/FormEditor/screen_rendering.png)
 
-... will be printed with this rendering:
+... 印刷すると、レンダリングは以下の様になります:
 
 ![](../assets/en/FormEditor/print_rendering.png)
 
@@ -222,26 +222,26 @@ For example, the following form:
 
 #### 旧式印刷レンダラー
 
-In releases prior to 4D 21 R3, another print renderer was used. This legacy renderer simply draws widgets as they appear on the screen. For compatibility, the legacy renderer is **enabled by default** in projects or databases converted from versions prior to 4D 21 R3, so that forms designed with this renderer continue to be printed as expected.
+4D 21 R3 以前のリリースでは、別の印刷レンダリングが使用されていました。 旧式レンダラーは単純にウィジェットをスクリーン上の見た目のまま描画します。 互換性のため、旧式レンダラーは4D 21 R3 以前のバージョンから変換されたプロジェクトまたはデータベースにおいては**デフォルトで有効化されており**、そのためこのレンダラー環境下でデザインされたフォームがそのデザイン通りに印刷される様にすることができます。
 
-You can however enable the modern print rendering engine at any moment by:
+しかし以下の方法によって、いつでも新しい印刷レンダリングエンジンを有効化することができます:
 
-- unchecking the **Use legacy print rendering** option in the [Compatibility page of the Settings dialog box](../settings/compatibility.md) (permanent setting),
-- or executing [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command with `Use legacy print rendering` selector set to 1 (volatile setting).
+- [データベース設定ダイアログボックス内の互換性ページ](../settings/compatibility.md) 内の**旧式印刷レンダリングを使用** のチェックを外す (恒久的な設定)
+- または[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドを実行して`Use legacy print rendering` セレクターを1 に設定する (一時的な設定)
 
 :::warning 制限
 
-For technical reasons, the legacy print renderer is not available with forms displayed with [Fluent UI](#fluent-ui-rendering) on Windows or [Liquid Glass](../Notes/updates.md#support-of-liquid-glass-on-macos) on macOS. In these contexts, forms are **always printed with the modern print rendering engine**, whatever the compatibility option.
+技術的な理由から、Windows 上で[Fluent UI](#fluent-ui-レンダリング) またはmacOS 上で[Liquid Glass](../Notes/updates.md#macOS-におけるliquid-glass-のサポート) を使用して表示されているフォームでは、旧式印刷レンダラーを使用することはできません。 これらのコンテキストにおいては、互換性オプションの設定に関わらず、フォームは**常に新しい印刷レンダリングエンジンを使用して印刷されます**。
 
 :::
 
-### Other form usages
+### 他のフォームの使用方法
 
-There are several other ways to use forms in the 4D applications, including:
+4D アプリケーション内でフォームを使用する方法は他にもいくつかあります。例えば:
 
-- a form can be [inherited](#inherited-forms) from another form,
-- a form can be [associated to a listbox](../FormObjects/properties_ListBox.md#detail-form-name) in response to a user action to display a row using an edit button or a double-click,
-- the [label editor can use a form](../Desktop/labels.md#form-to-use) as template to print labels.
+- フォームは他のフォームを[継承する](#継承フォーム) ことができます。
+- フォームを[リストボックスに割り当てる](../FormObjects/properties_ListBox.md#詳細フォーム名) ことで、編集ボタンやダブルクリックを使用して行を表示しようとするユーザーアクションに反応することができます。
+- [ラベルエディターでフォームをテンプレートとして使用する](../Desktop/labels.md#使用するフォーム) ことで、ラベルを印刷することができます。
 
 ## フォームのページ
 

@@ -32,7 +32,7 @@ HTTPリクエストハンドラーはあらゆる値を返すことが可能で�
 ]
 ```
 
-`http://127.0.0.1/start/example?param=demo&name=4D` リクエストが、`GET` 動詞とともにブラウザ内で実行されます。  このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます:
+`http://127.0.0.1/start/example?param=demo&name=4D` リクエストが、`GET` 動詞とともにブラウザー内で実行されます。  このリクエストは、以下の*GeneralHandling* シングルトンクラスの*gettingStarted* 関数によって管理されます:
 
 ```4d
 shared singleton Class constructor()

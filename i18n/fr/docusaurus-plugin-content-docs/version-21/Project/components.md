@@ -296,7 +296,7 @@ Le développeur du composant peut définir une version 4D minimale dans le fichi
 
 #### Dépôts privés
 
-Si vous souhaitez intégrer un composant situé dans un référentiel privé, vous devez indiquer à 4D d'utiliser un token (*jeton*) de connexion pour y accéder.
+Si vous souhaitez intégrer un composant situé dans un dépôt privé, vous devez indiquer à 4D d'utiliser un token (*jeton*) de connexion pour y accéder.
 
 Pour cela, dans votre compte GitHub, créez un token **classic** avec les droits d'accès au **dépôt**.
 
@@ -340,7 +340,7 @@ Un fichier `dependency-lock.json` est créé dans le dossier [`userPreferences`]
 
 Ce fichier enregistre des informations telles que le statut des dépendances, les chemins d'accès, les Url, les erreurs de chargement, ainsi que d'autres informations. Il peut être utile pour la gestion du chargement de composants ou le dépannage.
 
-## Monitoring Project Dependencies {#monitoring-project-dependencies}
+## Gestion des dépendances du projet {#monitoring-project-dependencies}
 
 Dans un projet ouvert, vous pouvez ajouter, supprimer, mettre à jour et obtenir des informations sur les dépendances et leur statut courant de chargement dans la fenêtre **Dépendances**.
 
@@ -501,7 +501,7 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. **Suivre la version de 4D** (option par défaut, recommandée) : Télécharge la dernière version du composant compatible avec la version courante de 4D. Cette option est **recommandée**, en particulier pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
+- **Suivre la version de 4D** (option par défaut, recommandée) : Télécharge la dernière version du composant compatible avec la version courante de 4D. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. Cette option est **recommandée**, en particulier pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
@@ -513,7 +513,7 @@ La version courante de la dépendance GitHub est affichée sur le côté droit d
 
 #### Modifier la plage de versions des dépendances GitHub
 
-Vous pouvez modifier le [paramètre de version](#defining-a-github-dependency-version-range) pour une dépendance GitHub listée : sélectionnez la dépendance à modifier et sélectionnez **Editer la dépendance...** dans le menu contextuel. You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu.
+Vous pouvez modifier le [paramètre de version](#defining-a-github-dependency-version-range) pour une dépendance GitHub listée : sélectionnez la dépendance à modifier et sélectionnez **Editer la dépendance...** dans le menu contextuel. Dans la boîte de dialogue "Editer la dépendance", modifiez le menu Règle de dépendance et cliquez sur **Appliquer**.
 
 La modification de la plage de versions est utile par exemple si vous utilisez la fonction de mise à jour automatique et que vous souhaitez verrouiller une dépendance à un numéro de version spécifique.
 
