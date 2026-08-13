@@ -59,7 +59,7 @@ title: リストボックス
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 Refer to the [List boxes and the 4D Language](#list-boxes-and-the-4d-language) paragraph.
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや [`EDIT ITEM`](../commands/edit-item)、[`Displayed line number`](../commands/displayed-line-number) コマンドなど、ほかのテーマのコマンドも利用することができます。 [リストボックスと4D ランゲージ](#リストボックスと4dランゲージ) の段落を参照してください。
 
 ## 入力の管理
 
@@ -582,19 +582,19 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 - ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
 
-## List boxes and the 4D language
+## リストボックスと4Dランゲージ
 
-Many commands of the 4D language can be used with list boxes, from the [List box theme](../commands/theme/List_Box.md) but also from [Objects (Forms)](../commands/theme/Objects_Forms.md) and other themes. They can be used with list boxes, or [parts of list boxes](#list-box-parts) such as headers, footers, rows, or columns. Some of them can only be used with specific [list box types](#list-box-types).
+4D ランゲージの大部分のコマンドはリストボックスに対して使用することができます。これらは[リストボックステーマ](../commands/theme/List_Box.md) だけでなく、[オブジェクト(フォーム)テーマ](../commands/theme/Objects_Forms.md) や他のテーマのコマンドを使用することができます。 これらはリストボックス全体に対して使用することができる他、ヘッダー、フッター、行やカラムなどの[リストボックスの構成要素](#リストボックスの構成要素) に対して使用することもできます。 一部のものは、特定の[タイプのリストボックス](#リストボックスの型)に対してのみ使用可能です。
 
-### List Box commands
+### リストボックスコマンド
 
-| コマンド                                                                             | List Box Type    | Supported Parts       |
+| コマンド                                                                             | リストボックスのタイプ      | サポートされる部分             |
 | -------------------------------------------------------------------------------- | ---------------- | --------------------- |
-| [`LISTBOX COLLAPSE`](../commands/listbox-collapse)                               | Hierarchical     | リストボックス、ヘッダー、フッター、行、列 |
+| [`LISTBOX COLLAPSE`](../commands/listbox-collapse)                               | 階層               | リストボックス、ヘッダー、フッター、行、列 |
 | [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column)                     | すべて              | 列                     |
 | [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)                         | 配列               | リストボックス、ヘッダー、フッター、行、列 |
 | [`LISTBOX DUPLICATE COLUMN`](../commands/listbox-duplicate-column)               | 配列、セレクション、コレクション | 列                     |
-| [`LISTBOX EXPAND`](../commands/listbox-expand)                                   | Hierarchical     | リストボックス、ヘッダー、フッター、行、列 |
+| [`LISTBOX EXPAND`](../commands/listbox-expand)                                   | 階層               | リストボックス、ヘッダー、フッター、行、列 |
 | [`LISTBOX Get array`](../commands/listbox-get-array)                             | 配列               | リストボックス、ヘッダー、フッター、行、列 |
 | [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)                           | すべて              | リストボックス、ヘッダー、フッター、行、列 |
 | [`LISTBOX Get auto row height`](../commands/listbox-get-auto-row-height)         | 配列               | リストボックス、ヘッダー、フッター、行、列 |
@@ -625,7 +625,7 @@ Many commands of the 4D language can be used with list boxes, from the [List box
 | [`LISTBOX MOVE COLUMN`](../commands/listbox-move-column)                         | すべて              | 列                     |
 | [`LISTBOX MOVED COLUMN NUMBER`](../commands/listbox-moved-column-number)         | すべて              | 列                     |
 | [`LISTBOX MOVED ROW NUMBER`](../commands/listbox-moved-row-number)               | 配列               | 行                     |
-| [`LISTBOX SELECT BREAK`](../commands/listbox-select-break)                       | Hierarchical     | リストボックス               |
+| [`LISTBOX SELECT BREAK`](../commands/listbox-select-break)                       | 階層               | リストボックス               |
 | [`LISTBOX SELECT ROW`](../commands/listbox-select-row)                           | すべて              | 行                     |
 | [`LISTBOX SET ARRAY`](../commands/listbox-set-array)                             | 配列               | リストボックス、列             |
 | [`LISTBOX SET AUTO ROW HEIGHT`](../commands/listbox-set-auto-row-height)         | 配列               | 行                     |
@@ -649,64 +649,64 @@ Many commands of the 4D language can be used with list boxes, from the [List box
 
 ### その他のコマンド
 
-| コマンド                                                         | List Box Type | Supported Parts       | コメント                                                                                                                                                                                      |
-| ------------------------------------------------------------ | ------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`EDIT ITEM`](../commands/edit-item)                         | すべて           | 列                     | Allows you to pass a cell of a list box object into edit mode                                                                                                                             |
-| [`Get edited text`](../commands/get-edited-text)             | すべて           | リストボックス、ヘッダー、フッター、行、列 |                                                                                                                                                                                           |
-| [`REDRAW`](../commands/redraw)                               | 配列、セレクション     | リストボックス               | When applied to a selection list box, triggers an update of the data displayed in the list box. Not supported with list box of the entity selection type. |
-| [`Displayed line number`](../commands/displayed-line-number) | すべて           | リストボックス、ヘッダー、フッター、行、列 | Works in the context of the [`On Display Detail`](../Events/onDisplayDetail.md) form event for a list box object                                                                          |
-| [`Drop position`](../commands/drop-position)                 | すべて           | リストボックス、ヘッダー、フッター、行、列 |                                                                                                                                                                                           |
-| [`Count in array`](../commands/count-in-array)               | すべて           | リストボックス、ヘッダー、フッター、行、列 |                                                                                                                                                                                           |
-| [`Print object`](../commands/print-object)                   | すべて           | リストボックス、ヘッダー、フッター、行、列 |                                                                                                                                                                                           |
+| コマンド                                                         | リストボックスのタイプ | サポートされる部分             | コメント                                                                                       |
+| ------------------------------------------------------------ | ----------- | --------------------- | ------------------------------------------------------------------------------------------ |
+| [`EDIT ITEM`](../commands/edit-item)                         | すべて         | 列                     | リストボックスオブジェクトのセルの一つを渡して編集モードにすることができます                                                     |
+| [`Get edited text`](../commands/get-edited-text)             | すべて         | リストボックス、ヘッダー、フッター、行、列 |                                                                                            |
+| [`REDRAW`](../commands/redraw)                               | 配列、セレクション   | リストボックス               | セレクション型リストボックスに対して適用した場合、リストボックス内に表示されるデータの更新をトリガーします。 エンティティセレクション型のリストボックスではサポートされていません。 |
+| [`Displayed line number`](../commands/displayed-line-number) | すべて         | リストボックス、ヘッダー、フッター、行、列 | リストボックスオブジェクトの[`On Display Detail`](../Events/onDisplayDetail.md) フォームイベントのコンテキスト内で動作します   |
+| [`Drop position`](../commands/drop-position)                 | すべて         | リストボックス、ヘッダー、フッター、行、列 |                                                                                            |
+| [`Count in array`](../commands/count-in-array)               | すべて         | リストボックス、ヘッダー、フッター、行、列 |                                                                                            |
+| [`Print object`](../commands/print-object)                   | すべて         | リストボックス、ヘッダー、フッター、行、列 |                                                                                            |
 
-### Object (forms) commands
+### オブジェクト(フォーム)コマンド
 
-| コマンド                                                                                       | List Box Type | Supported Parts                                                                                   |
-| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------- |
-| [`OBJECT DUPLICATE`](../commands/object-duplicate)                                         | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT GET BEST SIZE`](../commands/object-get-best-size)                                 | すべて           | 列                                                                                                 |
-| [`OBJECT Get border style`](../commands/object-get-border-style)                           | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)                             | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get data source`](../commands/object-get-data-source)                             | 配列            | リストボックス                                                                                           |
-| [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)         | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get enterable`](../commands/object-get-enterable)                                 | すべて           | 列                                                                                                 |
-| [`OBJECT Get filter`](../commands/object-get-filter)                                       | すべて           | 列                                                                                                 |
-| [`OBJECT Get focus rectangle invisible`](../commands/object-get-focus-rectangle-invisible) | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get font`](../commands/object-get-font)                                           | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get font size`](../commands/object-get-font-size)                                 | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get font style`](../commands/object-get-font-style)                               | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get format`](../commands/object-get-format)                                       | すべて           | ヘッダー                                                                                              |
-| [`OBJECT Get help tip`](../commands/object-get-help-tip)                                   | すべて           | ヘッダー、フッター                                                                                         |
-| [`OBJECT Get horizontal alignment`](../commands/object-get-horizontal-alignment)           | すべて           | リストボックス、ヘッダー、フッター、列                                                                               |
-| [`OBJECT Get list reference`](../commands/object-get-list-reference)                       | すべて           | 列                                                                                                 |
-| [`OBJECT Get name`](../commands/object-get-name)                                           | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT Get pointer`](../commands/object-get-pointer)                                     | すべて           | リストボックス、ヘッダー、フッター、行、列 (下記参照)                                                   |
-| [`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options)                   | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors)                               | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT GET SCROLL POSITION`](../commands/object-get-scroll-position)                     | すべて           | リストボックス                                                                                           |
-| [`OBJECT GET SCROLLBAR`](../commands/object-get-scrollbar)                                 | すべて           | リストボックス                                                                                           |
-| [`OBJECT Get type`](../commands/object-get-type)                                           | すべて           | リストボックス、ヘッダー、フッター、列                                                                               |
-| [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment)               | すべて           | リストボックス、ヘッダー、フッター、列                                                                               |
-| [`OBJECT MOVE`](../commands/object-move)                                                   | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET COLOR`](../commands/object-set-color)                                         | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)                             | すべて           | リストボックス                                                                                           |
-| [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)                             | すべて           | リストボックス                                                                                           |
-| [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)                                 | すべて           | 列                                                                                                 |
-| [`OBJECT SET EVENTS`](../commands/object-set-events)                                       | すべて           | リストボックス                                                                                           |
-| [`OBJECT SET FOCUS RECTANGLE INVISIBLE`](../commands/object-set-focus-rectangle-invisible) | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET FONT`](../commands/object-set-font)                                           | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)                                 | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)                               | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET FORMAT`](../commands/object-set-format)                                       | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)                                   | すべて           | ヘッダー、フッター                                                                                         |
-| [`OBJECT SET HORIZONTAL ALIGNMENT`](../commands/object-set-horizontal-alignment)           | すべて           | リストボックス、ヘッダー、フッター、列                                                                               |
-| [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)                   | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)                               | すべて           | リストボックス、ヘッダー、フッター、行、列                                                                             |
-| [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)                     | すべて           | リストボックス                                                                                           |
-| [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)                                 | すべて           | リストボックス。 Scrolls the list box rows so that the first selected row or a specified row is displayed |
-| [`OBJECT SET TITLE`](../commands/object-set-title)                                         | すべて           | ヘッダー                                                                                              |
-| [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)               | すべて           | リストボックス、ヘッダー、フッター、列                                                                               |
-| [`OBJECT SET VISIBLE`](../commands/object-set-visible)                                     | すべて           | リストボックス、ヘッダー、フッター                                                                                 |
+| コマンド                                                                                       | リストボックスのタイプ | サポートされる部分                                         |
+| ------------------------------------------------------------------------------------------ | ----------- | ------------------------------------------------- |
+| [`OBJECT DUPLICATE`](../commands/object-duplicate)                                         | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT GET BEST SIZE`](../commands/object-get-best-size)                                 | すべて         | 列                                                 |
+| [`OBJECT Get border style`](../commands/object-get-border-style)                           | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)                             | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get data source`](../commands/object-get-data-source)                             | 配列          | リストボックス                                           |
+| [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)         | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get enterable`](../commands/object-get-enterable)                                 | すべて         | 列                                                 |
+| [`OBJECT Get filter`](../commands/object-get-filter)                                       | すべて         | 列                                                 |
+| [`OBJECT Get focus rectangle invisible`](../commands/object-get-focus-rectangle-invisible) | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get font`](../commands/object-get-font)                                           | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get font size`](../commands/object-get-font-size)                                 | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get font style`](../commands/object-get-font-style)                               | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get format`](../commands/object-get-format)                                       | すべて         | ヘッダー                                              |
+| [`OBJECT Get help tip`](../commands/object-get-help-tip)                                   | すべて         | ヘッダー、フッター                                         |
+| [`OBJECT Get horizontal alignment`](../commands/object-get-horizontal-alignment)           | すべて         | リストボックス、ヘッダー、フッター、列                               |
+| [`OBJECT Get list reference`](../commands/object-get-list-reference)                       | すべて         | 列                                                 |
+| [`OBJECT Get name`](../commands/object-get-name)                                           | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT Get pointer`](../commands/object-get-pointer)                                     | すべて         | リストボックス、ヘッダー、フッター、行、列 (下記参照)   |
+| [`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options)                   | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors)                               | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT GET SCROLL POSITION`](../commands/object-get-scroll-position)                     | すべて         | リストボックス                                           |
+| [`OBJECT GET SCROLLBAR`](../commands/object-get-scrollbar)                                 | すべて         | リストボックス                                           |
+| [`OBJECT Get type`](../commands/object-get-type)                                           | すべて         | リストボックス、ヘッダー、フッター、列                               |
+| [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment)               | すべて         | リストボックス、ヘッダー、フッター、列                               |
+| [`OBJECT MOVE`](../commands/object-move)                                                   | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET COLOR`](../commands/object-set-color)                                         | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)                             | すべて         | リストボックス                                           |
+| [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)                             | すべて         | リストボックス                                           |
+| [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)                                 | すべて         | 列                                                 |
+| [`OBJECT SET EVENTS`](../commands/object-set-events)                                       | すべて         | リストボックス                                           |
+| [`OBJECT SET FOCUS RECTANGLE INVISIBLE`](../commands/object-set-focus-rectangle-invisible) | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET FONT`](../commands/object-set-font)                                           | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)                                 | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)                               | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET FORMAT`](../commands/object-set-format)                                       | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)                                   | すべて         | ヘッダー、フッター                                         |
+| [`OBJECT SET HORIZONTAL ALIGNMENT`](../commands/object-set-horizontal-alignment)           | すべて         | リストボックス、ヘッダー、フッター、列                               |
+| [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)                   | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)                               | すべて         | リストボックス、ヘッダー、フッター、行、列                             |
+| [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position)                     | すべて         | リストボックス                                           |
+| [`OBJECT SET SCROLLBAR`](../commands/object-set-scrollbar)                                 | すべて         | リストボックス。 選択された行または指定された行が表示されるようにリストボックスをスクロールします |
+| [`OBJECT SET TITLE`](../commands/object-set-title)                                         | すべて         | ヘッダー                                              |
+| [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)               | すべて         | リストボックス、ヘッダー、フッター、列                               |
+| [`OBJECT SET VISIBLE`](../commands/object-set-visible)                                     | すべて         | リストボックス、ヘッダー、フッター                                 |
 
 ヘッダーまたはフッターに [`OBJECT SET VISIBLE`](../commands/object-set-visible) を使用すると、このコマンドに渡した引数に関わらず、そのリストボックスオブジェクトのヘッダーまたはフッターすべてが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。 なお、[`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用してこれらのオブジェクトの表示設定を管理するには、それらのオブジェクトはあらかじめ、リストボックスプロパティにて表示設定にされている必要があります。
 

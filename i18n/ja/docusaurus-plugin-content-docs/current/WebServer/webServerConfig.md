@@ -577,15 +577,15 @@ User-Agent: <name>
 | ---------------- | ---------------------------------------------------------------------- | ---- |
 | webServer オブジェクト | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |      |
 
-セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティーコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
+セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
 
 > `SameSite` 属性に関する詳細な説明は [Mozilla のドキュメンテーション](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) または [こちらの Web開発ページ (英語)](https://web.dev/samesite-cookies-explained/) を参照ください。
 
 次の値が提供されています:
 
-- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティーのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティーの Webサイトには決して送信されません。
-- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティーのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
-- "None": ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
+- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティの Webサイトには決して送信されません。
+- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
+- "None": ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
 
 セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。
 

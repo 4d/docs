@@ -23,11 +23,12 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース                        | 内容                                                 |
-| --------------------------- | -------------------------------------------------- |
-| 19 R6                       | 変更                                                 |
-| 16 R2                       | 名称変更(旧 Get Listbox information) |
-| <6 | Created                                            |
+| リリース                        | 内容                                                                                                  |
+| --------------------------- | --------------------------------------------------------------------------------------------------- |
+| 20 R10                      | Support of lk current item expression, lk current item pos expression, lk selected items expression |
+| 19 R6                       | 変更                                                                                                  |
+| 16 R2                       | 名称変更(旧 Get Listbox information)                                                  |
+| <6 | Created                                                                                             |
 
 </details>
 </div>

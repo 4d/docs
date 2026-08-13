@@ -1212,6 +1212,19 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
  $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
 ```
 
+
+#### Exemplo 3
+
+The `.filter()` function can be used to compare two collections and extract the differences between them:
+
+```4d
+var $c1:=New collection(12; 45; 78; 99; 156)
+var $c2:=New collection(12; 78; 99) //two elements are missing
+var $diff:=$c1.filter(Formula(Not($c2.includes($1.value))))
+  // $diff=[45, 156]
+```
+
+
 <!-- END REF -->
 
 
@@ -2744,9 +2757,9 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 
 ```4d
-C_COLLECTION($c)
- $c:=New collection(5;3;5;1;3;4;4;6;2;2)
- $r:=$c.reduce("Multiply";1) //returns 86400
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduce(Formula($1.accumulator=$1.value); 1)  //returns 86400
 ```
 
 
@@ -2839,9 +2852,9 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 
 ```4d
-//numberOrder project method
- var $1 : Object
- $1.result:=String($1.value)<String($1.value2)
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //returns 86400
 
 
 ```

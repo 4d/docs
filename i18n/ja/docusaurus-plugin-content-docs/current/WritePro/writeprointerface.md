@@ -29,7 +29,7 @@ slug: /WritePro/write-pro-interface
 
 ### WP表ウィザードのインターフェース
 
-ユーザーは、4D Write Pro インタフェースツールバーとサイドバーの "表を挿入" メニューボタンから表ウィザードダイアログを開きます。
+ユーザーは、4D Write Pro インターフェースツールバーとサイドバーの "表を挿入" メニューボタンから表ウィザードダイアログを開きます。
 
 ![](../assets/en/WritePro/tablewizard-interface2.png)
 

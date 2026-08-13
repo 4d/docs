@@ -77,7 +77,7 @@ $lastEmployee:=$employee.last()
 
 4D プラグインや 4D コンポーネントを利用して、4D 開発環境に新しくコマンドを追加することもできます。
 
-4D のユーザーコミュニティーや、サードパーティーデベロッパーによるプラグインが多数存在します。 たとえば, [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) プラグインを macOS で使用した場合は次のコードが書けます:
+4D のユーザーコミュニティや、サードパーティデベロッパーによるプラグインが多数存在します。 たとえば, [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) プラグインを macOS で使用した場合は次のコードが書けます:
 
 ```4d
 PDF REMOVE PAGE(path;page)

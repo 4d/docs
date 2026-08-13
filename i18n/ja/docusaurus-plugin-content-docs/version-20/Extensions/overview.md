@@ -14,7 +14,7 @@ title: 拡張機能
 | コンポーネント                                                              | 説明                                                                                                | 主な機能                                                                                    |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [4D Labels](https://github.com/4d/4D-Labels)                         | ラベルテンプレートを作成するための内部コンポーネント                                                                        |                                                                                         |
-| [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x)               | サードパーティーAPI に接続するためのツール                                                                           | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`        |
+| [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x)               | サードパーティAPI に接続するためのツール                                                                            | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`        |
 | [4D Progress](https://github.com/4d/4D-Progress)                     | 1つ以上の進捗バーを同じウィンドウで開く                                                                              | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
 | [4D SVG](https://github.com/4d/4D-SVG)                               | 一般的な svgグラフィックオブジェクトの作成・操作                                                                        | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                               |
 | [4D ViewPro](ViewPro/getting-started.md)                             | フォームに追加できる表計算機能                                                                                   | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                |
@@ -22,7 +22,7 @@ title: 拡張機能
 | [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | [4D Write Pro](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.ja.html) パレットの管理 | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`          |
 
 
-## サードパーティーコンポーネント
+## サードパーティコンポーネント
 
 独自の 4Dコンポーネントを開発し、インストールすることができます。 詳しくは [このページ](develop-components.md) を参照ください。
 

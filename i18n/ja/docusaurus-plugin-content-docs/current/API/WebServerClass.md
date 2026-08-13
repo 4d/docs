@@ -566,9 +566,9 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 | 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティのコンテキストでのみ cookie が送信されます。                  |
 | Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
-| Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
+| Web SameSite None   | "None"   | ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。       |
 
 詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) の説明を参照ください。
 
