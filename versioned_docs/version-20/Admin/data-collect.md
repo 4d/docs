@@ -120,7 +120,7 @@ Some data is also collected at regular intervals.
 
 ## Where is it stored and sent?
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Collected data is written in a text file (JSON format) per database when certain events occur, such as when 4D Server starts up or shuts down.. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
 
 - on Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
