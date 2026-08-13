@@ -5,16 +5,18 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* : Text ; *nomElement* : Text ; *indice* : Integer ; *valorElement* : Variable ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* : Text ; *nomElément* : Text ; *indice* : Integer {; *valeurElément* : Variable {; *nomsAttr* : Text array {; *valeursAttr* : Text array }}}) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594; | Referencia del elemento XML |
-| nomElement | Text | &#8594; | Nombre del elemento a leer |
-| indice | Integer | &#8594; | Número de índice del elemento a leer |
-| valorElement | Variable | &#8592; | Valor del elemento |
+| elementRef | Text | &#8594;  | Referencia del elemento XML |
+| nomElement | Text | &#8594;  |Nombre del elemento a leer |
+| indice | Integer | &#8594;  | Número de índice del elemento a leer |
+| valeurElemento | Variable | &#8592; | Valor del elemento |
+| nomsAtr | Text array | &#8592;  | Nombres de atributos |
+| valorAttrElement | Array texto | &#8592; | Valores de los atributos |
 | Resultado | Text | &#8592; | Referencia del elemento XML (16 caracteres) |
 </div>
 <!-- END REF-->

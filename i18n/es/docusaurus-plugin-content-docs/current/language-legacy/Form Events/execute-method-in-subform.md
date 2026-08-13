@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | objetoSubForm | Text | &#8594; | Nombre del objeto subformulario |
 | nomMetodo | Object, Text | &#8594; | Nombre del método proyecto a ejecutar |
 | retorno | Variable | &#8592; | Value returned by formula (if any) |
-| \* | Operator | &#8594; | Formula does not return a value |
+| \* | Operator | &#8594; | La fórmula no devuelve ningún valor |
 | param | Expression | &#8594; | Parámetro(s)a pasar al método |
 </div>
 <!-- END REF-->

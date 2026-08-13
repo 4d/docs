@@ -5,13 +5,13 @@ slug: /commands/web-set-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( encab|arrayCamp {; *arrayValores* : Text array} )<!-- END REF-->
+<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *header* : Text )<br/>**WEB SET HTTP HEADER** ( *fieldArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| encab&#124;arrayCamp | Texto, Array texto | &#8594; | Campo o variable que contiene el encabezado HTTP de la petición o Array de campos del encabezado HTTP |
+| encab&#124;arrayCamp | Text, Text array | &#8594; | Campo o variable que contiene el encabezado HTTP de la petición o Array de campos del encabezado HTTP |
 | arrayValores | Text array | &#8594; | Contenido de los campos del encabezado HTTP |
 </div>
 <!-- END REF-->

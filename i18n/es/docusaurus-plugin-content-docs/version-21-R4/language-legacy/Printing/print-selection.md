@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabla* : Table}{;}{* | >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*aTable* : Table} {; *} )<br/>**PRINT SELECTION** ( {*aTable* : Table} {; > : >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 <div class="no-index">
 
@@ -18,6 +18,7 @@ displayed_sidebar: docs
 
 <div class="no-index">
 <details><summary>Historial</summary>
+
 
 |Versión|Cambios|
 |---|---|

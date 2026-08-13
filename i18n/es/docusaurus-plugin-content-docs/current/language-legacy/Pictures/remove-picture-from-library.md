@@ -5,13 +5,13 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( refImag | nomImag )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Entero largo, Cadena | &#8594; | Número de referencia o nombre de una imagen de la librería de imágenes |
+| refImag &#124; nomImag | Integer, Text | &#8594; | Número de referencia o nombre de una imagen de la librería de imágenes |
 </div>
 <!-- END REF-->
 

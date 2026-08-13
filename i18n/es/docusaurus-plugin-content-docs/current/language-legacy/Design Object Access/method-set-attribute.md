@@ -5,7 +5,7 @@ slug: /commands/method-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *ruta* : Text ; *tipoAtrib* : Integer ; *valorAtrib* : Boolean, Text {; ...(*tipoAtrib* : Integer, *valorAtrib* : Boolean, Text)}{; *operador* : *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *path* : Text ; *attribType* : Integer ; *attribValue* : Boolean, Text {; ...(*attribType* : Integer ; *attribValue* : Boolean, Text)}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -14,12 +14,13 @@ displayed_sidebar: docs
 | ruta | Text | &#8594; | Ruta del método proyecto |
 | tipoAtrib | Integer | &#8594; | Tipo de atributo |
 | valorAtrib | Boolean, Text | &#8594; | True = seleccionar el atributo  False = deseleccionar el atributo |
-| operador | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
+| * | Operator | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
 <details><summary>Historial</summary>
+
 
 |Versión|Cambios|
 |---|---|

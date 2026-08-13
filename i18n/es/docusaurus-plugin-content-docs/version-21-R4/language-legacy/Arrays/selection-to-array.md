@@ -5,17 +5,15 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *campo* : Field ; *array* : Array {; *campo* : Field ; *array* : Array {; ...(*campo* : Field, *array* : Array)}}{; *}})<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({...(*selection* : Field, Table ; *array* : Array)} {; *})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field, Table | &#8594; | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
-| array | Array | &#8592; | Array para recibir valores de campos o números de registros |
-| campo | Field | &#8594; | Campo a recuperar en el array |
-| array | Array | &#8592; | Array que recibe los valores del campo |
-| * | Operador | &#8594; | Esperar ejecución |
+| seleccion | Field, Table | &#8594;  | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registro |
+| array | Array | &#8592; | Array para recibir valores de los campos o los números de registros |
+| * | Operador | &#8594;  | Esperar ejecución |
 </div>
 <!-- END REF-->
 

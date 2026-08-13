@@ -5,14 +5,14 @@ slug: /commands/font-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fuentes* : Text array {; *tipoLista* : Integer, *} )<!-- END REF-->
+<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* : Text array {; *listType* : Integer } )<br/>**FONT LIST** ( *fonts* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuentes | Text array | &#8592; | Array de nombres de fuentes disponibles |
-| tipoLista | Integer, * | &#8594; | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en macOS |
+| tipoLista &#124; * | Integer, Operator | &#8594; | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en macOS |
 </div>
 <!-- END REF-->
 

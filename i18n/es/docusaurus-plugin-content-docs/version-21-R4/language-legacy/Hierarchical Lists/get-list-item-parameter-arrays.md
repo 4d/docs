@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena)Si se omite, lista es un número de referencia de lista |
 | lista | Integer, Text | &#8594; | Número de referencia de lista oNombre de objeto de tipo lista (si se pasa *) |
-| refElemento | Integer, * | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| refElemento | Integer, Operator | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
 | arrSelectores | Text array | &#8592; | Array de los nombres de parámetros |
 | arrValores | Text array | &#8592; | Array de los valores de los parámetros |
 </div>

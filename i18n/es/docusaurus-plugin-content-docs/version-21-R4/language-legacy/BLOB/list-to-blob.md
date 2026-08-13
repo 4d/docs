@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | lista | Integer | &#8594; | Lista jerárquica a almacenar en el BLOB |
 | Blob | Blob | &#8594; | BLOB a recibir la lista jerárquica |
-| * | Operador | &#8594; | * añadir el valor |
+| * | Operador | &#8594; | Añadir la lista al final del BLOB |
 </div>
 <!-- END REF-->
 

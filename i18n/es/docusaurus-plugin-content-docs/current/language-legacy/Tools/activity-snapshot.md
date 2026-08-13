@@ -5,13 +5,14 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActividades | arrUUID ; *arrInicio* : Text array ; *arrDuracion* : Integer array ; *arrInfo* : Text array {; *arrDetails* : Object array}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *arrActivities* : Object array {; *} )<br/>**ACTIVITY SNAPSHOT** ( *arrUUID* : Text array ; *arrStart* : Text array ; *arrDuration* : Integer array ; *arrInfo* : Text array {; *arrDetails* : Object array}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrActividades &#124; arrUUID | Array objeto, Array texto | &#8592; | Descripción completa de operaciones (array objeto) o<br/>UUIDs de las operaciones (array texto) |
+| arrUUID | Text array | &#8592; | UUIDs de operaciones  |
 | arrInicio | Text array | &#8592; | Horas de inicio de las operaciones |
 | arrDuracion | Integer array | &#8592; | Duración de las operaciones en milisegundos |
 | arrInfo | Text array | &#8592; | Descripción |
