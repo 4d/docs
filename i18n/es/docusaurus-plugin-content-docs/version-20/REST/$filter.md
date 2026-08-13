@@ -38,15 +38,31 @@ También puede utilizar la propiedad params de 4D.
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
 Para más información sobre cómo consultar los datos en 4D, consulte la [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentación.
-> Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
-> 
-> <li>Comillas ('): \u0027</li>
-  <li>Comillas dobles ("): \u0022</li>
-> 
-> Por ejemplo, se puede escribir lo siguiente al pasar un valor con una comilla cuando se utiliza la propiedad *params*:  
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
-> 
-> If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+
+
+
+:::note
+
+The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+
+:::
+
+
+:::note
+
+Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
+
+- Comillas ('): \u0027
+- Comillas dobles ("): \u0022
+
+For example, you can write the following when passing a value with a quote when using the *params* property:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+If you pass the value directly, you can write the following:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 ## Atributo
 

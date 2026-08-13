@@ -95,7 +95,7 @@ Para más información, vea la [descripción de la clase `4D.Formula`](../API/Fo
 
 Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
 
-Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. Por ejemplo, un comando de menú de entrada de registros puede llamar a un método que realice dos tareas: mostrar el formulario de entrada apropiado y llamar al comando [`ADD RECORD`(../commands/add-record)] hasta que el usuario cancele la actividad de entrada de datos.
+Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`](../commands/add-record) command until the user cancels the data entry activity.
 
 La automatización de secuencias de actividades es una capacidad muy poderosa del lenguaje de programación 4D. Utilizando los menús personalizados, se pueden automatizar las secuencias de tareas y, por lo tanto, ofrecer más orientación a los usuarios de la aplicación.
 

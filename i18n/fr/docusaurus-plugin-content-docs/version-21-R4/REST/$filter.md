@@ -35,16 +35,26 @@ Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` o
 
 Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la [documentation de dataClass.query()](../API/DataClassClass.md#query).
 
-> Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
->
-> <li>Quotes ('): \u0027</li>
-> <li>Guillemets doubles ("): \u0022</li>
->
-> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
->
-> Si vous passez la valeur directement, vous pouvez écrire ce qui suit:
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+:::note
+
+The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+
+:::
+
+:::note
+
+Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
+
+- Quotes ('): \u0027
+- Guillemets doubles ("): \u0022
+
+Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+If you pass the value directly, you can write the following:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 ## Attribut
 

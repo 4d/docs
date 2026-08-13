@@ -258,7 +258,7 @@ La propriété `restrictedByDefault` configure la manière dont chaque [ressourc
 
 :::
 
-### Recommended Configuration {#recommended-configuration}
+### Configuration recommandée {#recommended-configuration}
 
 En fonction de votre environnement, les paramètres recommandés sont les suivants :
 

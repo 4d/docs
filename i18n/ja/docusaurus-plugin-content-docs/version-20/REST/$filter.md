@@ -38,15 +38,31 @@ title: '$filter'
 たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 
 4D においてデータをクエリする方法についての詳細は、[dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.ja.html) ドキュメンテーションを参照ください。
-> 単一引用符 (') または二重引用符 (") を挿入するには、対応する文字コードを使ってそれらをエスケープする必要があります:
-> 
-> <li>単一引用符 ('): \u0027</li>
-  <li>二重引用符 ("): \u0022</li>
-> 
-> たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
-> 
-> 値を直接渡す場合は、次のように書けます: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+
+
+
+:::note
+
+The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+
+:::
+
+
+:::note
+
+単一引用符 (') または二重引用符 (") を挿入するには、対応する文字コードを使ってそれらをエスケープする必要があります:
+
+- 単一引用符 ('): \u0027
+- 二重引用符 ("): \u0022
+
+For example, you can write the following when passing a value with a quote when using the *params* property:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+If you pass the value directly, you can write the following:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 ## 属性
 

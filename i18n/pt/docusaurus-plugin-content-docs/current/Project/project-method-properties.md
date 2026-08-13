@@ -94,7 +94,7 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
-Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`](../commands/add-record) command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the 4D programming language. Usando menus personalizados, pode automatizar sequências de tarefa e fornecer mais orientação aos usuários do banco de dados.
 

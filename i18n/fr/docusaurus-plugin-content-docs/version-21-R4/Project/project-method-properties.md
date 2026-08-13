@@ -95,7 +95,7 @@ Pour plus d'informations, voir la description de la [classe `4D.Formula`](../API
 
 Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu en utilisant l'éditeur de menu ou une [commande du thème "Menus"](../commands/theme/Menus.md). Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. En créant des menus personnalisés qui appellent des méthodes de menu qui exécutent des actions spécifiques, vous créez des interfaces personnalisées pour vos applications de bureau.
 
-Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu pour créer des enregistrements peut appeler une méthode qui exécute deux tâches : afficher le formulaire de saisie approprié, et en appelant la commande [`ADD RECORD`](. /commands/add-record)] jusqu'à ce que l'utilisateur annule l'action de saisie de données.
+Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`](../commands/add-record) command until the user cancels the data entry activity.
 
 L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre application.
 
