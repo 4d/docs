@@ -23,6 +23,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|20 R10|Support of lk current item expression, lk current item pos expression, lk selected items expression|
 |19 R6|Modified|
 |16 R2|Renamed (Get Listbox information)|
 |<6|Created|
@@ -69,6 +70,7 @@ In the *property* parameter, pass a constant indicating the property whose value
 | lk named selection             | 28    | **[Named Selection](../../FormObjects/properties_DataSource.md#selection-name)** property for selection type list box<br/>Applies to: List box                                                                                                                                                                                                                                                     |
 | lk resizing mode               | 11    | **[Column Auto-Resizing](../../FormObjects/properties_ResizingOptions.md#column-auto-resizing)** property<br/>Applies to: List box<br/>Possible values:<br/>lk manual (0) <br/> lk automatic (2)                                                                                                                                                                                                     |
 | lk row height unit             | 17    | Unit of **[Row Height](../../FormObjects/properties_CoordinatesAndSizing.md#row-height)** property <br/>Applies to: List box<br/>Possible values:<br/> lk lines (1)<br/>lk pixels (0)<br/>                                                                                                                                                                            |
+| lk selected items expression   | 40 | **[Selected items](../../FormObjects/properties_DataSource.md#selected-items)** property<br/>Applies to: List box (Collection / Entity selection) |
 | lk selection mode              | 10    | **[Selection Mode](../../FormObjects/properties_ListBox.md#selection-mode)** property<br/>Applies to: List box<br/>Possible values: <br/> lk none (0)<br/>lk single (1)<br/>lk multiple (2)                                                                                                                                                                  |
 | lk single click edit           | 29    | **[Single-Click Edit](../../FormObjects/properties_Entry.md#single-click-edit)** property<br/>Applies to: List box<br/>Possible values: <br/> lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                  |
 | lk sortable                    | 20    | **[Sortable](../../FormObjects/properties_Action.md#sortable)** property<br/>Applies to: List box<br/>Possible values: <br/> lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                       |
