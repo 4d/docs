@@ -297,9 +297,9 @@ El mecanismo [`POST OUTSIDE CALL`](../commands/post-outside-call) y [`Outside ca
 
 Los procesos de usuario de un cliente (procesos que se ejecutan en una máquina cliente) pueden leer y escribir las variables de proceso (\*) de un procedimiento almacenado mediante los comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE TO VARIABLE`](../commands/variable-to-variable).
 
-(\*) as well as the server machine interprocess variable.
+(\*) así como las variables interproceso del equipo servidor.
 
-Important: "Intermachine" process communication, provided by the commands [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) and [`VARIABLE TO VARIABLE`](../commands/variable-to-variable), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure.
+Importante: la comunicación de procesos "intermáquinas", proporcionada por los comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE TO VARIABLE`](../commands/variable-to-variable), solo es posible del cliente al servidor. Siempre es un proceso cliente el que lee o escribe las variables de un procedimiento almacenado.
 
 #### Stored procedures on client machines
 

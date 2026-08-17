@@ -712,52 +712,52 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 ### OBJECT Get pointer
 
-The [`OBJECT Get pointer`](../commands/object-get-pointer) command used with the `Object with focus` or `Object current` constant can be used in the object method of a list box or a list box column. They return a pointer to the list box, the list box column (see note below) or the header variable depending on the type of [form event](../Events/overview.md). The following table details this functioning:
+[`OBJECT Get pointer`](../commands/object-get-pointer) コマンドで `Object with focus` または `Object current` 定数を使用する方法は、リストボックス本体またはリストボックスカラムのオブジェクトメソッドで使用することができます。 これは[フォームイベント](../Events/overview.md) のタイプによって、リストボックス、リストボックスカラム(以下の注記参考)またはヘッダ変数へのポインターを返します。 以下の表はこの機能の動作の詳細をまとめたものです:
 
-| イベント                                                     | フォーカスを持つオブジェクト                       | Object current                      |
-| -------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
-| [`On Clicked`](../Events/onClicked.md)                   | リストボックス                              | 列                                   |
-| [`On Double Clicked`](../Events/onDoubleClicked.md)      | リストボックス                              | 列                                   |
-| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | 列                                    | 列                                   |
-| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | 列                                    | 列                                   |
-| [`On After Edit`](../Events/onAfterEdit.md)              | 列                                    | 列                                   |
-| [`On Getting Focus`](../Events/onGettingFocus.md)        | 列またはリストボックス (\*)  | 列またはリストボックス (\*) |
-| [`On Losing Focus`](../Events/onLosingFocus.md)          | 列またはリストボックス (\*)  | 列またはリストボックス (\*) |
-| [`On Drop`](../Events/onDrop.md)                         | list box (source) | リストボックス (\*)     |
-| [`On Drag Over`](../Events/onDragOver.md)                | list box (source) | リストボックス (\*)     |
-| [`On Begin Drag Over`](../Events/onBeginDragOver.md)     | リストボックス                              | リストボックス (\*)     |
-| [`On Mouse Enter`](../Events/onMouseEnter.md)            | リストボックス (\*\*)    | リストボックス (\*\*)   |
-| [`On Mouse Move`](../Events/onMouseMove.md)              | リストボックス (\*\*)    | リストボックス (\*\*)   |
-| [`On Mouse Leave`](../Events/onMouseLeave.md)            | リストボックス (\*\*)    | リストボックス (\*\*)   |
-| [`On Data Change`](../Events/onDataChange.md)            | 列                                    | 列                                   |
-| [`On Selection Change`](../Events/onSelectionChange.md)  | リストボックス (\*\*)    | リストボックス (\*\*)   |
-| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | 列                                    | 列                                   |
-| [`On Column Moved`](../Events/onColumnMoved.md)          | リストボックス                              | 列                                   |
-| [`On Row Moved`](../Events/onRowMoved.md)                | リストボックス                              | リストボックス                             |
-| [`On Column Resize`](../Events/onColumnResize.md)        | リストボックス                              | 列                                   |
-| [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                  | リストボックス (\*\*)   |
-| [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                  | リストボックス (\*\*)   |
-| [`On Header Click`](../Events/onHeaderClick.md)          | リストボックス                              | ヘッダー                                |
-| [`On Footer Click`](../Events/onFooterClick.md)          | リストボックス                              | フッター                                |
-| [`On After Sort`](../Events/onAfterSort.md)              | リストボックス                              | ヘッダー                                |
+| イベント                                                     | `Object with focus`                   | `Object current`                      |
+| -------------------------------------------------------- | ------------------------------------- | ------------------------------------- |
+| [`On Clicked`](../Events/onClicked.md)                   | リストボックス                               | 列                                     |
+| [`On Double Clicked`](../Events/onDoubleClicked.md)      | リストボックス                               | 列                                     |
+| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | 列                                     | 列                                     |
+| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | 列                                     | 列                                     |
+| [`On After Edit`](../Events/onAfterEdit.md)              | 列                                     | 列                                     |
+| [`On Getting Focus`](../Events/onGettingFocus.md)        | カラムまたはリストボックス (\*) | カラムまたはリストボックス (\*) |
+| [`On Losing Focus`](../Events/onLosingFocus.md)          | カラムまたはリストボックス (\*) | カラムまたはリストボックス (\*) |
+| [`On Drop`](../Events/onDrop.md)                         | リストボックス(ソース)       | リストボックス (\*)       |
+| [`On Drag Over`](../Events/onDragOver.md)                | リストボックス(ソース)       | リストボックス (\*)       |
+| [`On Begin Drag Over`](../Events/onBeginDragOver.md)     | リストボックス                               | リストボックス (\*)       |
+| [`On Mouse Enter`](../Events/onMouseEnter.md)            | リストボックス (\*\*)     | リストボックス (\*\*)     |
+| [`On Mouse Move`](../Events/onMouseMove.md)              | リストボックス (\*\*)     | リストボックス (\*\*)     |
+| [`On Mouse Leave`](../Events/onMouseLeave.md)            | リストボックス (\*\*)     | リストボックス (\*\*)     |
+| [`On Data Change`](../Events/onDataChange.md)            | 列                                     | 列                                     |
+| [`On Selection Change`](../Events/onSelectionChange.md)  | リストボックス (\*\*)     | リストボックス (\*\*)     |
+| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | 列                                     | 列                                     |
+| [`On Column Moved`](../Events/onColumnMoved.md)          | リストボックス                               | 列                                     |
+| [`On Row Moved`](../Events/onRowMoved.md)                | リストボックス                               | リストボックス                               |
+| [`On Column Resize`](../Events/onColumnResize.md)        | リストボックス                               | 列                                     |
+| [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                   | リストボックス (\*\*)     |
+| [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                   | リストボックス (\*\*)     |
+| [`On Header Click`](../Events/onHeaderClick.md)          | リストボックス                               | ヘッダー                                  |
+| [`On Footer Click`](../Events/onFooterClick.md)          | リストボックス                               | フッター                                  |
+| [`On After Sort`](../Events/onAfterSort.md)              | リストボックス                               | ヘッダー                                  |
 
-(\*) When the focus is modified within a list box, a pointer to the column is returned. When the focus is modified at the overall form level, a pointer to the list box is returned. In the context of a column object method, a pointer to the column is returned.
-(\*\*) Not executed in the context of a column object method.
+(\*) フォーカスがリストボックス内で変更された場合、カラムへのポインターが返されます。 フォーカスがフォーム全体のレベルで変更された場合、リストボックスへのポインターが返されます。 カラムのオブジェクトメソッドのコンテキストにおいては、カラムへのポインターが返されます。
+(\*\*) カラムのオブジェクトメソッドのコンテキストにおいては実行されません。
 
 :::note
 
-When a pointer to a column is returned, the object pointed to depends on the type of list box. With an array type list box, the `OBJECT Get pointer` command returns a pointer to the column of the list box with the focus (i.e. to an array). The 4D pointer mechanism allows you to see the item number of the modified array. For example, supposing a user modified the 5th line of the column col2:
+カラムへのポインターが返された場合、ポインターが指し示すオブジェクトはリストボックスのタイプによって変わります。 配列型リストボックスの場合、`OBJECT Get pointer` コマンドは、フォーカスがあるリストボックスのカラム(つまり配列)へのポインターを返します。 4D のポインターの機構では、変更された配列の項目番号を見ることができます。 例えば、ユーザーがcol2 というカラムの5行目を編集したとします:
 
 ```4d
  $Column:=OBJECT Get pointer(Object with focus)
-  //$Column contains a pointer to col2
- $Row:=$Column-> //$Row equals 5
+  //$Column にはcol2 へのポインターが格納される
+ $Row:=$Column-> //$Row は 5
 ```
 
 :::
 
-For a selection type list box, the `OBJECT Get pointer` command returns:
+セレクション型リストボックスの場合、`OBJECT Get pointer` コマンドが返すものは以下の様になります:
 
-- For a column associated with a field, a pointer to the associated field,
-- For a column associated with a variable, a pointer to the variable,
-- For a column associated with an expression, the `Is nil pointer` pointer.
+- カラムにフィールドが割り当てられていた場合、割り当てられたフィールドへのポインターが返されます
+- カラムに変数が割り当てられていた場合、その変数へのポインターが返されます
+- カラムに式が割り当てられていた場合、`Is nil pointer` ポインターが返されます

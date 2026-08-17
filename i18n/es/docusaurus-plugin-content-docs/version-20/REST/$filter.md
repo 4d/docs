@@ -44,7 +44,7 @@ Para más información sobre cómo consultar los datos en 4D, consulte la [dataC
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+No está permitido el uso de la instrucción `eval()` en las consultas REST (y, por lo tanto, en las consultas [a datastores remotos](../ORDA/remoteDatastores.md)).
 
 :::
 
@@ -56,10 +56,10 @@ Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su c�
 - Comillas ('): \u0027
 - Comillas dobles ("): \u0022
 
-For example, you can write the following when passing a value with a quote when using the *params* property:  
+Por ejemplo, se puede escribir lo siguiente al pasar un valor con una comilla cuando se utiliza la propiedad *params*:<  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+Si pasa el valor directamente, puede escribir lo siguiente:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::

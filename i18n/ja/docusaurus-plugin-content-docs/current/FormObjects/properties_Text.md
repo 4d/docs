@@ -530,29 +530,29 @@ End if
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../commands/theme/Styled_Text.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["スタイル付きテキスト" テーマ](../commands/theme/Styled_Text.md)
 
-### Supported tags
+### サポートされているタグ
 
-You can use the following tags in 4D multi-style text areas.
+4D のマルチスタイルテキストエリアでは以下のタグを使用することができます。
 
-#### 4D Expression
+#### 4D式
 
 ```html
 <span style="-d4-ref:'expression'"> </span>
 ```
 
-This tag inserts a 4D expression (expression, method, field, variable, command, etc.) in the text. The expression is tokenized and evaluated:
+このタグは、テキストに4D式 (式、メソッド、フィールド、変数、コマンド、等) を 挿入します。 これらの式は以下のタイミングでトークナイズ度されて評価されます:
 
-- when the expression is inserted
-- when the object is loaded
-- when the `computeExpressions` standard action is called from an interface object or by the [`INVOKE ACTION`](../commands/invoke-action) command
-- when the [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) command is executed
-- when the [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) command is executed, if the second `*` parameter is passed.
+- 式が挿入されたとき
+- オブジェクトがロードされたとき
+- インターフェースオブジェクト、または[`INVOKE ACTION`](../commands/invoke-action) コマンドによって `computeExpressions` 標準アクションが呼び出されたとき
+- [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) コマンドが実行されたとき
+- [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) コマンドに第二引数 `*` が渡された状態で実行されたとき
 
-The evaluated value of the expression is not saved in the `<span>` tag, only its reference is.
+式の評価された値は `<span>` タグに保存されません。参照のみが保存されます。
 
-Note: To ensure that expressions will be evaluated correctly regardless of the 4D language or version used, we recommend using the token syntax for elements whose name might vary between different versions (commands, tables, fields, constants). たとえば、`Current time` コマンドを挿入するには、"`Current time:C178`"と入力します。 For more information about this, refer to *Using tokens in formulas*.
+注: 4Dのランゲージやバージョンに関係なく、式の正常な評価を確実にするには、異なるバージョン間において名前が変化しそうな要素 (コマンド、テーブル、フィールド、定数) に対してはトークンシンタックスを使用することが推奨されます。 たとえば、`Current time` コマンドを挿入するには、"`Current time:C178`"と入力します。 この点についての詳細は *フォーミュラ内でのトークンの使用* を参照ください。
 
 #### URL
 
@@ -560,27 +560,27 @@ Note: To ensure that expressions will be evaluated correctly regardless of the 4
 <span><a href="url">Visible label</a></span>
 ```
 
-This tag inserts a URL in the text. 例:
+このタグはテキストにURLを挿入します。 例:
 
 ```html
 <span><a href="http://www.4d.com/">4D Web Site</a></span>
 ```
 
-#### User link
+#### ユーザーリンク
 
 ```html
 <span style="-d4-ref-user:'myUserLink'">Click here</span>
 ```
 
-"User links" look the same as URLs, but when you click them, they do not automatically open the source. You can pass any string you want as reference, and it is up to the developer to program any custom actions that occur when it is clicked. This means you can create links which are not URLs but references to files, 4D methods, and so on, that you can open or execute when they are clicked. The [`ST Get content type`](../commands/st-get-content-type) command detects if a user link has been clicked.
+"ユーザーリンク" は見た目が URL と同じですが、クリックしてもソースは自動的に開きません。 どのような文字列でも参照として渡すことができますが、クリックされたときに起こるアクションはデベロッパーによってプログラムされた内容によります。 つまり、タグがクリックされたときに、URL の代わりに、ファイルや 4Dメソッド等を開いたり実行したりすることができます。 [`ST Get content type`](../commands/st-get-content-type) コマンドによって、ユーザーリンクがクリックされたかどうかを検知することもできます。
 
-User links are defined using the [`ST SET TEXT`](../commands/st-set-text) command. 例:
+ユーザーリンクは[`ST SET TEXT`](../commands/st-set-text) コマンドによって定義します。 例:
 
 ```4d
 ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
 ```
 
-#### Custom tags
+#### カスタムのタグ
 
 You can insert any tag in plain text, for example `<img src="http://doc.4d.com/pictures/ja.png">`. It is stored in the code of the plain text without being interpreted or displayed. This is particularly useful in the context of e-mails in HTML format and including pictures for example.
 

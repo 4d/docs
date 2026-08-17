@@ -9,9 +9,9 @@ title: 入力
 
 自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 この場合、スペルチェックはタイプ中に自動的に実行されます。 チェックしたいオブジェクトそれぞれに対して [`SPELL CHECKING`](../commands/spell-checking) 4Dランゲージコマンドを呼び出して実行することもできます。
 
-:::note Writing Tools (macOS)
+:::note ライティングツール(macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using AI, you might consider using the [Writing Tools](#writing-tools) property.
+macOS において、ユーザーがドキュメントのスペルチェックをできるように、Apple Intelligence ライティングツールを提供したい場合、[ライティングツール](#ライティングツール) プロパティの使用を検討してみてください。
 
 :::
 
@@ -144,9 +144,9 @@ On macOS, if you want to provide your users with Apple Intelligence Writing Tool
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                     |
-| ----------- | ------ | ----------------------------------------- |
-| entryFilter | string | <li>入力フィルターコード</li> または <li>入力フィルター名</li> |
+| 名称          | データタイプ | とりうる値                                                                |
+| ----------- | ------ | -------------------------------------------------------------------- |
+| entryFilter | string | <li>入力フィルターコード</li>、または<li>入力フィルター名 (フィルター名は &#124; で始まります)</li> |
 
 #### 対象オブジェクト
 
@@ -371,43 +371,43 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 ---
 
-## Writing Tools
+## ライティングツール
 
-On macOS, this property lets end users apply [Apple Intelligence **Writing Tools**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) to the text of [4D Write Pro](writeProArea_overview.md) and [input](input_overview.md) (with [multiline](#multiline) support) form objects. Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+macOS においてこのプロパティを使用するとエンドユーザーが[Apple Intelligence **ライティングツール**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) を[4D Write Pro](writeProArea_overview.md) および[入力](input_overview.md) ([複数行](#複数行) サポートつき) フォームオブジェクトのテキストに対して適用することができるようになります。 ライティングツールは、あなたの4D アプリケーション内で直接テキストの校正、書き直し、要約、あるいは文体の変更を行うためにAI を活用します。
 
 ![](../assets/en/FormObjects/writing-tools.png)
 
 :::tip 関連したblog 記事
 
-Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**.
+**実際のライティングツールの振る舞いを見る** ためには、[Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) のblog 記事を参照してください。
 
 :::
 
-When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+プロパティが有効化されていてフォームが実行された場合、オブジェクトの[コンテキストメニュー](#コンテキストメニュー) に**ライティングツールを表示** というメニュー項目が追加されます。 ユーザーがライティングツール内のアクションを選択した場合、選択状態に応じて以下の様な編集が返されます:
 
-- if some text is selected, only the selection is replaced,
-- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+- テキストの一部が選択されていた場合、選択範囲のみが置換されます
+- 選択範囲がない場合、エリアのコンテンツ全体が使用されます([4D Write Pro](writeProArea_overview.md) エリアの場合、カレントコンテナの全てのコンテンツが使用されます)。 ライティングツールが使用するコンテキストは、カーソルが位置しているコンテナ(ヘッダー、フッター、本文、またはテキストボックス)とカレントの選択範囲です。
 
 :::note
 
-Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.
+ライティングツールを使用する際は通常はスタイルは保持されますが、しかしながら一部のAI 機能によってはスタイルが置き換えられる可能性もあります。
 
 :::
 
-The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+ライティングツールは、**ライティングツール** [標準アクション](properties_Action.md#標準アクション) を通して表示することもでき、これはボタンやメニュー項目に割り当てることができます。
 
 :::note
 
-The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+ライティングツールは**Apple Intelligence** に依存しており、またmacOS に互換性のあるコンピューター上で、システム設定で*Apple Intelligence & Siri* が有効化されている場合のみ利用可能です。 Windows 上、またはApple Intelligence が有効化されていない場合でも、プロパティはプロパティリスト内に引き続き表示されますが、割り当てられた**ライティングツール** 標準アクションはランタイムには無効化されます(プログラミングでそれを呼び出した場合でも、何も起きません)。
 
 :::
 
-The availability and default value of the property depend on the object type:
+プロパティの利用可能状況およびデフォルト値は、オブジェクトタイプによって変わります:
 
-| Object                                       | Availability in the Property List                                             | デフォルト値 |
-| -------------------------------------------- | ----------------------------------------------------------------------------- | ------ |
-| [入力](input_overview.md)                      | Only when the [Multiline](#multiline) property is set to "Yes" or "Automatic" | false  |
-| [4D Write Pro エリア](writeProArea_overview.md) | Always displayed                                                              | true   |
+| Object                                       | プロパティリスト内で利用可能かどうか                         | デフォルト値 |
+| -------------------------------------------- | ------------------------------------------ | ------ |
+| [入力](input_overview.md)                      | [複数行](#複数行) が"はい"または "自動"に設定されている場合にのみ利用可能 | false  |
+| [4D Write Pro エリア](writeProArea_overview.md) | 常に表示されます                                   | true   |
 
 #### JSON 文法
 
@@ -417,6 +417,6 @@ The availability and default value of the property depend on the object type:
 
 #### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md) ([multiline](#multiline))
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md) ([複数行](#複数行))
 
 

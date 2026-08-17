@@ -97,7 +97,7 @@ title: リリースノート
 #### 動作の変更
 
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
-- *MeCab* ライブラリーは削除されました。 この変更は、日本語テキストの処理のみに影響します。 この変更は、日本語テキストの処理のみに影響します。
+- *MeCab* ライブラリは削除されました。 この変更は、日本語テキストの処理のみに影響します。
 - ["cs" クラス](../Concepts/classes.md#cs) タイプを使用して宣言されたオブジェクト型変数またはオブジェクト型引数に、異なるクラスのオブジェクトインスタンスを代入した場合にはシンタックスエラーを生成するようになりました。
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) 関数は、Web プロセス内において昇格された権限に対してはTrue を返すようになりました。
 - [`Time`](../commands/time) コマンドは、*timeValue* 引数が負の値の場合には、負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。
@@ -108,7 +108,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [*MeCab* ライブラリー](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
+- [*MeCab* ライブラリ](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `address` および `port`。

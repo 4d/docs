@@ -51,9 +51,9 @@ title: データ収集
 | databases[].numberOfRecordsMax                | Number                            | レコードの総数                                                                                                     |
 | databases[].numberOfTables                    | Number                            | テーブルの総数                                                                                                     |
 | databases[].qodly.webforms    | Number                            | Qodly Webフォームの数                                                                                             |
-| databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガの数                                                                                 |
-| databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガの数                                                                                  |
-| databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガの数                                                                                |
+| databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガーの数                                                                                |
+| databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガーの数                                                                                 |
+| databases[].remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガーの数                                                                               |
 | databases[].structureHash                     | Text                              |                                                                                                             |
 | databases[].uniqueID                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | databases[].uptime                            | Number                            | 二つの回収イベント間での経過時間(秒単位)                                                                    |
@@ -136,7 +136,7 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます:
+収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。 このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

@@ -224,7 +224,7 @@ If(Form event code=On Drop) // プロパティリストでドロップ可を有�
 
 - 4Dシグネチャ: 4Dシグネチャは4Dアプリケーションにより参照されるデータタイプを示す文字列です。 4D シグネチャはmacOS およびWindows で同じであるため、マルチプラットフォームアプリケーションの開発に適しています。 4D シグネチャの一覧は以下に示します。
 - UTI (Uniform Type Identifier, macOS のみ): Apple 社が定めるUTI 標準は、ネイティブタイプのオブジェクトごとに文字列を割り当てたものです。 例えば GIFピクチャーには UTIタイプ “com.apple.gif” が割り当てられています。 UTI は Apple社のドキュメント、あるいは関連するエディターで公開されています。
-- 数値またはフォーマット名 (Windowsのみ): Windowsでは、ネイティブデータタイプは数値 (“3”, “12”, 等) と名前 (“Rich Text Edit”)で参照されます。 デフォルトでMicrosoft社は標準データフォーマットと呼ばれるネイティブタイプを複数定義しています。 さらにサードパーティーエディタはシステムにフォーマットを “保存” し、対応する番号を得ることもできます。 この点に関する詳細とネイティブタイプについては、Microsoft developer documentation (特に http://msdn2.microsoft.com/en-us/library/ms649013.aspx ) を参照してください。
+- 数値またはフォーマット名 (Windowsのみ): Windowsでは、ネイティブデータタイプは数値 (“3”, “12”, 等) と名前 (“Rich Text Edit”)で参照されます。 デフォルトでMicrosoft社は標準データフォーマットと呼ばれるネイティブタイプを複数定義しています。 さらにサードパーティエディターはシステムにフォーマットを “保存” し、対応する番号を得ることもできます。 この点に関する詳細とネイティブタイプについては、Microsoft developer documentation (特に http://msdn2.microsoft.com/en-us/library/ms649013.aspx ) を参照してください。
 
 :::note
 

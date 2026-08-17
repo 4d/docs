@@ -53,7 +53,7 @@ title: オブジェクト
 
 > オブジェクト名のサイズ上限は 255バイトです。
 
-When using 4D’s language, you can [refer to an active form object by its object name](./formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language)..
+4D ランゲージを使用する場合、[オブジェクト名を使用してアクティブなフォームオブジェクトを参照する](./formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language) ことができます。
 
 フォームオブジェクトの命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 

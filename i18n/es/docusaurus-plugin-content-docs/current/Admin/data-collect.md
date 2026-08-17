@@ -140,7 +140,7 @@ También se recogen algunos datos a intervalos regulares.
 
 ## ¿Dónde se almacena y envía?
 
-Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se guarda dentro de la [carpeta activa de 4D](../commands/get-4d-folder), es decir:
+Los datos recopilados se guardan en un archivo de texto (formato JSON) para cada base de datos cuando se producen determinados eventos, como al iniciar o cerrar 4D Server. El archivo se guarda dentro de la [carpeta activa de 4D](../commands/get-4d-folder), es decir:
 
 - en Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - en macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
