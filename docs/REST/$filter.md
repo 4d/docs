@@ -5,7 +5,7 @@ title: $filter
 
 
  
-Allows to query the data in a dataclass or method (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 
 ## Description   
