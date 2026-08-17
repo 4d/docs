@@ -134,8 +134,8 @@ Displays the start page of your Qodly application in your default browser on the
 
 ### Maintenance Security Center  
 
-This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up and compacting of data and structure files.
-This command is available even when no database is opened by 4D Server: in this case, it can be used to open a database in "maintenance mode" (it displays the standard open file dialog box so that you can designate the database to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged databases.
+This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up, compacting and encryption of data and structure files.
+This command is available even when no project is opened by 4D Server: in this case, it can be used to open a project in "maintenance mode" (it displays the standard open file dialog box so that you can designate the project to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged projects.
 
 ### Online documentation  
 

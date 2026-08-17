@@ -27,7 +27,7 @@ Usually, the starting scenario will be:
 3. Quit and relaunch 4D Server or merged Application Server as administrator. The 4D VSS service is then automatically executed and registered in VSS.
 4. (Optional) Restart 4D Server or merged Application Server using standard privileges.
 
-The VSS writer executable is started as a service with the name "VSS <appName>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
+The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
 
 The [Monitor Page](../ServerWindow/monitor.md) of the 4D Server Administration window displays the status of VSS writer service, in Application information area:
  
@@ -49,6 +49,6 @@ The 4D VSS management is handled through a separate application since this progr
 
 :::
 
-The 4D VSS writer executable is automatically installed by 4D Server at first launch
+The 4D VSS writer executable is automatically installed by 4D Server at first launch.
 
 The 4D VSS Writer service handles and transfers VSS messages to 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.

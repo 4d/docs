@@ -6,14 +6,14 @@ title: Single Sign On (SSO)
 
 4D Server allows you to implement SSO (*Single Sign On*) capabilities in your client-server solutions on Windows. 
 
-Implementing SSO in your 4D solutions will allow users to access the 4D application on Windows without needing to reenter their password when they are already logged into the Windows domain of their company (using Active Directory). Behind the scenes, the 4D Server application delegates the authentication to Active Directory and gets the Windows session login, which you can use to log the 4D user into the database by means of your standard login method.
+Implementing SSO in your 4D solutions will allow users to access the 4D application on Windows without needing to reenter their password when they are already logged into the Windows domain of their company (using Active Directory). Behind the scenes, the 4D Server application delegates the authentication to Active Directory and gets the Windows session login, which you can use to log the 4D user into the application by means of your standard login method.
 
 ## Requirements  
 
 The SSO feature is available:
 
 - with 4D Server applications on Windows (4D single-user applications do not support SSO),
-- with the [ServerNet or QUIC network layer](../settings/client-server.md#network-layer) enabled. 
+- with the [QUIC or ServerNet network layer](../settings/client-server.md#network-layer) enabled. 
 
 ## Enabling the SSO feature  
 
@@ -88,7 +88,7 @@ flowchart LR
     style Ident fill:#ffffff,stroke:#365F91,stroke-width:2px
 ```
 
-The [`Current client authentication`](../commands/current-client-authentication) command must be called in the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method, which is called each time a remote 4D opens a new connection to the 4D Server application. If authentication fails, you can return a non-null value in the *$status* to reject the connection.
+The [`Current client authentication`](../commands/current-client-authentication) command must be called in the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method, which is called each time a remote 4D opens a new connection to the 4D Server application. If authentication fails, you have to return a non-null value in the *$status* to reject the connection.
 
 ### Using the Current client authentication command  
 
@@ -98,7 +98,7 @@ To call the [`Current client authentication`](../commands/current-client-authent
 $login:=Current client authentication($domain;$protocol)
 ```
 Where:
-- *$login* is the ID used by the client to log into the Active Directory (text value). You need to use this value to identify the user within your database. If the user is not correcty authenticated, an empty string is returned and no error is returned.
+- *$login* is the ID used by the client to log into the Active Directory (text value). You need to use this value to identify the user within your project. If the user is not correcty authenticated, an empty string is returned and no error is returned.
 - *$domain* and *$protocol* are optional text parameters. They are filled by the command and allow you to accept or reject connections depending on these values:
     - *$domain* is the Active Directory domain name
     - *$protocol* is the name of the protocol used by Windows to authenticate the user.
@@ -116,12 +116,12 @@ The following table provides the requirements for using NTLM or Kerberos authent
 |4D Server user is on domain|yes|yes|
 |4D remote is on the same AD as 4D Server user|yes or no(\*)|yes|
 |SPN is filled in on 4D Server|no|yes(\*\*)|
-|Information returned by Current client authentication if requirements are respected|*user*=expected login, *domain*=expected domain, *protocol*="NTLM"|*user*=expected login, *domain*=expected domain, *protocol*="Kerberos"|
+|Information returned by Current client authentication if requirements are respected|*login*=expected login, *domain*=expected domain, *protocol*="NTLM"|*login*=expected login, *domain*=expected domain, *protocol*="Kerberos"|
 
 
-(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. In this case, dethe domain parameter is filled with the 4D Server machine name. Note that the support depends on actual user settings: if not available, empty strings are returned.
+(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. In this case, the domain parameter is filled with the 4D Server machine name. Note that the support depends on actual user settings: if not available, empty strings are returned.
 
-(\*\*) If all Kerberos requirements are respected but the Current client authentication command returns "NTLM" in protocol, this means that you are facing one of the following situations:
+(\*\*) If all Kerberos requirements are respected but the [`Current client authentication`](../commands/current-client-authentication) command returns "NTLM" in protocol, this means that you are facing one of the following situations:
 - The SPN syntax is not valid; in other words, it does not respect the [constraints imposed by Microsoft](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).  
 - Or, the SPN has duplicates in the AD. This issue needs to be fixed by the AD administrator.
 
