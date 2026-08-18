@@ -22,7 +22,7 @@ Les informations suivantes sont fournies pour chaque ligne :
   - **Sous-opérations** (le cas échéant) : affiche les opérations dépendantes de l'opération sélectionnée (par exemple, suppression des enregistrements liés avant suppression de l'enregistrement parent).
   - **Détails du process** : fournit des informations supplémentaires concernant la table, le champ, le process ou le client, en fonction du type d'opération
 
-> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands/activity-snapshot) command internally. Vous trouverez des informations supplémentaires dans la description de cette commande.
+> La page moniteur en temps réel utilise en interne la commande [`ACTIVITY SNAPSHOT`](../commands/activity-snapshot). Vous trouverez des informations supplémentaires dans la description de cette commande.
 
 La page est active et mise à jour en permanence dès qu’elle est affichée. Il est à noter que son fonctionnement peut ralentir sensiblement l’exécution de l’application. Il est possible de suspendre la mise à jour de la page d’une des manières suivantes :
 
@@ -37,7 +37,7 @@ Il est possible de reprendre l’observation des opérations en effectuant la m�
 
 La page MTR peut afficher des informations supplémentaires, si nécessaire, pour chaque opération listée.
 
-Pour accéder au mode avancé pour une opération, appuyez sur la touche **Maj** et sélectionnez l'opération. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `ACTIVITY SNAPSHOT` command). Les informations disponibles dépendent de l'opération sélectionnée.
+Pour accéder au mode avancé pour une opération, appuyez sur la touche **Maj** et sélectionnez l'opération. Toutes les informations disponibles sont alors affichées dans la zone "Détails du process" sans aucun filtre (à l'instar de ce qui est retourné par la commande `ACTIVITY SNAPSHOT`). Les informations disponibles dépendent de l'opération sélectionnée.
 
 Voici un exemple d'information affichée en mode standard :
 

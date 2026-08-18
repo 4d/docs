@@ -58,7 +58,7 @@ Le bouton **Sauvegarder la base** permet de démarrer une sauvegarde immédiate 
 
 Cette zone indique la durée d’enregistrement des fichiers d'historique (lorsqu’ils sont activés) et vous permet de gérer leur activation.
 
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
+Pour plus d'informations sur ces fichiers, consultez la section [**Fichiers journaux**](Debugging/debugLogFiles.md).
 
 ### Démarrer/Arrêter les journaux des requêtes et de débogage
 
@@ -76,10 +76,10 @@ Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si 
 
 Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Un tel fichier peut être fourni par les services techniques de 4D pour surveiller et étudier des cas particuliers.
 
-### Mettre en pause l'enregistrement des logs
+### Mettre en pause les journaux
 
 Ce bouton suspend toutes les opérations de log actuellement lancées sur le serveur. Cette fonctionnalité peut être utile pour alléger temporairement les tâches du serveur.
 
-When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
+Lorsque les logs ont été mis en pause, le titre du bouton change en **Reprendre les journaux** pour que vous puissiez reprendre les opérations de journalisation.
 
 > Vous pouvez suspendre et reprendre la journalisation à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).

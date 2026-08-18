@@ -136,7 +136,7 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ## Où sont-elles stockées et envoyées ?
 
-Collected data is written in a text file (JSON format) per database when certain events occur, such as when 4D Server starts up or shuts down. Le fichier est stocké dans le [dossier 4D actif](../commands/get-4d-folder), c'est-à-dire :
+Les données collectées sont enregistrées dans un fichier texte (au format JSON) par base de données lorsque certains événements se produisent, par exemple au démarrage ou à l'arrêt de 4D Server. Le fichier est stocké dans le [dossier 4D actif](../commands/get-4d-folder), c'est-à-dire :
 
 - sous Windows : `Users\[userName]\AppData\Roaming\4D Server`
 - sous macOS : `/Users/[userName]/Library/ApplicationSupport/4D Server`

@@ -1,64 +1,64 @@
 ---
 id: exit
-title: Exiting 4D Server
+title: Quitter 4D Server
 ---
 
-To shut down the server:
+Pour quitter l'application 4D Server :
 
-1. Choose the **Quit** command from the **File** menu of 4D Server (Windows) or the **4D Server** menu (macOS).
+1. Sélectionnez la commande **Quitter** dans le menu **Fichier** de 4D Server (Windows) ou dans le menu **4D Server** (macOS).
 
-The following dialog box is displayed on the server machine:
+La fenêtre suivante s'affiche sur le poste serveur :
 
 ![](../assets/en/server/exit-1.png)
 
-2. Enter the number of minutes in which you want the server to shut down, or choose the "Wait for all Users to disconnect" option.
+2. Enter the number of minutes in which you want the server to shut down, or select a client disconnection option.
 
-As soon as you do this, no new client can connect to the server.
+A partir de cet instant, plus aucun nouveau client ne peut se connecter au serveur.
 
 Les options suivantes sont disponibles :
 
-- **Disconnect from Server in XX min.**
+- **Quitter le serveur dans XX mn**
 
-After the specified period of time, the server quits and all users are disconnected, including any clients in sleep mode. The following window appears on the server:
+Au bout du délai spécifié, le serveur s'arrête et tous les utilisateurs sont déconnectés, y compris les clients en mode veille. La fenêtre suivante apparaît sur le serveur :
 
 ![](../assets/en/server/exit-2.png)
 
-An identical window appears on each remote 4D machine. This window is repeated or updated on each client machine every 20 seconds or so, in order to prompt them to quit. When the time limit is reached, the server quits even if there are client machines still connected.
+Une fenêtre similaire apparaît sur chaque poste distant 4D. Cette fenêtre est répétée ou mise à jour sur chaque poste client toutes les 20 secondes environ, afin de l'inciter à quitter. A l'issue du délai, le serveur quitte même si des clients sont encore connectés.
 
-- **Wait for all clients to disconnect.**
+- **Attendre que tous les clients aient quitté**
 
-The server will only quit after all clients, including those in sleep mode, have disconnected. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
+Le serveur ne s'arrêtera qu'une fois que tous les clients, y compris ceux en mode veille, se seront déconnectés. Cette option peut s'avérer inappropriée pour les opérations de maintenance lancées pendant les horaires de déjeuner, par exemple, puisqu'il est possible que des clients soient [en mode veille](../ServerWindow/users.md#managing-sleeping-users).
 
-- **Wait for active clients to disconnect. (Ignore sleeping clients)**
+- **Attendre que les clients actifs aient quitté. (Ignorer les clients endormis)**
 
-The server will only quit after all active clients have disconnected (in other words, all client machines that are not in [sleep mode](../ServerWindow/users.md#managing-sleeping-users)). With this option, any clients in sleep mode are not considered as connected. Use this option if you want to perform maintenance operations during lunch time, for example. When this option is used, any clients in sleep mode will have a connection error when they wake up.
+Le serveur ne s'arrêtera qu'une fois que tous les clients actifs se seront déconnectés (autrement dit, tous les postes clients qui ne sont pas en [mode veille](../ServerWindow/users.md#managing-sleeping-users)). Avec cette option, les clients en mode veille ne sont pas considérés comme connectés. Utilisez cette option si vous souhaitez effectuer des opérations de maintenance pendant la pause déjeuner, par exemple. Lorsque cette option est activée, tous les clients en mode veille rencontreront une erreur de connexion à leur réveil.
 
 :::note
 
-A *sleeping client* refers to a remote 4D application on a machine that has switched to [sleep mode](../ServerWindow/users.md#managing-sleeping-users) while the connection to the server machine was still active.
+Un *client endormi* désigne une application 4D distante installée sur une machine qui est passée en [mode veille](../ServerWindow/users.md#managing-sleeping-users) alors que la connexion au serveur était encore active.
 
 :::
 
-When you choose one of these options, the following window appears, which indicates the number of clients that are still connected:
+Lorsque vous sélectionnez l'une de ces options, la fenêtre suivante s'affiche sur le serveur, indiquant le nombre de clients encore connectés :
 
 ![](../assets/en/server/exit-3.png)
 
-On each 4D client machine, the following window appears displaying a default message:
+Sur chaque poste client 4D, la fenêtre suivante apparaît, affichant un message par défaut :
 
 ![](../assets/en/server/exit-4.png)
 
-If you entered a custom message in the 4D Server shutdown dialog box, it is displayed instead of the default message on each client machine. Par exemple :
+Si vous avez saisi un message personnalisé dans la boîte de dialogue de fermeture de 4D Server, celui-ci s'affiche à la place du message par défaut sur chaque poste client. Par exemple :
 
 ![](../assets/en/server/exit-5.png)
 
-- **Disconnect all clients and quit**
+- **Déconnecter les clients et quitter**
 
-The server ends all processes and all connections and quits after a few seconds.
+Le serveur met fin à tous les process et toutes les connexions et quitte en quelques secondes.
 
 :::note Notes
 
-- In all cases, if no client is connected to the server when the shutting down window is validated, 4D Server quits immediately.
-- If you click **Cancel** in the 4D Server shutdown window, the process of shutting down the server is canceled.
-- You can close the database (and disconnect the clients) without quitting the 4D Server using the **Close project...** menu command.
+- Dans tous les cas, si aucun client n'est connecté au serveur au moment où la fenêtre de fermeture est validée, 4D Server quitte immédiatement.
+- Si vous cliquez sur **Annuler** dans la fenêtre d'arrêt de 4D Server, le processus d'arrêt du serveur est annulé.
+- Vous pouvez fermer le projet (et déconnecter les clients) sans quitter 4D Server à l'aide de la commande de menu **Fermer le projet...**.
 
 :::

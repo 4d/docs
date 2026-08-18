@@ -3,139 +3,139 @@ id: menus
 title: Menus
 ---
 
-The interface of the 4D Server application is made up of the following menus: **File**, **Edit**, **Window**, **Help**. Under macos, certain commands are found in the **4D Server** menu (application menu).
+L'interface de l'application 4D Server se compose des menus **Fichier**, **Édition**, **Fenêtre**, **Aide**. Sous macOS, certaines commandes se trouvent dans le menu **4D Server** (menu application).
 
 ## File
 
-### New
+### Nouveau
 
-This hierarchical command has submenus that can be used to [create a project](../GettingStarted/creating.md#creating-a-project) or a new data file on the server machine.
+Cette commande hiérarchique comporte des sous-menus permettant de [créer un projet](../GettingStarted/creating.md#creating-a-project) ou un nouveau fichier de données sur le serveur.
 
-### Open.../Open Recent
+### Ouvrir.../Ouvrir récent
 
-These commands can be used to [open a project with 4D Server](../Desktop/clientServer.md#opening-a-remote-project). The **Open Recent>** command displays a submenu listing projects that have been opened recently by 4D Server. To reset this menu, choose the **Clear Menu** command.
+Ces commandes permettent d'[ouvrir un projet avec 4D Server](../Desktop/clientServer.md#opening-a-remote-project). La commande **Ouvrir récent>** affiche un sous-menu répertoriant les projets récemment ouverts par 4D Server. Pour réinitialiser ce menu, sélectionnez la commande **Effacer le menu**.
 
-### Close Project...
+### Fermer le projet...
 
-This command closes the current project without exiting the 4D Server application. When you choose this command, the server shutdown dialog box appears so that you can [set the disconnection mode](../server/exit.md) for any connected clients.
+Cette commande referme le projet courant sans quitter l'application 4D Server. Lorsque vous sélectionnez cette commande, la boîte de dialogue d'arrêt du serveur s'affiche afin que vous puissiez [définir le mode de déconnexion](../server/exit.md) pour tous les clients éventuellement connectés.
 
-### Close Window
+### Fermer la fenêtre
 
-This command closes the window in the foreground of the 4D Server application.
+Cette commande ferme la fenêtre au premier plan de l'application 4D Server.
 
-### Close All Windows
+### Fermer les fenêtres
 
-This command closes all the windows of the 4D Server application. Note that in this case only the fact that the **Close Project...** command is activated in the **File** menu will indicate whether the project is still published.
+Cette commande provoque la fermeture de toutes les fenêtres de l'application 4D Server. Notez que, dans ce cas, seul le fait que la commande **Fermer le projet...** soit active dans le menu **Fichier** permettra de savoir si le projet est toujours publié.
 
-### Register Current Application as Service/Unregister Current Application/Unregister All Server Services
+### Enregistrer l'application comme un service / Désenregistrer la base courante / Désenregistrer tous les services serveur
 
-(Commands available under Windows) These commands are used to manage the [registering of the application as a Service](./service.md).
+(Commandes disponibles sous Windows) Ces commandes permettent de gérer l'[enregistrement de l'application en tant que service](./service.md).
 
-### Flush Data Buffers
+### Ecrire cache données
 
-This command can be used to "force" the saving of data in the cache to the disk. By default, 4D Server automatically flushes the cache after a [time limit set in the Settings](../settings/database.md#database-cache-settings).
+Cette commande permet de "forcer" l'enregistrement sur le disque des données placées dans le cache. Par défaut, 4D Server écrit automatiquement le cache sur le disque après un [délai défini dans les paramètres](../settings/database.md#database-cache-settings).
 
 ### Sauvegarde
 
-This command lets you launch a back-up of the project at any time. When you select this command, the following dialog box appears:
+Cette commande vous permet de démarrer une sauvegarde du projet à tout moment. Lorsque vous sélectionnez cette commande, la boîte de dialogue suivante s'affiche :
 
 ![](../assets/en/server/backup.png)
 
-- The **Backup** button immediately launches a backup that takes the [parameters set in the Settings](../settings/backup.md) of the application into account (files to be backed up, location of archives, number of sets kept, etc.).
-- The **Database Properties** button opens the [Backup theme of the Settings](../settings/backup.md), which lets you view and, if necessary, modify the current backup settings.
-- The **Cancel** button interrupts the backup process.
+- Le bouton **Sauvegarde** lance immédiatement une sauvegarde qui tient compte des [paramètres définis dans les Paramètres](../settings/backup.md) de l'application (fichiers à sauvegarder, emplacement des archives, nombre de jeux conservés, etc.).
+- Le bouton **Propriétés de la base** ouvre la [section "Sauvegarde" des Propriétés](../settings/backup.md), qui vous permet de consulter et, si nécessaire, de modifier les paramètres de sauvegarde courants.
+- Le bouton **Annuler** interrompt le processus de sauvegarde.
 
-### Restore...
+### Restituer...
 
-This command displays an open file dialog box so that you can select the archive to restore.
+Cette commande affiche une boîte de dialogue d'ouverture vous permettant de sélectionner une archive à restituer.
 
 ### Quitter
 
-This command lets you [close the 4D Server application](./exit.md).
+Cette commande vous permet de [fermer l'application 4D Server](./exit.md).
 
 :::note
 
-Under macos, the **Quit** command is located in the **4D Server** menu (application menu).
+Sous macOS, la commande **Quitter** se trouve dans le menu **4D Server** (menu application).
 
 :::
 
-## Editer méthode
+## Edition
 
-The **Edit** menu of 4D Server includes standard copy/paste commands, the **Show Clipboard** command, etc.
+Le menu **Édition** de 4D Server comprend les commandes classiques de copier/coller, la commande **Afficher le presse-papiers**, etc.
 
-This menu also includes the **Preferences...** (under Windows) and **Settings** command, which display the corresponding dialog boxes of the application. These dialog boxes are used to define developer's [preferences](../Preferences/overview.md) and various [settings](../settings/overview.md) of the project.
+Ce menu comprend également les commandes **Préférences...** (sous Windows) et **Propriétés**, qui ouvrent les boîtes de dialogue correspondantes de l'application. Ces boîtes de dialogue permettent de définir les [préférences](../Preferences/overview.md) du développeur ainsi que divers [paramètres](../settings/overview.md) du projet.
 
 :::note
 
-Under macos, the **Preferences...** command is located in the **4D Server** menu (application menu).
+Sous macOS, la commande **Préférences...** se trouve dans le menu **4D Server** (menu application).
 
 :::
 
-The **Edit** menu also includes the **Detach Debugger** and **Attach Debugger At Startup** commands, allowing you to control the debugging of the code:
+Le menu **Édition** comprend également les commandes **Détacher le débogueur** et **Attacher le débogueur au lancement**, qui vous permettent de contrôler le débogage du code :
 
-### Detach Debugger
+### Détacher le débogueur
 
-If you select this option, the debugger can be attached to a remote 4D. The menu command becomes **Attach Debugger**, so that you can attach the debugger back to the server (if not still attached to a remote 4D).
+Si vous sélectionnez cette option, le débogueur peut être attaché à un 4D distant. La commande du menu devient **Attacher le débogueur**, afin que vous puissiez rattacher le débogueur au serveur (s'il n'est pas encore attaché à un 4D distant).
 
-### Attach Debugger At Startup
+### Attacher le débogueur au lancement
 
-(selected by default) This option automatically attaches the debugger to the server each time the project is launched. Deselect this option if you want to attach permanently the debugger to a remote 4D.
+(sélectionnée par défaut) Cette option attache automatiquement le débogueur au serveur à chaque lancement du projet. Désélectionnez cette option si vous souhaitez associer de manière permanente le débogueur à un 4D distant.
 
-*Warning*: If this option is selected for a server which is subsequently launched in headless mode, it will not be possible to use the debugger on this server.
+*Attention* : Si cette option est sélectionnée pour un serveur qui est ensuite lancé en mode *headless*, il ne sera pas possible d'utiliser le débogueur sur ce serveur.
 
-For more information, please refer to [Debugging from Remote Machines](../Debugging/debugging-remote.md).
+Pour plus d'informations, veuillez consulter la section [Débogage depuis des machines distantes](../Debugging/debugging-remote.md).
 
-## Window
+## Fenêtre
 
-The first part of the **Window** menu includes standard commands for organizing workspace windows (these commands differ depending on the platform).
+Le menu **Fenêtre** comporte en premier lieu des commandes standard permettant d'organiser les fenêtres de l'espace de travail (ces commandes varient selon la plate-forme).
 
-It also contains display commands for windows specific to 4D Server:
+Il contient également les commandes d'affichage des fenêtres spécifiques de 4D Server :
 
 ### Administration
 
-This command displays the [4D Server Administration window](../ServerWindow/overview.md) if it has been closed or minimized.
+Cette commande affiche la [fenêtre d'administration de 4D Server](../ServerWindow/overview.md) si celle-ci a été fermée ou réduite.
 
-### Project Dependencies
+### Dépendences du projet
 
-Displays the [Dependency manager](../Project/components.md).
+Affiche le [Gestionnaire de dépendances](../Project/components.md).
 
 ### Explorateur d'exécution
 
-This command displays the 4D Server Runtime Explorer window.
+Cette commande affiche la fenêtre de l'Explorateur d'exécution de 4D Server.
 
 ![](../assets/en/server/runtime-explorer.png)
 
-The Runtime Explorer enables you to view the status of the database various structural elements and to check that the available resources are correctly managed. The Runtime Explorer is particularly useful while developing or analyzing a database.
+L'Explorateur d'exécution permet de visualiser le comportement des différents éléments structurels de la base et de vérifier que les ressources disponibles sont correctement exploitées. L’Explorateur d’exécution est particulièrement utile en phase de développement et d’analyse d’une base de données.
 
-The Runtime Explorer window contains four pages that can be accessed by clicking on the following buttons: **Watch**, **Process**, **Break** and **Catch**. The Runtime Explorer works the same way in 4D Server and 4D.
+La fenêtre comporte quatre onglets accessibles en cliquant sur les boutons correspondants : **Evaluation**, **Process**, **Point d’arrêt** et **Arrêt sur commande**. Le fonctionnement de l'Explorateur d'exécution sur 4D Server est identique à celui de 4D.
 
-### Data Explorer in Browser
+### Explorateur de données dans le navigateur
 
-Displays the [Data Explorer](../Admin/dataExplorer.md) in your default browser.
+Affiche l'[Explorateur de données](../Admin/dataExplorer.md) dans votre navigateur par défaut.
 
 ### Qodly Studio
 
-Displays the [Qodly Studio interface](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) in your default browser on the server machine.
+Affiche l'[interface de Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) dans votre navigateur par défaut sur le serveur.
 
 ### Aperçu de l'application Qodly
 
-Displays the start page of your Qodly application in your default browser on the server machine. See [this section](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#preview-qodly-application) for more information.
+Affiche la page d'accueil de votre application Qodly dans votre navigateur par défaut sur le serveur. Pour plus d'informations, consultez [cette section](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#preview-qodly-application).
 
 ## Aide
 
-### Maintenance Security Center
+### Centre de sécurité et de maintenance
 
-This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up and compacting of data and structure files.
-This command is available even when no database is opened by 4D Server: in this case, it can be used to open a database in "maintenance mode" (it displays the standard open file dialog box so that you can designate the database to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged databases.
+This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up, compacting and encryption of data and structure files.
+This command is available even when no project is opened by 4D Server: in this case, it can be used to open a project in "maintenance mode" (it displays the standard open file dialog box so that you can designate the project to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged projects.
 
-### Online documentation
+### Documentation en ligne
 
-Opens the 4D documentation home page.
+Ouvre la page d'accueil de la documentation 4D.
 
-### License manager...
+### Gestionnaire de licences...
 
-This command displays the License manager, used to view, manage, and activate [licenses](../Admin/licenses.md) in your 4D environment.
+Cette commande affiche le Gestionnaire de licences, qui permet de consulter, de gérer et d'activer les [licences](../Admin/licenses.md) dans votre environnement 4D.
 
 ### About 4D Server...
 
-Displays the 4D Server **About...** window.
+Affiche la fenêtre **À propos de...** de 4D Server.

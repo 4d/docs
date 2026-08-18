@@ -37,7 +37,7 @@ Pour plus d'informations sur la façon de rechercher des données dans 4D, repor
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+L'utilisation de l'instruction `eval()` est interdite dans les requêtes REST (et donc dans les requêtes vers un [datastore distant](../ORDA/remoteDatastores.md)).
 
 :::
 
@@ -51,7 +51,7 @@ Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous dev
 Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+Si vous passez la valeur directement, vous pouvez écrire :
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::
@@ -90,7 +90,7 @@ Le comparateur doit être l'une des valeurs suivantes :
 
 ## Similitude vectorielle
 
-Si l'attribut stocke des [**objets vectoriels**](../API/VectorClass.md) (voir comment [configurer un champ 4D pour qu'il ne stocke que des objets de la classe 4D.Vector](../Develop/field-properties.md#class)), vous pouvez filtrer la classe de données à l'aide de **vecteurs**, également appelés **embeddings**.
+Si l'attribut stocke des [**objets vectoriels**](../API/VectorClass.md) (voir comment [configurer un champ 4D pour qu'il ne stocke que des objets de la classe 4D.Vector](../Develop/field-properties.md#class)), vous pouvez filtrer la dataclass à l'aide de **vecteurs**, également appelés **embeddings**.
 
 Pour plus d'informations sur les recherches par similarité vectorielle, veuillez vous référer à la section [Requêtes par similarité vectorielle](../API/DataClassClass.md#query-by-vector-similarity).
 
@@ -106,7 +106,7 @@ Le paramètre *vectorComparison* est une collection des éléments suivants :
 | [].metric    | Text                  | Optionnel. [Calcul vectoriel](../API/VectorClass.md#understanding-the-different-vector-computations) à utiliser pour la recherche. Valeurs prises en charge :<li>"cosine" (valeur par défaut si omis) : calcule la similarité cosinus entre les vecteurs.</li><li>"dot" : calcule la similarité de points des vecteurs.</li><li>"euclidean" : calcule la distance euclidienne entre les vecteurs. |
 | [].threshold | Real                  | Facultatif (valeur par défaut : 0,5). Valeur seuil utilisée pour filtrer les comparaisons de vecteurs sur la base de leur score de similarité cosinus, point ou euclidienne selon la "métrique" sélectionnée. Il est fortement recommandé de choisir une similitude qui corresponde le mieux à votre cas d'utilisation spécifique pour des résultats optimaux.                                                                                                                    |
 
-Only a subset of **comparator** symbols is supported with vector comparisons. Notez qu'ils comparent les résultats à la valeur de seuil (threshold) :
+Seul un sous-ensemble de symboles **comparator** est pris en charge pour les comparaisons vectorielles. Notez qu'ils comparent les résultats à la valeur de seuil (threshold) :
 
 | Comparateur         | Symbole(s) | Commentaire                |
 | ------------------- | ----------------------------- | -------------------------- |

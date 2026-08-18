@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-データクラスまたはメソッドが返すデータをフィルターします (*例*: `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## 説明
 

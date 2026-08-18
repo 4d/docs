@@ -11,7 +11,7 @@ The following dialog box is displayed on the server machine:
 
 ![](../assets/en/server/exit-1.png)
 
-2. Enter the number of minutes in which you want the server to shut down, or choose the "Wait for all Users to disconnect" option.
+2. Enter the number of minutes in which you want the server to shut down, or select a client disconnection option.
 
 As soon as you do this, no new client can connect to the server.
 

@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Permite consultar los datos de una clase de datos o de un método (*por ejemplo*, `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descripción
 

@@ -34,7 +34,7 @@ La zone "Vue d’ensemble" fournit diverses informations relatives au système, 
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licenses Manager**](Admin/licenses.md).
+En règle générale, vous devrez consulter le [**Gestionnaire de licences**](Admin/licenses.md).
 
 ## Zone Détails
 

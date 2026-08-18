@@ -583,29 +583,29 @@ ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\"
 
 #### カスタムのタグ
 
-You can insert any tag in plain text, for example `<img src="http://doc.4d.com/pictures/ja.png">`. It is stored in the code of the plain text without being interpreted or displayed. This is particularly useful in the context of e-mails in HTML format and including pictures for example.
+例として、`<img src="http://doc.4d.com/pictures/ja.png">` のようなタグも可能です。 タグは標準テキストのコードに保存されますが、解釈されたり表示されたりすることはありません。 これは例えば、HTML形式のメールに画像を挿入するような場合に便利です。
 
-#### Style tags
+#### スタイルタグ
 
-This paragraph lists the attributes of \<SPAN> tags that are supported by 4D in rich text areas. You can use these tags to implement custom style handling. Only the tags listed below are supported by 4D for style variations.
+ここでは \<SPAN> タグの属性としてサポートされる4Dのリッチテキストエリアのスタイルを説明します。 これらの属性を使用してカスタムスタイルを指定することも可能です。 ここで説明されている属性のみが4D によってサポートされます。
 
-- Font name: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
-- Font size: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
+- フォント名: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
+- フォントサイズ: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
 - フォントスタイル:
-  - Bold `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
-  - Italic `<SPAN STYLE="font-style: italic"> ... </SPAN>`
-  - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
-  - Underline `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
-  - Strikethrough `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
+  - ボールド(太字) `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
+  - イタリック `<SPAN STYLE="font-style: italic"> ... </SPAN>`
+  - 普通 `<SPAN STYLE="font-style: normal"> ... </SPAN>`
+  - 下線付き `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
+  - 取り消し線 `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
 
-*Note: The "strikethrough" style is not supported under macOS, but this tag can still be managed by programming.*
+*注意 : maOS では"取り消し線"がサポートされていません。指定しても表示されませんが、プログラムで管理することはできます。*
 
-- Font colors: `<SPAN STYLE="color:green"> ... </SPAN>` or `<SPAN STYLE="color:#006CCC">...</SPAN>`
-- Background colors: `<SPAN STYLE="background-color:green"> ... </SPAN>` or `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
+- フォントカラー: `<SPAN STYLE="color:green"> ... </SPAN>` または `<SPAN STYLE="color:#006CCC">...</SPAN>`
+- 背景色: `<SPAN STYLE="background-color:green"> ... </SPAN>` または `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
 
-#### Color values
+#### カラーの値
 
-For font color and background color attributes, the color value can be either the hexadecimal code for an RGB color, or the name of one of the 16 HTML colors defined for standard CSS by the W3C:
+フォントカラーと背景色属性では、カラー値としてRGB の16進およびW3C によって標準CSS のために定義された16 のHTML カラー名を指定できます:
 
 ![](../assets/en/FormObjects/colors1.png)
 ![](../assets/en/FormObjects/colors2.png)
@@ -671,13 +671,13 @@ OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 - [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
 
-マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 データベースの実行中にスタイルを管理するためには、["スタイル付きテキスト" テーマ内のコマンド](../commands/theme/Styled_Text.md) を使用することが推奨されます。
 
 #### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../commands/get-edited-text) command returns the text of the current area including any style tags.
+[`Get edited text`](../commands/get-edited-text) コマンドがリッチテキストエリアで使用されると、コマンドはあらゆるスタイルタグを含む現在のエリアのすべてのテキストを返します。
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command:
+編集された生テキスト (タグなしのテキスト) を取り出すには、[`ST Get plain text`](../commands/st-get-plain-text) コマンドを使用しなければなりません:
 
 ```4d
 ST Get plain text(Get edited text)
@@ -687,7 +687,7 @@ ST Get plain text(Get edited text)
 
 マルチスタイルオブジェクトに対して行われるクエリや並び替えは、オブジェクトに保存されたスタイルタグを考慮に入れます。 単語中でスタイルの変更が行われた場合、その単語の検索は失敗します。
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. 例:
+有効な検索や並び替えを行うには、[`ST Get plain text`](../commands/st-get-plain-text) コマンドを使用する必要があります。 例:
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")

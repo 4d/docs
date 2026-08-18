@@ -9,7 +9,7 @@ Ce paramètre vous permet de définir l'opération à exécuter avec l'entité o
 
 | Syntaxe                                         | Exemple                                                                                 | Description                                                                                                                                          |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Deletes the current entity, entity collection, or entity set                                                                                         |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                        | Supprime l'entité, la collection d'entités ou l'entity set courants                                                                                  |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                        | Crée un entity set (ensemble d'entités) dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un entity set basé sur la collection d'entités liées définies dans la requête REST                                                              |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                          | Met à jour et/ou crée une ou plusieurs entités                                                                                                       |
@@ -52,13 +52,13 @@ Crée un entity set (ensemble d'entités) dans le cache de 4D Server basé sur l
 
 ### Description
 
-Lorsque vous créez une collection d'entités en REST, vous pouvez également créer un entity set qui sera enregistré dans le cache de 4D Server. L'entity set aura un numéro de référence que vous pouvez passer à `$entityset/\{entitySetID\}` pour y accéder. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to [`$timeout`](./$timeout.md). It can also be modified for the session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+Lorsque vous créez une collection d'entités en REST, vous pouvez également créer un entity set qui sera enregistré dans le cache de 4D Server. L'entity set aura un numéro de référence que vous pouvez passer à `$entityset/\{entitySetID\}` pour y accéder. Par défaut, il est valable deux heures ; vous pouvez toutefois modifier cette durée en passant une valeur (en secondes) à [`$timeout`](./$timeout.md). Il est également possible de la modifier pour la session via la propriété [`Session.quotas`](../API/SessionClass.md#quotas).
 
 Si vous avez utilisé `$savedfilter` et/ou `$savedorderby` (avec `$filter` et/ou `$orderby`) lors de la création de votre entity set, vous pouvez le recréer avec le même ID de référence même s'il a été supprimé du cache de 4D Server.
 
 :::note
 
-By default, you can create as many entity sets as you want. However, the total number of entity sets in the 4D Server cache can be limited for a session through the [`Session.quotas`](../API/SessionClass.md#quotas) property.
+Par défaut, vous pouvez créer autant d'entity sets que vous le souhaitez. Toutefois, le nombre total d'ensembles d'entités dans le cache de 4D Server peut être limité pour une session à l'aide de la propriété [`Session.quotas`](../API/SessionClass.md#quotas).
 
 :::
 

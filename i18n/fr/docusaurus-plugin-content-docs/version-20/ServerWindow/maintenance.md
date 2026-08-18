@@ -83,7 +83,7 @@ Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si 
 Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Un tel fichier peut être fourni par les services techniques de 4D pour surveiller et étudier des cas particuliers.
 
 
-### Mettre en pause l'enregistrement des logs
+### Mettre en pause les journaux
 
 Ce bouton suspend toutes les opérations de log actuellement lancées sur le serveur. Cette fonctionnalité peut être utile pour alléger temporairement les tâches du serveur.
 
