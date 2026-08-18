@@ -5,7 +5,7 @@ title: Sessions Page
 
 The **Sessions** page lists all active sessions connected to the server, including Client, Web, REST, and SOAP sessions.
 
-![](../assets/en/Admin/server-sessions-1.png)
+![](../assets/en/Admin/server-sessions-2.png)
 
 The **Sessions** button indicates, in parentheses, the total number of active sessions (this number does not take into account any display filters applied to the window).
 
