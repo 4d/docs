@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to read |
 | type | Integer | &#8594;  | Type to which to convert the value |
 | Function result | any | &#8592; | Current value of property |
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->
 
 **Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the [WP GET ATTRIBUTES]((../../WritePro/commands/wp-get-attributes.md) command (see example 9). 
 

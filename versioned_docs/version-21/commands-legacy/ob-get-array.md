@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to read |
 | array | Text array, Real array, Boolean array, Object array, Pointer array, Array integer | &#8592; | Value array of property |
 </div>

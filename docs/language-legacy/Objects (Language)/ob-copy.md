@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | resolvePtrs | Boolean | &#8594;  | True = resolve pointers, False or omitted = do not resolve pointers |
 | option | Integer | &#8594;  | ck shared: return a shared object, ck resolve pointers: resolve pointers before copying |
 | groupWith | Collection, Object | &#8594;  | Shared collection or object to be grouped with the resulting object |
