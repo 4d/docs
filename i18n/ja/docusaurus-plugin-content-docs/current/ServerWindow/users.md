@@ -3,4 +3,4 @@ id: users
 title: ユーザーページ
 ---
 
-The **Users** page has been renamed [**Sessions**](sessions.md) as of 4D 21 R4.
+4D 21 R4 以降、**ユーザー** ページは[**セッション**](sessions.md) へと名称変更されました。

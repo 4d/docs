@@ -33,14 +33,14 @@ Dans le paramètre *formulaObj*, passez un objet contenant les formules 4D qui p
 
 | Propriété          |            |                                                                                | Type                | Description                                                                                                                                                                                                                                                                  |
 | ------------------ | ---------- | ------------------------------------------------------------------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<customFunction>` |            |                                                                                | Object              | Description de la fonction personnalisée. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                               |
+| `<customFunction>` |            |                                                                                | Object              | Description de la fonction personnalisée. `<customFunction>` définit le nom de la fonction personnalisée à afficher dans les formules de 4D View Pro (les espaces ne sont pas autorisés)                                                  |
 |                    | formula    |                                                                                | Object              | Objet formule 4D (obligatoire). Voir la commande `Formula`.                                                                                                                                                               |
 |                    | parameters |                                                                                | Collection d'objets | Collection de paramètres (dans l'ordre dans lequel ils sont définis dans la formule). Pour plus d'informations, veuillez vous reporter à la section [Paramètres](../formulas.md#parameters).                              |
 |                    |            | \[ ].name | Text                | Nom du paramètre à afficher dans 4D View Pro                                                                                                                                                                                                                                 |
 |                    |            | \[ ].type | Number              | Type de paramètre. Type de paramètre. Type de paramètre. Si *type* est `Is object`, l'objet est envoyé dans une propriété `.value`. Voir la section [Paramètres](../formulas.md#parameters). |
 |                    | summary    |                                                                                | Text                | Description de la formule à afficher dans 4D View Pro                                                                                                                                                                                                                        |
 |                    | minParams  |                                                                                | Number              | Nombre minimum de paramètres                                                                                                                                                                                                                                                 |
-|                    | maxParams  |                                                                                | Number              | Nombre maximum de paramètres. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                               |
+|                    | maxParams  |                                                                                | Number              | Nombre maximum de paramètres. Passer un nombre supérieur à la taille de *parameters* permet de déclarer des paramètres "optionnels" avec un type par défaut                                                                                                  |
 
 > **ATTENTION**
 
@@ -49,7 +49,7 @@ Dans le paramètre *formulaObj*, passez un objet contenant les formules 4D qui p
 
 ## Exemple
 
-You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender and the company's peak month:
+Vous souhaitez utiliser des objets formule dans une zone de 4D View Pro pour ajouter des nombres, récupérer le nom de famille et le genre d'un client, ainsi que le mois le plus chargé de l'entreprise :
 
 ```4d
 Case of
@@ -58,31 +58,31 @@ Case of
        var $o : Object
        $o:=New object
  
-// Define "addnum" function from a method named "addnum"
+// Créer la fonction "addnum" depuis une méthode nommée "addnum"
        $o.addnum:=New object
        $o.addnum.formula:=Formula(addnum)
        $o.addnum.parameters:=New collection
        $o.addnum.parameters.push(New object("name";"num1";"type";Is Integer))
        $o.addnum.parameters.push(New object("name";"num2";"type";Is Integer))
  
-// Define "ClientLastName" function from a database field
+// Créer la fonction "ClientLastName" depuis un champ de la base
        $o.ClientLastName:=New object
        $o.ClientLastName.formula:=Formula([Customers]lastname)
        $o.ClientLastName.summary:="Lastname of the current client"
  
-// Define "label" function from a 4D expression with one parameter
+// Créer la fonction"label" depuis une expression 4D avec un paramètre
        $o.label:=New object
        $o.label.formula:=Formula(ds.Customers.get($1).label)
        $o.label.parameters:=New collection
        $o.label.parameters.push(New object("name";"ID";"type";Is Integer))
  
-// Define "AverageValues" function from a method named "AverageValues"
+// Créer la fonction "AverageValues" depuis une méthode nommée "AverageValues"
        $o.AverageValues:=New object
        $o.AverageValues.formula:=Formula(AverageValues)
        $o.AverageValues.parameters:=New collection
        $o.AverageValues.parameters.push(New object("name";"Mycollection";"type";Is collection))
         
-// Define "Title" function from a variable named "Title"
+// Créer la fonction "Title" depuis une variable nommée "Title"
        $o.Title:=New object
        $o.Title.formula:=Formula(Title)
  

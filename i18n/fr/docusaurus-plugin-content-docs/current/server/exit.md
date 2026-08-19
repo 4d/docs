@@ -11,7 +11,7 @@ La fenêtre suivante s'affiche sur le poste serveur :
 
 ![](../assets/en/server/exit-1.png)
 
-2. Enter the number of minutes in which you want the server to shut down, or select a client disconnection option.
+2. Saisissez un délai en minutes avant arrêt du serveur, ou sélectionnez une option de déconnexion des utilisateurs.
 
 A partir de cet instant, plus aucun nouveau client ne peut se connecter au serveur.
 

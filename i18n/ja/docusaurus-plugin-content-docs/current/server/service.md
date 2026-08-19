@@ -1,38 +1,38 @@
 ---
 id: service
-title: Registering as a Service
+title: サービスとして登録
 ---
 
-Under Windows, 4D Server can be launched as a Service.
+Windowsにおいて、4D Server をサービスとして起動することができます。
 
-A 4D Server application registered as a service is automatically launched on start-up of the machine with the current project, even before a user session is opened. It is not closed when the user exits their session.
+サービスとして登録された4D Server アプリケーションはマシンの開始時に自動で、ユーザセッションが開かれる前に、カレントのプロジェクトを使用して起動されます。 またユーザがセッションを終了したときも、データベースは閉じられません。
 
-This operation lets you guarantee the availability of a 4D Server application even in the event of an incident that requires restarting the machine. Maintenance can be carried out remotely.
+この動作により、マシンの再起動が必要になるような出来事の場合でも、4D Server が実行されるようにすることができます。 またメンテナンスをリモートで行うことができます。
 
 :::note 注記
 
-- In a 4D Server application registered as a service, the [headless mode](../Admin/cli.md) is implicit.
-- For more information about the mechanisms for managing Services, refer to the Windows documentation.
+- サービスとして登録された4D Server アプリケーションでは、暗示的に[ヘッドレスモード](../Admin/cli.md) で実行されます。
+- サービスを管理するメカニズムについては、Windows のドキュメントを参照してください。
 
 :::
 
-To register a 4D Server application as a Service, select **Register Current Application as Service** in the [**File** menu](./menus.md#file) of 4D Server. The next time the machine is started, 4D Server will be launched automatically and the current project opened. You can register any number of projects. Each project can be registered only once.
+4D Serverデータベースをサービスとして登録するには、4D Serverの[**ファイル** menu](./menus.md#file) メニューから**現在のアプリケーションをサービスとして登録**を選択します。 マシンが次回に開始されるとき、4D Server は自動で起動され、カレントのプロジェクトが開かれます。 いくつでもデータベースを登録できます。 それぞれのデータベースは一つのインスタンスとしてのみ登録できます。
 
 :::note
 
-Under Windows, this command may be grayed out when access to the service management functions is restricted. In this case, to be able to use this command, you must launch 4D Server with an administrator level (to do this, right click on the application icon and choose the **Run as administrator** command in the context menu).
+Windows では、サービス管理機能へのアクセスが制限されている場合、このメニューは選択不可になります。 この場合、このコマンドを使用できるようにするには管理者として4D Server を実行します。 (これを行うにはアプリケーションアイコン上で右クリックし、コンテキストメニューから**管理者として実行**コマンドを選択します)。
 
 :::
 
 :::warning
 
-When registered as service, by default 4D Server is configured to use the "Local System Account". You must change this account and select a valid user account having the access rights and settings required to use your application. In particular, if you want to be able to print, you must open the session with a user account which has default print settings. The issue is similar if you want to access network volumes. To change the account, go to **Control Panel > System and Security > Administrative Tools > Services**. In the **Services** list, right-click on **4D Server**, choose the **Properties** option, then go to the **Log On** tab and specify the account under which the server must run (setting used at next startup).
+サービスとして登録されている場合、デフォルトで4D Server は"ローカルシステムアカウント"を使用するように設定されています。 このアカウント設定は必ず変更する必要があり、お使いのアプリケーションに必要な権限と設定を持っている有効なユーザーアカウントを選択するようにして下さい。 具体的には、印刷を可能にしたい場合には、セッションを、デフォルトの印刷設定を持ったアカウントで開く必要があります。 この問題はネットワークボリュームにアクセスしたい場合に似ています。 アカウントを変更するためには、**コントロールパネル > システムとセキュリティ > 管理者ツール > サービス** を開いて下さい。 **サービス**の一覧の中から**4D Server** を右クリックし、**プロパティ**オプションを選択し、**ログオン**タブに移動してサーバーを実行するアカウントを指定して下さい(この設定は次回起動時に使用されます)。
 
 :::
 
-To unregister your application, select **Unregister Current Application** from the 4D Server **File** menu. This command is dimmed if the project is not registered as a service.
+アプリけーションの登録を解除するには、4D Server の**ファイル**メニューから**現在のデータベースの登録解除**を選択します。 このコマンドはデータベースがサービスとして登録されていないときはグレーアウトしていて選択できません。
 
-To unregister all 4D Server databases at once, select **Unregister All Server Services** from the 4D Server **File** menu. This command is dimmed if no 4D Server service is enabled.
+すべての4D Serverデータベースの登録を一度に解除するには、4D Server の**ファイル**メニューから**すべてのサーバサービスの登録解除**を選択します。 このコマンドは4D Serverサービスがどれも有効化されていないときにはグレーアウトしていて選択できません。
 
-You cannot change the service registration status of 4D Server from within 4D Server, if the application has been launched as a service on start-up. In this case, the three menu items are disabled. To stop the service, use the **Services** control panel.
+アプリケーションが起動時にサービスとして起動されているときは、4D Server から4D Server のサービスの登録状態を変更することはできません。 この場合これらのメニューを選択することはできません。 サービスを停止するには、**サービス**コントロールパネルを使用します。
 

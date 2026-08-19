@@ -3,139 +3,139 @@ id: menus
 title: メニュー
 ---
 
-The interface of the 4D Server application is made up of the following menus: **File**, **Edit**, **Window**, **Help**. Under macos, certain commands are found in the **4D Server** menu (application menu).
+4D Server アプリケーションのインタフェースは以下のメニューで構成されています: **ファイル**、**編集**、**ウィンドウ**、**ヘルプ**。 macOS ではいくつかのコマンドは**4D Server** メニュー (アプリケーションメニュー) に置かれます。
 
 ## File
 
-### New
+### 新規
 
-This hierarchical command has submenus that can be used to [create a project](../GettingStarted/creating.md#creating-a-project) or a new data file on the server machine.
+この階層コマンドにはサブメニューがあり、サーバマシン上で[プロジェクト](../GettingStarted/creating.md#プロジェクトの作成) やデータファイルを新しく作成するために使用します。
 
-### Open.../Open Recent
+### 開く.../最近使用したデータベースを開く
 
-These commands can be used to [open a project with 4D Server](../Desktop/clientServer.md#opening-a-remote-project). The **Open Recent>** command displays a submenu listing projects that have been opened recently by 4D Server. To reset this menu, choose the **Clear Menu** command.
+これらのコマンドを使用して[4D Serverでデータベース/プロジェクト](../Desktop/clientServer.md#リモートプロジェクトを開く) を開くことができます。 **最近使用したデータベース** コマンドは、4D Server が最近開いたことのあるデータベースを含むサブメニューを表示します。 このメニューをリセットするには、**メニュークリア** コマンドを選択します。
 
-### Close Project...
+### プロジェクトを閉じる...
 
-This command closes the current project without exiting the 4D Server application. When you choose this command, the server shutdown dialog box appears so that you can [set the disconnection mode](../server/exit.md) for any connected clients.
+このコマンドは4D Serverを終了せずに、現在のプロジェクトを閉じます。 このコマンドを選択するとサーバ終了ダイアログが表示され、接続ユーザの[接続解除モード](../server/exit.md) を指定できます。
 
-### Close Window
+### ウィンドウを閉じる
 
-This command closes the window in the foreground of the 4D Server application.
+このコマンドは4D Server アプリケーションの最前面にあるウィンドウを閉じます。
 
-### Close All Windows
+### すべてのウィンドウを閉じる
 
-This command closes all the windows of the 4D Server application. Note that in this case only the fact that the **Close Project...** command is activated in the **File** menu will indicate whether the project is still published.
+このコマンドは4D Serverアプリケーションのすべてのウィンドウを閉じます。 この場合、データベースが公開されていることを示す要素は**ファイル**メニューの**データベースを閉じる...** が有効化されているという点のみになるという点に注意してください。
 
-### Register Current Application as Service/Unregister Current Application/Unregister All Server Services
+### 現在のアプリケーションをサービスとして登録 / 現在のアプリケーションの登録解除 / すべてのサーバサービスの登録解除
 
-(Commands available under Windows) These commands are used to manage the [registering of the application as a Service](./service.md).
+(Windowsで利用可能) これらのコマンドを使用して[サービスとして登録するアプリケーション](./service.md) を管理します。
 
-### Flush Data Buffers
+### データバッファをフラッシュ
 
-This command can be used to "force" the saving of data in the cache to the disk. By default, 4D Server automatically flushes the cache after a [time limit set in the Settings](../settings/database.md#database-cache-settings).
+このコマンドはキャッシュ中のデータを"強制的に" ディスクに保存します。 デフォルトで、4D Server は[データベース環境設定 (データベース/データ管理ページ) で指定された時間](../settings/database.md#データベースキャッシュ設定) が経過すると自動でキャッシュをフラッシュします。
 
 ### バックアップ
 
-This command lets you launch a back-up of the project at any time. When you select this command, the following dialog box appears:
+このコマンドを使用していつでもデータベースのバックアップを起動できます。 このコマンドを選択すると、以下のダイアログボックスが表示されます:
 
 ![](../assets/en/server/backup.png)
 
-- The **Backup** button immediately launches a backup that takes the [parameters set in the Settings](../settings/backup.md) of the application into account (files to be backed up, location of archives, number of sets kept, etc.).
-- The **Database Properties** button opens the [Backup theme of the Settings](../settings/backup.md), which lets you view and, if necessary, modify the current backup settings.
-- The **Cancel** button interrupts the backup process.
+- **バックアップ** ボタンは、[データベース環境設定で設定された (バックアップするファイル、アーカイブの場所、保持するセット数などの) パラメタ](../settings/backup.md) を使用して、即座にバックアップを起動します。
+- **環境設定** ボタンは[環境設定のバックアップテーマ](../settings/backup.md) を開き、現在のバックアップ設定を確認して、必要であれば編集できます。
+- **キャンセル**ボタンはバックアップ処理を中断します。
 
-### Restore...
+### 復元...
 
-This command displays an open file dialog box so that you can select the archive to restore.
+このコマンドはファイルを開くダイアログを表示し、復元するアーカイブファイルを選択できます。
 
 ### 終了
 
-This command lets you [close the 4D Server application](./exit.md).
+このコマンドを使用して[4D Serverアプリケーションを閉じる](./exit.md) ことができます。
 
 :::note
 
-Under macos, the **Quit** command is located in the **4D Server** menu (application menu).
+macOS では**終了**コマンドは**4D Server** メニュー (アプリケーションメニュー) 内にあります。
 
 :::
 
 ## 編集
 
-The **Edit** menu of 4D Server includes standard copy/paste commands, the **Show Clipboard** command, etc.
+4D Serverの**編集**メニューは標準のコピー/ペーストコマンドや、**クリップボード表示**コマンド等を含みます。
 
-This menu also includes the **Preferences...** (under Windows) and **Settings** command, which display the corresponding dialog boxes of the application. These dialog boxes are used to define developer's [preferences](../Preferences/overview.md) and various [settings](../settings/overview.md) of the project.
+このメニューには**環境設定...** (Windows 環境下) and **データベース設定** コマンドが含まれ、これらを使用することでアプリケーション内のそれに対応するダイアログボックスを表示することができます。 このダイアログボックスを使用して開発者の[設定](../Preferences/overview.md) や、プロジェクトの様々な[動作](../settings/overview.md) を定義できます。
 
 :::note
 
-Under macos, the **Preferences...** command is located in the **4D Server** menu (application menu).
+macos では、**環境設定... \*\* コマンドは**4D Server\*\* メニュー (アプリケーションメニュー) 内にあります。
 
 :::
 
-The **Edit** menu also includes the **Detach Debugger** and **Attach Debugger At Startup** commands, allowing you to control the debugging of the code:
+**編集** メニューには**デバッガを無効化する** および **デバッガを開始時に有効化する** コマンドが含まれ、これによってコードのデバッギングを管理することができます:
 
-### Detach Debugger
+### デバッガを無効化する
 
-If you select this option, the debugger can be attached to a remote 4D. The menu command becomes **Attach Debugger**, so that you can attach the debugger back to the server (if not still attached to a remote 4D).
+このオプションを選択すると、デバッガをリモート4D で有効化することができます。 このメニューコマンドは**デバッガを有効化する**となり、これによってデバッガをサーバーで起動できるようになります(リモート4D でまだ有効化していない場合)。
 
-### Attach Debugger At Startup
+### デバッガを開始時に有効化する
 
-(selected by default) This option automatically attaches the debugger to the server each time the project is launched. Deselect this option if you want to attach permanently the debugger to a remote 4D.
+(デフォルトで選択されています) このオプションはプロジェクトが開始された時に毎回自動でサーバーでデバッガを有効にします。 リモート4D でデバッガを常時有効化したい場合には、このオプションの選択を解除してください。
 
-*Warning*: If this option is selected for a server which is subsequently launched in headless mode, it will not be possible to use the debugger on this server.
+*警告*: のちにヘッドレスモードで起動されるサーバーにおいてこのオプションが選択されたままの場合、このサーバーではデバッガーは利用できません。
 
-For more information, please refer to [Debugging from Remote Machines](../Debugging/debugging-remote.md).
+より詳細な情報については、[リモートマシンからのデバッギング](../Debugging/debugging-remote.md)を参照してください。
 
-## Window
+## ウィンドウ
 
-The first part of the **Window** menu includes standard commands for organizing workspace windows (these commands differ depending on the platform).
+**ウインドウ**メニューの上部にはワークスペースウィンドウを扱うための標準のコマンドがあります (これらのコマンドはプラットフォームより異なります)。
 
-It also contains display commands for windows specific to 4D Server:
+また4D Server 特有のウィンドウを表示するためのコマンドも含まれています:
 
 ### 管理
 
-This command displays the [4D Server Administration window](../ServerWindow/overview.md) if it has been closed or minimized.
+このコマンドは、もしそのウィンドウが閉じられていたり最小化されていれば、[4D Server 管理ウィンドウ](../ServerWindow/overview.md)  を表示します。
 
-### Project Dependencies
+### プロジェクト依存関係
 
-Displays the [Dependency manager](../Project/components.md).
+[依存関係マネージャー](../Project/components.md) を表示します。
 
 ### ランタイムエクスプローラー
 
-This command displays the 4D Server Runtime Explorer window.
+このコマンドは4D Server のランタイムエクスプローラウィンドウを表示します。
 
 ![](../assets/en/server/runtime-explorer.png)
 
-The Runtime Explorer enables you to view the status of the database various structural elements and to check that the available resources are correctly managed. The Runtime Explorer is particularly useful while developing or analyzing a database.
+ランタイムエクスプローラでは、データベースの様々なストラクチャ要素の状態を見たり、利用可能なリソースが正しく管理されているかをチェックできます。 ランタイムエクスプローラは特に開発時やデータベース解析中に便利です。
 
-The Runtime Explorer window contains four pages that can be accessed by clicking on the following buttons: **Watch**, **Process**, **Break** and **Catch**. The Runtime Explorer works the same way in 4D Server and 4D.
+ランタイムエクスプローラには4ページあり、それぞれのページには**ウォッチ**、**プロセス**、**ブレーク**、**キャッチ** ボタンからアクセスできます。 ランタイム エクスプローラは4D と4D Server で同じ動作を行います。
 
-### Data Explorer in Browser
+### データエクスプローラーをブラウザで開く
 
-Displays the [Data Explorer](../Admin/dataExplorer.md) in your default browser.
+[データエクスプローラー](../Admin/dataExplorer.md) をデフォルトのブラウザで表示します。
 
 ### Qodly Studio
 
-Displays the [Qodly Studio interface](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) in your default browser on the server machine.
+サーバーマシン上で、[Qodly Studio インターフェース](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface) をデフォルトのブラウザに表示します。
 
 ### Qodlyアプリケーションのプレビュー
 
-Displays the start page of your Qodly application in your default browser on the server machine. See [this section](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#preview-qodly-application) for more information.
+サーバーマシンのデフォルトのブラウザ内でQodly アプリケーションのスタートページを表示します。 詳細な情報については[こちらの章](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#preview-qodly-application) を参照してください。
 
 ## ヘルプ
 
 ### Maintenance Security Center
 
-This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up, compacting and encryption of data and structure files.
-This command is available even when no project is opened by 4D Server: in this case, it can be used to open a project in "maintenance mode" (it displays the standard open file dialog box so that you can designate the project to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged projects.
+このコマンドは[Maintenance and Security Center](../MSC/overview.md) (MSC)を開きます。ここにはデータベースの検証、解析、メンテナンス、バックアップ、圧縮を行うのに必要なすべてのツールが集められています。
+このコマンドは4D Server がプロジェクトを開いていない時でも使用できます。この場合、このコマンドを"メンテナンスモード"でプロジェクトを開くために使用できます (選択すると標準のファイルを開くダイアログが表示され、開くデータベースを選択できます)。 メンテナンスモードは圧縮や破損したデータベースを開く際に使用されます。
 
-### Online documentation
+### オンラインドキュメント
 
-Opens the 4D documentation home page.
+4D ドキュメントのホームページを開きます。
 
-### License manager...
+### ライセンス更新...
 
-This command displays the License manager, used to view, manage, and activate [licenses](../Admin/licenses.md) in your 4D environment.
+このコマンドは4D 環境で追加の[ライセンス](../Admin/licenses.md) をアクティベートするために使用するウィンドウを表示します。
 
-### About 4D Server...
+### 4D Serverについて...
 
-Displays the 4D Server **About...** window.
+このコマンドは\*\*4D Server について... \*\* ウィンドウを表示します。

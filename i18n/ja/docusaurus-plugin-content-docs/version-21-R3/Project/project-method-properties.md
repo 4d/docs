@@ -95,7 +95,7 @@ $o["custom_Alert"]() // "Hello world!" と表示します
 
 メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 メニューエディターまたは["メニュー" テーマのコマンド](../commands/theme/Menus.md) を使用して、メニューにメソッドを割り当てます。 メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
 
-メニューメソッドにより、単一または複数の処理を実行することができます。 For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`](../commands/add-record) command until the user cancels the data entry activity.
+メニューメソッドにより、単一または複数の処理を実行することができます。 たとえば、データ入力のメニューに、以下の二つの処理を実行するメソッドを割り当てられます。まず適切な入力フォームを表示し、次にユーザーがキャンセルするまでの間[`ADD RECORD`](../commands/add-record) コマンドによるデータ入力を繰り返します。
 
 連続した処理の自動化は、4D プログラミング言語の強力な機能の一つです。 カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
 

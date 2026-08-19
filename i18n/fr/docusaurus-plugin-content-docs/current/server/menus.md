@@ -125,8 +125,8 @@ Affiche la page d'accueil de votre application Qodly dans votre navigateur par d
 
 ### Centre de sécurité et de maintenance
 
-This command displays the [Maintenance and Security Center](../MSC/overview.md) (MSC) which groups together all the tools required for verification, analysis, maintenance, back-up, compacting and encryption of data and structure files.
-This command is available even when no project is opened by 4D Server: in this case, it can be used to open a project in "maintenance mode" (it displays the standard open file dialog box so that you can designate the project to be opened). Maintenance mode is used more particularly for operations such as compacting or opening damaged projects.
+Cette commande affiche le [Centre de maintenance et de sécurité](../MSC/overview.md) (CSM), qui regroupe tous les outils nécessaires à la vérification, l'analyse, la maintenance, la sauvegarde, la compression et l'encryptage des fichiers de données et de structure.
+Cette commande est disponible même lorsqu'aucun projet n'est ouvert par 4D Server : dans ce cas, elle permet d'ouvrir un projet en "mode maintenance" (elle affiche la boîte de dialogue standard d'ouverture de fichier afin que vous puissiez sélectionner le projet à ouvrir). Le mode maintenance est notamment utilisé pour des opérations telles que le compactage ou la restauration de projets endommagés.
 
 ### Documentation en ligne
 

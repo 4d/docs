@@ -76,7 +76,7 @@ OS によって許可されている名称であれば使用可能です。 し�
 
 :::note
 
-On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).
+Windows 上では、4D Server プロジェクトが[サービスとして登録](../server/service.md) されていれば、セッションの開始時に自動的に開始されるようにすることができます。
 
 :::
 

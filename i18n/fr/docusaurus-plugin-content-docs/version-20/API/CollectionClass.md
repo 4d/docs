@@ -1228,7 +1228,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 #### Exemple 3
 
-The `.filter()` function can be used to compare two collections and extract the differences between them:
+La fonction `.filter()` permet de comparer deux collections et d'extraire les différences entre elles :
 
 ```4d
 var $c1:= New collection(12; 45; 78; 99; 156)
@@ -2891,7 +2891,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //86400
 
 
 ```

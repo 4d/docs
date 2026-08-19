@@ -118,6 +118,6 @@ Lorsque plusieurs sessions sont sélectionnées, ce bouton est désactivé.
 
 Ce bouton permet de forcer la déconnexion de la ou des sessions client(s) sélectionnée(s).
 
-A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
+Une boîte de dialogue de confirmation s'affiche avant la déconnexion de la session afin de confirmer ou d'annuler cette opération (maintenez la touche **Alt** enfoncée tout en cliquant sur **Déconnecter l'utilisateur** pour vous déconnecter immédiatement sans afficher la boîte de dialogue de confirmation).
 
-You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+Vous pouvez effectuer la même opération par programmation à l'aide de la commande [`DROP REMOTE USER`](../commands/drop-remote-user).

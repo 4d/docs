@@ -57,11 +57,11 @@ Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il
 
 #### Authentification de l'utilisateur auprès du serveur de domaine
 
-Cette option vous permet de mettre en œuvre des fonctionnalités SSO (*Single Sign On*) dans votre base de données 4D Server sous Windows. Lorsque vous cochez cette option, 4D se connecte de manière transparente à l'Active directory du serveur de domaine Windows et obtient les tokens d'authentification disponibles. This option is described in the [Single Sign On (SSO) on Windows](../server/sso.md) page.
+Cette option vous permet de mettre en œuvre des fonctionnalités SSO (*Single Sign On*) dans votre base de données 4D Server sous Windows. Lorsque vous cochez cette option, 4D se connecte de manière transparente à l'Active directory du serveur de domaine Windows et obtient les tokens d'authentification disponibles. Cette option est décrite dans la page [Authentification unique (SSO)](../server/sso.md).
 
 #### Nom Principal de Service
 
-Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous devez remplir ce champ si vous souhaitez utiliser Kerberos comme protocole d'authentification. This option is described in the [Enablig Kerberos](../server/sso.md#enabling-kerberos) section.
+Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous devez remplir ce champ si vous souhaitez utiliser Kerberos comme protocole d'authentification. Cette option est décrite dans la section [Utiliser Kerberos](../server/sso.md#enabling-kerberos).
 
 #### Couche réseau
 
@@ -122,11 +122,11 @@ Lorsque cette option est cochée, toutes les machines distantes 4D se connectant
 
 :::note
 
-Cette option n'est pas disponible lorsque l'option de couche réseau [QUIC](#network-layer) est sélectionnée. QUIC communications are always in TLS, whatever your secured mode is.
+Cette option n'est pas disponible lorsque l'option de couche réseau [QUIC](#network-layer) est sélectionnée. Les communications QUIC s'effectuent toujours en TLS, quel que soit le mode de sécurisation choisi.
 
 :::
 
-This option activates the [secured mode for communications](../Admin/tls.md#enabling-tls-with-the-other-servers) between the server machine and the 4D remote machines with ServerNet netword layer.
+Cette option active le [mode sécurisé pour les communications](../Admin/tls.md#enabling-tls-with-the-other-servers) entre le serveur et les machines distantes 4D lorsque la couche réseau ServerNet est utilisée.
 
 #### Mise à jour du dossier Resources en cours de session
 
@@ -135,7 +135,7 @@ Ce paramètre permet de définir globalement le mode de mise à jour de l'instan
 - **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Toujours** : La synchronisation du dossier local **Resources** est automatiquement effectuée pendant la session chaque fois qu'une notification est envoyée par le serveur.
 - **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. L'utilisateur peut ensuite accepter ou refuser la synchronisation du dossier **Resources** local.\
-  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. For more information, please refer to the [Managing the Resources folder](../Desktop/clientServer.md#managing-the-resources-folder) section.
+  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, veuillez consulter la section [Gestion du dossier Resources](../Desktop/clientServer.md#managing-the-resources-folder).
 
 ## Page Configuration IP
 
@@ -156,20 +156,20 @@ Le fonctionnement de la table de configuration est le suivant :
 
 Par défaut, aucune restriction de connexion n’est appliquée par 4D Server : la première ligne de la table contient le libellé Autoriser et le caractère \* (toute adresse).
 
-### Support of IPv6
+### Prise en charge d'IPv6
 
-4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
+Le serveur d'applications 4D prend en charge la notation des adresses IPv6. La prise en charge d'IPv6 est transparente pour les utilisateurs et les développeurs 4D : 4D Server accepte aussi bien les connexions IPv6 que les connexions IPv4, sans distinction. Le tableau suivant répertorie les combinaisons prises en charge :
 
-|                     | 4D remote IPv4 only | 4D remote IPv6 only | 4D remote both |
-| ------------------- | ------------------- | ------------------- | -------------- |
-| 4D Server IPv4 only | IPv4                | *non supporté*      | IPv4           |
-| 4D Server IPv6 only | *non supporté*      | IPv6                | IPv6           |
-| 4D Server both      | IPv4                | IPv6                | IPv6           |
+|                            | 4D distant IPv4 uniquement | 4D distant IPv6 uniquement | 4D distant toutes notations |
+| -------------------------- | -------------------------- | -------------------------- | --------------------------- |
+| 4D Server IPv4 uniquement  | IPv4                       | *non supporté*             | IPv4                        |
+| 4D Server IPv6 uniquement  | *non supporté*             | IPv6                       | IPv6                        |
+| 4D Server toutes notations | IPv4                       | IPv6                       | IPv6                        |
 
-For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
+Pour plus d'informations sur IPv6, veuillez consulter la [spécification RFC 2460](https://datatracker.ietf.org/doc/html/rfc2460).
 
 :::note Compatibilité
 
-IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+La prise en charge d'IPv6 n'est disponible qu'avec les [couches réseau](#network-layer) QUIC et ServerNet.
 
 :::

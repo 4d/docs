@@ -1,64 +1,64 @@
 ---
 id: exit
-title: Exiting 4D Server
+title: 4D Serverを終了する
 ---
 
-To shut down the server:
+サーバを終了するには:
 
-1. Choose the **Quit** command from the **File** menu of 4D Server (Windows) or the **4D Server** menu (macOS).
+1. 4D Server の**ファイル**メニュー (Windows)または**4D Server** メニュー (macOS) から**終了**コマンドを選択
 
-The following dialog box is displayed on the server machine:
+以下のダイアログがサーバマシン上で表示されます:
 
 ![](../assets/en/server/exit-1.png)
 
-2. Enter the number of minutes in which you want the server to shut down, or select a client disconnection option.
+2. サーバを終了するまでの時間を分単位で入力するか、クライアントの接続解除オプションを選択する。
 
-As soon as you do this, no new client can connect to the server.
+この作業を行うと、サーバへの新規接続は行えなくなります。
 
 次のオプションから選択することができます:
 
-- **Disconnect from Server in XX min.**
+- **サーバーから XX 分で切断する**
 
-After the specified period of time, the server quits and all users are disconnected, including any clients in sleep mode. The following window appears on the server:
+指定された時間後、サーバーは終了し、スリープモードに入っているクライアントも含めて全てのユーザーは切断されます。 以下のウィンドウがサーバー上に表示されます:
 
 ![](../assets/en/server/exit-2.png)
 
-An identical window appears on each remote 4D machine. This window is repeated or updated on each client machine every 20 seconds or so, in order to prompt them to quit. When the time limit is reached, the server quits even if there are client machines still connected.
+同じウィンドウがそれぞれのリモートの4D マシン上に表示されます。 このウィンドウは約20 秒ごとに繰り返し表示・あるいは更新され、終了を促します。 制限時間に達すると、クライアントマシンがまだ接続していた場合でもサーバーは終了します。
 
-- **Wait for all clients to disconnect.**
+- **全てのクライアントが切断するのを待つ**
 
-The server will only quit after all clients, including those in sleep mode, have disconnected. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
+サーバーは、スリープモードに入っているものも含めて全てのクライアントが切断するまで終了するのをまちます。 このオプションは、例えば昼休み中のメンテナンス処理などには不向きな可能性があります。何故なら[スリープモード](../ServerWindow/users.md#managing-sleeping-users) に入っているクライアントがあることが容易に想像できるからです。
 
-- **Wait for active clients to disconnect. (Ignore sleeping clients)**
+- **アクティブなクライアントが切断するのを待つ (スリープのクライアントは無視)**
 
-The server will only quit after all active clients have disconnected (in other words, all client machines that are not in [sleep mode](../ServerWindow/users.md#managing-sleeping-users)). With this option, any clients in sleep mode are not considered as connected. Use this option if you want to perform maintenance operations during lunch time, for example. When this option is used, any clients in sleep mode will have a connection error when they wake up.
+サーバーはアクティブなクライアントが全て切断したあとに終了します(言い換えると、[スリープモード](../ServerWindow/users.md#managing-sleeping-users) に入っていない全てのクライアントマシンということです)。 このオプションを使用すると、スリープモードに入っているクライアントはどれも接続しているとは見なされません。 例えば昼休み中にメンテナンスオペレーションを実行したい場合などは、このオプションを使用して下さい。 このオプションが使用されているとき、スリープモードに入っているクライアントは復帰時に接続エラーが表示されます。
 
 :::note
 
-A *sleeping client* refers to a remote 4D application on a machine that has switched to [sleep mode](../ServerWindow/users.md#managing-sleeping-users) while the connection to the server machine was still active.
+*スリープ中のクライアント* とは、サーバーマシンへの接続がアクティブである間に[スリープモード](../ServerWindow/users.md#managing-sleeping-users) へと切り替わったマシン上にあるリモートの4Dアプリケーションのことをさします。
 
 :::
 
-When you choose one of these options, the following window appears, which indicates the number of clients that are still connected:
+これらのオプションのいづれか一つを選択すると、以下のウィンドウが現れ、接続中のクライアント数を表示します:
 
 ![](../assets/en/server/exit-3.png)
 
-On each 4D client machine, the following window appears displaying a default message:
+それぞれの4Dクライアントマシンには、以下のウィンドウが表示されデフォルトのメッセージが表示されます:
 
 ![](../assets/en/server/exit-4.png)
 
-If you entered a custom message in the 4D Server shutdown dialog box, it is displayed instead of the default message on each client machine. 例:
+4D Server のシャットダウンダイアログボックスにカスタムのメッセーイを入力していた場合、それぞれのクライアントマシンにはデフォルトメッセージの代わりにそれが表示されます。 例:
 
 ![](../assets/en/server/exit-5.png)
 
-- **Disconnect all clients and quit**
+- **全てのクライアントを切断し終了**
 
-The server ends all processes and all connections and quits after a few seconds.
+サーバーは全てのプロセスと切断を終了し、数秒後に終了します。
 
 :::note 注記
 
-- In all cases, if no client is connected to the server when the shutting down window is validated, 4D Server quits immediately.
-- If you click **Cancel** in the 4D Server shutdown window, the process of shutting down the server is canceled.
-- You can close the database (and disconnect the clients) without quitting the 4D Server using the **Close project...** menu command.
+- いずれのケースも、終了ウィンドウを受け入れた際にサーバに接続しているクライアントがいない場合、4D Server はすぐに終了します。
+- 4D Serverシャットダウンウィンドウで**キャンセル** をクリックすると、サーバシャットダウン処理はキャンセルされます。
+- **データベースを閉じる...** メニューコマンドを使用する事で、4D Serverを終了する事なくデータベースを閉じる(かつクライアントから切断する)ことができます。
 
 :::

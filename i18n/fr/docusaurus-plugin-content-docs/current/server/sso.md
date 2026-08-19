@@ -5,14 +5,14 @@ title: Authentification unique (SSO)
 
 4D Server vous permet d'implémenter des solutions d'authentification unique (*Single Sign On* ou *SSO*) dans vos applications client-serveur sous Windows.
 
-Grâce au SSO, vous pouvez mettre en place des solutions permettant aux utilisateurs sous Windows d'accéder directement aux applications 4D Server, sans avoir à saisir leurs identifiants, lorsqu'ils sont déjà connectés au domaine Windows de leur entreprise (via Active Directory).  Behind the scenes, the 4D Server application delegates the authentication to Active Directory and gets the Windows session login, which you can use to log the 4D user into the application by means of your standard login method.
+Grâce au SSO, vous pouvez mettre en place des solutions permettant aux utilisateurs sous Windows d'accéder directement aux applications 4D Server, sans avoir à saisir leurs identifiants, lorsqu'ils sont déjà connectés au domaine Windows de leur entreprise (via Active Directory).  En coulisses, l'application 4D Server délègue l'authentification à Active Directory et récupère l'identifiant de session Windows, que vous pouvez utiliser pour identifier l'utilisateur 4D dans votre application à l'aide de votre méthode standard de connexion.
 
 ## Conditions requises
 
 La fonctionnalité SSO est disponible :
 
 - avec les applications 4D Server sous Windows (les applications 4D mono-utilisateur ne prennent pas en charge l'authentification unique),
-- with the [QUIC or ServerNet network layer](../settings/client-server.md#network-layer) enabled.
+- avec la [couche réseau QUIC ou ServerNet](../settings/client-server.md#network-layer) activée.
 
 ## Activer la fonctionnalité SSO
 
@@ -83,7 +83,7 @@ flowchart LR
     style Ident fill:#ffffff,stroke:#365F91,stroke-width:2px
 ```
 
-La commande [`Current client authentication`](../commands/current-client-authentication) doit être appelée dans la méthode base [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md), qui est appelée chaque fois qu'un 4D distant ouvre une nouvelle connexion à l'application 4D Server. If authentication fails, you have to return a non-null value in the *$status* to reject the connection.
+La commande [`Current client authentication`](../commands/current-client-authentication) doit être appelée dans la méthode base [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md), qui est appelée chaque fois qu'un 4D distant ouvre une nouvelle connexion à l'application 4D Server. Si l'authentification échoue, vous devez renvoyer une valeur non nulle dans le paramètre *$status* pour refuser la connexion.
 
 ### Utilisation de la commande Current client authentication
 
@@ -95,7 +95,7 @@ $login:=Current client authentication($domain;$protocol)
 
 Où :
 
-- *$login* correspond à l'identifiant utilisé par le client pour se connecter à Active Directory (valeur de type texte). You need to use this value to identify the user within your project. Si l'utilisateur n'a pas pu être identifié, aucune erreur n'est générée, seule une chaîne vide est retournée.
+- *$login* correspond à l'identifiant utilisé par le client pour se connecter à Active Directory (valeur de type texte). Cette valeur vous sera nécessaire pour identifier l'utilisateur dans votre projet. Si l'utilisateur n'a pas pu être identifié, aucune erreur n'est générée, seule une chaîne vide est retournée.
 - *$domain* et *$protocol* sont des paramètres texte facultatifs. Ils sont remplis par la commande et peuvent vous permettre d'accepter ou de rejeter les connexions en fonction de certains critères :
   - *$domain* retourne le nom de domaine de l'Active Directory
   - *$protocol* retourne le nom du protocole utilisé par Windows pour authentifier l'utilisateur.
@@ -106,17 +106,17 @@ Où :
 
 Le tableau suivant liste les conditions nécessaires pour l'authentification NTLM ou Kerberos :
 
-|                                                                                          | NTLM                                                                | Kerberos                                                                |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 4D Server et 4D distant installés sur des machines différentes                           | oui                                                                 | oui                                                                     |
-| L'utilisateur 4D Server est sur le domaine                                               | oui                                                                 | oui                                                                     |
-| Le 4D distant est sur le même AD que l'utilisateur de 4D Server                          | oui ou non(\*)                                   | oui                                                                     |
-| Le SPN est indiqué dans 4D Server                                                        | non                                                                 | oui(\*\*)                                            |
-| Informations renvoyées par Current client authentication si les conditions sont remplies | *login*=expected login, *domain*=expected domain, *protocol*="NTLM" | *login*=expected login, *domain*=expected domain, *protocol*="Kerberos" |
+|                                                                                          | NTLM                                                                     | Kerberos                                                                     |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| 4D Server et 4D distant installés sur des machines différentes                           | oui                                                                      | oui                                                                          |
+| L'utilisateur 4D Server est sur le domaine                                               | oui                                                                      | oui                                                                          |
+| Le 4D distant est sur le même AD que l'utilisateur de 4D Server                          | oui ou non(\*)                                        | oui                                                                          |
+| Le SPN est indiqué dans 4D Server                                                        | non                                                                      | oui(\*\*)                                                 |
+| Informations renvoyées par Current client authentication si les conditions sont remplies | *login*=identifiant attendu, *domain*=domaine attendu, *protocol*="NTLM" | *login*=identifiant attendu, *domain*=domaine attendu, *protocol*="Kerberos" |
 
-(\*) La configuration spécifique suivante est prise en charge : l'utilisateur 4D distant est un compte local sur une machine qui appartient au même AD que 4D Server. In this case, the domain parameter is filled with the 4D Server machine name. A noter que cette prise en charge dépend des paramètres utilisateur : si elle n'est pas possible, des chaînes vides sont retournées.
+(\*) La configuration spécifique suivante est prise en charge : l'utilisateur 4D distant est un compte local sur une machine qui appartient au même AD que 4D Server. Dans ce cas, le paramètre domain contient le nom de la machine de 4D Server. A noter que cette prise en charge dépend des paramètres utilisateur : si elle n'est pas possible, des chaînes vides sont retournées.
 
-(\*\*) If all Kerberos requirements are respected but the [`Current client authentication`](../commands/current-client-authentication) command returns "NTLM" in protocol, this means that you are facing one of the following situations:
+(\*\*) Si toutes les conditions requises par Kerberos sont respectées mais que la commande [`Current client authentication`](../commands/current-client-authentication) renvoie "NTLM" comme protocole, cela signifie que vous êtes confronté à l'une des situations suivantes :
 
 - La syntaxe SPN n'est pas valide ; c'est-à-dire qu'elle ne respecte pas toutes les [contraintes imposées par Microsoft](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
 - Ou bien, le SPN a des doublons dans l'AD. Ce cas requiert l'intervention de l'administrateur de l'AD.

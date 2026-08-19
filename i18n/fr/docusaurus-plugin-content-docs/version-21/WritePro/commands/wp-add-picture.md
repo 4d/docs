@@ -29,7 +29,7 @@ Dans *wpDoc*, passez le nom d'un objet document 4D Write Pro.
 
 Pour le deuxième paramètre facultatif, vous pouvez passer soit :
 
-- En *picture* :  Une image 4D
+- Dans *picture* :  une image 4D
 - Dans *picturePath* : une chaîne contenant un chemin vers un fichier image stocké sur le disque (syntaxe système). Vous pouvez passer un chemin complet ou un chemin relatif au fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données. Si vous passez un nom de fichier, vous devez indiquer l'extension du fichier.
 - Dans *PictureFileObj* : un objet `4D.File` représentant un fichier image.
 
@@ -47,7 +47,7 @@ Par défaut, l'image ajoutée est :
 - Affichée en haut à gauche de la boîte à papier
 - Affichée sur toutes les pages
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
+L'emplacement, l'insertion (en ligne, devant/derrière le texte), la visibilité et toutes les propriétés de l'image peuvent être modifiées en utilisant la commande [WP SET ATTRIBUTES](wp-set-attributes.md), ou via des actions standards.
 
 **Note :** La commande [WP Selection range](../commands-legacy/wp-selection-range.md) retourne un objet *picture reference* si une image ancrée est sélectionnée et un *range object* si une image en ligne est sélectionnée. Vous pouvez déterminer si un objet sélectionné est un objet image en vérifiant l'attribut `wk type` :
 

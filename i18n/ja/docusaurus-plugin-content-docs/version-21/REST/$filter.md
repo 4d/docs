@@ -37,7 +37,7 @@ title: $filter
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+`eval()` ステートメントの使用は、REST クエリ内(ひいては[リモートデータストア](../ORDA/remoteDatastores.md) クエリ内)では許可されていません。
 
 :::
 
@@ -51,7 +51,7 @@ The use of the `eval()` statement is not allowed in REST queries (and thus in [r
 たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+値を直接渡す場合は、次のように書けます:
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::

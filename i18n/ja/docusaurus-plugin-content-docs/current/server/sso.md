@@ -1,59 +1,59 @@
 ---
 id: sso
-title: Single Sign On (SSO)
+title: シングルサインオン(SSO)
 ---
 
-4D Server allows you to implement SSO (*Single Sign On*) capabilities in your client-server solutions on Windows.
+4D Serverでは、Windows上のクライアント/サーバーソリューションにSSO(*Single Sign On*)機能を実装することができます。
 
-Implementing SSO in your 4D solutions will allow users to access the 4D application on Windows without needing to reenter their password when they are already logged into the Windows domain of their company (using Active Directory). Behind the scenes, the 4D Server application delegates the authentication to Active Directory and gets the Windows session login, which you can use to log the 4D user into the application by means of your standard login method.
+SSO を4D ソリューションに実装することにより、ユーザーはカンパニーのWindows ドメインにログインしていた場合に、パスワードを再入力する事なくWindows 上の4Dアプリケーションにアクセスできるようになります(Active Directory を使用)。 仕組みとしては、4D Server アプリケーションはActive Directory に認証を委任し、標準のメソッドを使用して4D ユーザーをデータベースにログインさせるための、Windows のセッションログインを取得します。
 
 ## 要件
 
-The SSO feature is available:
+SSO 機能を使用するためには以下の条件が必須となります:
 
-- with 4D Server applications on Windows (4D single-user applications do not support SSO),
-- with the [QUIC or ServerNet network layer](../settings/client-server.md#network-layer) enabled.
+- Windows 用の4D Server アプリケーションであること(4D のシングルユーザーアプリケーションはSSO をサポートしていません)
+- [QUIC または ServerNet ネットワークレイヤー](../settings/client-server.md#network-layer) が有効化されていること。
 
-## Enabling the SSO feature
+## SSO機能の有効化
 
-By default, the SSO feature is not enabled in 4D Server. To benefit from this feature, you need to set the **Authentication of user with domain server** option on the [Client-Server/Network options page](../settings/client-server.md#authentication-of-user-with-domain-server) of the Settings dialog box of 4D Server:
+デフォルトでは、SSO 機能は4D Server では有効化されていません。 この機能を利用するためには、4D Server のデータベース設定ダイアログボックスの[CS/公開オプションページ](../settings/client-server.md#ドメインサーバーによるユーザーの認証) にある**ドメインサーバーによるユーザー認証**オプションをチェックする必要があります:
 
 ![](../assets/en/server/sso.png)
 
 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。
 
-This option offers standard authentication through the NTLM protocol. 4D supports both NTLM and Kerberos protocols. The protocol used is automatically selected by 4D depending on the [current configuration](#requirements-for-sso). If you want to use the Kerberos protocol, you need to fill in the additional SPN field as well (see below).
+このオプションはNTLM プロトコル経由の標準の認証を提供します。 4D はNTLM とケルベロスプロトコルをサポートしています。 使用されるプロトコルは[カレントの設定](#SSOのための必須要件) に応じて4D によって自動的に選択されます。 ケルベロスプロトコルを使用したい場合、追加のSPN フィールドに入力する必要があります(後述参照)。
 
-### Enabling Kerberos
+### ケルベロスの有効化
 
-If you want to use Kerberos as your authentication protocol, you also need to fill in the [**Service Principal Name** option on the Client-server/Network options page](../settings/client-server.md#service-principal-name) of the Settings dialog box:
+ケルベロスを認証プロトコルとして使用したい場合、データベース設定ダイアログボックスの[C/Sの公開オプションページ内の\*\*サービスプリンシパル名(SPN)\*\*オプション](../settings/client-server.md#サービスプリンシパル名-spn) に入力をする必要があります:
 
 ![](../assets/en/server/sso-2.png)
 
-This option declares the SPN as set in the Active Directory configuration. A service principal name is a unique identifier of a service instance. SPNs are used by Kerberos authentication to associate a service instance with a service logon account. This allows a client application to request that the service authenticates an account even if the client does not have the account name. For more information, please refer to the [SPN page on the MSDN web site](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
+このオプションはSPN をActive Directory 設定内で設定されているものと同じに宣言します。 サービスプリンシパル名とはサービスインスタンスの固有の識別子です。 SPN は、ケルベロス認証によってサービスインスタンスとサービスログインアカウントを関連づけるのに使用されます。 これによりクライアントがアカウント名を持っていなくても、サービスがアカウントを認証する事をリクエストできるようになります。 詳細な情報については、[MSDN ウェブサイトのSPN のページ](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx) を参照して下さい。
 
-The SPN identifier must respect this pattern:
+SPN 識別子は以下のパターンに従う必要があります:
 
-- "ServiceName/FQDN_user" if the SPN is a computer attribute
-- "ServiceName/FQDN_computer" if the SPN is a user attribute
+- SPN がコンピューター属性である場合には、 "ServiceName/FQDN_user"
+- SPN がユーザー属性である場合には "ServiceName/FQDN_computer"
 
-詳細は以下の通りです:
+このとき上記の略称の意味は以下の通りです:
 
-- *ServiceName* is the name of the service which the client wants to authenticate.
-- The *Fully Qualified Domain Name* (FQDN) is a domain name that specifies its exact location in the tree hierarchy of the Active Directory for both computers and users.
+- *ServiceName* はクライアントが認証しようとしているサービスの名前です。
+- *Fully Qualified Domain Name* (FQDN) は、コンピューターとユーザーの両者に対し、Active Directory の3階層のうちどの位置にいるのかを指定するドメイン名です。
 
-In 4D applications, the SPN can be set:
+4D アプリケーションでは、SPN は以下のようにして設定することができます:
 
-- in the [structure settings](../Project/architecture.md#sources), for use with 4D Server.
-- or in the [user settings](../Project/architecture.md#settings-user) for deployment needs.
+- 4D Server での使用に対しては、データベースストラクチャー設定[structure settings](../Project/architecture.md#sources) 内で設定できます。
+- 配布のための使用については、[ユーザー設定](../Project/architecture.md#settings-ユーザーデータ) で設定できます。
 
-## Implementing SSO
+## SSOの実装
 
-When SSO features are enabled, you can rely on user authentication based on Windows session credentials to open a user session on 4D Server.
+SSO 機能が有効化されていると、4D Server でのユーザーセッションを開くのにWindows セッション証明書に基づいたユーザー認証を利用できるようになります。
 
-Keep in mind that the SSO feature only provides you with an authenticated login; it is up to you to pass this login to your standard 4D login method. When a 4D remote application tries to connect to the server, you have to call the [`Current client authentication`](../commands/current-client-authentication) command, which will return the user login, as defined in the Active Directory. You can then pass this login to your own identification system (using the built-in user and groups, the LDAP commands, or any custom mechanism) to open the appropriate session for the remote user in your 4D application.
+SSO 機能はあくまで認証されたログインのみを提供し、そのログインは自力で4D の標準ログインメソッドに渡す必要があるという点に注意して下さい。 4D リモートアプリケーションがサーバーに接続しようとするとき、Active Directory で定義されたユーザーログインを返す[`Current client authentication`](../commands/current-client-authentication) コマンドを使用する必要があります。 それからこのログインを(ビルトインのユーザーとグループ、LDAP コマンド、あるいは他のカスタムの機構などを使用して)認証システムに渡すことで、お使いの4D アプリケーションのリモートユーザーへの適切なセッションを開く事ができます。
 
-This principle is illustrated in the following graphic:
+この原理は以下のような図にまとめる事ができます:
 
 ```mermaid
 flowchart LR
@@ -65,15 +65,15 @@ flowchart LR
     Auth(["Current client<br/>authentication()"])
     AD["MS Active<br/>Directory"]
 
-    Client -->|Connection request| Server
+    Client -->|接続リクエスト| Server
 
     Server -->|login| Ident
-    Ident -.->|Client session opening| Server
+    Ident -.->|クライアントセッションを開く| Server
 
     Server <--> Auth
     Auth <--> AD
 
-    AD -->|Transparent authentication| Client
+    AD -->|透過的な認証| Client
 
     style Client fill:#4F81BD,color:#fff,stroke:#365F91,stroke-width:2px
     style Server fill:#4F81BD,color:#fff,stroke:#365F91,stroke-width:2px
@@ -83,47 +83,47 @@ flowchart LR
     style Ident fill:#ffffff,stroke:#365F91,stroke-width:2px
 ```
 
-The [`Current client authentication`](../commands/current-client-authentication) command must be called in the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method, which is called each time a remote 4D opens a new connection to the 4D Server application. If authentication fails, you have to return a non-null value in the *$status* to reject the connection.
+[`Current client authentication`](../commands/current-client-authentication) コマンドは[`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) データベースメソッド内で呼び出される必要があります。これはリモートの4D が4D Server アプリケーションへの新しい接続を開くときに毎回呼び出されるものです。 認証が失敗した場合、 *$status* に非ヌル値を渡し接続を拒否する必要があります。
 
-### Using the Current client authentication command
+### Current client authenticationコマンドの使用
 
-To call the [`Current client authentication`](../commands/current-client-authentication) command, use the following syntax:
+[`Current client authentication`](../commands/current-client-authentication) コマンドを呼び出すためには、以下のシンタックスを使用して下さい:
 
 ```4d
 $login:=Current client authentication($domain;$protocol)
 ```
 
-詳細は以下の通りです:
+このとき上記の略称の意味は以下の通りです:
 
-- *$login* is the ID used by the client to log into the Active Directory (text value). You need to use this value to identify the user within your project. If the user is not correcty authenticated, an empty string is returned and no error is returned.
-- *$domain* and *$protocol* are optional text parameters. They are filled by the command and allow you to accept or reject connections depending on these values:
-  - *$domain* is the Active Directory domain name
-  - *$protocol* is the name of the protocol used by Windows to authenticate the user.
+- *$login* はActive Directoryにログインするためにクライアントで使用されるID(テキスト値)です。 この値はプロジェクト内でユーザーを認識するために使用する必要があります。 ユーザーが正常に認証されていない場合、空の文字列が返され、エラーは返されません。
+- *$domain* と\*$protocol\* は任意のテキスト引数です。 これらはコマンドによって入力され、これらの値によって接続を受け入れまたは拒否することができます:
+  - *$domain* はActive Directory のドメイン名です
+  - *$protocol* はユーザーを認証するのにWindowsが使用するプロトコル名です。
 
-### Requirements for SSO
+### SSOのための必須要件
 
-4D Server handles various SSO configurations, depending on the current architecture and settings. The protocol used for authentication (NTLM or Kerberos) as well as information returned by the [`Current client authentication`](../commands/current-client-authentication) command depend on the actual configuration, if all requirements are respected (see below). The protocol actually used for authentication is returned in the protocol parameter of the [`Current client authentication`](../commands/current-client-authentication) command.
+4D Server はカレントのアーキテクチャーや設定によって、様々なSSO 設定を管理します。 認証に使用するプロトコル(NTLM または Kerberos) に加えて[`Current client authentication`](../commands/current-client-authentication) コマンドによって返される情報は、要件(以下参照)が満たされていた場合には、実際の設定によって変化します。 認証に実際に使用されるプロトコルは[`Current client authentication`](../commands/current-client-authentication) コマンドのprotocol 引数に返されます。
 
-The following table provides the requirements for using NTLM or Kerberos authentication:
+以下のテーブルはNTLM あるいはケルベロス認証を使用する際の必須要件をまとめたものです:
 
-|                                                                                     | NTLM                                                                | Kerberos                                                                |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 4D Server and 4D remote are on different machines                                   | ◯                                                                   | ◯                                                                       |
-| 4D Server user is on domain                                                         | ◯                                                                   | ◯                                                                       |
-| 4D remote is on the same AD as 4D Server user                                       | yes or no(\*)                                    | ◯                                                                       |
-| SPN is filled in on 4D Server                                                       | ×                                                                   | yes(\*\*)                                            |
-| Information returned by Current client authentication if requirements are respected | *login*=expected login, *domain*=expected domain, *protocol*="NTLM" | *login*=expected login, *domain*=expected domain, *protocol*="Kerberos" |
+|                                                       | NTLM                                                   | ケルベロス                                                      |
+| ----------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------- |
+| 4D Server と 4D リモートが異なるマシン上にあること                      | ◯                                                      | ◯                                                          |
+| 4D Server ユーザーがドメイン上にあること                             | ◯                                                      | ◯                                                          |
+| 4D リモートが4D Serverユーザーと同じリモート上にあること                    | yes または no(\*)                      | ◯                                                          |
+| SPN が4D Serverで入力されていること                              | ×                                                      | yes(\*\*)                               |
+| 要件が満たされている場合にCurrent client authentication によって返される情報 | *login*=予想されるログイン、*domain*=予想されるドメイン、*protocol*="NTLM" | *login*=予想されるログイン、*domain*=予想されるドメイン、*protocol*="Kerberos" |
 
-(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. In this case, the domain parameter is filled with the 4D Server machine name. Note that the support depends on actual user settings: if not available, empty strings are returned.
+(\*) 次の特定の設定のみサポートされます: 4Dリモートユーザーが4D Serverと同じADに属するマシン上のローカルアカウントであること。 この場合、domain 引数には4D Serverのマシン名が入力されます。 サポートの可否は実際のユーザー設定に依存し、サポートされない場合は空文字列が返されます。
 
-(\*\*) If all Kerberos requirements are respected but the [`Current client authentication`](../commands/current-client-authentication) command returns "NTLM" in protocol, this means that you are facing one of the following situations:
+(\*\*) ケルベロスの必須要件が全て満たされているのに[`Current client authentication`](../commands/current-client-authentication) コマンドがprotocol 引数に"NTLM"を返す場合、以下の状況のどちらかである事を意味します:
 
-- The SPN syntax is not valid; in other words, it does not respect the [constraints imposed by Microsoft](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
-- Or, the SPN has duplicates in the AD. This issue needs to be fixed by the AD administrator.
+- SPN シンタックスが無効です。つまり、[Microsoft によって提示された制約](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx) に従っていない事を意味します。
+- または、AD 内に重複したSPN が存在する事を意味します。 この問題はAD 管理者によって修正される必要があります。
 
 :::note
 
-A valid syntax does not mean that the SPN declaration itself is correct; more specifically, if the SPN does not exist in the AD, [`Current client authentication`](../commands/current-client-authentication) returns empty strings.
+シンタックスが有効であっても、SPN 宣言自身が正しいことを意味する訳ではありません。具体的には、AD 内にSPN が存在しない場合、[`Current client authentication`](../commands/current-client-authentication) コマンドは空の文字列を返します。
 
 :::
 

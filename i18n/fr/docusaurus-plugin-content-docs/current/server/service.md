@@ -16,7 +16,7 @@ Ce fonctionnement permet de garantir la disponibilité d’une application 4D Se
 
 :::
 
-Pour enregistrer une application 4D Server en tant que service, sélectionnez **Enregistrer l'application comme un Service** dans le [menu **Fichier**](./menus.md#file) de 4D Server. Au prochain démarrage de l'ordinateur, 4D Server sera automatiquement lancé et le projet courant ouvert. You can register any number of projects. Chaque projet ne peut être enregistré qu'une seule fois.
+Pour enregistrer une application 4D Server en tant que service, sélectionnez **Enregistrer l'application comme un Service** dans le [menu **Fichier**](./menus.md#file) de 4D Server. Au prochain démarrage de l'ordinateur, 4D Server sera automatiquement lancé et le projet courant ouvert. Vous pouvez enregistrer autant de projets que vous le souhaitez. Chaque projet ne peut être enregistré qu'une seule fois.
 
 :::note
 

@@ -47,7 +47,7 @@ Selon la sélection de l'utilisateur d'un modèle ou d'un tableau, l'utilisateur
 
 Dans l'Assistant de table, l'utilisateur peut également définir le nombre de lignes d'en-tête et de lignes supplémentaires (de 0 à 5 chacune), définir les [lignes de rupture](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.fr.html#6233076) (lignes de synthèse) au-dessus ou en dessous de la ligne de données, et choisir d'afficher/masquer les [lignes de report](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.fr.html#6236686).
 
-In addition, the user has the possibility to choose the table's behavior when its datasource is empty with the following options: Show data row, Hide date row, Hide table, Show placeholder row.
+De plus, l'utilisateur a la possibilité de choisir le comportement du tableau lorsque sa source de données est vide, grâce aux options suivantes : Afficher la ligne de données, Masquer la ligne de données, Masquer le tableau, Afficher la ligne d'espace réservé.
 
 ##### Dans Affichage :
 
@@ -74,34 +74,34 @@ Ces trois types de fichiers contribuent à la configuration de l'Assistant de ta
 Le fichier de modèle vous permet de définir les éléments suivants :
 
 - la formule qui retourne une sélection d'entité utilisée comme source de données de la table,
-- the break formulas (if any break row can be inserted)
+- les formules de rupture (si une ligne de rupture peut être insérée)
 - les attributs de dataclass qui peuvent être utilisés comme colonnes de table,
-- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
+- les formules disponibles dans les menus contextuels des lignes de rupture, de la ligne à reporter en bas, de la ligne de remplacement ou des autres lignes.
 
 Le fichier modèle doit être stocké dans un dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dans votre projet.
 
 Le fichier de modèle au format JSON contient les attributs suivants :
 
-| Attribut                             | Type       | Obligatoire | Description                                                                                                                                                                                              |
-| :----------------------------------- | :--------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource                      | Text       | x           | Formule de la source de données de la table                                                                                                                                                              |
-| columns                              | Collection | x           | Collection des colonnes de la table                                                                                                                                                                      |
-| columns.check        | Text       | x           | Vrai lorsque la colonne est déjà cochée dans l'éditeur de modèle. Faux lorsque la colonne est décochée dans l'éditeur de modèle.                                         |
-| columns.header       | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
-| columns.source       | Text       | x           | Formula                                                                                                                                                                                                  |
-| ruptures/sauts                       | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                                                                  |
-| breakFormulas                        | Collection |             | Collection of formula objects applicable to break rows                                                                                                                                                   |
-| breakFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                                                  |
-| bcorFormulas                         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                                                       |
-| bcorFormulas.label   | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                                                  |
-| extraFormulas                        | Collection |             | Collection d'objets de formule applicable aux lignes supplémentaires                                                                                                                                     |
-| extraFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                       |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                  |
-| placeholderFormulas                  | Collection |             | Collection of formula objects that are inserted in the placeholder row                                                                                                                                   |
+| Attribut                             | Type       | Obligatoire | Description                                                                                                                                                                                                                    |
+| :----------------------------------- | :--------- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource                      | Text       | x           | Formule de la source de données de la table                                                                                                                                                                                    |
+| columns                              | Collection | x           | Collection des colonnes de la table                                                                                                                                                                                            |
+| columns.check        | Text       | x           | Vrai lorsque la colonne est déjà cochée dans l'éditeur de modèle. Faux lorsque la colonne est décochée dans l'éditeur de modèle.                                                               |
+| columns.header       | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                                             |
+| columns.source       | Text       | x           | Formula                                                                                                                                                                                                                        |
+| ruptures/sauts                       | Collection |             | Collection d'objets de rupture. L'ordre des ruptures est important. Il correspond à l'ordre dans le document lorsque les ruptures se trouvent au-dessus des lignes de données. |
+| breaks.label         | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                                             |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                                                                                        |
+| breakFormulas                        | Collection |             | Collection d'objets de formule applicables aux lignes de rupture                                                                                                                                                               |
+| breakFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                                             |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                        |
+| bcorFormulas                         | Collection |             | Collection d'objets de formule applicables aux lignes à reporter en bas                                                                                                                                                        |
+| bcorFormulas.label   | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                                             |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                                                                        |
+| extraFormulas                        | Collection |             | Collection d'objets de formule applicable aux lignes supplémentaires                                                                                                                                                           |
+| extraFormulas.label  | Text       | x           | Étiquette affichée à l'utilisateur                                                                                                                                                                                             |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                                                                                        |
+| placeholderFormulas                  | Collection |             | Collection d'objets de formule insérés dans la ligne de remplacement                                                                                                                                                           |
 
 :::note Langue française
 
@@ -242,10 +242,10 @@ Le fichier de thème au format JSON contient les attributs suivants:
 | break4         | Object |             | Objet contenant la définition du style applicable à la quatrième ligne de rupture.                                                                                                                                           |
 | break5         | Object |             | Objet contenant la définition du style applicable à la cinquième ligne de rupture.                                                                                                                                           |
 | ruptures/sauts | Object |             | Objet contenant la définition du style applicable aux lignes de rupture, s'il s'agit d'une rupture spécifique (comme break1, break2...) n'est pas défini. |
-| bcor           | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                                                                                                              |
-| placeholder    | Object |             | Object containing the default style applicable to the placeholder row.                                                                                                                                                       |
+| bcor           | Object |             | Objet contenant la définition du style applicable à la ligne à reporter en bas.                                                                                                                                              |
+| placeholder    | Object |             | Objet contenant le style par défaut applicable à la ligne de remplacement.                                                                                                                                                   |
 
-For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
+Pour chaque attribut utilisé dans votre fichier JSON (lignes d'en-tête, de données, à reporter en bas, de synthèse et autres lignes), vous pouvez définir les attributs WP suivants, indiqués avec leur [constante WP correspondante](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html) :
 
 | Attributs WP    | Constante WP correspondante |
 | :-------------- | :-------------------------- |
@@ -304,34 +304,34 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 ## IA intégrée
 
-You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
+Vous pouvez utiliser une IA intégrée dans l'interface de 4D Write Pro afin de traduire ou d'améliorer facilement vos documents sans avoir à utiliser une application d'IA externe.
 
-Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the text of the selection or of the document itself.
+Une fois la fonctionnalité d'IA activée, vous pouvez afficher une zone de conversation au-dessus de votre document 4D Write Pro et interagir avec *chatGPT* pour modifier le texte de la sélection ou du document lui-même.
 
 :::note
 
-The 4D Write Pro interface uses OpenAI, for which you need to provide your own key (see below).
+L'interface de 4D Write Pro utilise OpenAI, pour lequel vous devez fournir votre propre clé (voir ci-dessous).
 
 :::
 
 ### Limitations
 
-In the current implementation, the feature has the following limitations:
+Dans l'implémentation actuelle, la fonctionnalité présente les limitations suivantes :
 
-- use of a predefined AI provider and necessity to pass your OpenAI key
-- basic chatting features
-- no image handling
-- non-configurable predefined action commands
-- predefined translations English/French and French/English only
+- utilisation d'un fournisseur d'IA prédéfini et nécessité de fournir votre clé OpenAI
+- fonctionnalités de conversation basiques
+- aucune prise en charge des images
+- commandes d'action prédéfinies non configurables
+- traductions prédéfinies anglais/français et français/anglais uniquement
 
-### Enabling the AI feature
+### Activation de la fonctionnalité d'IA
 
-The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
+La boîte de dialogue d'IA est accessible en cliquant sur un bouton dans l'interface de 4D Write Pro. Ce bouton est **masqué par défaut**, vous devez l'activer explicitement.
 
-To display the AI dialog box button, you need to:
+Pour afficher le bouton de la boîte de dialogue IA, vous devez :
 
-1. Get an API key from the [OpenAI website](https://openai.com/api/).
-2. Execute the following 4D code:
+1. Obtenir une clé API sur le [site web d'OpenAI](https://openai.com/api/).
+2. Exécuter le code 4D suivant :
 
 ```4d
 
@@ -341,73 +341,73 @@ WP SetAIKey ("<Your OpenAI Key>") //
 
 :::note
 
-No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty.
+Aucune vérification de la validité de la clé OpenAI n'est effectuée. Si celle-ci n'est pas valide, la zone de conversation *chatGPT* restera vide.
 
 :::
 
-The **A.I.** button is then displayed:
+Le bouton **I.A.** est alors affiché :
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
-- in the 4D Write Pro Toolbar, in the **Import Export** tab,
-- in the 4D Write Pro Widget, in the **Font Style** tab.
+- dans la barre d'outils de 4D Write Pro, dans l'onglet **Importer Exporter**,
+- dans le widget 4D Write Pro, dans l'onglet **Style de police**.
 
-Click on the button to display the AI dialog box.
+Cliquez sur le bouton pour afficher la boîte de dialogue d'IA.
 
-### AI dialog box
+### Boîte de dialogue d'IA
 
-The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
+La boîte de dialogue d'IA de 4D Write Pro permet une interaction simple entre la zone de conversation et le document 4D Write Pro.
 
-#### Prompt area
+#### Zone d'invite
 
-At the bottom of the window, the **prompt area** allows you to enter any question to send to the AI.
+En bas de la fenêtre, la **zone d'invite** vous permet de saisir toute question à envoyer à l'IA.
 
-To send your question to the AI, click on the Send button:
+Pour envoyer votre question à l'IA, cliquez sur le bouton **Envoyer** :
 
 ![ai send](../assets/en/WritePro/ai-send.png)
 
-The button icon changes when the same request is sent again:
+L'icône du bouton change lorsque la même requête est envoyée à nouveau :
 
 ![ai resend](../assets/en/WritePro/ai-resend.png)
 
-On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI.
+Sur le côté gauche de cette zone, un menu contextuel propose des exemples d'actions courantes qui peuvent être déléguées à l'IA.
 
-Selecting an action writes a corresponding question to the prompt. If necessary, you can modify the question and then to click on the Send button to actually send it:
+La sélection d'une action insère une question correspondante dans l'invite. Si nécessaire, vous pouvez modifier la question, puis cliquer sur le bouton **Envoyer** pour l'envoyer :
 
 ![ai menu](../assets/en/WritePro/ai-menu.png)
 
 :::note
 
-Default translation actions are based upon the current 4D default configuration and depend on available languages.
+Les actions de traduction par défaut sont basées sur la configuration 4D par défaut actuelle et dépendent des langues disponibles.
 
 :::
 
-#### Copy buttons
+#### Boutons de copie
 
-These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
+Ces boutons permettent des interactions de base entre la zone de conversation, le document 4D Write Pro sous-jacent et le presse-papiers :
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
-- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
-- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **Renvoyer le texte brut/Renvoyer le texte stylé** : Copie la dernière réponse ou la réponse sélectionnée de l'IA dans le document 4D Write Pro au point d'insertion courant, en remplaçant le texte sélectionné, le cas échéant.
+- **Copier le texte brut/Copier le texte stylé** : Copie la dernière réponse ou la réponse sélectionnée de l'IA dans le presse-papiers.
 
-In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
+Dans les deux cas, si la réponse comporte des styles, vous pouvez choisir de copier le texte avec ou sans les styles.
 
 :::note
 
-The chat box uses the Markdown language to format text. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
+La zone de conversation utilise le langage Markdown pour mettre en forme le texte. Les styles de base tels que le gras, l'italique, le soulignement et les titres sont pris en charge. Lorsque vous collez du texte stylé provenant de l'IA dans la zone 4D Write Pro, certaines informations de mise en forme peuvent être perdues.
 
 :::
 
-#### Chat area
+#### Zone de conversation
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+La zone de conversation affiche l'ensemble des interactions entre vous et l'IA. Vous pouvez la faire défiler et sélectionner la partie de votre choix.
 
-To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
+Pour vider cette zone, cliquez sur le bouton **Effacer** de la zone Historique (ce qui réinitialise la fenêtre et toutes les interactions).
 
 #### Historique
 
-The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area.
+La zone Historique répertorie toutes les invites que vous avez envoyées à l'IA. Vous pouvez masquer/afficher cette zone à l'aide du bouton situé dans le coin supérieur droit de la zone de conversation.
 
-The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box.
+Le bouton **Effacer** permet de réinitialiser l'ensemble de la fenêtre et d'effacer toutes les interactions. Cela revient à fermer puis à rouvrir la boîte de dialogue d'IA.
 

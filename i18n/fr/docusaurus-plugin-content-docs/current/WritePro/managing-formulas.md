@@ -6,9 +6,9 @@ slug: /WritePro/formulas
 
 ## Vue d’ensemble
 
-Les documents 4D Write Pro peuvent contenir des références à des formules 4D telles que des variables, des champs, des expressions, des méthodes projet ou des commandes 4D. Specific information such as the page number can also be referenced through formulas (see below).
+Les documents 4D Write Pro peuvent contenir des références à des formules 4D telles que des variables, des champs, des expressions, des méthodes projet ou des commandes 4D. Des informations spécifiques, telles que le numéro de page, peuvent également être référencées à l'aide de formules (voir ci-dessous).
 
-Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. Ils sont également retournés par la commande [**WP Get text**](commands-legacy/wp-get-text.md).
+L'insertion de formules dans les zones de 4D Write Pro se fait avec la commande [**WP Insert formula**](commands/wp-insert-formula.md) et peut être lue avec la commande [**WP Get formulas**](commands-legacy/wp-get-formulas.md). Ils sont également retournés par la commande [**WP Get text**](commands-legacy/wp-get-text.md).
 
 ### Évaluation des formules
 
@@ -89,13 +89,13 @@ Par exemple, pour insérer le numéro de page dans la zone de pied de page :
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP Insert formula($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  //Utiliser Formula(myMethod) avec myMethod traitant This.pageNumber
+  //ne fonctionnerait pas correctement
 ```
 
 :::note
 
-For more information about formula insertion, see [WP Insert formula](../commands/wp-insert-formula).
+Pour plus d'informations sur l'insertion de formules, voir [WP Insert formula](../commands/wp-insert-formula).
 
 :::
 
@@ -187,7 +187,7 @@ Dans ce cas, vous pouvez afficher les références des formules sous forme de sy
 Pour afficher les références de formules en tant que symboles, vous pouvez :
 
 - cocher l'option **Afficher la source de la formule comme symbole** dans la liste des propriétés (voir *Configuration des propriétés de vue*), ou
-- use the displayFormulaAsSymbol standard action , or
+- utiliser l'action standard displayFormulaAsSymbol , ou
 - utiliser la commande [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) avec le sélecteur `wk display formula as symbol` sur **True**.
 
 ### Références en noms
@@ -205,7 +205,7 @@ Si vous attribuez des noms de formule, ils sont affichés à la place des textes
 Pour attribuer un nom à une formule, vous devez utiliser la commande [WP Insert formula](commands/wp-insert-formula.md) avec un paramètre objet. Par exemple :
 
 ```4d
-  //inserts the previous day in the document
+  //insère le jour précédent dans le document
  $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP Insert formula($range;$o;wk append)

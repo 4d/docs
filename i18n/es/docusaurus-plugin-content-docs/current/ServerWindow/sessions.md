@@ -5,7 +5,7 @@ title: Página Sesiones
 
 La página **Sesiones** muestra todas las sesiones activas conectadas al servidor, incluidas las sesiones de cliente, web, REST y SOAP.
 
-![](../assets/en/Admin/server-sessions-1.png)
+![](../assets/en/Admin/server-sessions-2.png)
 
 El botón **Sesiones** indica, entre paréntesis, el número total de sesiones activas (esta cifra no tiene en cuenta los filtros de visualización aplicados a la ventana).
 

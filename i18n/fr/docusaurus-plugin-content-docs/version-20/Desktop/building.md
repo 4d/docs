@@ -203,7 +203,7 @@ Une application autonome nécessite une licence de déploiement. Elle peut être
 | ---------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | *4D OEM Desktop*       | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page Licences](#licenses) de la boîte de dialogue du Build application                                          |
 | *4D Unlimited Desktop* | **Arrêtée** - Licence personnalisée intégrée                                                   | [Page Licences](#licenses) de la boîte de dialogue du Build application                                          |
-| *4D Desktop*           | Per-computer license, allowing to use stand-alone 4D applications                              | [Première boîte de dialogue d'activation](../Admin/licenses.md#first-activation) sur la machine de l'utilisateur |
+| *4D Desktop*           | Licence par ordinateur, permettant d'utiliser des applications 4D autonomes                    | [Première boîte de dialogue d'activation](../Admin/licenses.md#first-activation) sur la machine de l'utilisateur |
 
 
 
