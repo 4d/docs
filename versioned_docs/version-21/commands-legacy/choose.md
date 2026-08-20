@@ -52,7 +52,7 @@ This command can be used to generate concise code that replaces tests of the “
 
 :::note
 
-If you use this command to compare two *value* parameters, you might also want to consider using the [ternary operator](../../Concepts/operators.md#ternary-operator), which can make your code more concise and efficient.
+If you use this command to compare two *value* parameters, you might also want to consider using the [ternary operator](../Concepts/operators.md#ternary-operator), which can make your code more concise and efficient.
 
 :::
 
