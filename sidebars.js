@@ -335,8 +335,8 @@ module.exports =
         "Develop-legacy/transactions",
         "Tags/transformation-tags",
         "Project/date-time-formats",
-        "Develop-legacy/xml"
-        /*
+        "Develop-legacy/xml",
+        
         // not ready yet, needs imports from Design ref for records and selection concepts,
         {
             type: "category",
@@ -353,10 +353,11 @@ module.exports =
             image: "/img/docusaurus.png"              },
               items: [
                 "Develop-legacy/records",
-                "Develop-legacy/sets",
-                "Develop-legacy/named-selections"
+                "Develop-legacy/current-selection",
+                "Develop-legacy/named-selections",
+              "Develop-legacy/sets"
           ]
-        } */
+        } 
       ]
     },
     {
