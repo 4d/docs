@@ -1,6 +1,6 @@
 ---
 id: xml
-title: Traitement XML
+title: Traitements XML
 slug: /Develop/XML
 displayed_sidebar: docs
 ---

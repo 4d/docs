@@ -216,3 +216,46 @@ Reading the **length** property of an undefined collection produces 0:
      var $c : Collection //variable created but no collection is defined
      $size:=$c.length //$size = 0
 ```
+
+## Type conversions between collections and 4D arrays
+
+When moving values between [arrays](./arrays.md) (typed) and collections (non-typed), 4D applies automatic conversions according to the values and the array type declarations.
+
+### Converting collections to arrays
+
+The following conversions are applied to values handled by the following commands:
+
+- [`COLLECTION TO ARRAY`](../commands/collection-to-array)
+- [`OB GET ARRAY`](../commands/ob-get-array)
+
+|Collection element type|null|boolean|Infinity|real|string|date|picture|object|collection|4D.BLOB|
+|----|----|----|----|----|----|----|----|----|----|----|
+|[`ARRAY TEXT`](../commands/array-text)|""	|"false" or "true"	|"Infinity"	|number with dot separator (if necessary)|Text|	Conversion of date in text according to [Dates inside objects](../commands/set-database-parameter#dates-inside-objects-85) parameter|"[object Object]"	|"[object Object]"|Collection elements separated by ,|"[object Object]"|
+|[`ARRAY LONGINT`](../commands/array-longint)|0|0 or 1|not defined behavior|rounded according to standard rounding rules|0 if string does not start with [0-9,+,-,e,.,x], otherwise standard conversion. Supports hexa notation prefix 0x|0|0|0|0|0
+|[`ARRAY REAL`](../commands/array-real)|	0|	0 or 1	|INF|	real|	same as ARRAY LONGINT|	0|	0|	0|	0|	0|
+|[`ARRAY INTEGER`](../commands/array-integer)|0|	0 or 1	|0|	rounded according to std rounding rules|	same as ARRAY LONGINT|	0|	0|	0|	0|	0|
+|[`ARRAY BOOLEAN`](../commands/array-boolean)|	False|	false or true	|true	|true if #0	|true if string#""|	true if date#"00/00/00"|	True|	True|	True|	True|
+|[`ARRAY OBJECT`](../commands/array-object)|	undefined|	undefined|	undefined|	undefined|	undefined|	undefined|	Object picture|	Object|	Undefined|	4D.Blob|
+|[`ARRAY BLOB`](../commands/array-blob)|0 bytes|	0 bytes|	0 bytes	|0 bytes|	0 bytes|	0 bytes	|0 bytes|	0 bytes	|0 bytes|	Blob|
+|[`ARRAY PICTURE`](../commands/array-picture)|	0 bytes	|0 bytes	|0 bytes|	0 bytes	|0 bytes|	0 bytes	|Picture	|0 bytes	|0 bytes|	0 bytes|
+|[`ARRAY DATE`](../commands/array-date)|00/00/00|	00/00/00	|00/00/00	|00/00/00|	00/00/00 or a date if ISO8601 compliant format|	date|	00/00/00|	00/00/00|	00/00/00|	00/00/00|
+|[`ARRAY TIME`](../commands/array-time)|	00:00:00|	00:00:00	|not defined behavior	|number of seconds in 00:00:00 format|	number of seconds in 00:00:00 format|	00:00:00|	00:00:00|	00:00:00|	00:00:00|	00:00:00|
+
+:::note
+
+Blob objects (4D.Blob) are [automatically converted to scalar blobs](dt_blob.md#automatic-conversion-of-blob-type) and vice versa when necessary.
+
+:::
+
+
+### Converting arrays to collections 
+
+The following conversions are applied to values handled by the following commands:
+
+- [`ARRAY TO COLLECTION`](../commands/array-to-collection)
+- [`OB SET ARRAY`](../commands/ob-set-array)
+
+|||||||||||||
+|---|----|----|----|----|----|----|----|---|----|----|----|
+||[`ARRAY TEXT`](../commands/array-text)|[`ARRAY LONGINT`](../commands/array-longint)|[`ARRAY REAL`](../commands/array-real)|[`ARRAY INTEGER`](../commands/array-integer)|[`ARRAY BOOLEAN`](../commands/array-boolean)|[`ARRAY OBJECT`](../commands/array-object)|[`ARRAY PICTURE`](../commands/array-picture)|[`ARRAY DATE`](../commands/array-date)|[`ARRAY TIME`](../commands/array-time)	|[`ARRAY BLOB`](../commands/array-blob)|
+|Collection element types|string|number|number|number|boolean|object or null|picture|string or date according to the [Dates inside objects](../commands/set-database-parameter#dates-inside-objects-85) parameter|number of seconds|4D.Blob|
