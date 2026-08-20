@@ -45,7 +45,7 @@ Dans l'environnement de développement, vous pouvez utiliser la commande **Tout 
 
 ## Créer un sous-ensemble d'enregistrements
 
-Vous pouvez définir une nouvelle sélection courante dans un formulaire de sortie en « marquant » manuellement certains enregistrements, puis en les définissant comme nouvelle sélection courante. C'est ce qu'on appelle la création d'un sous-ensemble. Dans l'environnement de développement, il existe une commande **Montrer sous-ensemble** spécifique dans le menu **Enregistrements**.
+Vous pouvez définir une nouvelle sélection courante dans un formulaire de sortie en « marquant » manuellement certains enregistrements, puis en les définissant comme nouvelle sélection courante. C'est ce qu'on appelle la création d'un sous-ensemble. Dans l'environnement de développement, il existe une commande **Sous sélection** spécifique dans le menu **Enregistrements**.
 
 Dans vos développements, vous pouvez gérer les enregistrements marqués par les utilisateurs à l'aide des [Ensembles](./sets.md).
 

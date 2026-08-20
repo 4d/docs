@@ -1,13 +1,13 @@
 ---
 id: records
-title: Enregistrements & sélections
+title: Enregistrements
 slug: /Develop/records
 displayed_sidebar: docs
 ---
 
 
 
-Les enregistrements et les sélections sont des outils fondamentaux qui permettent aux développeurs 4D d'accéder aux données de la base 4D et de les manipuler. Il s'agit de **concepts historiques**. Les nouveaux développements sont encouragés à s'appuyer sur l'[architecture ORDA moderne](../ORDA/overview.md). Cependant, ils restent pleinement fonctionnels et sont largement utilisés dans les développements 4D existants.
+Les enregistrements et les sélections sont des outils fondamentaux qui permettent aux développeurs 4D d'accéder aux données de la base 4D et de les manipuler. Il s'agit de **concepts historiques**. Pour les nouveaux développements, nous recommandons l'utilisation de l'[architecture ORDA](../ORDA/overview.md), proposant des concepts plus modernes. Cependant, ils restent pleinement fonctionnels et sont largement utilisés dans les développements 4D existants.
 
 ## Travailler avec les enregistrements
 

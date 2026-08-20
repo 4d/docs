@@ -1,6 +1,6 @@
 ---
 id: records
-title: レコード & セレクション
+title: レコード
 slug: /Develop/records
 displayed_sidebar: docs
 ---

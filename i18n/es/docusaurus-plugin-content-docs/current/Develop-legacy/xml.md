@@ -1,90 +1,90 @@
 ---
 id: xml
-title: XML Processing
+title: Procesamiento XML
 slug: /Develop/XML
 displayed_sidebar: docs
 ---
 
 
-## Overview of XML Commands
+## Información general sobre los comandos XML
 
-### XML, DOM, and SAX
+### XML, DOM y SAX
 
-The [**XML** theme](../commands/theme/XML.md) groups together the generic XML "utilities" commands of 4D. These are option- and error-management commands. 
+El [**tema XML**](../commands/theme/XML.md) agrupa los comandos "utilitarios" XML genéricos de 4D. Se trata de comandos de gestión de opciones y de errores.
 
-4D also offers two separate sets of XML commands: [**DOM**](../commands/theme/XML_DOM.md) (Document Object Model) and [**SAX**](../commands/theme/XML_SAX.md) (Simple API XML) are two different parsing modes for XML documents.
+4D también ofrece dos conjuntos distintos de comandos XML: [**DOM**](../commands/theme/XML_DOM.md) (Document Object Model) y [**SAX**](../commands/theme/XML_SAX.md) (Simple API XML) son dos modos de análisis diferentes para los documentos XML.
 
-- The DOM mode parses an XML source and builds its structure (its "tree") in memory. Because of this, access to each element of the source is extremely fast. However, since the entire tree structure is stored in memory, the processing of large XML documents may lead to the memory capacity being exceeded and thus provoke errors.
-- The SAX mode does not build a tree structure in memory. In this mode, "events" (such as the start and end of an element) are generated when parsing the source. This mode lets you parse XML documents of any size, regardless of the amount of memory available.
+- El modo DOM analiza una fuente XML y construye su estructura (su "árbol") en memoria. Debido a esto, el acceso a cada elemento de la fuente es extremadamente rápido. Sin embargo, dado que toda la estructura de árbol se almacena en memoria, el procesamiento de documentos XML de gran tamaño puede llevar a superar la capacidad de memoria y provocar así errores.
+- El modo SAX no construye una estructura de árbol en memoria. En este modo, se generan "eventos" (como el inicio y el fin de un elemento) al analizar la fuente. Este modo le permite analizar documentos XML de cualquier tamaño, independientemente de la cantidad de memoria disponible.
 
-### References
+### Referencias
 
 http://www.saxproject.org/?selected=event <br/>
 http://www.w3schools.com/xml/
 
 :::note
 
-For XML support, 4D uses the [Xerces.dll library](../Notes/updates.md#library-table) developed by the Apache Foundation company. 
+Para el soporte de XML, 4D utiliza la [biblioteca Xerces.dll](../Notes/updates.md#library-table) desarrollada por la empresa Apache Foundation.
 
 :::
 
 
-### Preemptive mode
+### Modo apropiativo
 
-XML references created by a [preemptive process](../Develop/preemptive.md) can only be used in that specific process. Conversely, XML references created by a cooperative process can be used by any other cooperative process, but cannot be used by any preemptive process.
+Las referencias XML creadas por un [proceso apropiativo](../Develop/preemptive.md) solo pueden utilizarse en ese proceso específico. A la inversa, las referencias XML creadas por un proceso cooperativo pueden utilizarse por cualquier otro proceso cooperativo, pero no pueden utilizarse por ningún proceso apropiativo.
 
 
-### Character Sets  
+### Juegos de caracteres
 
-The following character sets are supported by the XML DOM and XML SAX commands of 4D:
+Los siguientes juegos de caracteres son compatibles con los comandos XML DOM y XML SAX de 4D:
 
 - ASCII
 - UTF-8
 - UTF-16 (Big/Small Endian)
 - UCS4 (Big/Small Endian)
-- EBCDIC code pages IBM037, IBM1047 and IBM1140 encodings,
-- ISO-8859-1 (or Latin1)
+- Páginas de códigos EBCDIC, codificaciones IBM037, IBM1047 e IBM1140,
+- ISO-8859-1 (o Latin1)
 - Windows-1252.
 
 
-### Glossary
+### Glosario
 
-This non-exhaustive list details the main XML concepts used by the commands and functions of 4D.
+Esta lista no exhaustiva detalla los principales conceptos XML utilizados por los comandos y funciones de 4D.
 
-- **Attribute**: an XML sub-tag associated with an element. An attribute always contains a name and a value.
-- **Child**: In an XML structure, an element in a level directly below another.
-- **DTD**: *Document Type Declaration*. The DTD records the set of specific rules and properties that the XML must follow. These rules define, more particularly, the name and content of each tag as well as its context. This formalization of the elements can be used to check whether an XML document is in compliance (in which case, it is declared “valid”). The DTD may be included in the XML document (internal DTD) or in a separate document (external DTD). Note that the DTD is not mandatory.
-- **Element**: an XML tag. An element always contains a name and a value. Optionally, an element may contain attributes.
-- **ElementRef**: XML reference used by the 4D XML commands to specify an XML structure. This reference is made up of 8 coded characters in hexadecimal form, which means that its length is 32 characters on a 64-bit system. It is recommended to declare XML references as Text.
-- **Parent**: In an XML structure, an element in a level directly above another.
-- **Parsing, parser**: The act of analyzing the contents of a structured object in order to extract useful information.
-- **Root**: An element located at the first level of an XML structure.
-- **Sibling**: An element at the same level as another.
-- **Structure**: structured XML object. This object can be a document, a variable, or an element.
-- **Validation**: An XML document is “validated” by the parser when it is “well-formed” and in compliance with the DTD specifications. 
-- **Well-formed**: An XML document is declared “well-formed” by the parser when it complies with the generic XML specifications. 
-- **XML**: eXtensible Markup Language. A computerized data exchange standard enabling the transfer of data as well as their structure. The XML language is based on the use of tags and a specific syntax, in keeping with the HTML language. However, unlike the latter, the XML language allows the definition of customized tags.
-- **XSL**: eXtensible Stylesheet Language. A language permitting the definition of style sheets used to process and display the contents of an XSL document.
-
-
-## XML DOM Commands
-
-### Creating, opening and closing XML documents via DOM  
-
-Objects created, modified or parsed by the [4D XML DOM commands](../commands/theme/XML_DOM.md) can be text, URLs, documents or BLOBs. The DOM commands used for opening XML objects in 4D are [`DOM Parse XML source`](../commands/dom-parse-xml-source) and [`DOM Parse XML variable`](../commands/dom-parse-xml-variable).
-
-Many commands then let you read, parse and write the elements and attributes. Errors are recovered using the [`XML GET ERROR`](../commands/xml-get-error) command. Do not forget to call the [`DOM CLOSE XML`](../commands/dom-close-xml) command to close the source in the end.
-
-Note about use of XML BLOB parameters: For historical reasons, XML commands such as [`DOM Parse XML variable`](../commands/dom-parse-xml-variable) accept BLOB type parameters. However, it is highly recommended to store XML structures as Text. The use of BLOBs is reserved for processing binary data. In conformity with XML specifications, binary data are automatically encoded in Base64, even when the BLOB contains text.
+- **Atributo**: un subtag XML asociado a un elemento. Un atributo siempre contiene un nombre y un valor.
+- **Hijo (Child)**: En una estructura XML, un elemento situado en un nivel directamente inferior a otro.
+- **DTD**: *Document Type Declaration*. La DTD registra el conjunto de reglas y propiedades específicas que el XML debe respetar. Estas reglas definen, más concretamente, el nombre y el contenido de cada tag así como su contexto. Esta formalización de los elementos puede utilizarse para comprobar si un documento XML es conforme (en cuyo caso, se declara "válido"). La DTD puede estar incluida en el documento XML (DTD interna) o en un documento separado (DTD externa). Tenga en cuenta que la DTD no es obligatoria.
+- **Elemento**: un tag XML. Un elemento siempre contiene un nombre y un valor. Opcionalmente, un elemento puede contener atributos.
+- **ElementRef**: referencia XML utilizada por los comandos XML de 4D para designar una estructura XML. Esta referencia está compuesta por 8 caracteres codificados en forma hexadecimal, lo que significa que su longitud es de 32 caracteres en un sistema de 64 bits. Se recomienda declarar las referencias XML como Texto.
+- **Padre**: En una estructura XML, un elemento situado en un nivel directamente superior a otro.
+- **Análisis (Parsing), analizador (parser)**: La acción de analizar el contenido de un objeto estructurado con el fin de extraer información útil.
+- **Raíz (Root)**: Un elemento situado en el primer nivel de una estructura XML.
+- **Hermano (Sibling)**: Un elemento situado en el mismo nivel que otro.
+- **Estructura**: objeto XML estructurado. Este objeto puede ser un documento, una variable o un elemento.
+- **Validación**: Un documento XML es "validado" por el analizador cuando está "bien formado" y es conforme con las especificaciones de la DTD.
+- **Bien formado (Well-formed)**: Un documento XML se declara "bien formado" por el analizador cuando es conforme con las especificaciones XML genéricas.
+- **XML**: eXtensible Markup Language. Un estándar informatizado de intercambio de datos que permite la transferencia de los datos así como de su estructura. El lenguaje XML se basa en el uso de tags y de una sintaxis específica, al igual que el lenguaje HTML. Sin embargo, a diferencia de este último, el lenguaje XML permite la definición de tags personalizados.
+- **XSL**: eXtensible Stylesheet Language. Un lenguaje que permite la definición de hojas de estilo utilizadas para procesar y mostrar el contenido de un documento XSL.
 
 
-### Support of XPath notation  
+## Comandos XML DOM
 
-Several XML DOM commands ([`DOM Create XML element`](../commands/dom-create-xml-element), [`DOM Find XML element`](../commands/dom-find-xml-element), [`DOM Create XML element arrays`](../commands/dom-create-xml-element-arrays) and [`DOM SET XML ELEMENT VALUE`](../commands/dom-set-xml-element-value)) support some XPath expressions for accessing XML elements. 
+### Crear, abrir y cerrar documentos XML mediante DOM
 
-XPath notation comes from the XPath language, designed to navigate within XML structures. It allows the setting of elements directly within an XML structure via a "pathname" type syntax, without necessarily having to indicate the complete pathname in order to reach it. 
+Los objetos creados, modificados o analizados por los [comandos XML DOM de 4D](../commands/theme/XML_DOM.md) pueden ser texto, URL, documentos o BLOB. Los comandos DOM utilizados para abrir objetos XML en 4D son [`DOM Parse XML source`](../commands/dom-parse-xml-source) y [`DOM Parse XML variable`](../commands/dom-parse-xml-variable).
 
-For example, given the following structure: 
+A continuación, muchos comandos le permiten leer, analizar y escribir los elementos y los atributos. Los errores se recuperan utilizando el comando [`XML GET ERROR`](../commands/xml-get-error). No olvide llamar al comando [`DOM CLOSE XML`](../commands/dom-close-xml) para cerrar la fuente al final.
+
+Nota sobre el uso de los parámetros BLOB XML: Por razones históricas, los comandos XML como [`DOM Parse XML variable`](../commands/dom-parse-xml-variable) aceptan parámetros de tipo BLOB. Sin embargo, se recomienda encarecidamente almacenar las estructuras XML como Texto. El uso de los BLOB está reservado al procesamiento de datos binarios. De conformidad con las especificaciones XML, los datos binarios se codifican automáticamente en Base64, incluso cuando el BLOB contiene texto.
+
+
+### Soporte de la notación XPath
+
+Varios comandos XML DOM ([`DOM Create XML element`](../commands/dom-create-xml-element), [`DOM Find XML element`](../commands/dom-find-xml-element), [`DOM Create XML element arrays`](../commands/dom-create-xml-element-arrays) y [`DOM SET XML ELEMENT VALUE`](../commands/dom-set-xml-element-value)) soportan algunas expresiones XPath para acceder a los elementos XML.
+
+La notación XPath proviene del lenguaje XPath, diseñado para navegar dentro de las estructuras XML. Permite designar elementos directamente dentro de una estructura XML mediante una sintaxis de tipo "nombre de ruta", sin tener necesariamente que indicar la ruta completa para alcanzarlo.
+
+Por ejemplo, dada la siguiente estructura:
 
 ```xml
    <RootElement>
@@ -96,9 +96,9 @@ For example, given the following structure:
    </RootElement>
 ```
 
-XPath notation allows you to access element 3 using the */RootElement/Elem1/Elem2/Elem3* syntax.
+La notación XPath le permite acceder al elemento 3 utilizando la sintaxis */RootElement/Elem1/Elem2/Elem3*.
 
-4D also accepts indexed XPath elements using the *Element[ElementNum]* syntax. For example, given the following structure:
+4D también acepta elementos XPath indexados utilizando la sintaxis *Element[ElementNum]*. Por ejemplo, dada la siguiente estructura:
 
 ```xml
    <RootElement>
@@ -110,48 +110,48 @@ XPath notation allows you to access element 3 using the */RootElement/Elem1/Elem
    </RootElement>
 ```
 
-XPath notation allows you to access the "ccc" value using the */RootElement/Elem1/Elem2[3]* syntax.
+La notación XPath le permite acceder al valor "ccc" utilizando la sintaxis */RootElement/Elem1/Elem2[3]*.
 
-For a comprehensive list of supported XPath expressions, refer to the [`DOM Find XML element`](../commands/dom-find-xml-element) command description. 
+Para una lista completa de las expresiones XPath soportadas, consulte la descripción del comando [`DOM Find XML element`](../commands/dom-find-xml-element).
 
-:::note Compatibility
+:::note Compatibilidad
 
-Starting with 4D 18 R3, the XPath implementation has been modified to be more compliant and to support a wider set of expressions. If you want to benefit from the extended features in your converted databases, you need to select the **Use standard XPath** option of the [Compatibility page](../settings/compatibility.md). 
+A partir de 4D 18 R3, la implementación de XPath se ha modificado para ser más conforme y soportar un conjunto más amplio de expresiones. Si desea beneficiarse de las funciones ampliadas en sus bases convertidas, debe seleccionar la opción **Utilizar XPath estándar** de la [página Compatibilidad](../settings/compatibility.md).
 
 :::
 
-### Error Handling  
+### Gestión de errores
 
-Many functions in this theme return an XML element reference. If an error occurs during function execution (for example, if the root element reference is not valid), the *OK* variable is set to 0 and an error is generated.
+Muchas funciones de este tema devuelven una referencia de elemento XML. Si se produce un error durante la ejecución de la función (por ejemplo, si la referencia del elemento raíz no es válida), la variable *OK* se establece en 0 y se genera un error.
 
-In addition, the reference returned in this case is a sequence of 32 zero "0" characters.
+Además, la referencia devuelta en este caso es una secuencia de 32 caracteres cero "0".
 
 
-## XML SAX Commands
+## Comandos XML SAX
 
-### Creating, opening and closing XML documents via SAX  
+### Crear, abrir y cerrar documentos XML mediante SAX
 
-The [XML SAX commands](../commands/theme/XML_SAX.md) work with the standard document references of 4D (**DocRef**, a Time type reference). It is therefore possible to use these commands jointly with the 4D commands used to manage documents, such as [`SEND PACKET`](../commands/send-packet) or [`Append document`](../commands/append-document).
+Los [comandos XML SAX](../commands/theme/XML_SAX.md) funcionan con las referencias de documento estándar de 4D (**DocRef**, una referencia de tipo Hora). Por lo tanto, es posible utilizar estos comandos conjuntamente con los comandos 4D utilizados para gestionar documentos, como [`SEND PACKET`](../commands/send-packet) o [`Append document`](../commands/append-document).
 
-The creation and opening of XML documents by programming is carried out using the [`Create document`](../commands/create-document) and [`Open document`](../commands/open-document) commands. Subsequently, the use of an XML command with these documents will cause the automatic activation of XML mechanisms such as encoding. For instance, the `<?xml version="1.0" encoding="… encodage …" standalone = "no "?>` header will be written automatically in the document.
+La creación y apertura de documentos XML por programación se realiza utilizando los comandos [`Create document`](../commands/create-document) y [`Open document`](../commands/open-document). Posteriormente, el uso de un comando XML con estos documentos provocará la activación automática de mecanismos XML como la codificación. Por ejemplo, la cabecera `<?xml version="1.0" encoding="… codificación …" standalone = "no "?>` se escribirá automáticamente en el documento.
 
 :::note
 
-Documents read by SAX commands must be opened in read-only mode by the [`Open document`](../commands/open-document) command. This avoids any conflict between 4D and the Xerces library when you open "regular" and XML documents simultaneously. If you execute a SAX parsing command with a document open in read-write mode, an alert message is displayed and parsing is impossible.
+Los documentos leídos por los comandos SAX deben abrirse en modo solo lectura mediante el comando [`Open document`](../commands/open-document). Esto evita cualquier conflicto entre 4D y la biblioteca Xerces cuando abre simultáneamente documentos "normales" y XML. Si ejecuta un comando de análisis SAX con un documento abierto en modo lectura/escritura, se muestra un mensaje de alerta y el análisis es imposible.
 
 :::
 
-Closing an XML document must be carried out using the [`CLOSE DOCUMENT`](../commands/close-document) command. If any XML elements were open, they will be closed automatically.
+El cierre de un documento XML debe realizarse utilizando el comando [`CLOSE DOCUMENT`](../commands/close-document). Si había elementos XML abiertos, se cerrarán automáticamente.
 
-### About end-of-line characters and BOM management  
+### Acerca de los caracteres de fin de línea y la gestión del BOM
 
-When writing SAX documents, 4D uses the following default settings for end-of-line characters and BOM (byte order mask) usage:
+Al escribir documentos SAX, 4D utiliza los siguientes ajustes predeterminados para los caracteres de fin de línea y el uso del BOM (byte order mask):
 
-- CRLF characters on Windows and LF on macOS for end-of-line characters
-- files are written without BOM.
+- caracteres CRLF en Windows y LF en macOS para los caracteres de fin de línea
+- los archivos se escriben sin BOM.
 
-:::note Compatibility
+:::note Compatibilidad
 
-In projects created with 4D versions up to 19.x, by default 4D uses CRLF as end-of-line characters on macOS for SAX and a BOM. You can control the `XML line ending` and `XML BOM` management using the [`XML SET OPTIONS`](../commands/xml-set-options) command and a [Compatibility setting](../settings/compatibility.md). Important: Since SAX file lines are written directly at each statement, if you need to set the BOM and/or end-of-line options, you must call the [`XML SET OPTIONS`](../commands/xml-set-options) command before the first SAX writing command.
+En los proyectos creados con versiones de 4D hasta 19.x, por defecto 4D utiliza CRLF como caracteres de fin de línea en macOS para SAX y un BOM. Puede controlar la gestión de `XML line ending` y `XML BOM` utilizando el comando [`XML SET OPTIONS`](../commands/xml-set-options) y un [ajuste de compatibilidad](../settings/compatibility.md). Importante: Dado que las líneas de los archivos SAX se escriben directamente en cada instrucción, si necesita definir las opciones de BOM y/o de fin de línea, debe llamar al comando [`XML SET OPTIONS`](../commands/xml-set-options) antes del primer comando de escritura SAX.
 
 :::

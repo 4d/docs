@@ -1,168 +1,168 @@
 ---
 id: sets
-title: Sets
+title: Ensembles
 slug: /Develop/sets
 displayed_sidebar: docs
 ---
 
 
-Sets offer you a powerful, swift means for manipulating record selections. Besides the ability to create sets, relate them to the current selection, and store, load, and clear sets, 4D offers three standard set operations:
+Les ensembles vous offrent un moyen puissant et rapide de manipuler les sélections d'enregistrements. Outre la possibilité de créer des ensembles, de les relier à la sélection courante, ainsi que de stocker, charger et effacer des ensembles, 4D propose trois opérations standard sur les ensembles :
 
 - Intersection
 - Union
-- Difference.
+- Différence.
 
 
-## Sets and the Current Selection  
+## Ensembles et sélection courante
 
-A set is a compact representation of a selection of records. The idea of sets is closely bound to the idea of the current selection. Sets are generally used for the following purposes:
+Un ensemble est une représentation compacte d'une sélection d'enregistrements. La notion d'ensemble est étroitement liée à celle de sélection courante. Les ensembles sont généralement utilisés aux fins suivantes :
 
-- To save and later restore a selection when the order does not matter
-- To access the selection a user made on screen (the `UserSet`)
-- To perform a logical operation between selections.
+- Sauvegarder puis restaurer ultérieurement une sélection lorsque l'ordre n'a pas d'importance
+- Accéder à la sélection qu'un utilisateur a effectuée à l'écran (le `UserSet`)
+- Effectuer une opération logique entre des sélections.
 
-The current selection is a list of references that points to each record that is currently selected. The list exists in memory. Only currently selected records are in the list. A selection doesn’t actually contain the records, but only a list of references to the records. Each reference to a record takes 4 bytes in memory. When you work on a table, you always work with the records in the current selection. When a selection is sorted, only the list of references is rearranged. There is only one current selection for each table inside a process.
+La sélection courante est une liste de références qui pointe vers chaque enregistrement actuellement sélectionné. La liste existe en mémoire. Seuls les enregistrements actuellement sélectionnés figurent dans la liste. Une sélection ne contient pas réellement les enregistrements, mais uniquement une liste de références vers les enregistrements. Chaque référence à un enregistrement occupe 4 octets en mémoire. Lorsque vous travaillez sur une table, vous travaillez toujours avec les enregistrements de la sélection courante. Lorsqu'une sélection est triée, seule la liste des références est réorganisée. Il n'y a qu'une seule sélection courante pour chaque table au sein d'un process.
 
-Like a current selection, a set represents a selection of records. A set does this by using a very compact representation for each record. Each record is represented by one bit (one-eighth of a byte). Operations using sets are very fast, because computers can perform operations on bits very quickly. A set contains one bit for every record in the table, whether or not the record is included in the set. In fact, each bit is equal to 1 or 0, depending on whether or not the record is in the set.
+Comme une sélection courante, un ensemble représente une sélection d'enregistrements. Un ensemble le fait en utilisant une représentation très compacte pour chaque enregistrement. Chaque enregistrement est représenté par un bit (un huitième d'octet). Les opérations utilisant des ensembles sont très rapides, car les ordinateurs peuvent effectuer des opérations sur les bits très rapidement. Un ensemble contient un bit pour chaque enregistrement de la table, que l'enregistrement soit inclus ou non dans l'ensemble. En fait, chaque bit est égal à 1 ou 0, selon que l'enregistrement figure ou non dans l'ensemble.
 
-Sets are very economical in terms of RAM space. The size of a set, in bytes, is always equal to the total number of records in the table divided by 8. For example, if you create a set for a table containing 10,000 records, the set takes up 1,250 bytes, which is about 1.2K in RAM.
+Les ensembles sont très économiques en termes d'espace RAM. La taille d'un ensemble, en octets, est toujours égale au nombre total d'enregistrements de la table divisé par 8. Par exemple, si vous créez un ensemble pour une table contenant 10 000 enregistrements, l'ensemble occupe 1 250 octets, soit environ 1,2 Ko en RAM.
 
-There can be many sets for each table. In fact, sets can be saved to disk separately from the database. To change a record belonging to a set, first you must use the set as the current selection, then modify the record or records.
+Il peut y avoir de nombreux ensembles pour chaque table. En fait, les ensembles peuvent être sauvegardés sur disque séparément de la base de données. Pour modifier un enregistrement appartenant à un ensemble, vous devez d'abord utiliser l'ensemble comme sélection courante, puis modifier le ou les enregistrements.
 
-A set is never in a sorted order—the records are simply indicated as belonging to the set or not. On the other hand, a named selection is in sorted order, but it requires more memory in most cases. For more information about named selections, see the Named Selections section.
+Un ensemble n'est jamais dans un ordre trié — les enregistrements sont simplement indiqués comme appartenant ou non à l'ensemble. En revanche, une sélection nommée est dans un ordre trié, mais elle nécessite davantage de mémoire dans la plupart des cas. Pour plus d'informations sur les sélections nommées, reportez-vous à la section Sélections nommées.
 
-A set "remembers" which record was the current record at the time the set was created. The following table compares the concepts of the current selection and of sets:
+Un ensemble « se souvient » de l'enregistrement qui était l'enregistrement courant au moment de la création de l'ensemble. Le tableau suivant compare les concepts de la sélection courante et des ensembles :
 
-|Comparison|Current Selection|Sets|
+|Comparaison|Sélection courante|Ensembles|
 |---|---|---|
-|Number per table|1|0 to many|
-|Sortable|Yes|No|
-|Can be saved on disk|No|Yes|
-|RAM per record(in bytes)|Number of	selected records * 4|Total number of records/8|
-|Combinable|	No|	Yes|
-|Contains current record|	Yes|	Yes, as of the time the set was created|
+|Nombre par table|1|0 à plusieurs|
+|Triable|Oui|Non|
+|Peut être sauvegardé sur disque|Non|Oui|
+|RAM par enregistrement (en octets)|Nombre d'enregistrements sélectionnés * 4|Nombre total d'enregistrements/8|
+|Combinable|	Non|	Oui|
+|Contient l'enregistrement courant|	Oui|	Oui, tel qu'au moment de la création de l'ensemble|
 
-When you create a set, it belongs to the table from which you created it. Set operations can be performed only between sets belonging to the same table.
+Lorsque vous créez un ensemble, il appartient à la table à partir de laquelle vous l'avez créé. Les opérations sur les ensembles ne peuvent être effectuées qu'entre des ensembles appartenant à la même table.
 
-Sets are independent from the data. This means that after changes are made to a file, a set may no longer be accurate. There are many operations that can cause a set to be inaccurate. For example, if you create a set of all the people from New York City, and then change the data in one of those records to “Boston” the set would not change, because the set is just a representation of a selection of records. Deleting records and replacing them with new ones also changes a set, as well as compacting the data. Sets can be guaranteed to be accurate only as long as the data in the original selection has not been changed.
+Les ensembles sont indépendants des données. Cela signifie qu'après des modifications apportées à un fichier, un ensemble peut ne plus être exact. De nombreuses opérations peuvent rendre un ensemble inexact. Par exemple, si vous créez un ensemble de toutes les personnes de New York, puis que vous modifiez les données de l'un de ces enregistrements en « Boston », l'ensemble ne changera pas, car l'ensemble n'est qu'une représentation d'une sélection d'enregistrements. La suppression d'enregistrements et leur remplacement par de nouveaux modifient également un ensemble, tout comme le compactage des données. L'exactitude des ensembles ne peut être garantie que tant que les données de la sélection d'origine n'ont pas été modifiées.
 
-## Process and Interprocess Sets  
+## Ensembles process et interprocess
 
-You can have the following three types of sets:
+Vous pouvez disposer des trois types d'ensembles suivants :
 
-- **Process sets**: A process set can only be accessed by the process in which it has been created. `LockedSet` is a process set. Process sets are cleared as soon as the process method ends. Process sets do not need any special prefix in the name.
-- **Interprocess sets**: A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign. An interprocess set is “visible” to all the processes of the database.
-In client/server mode, an interprocess set is “visible” to processes of the machine where it was created (client or server).
-The name of an interprocess set must be unique in the database.
-- **Local Sets/Client Sets**: Local/client sets are intended for use in client/server mode. The name of a local/client set is always preceded by the dollar sign ($) -- except for the UserSet system set. Unlike other types of sets, a local/client set is stored on the client machine.
+- **Ensembles process** : Un ensemble process ne peut être accédé que par le process dans lequel il a été créé. `LockedSet` est un ensemble process. Les ensembles process sont effacés dès que la méthode process se termine. Les ensembles process ne nécessitent aucun préfixe particulier dans leur nom.
+- **Ensembles interprocess** : Un ensemble est un ensemble interprocess si le nom de l'ensemble est précédé des symboles (<>) — un signe « inférieur à » suivi d'un signe « supérieur à ». Un ensemble interprocess est « visible » par tous les process de la base de données.
+En mode client/serveur, un ensemble interprocess est « visible » par les process de la machine où il a été créé (client ou serveur).
+Le nom d'un ensemble interprocess doit être unique dans la base de données.
+- **Ensembles locaux/ensembles client** : Les ensembles locaux/client sont destinés à être utilisés en mode client/serveur. Le nom d'un ensemble local/client est toujours précédé du signe dollar ($) -- sauf pour l'ensemble système UserSet. Contrairement aux autres types d'ensembles, un ensemble local/client est stocké sur la machine cliente.
 
 :::note Notes
 
-- The maximum size of a set name is 255 characters (excluding <> and $ symbols).
-- For more information about the use of sets in client/server mode, please refer to 4D Server, Sets and Named Selections.
+- La taille maximale d'un nom d'ensemble est de 255 caractères (hors symboles <> et $).
+- Pour plus d'informations sur l'utilisation des ensembles en mode client/serveur, veuillez vous reporter à 4D Server, Ensembles et sélections nommées.
 
 :::
 
 
-## Visibility of Sets  
+## Visibilité des ensembles
 
-The following table indicates the principles concerning the visibility of sets depending on their scope and where they were created:
+Le tableau suivant indique les principes concernant la visibilité des ensembles selon leur portée et l'endroit où ils ont été créés :
 
  
 
-||Client Process|Other processes on the same client|Other clients|Server process|Other processes on the server|
+||Process client|Autres process sur le même client|Autres clients|Process serveur|Autres process sur le serveur|
 |---|---|---|---|---|---|
-|Creation in a client process	||||||
+|Création dans un process client	||||||
 |$test|X	|||||
 |test	| X||| X(Trigger)	||
 |<>test	| X|X	||||
-|Creation in a server process||||||
+|Création dans un process serveur||||||
 |$test|||| X||
 |test	||||X||
 |<>test||||X| X|
 
 
-## Sets and Transactions  
+## Ensembles et transactions
 
-A set can be created inside a [transaction](./transactions.md). It is possible to create a set of the records created inside a transaction and a set of records created or modified outside of a transaction. When the transaction ends, the set created during the transaction should be cleared, because it may not be an accurate representation of the records, especially if the transaction was canceled.
+Un ensemble peut être créé à l'intérieur d'une [transaction](./transactions.md). Il est possible de créer un ensemble des enregistrements créés à l'intérieur d'une transaction et un ensemble des enregistrements créés ou modifiés en dehors d'une transaction. Lorsque la transaction se termine, l'ensemble créé pendant la transaction doit être effacé, car il peut ne pas être une représentation exacte des enregistrements, en particulier si la transaction a été annulée.
 
-## Example  
+## Exemple
 
-The following example deletes duplicate records from a table which contains information about people. A For...End for loop moves through all the records, comparing the current record to the previous record. If the name, address, and zip code are the same, then the record is added to a set. At the end of the loop, the set is made the current selection and the (old) current selection is deleted:
+L'exemple suivant supprime les enregistrements en double d'une table contenant des informations sur des personnes. Une boucle For...End for parcourt tous les enregistrements en comparant l'enregistrement courant à l'enregistrement précédent. Si le nom, l'adresse et le code postal sont identiques, l'enregistrement est ajouté à un ensemble. À la fin de la boucle, l'ensemble est défini comme sélection courante et l'(ancienne) sélection courante est supprimée :
 
 ```4d
  CREATE EMPTY SET([People];"Duplicates")
-  // Create an empty set for duplicate records
+  // Crée un ensemble vide pour les enregistrements en double
  ALL RECORDS([People])
-  // Select all records
-  // Sort the records by ZIP, address, and name so
-  // that the duplicates will be next to each other
+  // Sélectionne tous les enregistrements
+  // Trie les enregistrements par code postal, adresse et nom afin
+  // que les doublons soient les uns à côté des autres
  ORDER BY([People];[People]ZIP;>;[People]Address;>;[People]Name;>)
-  // Initialize variables that hold the fields from the previous record
+  // Initialise les variables qui contiennent les champs de l'enregistrement précédent
  $Name:=[People]Name
  $Address:=[People]Address
  $ZIP:=[People]ZIP
-  // Go to second record to compare with first
+  // Va au deuxième enregistrement pour le comparer au premier
  NEXT RECORD([People])
  For($i;2;Records in table([People]))
-  // Loop through records starting at 2
-  // If the name, address, and ZIP are the same as the
-  // previous record then it is a duplicate record.
+  // Boucle à travers les enregistrements à partir de 2
+  // Si le nom, l'adresse et le code postal sont identiques à ceux de
+  // l'enregistrement précédent, alors il s'agit d'un enregistrement en double.
     If(([People]Name=$Name) & ([People]Address=$Address) & ([People]ZIP=$ZIP))
-  // Add current record (the duplicate) to set
+  // Ajoute l'enregistrement courant (le doublon) à l'ensemble
        ADD TO SET([People];"Duplicates")
     Else
-  // Save this record’s name, address, and ZIP for comparison with the next record
+  // Sauvegarde le nom, l'adresse et le code postal de cet enregistrement pour comparaison avec le suivant
        $Name:=[People]Name
        $Address:=[People]Address
        $ZIP:=[People]ZIP
     End if
-  // Move to the next record
+  // Passe à l'enregistrement suivant
     NEXT RECORD([People])
  End for
-  // Use duplicate records that were found
+  // Utilise les enregistrements en double qui ont été trouvés
  USE SET("Duplicates")
-  // Delete the duplicate records
+  // Supprime les enregistrements en double
  DELETE SELECTION([People])
-  // Remove the set from memory
+  // Retire l'ensemble de la mémoire
  CLEAR SET("Duplicates")
 ```
 
-As an alternative to immediately deleting records at the end of the method, you could display them on screen or print them, so that a more detailed comparison can be made.
+Au lieu de supprimer immédiatement les enregistrements à la fin de la méthode, vous pourriez les afficher à l'écran ou les imprimer, afin de pouvoir effectuer une comparaison plus détaillée.
 
 
-## The UserSet System Set  
+## L'ensemble système UserSet
 
-4D maintains a system set named `UserSet`, which automatically stores the most recent selection of records highlighted on screen by the user. Thus, you can display a group of records with [`MODIFY SELECTION`](../commands/modify-selection) or [`DISPLAY SELECTION`](../commands/display-selection), ask the user to select from among them and turn the results of that manual selection into a selection or into a set that you name.
+4D gère un ensemble système nommé `UserSet`, qui stocke automatiquement la sélection la plus récente d'enregistrements mis en surbrillance à l'écran par l'utilisateur. Ainsi, vous pouvez afficher un groupe d'enregistrements avec [`MODIFY SELECTION`](../commands/modify-selection) ou [`DISPLAY SELECTION`](../commands/display-selection), demander à l'utilisateur d'effectuer une sélection parmi ces enregistrements et transformer le résultat de cette sélection manuelle en une sélection ou en un ensemble que vous nommez.
 
 ::info 4D Server
 
-Although its name does not begin with the character "$", the `UserSet` system set is a client set. So, when using [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) and [`DIFFERENCE`](../commands/difference), make sure you compare `UserSet` only to client sets. 
+Bien que son nom ne commence pas par le caractère « $ », l'ensemble système `UserSet` est un ensemble client. Ainsi, lorsque vous utilisez [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) et [`DIFFERENCE`](../commands/difference), veillez à ne comparer `UserSet` qu'à des ensembles client.
 
 :::
 
-There is only one `UserSet` for a [process](../Develop/processes.md). Each table does not have its own `UserSet`. `UserSet` becomes "owned" by a table when a selection of records is displayed for the table.
+Il n'y a qu'un seul `UserSet` pour un [process](../Develop/processes.md). Chaque table ne dispose pas de son propre `UserSet`. `UserSet` devient « détenu » par une table lorsqu'une sélection d'enregistrements est affichée pour cette table.
 
-4D manages the `UserSet` set for list forms displayed in Design mode or using the [`MODIFY SELECTION`](../commands/modify-selection) or [`DISPLAY SELECTION`](../commands/display-selection) commands. However, this mechanism is not active for [subforms](../FormObjects/subform_overview.md).
+4D gère l'ensemble `UserSet` pour les formulaires liste affichés en mode Développement ou à l'aide des commandes [`MODIFY SELECTION`](../commands/modify-selection) ou [`DISPLAY SELECTION`](../commands/display-selection). Cependant, ce mécanisme n'est pas actif pour les [sous-formulaires](../FormObjects/subform_overview.md).
 
-The following method illustrates how you can display records, allow the user to select some of them, and then use UserSet to display the selected records:
+La méthode suivante illustre comment vous pouvez afficher des enregistrements, permettre à l'utilisateur d'en sélectionner certains, puis utiliser UserSet pour afficher les enregistrements sélectionnés :
 
 ```4d
-  // Display all records and allow user to select any number of them.
-  // Then display this selection by using UserSet to change the current selection.
- FORM SET OUTPUT([People];"Display") // Set the output layout
- ALL RECORDS([People]) // Select all people
- ALERT("Press Ctrl or Command and Click to select the people required.")
- DISPLAY SELECTION([People]) // Display the people
- USE SET("UserSet") // Use the people that were selected
- ALERT("You chose the following people.")
- DISPLAY SELECTION([People]) // Display the selected people
+  // Affiche tous les enregistrements et permet à l'utilisateur d'en sélectionner un nombre quelconque.
+  // Puis affiche cette sélection en utilisant UserSet pour modifier la sélection courante.
+ FORM SET OUTPUT([People];"Display") // Définit le formulaire de sortie
+ ALL RECORDS([People]) // Sélectionne toutes les personnes
+ ALERT("Appuyez sur Ctrl ou Commande et cliquez pour sélectionner les personnes souhaitées.")
+ DISPLAY SELECTION([People]) // Affiche les personnes
+ USE SET("UserSet") // Utilise les personnes qui ont été sélectionnées
+ ALERT("Vous avez choisi les personnes suivantes.")
+ DISPLAY SELECTION([People]) // Affiche les personnes sélectionnées
 ```
 
-## The LockedSet System Set  
+## L'ensemble système LockedSet
 
-The [`APPLY TO SELECTION`](../commands/apply-to-selection), [`DELETE SELECTION`](../commands/delete-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection) and [`JSON TO SELECTION`](../commands/json-to-selection) commands create a set named `LockedSet` when used in a multi-processing environment.
+Les commandes [`APPLY TO SELECTION`](../commands/apply-to-selection), [`DELETE SELECTION`](../commands/delete-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection) et [`JSON TO SELECTION`](../commands/json-to-selection) créent un ensemble nommé `LockedSet` lorsqu'elles sont utilisées dans un environnement multi-process.
 
-Query commands also create a `LockedSet` system set when they find locked records in the 'query and lock' context (see the [`SET QUERY AND LOCK`](../commands/set-query-and-lock) command).
+Les commandes de recherche créent également un ensemble système `LockedSet` lorsqu'elles rencontrent des enregistrements verrouillés dans le contexte « recherche et verrouillage » (voir la commande [`SET QUERY AND LOCK`](../commands/set-query-and-lock)).
 
-`LockedSet` indicates which records were locked during the execution of the command.
+`LockedSet` indique quels enregistrements ont été verrouillés lors de l'exécution de la commande.
