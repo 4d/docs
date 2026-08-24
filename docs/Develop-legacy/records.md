@@ -6,8 +6,12 @@ displayed_sidebar: docs
 ---
 
 
+:::info Preliminary Note
 
 Records and selections are primary tools that allow 4D developers to access and handle data from the 4D database. They are **legacy concepts**. New developments are encouraged to rely on the modern [ORDA architecture](../ORDA/overview.md). However, they are still fully functional and are widely used in existing 4D developments. 
+
+:::
+
 
 ## Working with records
 

@@ -255,7 +255,6 @@ The following conversions are applied to values handled by the following command
 - [`ARRAY TO COLLECTION`](../commands/array-to-collection)
 - [`OB SET ARRAY`](../commands/ob-set-array)
 
-|||||||||||||
-|---|----|----|----|----|----|----|----|---|----|----|----|
 ||[`ARRAY TEXT`](../commands/array-text)|[`ARRAY LONGINT`](../commands/array-longint)|[`ARRAY REAL`](../commands/array-real)|[`ARRAY INTEGER`](../commands/array-integer)|[`ARRAY BOOLEAN`](../commands/array-boolean)|[`ARRAY OBJECT`](../commands/array-object)|[`ARRAY PICTURE`](../commands/array-picture)|[`ARRAY DATE`](../commands/array-date)|[`ARRAY TIME`](../commands/array-time)	|[`ARRAY BLOB`](../commands/array-blob)|
-|Collection element types|string|number|number|number|boolean|object or null|picture|string or date according to the [Dates inside objects](../commands/set-database-parameter#dates-inside-objects-85) parameter|number of seconds|4D.Blob|
+|---|----|----|----|----|----|----|----|---|----|----|
+|Collection element types|text|number|number|number|boolean|object or null|picture|text or date according to the [Dates inside objects](../commands/set-database-parameter#dates-inside-objects-85) parameter|number of seconds|4D.Blob|

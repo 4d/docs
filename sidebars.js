@@ -344,7 +344,7 @@ module.exports =
             link: {
               type: "generated-index",
             title: "Records & Selections (legacy data access)",
-            description: "Legacy data access based upon records, selections, sets",
+            description: "Legacy data access based upon records, selections, and sets.",
             slug: "/category/records-selections",
             keywords: [
               "records",
