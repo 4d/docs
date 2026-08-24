@@ -1,20 +1,20 @@
 ---
 id: vss
-title: Volume Shadow Copy Service (VSS)
+title: ボリュームシャドウコピーサービス(VSS)
 ---
 
-4D Server Windows comes with a dedicated **VSS writer** application that will automatically manage snapshot requests sent through Windows Volume Shadows Copy Service (VSS).
+Windows 用4D Server には、Windows ボリュームシャドウコピーサービス(VSS) を通して送られたスナップショットリクエストを自動的に管理するための**VSS writer** アプリケーションが付属します。
 
-VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Thanks to this technology, you can recover, for example, a 4D Server database at the exact state it was at the moment of the snapshot. This mechanism requires that running application files are in a consistent state when the snapshot is performed. For this reason, a VSS-aware application must install a VSS writer application or service. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
+VSS はWindows Server によって提供されている機能で、バックアップアプリケーションが、アプリケーションの実行中でも任意の瞬間にどんなファイル、あるいはハードディスク全体のスナップショット(シャドウコピー)をキャプチャーできるようにするためのものです。 このテクノロジーのおかげで、例えば4D Server のデータベースをそのスナップショットを取得した瞬間通りの状態へと戻すことができます。 この機構のためには、実行中のアプリケーションファイルがスナップショットが実行される間、一定の状態を保っている必要があります。 このため、VSS アウェアアプリケーション(VSS を利用するアプリケーション)はVSS ライターアプリケーションまたはサービスをインストールする必要があります。 このコンポーネントはシャドウコピーが作成されようとしている時にサービスによって"警告"され、**VSS requestor** (基本的にはバックアップアプリケーション)にどのようにファイルとデータのバックアップを取るべきかを指示します。
 
-## Requirements for the virtualizer
+## バーチャライザーのための必要用件
 
-On the host side, the following VSS requestors are supported:
+ホスト側では、以下のVSS requestor がサポートされています:
 
-- VMware ESXI on any platform
+- VMware ESXI (全プラットフォーム)
 - Microsoft Hyper-V Server 2016
 
-## Enabling the VSS
+## VSSの有効化
 
 The VSS feature is automatically installed/updated when the 4D Server application is launched. The VSS writer application service is started if the session user has admin privileges.
 

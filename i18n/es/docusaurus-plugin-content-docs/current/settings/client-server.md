@@ -156,15 +156,15 @@ El funcionamiento de la tabla de configuración es el siguiente:
 
 Por defecto, 4D Server no aplica ninguna restricción de conexión: la primera línea de la tabla contiene la etiqueta Autorizar y el caracter \* (todas las direcciones).
 
-### Support of IPv6
+### Soporte de IPv6
 
 4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
 
-|                     | 4D remote IPv4 only | 4D remote IPv6 only | 4D remote both |
-| ------------------- | ------------------- | ------------------- | -------------- |
-| 4D Server IPv4 only | IPv4                | *not supported*     | IPv4           |
-| 4D Server IPv6 only | *not supported*     | IPv6                | IPv6           |
-| 4D Server both      | IPv4                | IPv6                | IPv6           |
+|                           | 4D remoto, IPv4 únicamente | 4D remote IPv6 únicamente | 4D remote both |
+| ------------------------- | -------------------------- | ------------------------- | -------------- |
+| 4D Server IPv4 únicamente | IPv4                       | *not supported*           | IPv4           |
+| 4D Server IPv6 únicamente | *not supported*            | IPv6                      | IPv6           |
+| 4D Server both            | IPv4                       | IPv6                      | IPv6           |
 
 For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
 
