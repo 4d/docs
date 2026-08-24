@@ -42,7 +42,7 @@ Los siguientes juegos de caracteres son compatibles con los comandos XML DOM y X
 - UTF-8
 - UTF-16 (Big/Small Endian)
 - UCS4 (Big/Small Endian)
-- Páginas de códigos EBCDIC, codificaciones IBM037, IBM1047 e IBM1140,
+- Páginas de códigos EBCDIC (codificaciones IBM037, IBM1047 e IBM1140)
 - ISO-8859-1 (o Latin1)
 - Windows-1252.
 
@@ -150,7 +150,7 @@ Al escribir documentos SAX, 4D utiliza los siguientes ajustes predeterminados pa
 - caracteres CRLF en Windows y LF en macOS para los caracteres de fin de línea
 - los archivos se escriben sin BOM.
 
-:::note Compatibilidad
+:::Note Nota de compatibilidad
 
 En los proyectos creados con versiones de 4D hasta 19.x, por defecto 4D utiliza CRLF como caracteres de fin de línea en macOS para SAX y un BOM. Puede controlar la gestión de `XML line ending` y `XML BOM` utilizando el comando [`XML SET OPTIONS`](../commands/xml-set-options) y un [ajuste de compatibilidad](../settings/compatibility.md). Importante: Dado que las líneas de los archivos SAX se escriben directamente en cada instrucción, si necesita definir las opciones de BOM y/o de fin de línea, debe llamar al comando [`XML SET OPTIONS`](../commands/xml-set-options) antes del primer comando de escritura SAX.
 
