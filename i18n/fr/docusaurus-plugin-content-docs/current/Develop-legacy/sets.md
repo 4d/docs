@@ -135,7 +135,7 @@ Au lieu de supprimer immédiatement les enregistrements à la fin de la méthode
 
 4D gère un ensemble système nommé `UserSet`, qui stocke automatiquement la sélection la plus récente d'enregistrements mis en surbrillance à l'écran par l'utilisateur. Ainsi, vous pouvez afficher un groupe d'enregistrements avec [`MODIFY SELECTION`](../commands/modify-selection) ou [`DISPLAY SELECTION`](../commands/display-selection), demander à l'utilisateur d'effectuer une sélection parmi ces enregistrements et transformer le résultat de cette sélection manuelle en une sélection ou en un ensemble que vous nommez.
 
-::info 4D Server
+:::info 4D Server
 
 Bien que son nom ne commence pas par le caractère « $ », l'ensemble système `UserSet` est un ensemble client. Ainsi, lorsque vous utilisez [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) et [`DIFFERENCE`](../commands/difference), veillez à ne comparer `UserSet` qu'à des ensembles client.
 

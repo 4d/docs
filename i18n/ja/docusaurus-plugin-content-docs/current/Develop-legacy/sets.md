@@ -134,7 +134,7 @@ displayed_sidebar: docs
 
 4D は `UserSet` という名前のシステムセットを管理しており、これはユーザーが画面上でハイライトした最新のレコードのセレクションを自動的に格納します。したがって、[`MODIFY SELECTION`](../commands/modify-selection) または [`DISPLAY SELECTION`](../commands/display-selection) でレコードのグループを表示し、その中からユーザーに選択してもらい、その手動選択の結果を、あなたが名前を付けるセレクションまたはセットに変換できます。
 
-::info 4D Server
+:::info 4D Server
 
 その名前が文字 "$" で始まらないにもかかわらず、`UserSet` システムセットはクライアントセットです。そのため、[`INTERSECTION`](../commands/intersection)、[`UNION`](../commands/union)、[`DIFFERENCE`](../commands/difference) を使用する際は、`UserSet` をクライアントセットとのみ比較するようにしてください。
 

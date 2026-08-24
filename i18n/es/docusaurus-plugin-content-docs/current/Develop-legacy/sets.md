@@ -135,7 +135,7 @@ Como alternativa a eliminar inmediatamente los registros al final del método, p
 
 4D mantiene un conjunto sistema llamado `UserSet`, que almacena automáticamente la selección más reciente de registros resaltados en pantalla por el usuario. Así, puede mostrar un grupo de registros con [`MODIFY SELECTION`](../commands/modify-selection) o [`DISPLAY SELECTION`](../commands/display-selection), pedir al usuario que seleccione de entre ellos y convertir el resultado de esa selección manual en una selección o en un conjunto que usted nombre.
 
-::info 4D Server
+:::info 4D Server
 
 Aunque su nombre no comienza por el carácter "$", el conjunto sistema `UserSet` es un conjunto cliente. Por lo tanto, al utilizar [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) y [`DIFFERENCE`](../commands/difference), asegúrese de comparar `UserSet` únicamente con conjuntos cliente.
 
