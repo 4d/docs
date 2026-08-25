@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | réfUtilisateur | Integer | &#8594;  | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
-| &#8592; | Unique ID number of added user account (if any) |
+| | &#8592; | Numéro de référence unique du compte de l'utilisateur ajouté (le cas échéant) |
 | nom | Text | &#8594;  | Nouveau nom de l'utilisateur |
 | démarrage | Text | &#8594;  | Nom de la nouvelle méthode de démarrage |
 | motDePasse | Text | &#8594;  | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |

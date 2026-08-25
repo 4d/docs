@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
 | zoneWP | Text | &#8594;  | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
 | sélecteurCadre | Integer | &#8594;  | Cadre dans lequel placer le curseur |
-| textBoxID | Text | &#8594;  | Id of the text box where the cursor should be set |
+| textBoxID | Text | &#8594;  | Id de la zone de texte où placer le curseur |
 </div>
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP SET FRAME.Summary-->La commande **WP SET FRAME** place le curseur dans le cadre désigné par le paramètre *sélecteurCadre* et, facultativement, textBoxID, de la zone 4D Write Pro *wpZone*.<!-- END REF-->
+<!--REF #_command_.WP SET FRAME.Summary-->La commande **WP SET FRAME** place le curseur dans le cadre désigné par le paramètre *sélecteurCadre* et, facultativement, *textBoxID*, de la zone 4D Write Pro *zoneWP*.<!-- END REF-->
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *zoneWP* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *zoneWP* est un champ ou une variable objet.
 

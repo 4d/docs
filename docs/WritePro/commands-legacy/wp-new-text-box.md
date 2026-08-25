@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New text box.Summary-->The **WP New text box** command creates and returns a new text box object in the page *pageNum* of *wpDoc*.<!-- END REF-->
 
-**Note:** For more information on text boxes, please refer to the *Handling text boxes* paragraph.
+**Note:** For more information on text boxes, please refer to the [*Text boxes*](../text-boxes) page.
 
 In the *wpDoc* parameter, pass a 4D Write Pro document. 
 

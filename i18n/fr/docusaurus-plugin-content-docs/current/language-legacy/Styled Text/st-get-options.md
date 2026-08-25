@@ -39,7 +39,7 @@ Passez dans *option* le code de l’option à lire. La commande retourne dans *v
 
 | Constante                   | Type        | Valeur | Comment                                                        |
 | --------------------------- | ----------- | ------ | -------------------------------------------------------------- |
-| ST Expressions display mode | Entier long | 1      | Le paramètre *valeur* peut contenir ST Values or ST References |
+| ST Expressions display mode | Entier long | 1      | Le paramètre *valeur* peut contenir ST Values ou ST References |
 | ST References               | Entier long | 1      | Affichage des chaînes source des expressions                   |
 | ST Values                   | Entier long | 0      | Affichage des valeurs calculées des expressions                |
 

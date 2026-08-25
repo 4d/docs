@@ -12,7 +12,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | **Attribut/Fonctionnalités**                  | **Exporté(e)** | **Commentaire** |
 | --------------------------------------------- | -------------- | --------------- |
 | Background clip                               | oui            |                 |
-| Background color (for element, not character) | oui            |                 |
+| Background color (pour les éléments, pas les caractères) | oui            |                 |
 | Background image                              | oui            |                 |
 | Background repeat                             | oui            |                 |
 | Background origin                             | oui            |                 |

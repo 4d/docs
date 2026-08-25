@@ -40,7 +40,7 @@ Le paramètre *option* prend en charge la constante suivante du thème "*Texte m
 
 | Constante                   | Type        | Valeur | Comment                                                        |
 | --------------------------- | ----------- | ------ | -------------------------------------------------------------- |
-| ST Expressions display mode | Entier long | 1      | Le paramètre *valeur* peut contenir ST Values or ST References |
+| ST Expressions display mode | Entier long | 1      | Le paramètre *valeur* peut contenir ST Values ou ST References |
 
 Vous pouvez passer dans le paramètre *valeur* l'une des constantes suivantes :
 

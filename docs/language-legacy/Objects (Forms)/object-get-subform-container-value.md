@@ -34,7 +34,7 @@ This command can only be used in the context of a form used as a subform. In any
 * If the data source is an expression, the command returns the current value of the expression, evaluated since the last form event cycle.
 * If the data source is an array, the command returns the array index (integer).
 
-For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
+For more information on bound variables and form/subform interaction, see [*Using the bound variable*](../../FormObjects/subform_overview.md#using-the-bound-variable-or-expression).
 
 ## Example 
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| valeur | any | &#8594;  | New value for the data source |
+| valeur | any | &#8594;  | Nouvelle valeur de la source de données |
 </div>
 <!-- END REF-->
 

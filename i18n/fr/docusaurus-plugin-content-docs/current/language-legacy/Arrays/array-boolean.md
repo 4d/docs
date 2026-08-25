@@ -51,9 +51,9 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
 Cet exemple crée un tableau interprocess de 50 éléments de type Booléen et affecte à chaque élément pair la valeur Faux :
 
 ```4d
- ARRAY BOOLEAN(◊tabBooléens;50)
+ ARRAY BOOLEAN(<>tabBooléens;50)
  For($vElem;1;50)
-    ◊tabBooléens{$vElem}:=(($vElem%2)=0)
+    <>tabBooléens{$vElem}:=(($vElem%2)=0)
  End for
 ```
 

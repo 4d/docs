@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | startFrom | Integer | &#8594;  | Starting index (included) |
-| Résultat | Collection | &#8592; | New collection containing parameters actually passed |
+| Résultat | Collection | &#8592; | Nouvelle collection contenant tous les paramètres passés |
 </div>
 <!-- END REF-->
 
