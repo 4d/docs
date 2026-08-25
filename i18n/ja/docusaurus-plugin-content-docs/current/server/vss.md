@@ -16,14 +16,14 @@ VSS はWindows Server によって提供されている機能で、バックア�
 
 ## VSSの有効化
 
-The VSS feature is automatically installed/updated when the 4D Server application is launched. The VSS writer application service is started if the session user has admin privileges.
+VSS 機能は4D Server アプリケーションがローンチされたときに自動的にインストール/アップデートされます。 VSS writer アプリケーションサービスは、セッションユーザーが管理権限を持っている場合に開始されます。
 
-Usually, the starting scenario will be:
+一般的に、開始シナリオは以下の様な感じになります:
 
-1. 4D Server or merged Application Server is launched for the first time.
-2. If not launched with administration privileges, a warning icon is displayed.
-3. Quit and relaunch 4D Server or merged Application Server as administrator. The 4D VSS service is then automatically executed and registered in VSS.
-4. (Optional) Restart 4D Server or merged Application Server using standard privileges.
+1. 4D Server あるいは 組み込みアプリサーバーが初めて起動される。
+2. 管理者権限で起動されていない場合、警告アイコンが表示される。
+3. アプリケーションを終了し、4D Server あるいは組み込みアプリケーションサーバーを管理者として再起動する。 その際4D VSS サービスが自動的に実行され、VSS に登録される。
+4. (任意)4D Server あるいは組み込みアプリケーションを通常の権限を使用して再起動する。
 
 The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
 

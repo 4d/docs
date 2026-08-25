@@ -37,7 +37,7 @@ var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
 
-The -&#062; symbol means “get a pointer to.” Ce symbole est formé du caractère "tiret" (-) suivi du caractère "supérieur à". Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
+Le symbole -> signifie "pointer vers". Ce symbole est formé du caractère "tiret" (-) suivi du caractère "supérieur à". Dans ce cas, il crée un pointeur qui référence ou “pointe vers” $MyVar. Ce pointeur est assigné à $MyPointer via l’opérateur d’assignation.
 
 $MyPointer est désormais une variable qui contient un pointeur vers $MyVar. $MyPointer ne contient pas "Hello", la valeur de $MyVar, mais vous pouvez utiliser $MyPointer pour obtenir cette valeur. L’expression suivante retourne la valeur de $MyVar :
 
@@ -47,7 +47,7 @@ $MyPointer->
 
 Dans ce cas, la chaîne "Hello" est retournée. Lorsque le symbole -> est placé derrière un pointeur, la valeur de l’objet vers lequel pointe le pointeur est récupérée. On dit alors qu’on dépointe le pointeur.
 
-Il est important de comprendre que vous pouvez utiliser un pointeur suivi du symbole -> partout où vous auriez pu utiliser l’objet pointé lui-même. Vous pouvez placer l’expression $MonPointeur-> partout où vous pourriez utiliser la variable originale $MaVar. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Hello :
+Il est important de comprendre que vous pouvez utiliser un pointeur suivi du symbole -> partout où vous auriez pu utiliser l’objet pointé lui-même. Vous pouvez utiliser l’expression $MyPointer-> partout où vous pourriez utiliser la variable originale $MyVar. Par exemple, l'instruction suivante affiche une boîte de dialogue d’alerte comportant le mot Hello :
 
 ```4d
 ALERT($MyPointer->)
@@ -59,7 +59,7 @@ Vous pouvez également utiliser $MyPointer pour modifier la valeur de $MyVar. Pa
 $MyPointer->:="Goodbye"
 ```
 
-Si vous examinez les deux utilisations de l’expression $MonPointeur-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MaVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MyVar :
+Si vous examinez les deux utilisations de l’expression $MyPointer-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MyVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MyVar :
 
 ```4d
 ALERT($MyPointer->)
@@ -158,7 +158,7 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.
 
-Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. For example, if you write in *Method1*:
+Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans *Method1* :
 
 ```4d
  $MyVar:="Hello world"
@@ -174,8 +174,8 @@ Les pointeurs vers des variables locales permettent dans de nombreux cas d’éc
 
 Le débogueur affichera $param comme suit :
 
-| $param | ->$MaVar (Méthode1) |
-| ------ | -------------------------------------- |
+| $param | ->$MyVar (Method1) |
+| ------ | ------------------------------------- |
 
 Vous pouvez étendre $param et sa valeur sera :
 
@@ -264,9 +264,9 @@ Voici la description de chaque ligne de l’exemple :
 - $PointerTwo:=->$PointerOne
   \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
 - ($PointerTwo->)->:="Goodbye"
-  \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
+  \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
 - ALERT (($PointerTwo->)->)
-  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Par conséquent, ($PointerTwo-&#062;)-&#062; référence le contenu de $MyVar.
+  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar. Par conséquent, ($PointerTwo-&#062;)-&#062; référence le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
