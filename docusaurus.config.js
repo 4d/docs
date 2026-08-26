@@ -272,7 +272,7 @@ sidebarItemsGenerator: async function (args) {
     ],
   ],
   future: {
-    experimental_faster: {
+    faster: {
       swcJsLoader: true,
       swcJsMinimizer: true,
       swcHtmlMinimizer: true,
