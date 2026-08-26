@@ -6,7 +6,6 @@ displayed_sidebar: docs
 ---
 
 
-## Vue d'ensemble
 
 Lorsque vous gérez des données, vous sélectionnez le groupe d'enregistrements avec lequel vous souhaitez travailler. Ce groupe d'enregistrements est appelé la **sélection courante**. La sélection courante peut ne contenir aucun, un, plusieurs ou tous les enregistrements d'une table. Chaque table et chaque process possède sa propre sélection courante d'enregistrements.
 
