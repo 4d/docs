@@ -116,7 +116,7 @@ Exemples avec la commande [`CREATE FOLDER`](../../commands/create-folder) :
 
 ```4d
 
- CREATE FOLDER("Monday") // chemin relatif
+CREATE FOLDER("Monday") // chemin relatif
  CREATE FOLDER("macintosh hd:") // chemin absolu
  CREATE FOLDER("Monday:Tuesday") // chemin absolu (un volume doit s'appeler Monday)
  CREATE FOLDER(":Monday:Tuesday") // chemin relatif

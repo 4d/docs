@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Allows to query the data in a dataclass (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Permet d'interroger les données d'une dataclass (*par exemple*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Description
 

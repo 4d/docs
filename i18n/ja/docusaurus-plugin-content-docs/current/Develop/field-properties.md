@@ -21,7 +21,7 @@ title: フィールドプロパティ
 
 :::note
 
-[ORDA データモデルクラス](../ORDA/ordaClasses.md)、[ファイルハンドラー](../API/FileHandleClass.md)、[Web サーバー](../API/WebServerClass.md)... などの**ストリーム不可のクラス** はオブジェクトフィールドに代入することはできません。
+[**Non-streamable classes**](../Concepts/dt_object.md#streaming-support) such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... などの**ストリーム不可のクラス** はオブジェクトフィールドに代入することはできません。
 
 :::
 

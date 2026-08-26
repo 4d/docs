@@ -21,7 +21,7 @@ Si vous saisissez un nom de classe non valide, la saisie est rejetée.
 
 :::note
 
-Les **classes non *sérialisables*** telles que les [classes du modèle de données ORDA](../ORDA/ordaClasses.md), la classe [FileHandle](../API/FileHandleClass.md), [WebServer](../API/WebServerClass.md)... ne peuvent pas être associées à des champs objets.
+[**Non-streamable classes**](../Concepts/dt_object.md#streaming-support) such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... ne peuvent pas être associées à des champs objets.
 
 :::
 

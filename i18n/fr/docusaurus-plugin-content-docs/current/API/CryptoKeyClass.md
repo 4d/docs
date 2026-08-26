@@ -262,9 +262,9 @@ La valeur retournée est un message chiffré.
 
 <div class="no-index">
 
-| Paramètres | Type |                             | Description                |
-| ---------- | ---- | --------------------------- | -------------------------- |
-| Résultat   | Text | <- | Clé primaire au format PEM |
+| Paramètres | Type |                             | Description              |
+| ---------- | ---- | --------------------------- | ------------------------ |
+| Résultat   | Text | <- | Clé privée au format PEM |
 
 </div>
 <!-- END REF -->
@@ -326,7 +326,7 @@ La valeur retournée est la clé publique.
 
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
-<!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
+The <!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. <!-- END REF -->
 
 <!-- END REF -->
 

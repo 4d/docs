@@ -136,7 +136,7 @@ var $mycol:=[]  // Déduit en Collection
 
 :::note
 
-Le type déduit peut être différent entre le [mode interprété et compilé](interpreted.md) si l'évaluation de la valeur est trop ambiguë. Dans ce cas, un warning est généré par le compilateur et un type variant est utilisé. For example, in the following *$a* type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and *$a* will be typed as a variant for the compiled mode.
+Le type déduit peut être différent entre le [mode interprété et compilé](interpreted.md) si l'évaluation de la valeur est trop ambiguë. Dans ce cas, un warning est généré par le compilateur et un type variant est utilisé. Par exemple ci-dessous, le type de *$a* sera correctement déduit en mode interprété (Texte), mais la vérification de syntaxe générera un warning et *$a* sera typé en variant en mode compilé.
 
 ```4d
 var $class:={test: "a"}
