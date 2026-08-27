@@ -31,15 +31,16 @@ displayed_sidebar: docs
   
 **Nota**: esta caja de diálogo es modal en Windows pero no en macOS.  
   
-Si el usuario selecciona un color y valida la caja de diálogo, este color se aplica a la selección actual de texto en el objeto con el foco, si la propiedad "Aceptar selector color/fuente" está seleccionada para este objeto (ver el manual de *Diseño*).  
+Si el usuario selecciona un color y valida la caja de diálogo, este color se aplica a la selección actual de texto en el objeto con el foco, si la [propiedad "Aceptar selector color/fuente"](../../FormObjects/properties_Text.md#allow-fontcolor-picker) está seleccionada para este objeto.  
   
 Si pasa 0 en el parámetro *textOFondo* u omite este parámetro, el color seleccionado se aplica al texto. Si pasa 1 en *textOFondo*, este color se aplica al fondo del texto.  
   
-Si el color se ha cambiado, el evento formulario On After Edit se genera para el objeto.
+Si el color se ha cambiado, el [evento formulario `On After Edit`](../../Events/onAfterEdit.md) se genera para el objeto.
 
 ## Ver también 
 
 [OPEN FONT PICKER](../commands/open-font-picker)  
+[Select RGB color](../commands/select-rgb-color)  
 
 ## Propiedades
 
