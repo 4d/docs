@@ -30,7 +30,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Le paramètre *row* définit la première ligne de la plage de lignes. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. *rowCount* doit être supérieur à 0.
 
-Le paramètre optionnel *rowCount* vous permet de définir le nombre total de lignes comprises dans la plage. *rowCount* doit être supérieur à 0. If omitted, the value will be set to 1 by default.
+Le paramètre optionnel *rowCount* vous permet de définir le nombre total de lignes comprises dans la plage. *rowCount* doit être supérieur à 0. Si omis, la valeur sera définie à 1 par défaut.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 

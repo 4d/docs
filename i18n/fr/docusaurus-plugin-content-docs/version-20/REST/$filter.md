@@ -44,7 +44,7 @@ Pour plus d'informations sur la façon de rechercher des données dans 4D, repor
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+L'utilisation de l'instruction `eval()` est interdite dans les requêtes REST (et donc dans les requêtes vers un [datastore distant](../ORDA/remoteDatastores.md)).
 
 :::
 

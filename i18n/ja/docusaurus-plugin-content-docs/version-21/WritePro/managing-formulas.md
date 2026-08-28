@@ -111,7 +111,7 @@ Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**
 
 :::note
 
-For more information about formula insertion, see [WP Insert formula](./commands/wp-insert-formula).
+これらのフォーミュラ挿入についての詳細な情報については、[WP Insert formula](./commands/wp-insert-formula) を参照してください。
 
 :::
 
