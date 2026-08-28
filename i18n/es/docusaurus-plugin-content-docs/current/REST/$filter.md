@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Allows to query the data in a dataclass (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Permite consultar los datos de una clase de datos (*por ejemplo*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descripción
 
@@ -37,7 +37,7 @@ Para más información sobre cómo consultar datos en 4D, consulte la documentac
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+El uso de la instrucción `eval()` no está permitido en consultas REST (y por lo tanto en las consultas a un [datastore remoto](../ORDA/remoteDatastores.md)).
 
 :::
 
@@ -51,7 +51,7 @@ Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su c�
 Por ejemplo, puede escribir lo siguiente al pasar un valor con comillas cuando utilice la propiedad \*params  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+Si pasa el valor directamente, puede escribir lo siguiente:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::

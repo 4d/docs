@@ -47,7 +47,7 @@ Aparece la caja de diálogo estándar de apertura de archivos.
 
 :::note
 
-You can also launch 4D projects without any interface thanks to the 4D [CLI (Command Line Interface)](../Admin/cli.md).
+También puede iniciar proyectos 4D sin interfaz gracias a la [CLI (Interfaz de línea de comandos)](../Admin/cli.md) de 4D.
 
 :::
 
@@ -76,7 +76,7 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
 
 :::note
 
-On Windows, a 4D Server project can be automatically launched at session startup if it is [registered as a Service](../server/service.md).
+En Windows, un proyecto de 4D Server se puede iniciar automáticamente al iniciar la sesión si está [registrado como servicio](../server/service.md).
 
 :::
 

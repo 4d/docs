@@ -6,9 +6,9 @@ slug: /WritePro/formulas
 
 ## Generalidades
 
-Los documentos 4D Write Pro pueden contener referencias a fórmulas 4D como variables, campos, expresiones, métodos proyecto o comandos 4D. Specific information such as the page number can also be referenced through formulas (see below).
+Los documentos 4D Write Pro pueden contener referencias a fórmulas 4D como variables, campos, expresiones, métodos proyecto o comandos 4D. Información específica como el número de página también puede ser referenciada a través de fórmulas (ver abajo).
 
-Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. También los devuelve el comando [**WP Get text**](commands-legacy/wp-get-text.md).
+La inserción de fórmulas en las áreas 4D Write Pro se realiza con el comando [**WP Insert formula**](commands/wp-insert-formula.md) y estas pueden leerse utilizando el comando [**WP Get formulas**](commands-legacy/wp-get-formulas.md). También los devuelve el comando [**WP Get text**](commands-legacy/wp-get-text.md).
 
 ### Evaluación de fórmulas
 
@@ -89,13 +89,13 @@ Por ejemplo, para insertar el número de página en el pie de página:
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP Insert formula($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  //Usando Formula(myMethod) con myMethod procesando This.pageNumber
+  //no funcionaría correctamente
 ```
 
 :::note
 
-For more information about formula insertion, see [WP Insert formula](../commands/wp-insert-formula).
+Para más información sobre la inserción de fórmulas, ver [WP Insert formula](../commands/wp-insert-formula).
 
 :::
 
@@ -186,7 +186,7 @@ En este caso, puede mostrar las referencias a fórmulas como símbolos ![](../as
 Para mostrar las referencias a fórmulas como símbolos, puede:
 
 - active la opción **Mostrar origen de fórmula como símbolo** en la lista de propiedades (consulte *Configuración de las propiedades de la vista*), o
-- use the displayFormulaAsSymbol standard action , or
+- utilizar la acción estándar displayFormulaAsSymbol, o
 - usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk display formula as symbol` en **True**.
 
 ### Referencias como nombres

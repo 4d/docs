@@ -29,7 +29,7 @@ Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nomb
 
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
-When using 4D’s language, you can [refer to an active form object by its object name](./formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language)..
+Al usar el lenguaje 4D, puede [hacer referencia a un objeto del formulario activo por su nombre de objeto](./formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language).
 
 Para más información sobre las reglas de denominación de los objetos de formulario, consulte la sección [Identificadores](Concepts/identifiers.md).
 

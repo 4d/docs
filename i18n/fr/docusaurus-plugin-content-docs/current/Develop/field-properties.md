@@ -21,7 +21,7 @@ Si vous saisissez un nom de classe non valide, la saisie est rejetée.
 
 :::note
 
-[**Non-streamable classes**](../Concepts/dt_object.md#streaming-support) such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... ne peuvent pas être associées à des champs objets.
+Les [**classes non sérialisables**](../Concepts/dt_object.md#streaming-support) telles que les [classes du modèle de données ORDA](../ORDA/ordaClasses.md), la classe [FileHandle](../API/FileHandleClass.md), [WebServer](../API/WebServerClass.md)... ne peuvent pas être associées à des champs objets.
 
 :::
 
