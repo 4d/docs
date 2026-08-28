@@ -3,6 +3,19 @@ id: updates
 title: Release Notes
 ---
 
+
+## 4D 21 R5
+
+Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), the blog post that lists all new features and enhancements in 4D 21 R5.
+
+#### Highlights
+
+- Support of S/MIME email signing in [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class through new properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R5): list of all bugs that have been fixed in 4D 21 R5.  
+
+
+
 ## 4D 21 R4
 
 Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.
