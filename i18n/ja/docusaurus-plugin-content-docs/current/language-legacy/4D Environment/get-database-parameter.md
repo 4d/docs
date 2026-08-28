@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
-|21 R4|*QUIC session timeout* を追加|
+|21 R4|*Use legacy network layer* のサポートを削除、*Use legacy print rendering* を追加|
 |20 R6|変更|
 |19 R5|変更|
 |16 R4|変更|
@@ -605,11 +605,13 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 **デフォルトの値**: TLSv1\_3 
 
-**取りうる値**: TLSv1\_2 (TLS 1.2、2008年に導入) TLSv1\_3 (TLS 1.3、2018年に導入) **注**: 
+**取りうる値**: TLSv1\_2 (TLS 1.2、2008年に導入) TLSv1\_3 (TLS 1.3、2018年に導入)
 
-- 4D Internet Commands プラグインは異るネットワークレイヤーを使用するため、ここのセレクターは4DICのTLSバージョンには影響しません。
+:::note
 
-- TLS を旧式ネットワークレイヤーに適用しても反映されません。
+4D Internet Commands プラグインは異るネットワークレイヤーを使用するため、ここのセレクターは4DICのTLSバージョンには影響しません。
+
+:::
 
 
 
@@ -792,15 +794,13 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 ### RDP optimization (133)
 
-**Scope:** 4D application.
+**スコープ:** 4D アプリケーション
 
-**Kept between two sessions:** No.
+**2セッション間で設定を保持:** No
 
-**Possible values:** `0`: Disabled (default), `1`: Enabled. 
+**取り得る値:** `0`: 無効化(デフォルト)、 `1`: 有効化
 
-**Description:** Enables or disables optimizations for RDP (Remote Desktop Protocol). When enabled, optimizes in particular the use of shared clipboard in RDP connections, which can otherwise lead to freezing issues. Note that this selector disables the support in clipboard for images encoded as data uri in raw text (only concerns images dropped or explicitly copied as text from a browser). 
-
-
+**説明:** RDP (リモートデスクトッププロトコル) 用の最適化を有効化または無効化します。有効化されていると、具体的にはRDP 接続において共有クリップボードの使用を最適化し、これをしないとフリーズなどの問題に至る可能性があります。このセレクターは、クリップボード内において標準テキスト内でのデータURI としてエンコードされた画像を無効化するという点に注意してください(これはドロップされた画像またはブラウザから明示的にテキストしてコピーされたテキストにのみ関係します)。
 
 
 
@@ -957,13 +957,13 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 ### TCPUDP log recording (131)
 
-**Scope:** 4D application.
+**スコープ:** 4D アプリケーション
 
-**Kept between two sessions:** No.
+**2セッション間で設定を保持:** No
 
-**Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
+**取り得る値:** `0`: ログの無効化(デフォルト)、 `1`: ログの有効化。
 
-**Description:** Enables or disables the `4DTCPUDPLog.txt` file for logging TCP  events.
+**説明:** TCP イベントの記録用の`4DTCPUDPLog.txt` ファイルを有効化または無効化します。
 
 
 
@@ -1022,25 +1022,6 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 **詳細:** 4DアプリケーションのTipsのカレントの表示状態を設定あるいは取得します。デフォルトでは、Tipsは有効化されています。
 
 この引数は全ての4DTipsに影響するという点に注意してください。つまり、フォームヘルプメッセージとデザインモードのエディターTipsに影響します。
-
-
-
-
-### Use legacy network layer (87)
-
-**スコープ**: 4D ローカル、4D Server
-
-**異なるセッション間で値を保持**: Yes
-
-**詳細:** クライアント/サーバー間の通信のネットワークレイヤーのカレントの状態を設定・取得します。旧式ネットワークレイヤーは4D v14 R5以降廃止予定となり、お使いのアプリケーションにおいて*ServerNet* ネットワークレイヤーへと積極的に置き換えられてい行くべきです。*ServerNet* は、将来のネットワークの進化の恩恵を受けるために、今後の4Dのリリースの中で必須要項となって行きます。互換性の理由から、既存のアプリケーションの速やかな移行をサポートするために、旧式のネットワークレイヤーは引き続きサポートされます(v14 R5以前のリリースから変換されたアプリケーションにおいてはデフォルトで旧式ネットワークレイヤーが使用されます)。クライアント/サーバー通信において旧式ネットワークレイヤーを使用するためにはこの引数に1を渡します(*ServerNet* が無効化されます)。0を渡すと旧式ネットワークレイヤーが無効化されます(そして*ServerNet* が使用されます)。
-
-このプロパティはデータベース設定の*互換性ページ* の"旧式ネットワークレイヤー"オプションを使用することによっても設定できます(*ネットワーク/クライアント-サーバー通信*参照)。この章では、移行戦略についての議論を読むこともできます。*ServerNet* の速やかな有効化が推奨されます。
-
-この引数が有効になるためには、アプリケーションを再起動する必要があります。OS X版の4D Server 64-bit 版においては*ServerNet* のみをサポートするため、このオプションはご利用いただけません(常に0を返します)。
-
-**取り得る値:** 0 または 1 (0 = 旧式ネットワークレイヤーを使用しない、1 = 旧式ネットワークレイヤーを使用する)
-
-**デフォルトの値:** 4D v14 R5以降で作成されたデータベースにおいては0、4D v14 R4以前のものから変換されたデータベースにおいては1
 
 
 
