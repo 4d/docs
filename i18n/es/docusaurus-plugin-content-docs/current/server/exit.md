@@ -1,33 +1,33 @@
 ---
 id: exit
-title: Exiting 4D Server
+title: Salir de 4D Server
 ---
 
-To shut down the server:
+Para apagar el servidor:
 
-1. Choose the **Quit** command from the **File** menu of 4D Server (Windows) or the **4D Server** menu (macOS).
+1. Seleccione el comando **Salir** en el menú **Archivo** de 4D Server (Windows) o en el menú **4D Server** (macOS).
 
-The following dialog box is displayed on the server machine:
+La ventana siguiente se muestra en la máquina servidor:
 
 ![](../assets/en/server/exit-1.png)
 
-2. Enter the number of minutes in which you want the server to shut down, or select a client disconnection option.
+2. Introduzca el número de minutos tras los cuales desea que se apague el servidor, o seleccione una opción de desconexión de los clientes.
 
-As soon as you do this, no new client can connect to the server.
+En cuanto haga esto, ningún cliente nuevo podrá conectarse al servidor.
 
 Las siguientes opciones están disponibles:
 
-- **Disconnect from Server in XX min.**
+- **Desconectar el servidor en XX min.**
 
-After the specified period of time, the server quits and all users are disconnected, including any clients in sleep mode. The following window appears on the server:
+Transcurrido el tiempo especificado, el servidor se cierra y todos los usuarios quedan desconectados, incluidos los clientes que se encuentren en modo de suspensión. La siguiente ventana aparece en el servidor:
 
 ![](../assets/en/server/exit-2.png)
 
-An identical window appears on each remote 4D machine. This window is repeated or updated on each client machine every 20 seconds or so, in order to prompt them to quit. When the time limit is reached, the server quits even if there are client machines still connected.
+Aparecerá una ventana idéntica en cada máquina 4D remota. Esta ventana se repite o se actualiza en cada ordenador cliente cada 20 segundos aproximadamente, con el fin de pedirles que cierren la aplicación. Cuando se alcanza el límite de tiempo, el servidor se cierra incluso si aún hay máquinas cliente conectadas.
 
-- **Wait for all clients to disconnect.**
+- **Espere a que todos los clientes se desconecten.**
 
-The server will only quit after all clients, including those in sleep mode, have disconnected. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
+El servidor solo se cerrará una vez que todos los clientes, incluidos los que estén en modo de suspensión, se hayan desconectado. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
 
 - **Wait for active clients to disconnect. (Ignore sleeping clients)**
 

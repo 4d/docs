@@ -9,21 +9,24 @@ A classe `SMTPTransporter` permite-lhe configurar ligações SMTP e enviar corre
 
 Os objetos SMTP Transporter são instanciados com o comando [`SMTP New transporter`](../commands/smtp-new-transporter). Eles oferecem as propriedades abaixo e funções:
 
-|                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary --> |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                   |
-| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->                                        |
-| [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<br/><!-- INCLUDE #transporter.checkConnection().Summary -->                        |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                      |
-| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<br/><!-- INCLUDE #transporter.headerCharset.Summary -->                                  |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                             |
-| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<br/><!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                            |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                    |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                             |
-| [<!-- INCLUDE #SMTPTransporterClass.send().Syntax -->](#send)<br/><!-- INCLUDE #SMTPTransporterClass.send().Summary -->                                       |
-| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                        |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                             |
+|                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->    |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                      |
+| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->                                           |
+| [<!-- INCLUDE #SMTPTransporterClass.certificate.Syntax -->](#certificate)<br/><!-- INCLUDE #SMTPTransporterClass.certificate.Summary -->                         |
+| [<!-- INCLUDE #SMTPTransporterClass.certificateName.Syntax -->](#certificatename)<br/><!-- INCLUDE #SMTPTransporterClass.certificateName.Summary -->             |
+| [<!-- INCLUDE #SMTPTransporterClass.certificatePassword.Syntax -->](#certificatepassword)<br/><!-- INCLUDE #SMTPTransporterClass.certificatePassword.Summary --> |
+| [<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<br/><!-- INCLUDE #transporter.checkConnection().Summary -->                           |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                         |
+| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<br/><!-- INCLUDE #transporter.headerCharset.Summary -->                                     |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                |
+| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<br/><!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                               |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                       |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                |
+| [<!-- INCLUDE #SMTPTransporterClass.send().Syntax -->](#send)<br/><!-- INCLUDE #SMTPTransporterClass.send().Summary -->                                          |
+| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<br/><!-- INCLUDE #transporter.sendTimeOut.Summary -->                                           |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                |
 
 ## 4D.SMTPTransporter.new()
 
@@ -50,6 +53,116 @@ A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary
 <!-- INCLUDE transporter.authenticationModeSMTP.Desc -->
 
 <!-- INCLUDE transporter.bodyCharset.Desc -->
+
+## .certificate
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+
+</details>
+
+<!-- REF #SMTPTransporterClass.certificate.Syntax -->**.certificate** : 4D.File<br/>**.certificate** : Blob<!-- END REF -->
+
+#### Descrição
+
+The `.certificate` property contains <!-- REF #SMTPTransporterClass.certificate.Summary -->the certificate used to sign emails using S/MIME (Secure/MIME), provided as a [`4D.File`](./FileClass.md) object or a Blob<!-- END REF -->. This certificate contains the private key.
+
+If your certificate is already registered in your Certificate store (*keychain*), you can use [`.certificateName`](#certificatename) instead of this property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+
+:::tip Related blog post
+
+[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
+
+#### Exemplo
+
+```4d
+var $transporter : 4D.SMTPTransporter
+var $options ; $result : Object
+
+$options:=New object
+//Enter the information for the SMTP server
+
+//Enable S/MIME signing
+//Provide certificate file
+$options.certificate:=File("myCertificateFile.p12")
+$options.certificatePassword:="myGreatPW123"
+
+$transporter:=4D.SMTPTransporter.new($options)
+
+$email:=New object
+//Fill the email content
+
+$result:=$transporter.send($email)
+```
+
+#### Veja também
+
+[.certificateName](#certificatename)<br/>
+[.certificatePassword](#certificatepassword)
+
+## .certificateName
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+
+</details>
+
+<!-- REF #SMTPTransporterClass.certificateName.Syntax -->**.certificateName** : Text<!-- END REF -->
+
+#### Descrição
+
+The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
+
+The certificate can also be provided directly as a file using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+
+#### Veja também
+
+[.certificate](#certificate)
+[.certificatePassword](#certificatepassword)
+
+## .certificatePassword
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+
+</details>
+
+<!-- REF #SMTPTransporterClass.certificatePassword.Syntax -->**.certificatePassword** : Text<!-- END REF -->
+
+#### Descrição
+
+The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->the password of the certificate used to sign emails, if required<!-- END REF -->. An empty string is used if no password is required.
+
+#### Veja também
+
+[.certificate](#certificate)
+[.certificateName](#certificatename)
+
+<!-- INCLUDE transporter.logFile.Desc -->
+
+<!-- INCLUDE transporter.port.Desc -->
+
+## .send()
+
+<details><summary>História</summary>
+
+| Release | Mudanças                 |
+| ------- | ------------------------ |
+| 17 R5   | Suporte de conteúdo Mime |
+| 17 R4   | Adicionado               |
+
+</details>
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
