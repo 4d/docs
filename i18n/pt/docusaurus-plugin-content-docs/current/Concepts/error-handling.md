@@ -191,7 +191,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable]{#predictable-vs-unpredictable-errors} errors:
+3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
 
 ```4d
 var $e:=ds.Employee.new()

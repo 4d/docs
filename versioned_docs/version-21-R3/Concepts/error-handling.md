@@ -200,7 +200,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable]{#predictable-vs-unpredictable-errors} errors:
+3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
 
 ```4d
 var $e:=ds.Employee.new()
@@ -305,7 +305,7 @@ Exceptions that interrupt code execution are returned by 4D but can have differe
 - a **message**, which explains why the error occurred 
 - a **code**, which is an arbitrary number returned by the component
 
-The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user. 
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user. Click on the **Copy** button to store detailed information related to the error in the pasteboard.  
 
 To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors) and make sure you log all properties of the *error* object since error codes depend on the components. 
 
