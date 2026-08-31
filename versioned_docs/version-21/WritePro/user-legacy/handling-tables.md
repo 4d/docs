@@ -39,7 +39,7 @@ Users can also select columns, rows, or cells and apply available attributes reg
 
 (\*) Columns do not have equivalent in html. In 4D Write Pro, a column range is actually a range of cells, which means that columns have the same priority as cells.
 
-Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
+Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](./4d-write-pro-attributes) section).
 
 When different attributes are applied to concurrent elements of a table, a priority order is applied for the rendering:
 
@@ -166,7 +166,7 @@ Tables can split between rows, and rows can split too. The table pagination is d
 
 **Notes:** 
 
-* You can disable automatic splits in tables by using the wk page break inside row / wk page break inside table attributes (see [4D Write Pro Attributes](../4d-write-pro-attributes)) or the *table/avoidPageBreakInside* and *row/avoidPageBreakInside* standard actions (see *Using 4D Write Pro standard actions*).
+* You can disable automatic splits in tables by using the wk page break inside row / wk page break inside table attributes (see [4D Write Pro Attributes](./4d-write-pro-attributes)) or the *table/avoidPageBreakInside* and *row/avoidPageBreakInside* standard actions.
 * When a table row and a paragraph have different page break options, the options applied to the row have precedence. For example, when a paragraph allows page breaks, but its parent row does not, the row will not split.
 
 Table pagination can also be controlled by programming or by the user. Available actions include:
@@ -198,7 +198,7 @@ When a page break or a column break is inserted through a standard action or the
 
 Table headers are the first row(s) of the table. To define header rows, you can:
 
-* use the *headerRowCount* standard action (see *Using 4D Write Pro standard actions*), or
+* use the *headerRowCount* standard action , or
 * use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) with wk header row count (on a table, see *Tables*), or wk header (on a row, see *Rows and columns*).
 
 If you designate more than five rows as header (or if it results from an insertion of rows in an existing header), 4D Write Pro only uses the first five rows as header. If you remove row(s) defined in the header, the number of header rows is decreased. 
@@ -269,7 +269,7 @@ To create carry-over rows:
 
 1. In the table template, add a row just after the data row or the break row(s) and insert any necessary formulas inside, using for example **This.previousItems**.
 2. Enable the carry-over row feature for your document. You can:  
-\- use the *bottomCarryOverRow* standard action (see *Using 4D Write Pro standard actions*), or  
+\- use the *bottomCarryOverRow* standard action , or  
 \- use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk bottom carry over row *Tables* attribute selector.
 
 **Note:** Page breaks inside rows are not allowed when the carry-over row feature is enabled (see *Table pagination*). Corresponding options, if set, are ignored.
@@ -319,7 +319,7 @@ When used in a formula within the table, the **This** keyword gives access to di
 
 In any other contexts, these expressions will return *undefined*.
 
-**Note:** For more information about formula insertion, see [WP INSERT FORMULA](./commands/wp-insert-formula).
+**Note:** For more information about formula insertion, see [WP Insert formula](./commands/wp-insert-formula).
 
 ### Working with a table datasource 
 

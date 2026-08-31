@@ -49,9 +49,9 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
 Cet exemple crée un tableau interprocess de 50 éléments de type Date et affecte à chaque élément la date du jour + un nombre de jours égal au numéro de l'élément :
 
 ```4d
- ARRAY DATE(◊tabDates;50)
+ ARRAY DATE(<>tabDates;50)
  For($vElem;1;50)
-    ◊tabDates{$vElem}:=Current date+$vElem
+    <>tabDates{$vElem}:=Current date+$vElem
  End for
 ```
 

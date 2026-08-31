@@ -272,7 +272,7 @@ sidebarItemsGenerator: async function (args) {
     ],
   ],
   future: {
-    experimental_faster: {
+    faster: {
       swcJsLoader: true,
       swcJsMinimizer: true,
       swcHtmlMinimizer: true,
@@ -432,7 +432,7 @@ sidebarItemsGenerator: async function (args) {
           ],
         },
       ],
-      "copyright": "© 2026 4D SAS - All rights reserved",
+      "copyright": "© 2026 4D SAS - All rights reserved <div style='margin-top:8px'>Some content is written with the help of AI</div>",
     },
   },
   markdown: {

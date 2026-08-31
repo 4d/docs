@@ -36,10 +36,10 @@ Pour des raisons de sécurité, dans les zones de saisie [multi-style](./propert
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                 |
-| ------- | --------------------------------------------- |
-| 20 R4   | Support of Writing Tools property             |
-| 19 R7   | Prise en charge de la propriété Rayon d'angle |
+| Release | Modifications                                     |
+| ------- | ------------------------------------------------- |
+| 20 R4   | Prise en charge de la propriété Outils d'écriture |
+| 19 R7   | Prise en charge de la propriété Rayon d'angle     |
 
 </details>
 

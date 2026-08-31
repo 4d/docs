@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to remove |
 </div>
 <!-- END REF-->
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB REMOVE.Summary-->The **OB REMOVE** command removes the *property* of the language object designated by the *object* parameter.<!-- END REF--> This command removes the *property* as well as its current value.
 
-*object* can be an object varialble or a 4D object field.
+*object* can be an object variable or a 4D object field.
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
 

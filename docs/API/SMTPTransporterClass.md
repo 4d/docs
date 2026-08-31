@@ -13,6 +13,9 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->|
 |[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->|
+|[<!-- INCLUDE #SMTPTransporterClass.certificate.Syntax -->](#certificate)<br/><!-- INCLUDE #SMTPTransporterClass.certificate.Summary -->|
+|[<!-- INCLUDE #SMTPTransporterClass.certificateName.Syntax -->](#certificatename)<br/><!-- INCLUDE #SMTPTransporterClass.certificateName.Summary -->|
+|[<!-- INCLUDE #SMTPTransporterClass.certificatePassword.Syntax -->](#certificatepassword)<br/><!-- INCLUDE #SMTPTransporterClass.certificatePassword.Summary -->|
 |[<!-- INCLUDE #transporter.checkConnection().Syntax -->](#checkconnection)<br/><!-- INCLUDE #transporter.checkConnection().Summary -->|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->|
 |[<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)<br/><!-- INCLUDE #transporter.headerCharset.Summary -->|
@@ -49,6 +52,130 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 <!-- INCLUDE transporter.authenticationModeSMTP.Desc -->
 
 <!-- INCLUDE transporter.bodyCharset.Desc -->
+
+
+
+## .certificate
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added
+</details>
+
+<!-- REF #SMTPTransporterClass.certificate.Syntax -->**.certificate** : 4D.File<br/>**.certificate** : Blob<!-- END REF -->
+
+#### Description
+
+The `.certificate` property contains <!-- REF #SMTPTransporterClass.certificate.Summary -->the certificate used to sign emails using S/MIME (Secure/MIME), provided as a [`4D.File`](./FileClass.md) object or a Blob<!-- END REF -->. This certificate contains the private key. 
+
+If your certificate is already registered in your Certificate store (*keychain*), you can use [`.certificateName`](#certificatename) instead of this property. Note that you cannot use both properties simultaneously, otherwise an error is returned.   
+
+
+:::tip Related blog post
+
+[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
+
+#### Example
+
+```4d
+var $transporter : 4D.SMTPTransporter
+var $options ; $result : Object
+
+$options:=New object
+//Enter the information for the SMTP server
+
+//Enable S/MIME signing
+//Provide certificate file
+$options.certificate:=File("myCertificateFile.p12")
+$options.certificatePassword:="myGreatPW123"
+
+$transporter:=4D.SMTPTransporter.new($options)
+
+$email:=New object
+//Fill the email content
+
+$result:=$transporter.send($email)
+```
+
+#### See also
+
+[.certificateName](#certificatename)   
+[.certificatePassword](#certificatepassword)
+
+
+## .certificateName
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added
+</details>
+
+<!-- REF #SMTPTransporterClass.certificateName.Syntax -->**.certificateName** : Text<!-- END REF -->
+
+#### Description
+
+The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
+
+The certificate can also be provided directly as a file or blob using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.   
+
+
+:::tip Related blog post
+
+[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
+
+
+#### See also
+
+[.certificate](#certificate)   
+[.certificatePassword](#certificatepassword)  
+
+
+## .certificatePassword
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added
+</details>
+
+<!-- REF #SMTPTransporterClass.certificatePassword.Syntax -->**.certificatePassword** : Text<!-- END REF -->
+
+#### Description
+
+The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->the password of the certificate used to sign emails, if required<!-- END REF -->. An empty string is used if no password is required. 
+
+#### See also
+
+[.certificate](#certificate)   
+[.certificateName](#certificatename)  
+
+
+<!-- INCLUDE transporter.logFile.Desc -->
+
+<!-- INCLUDE transporter.port.Desc -->
+
+## .send()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Support of mime contents|
+|17 R4|Added|
+
+</details>
+
+
+
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 

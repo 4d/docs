@@ -5,14 +5,14 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *objet* : Text {; *posX* : Integer {; *posY* : Integer {; *largeur* : Integer {; *hauteur* : Integer}}}} ) : Boolean<br/>**Print object** ( *objet* : Variable, Field {; *posX* : Integer {; *posY* : Integer {; *largeur* : Integer {; *hauteur* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| objet | Text, Field, Variable | &#8594;  | Nom d'objet (si * spécifié), ou chanmp ou variable (si * omis) |
 | posX | Integer | &#8594;  | Emplacement horizontal de l'objet |
 | posY | Integer | &#8594;  | Emplacement vertical de l'objet |
 | largeur | Integer | &#8594;  | Largeur de l'objet (pixels) |

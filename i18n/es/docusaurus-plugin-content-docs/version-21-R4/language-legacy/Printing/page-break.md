@@ -11,8 +11,8 @@ displayed_sidebar: docs
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operator | &#8594; | Cancel printing job started with Print form |
-| > | Operator | &#8594; | Force one printing job |
+| * | Operator | &#8594; | Cancela la impresión lanzada por Print form |
+| > | Operator | &#8594; | Forzar un trabajo de impresión |
 </div>
 <!-- END REF-->
 
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara la impresión de datos enviados a la impresora y provocar un salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente con *form* (en el contexto del evento de formulario On Printing Detail) para forzar saltos de página e imprimir la última página creada en memoria. No utilice PAGE BREAK con el comando [PRINT SELECTION](print-selection.md "PRINT SELECTION"). Es mejor utilizar [Subtotal](subtotal.md "Subtotal") o [BREAK LEVEL](../commands/break-level) con el parámetro opcional para generar saltos de página.
+<!--REF #_command_.PAGE BREAK.Summary-->PAGE BREAK dispara la impresión de datos enviados a la impresora y provocar un salto de página.<!-- END REF--> PAGE BREAK se utiliza conjuntamente con *form* (en el contexto del evento de formulario On Printing Detail) para forzar saltos de página e imprimir la última página creada en memoria. No utilice PAGE BREAK con el comando [PRINT SELECTION](../commands/print-selection). Es mejor utilizar [Subtotal](../commands/subtotal) o [BREAK LEVEL](../commands/break-level) con el parámetro opcional para generar saltos de página.
 
 Los parámetros *\** y *\>* son opcionales.
 
-El parámetro *\** le permite cancelar un trabajo de impresión iniciado por el comando [Print form](../commands/print-form.md "Print form"). La ejecución de este comando detiene inmediatamente los trabajos de impresión en progreso.
+El parámetro *\** le permite cancelar un trabajo de impresión iniciado por el comando [Print form](../commands/print-form.md). La ejecución de este comando detiene inmediatamente los trabajos de impresión en progreso.
 
 **Nota:** bajo Windows, este mecanismo puede ser trastornado por las propiedades de cola de espera del servidor de impresión. Si la impresora se configura para comenzar la impresión de inmediatamente, la cancelación no será efectiva. Para que el comando PAGE BREAK(\*) funcione correctamente, es preferible elegir la propiedad "Iniciar impresión cuando la última página haya entrado en la cola" de la impresora.
 
@@ -47,11 +47,11 @@ La segunda opción es particularmente útil cuando se utiliza con un trabajo de 
 
 ## Ejemplo 1 
 
-Ver el ejemplo del comando [Print form](../commands/print-form.md "Print form").
+Ver el ejemplo del comando [Print form](../commands/print-form.md).
 
 ## Ejemplo 2 
 
-Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER").
+Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md).
 
 ## Ver también 
 

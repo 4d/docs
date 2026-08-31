@@ -1231,6 +1231,19 @@ Quiere filtrar los elementos según su tipo de valor:
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
 ```
 
+
+#### Ejemplo 3
+
+La función `.filter()` se puede utilizar para comparar dos colecciones y extraer las diferencias entre ellas:
+
+```4d
+var $c1:=New collection(12; 45; 78; 99; 156)
+var $c2:=New collection(12; 78; 99) //faltan dos elementos
+var $diff:=$c1.filter(Formula(Not($c2.includes($1.value))))
+  // $diff=[45, 156]
+```
+
+
 <!-- END REF -->
 
 
@@ -2794,7 +2807,7 @@ La retrollamada define los siguientes parámetros:
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
+$r:=$c.reduce(Formula($1.accumulator=$1.value); 1)  //devuelve 86400
 ```
 
 
@@ -2888,7 +2901,7 @@ La retrollamada define los siguientes parámetros:
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //devuelve 86400
 
 
 ```

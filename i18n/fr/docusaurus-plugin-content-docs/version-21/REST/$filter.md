@@ -35,16 +35,26 @@ Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` o
 
 Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la [documentation de dataClass.query()](../API/DataClassClass.md#query).
 
-> Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
->
-> <li>Quotes ('): \u0027</li>
-> <li>Guillemets doubles ("): \u0022</li>
->
-> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
->
-> Si vous passez la valeur directement, vous pouvez écrire ce qui suit:
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+:::note
+
+L'utilisation de l'instruction `eval()` est interdite dans les requêtes REST (et donc dans les requêtes vers un [datastore distant](../ORDA/remoteDatastores.md)).
+
+:::
+
+:::note
+
+Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
+
+- Quotes ('): \u0027
+- Guillemets doubles ("): \u0022
+
+Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+Si vous passez la valeur directement, vous pouvez écrire :
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 ## Attribut
 
@@ -80,7 +90,7 @@ Le comparateur doit être l'une des valeurs suivantes :
 
 ## Similitude vectorielle
 
-Si l'attribut stocke des [**objets vectoriels**](../API/VectorClass.md) (voir comment [configurer un champ 4D pour qu'il ne stocke que des objets de la classe 4D.Vector](../Develop/field-properties.md#class)), vous pouvez filtrer la classe de données à l'aide de **vecteurs**, également appelés **embeddings**.
+Si l'attribut stocke des [**objets vectoriels**](../API/VectorClass.md) (voir comment [configurer un champ 4D pour qu'il ne stocke que des objets de la classe 4D.Vector](../Develop/field-properties.md#class)), vous pouvez filtrer la dataclass à l'aide de **vecteurs**, également appelés **embeddings**.
 
 Pour plus d'informations sur les recherches par similarité vectorielle, veuillez vous référer à la section [Requêtes par similarité vectorielle](../API/DataClassClass.md#query-by-vector-similarity).
 

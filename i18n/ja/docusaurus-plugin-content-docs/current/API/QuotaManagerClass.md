@@ -78,7 +78,7 @@ Session.quotas.defaultEntitySetTimeout:=1200
 
 #### 説明
 
-`.maxEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->カレントセッションの途中にメモリー内に保存されているREST エンティティセットの非アクティブタイムアウトの最大値(秒単位)<!-- END REF --> が格納されています。
+`.maxEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->カレントセッションの途中にメモリ内に保存されているREST エンティティセットの非アクティブタイムアウトの最大値(秒単位)<!-- END REF --> が格納されています。
 
 この値は[セッションの`quotas.maxEntitySetTimeout` プロパティ](./SessionClass.md#quotas) を使用することで設定することもできます。これらはセッション内で後で作成されたあらゆるエンティティセットに対して使用することができます(この場合既存のエンティティセットのタイムアウトの最大値は変更されません)。
 

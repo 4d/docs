@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | réfGroupe | Integer | &#8594;  | Numéro de référence unique du groupe activé ou -1 pour ajouter un groupe de Super_Utilisateur -2 pour ajouter un groupe d'Administrateur |
-| &#8592; | Unique ID number of added group (if any) |
+|| &#8592; | Numéro de référence unique du groupe ajouté (le cas échéant) |
 | nom | Text | &#8594;  | Nouveau nom de groupe |
 | propriétaire | Integer | &#8594;  | Numéro de référence unique de l'utilisateur ou le propriétaire du nouveau groupe |
 | membres | Integer array | &#8594;  | Nouveaux membres du groupe |

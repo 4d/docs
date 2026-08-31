@@ -27,7 +27,7 @@ title: リリースノート
   - Web サーバーオブジェクトには新しい[`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) プロパティが含まれます。
 - 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
 - `roles.json` ファイル内での、明確な許可のないアクセスをデフォルトで全てブロックする新しい[`restrictedByDefault` プロパティ](../ORDA/privileges.md#制限モード) のサポート。
-- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダーの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
+- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダーの代わりに Windows 証明書ストアからの証明書を使用することを許可する新しいオプション。
 - [Sessions API](../API/SessionClass.md) は全ての[デスクトップセッション](../Desktop/sessions.md) をサポートするようになり、[デスクトップセッションとWeb アクセスを共有する](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ことが可能になりました。これにより、Web エリア内にQodly ページを使用するアプリケーションの開発が容易になりました。
 - [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
 - プロジェクトを閉じたり再起動したりすることなく、4D エクスプローラーから[ホストプロジェクトから直接コンポーネントを作成](../Extensions/develop-components.md#コンポーネントの作成)したり、あるいは[専用のタブからコンポーネントのコードを編集する](../Extensions/develop-components.md#全てのコンポーネントコードを編集) ことができるようになりました。
@@ -97,7 +97,7 @@ title: リリースノート
 #### 動作の変更
 
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
-- *MeCab* ライブラリーは削除されました。 この変更は、日本語テキストの処理のみに影響します。 この変更は、日本語テキストの処理のみに影響します。
+- *MeCab* ライブラリは削除されました。 この変更は、日本語テキストの処理のみに影響します。
 - ["cs" クラス](../Concepts/classes.md#cs) タイプを使用して宣言されたオブジェクト型変数またはオブジェクト型引数に、異なるクラスのオブジェクトインスタンスを代入した場合にはシンタックスエラーを生成するようになりました。
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) 関数は、Web プロセス内において昇格された権限に対してはTrue を返すようになりました。
 - [`Time`](../commands/time) コマンドは、*timeValue* 引数が負の値の場合には、負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。
@@ -108,14 +108,14 @@ title: リリースノート
 
 #### ハイライト
 
-- [*MeCab* ライブラリー](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
+- [*MeCab* ライブラリ](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `address` および `port`。
 - [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
 - 新しいコマンド[WA SET CONTEXT](../commands/wa-set-context.md) および [WA Get context](../commands/wa-get-context.md) を使用して、Web エリア内の[$4d](../FormObjects/webArea_overview.md#4d-object) コンテンツを管理することができるようになります。
 - 新しい[`RDP optimization` データベースパラメーター](../commands-legacy/set-database-parameter.md#rdp-optimization-133) を使用して、例えば4D をリモートデスクトッププロトコルを使用している場合の共有クリップボードを最適化することができます。
-- インタープリタ版のコンポーネントは今後 [ホストプロジェクトから編集](../Extensions/develop-components.md#editing-components) できるようになりました。
+- インタープリター版のコンポーネントは今後 [ホストプロジェクトから編集](../Extensions/develop-components.md#editing-components) できるようになりました。
 - [ライセンス](../Admin/licenses.md) は起動時に自動的に更新されるようになりました。
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)

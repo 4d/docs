@@ -26,16 +26,16 @@ title: ドラッグ&ドロップ
 
 以下の表はドラッグ可能またはドロップ可能なオブジェクトでの利用可能なプロパティの一覧をまとめたものです:
 
-| フォームオブジェクト                                   | ドラッグ可 "カスタム" | ドロップ可 "カスタム" | ドラッグ可 "自動" | ドロップ可 "自動" |
-| -------------------------------------------- | ------------ | ------------ | ---------- | ---------- |
-| [4D Write Pro エリア](writeProArea_overview.md) | ○            | ○            | ○          | ○          |
-| [コンボボックス](comboBox_overview.md)              |              | ○            | ○          | ○          |
-| [入力](input_overview.md)                      | ○            | ○            | ○          | ○          |
-| [階層リスト](list_overview.md)                    | ○            | ○            |            |            |
-| [リストボックス](listbox_overview.md)               | ○            | ○            |            |            |
-| [プラグインエリア](pluginArea_overview.md)           |              |              | ○          | ○          |
-| [ボタン](button_overview.md)                    |              | ○            |            |            |
-| [ピクチャーボタン](pictureButton_overview.md)        |              | ○            |            |            |
+| フォームオブジェクト                                                  | ドラッグ可 "カスタム" | ドロップ可 "カスタム" | ドラッグ可 "自動" | ドロップ可 "自動" |
+| ----------------------------------------------------------- | ------------ | ------------ | ---------- | ---------- |
+| [4D Write Pro エリア](../FormObjects/writeProArea_overview.md) | ○            | ○            | ○          | ○          |
+| [コンボボックス](../FormObjects/comboBox_overview.md)              |              | ○            | ○          | ○          |
+| [入力](../FormObjects/input_overview.md)                      | ○            | ○            | ○          | ○          |
+| [階層リスト](../FormObjects/list_overview.md)                    | ○            | ○            |            |            |
+| [リストボックス](../FormObjects/listbox_overview.md)               | ○            | ○            |            |            |
+| [プラグインエリア](../FormObjects/pluginArea_overview.md)           |              |              | ○          | ○          |
+| [ボタン](../FormObjects/button_overview.md)                    |              | ○            |            |            |
+| [ピクチャーボタン](../FormObjects/pictureButton_overview.md)        |              | ○            |            |            |
 
 改装リスト内の項目、またはリストボックス内の行はドラッグ&ドロップすることができます。 逆に、あるオブジェクトを改装リスト内の項目またはリストボックスの行にドラッグ&ドロップすることもできます。 ただし、出力フォームの詳細エリアからオブジェクトをドラッグ&ドロップすることはできません。 アプリケーションのフォーム外へのドラッグアンドドロップも、[`On Drop` データベースメソッド](../commands-legacy/on-drop-database-method.md) で管理できます。
 

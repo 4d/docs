@@ -5,7 +5,7 @@ slug: /commands/receive-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* : Time ;} *varRecep* : Text, Blob ; stopCar | numBytes )<!-- END REF-->
+<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *stopChar* : Text )<br/>**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *numBytes* : Integer )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | docRef | Time | &#8594; | Número de referencia del documento o canal actual (puerto serial o documento) |
 | varRecep | Text, Blob | &#8592; | Variable para recibir datos |
-| stopCar &#124; numBytes | Cadena, Entero largo | &#8594; | Carácter(es) en el(los) cual(es) detener la recepción de datos o número de bytes a recibir |
+| stopCar &#124; numBytes | Text, Integer | &#8594; | Carácter(es) en el(los) cual(es) detener la recepción de datos o número de bytes a recibir |
 </div>
 <!-- END REF-->
 

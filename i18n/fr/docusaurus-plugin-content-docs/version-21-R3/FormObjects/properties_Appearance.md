@@ -37,7 +37,7 @@ A l'exécution, un champ ou toute zone saisissable est délimité par un rectang
 
 :::note
 
-The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI.
+Le rectangle de focus n'est disponible que sur macOS et (pour les [zones de saisie](input_overview.md) de texte et d'image) sous Windows avec [l'interface Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) activé. Il n'est pas pris en charge par l'interface utilisateur classique de Windows.
 
 :::
 

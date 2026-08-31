@@ -5,14 +5,14 @@ slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nom* {; *nomSurlignage*}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *objet* : Text ; *numTable* : Integer {; *nom* : Text {; *nomSurlignage* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *objet* : Variable ; *numTable* : Integer {; *nom* : Text {; *nomSurlignage* : Text}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | numTable | Integer | &#8592; | Numéro de la table de la sélection |
 | nom | Text | &#8592; | Nom de la sélection temporaire ou "" pour la sélection courante |
 | nomSurlignage | Text | &#8592; | Nom de l’ensemble de surlignage |

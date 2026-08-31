@@ -576,7 +576,7 @@ Se uma licença não for válida, será avisado por uma mensagem.
 
 Pode designar o número de ficheiros válidos que desejar. Ao construir uma aplicação executável, o 4D usará a licença mais apropriada disponível.
 
-> Licenças "R" dedicadas são necessárias para criar aplicativos com base nas versões de "R-release" (números de licença para "R" produtos começam com "R-4DP").
+> Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 Depois que um aplicativo licenciado é criado, um novo arquivo de licença de implantação é incluído automaticamente na pasta Licenses, ao lado do aplicativo executável (Windows) ou no pacote (macOS).
 

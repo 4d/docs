@@ -5,7 +5,7 @@ slug: /commands/wa-set-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
+<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( * ; *objet* : Text ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<br/>**WA SET EXTERNAL LINKS FILTERS** ( *objet* : Variable, Field ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 <div class="no-index">
 

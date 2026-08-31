@@ -65,30 +65,30 @@ $a+=2 // $a=3
 
 Les opérateurs d'affectation composés suivants sont pris en charge :
 
-| Opérateur      | Syntaxe            | Assigne | Exemple                                                                         |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------------------- |
-| Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                               |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                              |
-|                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                              |
-|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                                       |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                           |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                         |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`             |
-| Soustraction   | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                              |
-|                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                              |
-|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                                       |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                           |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (déplacer horizontalement $p1 de 5 pixels vers la gauche)` |
-| Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                              |
-|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                                       |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                           |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (ajouter $p2 vers le bas de $p1)`                      |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (déplacer verticalement $p1 de 5 pixels)`                  |
-| Multiplication | Text \*= Number    | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                     |
-|                | Number \*= Number  | Number  | `$n*=5 //$n:=$n*5`                                                              |
-|                | Time \*= Time      | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                                       |
-|                | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                                                           |
-|                | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                 |
+| Opérateur      | Syntaxe            | Assigne | Exemple                                                                           |
+| -------------- | ------------------ | ------- | --------------------------------------------------------------------------------- |
+| Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                                 |
+|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                                |
+|                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                                |
+|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                                         |
+|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                             |
+|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (ajouter $p2 à droite de $p1)`                           |
+|                | Picture += Number  | Picture | `$p1+= 5 //$p1:=$p1+ 5 (déplacer horizontalement $p1 de 5 pixels vers la droite)` |
+| Soustraction   | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                                |
+|                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                                |
+|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                                         |
+|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                             |
+|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (déplacer horizontalement $p1 de 5 pixels vers la gauche)`   |
+| Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                                |
+|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                                         |
+|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                             |
+|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (ajouter $p2 vers le bas de $p1)`                        |
+|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (déplacer verticalement $p1 de 5 pixels)`                    |
+| Multiplication | Text \*= Number    | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                       |
+|                | Number \*= Number  | Number  | `$n*=5 //$n:=$n*5`                                                                |
+|                | Time \*= Time      | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                                         |
+|                | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                                                             |
+|                | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                   |
 
 Ces opérateurs s'appliquent à toutes les [expressions assignables](quick-tour.md#assignable-vs-non-assignable-expressions) sauf :
 

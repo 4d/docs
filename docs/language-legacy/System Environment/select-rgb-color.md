@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Select RGB color.Summary-->The Select RGB color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->The **Select RGB color** command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
 
 The system color selection window appears as follows:   
 
@@ -43,14 +43,16 @@ The optional *message* parameter customizes the title of the system window. By d
 
 The effect of validating this dialog box differs depending on the platform:
 
-* Under Windows, when the user clicks on **OK**, the command returns the value of the color selected in RGB format and the system variable *OK* is set to 1\. If the user cancels the dialog box, the command returns -1 and the system variable *OK* is set to 0.
-* Under Mac OS, you can only close this dialog box by clicking on the close box or by pressing on the **Esc** key. In both cases, the system variable *OK* is set to 1, regardless of the user actions in the window. The command returns the value of the color selected in RGB format. If the user did not select a color, the value returned is the one passed in *defaultColor* (if any) or 0 if *defaultColor* is not passed.
+* Under Windows, when the user clicks on **OK**, the command returns the value of the color selected in RGB format and the system variable *OK* is set to 1. If the user cancels the dialog box, the command returns -1 and the system variable *OK* is set to 0.
+* Under macOS, you can only close this dialog box by clicking on the close box or by pressing on the **Esc** key. In both cases, the system variable *OK* is set to 1, regardless of the user actions in the window. The command returns the value of the color selected in RGB format. If the user did not select a color, the value returned is the one passed in *defaultColor* (if any) or 0 if *defaultColor* is not passed.
 
 **Note:** This command must not be executed on the server machine nor within a Web process.
 
 ## See also 
 
-[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)   
+[OPEN COLOR PICKER](../commands/open-color-picker)   
+    
 
 ## Properties
 

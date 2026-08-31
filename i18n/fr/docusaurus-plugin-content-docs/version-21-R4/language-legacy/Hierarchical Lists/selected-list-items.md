@@ -5,7 +5,7 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *liste* {; *tabEléments* {; *}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( * ; *liste* : Text {; *tabEléments* : Integer array} {; *} ) : Integer<br/>**Selected list items** ( *liste* : Integer {; *tabEléments* : Integer array} {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 <div class="no-index">
 
@@ -14,8 +14,8 @@ displayed_sidebar: docs
 | * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
 | tabEléments | Integer array | &#8592; | Si 2e * omis : Tableau des positions des éléments sélectionnés dans la ou les liste(s) Si 2e * passé : Tableau des références des éléments sélectionnés dans la ou les liste(s) |
-| * | Opérateur | &#8594;  | Si omis : Position(s) d’élément(s) Si passé : Référence(s) d’élément(s) |
-| Résultat | Integer | &#8592; | Si 2e * omis : Position de l'élément sélectionné parmi la ou les liste(s) déployée(s)/contractée(s) Si 2e * passé : Référence de l'élément sélectionné |
+| * | Opérateur | &#8594;  | Si omis : Position(s) d’élément(s). Si passé : Référence(s) d’élément(s) |
+| Résultat | Integer | &#8592; | Si 2e * omis : Position de l'élément sélectionné parmi la ou les liste(s) déployée(s)/contractée(s). Si 2e * passé : Référence de l'élément sélectionné |
 </div>
 <!-- END REF-->
 

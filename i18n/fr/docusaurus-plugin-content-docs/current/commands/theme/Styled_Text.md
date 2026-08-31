@@ -23,17 +23,17 @@ slug: /commands/theme/Styled-Text
 | [<!-- INCLUDE #_command_.ST SET PLAIN TEXT.Syntax -->](../../commands/st-set-plain-text)<br/>           |
 | [<!-- INCLUDE #_command_.ST SET TEXT.Syntax -->](../../commands/st-set-text)<br/>                       |
 
-## Working with text handling commands
+## Travailler avec des commandes de gestion de texte
 
 ### Interface utilisateur
 
-The commands that can be used to manipulate text objects by programming do not take any style tags integrated into the text into account. They act upon displayed text only. This concerns the following commands:
+Les commandes qui peuvent être utilisées pour manipuler des objets texte par programmation ne prennent pas en compte les balises de style intégrées dans le texte. Elles agissent uniquement sur le texte à l'écran. Ceci concerne les commandes suivantes :
 
-- [User Interface](./User_Interface.md) theme commands
+- Commandes du thème [Interface utilisateur](./User_Interface.md)
 - [`HIGHLIGHT TEXT`](../../commands/highlight-text)
 - [`GET HIGHLIGHT`](../../commands/get-highlight)
 
-When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+Lorsque vous utilisez ces commandes avec des commandes qui manipulent des chaînes de caractères, il est nécessaire de filtrer les caractères de formatage en utilisant la commande [`ST Get plain text`](../../commands/st-get-plain-text) :
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -41,21 +41,21 @@ When you use these commands with commands that manipulate character strings, it 
 
 ### Objets (Formulaires)
 
-The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../../commands/object-set-font)) apply to the whole object and not to the selection.
+Les commandes qui peuvent être utilisées pour modifier le style des objets (par exemple, [`OBJECT SET FONT`](../../commands/object-set-font)) s'appliquent à l'objet entier et non à la sélection.
 
-If the object does not have the focus when the command is executed, the modification is applied simultaneously to the object (the text area) and to its associated variable. If the object does have the focus, the modification is carried out on the object but not on the associated variable. The modification is only applied to the variable when the object loses the focus. Keep this principle in mind when programming text areas.
+Si l'objet n'a pas le focus lorsque la commande est exécutée, la modification est appliquée simultanément à l'objet (la zone de texte) et à sa variable associée. Si l'objet a le focus, la modification est effectuée sur l'objet mais pas sur la variable associée. La modification n'est appliquée à la variable que lorsque l'objet perd le focus. Gardez ce principe à l'esprit lors de la programmation des zones de texte.
 
 :::note
 
-If the [**Store with default style tags**](../../FormObjects/properties_Text.md#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
+Si l'option [**Stocker les balises par défaut**](../../FormObjects/properties_Text.md#store-with-default-style-tags) est cochée pour l'objet, l'utilisation de ces commandes provoquera une modification des balises enregistrées avec chaque objet.
 
 :::
 
-Note also that only default properties are affected by these commands (as well as any properties saved by means of default tags). Custom style tags remain as they are. For example, given a multi-style area where default tags were saved:
+Notez aussi que seules les propriétés par défaut sont affectées par ces commandes (ainsi que toutes les propriétés enregistrées par les balises par défaut). Les balises de style personnalisé restent telles quelles. Par exemple, dans une zone multi-style où les balises par défaut ont été enregistrées :
 
 ![](../../assets/en/FormObjects/multistyle-ex1.png)
 
-The plain text of the area is as follows:
+Le texte brut de la zone est le suivant :
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#009900">This is the word <span style="color:#D81E05">red</span></span>
@@ -67,40 +67,40 @@ Si vous exécutez le code suivant :
 OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 ```
 
-The red color remains:
+La couleur rouge reste :
 
 ![](../../assets/en/FormObjects/multistyle-ex2.png)
 
-and code is:
+et le code est :
 
 ```html
 <span style="text-align:left;font-family:'Segoe UI';font-size:9pt;color:#0000FF">This is the word <span style="color:#D81E05">red</span></span>
 ```
 
-The following commands are concerned:
+Les commandes suivantes sont concernées :
 
 - [`OBJECT SET RGB COLORS`](../../commands/object-set-rgb-colors)
 - [`OBJECT SET FONT`](../../commands/object-set-font)
 - [`OBJECT SET FONT STYLE`](../../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../../commands/object-set-font-size)
 
-In the context of multi-style areas, such commands should be used to set default styles only. To manage styles during database execution, we recommend using the commands of the "Styled Text" theme.
+Dans le contexte des zones de texte multistyles, les commandes génériques doivent être utilisées pour définir les styles par défaut uniquement. Pour gérer les styles lors de l'exécution de la base de données, nous vous recommandons d'utiliser les commandes du thème "Texte multistyle".
 
 ### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../../commands/get-edited-text) command returns the text of the current area including any style tags.
+Lorsqu’elle est utilisée avec une zone de texte riche, la commande [`Get edited text`](../../commands/get-edited-text) retourne le texte de la zone courante en incluant les éventuelles balises de style.
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command:
+Pour récupérer le texte "brut" (texte sans balises) en cours d’édition, vous devez utiliser la commande [`ST Get plain text`](../../commands/st-get-plain-text) :
 
 ```4d
 ST Get plain text(Get edited text)
 ```
 
-### Query and order by commands
+### Commandes de recherche et de tri
 
-Queries and sorts carried out among multi-style objects take into account any style tags saved in the object. If a style modification has been made within a word, searching for the word will not be successful.
+Les recherches et les tris effectués parmi des objets multistyles tiennent compte des éventuelles balises de style enregistrées dans l’objet. Si une modification de style a été apportée à l’intérieur d’un mot, une recherche sur ce mot sera infructueuse.
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../../commands/st-get-plain-text) command. Par exemple :
+Pour pouvoir effectuer des recherches et des tris valides, vous devez utiliser la commande [`ST Get plain text`](../../commands/st-get-plain-text). Par exemple :
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")

@@ -7,11 +7,11 @@ title: Saisie
 
 4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Les [zones de saisie](input_overview.md) de texte peuvent être vérifiées, ainsi que les documents [4D Write Pro](writeProArea_overview.md).
 
-La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. You can also execute the [`SPELL CHECKING`](../commands/spell-checking) 4D language command for each object to be checked.
+La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. Vous pouvez également exécuter la commande du langage 4D [`SPELL CHECKING`](../commands/spell-checking) pour chaque objet à vérifier.
 
-:::note Writing Tools (macOS)
+:::note Outils d'écriture (macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can spellcheck their documents using IA, you might consider using the [Writing Tools](#writing-tools) property.
+SOus macOS, si vous voulez fournir à vos utilisateurs les Outils d'écriture Apple Intelligence pour qu'ils puissent vérifier l'orthographe de leurs documents en utilisant l'IA, vous pouvez utiliser la propriété [Outils d'écriture](#writing-tools).
 
 :::
 
@@ -40,7 +40,7 @@ Pour une [zone de saisie](input_overview.md) de type image, en plus des commande
 Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox-column.md) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
 - **Polices...** : affiche la boîte de dialogue système de police
-- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
+- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes [`SET RECENT FONTS`](../commands/set-recent-fonts) et [`FONT LIST`](../commands/font-list).
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
   Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 
@@ -352,43 +352,43 @@ Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélec
 
 ---
 
-## Writing Tools
+## Outils d'écriture
 
-On macOS, this property lets end users apply [Apple Intelligence **Writing Tools**](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) to the text of [4D Write Pro](writeProArea_overview.md) and [input](input_overview.md) (with [multiline](#multiline) support) form objects. Writing Tools use AI to proofread, rewrite, summarize, or change the tone of text directly within your 4D application.
+Sur macOS, cette propriété permet aux utilisateurs d'appliquer les [**Outils d'écriture** Apple Intelligence](https://support.apple.com/guide/mac-help/find-the-right-words-with-writing-tools-mchldcd6c260/mac) au texte des objets de formulaire [4D Write Pro](writeProArea_overview.md) et [zones de saisie](input_overview.md) avec option [multilignes](#multiline). Les outils d'écriture utilisent l'IA pour relire, réécrire, résumer ou retravailler le texte directement dans votre application 4D.
 
 ![](../assets/en/FormObjects/writing-tools.png)
 
 :::tip Article(s) de blog sur le sujet
 
-Refer to [Apple Writing Tools – Now Available in 4D Write Pro and Text Input](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input) blog post to **see Writing Tools in action**.
+[Apple Writing Tools – Maintenant disponible dans 4D Write Pro et les zones de saisie](https://blog.4d.com/apple-writing-tools-now-available-in-4d-write-pro-and-text-input)
 
 :::
 
-When the property is enabled and the form is executed, a **Show Writing Tools** menu item is added to the [context menu](#context-menu) of the object. When the user selects an action in the Writing Tools, the text is replaced with the returned modification:
+Lorsque la propriété est activée et que le formulaire est exécuté, une ligne **Afficher outils d'écriture** est ajoutée au [menu contextuel](#context-menu) de l'objet. Lorsque l'utilisateur sélectionne une action dans les Outils d'écriture, le texte est remplacé par la modification retournée :
 
-- if some text is selected, only the selection is replaced,
-- if there is no selection, the whole contents of the area is used (for a [4D Write Pro](writeProArea_overview.md) area, the whole contents of the current container). The context used by the Writing Tools is the container in which the cursor is located (header, footer, body, or text box) along with the current selection.
+- si du texte est sélectionné, seule la sélection est remplacée,
+- s'il n'y a pas de sélection, tout le contenu de la zone est utilisé (pour une zone [4D Write Pro](writeProArea_overview.md) tout le contenu du conteneur courant). Le contexte utilisé par les outils d'écriture est le conteneur dans lequel se trouve le curseur (en-tête, pied de page, corps ou zone de texte) avec la sélection courante.
 
 :::note
 
-Styles are usually preserved when using Writing Tools, however with some AI features they might be replaced.
+Les styles sont généralement préservés lors de l'utilisation des Outils d'écriture, cependant avec certaines fonctionnalités IA ils peuvent se voir remplacés.
 
 :::
 
-The Writing Tools can also be displayed through the **writingTools** [standard action](properties_Action.md#standard-action), which can be assigned to a button or a menu item.
+Les Outils d'écriture peuvent également être affichés via l'[action standard](properties_Action.md#standard-action) **writingTools**, qui peut être assignée à un bouton ou à une ligne de menu.
 
 :::note
 
-The Writing Tools feature relies on **Apple Intelligence** and is only available on compatible macOS computers when *Apple Intelligence & Siri* is enabled in the System Settings. On Windows, or when Apple Intelligence is not enabled, the property remains available in the Property List but the feature and the associated **WritingTools** standard action are deactivated at runtime (if the action is invoked by programming, it does nothing).
+La fonctionnalité Outils d'écriture repose sur **Apple Intelligence** et n'est disponible que sur les ordinateurs macOS lorsque *Apple Intelligence & Siri* est activé dans les paramètres du système. Sous Windows, ou lorsque Apple Intelligence n'est pas activé, la propriété reste disponible dans la liste des propriétés, mais la fonctionnalité et l'action standard associée **WritingTools** sont désactivées à l'exécution (si l'action est appelée par la programmation, elle ne fait rien).
 
 :::
 
-The availability and default value of the property depend on the object type:
+La disponibilité et la valeur par défaut de la propriété dépendent du type d'objet :
 
-| Object                                        | Availability in the Property List                                             | Valeur par défaut |
-| --------------------------------------------- | ----------------------------------------------------------------------------- | ----------------- |
-| [Zone de saisie](input_overview.md)           | Only when the [Multiline](#multiline) property is set to "Yes" or "Automatic" | False             |
-| [4D Write Pro area](writeProArea_overview.md) | Always displayed                                                              | True              |
+| Object                                        | Disponibilité dans la liste des propriétés                                          | Valeur par défaut |
+| --------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------- |
+| [Zone de saisie](input_overview.md)           | Seulement lorsque la propriété [Multilignes](#multiline) est "Oui" ou "Automatique" | False             |
+| [4D Write Pro area](writeProArea_overview.md) | Toujours affiché                                                                    | True              |
 
 #### Grammaire JSON
 

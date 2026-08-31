@@ -64,7 +64,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 
 You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object (properties)" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Refer to the [List boxes and the 4D Language](#list-boxes-and-the-4d-language) paragraph.
 
 
 

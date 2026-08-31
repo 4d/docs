@@ -5,14 +5,14 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *formule* ; *typeDonnées* ; *nomEnTête* ; *variableEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objet* : Text ; *positionCol* : Integer ; *nomCol* : Text ; *formule* : Text ; *typeDonnées* : Integer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objet* : Variable ; *positionCol* : Integer ; *nomCol* : Text ; *formule* : Text ; *typeDonnées* : Integer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
 | nomCol | Text | &#8594;  | Nom d’objet de la colonne |
 | formule | Text | &#8594;  | Formule 4D associée à la colonne |

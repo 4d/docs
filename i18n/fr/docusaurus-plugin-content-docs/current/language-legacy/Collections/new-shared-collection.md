@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètres | Type                                                  |                             | Description                                            |
 | ---------- | ----------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                            | &#8592; | New shared collection                                  |
+| Résultat   | Collection                                            | &#8592; | Nouvelle collection partagée                                 |
 
 <!-- END REF-->
 
@@ -78,7 +78,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 [New collection](../commands/new-collection)\
 [New shared object](../../commands-legacy/new-shared-object)\
-*Shared objects and shared collections*
+[Objets et collection partagés](../../Concepts/shared.md)
 
 ## Propriétés
 

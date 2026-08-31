@@ -5,14 +5,14 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( {* ;} *objet* ) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *objet* : Text ) : Pointer<br/>**OBJECT Get data source** ( *objet* : Variable, Field ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Pointer | &#8592; | Pointeur vers la source de données courante de l’objet |
 </div>
 <!-- END REF-->

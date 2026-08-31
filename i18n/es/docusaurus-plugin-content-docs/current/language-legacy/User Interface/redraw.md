@@ -5,13 +5,14 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *objeto* : any )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *aTable* : Table )<br/>**REDRAW** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | any | &#8594; | Tabla para la cual rediseñar el subformulario o Campo para el cual rediseñar el área o Variable para la cual rediseñar el área o Tabla del formulario a rediseñar en un navegador Web |
+| aTable | Table | &#8594;  | Table for which to redraw the subform |
+| object | Field, Variable | &#8594;  | Campo o Variable para el cual rediseñar el área, o List box a actualizar |
 </div>
 <!-- END REF-->
 

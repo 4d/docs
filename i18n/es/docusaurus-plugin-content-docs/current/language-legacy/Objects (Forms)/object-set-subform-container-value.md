@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| value | any | &#8594; | New value for the data source |
+| value | any | &#8594; | Nuevo valor para la fuente de datos |
 </div>
 <!-- END REF-->
 
@@ -27,17 +27,17 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->The **OBJECT SET SUBFORM CONTAINER VALUE** command sets the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Summary-->El comando **OBJECT SET SUBFORM CONTAINER VALUE** define el valor actual de la fuente de datos vinculada al contenedor de subformulario mostrado en el formulario padre.<!-- END REF-->
 
-This command can only be used in the context of a form used as a subform. In any other context, it does nothing.
+Este comando solo puede utilizarse en el contexto de un formulario utilizado como subformulario. En cualquier otro contexto, no hace nada.
 
-Pass in *value* a value of the same type as the data source bound to the subform container. The data source must be an assignable expression (see *Assignable vs non-assignable expressions*), otherwise the command does nothing. 
+Pase en *value* un valor del mismo tipo que la fuente de datos vinculada al contenedor de subformulario. La fuente de datos debe ser una expresión asignable (ver *Assignable vs non-assignable expressions*), de lo contrario el comando no hace nada. 
 
-For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
+Para más información sobre las variables vinculadas y la interacción formulario/subformulario, consulte *Managing the bound variable* en developer.4d.com.
 
 ## Ejemplo 
 
-A detailed example is available in the [OBJECT Get subform container value](../commands/object-get-subform-container-value) section.
+Hay un ejemplo detallado disponible en la sección [OBJECT Get subform container value](../commands/object-get-subform-container-value).
 
 ## Ver también 
 

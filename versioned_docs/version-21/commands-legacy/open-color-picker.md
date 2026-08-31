@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 **Note:** This is a modal dialog box under Windows but not under macOS.
 
-When the user selects a color and validates the dialog box, this color is applied to the current text selection in the object with the focus, if the "Allow Font/Color Picker" property is checked for this object (see the *Design Reference* manual).
+When the user selects a color and validates the dialog box, this color is applied to the current text selection in the object with the focus, if the ["Allow Font/Color Picker" property](../../FormObjects/properties_Text.md#allow-fontcolor-picker) is checked for this object.
 
 If you pass 0 in the *textOrBackground* parameter or omit this parameter, the selected color is applied to the text. If you pass 1 in *textOrBackground*, this color is applied to the text background. 
 
-If the color was changed, the On After Edit form event is generated for the object. 
+If the color was changed, the [`On After Edit` form event](../../Events/onAfterEdit.md) is generated for the object. 
 
 ## See also 
 

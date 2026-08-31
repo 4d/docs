@@ -5,13 +5,13 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( encab|arrayCamp {; *arrayValores* : Text array} )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* : Text )<br/>**WEB GET HTTP HEADER** ( *fieldArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| encab&#124;arrayCamp | Texto, Array texto | &#8592; | Encabezado HTTP de la petición o Campos del encabezado HTTP |
+| encab&#124;arrayCamp | Text, Text array | &#8592; | Encabezado HTTP de la petición o Campos del encabezado HTTP |
 | arrayValores | Text array | &#8592; | Contenido de los campos del encabezado HTTP |
 </div>
 <!-- END REF-->

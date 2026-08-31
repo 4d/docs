@@ -5,7 +5,7 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; OK button title {; cancel button title}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; *OK button title* : Text {; *cancel button title* : Text}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 <div class="no-index">
 

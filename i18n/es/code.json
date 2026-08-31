@@ -21,7 +21,7 @@
     "message": "Conceptos del lenguaje"
   },
   "Language Reference (4D Doc Center)": {
-    "message": "Lenguaje (4D Doc Center)"
+    "message": "Referencia del lenguaje (4D Doc Center)"
   },
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
@@ -242,7 +242,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Cambia entre el modo oscuro y el claro (actualmente {mode})",
+    "message": "Alternar entre modo oscuro y claro (actualmente {mode})",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
@@ -281,11 +281,11 @@
     "message": "Versión: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Se trata de documentación inédita para la versión {siteTitle} {versionLabel}.",
+    "message": "Esta es la documentación no publicada de la próxima versión {versionLabel} de {siteTitle}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Esta es documentación para {siteTitle} {versionLabel}, que ya no se mantiene activamente.",
+    "message": "Esta es la documentación de {siteTitle} {versionLabel}, que ya no se mantiene activamente.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
@@ -345,7 +345,7 @@
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copiar código al portapaples",
+    "message": "Copiar el código",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copy": {
@@ -369,7 +369,7 @@
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "Lectura de un minuto|{readingTime} min de lectura",
+    "message": "Lectura de un minuto|{readingTime} minutos de lectura",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
@@ -484,7 +484,7 @@
     "description": "The select text for footer"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
-    "message": "Enter key",
+    "message": "Tecla Enter",
     "description": "The ARIA label for select key in footer"
   },
   "theme.SearchModal.footer.navigateText": {
@@ -492,11 +492,11 @@
     "description": "The navigate text for footer"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
-    "message": "Arrow up",
+    "message": "Flecha arriba",
     "description": "The ARIA label for navigate up key in footer"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
-    "message": "Arrow down",
+    "message": "Flecha abajo",
     "description": "The ARIA label for navigate down key in footer"
   },
   "theme.SearchModal.footer.closeText": {
@@ -504,7 +504,7 @@
     "description": "The close text for footer"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
-    "message": "Escape key",
+    "message": "Tecla Escape",
     "description": "The ARIA label for close key in footer"
   },
   "theme.SearchModal.footer.searchByText": {
@@ -617,7 +617,7 @@
     "description": "The unlisted content banner title"
   },
   "theme.unlistedContent.message": {
-    "message": "Esta página no está en la lista. Los motores de búsqueda no lo indexarán, y sólo los usuarios que tengan un enlace directo pueden acceder a ella.",
+    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán y solo los usuarios que tengan un enlace directo podrán acceder a ella.",
     "description": "The unlisted content banner message"
   },
   "Language": {
@@ -647,7 +647,7 @@
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Esta página no está en la lista. Los motores de búsqueda no lo indexarán, y sólo los usuarios que tengan un enlace directo pueden acceder a ella.",
+    "message": "Esta página no está listada. Los motores de búsqueda no la indexarán y solo los usuarios que tengan un enlace directo podrán acceder a ella.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {

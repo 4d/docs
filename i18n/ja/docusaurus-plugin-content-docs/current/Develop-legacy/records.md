@@ -1,304 +1,379 @@
 ---
 id: records
-title: Records
+title: レコード
 slug: /Develop/records
 displayed_sidebar: docs
 ---
 
 
-## Record numbers
 
-There are three numbers associated with a record:
+レコードとセレクションは、4D デベロッパーが 4D データベースのデータにアクセスして操作するための主要なツールです。これらは **レガシーな概念** です。新規開発では、モダンな [ORDA アーキテクチャー](../ORDA/overview.md) に依拠することが推奨されます。ただし、これらは依然として完全に機能し、既存の 4D 開発で広く使用されています。
 
-- Record number
-- Selected record number
-- Sequence number
-
-### Record Number  
-
-The record number is the absolute/physical record number for a record. A record number is automatically assigned to each new record and remains constant for the record until the record is deleted. Record numbers start at zero. They are not unique because record numbers of deleted records are reused for new records. They also change when the database is [compacted](../MSC/compact.md) or [repaired](../MSC/repair.md).
-
-### Selected Record Number  
-
-The selected record number is the position of the record in the current selection, and so depends on the current selection. If the selection is changed or sorted, the selected record number will probably change. Numbering for the selected record number starts at one (1).
-
-### Sequence Number 
-
-The sequence number is a unique non-repeating number that may be assigned to a field of a record (via the Autoincrement property, the SQL AUTO_INCREMENT attribute or the [`Sequence number`](../commands/sequence-number) command). It is not automatically stored with each record. It starts by default at 1 and is incremented for each new record that is created. Unlike record numbers, a sequence number is not reused when a record is deleted or when a database is compacted or repaired. Sequence numbers provide a way to have unique ID numbers for records. If a sequence number is incremented during a transaction, the number is not decremented if the transaction is canceled.
-
-:::note Notes
-
-- 4D does not carry out any check when you modify the automatic number internal counter of a table using the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command. If you decrement this counter, the new records created may have numbers that have already been assigned.
-- Sequence numbers are not recommended to fill unique ID primary key fields for records. To create unique record IDs, it is strongly recommended to use UUIDs. 
-
-:::
-
-### Example
-
-The following tables illustrate the numbers that are associated with records. Each line in the table represents information about a record. The order of the lines is the order in which records would be displayed in an output form.
-
-- **Data**: The data from a field in each record. For our example, it contains a person’s name.
-- **Record Number**: The record’s absolute record number. This is the number returned by the [`Record number`](../commands/record-number) command.
-- **Selected Record Number**: The record’s position in the current selection. This is the number returned by the [`Selected record number`](../commands/selected-record-number) command.
-- **Sequence Number**: The record’s unique sequence number. This is the number returned by the [`Sequence number`](../commands/sequence-number) command when the record was created. This number is stored in a field.
-
-#### After the Records Are Entered 
-
-The first table shows the records after they are entered.
-
-- The default order for the records is by record number.
-- The record number starts at 0.
-- The selected record number and the sequence number start at 1.
-
-|Data|Record Number|Selected Record Number|Sequence Number|
-|---|---|---|----|
-|Tess	|0|	1|	1|
-|Terri|	1	|2	|2|
-|Sabra|	2|3|	3|
-|Sam|	3	|4	|4|
-|Lisa|	4|	5	|5|
-
-Note: The records remain in the default order after a command changes the current selection without reordering it; for example, after the **Show All** menu command is chosen in the Design environment, or after the [`ALL RECORDS`](../commands/all-records) command is executed.
-
-#### After the Records Are Sorted  
-
-The next table shows the same records sorted by name.
-
-- The same record number remains associated with each record.
-- The selected record numbers reflect the new position of the records in the sorted selection.
-- The sequence numbers never change, since they were assigned when each record was created and are stored in the record.
-
-|Data|Record Number|Selected Record Number|Sequence Number|
-|---|---|---|----|
-|Lisa|	4|	1	|5|
-|Sabra|	2|2|	3|
-|Sam|	3	|3	|4|
-|Terri|	1	|4	|2|
-|Tess	|0|	5|	1|
-
-
-#### After a Record Is Deleted  
-
-The following table shows the records after Sam is deleted.
-
-- Only the selected record numbers have changed. Selected record numbers reflect the order in which the records are displayed.
-
-|Data|Record Number|Selected Record Number|Sequence Number|
-|---|---|---|----|
-|Lisa|	4|	1	|5|
-|Sabra|	2|2|	3|
-|Terri|	1	|3	|2|
-|Tess	|0|	4|	1|
-
-
-#### After a Record Is Added  
-
-The next table shows the records after a new record has been added for Liz.
-
-- A new record is added to the end of the current selection.
-- Sam’s record number is reused for the new record.
-- The sequence number continues to increment.
-
-|Data|Record Number|Selected Record Number|Sequence Number|
-|---|---|---|----|
-|Tess	|0|	1|	1|
-|Terri|	1	|2	|2|
-|Sabra|	2|3|	3|
-|Lisa|	4|	4	|5|
-|Liz	|3|	5|	6|
-
-#### After the Selection is Changed and Sorted  
-
-The following table shows the records after the selection was reduced to three records and then sorted.
-
-- Only the selected record number associated with each record changes.
-
-|Data|Record Number|Selected Record Number|Sequence Number|
-|---|---|---|----|
-|Sabra|	2|1|	3|
-|Liz	|3|	2|	6|
-|Terri|	1	|3	|2|
-
-## Record Stack
-
-The [`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) commands allow you to put (“push”) records onto the record stack, and to remove (“pop”) them from the stack.
-
-Each process has its own record stack for each table. 4D maintains the record stacks for you. Each record stack is a last-in-first-out (LIFO) stack. Stack capacity is limited by memory.
-
-[`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) should be used with discretion. Each record that is pushed uses part of free memory. Pushing too many records can cause an out-of-memory or stack full condition.
-
-4D clears the stack of any unpopped records when you return to the menu at the end of execution of your method.
-
-[`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) are useful when you want to examine records in the same file during data entry. To do this, you push the record, search and examine records in the file (copy fields into variables, for example), and finally pop the record to restore the record.
-
-While entering a record, if you have to check a multiple field unique value, use the [`SET QUERY DESTINATION`](../commands/set-query-destination) command. This will save you the calls to [`PUSH RECORD`](../commands/push-record) and [`POP RECORD`](../commands/pop-record) that you were making before and after the call to QUERY in order to preserve the data entered in the current record. [`SET QUERY DESTINATION`](../commands/set-query-destination) allows you to make a query that does not change the selection nor the current record.
-
-## Record locking
-
-4D and 4D Server automatically manage databases by preventing multi-user or multi-process conflicts. Two users or two processes cannot modify the same record or object at the same time. However, the second user or process can have read-only access to the record or object at the same time.
-
-There are several reasons for using the multi-user commands:
-
-- Modifying records by using the language.
-- Using a custom user interface for multi-user operations.
-- Saving related modifications inside a transaction.
-
-There are three important concepts to be aware of when using commands in a multi-processing database:
-
-1. In a process, each table is in either a read-only or a read/write state.
-2. Records become locked when they are loaded and unlocked when they are unloaded.
-3. A locked record cannot be modified.
-
-As a convention in the following sections, the person performing an operation on the multi-user database is referred to as the **local user**. Other people using the database are referred to as the **other users**. The discussion is from the perspective of the local user. Also, from a multi-process perspective, the process executing an operation on the database is the **current process**. Any other executing process is referred to as **other processes**. The discussion is from the point of view of the current process.
-
-### Locked Records  
-
-A locked record cannot be modified by the local user or the current process. A locked record can be loaded, but cannot be modified. A record is locked when one of the other users or processes has successfully loaded the record for modification, or when the record is stacked. Only the user who is modifying the record sees that record as unlocked. All other users and processes see the record as locked, and therefore unavailable for modification. A table must be in a read/write state for a record to be loaded unlocked.
-
-### Read-Only and Read/Write States  
-
-Each table in a database is in either a read/write or a read-only state for each user and process of the database. **Read-only** means that records for the table can be loaded but not modified. **Read/write** means that records for the table can be loaded and modified if no other user has locked the record first.
-
-Note that if you change the status of a table, the change takes effect for the next record loaded. If there is a record currently loaded when you change the table’s status, that record is not affected by the status change.
-
-#### Read-Only State  
-
-When a table is read-only and a record is loaded, this record is always locked. In other words, locked records can be displayed, printed, and otherwise used, but they cannot be modified.
-
-Note that the read-only state applies only to editing existing records. A read-only state does not affect the creation of new records. You can still add records to a read-only table using [`CREATE RECORD`](../commands/create-record) and [`ADD RECORD`](../commands/add-record), or the menu commands of the Design environment (in this case, the records being created are locked for all other users/processes). Note that the [`ARRAY TO SELECTION`](../commands/array-to-selection) command is not affected by the read-only state since it can both create and modify records.
-
-4D automatically sets a table to read-only for commands that do not require write access to records. These commands are: [`DISPLAY SELECTION`](../commands/display-selection), [`DISTINCT VALUES`](../commands/distinct-values), [`EXPORT DIF`](../commands/export-dif), [`EXPORT SYLK`](../commands/export-sylk), [`EXPORT TEXT`](../commands/export-text), [`PRINT SELECTION`](../commands/print-selection), [`PRINT LABEL`](../commands/print-label), [`QR REPORT`](../commands/qr-report), [`SELECTION TO ARRAY`](../commands/selection-to-array), [`SELECTION RANGE TO ARRAY`](../commands/selection-range-to-array).
-
-You can find out the state of a table at any time using the [`Read only state`](../commands/read-only-state) function.
-
-Before executing any of these commands, 4D saves the current state of the table (read-only or read/write) for the current process. After the command has executed, this state is restored.
-
-#### Read/Write State  
-
-When a table is read/write and a record is loaded, the record will become unlocked if no other user has locked the record first. If the record is locked by another user, the record is loaded as a locked record that cannot be modified by the local user.
-
-A table must be set to read/write and the record loaded for it to become unlocked and thus modifiable.
-
-If a user loads a record from a table in read/write mode, no other users can load that record for modification. However, other users can add records to the table, either through the [`CREATE RECORD`](../commands/create-record) and [`ADD RECORD`](../commands/add-record) commands or manually in the Design environment.
-
-Read/write is the default state for all tables when a database is opened and a new process is started.
-
-#### Changing the Status of a Table  
-
-You can use the [`READ ONLY`](../commands/read-only) and [`READ WRITE`](../commands/read-write) commands to change the state of a table. If you want to change the state of a table in order to make a record read-only or read/write, you must execute the command before this record is loaded. Any record that is already loaded is not affected by the [`READ ONLY`](../commands/read-only) and [`READ WRITE`](../commands/read-write) commands.
-
-Each process has its own state (read-only or read/write) for each table in the database.
-
-By default, if you do not use the READ ONLY command, all tables are in read/write mode.
-
-### Loading, Modifying and Unloading Records 
-
-Before the local user can modify a record, the table must be in the read/write state and the record must be loaded and unlocked.
-
-Any of the commands that loads a current record (if there is one) — such as [`NEXT RECORD`](../commands/next-record), [`QUERY`](../commands/query), [`ORDER BY`](../commands/order-by), [`RELATE ONE`](../commands/relate-one), etc. — sets the record state as locked or unlocked. The record is loaded according to the current state of its table (read-only or read/write) and its availability. A record may also be loaded for a related table by any of the commands that cause an automatic relation to be established.
-
-If a table is in the read-only state for a process or a user, then this table's records are loaded in read-only mode, which means they cannot be modified or deleted by this process or user. This is recommended for viewing or retrieving data because it does not prevent other users or processes from accessing the records of this table in read/write mode if necessary.
-
-If a table is in the read/write state for a process or a user, then any record from this table is also loaded in read/write mode, but only if no other user or process has already locked this record. If a record is successfully loaded in read/write mode, it is unlocked for the current process or user (it can be modified and saved) and is locked for all other users or processes. A table must be put into the read/write state before loading a record for modification and then saving it.
-
-If the record is to be modified, you use the Locked function to test whether or not a record is locked by another user. If a record is locked (Locked returns True), load the record with the [`LOAD RECORD`](../commands/load-record) command and again test whether or not the record is locked. This sequence must be continued until the record becomes unlocked (Locked returns False).
-
-When modifications to be made to a record are finished, the record must be released (and therefore unlocked for the other users) with [`UNLOAD RECORD`](../commands/unload-record). If a record is not unloaded, it will remain locked for all other users until a different current record is selected. Changing the current record of a table automatically unlocks the previous current record. You need to explicitly call [`UNLOAD RECORD`](../commands/unload-record) if you do not change the current record. This discussion applies to existing records. When a new record is created, it can be saved regardless of the state of the table to which it belongs.
+## レコードの操作
 
 :::note
 
-When it is used in a transaction, the [`UNLOAD RECORD`](../commands/unload-record) command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or canceled).
+[ORDA テクノロジー](../ORDA/overview.md) は、必要に応じてデータベースレベルで基盤となるレコードを作成、変更、削除します。たとえば、[新しいエンティティを作成する](../ORDA/entities.md#creating-an-entity) 際にレコードが作成されます。
 
 :::
 
-Use the [`LOCKED BY`](../commands/locked-by) command to see which user and/or process have locked a record.
 
-A good practice is to place all tables in read-only mode when each process is started (using the syntax [`READ ONLY(*)`](../commands/read-only)) then put each table in read/write mode only when necessary. Access to tables in read-only mode is faster and more memory-efficient. Moreover, changing the state of a table is optimized in client/server mode because it does not cause any additional network traffic: information is only sent to the server when executing a command that requires adequate access to the table.
 
-### Loops to Load Unlocked Records
+### 新しいレコードの追加
 
-The following example shows the simplest loop with which to load an unlocked record:
+4D アプリケーションでは、次を使用してレコードを追加します：
+
+- コマンド：[`CREATE RECORD`](../commands/create-record) はメモリ内にレコードを作成します（新しいレコードを実際にデータに保存するには [`SAVE RECORD`](../commands/save-record) を使用する必要があります）。[`ADD RECORD`](../commands/add-record) はデータ入力の準備が整った入力フォームをユーザーに開きます。[`ARRAY TO SELECTION`](../commands/array-to-selection) は配列内の対応するデータからレコードを作成します。
+- [インポートとエクスポートテーマ](../commands/theme/Import-and-Export) のコマンドまたはインポートダイアログボックスを使用したデータインポート機能。
+- 標準アクション：リストにレコードを追加する [`Add Subrecord`](../Desktop-legacy/standard-actions#addsubrecord)。
+- 4D IDE のインターフェースおよびメニューコマンド：**レコード** メニューの **新規レコード** および **リストに新規レコード**。
+
+ほとんどの場合、レコードはメモリ内にのみ作成されるため、新しいレコードを実際にデータに保存するには、インターフェースを介して、または [`SAVE RECORD`](../commands/save-record) や [`accept` 標準アクション](../Desktop/standard-actions#accept) などのコマンドを使用して、明示的に保存する必要があります。
+
+
+
+### レコードの変更
+
+情報を更新する必要がある場合や、当初入力された情報が正しくないことが判明した場合に、レコードを変更します。レコードのグループを変更する前に、変更するレコードを [カレントセレクション](./current-selection.md) として選択します。検索して変更するレコードを選択することも、[出力フォーム](../FormEditor/properties_FormProperties.md#form-type) でレコードを強調表示した後に選択することもできます。
+
+レコードが別のプロセスまたは別のユーザー（リモートモード）によって変更されている場合、そのレコードは [ロックされている](#ロックされたレコード) と言われます。ロックされたレコードは表示できますが、変更することはできません。ロックされたレコードを開いた場合、フィールドの入力内容を表示することはできますが、データを変更することはできません。
+
+4D アプリケーションでは、次を使用してレコードを変更します：
+
+- コマンド：[`MODIFY RECORD`](../commands/add-record) はデータ変更の準備が整った入力フォームをユーザーに開きます。[`ARRAY TO SELECTION`](../commands/array-to-selection) は配列から選択されたレコードのデータを変更します。
+- [インポートとエクスポートテーマ](../commands/theme/Import-and-Export) のコマンドまたはインポートダイアログボックスを使用したデータインポート機能。
+- 標準アクション：リスト内のレコードを編集する [`Edit Subrecord`](../Desktop/standard-actions#editsubrecord)。
+- 4D IDE のインターフェースおよびメニューコマンド：**レコード** メニューの **レコードを変更** またはリストフォーム内でのダブルクリック。
+
+ほとんどの場合、レコードはメモリ内でのみ変更されるため、変更したレコードを実際にデータに保存するには、インターフェースを介して、または [`SAVE RECORD`](../commands/save-record) や [`accept` 標準アクション](../Desktop/standard-actions#accept) などのコマンドを使用して、明示的に保存する必要があります。
+
+
+### グローバル更新
+
+レコードのグループに対して特定の変更を加えたい場合に、グローバル更新をおこないます。そうしなければ手間がかかり時間のかかるレコードグループへの変更を自動化するために、グローバル更新を実行します。たとえば、[在庫] テーブルのすべての価格を一定の割合で変更したり、数値フィールドや文字フィールドをフォーマットしたりする場合に、グローバル更新を実行します。
+
+グローバル更新は、カレントセレクションのレコードに数式を「適用」することでおこなわれます。言い換えれば、数式はカレントセレクション内の各レコードに変更を加えるために使用されます。以下はいくつかの数式の例です：
+
+- 次の数式は、給与フィールドを 1.05 倍します。たとえば、昇給が実施される際に使用できます：
 
 ```4d
- READ WRITE([Customers])//Set the table’s state to read/write
- Repeat//Loop until the record is unlocked
-    LOAD RECORD([Customers])//Load record and set locked status
- Until(Not(Locked([Customers])))
- //Do something to the record here
- READ ONLY([Customers])//Set the table’s state to read-only
+[Emp]Salary:=[Emp]Salary*1.05
 ```
 
-The loop continues until the record is unlocked.
+- 次の例は、組み込み関数を使用して州フィールドの内容を大文字にします。ラベルやレポートにおける州の表示の統一性を保証します：
 
-A loop like this is used only if the record is unlikely to be locked by anyone else, since the user would have to wait for the loop to terminate. Thus, it is unlikely that the loop would be used as is unless the record could only be modified by means of a method.
+```4d
+[Customer]State:=Uppercase([Customer]State)
+```
 
-The following example uses the previous loop to load an unlocked record and modify the record:
+- この数式には、姓フィールドの最初の文字を大文字にし、残りのすべての文字を小文字にする、ユーザーが記述した関数が含まれています。
+
+```4d
+[Emp]Last Name:=Capitalize([Emp]Last_Name)
+```
+
+グローバル更新を実行する際にユーザーが記述した関数を組み込める機能は、4D の強力な機能です。数式には、4D 言語関数のほか、プロジェクトメソッドを含めることができます。セキュリティ上の理由から、数式内のプロジェクトメソッドへのアクセスは、[セキュリティ設定](../settings/security.md#options) および/または [`SET ALLOWED METHODS` コマンド](../commands/set-allowed-methods) によって制限されています。
+
+1 つの論理行より長い数式を記述することはできません。言い換えれば、キャリッジリターンを押して 2 行目を入力することはできません。ただし、数式エディターで使用可能と宣言されたメソッドは、当然ながら複数行で構成できます。
+
+グローバル更新を実行するには、[`EXECUTE FORMULA`](../commands/execute-formula) コマンドを介して更新用の数式を直接実行するか、[`EDIT FORMULA`](../commands/edit-formula) コマンドを介して数式エディターを表示します。
+
+4D IDE では、**数式エディター** を使用して、カレントセレクションの各レコードに適用される数式を記述することもできます。これをおこなうには、**レコード** メニューの **数式を適用...** コマンドを選択し、数式を記述します。以前にディスクにファイル（拡張子 .4fr）として保存された数式を読み込むこともできます。
+
+
+### レコードの削除
+
+古くなった、あるいは不要になったレコードを削除したい場合があります。レコードは必要だが、レコードに格納されている値が正しくない場合は、レコードを削除するのではなく変更すべきです。
+
+レコードは 2 つの方法で削除できます：
+
+- レコードを個別に削除する。
+- レコードのセットを削除する。
+
+レコードの削除は、[`Delete Record`](../Desktop/standard-actions#deleterecord) または [`Delete Subrecord`](../Desktop/standard-actions#deletesubrecord)（リスト内での削除）標準アクションを介して、あるいは [`DELETE RECORD`](../commands/delete-record) または [`DELETE SELECTION`](../commands/delete-selection) コマンドを介しておこなわれます。
+
+4D IDE では、**編集** メニューの **消去** コマンドや削除キーを使用することもできます。
+
+:::warning
+
+レコードの削除は永久的であり、データベースのバックアップを復元することでしか元に戻せません。レコードを削除すると、4D は削除の確認を求めるダイアログボックスを表示します。
+
+:::
+
+レコードを削除する前に、削除したいレコードのセレクションを作成します。セレクションに [ロックされたレコード](#record-locking) が含まれている場合、削除は続行されますが、ロックされたレコードは削除されず、削除後もカレントセレクションに残ります。これらのレコードを削除するには、それらがロック解除される（つまり、使用されなくなる）まで待つ必要があります。この種のシナリオを管理するには、["Record Locking" テーマのコマンド](../commands/theme/Record-Locking) を使用できます。
+
+#### 別のプロセスで削除されたレコード
+
+カレントセレクションは、別のプロセスで削除されたレコードによって変化することがあります。たとえば、データベースで作業している間に、テーブルから特定のレコードを削除する別のプロセスを開始することがあります。そのプロセスで削除されたレコードは、テーブルから永久に取り除かれます。ただし、データベースでの作業中に表示されるレコードは、新しいレコードのセレクションが作成されるまで、テーブルへのそれらの変更を反映しない場合があります。
+
+この点を説明するために、テーブルに 50 件のレコードが含まれ、すべてのレコードがカレントセレクションに含まれているとします。この時点で、出力フォームのタイトルバーには「50 分の 50」件のレコードが選択されていると表示されます。別のプロセスでレコードの 1 つが削除されると、タイトルバーは「49 分の 50」件のレコードが選択されていると表示されるように変わります。カレントセレクションにテーブルよりも多くのレコードがあるように見えるようになりました！ タイトルバーは、カレントセレクションを変更したときに更新されます。
+
+削除されたレコードを変更または削除しようとすると、レコードが削除されたことを示すダイアログボックスが表示されます。
+
+:::note 4D Server
+
+別のユーザーによって削除されたレコードも、カレントセレクションに同じ影響を与えます。レコードはテーブルからは削除されますが、カレントセレクションからは削除されません。したがって、カレントセレクションには、テーブルに実際に存在するよりも多くのレコードが含まれているように見える場合があります。
+
+:::
+
+### レコード番号
+
+レコードには 3 つの番号が関連付けられています：
+
+- **レコード番号**：レコード番号は、レコードの絶対的/物理的なレコード番号です。この番号は [`Record number`](../commands/record-number) コマンドによって返されます。
+レコード番号は新しいレコードごとに自動的に割り当てられ、そのレコードが削除されるまで一定に保たれます。レコード番号はゼロから始まります。削除されたレコードのレコード番号は新しいレコードに再利用されるため、一意ではありません。また、データベースが [圧縮](../MSC/compact.md) または [修復](../MSC/repair.md) されると変化します。
+- **選択されたレコード番号**：選択されたレコード番号は、カレントセレクション内のレコードの位置であり、したがってカレントセレクションに依存します。セレクションが変更またはソートされると、選択されたレコード番号はおそらく変化します。選択されたレコード番号の番号付けは 1 から始まります。この番号は [`Selected record number`](../commands/selected-record-number) コマンドによって返されます。
+- **シーケンス番号**：シーケンス番号は、レコードのフィールドに割り当てることができる一意の反復しない番号です（**自動インクリメント** プロパティ、SQL の AUTO_INCREMENT 属性、または [`Sequence number`](../commands/sequence-number) コマンドを介して）。これは各レコードとともに自動的に格納されるわけではありません。デフォルトでは 1 から始まり、作成される新しいレコードごとにインクリメントされます。レコード番号とは異なり、シーケンス番号はレコードが削除されたときやデータベースが圧縮または修復されたときに再利用されません。シーケンス番号は、レコードに一意の ID 番号を持たせる方法を提供します。トランザクション中にシーケンス番号がインクリメントされた場合、トランザクションがキャンセルされてもその番号はデクリメントされません。
+
+:::note 注記
+
+- [`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドを使用してテーブルの自動番号内部カウンターを変更する場合、4D は一切のチェックをおこないません。このカウンターをデクリメントすると、作成される新しいレコードにすでに割り当てられている番号が付く可能性があります。
+- レコードの一意の ID 主キーフィールドを埋めるためにシーケンス番号を使用することは推奨されません。一意のレコード ID を作成するには、UUID を使用することを強く推奨します。
+
+:::
+
+
+### レコードスタック
+
+[`PUSH RECORD`](../commands/push-record) および [`POP RECORD`](../commands/pop-record) コマンドを使用すると、レコードをレコードスタックに入れ（「プッシュ」）、スタックから取り除く（「ポップ」）ことができます。
+
+各プロセスは、テーブルごとに独自のレコードスタックを持ちます。4D がレコードスタックを管理します。各レコードスタックは、後入れ先出し（LIFO）スタックです。スタックの容量はメモリによって制限されます。
+
+[`PUSH RECORD`](../commands/push-record) と [`POP RECORD`](../commands/pop-record) は慎重に使用する必要があります。プッシュされる各レコードは空きメモリの一部を使用します。あまりにも多くのレコードをプッシュすると、メモリ不足やスタックフルの状態が発生する可能性があります。
+
+メソッドの実行終了時にメニューに戻ると、4D はポップされていないレコードをスタックから消去します。
+
+[`PUSH RECORD`](../commands/push-record) と [`POP RECORD`](../commands/pop-record) は、データ入力中に同じファイルのレコードを調べたい場合に便利です。これをおこなうには、レコードをプッシュし、ファイル内のレコードを検索して調べ（たとえばフィールドを変数にコピーするなど）、最後にレコードをポップして復元します。
+
+レコードの入力中に複数フィールドの一意の値をチェックする必要がある場合は、[`SET QUERY DESTINATION`](../commands/set-quer-destination) コマンドを使用します。これにより、カレントレコードに入力されたデータを保持するために QUERY の呼び出しの前後でおこなっていた [`PUSH RECORD`](../commands/push-record) と [`POP RECORD`](../commands/pop-record) の呼び出しが不要になります。[`SET QUERY DESTINATION`](../commands/set-quer-destination) を使用すると、セレクションもカレントレコードも変更しない検索をおこなうことができます。
+
+## レコードのロック
+
+4D および 4D Server は、マルチユーザーまたはマルチプロセスの競合を防ぐことで、データベースを自動的に管理します。2 人のユーザーまたは 2 つのプロセスが同時に同じレコードやオブジェクトを変更することはできません。ただし、2 人目のユーザーまたはプロセスは、同時にそのレコードやオブジェクトへの読み取り専用アクセスを持つことができます。
+
+マルチユーザーコマンドを使用する理由はいくつかあります：
+
+- 言語を使用してレコードを変更する。
+- マルチユーザー操作にカスタムユーザーインターフェースを使用する。
+- 関連する変更をトランザクション内で保存する。
+
+マルチプロセスのデータベースでコマンドを使用する際に注意すべき重要な概念が 3 つあります：
+
+1. プロセス内では、各テーブルは読み取り専用または読み書きのいずれかの状態にあります。
+2. レコードは読み込まれるとロックされ、解放されるとロック解除されます。
+3. ロックされたレコードは変更できません。
+
+以降のセクションでは慣例として、マルチユーザーデータベースで操作をおこなう人物を **ローカルユーザー** と呼びます。データベースを使用する他の人々は **他のユーザー** と呼びます。説明はローカルユーザーの視点からおこなわれます。同様に、マルチプロセスの観点からは、データベースで操作を実行しているプロセスを **カレントプロセス** と呼びます。他の実行中のプロセスは **他のプロセス** と呼びます。説明はカレントプロセスの視点からおこなわれます。
+
+### ロックされたレコード
+
+ロックされたレコードは、ローカルユーザーまたはカレントプロセスによって変更できません。ロックされたレコードは読み込むことはできますが、変更することはできません。レコードは、他のユーザーまたはプロセスの 1 つが変更のためにレコードの読み込みに成功したとき、またはレコードがスタックされているときにロックされます。レコードを変更しているユーザーだけが、そのレコードをロック解除された状態として見ます。他のすべてのユーザーおよびプロセスは、そのレコードをロックされた状態、したがって変更不可能な状態として見ます。レコードがロック解除された状態で読み込まれるためには、テーブルが読み書き状態にある必要があります。
+
+### 読み取り専用状態と読み書き状態
+
+データベース内の各テーブルは、データベースの各ユーザーおよびプロセスに対して、読み書き状態または読み取り専用状態のいずれかにあります。**読み取り専用** とは、テーブルのレコードを読み込めるが変更はできないことを意味します。**読み書き** とは、他のユーザーが先にレコードをロックしていなければ、テーブルのレコードを読み込んで変更できることを意味します。
+
+テーブルのステータスを変更すると、その変更は次に読み込まれるレコードに対して有効になることに注意してください。テーブルのステータスを変更したときに現在読み込まれているレコードがある場合、そのレコードはステータス変更の影響を受けません。
+
+#### 読み取り専用状態
+
+テーブルが読み取り専用でレコードが読み込まれると、そのレコードは常にロックされます。言い換えれば、ロックされたレコードは表示、印刷、その他の方法で使用できますが、変更することはできません。
+
+読み取り専用状態は既存のレコードの編集にのみ適用されることに注意してください。読み取り専用状態は新しいレコードの作成には影響しません。[`CREATE RECORD`](../commands/create-record) および [`ADD RECORD`](../commands/add-record)、またはデザイン環境のメニューコマンドを使用して、読み取り専用テーブルにレコードを追加することは依然として可能です（この場合、作成されるレコードは他のすべてのユーザー/プロセスに対してロックされます）。[`ARRAY TO SELECTION`](../commands/array-to-selection) コマンドは、レコードの作成と変更の両方をおこなえるため、読み取り専用状態の影響を受けないことに注意してください。
+
+4D は、レコードへの書き込みアクセスを必要としないコマンドに対して、テーブルを自動的に読み取り専用に設定します。これらのコマンドは次のとおりです：[`DISPLAY SELECTION`](../commands/display-selection)、[`DISTINCT VALUES`](../commands/distinct-values)、[`EXPORT DIF`](../commands/export-dif)、[`EXPORT SYLK`](../commands/export-sylk)、[`EXPORT TEXT`](../commands/export-text)、[`PRINT SELECTION`](../commands/print-selection)、[`PRINT LABEL`](../commands/print-label)、[`QR REPORT`](../commands/qr-report)、[`SELECTION TO ARRAY`](../commands/selection-to-array)、[`SELECTION RANGE TO ARRAY`](../commands/selection-range-to-array)。
+
+[`Read only state`](../commands/read-only-state) 関数を使用して、いつでもテーブルの状態を確認できます。
+
+これらのコマンドのいずれかを実行する前に、4D はカレントプロセスに対するテーブルの現在の状態（読み取り専用または読み書き）を保存します。コマンドの実行後、この状態は復元されます。
+
+#### 読み書き状態
+
+テーブルが読み書きでレコードが読み込まれると、他のユーザーが先にレコードをロックしていなければ、そのレコードはロック解除されます。レコードが別のユーザーによってロックされている場合、そのレコードはロックされたレコードとして読み込まれ、ローカルユーザーは変更できません。
+
+レコードがロック解除され、したがって変更可能になるためには、テーブルが読み書きに設定され、レコードが読み込まれている必要があります。
+
+ユーザーが読み書きモードのテーブルからレコードを読み込むと、他のユーザーはそのレコードを変更のために読み込むことはできません。ただし、他のユーザーは、[`CREATE RECORD`](../commands/create-record) および [`ADD RECORD`](../commands/add-record) コマンドを介して、あるいはデザイン環境で手動で、テーブルにレコードを追加することができます。
+
+読み書きは、データベースが開かれ新しいプロセスが開始されたときの、すべてのテーブルのデフォルト状態です。
+
+#### テーブルのステータスの変更
+
+[`READ ONLY`](../commands/read-only) および [`READ WRITE`](../commands/read-write) コマンドを使用して、テーブルの状態を変更できます。レコードを読み取り専用または読み書きにするためにテーブルの状態を変更したい場合は、このレコードが読み込まれる前にコマンドを実行する必要があります。すでに読み込まれているレコードは、[`READ ONLY`](../commands/read-only) および [`READ WRITE`](../commands/read-write) コマンドの影響を受けません。
+
+各プロセスは、データベース内の各テーブルに対して独自の状態（読み取り専用または読み書き）を持ちます。
+
+デフォルトでは、READ ONLY コマンドを使用しない場合、すべてのテーブルは読み書きモードになっています。
+
+### レコードの読み込み、変更、および解放
+
+ローカルユーザーがレコードを変更できるようにするには、テーブルが読み書き状態にあり、レコードが読み込まれてロック解除されている必要があります。
+
+カレントレコードを読み込むコマンド（存在する場合）— [`NEXT RECORD`](../commands/next-record)、[`QUERY`](../commands/query)、[`ORDER BY`](../commands/order-by)、[`RELATE ONE`](../commands/relate-one) など — はいずれも、レコードの状態をロックまたはロック解除に設定します。レコードは、そのテーブルの現在の状態（読み取り専用または読み書き）と可用性に応じて読み込まれます。レコードは、自動リレーションを確立させる任意のコマンドによって、関連するテーブルに対して読み込まれることもあります。
+
+テーブルがプロセスまたはユーザーに対して読み取り専用状態にある場合、このテーブルのレコードは読み取り専用モードで読み込まれます。つまり、このプロセスまたはユーザーによって変更または削除することはできません。これはデータの表示や取得に推奨されます。必要に応じて、他のユーザーやプロセスがこのテーブルのレコードに読み書きモードでアクセスすることを妨げないためです。
+
+テーブルがプロセスまたはユーザーに対して読み書き状態にある場合、このテーブルの任意のレコードも読み書きモードで読み込まれますが、これは他のユーザーまたはプロセスがすでにこのレコードをロックしていない場合に限られます。レコードが読み書きモードで正常に読み込まれると、それはカレントプロセスまたはユーザーに対してロック解除され（変更して保存できます）、他のすべてのユーザーまたはプロセスに対してロックされます。変更のためにレコードを読み込んでから保存するには、その前にテーブルを読み書き状態にする必要があります。
+
+レコードを変更する場合は、Locked 関数を使用して、レコードが別のユーザーによってロックされているかどうかをテストします。レコードがロックされている場合（Locked が True を返す）、[`LOAD RECORD`](../commands/load-record) コマンドでレコードを読み込み、レコードがロックされているかどうかを再度テストします。このシーケンスは、レコードがロック解除される（Locked が False を返す）まで続ける必要があります。
+
+レコードに加える変更が完了したら、レコードを [`UNLOAD RECORD`](../commands/unload-record) で解放する（したがって他のユーザーに対してロック解除する）必要があります。レコードが解放されない場合、別のカレントレコードが選択されるまで、他のすべてのユーザーに対してロックされたままになります。テーブルのカレントレコードを変更すると、以前のカレントレコードが自動的にロック解除されます。カレントレコードを変更しない場合は、明示的に [`UNLOAD RECORD`](../commands/unload-record) を呼び出す必要があります。この説明は既存のレコードに適用されます。新しいレコードが作成された場合、それが属するテーブルの状態に関係なく保存できます。
+
+:::note
+
+トランザクション内で使用される場合、[`UNLOAD RECORD`](../commands/unload-record) コマンドは、トランザクションを管理するプロセスに対してのみカレントレコードを解放します。他のプロセスに対しては、トランザクションが確定（またはキャンセル）されるまで、レコードはロックされたままになります。
+
+:::
+
+[`LOCKED BY`](../commands/locked-by) コマンドを使用して、どのユーザーおよび/またはプロセスがレコードをロックしたかを確認できます。
+
+良い方法は、各プロセスの開始時にすべてのテーブルを読み取り専用モードにし（[`READ ONLY(*)`](../commands/read-only) 構文を使用）、必要なときにのみ各テーブルを読み書きモードにすることです。読み取り専用モードでのテーブルへのアクセスは、より高速でメモリ効率が高くなります。さらに、テーブルの状態の変更はクライアント/サーバーモードで最適化されています。これは、追加のネットワークトラフィックを発生させないためです。情報は、テーブルへの適切なアクセスを必要とするコマンドを実行するときにのみサーバーに送信されます。
+
+### ロック解除されたレコードを読み込むためのループ
+
+次の例は、ロック解除されたレコードを読み込むための最もシンプルなループを示しています：
+
+```4d
+ READ WRITE([Customers])//テーブルの状態を読み書きに設定
+ Repeat//レコードがロック解除されるまでループ
+    LOAD RECORD([Customers])//レコードを読み込みロック状態を設定
+ Until(Not(Locked([Customers])))
+ //ここでレコードに対して何かをおこなう
+ READ ONLY([Customers])//テーブルの状態を読み取り専用に設定
+```
+
+ループは、レコードがロック解除されるまで続きます。
+
+このようなループは、レコードが他の誰かによってロックされている可能性が低い場合にのみ使用されます。そうでないと、ユーザーはループが終了するまで待たなければならないからです。したがって、レコードがメソッドによってのみ変更され得る場合を除き、このループがそのまま使用されることはまずないでしょう。
+
+次の例は、前述のループを使用してロック解除されたレコードを読み込み、レコードを変更します：
 
 ```4d
  READ WRITE([Inventory])
- Repeat //Loop until the record is unlocked
-    LOAD RECORD([Inventory]) //Load record and set it to locked
+ Repeat //レコードがロック解除されるまでループ
+    LOAD RECORD([Inventory]) //レコードを読み込みロック状態に設定
  Until(Not(Locked([Inventory])))
- [Inventory]Part Qty:=[Inventory]Part Qty-1 //Modify the record
- SAVE RECORD([Inventory]) //Save the record
- UNLOAD RECORD([Inventory]) //Let other users modify it
+ [Inventory]Part Qty:=[Inventory]Part Qty 1 //レコードを変更
+ SAVE RECORD([Inventory]) //レコードを保存
+ UNLOAD RECORD([Inventory]) //他のユーザーが変更できるようにする
  READ ONLY([Inventory])
 ```
 
 
-The [`MODIFY RECORD`](../commands/modify-record) command automatically notifies the user if a record is locked, and prevents the record from being modified. The following example avoids this automatic notification by first testing the record with the Locked function. If the record is locked, the user can cancel.
+[`MODIFY RECORD`](../commands/modify-record) コマンドは、レコードがロックされている場合に自動的にユーザーに通知し、レコードが変更されるのを防ぎます。次の例は、まず Locked 関数でレコードをテストすることで、この自動通知を回避します。レコードがロックされている場合、ユーザーはキャンセルできます。
 
-This example efficiently checks to see if the current record is locked for the table [Commands]. If it is locked, the process is delayed by the procedure for one second. This technique can be used both in a multi-user or multi-process situation:
+この例は、テーブル [Commands] に対してカレントレコードがロックされているかどうかを効率的にチェックします。ロックされている場合、プロセスはプロシージャによって 1 秒間遅延されます。この手法は、マルチユーザーの状況でもマルチプロセスの状況でも使用できます：
 
 ```4d
  Repeat
-    READ ONLY([Commands])//You do not need read/write right now
+    READ ONLY([Commands])//今は読み書きは必要ありません
     QUERY([Commands])
- //If the search was completed and some records were returned
+ //検索が完了し、いくつかのレコードが返された場合
     If((OK=1) & (Records in selection([Commands])>0))
-       READ WRITE([Commands])//Set the table to read/write state
+       READ WRITE([Commands])//テーブルを読み書き状態に設定
        LOAD RECORD([Commands])
-       While(Locked([Commands]) & (OK=1)) `If the record is locked,
- //loop until the record is unlocked
- //Who is the record locked by?
+       While(Locked([Commands]) & (OK=1)) `レコードがロックされている場合、
+ //レコードがロック解除されるまでループ
+ //レコードは誰によってロックされているか？
           LOCKED BY([Commands];$Process;$User;$SessionUser;$Name)
-          If($Process=-1)//Has the record been deleted?
-             ALERT("The record has been deleted in the meantime.")
+          If($Process=-1)//レコードは削除されたか？
+             ALERT("レコードはその間に削除されました。")
              OK:=0
           Else
-             If($User="")//Are you in single-user mode
-                $User:="you"
+             If($User="")//シングルユーザーモードですか
+                $User:="あなた"
              End if
-             CONFIRM("The record is already used by "+$User+" in the "+$Name+" Process.")
-             If(OK=1)//If you want to wait for a few seconds
-                DELAY PROCESS(Current process;120)//Wait for a few seconds
-                LOAD RECORD([Commands])//Try to load the record
+             CONFIRM("レコードはすでに "+$User+" によって "+$Name+" プロセスで使用されています。")
+             If(OK=1)//数秒待ちたい場合
+                DELAY PROCESS(Current process;120)//数秒待つ
+                LOAD RECORD([Commands])//レコードの読み込みを試みる
              End if
           End if
        End while
-       If(OK=1)//The record is unlocked
-          MODIFY RECORD([Commands])//You can modify the record
+       If(OK=1)//レコードはロック解除されている
+          MODIFY RECORD([Commands])//レコードを変更できます
           UNLOAD RECORD([Commands])
        End if
-       READ ONLY([Commands])//Switch back to read-only
+       READ ONLY([Commands])//読み取り専用に戻す
        OK:=1
     End if
  Until(OK=0)
 ```
 
 
-### Using Commands in Multi-user or Multi-process Environment  
+### マルチユーザーまたはマルチプロセス環境でのコマンドの使用
 
-A number of commands in the language perform specific actions when they encounter a locked record. They behave normally if they do not encounter a locked record.
+言語内の多くのコマンドは、ロックされたレコードに遭遇したときに特定のアクションを実行します。ロックされたレコードに遭遇しなければ、通常どおり動作します。
 
-Here is a list of these commands and their actions when a locked record is encountered.
+以下は、これらのコマンドと、ロックされたレコードに遭遇したときのアクションのリストです。
 
-- [`MODIFY RECORD`](../commands/modify-record): Displays a dialog box stating that the record is in use. The record is not displayed, therefore the user cannot modify the record. In the Design environment, the record is shown in read-only state.
-- [`MODIFY SELECTION`](../commands/modify-selection): Behaves normally except when the user double-clicks a record to modify it. [`MODIFY SELECTION`](../commands/modify-selection) displays dialog box stating that the record is in use and then allows read-only access to the record.
-- [`APPLY TO SELECTION`](../commands/apply-to-selection): Loads a locked record, but does not modify it. [`APPLY TO SELECTION`](../commands/apply-to-selection) can be used to read information from the table without special care. If the command encounters a locked record, the record is put into the [`LockedSet` system set](./sets.md#the-lockedset-system-set).
-- [`DELETE SELECTION`](../commands/delete-selection): Does not delete any locked records; it skips them. If the command encounters a locked record, the record is put into the [`LockedSet` system set](./sets.md#the-lockedset-system-set).
-- [`DELETE RECORD`](../commands/delete-record): This command is ignored if the record is locked. No error is returned. You must test that the record is unlocked before executing this command.
-- [`SAVE RECORD`](../commands/save-record): This command is ignored if the record is locked. No error is returned. You must test that the record is unlocked before executing this command.
-- [`ARRAY TO SELECTION`](../commands/array-to-selection): Does not save any locked records. If the command encounters a locked record, the record is put into the [`LockedSet` system set](./sets.md#the-lockedset-system-set).
-- [`GOTO RECORD`](../commands/goto-record): Records in a multi-user/multi-process database may be deleted and added by other users, therefore the record numbers may change. Use caution when directly referencing a record by number in a multi-user database.
-- [**Sets**](./sets.md): Take special care with sets, as the information that the set was based on may be changed by another user or process.
+- [`MODIFY RECORD`](../commands/modify-record)：レコードが使用中であることを示すダイアログボックスを表示します。レコードは表示されないため、ユーザーはレコードを変更できません。デザイン環境では、レコードは読み取り専用状態で表示されます。
+- [`MODIFY SELECTION`](../commands/modify-selection)：ユーザーがレコードをダブルクリックして変更する場合を除き、通常どおり動作します。[`MODIFY SELECTION`](../commands/modify-selection) はレコードが使用中であることを示すダイアログボックスを表示し、その後レコードへの読み取り専用アクセスを許可します。
+- [`APPLY TO SELECTION`](../commands/apply-to-selection)：ロックされたレコードを読み込みますが、変更はしません。[`APPLY TO SELECTION`](../commands/apply-to-selection) は、特別な注意なしにテーブルから情報を読み取るために使用できます。コマンドがロックされたレコードに遭遇した場合、そのレコードは [`LockedSet` システムセット](./sets.md#the-lockedset-system-set) に入れられます。
+- [`DELETE SELECTION`](../commands/delete-selection)：ロックされたレコードは削除せず、スキップします。コマンドがロックされたレコードに遭遇した場合、そのレコードは [`LockedSet` システムセット](./sets.md#the-lockedset-system-set) に入れられます。
+- [`DELETE RECORD`](../commands/delete-record)：レコードがロックされている場合、このコマンドは無視されます。エラーは返されません。このコマンドを実行する前に、レコードがロック解除されていることをテストする必要があります。
+- [`SAVE RECORD`](../commands/save-record)：レコードがロックされている場合、このコマンドは無視されます。エラーは返されません。このコマンドを実行する前に、レコードがロック解除されていることをテストする必要があります。
+- [`ARRAY TO SELECTION`](../commands/array-to-selection)：ロックされたレコードは保存しません。コマンドがロックされたレコードに遭遇した場合、そのレコードは [`LockedSet` システムセット](./sets.md#the-lockedset-system-set) に入れられます。
+- [`GOTO RECORD`](../commands/goto-record)：マルチユーザー/マルチプロセスのデータベースでは、レコードが他のユーザーによって削除および追加される可能性があるため、レコード番号が変わることがあります。マルチユーザーのデータベースで番号によってレコードを直接参照する場合は注意してください。
+- [**セット**](./sets.md)：セットには特に注意してください。セットの基になっていた情報が、別のユーザーまたはプロセスによって変更されている可能性があるためです。
+
+
+## レコードとリレーション
+
+[Relations テーマ](../commands/theme/Relations.md) のコマンド、特に [`RELATE ONE`](../commands/relate-one) と [`RELATE MANY`](../commands/relate-many) は、テーブル間の自動および非自動のリレーションを確立して管理します。このテーマのコマンドを使用する前に、テーブル間のリレーションの作成に関する情報については 4D デザインリファレンスマニュアルを参照してください。
+
+### コマンドで自動テーブルリレーションを使用する
+
+2 つのテーブルは自動テーブルリレーションで関連付けることができます。一般に、自動テーブルリレーションが確立されると、関連するテーブル内の関連レコードを読み込むか選択します。多くの操作がリレーションの確立を引き起こします。
+
+これらの操作には次のものが含まれます：
+
+- データ入力
+- 出力フォームでの画面上のレコードのリスト表示
+- レポート作成
+- 検索、ソート、数式の適用など、レコードのセレクションに対する操作
+
+パフォーマンスを最適化するため、4D が自動リレーションを確立する際、テーブルに対してカレントレコードになるのは 1 件のレコードだけです。上記の各操作について、関連レコードは次の原則に従って読み込まれます：
+
+- リレーションが関連テーブルの 1 件のレコードのみを選択する場合、そのレコードはディスクから読み込まれます。
+- リレーションが関連テーブルの複数のレコードを選択する場合、そのテーブルに対して新しいレコードのセレクションが作成され、そのセレクションの最初のレコードがディスクから読み込まれます。
+
+たとえば、ここに表示されているデータベースストラクチャーを使用すると、[Employees] テーブルのレコードがデータ入力のために読み込まれて表示される場合、[Companies] テーブルの関連レコードが選択されて読み込まれます。同様に、[Companies] テーブルのレコードがデータ入力のために読み込まれて表示される場合、[Employees] テーブルの関連レコードが選択されます。
+
+![](../assets/en/Develop/relations.png)
+
+
+このデータベースストラクチャーでは、[Employees] テーブルは **N テーブル**（Many）と呼ばれ、[Companies] テーブルは **1 テーブル**（One）と呼ばれます。この概念を覚えるには、「1 つの会社に多数の従業員が関連している」および「各会社には多数の従業員がいる」と考えてください。
+
+同様に、[Employees] テーブルの Company フィールドは **N フィールド** と呼ばれ、[Companies] テーブルの Name フィールドは **1** フィールドと呼ばれます。関連フィールドを一意にすることが常に可能とは限りません。たとえば、[Companies]Name フィールドには、同じ値を含む複数の会社レコードが存在する場合があります。この一意でない状況は、関連テーブルの別のフィールドに、常に一意となるリレーションを作成することで簡単に処理できます。このフィールドは会社 ID フィールドにできます。
+
+次の表は、コマンドの実行中に自動リレーションを使用して関連レコードを読み込むコマンドの一覧です。すべてのコマンドは、既存の自動 N 対 1 リレーションを使用します。下記の「1 対 N 確立」列に「はい」があるコマンドのみが、自動 1 対 N リレーションを使用します。
+
+|コマンド|1 対 N 確立|
+|--|--|
+|[`ADD RECORD`](../commands/add-record)	|はい|
+|[`APPLY TO SELECTION`](../commands/apply-to-selection)|	いいえ|
+|[`DISPLAY SELECTION`](../commands/display-selection)|	いいえ|
+|[`EXPORT DIF`](../commands/export-dif)|	いいえ|
+|[`EXPORT SYLK`](../commands/export-sylk)|	いいえ|
+|[`EXPORT TEXT`](../commands/export-text)|	いいえ|
+|[`EXPORT DATA`](../commands/export-data)|	いいえ|
+|[`MODIFY RECORD`](../commands/modify-record)|	はい|
+|[`MODIFY SELECTION`](../commands/modify-selection)|	はい（データ入力時）|
+|[`ORDER BY`](../commands/order-by)|	いいえ|
+|[`ORDER BY FORMULA`](../commands/order-by-formula)|	いいえ|
+|[`QUERY BY FORMULA`](../commands/query-by-formula)|	はい|
+|[`QUERY SELECTION`](../commands/query-selection)|	はい|
+|[`QUERY`](../commands/query)|	はい|
+|[`PRINT LABEL`](../commands/print-label)|	いいえ|
+|[`PRINT SELECTION`](../commands/print-selection)|	はい|
+|[`QR REPORT`](../commands/qr-report)|	いいえ|
+|[`SELECTION TO ARRAY`](../commands/selection-to-array)|	いいえ|
+|[`SELECTION RANGE TO ARRAY`](../commands/selection-range-to-array)|	いいえ|
+
+
+### コマンドを使用してテーブルリレーションを確立する
+
+自動リレーションは、コマンドがレコードを読み込むだけで、テーブルの関連レコードが選択されることを意味するわけではありません。場合によっては、レコードを読み込むコマンドを使用した後、関連データにアクセスする必要があるときは、[`RELATE ONE`](../commands/relate-one) または [`RELATE MANY`](../commands/relate-many) を使用して関連レコードを明示的に選択する必要があります。
+
+前述の表に記載されているコマンドの一部（検索コマンドなど）は、タスクの完了後にカレントレコードを読み込みます。この場合、読み込まれたレコードは、それに関連するレコードを自動的に選択しません。この場合も、関連データにアクセスする必要があるときは、[`RELATE ONE`](../commands/relate-one) または [`RELATE MANY`](../commands/relate-many) を使用して関連レコードを明示的に選択する必要があります。

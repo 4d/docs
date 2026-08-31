@@ -21,7 +21,7 @@ Les utilisateurs peuvent saisir et afficher du texte sur plusieurs lignes au sei
 
 Les booléens et les images peuvent être affichés dans des cellules, ainsi que des dates, des heures ou des nombres. Il est possible de trier les valeurs de colonne en cliquant sur un en-tête ([tri standard](#managing-sorts)). Toutes les colonnes sont automatiquement synchronisées.
 
-Il est également possible de redimensionner chaque colonne, et l'utilisateur peut modifier l'ordre des [colonnes](properties_ListBox.md#locked-columns-and-static-columns) et des [lignes](properties_Action.md#movable-rows) en les déplaçant à l'aide de la s Notez que les list box peuvent être utilisées [en mode hiérarchique](#hierarchical-list-boxes). Notez que les list box peuvent être utilisées [en mode hiérarchique](#hierarchical-list-boxes).
+Il est également possible de redimensionner chaque colonne, et l'utilisateur peut modifier l'ordre des [colonnes](properties_ListBox.md#locked-columns-and-static-columns) et des [lignes](properties_Action.md#movable-rows) en les déplaçant à l'aide de la souris, si cette action est autorisée. Notez que les list box peuvent être utilisées [en mode hiérarchique](#hierarchical-list-boxes).
 
 L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourcis standard : **Maj + clic** pour une sélection adjacente et **Ctrl + clic** (Windows) ou **Commande + clic** (macOS) pour une sélection non adjacente.
 
@@ -29,10 +29,10 @@ L'utilisateur peut sélectionner une ou plusieurs lignes à l'aide des raccourci
 
 Une list box est composée de quatre parties distinctes :
 
-- the [list box object](./listbox-object.md) in its entirety,
-- [columns](./listbox-column.md),
-- column [headers](./listbox-header-footer.md#headers), and
-- column [footers](./listbox-header-footer.md#footers).
+- l'objet [list box](./listbox-object.md) dans son intégralité,
+- les [colonnes](./listbox-column.md)
+- les [en-têtes](./listbox-header-footer.md#headers) de colonnes, et
+- les [pieds](./listbox-header-footer.md#footers) de colonnes.
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
@@ -59,7 +59,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes [`EDIT ITEM`](../commands/edit-item) et [`Displayed line number`](../commands/displayed-line-number) peuvent également être utilisées. Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*.
 
 ## Gestion de la saisie
 
@@ -244,14 +244,14 @@ Il est possible d'activer ou d'inactiver le tri utilisateur standard via la prop
 
 La prise en charge du tri standard dépend du type de list box :
 
-| Type de list box                | Prise en charge du tri standard | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Collection d'objets             | Oui                             | <ul><li>Les colonnes "This.a" ou "This.a.b" sont triables.</li><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                |
-| Collection de valeurs scalaires | Non                             | Utiliser un tri personnalisé avec la fonction [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Entity selection                | Oui                             | <ul><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><ul><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li> For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li></ul> |
-| Sélection courante              | Oui                             | Seules les expressions simples sont triables (par exemple `[Table_1]Champ_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Sélection temporaire            | Non                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Tableaux                        | Oui                             | Les colonnes liées à des tableaux d'images et de pointeurs ne sont pas triables                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Type de list box                | Prise en charge du tri standard | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Collection d'objets             | Oui                             | <ul><li>Les colonnes "This.a" ou "This.a.b" sont triables.</li><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                        |
+| Collection de valeurs scalaires | Non                             | Utiliser un tri personnalisé avec la fonction [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Entity selection                | Oui                             | <ul><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><ul><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li> Pour cela, vous devez utiliser le tri personnalisé avec la fonction [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (voir l'exemple ci-dessous)</li></ul> |
+| Sélection courante              | Oui                             | Seules les expressions simples sont triables (par exemple `[Table_1]Champ_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Sélection temporaire            | Non                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Tableaux                        | Oui                             | Les colonnes liées à des tableaux d'images et de pointeurs ne sont pas triables                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ### Tri personnalisé
 
@@ -316,12 +316,12 @@ Vous disposez de plusieurs possibilités pour définir des couleurs de fond, des
 
 Des principes de priorité et d'héritage sont observés lorsqu’une même propriété est définie à plusieurs niveaux.
 
-1. (highest priority) Cell (if multi-style text)
+1. (priorité la plus élevée) Cellule (si texte multi-style)
 2. Tableaux/Méthodes colonne
 3. Tableaux/Méthodes list box
 4. Propriétés de colonne
 5. Propriétés de list box
-6. (lowest priority) Meta Info expression (for collection or entity selection list boxes)
+6. (priorité la plus basse) Meta Info expression (pour les list box de type collection ou entity selection)
 
 Par exemple, si vous définissez un style de caractères dans les propriétés de la list box et un autre via un tableau de styles pour la colonne, ce dernier sera pris en compte.
 
@@ -512,20 +512,20 @@ Par exemple, si vous voulez sélectionner la ligne contenant Rennes, vous devez 
  ->MyListbox{3}:=True
 ```
 
-*Non-hierarchical representation:*  
+*Représentation non hiérarchique :*
 ![](../assets/en/FormObjects/hierarch7.png)
 
-*Hierarchical representation:*  
+*Représentation hiérarchique :*
 ![](../assets/en/FormObjects/hierarch8.png)
 
 > Si une ou plusieurs lignes sont masquées du fait que leurs parents ont été contractés, elles ne sont plus sélectionnées. Seules les lignes visibles (directement ou suite à un défilement) sont sélectionnables. Autrement dit, les lignes ne peuvent pas être à la fois sélectionnées et cachées.
 
 Comme pour les sélections, la commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie les mêmes valeurs pour une list box hiérarchique que pour une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renverra la même position : (3;2).
 
-*Non-hierarchical representation:*  
+*Représentation non hiérarchique :*
 ![](../assets/en/FormObjects/hierarch9.png)
 
-*Hierarchical representation:*  
+*Représentation hiérarchique :*
 ![](../assets/en/FormObjects/hierarch10.png)
 
 Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de rupture est automatiquement masquée. Dans l’exemple ci-dessus, si les lignes 1 à 3 sont masquées, la ligne de rupture "Bretagne" n’apparaîtra pas.
@@ -542,10 +542,10 @@ Les lignes de rupture ne sont pas prises en compte dans les tableaux internes pe
 
 Soit par exemple la list box suivante (les noms des tableaux associés sont précisés entre parenthèses) :
 
-*Non-hierarchical representation:*  
+*Représentation non hiérarchique :*
 ![](../assets/en/FormObjects/hierarch12.png)
 
-*Hierarchical representation:*  
+*Représentation hiérarchique :*
 ![](../assets/en/FormObjects/hierarch13.png)
 
 En mode hiérarchique, les niveaux de rupture ne sont pas pris en compte par les tableaux de modification de style nommés `tStyle` et `tCouleurs`. Pour modifier la couleur ou le style des niveaux de rupture, vous devez exécuter les instructions suivantes :
@@ -571,7 +571,7 @@ L'utilisation des événements formulaire `On Expand` et `On Collapse` permet de
 
 Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués par le code. Les principes à mettre en oeuvre sont :
 
-- A l’affichage de la listbox, seul le premier tableau doit être rempli. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:  
+- A l’affichage de la listbox, seul le premier tableau doit être rempli. Cependant, vous devez créer un deuxième tableau avec des valeurs vides pour que la list box affiche les boutons déployer/contracter :
   ![](../assets/en/FormObjects/hierarch15.png)
 
 - Lorsque l’utilisateur clique sur un bouton de déploiement, vous pouvez traiter l’événement `On Expand`. La commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule concernée et vous permet de construire la hiérarchie appropriée : vous remplissez le premier tableau avec les valeurs répétées et le second avec les valeurs envoyées par la commande [`SELECTION TO ARRAY`](../commands/selection-to-array) et vous insérez autant de lignes que nécessaire dans la zone de liste à l'aide de la commande [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows).  

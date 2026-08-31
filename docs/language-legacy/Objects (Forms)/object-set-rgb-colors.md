@@ -13,9 +13,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
 | object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) ||
-| foregroundColor | Text, Integer | &#8594;  | RGB color value for foreground |
-| backgroundColor | Text, Integer | &#8594;  | RGB color value for background |
-| altBackgrndColor | Text, Integer | &#8594;  | RGB color value for alternating background |
+| foregroundColor | Text, Integer | &#8594;  | RGB color value for foreground ("" = unchanged)|
+| backgroundColor | Text, Integer | &#8594;  | RGB color value for background ("" = unchanged)|
+| altBackgrndColor | Text, Integer | &#8594;  | RGB color value for alternating background ("" = unchanged)|
 </div>
 <!-- END REF-->
 
@@ -39,9 +39,9 @@ displayed_sidebar: docs
 
 If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the *Object Properties* section.
 
-The optional *altBackgrndColor* parameter lets you set an alternate background color for even-numbered rows. This parameter is only used when the object specified is a list box or a column of the list box. When this parameter is used, the *backgroundColor* parameter is only used for odd-numbered rows. Using alternating colors makes lists easier to read.
+The optional *altBackgrndColor* parameter lets you set an alternate background color for even-numbered rows. This parameter is only used when the object specified is a list box or a column of the list box. When this parameter is used, the *backgroundColor* parameter is only used for odd-numbered rows. Using alternating colors makes lists easier to read. If *object* specifies a list box object, alternating colors are used for the entire list box. If *object* specifies a column of the list box, only that column will use the colors set.
 
-If *object* specifies a list box object, alternating colors are used for the entire list box. If *object* specifies a column of the list box, only that column will use the colors set.
+You can use "" (empty string) in *foregroundColor*, *backgroundColor*, and/or *altBackgrndColor* to let it unchanged.
 
 **Definition of colors**
 
@@ -49,11 +49,11 @@ You indicate RGB color values in *foregroundColor* and, optionally, *backgroundC
 
 | **Format name**               | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **Examples**                                                                                              |
 | ----------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| CSS color name                | Text     | Standard CSS2 color name. <li> List of available names can be found in various locations on the web, for example on the [htmlcolorcodes.com](https://htmlcolorcodes.com/color-names/) web site.</li><li>Use "transparent" to set transparency to background (can only be used with the *backgroundColor* and *altBackgrndColor* parameters).</li><li> Use "" (empty string) in *foregroundColor* and/or *backgroundColor* to let it unchanged.</li> | "red", "cyan", "lightblue"                                                                                |
-| CSS color "#rrggbb" syntax    | Text     | Standard CSS2 hex color code:<li>rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color     </li>    | "#ff0000", "#00FFFF", "#ADD8E6"                                                                           |
-| CSS color "rgb(r,g,b)" syntax | Text     | Standard CSS2 rgb color code:<li>r = red component of the color (0...255)</li><li>g = green component of the color (0...255)</li><li>b = blue component of the color (0...255) </li>       | "rgb(255,255,0)", "rgb(255,0,0)"                                                                          |
-| 4-byte RGB value              | Integer  | 4-byte Long Integer (format 0x00rrggbb). Hex values:<li> rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color</li>  | 0x00000000, 0x00FF7F7F                                                                                    |
-| 4D "system" color constant    | Integer  | Colors used by 4D for drawing objects with automatic colors. Available constants (from *SET RGB COLORS* theme):<li> Background color</li><li>Background color none (can only be used with the *backgroundColor* and *altBackgrndColor* parameters)</li><li>Dark shadow color</li><li>Disable highlight item color</li><li>Foreground color</li><li>Highlight menu background color</li><li>Highlight menu text color</li><li>Highlight text background color</li><li>Highlight text color</li><li>Light shadow color </li>| **Note:* Automatic colors depend on the system as well as the type of object to which they are assigned.* |
+| CSS color name                | Text     | Standard CSS2 color name. <ul><li> List of available names can be found in various locations on the web, for example on the [htmlcolorcodes.com](https://htmlcolorcodes.com/color-names/) web site.</li><li>Use "transparent" to set transparency to background (can only be used with the *backgroundColor* and *altBackgrndColor* parameters).</li></ul> | "red", "cyan", "lightblue"                                                                                |
+| CSS color "#rrggbb" syntax    | Text     | Standard CSS2 hex color code:<ul><li>rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color     </li> </ul>| "#ff0000", "#00FFFF", "#ADD8E6"                                                                           |
+| CSS color "rgb(r,g,b)" syntax | Text     | Standard CSS2 rgb color code:<ul><li>r = red component of the color (0...255)</li><li>g = green component of the color (0...255)</li><li>b = blue component of the color (0...255) </li></ul>| "rgb(255,255,0)", "rgb(255,0,0)"                                                                          |
+| 4-byte RGB value              | Integer  | 4-byte Long Integer (format 0x00rrggbb). Hex values:<ul><li> rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color</li></ul>| 0x00000000, 0x00FF7F7F                                                                                    |
+| 4D "system" color constant    | Integer  | Colors used by 4D for drawing objects with automatic colors. Available constants (from *SET RGB COLORS* theme):<ul><li> Background color</li><li>Background color none (can only be used with the *backgroundColor* and *altBackgrndColor* parameters)</li><li>Dark shadow color</li><li>Disable highlight item color</li><li>Foreground color</li><li>Highlight menu background color</li><li>Highlight menu text color</li><li>Highlight text background color</li><li>Highlight text color</li><li>Light shadow color </li></ul>| **Note:* Automatic colors depend on the system as well as the type of object to which they are assigned.* |
 
 ## Example 1 
 

@@ -45,7 +45,7 @@ Toutes les classes de modèle de données ORDA sont exposées en tant que propri
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project.
+> Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet.
 
 De plus, les instances d'objet de classes utilisateurs du modèles de données ORDA bénéficient des propriétés et fonctions de leurs parents:
 
@@ -60,7 +60,7 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 | Release | Modifications                                                                                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 21 R3   | Support for the `server` keyword.                                                                                                                |
+| 21 R3   | Prise en charge du mot clé `server`.                                                                                                             |
 | 19 R4   | Attributs alias dans la classe Entity                                                                                                                            |
 | 19 R3   | Attributs calculés dans la classe Entity                                                                                                                         |
 | 18 R5   | Les fonctions des classes du modèle de données ne sont pas exposées par défaut en REST. Nouveaux mots-clés `exposed` et `local`. |
@@ -346,7 +346,7 @@ La fonction `Class constructor` est déclenchée par les commandes et fonctionna
 
 #### Configurations distantes
 
-When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. Lorsqu'elle est appelée sur le client, elle n'est pas déclenchée à nouveau lorsque le client tente d'enregistrer la nouvelle entité et envoie une demande de mise à jour au serveur pour la créer en mémoire sur le serveur.
+Lorsque vous utilisez une configuration distante, vous devez prêter attention au principe suivant : en **client/serveur** la fonction peut être appelée sur le client ou sur le serveur, en fonction de l'emplacement du code appelant. Lorsqu'elle est appelée sur le client, elle n'est pas déclenchée à nouveau lorsque le client tente d'enregistrer la nouvelle entité et envoie une demande de mise à jour au serveur pour la créer en mémoire sur le serveur.
 
 :::warning
 
@@ -425,7 +425,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 
 ```
 
-#### Example 5 (diagram): Qodly - Entity instantiated in a function
+#### Exemple 5 (diagramme) : Qodly - Entité instanciée dans une fonction
 
 ```mermaid
 
@@ -467,7 +467,7 @@ Dans les fonctions d'attributs calculés, [`This`](Concepts/classes.md#this) dé
 
 > Les attributs calculés ORDA ne sont pas [**exposés**](#exposed-vs-non-exposed-functions) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
 
-> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
+> Les **fonctions get et set** peuvent avoir la propriété [`local`](../Concepts/classes.md#local) pour optimiser les traitements en client/serveur.
 
 ### `Function get <attributeName>`
 
@@ -502,7 +502,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Pour plus d'informations sur les mots clés `local` et `server`, veuillez vous référer à la section [local et server](../Concepts/classes.md#local-and-server).
 
 :::
 
@@ -569,7 +569,7 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 :::note
 
-For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+Pour plus d'informations sur les mots clés `local` et `server`, veuillez vous référer à la section [local et server](../Concepts/classes.md#local-and-server).
 
 :::
 

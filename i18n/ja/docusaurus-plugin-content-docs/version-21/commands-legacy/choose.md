@@ -91,6 +91,9 @@ displayed_sidebar: docs
  End case
 ```
 
+## See also
+
+[Ternary operator](../../Concepts/operators.md#ternary-operator)
 
 ## プロパティ
 

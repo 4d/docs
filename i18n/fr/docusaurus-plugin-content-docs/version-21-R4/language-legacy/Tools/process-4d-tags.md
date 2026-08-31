@@ -5,7 +5,7 @@ slug: /commands/process-4d-tags
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* ; *résultatSortie* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* : Text, Blob ; *résultatSortie* : Variable, Text, Blob {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 <div class="no-index">
 

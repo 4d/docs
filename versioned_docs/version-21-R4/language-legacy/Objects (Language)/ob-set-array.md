@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | property | Text | &#8594;  | Name of property to set |
 | array | Array, Variable | &#8594;  | Array to store in property |
 </div>
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->
 
 In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
 Note that the *property* parameter is case sensitive. 

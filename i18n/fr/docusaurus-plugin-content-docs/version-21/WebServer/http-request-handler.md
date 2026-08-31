@@ -22,15 +22,15 @@ Les gestionnaires de requêtes HTTP personnalisés sont pris en charge dans le c
 - les [sessions extensibles](./sessions.md#enabling-web-sessions) ou [pas de sessions](../settings/web.md#no-sessions) sont activées,
 - un serveur web exécuté localement par 4D ou 4D Server, y compris ceux [exécutés par des composants](./webServerObject.md).
 
-### Authentication and Privileges
+### Authentification et droits d'accès
 
-Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
+Comme les fonctions de gestion des requêtes HTTP sont appelées à partir de requêtes Web standard (elles ne contiennent pas le motif `/rest/xxx` comme les requêtes REST), elles ne sont pas soumises aux règles du [**Force login**](../REST/authUsers.md#force-login-mode). Cela signifie qu'elles peuvent être exécutées sans authentification préalable, c'est-à-dire sans appel à la fonction [`setPrivileges()`](../API/SessionClass.md#setprivileges) sur la session, auquel cas elles seront exécutées dans une session *guest*.
 
-However, these functions need to have appropriate **permissions**, like all requests executed from web processes. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Any other resources accessed within the code (data, other functions...) also need to be allowed by permissions.
+Cependant, ces fonctions doivent disposer des **permissions** appropriées, comme toutes les requêtes exécutées à partir de process Web. Lorsque la fonction de gestion est appelée, les **privilèges** de sa session Web doivent permettre au code de s'exécuter correctement. Toute autre ressource utilisée dans le code (données, autres fonctions...) doivent également être autorisées par les permissions.
 
-In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), if a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
+En [*mode restreint par défaut*](../ORDA/privileges.md#restriction-modes), si un gestionnaire de requêtes HTTP peut ouvrir une nouvelle session non authentifiée (ce qui est le cas, par exemple, lorsque votre application propose une fonctionnalité de **deep linking**), vous devez vous assurer que le privilège *guest* est autorisé à exécuter la fonction du gestionnaire et à accéder à toutes les ressources requises.
 
-If a HTTP Request handler function can be executed within an already authenticated session, you need to make sure the user session is allowed to execute the handler function and access all subsequent resources. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
+Si une fonction de gestion des requêtes HTTP peut être exécutée dans le cadre d'une session déjà authentifiée, vous devez vous assurer que la session utilisateur est autorisée à exécuter cette fonction et à accéder à toutes les ressources requises. Notez que cela peut également se produire avec les liens directs si vous copiez-collez le lien dans un navigateur où vous êtes déjà connecté à l'application et où la session est toujours active.
 
 ## Comment définir les gestionnaires
 

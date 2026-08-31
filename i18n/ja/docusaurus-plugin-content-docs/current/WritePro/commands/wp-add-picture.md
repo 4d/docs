@@ -47,7 +47,7 @@ displayed_sidebar: docs
 - ペーパーボックスの左上隅に表示
 - 全てのページに表示
 
-位置、レイヤー(インライン、テキストの前/後)、表示状態、その他ピクチャーのあらゆるプロパティは[WP SET ATTRIBUTES](wp-set-attributes.md) コマンド、または標準アクションを使用して変更することができます(*4D Write Pro 標準アクションを使用*を参照してください)。
+The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
 
 **注意:** [WP Selection range](../commands/wp-selection-range) コマンドは、アンカーされたピクチャーが選択されていた場合には *ピクチャー参照* を、インラインピクチャーが選択されていた場合には *レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
 

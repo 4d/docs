@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
+| object | Object| &#8594;  | Structured object |
 | property | Text | &#8594;  | If passed = property to check, if omitted = check object |
 | Function result | Boolean | &#8592; | If property omitted: True if object is defined, otherwise False.<br/>If property passed: True if property is defined, otherwise False |
 </div>
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->
 
 By default, if you omit the *property* parameter, the command checks whether the *object* is defined. An object is defined if its contents has been initialized. 
 

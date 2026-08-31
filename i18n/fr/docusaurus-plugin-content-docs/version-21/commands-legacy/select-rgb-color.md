@@ -44,7 +44,7 @@ Le paramètre facultatif *message* vous permet de personnaliser le titre de la f
 La prise en compte de la validation de la boîte de dialogue diffère selon la plate-forme :
 
 * Sous Windows, si l’utilisateur clique sur le bouton **OK**, la commande retourne la valeur de couleur sélectionnée au format RVB et la variable système *OK* prend la valeur 1\. Si l’utilisateur annule la boîte de dialogue, la commande retourne -1 et la variable système *OK* prend la valeur 0.
-* Sous Mac OS, la boîte de dialogue peut uniquement être refermée via un clic sur la case de fermeture ou en appuyant sur la touche **Echap**. Dans les deux cas, la variable système *OK* prend la valeur 1, quelles que soient les actions utilisateur dans la fenêtre. La commande retourne la valeur de couleur sélectionnée au format RVB. Si l'utilisateur n'a pas sélectionné de couleur, la valeur retournée est la valeur éventuellement passée dans *coulDefaut* ou 0 si vous n'avez pas passé ce paramètre.
+* Sous macOS, la boîte de dialogue peut uniquement être refermée via un clic sur la case de fermeture ou en appuyant sur la touche **Echap**. Dans les deux cas, la variable système *OK* prend la valeur 1, quelles que soient les actions utilisateur dans la fenêtre. La commande retourne la valeur de couleur sélectionnée au format RVB. Si l'utilisateur n'a pas sélectionné de couleur, la valeur retournée est la valeur éventuellement passée dans *coulDefaut* ou 0 si vous n'avez pas passé ce paramètre.
 
 **Note :** Cette commande ne doit pas être exécutée sur le poste serveur ni dans le cadre d’un process Web.
 

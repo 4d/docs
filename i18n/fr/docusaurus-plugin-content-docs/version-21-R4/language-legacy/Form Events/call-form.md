@@ -5,7 +5,7 @@ slug: /commands/call-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *fenêtre* ; *formule* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *fenêtre* : Integer ; *formule* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
 <div class="no-index">
 

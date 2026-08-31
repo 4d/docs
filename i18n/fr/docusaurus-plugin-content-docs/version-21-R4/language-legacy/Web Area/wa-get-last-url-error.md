@@ -5,7 +5,7 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *objet* ; *url* ; *description* ; *codeErreur* )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *objet* : Text ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<br/>**WA GET LAST URL ERROR** ( *objet* : Variable, Field ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 <div class="no-index">
 

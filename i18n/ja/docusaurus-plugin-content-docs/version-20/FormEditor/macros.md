@@ -307,7 +307,7 @@ Function onInvoke($editor : Object)->$result : Object
 | $error       |                       | Collection | エラースタック                              |
 |              | [].errCode            | Number     | エラーコード                               |
 |              | [].message            | Text       | エラーの詳細                               |
-|              | [].componentSignature | Text       | 内部コンポーネントのシグネチャー                     |
+|              | [].componentSignature | Text       | 内部コンポーネントのシグネチャ                      |
 
 マクロの実行時にエラーが発生した場合、`onError` 関数が実行されます。
 

@@ -22,15 +22,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP New text box.Summary-->La commande **WP New text box** crée et renvoie un nouvel objet zone de texte dans la page pageNum de wpDoc.<!-- END REF-->
+<!--REF #_command_.WP New text box.Summary-->La commande **WP New text box** crée et renvoie un nouvel objet zone de texte dans la page *pageNum* de *wpDoc*.<!-- END REF-->
 
-**Note :** Pour plus d'informations sur les zones de texte, veuillez consulter le paragraphe *Gestion des zones de texte*.
+**Note :** Pour plus d'informations sur les zones de texte, veuillez consulter la page [*Zones de texte*](../text-boxes).
 
-Dans le paramètre wpDoc, passez un document 4D Write Pro. 
+Dans le paramètre *wpDoc*, passez un document 4D Write Pro. 
 
-Dans pageNum, passez le numéro de la page à laquelle la zone de texte doit être ancrée. Si pageNum < 0, le numéro de page **1** est utilisé (aucune erreur n'est générée). 
-
-The command creates a new text box element with the following default attributes:
+Dans *pageNum*, passez le numéro de la page à laquelle la zone de texte doit être ancrée. Si *pageNum* < 0, le numéro de page **1** est utilisé (aucune erreur n'est générée). 
 
 La commande crée une nouvelle zone de texte avec les attributs par défaut suivants :
 
@@ -41,14 +39,11 @@ La commande crée une nouvelle zone de texte avec les attributs par défaut suiv
 * marge = 0 pt,
 * couleur de fond = white,
 * id = "textBoxN" where N is a number,
-* anchored in front of the body at the top left corner of the page rectangle (like an anchored picture, a text box can be anchored to embedded mode, or to a section, to all sections or to a subsection in page mode, and to the background or front layer.)
 * ancrée devant le corps, dans le coin supérieur gauche du rectangle de la page (comme une image ancrée, une zone de texte peut être ancrée au mode incorporé, ou à une section, à toutes les sections ou à une sous-section en mode page, et au niveau de l'arrière-plan ou de l'avant-plan).
 
 Voir la section *Attributs 4D Write Pro* pour une description détaillée de ces attributs.
 
-The new text box is rendered only on the page *pageNum,* so it may not be rendered if:
-
-La nouvelle zone texte n'est affichée que sur la page pageNum, il se peut donc qu'elle ne soit pas affichée si :
+La nouvelle zone texte n'est affichée que sur la page *pageNum*, il se peut donc qu'elle ne soit pas affichée si :
 
 * il n'y a pas de page avec le numéro de page transmis
 * le mode d'affichage actuel est incorporé (embedded) ou brouillon (draft)
@@ -60,7 +55,7 @@ Toutefois, la zone de texte existe toujours et appartient au document, même si 
 Vous souhaitez créer une zone de texte vide par défaut :
 
 ```4d
- $textBox:=WP Créer zone de texte(WParea;1)
+ $textBox:=WP New text box(WParea;1)
 ```
 
 Résultat :
@@ -73,7 +68,7 @@ Dans un modèle de lettre, on souhaite ajouter une zone de texte pour afficher l
 
 ```4d
   // #1 créer la zone de texte
- $textBox:=WP Créer zone de texte(WParea;1)
+ $textBox:=WP New text box(WParea;1)
  
   // #2 définir quelques attributs de zone de texte
  WP SET ATTRIBUTES($textBox;wk id;"AddressArea")
@@ -89,9 +84,9 @@ Dans un modèle de lettre, on souhaite ajouter une zone de texte pour afficher l
 
 
   // #3: définir les formules dans la zone de texte
- WP INSÉRER FORMULE($textBox;Formula(This.data.fullName);wk append)
- WP INSÉRER RUPTURE($textBox;wk paragraph break;wk append)
- WP INSÉRER FORMULE($textBox;Formula(This.data.fullAddress);wk append)
+ WP Insert formula($textBox;Formula(This.data.fullName);wk append)
+ WP INSERT BREAK($textBox;wk paragraph break;wk append)
+ WP Insert formula($textBox;Formula(This.data.fullAddress);wk append)
 
 
   // #4: Styliser le contenu de la zone de texte

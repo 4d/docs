@@ -812,7 +812,7 @@
     "description": "The generated-index page title for category 'Commands by theme' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.description": {
-    "message": "4D commands by theme",
+    "message": "Commandes 4D par thème",
     "description": "The generated-index page description for category 'Commands by theme' in sidebar 'docs'"
   }
 }

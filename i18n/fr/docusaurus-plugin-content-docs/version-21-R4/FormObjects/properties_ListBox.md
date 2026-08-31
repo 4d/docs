@@ -31,7 +31,7 @@ Indique le formulaire à utiliser pour modifier ou afficher les enregistrements 
 
 Le formulaire spécifié est affiché :
 
-- when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](/Desktop/standard-actions)),
+- lors de l'utilisation des actions standard `Add Subrecord` et `Edit Subrecord` appliquées à la list box (voir [Utiliser des actions standard](/Desktop/standard-actions)),
 - lorsqu'on double-clique sur une ligne et que la propriété [Double-clic sur ligne](#double-click-on-row) est définie sur "Editer l'enregistrement" ou "Afficher l'enregistrement".
 
 #### Grammaire JSON

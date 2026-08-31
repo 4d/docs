@@ -11,7 +11,7 @@ Après avoir [créé un entity set]($method.md#methodentityset) à l'aide de `$m
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | [**$entityset/\{entitySetID\}**](#entitysetentitysetid)                                                                                                                                    | `/People/$entityset/0ANUMBER`                                                | Récupère un entity set existant                                              |
 | [**$entityset/\{entitySetID\}?$logicOperator...&$otherCollection**](#entitysetentitysetidlogicoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND&$otherCollection=0ANUMBER` | Crée un nouvel entity set à partir de la comparaison d'entity sets existants |
-| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Releases one or more existing entity sets from the 4D Server's cache         |
+| [**$entityset/$release**](#entitysetrelease)                                                                                                                                                 | `/Employee/$entityset/$release`                                              | Libère une ou plusieurs entity sets existants du cache de 4D Server          |
 
 ## $entityset/\{entitySetID\}
 
@@ -93,19 +93,19 @@ Dans l'exemple suivant, nous créons un nouvel entity set qui combine toutes les
 
 ## $entityset/$release
 
-Releases on or more existing entity set(s) stored in [4D Server's cache](./$info.md).
+Libère un ou plusieurs entity set(s) existants stockés dans [le cache de 4D Server](./$info.md).
 
 ### Description
 
-You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+Cette commande vous permet de libérer du cache de 4D Server un ensemble d'entity sets que vous avez créés à l'aide de [`$method=entityset`](./$method.md#methodentityset).
 
 ### Exemple
 
-Release two entity sets from the server's cache:
+Libérer deux entity sets du cache du serveur :
 
 `POST  /rest/Employee/$entityset/$release`
 
-The body must contain a collection with the entity sets ids to release:
+Le body du message doit contenir une collection comprenant les identifiants des entity sets à libérer :
 
 **Données POST** :
 

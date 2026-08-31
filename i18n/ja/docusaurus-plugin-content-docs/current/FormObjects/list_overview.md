@@ -54,7 +54,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### @をサポート
 
-As with [other object property management commands](../FormObjects/formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language), it is possible to use the “@” character in the `ListName` parameter. このシンタックスは、フォーム上の複数のオブジェクトを指定するために使用されます。 しかし階層リストコマンドのコンテキストにおいては、これはすべての場合に適用されるわけではありません。 コマンドのタイプにより、このシンタックスは 2つの異なる効果があります:
+[他のオブジェクトプロパティ管理コマンド](../FormObjects/formObjects_overview.md#名前またはデータソースを使用してそのフォームオブジェクトに4Dランゲージでアクセスする) 同様、`ListName` 引数内で“@” 文字を使用することができます。 このシンタックスは、フォーム上の複数のオブジェクトを指定するために使用されます。 しかし階層リストコマンドのコンテキストにおいては、これはすべての場合に適用されるわけではありません。 コマンドのタイプにより、このシンタックスは 2つの異なる効果があります:
 
 - プロパティ設定用のコマンドにおいて、このシンタックスは該当する名前のオブジェクトを対象とします (標準の動作)。 たとえば、引数 "LH@" は、オブジェクト名が "LH" で始まる階層リストを指定します。
   - [`DELETE FROM LIST`](../commands/delete-from-list)
@@ -133,7 +133,7 @@ As with [other object property management commands](../FormObjects/formObjects_o
 
 ### どのような場合にユニークな参照番号が必要ですか?
 
-階層リストをユーザーインタフェースとして使用し、クリックまたはドラッグにより選択された項目のみを処理する場合は、ほとんどの場合項目参照番号を必要としません。 [`Selected list items`](../commands/selected-list-items) や [`GET LIST ITEM`](../commands/get-list-item) を使用すれば、現在選択されている項目を扱うことができます。 さらに [`INSERT IN LIST`](../commands/insert-in-list) や [`DELETE FROM LIST`](../commands/delete-from-list) などのコマンドは、選択された項目との相対位置でリストを操作できます。
+階層リストをユーザーインターフェースとして使用し、クリックまたはドラッグにより選択された項目のみを処理する場合は、ほとんどの場合項目参照番号を必要としません。 [`Selected list items`](../commands/selected-list-items) や [`GET LIST ITEM`](../commands/get-list-item) を使用すれば、現在選択されている項目を扱うことができます。 さらに [`INSERT IN LIST`](../commands/insert-in-list) や [`DELETE FROM LIST`](../commands/delete-from-list) などのコマンドは、選択された項目との相対位置でリストを操作できます。
 
 基本的に、項目の選択に関係なく、プログラムで任意のリスト項目にアクセスする必要がある場合に項目参照番号が必要です。
 

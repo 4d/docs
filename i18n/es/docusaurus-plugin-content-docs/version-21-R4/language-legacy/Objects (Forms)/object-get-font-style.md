@@ -5,7 +5,7 @@ slug: /commands/object-get-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *objeto* : any ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get font style** ( *objeto* : Variable, Field ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
 <div class="no-index">
 

@@ -3,6 +3,16 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 21 R5
+
+Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), the blog post that lists all new features and enhancements in 4D 21 R5.
+
+#### ハイライト
+
+- Support of S/MIME email signing in [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class through new properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
+
 ## 4D 21 R4
 
 [**4D 21 R4 の新機能**](https://blog.4d.com/ja/whats-new-in-4d-21-r4/): 4D 21 R4 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -17,7 +27,7 @@ title: リリースノート
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
 - 改善された4D Server 管理ウィンドウ内にて、セッションの情報を表示するための[**Sessions**](../ServerWindow/sessions.md) ページ(旧**Users**ページ)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/194/release-note-version-21r4/))。
 
 #### 動作の変更
 
@@ -31,7 +41,7 @@ title: リリースノート
 
 - [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
 - 4D Write Pro は[マルチレベルスタイルシート](../WritePro/user-legacy/stylesheets.md#multi-level-list-style-sheets) サポートするようになり、これにより自動ナンバリングつきの、構造化された[マルチレベルのリスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) の作成と管理が可能になりました。
-- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
+- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダーの代わりに macOS キーチェーンからのカスタムの証明書を使用できるようになりました。
 - テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
 - IMAP transporter は、[4D.IMAPNotifier](../API/IMAPNotifierClass.md) クラスの、[notifier オブジェクト](../API/IMAPTransporterClass.md#notifier) を通して、IDLE プロトコルを使用したメールボックスイベント通知イベントをサポートするようになりました。またこのクラスは [IMAP New transporter](../commands/imap-new-transporter) の `listener` プロパティを通して設定することができます。
 - リモートの[session](../API/SessionClass.md) オブジェクトは、[クライアント側でも利用可能](../Desktop/sessions.md#availability) になりました。
@@ -40,7 +50,7 @@ title: リリースノート
 - ORDA データモデル関数および共有/セッションシングルトン関数における [`server` キーワード](../Concepts/classes.md#server) のサポート。
 - Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。 [クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
 - 依存関係: [GitLab リポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/101/release-note-version-21r3/))。
 
 #### macOS におけるLiquid glass のサポート
 
@@ -53,8 +63,8 @@ title: リリースノート
 - [`JSON Validate`](../commands/json-validate) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
 - 分かりやすさのために、フォーミュラオブジェクトは、汎用的な [`4D.Function`](../API/FunctionClass.md) クラスを継承する [`4D.Formula`](../API/FormulaClass.md) クラスの新しいインスタンスになりました。
 - 4D 21 R3 では、[コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) にもたらされた新しい改良が、ランゲージコマンドに対しても適用されます([こちらのblog 記事](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)を参照してください)。 以前は検知されなかったシンタックスエラーがコード内でフラグ付けされるようになりました。
-- [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
-- \**旧式* ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
+- [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
+- **旧式** ネットワークレイヤーはサポートされなくなりました。 旧式ネットワークレイヤーを使用していたプロジェクトまたはバイナリーデータベースは、4D 21 R3 以降にアップグレードした際に自動的に[**ServerNet**](../settings/client-server.md#ネットワークレイヤー) へと設定されます。
 
 ## 4D 21 R2
 
@@ -69,7 +79,7 @@ title: リリースノート
 - [コンポーネントのアイコンをカスタマイズできる](../Extensions/develop-components.md#custom-icon) ようになりました。
 - 4D AIKit component: 新しい [ファイル API](../aikit/Classes/OpenAIFilesAPI.md) クラスを使用することで **ファイルアップロード** 機能を実装できます。
 - [**デザインモードを検索**](../Project/search-replace.md#コンポーネント内を検索) および [**コンテンツを置換**](../Project/search-replace.md#コンテンツを置換) 機能は編集可能なコンポーネントをサポートするようになりました。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/178/release-note-version-20r2/))。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/54/release-note-version-21r2/))。
 
 #### デベロッパー・プレビュー
 
@@ -86,7 +96,6 @@ title: リリースノート
 
 | ライブラリ           | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                                                                                   |
 | --------------- | -------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL       | 664a985                                | **21 R4**      | QUIC に使用                                                                                                                                             |
 | CEF             | 7258                                   | 21             | Chromium 139                                                                                                                                         |
 | Hunspell        | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                                               |
 | ICU             | 77.1                   | 21             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                                     |
@@ -97,7 +106,7 @@ title: リリースノート
 | libZip          | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA            | 5.8.1  | 21             |                                                                                                                                                      |
 | ngtcp2          | 1.24.0 | **21 R4**      | QUIC に使用                                                                                                                                             |
-| OpenSSL         | 4.0                    | **21 R4**      |                                                                                                                                                      |
+| OpenSSL         | 4.0.1  | **21 R5**      |                                                                                                                                                      |
 | PDFWriter       | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS        | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit          | WKWebView                              | 19             |                                                                                                                                                      |

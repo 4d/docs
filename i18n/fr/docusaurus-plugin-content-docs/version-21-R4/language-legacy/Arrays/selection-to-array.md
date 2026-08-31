@@ -5,16 +5,15 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}{; *})<br/>**SELECTION TO ARRAY** {( *laTable* ; *tableau* {; *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({...(*sélection* : Field, Table ; *tableau* : Array)} {; *})
+<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp &#124; laTable | Champ, Table | &#8594;  | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
+| sélection | Field, Table | &#8594;  | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
 | tableau | Array | &#8592; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
-| leField | Field | &#8594;  | Champ à récupérer dans le tableau |
-| tableau | Array | &#8592; | Tableau recevant les valeurs du champ |
 | * | Opérateur | &#8594;  | Attente d’exécution |
 </div>
 <!-- END REF-->
@@ -32,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
+<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF--> La commande **SELECTION TO ARRAY** s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
 
 * Charger les valeurs d'un ou plusieurs champs,
 * Charger les numéros des enregistrements de la table, à l'aide de la syntaxe *\[table\];tableau*

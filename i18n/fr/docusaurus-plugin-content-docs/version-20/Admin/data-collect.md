@@ -120,7 +120,7 @@ Certaines données sont également collectées à intervalles réguliers.
 
 ## Où sont-elles stockées et envoyées ?
 
-Les données collectées sont écrites dans un fichier texte (format JSON) par base de données lorsque 4D Server quitte. Le fichier est stocké dans le [dossier 4D actif](https://doc.4d.com/4dv20/help/command/en/page485.html), c'est-à-dire :
+Les données collectées sont enregistrées dans un fichier texte (au format JSON) par base de données lorsque certains événements se produisent, par exemple au démarrage ou à l'arrêt de 4D Server. Le fichier est stocké dans le [dossier 4D actif](https://doc.4d.com/4dv20/help/command/en/page485.html), c'est-à-dire :
 
 - sous Windows : `Users\[userName]\AppData\Roaming\4D Server`
 - sous macOS : `/Users/[userName]/Library/ApplicationSupport/4D Server`

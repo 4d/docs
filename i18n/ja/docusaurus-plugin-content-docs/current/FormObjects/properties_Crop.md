@@ -15,7 +15,7 @@ title: 行列数
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md)
 
 #### コマンド
 
@@ -35,7 +35,7 @@ title: 行列数
 
 #### 対象オブジェクト
 
-[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md)
 
 #### コマンド
 

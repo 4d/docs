@@ -45,7 +45,7 @@ By default, the added picture is:
 - Displayed at the top left corner of the paper box
 - Shown on all pages
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
+The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
 
 
 **Note:** The [WP Selection range](../commands-legacy/wp-selection-range.md) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:

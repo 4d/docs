@@ -5,14 +5,14 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *objet* ; *ligne* ; *colonne* {; *action*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *objet* : Text ; *ligne* : Integer ; *colonne* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *objet* : Variable ; *ligne* : Integer ; *colonne* : Integer {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| objet | Text, Variable | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
 | ligne | Integer | &#8594;  | Numéro de ligne de la rupture |
 | colonne | Integer | &#8594;  | Numéro de colonne de la rupture |
 | action | Integer | &#8594;  | Action de sélection |

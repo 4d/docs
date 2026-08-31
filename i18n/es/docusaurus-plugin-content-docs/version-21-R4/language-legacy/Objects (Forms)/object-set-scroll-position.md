@@ -5,7 +5,7 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* : any {; *posicionL* : Integer {; *posicionH* : Integer}}{; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *objeto* : Text {; *posicionL* : Integer {; *posicionH* : Integer}}{; *} )<br/>**OBJECT SET SCROLL POSITION** ( *objeto* : Variable, Field, Table {; *posicionL* : Integer {; *posicionH* : Integer}}{; *} )<br/><!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 <div class="no-index">
 

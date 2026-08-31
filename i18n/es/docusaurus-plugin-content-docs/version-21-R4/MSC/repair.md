@@ -4,7 +4,7 @@ title: Página Reparación
 sidebar_label: Página Reparación
 ---
 
-Esta página se utiliza para reparar el archivo de datos cuando se ha dañado. Generalmente, sólo utilizará estas funciones bajo la supervisión de los equipos técnicos de 4D, cuando se hayan detectado anomalías al abrir la aplicación o tras una [verificación](verify.md).
+Esta página se utiliza para reparar el archivo de datos cuando se ha dañado. Generalmente, solo utilizará estas funciones bajo la supervisión del equipo técnico de 4D, cuando se hayan detectado anomalías al abrir la aplicación o tras una [verificación](verify.md).
 
 **Atención:** cada operación de reparación implica la duplicación del archivo original, lo que aumenta el tamaño de la carpeta de la aplicación. Es importante tener esto en cuenta (especialmente en macOS, donde las aplicaciones 4D aparecen como paquetes) para que el tamaño de la aplicación no aumente excesivamente. Eliminar manualmente las copias del archivo original dentro del paquete puede ser útil para minimizar el tamaño del paquete.
 

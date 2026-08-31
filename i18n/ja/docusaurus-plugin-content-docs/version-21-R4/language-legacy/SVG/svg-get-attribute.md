@@ -5,7 +5,7 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; *element_ID* ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer, Boolean )<br/>**SVG GET ATTRIBUTE** ( *pictureObject* : Variable, Field ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer, Boolean )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 <div class="no-index">
 

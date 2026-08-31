@@ -5,7 +5,7 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *object* : Variable, Field, any ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer )<br/>**HIGHLIGHT TEXT** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 <div class="no-index">
 

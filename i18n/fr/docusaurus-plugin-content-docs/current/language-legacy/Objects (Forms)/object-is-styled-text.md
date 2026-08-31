@@ -5,14 +5,14 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *objet* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *objet* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Boolean | &#8592; | Vrai si l’objet est un texte en multistyle, Faux sinon |
 </div>
 <!-- END REF-->

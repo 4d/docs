@@ -227,7 +227,7 @@ Par défaut, lorsqu'un bouton contient un titre et une image, les éléments son
 
 #### Objets pris en charge
 
-[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
+[Bouton](button_overview.md) (tous styles sauf Aide) - [Case à cocher](checkbox_overview.md) (tous styles sauf Regular, Flat, Disclosure et Collapse/Expand) - [Radio Button](radio_overview.md) (tous styles sauf Regular, Flat, Disclosure et Collapse/Expand).
 
 #### Commandes
 
@@ -300,7 +300,7 @@ Il est important de noter que la propriété “Avec pop up menu” gère unique
 
 #### Objets pris en charge
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
+[Bouton Toolbar](button_overview.md#toolbar) - [Bouton bevel](button_overview.md#bevel) - [Bouton bevel arrondi](button_overview.md#rounded-bevel) - [Bouton gradient OS X](button_overview.md#os-x-gradient) - [Bouton OS X Textured](button_overview.md#os-x-textured) - [Bouton Office XP](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
 
 #### Commandes
 

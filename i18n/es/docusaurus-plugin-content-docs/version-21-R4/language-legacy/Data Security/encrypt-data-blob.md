@@ -5,14 +5,14 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAEncriptar* : Blob ; objetoLlave | frasePasar ; *sal* : Integer ; *blobEncriptado* : Blob ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *keyObject* : Object ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *passPhrase* : Text ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | blobAEncriptar | Blob | &#8594; | BLOB a encriptar |
-| objetoLlave &#124; frasePasar | Objeto, Texto | &#8594; | Objeto JSON que contiene la llave de cifrado o la frase de paso para la generación directa de la llave de cifrado (texto) |
+| objetoLlave &#124; frasePasar | Object, Text | &#8594; | Objeto JSON que contiene la llave de cifrado o la frase de paso para la generación directa de la llave de cifrado (texto) |
 | sal | Integer | &#8594; | Sal adicional para el algoritmo |
 | blobEncriptado | Blob | &#8592; | BLOB Encriptado |
 | Resultado | Boolean | &#8592; | True si la encriptación se ha realizado correctamente, False en caso contrario |
@@ -21,6 +21,7 @@ displayed_sidebar: docs
 
 <div class="no-index">
 <details><summary>Historial</summary>
+
 
 |Versión|Cambios|
 |---|---|

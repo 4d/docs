@@ -16,12 +16,12 @@ title: プロジェクトのアーキテクチャー
         - `DerivedData`
         - `Sources`
         - `Trash`
-    - `リソース`
+    - `Resources`
     - `Settings`
     - `userPreferences.username`
     - `WebFolder`
 
-> バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
+> バイナリーデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
 
 ## `Project` フォルダー
@@ -63,8 +63,8 @@ title: プロジェクトのアーキテクチャー
 | lists.json              | 定義されたリスト                                                                                                                                                                                                                                                                                                                                                        | JSON |
 | filters.json            | 定義されたフィルター                                                                                                                                                                                                                                                                                                                                                      | JSON |
 | styleSheets.css         | CSS スタイルシート                                                                                                                                                                                                                                                                                                                                                     | CSS  |
-| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                            | CSS  |
-| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリデータベースより)                                                                                                                                                                                                                                                                                                                        | CSS  |
+| styleSheets_mac.css     | Mac用 CSS スタイルシート (変換されたバイナリーデータベースより)                                                                                                                                                                                                                                                                                                                           | CSS  |
+| styleSheets_windows.css | Windows用 CSS スタイルシート (変換されたバイナリーデータベースより)                                                                                                                                                                                                                                                                                                                       | CSS  |
 
 
 #### `DatabaseMethods`
@@ -140,14 +140,14 @@ Libraries フォルダーには、macOS 上で [Apple Silicon用にコンパイ�
 
 ## `リソース`
 
-Resources フォルダーには、追加のカスタムプロジェクトリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です  (*4D Server リファレンスマニュアル* の [リソースフォルダーの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。 (*4D Server リファレンスマニュアル* の [リソースフォルダーの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。
+Resources フォルダーには、追加のカスタムプロジェクトリソースファイルやフォルダーが格納されます。 アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。 リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です。 (*4D Server リファレンスマニュアル* の [リソースフォルダーの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)
 
 | 内容                    | 説明                                                                        | 形式      |
 | --------------------- | ------------------------------------------------------------------------- | ------- |
 | *item*                | プロジェクトリソースファイルとフォルダー                                                      | 様々      |
 | Images/Library/*item* | ピクチャーライブラリの個別ピクチャーファイル(*)。 各アイテムの名称がファイル名となります。 名称が重複する場合には、名称に番号が追加されます。 | picture |
 
-(*) .4db バイナリデータベースから変換されたプロジェクトの場合のみ
+(*) .4db バイナリーデータベースから変換されたプロジェクトの場合のみ
 
 
 ## `Data`

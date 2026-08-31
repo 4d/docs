@@ -21,7 +21,7 @@ Si introduce un nombre de clase inválido, se activa una advertencia y se rechaz
 
 :::note
 
-Las **Clases no transferibles** como las [clases del modelo de datos ORDA](../ORDA/ordaClasses.md), [gestores de archivos](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... no pueden asociarse a campos objeto.
+[**Non-streamable classes**](../Concepts/dt_object.md#streaming-support) such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... no pueden asociarse a campos objeto.
 
 :::
 

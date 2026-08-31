@@ -290,7 +290,7 @@ Toutefois, la sérialisation d'objets sous forme de texte présente les limites 
 - les références circulaires sont prises en charge,
 - les objets gardent leur classe,
 - une gamme élargie d'objets peut être sérialsiée : documents [4D Write Pro](../WritePro/user-legacy/presentation.md), objets images, [objets blobs](dt_blob.md#blob-types), et objets pointeurs,
-- des objets de classe 4D native peuvent être sérialisés, par exemple [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), ou [`Vector`](../API/VectorClass.md). Cependant, seules quelques classes 4D natives peuvent être sérialisées. À moins qu'il ne soit explicitement indiqué "Cette classe est **streamable** en binaire", il faut considérer qu'une classe 4D native n'est PAS streamable.
+- des objets de classe 4D native peuvent être sérialisés, par exemple [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), ou [`Vector`](../API/VectorClass.md). Cependant, seules quelques classes 4D natives peuvent être sérialisées. Sauf indication contraire explicite précisant "Cette classe est **sérialisable** en binaire", considérez qu'une classe native 4D n'est PAS sérialisable.
 
 ## Exemples
 

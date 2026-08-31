@@ -531,29 +531,29 @@ End if
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["Styled Text" theme](../ommands/theme/Styled_Text.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) - ["スタイル付きテキスト" テーマ](../commands/theme/Styled_Text.md)
 
-### Supported tags
+### サポートされているタグ
 
-You can use the following tags in 4D multi-style text areas.
+4D のマルチスタイルテキストエリアでは以下のタグを使用することができます。
 
-#### 4D Expression
+#### 4D式
 
 ```html
 <span style="-d4-ref:'expression'"> </span>
 ```
 
-This tag inserts a 4D expression (expression, method, field, variable, command, etc.) in the text. The expression is tokenized and evaluated:
+このタグは、テキストに4D式 (式、メソッド、フィールド、変数、コマンド、等) を 挿入します。 これらの式は以下のタイミングでトークナイズ度されて評価されます:
 
-- when the expression is inserted
-- when the object is loaded
-- when the `computeExpressions` standard action is called from an interface object or by the [`INVOKE ACTION`](../commands/invoke-action) command
-- when the [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) command is executed
-- when the [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) command is executed, if the second `*` parameter is passed.
+- 式が挿入されたとき
+- オブジェクトがロードされたとき
+- インターフェースオブジェクト、または[`INVOKE ACTION`](../commands/invoke-action) コマンドによって `computeExpressions` 標準アクションが呼び出されたとき
+- [`ST COMPUTE EXPRESSIONS`](../commands/st-compute-expressions) コマンドが実行されたとき
+- [`ST FREEZE EXPRESSIONS`](../commands/st-freeze-expressions) コマンドに第二引数 `*` が渡された状態で実行されたとき
 
-The evaluated value of the expression is not saved in the `<span>` tag, only its reference is.
+式の評価された値は `<span>` タグに保存されません。参照のみが保存されます。
 
-Note: To ensure that expressions will be evaluated correctly regardless of the 4D language or version used, we recommend using the token syntax for elements whose name might vary between different versions (commands, tables, fields, constants). たとえば、`Current time` コマンドを挿入するには、"`Current time:C178`"と入力します。 For more information about this, refer to *Using tokens in formulas*.
+注: 4Dのランゲージやバージョンに関係なく、式の正常な評価を確実にするには、異なるバージョン間において名前が変化しそうな要素 (コマンド、テーブル、フィールド、定数) に対してはトークンシンタックスを使用することが推奨されます。 たとえば、`Current time` コマンドを挿入するには、"`Current time:C178`"と入力します。 この点についての詳細は *フォーミュラ内でのトークンの使用* を参照ください。
 
 #### URL
 
@@ -561,51 +561,51 @@ Note: To ensure that expressions will be evaluated correctly regardless of the 4
 <span><a href="url">Visible label</a></span>
 ```
 
-This tag inserts a URL in the text. 例:
+このタグはテキストにURLを挿入します。 例:
 
 ```html
 <span><a href="http://www.4d.com/">4D Web Site</a></span>
 ```
 
-#### User link
+#### ユーザーリンク
 
 ```html
 <span style="-d4-ref-user:'myUserLink'">Click here</span>
 ```
 
-"User links" look the same as URLs, but when you click them, they do not automatically open the source. You can pass any string you want as reference, and it is up to the developer to program any custom actions that occur when it is clicked. This means you can create links which are not URLs but references to files, 4D methods, and so on, that you can open or execute when they are clicked. The [`ST Get content type`](../commands/st-get-content-type) command detects if a user link has been clicked.
+"ユーザーリンク" は見た目が URL と同じですが、クリックしてもソースは自動的に開きません。 どのような文字列でも参照として渡すことができますが、クリックされたときに起こるアクションはデベロッパーによってプログラムされた内容によります。 つまり、タグがクリックされたときに、URL の代わりに、ファイルや 4Dメソッド等を開いたり実行したりすることができます。 [`ST Get content type`](../commands/st-get-content-type) コマンドによって、ユーザーリンクがクリックされたかどうかを検知することもできます。
 
-User links are defined using the [`ST SET TEXT`](../commands/st-set-text) command. 例:
+ユーザーリンクは[`ST SET TEXT`](../commands/st-set-text) コマンドによって定義します。 例:
 
 ```4d
 ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
 ```
 
-#### Custom tags
+#### カスタムのタグ
 
-You can insert any tag in plain text, for example `<img src="http://doc.4d.com/pictures/ja.png">`. It is stored in the code of the plain text without being interpreted or displayed. This is particularly useful in the context of e-mails in HTML format and including pictures for example.
+例として、`<img src="http://doc.4d.com/pictures/ja.png">` のようなタグも可能です。 タグは標準テキストのコードに保存されますが、解釈されたり表示されたりすることはありません。 これは例えば、HTML形式のメールに画像を挿入するような場合に便利です。
 
-#### Style tags
+#### スタイルタグ
 
-This paragraph lists the attributes of \<SPAN> tags that are supported by 4D in rich text areas. You can use these tags to implement custom style handling. Only the tags listed below are supported by 4D for style variations.
+ここでは \<SPAN> タグの属性としてサポートされる4Dのリッチテキストエリアのスタイルを説明します。 これらの属性を使用してカスタムスタイルを指定することも可能です。 ここで説明されている属性のみが4D によってサポートされます。
 
-- Font name: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
-- Font size: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
+- フォント名: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
+- フォントサイズ: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
 - フォントスタイル:
-  - Bold `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
-  - Italic `<SPAN STYLE="font-style: italic"> ... </SPAN>`
-  - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
-  - Underline `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
-  - Strikethrough `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
+  - ボールド(太字) `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
+  - イタリック `<SPAN STYLE="font-style: italic"> ... </SPAN>`
+  - 普通 `<SPAN STYLE="font-style: normal"> ... </SPAN>`
+  - 下線付き `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
+  - 取り消し線 `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
 
-*Note: The "strikethrough" style is not supported under macOS, but this tag can still be managed by programming.*
+*注意 : maOS では"取り消し線"がサポートされていません。指定しても表示されませんが、プログラムで管理することはできます。*
 
-- Font colors: `<SPAN STYLE="color:green"> ... </SPAN>` or `<SPAN STYLE="color:#006CCC">...</SPAN>`
-- Background colors: `<SPAN STYLE="background-color:green"> ... </SPAN>` or `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
+- フォントカラー: `<SPAN STYLE="color:green"> ... </SPAN>` または `<SPAN STYLE="color:#006CCC">...</SPAN>`
+- 背景色: `<SPAN STYLE="background-color:green"> ... </SPAN>` または `<SPAN STYLE="background-color:#006CCC">...</SPAN>`
 
-#### Color values
+#### カラーの値
 
-For font color and background color attributes, the color value can be either the hexadecimal code for an RGB color, or the name of one of the 16 HTML colors defined for standard CSS by the W3C:
+フォントカラーと背景色属性では、カラー値としてRGB の16進およびW3C によって標準CSS のために定義された16 のHTML カラー名を指定できます:
 
 ![](../assets/en/FormObjects/colors1.png)
 ![](../assets/en/FormObjects/colors2.png)
@@ -671,13 +671,13 @@ OBJECT SET COLOR(*;"myArea";-(Blue+(256*Yellow)))
 - [`OBJECT SET FONT STYLE`](../commands/object-set-font-style)
 - [`OBJECT SET FONT SIZE`](../commands/object-set-font-size)
 
-マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 To manage styles during database execution, we recommend using the [commands of the "Styled Text" theme](../commands/theme/Styled_Text.md).
+マルチスタイルエリアのコンテキストにおいては、これらのコマンドはデフォルトのスタイルを設定するためだけに使用されるべきです。 データベースの実行中にスタイルを管理するためには、["スタイル付きテキスト" テーマ内のコマンド](../commands/theme/Styled_Text.md) を使用することが推奨されます。
 
 #### Get edited text
 
-When it is used with a rich text area, the [`Get edited text`](../commands/get-edited-text) command returns the text of the current area including any style tags.
+[`Get edited text`](../commands/get-edited-text) コマンドがリッチテキストエリアで使用されると、コマンドはあらゆるスタイルタグを含む現在のエリアのすべてのテキストを返します。
 
-To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command:
+編集された生テキスト (タグなしのテキスト) を取り出すには、[`ST Get plain text`](../commands/st-get-plain-text) コマンドを使用しなければなりません:
 
 ```4d
 ST Get plain text(Get edited text)
@@ -687,7 +687,7 @@ ST Get plain text(Get edited text)
 
 マルチスタイルオブジェクトに対して行われるクエリや並び替えは、オブジェクトに保存されたスタイルタグを考慮に入れます。 単語中でスタイルの変更が行われた場合、その単語の検索は失敗します。
 
-To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. 例:
+有効な検索や並び替えを行うには、[`ST Get plain text`](../commands/st-get-plain-text) コマンドを使用する必要があります。 例:
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")

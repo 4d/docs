@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 **Note :** Cette boîte de dialogue est modale sous Windows mais pas sous macOS.
 
-Si l’utilisateur sélectionne une couleur et valide la boîte de dialogue, la couleur choisie est appliquée à la sélection courante de texte dans l’objet ayant le focus, si la propriété "Autoriser sélecteur couleur/police" est cochée pour cet objet (cf. manuel *Mode Développement*).
+Si l’utilisateur sélectionne une couleur et valide la boîte de dialogue, la couleur choisie est appliquée à la sélection courante de texte dans l’objet ayant le focus, si la [propriété "Autoriser sélecteur couleur/police"](../../FormObjects/properties_Text.md#allow-fontcolor-picker) est cochée pour cet objet.
 
 Si vous passez 0 dans le paramètre *texteOuFond* ou omettez ce paramètre, la couleur sélectionnée sera appliquée au texte. Si vous passez 1 dans *texteOuFond*, la couleur sélectionnée sera appliquée au fond du texte. 
 
-Si la couleur a été modifiée, l’événement formulaire On After Edit est généré pour l’objet. 
+Si la couleur a été modifiée, l’[événement formulaire `On After Edit`](../../Events/onAfterEdit.md) est généré pour l’objet. 
 
 ## Voir aussi 
 

@@ -141,23 +141,23 @@ Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
-### Using the `local` keyword
+### Utilisation du mot-clé `local`
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+Par défaut, les [fonctions du data model ORDA](../ORDA/ordaClasses.md) sont exécutées sur le serveur, qui fournit généralement les meilleures performances puisque seule la requête de la fonction et le résultat sont envoyés sur le réseau. Cependant, il peut arriver qu'une fonction traite des données déjà présentes dans le cache local et soit entièrement exécutable côté client. Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi, améliorer la performance de l'application en [utilisant le mot-clé `local` dans la définition de la fonction](../Concepts/classes.md#local).
 
 A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Trouver les étudiants les plus jeunes  
+// Utilisation inappropriée du mot-clé local
 local Function getYoungest() : Object
-    return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+    return:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
 - **sans** le mot clé `local`, le résultat est donné en une seule requête
 - **avec** le mot-clé `local`, 4 requêtes sont nécessaires : une pour obtenir les élèves de l'entité Schools, une pour la `query()`, une pour le `orderBy()` et une pour la `slice()`. Dans cet exemple, l'utilisation du mot-clé `local` est inappropriée.
 
-#### Example: Checking attributes
+#### Exemple : Vérification des attributs
 
 Nous souhaitons vérifier la cohérence des attributs d'une entité chargée sur le client et mise à jour par l'utilisateur, avant de demander au serveur de les enregistrer.
 

@@ -460,7 +460,7 @@ $output:=$worker.response
 
 `.postMessage()` 関数は、<!-- REF #SystemWorkerClass.postMessage().Summary -->外部プロセスの入力ストリーム (stdin) への書き込みをおこないます<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。 *message* には *stdin* に書き込むテキストを渡します。
 
-`.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
+`.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリーデータを送信することもできます。
 
 [options オブジェクト](#options-オブジェクト) の `.dataType` プロパティを使って、レスポンス本文が BLOB を返すようにできます。
 

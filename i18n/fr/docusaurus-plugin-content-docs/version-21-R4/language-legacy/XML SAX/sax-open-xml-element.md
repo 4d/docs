@@ -5,7 +5,7 @@ slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* ; *balise* {; *nomAttribut* ; *valeurAttribut*} {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* : Time ; *balise* : Text {; ...(*nomAttribut* : Text ; *valeurAttribut* : Text)} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 <div class="no-index">
 

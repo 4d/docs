@@ -4,11 +4,11 @@ title: 4D en un coup d'œil
 slug: /GettingStarted/overview
 ---
 
-A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, desktop, or mobile), from the database structure to the user interface, including code, web pages, forms, menus, user settings, or any required resources. Un projet 4D est principalement constitué de fichiers texte.
+Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise. Un projet 4D est principalement constitué de fichiers texte.
 
 ## Fichiers du projet
 
-4D project files are open and edited using regular 4D platform applications (4D or 4D Server), on Windows or macOS. With 4D, full-featured editors are available to manage files, including a [code editor](../code-editor/write-class-method.md), a [web interface builder (4D Qodly Pro)](https://developer.4d.com/qodly/), a [form editor](../FormEditor/formEditor.md), a structure editor, a menu editor...
+Les fichiers de projet 4D sont ouverts et édités à l'aide des applications standard de la plate-forme 4D (4D ou 4D Server) sous Windows ou macOS. Avec 4D, des éditeurs complets sont disponibles pour gérer les fichiers, y compris un [éditeur de code](../code-editor/write-class-method.md), un [constructeur d'interface web (4D Qodly Pro)](https://developer.4d.com/qodly/), un [éditeur de formulaires](../FormEditor/formEditor.md), un éditeur de structure, un éditeur de menu...
 
 Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
 
@@ -16,18 +16,18 @@ De plus, les fichiers de projet 4D facilitent la programmation générique, la c
 
 ## Développement
 
-Les projets 4D sont développés à l'aide de l'application **4D**. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a web interface builder, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
+Les projets 4D sont développés à l'aide de l'application **4D**. Elle fournit un Environnement de Développement Intégré (IDE) pour les projets 4D ainsi qu'un serveur web, un constructeur d'interface web, un générateur d'application mobile, et un environnement d'exécution d'application, permettant de développer, tester et déboguer tout type de projet.
 
-### Contrôle de la source
+### Contrôle des sources
 
 Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
-### Development mode on 4D Server
+### Mode développement sur 4D Server
 
-If you are a small-size development team and you do not want to use a source control tool, you can use the [**Development mode**](../Desktop/clientServer.md#development-mode) of 4D Server, allowing developers to work online on the same project with 4D in remote mode. Note that this alternative mode should be used in specific cases; using an organisation based upon source control tools (see above) is usually recommended.
+Si vous êtes une petite équipe de développement et que vous ne voulez pas utiliser un outil de contrôle des sources, vous pouvez utiliser le [**mode développement**](../Desktop/clientServer.md#development-mode) de 4D Server, permettant aux développeurs de travailler en ligne sur le même projet avec 4D en mode distant. Notez que ce mode alternatif doit être utilisé dans des cas spécifiques ; une organisation basée sur les outils de contrôle des sources est généralement recommandé.
 
 ## Déploiement
 
-Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés. 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or [mobile applications](https://developer.4d.com/go-mobile/).
+Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés. 4D vous permet de créer plusieurs types d'applications à partir de vos projets, y compris des applications [web](WebServer/webServer.md), des applications [desktop](Desktop/building.md) (client/serveur ou mono-utilisateur) ou des [applications mobiles](https://developer.4d.com/go-mobile/).
 
 Les applications back end peuvent être déployées à l'aide de 4D Server, 4D ou [fusionnées avec 4D Volume Desktop](../Desktop/building.md).

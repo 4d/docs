@@ -1,4 +1,4 @@
----
+﻿---
 id: 4d-write-pro-documents
 title: 4D Write Pro documents
 displayed_sidebar: docs
@@ -28,12 +28,12 @@ You can always reopen a .4wp document with a previous version of 4D Write Pro. I
 
 ## Storing 4D Write Pro documents in 4D Object fields
 
-You can store your 4D Write Pro documents automatically in the 4D data file. If you created a 4D Write Pro area on a form and created an Object field to store the area’s contents, any text entered in the area is saved automatically with each record when the record is validated. You can then use the [QUERY BY ATTRIBUTE](../../commands/query-by-attribute) command in order to select records based on the value of their internal attributes. You can also add and query your own attributes with 4D Write Pro areas. 
+You can store your 4D Write Pro documents automatically in the 4D data file. If you created a 4D Write Pro area on a form and created an Object field to store the area’s contents, any text entered in the area is saved automatically with each record when the record is validated. You can then use the [QUERY BY ATTRIBUTE](../commands/query-by-attribute) command in order to select records based on the value of their internal attributes. You can also add and query your own attributes with 4D Write Pro areas. 
 
 This section describes the following features:
 
 * Binding a 4D Object field to a 4D Write Pro area in a form
-* Setting, getting, and querying custom attributes of stored 4D Write Pro documents using the [OB SET](../../commands/ob-set), [OB Get](../../commands/ob-get) standard object commands, and [QUERY BY ATTRIBUTE](../../commands/query-by-attribute).
+* Setting, getting, and querying custom attributes of stored 4D Write Pro documents using the [OB SET](../commands/ob-set), [OB Get](../commands/ob-get) standard object commands, and [QUERY BY ATTRIBUTE](../commands/query-by-attribute).
 
 ### Assigning a 4D Object field to a 4D Write Pro area 
 
@@ -62,9 +62,9 @@ Your 4D Write Pro area is then associated with the field, ensuring that its cont
 
 When 4D Write Pro areas are stored in Object fields, you can save and read any custom attributes with the 4D Write Pro document, such as, for example, the writer's name, the document category, or any additional information you may find useful. You can then query your custom attributes to select records matching the criteria.
 
-Custom attributes will be exported with the [WP EXPORT DOCUMENT](../commands/wp-export-document) or [WP EXPORT VARIABLE](../commands/wp-export-variable) commands. They will be exported as well when converting a 4D Write Pro Object field to JSON using the [JSON Stringify](../../commands/json-stringify) command (along with the 4D Write Pro main document attributes).
+Custom attributes will be exported with the [WP EXPORT DOCUMENT](./commands/wp-export-document) or [WP EXPORT VARIABLE](./commands/wp-export-variable) commands. They will be exported as well when converting a 4D Write Pro Object field to JSON using the [JSON Stringify](../commands/json-stringify) command (along with the 4D Write Pro main document attributes).
 
-To set or get custom attributes, you just need to use object notation or the [OB Get](../../commands/ob-get) and [OB SET](../../commands/ob-set) commands.
+To set or get custom attributes, you just need to use object notation or the [OB Get](../commands/ob-get) and [OB SET](../commands/ob-set) commands.
 
 For example, in the form method, you can write:
 
@@ -111,7 +111,7 @@ Since custom attributes share the same naming space as 4D Write Pro internal att
 
 :::
 
-**Note:** Custom attributes cannot be handled by the [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), and [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) commands (they only support 4D Write Pro internal attributes). 
+**Note:** Custom attributes cannot be handled by the [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes), and [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) commands (they only support 4D Write Pro internal attributes). 
 
 
 
@@ -119,7 +119,7 @@ Since custom attributes share the same naming space as 4D Write Pro internal att
 
 ## Opening and exporting documents
 
-In 4D applications, 4D Write Pro documents are created, imported, and exported by means of specific commands found in the **4D Write Pro** theme ([WP EXPORT DOCUMENT](../commands/wp-export-document), [WP EXPORT VARIABLE](../commands/wp-export-variable), [WP Import document](../commands/wp-import-document), [WP New](../commands/wp-new)).
+In 4D applications, 4D Write Pro documents are created, imported, and exported by means of specific commands found in the **4D Write Pro** theme ([WP EXPORT DOCUMENT](./commands/wp-export-document), [WP EXPORT VARIABLE](./commands/wp-export-variable), [WP Import document](./commands/wp-import-document), [WP New](./commands/wp-new)).
 
 You can also [associate a 4D Write Pro area with an Object field](#storing-4d-write-pro-documents-in-4d-object-fields) of the database. This way, each 4D Write Pro document is automatically saved with the record and stored in the database's data. 
 
@@ -133,15 +133,15 @@ You can also [associate a 4D Write Pro area with an Object field](#storing-4d-wr
 
 ### Printing documents in 4D forms 
 
-You can print 4D Write Pro embedded objects as part of any kind of [4D form](../../FormEditor/forms.md) (project, table, input, or output) using standard 4D printing commands such as [PRINT SELECTION](../../commands/print-selection) or [PRINT RECORD](../../commands/print-record). 
+You can print 4D Write Pro embedded objects as part of any kind of [4D form](../../FormEditor/forms.md) (project, table, input, or output) using standard 4D printing commands such as [PRINT SELECTION](../commands/print-selection) or [PRINT RECORD](../commands/print-record). 
 
 The standard *Print Variable Frame* option is also supported(\*) for 4D Write Pro areas, allowing you to manage size during printing. When this option is checked, the margins (outside and inside) and top border are only applied to the first page, and the margins (outside and inside) and bottom border are only applied to the last page. Pagination properties of the document are ignored: widow and orphan control is disabled and page breaks are not applied (these properties are only used for page rendering on screen, or for standalone printing of the document). When the **Print Variable Frame** option is selected, only objects located above the form area are printed. For more information about this option, refer to "*Print Variable Frame*" in the Design Reference manual.
 
-(\*) The [Print object](../../commands/print-object) and [Print form](../../commands/print-form) commands are not compatible with this option. 
+(\*) The [Print object](../commands/print-object) and [Print form](../commands/print-form) commands are not compatible with this option. 
 
 #### View mode for printing 
 
-Regardless of the **View mode** set for the 4D Write Pro area (see *Configuring View properties*), it is always printed as in the **Embedded** mode when you use a 4D printing command such as [Print form](../../commands/print-form). In this case, the following Appearance settings are not taken into account for the 4D Write Pro form objects: Page view mode (always "Embedded"), Show headers, Show footers, Show page frame (always "No"), Show hidden characters (always "No"). 
+Regardless of the **View mode** set for the 4D Write Pro area (see *Configuring View properties*), it is always printed as in the **Embedded** mode when you use a 4D printing command such as [Print form](../commands/print-form). In this case, the following Appearance settings are not taken into account for the 4D Write Pro form objects: Page view mode (always "Embedded"), Show headers, Show footers, Show page frame (always "No"), Show hidden characters (always "No"). 
 
 #### Example 
 
@@ -168,8 +168,8 @@ Starting with 4D v15 R5, 4D Write Pro includes printing features allowing you to
 
 Basically, two commands handle the 4D Write Pro printing features: **WP PRINT** and **WP USE PAGE SETUP**.
 
-* [WP PRINT](../commands/wp-print) launches a print job for a 4D Write Pro document or adds the document to a current print job.
-* [WP USE PAGE SETUP](../commands/wp-use-page-setup) modifies the current printer page settings based on the 4D Write Pro document attributes for page size and orientation.
+* [WP PRINT](./commands/wp-print) launches a print job for a 4D Write Pro document or adds the document to a current print job.
+* [WP USE PAGE SETUP](./commands/wp-use-page-setup) modifies the current printer page settings based on the 4D Write Pro document attributes for page size and orientation.
 
 **Note:** On machines with Windows 7 or Windows Server 2008 R2, make sure that the *Platform Update for Windows 7* has been installed so that the printing features are supported.
 
@@ -177,6 +177,6 @@ Basically, two commands handle the 4D Write Pro printing features: **WP PRINT** 
 
 The following 4D commands support 4D Write Pro printing features:
 
-* [SET PRINT OPTION](../../commands/set-print-option) and [GET PRINT OPTION](../../commands/get-print-option): All options are supported for 4D Write Pro documents printed by [WP PRINT](../commands/wp-print). For Paper option and Orientation option, you may find it more efficient to call [WP USE PAGE SETUP](../commands/wp-use-page-setup) in order to easily synchronize these attributes with the 4D Write Pro document settings. The Page range option (15) allows you to specify the page range to print.
-* [PRINT SETTINGS](../../commands/print-settings): Defines print settings for the current printer; if [WP PRINT](../commands/wp-print) is called afterwards, it takes any print settings modified by means of the Print Settings dialog boxes into account (except for margins, which are always based on the 4D Write Pro document).
-* [OPEN PRINTING JOB](../../commands/open-printing-job) and [CLOSE PRINTING JOB](../../commands/close-printing-job): [WP PRINT](../commands/wp-print) can be called between these commands in order to insert one or more 4D Write Pro documents into a single print job.
+* [SET PRINT OPTION](../commands/set-print-option) and [GET PRINT OPTION](../commands/get-print-option): All options are supported for 4D Write Pro documents printed by [WP PRINT](./commands/wp-print). For Paper option and Orientation option, you may find it more efficient to call [WP USE PAGE SETUP](./commands/wp-use-page-setup) in order to easily synchronize these attributes with the 4D Write Pro document settings. The Page range option (15) allows you to specify the page range to print.
+* [PRINT SETTINGS](../commands/print-settings): Defines print settings for the current printer; if [WP PRINT](./commands/wp-print) is called afterwards, it takes any print settings modified by means of the Print Settings dialog boxes into account (except for margins, which are always based on the 4D Write Pro document).
+* [OPEN PRINTING JOB](../commands/open-printing-job) and [CLOSE PRINTING JOB](../commands/close-printing-job): [WP PRINT](./commands/wp-print) can be called between these commands in order to insert one or more 4D Write Pro documents into a single print job.

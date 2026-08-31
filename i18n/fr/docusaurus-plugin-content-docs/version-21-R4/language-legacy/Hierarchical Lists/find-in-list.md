@@ -5,7 +5,7 @@ slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *liste* ; *valeur* ; *portée* {; *tabEléments* {; *}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in list.Syntax-->**Find in list** ( * ; *liste* : Text ; *valeur* : Text ; *portée* : Integer {; *tabEléments* : Integer array} {; *} ) : Integer<br/>**Find in list** ( *liste* : Integer ; *valeur* : Text ; *portée* : Integer {; *tabEléments* : Integer array} {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
 <div class="no-index">
 

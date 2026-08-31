@@ -5,17 +5,17 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *liste* ; *refElément* ; *sélecteur* ; *valeur* )<br/>**GET LIST ITEM PARAMETER** ( * ; *liste* ; * ; *sélecteur* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( * ; *liste* : Text ; *refElément* : Integer, Operator ; *sélecteur* : Text ; *valeur* : Variable )<br/>**GET LIST ITEM PARAMETER** ( *liste* : Integer ; *refElément* : Integer, Operator ; *sélecteur* : Text ; *valeur* : Variable )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| * | Operator | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
 | liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| refElément | Integer, Operator | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
 | sélecteur | Text | &#8594;  | Constante de paramètre |
-| valeur | Text, Boolean, Real | &#8592; | Valeur courante du paramètre |
+| valeur | Variable | &#8592; | Valeur courante du paramètre (variable de type texte, booleen ou numérique) |
 </div>
 <!-- END REF-->
 

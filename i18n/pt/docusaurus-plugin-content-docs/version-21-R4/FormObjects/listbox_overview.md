@@ -59,7 +59,7 @@ Há vários tipos de list boxes com seus próprios comportamentos e propriedades
 
 Pode configurar completamente um objeto list box através de suas propriedades e também pode gerenciar dinamicamente por programação.
 
-Consulte a página [Resumo dos comandos List Box](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) da *Referência da linguagem 4D* para obter mais informações. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
+Consulte a página [Resumo dos comandos List Box](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) da *Referência da linguagem 4D* para obter mais informações. Refer to the [List boxes and the 4D Language](#list-boxes-and-the-4d-language) paragraph.
 
 ## Gerenciar entrada
 

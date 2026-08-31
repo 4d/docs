@@ -5,14 +5,15 @@ slug: /commands/print-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *laTable* {; * } )<br/>**PRINT RECORD** ( *laTable {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *laTable* : Table {; *} )<br/>**PRINT RECORD** ( *laTable* : Table {; > : > } )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table de laquelle imprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| * &#124; > | Opérateur | &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
+| * | Operator | &#8594;  | Supprimer les boîtes de dialogue d'impression |
+| > | > | &#8594;  | Ne pas réinitialiser les paramètres d'impression |
 </div>
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *grafImagen* : Picture ; *grafNum* : Integer, Object ; *xCategorias* : Array {; *...yValores* : Array} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphPicture* : Picture ; *graphNumber* : Integer ; *xLabels* : Array {; *...yElements* : Array} )<br/>**GRAPH** ( *graphPicture* : Picture ; *graphSettings* : Object ; *xLabels* : Array {; *...yElements* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 <div class="no-index">
 
@@ -13,8 +13,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | grafImagen | Picture | &#8594; | Variable imagen |
 | grafNum | Integer, Object | &#8594; | Número de tipo de gráfico |
+| graphSettings | Object | &#8594;  | Parámetros del gráfico |
 | xCategorias | Array | &#8594; | Categorías para el eje x |
-| yValores | Array | &#8594; | Valores a representar gráficamente (hasta 8) |
+| zValores | Array | &#8594; | Valores a representar gráficamente (hasta 8) |
 </div>
 <!-- END REF-->
 

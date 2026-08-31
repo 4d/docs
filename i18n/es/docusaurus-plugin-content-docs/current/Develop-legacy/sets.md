@@ -1,168 +1,168 @@
 ---
 id: sets
-title: Sets
+title: Conjuntos
 slug: /Develop/sets
 displayed_sidebar: docs
 ---
 
 
-Sets offer you a powerful, swift means for manipulating record selections. Besides the ability to create sets, relate them to the current selection, and store, load, and clear sets, 4D offers three standard set operations:
+Los conjuntos le ofrecen un medio potente y rápido de manipular las selecciones de registros. Además de la posibilidad de crear conjuntos, relacionarlos con la selección actual, así como almacenar, cargar y borrar conjuntos, 4D ofrece tres operaciones estándar sobre conjuntos:
 
-- Intersection
-- Union
-- Difference.
+- Intersección
+- Unión
+- Diferencia.
 
 
-## Sets and the Current Selection  
+## Conjuntos y selección actual
 
-A set is a compact representation of a selection of records. The idea of sets is closely bound to the idea of the current selection. Sets are generally used for the following purposes:
+Un conjunto es una representación compacta de una selección de registros. La idea de los conjuntos está estrechamente ligada a la idea de la selección actual. Los conjuntos se utilizan generalmente para los siguientes propósitos:
 
-- To save and later restore a selection when the order does not matter
-- To access the selection a user made on screen (the `UserSet`)
-- To perform a logical operation between selections.
+- Guardar y restaurar posteriormente una selección cuando el orden no importa
+- Acceder a la selección que un usuario ha realizado en pantalla (el `UserSet`)
+- Realizar una operación lógica entre selecciones.
 
-The current selection is a list of references that points to each record that is currently selected. The list exists in memory. Only currently selected records are in the list. A selection doesn’t actually contain the records, but only a list of references to the records. Each reference to a record takes 4 bytes in memory. When you work on a table, you always work with the records in the current selection. When a selection is sorted, only the list of references is rearranged. There is only one current selection for each table inside a process.
+La selección actual es una lista de referencias que apunta a cada registro seleccionado actualmente. La lista existe en memoria. Solo los registros seleccionados actualmente están en la lista. Una selección no contiene realmente los registros, sino únicamente una lista de referencias a los registros. Cada referencia a un registro ocupa 4 bytes en memoria. Cuando trabaja sobre una tabla, siempre trabaja con los registros de la selección actual. Cuando una selección se ordena, solo se reorganiza la lista de referencias. Solo hay una selección actual para cada tabla dentro de un proceso.
 
-Like a current selection, a set represents a selection of records. A set does this by using a very compact representation for each record. Each record is represented by one bit (one-eighth of a byte). Operations using sets are very fast, because computers can perform operations on bits very quickly. A set contains one bit for every record in the table, whether or not the record is included in the set. In fact, each bit is equal to 1 or 0, depending on whether or not the record is in the set.
+Al igual que una selección actual, un conjunto representa una selección de registros. Un conjunto lo hace utilizando una representación muy compacta para cada registro. Cada registro se representa mediante un bit (un octavo de byte). Las operaciones que utilizan conjuntos son muy rápidas, porque los ordenadores pueden realizar operaciones sobre bits muy rápidamente. Un conjunto contiene un bit por cada registro de la tabla, esté o no incluido el registro en el conjunto. De hecho, cada bit es igual a 1 o 0, según el registro esté o no en el conjunto.
 
-Sets are very economical in terms of RAM space. The size of a set, in bytes, is always equal to the total number of records in the table divided by 8. For example, if you create a set for a table containing 10,000 records, the set takes up 1,250 bytes, which is about 1.2K in RAM.
+Los conjuntos son muy económicos en cuanto a espacio de RAM. El tamaño de un conjunto, en bytes, siempre es igual al número total de registros de la tabla dividido por 8. Por ejemplo, si crea un conjunto para una tabla que contiene 10.000 registros, el conjunto ocupa 1.250 bytes, es decir, alrededor de 1,2 K en RAM.
 
-There can be many sets for each table. In fact, sets can be saved to disk separately from the database. To change a record belonging to a set, first you must use the set as the current selection, then modify the record or records.
+Puede haber muchos conjuntos para cada tabla. De hecho, los conjuntos pueden guardarse en disco por separado de la base de datos. Para cambiar un registro perteneciente a un conjunto, primero debe utilizar el conjunto como la selección actual y luego modificar el registro o registros.
 
-A set is never in a sorted order—the records are simply indicated as belonging to the set or not. On the other hand, a named selection is in sorted order, but it requires more memory in most cases. For more information about named selections, see the Named Selections section.
+Un conjunto nunca está en un orden clasificado — los registros simplemente se indican como pertenecientes o no al conjunto. Por otro lado, una selección nombrada está en orden clasificado, pero requiere más memoria en la mayoría de los casos. Para más información sobre las selecciones nombradas, consulte la sección Selecciones nombradas.
 
-A set "remembers" which record was the current record at the time the set was created. The following table compares the concepts of the current selection and of sets:
+Un conjunto "recuerda" qué registro era el registro actual en el momento en que se creó el conjunto. La siguiente tabla compara los conceptos de la selección actual y de los conjuntos:
 
-|Comparison|Current Selection|Sets|
+|Comparación|Selección actual|Conjuntos|
 |---|---|---|
-|Number per table|1|0 to many|
-|Sortable|Yes|No|
-|Can be saved on disk|No|Yes|
-|RAM per record(in bytes)|Number of	selected records * 4|Total number of records/8|
-|Combinable|	No|	Yes|
-|Contains current record|	Yes|	Yes, as of the time the set was created|
+|Número por tabla|1|0 a varios|
+|Ordenable|Sí|No|
+|Puede guardarse en disco|No|Sí|
+|RAM por registro (en bytes)|Número de registros seleccionados * 4|Número total de registros/8|
+|Combinable|	No|	Sí|
+|Contiene el registro actual|	Sí|	Sí, tal como estaba en el momento en que se creó el conjunto|
 
-When you create a set, it belongs to the table from which you created it. Set operations can be performed only between sets belonging to the same table.
+Cuando crea un conjunto, este pertenece a la tabla a partir de la cual lo creó. Las operaciones sobre conjuntos solo pueden realizarse entre conjuntos que pertenezcan a la misma tabla.
 
-Sets are independent from the data. This means that after changes are made to a file, a set may no longer be accurate. There are many operations that can cause a set to be inaccurate. For example, if you create a set of all the people from New York City, and then change the data in one of those records to “Boston” the set would not change, because the set is just a representation of a selection of records. Deleting records and replacing them with new ones also changes a set, as well as compacting the data. Sets can be guaranteed to be accurate only as long as the data in the original selection has not been changed.
+Los conjuntos son independientes de los datos. Esto significa que, tras realizar cambios en un archivo, un conjunto puede dejar de ser exacto. Hay muchas operaciones que pueden hacer que un conjunto sea inexacto. Por ejemplo, si crea un conjunto de todas las personas de Nueva York y luego cambia los datos de uno de esos registros a "Boston", el conjunto no cambiaría, porque el conjunto es solo una representación de una selección de registros. Eliminar registros y reemplazarlos por nuevos también cambia un conjunto, al igual que el compactado de los datos. Solo se puede garantizar que los conjuntos sean exactos mientras los datos de la selección original no hayan sido modificados.
 
-## Process and Interprocess Sets  
+## Conjuntos de proceso e interproceso
 
-You can have the following three types of sets:
+Puede tener los siguientes tres tipos de conjuntos:
 
-- **Process sets**: A process set can only be accessed by the process in which it has been created. `LockedSet` is a process set. Process sets are cleared as soon as the process method ends. Process sets do not need any special prefix in the name.
-- **Interprocess sets**: A set is an interprocess set if the name of the set is preceded by the symbols (<>) — a “less than” sign followed by a “greater than” sign. An interprocess set is “visible” to all the processes of the database.
-In client/server mode, an interprocess set is “visible” to processes of the machine where it was created (client or server).
-The name of an interprocess set must be unique in the database.
-- **Local Sets/Client Sets**: Local/client sets are intended for use in client/server mode. The name of a local/client set is always preceded by the dollar sign ($) -- except for the UserSet system set. Unlike other types of sets, a local/client set is stored on the client machine.
+- **Conjuntos de proceso**: Un conjunto de proceso solo puede ser accedido por el proceso en el que se ha creado. `LockedSet` es un conjunto de proceso. Los conjuntos de proceso se borran en cuanto termina el método de proceso. Los conjuntos de proceso no necesitan ningún prefijo especial en el nombre.
+- **Conjuntos interproceso**: Un conjunto es un conjunto interproceso si el nombre del conjunto va precedido de los símbolos (<>) — un signo "menor que" seguido de un signo "mayor que". Un conjunto interproceso es "visible" para todos los procesos de la base de datos.
+En modo cliente/servidor, un conjunto interproceso es "visible" para los procesos de la máquina donde se creó (cliente o servidor).
+El nombre de un conjunto interproceso debe ser único en la base de datos.
+- **Conjuntos locales/conjuntos cliente**: Los conjuntos locales/cliente están destinados a utilizarse en modo cliente/servidor. El nombre de un conjunto local/cliente siempre va precedido del signo de dólar ($) -- excepto para el conjunto sistema UserSet. A diferencia de otros tipos de conjuntos, un conjunto local/cliente se almacena en la máquina cliente.
 
-:::note Notes
+:::note Notas
 
-- The maximum size of a set name is 255 characters (excluding <> and $ symbols).
-- For more information about the use of sets in client/server mode, please refer to 4D Server, Sets and Named Selections.
+- El tamaño máximo de un nombre de conjunto es de 255 caracteres (excluyendo los símbolos <> y $).
+- Para más información sobre el uso de conjuntos en modo cliente/servidor, consulte 4D Server, Conjuntos y selecciones nombradas.
 
 :::
 
 
-## Visibility of Sets  
+## Visibilidad de los conjuntos
 
-The following table indicates the principles concerning the visibility of sets depending on their scope and where they were created:
+La siguiente tabla indica los principios relativos a la visibilidad de los conjuntos en función de su alcance y del lugar donde se crearon:
 
  
 
-||Client Process|Other processes on the same client|Other clients|Server process|Other processes on the server|
+||Proceso cliente|Otros procesos en el mismo cliente|Otros clientes|Proceso servidor|Otros procesos en el servidor|
 |---|---|---|---|---|---|
-|Creation in a client process	||||||
+|Creación en un proceso cliente	||||||
 |$test|X	|||||
 |test	| X||| X(Trigger)	||
 |<>test	| X|X	||||
-|Creation in a server process||||||
+|Creación en un proceso servidor||||||
 |$test|||| X||
 |test	||||X||
 |<>test||||X| X|
 
 
-## Sets and Transactions  
+## Conjuntos y transacciones
 
-A set can be created inside a [transaction](./transactions.md). It is possible to create a set of the records created inside a transaction and a set of records created or modified outside of a transaction. When the transaction ends, the set created during the transaction should be cleared, because it may not be an accurate representation of the records, especially if the transaction was canceled.
+Un conjunto puede crearse dentro de una [transacción](./transactions.md). Es posible crear un conjunto de los registros creados dentro de una transacción y un conjunto de registros creados o modificados fuera de una transacción. Cuando la transacción finaliza, el conjunto creado durante la transacción debería borrarse, porque puede no ser una representación exacta de los registros, especialmente si la transacción fue cancelada.
 
-## Example  
+## Ejemplo
 
-The following example deletes duplicate records from a table which contains information about people. A For...End for loop moves through all the records, comparing the current record to the previous record. If the name, address, and zip code are the same, then the record is added to a set. At the end of the loop, the set is made the current selection and the (old) current selection is deleted:
+El siguiente ejemplo elimina los registros duplicados de una tabla que contiene información sobre personas. Un bucle For...End for recorre todos los registros, comparando el registro actual con el registro anterior. Si el nombre, la dirección y el código postal son iguales, el registro se añade a un conjunto. Al final del bucle, el conjunto se convierte en la selección actual y la (antigua) selección actual se elimina:
 
 ```4d
  CREATE EMPTY SET([People];"Duplicates")
-  // Create an empty set for duplicate records
+  // Crea un conjunto vacío para los registros duplicados
  ALL RECORDS([People])
-  // Select all records
-  // Sort the records by ZIP, address, and name so
-  // that the duplicates will be next to each other
+  // Selecciona todos los registros
+  // Ordena los registros por código postal, dirección y nombre para
+  // que los duplicados queden unos junto a otros
  ORDER BY([People];[People]ZIP;>;[People]Address;>;[People]Name;>)
-  // Initialize variables that hold the fields from the previous record
+  // Inicializa las variables que contienen los campos del registro anterior
  $Name:=[People]Name
  $Address:=[People]Address
  $ZIP:=[People]ZIP
-  // Go to second record to compare with first
+  // Va al segundo registro para compararlo con el primero
  NEXT RECORD([People])
  For($i;2;Records in table([People]))
-  // Loop through records starting at 2
-  // If the name, address, and ZIP are the same as the
-  // previous record then it is a duplicate record.
+  // Bucle a través de los registros a partir del 2
+  // Si el nombre, la dirección y el código postal son iguales a los del
+  // registro anterior, entonces es un registro duplicado.
     If(([People]Name=$Name) & ([People]Address=$Address) & ([People]ZIP=$ZIP))
-  // Add current record (the duplicate) to set
+  // Añade el registro actual (el duplicado) al conjunto
        ADD TO SET([People];"Duplicates")
     Else
-  // Save this record’s name, address, and ZIP for comparison with the next record
+  // Guarda el nombre, la dirección y el código postal de este registro para compararlos con el siguiente
        $Name:=[People]Name
        $Address:=[People]Address
        $ZIP:=[People]ZIP
     End if
-  // Move to the next record
+  // Pasa al siguiente registro
     NEXT RECORD([People])
  End for
-  // Use duplicate records that were found
+  // Utiliza los registros duplicados que se encontraron
  USE SET("Duplicates")
-  // Delete the duplicate records
+  // Elimina los registros duplicados
  DELETE SELECTION([People])
-  // Remove the set from memory
+  // Retira el conjunto de la memoria
  CLEAR SET("Duplicates")
 ```
 
-As an alternative to immediately deleting records at the end of the method, you could display them on screen or print them, so that a more detailed comparison can be made.
+Como alternativa a eliminar inmediatamente los registros al final del método, podría mostrarlos en pantalla o imprimirlos, para poder realizar una comparación más detallada.
 
 
-## The UserSet System Set  
+## El conjunto sistema UserSet
 
-4D maintains a system set named `UserSet`, which automatically stores the most recent selection of records highlighted on screen by the user. Thus, you can display a group of records with [`MODIFY SELECTION`](../commands/modify-selection) or [`DISPLAY SELECTION`](../commands/display-selection), ask the user to select from among them and turn the results of that manual selection into a selection or into a set that you name.
+4D mantiene un conjunto sistema llamado `UserSet`, que almacena automáticamente la selección más reciente de registros resaltados en pantalla por el usuario. Así, puede mostrar un grupo de registros con [`MODIFY SELECTION`](../commands/modify-selection) o [`DISPLAY SELECTION`](../commands/display-selection), pedir al usuario que seleccione de entre ellos y convertir el resultado de esa selección manual en una selección o en un conjunto que usted nombre.
 
-::info 4D Server
+:::info 4D Server
 
-Although its name does not begin with the character "$", the `UserSet` system set is a client set. So, when using [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) and [`DIFFERENCE`](../commands/difference), make sure you compare `UserSet` only to client sets. 
+Aunque su nombre no comienza por el carácter "$", el conjunto sistema `UserSet` es un conjunto cliente. Por lo tanto, al utilizar [`INTERSECTION`](../commands/intersection), [`UNION`](../commands/union) y [`DIFFERENCE`](../commands/difference), asegúrese de comparar `UserSet` únicamente con conjuntos cliente.
 
 :::
 
-There is only one `UserSet` for a [process](../Develop/processes.md). Each table does not have its own `UserSet`. `UserSet` becomes "owned" by a table when a selection of records is displayed for the table.
+Solo hay un `UserSet` para un [proceso](../Develop/processes.md). Cada tabla no tiene su propio `UserSet`. `UserSet` pasa a ser "propiedad" de una tabla cuando se muestra una selección de registros para esa tabla.
 
-4D manages the `UserSet` set for list forms displayed in Design mode or using the [`MODIFY SELECTION`](../commands/modify-selection) or [`DISPLAY SELECTION`](../commands/display-selection) commands. However, this mechanism is not active for [subforms](../FormObjects/subform_overview.md).
+4D gestiona el conjunto `UserSet` para los formularios lista mostrados en modo Diseño o mediante los comandos [`MODIFY SELECTION`](../commands/modify-selection) o [`DISPLAY SELECTION`](../commands/display-selection). Sin embargo, este mecanismo no está activo para los [subformularios](../FormObjects/subform_overview.md).
 
-The following method illustrates how you can display records, allow the user to select some of them, and then use UserSet to display the selected records:
+El siguiente método ilustra cómo puede mostrar registros, permitir que el usuario seleccione algunos de ellos y luego utilizar UserSet para mostrar los registros seleccionados:
 
 ```4d
-  // Display all records and allow user to select any number of them.
-  // Then display this selection by using UserSet to change the current selection.
- FORM SET OUTPUT([People];"Display") // Set the output layout
- ALL RECORDS([People]) // Select all people
- ALERT("Press Ctrl or Command and Click to select the people required.")
- DISPLAY SELECTION([People]) // Display the people
- USE SET("UserSet") // Use the people that were selected
- ALERT("You chose the following people.")
- DISPLAY SELECTION([People]) // Display the selected people
+  // Muestra todos los registros y permite que el usuario seleccione cualquier número de ellos.
+  // Luego muestra esta selección utilizando UserSet para cambiar la selección actual.
+ FORM SET OUTPUT([People];"Display") // Define el formulario de salida
+ ALL RECORDS([People]) // Selecciona todas las personas
+ ALERT("Pulse Ctrl o Comando y haga clic para seleccionar las personas necesarias.")
+ DISPLAY SELECTION([People]) // Muestra las personas
+ USE SET("UserSet") // Utiliza las personas que se seleccionaron
+ ALERT("Ha elegido las siguientes personas.")
+ DISPLAY SELECTION([People]) // Muestra las personas seleccionadas
 ```
 
-## The LockedSet System Set  
+## El conjunto sistema LockedSet
 
-The [`APPLY TO SELECTION`](../commands/apply-to-selection), [`DELETE SELECTION`](../commands/delete-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection) and [`JSON TO SELECTION`](../commands/json-to-selection) commands create a set named `LockedSet` when used in a multi-processing environment.
+Los comandos [`APPLY TO SELECTION`](../commands/apply-to-selection), [`DELETE SELECTION`](../commands/delete-selection), [`ARRAY TO SELECTION`](../commands/array-to-selection) y [`JSON TO SELECTION`](../commands/json-to-selection) crean un conjunto llamado `LockedSet` cuando se utilizan en un entorno multiproceso.
 
-Query commands also create a `LockedSet` system set when they find locked records in the 'query and lock' context (see the [`SET QUERY AND LOCK`](../commands/set-query-and-lock) command).
+Los comandos de búsqueda también crean un conjunto sistema `LockedSet` cuando encuentran registros bloqueados en el contexto de "búsqueda y bloqueo" (ver el comando [`SET QUERY AND LOCK`](../commands/set-query-and-lock)).
 
-`LockedSet` indicates which records were locked during the execution of the command.
+`LockedSet` indica qué registros fueron bloqueados durante la ejecución del comando.

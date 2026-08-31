@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text, Integer ; *modificadores* : Integer {; *processo* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text ; *modificadores* : Integer {; *processo* : Integer} )<br/>**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 <div class="no-index">
 

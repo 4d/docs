@@ -1,12 +1,12 @@
 ---
 id: listbox-header-footer
-title: List Box Header and Footer
+title: En-tête et pied de Listbox
 ---
 
 :::note
 
-- To be able to access header properties for a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option.
-- Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
+- Pour pouvoir accéder aux propriétés d'en-tête pour une list box, vous devez avoir coché la propriété [Afficher en-têtes](properties_Headers.md#display-headers).
+- Pour pouvoir accéder aux propriétés de pied d'une List box, vous devez avoir coché la propriété [Afficher pieds](properties_Footers.md#display-footers).
 
 :::
 
@@ -18,7 +18,7 @@ Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans
 
 Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
 
-Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](./listbox_overview.md#managing-sorts).
+Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. En particulier, une icône peut être affichée dans l’en-tête à côté ou à la place du libellé de la colonne, notamment dans le cadre des [tris personnalisés](./listbox_overview.md#managing-sorts).
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 

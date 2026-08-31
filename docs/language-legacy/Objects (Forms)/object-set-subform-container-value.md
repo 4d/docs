@@ -31,9 +31,9 @@ displayed_sidebar: docs
 
 This command can only be used in the context of a form used as a subform. In any other context, it does nothing.
 
-Pass in *value* a value of the same type as the data source bound to the subform container. The data source must be an assignable expression (see *Assignable vs non-assignable expressions*), otherwise the command does nothing. 
+Pass in *value* a value of the same type as the data source bound to the subform container. The data source must be an [assignable expression](../../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions-assignable-vs-non-assignable-expressions), otherwise the command does nothing. 
 
-For more information on bound variables and form/subform interaction, see *Managing the bound variable* on developer.4d.com.
+For more information on bound variables and form/subform interaction, see [Using the bound variable or expression](../../FormObjects/subform_overview.md#using-the-bound-variable-or-expression).
 
 ## Example 
 

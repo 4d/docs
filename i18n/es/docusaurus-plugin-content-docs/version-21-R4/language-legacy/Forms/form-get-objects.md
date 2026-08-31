@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | arrObjetos | Text array | &#8592; | Nombre de los objetos del formulario |
 | arrVariables | Pointer array | &#8592; | Punteros a variables o campos asociados a los objetos |
 | arrPags | Integer array | &#8592; | Número de página de cada objeto |
-| opcionPag | Integer, * | &#8594; | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
+| opcionPag | Integer | &#8594; | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas |
 </div>
 <!-- END REF-->
 

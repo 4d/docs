@@ -5,14 +5,14 @@ slug: /commands/listbox-moved-column-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( {* ;} *objet* ; *ancPosition* ; *nouvPosition* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( * ; *objet* : Text ; *ancPosition* : Integer ; *nouvPosition* : Integer )<br/>**LISTBOX MOVED COLUMN NUMBER** ( *objet* : Variable ; *ancPosition* : Integer ; *nouvPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | ancPosition | Integer | &#8592; | Ancienne position de la colonne déplacée |
 | nouvPosition | Integer | &#8592; | Nouvelle position de la colonne déplacée |
 </div>

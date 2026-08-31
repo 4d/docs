@@ -5,14 +5,14 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *objet* ; *styleBordure* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *objet* : Text ; *styleBordure* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *objet* : Variable, Field ; *styleBordure* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | styleBordure | Integer | &#8594;  | Style de la ligne de bordure |
 </div>
 <!-- END REF-->

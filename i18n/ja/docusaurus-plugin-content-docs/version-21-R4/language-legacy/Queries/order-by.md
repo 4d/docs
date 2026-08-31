@@ -5,7 +5,7 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; *> or <*}) } {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table} {; ...(*aField* : Field {; *> または <* : >, <}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 <div class="no-index">
 

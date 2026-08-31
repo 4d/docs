@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, zoneWP est un nom d'objet de formulaire (chaîne). Si omis, zoneWP est un champ ou une variable objet |
 | zoneWP | Text | &#8594;  | Nom d'objet de formulaire (si * spécifié) ou champ ou variable objet 4D Write Pro (si * omis) |
-| textBoxID | Chaîne | &#x1F858; | ID of the text box (only filled if a text box has the focus) |
+| textBoxID | Chaîne | &#x1F858; | ID de la zone de texte (rempli uniquement si la zone de texte a le focus) |
 | Résultat | Integer | &#8592; | Cadre dans lequel se trouve le curseur |
 </div>
 <!-- END REF-->

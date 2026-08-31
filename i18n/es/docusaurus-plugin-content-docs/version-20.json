@@ -276,7 +276,7 @@
     "description": "The label for link 'Go Mobile' in sidebar 'docs', linking to 'https://developer.4d.com/go-mobile/'"
   },
   "sidebar.docs.link.4D for iOS (archive)": {
-    "message": "4D for iOS (archive)",
+    "message": "4D for iOS (archivo)",
     "description": "The label for link '4D for iOS (archive)' in sidebar 'docs', linking to 'https://developer.4d.com/4d-for-ios'"
   },
   "sidebar.docs.doc.Command Line Interface": {

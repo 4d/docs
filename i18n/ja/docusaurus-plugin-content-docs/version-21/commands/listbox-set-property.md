@@ -23,10 +23,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容      |
-| ----- | ------- |
-| 19 R6 | 変更      |
-| 16 R2 | Created |
+| リリース   | 内容                                                                                             |
+| ------ | ---------------------------------------------------------------------------------------------- |
+| 20 R10 | lk current item expression、 lk current item pos expression、 lk selected items expression のサポート |
+| 19 R6  | 変更                                                                                             |
+| 16 R2  | Created                                                                                        |
 
 </details>
 </div>

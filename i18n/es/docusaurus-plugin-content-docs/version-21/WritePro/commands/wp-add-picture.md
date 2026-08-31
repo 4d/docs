@@ -47,7 +47,7 @@ Por defecto, la imagen añadida es:
 - Aparece en la esquina superior izquierda de la papelera
 - Mostrar en todas las páginas
 
-La ubicación, la capa (en línea, delante/detrás del texto), la visibilidad y cualquier otra propiedad de la imagen pueden modificarse mediante el comando [WP SET ATTRIBUTES](wp-set-attributes.md), o mediante acciones estándar (ver *Uso de las acciones estándar 4D Write Pro*).
+The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
 
 **Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. Puede determinar si un objeto seleccionado es un objeto imagen comprobando el atributo `wk type`:
 

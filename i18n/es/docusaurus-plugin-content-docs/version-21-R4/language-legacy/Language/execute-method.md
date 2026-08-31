@@ -13,6 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | nomMetodo | Text | &#8594; | Nombre del método de proyecto a ejecutar |
 | result | Variable, Operator | &#8592; | Variable que recibe el resultado del método * para un método que no devuelve un resultado |
+| * | Operator | &#8594; | El método no devuelve ningún resultado |
 | param | Expression | &#8594; | Parámetro(s) del método |
 </div>
 <!-- END REF-->

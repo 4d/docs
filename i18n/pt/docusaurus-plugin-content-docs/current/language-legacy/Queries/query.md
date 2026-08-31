@@ -5,7 +5,7 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*tabela* : Table }{;}{ *criterioPesquisa* : Expression {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( *tabela* : Table {; *criterioPesquisa* : Expression {; *}} )<br/>**QUERY** ( *criterioPesquisa* : Expression {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 <div class="no-index">
 

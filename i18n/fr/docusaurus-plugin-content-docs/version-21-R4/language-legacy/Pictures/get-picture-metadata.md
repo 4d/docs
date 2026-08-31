@@ -5,7 +5,7 @@ slug: /commands/get-picture-metadata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *image* ; *nomMeta* ; *contenuMeta* {; *nomMeta2* ; *contenuMeta2* ; ... ; *nomMetaN* ; *contenuMetaN*} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *image* : Picture ; *nomMeta* : Text ; *contenuMeta* : Variable {; ...(*nomMeta* : Text ; *contenuMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE METADATA.Params-->
 <div class="no-index">
 

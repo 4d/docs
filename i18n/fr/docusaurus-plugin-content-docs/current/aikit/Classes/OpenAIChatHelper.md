@@ -36,26 +36,26 @@ Cette méthode crée un nouvel assistant de conversation avec l'invite système 
 
 **prompt**(*prompt* : Variant) : OpenAIChatCompletionsResult
 
-| Paramètres              | Type                                                          | Description                                                                                                                                                                                   |
-| ----------------------- | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *prompt*                | Text or [OpenAIMessage](OpenAIMessage.md)                     | The text prompt to send to OpenAI chat, or an OpenAIMessage object for more complex messages (e.g., with images or files). |
-| Résultat de la fonction | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                                                                                                                                         |
+| Paramètres              | Type                                                          | Description                                                                                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *prompt*                | Text ou [OpenAIMessage](OpenAIMessage.md)                     | L'invite de texte à envoyer à la conversation OpenAI ou un objet OpenAIMessage pour des messages plus complexes (par exemple, avec des images ou des fichiers). |
+| Résultat de la fonction | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                                                                                                                                              |
 
-Envoie une invite utilisateur au modèle de conversation et retourne la réponse générée. You can pass either a simple text string or an [OpenAIMessage](OpenAIMessage.md) object for more advanced scenarios like including images or files.
+Envoie une invite utilisateur au modèle de conversation et retourne la réponse générée. Vous pouvez passer soit une simple chaîne de texte ou un objet [OpenAIMessage](OpenAIMessage.md) pour des scénarios plus avancés comme des images ou des fichiers.
 
 #### Exemple d'utilisation
 
 ```4D
-// Simple text prompt
+// Invite de texte simple
 var $result:=$chatHelper.prompt("Hello, how can I help you today?")
 $result:=$chatHelper.prompt("Why 42?")
 
-// Using OpenAIMessage for advanced scenarios (e.g., with images)
+// Utilisation d'OpenAIMessage pour scénarios avancés (ex : avec images)
 var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "What's in this image?"})
 $message.addImageURL("https://example.com/photo.jpg"; "high")
 $result:=$chatHelper.prompt($message)
 
-// Using OpenAIMessage with files
+// Utilisation d'OpenAIMessage avec des fichiers
 var $fileMessage:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Analyze this document"})
 $fileMessage.addFileId($uploadedFile.id)
 $result:=$chatHelper.prompt($fileMessage)
@@ -78,21 +78,21 @@ $chatHelper.reset() // Efface tous les messages et outils précédents
 
 **registerTool**(*tool* : Object; *handler* : Variant)
 
-| Paramètres | Type   | Description                                                                                                                                           |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*     | Object | Objet de définition d'outil (ou instance [OpenAITool](OpenAITool.md))                                                              |
-| *handler*  | Object | The function to handle tool calls (4D.Function or Object), optional if defined inside *tool* as *handler* property |
+| Paramètres | Type   | Description                                                                                                                                                              |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *tool*     | Object | Objet de définition d'outil (ou instance [OpenAITool](OpenAITool.md))                                                                                 |
+| *handler*  | Object | Fonction pour gérer les appels d'outils (4D.Function ou Objet), facultative si elle est définie dans *tool* comme propriété *handler* |
 
 Enregistre un outil avec sa fonction de gestion automatique des appels d'outils.
 
 Le paramètre *handler* peut être :
 
 - Un objet **4D.Function** : Fonction de gestion directe
-- An **Object**: An object containing a formula property matching the tool function name
+- Un **Objet** : un objet contenant une propriété formula correspondant au nom de la fonction outil
 
 La fonction de gestion reçoit un objet contenant les paramètres transmis par l'appel à l'outil OpenAI. Cet objet contient des paires clé-valeur dont les clés correspondent aux noms des paramètres définis dans le schéma de l'outil et dont les valeurs sont les arguments réels fournis par le modèle d'IA.
 
-#### Register Tool Examples
+#### Exemples de Register Tool
 
 ```4D
 // Exemple 1: Enregistrement simple avec gestionnaire direct
@@ -128,7 +128,7 @@ Enregistre plusieurs outils à la fois. Le paramètre peut être :
 - **Objet** : Objet dont les propriétés sont des noms de fonctions correspondant à des définitions d'outils
 - **Objet avec attribut `tools`** : Objet contenant une collection `tools` et des propriétés formula correspondant à des noms d'outils
 
-#### Register Multiple Tools Examples
+#### Exemples de Register Tools multiples
 
 ##### Exemple 1 : Format collection avec des gestionnaires dans les outils
 

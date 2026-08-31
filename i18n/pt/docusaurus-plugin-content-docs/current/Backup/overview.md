@@ -13,10 +13,6 @@ Aplicações podem ser restauradas automaticamente quando uma aplicação danifi
 
 Além disso, o módulo de backup integrado pode aproveitar o arquivo .journal ([arquivo de log do banco de dados](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com uma aplicação em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que a aplicação for aberta. Pode ver os conteúdos do arquivo journal a qualquer momento.
 
-> Pode implementar também soluções alternativas para replicar e sincronizar dados para manter versões idênticas de aplicações por razões de backup. Essas soluções podem ser baseadas nos seguintes mecanismos e tecnologias:
->
-> - Configurando um espelho lógico com o 4D Server (usando os mecanismos do módulo de backup integrado)
-> - Sincronização usando SQL
-> - Sincronização usando HTTP (/rest/url)
+With 4D Server, you can also implement a [logical mirror](./mirror.md) for replicating and synchronizing data in order to maintain identical versions of applications for backup purposes.
 
 > Para obter uma visão geral das funcionalidades de segurança do 4D, consulte o [guia de segurança do 4D](https://blog.4d.com/4d-security-guide/).

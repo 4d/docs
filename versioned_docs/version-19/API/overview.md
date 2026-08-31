@@ -1402,7 +1402,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 |[`WP IMPORT STYLE SHEETS`](https://doc.4d.com/4dv19/help/command/en/page1673.html)|1673|
 |[`WP INSERT BREAK`](https://doc.4d.com/4dv19/help/command/en/page1413.html)|1413|
 |[`WP INSERT DOCUMENT`](https://doc.4d.com/4dv19/help/command/en/page1411.html)|1411|
-|[`WP INSERT FORMULA`](https://doc.4d.com/4dv19/help/command/en/page1703.html)|1703|
+|[`WP Insert formula`](https://doc.4d.com/4dv19/help/command/en/page1703.html)|1703|
 |[`WP INSERT PICTURE`](https://doc.4d.com/4dv19/help/command/en/page1437.html)|1437|
 |[`WP Insert table`](https://doc.4d.com/4dv19/help/command/en/page1473.html)|1473|
 |[`WP Is font style supported`](https://doc.4d.com/4dv19/help/command/en/page1363.html)|1363|

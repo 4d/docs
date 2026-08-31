@@ -5,7 +5,7 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*tabla* : Table ;} {; ...(*campoObjeto* : Field ; *rutaAtrib* : Text  {; >,<})} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*tabla* : Table ;} {; ...(*campoObjeto* : Field ; *rutaAtrib* : Text  {; *> o <* : >, <})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 <div class="no-index">
 

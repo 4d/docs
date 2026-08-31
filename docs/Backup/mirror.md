@@ -1,0 +1,86 @@
+---
+id: mirror
+title: Logical mirror
+---
+
+4D Server offers an integrated solution that allows the setting up of a backup system via a logical mirror. 
+
+## What is a logical mirror?  
+
+A logical mirror is a sophisticated backup mode, primarily intended for critical or high-load databases.
+
+Using a logical mirror consists in operating a project on one machine and keeping a copy of it that is periodically updated on a second machine. Both machines communicate via the network with the machine in operation regularly transmitting any changes made in the data to the mirror machine via the intermediary of the log file.
+
+In this way, when there is an incident affecting the operational database, the mirror database can be used to get things back in working order quickly without any data loss. Moreover, the operational database is never “blocked” by backup operations.
+
+## Why choose to back up using a logical mirror?  
+
+The use of a logical mirror corresponds to specific needs. The standard strategy based on periodic backups and the use of a log file in most cases offers a simple, reliable and inexpensive solution. The database is backed up regularly (every 24 hours in general). During backup, all processes are frozen. This period of partial unavailability is very short, and even in the case of large databases (greater than 2 GB), it lasts no longer than 5 minutes. This operation can be programmed to take place outside of normal periods of database usage.
+
+Nevertheless, for certain kinds of organizations, such as hospitals for instance, critical databases must be entirely operational 24 hours a day. The database cannot be "being backed up" (and thus unavailable), even for a very short period of time. In this case, setting up a logical mirror is an appropriate solution.
+
+:::note
+
+A mirror solution only reflects changes made to the **data**. This backup mode is not suitable for projects in the process of development, where frequent structural modifications will make the mirror rapidly obsolete or will require repeated updating of the mirror database structure.
+
+:::
+
+## How it works  
+
+Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file). 
+
+The following principles are implemented:
+
+- The application is installed on the main 4D Server machine (operational machine) and an identical copy of the application is installed on the 4D Server mirror machine.
+- A test on startup of the application (for instance, for the presence of a specific file in a subfolder of the 4D Server application) is used to distinguish between the two versions (operational and mirror) and thus execute the appropriate operations. 
+- On the 4D Server machine in operation, the log file is “segmented” at regular intervals using the [`New log file`](../commands/new-log-file) command. Since no backup is carried out on the main server, the application remains permanently available in read-write mode. 
+- Each "segment" of the log file is sent to the mirror machine, where it is integrated into the mirror application using the [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) command.
+
+Setting up this system requires programming specific code, in particular:
+
+- A timer on the main server for managing the execution cycles of the [`New log file`](../commands/new-log-file) command,
+- A transfer system for the "segments" of the log file between the operational machine and the mirror machine (using HTTP, Web Services, etc.),
+- A process on the mirror machine intended to supervise the arrival of new "segments" of the log file and to integrate them using the [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) command,
+- A communication and error-handling system between the main server and the mirror server.
+
+:::warning
+
+A backup system using a logical mirror is not compatible with [regular backups](./backup.md) on a running application in use since the simultaneous use of these two backup modes would lead to the desynchronization of the operational and mirror applications. Consequently, you must be sure that no backups, whether automatic or manual, are carried out on the operational application. On the other hand, it is possible to back up the mirror application or to set up a "mirror-mirror".
+
+:::
+
+## Backup of a mirror and mirror-mirror  
+
+4D Server can be used to carry out backups of the application on the mirror machine.
+
+Any conventional means can be used to carry out backups on the mirror machine: manual backups using the command in the **File** menu, [scheduled backups set in the Settings](./settings.md#scheduler) or programmed backups using language commands.
+
+To avoid risks of desynchronization with the operational machine, 4D automatically locks the mirror machine when it is carrying out one of two basic operations: the integration of the log file from the operational machine and the backup of the mirror application.
+
+- When a log file is being integrated, it is not possible to carry out a backup. If the [`BACKUP`](../commands/backup) command is used, error 1417 is generated.
+- When a backup is underway, all the processes are frozen and it is not possible to launch the integration of a log file.
+
+You can enable the current log file on the mirror machine, which means that you can set up a "mirror-mirror" (or even a series of mirrors), or a "hub-and-spoke" mirror architecture (several mirrors for the same operational application). In the first case, the current log file of the mirror is sent in turn to another mirror (the "mirror-mirror") for integration, and so forth if you use a series of mirrors. In the second case, the current log is sent directly to several identical mirror servers. This type of redundancy ensures the continuous availability of the server, even in the case of simultaneous failure of the server and the main mirror.
+
+
+## Operating scenario for a logical mirror  
+
+The following scenario illustrates, from the viewpoint of each 4D Server machine, the setting up and operation of a backup system using a mirror:
+
+|Step|Operational machine|Mirror machine|
+|---|---|---|
+|1|	Start up of the application, back up of the data file. The log file is activated by default; for better security, store this file on a separate hard drive.||
+||4D creates the MyApp.journal file.||
+||The application is exited.||
+||Copy of all the database files (log file included) onto the mirror machine.||
+|2|	Restarting of the application and beginning of operation (verify that there is not a full backup programmed).|Start up of the mirror application. 4D Server requests the current log file: Select the MyApp.journal file that was transferred from the operational database. This file will be used when setting-up a mirror-mirror.|
+|3|	Decision made to update the mirror (for example, after a certain period of operation).||
+||Execution of the method containing `New log file`. The file saved is named MyApp[0001-0001].journal.||
+||Sending of the MyApp[0001-0001].journal file via programming to the mirror machine.||
+||The application is operating.||
+|4||Detection of a file that is waiting to be integrated. Execution of the method containing the `INTEGRATE MIRROR LOG FILE` command in order to integrate the MyApp[0001-0001].journal file. If you are using a mirror-mirror, execution on the mirror machine of a procedure similar to step 3 (to be repeated each time a log is integrated).|
+|5|	Incident occurs on the machine; the database is unusable. Decision made to switch to the mirror machine.||
+||Copy of the current log file MyApp.journal onto the mirror machine, via the usual destination folder||
+|6|	Analysis of incident and repair.|Detection of a file that is waiting to be integrated. Execution of the method containing the `INTEGRATE MIRROR LOG FILE` command in order to integrate the MyApp.journal file.|
+|||The application is operating.|
+|7|	The machine is repaired. Replacement of the database files by those of the mirror database. Start up of the application. 4D Server requests the log file: Select the file that was transferred from the mirror.|The application is exited. Return to step 2.|

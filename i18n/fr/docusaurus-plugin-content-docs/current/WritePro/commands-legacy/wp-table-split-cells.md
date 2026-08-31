@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| tableRef | Object | &#8594;  | Table reference |
-| startColumn | Integer | &#8594;  | Position of first cell column |
-| startRow | Integer | &#8594;  | Position of first column row |
-| columnCount | Integer | &#8594;  | Number of columns to split |
-| rowCount | Integer | &#8594;  | Number of rows to split |
+| targetObj | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| tableRef | Object | &#8594;  | Référence de tableau |
+| startColumn | Integer | &#8594;  | Position de la colonne de la première cellule  |
+| startRow | Integer | &#8594;  | Position de la ligne de la première cellule |
+| columnCount | Integer | &#8594;  | Nombre de colonnes à fractionner |
+| rowCount | Integer | &#8594;  | Nombre de lignes à fractionner|
 </div>
 <!-- END REF-->
 
@@ -43,9 +43,9 @@ Si *targetObj* croise une ou plusieurs cellules qui n'ont pas été fusionnées 
 * startColumn et *startRow* \- définissent les coordonnées gauche-haut de la première cellule à fractionner.
 * columnCount et rowCount (facultatif) - spécifie respectivement le nombre de colonnes et le nombre de lignes à fractionner.  
     
-Si rowCount est omis, cela équivaut à passer 1 (valeur par défaut). Si columnCount et rowCount sont tous deux omis, cela équivaut à fractionner une seule cellule, et si elle n'a pas été fusionnée auparavant, rien ne se produit.
+Si *rowCount* est omis, cela équivaut à passer 1 (valeur par défaut). Si *columnCount* et *rowCount* sont tous deux omis, cela équivaut à fractionner une seule cellule, et si elle n'a pas été fusionnée auparavant, rien ne se produit.
 
-Si startColumn plus ColumnCount ou *startRow* plus rowCount dépasse le nombre de colonnes/lignes dans tableRef, ou si startColumn ou *startRow* est supérieur au nombre de colonnes/lignes dans tableRef, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que chaque cellule du tableau (si elle a été fusionnée auparavant) est fractionnée.
+Si *startColumn* plus *ColumnCount* ou *startRow* plus *rowCount* dépasse le nombre de colonnes/lignes dans *tableRef*, ou si *startColumn* ou *startRow* est supérieur au nombre de colonnes/lignes dans *tableRef*, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que chaque cellule du tableau (si elle a été fusionnée auparavant) est fractionnée.
 
 ## Example 
 

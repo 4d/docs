@@ -5,22 +5,19 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texto* : Text ; *BLOB* : Blob {; *formatoTexto* : Integer {; offset | *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; offset : Variable }} )<br/>**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | texto | Text | &#8594; | Texto a escribir en el BLOB |
-| Blob | Blob | &#8594; | BLOB a recibir el texto |
+| blob | Blob | &#8594; | BLOB a recibir el texto |
 | formatoTexto | Integer | &#8594; | Formato y conjunto de caracteres de texto |
 | offset &#124; * | Variable, Operador | &#8596; | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
 |  |  |  | Nuevo offset después de la escritura si se omite * |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historial</summary>
 
 |Versión|Cambios|
 |---|---|

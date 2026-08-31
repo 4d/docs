@@ -65,7 +65,7 @@ $result:=$chatHelper.prompt($fileMessage)
 
 **reset**()
 
-全てのメッセージを消去し、全てのツールの登録を解除することで、チャットコンテキストをリセットします。 これにより、システムのプロンプトとパラメータをそのままにしながら、効果的に新しい会話を始めることができます。
+全てのメッセージを消去し、全てのツールの登録を解除することで、チャットコンテキストをリセットします。 これにより、システムのプロンプトとパラメーターをそのままにしながら、効果的に新しい会話を始めることができます。
 
 #### リセットの例
 
@@ -83,11 +83,11 @@ $chatHelper.reset()  // 以前のメッセージとツールを全て消去
 | *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                              |
 | *handler* | Object | ツール呼び出しを管理する関数(4D.Function またはオブジェクト)、*tool* 内の *handler* プロパティで定義されている場合にはオプション |
 
-自動ツール呼び出し関数のために、ツールとそのハンドラ関数を登録します。
+自動ツール呼び出し関数のために、ツールとそのハンドラー関数を登録します。
 
 *handler* 引数には以下のものを渡すことができます:
 
-- **4D.Function**: 直接ハンドラ関数
+- **4D.Function**: 直接ハンドラー関数
 - **Object**: ツール関数名と一致するフォーミュラプロパティを格納しているオブジェクト
 
 ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
@@ -95,7 +95,7 @@ $chatHelper.reset()  // 以前のメッセージとツールを全て消去
 #### ツールを登録する例題
 
 ```4D
-// Example 1: 直接ハンドラを使用したシンプルな登録
+// Example 1: 直接ハンドラーを使用したシンプルな登録
 var $tool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}}
 var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
@@ -108,7 +108,7 @@ $chatHelper.registerTool($tool)
 // Example 3: オブジェクト記法を使用する
 $chatHelper.registerTool({tool: $tool; handler: $handler})
 
-// Example 4: ツール名と合致するフォーミュラを持ったオブジェクトとしてのハンドラ
+// Example 4: ツール名と合致するフォーミュラを持ったオブジェクトとしてのハンドラー
 var $tool:={name: "getTime"; description: "Get current time"}
 var $handlerObj:=cs.MyTimeTool.new() // getTime 関数を持つクラス
 $chatHelper.registerTool($tool; $handlerObj)
@@ -118,13 +118,13 @@ $chatHelper.registerTool($tool; $handlerObj)
 
 **registerTools**(*toolsWithHandlers* : Variant)
 
-| 引数                  | 型       | 説明                              |
-| ------------------- | ------- | ------------------------------- |
-| *toolsWithHandlers* | Variant | ツールとのそのハンドラを格納したオブジェクトまたはコレクション |
+| 引数                  | 型       | 説明                               |
+| ------------------- | ------- | -------------------------------- |
+| *toolsWithHandlers* | Variant | ツールとのそのハンドラーを格納したオブジェクトまたはコレクション |
 
 複数のツールを一度に登録します。 引数には以下のものを渡すことができます:
 
-- **コレクション**: (ハンドラが埋め込んである、あるいは分離してある)ツールオブジェクトのコレクション
+- **コレクション**: (ハンドラーが埋め込んである、あるいは分離してある)ツールオブジェクトのコレクション
 - **オブジェクト**: 関数名がツール定義にマッピングされているキーとするオブジェクト
 - **`tools` 属性を持つオブジェクト**: `tools` コレクションと、ツール名に合致するフォーミュラプロパティを格納しているオブジェクト
 
@@ -139,7 +139,7 @@ var $calculatorTool:={name: "calculate"; description: "Perform calculations"; ha
 $chatHelper.registerTools([$weatherTool; $calculatorTool])
 ```
 
-##### 例 2: 別個のツールとハンドラを使用したオブジェクトフォーマット
+##### 例 2: 別個のツールとハンドラーを使用したオブジェクトフォーマット
 
 ```4D
 var $toolsWithSeparateHandlers:={}
@@ -188,7 +188,7 @@ $chatHelper.registerTools($tools)
 | -------------- | ---- | --------------- |
 | *functionName* | Text | 登録を解除したいツールの関数名 |
 
-特定のツールをその関数名で指定して登録解除します。 これによってツールは登録されたツールのコレクションから削除され、ハンドラも消去され、引数からも削除されます。
+特定のツールをその関数名で指定して登録解除します。 これによってツールは登録されたツールのコレクションから削除され、ハンドラーも消去され、引数からも削除されます。
 
 #### ツールを登録解除する例
 
@@ -201,7 +201,7 @@ $chatHelper.unregisterTool("get_weather")  // weather ツールを削除
 
 **unregisterTools**()
 
-全てのツールを一度に登録解除します。 これはすべてのツールハンドラを消去し、tools コレクションをからにし、そして引数からも全てのツールを削除します。
+全てのツールを一度に登録解除します。 これはすべてのツールハンドラーを消去し、tools コレクションをからにし、そして引数からも全てのツールを削除します。
 
 #### 全てのツールを登録解除する例
 

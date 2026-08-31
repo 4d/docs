@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Permite consultar los datos de una clase de datos o de un método (*por ejemplo*, `$filter="firstName!='' AND salary>30000"`)
+Permite consultar los datos de una clase de datos (*por ejemplo*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descripción
 
@@ -35,16 +35,26 @@ Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` don
 
 Para más información sobre cómo consultar datos en 4D, consulte la documentación de [dataClass.query()](../API/DataClassClass.md#query).
 
-> Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
->
-> <li>Comillas ('): \u0027</li>
-> <li>Comillas dobles ("): \u0022</li>
->
-> Por ejemplo, puede escribir lo siguiente al pasar un valor con comillas cuando utilice la propiedad \*params  
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
->
-> Si pasa el valor directamente, puede escribir lo siguiente:
-> `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+:::note
+
+El uso de la instrucción `eval()` no está permitido en consultas REST (y por lo tanto en las consultas a un [datastore remoto](../ORDA/remoteDatastores.md)).
+
+:::
+
+:::note
+
+Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
+
+- Comillas ('): \u0027
+- Comillas dobles ("): \u0022
+
+Por ejemplo, puede escribir lo siguiente al pasar un valor con comillas cuando utilice la propiedad \*params  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
+
+Si pasa el valor directamente, puede escribir lo siguiente:  
+`http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+
+:::
 
 ## Atributo
 

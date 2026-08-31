@@ -5,7 +5,7 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *ruta* : Text, Text array ; *fechaMod* : Date, Date array ; *horaMod* : Time, Integer array {; *operador* : *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* : Text, Text array ; *modDate* : Date, Date array ; *modTime* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 <div class="no-index">
 
@@ -14,13 +14,12 @@ displayed_sidebar: docs
 | ruta | Text, Text array | &#8594; | Texto o array texto que contiene una o más rutas de acceso |
 | fechaMod | Date, Date array | &#8592; | Fecha(s) de modificación de métodos(s) |
 | horaMod | Time, Integer array | &#8592; | Hora(s) de modificación de métodos(s) |
-| operador | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
 <details><summary>Historial</summary>
-
 |Versión|Cambios|
 |---|---|
 |13|Creado por|

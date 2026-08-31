@@ -6,7 +6,6 @@ displayed_sidebar: docs
 ---
 
 
-## Overview
 
 Named selections provide an easy way to manipulate several selections simultaneously. A named selection is an ordered list of records for a table in a process. This ordered list can be given a name and kept in memory. Named selections offer a simple means to preserve in memory the order of the selection and the current record of the selection.
 
@@ -58,7 +57,7 @@ The following table indicates the principles concerning the visibility of named 
 |<>test	|||| X|X|
 
 
-## Named Selections and Sets
+### Named Selections and Sets
 
 The differences between [sets](./sets.md) and named selections are:
 

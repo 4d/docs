@@ -5,7 +5,7 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rutaScript* : Text ; *accionError* : Integer {; *nomAtrib* : Text ; *valAtrib* : Text} {; ...(*nomAtrib* : Text, *valAtrib* : Text)} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rutaScript* : Text ; *accionError* : Integer {; ...(*nomAtrib* : Text ; *valAtrib* : any)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 <div class="no-index">
 

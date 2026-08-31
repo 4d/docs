@@ -26,16 +26,16 @@ Para hacer de un objeto el destino de una operación de arrastrar y soltar, debe
 
 La siguiente tabla muestra las propiedades disponibles para objetos arrastrables y/o soltables:
 
-| Objetos de formulario                          | Arrastrable "Personalizado" | Soltable "Personalizado" | Arrastrable "Auto" | Soltable "Auto" |
-| ---------------------------------------------- | --------------------------- | ------------------------ | ------------------ | --------------- |
-| [Áreas 4D Write Pro](writeProArea_overview.md) | x                           | x                        | x                  | x               |
-| [Combo Box](comboBox_overview.md)              |                             | x                        | x                  | x               |
-| [Entrada](input_overview.md)                   | x                           | x                        | x                  | x               |
-| [Lista jerárquica](list_overview.md)           | x                           | x                        |                    |                 |
-| [List Box](listbox_overview.md)                | x                           | x                        |                    |                 |
-| [Área de plugin](pluginArea_overview.md)       |                             |                          | x                  | x               |
-| [Botón](button_overview.md)                    |                             | x                        |                    |                 |
-| [Botón Imagen](pictureButton_overview.md)      |                             | x                        |                    |                 |
+| Objetos de formulario                                         | Arrastrable "Personalizado" | Soltable "Personalizado" | Arrastrable "Auto" | Soltable "Auto" |
+| ------------------------------------------------------------- | --------------------------- | ------------------------ | ------------------ | --------------- |
+| [Áreas 4D Write Pro](../FormObjects/writeProArea_overview.md) | x                           | x                        | x                  | x               |
+| [Combo Box](../FormObjects/comboBox_overview.md)              |                             | x                        | x                  | x               |
+| [Entrada](../FormObjects/input_overview.md)                   | x                           | x                        | x                  | x               |
+| [Lista jerárquica](../FormObjects/list_overview.md)           | x                           | x                        |                    |                 |
+| [List Box](../FormObjects/listbox_overview.md)                | x                           | x                        |                    |                 |
+| [Área de plugin](../FormObjects/pluginArea_overview.md)       |                             |                          | x                  | x               |
+| [Botón](../FormObjects/button_overview.md)                    |                             | x                        |                    |                 |
+| [Botón Imagen](../FormObjects/pictureButton_overview.md)      |                             | x                        |                    |                 |
 
 Los elementos de una lista jerárquica o las líneas de un list box se pueden arrastrar y soltar. Por el contrario, puede arrastrar y soltar un objeto sobre un elemento de una lista jerárquica o sobre una línea de un list box. Sin embargo, no es posible arrastrar y soltar objetos desde el área de detalles de un formulario de salida. También puede gestionar la acción de arrastrar y soltar en la aplicación, fuera de cualquier formulario, utilizando el [método base `On Drop`](../commands-legacy/on-drop-database-method.md).
 

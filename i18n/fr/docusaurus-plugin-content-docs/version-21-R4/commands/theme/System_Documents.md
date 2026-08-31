@@ -43,95 +43,95 @@ slug: /commands/theme/System-Documents
 
 :::info Compatibilité
 
-Legacy commands from this theme can usually be usefully replaced by commands of the [*File and Folder*](./File_and_Folder.md) theme and their associated [File](../../API/FileClass.md), [Folder](../../API/FolderClass.md), [ZipFile](../../API/ZipFileClass.md) and [ZipFolder](../../API/ZipFolderClass.md) classes, allowing you to handle files and folders as objects.
+Les commandes classiques (legacy) de ce thème peuvent généralement être avantageusement remplacées par les commandes du thème [*Fichiers et Dossiers*](./File_and_Folder.md) et leurs classes associées [File](../../API/FileClass.md), [Folder](../../API/FolderClass.md), [ZipFile](../../API/ZipFileClass.md) et [ZipFolder](../../API/ZipFolderClass.md), qui vous permettent de manipuler les fichiers et les dossiers comme des objets.
 
 :::
 
-## Document reference number
+## Numéro de référence de document
 
-You open a document with the [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) and [`Append document`](../../commands/append-document) commands. Once a document is open, you can read and write characters from and to the document using commands such as [`RECEIVE PACKET`](../../commands/receive-packet) and [`SEND PACKET`](../../commands/send-packet). When you are finished with the document, you usually close it using the `CLOSE DOCUMENT` command.
+Vous ouvrez un document avec les commandes [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document) et [`Append document`](../../commands/append-document). Une fois qu'un document est ouvert, vous pouvez y lire et y écrire des caractères à l'aide de commandes telles que [`RECEIVE PACKET`](../../commands/receive-packet) et [`SEND PACKET`](../../commands/send-packet). Lorsque vous avez terminé d'utiliser le document, vous le fermez généralement à l'aide de la commande `CLOSE DOCUMENT`.
 
-All open documents returned by these commands are referred to using a **document reference number** (*DocRef*). A *DocRef* uniquely identifies an open document. It is formally an expression of the **Time** type. All commands working with open documents expect *DocRef* as a parameter. If you pass an incorrect *DocRef* to one of these commands, a file manager error occurs.
+Tous les documents ouverts retournés par ces commandes sont désignés à l'aide d'un **numéro de référence de document** (*DocRef*). Un *DocRef* identifie de manière unique un document ouvert. Il s'agit formellement d'une expression de type **Heure**. Toutes les commandes travaillant avec des documents ouverts attendent un *DocRef* comme paramètre. Si vous passez un *DocRef* incorrect à l'une de ces commandes, une erreur du gestionnaire de fichiers se produit.
 
-A document can be opened in **read/write** mode by only one process at a time. In **read-only** mode, one process can open several documents, several processes can open multiple documents, you can open the same document as many times as necessary, but you cannot open the same document in read/write mode twice at a time. The `Create document` and `Append document` commands automatically open documents in read/write mode. Only the `Open document` command lets you choose the opening mode.
+Un document ne peut être ouvert en mode **lecture/écriture** que par un seul process à la fois. En mode **lecture seule**, un process peut ouvrir plusieurs documents, plusieurs process peuvent ouvrir plusieurs documents, vous pouvez ouvrir le même document autant de fois que nécessaire, mais vous ne pouvez pas ouvrir le même document deux fois en mode lecture/écriture simultanément. Les commandes `Create document` et `Append document` ouvrent automatiquement les documents en mode lecture/écriture. Seule la commande `Open document` vous permet de choisir le mode d'ouverture.
 
 :::note
 
-When it is called from a [preemptive process](../../Develop/preemptive.md), a *DocRef* reference can only be used from this preemptive process. When it is called from a cooperative process, a *DocRef* reference can be used from any other cooperative process.
+Lorsqu'il est appelé depuis un [process préemptif](../../Develop/preemptive.md), un *DocRef* ne peut être utilisé que depuis ce process préemptif. Lorsqu'il est appelé depuis un process coopératif, un *DocRef* peut être utilisé depuis n'importe quel autre process coopératif.
 
 :::
 
-## The Document system variable
+## Variable système Document
 
-[`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document), [`Append document`](../../commands/append-document`) and [`Select document`](../../commands/select-document) commands enable you to access a document using the standard Open or Save file dialog boxes. When you access a document through a standard dialog, 4D returns the full pathname of the document in the [`Document` system variable](../../Concepts/variables.md#system-variables). This system variable has to be distinguished from the *document* parameter that appears in the parameter list of the commands.
+Les commandes [`Open document`](../../commands/open-document), [`Create document`](../../commands/create-document), [`Append document`](../../commands/append-document`) et [`Select document`](../../commands/select-document) vous permettent d'accéder à un document à l'aide des boîtes de dialogue standard d'ouverture ou d'enregistrement de fichiers. Lorsque vous accédez à un document via une boîte de dialogue standard, 4D retourne le chemin d'accès complet du document dans la [variable système `Document`](../../Concepts/variables.md#system-variables). Cette variable système doit être distinguée du paramètre *document* qui apparaît dans la liste des paramètres des commandes.
 
-## Absolute or relative pathname
+## Chemin d'accès absolu ou relatif
 
-Most of the routines of this section accept **document names**, **relative pathnames** or **absolute pathnames**.
+La plupart des routines de cette section acceptent des **noms de documents**, des **chemins d'accès relatifs** ou des **chemins d'accès absolus**.
 
-- **Relative pathnames** define a location with respect to a folder located on disk. Passing only a document name is considered as using a relative pathname. In 4D, a relative pathname is usually expressed with respect to the [project folder](../../Project/architecture.md#project-folder), i.e. the folder containing the .project file. Relative pathnames are especially useful when deploying applications in heterogenous environments.
-- **Absolute pathnames** define a location with respect to the root of the volume and so they do not depend on the current location of the project folder.
+- Les **chemins d'accès relatifs** définissent un emplacement par rapport à un dossier situé sur le disque. Passer uniquement un nom de document est considéré comme l'utilisation d'un chemin d'accès relatif. Dans 4D, un chemin d'accès relatif est généralement exprimé par rapport au [dossier du projet](../../Project/architecture.md#project-folder), c'est-à-dire le dossier contenant le fichier .project. Les chemins d'accès relatifs sont particulièrement utiles lors du déploiement d'applications dans des environnements hétérogènes.
+- Les **chemins d'accès absolus** définissent un emplacement par rapport à la racine du volume et ne dépendent donc pas de l'emplacement actuel du dossier du projet.
 
-To determine whether a pathname passed to a command must be interpreted as absolute or relative, 4D applies a specific algorithm on each platform.
+Pour déterminer si un chemin d'accès passé à une commande doit être interprété comme absolu ou relatif, 4D applique un algorithme spécifique sur chaque plate-forme.
 
 ### Windows
 
-- If the parameter contains only two characters and if the second one is a ':'
-- or if the text contains ':' and '\' as the second and third character,
-- or if the text starts with "\\",
-- then the pathname is absolute.
+- Si le paramètre contient seulement deux caractères et si le second est un ':'
+- ou si le texte contient ':' et '\' comme deuxième et troisième caractères,
+- ou si le texte commence par "\\",
+- alors le chemin d'accès est absolu.
 
-In all other cases, the pathname is relative.
+Dans tous les autres cas, le chemin d'accès est relatif.
 
-Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
+Exemples avec la commande [`CREATE FOLDER`](../../commands/create-folder) :
 
 ```4d
- CREATE FOLDER("lundi") // relative path
- CREATE FOLDER("\Monday") // relative path
- CREATE FOLDER("\Monday\Tuesday") // relative path
- CREATE FOLDER("c:") // absolute path
- CREATE FOLDER("d:\Monday") // absolute path
- CREATE FOLDER("\\srv-Internal\temp") // absolute path
+ CREATE FOLDER("lundi") // chemin relatif
+ CREATE FOLDER("\Monday") // chemin relatif
+ CREATE FOLDER("\Monday\Tuesday") // chemin relatif
+ CREATE FOLDER("c:") // chemin absolu
+ CREATE FOLDER("d:\Monday") // chemin absolu
+ CREATE FOLDER("\\srv-Internal\temp") // chemin absolu
 ```
 
 :::note
 
-The code editor of 4D allows the use of [escape sequences](../../Concepts/quick-tour.md#escape-sequences). An escape sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the Tab character.
+L'éditeur de code de 4D permet l'utilisation de [séquences d'échappement](../../Concepts/quick-tour.md#escape-sequences). Une séquence d'échappement commence par une barre oblique inversée `\`, suivie d'un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère Tabulation.
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the method editor by replacing single backslashes `\` with double backslashes `\\`. For example, `C:\Folder` will become `C:\\Folder`.
+Le caractère `\` est également utilisé comme séparateur dans les chemins d'accès sous Windows. En général, 4D interprète correctement les chemins d'accès Windows saisis dans l'éditeur de méthodes en remplaçant les barres obliques inversées simples `\` par des doubles `\\`. Par exemple, `C:\Folder` deviendra `C:\\Folder`.
 
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). Vous devez donc saisir un double `\\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
+Cependant, si vous saisissez `C:\MyDocuments\New`, 4D affichera `C:\\MyDocuments\New`. Dans ce cas, le second `\` est interprété à tort comme `\N` (une séquence d'échappement existante). Vous devez donc saisir un double `\\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 
 :::
 
 ### macOS
 
-- If the text starts with a folder separator ':',
-- or if does not contain any,
-- then the path is relative.
+- Si le texte commence par un séparateur de dossier ':',
+- ou s'il n'en contient aucun,
+- alors le chemin d'accès est relatif.
 
-In all other cases, it is absolute.
+Dans tous les autres cas, il est absolu.
 
-Examples with the [`CREATE FOLDER`](../../commands/create-folder) command:
+Exemples avec la commande [`CREATE FOLDER`](../../commands/create-folder) :
 
 ```4d
 
- CREATE FOLDER("Monday") // relative path
- CREATE FOLDER("macintosh hd:") // absolute path
- CREATE FOLDER("Monday:Tuesday") // absolute path (a volume must be called Monday)
- CREATE FOLDER(":Monday:Tuesday") // relative path
+CREATE FOLDER("Monday") // chemin relatif
+ CREATE FOLDER("macintosh hd:") // chemin absolu
+ CREATE FOLDER("Monday:Tuesday") // chemin absolu (un volume doit s'appeler Monday)
+ CREATE FOLDER(":Monday:Tuesday") // chemin relatif
 ```
 
 :::note
 
-See also [**Absolute and relative pathnames** in the Concepts section](../../Concepts/paths.md#absolute-and-relative-pathnames).
+Voir aussi [**Chemins d'accès absolus et relatifs** dans la section Concepts](../../Concepts/paths.md#absolute-and-relative-pathnames).
 
 :::
 
-## Extracting pathname contents
+## Extraire le contenu d'un chemin d'accès
 
-You can handle pathname contents using the [`Path to object`](../../commands/path-to-object) and [`Object to path`](../../commands/object-to-path) commands. In particular, using these commands, you can extract from a pathname:
+Vous pouvez manipuler le contenu d'un chemin d'accès à l'aide des commandes [`Path to object`](../../commands/path-to-object) et [`Object to path`](../../commands/object-to-path). En particulier, à l'aide de ces commandes, vous pouvez extraire d'un chemin d'accès :
 
-- a file name,
-- the parent folder path,
-- the file or folder extension.
+- un nom de fichier,
+- le chemin du dossier parent,
+- l'extension du fichier ou du dossier.

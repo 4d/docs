@@ -5,14 +5,14 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobADescifrar* : Blob ; objetoLlave | frasePasar ; *sal* : Integer ; *blobDescifrado* : Blob ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : Object ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : Text ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | blobADescifrar | Blob | &#8594; | BLOB a descifrar |
-| objetoLlave &#124; frasePasar | Objeto, Texto | &#8594; | Objeto JSON que contiene la llave de cifrado o la frase de paso para la generación directa de la llave de cifrado (texto) |
+| objetoLlave &#124; frasePasar | Object, Text | &#8594; | Objeto JSON que contiene la llave de cifrado o la frase de paso para la generación directa de la llave de cifrado (texto) |
 | sal | Integer | &#8594; | Sal adicional para el algoritmo |
 | blobDescifrado | Blob | &#8592; | BLOB descifrado |
 | Resultado | Boolean | &#8592; | True si la desencriptación se ha realizado correctamente, False en caso contrario |
@@ -21,6 +21,7 @@ displayed_sidebar: docs
 
 <div class="no-index">
 <details><summary>Historial</summary>
+
 
 |Versión|Cambios|
 |---|---|

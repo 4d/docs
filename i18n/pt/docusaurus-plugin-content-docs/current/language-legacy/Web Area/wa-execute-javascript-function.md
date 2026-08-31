@@ -5,7 +5,7 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objeto* : Text ; *funcaoJS* : Text ; resultado|* {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objeto* : Field, Variable ; *funcaoJS* : Text ; resultado|* {; *...param* : any} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objeto* : Text ; *funcaoJS* : Text {; *result* : Variable} {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objeto* : Variable, Field ; *funcaoJS* : Text {; *result* : Variable } {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objeto* : Text ; *funcaoJS* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objeto* : Variable, Field ; *funcaoJS* : Text ; * {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 <div class="no-index">
 

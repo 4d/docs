@@ -3,7 +3,7 @@ id: project-method-properties
 title: Méthodes projet
 ---
 
-## Roles
+## Rôles
 
 Une méthode projet peut tenir les rôles suivants, en fonction de la manière dont elle est exécutée et utilisée :
 
@@ -12,7 +12,7 @@ Une méthode projet peut tenir les rôles suivants, en fonction de la manière d
 - Méthode de menu
 - Méthode de gestion de process
 - Méthode de gestion d’événements et d'erreurs
-- APIs to be called from the web server, transformation tags, extensions...
+- API à appeler depuis le serveur web, les balises de transformation, les extensions...
 - Vous pouvez également exécuter les méthodes projet manuellement, à des fins de test par exemple.
 
 ### Sous-routines
@@ -66,7 +66,7 @@ Même pour quelqu’un qui ne connaît pas le projet, le code est clair. Il n’
 
 Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
-The [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) commands allow you to create [native formula objects](../API/FormulaClass.md) that you can encapsulate in object properties. Vous pouvez ainsi implémenter des méthodes d'objets personnalisées.
+Les commandes [`Formula`](../commands/formula) ou [`Formula from string`](../commands/formula-from-string) vous permettent de créer des [objets formules natifs](../API/FormulaClass.md) que vous pouvez encapsuler dans les propriétés de l'objet. Vous pouvez ainsi implémenter des méthodes d'objets personnalisées.
 
 Pour exécuter une méthode stockée dans une propriété d'objet, utilisez l'opérateur **()** après le nom de la propriété. Par exemple :
 
@@ -89,35 +89,35 @@ La syntaxe avec des crochets est également prise en charge :
 $o["custom_Alert"]() //affiche "Hello world!"
 ```
 
-For more information, see the [`4D.Formula` class description](../API/FormulaClass.md) and the [Using object properties as named parameters](../Concepts/parameters.md#using-object-properties-as-named-parameters) paragraph.
+Pour plus d'informations, voir la description de la [classe `4D.Formula`](../API/FormulaClass.md) et le paragraphe [Utiliser les propriétés de l'objet comme paramètres nommés](../Concepts/parameters.md#using-object-properties-as-named-parameters).
 
 ### Méthodes de menu
 
-Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. En créant des menus personnalisés qui appellent des méthodes de menu qui exécutent des actions spécifiques, vous créez des interfaces personnalisées pour vos applications de bureau.
+Une méthode de menu est appelée lorsque la commande de menu personnalisé à laquelle elle est associée est sélectionnée. Vous assignez la méthode à la commande de menu en utilisant l'éditeur de menu ou une [commande du thème "Menus"](../commands/theme/Menus.md). Lorsque l’utilisateur sélectionne la commande de menu, la méthode est exécutée. En créant des menus personnalisés qui appellent des méthodes de menu qui exécutent des actions spécifiques, vous créez des interfaces personnalisées pour vos applications de bureau.
 
-Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+Les commandes de menus personnalisés peuvent déclencher une ou plusieurs actions. Par exemple, une commande de menu permettant de saisir des enregistrements peut appeler une méthode qui effectue deux tâches : afficher le formulaire de saisie approprié et appeler la commande [`ADD RECORD`](../commands/add-record) jusqu’à ce que l’utilisateur annule l’opération de saisie.
 
-Automating sequences of activities is a very powerful capability of the 4D programming language. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre application.
+L’automatisation de séquences d’actions est une possibilité très puissante du langage de programmation de 4D. A l’aide des menus personnalisés, vous pouvez automatiser des séquences de tâches, vous permettez aux utilisateurs de naviguer plus facilement dans votre application.
 
 ### Méthodes de gestion de process
 
-Une **méthode process** est une méthode projet appelée lorsqu’un process est démarré. The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
+Une **méthode process** est une méthode projet appelée lorsqu’un process est démarré. Le process existe seulement tant que la méthode process continue de s'exécuter, sauf s'il s'agit d'un [process worker](../Develop/processes.md#worker-processes). A noter qu'une méthode de menu associée à une commande de menu ayant la propriété [*Démarrer un nouveau process*](../Menus/properties.md#start-a-new-process) est aussi la méthode de gestion de process pour le process créé.
 
 ### Méthodes de gestion d’événements et d'erreurs
 
-Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
+Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, voir la description de la commande [`ON EVENT CALL`](../commands/on-event-call).
 
 Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. Elle est appelée à chaque fois qu'une erreur ou une exception se produit. Pour plus d'informations, consultez la section [Gestion des erreurs](../Concepts/error-handling.md).
 
-### API Methods
+### Méthodes API
 
-Project methods can be called from external contexts such as other applications, web apps, processed files, etc., in which case they can be seen as API. Such calls include:
+Les méthodes projet peuvent être appelées à partir de contextes externes tels que d'autres applications, des applications web, des fichiers traités, etc. auquel cas elles peuvent être considérées comme des API. Ces appels incluent :
 
-- calls to the web server through [http request handlers](../WebServer/http-request-handler.md) or [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
-- [tag processing](../Tags/transformation-tags.md)
-- expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
+- des appels au serveur web via des [gestionnaires de requêtes http](../WebServer/http-request-handler.md) ou des [urls `4DACTION`](../WebServer/httpRequests.md#4daction),
+- [les traitements des balises](../Tags/transformation-tags.md)
+- les expressions appelées depuis des extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) ou des objets de formulaire (par exemple [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
 
-External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
+Les appels externes aux méthodes projet doivent être autorisés dans les [propriétés de la méthode projet](../Project/project-method-properties.md).
 
 ### Execution mode
 
@@ -235,11 +235,11 @@ Lorsque vous implémentez du code pour traiter des cas comme celui décrit ci-de
 Dans 4D, la récursivité est typiquement utilisée pour :
 
 - Traiter les enregistrements de tables liées les unes aux autres de la même manière que décrit dans l'exemple ci-dessus.
-- Browsing documents and folders on your disk, using the commands [`FOLDER LIST`](../commands/folder-list) and [`DOCUMENT LIST`](document-list). Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
+- Naviguer parmi vos documents et dossiers en utilisant les commandes [`FOLDER LIST`](../commands/folder-list) et [`DOCUMENT LIST`](document-list). Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
 :::warning
 
-Recursive calls should always end at some point. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
+Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
 
 :::
 
@@ -296,7 +296,7 @@ Pour plus d'informations sur les composants, reportez-vous au chapitre [Dévelop
 
 Cet attribut est pris en compte uniquement dans le cadre d’une application 4D en client/serveur. Lorsque cette option est cochée, la méthode du projet est toujours exécutée sur le serveur, quelle que soit la manière dont elle est appelée.
 
-Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter sur serveur](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.en.html).
+Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter sur serveur](../Desktop/clientServer.md#execute-on-server-attribute).
 
 ### Mode d’exécution
 

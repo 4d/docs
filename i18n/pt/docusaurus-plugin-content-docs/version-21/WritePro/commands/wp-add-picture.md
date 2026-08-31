@@ -47,7 +47,7 @@ Por padrão, a imagem adicionada é:
 - Exibido no canto superior esquerdo da caixa de papel
 - Exibido em todas as páginas
 
-O local, camada (inline, front-behind de texto), visibilidade e quaisquer propriedades da imagem podem ser modificadas usando o comando [WP SET ATTRIBUTES](wp-set-attributes.md) ou através de ações padrão (veja *Usando ações 4D Write Pro padrão*).
+The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
 
 **Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto imagem verificando o atributo `wk type`:
 

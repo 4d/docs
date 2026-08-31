@@ -36,9 +36,9 @@ title: フォームオブジェクト
 	}
 ```
 
-### Accessing form objects using their name or their data source in the 4D language
+### 名前またはデータソースを使用してそのフォームオブジェクトに4Dランゲージでアクセスする
 
-Many commands handling form objects such as commands from [Objects (Forms)](../commands/theme/Objects_Forms.md), [List Box](../commands/theme/List_Box.md), or [Styled Text](../commands/theme/Styled_Text.md) themes share the same generic syntaxes described here:
+[オブジェクト(フォーム)](../commands/theme/Objects_Forms.md)、 [リストボックス](../commands/theme/List_Box.md)、あるいは [スタイル付きテキスト](../commands/theme/Styled_Text.md) テーマのコマンドなど、フォームオブジェクトを管理する多数のコマンドは、ここで説明されている汎用的なシンタックスを共有します:
 
 ```4d
 COMMAND NAME( * ; *object* : Text { ; *additional parameters* } )
@@ -46,24 +46,24 @@ COMMAND NAME( * ; *object* : Text { ; *additional parameters* } )
 COMMAND NAME( *object* : Variable, Field { ; *additional parameters* })
 ```
 
-If you specify the \* parameter, you indicate that *object* is the [name of the object](./properties_Object.md#object-name) (a string). If you don't pass the \*, you indicate that *object* is a field or a variable, i.e. its [data source](./properties_Object.md#variable-or-expression).
+\* 引数を指定した場合、*object* 引数が[オブジェクト名](./properties_Object.md#オブジェクト名)(文字列)であることを指定します。 \* を渡さなかった場合、*object* 引数がフィールドまたは変数である、つまり[データソース](./properties_Object.md#variable-or-expression) であることを指定します。
 
-When using the [object name](./properties_Object.md#object-name), you can rely on the @ character within that name if you want to address several objects of the form in one call. The following table shows examples of object names you can specify to this command.
+[オブジェクト名](./properties_Object.md#オブジェクト名) を使用する場合、@ 文字を名前内で使用することで、一度の呼び出しでフォーム内の複数のオブジェクトを指定することができます。 以下の表は、このコマンドで指定可能なオブジェクト名の一例を表しています。
 
-| Object Names                      | Objects affected by the call                                                   |
-| --------------------------------- | ------------------------------------------------------------------------------ |
-| mainGroupBox                      | Only the object mainGroupBox.                                  |
-| main@                | The objects whose name starts with “main”.                     |
-| @GroupBox            | The objects whose name ends with “GroupBox”.                   |
-| @Group@ | The objects whose name contains “Group”.                       |
-| main@Btn             | The objects whose name starts with “main” and ends with “Btn”. |
-| @                    | All the objects present in the form.                           |
+| オブジェクト名                           | 呼び出しで影響を受けるオブジェクト                  |
+| --------------------------------- | ---------------------------------- |
+| mainGroupBox                      | mainGroupBox というオブジェクトのみ。          |
+| main@                | “main” で始まる名前を持ったオブジェクト。           |
+| @GroupBox            | “GroupBox” で終わる名前を持ったオブジェクト。       |
+| @Group@ | “Group” を名前に含むオブジェクト。              |
+| main@Btn             | “main” で始まり、“Btn” で終わる名前を持つオブジェクト。 |
+| @                    | フォーム内にある全てのオブジェクト。                 |
 
-Form object names can contain up 255 bytes, allowing you to define and apply custom naming rules, such as "xxxx_Button" or "xxx_Mac".
+フォームオブジェクトの名前は255 バイトまで格納することができ、これにより"xxxx_Button" あるいは "xxx_Mac"などのカスタムの命名規則を定義して適用することができます。
 
 :::warning
 
-You can [configure the way the @ character is interpreted](../settings/database.md#text-comparison) when it is included in a character string. This option affects the functioning of the form object commands.
+また@ が文字列内に含まれている場合に[@ 文字がどのように解釈されるかを設定](../settings/database.md#テキスト比較) ことができます。 このオプションはフォームオブジェクトコマンドの振る舞いに影響します。
 
 :::
 

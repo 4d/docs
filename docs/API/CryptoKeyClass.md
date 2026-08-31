@@ -310,7 +310,7 @@ The returned value is the public key.
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
 
-<!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
+The <!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
 <!-- END REF -->
 

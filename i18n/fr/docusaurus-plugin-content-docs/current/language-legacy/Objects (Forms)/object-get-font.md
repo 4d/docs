@@ -5,14 +5,14 @@ slug: /commands/object-get-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( {* ;} *objet* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get font.Syntax-->**OBJECT Get font** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get font** ( *objet* : Variable, Field ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get font.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | Résultat | Text | &#8592; | Nom de la police |
 </div>
 <!-- END REF-->

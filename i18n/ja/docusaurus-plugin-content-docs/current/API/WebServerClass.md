@@ -190,7 +190,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 *読み取り専用プロパティ*
 
-<!-- REF #WebServerClass.handlers.Summary -->カスタムHTTP ハンドラオブジェクトのコレクション<!-- END REF -->。 HTTP ハンドラオブジェクトには聞いているURL パターン、管理される動詞(メソッド)、そして呼び出されるべきコードが格納されています。 HTTP ハンドラはHTTPHandlers.json ファイルまたは[`.start()`](#start) 関数の*settings* 引数で定義することができます。 詳細については[HTTP リクエストハンドラ](../WebServer/http-request-handler.md) のページを参照してください。
+<!-- REF #WebServerClass.handlers.Summary -->カスタム HTTPハンドラーオブジェクトのコレクション<!-- END REF -->。 HTTPハンドラーオブジェクトには聞いている URLパターン、管理される動詞 (メソッド)、そして呼び出されるべきコードが格納されています。 HTTPハンドラーは HTTPHandlers.json ファイルまたは [`.start()`](#start) 関数の *settings* 引数で定義することができます。 詳細については [HTTPリクエストハンドラー](../WebServer/http-request-handler.md)のページを参照してください。
 
 <!-- END REF -->
 
@@ -522,7 +522,7 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
-<!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
+<!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
 
 <!-- END REF -->
 
@@ -544,7 +544,7 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
-<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
+<!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 <!-- END REF -->
 
@@ -566,9 +566,9 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 | 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティーのコンテキストでのみ cookie が送信されます。                 |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティのコンテキストでのみ cookie が送信されます。                  |
 | Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
-| Web SameSite None   | "None"   | ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。      |
+| Web SameSite None   | "None"   | ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。       |
 
 詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) の説明を参照ください。
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
 | lista | Integer, Text | &#8594; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo de lista (si pasa *) |
-| refElem &#124; * | Operador, Entero largo | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| refElem | Operador, Entero largo | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
 | icono | Picture | &#8592; | Icono asociado al elemento |
 </div>
 <!-- END REF-->

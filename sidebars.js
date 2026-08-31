@@ -335,8 +335,8 @@ module.exports =
         "Develop-legacy/transactions",
         "Tags/transformation-tags",
         "Project/date-time-formats",
-        "Develop-legacy/xml"
-        /*
+        "Develop-legacy/xml",
+        
         // not ready yet, needs imports from Design ref for records and selection concepts,
         {
             type: "category",
@@ -344,7 +344,7 @@ module.exports =
             link: {
               type: "generated-index",
             title: "Records & Selections (legacy data access)",
-            description: "Legacy data access based upon records, selections, sets",
+            description: "Legacy data access based upon records, selections, and sets.",
             slug: "/category/records-selections",
             keywords: [
               "records",
@@ -353,10 +353,11 @@ module.exports =
             image: "/img/docusaurus.png"              },
               items: [
                 "Develop-legacy/records",
-                "Develop-legacy/sets",
-                "Develop-legacy/named-selections"
+                "Develop-legacy/current-selection",
+                "Develop-legacy/named-selections",
+              "Develop-legacy/sets"
           ]
-        } */
+        } 
       ]
     },
     {
@@ -787,21 +788,42 @@ module.exports =
       items: [
         {
           type: "category",
-          label: "4D Server Window",
+          label: "4D Server",
           link: {
             type: "doc",
-            id: "ServerWindow/overview"
+            id: "server/overview"
           },
           items: [
-            "ServerWindow/monitor",
-            "ServerWindow/sessions",
-            "ServerWindow/processes",
-            "ServerWindow/maintenance",
-            "ServerWindow/application-server",
-            "ServerWindow/sql-server",
-            "ServerWindow/http-server",
-            "ServerWindow/real-time-monitor",
-            "ServerWindow/remote-admin"
+            {
+                type: "category",
+                label: "Administration Window",
+                link: {
+                  type: "doc",
+                  id: "ServerWindow/overview"
+                },
+                items: [
+                  "ServerWindow/monitor",
+                  "ServerWindow/sessions",
+                  "ServerWindow/processes",
+                  "ServerWindow/maintenance",
+                  "ServerWindow/application-server",
+                  "ServerWindow/sql-server",
+                  "ServerWindow/http-server",
+                  "ServerWindow/real-time-monitor",
+                  "ServerWindow/remote-admin"
+                ]
+              },
+            "server/menus",
+            "server/exit",
+              {
+                type: "category",
+                label: "Windows Features",
+                items: [
+                  "server/sso",
+                  "server/service",
+                  "server/vss"
+                ]
+              }
           ]
         },
         {
@@ -872,7 +894,8 @@ module.exports =
             "Backup/backup",
             "Backup/settings",
             "Backup/log",
-            "Backup/restore"
+            "Backup/restore",
+            "Backup/mirror"
           ]
         },
         {

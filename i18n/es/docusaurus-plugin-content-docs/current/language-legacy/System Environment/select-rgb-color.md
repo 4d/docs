@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Select RGB color.Summary-->El comando Select RGB color muestra la ventana sistema de selección de color y devuelve el valor RGB del color seleccionado por el usuario.<!-- END REF--> 
+<!--REF #_command_.Select RGB color.Summary-->El comando **Select RGB color** muestra la ventana sistema de selección de color y devuelve el valor RGB del color seleccionado por el usuario.<!-- END REF--> 
 
 La ventana sistema de selección de color se ve de esta manera:  
 
@@ -43,14 +43,15 @@ El parámetro opcional *mensaje* permite personalizar el título de la ventana s
 
 El efecto de la validación de esta caja de diálogo difiere dependiendo de la plataforma:
 
-* Bajo Windows, si el usuario hace clic en el botón **OK**, el comando devuelve el valor de color seleccionado en formato RGB y la variable sistema *OK* toma el valor 1\. Si el usuario cancela la caja de diálogo, el comando devuelve -1 y la variable sistema *OK* toma el valor 0.
-* Bajo Mac OS, sólo puede cerrar esta caja de diálogo haciendo clic en la casilla de cierre o presionando la tecla **Esc**. En ambos caos, la variable sistema *OK* toma el valor 1, sin importar las acciones del usuario en la ventana. El comando devuelve el valor del color seleccionado en formato RGB. Si el usuario no selecciona un color, el valor devuelto es el pasado en *colorDefecto* (si lo hay) o 0 si no se pasa *colorDefecto*.
+* Bajo Windows, si el usuario hace clic en el botón **OK**, el comando devuelve el valor de color seleccionado en formato RGB y la variable sistema *OK* toma el valor 1. Si el usuario cancela la caja de diálogo, el comando devuelve -1 y la variable sistema *OK* toma el valor 0.
+* Bajo macOS, sólo puede cerrar esta caja de diálogo haciendo clic en la casilla de cierre o presionando la tecla **Esc**. En ambos caos, la variable sistema *OK* toma el valor 1, sin importar las acciones del usuario en la ventana. El comando devuelve el valor del color seleccionado en formato RGB. Si el usuario no selecciona un color, el valor devuelto es el pasado en *colorDefecto* (si lo hay) o 0 si no se pasa *colorDefecto*.
 
 **Nota:** este comando no debe ejecutarse en el equipo servidor ni en un proceso web.
 
 ## Ver también 
 
 [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
+[OPEN COLOR PICKER](../commands/open-color-picker)  
 
 ## Propiedades
 

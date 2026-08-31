@@ -413,7 +413,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サイズ (バイト単位)。 デフォルト値は 2,000,000 (2MBより、すこし少ない値) です。 最大値 (2,147,483,648) に設定した場合、実際には制限無しということになります。
 
-制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。
+制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、4D Webサーバーによって拒否されます。
 
 とりうる値: 500,000 - 2,147,483,648。
 
@@ -576,7 +576,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | webServer オブジェクト | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |      |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |      |
 
-セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
+セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
 
 
 ## セッションcookie名
@@ -596,7 +596,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | webServer オブジェクト | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |      |
 | `WEB SET OPTION` | `Web session cookie path`                                      |      |
 
-セッションcookie の "domain" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
+セッションcookie の "domain" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 ## セッションcookie SameSite
 
@@ -604,15 +604,15 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | ---------------- | ---------------------------------------------------------------------- | ---- |
 | webServer オブジェクト | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |      |
 
-セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティーコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
+セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
 
 > `SameSite` 属性に関する詳細な説明は [Mozilla のドキュメンテーション](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) または [こちらの Web開発ページ (英語)](https://web.dev/samesite-cookies-explained/) を参照ください。
 
 次の値が提供されています:
 
-- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティーのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティーの Webサイトには決して送信されません。
-- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティーのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
-- "None": ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
+- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティの Webサイトには決して送信されません。
+- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
+- "None": ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
 
 セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。
 

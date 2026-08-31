@@ -5,8 +5,7 @@ slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean} ; * {; *} )
-<!-- END REF-->
+<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*tabela* : Table}{; *modoSelecao* : Integer}{; *entraLista* : Boolean}{; *}{; *})<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 <div class="no-index">
 

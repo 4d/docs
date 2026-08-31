@@ -5,14 +5,14 @@ slug: /commands/listbox-set-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( {* ;} *objet* ; *ligne* ; *hauteur* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *objet* : Text ; *ligne* : Integer ; *hauteur* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *objet* : Variable ; *ligne* : Integer ; *hauteur* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | ligne | Integer | &#8594;  | Ligne de la List box dont la hauteur doit être fixée. |
 | hauteur | Integer | &#8594;  | Hauteur de la ligne de la List box |
 </div>

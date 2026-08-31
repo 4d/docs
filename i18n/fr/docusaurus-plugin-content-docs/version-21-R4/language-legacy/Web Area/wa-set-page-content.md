@@ -5,7 +5,7 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( {* ;} *objet* ; *contenu* ; *baseURL* )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *objet* : Text ; *contenu* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *objet* : Variable, Field ; *contenu* : Text ; *baseURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 <div class="no-index">
 

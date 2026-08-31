@@ -23,10 +23,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release | Modifications |
-| ------- | ------------- |
-| 19 R6   | Modifié       |
-| 16 R2   | Created       |
+| Release | Modifications                                                                             |
+| ------- | ----------------------------------------------------------------------------------------- |
+| 20 R10  | Prise en charge des expressions lk current item, lk current item pos et lk selected items |
+| 19 R6   | Modifié                                                                                   |
+| 16 R2   | Created                                                                                   |
 
 </details>
 </div>

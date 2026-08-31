@@ -5,14 +5,14 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( {* ;} *objet* ; *actif* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *objet* : Text ; *actif* : Boolean )<br/>**OBJECT SET ENABLED** ( *objet* : Variable, Field ; *actif* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | actif | Boolean | &#8594;  | Vrai = objet(s) activé(s), Faux sinon |
 </div>
 <!-- END REF-->

@@ -5,14 +5,14 @@ slug: /commands/st-insert-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( {* ;} *objet* ; *expression* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( * ; *objet* : Text ; *expression* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST INSERT EXPRESSION** ( *objet* : Variable, Field ; *expression* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Object | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | expression | Text | &#8594;  | Expression et (optionnel) format à insérer |
 | débutSél | Integer | &#8594;  | Début de la sélection |
 | finSél | Integer | &#8594;  | Fin de la sélection |

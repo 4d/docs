@@ -70,7 +70,7 @@ title: Comandos 4D Write Pro
 [`WP IMPORT STYLE SHEETS`](../commands/wp-import-style-sheets)<br/>
 [`WP INSERT BREAK`](../commands/wp-insert-break) ***Modificado en 4D 20 R8***<br/>
 [`WP Insert document body`](../commands/wp-insert-document-body) ***Modificado en 4D 20 R8***<br/>
-[`WP INSERT FORMULA`](../commands/wp-insert-formula) ***Modificado en 4D 20 R8***<br/>
+[`WP Insert formula`](../commands/wp-insert-formula) ***Modificado en 4D 20 R8***<br/>
 [`WP INSERT PICTURE`](../commands/wp-insert-picture) ***Modificado en 4D 20 R8***<br/>
 [`WP Insert table`](../commands/wp-insert-table)<br/>
 [`WP Is font style supported`](../commands/wp-is-font-style-supported)

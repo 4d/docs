@@ -5,7 +5,7 @@ slug: /commands/modify-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*laTable*}{; *modeSélection*}{; *saisieListe*}{; *}{; *} )<!-- END REF-->
+<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean}{; *} )<br/>**MODIFY SELECTION** ( {*laTable* : Table}{; *modeSélection* : Integer}{; *saisieListe* : Boolean}; * {; *} ))<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
 <div class="no-index">
 

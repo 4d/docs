@@ -5,7 +5,7 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ tabla | * })<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : Table })<br/>**READ WRITE** ({ * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 <div class="no-index">
 

@@ -29,7 +29,7 @@ Each active form object is associated with an object name. Each object name must
 
 >Object names are limited to a size of 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../commands/theme/Objects_Forms))).
+When using 4D’s language, you can [refer to an active form object by its object name](./formObjects_overview.md#accessing-form-objects-using-their-name-or-their-data-source-in-the-4d-language)..
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 

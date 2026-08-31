@@ -82,7 +82,7 @@ $client.model.lists(...)
 
 Le client OpenAI prend en charge les alias de modèles de fournisseurs pour faciliter l'utilisation de plusieurs fournisseurs. Voir [Alias de modèles de fournisseurs](../provider-model-aliases.md) pour une documentation complète.
 
-You can construct an OpenAI client using a pre-configured provider name. This allows you to easily switch between different AI providers (OpenAI, Anthropic, etc.) without specifying the full configuration each time.
+Vous pouvez construire un client OpenAI en utilisant un nom de fournisseur préconfiguré. Cela vous permet de basculer facilement entre différents fournisseurs IA (OpenAI, Anthropic, etc.) sans spécifier la configuration complète à chaque fois.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({provider: "anthropic"})

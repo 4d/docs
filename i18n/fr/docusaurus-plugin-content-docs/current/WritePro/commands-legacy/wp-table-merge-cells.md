@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| tableRef | Object | &#8594;  | Table reference |
-| startColumn | Integer | &#8594;  | Position of first cell column |
-| startRow | Integer | &#8594;  | Position of first column row |
-| columnCount | Integer | &#8594;  | Number of columns to merge |
-| rowCount | Integer | &#8594;  | Number of rows to merge |
+| targetObj | Object | &#8594;  | Plage ou élément ou document 4D Write Pro |
+| tableRef | Object | &#8594;  | Référence de tableau |
+| startColumn | Integer | &#8594;  | Position de la colonne de la première cellule |
+| startRow | Integer | &#8594;  | Position de la ligne de la première cellule |
+| columnCount | Integer | &#8594;  | Nombre de colonnes à fusionner |
+| rowCount | Integer | &#8594;  | Nombre de lignes à fusionner |
 </div>
 <!-- END REF-->
 
@@ -40,12 +40,12 @@ Si *targetObj* ne croise qu'une seule cellule, la commande **WP TABLE MERGE CELL
 
 **Ou**
 
-* startColumn et *startRow* \- définissent les coordonnées gauche-haut de la première cellule à fusionner.
-* columnCount et rowCount (facultatif) - spécifie respectivement le nombre de colonnes et le nombre de lignes à fusionner.
+* *startColumn* et *startRow* \- définissent les coordonnées gauche-haut de la première cellule à fusionner.
+* *columnCount* et *rowCount* (facultatif) - spécifie respectivement le nombre de colonnes et le nombre de lignes à fusionner.
 
-Si rowCount est omis, cela équivaut à passer 1 (valeur par défaut). Si columnCount et rowCount sont tous deux omis, c'est l'équivalent de l'intersection d'une seule cellule, donc rien ne se passe.  
+Si *rowCount* est omis, cela équivaut à passer 1 (valeur par défaut). Si *columnCount* et *rowCount* sont tous deux omis, c'est l'équivalent de l'intersection d'une seule cellule, donc rien ne se passe.  
 
-Si startColumn plus ColumnCount ou *startRow* plus rowCount dépasse le nombre de colonnes/lignes dans tableRef, ou si startColumn ou *startRow* est supérieur au nombre de colonnes/lignes dans tableRef, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que l'ensemble du tableau sera fusionné en une seule grande cellule.  
+Si *startColumn* plus *columnCount* ou *startRow* plus *rowCount* dépasse le nombre de colonnes/lignes dans *tableRef*, ou si *startColumn* ou *startRow* est supérieur au nombre de colonnes/lignes dans *tableRef*, la plage renvoyée contient le maximum de colonnes/lignes possibles, ce qui signifie que l'ensemble du tableau sera fusionné en une seule grande cellule.  
 
 ## Example 
 

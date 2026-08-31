@@ -5,14 +5,14 @@ slug: /commands/object-get-context-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( {* ;} *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( * ; *objet* : Text ) : Boolean<br/>**OBJECT Get context menu** ( *objet* : Variable, Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get context menu.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Boolean | &#8592; | Vrai = menu contextuel activé, <br/>Faux = menu contextuel désactivé |
 </div>
 <!-- END REF-->

@@ -23,11 +23,12 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>História</summary>
 
-| Release                     | Mudanças                                             |
-| --------------------------- | ---------------------------------------------------- |
-| 19 R6                       | Modificado                                           |
-| 16 R2                       | Renamed (Get Listbox information) |
-| <6 | Created                                              |
+| Release                     | Mudanças                                                                                            |
+| --------------------------- | --------------------------------------------------------------------------------------------------- |
+| 20 R10                      | Support of lk current item expression, lk current item pos expression, lk selected items expression |
+| 19 R6                       | Modificado                                                                                          |
+| 16 R2                       | Renamed (Get Listbox information)                                                |
+| <6 | Created                                                                                             |
 
 </details>
 </div>

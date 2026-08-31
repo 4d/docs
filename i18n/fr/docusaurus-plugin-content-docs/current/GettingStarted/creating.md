@@ -45,6 +45,12 @@ La boîte de dialogue standard Ouvrir apparaît.
    - *Fichiers de raccourcis* : extension `.4DLink` - stocke des paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
    - *Fichiers binaires* : extension `.4db` ou `.4dc` - anciens formats de base de données 4D
 
+:::note
+
+Vous pouvez également ouvrir des projets 4D sans aucune interface graphique via l'[interface  en ligne de commande](../Admin/cli.md) (CLI).
+
+:::
+
 ### Options
 
 Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D propose deux menus avec des options spécifiques disponibles via le bouton **Ouvrir** et le menu **Data file**.
@@ -67,6 +73,12 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
   - Placez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
 
 - en utilisant un fichier `.4DLink` .
+
+:::note
+
+Sous Windows, un projet 4D Server peut être lancé automatiquement au démarrage de la session s'il est [enregistré en tant que Service](../server/service.md).
+
+:::
 
 ### Ouvrir un projet avec un fichier 4DLink
 

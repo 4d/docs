@@ -1093,6 +1093,19 @@ You want to filter elements according to their value type:
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
 ```
 
+
+#### Example 3
+
+The `.filter()` function can be used to compare two collections and extract the differences between them:
+
+```4d
+var $c1:=New collection(12; 45; 78; 99; 156)
+var $c2:=New collection(12; 78; 99) //two elements are missing
+var $diff:=$c1.filter(Formula(Not($c2.includes($1.value))))
+  // $diff=[45, 156]
+```
+
+
 <!-- END REF -->
 
 
@@ -3022,7 +3035,7 @@ The callback sets the following parameter(s):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator=$1.value); 1)  //returns 86400
 ```
 
 
@@ -3117,7 +3130,7 @@ The callback sets the following parameter(s):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //returns 86400
 
 ```
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *objeto* : Text ; numTabla | tempo {; *nomSel* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objeto* : Field, Variable ; numTabla | tempo {; *nomSel* : Text} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *objeto* : Text ; numTabla | tempo {; *nomSel* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Field, Variable ; numTabla | tempo {; *nomSel* : Text} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 <div class="no-index">
 
@@ -13,8 +13,9 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite*) |
-| numTabla &#124; tempo | Entero largo, Cadena | &#8594; | Número de la tabla de la cual utilizarla selección actual o nombre de la selección temporal a utilizar |
-| nomSel | Text | &#8594; | Nombre del conjunto seleccionado |
+| tableNum | Integer | &#8594;  | Número de la tabla de la cual utilizarla selección actual |
+| selName | Text | &#8594;  | Nombre de la selección temporal a utilizar |
+| highlightName | Text | &#8594;  | Nombre del conjunto seleccionado |
 </div>
 <!-- END REF-->
 

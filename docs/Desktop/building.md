@@ -582,7 +582,7 @@ If a license is not valid, a message will warn you.
 
 You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
 
->Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
+>Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-").
 
 After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
@@ -789,7 +789,7 @@ Here is the scenario for updating a server or merged single-user application:
 2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
 3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. The former version is renamed.
 
-> This sequence is compatible with Windows server applications run as a Service.
+> This sequence is compatible with Windows server applications [run as a Service](../server/service.md).
 
 ### Update log  
 

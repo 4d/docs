@@ -5,7 +5,7 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* ; *encodage* {; *autonome*} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encodage* : Text {; *autonome* : Boolean} {; *indentation* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 <div class="no-index">
 
@@ -14,6 +14,7 @@ displayed_sidebar: docs
 | document | Time | &#8594;  | Référence du document ouvert |
 | encodage | Text | &#8594;  | Jeu de caractères du document XML |
 | autonome | Boolean | &#8594;  | Vrai=le document est autonome, Faux (défaut)=le document n’est pas autonome |
+| indentation | Boolean | &#8594;  | *** obsolète, ne pas utiliser *** |
 </div>
 <!-- END REF-->
 

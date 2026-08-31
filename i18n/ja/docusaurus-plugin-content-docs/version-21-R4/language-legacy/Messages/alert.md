@@ -5,7 +5,7 @@ slug: /commands/alert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* : Text {; OK button title} )<!-- END REF-->
+<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* : Text {; *OK button title* : Text} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
 <div class="no-index">
 

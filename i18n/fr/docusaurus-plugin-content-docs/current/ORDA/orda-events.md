@@ -48,7 +48,7 @@ Cependant, dans une configuration client/serveur, la fonction d'événement `tou
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
+Les fonctions ORDA [`constructor()`](./ordaClasses.md#class-constructor) sont toujours exécutées localement.
 
 :::
 
@@ -58,7 +58,7 @@ Avec les autres configurations à distance (c'est-à-dire les [applications Qodl
 
 Le tableau suivant liste les événements d'entité ORDA ainsi que leurs règles.
 
-| Evénement                             | Niveau   | Nom de la fonction                                      |             (C/S) Execution            | Peut arrêter l'action en renvoyant une erreur |
+| Evénement                             | Niveau   | Nom de la fonction                                      |             (C/S) Exécution            | Peut arrêter l'action en renvoyant une erreur |
 | :------------------------------------ | :------- | :------------------------------------------------------ | :-------------------------------------------------------: | --------------------------------------------- |
 | Instanciation d'entité                | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                           local                           | non                                           |
 | Attribut touched                      | Attribut | `event touched <attrName>()`                            | Dépend du mot-clé [`local`](../Concepts/classes.md#local) | non                                           |

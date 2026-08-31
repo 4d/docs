@@ -62,7 +62,7 @@ Insert an object in the 4D Write Pro document's context and display its informat
  $info:=Formula(This.data.firstName+" "+This.data.lastName)
  
   // Display context data on the page
- WP INSERT FORMULA(WParea;$info;wk replace) // displays "John Doe" on the page.
+ WP Insert formula(WParea;$info;wk replace) // displays "John Doe" on the page.
 ```
 
 Here's the result:

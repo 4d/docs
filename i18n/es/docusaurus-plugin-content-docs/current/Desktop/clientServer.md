@@ -1,6 +1,6 @@
 ---
 id: clientServer
-title: Gestión Cliente/Servidor
+title: Cliente/Servidor
 ---
 
 Las aplicaciones 4D Desktop pueden utilizarse en una configuración Cliente/Servidor, ya sea como aplicaciones combinadas cliente/servidor o como proyectos remotos.
@@ -67,25 +67,7 @@ Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá 
 
 Cuando se ha producido una versión .4dz actualizada del proyecto en 4D Server, las máquinas 4D remotas conectadas deben cerrar la sesión y volver a conectarse a 4D Server para poder beneficiarse de la versión actualizada.
 
-## Utilizar 4D y 4D Server en la misma máquina
-
-Cuando 4D se conecta a un 4D Server en la misma máquina, la aplicación se comporta como 4D en modo monopuesto y el entorno de diseño le permite editar los archivos del proyecto. Esta funcionalidad le permite desarrollar una aplicación cliente/servidor en el mismo contexto de despliegue.
-
-> Cuando 4D se conecta a un 4D Server en la misma máquina, el **modo desarrollo** se activa automáticamente, sea cual sea el estado del [modo Desarrollo](#development-mode).
-
-Cada vez que 4D realiza una acción **Guardar todo** desde el entorno de diseño (explícitamente desde el menú **Archivo** o implícitamente al cambiar al modo aplicación, por ejemplo), 4D Server recarga sincronizadamente los archivos del proyecto. 4D espera a que 4D Server termine de recargar los archivos del proyecto antes de continuar.
-
-Sin embargo, debe prestar atención a las siguientes diferencias de comportamiento en comparación con [la arquitectura proyecto estándar](Project/architecture.md):
-
-- la carpeta userPreferences.\{username\} utilizada por 4D no es la misma carpeta utilizada por 4D Server en la carpeta proyecto. la carpeta userPreferences.\{username\} utilizada por 4D no es la misma carpeta utilizada por 4D Server en la carpeta proyecto.
-- la carpeta utilizada por 4D para los datos derivados no es la carpeta llamada "DerivedData" en la carpeta proyecto. En su lugar, se trata de una carpeta dedicada llamada "DerivedDataRemote" situada en la carpeta del sistema del proyecto.
-- el archivo catalog.4DCatalog no es editado por 4D sino por 4D Server. La información del catálogo se sincroniza mediante peticiones cliente/servidor
-- el archivo directory.json no es editado por 4D sino por 4D Server. La información del directorio se sincroniza mediante peticiones cliente/servidor
-- 4D utiliza sus propios componentes internos y plug-ins en lugar de los de 4D Server.
-
-> No se recomienda instalar plug-ins o componentes a nivel de la aplicación 4D o 4D Server.
-
-## Modo desarrollo
+### Modo desarrollo
 
 El **modo Desarrollo** en el servidor 4D es un modo especial de apertura de proyectos que permite el acceso de lectura/escritura para aplicaciones 4D remotas conectadas. El proyecto debe estar disponible en [modo **interpretado**](../Concepts/interpreted.md).
 
@@ -125,92 +107,306 @@ Esta funcionalidad está diseñada para equipos de desarrollo de tamaño pequeñ
 
 :::
 
-## Lugar de ejecución del código
+## Utilizar 4D y 4D Server en la misma máquina
+
+Cuando 4D se conecta a un 4D Server en la misma máquina, la aplicación se comporta como 4D en modo monopuesto y el entorno de diseño le permite editar los archivos del proyecto. Esta funcionalidad le permite desarrollar una aplicación cliente/servidor en el mismo contexto de despliegue.
+
+> Cuando 4D se conecta a un 4D Server en la misma máquina, el **modo desarrollo** se activa automáticamente, sea cual sea el estado del [modo Desarrollo](#development-mode).
+
+Cada vez que 4D realiza una acción **Guardar todo** desde el entorno de diseño (explícitamente desde el menú **Archivo** o implícitamente al cambiar al modo aplicación, por ejemplo), 4D Server recarga sincronizadamente los archivos del proyecto. 4D espera a que 4D Server termine de recargar los archivos del proyecto antes de continuar.
+
+Sin embargo, debe prestar atención a las siguientes diferencias de comportamiento en comparación con [la arquitectura proyecto estándar](Project/architecture.md):
+
+- la carpeta userPreferences.\{username\} utilizada por 4D no es la misma carpeta utilizada por 4D Server en la carpeta proyecto. la carpeta userPreferences.\{username\} utilizada por 4D no es la misma carpeta utilizada por 4D Server en la carpeta proyecto.
+- la carpeta utilizada por 4D para los datos derivados no es la carpeta llamada "DerivedData" en la carpeta proyecto. En su lugar, se trata de una carpeta dedicada llamada "DerivedDataRemote" situada en la carpeta del sistema del proyecto.
+- el archivo catalog.4DCatalog no es editado por 4D sino por 4D Server. La información del catálogo se sincroniza mediante peticiones cliente/servidor
+- el archivo directory.json no es editado por 4D sino por 4D Server. La información del directorio se sincroniza mediante peticiones cliente/servidor
+- 4D utiliza sus propios componentes internos y plug-ins en lugar de los de 4D Server.
+
+> No se recomienda instalar plug-ins o componentes a nivel de la aplicación 4D o 4D Server.
+
+## Desarrollo cliente/servidor
+
+### Lugar de ejecución del código
 
 En una aplicación cliente-servidor, es importante saber dónde se ejecutará realmente el código: **del lado del servidor** o **del lado del cliente**. La ubicación de la ejecución es crucial cuando se desea implementar código relacionado con la sesión del usuario, compartir información entre procesos, acceder a datos, etc.
 
 La siguiente tabla resume dónde se ejecuta el código por defecto y cómo cambiar su ubicación de ejecución (si está permitido). Tenga en cuenta que **local** significa que el código será ejecutado en la máquina desde donde es realmente llamado.
 
-| Code                                                                                                                                                                                                                                                                                                                                  | Ejecución por defecto | Cómo cambiar                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Funciones del modelo de datos ORDA](../ORDA/ordaClasses.md)                                                                                                                                                                                                                                                                          | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
-| Funciones de atributo calculadas ORDA [`get()`](../ORDA/ordaClasses.md#function-get-attributename), [`set()`](../ORDA/ordaClasses.md#function-set-attributename)                                                                                                                                                                      | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
-| Funciones de atributo calculadas ORDA [`query()`](../ORDA/ordaClasses.md#function-query-attributename), [`orderBy()`](../ORDA/ordaClasses.md#function-orderby-attributename)                                                                                                                                                          | server                | n/a                                                                                                                                                                                                                                          |
-| Funciones del evento ORDA [(general)](../ORDA/orda-events.md)                                                                                                                                                                                                                                                      | server                | n/a                                                                                                                                                                                                                                          |
-| Función del evento ORDA [`constructor()`](../ORDA/ordaClasses.md#class-constructor-1)                                                                                                                                                                                                                                                 | local                 | n/a                                                                                                                                                                                                                                          |
-| Función de evento ORDA [`event touched()`](../ORDA/orda-events.md#function-event-touched)                                                                                                                                                                                                                                             | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
-| [Funciones de clase usuario](../Concepts/classes.md#function)                                                                                                                                                                                                                                                                         | local                 | n/a                                                                                                                                                                                                                                          |
-| [Función singleton compartida o de sesión](../Concepts/classes.md#singleton-classes)                                                                                                                                                                                                                                                  | local                 | utilizar la palabra clave `server` en la definición de la función                                                                                                                                                                            |
-| Trigger                                                                                                                                                                                                                                                                                                                               | server                | n/a                                                                                                                                                                                                                                          |
-| Método proyecto llamado desde un cliente                                                                                                                                                                                                                                                                                              | client                | marcar la opción [**Ejecutar en el servidor**](../Project/project-method-properties.md#execute-on-server). El código se ejecuta en el proceso gemelo del [proceso de sesión del usuario](./sessions.md#remote-user-sessions) |
-|                                                                                                                                                                                                                                                                                                                                       |                       | llamar al comando [`Execute on server`](../commands/execute-on-server). El código se ejecuta en la [sesión de procedimientos almacenados](./sessions.md#stored-procedure-sessions)                                           |
-| Método proyecto llamado desde un procedimiento almacenado en el servidor                                                                                                                                                                                                                                                              | server                | llame al comando [`EXECUTE ON CLIENT`](../commands/execute-on-client). El cliente destinatario debe estar [registrado](../commands/register-client)                                                                          |
-| Método objeto                                                                                                                                                                                                                                                                                                                         | local                 | n/a                                                                                                                                                                                                                                          |
-| Métodos base de datos::<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server                | n/a                                                                                                                                                                                                                                          |
-| Métodos base:<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                                             | client                | n/a                                                                                                                                                                                                                                          |
+| Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Ejecución por defecto | Cómo cambiar                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Funciones del modelo de datos ORDA](../ORDA/ordaClasses.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
+| Funciones de atributo calculadas ORDA [`get()`](../ORDA/ordaClasses.md#function-get-attributename), [`set()`](../ORDA/ordaClasses.md#function-set-attributename)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
+| Funciones de atributo calculadas ORDA [`query()`](../ORDA/ordaClasses.md#function-query-attributename), [`orderBy()`](../ORDA/ordaClasses.md#function-orderby-attributename)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | server                | n/a                                                                                                                                                                                                                                          |
+| Funciones del evento ORDA [(general)](../ORDA/orda-events.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | server                | n/a                                                                                                                                                                                                                                          |
+| Función del evento ORDA [`constructor()`](../ORDA/ordaClasses.md#class-constructor-1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | local                 | n/a                                                                                                                                                                                                                                          |
+| Función de evento ORDA [`event touched()`](../ORDA/orda-events.md#function-event-touched)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | server                | utilizar la palabra clave `local` en la definición de la función                                                                                                                                                                             |
+| [Funciones de clase usuario](../Concepts/classes.md#function)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | local                 | n/a                                                                                                                                                                                                                                          |
+| [Función singleton compartida o de sesión](../Concepts/classes.md#singleton-classes)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | local                 | utilizar la palabra clave `server` en la definición de la función                                                                                                                                                                            |
+| [Trigger](#triggers)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | server                | n/a                                                                                                                                                                                                                                          |
+| Método proyecto llamado desde un cliente                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | client                | marcar la opción [**Ejecutar en el servidor**](../Project/project-method-properties.md#execute-on-server). El código se ejecuta en el proceso gemelo del [proceso de sesión del usuario](./sessions.md#remote-user-sessions) |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                       | llamar al comando [`Execute on server`](../commands/execute-on-server). El código se ejecuta en la [sesión de procedimientos almacenados](./sessions.md#stored-procedure-sessions)                                           |
+| Método proyecto llamado desde un [procedimiento almacenado](#stored-procedures) en el servidor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | server                | llame al comando [`EXECUTE ON CLIENT`](../commands/execute-on-client). El cliente destinatario debe estar [registrado](../commands/register-client)                                                                          |
+| Método objeto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | local                 | n/a                                                                                                                                                                                                                                          |
+| Métodos base de datos:<ul><li>[On Backup Shutdown](../commands-legacy/on-backup-shutdown-database-method.md)</li><li>[On Backup Startup](../commands-legacy/on-backup-startup-database-method.md)</li><li>[On Server Close Connection](../commands-legacy/on-server-close-connection-database-method.md)</li><li>[On Server Open Connection](../commands-legacy/on-server-open-connection-database-method.md)</li><li>[On Server Shutdown](../commands-legacy/on-server-shutdown-database-method.md)</li><li>[On Server Startup](../commands-legacy/on-server-startup-database-method.md)</li><li>[On SQL Authentication](../commands-legacy/on-sql-authentication-database-method.md)</li><li>[On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)</li><li>[On Web Connection](../commands-legacy/on-web-connection-database-method.md)</li></ul> | server                | n/a                                                                                                                                                                                                                                          |
+| Métodos base de datos:<ul><li>[On Startup](../commands-legacy/on-startup-database-method.md)</li><li>[On Exit](../commands-legacy/on-exit-database-method.md)</li><li>[On Drop](../commands-legacy/on-drop-database-method.md)</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | client                | n/a                                                                                                                                                                                                                                          |
 
-## Gestión de sesiones de clientes inactivas
+### Triggers
 
-4D Server gestiona específicamente los casos en los que una máquina que ejecuta una aplicación remota 4D pasa al modo de reposo mientras su conexión al servidor permanece activa.
+Los [triggers](../Develop/triggers) se ejecutan en la máquina donde está el motor de la base de datos. Con 4D Server, los triggers se ejecutan en el contexto de los procesos en ejecución en la máquina servidor, y no en la máquina cliente. Más específicamente, se ejecutan en el contexto de los procesos gemelos de los procesos de usuario que llaman a la operación de base de datos. Estos procesos gemelos comparten el contexto de la base de datos con el proceso de usuario en la máquina cliente (en particular, el estado de las transacciones y el bloqueo de registros), pero no comparten el contexto del lenguaje (variables, procesos, conjuntos, selecciones actuales). Sin embargo, note que el registro actual de la tabla asociada al trigger es el mismo en todos los contextos.
 
-En este caso, la aplicación remota avisa a 4D Server antes de entrar en modo de suspensión. La sesión del cliente correspondiente pasa al estado **Inactivo**.
+:::note
 
-![](../assets/en/Admin/server-sleep.png)
-
-Este estado libera los recursos del servidor al tiempo que conserva el contexto de la sesión.
-
-Cuando la máquina remota se enciende, la aplicación se vuelve a conectar y restaura automáticamente la sesión existente.
-
-Una sesión cliente inactiva se cierra automáticamente tras 48 horas de inactividad.
-
-Puede modificar este tiempo de espera utilizando el comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) con el selector `Remote connection sleep timeout`.
-
-## Gestión de pares inalcanzables
-
-Cuando se utiliza la [capa de red QUIC](../settings/client-server.md#network-layer), las sesiones cliente-servidor se benefician de una **función de reconexión automática** en caso de desconexiones inesperadas. Entre las desconexiones inesperadas se incluyen, por ejemplo:
-
-- desenchufar y enchufar el cable LAN,
-- Transferencia mediante una conexión móvil,
-- reinicio del conmutador,
-- un pequeño error de red.
-
-Esta funcionalidad permite la gestión tanto del lado del servidor como del lado del cliente en caso de pérdida de conexión con un par, e incluye tiempos de espera configurables e información en tiempo real.
-
-:::tip Entrada de blog relacionada
-
-¿Cansado de los errores de red que interrumpen a sus usuarios? [4D 21 R4 tiene la respuesta](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+En el servidor, un trigger se ejecuta en el proceso responsable de la acción asociada (crear/actualizar/eliminar). Si la acción se activó desde un [proceso preventivo en el servidor](../Develop/preemptive.md) (por ejemplo, un procedimiento almacenado, una solicitud HTTP en modo de sesión escalable), entonces el trigger se ejecutará en el mismo proceso preventivo. Pero si la acción se activó desde un 4D remoto, el trigger se ejecutará en el proceso gemelo, el cual está siempre en modo cooperativo (un proceso gemelo se comparte para todas las llamadas de un usuario).
 
 :::
 
-### Evento Unreachable
+### Procedimientos almacenados
 
-La capa de red QUIC emite automáticamente un evento "Unreachable" a 4D Server cuando inesperadamente un 4D remoto deja de responder; por el contrario, emite automáticamente un evento "Unreachable" a un 4D remoto cuando 4D Server inesperadamente deja de responder. Cuando se recibe el evento "Unreachable" en cualquiera de los lados, se refleja inmediatamente en la interfaz y en el objeto de la [`Session`](./sessions.md) de la máquina.
+Un procedimiento almacenado en 4D es un método de proyecto que lanza un método proceso en un proceso que se ejecuta en la máquina del servidor (o en cualquier máquina cliente registrada), en lugar de en la máquina cliente que ha iniciado el método.
 
-#### El cliente remoto no responde
+Con 4D en modo local, cuando utiliza un comando, como [`New process`](../commands/new-process), puede iniciar un proceso de usuario para ejecutar un método. Este método se llama [método proceso](../Project/project-method-properties.md#process-methods). Puede hacer lo mismo con 4D Server, en una máquina cliente. Además, con el comando [`Execute on server`](../commands/execute-on-server) puede iniciar un proceso de usuario en la máquina servidor para ejecutar un método. Además, al usar el comando [`EXECUTE ON CLIENT`](../commands/execute-on-client), puede ejecutar un método en otro proceso en un cliente diferente. En ambos casos, el método se llama **procedimiento almacenado**, y (por analogía) el proceso iniciado en la máquina servidor u otro cliente también se llama procedimiento almacenado.
 
-Cuando un 4D remoto deja de responder de forma inesperada, en la [ventana de administración del servidor](../ServerWindow/overview.md), el [estado de la sesión remota](../ServerWindow/sessions.md#list-of-sessions) pasa a ser **Unreachable**.
+:::note
 
-![](../assets/en/Desktop/unreachable-status.png)
+Todos los procedimientos almacenados en el servidor [comparten la misma sesión de usuario virtual](./sessions.md#stored-procedure-sessions).
 
-#### El servidor deja de responder
+:::
 
-Si 4D Server deja de responder de forma inesperada, aparece un cuadro de diálogo de reconexión en el equipo remoto:
+#### Arquitectura
 
-![](../assets/en/Desktop/server-not-responding.png)
+Como un proceso regular, un procedimiento almacenado tiene su propio entorno:
 
-#### Objeto Session actualizado
+- Una selección actual por tabla: cada procedimiento almacenado tiene una selección actual separada. Una tabla puede tener una selección actual diferente en diferentes procedimientos almacenados.
+- Un registro actual por tabla: cada tabla puede tener un registro actual diferente en cada procedimiento almacenado.
+- Variables: cada procedimiento almacenado tiene sus propias variables proceso. Las variables de proceso solo se reconocen dentro del dominio de su procedimiento almacenado nativo.
+- Tabla por defecto: cada procedimiento almacenado tiene su propia tabla por defecto.
+- Conjuntos de proceso: cada procedimiento almacenado tiene sus propios conjuntos de proceso.
+- On Error Call: cada procedimiento almacenado tiene su propio método de gestión de errores.
+- Ventana de depuración: cada procedimiento almacenado puede tener su propia ventana de depuración.
 
-Cuando el evento "Unreachable" es recibido en ambos lados, una propiedad [`info.ureachableSince`](../API/SessionClass.md#info) es creada en la sesión de la máquina que recibe el evento (en el servidor, es legible a través de la propiedad [`Process activity.sessions`](../commands/process-activity), y comienza a contar segundos desde la última comunicación. Puede utilizar esta propiedad para implementar su propia interfaz de desconexión.
+En términos de interfaz de usuario, un procedimiento almacenado puede abrir ventanas y mostrar datos (por ejemplo, [`DISPLAY RECORD`](../commands/display-records)). Un procedimiento almacenado ejecutado en una máquina cliente 4D permite la entrada de datos. Por otro lado, un procedimiento almacenado ejecutado en el servidor no puede invocar la interfaz de entrada de datos, ya que no existe un motor de entrada de datos en la máquina servidor.
 
-### Restablecer o cerrar la conexión
+Puede iniciar tantos procedimientos almacenados como permitan el hardware y la memoria del sistema. De hecho, la máquina servidor 4D debe verse como un equipo que no solo responde a clientes 4D y navegadores web, sino que también ejecuta procesos que interactúan con otros procesos en ejecución en el servidor y en máquinas 4D remotas.
 
-El tiempo de espera de la sesión QUIC es de 900 segundos (15 minutos) por defecto, pero se puede modificar utilizando el selector `QUIC session timeout` del comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
+:::note
 
-El tiempo de espera de la sesión QUIC se utiliza automáticamente para supervisar las desconexiones:
+La propiedad de método [**Ejecutar en el servidor**](../Project/project-method-properties.md#execute-on-server) también se puede usar para ejecutar un método en un proceso en el servidor, pero en este caso el método utiliza el proceso gemelo del proceso cliente, lo que significa, en particular, que puede aprovechar el entorno de dicho proceso cliente. En este caso, no se trata de un procedimiento almacenado 4D.
 
-- Si la conexión se restablece antes de que se agote el tiempo de espera de la sesión QUIC, la propiedad [`info.unreachableSince`](../API/SessionClass.md#info) se elimina automáticamente del objeto de sesión.
-- Si la conexión no se restablece antes de que se agote el tiempo de espera de la sesión QUIC, la sesión se cierra.
-  - En caso de que el servidor cierre una sesión remota, se registra una entrada de advertencia en el [registro de diagnóstico](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
-  - En caso de que se cierre una sesión del servidor desde un equipo remoto, aparece un cuadro de diálogo de advertencia para que el usuario pueda reiniciar la aplicación remota o salir:
-    ![](../assets/en/Desktop/remote-not-responding.png)
+:::
 
+#### ¿Qué hace un procedimiento almacenado?
+
+A excepción de la entrada de datos para procedimientos almacenados ejecutados en el servidor, casi todas las capacidades de los procesos y del lenguaje 4D se aplican a los procedimientos almacenados.
+
+Un procedimiento almacenado puede añadir, consultar, ordenar, actualizar o eliminar datos. Un procedimiento almacenado puede acceder a documentos en disco, trabajar con BLOBs, imprimir registros, entre otras funciones. Considere que, en lugar de realizar algo en una máquina 4D local, lo está haciendo en la máquina servidor o en una o varias máquinas cliente 4D.
+
+Una ventaja evidente de los procedimientos almacenados ejecutados en el servidor es que se ejecutan localmente en la máquina servidor, la máquina donde se encuentra el motor de la base de datos. Por ejemplo, un comando [`APPLY TO SELECTION`](../commands/apply-to-selection) no resulta eficiente a través de la red, pero sí lo es cuando se ejecuta desde un procedimiento almacenado.
+
+Los procedimientos almacenados ejecutados en una o varias máquinas cliente permiten optimizar la distribución de tareas y la comunicación entre los distintos clientes. Consulte el comando [`REGISTER CLIENT`](../commands/register-client) para un ejemplo de procedimientos almacenados ejecutados en varios clientes.
+
+Sin embargo, la ventaja más importante de la arquitectura de procedimientos almacenados es la dimensión adicional que da a 4D Server. Gracias a los procedimientos almacenados, puede implementar sus propios servicios 4D Server. El único límite es su imaginación.
+
+#### ¿Qué no puede hacer un procedimiento almacenado?
+
+En general, los procedimientos almacenados ejecutados en el servidor no deberían tratar con elementos de interfaz (como menús, ventanas, formularios...). De hecho, la interfaz no se gestiona del lado del servidor.
+
+Todos los comandos que puedan generar cuadros de diálogo modales en la máquina servidor (por ejemplo [`Open document`](../commands/open-document) con una cadena vacía como primer parámetro) se deben evitar. Tenga en cuenta que no siempre hay un usuario frente a la pantalla del servidor, por lo que la visualización de un cuadro de diálogo modal que requiere una acción del usuario puede hacer que la aplicación quede bloqueada.
+
+#### Comandos no permitidos en el servidor
+
+Esta es la lista de los comandos que NO deben utilizarse en los procedimientos almacenados ejecutados en el servidor. Si uno de los siguientes comandos se utiliza en un procedimiento almacenado, se mostrará una alerta que indica que este comando no se puede ejecutar en 4D Server. Se devuelve el error #67; puede interceptarse mediante un método instalado con el comando [`ON ERR CALL`](../commands/on-err-call).
+
+[`ADD RECORD`](../commands/add-record)
+[`APPEND MENU ITEM`](../commands/append-menu-item)
+[`POST OUTSIDE CALL`](../commands/post-outside-call)
+[`CHANGE LICENSES`](../commands/change-licenses)
+[`Count menu items`](../commands/count-menu-items)
+[`Count menus`](../commands/count-menus)
+[`DELETE MENU ITEM`](../commands/delete-menu-item)
+[`DISABLE MENU ITEM`](../commands/disable-menu-item)
+[`DISPLAY SELECTION`](../commands/display-selection)
+[`EDIT ACCESS`](../commands/edit-access)
+[`ENABLE MENU ITEM`](../commands/enable-menu-item)
+[`FILTER EVENT`](../commands/filter-event)
+[`Get menu item`](../commands/get-menu-item)
+[`Get menu item key`](../commands/get-menu-item-key)
+[`Get menu item mark`](../commands/get-menu-item-mark)
+[`Get menu item style`](../commands/get-menu-item-style)
+[`Get menu title`](../commands/get-menu-title)
+[`SET PICTURE TO LIBRARY`](../commands/set-picture-to-library)
+[`INSERT MENU ITEM`](../commands/insert-menu-item)
+[`Menu selected`](../commands/menu-selected)
+[`MODIFY RECORD`](../commands/modify-record)
+[`MODIFY SELECTION`](../commands/modify-selection)
+[`ON EVENT CALL`](../commands/on-event-call)
+[`QUERY BY EXAMPLE`](../commands/query-by-example)
+[`QR REPORT`](../commands/qr-report)
+[`REMOVE PICTURE FROM LIBRARY`](../commands/remove-picture-from-library)
+[`SET MENU ITEM`](../commands/set-menu-item)
+[`SET MENU ITEM SHORTCUT`](../commands/set-menu-item-shortcut)
+[`SET MENU ITEM MARK`](../commands/set-menu-item-mark)
+[`SET MENU ITEM STYLE`](../commands/set-menu-item-style)
+[`SET PICTURE TO LIBRARY`](../commands/set-picture-to-library)
+[`SET USER ALIAS`](../commands/set-user-alias)
+[`SHOW MENU BAR`](../commands/show-menu-bar)
+
+Comandos sin efecto en el servidor
+Los siguientes comandos no tienen efecto cuando se ejecutan en un procedimiento almacenado en el servidor. No se devuelve ningún código de error específico.
+
+[`GRAPH`](../commands/graph)
+[`MESSAGES OFF`](../commands/messages-off)
+[`MESSAGES ON`](../commands/messages-on)
+[`SET MENU BAR`](../commands/set-menu-bar)
+[`SHOW TOOL BAR`](../commands/show-tool-bar)
+
+#### Cómo lanzar un procedimiento almacenado
+
+Desde 4D, puede lanzar manualmente un procedimiento almacenado en el cuadro de diálogo **Ejecutar método**:
+
+![](../assets/en/Desktop/execute-method.png)
+
+Puede ejecutarlo en 4D Server o en otra máquina cliente 4D. Tenga en cuenta que para mostrar las máquinas cliente 4D en esta lista, deben haberse [registradas](#stored-procedures-on-client-machines) previamente.
+
+- También en 4D, puede iniciar programáticamente un procedimiento almacenado utilizando los comandos [`Execute on server`](../commands/execute-on-server) o [`EXECUTE ON CLIENT`](../commands/execute-on-client).
+- Un método ejecutado en 4D Server (método base de datos, método con el atributo **Execute on Server** o procedimiento almacenado) puede iniciar un procedimiento almacenado con [`Execute on server`](../commands/execute-on-server), [`New process`](../commands/new-process) o [`EXECUTE ON CLIENT`](../commands/execute-on-client).
+
+:::note
+
+No es posible usar los comandos de gestión de procesos [`DELAY PROCESS`](../commands/delay-process), [`PAUSE PROCESS`](../commands/pause-process) y [`RESUME PROCESS`](../commands/resume-process) desde un 4D remoto en procedimientos almacenados en el servidor.
+
+:::
+
+#### Comunicación entre los procedimientos almacenados y los procesos usuario
+
+Los procedimientos almacenados se pueden comunicar entre ellos mediante:
+
+- el objeto compartido [`session.storage`](../API/SessionClass.md#storage) de la [sesión de procedimientos almacenados](../Desktop/sessions.md#stored-procedure-sessions)
+- [sémaforos](../Develop/processes.md#semaphores) globales o locales
+- registros
+- comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE A VARIABLE`](../commands/variable-to-variable)
+- (*obsoleto*) variables, conjuntos y selecciones temporales interprocesos
+
+Tenga en cuenta que los comandos 4D actúan en el entorno de la máquina que ejecuta el procedimiento almacenado (servidor o cliente) de la misma manera en que actúan en el entorno de una máquina cliente.
+
+:::note
+
+El mecanismo [`POST OUTSIDE CALL`](../commands/post-outside-call) y [`Outside call`](../commands/outside-call) no tiene efecto en la máquina servidor, ya que los procedimientos almacenados no tienen una interfaz de usuario para la entrada de datos.
+
+:::
+
+Los procesos de usuario de un cliente (procesos que se ejecutan en una máquina cliente) pueden leer y escribir las variables de proceso (\*) de un procedimiento almacenado mediante los comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE TO VARIABLE`](../commands/variable-to-variable).
+
+(\*) así como las variables interproceso del equipo servidor.
+
+Importante: la comunicación de procesos "intermáquinas", proporcionada por los comandos [`GET PROCESS VARIABLE`](../commands/get-process-variable), [`SET PROCESS VARIABLE`](../commands/set-process-variable) y [`VARIABLE TO VARIABLE`](../commands/variable-to-variable), solo es posible del cliente al servidor. Siempre es un proceso cliente el que lee o escribe las variables de un procedimiento almacenado.
+
+#### Procedimientos almacenados en máquinas clientes
+
+Los procedimientos almacenados pueden ejecutarse en una o varias máquinas cliente de 4D. Los procedimientos almacenados en las máquinas cliente se ejecutan del mismo modo que los procedimientos almacenados en el servidor, excepto que, en el cliente, pueden invocar la entrada de datos con comandos heredados como [`ADD RECORD`](../commands/add-record).
+
+Todo equipo cliente que ejecute procedimientos almacenados iniciados por un servidor u otro equipo cliente debe registrarse explícitamente para esta sesión. Hay dos formas de registrar un cliente: se puede registrar automáticamente al conectarse o por programación.
+
+- Para registrar automáticamente cada máquina cliente 4D que se conecta al servidor 4D: marque la casilla [**Registrar clientes al iniciar para ejecutar en el cliente**](../settings/client-server.md#register-clients-at-startup-for-execute-on-client) en el cuadro de diálogo Configuración. Cuando esta opción está seleccionada, cada equipo cliente 4D que se conecte a la aplicación queda automáticamente registrado en 4D Server como habilitado para ejecutar procedimientos almacenados. En el servidor se crea un proceso de tipo Cliente 4D cuyo nombre se basa en el nombre del equipo cliente. También se crea un proceso equivalente en cada equipo cliente.
+- Registro de los 4D Client por programación: puede registrar uno o varios equipos cliente por programación, lo que le permite seleccionar los equipos cliente que se deben registrar y definir su nombre de registro. Utilice el comando [`REGISTER CLIENT`](../commands/register-client), que le permite registrar un equipo cliente con el nombre que desee.
+- Dar de baja un cliente 4D: independientemente de cómo se hayan registrado los equipos cliente, puede darlos de baja para la sesión actual utilizando el comando [`UNREGISTER CLIENT`](../commands/unregister-client) para un cliente concreto. El proceso de registro (nombrado según el cliente) desaparece del grupo de procesos de usuario tanto en la máquina servidor como en la máquina cliente.
+
+Puede obtener la lista y la distribución de tareas (número de métodos por ejecutar) para los clientes registrados en una sesión específica utilizando el comando [`GET REGISTERED CLIENTS`](../commands/get-registered-clients).
+
+### Variables
+
+Como todos los procesos, cada procedimiento almacenado, método base de datos y trigger tiene su propia tabla de variables de proceso. Estas variables de proceso se pueden crear y utilizar dinámicamente durante cada fase de ejecución.
+
+4D Server mantiene una tabla de [variables interproceso](../Concepts/variables.md#interprocess-variables) (*obsoleto*). El alcance de estas variables es la máquina servidor. Cuando se ejecuta una base compilada, la definición de la tabla de variables interproceso es común entre el servidor y todas las máquinas cliente, pero cada máquina tiene su propia instancia.
+
+### Conjuntos y selecciones temporales
+
+- Conjuntos y selecciones temporales de proceso: a un objeto de proceso solo se puede acceder desde el proceso en el que fue creado y, si se creó en un proceso cliente, desde el proceso gemelo creado en el servidor. Los conjuntos proceso se borran en cuanto termina el método proceso. Los objetos de proceso no necesitan ningún prefijo especial en el nombre.
+- Conjuntos/Selecciones temporales interproceso (*obsoleto*): un objeto interproceso es visible para todos los procesos en la máquina (cliente o servidor) en la que fue creado. Un conjunto o selección temporal es un objeto interproceso si el nombre del conjunto está precedido por los símbolos (\<>) — un signo "menor que" seguido de un signo "mayor que".
+- Conjuntos/Selecciones temporales locales/clientes: un objeto local/cliente solo es visible en el proceso donde se creó. El nombre de un objeto local/cliente está precedido por el signo de dólar ($).
+  Nota: aunque su nombre no comienza por `$`, el sistema `UserSet` es un conjunto local/cliente.
+
+La siguiente tabla indica los principios de visibilidad de las selecciones temporales y los conjuntos según donde se creen (la tabla es idéntica para ambos tipos de objetos):
+
+|                                   | Proceso cliente | Otros procesos cliente | Proceso servidor               | Otros procesos servidor |
+| --------------------------------- | --------------- | ---------------------- | ------------------------------ | ----------------------- |
+| **Creado en un proceso cliente**  |                 |                        |                                |                         |
+| `$test`                           | x               |                        |                                |                         |
+| `test`                            | x               |                        | x (Trigger) |                         |
+| `<>test`                          | x               | x                      |                                |                         |
+| **Creado en un proceso servidor** |                 |                        |                                |                         |
+| `$test`                           |                 |                        | x                              |                         |
+| `test`                            |                 |                        | x                              |                         |
+| `<>test`                          |                 |                        | x                              | x                       |
+
+x = visible
+
+Tenga en cuenta esta matriz de visibilidad dependiendo de las operaciones que vaya a realizar. Por ejemplo, si quiere hacer una operación de tipo [`DIFFERENCE`](../commands/difference), [`INTERSECTION`](../commands/intersection) o [`UNION`](../commands/union), asegúrese de que todos los conjuntos sean visibles en la máquina que está ejecutando la operación.
+
+### Atributo Ejecutar en el servidor
+
+El atributo de método proyecto **Ejecutar en el servidor** se puede definir utilizando el cuadro de diálogo de configuración por lotes de atributos así como el [cuadro de diálogo Propiedades](../Project/project-method-properties.md#execute-on-server) de los métodos. Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
+
+#### Contexto de ejecución
+
+Cuando se marca este atributo, el contexto de ejecución del método proyecto es comparable al de los [triggers](#triggers): el método en el servidor comparte el mismo contexto de base de datos que el correspondiente del lado del cliente para el bloqueo de registros y transacciones, pero no el mismo contexto de lenguaje (variables de proceso, conjuntos, selecciones actuales). Sin embargo, a diferencia de un trigger, un método que se ejecuta en el servidor no comparte el registro actual con el contexto del cliente.
+Todos los [parámetros del método](../Concepts/parameters.md) se envían al servidor y el valor devuelto, si lo hay, se retorna al cliente.
+
+A diferencia del comando [`Execute on server`](../commands/execute-on-server), esta opción no crea un proceso en el servidor. 4D Server utiliza el proceso gemelo del proceso cliente que solicitó la ejecución. Además, esta opción simplifica el principio de delegar la ejecución de un método en el servidor, ya que la transferencia de parámetros se realiza automáticamente en ambas direcciones, como en una llamada normal a un método. El comando [`Execute on server`](../commands/execute-on-server) funciona de forma asíncrona; por lo tanto, requiere más programación y hace uso de [semáforos](../Develop/processes.md#semaphores) para la lectura de resultados.
+
+#### Comandos utilizables
+
+Los métodos con el atributo "Ejecutar en el servidor" están sujetos a las mismas reglas que los [procedimientos almacenados](#stored-procedures) en lo que se refiere al uso de comandos del lenguaje 4D.
+
+#### Punteros
+
+Si pasa un puntero a una variable (variable simple, array o elemento de array), el valor referenciado también se envía al servidor. If the pointed value is modified on the server by the method, the modified value is returned to the client in order to update the corresponding variable on the client side.
+Pointers to a table or field are sent as references (table number, field number). The current record value is not automatically exchanged.
+
+:::note
+
+This option works the same way in [interpreted mode as in compiled mode](../Concepts/interpreted.md).
+
+:::
+
+#### Ejemplo
+
+Here is the code for the *MyAppli* project method which has the "Execute on Server" attribute:
+
+```4d
+ #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
+ 
+  //Buscar y devolver valores para cada registro
+ QUERY($table->;$field->=$search)
+ While(Not(End selection($table->)))
+    APPEND TO ARRAY($array->;myFormula($table))
+    NEXT RECORD($table->)
+ End while
+ UNLOAD RECORD($table->)
+ $result:=Records in selection($table->)
+```
+
+Del lado del cliente, el método se llama de la siguiente manera:
+
+```4d
+ ARRAY TEXT(myArray;0)
+ var $vlnum:=MyAppli(->[Table_1] ;->[Table_1]Field_1 ;->myArray;"to find")
+```
+
+## Carpeta Resources
+
+The [**Resources** folder](../Project/architecture.md#resources) of a project can be used to share custom data (pictures, files, subfolders, etc.) between the server machine and all the client machines. On the server machine, the **Resources** folder is simply be located at the first level of the [project root folder](../Project/architecture.md).
+
+All referencing mechanisms associated with the **Resources** folder are supported in client/server mode (.lproj folder, XLIFF, pictures and so on).
+
+Each client has a local copy of this folder. The contents of the local folder are automatically synchronized with that of the server each time the client connects.
+
+Moreover, client machines can be dynamically "notified" during a session when the contents of the **Resources** folder of the server application are modified by a developer. This notification can be triggered:
+
+- either automatically by the server, two minutes after the last modification made by a client (this delay helps to avoid inopportune notification in the case where numerous files are being copied).
+- or manually via the **Notify clients** command in the action menu of the [**Resources explorer**][Using the Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html) on the Toolbox of the client machine at the origin of the modification.
+- or by programming, via a [`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands/notify-resources-folder-notification) command. This command is useful when the contents of the **Resources** folder are modified on the server machine via a stored procedure.
+
+On the client side, the way the notification of any modifications will be handled depending on the [**Update "Resources" folder during a session**](../settings/client-server.md#update-resources-folder-during-a-session) setting value. This can also be set individually via the [`Auto synchro resources folder` selector of the `SET DATABASE PARAMETER`](../commands/set-database-parameter#auto-synchro-resources-folder-48) command. Three choices are available: **no synchronization**, **auto synchronization** or **ask**. For more information, please refer to the [**Network and Client-Server options** section](../settings/client-server.md#update-resources-folder-during-a-session).
+
+Lastly, each client machine can synchronize itself with the server at any time via the **Update Local Resources** command in the action menu of the [Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Resources-explorer.200-6750091.en.html).

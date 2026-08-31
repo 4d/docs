@@ -97,7 +97,7 @@ title: $entityset
 
 ### 説明
 
-You can use this command to release a collection of entity sets, which you created using [`$method=entityset`](#methodentityset), from 4D Server's cache.
+このコマンドを使って、[`$method=entityset`](./$method.md#methodentityset) によって作成したエンティティセットのコレクションを 4D Server のキャッシュからリリースすることができます。
 
 ### 例題
 

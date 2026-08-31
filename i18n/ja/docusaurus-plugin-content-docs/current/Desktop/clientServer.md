@@ -1,6 +1,6 @@
 ---
 id: clientServer
-title: クライアント/サーバー管理
+title: クライアント/サーバー
 ---
 
 組み込みクライアント/サーバーアプリケーションまたはリモートプロジェクトの形で、4Dデスクトップアプリケーションをクライアント/サーバー構成で運用することができます。
@@ -67,32 +67,14 @@ title: クライアント/サーバー管理
 
 4D Server 上で .4dz ファイルの更新版が生成された場合、その更新版を利用するには、接続中のリモート 4D マシンは一度ログアウトし、4D Server に再接続する必要があります。
 
-## 4D と 4D Server の同じマシン上での使用
+### 開発モード
 
-同じマシン上で 4D が 4D Server に接続すると、アプリケーションはシングルユーザーモードの 4D のようにふるまい、デザイン環境にてプロジェクトファイルの編集が可能です。 この機能により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます。
-
-> 同じマシン上で 4D Server に 4D を接続する場合には、 [開発モード](#開発モード) オプションの設定にかかわらず **開発モード** が自動的に有効化されます。
-
-デザイン環境にて 4D が **すべてを保存** アクションを (**ファイル** メニューを使って明示的に、または、アプリケーションモードへの移行により暗示的に) おこなうと、4D Server は同期的にプロジェクトファイルをリロードします。 4D Server によるプロジェクトファイルのリロードが完了するのを待って、4D は続行します。
-
-ただし、[標準のプロジェクトアーキテクチャー](Project/architecture.md) とは次のふるまいにおいて異なりますので、注意が必要です:
-
-- 4D が使用する userPreferences.\{username\} フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 4D が使用する userPreferences.\{username\} フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。
-- 4D が使用する DerivedData フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "DerivedDataRemote" フォルダーはプロジェクトのシステムフォルダー内に格納されます。
-- catalog.4DCatalog ファイルは 4D ではなく 4D Server によって編集されます。 catalog の情報はクライアント/サーバーリクエストによって同期されます。
-- directory.json ファイルは 4D ではなく 4D Server によって編集されます。 directory の情報はクライアント/サーバーリクエストによって同期されます。
-- 4D は、4D Server 上のものではなく、独自の内部的なコンポーネントやプラグインを使用します。
-
-> プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
-
-## 開発モード
-
-4D Server における **開発モード** とは、接続したリモート4D アプリケーションに読み/書きアクセスが許可されるプロジェクトを開くときの特別なモードです。 プロジェクトは[**インタープリタ** モード](../Concepts/interpreted.md) でなければなりません。
+4D Server における **開発モード** とは、接続したリモート4D アプリケーションに読み/書きアクセスが許可されるプロジェクトを開くときの特別なモードです。 プロジェクトは[**インタープリター** モード](../Concepts/interpreted.md) でなければなりません。
 
 このモードでは、同じプロジェクトに対して複数のデベロッパーがデザイン環境で同時に作業することができます。 プロジェクトが**開発モード**で開かれている場合、以下のような特徴があります:
 
 - プロジェクトファイルは読み/書きが可能な状態なので、メソッドやフォームなどを編集することができます。
-- 複数のリモート4D が、同じインタープリタ版のプロジェクトファイルを同時に開いて、それを編集することができます。 この場合、自動ロックシステムが同じリソースへの同時アクセスを防止します。
+- 複数のリモート4D が、同じインタープリター版のプロジェクトファイルを同時に開いて、それを編集することができます。 この場合、自動ロックシステムが同じリソースへの同時アクセスを防止します。
 - 編集は全てのリモートデベロッパーに対して利用可能になります。 ただし、このときリモートデベロッパーに対しては自動的なプッシュは起こらなず、最新のバージョンのファイルを取得するためには更新を行う必要があります(更新は、デベロッパーがデザインモードからアプリケーションモードへと切り替えるか、あるいは **ファイル** メニューから **全て保存** を選択したときに毎回起こります)。
 
 このモードを使用するには、リモート4D から[接続ダイアログボックス](#リモートプロジェクトを開く) から**開発モードを有効化する** を選択する必要があります。 次に**4D プロジェクトファイルを選択してください**と表示されます: 4D Server が開いている [.project ファイル](../Project/architecture.md#applicationname4dproject-ファイル) を選択する必要があります。 異なるファイルを選択した場合、開発モードが利用できないことを警告するアラートダイアログボックスが表示されます。 これは、リモート4D がプロジェクトフォルダーに対してネットワーク越しでもアクセス権を持っていなければならないことを意味します(例えばプロジェクトのroot フォルダーが共有されているなど、プロジェクトファイル全体が共有されている必要があります)。
@@ -125,92 +107,307 @@ title: クライアント/サーバー管理
 
 :::
 
-## コードの実行場所
+## 4D と 4D Server の同じマシン上での使用
+
+同じマシン上で 4D が 4D Server に接続すると、アプリケーションはシングルユーザーモードの 4D のようにふるまい、デザイン環境にてプロジェクトファイルの編集が可能です。 この機能により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます。
+
+> 同じマシン上で 4D Server に 4D を接続する場合には、 [開発モード](#開発モード) オプションの設定にかかわらず **開発モード** が自動的に有効化されます。
+
+デザイン環境にて 4D が **すべてを保存** アクションを (**ファイル** メニューを使って明示的に、または、アプリケーションモードへの移行により暗示的に) おこなうと、4D Server は同期的にプロジェクトファイルをリロードします。 4D Server によるプロジェクトファイルのリロードが完了するのを待って、4D は続行します。
+
+ただし、[標準のプロジェクトアーキテクチャー](Project/architecture.md) とは次のふるまいにおいて異なりますので、注意が必要です:
+
+- 4D が使用する userPreferences.\{username\} フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "userPreferences" フォルダーはプロジェクトシステムフォルダー内 (つまり、.4dzプロジェクトを開く場合と同じ場所) に格納されます。
+- 4D が使用する DerivedData フォルダーは、4D Server が使用するプロジェクトフォルダー内のものと同一ではありません。 この専用の "DerivedDataRemote" フォルダーはプロジェクトのシステムフォルダー内に格納されます。
+- catalog.4DCatalog ファイルは 4D ではなく 4D Server によって編集されます。 catalog の情報はクライアント/サーバーリクエストによって同期されます。
+- directory.json ファイルは 4D ではなく 4D Server によって編集されます。 directory の情報はクライアント/サーバーリクエストによって同期されます。
+- 4D は、4D Server 上のものではなく、独自の内部的なコンポーネントやプラグインを使用します。
+
+> プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
+
+## クライアント/サーバー開発
+
+### コードの実行場所
 
 クライアント/サーバーアプリケーションにおいては、コードが実際に実行される場所を知っておくことが重要です: **サーバー側** あるいは **クライアント側** のどちらかです。 実行場所を知っておくことは、ユーザーセッション関連のコードの実装、プロセス間での情報の共有、またはデータのアクセスなどの際に非常に重要となります。
 
 以下の表は、デフォルトでのコードの実行場所と、その実行場所を切り替えるための方法(許可されていれば)をまとめたものです。 この表での **ローカル** とは、コードはそれが実際に呼ばれたマシン上で実行されることを意味するという点に注意してください。
 
-| コード                                                                                                                                                                                                                                                                                                          | デフォルトの実行場所 | 切り替え方法                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [ORDA データモデル関数](../ORDA/ordaClasses.md)                                                                                                                                                                                                                                                                      | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
-| ORDA 計算属性関数のうち [`get()`](../ORDA/ordaClasses.md#function-get-attributename)、 [`set()`](../ORDA/ordaClasses.md#function-set-attributename)                                                                                                                                                                    | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
-| ORDA 計算属性関数のうち [`query()`](../ORDA/ordaClasses.md#function-query-attributename)、 [`orderBy()`](../ORDA/ordaClasses.md#function-orderby-attributename)                                                                                                                                                        | server     | n/a                                                                                                                                                          |
-| ORDA イベント関数 [(全般)](../ORDA/orda-events.md)                                                                                                                                                                                                                                                | server     | n/a                                                                                                                                                          |
-| ORDA イベント関数 [`constructor()`](../ORDA/ordaClasses.md#class-constructor-1)                                                                                                                                                                                                                                    | local      | n/a                                                                                                                                                          |
-| ORDA イベント関数 [`event touched()`](../ORDA/orda-events.md#function-event-touched)                                                                                                                                                                                                                               | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
-| [ユーザークラス関数](../Concepts/classes.md#function)                                                                                                                                                                                                                                                                 | local      | n/a                                                                                                                                                          |
-| [共有シングルトンまたは施ッションシングルトンの関数](../Concepts/classes.md#シングルトンクラス)                                                                                                                                                                                                                                                | local      | 関数定義内で `server` キーワードを使用                                                                                                                                     |
-| トリガ                                                                                                                                                                                                                                                                                                          | server     | n/a                                                                                                                                                          |
-| クライアントから呼び出されたプロジェクトメソッド                                                                                                                                                                                                                                                                                     | client     | [**サーバー上で実行する** オプション](../Project/project-method-properties.md#サーバー上で実行) をチェックする。 コードは、[ユーザーセッションプロセス](./sessions.md#remote-user-sessions) のツインプロセス内で実行されます。 |
-|                                                                                                                                                                                                                                                                                                              |            | [`Execute on server`](../commands/execute-on-server) コマンドを呼び出す。 コードは[ストアドプロシージャセッション](./sessions.md#stored-procedure-sessions) 内で実行されます。                     |
-| サーバー上のストアドプロシージャから呼び出されたプロジェクトメソッド                                                                                                                                                                                                                                                                           | server     | [`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを呼び出す。 ターゲットとなるクライアントは [登録されている](../commands/register-client) 必要があります。                              |
-| オブジェクトメソッド                                                                                                                                                                                                                                                                                                   | local      | n/a                                                                                                                                                          |
-| 以下のデータベースメソッド:<ul><li>On Backup Shutdown</li><li>On Backup Startup</li><li>On Server Close Connection</li><li>On Server Open Connection</li><li>On Server Shutdown</li><li>On Server Startup</li><li>On SQL Authentication</li><li>On Web Authentication</li><li>On Web Connection</li></ul> | server     | n/a                                                                                                                                                          |
-| 以下のデータベースメソッド:<ul><li>On Startup</li><li>On Exit</li><li>On Drop</li></ul>                                                                                                                                                                                                                   | client     | n/a                                                                                                                                                          |
+| コード                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | デフォルトの実行場所 | 切り替え方法                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [ORDA データモデル関数](../ORDA/ordaClasses.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
+| ORDA 計算属性関数のうち [`get()`](../ORDA/ordaClasses.md#function-get-attributename)、 [`set()`](../ORDA/ordaClasses.md#function-set-attributename)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
+| ORDA 計算属性関数のうち [`query()`](../ORDA/ordaClasses.md#function-query-attributename)、 [`orderBy()`](../ORDA/ordaClasses.md#function-orderby-attributename)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | server     | n/a                                                                                                                                                          |
+| ORDA イベント関数 [(全般)](../ORDA/orda-events.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | server     | n/a                                                                                                                                                          |
+| ORDA イベント関数 [`constructor()`](../ORDA/ordaClasses.md#class-constructor-1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | local      | n/a                                                                                                                                                          |
+| ORDA イベント関数 [`event touched()`](../ORDA/orda-events.md#function-event-touched)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | server     | 関数定義内で `local` キーワードを使用                                                                                                                                      |
+| [ユーザークラス関数](../Concepts/classes.md#function)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | local      | n/a                                                                                                                                                          |
+| [共有シングルトンまたは施ッションシングルトンの関数](../Concepts/classes.md#シングルトンクラス)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | local      | 関数定義内で `server` キーワードを使用                                                                                                                                     |
+| [トリガー](#トリガー)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | server     | n/a                                                                                                                                                          |
+| クライアントから呼び出されたプロジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | client     | [**サーバー上で実行する** オプション](../Project/project-method-properties.md#サーバー上で実行) をチェックする。 コードは、[ユーザーセッションプロセス](./sessions.md#remote-user-sessions) のツインプロセス内で実行されます。 |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |            | [`Execute on server`](../commands/execute-on-server) コマンドを呼び出す。 コードは[ストアドプロシージャーセッション](./sessions.md#ストアドプロシージャーセッション) 内で実行されます。                             |
+| サーバー上の[ストアドプロシージャー](#ストアドプロシージャー) から呼び出されたプロジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | server     | [`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを呼び出す。 ターゲットとなるクライアントは [登録されている](../commands/register-client) 必要があります。                              |
+| オブジェクトメソッド                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | local      | n/a                                                                                                                                                          |
+| データベースメソッド:<ul><li>[On Backup Shutdown](../commands-legacy/on-backup-shutdown-database-method.md)</li><li>[On Backup Startup](../commands-legacy/on-backup-startup-database-method.md)</li><li>[On Server Close Connection](../commands-legacy/on-server-close-connection-database-method.md)</li><li>[On Server Open Connection](../commands-legacy/on-server-open-connection-database-method.md)</li><li>[On Server Shutdown](../commands-legacy/on-server-shutdown-database-method.md)</li><li>[On Server Startup](../commands-legacy/on-server-startup-database-method.md)</li><li>[On SQL Authentication](../commands-legacy/on-sql-authentication-database-method.md)</li><li>[On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)</li><li>[On Web Connection](../commands-legacy/on-web-connection-database-method.md)</li></ul> | server     | n/a                                                                                                                                                          |
+| データベースメソッド:<ul><li>[On Startup](../commands-legacy/on-startup-database-method.md)</li><li>[On Exit](../commands-legacy/on-exit-database-method.md)</li><li>[On Drop](../commands-legacy/on-drop-database-method.md)</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | client     | n/a                                                                                                                                                          |
 
-## スリープしたクライアントセッションの管理
+### トリガー
 
-4D Server は、サーバーマシンへの接続がアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。
+[トリガー](../Develop/triggers) はデータベースエンジンが実際に存在するマシン上で実行されます。 4D Server では、トリガーはサーバーマシン上で実行されるプロセスのコンテキスト内で実行され、クライアントマシン上では実行されません。 具体的には、データベース操作を呼び出すユーザープロセスの "ツイン" プロセスのコンテキスト内で実行されます。 これらのツインプロセスはクライアント上のユーザープロセスと同じデータベースコンテキスト (具体的にはトランザクションの状態とレコードのロッキング) を共有しますが、ランゲージコンテキスト (変数、プロセス、セット、カレントセレクションなど) は共有しません。 ただしトリガーのテーブルのカレントレコードはすべてのコンテキストにおいて同じであるという点に注意してください。
 
-この場合、リモートアプリケーションはスリープする前に4D Server へと自動的に知らせます。 対応するクライアントセッションはステータスは**Sleeping** へと変更されます。
+:::note
 
-![](../assets/en/Admin/server-sleep.png)
-
-このステータスはセッションのコンテキストを保持しつつ、サーバー側のリソースを一部解放します。
-
-リモートマシンがスリープモードから復帰した時、アプリケーションは再接続し、既存のセッションを復元します。
-
-スリープ状態のクライアントセッションは、48時間活動がなかった場合には自動的にドロップされます。
-
-この\タイムアウトを変更するには、[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドの `Remote connection sleep timeout` セレクターを使用します。
-
-## 到達不能なピアの管理
-
-[QUIC ネットワークレイヤーが使用されている](../settings/client-server.md#ネットワークレイヤー) 場合、クライアント/サーバーせションでは予期せぬ接続切断の場合に **自動再接続機能** の恩恵を受けることができます。 予期せぬ接続切断とは、例えば以下の様な場合を含みます:
-
-- LAN ケーブルの抜き差し
-- モバイル接続の移行
-- スイッチの再起動
-- 小さなネットワークエラー。
-
-この機能はピアとの接続が切断された場合の、サーバー側とクライアント側との両方をサポートしており、また設定可能なタイムアウトとリアルタイム情報も含みます。
-
-:::tip 関連したblog 記事
-
-[Tired of network errors disrupting your users? 4D 21 R4 has the answer](https://blog.4d.com/tired-of-network-errors-disrupting-your-users-4d-21-r4-has-the-answer)
+サーバー上では、トリガーは割り当てられたアクション (作成/更新/削除) を処理するプロセス内で実行されます。 アクションが[サーバー上のプリエンプティブプロセス](../Develop/preemptive.md) (例: ストアドプロシージャーやスケーラブルセッションモードでの HTTPリクエスト) でトリガーされた場合には、トリガーは同じプリエンプティブプロセス内で実行されます。 ただし、アクションが 4Dリモートからトリガーされていた場合、トリガーはツインプロセスで実行され、このツインプロセスは必ずコオペラティブモードで実行されます (ツインプロセスはユーザーのすべての呼び出しに対して共有されます)。
 
 :::
 
-### 到達不能イベント
+### ストアドプロシージャー
 
-QUIC ネットワークレイヤーは、リモート4D が予期せず対応できない状態になったときには、自動的に"到達不能"イベントを4D Server に送信します。逆に、4D Server が予期せず対応できない状態になったときには、リモート4D に"到達不能"イベントを自動的に送信します。 どちらか側で"到達不能" イベントが受信されると、その情報はインターフェース内とマシンの[`Session`](./sessions.md) オブジェクト内にて即座に反映されます。
+4D のストアドプロシージャーとは、メソッドを実行したクライアントマシンではなく、サーバーマシン (あるいは登録されたクライアントマシン) 上で実行中のプロセス内でプロセスメソッドを実行するプロジェクトメソッドです。
 
-#### リモート4D側が応答を停止した場合
+ローカルモードの 4D では、[`New process`](../commands/new-process) などのコマンドを使用すると、メソッドを実行できるユーザープロセスを開始することができます。 このメソッドは[プロセスメソッド](../Project/project-method-properties.md#プロセスメソッド) と呼ばれています。 同じことは、4D Server、クライアントマシンで行うことができます。 また、サーバーマシン上で[`Execute on server`](../commands/execute-on-server) コマンドを使用することで、メソッドを実行できるユーザープロセスを開始することができます。 さらに、[`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを使用すると異なるクライアント上の他のプロセス内でメソッドを実行することができます。 どちらの場合においても、このメソッドは**ストアドプロシージャー**と呼ばれ、またサーバーマシンまたは他のクライアント上で開始されたプロセスについても(比喩から)同じくストアドプロシージャーと呼ばれます。
 
-リモート4D が予期せず応答を停止した場合、[サーバー管理ウィンドウ](../ServerWindow/overview.md) 上では、[リモートセッションのステータス](../ServerWindow/sessions.md#セッションの一覧) が**到達不能** に設定されます。
+:::note
 
-![](../assets/en/Desktop/unreachable-status.png)
+サーバー上で実行されるすべてのストアドプロシージャーは[同じ仮想的なユーザーセッションを共有します](./sessions.md#stored-procedure-sessions)。
 
-#### サーバーが応答を停止した場合
+:::
 
-4D Server が予期せず応答を停止した場合、リモートマシン上では再接続ダイアログボックスが表示されます:
+#### アーキテクチャー
 
-![](../assets/en/Desktop/server-not-responding.png)
+通常のプロセスと同様に、ストアドプロシージャーには次のような独自の環境があります:
 
-#### セッションオブジェクトの更新
+- テーブルごとのカレントセレクション: 各ストアドプロシージャーには、個別のカレントセレクションがあります。 1 つのテーブルは、別々のストアドプロシージャーで異なるカレントセレクションを持つことができます。
+- テーブルごとのカレントレコード: 各テーブルは、ストアドプロシージャーごとに異なるカレントレコードを持つことができます。
+- 変数: 各ストアドプロシージャーには独自のプロセス変数があります。 プロセス変数は、その変数が設定されたストアドプロシージャーの範囲内でのみ認識されます。
+- デフォルトテーブル: 各ストアドプロシージャーには、独自のデフォルトテーブルがあります。
+- プロセスセット: 各ストアドプロシージャーには、独自のプロセスセットがあります。
+- エラー処理: 各ストアドプロシージャーには、独自のエラー処理メソッドを持てます。
+- デバッガーウィンドウ: 各ストアドプロシージャーは、独自のデバッガーウィンドウを持てます。
 
-どちらかで"Unreachable" イベントが受信された時、イベントを受信したマシン上のセッション内にて[`info.unreachableSince`](../API/SessionClass.md#info) プロパティが作成され(サーバー上ではこれは[`Process activity.sessions`](../commands/process-activity) プロパティを通して読み出し可能です)、また最後の通信からの秒数をカウントし始めます。 このプロパティを使用して独自の接続解除インターフェースを実装することができます。
+ユーザーインターフェースの点では、ストアドプロシージャーは、ウィンドウを開き、データを表示する (例えば[`DISPLAY RECORD`](../commands/display-records) を使用) ことができます。 4D クライアントマシン上で実行されるストアドプロシージャーではデータ入力ができます。 一方、サーバー上で実行されるストアドプロシージャーではデータ入力を開始することはできません。
 
-### 接続の復元または解除
+ストアドプロシージャーは、システム (ハードウェアおよびメモリ) が許す限りいくつでも開始することができます。 事実、4D Server マシンは、4Dクライアントおよび Webブラウザーに応答するマシンであるだけではなく、サーバーマシンおよびリモート4D マシン上で実行中の他のプロセスと対話するプロセスを実行するマシンである、という見方をする必要があります。
 
-QUIC セッションのタイムアウトはデフォとでは900 秒(15分) となっており、これは[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドの`QUIC session timeout` セレクターを使用することで変更することができます。
+:::note
 
-QUIC セッションタイムアウトは、接続解除をモニターするために以下の様に自動的に使用されます:
+[**サーバー上で実行** メソッド属性](../Project/project-method-properties.md#サーバー上で実行)
+を使用して、サーバー上のプロセスでメソッドを実行することもできます。ただしこの場合メソッドは、クライアントプロセスに対応するサーバー上のクライアントプロセスで実行されます。つまりクライアントプロセスの環境を使用できます。 この場合、これは 4D のストアドプロシージャーではありません。
 
-- 接続がQUIC セッションタイムアウトに達する前に復元された場合、[`info.unreachableSince`](../API/SessionClass.md#info) プロパティはセッションオブジェクトから自動的に削除されます。
-- 接続がQUIC セッションタイムアウトに達するまでに復元されなかった場合、セッションは閉じられます。
-  - サーバーマシン上でリモートセッションが閉じられた場合、警告エントリーが[診断ログ](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) 内に書き込まれます。
-  - リモートマシンにおいてサーバーセッションが閉じられた場合、警告ダイアログが表示され、ユーザーはリモートアプリケーションを再起動するか終了するかを選択することができます:
-    ![](../assets/en/Desktop/remote-not-responding.png)
+:::
 
+#### ストアドプロシージャーの機能
+
+サーバー上で実行されるストアドプロシージャーでのデータ入力を除き、ほとんどすべてのプロセスおよび4D ランゲージの機能は、ストアドプロシージャーにも適用されます。
+
+ストアドプロシージャーではデータの追加、検索、並べ替え、更新、削除が可能です。 ストアドプロシージャーではディスク上のドキュメントファイルへのアクセス、BLOB を使用した作業、レコードの印刷等を行うことができます。 ローカルの 4Dマシン上で作業を行う代わりに、サーバーマシン上や他の 4Dクライアントマシン上で実行していると考えてください。
+
+ローカルに実行されるストアドプロシージャーに対しサーバー上で実行されるストアドプロシージャーの明確な利点とは、データベースエンジンがあるサーバーマシン上でローカルに実行されるということです。 例えば、ネットワーク経由で[`APPLY TO SELECTION`](../commands/apply-to-selection) を行うと効率的ではありませんが、ストアドプロシージャー内では効率良く実行されます。
+
+クライアントマシン上で実行されるストアドプロシージャーを使用すれば、タスクの分割やクライアントマシン間の通信を最適化できます。 複数のマシンでストアドプロシージャーを実行する例題は、[`REGISTER CLIENT`](../commands/register-client) を参照してください。
+
+しかし、ストアドプロシージャーアーキテクチャーの最も重要な利点は、4D Server に追加の世界をもたらすところです。 ストアドプロシージャーを利用すると、独自の4D Server サービスを実現することができます。 唯一の制約はあなたの想像力だけです。
+
+#### ストアドプロシージャーが行わないこと
+
+一般的に言って、サーバー上で実行されるストアドプロシージャーはインターフェース (メニューやウィンドウ、フォームなど) を扱うべきではありません。 実際インターフェースはサーバー上では管理されません。
+
+サーバーマシン上でモーダルダイアログボックスを生成しうる可能性のあるコマンド(例: [`Open document`](../commands/open-document) に第一引数に空の文字列を渡して呼び出すなど)は、すべて避けるべきです。 サーバー画面の前には必ずしも常にユーザーがいるわけではないため、ユーザーアクションが必要なモーダルなダイアログボックスを表示することは、アプリケーションの一時的なブロックにつながることがあるという点に注意してください。
+
+#### サーバー上で禁止されるコマンド
+
+以下はサーバー上で実行されるストアドプロシージャー内で使用すべきでないコマンドのリストです。 以下のコマンドの1つををストアドプロシージャー内で使用したら、4D Server 上で使ってはいけないというアラートが表示されます。 エラーは#67 が返ります。[`ON ERR CALL`](../commands/on-err-call) コマンドでインストールされたメソッドを通し、受け取ることができます。
+
+[`ADD RECORD`](../commands/add-record)
+[`APPEND MENU ITEM`](../commands/append-menu-item)
+[`POST OUTSIDE CALL`](../commands/post-outside-call)
+[`CHANGE LICENSES`](../commands/change-licenses)
+[`Count menu items`](../commands/count-menu-items)
+[`Count menus`](../commands/count-menus)
+[`DELETE MENU ITEM`](../commands/delete-menu-item)
+[`DISABLE MENU ITEM`](../commands/disable-menu-item)
+[`DISPLAY SELECTION`](../commands/display-selection)
+[`EDIT ACCESS`](../commands/edit-access)
+[`ENABLE MENU ITEM`](../commands/enable-menu-item)
+[`FILTER EVENT`](../commands/filter-event)
+[`Get menu item`](../commands/get-menu-item)
+[`Get menu item key`](../commands/get-menu-item-key)
+[`Get menu item mark`](../commands/get-menu-item-mark)
+[`Get menu item style`](../commands/get-menu-item-style)
+[`Get menu title`](../commands/get-menu-title)
+[`SET PICTURE TO LIBRARY`](../commands/set-picture-to-library)
+[`INSERT MENU ITEM`](../commands/insert-menu-item)
+[`Menu selected`](../commands/menu-selected)
+[`MODIFY RECORD`](../commands/modify-record)
+[`MODIFY SELECTION`](../commands/modify-selection)
+[`ON EVENT CALL`](../commands/on-event-call)
+[`QUERY BY EXAMPLE`](../commands/query-by-example)
+[`QR REPORT`](../commands/qr-report)
+[`REMOVE PICTURE FROM LIBRARY`](../commands/remove-picture-from-library)
+[`SET MENU ITEM`](../commands/set-menu-item)
+[`SET MENU ITEM SHORTCUT`](../commands/set-menu-item-shortcut)
+[`SET MENU ITEM MARK`](../commands/set-menu-item-mark)
+[`SET MENU ITEM STYLE`](../commands/set-menu-item-style)
+[`SET PICTURE TO LIBRARY`](../commands/set-picture-to-library)
+[`SET USER ALIAS`](../commands/set-user-alias)
+[`SHOW MENU BAR`](../commands/show-menu-bar)
+
+サーバー上で効果がないコマンド
+以下のコマンドはサーバー上のストアドプロシージャーで呼び出された場合、効果がありません。 特定のエラーコードは返されません。
+
+[`GRAPH`](../commands/graph)
+[`MESSAGES OFF`](../commands/messages-off)
+[`MESSAGES ON`](../commands/messages-on)
+[`SET MENU BAR`](../commands/set-menu-bar)
+[`SHOW TOOL BAR`](../commands/show-tool-bar)
+
+#### ストアドプロシージャーを開始する
+
+4D から**メソッド実行**ダイアログボックスを使用して、手動でストアドプロシージャーを開始できます:
+
+![](../assets/en/Desktop/execute-method.png)
+
+ここからメソッドを 4D Serverまたは他の 4Dクライアントマシン上で実行できます。 このリストに 4Dクライアントマシンを表示させるためには、まずそのマシンが[登録](#クライアントマシン上でのストアドプロシージャー) されていなければならないことに留意してください。
+
+- また 4D 上では、[`Execute on server`](../commands/execute-on-server) または [`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを使用してプログラムからストアドプロシージャーを開始できます。
+- 4D Server上で実行されているメソッド (サーバーデータベースメソッド、**サーバー上で実行**属性付きのメソッド、またはストアドプロシージャー) は[`Execute on server`](../commands/execute-on-server)、 [`New process`](../commands/new-process)、または [`EXECUTE ON CLIENT`](../commands/execute-on-client) を使用してストアドプロシージャーを開始できます。
+
+:::note
+
+リモート4D からサーバーのストアドプロシージャーに、[`DELAY PROCESS`](../commands/delay-process), [`PAUSE PROCESS`](../commands/pause-process) および [`RESUME PROCESS`](../commands/resume-process) などのプロセス管理コマンドを使用することはできません。
+
+:::
+
+#### ストアドプロシージャーとユーザープロセス間のインタープロセス通信について
+
+ストアドプロシージャー間の通信には、次の方法を使用します:
+
+- [ストアドプロシージャーセッション](../Desktop/sessions.md#stored-procedure-sessions) の共有オプジェクトの[`session.storage`](../API/SessionClass.md#storage)
+- ローカルセマフォーまたはグローバル[セマフォー](../Develop/processes.md#semaphores)
+- レコード
+- [`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンド
+- (*非推奨*) インタープロセスセットおよびインタープロセス命名セレクション
+
+4Dコマンドは、クライアントマシンのスコープ内で動作する場合と同様に、ストアドプ ロシージャーを実行するサーバーまたはクライアントマシンのスコープ内で動作することに注意してください。
+
+:::note
+
+[`POST OUTSIDE CALL`](../commands/post-outside-call) および [`Outside call`](../commands/outside-call) メカニズムは、サーバーマシン上では意味がありません。ストアドプロシージャーには、データ入力のためのユーザーインターフェースがないためです。
+
+:::
+
+クライアントユーザープロセス (クライアントマシンで実行されるプロセス) は、[`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンドを使用して、ストアドプロシージャーのプロセス変数 (\*) を読み込んだり、書き込むことができます。
+
+(\*) サーバーマシンのインタープロセス変数も同様。
+
+重要: [`GET PROCESS VARIABLE`](../commands/get-process-variable)、 [`SET PROCESS VARIABLE`](../commands/set-process-variable) および [`VARIABLE TO VARIABLE`](../commands/variable-to-variable) コマンドを使用して行う“マシン間”のプロセス通信は、クライアントからサーバーに対してのみ可能です。 ストアドプロシージャーの変数を読み込んだり、書き込んだりするのは常にクライアントのプロセスです。
+
+#### クライアントマシン上でのストアドプロシージャー
+
+ストアドプロシージャーを 1つあるいは複数の 4Dマシン上で実行できます。 クライアント上のストアドプロシージャーは、サーバー上のそれとおなじように実行されますが、クライアント上では[`ADD RECORD`](../commands/add-record) などの従来のコマンドを使用してデータ入力を行うことができます。
+
+サーバーまたは他のクライアントマシンによって起こされた、どのようなクライアントマシンで実行されているストアドプロシージャーも、明示的にこのセッションに登録されなければなりません。 4D クライアントを登録するには2つの方法があります。接続時に自動登録またはプログラミングによる登録です。
+
+- 4D Server へ接続する各 4Dクライアントマシンを自動的に登録する: データベース設定のクライアント-サーバーページ中、公開オプションタブの[**Execute On Client のために起動時にクライアント登録**](../settings/client-server.md#execute-on-clientのために起動時にクライアント登録)チェックボックスを利用します。 このオプションにチェックを入れると、データベースに接続した各 4Dクライアントマシンは、ストアドプロシージャーを実行することができるクライアントとして、4D Server から自動的に参照されます。 クライアントマシンに応じて名前がつけられた 4Dクライアントタイプのプロセスは、サーバー上に作成されます。 また対応するプロセスが、各クライアントマシン上に作成されます。
+- プログラミングによる 4Dクライアントの登録: プログラミングを使って 1つまたは複数の 4Dクライアントマシンを登録することができます。この方法では登録に必要なクライアントマシンを選択し、登録名を決めることができます。 [`REGISTER CLIENT`](../commands/register-client) コマンドで、どのような名前でもクライアントマシンを登録することができます。
+- 4D クライアントの登録解除: クライアントマシンが登録された方法にかかわらず、[`UNREGISTER CLIENT`](../commands/unregister-cient) コマンドで現在のセッションから指定したクライアントを登録解除することができます。 クライアントごとに付けられた名前の登録プロセスはサーバーマシンのユーザープロセスグループから消え、クライアント上の対応するプロセスも終了されます。
+
+[`GET REGISTERED CLIENTS`](../commands/get-registered-clients) コマンドを使用して、セッションに登録されたクライアントのリストとタスク割り当て(実行待ちのメソッド数)を取得することができます。
+
+### 変数
+
+すべてのプロセス同様、各ストアドプロシージャーには独自のプロセス変数があります。 これらのプロセス変数、実行の各フェーズにおいて作成して動的に使用することができます。
+
+4D Server は[インタープロセス変数](../Concepts/variables.md#インタープロセス変数) のテーブルを一つ管理しています(インタープロセス変数は *非推奨*です)。 これらの変数のスコープはサーバーマシンです。 コンパイルしたデータベースを実行している場合、インタープロセス変数テーブルの定義は、サーバーマシンとすべてのクライアントマシンとで共通です。各マシンはそれぞれ独自のインスタンスを保持します。
+
+### セットと命名セレクション
+
+- プロセスセット/命名セレクション: プロセスオブジェクトには、それを作成したプロセス内、およびクライアントプロセスで作成された場合には対応するサーバー上のクライアントプロセス上でのみアクセスできます。 プロセスセットは、プロセスメソッドが終了すると直ちに消去されます。 プロセスオブジェクトはその名前に特別な接頭辞を必要としません。
+- インタープロセスセット/命名セレクション(*非推奨*): インタープロセスオブジェクトはそれが作成されたマシン上 (クライアントまたはサーバー) のすべてのプロセスで可視です。 名前の前に"小なり記号"と"大なり記号"の組合せ (\<>) が付いていれば、そのセットや命名セレクションはインタープロセスセットです。
+- ローカル/クライアントセット/命名セレクション: ローカル/クライアントオブジェクトはそれが作成されたプロセス内でのみ可視です。 ローカル/クライアントオブジェクトの名前の前には、ドル記号 ($) を付けます。
+  注: `UserSet` システムセットの名前は`$` で始まっていませんが、ローカル/クライアントセットです。
+
+以下の表は命名セレクションとセットがどこで作成されたかに基づき、これらの可視性の原則を示しています (表は両タイプのオブジェクトで共通です):
+
+|                       | クライアントプロセス | 他のクライアントプロセス | サーバープロセス                    | 他のサーバープロセス |
+| --------------------- | ---------- | ------------ | --------------------------- | ---------- |
+| **クライアントプロセス内で作成された** |            |              |                             |            |
+| `$test`               | ○          |              |                             |            |
+| `test`                | ○          |              | ○ (トリガー) |            |
+| `<>test`              | ○          | ○            |                             |            |
+| **サーバープロセス内で作成された**   |            |              |                             |            |
+| `$test`               |            |              | ○                           |            |
+| `test`                |            |              | ○                           |            |
+| `<>test`              |            |              | ○                           | ○          |
+
+x = 可視
+
+行いたい処理に基づき、この可視表を常に心にとめておいてください。 例えば[`DIFFERENCE`](../commands/difference)、 [`INTERSECTION`](../commands/intersection) あるいは[`UNION`](../commands/union) タイプの処理を行うとき、すべてのセットや命名セレクションが、処理を行うマシン上で可視であることを確認してください。
+
+### サーバー上で実行属性
+
+The **サーバー上で実行** プロジェクトメソッド属性は属性の一括設定ダイアログや[メソッドプロパティダイアログ](../Project/project-method-properties.md#サーバー上で実行) を使用して設定できます。 このオプションが選択されていると、そのプロジェクトメソッドは呼び出し方に関わらず常にサーバー上で実行されます。
+
+#### 実行コンテキスト
+
+この属性が選択されている場合、そのプロジェクトメソッドの実行コンテキストは[トリガー](#トリガー)のそれと同じものになります。つまり、サーバー上で実行されるメソッドは、レコードロックやトランザクションについてクライアント側の対応する同じデータベースコンテキストを共有しますが、ランゲージコンテキスト (プロセス変数、セット、カレントセレクション) は共有しません。 しかしながらトリガーと異なり、サーバー上で実行されるメソッドはクライアントコンテキストのカレントレコードを共有しない点に留意してください (トリガーはトリガーテーブルのカレントレコードを共有します)。
+[メソッドのすべての引数](../Concepts/parameters.md) はサーバーに送信され、戻り値が (使用されていれば) クライアントに返されます。
+
+[`Execute on server`](../commands/execute-on-server) コマンドと異なり、このオプションはサーバー上にプロセスを作成しません。 4D Server は、実行をリクエストしたクライアントプロセス("ツイン"プロセス)に対応するサーバー側のクライアントプロセスを使用します。 さらにこのオプションは、"普通"のメソッド呼び出しのように、引数の交換が両方向で自動化されるので、サーバーにメソッドの実行を移譲することが簡単になります。 [`Execute on server`](../commands/execute-on-server) コマンドの場合、これは非同期で動作するため、追加のプログラミングと、結果を読み込むための[セマフォー](../Develop/processes.md#セマフォー) が必要です。
+
+#### 使用できるコマンド
+
+"サーバー上で実行"属性を持つメソッドは、4Dランゲージコマンドの利用においては、[ストアドプロシージャー](#ストアドプロシージャー) と同じルールが適用されます。
+
+#### ポインター
+
+変数へのポインター (変数、配列、または配列要素) を渡した場合、参照先の値もサーバーに送信されます。 サーバー上でメソッドにより参照先の値が更新されると、更新された値がクライアントに返され、クライアント側の対応する変数が更新されます。
+テーブルやフィールドのポインターは参照として送られます (テーブル番号、フィールド番号)。 カレントのレコード値は自動では交換されません。
+
+:::note
+
+このオプションは[インタープリターモードとコンパイルモード](../Concepts/interpreted.md) で同じように動作します。
+
+:::
+
+#### 例題
+
+以下は"サーバー上で実行"属性が設定された*MyAppli* プロジェクトメソッドのコードです:
+
+```4d
+ #DECLARE($table: Pointer; $field: Pointer; $array: Pointer; $search: Text) -> $result : Integer
+ 
+  //検索を行いレコード毎の結果を返す
+ QUERY($table->;$field->=$search)
+ While(Not(End selection($table->)))
+    APPEND TO ARRAY($array->;myFormula($table))
+    NEXT RECORD($table->)
+ End while
+ UNLOAD RECORD($table->)
+ $result:=Records in selection($table->)
+```
+
+クライアント側で、メソッドは以下のように呼び出されます:
+
+```4d
+ ARRAY TEXT(myArray;0)
+ var $vlnum:=MyAppli(->[Table_1] ;->[Table_1]Field_1 ;->myArray;"to find")
+```
+
+## Resources フォルダー
+
+データベースの [**Resources** フォルダー](../Project/architecture.md#resources) を使用して、カスタムデータ (ピクチャー、ファイル、サブフォルダー等) を サーバーマシンとすべてのクライアントマシンで共有できます。 **Resources** フォルダーはサーバーマシン上で [プロジェクトルートフォルダー](../Project/architecture.md) の第一階層になければなりません。
+
+**Resources** フォルダーに関連付けられたすべての参照メカニズムは、クライアント/サーバーモードでもサポートされています (.lprojフォルダー、XLIFF、ピクチャーなど)。
+
+クライアントはそれぞれこのフォルダーのローカルコピーを持ちます。 ローカルフォルダーの内容は、クライアントがサーバーに接続するたびに自動でサーバーのそれと同期されます。
+
+さらに、サーバーデータベース上の **Resources** フォルダーの内容が開発者によりセッション中に更新されたとき、クライアントマシンはその通知を受け取ることもできます。 この通知は以下をトリガーとして行われます:
+
+- クライアントから最新の更新が行われてから2分後、サーバーが自動で行う (この遅延は多数のファイルがコピーされた場合の不適切な通知を避けるためのものです)。
+- または更新を行ったクライアントマシン上の[**リソースエクスプローラー**](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.ja.html) のアクションメニューから[**クライアントに通知コマンド**]を選択する。
+- または[`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands/notify-resources-folder-notification) コマンドを使用してプログラミングで行う。 このコマンドは **Resources** フォルダーの内容がストアドプロシージャーを使用してサーバー上で更新された場合に便利です。
+
+クライアント側では、環境設定の[**セッション中に"Resources"フォルダーを更新**](../settings/client-server.md#update-resources-folder-during-a-session) の設定に基づき、この通知に対する処理が決定されます。 この設定は[`SET DATABASE PARAMETER` コマンドの`Auto synchro resources folder` セレクター](../commands/set-database-parameter#auto-synchro-resources-folder-48) を使用して、個々に設定することもできます。 3つの選択肢があります: **同期しない**、 **自動で同期する** そして **その都度指定**。 詳細はネットワーク/クライアント-サーバー通信 [**ネットワーク/クライアント-サーバー通信** の節](../settings/client-server.md#update-resources-folder-during-a-session) を参照してください。
+
+最後に、それぞれのクライアントマシンはいつでも[リソースエクスプローラー](https://doc.4d.com/4Dv20/4D/20.2/Resources-explorer.200-6750091.ja.html) のアクションメニューの**ローカルリソースを更新**コマンドを使用してサーバーと同期できます。

@@ -5,7 +5,7 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *objet* : Text ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<br/>**WA SET URL FILTERS** ( *objet* : Variable, Field ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 <div class="no-index">
 

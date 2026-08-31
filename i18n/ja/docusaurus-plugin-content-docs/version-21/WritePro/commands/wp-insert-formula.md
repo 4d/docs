@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 *formula* 引数には、評価される 4D フォーミュラを渡します。 以下のものを渡すことができます: 以下のものを渡すことができます:
 
-- [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects)
+- [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula-from-string.md) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula-objects.md)
 - または以下の2つのプロパティを格納しているオブジェクト:
 
 | **プロパティ** | **型**  | **説明**                                                                                                                                                                    |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                     |
-| formula   | Object | [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects) |
+| formula   | Object | [**Formula**](../../commands/formula.md) または [**Formula from string**](../../commands/formula-from-string.md) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula-objects.md) |
 
 フォーミュラの*name* プロパティがあるオブジェクトを使用する場合、ドキュメント内で、フォーミュラが参照として表示される場合にはフォーミュラ参照ではなくそのname の名前が表示され、値または記号として表示される場合にはフォーミュラtip に名前が表示されます。 *name* プロパティが空の文字列を格納しているか省略されている場合、それはオブジェクトから削除され、デフォルトでフォーミュラが表示されます。 詳細な情報については、[フォーミュラの管理](../managing-formulas.md) のページを参照してください。
 

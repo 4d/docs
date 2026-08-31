@@ -5,14 +5,14 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *tableau* ; *leChamp* {; *tableau2* ; *leChamp2* ; ... ; *tableauN* ; *leChampN*}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *tableau* : Array ; *leChamp* : Field {; ...(*tableau* : Array; *leChamp* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tableau | Array | &#8594;  | Tableau à copier dans la sélection |
-| leField | Field | &#8592; | Champ recevant les valeurs du tableau |
+| leChamp | Field | &#8592; | Champ recevant les valeurs du tableau |
 | * | Opérateur | &#8594;  | Attente d’exécution |
 </div>
 <!-- END REF-->

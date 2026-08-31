@@ -13,7 +13,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *méthode* ; *pile* {; *nom* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *méthode* : Text ; *pile* : Integer {; *nom* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 <div class="no-index">
 

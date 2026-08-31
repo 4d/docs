@@ -5,14 +5,6 @@ slug: /commands/register-client
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|\* parameter ignored|
-|11.3|*period* parameter ignored |
-
-</details>
 
 
 <!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( {*clientName* : Text {; *}} )<!-- END REF-->
@@ -31,6 +23,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21|\* parameter ignored|
+|11.3|*period* parameter ignored |
 |11 SQL Release 3|Modified|
 |<6|Created|
 

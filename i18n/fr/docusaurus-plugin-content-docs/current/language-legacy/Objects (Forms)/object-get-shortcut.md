@@ -5,14 +5,14 @@ slug: /commands/object-get-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( {* ;} *objet* ; *touche* ; *modifiers* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( * ; *objet* : Text ; *touche* : Text ; *modifiers* : Integer )<br/>**OBJECT GET SHORTCUT** ( *objet* : Variable, Field ; *touche* : Text ; *modifiers* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | Text, Variable, Field | &#8594;  | Nom d’objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | touche | Text | &#8592; | Touche associée à l’objet |
 | modifiers | Integer | &#8592; | Masque ou combinaison de masques de touche(s) de modification |
 </div>

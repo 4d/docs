@@ -5,7 +5,7 @@ slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( refElement | document ; *selector* : Integer ; *valor* : Integer {; ...(*selector* : Integer, *valor* : Integer)} )<!-- END REF-->
+<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *refElement &#124; document* : Text, Time ; *selector* : Integer ; *valor* : Integer {; ...(*selector* : Integer ; *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
 <div class="no-index">
 

@@ -5,7 +5,7 @@ slug: /commands/sax-open-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *documento* : Time ; *etiqueta* : Text {; *atribNomesArray* : Text array ; *attribValuesArray* : Array} {; ...(*atribNomesArray* : Text array, *attribValuesArray* : Array)} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *documento* : Time ; *etiqueta* : Text {; ...(*atribNomesArray* : Text array ; *attribValuesArray* : Array)} )<br/>*SAX OPEN XML ELEMENT ARRAYS** ( *documento* : Time ; *etiqueta* : Text {; ...(*atribNomesArray* : Text  ; *attribValuesArray* : Text)} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
 <div class="no-index">
 

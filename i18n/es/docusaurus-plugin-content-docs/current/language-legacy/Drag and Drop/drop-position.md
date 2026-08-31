@@ -5,13 +5,13 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** ( colNum | posXImagen ) : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** ( { *columnNumber* : Integer } ) : Integer<br/>**Drop position** ( { *pictPosY* : Integer } ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 <div class="no-index">
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| colNum &#124; posXImagen | Entero largo | &#8592; | Número de columna del list box (-1 si el soltar ocurre más allá de la última columna)o <br/>Posición coordenada X en la imagen |
+| colNum &#124; posXImagen | Integer | &#8592; | Número de columna del list box (-1 si el soltar ocurre más allá de la última columna)o <br/>Posición coordenada X en la imagen |
 | Resultado | Integer | &#8592; | Número (array/ list box) o posición (lista jerárquica) o Posición en cadena (texto/combo box) o elemento de destino o -1 si soltar ocurrió más allá del último elemento del array o de la lista |
 </div>
 <!-- END REF-->

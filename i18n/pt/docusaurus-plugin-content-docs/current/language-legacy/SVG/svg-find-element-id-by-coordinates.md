@@ -5,7 +5,7 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetoImagem* ; *X* : Integer ; *Y* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( * ; *objetoPicture* : Text ; *X* : Integer ; *Y* : Integer ) : Text<br/>**SVG Find element ID by coordinates** ( *objetoPicture* : Variable, Field ; *X* : Integer ; *Y* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 <div class="no-index">
 

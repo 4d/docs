@@ -128,7 +128,7 @@ Sections inherit attributes from the document. However, common document attribut
 ![](../../assets/en/WritePro/pict2994945.en.png)
 * **Columns** commands: allow to define the number and properties of columns for the section. These options are detailed below.
 * **Header** and **Footer** commands: these options allow you to define separate headers and footers. These options are detailed below.
-* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the [4D Write Pro Attributes](../4d-write-pro-attributes) article.
+* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the [Attributes](./4d-write-pro-attributes) page.
 
 ### Inserting headers and footers 
 
@@ -192,7 +192,7 @@ Vertical rulers are available in Page mode only and have the following character
 * Graduations in cm, mm, inches or pt according to current layout unit defined in the 4D Write Pro document. You can change measurement units using the context menu or by modifying the wk layout unit attribute.
 * Visible color contrast representing top and bottom page margins
 
-You can change the display status of the rulers via standard actions (see *Using 4D Write Pro standard actions*) or by checking or unchecking the **Show horizontal ruler** or **Show vertical ruler** item in the context menu of the 4D Write Pro area:  
+You can change the display status of the rulers via standard actions  or by checking or unchecking the **Show horizontal ruler** or **Show vertical ruler** item in the context menu of the 4D Write Pro area:  
   
 ![](../../assets/en/WritePro/pict4101161.en.png)  
 

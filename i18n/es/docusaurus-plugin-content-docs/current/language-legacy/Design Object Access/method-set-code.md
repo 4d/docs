@@ -5,7 +5,7 @@ slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *ruta* : Text, Text array ; *codigo* : Text, Text array {; *operador* : *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *path* : Text, Text array ; *code* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | ruta | Text, Text array | &#8594; | Texto o array texto que contiene una o varias rutas de métodos |
 | codigo | Text, Text array | &#8594; | Código de los métodos designados |
-| operador | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| * | Operator | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 </div>
 <!-- END REF-->
 

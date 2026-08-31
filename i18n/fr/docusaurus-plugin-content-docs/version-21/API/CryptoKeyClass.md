@@ -262,9 +262,9 @@ La valeur retournée est un message chiffré.
 
 <div class="no-index">
 
-| Paramètres | Type |                             | Description                |
-| ---------- | ---- | --------------------------- | -------------------------- |
-| Résultat   | Text | <- | Clé primaire au format PEM |
+| Paramètres | Type |                             | Description              |
+| ---------- | ---- | --------------------------- | ------------------------ |
+| Résultat   | Text | <- | Clé privée au format PEM |
 
 </div>
 <!-- END REF -->

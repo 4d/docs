@@ -5,14 +5,14 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetImage* ; *x* ; *y* ; *largeur* ; *hauteur* ; *tabIds* ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( * ; *objetImage* : Text ; *x* : Integer ; *y* : Integer ; *largeur* : Integer ; *hauteur* : Integer ; *tabIds* : Text array ) : Boolean<br/>**SVG Find element IDs by rect** ( *objetImage* : Variable, Field ; *x* : Integer ; *y* : Integer ; *largeur* : Integer ; *hauteur* : Integer ; *tabIds* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
-| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| objetImage | Text, Variable, Field | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
 | x | Integer | &#8594;  | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
 | y | Integer | &#8594;  | Coordonnée verticale du coin haut gauche du rectangle de sélection |
 | largeur | Integer | &#8594;  | Largeur du rectangle de sélection |

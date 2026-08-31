@@ -5,14 +5,14 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( {* ;} *objet* ; *hiérarchique* {; *hiérarchie*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *objet* : Text ; *hiérarchique* : Boolean {; *hiérarchie* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *objet* : Variable ; *hiérarchique* : Boolean {; *hiérarchie* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| objet | Text, Variable | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | hiérarchique | Boolean | &#8594;  | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
 | hiérarchie | Pointer array | &#8594;  | Tableau de pointeurs |
 </div>
