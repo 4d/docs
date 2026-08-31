@@ -8,7 +8,7 @@ A **remote datastore** is a reference, on a local 4D application (4D or 4D Serve
 
 The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../commands/open-datastore) command.
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they might require [available licenses](../REST/authUsers.md). 
+On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they require [**authentication** and **available licenses**](../REST/authUsers.md). 
 
  
 ## Using web sessions
@@ -30,19 +30,11 @@ These principles are illustrated in the following graphics:
 
 ### Viewing sessions  
 
-Processes that manage sessions for datastore access are shown in the 4D Server administration window:
-
-*	name: "REST Handler: \<process name\>" 
-*	type: HTTP Server Worker type
-*	session: session name is the user name passed to the `Open datastore` command.
-
-In the following example, two processes are running for the same session:
-
-![](../assets/en/ORDA/sessionAdmin.png)
+Sessions for datastore access are shown in the 4D Server administration window as [**REST sessions**](../ServerWindow/sessions.md#rest-web-and-soap-sessions) with **4D** as user agent. 
 
 ## Closing sessions  
 
-As described in the [session lifetime](../WebServer/sessions.md#session-lifetime) paragraph, a web session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command. 
+As described in the [session lifetime](../WebServer/sessions.md#session-lifetime) paragraph, a web session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore) command. 
 
 If a request is sent to the remote datastore after the session has been closed, it is automatically re-created if possible (license available, server not stopped...). However, keep in mind that the context of the session regarding locks and transactions is lost (see below). 
 
@@ -52,7 +44,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
 
 *	If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory. 
-*	Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. They do not impact other datastores. 
+*	Transactions can be started, validated or cancelled separately on each remote datastore using the [`dataStore.startTransaction()`](../API/DataStoreClass.md#starttransaction), [`dataStore.cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), and [`dataStore.validateTransaction()`](../API/DataStoreClass.md#starttransaction) functions. They do not impact other datastores. 
 *	Classic 4D language commands ([`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](../commands/validate-transaction), [`CANCEL TRANSACTION`](../commands/cancel-transaction)) only apply to the main datastore (returned by `ds`).
 If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session. 
 *	Locks on entities are removed and transactions are rollbacked:
