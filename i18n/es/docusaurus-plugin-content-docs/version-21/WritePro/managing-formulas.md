@@ -111,7 +111,7 @@ En cualquier otro contexto, estas expresiones devolverán *undefined*.
 
 :::note
 
-For more information about formula insertion, see [WP Insert formula](./commands/wp-insert-formula).
+Para más información sobre la inserción de fórmulas, ver [WP Insert formula](./commands/wp-insert-formula).
 
 :::
 
