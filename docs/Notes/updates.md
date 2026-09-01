@@ -39,6 +39,7 @@ In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default]
 
 
 
+
 ## 4D 21 R4
 
 Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.
