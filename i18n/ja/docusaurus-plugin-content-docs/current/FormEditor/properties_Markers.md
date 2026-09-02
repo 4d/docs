@@ -35,6 +35,8 @@ title: マーカー
 
 以下のフォームオブジェクトは詳細エリアでは**サポートされていません** (つまり各レコードに対しては繰り返されません): [Web エリア](../FormObjects/webArea_overview.md)、[4D View Pro エリア](../FormObjects/viewProArea_overview.md)、[リストボックス](../FormObjects/listbox_overview.md)、[階層リスト](../FormObjects/list_overview.md)、[スプリッター](../FormObjects/splitters.md)、[サブフォーム](../FormObjects/subform_overview.md)、および[プラグインエリア](../FormObjects/pluginArea_overview.md)。
 
+The following form objects are **not supported** in the Detail area (i.e. they are not repeated for each record): [Web areas](../FormObjects/webArea_overview.md), [4D View Pro areas](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [hierarchical lists](../FormObjects/list_overview.md), [splitters](../FormObjects/splitters.md), and [subforms](../FormObjects/subform_overview.md).
+
 #### JSON 文法
 
 | 名称         | データタイプ  | とりうる値                            |
