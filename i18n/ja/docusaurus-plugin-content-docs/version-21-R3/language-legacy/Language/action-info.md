@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | action | Text | &#8594; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
 | target | Integer | &#8594; | アクションの情報を取得するターゲットを定義します。メインフォームあるいはカレントフォーム |
-| 戻り値 | Object | &#8592; | アクションのステータスを表したブール型のプロパティを格納するオブジェクト: isEnabled、isVisible、isChecked、isMixed、isUnknownState |
+| 戻り値 | Object | &#8592; | アクションのステータスを表したプロパティを格納するオブジェクト |
 </div>
 <!-- END REF-->
 
