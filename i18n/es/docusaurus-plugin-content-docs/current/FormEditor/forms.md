@@ -281,9 +281,9 @@ Esta funcionalidad puede utilizarse **en proyectos 4D en Windows**. No está dis
 
 :::tip Entradas de blog relacionadas
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
-[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms)
+[Modernice sus interfaces 4D con Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Implemente Fluent UI sin esfuerzo en sus aplicaciones 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
+[Fluent UI llega a los formularios lista](https://blog.4d.com/fluent-ui-comes-to-list-forms)
 
 :::
 
@@ -340,7 +340,7 @@ Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar ate
 - Los [botones circulares](../FormObjects/button_overview.md#circle) son soportados (como en macOS).
 - Los comandos [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) no son compatibles en áreas Web con motor de renderizado sistema.
 - Se puede añadir rectángulo de foco a las [entradas](../FormObjects/input_overview.md) imagen y texto.
-- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
+- En los [formularios lista](../FormEditor/properties_FormProperties.md#form-type), los objetos situados en las [áreas de encabezado o pie de página](./properties_Markers.md) siempre se muestran en una capa de fondo, mientras que los del área de detalle se muestran en primer plano. A diferencia de la representación clásica, un objeto que se extienda más allá de los límites del encabezado siempre se dibujará debajo de los objetos del área de detalle.
 
 ## Formularios heredados
 

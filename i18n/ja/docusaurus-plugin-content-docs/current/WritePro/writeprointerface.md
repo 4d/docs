@@ -319,7 +319,7 @@ AI 機能を有効化すると、4D Write Pro ドキュメント上にチャッ�
 
 :::note ライティングツール(macOS)
 
-On macOS, if you want to provide your users with Apple Intelligence Writing Tools so that they can proofread, rewrite, summarize, or change the tone of text directly within their documents, you might consider using the [Writing Tools feature](../FormObjects/properties_Entry.md#writing-tools).
+macOS におてい、Apple Intelligence のライティングツールをユーザーに提供してテキストの校正、書き直し、要約、あるいは文調の変更をドキュメント内で直接行えるようにしたい場合には、[ライティングツール機能](../FormObjects/properties_Entry.md#ライティングツール) を使用することを検討してください。
 
 :::
 
@@ -420,19 +420,19 @@ AI に質問を送信するためには、送信ボタンをクリックしま�
 
 消去ボタンを使用すると全てのやりとりを消去しウィンドウ全体をリセットすることができます。 これはAI ダイアログボックスを閉じて再度開くのと同じです。
 
-## Multi-level list style sheets
+## 複数レベルリストスタイルシート
 
-4D Write Pro Interface allows users to create and manage [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) directly from both the toolbar and widget sidebar.
+4D Write Pro インターフェースを使用すると、ユーザーがツールバーまたはウィジェットサイドバーの両方から[マルチレベルリスト](./user-legacy/using-a-4d-write-pro-area.md#複数レベルリスト) を直接作成・管理できるようにすることができます。
 
-**Toolbar:**
+**ツールバー:**
 
 ![](../assets/en/WritePro/wp-multi-level-list-stylesheets1.png)
 
-**Sidebar:**
+**サイドバー:**
 
 ![](../assets/en/WritePro/wp-multi-level-list-stylesheets2.png)
 
-To manage multi-level list style sheets, click the ![](../assets/en/WritePro/wp-multi-level-list-button.png) multi-level list button.
+マルチレベルリストスタイルシーツを管理するためには、マルチレベルリストボタン![](../assets/en/WritePro/wp-multi-level-list-button.png) をクリックします。
 
 When the multi-level list mode is enabled, the Style Sheets panel displays the [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets) defined in the document as well as [predefined templates](#predefined-templates).
 

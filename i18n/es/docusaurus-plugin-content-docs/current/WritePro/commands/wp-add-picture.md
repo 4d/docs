@@ -47,7 +47,7 @@ Por defecto, la imagen añadida es:
 - Aparece en la esquina superior izquierda de la papelera
 - Mostrar en todas las páginas
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions.
+La ubicación, la capa (en línea, delante o detrás del texto), la visibilidad y todas las propiedades de la imagen se pueden modificar mediante el comando [WP SET ATTRIBUTES](wp-set-attributes.md) o a través de las acciones estándar.
 
 **Nota:** el comando [WP Selection range](../commands/wp-selection-range) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. Puede determinar si un objeto seleccionado es un objeto imagen comprobando el atributo `wk type`:
 

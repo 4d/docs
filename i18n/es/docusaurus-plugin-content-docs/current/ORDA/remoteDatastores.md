@@ -7,7 +7,7 @@ Un **datastore remoto** es una referencia, en una aplicación 4D local (4D o 4D 
 
 La aplicación 4D local se conecta y hace referencia al datastore remoto a través de una llamada al comando [`Open datastore`](../commands/open-datastore).
 
-En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they require [**authentication** and **available licenses**](../REST/authUsers.md).
+En la máquina remota, 4D abre una [sesión](../WebServer/sessions.md) para gestionar las peticiones de la aplicación que llaman a `Open datastore`. Las peticiones utilizan internamente la [API REST](../REST/gettingStarted.md), lo que significa que requieren [**autenticación** y **licencias disponibles**](../REST/authUsers.md).
 
 ## Utilizando sesiones web
 
@@ -27,11 +27,11 @@ Estos principios se ilustran en los gráficos siguientes:
 
 ### Visualización de las sesiones
 
-Sessions for datastore access are shown in the 4D Server administration window as [**REST sessions**](../ServerWindow/sessions.md#rest-web-and-soap-sessions) with **4D** as user agent.
+Las sesiones de acceso al almacén de datos aparecen en la ventana de administración de 4D Server como [**Sesiones REST**](../ServerWindow/sessions.md#rest-web-and-soap-sessions) con **4D** como agente de usuario.
 
 ## Cierre de las sesiones
 
-Como se describe en el párrafo [tiempo de vida de la sesión](../WebServer/sessions.md#session-lifetime) una sesión web es cerrada automáticamente por 4D cuando no ha habido actividad durante su periodo de tiempo de espera. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore) command.
+Como se describe en el párrafo [tiempo de vida de la sesión](../WebServer/sessions.md#session-lifetime) una sesión web es cerrada automáticamente por 4D cuando no ha habido actividad durante su periodo de tiempo de espera. El tiempo de espera predeterminado es de 60 minutos, pero este valor se puede modificar mediante el parámetro *connectionInfo* del comando [`Open datastore`](../commands/open-datastore).
 
 Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). Sin embargo, hay que tener en cuenta que se pierde el contexto de la sesión en cuanto a bloqueos y transacciones (ver abajo).
 
@@ -40,7 +40,7 @@ Si se envía una solicitud al almacén de datos remoto después de haber cerrado
 Las funcionalidades ORDA relacionadas con el bloqueo de entidades y transacciones se gestionan a nivel del proceso en los datastores remotos, igual que en el modo cliente/servidor ORDA:
 
 - Si un proceso bloquea una entidad de un datastores remoto, la entidad se bloquea para todos los otros procesos, incluso cuando estos procesos comparten la misma sesión (ver [Bloqueo de entidades](entities.md#entity-locking)). Si varias entidades que apuntan a un mismo registro han sido bloqueadas en un proceso, todas deben ser desbloqueadas en el proceso para eliminar el bloqueo. Si se ha puesto un bloqueo en una entidad, el bloqueo se elimina cuando ya no hay ninguna referencia a esta entidad en la memoria.
-- Transactions can be started, validated or cancelled separately on each remote datastore using the [`dataStore.startTransaction()`](../API/DataStoreClass.md#starttransaction), [`dataStore.cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), and [`dataStore.validateTransaction()`](../API/DataStoreClass.md#starttransaction) functions. No afectan a otros almacenes de datos.
+- Las transacciones se pueden iniciar, validar o cancelar por separado en cada almacén de datos remoto mediante las funciones [`dataStore.startTransaction()`](../API/DataStoreClass.md#starttransaction), [`dataStore.cancelTransaction()`](../API/DataStoreClass.md#canceltransaction) y [`dataStore.validateTransaction()`](../API/DataStoreClass.md#starttransaction). No afectan a otros almacenes de datos.
 - Los comandos clásicos del lenguaje 4D ([`START TRANSACTION`](../commands/start-transaction), [`VALIDATE TRANSACTION`](../commands/validate-transaction), [`CANCEL TRANSACTION`](../commands/cancel-transaction)) sólo se aplican al datastore principal (devuelto por `ds`).
   Si una entidad de un datastore remoto es retenida por una transacción en un proceso, los otros procesos no pueden actualizarla, incluso si estos procesos comparten la misma sesión.
 - Los bloqueos en las entidades son eliminados y las transacciones son anuladas:

@@ -27,7 +27,7 @@ title: 論理ミラー
 
 ## 動作
 
-Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+論理ミラーを使⽤したバックアップシステムの設定は、2つのコマンド [`New log file`](../commands/new-log-file) および [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) を使⽤して⾏います。
 
 以下のような原則が実装されています:
 

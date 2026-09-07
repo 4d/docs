@@ -27,11 +27,11 @@ Aparecerá una ventana idéntica en cada máquina 4D remota. Esta ventana se rep
 
 - **Espere a que todos los clientes se desconecten.**
 
-El servidor solo se cerrará una vez que todos los clientes, incluidos los que estén en modo de suspensión, se hayan desconectado. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
+El servidor solo se cerrará una vez que todos los clientes, incluidos los que estén en modo de suspensión, se hayan desconectado. Esta opción podría ser inadecuada para operaciones de mantenimiento durante el almuerzo, por ejemplo, ya que es probable que haya clientes en [modo inactivo](../ServerWindow/users.md#managing-sleeping-users).
 
-- **Wait for active clients to disconnect. (Ignore sleeping clients)**
+- **Espere a que los clientes activos se desconecten. (Ignorar a los clientes inactivos)**
 
-The server will only quit after all active clients have disconnected (in other words, all client machines that are not in [sleep mode](../ServerWindow/users.md#managing-sleeping-users)). With this option, any clients in sleep mode are not considered as connected. Use this option if you want to perform maintenance operations during lunch time, for example. When this option is used, any clients in sleep mode will have a connection error when they wake up.
+El servidor solo se cerrará después de que todos los clientes activos se hayan desconectado (en otras palabras, todas las máquinas cliente que no están en [modo inactivo](../ServerWindow/users.md#managing-sleeping-users)). Con esta opción, los clientes que se encuentren en modo inactivo no se consideran conectados. Utilice esta opción si desea realizar operaciones de mantenimiento durante el almuerzo, por ejemplo. Cuando se utiliza esta opción, cualquier cliente que se encuentre en modo inactivo experimentará un error de conexión al reactivarse.
 
 :::note
 

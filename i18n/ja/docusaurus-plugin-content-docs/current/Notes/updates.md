@@ -9,9 +9,9 @@ title: リリースノート
 
 #### ハイライト
 
-- Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+- [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) クラスの新しいクラスプロパティを使用したS/MIME Eメール署名のサポート: [`.certificate`](../API/SMTPTransporterClass.md#certificate) または [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (証明書の提供)、および[`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword)。
 
-- Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
+- Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) でのリストフォームのサポート。
 
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
 

@@ -9,56 +9,56 @@ title: Espejo lógico
 
 Un espejo lógico es un modo de copia de seguridad sofisticado, principalmente destinado a bases de datos críticas o de alta carga.
 
-Using a logical mirror consists in operating a project on one machine and keeping a copy of it that is periodically updated on a second machine. Both machines communicate via the network with the machine in operation regularly transmitting any changes made in the data to the mirror machine via the intermediary of the log file.
+El uso de un espejo lógico consiste en operar un proyecto en una máquina y mantener una copia que se actualiza periódicamente en una segunda máquina. Las dos máquinas se comunican a través de la red, y la máquina en funcionamiento transmite periódicamente a la máquina espejo cualquier cambio realizado en los datos a través del archivo de historial.
 
-In this way, when there is an incident affecting the operational database, the mirror database can be used to get things back in working order quickly without any data loss. Moreover, the operational database is never “blocked” by backup operations.
+De esta manera, cuando hay un incidente que afecta a la base de datos operativa, la base de datos espejo se puede utilizar para restablecer el funcionamiento rápidamente y sin pérdida de datos. Además, la base de datos operativa nunca está “bloqueada” por operaciones de copia de seguridad.
 
-## Why choose to back up using a logical mirror?
+## ¿Por qué elegir hacer una copia de seguridad utilizando un espejo lógico?
 
-The use of a logical mirror corresponds to specific needs. The standard strategy based on periodic backups and the use of a log file in most cases offers a simple, reliable and inexpensive solution. The database is backed up regularly (every 24 hours in general). During backup, all processes are frozen. This period of partial unavailability is very short, and even in the case of large databases (greater than 2 GB), it lasts no longer than 5 minutes. This operation can be programmed to take place outside of normal periods of database usage.
+El uso de un espejo lógico responde a necesidades específicas. La estrategia estándar, basada en copias de seguridad periódicas y en el uso de un archivo de registro, ofrece en la mayoría de los casos una solución sencilla, fiable y económica. Se realizan copias de seguridad de la base de datos con regularidad (por lo general, cada 24 horas). Durante la copia de seguridad, todos los procesos se detienen. Este periodo de indisponibilidad parcial es muy breve e incluso en el caso de bases de datos de gran tamaño (superiores a 2 GB), no dura más de 5 minutos. Esta operación se puede programar para que se realice fuera de los horarios habituales de uso de la base de datos.
 
-Nevertheless, for certain kinds of organizations, such as hospitals for instance, critical databases must be entirely operational 24 hours a day. The database cannot be "being backed up" (and thus unavailable), even for a very short period of time. In this case, setting up a logical mirror is an appropriate solution.
+No obstante, en el caso de determinados tipos de organizaciones, como los hospitales, por ejemplo, las bases de datos críticas deben estar plenamente operativas las 24 horas del día. La base de datos no puede estar en proceso de copia de seguridad (y, por lo tanto, no estar disponible), ni siquiera durante un período muy corto. En este caso, configurar un espejo lógico es la solución adecuada.
 
 :::note
 
-A mirror solution only reflects changes made to the **data**. This backup mode is not suitable for projects in the process of development, where frequent structural modifications will make the mirror rapidly obsolete or will require repeated updating of the mirror database structure.
+Una solución espejo solo refleja los cambios realizados en los **datos**. Este modo de copia de seguridad no es adecuado para proyectos en proceso de desarrollo, donde las frecuentes modificaciones estructurales harán que el espejo quede rápidamente obsoleto o requerirán actualizar repetidamente la estructura de la base de datos espejo.
 
 :::
 
 ## Principios de funcionamiento
 
-Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+La configuración de un sistema de copia de seguridad mediante un espejo lógico se basa en dos comandos: [`New log file`](../commands/new-log-file) y [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
 Se aplican los siguientes principios:
 
-- The application is installed on the main 4D Server machine (operational machine) and an identical copy of the application is installed on the 4D Server mirror machine.
-- A test on startup of the application (for instance, for the presence of a specific file in a subfolder of the 4D Server application) is used to distinguish between the two versions (operational and mirror) and thus execute the appropriate operations.
-- On the 4D Server machine in operation, the log file is “segmented” at regular intervals using the [`New log file`](../commands/new-log-file) command. Since no backup is carried out on the main server, the application remains permanently available in read-write mode.
-- Each "segment" of the log file is sent to the mirror machine, where it is integrated into the mirror application using the [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) command.
+- La aplicación se instala en la máquina principal 4D Server (máquina operativa) y se instala una copia idéntica de la aplicación en la máquina espejo 4D Server.
+- Una prueba al inicio de la aplicación (por ejemplo, para la presencia de un archivo específico en una subcarpeta de la aplicación 4D Server) se utiliza para distinguir entre las dos versiones (operativas y réplicas) y así ejecutar las operaciones apropiadas.
+- En la máquina 4D Server en funcionamiento, el archivo de historial se "segmenta" en intervalos regulares utilizando el comando [`New log file`](../commands/new-log-file). Dado que no se realiza ninguna copia de seguridad en el servidor principal, la aplicación permanece disponible en todo momento en modo de lectura y escritura.
+- Cada "segmento" del archivo de historial se envía a la máquina espejo, donde se integra en la aplicación de espejo utilizando el comando [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
-Setting up this system requires programming specific code, in particular:
+La configuración de este sistema requiere la programación de código específico, en concreto:
 
-- A timer on the main server for managing the execution cycles of the [`New log file`](../commands/new-log-file) command,
-- A transfer system for the "segments" of the log file between the operational machine and the mirror machine (using HTTP, Web Services, etc.),
-- A process on the mirror machine intended to supervise the arrival of new "segments" of the log file and to integrate them using the [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) command,
-- A communication and error-handling system between the main server and the mirror server.
+- Un temporizador en el servidor principal para gestionar los ciclos de ejecución del comando [`New log file`](../commands/new-log-file),
+- Un sistema de transferencia de los "segmentos" del archivo de historial entre la máquina operativa y la máquina espejo (utilizando HTTP, Servicios Web, etc.),
+- Un proceso en la máquina espejo destinado a supervisar la llegada de nuevos "segmentos" del archivo de historial e integrarlos utilizando el comando [`INTEGRATE MIROR LOG FILE`](../commands/integrate-mirror-log-file)
+- Un sistema de comunicación y de gestión de errores entre el servidor principal y el servidor espejo.
 
 :::warning
 
-A backup system using a logical mirror is not compatible with [regular backups](./backup.md) on a running application in use since the simultaneous use of these two backup modes would lead to the desynchronization of the operational and mirror applications. Consequently, you must be sure that no backups, whether automatic or manual, are carried out on the operational application. On the other hand, it is possible to back up the mirror application or to set up a "mirror-mirror".
+Un sistema de copia de seguridad que utiliza un espejo lógico no es compatible con las [copias de seguridad normales](./backup.md) en una aplicación en ejecución en uso, ya que el uso simultáneo de estos dos modos de copia de seguridad provocaría la desincronización de las aplicaciones operativa y espejo. Por consiguiente, debe asegurarse de que no se realizan copias de seguridad, ya sean automáticas o manuales, sobre la aplicación operativa. En cambio, es posible realizar una copia de seguridad de la aplicación espejo o configurar un "espejo-espejo".
 
 :::
 
-## Backup of a mirror and mirror-mirror
+## Copia de seguridad de un espejo y espejo del espejo
 
-4D Server can be used to carry out backups of the application on the mirror machine.
+4D Server se puede utilizar para realizar copias de seguridad de la aplicación en el servidor espejo.
 
-Any conventional means can be used to carry out backups on the mirror machine: manual backups using the command in the **File** menu, [scheduled backups set in the Settings](./settings.md#scheduler) or programmed backups using language commands.
+Cualquier medio convencional puede utilizarse para realizar copias de seguridad en la máquina espejo: copias de seguridad manuales utilizando el comando del menú **Archivo**, [copias de seguridad programadas establecidas en las Propiedades](./settings.md#scheduler) o copias de seguridad por código utilizando comandos del lenguaje.
 
-To avoid risks of desynchronization with the operational machine, 4D automatically locks the mirror machine when it is carrying out one of two basic operations: the integration of the log file from the operational machine and the backup of the mirror application.
+Para evitar riesgos de desincronización con la máquina operativa, 4D bloquea automáticamente la máquina espejo cuando está llevando a cabo una de dos operaciones básicas: la integración del archivo de registro desde la máquina operativa y la copia de seguridad de la aplicación espejo.
 
-- When a log file is being integrated, it is not possible to carry out a backup. If the [`BACKUP`](../commands/backup) command is used, error 1417 is generated.
-- When a backup is underway, all the processes are frozen and it is not possible to launch the integration of a log file.
+- Cuando un archivo de historial se está integrando, no es posible realizar una copia de seguridad. Si el comando [`BACKUP`](../commands/backup) se utiliza, se produce el error 1417.
+- Cuando se está realizando una copia de seguridad, todos los procesos se bloquean y no es posible iniciar la integración de un archivo de registro.
 
 Puede activar el archivo de historial actual en el servidor espejo, lo que le permite configurar un "espejo-espejo" (o incluso una serie de servidores espejo), o bien una arquitectura de espejos de tipo "hub-and-spoke" (varios servidores espejo para la misma aplicación operativa). En el primer caso, el archivo de historial actual del servidor espejo se envía a su vez a otro servidor espejo (el "espejo-espejo") para su integración, y así sucesivamente si utiliza una serie de servidores espejo. En el segundo caso, el archivo de historial actual se envía directamente a varios servidores espejo idénticos. Este tipo de redundancia garantiza la disponibilidad continua del servidor, incluso en caso de que se produzca un fallo simultáneo del servidor y del servidor espejo principal.
 

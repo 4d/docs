@@ -121,7 +121,7 @@ $result:=$transporter.send($email)
 
 `.certificateName` プロパティは <!-- REF #SMTPTransporterClass.certificateName.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するために使用される、システム証明書ストア(*keychain*) に登録されている証明書の名前<!-- END REF --> を格納しています。 証明書には秘密鍵が含まれています。
 
-The certificate can also be provided directly as a file or blob using the [`.certificate`](#certificate) property. ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
+この証明書は[`.certificate`](#certificate) プロパティを使用することで、ファイルまたはblob として直接提供することもできます。 ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
 
 :::tip 関連したblog 記事
 
