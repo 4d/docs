@@ -29,7 +29,7 @@ to import
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 
-When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. The developer can add a custom margin if necessary.
+[WP SET ATTRIBUTE コマンド](../commands-legacy/4d-write-pro-attributes.md#リスト)コマンドを使用してリストが作成された場合、具体的な余白は設定されておらず、デフォルトでマーカーは段落の左端に追加されます。 必要であれば開発者はカスタムの余白を追加することができます。
 
 :::tip 関連したblog 記事
 
@@ -37,21 +37,21 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 :::
 
-### Multi-level lists
+### 複数レベルのリスト
 
-Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+マルチレベルリスト(複数レベルのリスト)は、[マルチレベルスタイルシート](../user-legacy/stylesheets.md#multi-level-list-style-sheets) に基づいています。 マルチレベルリストにはルートレベルのスタイルシートが一つと、一つ以上のサブレベルスタイルシートが含まれています。 各レベルはマルチレベルスタイルシートに関連づけられており、またリスト内での深さを表します(レベル1、レベル2、レベル3、など)。
 
-When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+新しいサブレベルが作成されると、レベルの番号振り分けは1 から再スタートします。 マルチレベルリスト内で要素を追加または削除した場合、番号は自動的に調整されます。
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+[WP New style sheet](../commands/wp-new-style-sheet.md) コマンドで作成され、[WP SET ATTRIBUTE](../commands/wp-set-attributes.md) を使用して段落に適用することができます。
 
-Multi-level lists can be managed using:
+マルチレベルリストは以下の方法で管理することができます:
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- 段落[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) (例えば`wk list level index`、 `wk list level count`、および `wk list concat string format` など)
+- レベル管理専用の[標準アクション](../user-legacy/standard-actions.md) (`listLevelAppend`、 `listLevelInc`、 `listLevelDec` など)
+- マーカー管理の番号管理専用の標準アクション(`listConcatStringFormat`、 `listNumberFormat`)。
 
 :::tip 関連したblog 記事
 
@@ -63,36 +63,36 @@ Multi-level lists can be managed using:
 
 <!-- REF multi-level-list-style-sheets.Desc -->
 
-## Multi-level list style sheets
+## 複数レベルリストスタイルシート
 
-Multi-level list style sheets are used to create [multi-level lists](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists).
+複数レベル(マルチレベル)リストスタイルシートは、[マルチレベルリスト](../user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) を作成するために使用されます。
 
-To create a multi-level list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
+マルチレベルリストスタイルシートを作成するためには、[WP New style sheet](../commands/wp-new-style-sheet.md) を使用し、必要な階層の数を*listLevelCount* 引数に渡します。 次に関連した段落スタイルシートの階層を定義します: 一つの**ルートレベル** スタイルシートと、それにリンクした一つ以上の**サブレベル** スタイルシートです。 各レベルはリスト内の深さ(レベル1、レベル2、レベル3、など)を表し、 それぞれ自動的に"ルートレベル名 + lvl + インデックス"という形式の名前が付けられます。例えば"Mylist lvl 2" といった具合です。
 
-To customize multi-level list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+マルチレベルリストスタイルをカスタマイズするために、段落スタイルシートオブジェクトは[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート)を使用してカスタマイズすることが可能です。
 
-Multi-level list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
+マルチレベルリストスタイルシートは、以下のコマンドによって完全にサポートされています: [`WP Get style sheet`](../commands/wp-get-style-sheet.md)、 [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md)、 [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md)。
 
 ### 例題
 
-The following example creates a three-level multi-level list style sheet and applies it to paragraphs.
+以下の例は3階層のマルチレベルリストスタイルシートを作成し、それを段落へと割り当てます。
 
 ```4d
-// Create 3 multi-level list style sheets
+// 3階層のマルチレベルリストスタイルシートを作成
 WP New style sheet(wpArea; wk type paragraph; "MyList"; 3)
 
-// Retrieve each level
+// 各階層を取得
 var $level1; $level2; $level3 : Object
 $level1:=WP Get style sheet(wpArea; "MyList"; 1) // Root level
 $level2:=WP Get style sheet(wpArea; "MyList"; 2) // 1st sub-level
 $level3:=WP Get style sheet(wpArea; "MyList"; 3) // 2nd sub-level
 
-// Customize styles
+// スタイルをカスタマイズする
 WP SET ATTRIBUTES($level1; {listStyleType: wk upper latin; fontBold: wk true})
 WP SET ATTRIBUTES($level2; {listConcatStringFormat: True})
 WP SET ATTRIBUTES($level3; {listStringFormatLtr: "(#)"})
 
-// Apply multi-level style sheets to paragraphs
+// マルチレベルスタイルシートを段落に適用する
 var $paragraphs : Collection
 $paragraphs:=WP Get elements(wpArea; wk type paragraph)
 
@@ -101,34 +101,34 @@ WP SET ATTRIBUTES($paragraphs[1]; wk style sheet; $level2)
 WP SET ATTRIBUTES($paragraphs[2]; wk style sheet; $level3)
 ```
 
-result:
+実行結果:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+最初のサブレベルを削除するには以下を実行します:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
 ```
 
-result:
+実行結果:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### 定義済属性値
 
-When created, multi-level list style sheets use predefined values:
+マルチレベルリストスタイルシートを作成すると、それらは定義済みの値を使用します:
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- カレントのレイアウト単位によって、`wk margin left` = 0.75 cm \* (そこまでのレベルの数) あるいは 0.25 インチ \* (そこまでのレベルの数)
 - `wk list type` = `wk decimal`
-- `wk name` is derived from the root style sheet name (Read-only for sub-levels)
+- `wk name` は、ルートレベルのスタイルシート名から取られます(サブレベルにおいては読み取り専用になります)
 - `wk list level count` は、指定された値が全てのレベルに対して設定されます
 
   - 例:
 
-    - Root level: `"MyList"`
-    - First sub-level: `"MyList lvl 2"`
-    - Second sub-level: `"MyList lvl 3"`
+    - ルートレベル: `"MyList"`
+    - 最初のサブレベル: `"MyList lvl 2"`
+    - 二つ目のサブレベル: `"MyList lvl 3"`
 
 <!-- END REF -->
 

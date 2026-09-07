@@ -293,6 +293,6 @@ Excepciones que interrumpen la ejecución de código son devueltas por 4D pero p
 - un **mensaje**, que explica por qué se ha producido el error
 - un **código**, que es un número arbitrario devuelto por el componente
 
-La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario. Click on the **Copy** button to store detailed information related to the error in the pasteboard.
+La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario. Haga clic en el botón **Copiar** para almacenar información detallada relacionada con el error en el portapapeles.
 
 Para tener una descripción completa de un error y especialmente su origen, necesita llamar al comando [`Last errors`](../commands/last-errors.md). Cuando intercepta y maneja errores usando un [método de gestión de errores](#installing-an-error-handling-method) en sus aplicaciones finales, use [`Last errors`](../commands/last-errors.md) y asegúrese de registrar todas las propiedades del objeto *error* ya que los códigos de error dependen de los componentes.

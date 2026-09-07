@@ -58,8 +58,7 @@ title: 4Dユーザー＆グループの管理
 
 ![](../assets/en/Users/editor.png)
 
-> ユーザーとグループのエディターは、[EDIT ACCESS](../commands-legacy/edit-access.md) コマンドを使用することでランタイムで表示することもできます。
-> ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
+> ユーザーとグループのエディターは、[EDIT ACCESS](../commands/edit-access) コマンドを使用することでランタイムで表示することもできます。
 > ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
 ### ユーザーの追加と変更
@@ -154,15 +153,13 @@ title: 4Dユーザー＆グループの管理
 
 You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
 
 > 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
 
 ![](../assets/en/Users/plugins.png)
-
-The **4D Client Web Server** (*deprecated as of 4D 21*) and **4D Client SOAP Server** items let you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 ### アクセス権の階層構造
 
@@ -213,4 +210,5 @@ The **4D Client Web Server** (*deprecated as of 4D 21*) and **4D Client SOAP Ser
 - データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](../Project/architecture.md#settings-user-data) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
 > パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。
+
 

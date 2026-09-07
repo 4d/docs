@@ -58,7 +58,7 @@ O editor de usuários está na Barra de Ferramentas de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](../commands-legacy/edit-access.md).
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands/edit-access) command.
 > Toda la configuración de usuarios y grupos también puede editarse durante la ejecución de la aplicación utilizando los comandos del lenguaje 4D del tema `Usuarios y Grupos`.
 
 ### Adicionar e modificar usuários
@@ -155,15 +155,13 @@ Para remover um usuário ou grupo de outro grupo, você só precisa desmarcar a 
 
 You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
 
 > Licenças utilizadas permanecem anexadas a contas de usuário 4D no grupo para toda a sessão 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
 
 ![](../assets/en/Users/plugins.png)
-
-The **4D Client Web Server** (*deprecated as of 4D 21*) and **4D Client SOAP Server** items let you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. Essas licenças são consideradas como licenças de plug-in por 4D Server. Portanto, da mesma forma que para plug-ins, você pode restringir o direito de utilizar essas licenças para um grupo específico de usuários.
 
 ### Um esquema de acesso hierárquico
 
@@ -211,4 +209,5 @@ Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necess
 - Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](../Project/architecture.md#settings-user-data). Essa configuração personalizada/local de usuários e grupos não será afetada por uma atualização da aplicação.
 
 > To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+
 
