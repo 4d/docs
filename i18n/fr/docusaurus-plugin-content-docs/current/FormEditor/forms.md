@@ -265,12 +265,6 @@ Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusie
 
 ## Rendu Fluent UI
 
-:::caution Developer Preview
-
-La prise en charge de Fluent UI est actuellement en phase d'aperçu pour les développeurs. Il ne doit pas être utilisé en production.
-
-:::
-
 Sous Windows, 4D prend en charge le rendu de formulaire **Fluent UI**, l'interface utilisateur graphique moderne de Microsoft, basée sur la technologie **WinUI 3**. **WinUI 3** est la base du Windows App SDK et représente les prochaines interfaces graphiques de Windows.
 
 Le rendu Fluent UI offre des contrôles modernes et agréables, la prise en charge des thèmes système dark/light, un rendu plus fluide optimisé pour les écrans haute résolution et une expérience utilisateur cohérente alignée sur les applications Microsoft récentes.
@@ -287,8 +281,9 @@ Cette fonction peut être utilisée **dans les projets 4D sous Windows**. Elle n
 
 :::tip Articles de blog sur le sujet
 
-[Modernisez vos interfaces 4D avec Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
-[Déployez Fluent UI sans effort dans vos applications 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
+[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms)
 
 :::
 
@@ -337,7 +332,7 @@ Le [media query CSS **form-theme**](./createStylesheet.md#media-queries) vous pe
 
 Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez prêter attention aux points suivants :
 
-- La commande [`FORM theme`](../commands/form-theme) renvoie le thème d'affichage réel du formulaire courant. Valeurs possibles : "Classic" ou "FluentUI". S'il n'y a pas de formulaire courant ou si la commande est appelée sous macOS, une chaîne vide est renvoyée.
+- La commande [`FORM theme`](../commands/form-theme) renvoie le thème d'affichage réel du formulaire courant. Possible values: "Classic", "FluentUI" or "LiquidGlass".
 - La commande [`Application info`](../commands/application-info) vous permet de savoir si Fluent UI peut être utilisé (propriété `canUseFluentUI`) ou est utilisé (propriété `useFluentUI`).
 - Si [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) est appelée dans le contexte d'un formulaire, les informations renvoyées concernent l'apparence courante du formulaire (Classic ou FluentUI). Si la commande est appelée en dehors du contexte d'un formulaire, les informations renvoyées concernent les [propriétés globales du projet](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) avec le paramètre *itemStyle* `Underline` n'est pas pris en charge (ignoré) pour les menus pop up.
@@ -345,6 +340,7 @@ Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez pr�
 - Les [boutons circulaires](../FormObjects/button_overview.md#circle) sont pris en charge (comme sur macOS).
 - Les commandes [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) ne sont pas prises en charge dans les zones Web avec moteur de rendu système.
 - Un rectangle de focus peut être ajouté aux [zones de saisie](../FormObjects/input_overview.md) image et texte.
+- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
 
 ## Formulaires hérités
 

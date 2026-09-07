@@ -18,15 +18,15 @@ Les licences de développement sont nécessaires pour accéder à l'environnemen
 
 Les licences de déploiement peuvent être intégrées à l'étape de construction par le développeur ou saisies lors du premier lancement par l'utilisateur final, comme décrit dans le tableau suivant :
 
-| Licence de déploiement   | Description                                                                                    | Où la saisir                                                                                             |
-| ------------------------ | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| *4D OEM Desktop*         | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D Unlimited Desktop*   | **Non maintenu** - Licence personnalisée intégrée                                              | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D Desktop*             | Licence par utilisateur, lui permettant d'utiliser des applications 4D autonomes               | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
-| *4D Desktop Business*    | Licence personnalisée intégrée pour les applications 4D autonomes                              | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D Server OEM*          | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D XML Keys Activation* | Utilisée pour activer les licences 4D Server OEM en mode d'intégration non automatique         | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D Server*              | Licence par utilisateur, lui permettant d'utiliser 4D Server et des postes clients             | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
+| Licence de déploiement        | Description                                                                                    | Où la saisir                                                                                             |
+| ----------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| *4D Server*                   | Licence par utilisateur, lui permettant d'utiliser 4D Server et des postes clients             | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
+| *4D Desktop*                  | Licence par ordinateur, permettant d'utiliser des applications 4D autonomes                    | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
+| *4D Desktop Business Edition* | Licence personnalisée intégrée pour les applications 4D autonomes                              | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
+| *4D Server OEM*               | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
+| *4D OEM Desktop*              | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
+| *4D XML Keys Activation*      | Utilisée pour activer les licences 4D Server OEM en mode d'intégration non automatique         | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
+| *4D Unlimited Desktop*        | **Non maintenu** - Licence personnalisée intégrée                                              | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
 
 ### Expiration
 

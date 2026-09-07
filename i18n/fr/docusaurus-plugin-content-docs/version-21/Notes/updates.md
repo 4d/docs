@@ -9,6 +9,12 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fr/whats-new-in-4d-21lt
 
 :::
 
+## 4D 21.2 LTS
+
+#### Points forts
+
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21.2) : liste de tous les bugs qui ont été corrigés dans 4D 21.2.
+
 ## 4D 21.1 LTS
 
 #### Points forts
@@ -312,7 +318,7 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 | libZip       | 1.11.4 | **21**              | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA         | 5.8.1  | **21**              |                                                                                                                                                       |
 | ngtcp2       | 1.18.0 | **21**              | Utilisé pour QUIC                                                                                                                                     |
-| OpenSSL      | 3.5.2  | **21**              |                                                                                                                                                       |
+| OpenSSL      | 3.5.7  | **21**              |                                                                                                                                                       |
 | PDFWriter    | 4.7.0  | **21**              | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS     | 17.1.0 | 20 R7               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |

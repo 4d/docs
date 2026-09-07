@@ -24,7 +24,7 @@ La integración de áreas de 4D View Pro en sus formularios le permite importar 
 
 Las funcionalidades de 4D View Pro se incluyen directamente en 4D, lo que facilita su despliegue y gestión. No se requiere ninguna instalación adicional.
 
-Sin embargo, 4D View Pro requiere una licencia. Es necesario activar esta licencia en su aplicación para poder utilizar sus funcionalidades. Cuando se utiliza este componente sin licencia, el contenido de un objeto que requiere una función de 4D View Pro no se muestra en tiempo de ejecución, sino que se muestra un mensaje de error:
+Sin embargo, 4D View Pro requiere una licencia. Debe activar y [asignar esta licencia en su aplicación](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) para utilizar sus funcionalidades. Cuando se utiliza este componente sin licencia, el contenido de un objeto que requiere una función de 4D View Pro no se muestra en tiempo de ejecución, sino que se muestra un mensaje de error:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

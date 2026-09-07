@@ -170,7 +170,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
 
-デフォルトのホームページの名称 または、カスタムのホームページを送信しない場合は ""。
+<!-- REF #WebServerClass.defaultHomepage.Summary -->デフォルトのホームページの名称<!-- END REF --> または、カスタムのホームページを送信しない場合は ""。
 
 <!-- END REF -->
 
@@ -210,7 +210,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Integer<!-- END REF -->
 
-新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)。 この情報はクライアント側で指定された時間のあいだ保存されます。 この情報はクライアント側で指定された時間のあいだ保存されます。
+<!-- REF #WebServerClass.HSTSMaxAge.Summary -->新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<!-- END REF -->。 この情報はクライアント側で指定された時間のあいだ保存されます。
 
 デフォルト値: 63072000 (2年)。
 
@@ -261,7 +261,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Integer<!-- END REF -->
 
-HTTP のリッスンIPポート番号。
+<!-- REF #WebServerClass.HTTPPort.Summary -->HTTP のリッスンIPポート番号<!-- END REF -->。
 
 デフォルト = 80
 
@@ -293,7 +293,7 @@ HTTP のリッスンIPポート番号。
 
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Integer<!-- END REF -->
 
-HTTPS のリッスンIPポート番号。
+<!-- REF #WebServerClass.HTTPSPort.Summary -->HTTPS のリッスンIPポート番号<!-- END REF -->。
 
 デフォルト = 443
 
@@ -355,7 +355,7 @@ HTTPS のリッスンIPポート番号。
 
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
-Webサーバーで旧式セッションが有効されている場合に `true`、それ以外は `false`。
+<!-- REF #WebServerClass.keepSession.Summary -->Webサーバーで旧式セッションが有効されている場合に `true`、それ以外は `false`<!-- END REF -->。
 
 ##### 参照
 
@@ -369,7 +369,7 @@ Webサーバーで旧式セッションが有効されている場合に `true`�
 
 <!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Integer<!-- END REF -->
 
-リクエストログ (logweb.txt) の記録オプション値。
+<!-- REF #WebServerClass.logRecording.Summary -->リクエストログ (logweb.txt) の記録オプション値<!-- END REF -->。
 
 - 0 = 記録しない (デフォルト)
 - 1 = CLF形式で記録する
@@ -456,7 +456,7 @@ Webサーバーで旧式セッションが有効されている場合に `true`�
 
 *読み取り専用プロパティ*
 
-使用されている OpenSSLライブラリのバージョン。
+<!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -508,7 +508,7 @@ Webサーバーで旧式セッションが有効されている場合に `true`�
 
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
-Webサーバーがスケーラブルセッションを使用している場合に `true`、それ以外は `false`。
+<!-- REF #WebServerClass.scalableSession.Summary -->Webサーバーがスケーラブルセッションを使用している場合に `true`、それ以外は `false`<!-- END REF -->。
 
 ##### 参照
 
@@ -532,7 +532,7 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
-セッションID の保存に使用されるセッションcookie の名称。
+<!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
 *読み取り専用プロパティ*
 
@@ -562,7 +562,7 @@ Webサーバーがスケーラブルセッションを使用している場合�
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
-セッションcookie の "SameSite" 属性の値。 とりうる値 (定数使用): とりうる値 (定数使用):
+<!-- REF #WebServerClass.sessionCookieSameSite.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。 とりうる値 (定数使用):
 
 | 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |

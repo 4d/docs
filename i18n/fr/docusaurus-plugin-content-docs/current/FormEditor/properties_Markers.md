@@ -33,6 +33,8 @@ La zone de corps (ou de détail) du formulaire est affichée à l'écran et impr
 
 Vous agrandissez ou réduisez la taille de cette zone en faisant glisser le taquet C vers le bas ou vers le haut. Tout élément placé dans cette zone est affiché ou imprimé une fois pour chacun des enregistrements. La plupart du temps, vous placez des champs ou des variables dans cette zone afin que les données de chaque enregistrement soient imprimées ou affichées, mais il est aussi possible d’y placer d’autres éléments.
 
+The following form objects are **not supported** in the Detail area (i.e. they are not repeated for each record): [Web areas](../FormObjects/webArea_overview.md), [4D View Pro areas](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [hierarchical lists](../FormObjects/list_overview.md), [splitters](../FormObjects/splitters.md), and [subforms](../FormObjects/subform_overview.md).
+
 #### Grammaire JSON
 
 | Nom        | Type de données | Valeurs possibles                                                       |

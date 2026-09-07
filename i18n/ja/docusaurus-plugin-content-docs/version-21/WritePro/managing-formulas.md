@@ -6,9 +6,9 @@ slug: /WritePro/formulas
 
 ## 概要
 
-4D Write Pro ドキュメントには、変数、フィールド、式、プロジェクトメソッドあるいは4D コマンドなどの4D フォーミュラへの参照を含めることができます。 Specific information such as the page number can also be referenced through formulas (see below).
+4D Write Pro ドキュメントには、変数、フィールド、式、プロジェクトメソッドあるいは4D コマンドなどの4D フォーミュラへの参照を含めることができます。 ページ番号などの特定の情報もフォーミュラを通して参照することができます(以下参照)。
 
-Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. また、[**WP Get text**](commands-legacy/wp-get-text.md) コマンドを使用することでも返されます。
+4D Write Pro エリアへのフォーミュラの挿入には [**WP Insert formula**](commands/wp-insert-formula.md) コマンドを使用し、フォーミュラの読み出しには[**WP Get formulas**](commands-legacy/wp-get-formulas.md) コマンドを使用します。 また、[**WP Get text**](commands-legacy/wp-get-text.md) コマンドを使用することでも返されます。 また、[**WP Get text**](commands-legacy/wp-get-text.md) コマンドを使用することでも返されます。
 
 フォーミュラは以下のタイミングで評価されます:
 
@@ -87,8 +87,8 @@ Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP Insert formula($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  // ただしFormula(myMethod) と書いてmyMethod にThis.pageNumber を処理させようとした場合
+  // これは正常には動作しません
 ```
 
 ## テキストフォーミュラコンテキストオブジェクト
@@ -202,7 +202,7 @@ Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**
 フォーミュラ参照を記号として表示するためには、以下の方法があります:
 
 - プロパティリスト内の**フォーミュラのソースを記号として表示** オブションをチェックする(*ビュープロパティの設定* 参照)
-- use the displayFormulaAsSymbol standard action , or
+- `displayFormulaAsSymbol` 標準アクションを使用する
 - [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) コマンドを、`wk display formula as symbol` セレクターを**True** にして使用する
 
 ### 参照を名前で表示
@@ -217,10 +217,10 @@ Inserting formulas in 4D Write Pro areas is done with the [**WP Insert formula**
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-フォーミュラに名前を割り当てるためには、 [WP Insert formula](commands/wp-insert-formula.md) コマンドにオブジェクト型の引数を渡す必要があります。 例: 例:
+フォーミュラに名前を割り当てるためには、 [WP Insert formula](commands/wp-insert-formula.md) コマンドにオブジェクト型の引数を渡す必要があります。 例:
 
 ```4d
-  //inserts the previous day in the document
+  // ドキュメント内に昨日の日付を挿入する
  $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP Insert formula($range;$o;wk append)

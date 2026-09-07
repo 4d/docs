@@ -3,7 +3,7 @@ id: mirror
 title: Espejo lógico
 ---
 
-4D Server ofrece una solución integrada que permite configurar un sistema de copias de seguridad mediante un espejo lógico. Esta solución se basa en dos comandos: [`New log file`](../commands/new-log-file) e [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+4D Server ofrece una solución integrada que permite configurar un sistema de copias de seguridad mediante un espejo lógico.
 
 ## ¿Qué es un espejo lógico?
 
@@ -27,7 +27,7 @@ A mirror solution only reflects changes made to the **data**. This backup mode i
 
 ## Principios de funcionamiento
 
-Setting up a backup system using a logical mirror is based on two new commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
 Se aplican los siguientes principios:
 

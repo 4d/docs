@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | Blob | Blob | &#8594;  | BLOB containing a hierarchical list |
-| offset | Integer | &#8596;  | Offset within the BLOB (expressed in bytes) |
+| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 |||| New offset after reading |
 | Function result | Integer | &#8592; | Reference to newly created list |
 </div>

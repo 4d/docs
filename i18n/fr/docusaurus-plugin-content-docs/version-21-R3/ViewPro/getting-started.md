@@ -32,7 +32,7 @@ La façon la plus simple d'installer 4D View Pro dans un projet ouvert est d'uti
 
 Une fois le projet redémarré, le composant 4D View Pro est installé en tant que [dépendance Github] (../Project/components.md#adding-a-github-or-gitlab-dependency).
 
-4D View Pro nécessite une licence. Vous devez activer cette licence dans votre application afin d'utiliser ses fonctionnalités. Lorsque vous utilisez ce composant sans licence, le contenu d'un objet nécessitant une fonctionnalité 4D View Pro ne s'affiche pas au moment de l'exécution; au lieu de cela, un message d'erreur :
+4D View Pro nécessite une licence. You need to activate and [assign this license in your application](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to use its features. Lorsque vous utilisez ce composant sans licence, le contenu d'un objet nécessitant une fonctionnalité 4D View Pro ne s'affiche pas au moment de l'exécution; au lieu de cela, un message d'erreur :
 
 ![](../assets/en/ViewPro/licenseError.png)
 

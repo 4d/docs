@@ -129,7 +129,7 @@ $f:={message: $message}
 
 #### 説明
 
-`.call()` 関数は、<!-- REF #FunctionClass.apply().Summary -->対象の function オブジェクトを、一つまたはそれ以上の引数を直接渡して実行し、その結果の値を返します<!-- END REF -->。
+`.call()` 関数は、<!-- REF #FunctionClass.call().Summary -->対象の function オブジェクトを、一つまたはそれ以上の引数を直接渡して実行し、その結果の値を返します<!-- END REF -->。
 
 *thisObj* には、関数内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 

@@ -11,7 +11,7 @@ title: プロセスページ
 
 列ヘッダーをドラッグ＆ドロップして、列の順番を入れ替えることができます。 また、ヘッダーをクリックすると、リストの値が並べ替えられます。
 
-Like the Sessions page, this page contains a dynamic [search/filtering area](sessions.md#search-and-filtering) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. 検索/フィルターはセッションとプロセス名の列に対して実行されます。
+セッションページと同様にこのページにも、検索欄に入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができる動的な [検索/フィルターエリア](sessions.md#検索とフィルター) があります。 検索/フィルターはセッションとプロセス名の列に対して実行されます。
 
 ウィンドウに表示されるプロセスを、タイプ毎にフィルターするためのボタンが 3つあります:
 
@@ -99,6 +99,6 @@ Like the Sessions page, this page contains a dynamic [search/filtering area](ses
 
 > 確認ダイアログなしに選択したプロセスをデバッグするには、**Alt**キーを押しながらこのボタンをクリックします。
 
-- **Watch session**: used to display, on the [Sessions page](sessions.md), all the processes of the selected session(s). 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
+- **セッションを表示**: 選択されたプロセスのセッションを管理ウィンドウの [セッションページ](sessions.md) に直接表示させることができます。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。
 
 

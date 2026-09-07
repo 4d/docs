@@ -21,10 +21,10 @@ title: QuotaManager
 
 |                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #QuotaManagerClass.currentValues.Syntax -->](#currentvalues)<br/><!-- INCLUDE #QuotaManagerClass.defaultcurrentValuesEntitySetTimeout.Summary -->        |
+| [<!-- INCLUDE #QuotaManagerClass.currentValues.Syntax -->](#currentvalues)<br/><!-- INCLUDE #QuotaManagerClass.currentValues.Summary -->                               |
 | [<!-- INCLUDE #QuotaManagerClass.defaultEntitySetTimeout.Syntax -->](#defaultentitysettimeout)<br/><!-- INCLUDE #QuotaManagerClass.defaultEntitySetTimeout.Summary --> |
 | [<!-- INCLUDE #QuotaManagerClass.maxEntitySetTimeout.Syntax -->](#maxentitysettimeout)<br/><!-- INCLUDE #QuotaManagerClass.maxEntitySetTimeout.Summary -->             |
-| [<!-- INCLUDE #QuotaManagerClass.nbEntitySets.Syntax -->](#nbentitysets)<br/><!-- INCLUDE #QuotaManagerClass.nbEntitySets().Summary -->                                |
+| [<!-- INCLUDE #QuotaManagerClass.nbEntitySets.Syntax -->](#nbentitysets)<br/><!-- INCLUDE #QuotaManagerClass.nbEntitySets.Summary -->                                  |
 
 <!-- REF QuotaManagerClass.currentValues.Desc -->
 
@@ -112,7 +112,7 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### 説明
 
-`.nbEntitySets` プロパティには<!-- REF #QuotaManagerClass.nbEntitySets.Summary -->カレントセッション中にメモリ内で許可されるREST エンティティセットの最大数<!-- END REF --> が格納されています。
+The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session<!-- END REF -->.
 
 デフォルトでは、エンティティセットが[REST リクエストによってメモリに保存される数](../REST/$info.md) には制約はありません(値は 0 に設定されています)。 特定のセッションに対して、サーバーのペイロードを抑えるために、上限を設定することができます。
 

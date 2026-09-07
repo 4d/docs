@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-`HTTP Parse message` コマンドは、<!--REF #_command_.HTTP Parse message.Summary-->multipart/form-*data* のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
+`HTTP Parse message` コマンドは、<!--REF #_command_.HTTP Parse message.Summary-->multipart/form-*data* のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
 
 :::info
 
@@ -90,4 +90,4 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 |         |      |
 | ------- | ---- |
 | コマンド番号  | 1824 |
-| スレッドセーフ | ×    |
+| スレッドセーフ | ◯    |

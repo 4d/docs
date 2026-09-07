@@ -191,7 +191,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
+3. Você deseja lidar com erros [previsíveis e não previsíveis](#predictable-vs-unpredictable-errors):
 
 ```4d
 var $e:=ds.Employee.new()
@@ -290,6 +290,6 @@ Exceções que interrompem a execução de código são retornadas pela 4D, mas 
 - uma **mensagem**, que explica porque o erro ocorreu
 - um **código**, que é um número arbitrário retornado pelo componente
 
-A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário.
+A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário. Click on the **Copy** button to store detailed information related to the error in the pasteboard.
 
 Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). Ao interceptar e tratar erros usando um [método de tratamento de erros](#installing-an-error-handling-method) em seus aplicativos finais, use [`Last errors`](../commands/last-errors.md) e certifique-se de registrar todas as propriedades do objeto *error*, pois os códigos de erro dependem dos componentes.

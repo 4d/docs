@@ -21,10 +21,10 @@ Les objets 4D.QuotaManager exposent les propriétés suivantes :
 
 |                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #QuotaManagerClass.currentValues.Syntax -->](#currentvalues)<br/><!-- INCLUDE #QuotaManagerClass.defaultcurrentValuesEntitySetTimeout.Summary -->        |
+| [<!-- INCLUDE #QuotaManagerClass.currentValues.Syntax -->](#currentvalues)<br/><!-- INCLUDE #QuotaManagerClass.currentValues.Summary -->                               |
 | [<!-- INCLUDE #QuotaManagerClass.defaultEntitySetTimeout.Syntax -->](#defaultentitysettimeout)<br/><!-- INCLUDE #QuotaManagerClass.defaultEntitySetTimeout.Summary --> |
 | [<!-- INCLUDE #QuotaManagerClass.maxEntitySetTimeout.Syntax -->](#maxentitysettimeout)<br/><!-- INCLUDE #QuotaManagerClass.maxEntitySetTimeout.Summary -->             |
-| [<!-- INCLUDE #QuotaManagerClass.nbEntitySets.Syntax -->](#nbentitysets)<br/><!-- INCLUDE #QuotaManagerClass.nbEntitySets().Summary -->                                |
+| [<!-- INCLUDE #QuotaManagerClass.nbEntitySets.Syntax -->](#nbentitysets)<br/><!-- INCLUDE #QuotaManagerClass.nbEntitySets.Summary -->                                  |
 
 <!-- REF QuotaManagerClass.currentValues.Desc -->
 
@@ -112,7 +112,7 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### Description
 
-La propriété `.nbEntitySets` contient <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->le nombre maximal d'entity sets REST autorisés en mémoire pour la session courante (en secondes)<!-- END REF -->.
+The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session<!-- END REF -->.
 
 Par défaut, il n'y a pas de limite pour les entity sets [stockés en mémoire par les requêtes REST](../REST/$info.md) (la valeur est 0). Vous pouvez définir une limite afin de contrôler la charge utile du serveur pour une session spécifique.
 

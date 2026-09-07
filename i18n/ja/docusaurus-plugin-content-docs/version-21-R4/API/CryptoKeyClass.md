@@ -327,7 +327,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
-The <!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。 <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->読み込む暗号化キーのPEM 定義。 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。 <!-- END REF -->
 
 <!-- END REF -->
 

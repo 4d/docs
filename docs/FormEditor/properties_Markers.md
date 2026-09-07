@@ -34,6 +34,8 @@ The form Detail area is displayed on the screen and printed once for each record
 
 You can make the Detail area smaller or larger. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
 
+The following form objects are **not supported** in the Detail area (i.e. they are not repeated for each record): [Web areas](../FormObjects/webArea_overview.md), [4D View Pro areas](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [hierarchical lists](../FormObjects/list_overview.md), [splitters](../FormObjects/splitters.md), [subforms](../FormObjects/subform_overview.md), and [plug-in areas](../FormObjects/pluginArea_overview.md). 
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|

@@ -5,13 +5,15 @@ title: リリースノート
 
 ## 4D 21 R5
 
-Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), the blog post that lists all new features and enhancements in 4D 21 R5.
+[**4D 21 R5 の新機能**](https://blog.4d.com/ja/whats-new-in-4d-21-r5/): 4D 21 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- Support of S/MIME email signing in [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class through new properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+- Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
+- Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
+
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
 
 ## 4D 21 R4
 

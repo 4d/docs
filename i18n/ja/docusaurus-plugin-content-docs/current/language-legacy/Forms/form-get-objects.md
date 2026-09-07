@@ -5,7 +5,7 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : 倍長整数, 演算子} )<br/>**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : 倍長整数 } )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 <div class="no-index">
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | objectsArray | Text array | &#8592; | フォームオブジェクト名 |
 | variablesArray | Pointer array | &#8592; | オブジェクトに関連付けられた 変数やフィールドへのポインタ |
 | pagesArray | Integer array | &#8592; | オブジェクトごとのページ番号 |
-| formPageOption &#124; * | 倍長整数, 演算子 | &#8594; | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>* 指定時(廃止予定) = Form current pageとForm inherited |
+| formPageOption | 倍長整数 | &#8594; | 1=Form current page, 2=Form all pages, 4=Form inherited |
 </div>
 <!-- END REF-->
 
@@ -38,17 +38,17 @@ displayed_sidebar: docs
 
 引数として渡した配列が事前に定義されていない場合、コマンドはその配列を作成し、サイズを自動的に設定します。しかし、アプリケーションをコンパイルする場合を考慮し、各配列を明示的に宣言することをお勧めします。
 
-(フォーム内でユニークな) オブジェクト名を受け取る文字列配列を*objectsArray*に渡します。配列内でのオブジェクトの出現順序は意味を持ちません。。
+(フォーム内でユニークな) オブジェクト名を受け取る文字列配列を*objectsArray* に渡します。配列内でのオブジェクトの出現順序は意味を持ちません。
 
 コマンドにより代入される他の任意の配列は、1番目の配列との同期が取られます。
 
-任意の引数*variablesArray*にはポインタ配列を渡し、この配列にはオブジェクトに関連付けられている変数やフィールドへのポインタが格納されます。オブジェクトに関連付けられた変数が存在しない場合、[Is nil pointer](../commands/is-nil-pointer) ポインタが返されます。“サブフォーム”オブジェクトタイプが存在する場合、サブフォームのテーブルへのポインタが返されます。
+任意の引数*variablesArray* にはポインタ配列を渡し、この配列にはオブジェクトに関連付けられている変数やフィールドへのポインタが格納されます。オブジェクトに関連付けられた変数が存在しない場合、[Is nil pointer](../commands/is-nil-pointer) ポインタが返されます。“サブフォーム”オブジェクトタイプが存在する場合、サブフォームのテーブルへのポインタが返されます。
 
-3番目の配列（任意）*pagesArray*には、フォームのページ番号が代入されます。この配列の各要素には、対応するオブジェクトのページ番号が格納されます。
+3番目の配列（任意）*pagesArray* には、フォームのページ番号が代入されます。この配列の各要素には、対応するオブジェクトのページ番号が格納されます。
 
-任意の引数 *\** を使用すると、返されるオブジェクトのリストをフォームのカレントページに限定することができます。この引数を渡した場合、コマンドはカレントページ、 ページ0、継承ページのオブジェクトだけを返します。このコマンドは、フォームのカレントページ上に存在するあらゆるオブジェクト (表示・非表示とも) を処理します。
+任意の引数 *\** を使用すると、返されるオブジェクトのリストをフォームのカレントページに限定することができます。この引数を渡した場合、コマンドはカレントページ、 ページ0、継承ページのオブジェクトだけを返します。言い換えると、この場合のこのコマンドは、フォームのカレントページ上に存在するあらゆるオブジェクト (表示・非表示とも) を処理します。
 
-任意の引数 *formPageOption* はオブジェクトを取得したいフォームの部分を指定することができます。デフォルトでは、*formPageOption* parameter引数(と*\** 引数)が省略された場合、継承されたオブジェクトを含む、全てのページのオブジェクトフォームが返されます。コマンドのスコープを限定するためには、*formPageOption* 引数に値を渡します。"*Form Objects (Access)*" テーマ内にある、以下の定数のどれか一つ(またはその組み合わせ)を渡して下さい: 
+任意の引数 *formPageOption* はオブジェクトを取得したいフォームの部分を指定することができます。デフォルトでは、*formPageOption* 引数(と*\** 引数)が省略された場合、継承されたオブジェクトを含む、全てのページのオブジェクトフォームが返されます。コマンドのスコープを限定するためには、*formPageOption* 引数に値を渡します。"*Form Objects (Access)*" テーマ内にある、以下の定数のどれか一つ(またはその組み合わせ)を渡して下さい: 
 
 | 定数                | 型    | 値 | コメント                                                |
 | ----------------- | ---- | - | --------------------------------------------------- |

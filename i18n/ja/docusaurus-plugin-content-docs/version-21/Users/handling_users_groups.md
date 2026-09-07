@@ -7,7 +7,7 @@ title: 4Dユーザー＆グループの管理
 
 ## プロジェクトにおけるユーザー＆グループ
 
-プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびマルチユーザー環境の両方でユーザーとグループを設定することができます。 ただし、**アクセスシステム** は 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
+プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびマルチユーザー環境の両方でユーザーとグループを設定することができます。 ただし、**アクセスコントロール** は 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
 |                              | 4D (シングルユーザー)        | 4D Server |
 | ---------------------------- | --------------------------------------- | --------- |
@@ -58,8 +58,7 @@ title: 4Dユーザー＆グループの管理
 
 ![](../assets/en/Users/editor.png)
 
-> ユーザーとグループのエディターは、[EDIT ACCESS](../commands-legacy/edit-access.md) コマンドを使用することでランタイムで表示することもできます。
-> ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
+> ユーザーとグループのエディターは、[EDIT ACCESS](../commands/edit-access) コマンドを使用することでランタイムで表示することもできます。
 > ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
 ### ユーザーの追加と変更
@@ -104,9 +103,9 @@ title: 4Dユーザー＆グループの管理
 
 ### ユーザープロパティ
 
-- **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合にあ) "ユーザー"
+- **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合に) "ユーザー"
 
-- **開始メソッド**: ユーザーがアプリケーションを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。 このメソッドを使って、たとえばユーザー設定をロードできます。
+- **開始メソッド**: ユーザーがアプリケーションを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。
 
 ## グループエディター
 
@@ -150,19 +149,17 @@ title: 4Dユーザー＆グループの管理
 
 ユーザーやグループをグループから取り除くには、ユーザー/グループ一覧でチェックを解除します。
 
-### プラグインやサーバーにグループを割り当てる
+### Assigning a license to a group
 
-プロジェクトにインストールされたプラグインへのアクセス権をグループに割り当てることができます。 これには 4D のプラグインと任意のサードパーティープラグインが含まれます。
+You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
 
-プラグインへのアクセス権を割り当てると、所有するプラグインライセンスの使用を管理できるようになります。 プラグインのアクセスグループに属さないユーザーは、そのプラグインをロードすることができません。
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
 
 > 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-ツールボックスのグループページにある "プラグイン" エリアには、4Dアプリケーションによりロードされたプラグインがすべて表示されます。 プラグインへのアクセス権をグループに与えるには、該当するオプションをチェックします。
+The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
 
 ![](../assets/en/Users/plugins.png)
-
-**4D Client Web Server** や **4D Client SOAP Server** 項目を使用し、リモートモードの 4D がそれぞれ Web および SOAP (Webサービス) 公開をおこなえるかどうかを管理することができます。 これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 ### アクセス権の階層構造
 
@@ -213,4 +210,5 @@ title: 4Dユーザー＆グループの管理
 - データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](../Project/architecture.md#settings-user-data) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
 > パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。
+
 

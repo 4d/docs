@@ -3,7 +3,7 @@ id: mirror
 title: Miroir logique
 ---
 
-4D Server offre une solution intégrée qui permet la mise en place d'un système de sauvegarde via un miroir logique. Cette solution est basée sur deux commandes : [`New log file`](../commands/new-log-file) et [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+4D Server offre une solution intégrée qui permet la mise en place d'un système de sauvegarde via un miroir logique.
 
 ## Qu'est-ce qu'un miroir logique ?
 
@@ -27,7 +27,7 @@ La base miroir ne reflète que les modifications apportées aux **données**. Ce
 
 ## Principes de fonctionnement
 
-Setting up a backup system using a logical mirror is based on two new commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
 Les principes suivants sont mis en œuvre :
 

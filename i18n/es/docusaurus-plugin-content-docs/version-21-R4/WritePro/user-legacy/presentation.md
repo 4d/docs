@@ -27,7 +27,7 @@ Las funcionalidades principales del producto son las siguientes:
 
 4D Write Pro está totalmente integrado en el propio 4D, por lo que es más fácil de desplegar y administrar. No se requiere ninguna instalación adicional, puede agregar áreas 4D Write Pro en sus formularios y manejar las variables 4D Write Pro en sus aplicaciones 4D directamente.  
   
-Sin embargo, es necesario tener instalada una licencia de 4D Write Pro en la aplicación para poder habilitar la función.
+Sin embargo, es necesario tener [una licencia de 4D Write Pro instalada en la aplicación](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) para poder habilitar la función.
 
 ## Creación de un área 4D Write Pro
 

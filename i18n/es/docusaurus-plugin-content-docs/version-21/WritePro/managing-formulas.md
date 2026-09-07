@@ -220,10 +220,10 @@ Si asigna nombres a las fórmulas, se mostrarán en lugar de los textos:
 Para asignar un nombre a una fórmula, debe utilizar el comando [WP Insert formula](commands/wp-insert-formula.md) con un parámetro objeto. Por ejemplo:
 
 ```4d
-  //inserts the previous day in the document
- $o:=New object("formula";Formula(Current date-1);"name";"Yesterday")
+  //inserta el día anterior en el documento
+ $o:=New object("formula";Formula(Current date-1); "name"; "Yesterday")
  $range:=WP Text range(WPArea;wk start text;wk end text)
- WP Insert formula($range;$o;wk append)
+ WP INSERT FORMULA($range;$o;wk append)
  
 ```
 

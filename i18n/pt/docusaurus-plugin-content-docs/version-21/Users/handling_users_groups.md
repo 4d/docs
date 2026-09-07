@@ -58,7 +58,7 @@ O editor de usuários está na Barra de Ferramentas de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](../commands-legacy/edit-access.md).
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands/edit-access) command.
 > Toda la configuración de usuarios y grupos también puede editarse durante la ejecución de la aplicación utilizando los comandos del lenguaje 4D del tema `Usuarios y Grupos`.
 
 ### Adicionar e modificar usuários
@@ -151,19 +151,17 @@ A colocação de grupos noutros grupos permite-lhe criar uma hierarquia de usuá
 
 Para remover um usuário ou grupo de outro grupo, você só precisa desmarcar a opção correspondente na área de atribuição de membros.
 
-### Atribuição de um grupo a um plug-in ou a um servidor
+### Assigning a license to a group
 
-Você pode atribuir privilégios de grupo a qualquer plug-in instalado no projeto. Isto inclui todos os plug-ins 4D e de terceiros.
+You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
 
-A distribuição de acesso ao plug-ins permite que você controle o uso das licenças que você possui para esses plug-ins. Qualquer usuário que não pertence ao grupo de acesso de um plug-in não pode carregar este plug-in.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
 
 > Licenças utilizadas permanecem anexadas a contas de usuário 4D no grupo para toda a sessão 4D.
 
-A área "Plug-in" na página de grupos da caixa de ferramentas lista todos os plug-ins carregados pela aplicação 4D. Para dar acesso a um grupo a um plug-in, você precisa simplesmente marcar a opção correspondente.
+The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
 
 ![](../assets/en/Users/plugins.png)
-
-Las líneas **4D Client Web Server** y **4D Client SOAP Server** permiten controlar la posibilidad de publicación Web y SOAP (Web Services) de cada 4D en modo remoto. Essas licenças são consideradas como licenças de plug-in por 4D Server. Portanto, da mesma forma que para plug-ins, você pode restringir o direito de utilizar essas licenças para um grupo específico de usuários.
 
 ### Um esquema de acesso hierárquico
 
@@ -211,4 +209,5 @@ Esse arquivo pode ser armazenado nos seguintes locais, dependendo de suas necess
 - Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](../Project/architecture.md#settings-user-data). Essa configuração personalizada/local de usuários e grupos não será afetada por uma atualização da aplicação.
 
 > To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+
 

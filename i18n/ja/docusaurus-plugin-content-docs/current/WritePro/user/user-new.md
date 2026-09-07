@@ -10,22 +10,22 @@ to import
 
 ## リスト
 
-4D Write Pro supports flat lists (single-level) and multi-level lists.
+4D Write Pro はフラットなリスト(単一レベル) と複数レベルのリストをサポートしています。
 
-### Single-level lists
+### 単一レベルのリスト
 
-4D Write Pro supports two main types of single-level lists:
+4D Write Pro は主に2つのタイプの単一レベルのリストをサポートします:
 
-- unordered lists: where list items are marked with bullets, custom bullets, or images used as markers.
-- ordered lists: where list items are marked with numbers or letters
+- 順番なしリスト: リストの項目は箇条書き記号、カスタムの箇条書き記号、あるいはマーカーとして使用される画像でマークされます。
+- 順番付きリスト: リストの項目は番号または文字でマークされます。
 
-They can be created using:
+これらは以下の方法で作成することができます:
 
-- the toolbar or sidebar of the [4D Write Pro interface](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-- the `listStyleType` or `listStyleImage` [standard actions](./standard-actions) ,
-- or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](../commands/wp-set-attributes).
+- [4D Write Pro インターフェース](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.ja.html#5865253) のツールバーまたはサイドバー
+- `listStyleType` あるいは `listStyleImage` の[標準アクション](./standard-actions)
+- あるいは[WP SET ATTRIBUTE](../commands/wp-set-attributes) コマンドを使用して[プログラムで作成する](../commands-legacy/4d-write-pro-attributes.md#リスト)。
 
-When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`).
+標準アクション(`listStyleType` あるいは `listStyleImage`) あるいはツールバー/サイドバーを使用してリストが作成された場合、4D Write Pro はマーカーがテキストの内側に表示されるように、自動的にテキストの前に余白を挿入します。 挿入される余白の値は、デフォルトタブのオフセット(`wk tab default`) に対応します。
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 

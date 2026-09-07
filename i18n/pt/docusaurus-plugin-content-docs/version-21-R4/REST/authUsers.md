@@ -28,10 +28,9 @@ A sequência de login do usuário é a seguinte:
    Descriptive REST requests are always processed by the server, even if no web user session using a license is opened. At the first REST call (for a Qodly page call for example), a "guest" web user session is created.
 
 2. Você chama sua [`authentify()`](#function-authentify) (criado previamente), na qual você verifica as credenciais do usuário e chama [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) com privilégios apropriados. `authentify()` deve ser uma [função de datastore class](../ORDA/ordaClasses.md#datastore-class) exposta.
+   The function can be called either directly from your 4D code (see [`Open datastore`](../commands/open-datastore) example) or through a `/rest/$catalog/authentify` request along with user credentials. This step only requires a basic login form that do not access data; it can be for example a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
 
-3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
-
-4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
+3. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted as soon as the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 

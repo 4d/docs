@@ -122,26 +122,26 @@ UUID バージョン7の詳細な情報については、 [こちらのblog記�
 
 :::note
 
-You can modify temporary the cache flush frequency using the [`Cache flush periodicity` selector of the `SET DATABASE PARAMETER` command](../commands/set-database-parameter#cache-flush-periodicity-95).
+[`SET DATABASE PARAMETER` コマンドの`Cache flush periodicity` セレクター](../commands/set-database-parameter#cache-flush-periodicity-95)を使用することで、キャッシュのフラッシュ頻度を一時的に変更することができます。
 
 :::
 
-### Managing priorities in database cache
+### データベースキャッシュの優先度を管理する
 
-The 4D database cache includes an automatic priority management mechanism that provides a high level of efficiency and performance for data access. Thanks to this mechanism, when space is needed to load new data in the cache, low priority cached data are released first, while higher priority cached data remain loaded.
+4D データベースキャッシュには、パフォーマンスとデータアクセスにおいて高い効率とパフォーマンスを提供する、自動優先度管理機構が含まれています。 この機構のおかげで、新しいデータをロードするためにキャッシュが必要になったとき、優先度の低いキャッシュデータから先に解放され、優先度の高いキャッシュデータはロードされたままになります。
 
-This mechanism is fully automatic and usually, you will not have to worry about it. However, for specific cases it can be customized using a [set of dedicated commands from the "Cache Management" theme](../commands/theme/Cache_Management.md), which allow changing the priority of objects for the entire time the database is running, or temporarily for the current process. Note that these commands must be used carefully since they affect database performance.
+この機構は完全に自動的であり、通常は何も心配をする必要はありません。 しかしながら特定の場合においては["Cache Management" テーマにある専用のコマンド群](../commands/theme/Cache_Management.md) を使用してこれをカスタマイズすることが可能です。これによってデータベースが実行している間中、あるいはカレントプロセスにおいて一時的にオブジェクトの優先順位を変更することができます。 ただしこれらのコマンドはデータベースのパフォーマンスに影響を与えるため使用に際して注意が必要であるという点に注意してください。
 
-#### Priority management overview
+#### 優先度管理の概要
 
-The Cache manager selects data to remove from the cache as necessary using a priority system. The three kinds of objects that can be loaded in the cache have a different priority:
+キャッシュマネージャーは優先度システムを使用して必要に応じてキャッシュから削除するデータを選択します。 キャッシュにロードできる三つの種類のオブジェクトには、異なった優先度がつけられます:
 
-- **tables**: all standard field data (numeric, dates, etc.), excluding blobs (see below). Default priority is medium.
-- **blobs**: all binary field data (text, picture, object and blobs) stored in the data file. Default priority is the lowest.
-- **indexes**: all field indexes, including keyword indexes and composite indexes. Since indexes are frequently accessed, they have a special status in the cache. Default priority is the highest.
+- **テーブル**: 全ての標準のフィールドデータ(数値、日付、など)、ただしBlobを除く(以下参照)。 デフォルトの優先度は「中」です。
+- **Blob**: データファイルに保存されている全てのバイナリーフィールドデータ(テキスト、ピクチャー、オブジェクトおよびBlob)。 デフォルトの優先度は「低」です。
+- **インデックス**: キーワードインデックスと複合インデックスも含めた全てのフィールドインデックス。 インデックスは頻繁にアクセスされるため、これはキャッシュ内で特殊なステータスを持ちます。 デフォルトの優先度は「最高」です。
 
-Default priorities usually provide the best performances. However, for specific cases you can customize the cache priorities using two sets of 4D commands:
+デフォルトの優先度だけで通常は最高のパフォーマンスを引き出すことができます。 しかしながら特定の場合においては二種類の4D コマンドを使用することでキャッシュ優先度をカスタマイズすることができます:
 
-- Commands that change the priorities for the whole session and all processes: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority), [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority), and [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority). These commands should be used in a startup database method.
-- Commands that change the priorities only for the current process: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority), [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority), and [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority). Use these commands to improve the performance of a temporary operation on your database and go back to initial priorities after the operation is finished. These commands are available only on 4D Server or 4D in local mode.
+- セッション全体と全てのプロセスにおいて優先度を変更するコマンド: [`SET TABLE CACHE PRIORITY`](../commands/set-table-cache-priority)、[`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority)、および [`SET BLOBS CACHE PRIORITY`](../commands/set-blobs-cache-priority)。 これらのコマンドはデータベース起動時のメソッドで使用されなければなりません。
+- カレントプロセスにおいてのみ優先度を変更するコマンド: [`ADJUST TABLE CACHE PRIORITY`](../commands/adjust-table-cache-priority)、 [`ADJUST INDEX CACHE PRIORITY`](../commands/adjust-index-cache-priority)、および [`ADJUST BLOBS CACHE PRIORITY`](../commands/adjust-blobs-cache-priority)。 これらのコマンドを使用することでデータベース上の一時的な操作のパフォーマンスを向上させ、その操作が終了したあとは初期プロパティに戻るようにすることができます。 これらのコマンドは4D Server とローカルモードの4D においてのみ利用可能です。
 

@@ -327,7 +327,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
-The <!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。 <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->読み込む暗号化キーのPEM 定義。 秘密鍵を渡した場合、RSA または ECDSA の公開鍵は秘密鍵から推定されます。 <!-- END REF -->
 
 <!-- END REF -->
 
@@ -412,7 +412,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
-キーのタイプ: "RSA", "ECDSA", "PEM"。
+<!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM"<!-- END REF -->。
 
 - "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア
 - "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。

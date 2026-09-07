@@ -59,7 +59,7 @@ The editor for users is located in the Toolbox of 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands-legacy/edit-access.md) command. 
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands/edit-access) command. 
 > The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.  
 
 ### Adding and modifying users
@@ -153,19 +153,17 @@ Placing groups into other groups lets you create a user hierarchy. The users of 
 
 To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
 
-### Assigning a group to a plug-in or to a server  
+### Assigning a license to a group 
 
-You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins. 
+You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components. 
  
-Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
 
 > Used licenses remain attached to 4D user accounts in the group for the whole 4D session. 
 
-The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option. 
+The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option. 
 
 ![](../assets/en/Users/plugins.png)
-
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
 
 ### An access hierarchy scheme
@@ -215,4 +213,5 @@ This file can be stored at the following locations, depending on your needs:
 - If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.  
 
 > To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+
 

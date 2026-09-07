@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. [予測可能なエラーと予測不可能なエラー]{#predictable-vs-unpredictable-errors} の両方を管理したい場合を考えます:
+3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
 
 ```4d
 var $e:=ds.Employee.new()
@@ -293,7 +293,21 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 - **メッセージ**。エラーがなぜ起きたかを説明します。
 - **コード**。コンポーネントによって返される任意の数値です。
 
-[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。
+To have a full description of an error and especially its origin, you can use the [4D error dialog box](../Debugging/basics.md) or the [`Last errors`](../commands/last-errors) command.
 
-エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors) コマンドを呼び出す必要があります。 最終アプリケーションにおいて[エラー処理メソッド](#installing-an-error-handling-method) を使用してエラーへの割り込みと処理をする場合、[`Last errors`](../commands/last-errors) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。
+### Error dialog box
+
+[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。 Expand the **Details** area and click on the **Save...** or **Copy** button:
+
+![copy-button](../assets/en/Concepts/error.png)
+
+Detailed information related to the error is then saved to a text file or copied to the pasteboard, including the context and the component:
+
+![pasted-error](../assets/en/Concepts/error2.png)
+
+### `Last errors` command
+
+You can call the [`Last errors`](../commands/last-errors) command in your code to get information about errors. This command must be called from an on error call method installed by the [`ON ERR CALL`](../commands/on-err-call) command or within a [`Try or Try/Catch`](#trycatchend-try) context.
+
+When you intercept and handle errors in your final applications, use [`Last errors`](../commands/last-errors) and make sure you log all properties of the *error* object since error codes depend on the components.
 

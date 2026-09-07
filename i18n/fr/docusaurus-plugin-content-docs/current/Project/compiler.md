@@ -5,7 +5,7 @@ title: Compilation
 
 Vous pouvez compiler vos projets, c'est-à-dire traduire toutes vos méthodes en langage machine. La compilation d'un projet permet de vérifier la cohérence du code et d'accélérer son exécution, mais aussi de masquer le code dans son intégralité. La compilation est une étape indispensable, entre le développement de projets avec 4D et leur déploiement en tant qu'applications autonomes.
 
-## Compilation incrémentale
+## Compiler
 
 La compilation est gérée depuis votre application 4D et est entièrement automatique.
 
@@ -39,7 +39,7 @@ Le nombre d'erreurs trouvées lors de vos premières compilations peut être dé
 
 > La compilation nécessite une licence appropriée. Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
-## Exécuter la compilation
+## Exécuter en compilé
 
 Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). Pour ce faire, utilisez les commandes **Redémarrer en interprété** et **Redémarrer en compilé** du menu **Exécution**. La [boîte de dialogue d'ouverture de projet ](GettingStarted/creating.md#options) de 4D permet également de choisir le mode interprété ou compilé au lancement du projet.
 

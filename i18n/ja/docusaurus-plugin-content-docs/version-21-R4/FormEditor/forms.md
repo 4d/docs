@@ -338,7 +338,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 Possible values: "Classic", "FluentUI" or "LiquidGlass".
 - [`Application info`](../commands/application-info) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
 - [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。

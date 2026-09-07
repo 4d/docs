@@ -39,7 +39,7 @@ The *contents* parameter receives the contents of the part. When the parts to be
 
 The *name* parameter receives the variable name of the HTTP input field.
 
-The *mimeType* and *name* parameters receive the Mime type and the name of the original file, if any. A *name* is only received when the file was submitted as **<input type="file">**.  
+The *mimeType* and *name* parameters receive the Mime type and the name of the original file, if any. A *name* is only received when the file was submitted as `<input type="file">`.  
 *mimeType* and *name* are optional but must be passed together. 
 
 **Note:** In the context of a multi-part request, the first array of the [WEB GET VARIABLES](web-get-variables.md) command returns all parts of the form, in the same order as the **WEB GET BODY PART** command. You can use it in order to get the position of the parts of the form directly. 

@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. Desea gestionar tanto los errores [previsibles como los no previsibles](#predictable-vs-unpredictable-errors):
+3. Desea gestionar tanto los errores [previsibles como los no previsibles>](#predictable-vs-unpredictable-errors):
 
 ```4d
 var $e:=ds.Employee.new()
@@ -293,7 +293,21 @@ Excepciones que interrumpen la ejecución de código son devueltas por 4D pero p
 - un **mensaje**, que explica por qué se ha producido el error
 - un **código**, que es un número arbitrario devuelto por el componente
 
-La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario.
+Para obtener una descripción completa de un error y, en especial, de su origen, puede utilizar el [cuadro de diálogo de errores de 4D](../Debugging/basics.md) o el comando [`Last errors`](../commands/last-errors).
 
-Para tener una descripción completa de un error y especialmente su origen, necesita llamar al comando [`Last errors`](../commands/last-errors). Cuando intercepta y maneja errores usando un [método de gestión de errores](#installing-an-error-handling-method) en sus aplicaciones finales, use [`Last errors`](../commands/last-errors) y asegúrese de registrar todas las propiedades del objeto *error* ya que los códigos de error dependen de los componentes.
+### Cuadro de diálogo de errores
+
+La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario. Expanda el área **Detalles** y haga clic en el botón **Guardar...** o **Copiar**:
+
+![copy-button](../assets/en/Concepts/error.png)
+
+La información detallada relacionada con el error se guarda en un archivo de texto o se copia en el portapapeles, incluyendo el contexto y el componente:
+
+![pasted-error](../assets/en/Concepts/error2.png)
+
+### Comando `Last errors`
+
+Puede llamar al comando [`Last errors`](../commands/last-errors) en su código para obtener información sobre errores. Este comando debe llamarse desde un método de gestión de errores instalado por el comando [`ON ERR CALL`](../commands/on-err-call) o en un contexto [`Try or Try/Catch`](#trycatchend-try).
+
+Cuando intercepte y gestione errores en sus aplicaciones finales, utilice [`Last errors`](../commands/last-errors) y asegúrese de registrar todas las propiedades del objeto *error*, ya que los códigos de error dependen de los componentes.
 

@@ -265,12 +265,6 @@ Um formulário de múltiplas páginas possui tanto uma página de fundo quanto v
 
 ## Fluent UI rendering
 
-:::caution Prévia do desenvolvedor
-
-Fluent UI support is currently in the Developer Preview phase. Não deve ser usado na produção.
-
-:::
-
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
 Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
@@ -287,8 +281,9 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 :::tip Related blog posts
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
+[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms)
 
 :::
 
@@ -337,7 +332,7 @@ The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- The [`FORM theme`](../commands/form-theme) command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
+- The [`FORM theme`](../commands/form-theme) command returns the actual display theme of the current form. Possible values: "Classic", "FluentUI" or "LiquidGlass".
 - The [`Application info`](../commands/application-info) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
 - If [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
@@ -345,6 +340,7 @@ When using 4D forms with Fluent UI rendering, you need to pay attention to the f
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
 - The [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) commands are not supported in Web areas with system rendering engine.
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
 
 ## Formulários herdados
 

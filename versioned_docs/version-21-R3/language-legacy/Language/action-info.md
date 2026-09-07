@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | action | Text | &#8594;  | Standard action name or pattern including parameter if required |
 | target | Integer | &#8594;  | Defines the target of the action to get information: main form or current form |
-| Function result | Object | &#8592; | Object containing action status as boolean properties: isEnabled, isVisible, isChecked, isMixed, isUnknownState |
+| Function result | Object | &#8592; | Object containing action status as properties |
 </div>
 <!-- END REF-->
 

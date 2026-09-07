@@ -282,13 +282,6 @@ A multi-page form has both a background page and several display pages. Objects 
 
 ## Fluent UI rendering
 
-:::caution Developer Preview
-
-Fluent UI support is currently in the Developer Preview phase. It should not be used in production.
-
-:::
-
-
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
 Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
@@ -307,8 +300,9 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 :::tip Related blog posts
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)   
+[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms) 
 
 :::
 
@@ -365,6 +359,7 @@ When using 4D forms with Fluent UI rendering, you need to pay attention to the f
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
 - The [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) commands are not supported in Web areas with system rendering engine. 
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md). 
+- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area. 
 
 
 

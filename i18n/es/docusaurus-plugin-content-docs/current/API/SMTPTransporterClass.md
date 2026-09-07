@@ -68,13 +68,13 @@ La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summar
 
 #### Descripción
 
-The `.certificate` property contains <!-- REF #SMTPTransporterClass.certificate.Summary -->the certificate used to sign emails using S/MIME (Secure/MIME), provided as a [`4D.File`](./FileClass.md) object or a Blob<!-- END REF -->. This certificate contains the private key.
+La propiedad `.certificate` contiene <!-- REF #SMTPTransporterClass.certificate.Summary -->el certificado utilizado para firmar correos electrónicos mediante S/MIME (Secure/MIME), proporcionado como un objeto [`4D.File`](./FileClass.md) o como un Blob<!-- END REF -->. Este certificado contiene la llave privada.
 
-If your certificate is already registered in your Certificate store (*keychain*), you can use [`.certificateName`](#certificatename) instead of this property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+Si su certificado ya está registrado en su tienda de certificados (*keychain*), puede utilizar [`.certificateName`](#certificatename) en lugar de esta propiedad. Tenga en cuenta que no puede utilizar ambas propiedades simultáneamente, de lo contrario se devuelve un error.
 
 :::tip Entrada de blog relacionada
 
-[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+[Firmar correos electrónicos con S/MIME y SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
 
 :::
 
@@ -85,24 +85,24 @@ var $transporter : 4D.SMTPTransporter
 var $options ; $result : Object
 
 $options:=New object
-//Enter the information for the SMTP server
+//Introducir la información del servidor SMTP
 
-//Enable S/MIME signing
-//Provide certificate file
+//Habilitar la firma S/MIME
+//Proporcionar el archivo de certificado
 $options.certificate:=File("myCertificateFile.p12")
 $options.certificatePassword:="myGreatPW123"
 
 $transporter:=4D.SMTPTransporter.new($options)
 
 $email:=New object
-//Fill the email content
+//Llenar el contenido del correo electrónico
 
 $result:=$transporter.send($email)
 ```
 
 #### Ver también
 
-[.certificateName](#certificatename)<br/>
+[.certificateName](#certificatename)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificateName
@@ -119,13 +119,19 @@ $result:=$transporter.send($email)
 
 #### Descripción
 
-The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
+La propiedad `.certificateName` contiene <!-- REF #SMTPTransporterClass.certificateName.Summary -->el nombre del certificado utilizado para firmar correos electrónicos mediante S/MIME (Secure/MIME), tal y como figura registrado en el almacén de certificados del sistema (*keychain*)<!-- END REF -->. Este certificado contiene la llave privada.
 
-The certificate can also be provided directly as a file using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+El certificado también se puede proporcionar directamente como un archivo o un blob mediante la propiedad [`.certificate`](#certificate). Tenga en cuenta que no puede utilizar ambas propiedades simultáneamente, de lo contrario se devuelve un error.
+
+:::tip Entrada de blog relacionada
+
+[Firmar correos electrónicos con S/MIME y SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
 
 #### Ver también
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificatePassword
@@ -142,11 +148,11 @@ The certificate can also be provided directly as a file using the [`.certificate
 
 #### Descripción
 
-The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->the password of the certificate used to sign emails, if required<!-- END REF -->. An empty string is used if no password is required.
+La propiedad `.certificatePassword` contiene <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->la contraseña del certificado utilizado para firmar los correos electrónicos, si es necesario<!-- END REF -->. Se usa una cadena vacía si no se requiere una contraseña.
 
 #### Ver también
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificateName](#certificatename)
 
 <!-- INCLUDE transporter.logFile.Desc -->

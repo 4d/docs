@@ -33,7 +33,7 @@ title: はじめに
 
 プロジェクトを再起動すると、4D View Pro コンポーネントは[Github 依存関係](../Project/components.md#githubの依存関係の追加)としてインストールされます。
 
-4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
+4D View Pro はライセンスを必要とします。 You need to activate and [assign this license in your application](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to use its features. 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

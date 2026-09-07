@@ -5,7 +5,7 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( * ; *list* : Integer, Text ; * ; *icon* : Picture<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( * ; *list* : Text ; *itemRef* : 演算子, 倍長整数 ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( *list* : Integer ; *itemRef* : 演算子, 倍長整数 ; *icon* : Picture )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 <div class="no-index">
 
@@ -30,19 +30,19 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GET LIST ITEM ICON.Summary-->GET LIST ITEM ICON コマンドは、*list*に参照番号またはオブジェクト名を渡したリスト内の、*itemRef*項目参照の項目に割り当てられたアイコンを*icon*に返します。<!-- END REF-->  
+<!--REF #_command_.GET LIST ITEM ICON.Summary-->GET LIST ITEM ICON コマンドは、*list* に参照番号またはオブジェクト名を渡したリスト内の、*itemRef* 項目参照の項目に割り当てられたアイコンを*icon* に返します。<!-- END REF-->  
   
 オプションの第一引数 *\** を渡すと、*list* 引数はフォーム上のリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。リストオブジェクトを一つしか使わない場合や、2番目の *\** を使用しない場合は、両方のシンタックスを使用できます。他方フォーム上に同じ階層リストを参照する複数のオブジェクトがある場合で、2番目の *\** を渡して現在選択されている項目を参照する場合、それぞれのオブジェクトが個別に選択された項目をもつので、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-**Note:** オブジェクト名に @ 文字を使用することで、名前に対応するオブジェクトが複数検索された場合、GET LIST ITEM ICON コマンドは最初に見つけたオブジェクトを処理の対象とします。
+**注意:** オブジェクト名に @ 文字を使用することで、名前に対応するオブジェクトが複数検索された場合、**GET LIST ITEM ICON** コマンドは最初に見つけたオブジェクトを処理の対象とします。
 
-*itemRef*に項目参照番号を渡すことができます。対応する項目がない場合、コマンドは何も行いません。0を渡した場合、リストに最後に追加された項目が処理の対象となります。*\** を渡した場合、コマンドは現在選択されている項目を処理の対象とします。複数の項目が選択されている場合、カレントの項目は最後に選択された項目です。項目が選択されていない場合、コマンドは何も行いません。
+*itemRef* に項目参照番号を渡すことができます。対応する項目がない場合、コマンドは何も行いません。*itemRef* に0 を渡した場合、リストに最後に([APPEND TO LIST](../commands/append-to-list)を使用して)追加された項目が処理の対象となります。*itemRef* に*\** を渡した場合、コマンドは現在選択されている項目を処理の対象とします。複数の項目が選択されている場合、カレントの項目は最後に選択された項目です。項目が選択されていない場合、コマンドは何も行いません。
 
-iconにはピクチャ変数を渡します。コマンド実行後、(スタティックピクチャ、リソース、ピクチャ式になどの) ソースに関わらず、引数には項目に割り当てられたアイコンが返されます。
+*icon* 引数にはピクチャ変数を渡します。コマンド実行後、(スタティックピクチャ、リソース、ピクチャ式になどの) ソースに関わらず、引数には項目に割り当てられたアイコンが返されます。
 
-項目にアイコンが割り当てられていない場合、*icon*変数は空となります。
+項目にアイコンが割り当てられていない場合、*icon* 変数は空となります。
 
-**Note:** 項目に割り当てられたアイコンがスタティックな参照 (リソース参照またはピクチャライブラリのピクチャ) で定義されている場合、その番号は[GET LIST ITEM PROPERTIES](get-list-item-properties.md "GET LIST ITEM PROPERTIES") コマンドで取得できます。
+**注意:** 項目に割り当てられたアイコンがスタティックな参照 (リソース参照またはピクチャライブラリのピクチャ) で定義されている場合、その番号は[GET LIST ITEM PROPERTIES](get-list-item-properties.md "GET LIST ITEM PROPERTIES") コマンドで取得できます。
 
 ## 参照 
 

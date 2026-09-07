@@ -56,11 +56,11 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 This option is described in the [Single Sign On (SSO) on Windows](../server/sso.md) page.
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については[Windows でのシングルサインオン(SSO)](../server/sso.md) のページをご参照ください。
 
 #### サービスプリンシパル名 (SPN)
 
-Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 This option is described in the [Enablig Kerberos](../server/sso.md#enabling-kerberos) section.
+Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については[ケルベロスの有効化](../server/sso.md#ケルベロスの有効化) の章にて説明されています。
 
 #### ネットワークレイヤー
 
@@ -115,17 +115,17 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### Execute On Clientのために起動時にクライアント登録
 
-このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 This mechanism is detailed in the section [Stored procedures on client machines](../Desktop/clientServer.md#stored-procedures-on-client-machines).
+このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 このメカニズムについては[クライアントマシン上でのストアドプロシージャー](../Desktop/clientServer.md#クライアントマシン上でのストアドプロシージャー)に詳細な説明があります。
 
 #### クライアント-サーバー通信の暗号化
 
 :::note
 
-このオプションは、 [QUIC](#ネットワークレイヤー) ネットワークレイヤーオプションが選択されている場合には利用できません。 QUIC communications are always in TLS, whatever your secured mode is.
+このオプションは、 [QUIC](#ネットワークレイヤー) ネットワークレイヤーオプションが選択されている場合には利用できません。 QUIC 通信は、セキュアモードの設定に関わらず常にTLS で行われます。
 
 :::
 
-This option activates the [secured mode for communications](../Admin/tls.md#enabling-tls-with-the-other-servers) between the server machine and the 4D remote machines with ServerNet netword layer.
+このオプションを有効化するとサーバーマシンと4D リモートマシン間でServerNet ネットワークレイヤーを使用している場合に[その通信のセキュアモード](../Admin/tls.md#他のサーバーで-tls-を有効にする) が有効化されます。
 
 #### セッション中に "Resources" フォルダーを更新
 
@@ -133,7 +133,7 @@ This option activates the [secured mode for communications](../Admin/tls.md#enab
 
 - **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
 - **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
-- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインターフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 For more information, please refer to the [Managing the Resources folder](../Desktop/clientServer.md#managing-the-resources-folder) section.
+- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインターフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細な情報については、[Resources フォルダーの管理](../Desktop/clientServer.md#resources-フォルダー) の章を参照してください。
 
 ## IP設定ページ
 
@@ -154,20 +154,20 @@ This option activates the [secured mode for communications](../Admin/tls.md#enab
 
 デフォルトでは、4D Server にアクセス制限はありません。 最初の行には \* (すべてのアドレス) に対する許可ルールが設定されています。
 
-### Support of IPv6
+### IPv6のサポート
 
-4D application server supports IPv6 address notation. Support of IPv6 is transparent for users and 4D developers: 4D Server accepts either IPv6 or IPv4 connections without distinction. The following table lists supported combinations:
+4D のアプリケーションサーバーは IPv6 のアドレス表記をサポートします。 IPv6へのサポートはユーザーに対しても4Dデベロッパーに対しても透過的で、IPv6とIPv4を区別することなく4D Server は接続を受け入れます。 以下の表はサポートされる組み合わせをまとめたものです:
 
-|                     | 4D remote IPv4 only | 4D remote IPv6 only | 4D remote both |
-| ------------------- | ------------------- | ------------------- | -------------- |
-| 4D Server IPv4 only | IPv4                | *サポートされていません*       | IPv4           |
-| 4D Server IPv6 only | *サポートされていません*       | IPv6                | IPv6           |
-| 4D Server both      | IPv4                | IPv6                | IPv6           |
+|                   | IPv4 のみの4D リモート | IPv6 のみの4D リモート | 両方を使用する4D リモート |
+| ----------------- | --------------- | --------------- | -------------- |
+| 4D Server IPv4 のみ | IPv4            | *サポートされていません*   | IPv4           |
+| 4D Server IPv6 のみ | *サポートされていません*   | IPv6            | IPv6           |
+| 両方を使用する4D Server  | IPv4            | IPv6            | IPv6           |
 
-For detailed information about IPv6, please refer to the [RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460).
+IPv6 についての詳細な情報については、[RFC 2460 specification](https://datatracker.ietf.org/doc/html/rfc2460) を参照してください。
 
 :::note 互換性
 
-IPv6 support is only available with the ServerNet and QUIC [network layers](#network-layer).
+IPv6 のサポートについては、ServerNet またはQUIC [ネットワークレイヤー](#ネットワークレイヤー) の場合にのみサポートされます。
 
 :::

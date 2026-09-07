@@ -232,7 +232,7 @@ icon: url("edit.png"); /* relative path to the form file */
 * For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
 
   * css color name: `fill: red;`
-  * hexa value: `fill: #FF0000;`
+  * Hexa value: `fill: #FF0000;` (only 6 characters, transparency is not supported)  
   * the `rgb()` function: `fill:rgb(255,0,0)`
 
 * If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:

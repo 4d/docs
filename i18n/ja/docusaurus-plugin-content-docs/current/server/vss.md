@@ -25,26 +25,26 @@ VSS 機能は4D Server アプリケーションがローンチされたときに
 3. アプリケーションを終了し、4D Server あるいは組み込みアプリケーションサーバーを管理者として再起動する。 その際4D VSS サービスが自動的に実行され、VSS に登録される。
 4. (任意)4D Server あるいは組み込みアプリケーションを通常の権限を使用して再起動する。
 
-The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
+VSS ライターの実行ファイルは、"VSS \<appName\>" という名前でサービスとして開始されます。 全ての4D Server インスタンスに対して一つのVSS サービスが実行されます。 同じマシン上で実行される組み込みアプリケーション(違う名前を持つ)に対しては、それぞれに個別のVSS サービスが実行されます(以下参照)。
 
-The [Monitor Page](../ServerWindow/monitor.md) of the 4D Server Administration window displays the status of VSS writer service, in Application information area:
+4D Server 管理ウィンドウの[モニターページ](../ServerWindow/monitor.md) にはVSS ライターサービスの状態がアプリケーション情報エリア内に表示されます:
 
 ![](../assets/en/server/vss.png)
 
-Additional information about the Volume Shadow Copy status can be displayed in a tips when you hover the mouse over the area:
+エリア上にマウスをホバーすると、ボリュームシャドウコピーサービスに関する追加の情報が表示されます:
 
 ![](../assets/en/server/vss-2.png)
 
-## About VSS Writer
+## VSSライターについて
 
-The **vss_writer.exe** application is provided to handle Volume Shadow Copy Service (VSS) management for 4D applications.
+4D アプリケーションのボリュームシャドウコピーサービス(VSS) 管理を行うために**vss_writer.exe** アプリケーションが提供されています。
 
 :::note
 
-The 4D VSS management is handled through a separate application since this program must run using administration privileges.
+4D VSS 管理は別のアプリケーションを通して行われます。このプログラムは管理者権限を使用して実行される必要があるからです。
 
 :::
 
-The 4D VSS writer executable is automatically installed by 4D Server at first launch.
+4D VSS ライターの実行可能ファイルは4D Server によって初回起動時に自動的にインストールされます。
 
-The 4D VSS Writer service handles and transfers VSS messages to 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.
+4D VSS ライターサービスはVSS メッセージを管理し、そのメッセージを4D Server へと転送します。 これらのメッセージは4D Server の診断ログと、Windows イベントビューワーに記録されます。

@@ -5,13 +5,13 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *nomProjet* )}<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *buildAppSettings* )}<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 <div class="no-index">
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomProjet | Text | &#8594;  | Chemin d’accès complet du projet à utiliser |
+| buildAppSettings | Text | &#8594;  | Chemin d’accès complet du fichier de configuration xml |
 </div>
 <!-- END REF-->
 

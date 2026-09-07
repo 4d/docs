@@ -24,7 +24,7 @@ title: はじめに
 
 4D View Pro 機能は 4D に直接含まれているため、配布と運用が容易です。 追加のインストールは必要ありません。
 
-しかしながら、4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
+しかしながら、4D View Pro はライセンスを必要とします。 You need to activate and [assign this license in your application](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to use its features. 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

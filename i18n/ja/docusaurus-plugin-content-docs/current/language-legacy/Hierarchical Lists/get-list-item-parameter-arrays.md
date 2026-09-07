@@ -5,7 +5,7 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* : Integer, Text ; *itemRef* : 倍長整数, 演算子 ; *arrSelection* : Text array {; *arrValues* : Text array} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* : Integer, Text ; * ; *arrSelection* : Text array {; *arrValues* : Text array} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* : Text ; *itemRef* : 倍長整数, 演算子 ; *arrSelection* : Text array {; *arrValues* : Text array} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( *list* : Integer ; *itemRef* : 倍長整数, 演算子 ; *arrSelection* : Text array {; *arrValues* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時listはオブジェクト名 (文字列)省略時listはリスト参照番号 |
 | list | Integer, Text | &#8594; | リストタイプのオブジェクト名 (* 指定時)またはリスト参照番号 (* 省略時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
+| itemRef | 倍長整数, 演算子 | &#8594; | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
 | arrSelection | Text array | &#8592; | パラメーター名配列 |
 | arrValues | Text array | &#8592; | パラメーター値配列 |
 </div>
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 一番目のオプションの引数 *\** を渡すと、*list* はフォーム中でリストを表示するリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。ひとつのリストオブジェクトだけ、あるいは (二番目の *\** を使用しないで) 項目を構造的に選択する場合、どちらのシンタックスでも使用できます。しかし同じリストを複数のリストオブジェクトに表示し、かつ (二番目の *\** を使用して) 現在選択されている項目に対してコマンドを適用する場合、各リストオブジェクトは異なるカレント項目を持つことができるため、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-**GET LIST ITEM PARAMETER ARRAYS**は*itemRef*項目に設定されたパラメーターを*arrSelectors*テキスト配列に返します。*arrValues*テキスト配列が渡された場合、これらのパラメーターに設定された値も返します。
+**GET LIST ITEM PARAMETER ARRAYS**は*itemRef* 項目に設定されたパラメーターを*arrSelectors* テキスト配列に返します。*arrValues* テキスト配列が渡された場合、これらのパラメーターに設定された値も返します。
 
 *arrValues* はテキスト配列でなければなりません。関連付けた値がテキストでない (数値やブール) の場合、文字に変換されます (True="1", False="0")。
 

@@ -9,6 +9,12 @@ title: リリースノート
 
 :::
 
+## 4D 21.2 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21.2): 4D 21.2 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+
 ## 4D 21.1 LTS
 
 #### ハイライト
@@ -317,7 +323,7 @@ title: リリースノート
 | libZip    | 1.11.4 | **21**         | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA      | 5.8.1  | **21**         |                                                                                                                                                      |
 | ngtcp2    | 1.18.0 | **21**         | QUIC に使用                                                                                                                                             |
-| OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                      |
+| OpenSSL   | 3.5.7  | **21**         |                                                                                                                                                      |
 | PDFWriter | 4.7.0  | **21**         | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS  | 17.1.0 | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                                            |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |

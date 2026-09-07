@@ -102,7 +102,7 @@ $result:=$transporter.send($email)
 
 #### Voir également
 
-[.certificateName](#certificatename)<br/>
+[.certificateName](#certificatename)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificateName
@@ -121,11 +121,17 @@ $result:=$transporter.send($email)
 
 The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
 
-The certificate can also be provided directly as a file using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+The certificate can also be provided directly as a file or blob using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+
+:::tip Article(s) de blog sur le sujet
+
+[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
 
 #### Voir également
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificatePassword
@@ -146,7 +152,7 @@ The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.cert
 
 #### Voir également
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificateName](#certificatename)
 
 <!-- INCLUDE transporter.logFile.Desc -->

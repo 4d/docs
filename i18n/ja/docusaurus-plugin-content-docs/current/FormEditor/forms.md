@@ -265,12 +265,6 @@ var $h:=Print form("Request_var";$formData;Form detail)
 
 ## Fluent UI レンダリング
 
-:::caution デベロッパー・プレビュー
-
-Fluent UI のサポートは現在デベロッパープレビューのフェーズです。 本番環境で使用すべきではありません。 本番環境で使用すべきではありません。
-
-:::
-
 Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
 
 Fluent UI レンダリングは現代的かつ魅力的なコントロールを提供するだけでなく、ダーク/ライトシステムテーマのサポート、高解像度ディスプレイのために最適化されたよりスムーズなレンダリング、そして最近のMicrosoft アプリケーションに沿った、一貫したユーザーエクスペリエンスを提供します。
@@ -287,8 +281,9 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 :::tip 関連したblog 記事
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
+[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms)
 
 :::
 
@@ -338,7 +333,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 Possible values: "Classic", "FluentUI" or "LiquidGlass".
 - [`Application info`](../commands/application-info) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
 - [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
@@ -346,6 +341,7 @@ Fluent UI で4D フォームを使用する場合、以下の点に注意を払�
 - [サークルボタン](../FormObjects/button_overview.md#サークル) はサポートされています(macOS と同様)。
 - [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
 - フォーカスの四角はピクチャーおよびテキストの[入力](../FormObjects/input_overview.md) に追加することができます。
+- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
 
 ## 継承フォーム
 

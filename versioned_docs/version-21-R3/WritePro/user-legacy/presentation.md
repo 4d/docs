@@ -27,7 +27,7 @@ The key features of the product are:
 
 4D Write Pro is fully integrated into 4D itself, making it easier to deploy and manage. No additional installation is required; you can add 4D Write Pro areas to your forms and handle 4D Write Pro variables directly in your 4D applications.
 
-However, you need to have a 4D Write Pro license installed in your application in order to enable the feature. 
+However, you need to have a [4D Write Pro license installed in your application](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to enable the feature. 
 
 ## Creating a 4D Write Pro area
 

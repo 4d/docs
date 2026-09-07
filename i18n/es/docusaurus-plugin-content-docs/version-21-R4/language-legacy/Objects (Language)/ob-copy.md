@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594; | Objeto estructurado |
+| objeto | Object | &#8594; | Objeto estructurado |
 | resuelvePunt | Boolean | &#8594; | True = resuelve los puntero, False o se omite = no resuelve punteros |
 | option | Integer | &#8594; | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
 | agruparCon | Collection, Object | &#8594; | Colección u objeto compartido a agrupar con el objeto resultante |

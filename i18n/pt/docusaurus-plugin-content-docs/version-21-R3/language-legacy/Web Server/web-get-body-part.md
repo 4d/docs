@@ -39,7 +39,7 @@ No parâmetro *conteudo* recebe o conteúdo da parte. Quando as partes a recuper
   
 O parâmetro *nome* recupera o nome da variável do campo input HTTP.  
   
-Os parâmetros *tipoMime* e *nomArquivo* recebem o tipo Mime e o nome do arquivo original, se houver. *nomArquivo* só é recebido quando o arquivo se enviou como **<input type="file">**.  
+Os parâmetros *tipoMime* e *nomArquivo* recebem o tipo Mime e o nome do arquivo original, se houver. *nomArquivo* só é recebido quando o arquivo se enviou como `<input type="file">`.  
 *tipoMime* e *nomArquivo* são opcionais mas devem ser passados juntos.  
   
 **Nota**: No contexto de uma petição multi-part, o primeiro de array do comando [WEB GET VARIABLES](../commands/web-get-variables) devolve todas as partes do formulário, na mesma ordem que o comando **WEB GET BODY PART**. Pode utilizar-lo para obter diretamente a posição de uma parte de um formulário. 

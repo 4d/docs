@@ -68,9 +68,9 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 #### 説明
 
-The `.certificate` property contains <!-- REF #SMTPTransporterClass.certificate.Summary -->the certificate used to sign emails using S/MIME (Secure/MIME), provided as a [`4D.File`](./FileClass.md) object or a Blob<!-- END REF -->. This certificate contains the private key.
+`.certificate` プロパティには<!-- REF #SMTPTransporterClass.certificate.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するのに使用される証明書を、[`4D.File`](./FileClass.md) オブジェクトまたはBlob 形式として格納<!-- END REF --> されています。 証明書には秘密鍵が含まれています。
 
-If your certificate is already registered in your Certificate store (*keychain*), you can use [`.certificateName`](#certificatename) instead of this property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+証明書がすでに証明書ストア(*keychain*) に登録されている場合、このプロパティの代わりに[`.certificateName`](#certificatename) を使用することができます。 ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
 
 :::tip 関連したblog 記事
 
@@ -85,24 +85,24 @@ var $transporter : 4D.SMTPTransporter
 var $options ; $result : Object
 
 $options:=New object
-//Enter the information for the SMTP server
+// SMTP サーバー用の情報を入力
 
-//Enable S/MIME signing
-//Provide certificate file
+// S/MIME 署名を有効化
+// 証明書ファイルを提供
 $options.certificate:=File("myCertificateFile.p12")
 $options.certificatePassword:="myGreatPW123"
 
 $transporter:=4D.SMTPTransporter.new($options)
 
 $email:=New object
-//Fill the email content
+// Eメールの中身を代入
 
 $result:=$transporter.send($email)
 ```
 
 #### 参照
 
-[.certificateName](#certificatename)<br/>
+[.certificateName](#certificatename)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificateName
@@ -119,13 +119,19 @@ $result:=$transporter.send($email)
 
 #### 説明
 
-The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
+`.certificateName` プロパティは <!-- REF #SMTPTransporterClass.certificateName.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するために使用される、システム証明書ストア(*keychain*) に登録されている証明書の名前<!-- END REF --> を格納しています。 証明書には秘密鍵が含まれています。
 
-The certificate can also be provided directly as a file using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+The certificate can also be provided directly as a file or blob using the [`.certificate`](#certificate) property. ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
+
+:::tip 関連したblog 記事
+
+[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+
+:::
 
 #### 参照
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificatePassword](#certificatepassword)
 
 ## .certificatePassword
@@ -142,11 +148,11 @@ The certificate can also be provided directly as a file using the [`.certificate
 
 #### 説明
 
-The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->the password of the certificate used to sign emails, if required<!-- END REF -->. An empty string is used if no password is required.
+`.certificatePassword` プロパティは<!-- REF #SMTPTransporterClass.certificatePassword.Summary -->Eメールを署名するのに証明書が使用するパスワード(必要であれば)<!-- END REF --> を格納しています。 パスワードが何も必要ない場合には空の文字列が使用されます。
 
 #### 参照
 
-[.certificate](#certificate)
+[.certificate](#certificate)  
 [.certificateName](#certificatename)
 
 <!-- INCLUDE transporter.logFile.Desc -->

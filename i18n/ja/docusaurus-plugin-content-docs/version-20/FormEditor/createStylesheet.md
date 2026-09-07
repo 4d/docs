@@ -284,7 +284,7 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 * `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` および `verticalLineStroke` の属性は 3種類のシンタックスを受け付けます:
 
   * CSS カラーネーム: `fill: red;`
-  * 16進数カラーコード: `fill: #FF0000;`
+  * Hexa value: `fill: #FF0000;` (only 6 characters, transparency is not supported)
   * `rgb()` 関数: `fill:rgb(255,0,0)`
 
 * CSS では禁じられている文字を使用している文字列については、その文字列を単一引用符または二重引用符でくくることができます。 例:

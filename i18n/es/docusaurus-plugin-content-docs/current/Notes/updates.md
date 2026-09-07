@@ -9,7 +9,9 @@ Lea [**Las novedades en 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 
 #### Lo más destacado
 
-- Support of S/MIME email signing in [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class through new properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+- Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+
+- Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos los bugs que se han corregido en 4D 21 R5.
 

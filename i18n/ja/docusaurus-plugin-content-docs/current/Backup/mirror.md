@@ -3,7 +3,7 @@ id: mirror
 title: 論理ミラー
 ---
 
-4D Server では論理ミラーを使⽤したバックアップシステムの設定を可能とする統合されたソリューションを提供します。 このソリューションは2つのコマンドに基づいています: [`New log file`](../commands/new-log-file) よび [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) です。
+4D Server では論理ミラーを使⽤したバックアップシステムの設定を可能とする統合されたソリューションを提供します。
 
 ## 論理ミラーとは
 
@@ -27,7 +27,7 @@ title: 論理ミラー
 
 ## 動作
 
-論理ミラーを使⽤したバックアップシステムの設定は、2つの新しいコマンド [`New log file`](../commands/new-log-file) および [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file) を使⽤して⾏います。
+Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
 以下のような原則が実装されています:
 

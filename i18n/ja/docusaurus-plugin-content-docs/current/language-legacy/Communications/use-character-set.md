@@ -5,13 +5,13 @@ slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( map | * {; *mapInOut*} )<!-- END REF-->
+<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *map* : Text, Operator {; *mapInOut* : Integer} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
 <div class="no-index">
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| map &#124; * | Text, Operator | &#8594; | 使用する文字セット名 (Unicodeモード), または 使用するASCIIマップドキュメント名 (ASCIIモード), または * の場合、デフォルトの文字セット/ASCIIマップにリセット |
+| map | Text, Operator | &#8594; | 使用する文字セット名、または * の場合、デフォルトの文字セットにリセット |
 | mapInOut | Integer | &#8594; | 0 = 出力マップ 1 = 入力マップ 省略した場合、出力マップ |
 </div>
 <!-- END REF-->
@@ -29,15 +29,15 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET**は、データベースとドキュメントまたはシリアルポート間のデータ交換の際、4Dが 使用する文字セットを変更するために使用できます。<!-- END REF-->このコマンドはカレントプロセスに有効です。交換操作にはテキスト, DIF, そして SYLK ファイルの読み込み/書き出しが含まれます。文字マップはまた[SEND PACKET](../commands/send-packet), [RECEIVE PACKET](../commands/receive-packet) (テキスト型パケット) そして[RECEIVE BUFFER](../commands/receive-buffer)によるデータ交換にも使用されます。[SEND RECORD](../commands/send-record), [SEND VARIABLE](../commands/send-variable), [RECEIVE RECORD](../commands/receive-record), [SEND PACKET](../commands/send-packet), [RECEIVE PACKET](../commands/receive-packet) (BLOB型パケット) そして [RECEIVE VARIABLE](../commands/receive-variable) によるデータ交換には影響しません。
+<!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET**は、データベースとドキュメントまたはシリアルポート間のデータ交換の際、4D が使用する文字セットを変更するために使用できます。<!-- END REF-->このコマンドはカレントプロセスに有効です。交換操作にはテキスト, DIF, そして SYLK ファイルの読み込み/書き出しが含まれます。文字マップはまた[SEND PACKET](../commands/send-packet), [RECEIVE PACKET](../commands/receive-packet) (テキスト型パケット) そして[RECEIVE BUFFER](../commands/receive-buffer)によるデータ交換にも使用されます。[SEND RECORD](../commands/send-record), [SEND VARIABLE](../commands/send-variable), [RECEIVE RECORD](../commands/receive-record), [SEND PACKET](../commands/send-packet), [RECEIVE PACKET](../commands/receive-packet) (BLOB型パケット) そして [RECEIVE VARIABLE](../commands/receive-variable) によるデータ交換には影響しません。
 
-*map* 引数は使用する文字セットの“IANA”名、またはそのエイリアス名と対応していなければなりません。例えば、“iso-8859-1”と“utf-8”は有効 な名前であり、そのエイリアス“latin1”あるいは“l1”もまた有効です。これらの名前に関する詳細は、以下のサイトを参照してください:
+*map* 引数は使用する文字セットの“IANA” 名、またはそのエイリアス名と対応していなければなりません。例えば、“iso-8859-1” と“utf-8” はどちらも有効な名前であり、そのエイリアスである“latin1” あるいは“l1” もまた有効です。これらの名前に関する詳細は、以下のサイトを参照してください:
 
 *http://www.iana.org/assignments/character-sets*
 
 IANA名に関する説明は[CONVERT FROM TEXT](../commands/convert-from-text)コマンドにもあります。
 
-*mapInOut*が0の場合、マップは書き出しのために設定されます。*mapInOut*が1の場合、マップは読み込みのために設定されます。*mapInOut* 引数を渡さない場合、デフォルトで書き出しマップが使用されます。
+*mapInOut* が0 の場合、マップは書き出しのために設定されます。*mapInOut* が1 の場合、マップは読み込みのために設定されます。*mapInOut* 引数を渡さない場合、デフォルトで書き出しマップが使用されます。
 
 *\** 引数が渡されると、 (*mapInOut*の値に基づき、読み込みまたは書き込みが) デフォルトの文字セットに再設定されます。  
 4Dが使用するデフォルトの文字コードはUTF-8です。

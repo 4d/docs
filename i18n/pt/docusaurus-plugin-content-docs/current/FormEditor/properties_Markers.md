@@ -33,6 +33,8 @@ A área de dFormulário detalhado é exibida na tela e impressa uma vez para cad
 
 É possível aumentar ou diminuir a área Detalhe. O que quer que seja colocado na área Detalhes é exibido ou impresso uma vez para cada registro. Na maioria das vezes, você coloca campos ou variáveis na área Detail para que as informações de cada registro sejam exibidas ou impressas, mas também é possível colocar outros elementos na área Detail.
 
+The following form objects are **not supported** in the Detail area (i.e. they are not repeated for each record): [Web areas](../FormObjects/webArea_overview.md), [4D View Pro areas](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [hierarchical lists](../FormObjects/list_overview.md), [splitters](../FormObjects/splitters.md), and [subforms](../FormObjects/subform_overview.md).
+
 #### Gramática JSON
 
 | Nome       | Tipo de dados | Valores possíveis                                                         |

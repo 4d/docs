@@ -39,7 +39,7 @@ Le paramètre *contenuParti*e récupère le contenu de la partie. Lorsque les pa
 
 Le paramètre *nomPartie* récupère le nom de la variable du champ input HTTP.
 
-Les paramètres *typeMime* et *nomFichier* permettent de récupérer le type Mime et le nom du fichier d’origine, le cas échéant. *nomFichier* n’est renseigné que dans le cas où le fichier a été posté dans **<input type="file">**.  
+Les paramètres *typeMime* et *nomFichier* permettent de récupérer le type Mime et le nom du fichier d’origine, le cas échéant. *nomFichier* n’est renseigné que dans le cas où le fichier a été posté dans `<input type="file">`.  
 *typeMime* et *nomFichier* sont optionnels mais ne peuvent pas être passés séparément. 
 
 **Note :** Dans le cadre d’une requête multi-part, le premier tableau de la commande [WEB GET VARIABLES](../commands/web-get-variables) retourne toutes les parties du formulaire, dans le même ordre que la commande **WEB GET BODY PART**. Vous pouvez l’utiliser par exemple afin d’obtenir directement la position d'une partie du formulaire. 

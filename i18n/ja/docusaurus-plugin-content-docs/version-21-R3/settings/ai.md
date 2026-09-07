@@ -75,7 +75,7 @@ AI プロバイダーを追加するには:
 
 :::warning
 
-The *AIProviders.json* file contains your provider API keys. If your project is [stored on a source control repository tool](../Project/overview.md#source-control) such as GitHub or GitLab, make sure the *AIProviders.json* file is [registered in the .gitignore file](../Project/architecture.md#gitignore-file-optional), otherwise **your keys could be publicly exposed**.
+*AIProviders.json* ファイルにはあなたのプロバイダーAPI キーが格納されます。 あなたのプロジェクトがGitHub やGitLab などの[ソース管理レポジトリツールに保存されている](../Project/overview.md#ソース管理) 場合、*AIProviders.json* ファイルが[.gitignore ファイル内に登録されている](../Project/architecture.md#gitignore-ファイル-任意) ようにしてください。そうでない場合、**あなたのキーが公開されてしまう可能性があり得ます**。
 
 :::
 

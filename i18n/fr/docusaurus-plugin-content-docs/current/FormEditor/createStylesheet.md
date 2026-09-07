@@ -323,7 +323,7 @@ icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 - Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
   - Nom la couleur CSS : `fill: red;`
-  - Valeur hexadécimale : `fill: #FF0000;`
+  - Hexa value: `fill: #FF0000;` (only 6 characters, transparency is not supported)
   - fonction `rgb()` : `fill:rgb(255,0,0)`
 
 - Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :

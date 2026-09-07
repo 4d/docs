@@ -24,7 +24,7 @@ A incorporação de áreas do 4D View Pro em seus formulários permite importar 
 
 Os recursos do 4D View Pro estão incluídos diretamente no 4D, o que facilita a implementação e o gerenciamento. Não é necessária qualquer instalação adicional.
 
-No entanto, 4D View Pro requer uma licença. Você precisa ativar essa licença em seu aplicativo para usar seus recursos. Ao usar esse componente sem uma licença, o conteúdo de um objeto que requer um recurso do 4D View Pro não é exibido em tempo de execução; em vez disso, é exibida uma mensagem de erro:
+No entanto, 4D View Pro requer uma licença. You need to activate and [assign this license in your application](../../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to use its features. Ao usar esse componente sem uma licença, o conteúdo de um objeto que requer um recurso do 4D View Pro não é exibido em tempo de execução; em vez disso, é exibida uma mensagem de erro:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

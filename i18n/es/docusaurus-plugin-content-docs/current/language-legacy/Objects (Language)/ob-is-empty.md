@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594; | Objeto estructurado |
+| objeto | Object | &#8594; | Objeto estructurado |
 | Resultado | Boolean | &#8592; | True si objeto está vacío o indefinido, de lo contrario False |
 </div>
 <!-- END REF-->

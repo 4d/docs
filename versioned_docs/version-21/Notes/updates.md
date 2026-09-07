@@ -9,6 +9,15 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), th
 
 :::
 
+## 4D 21.2 LTS
+
+#### Highlights
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21.2): list of all bugs that have been fixed in 4D 21.2.
+
+
+
+
 ## 4D 21.1 LTS
 
 #### Highlights

@@ -26,7 +26,7 @@ slug: /WritePro/getting-started
 
 4D Write Pro はプラグインではなく、4D自身に完全に統合されており、配布と管理がより簡単になっています。追加のインストールは何も必要なく、フォーム内に4D Write Proエリアを追加するだけで、4Dアプリケーション内において4D Write Pro変数を直接管理することができます。
 
-ただし、この機能を有効にするには、アプリケーションに4D Write Proライセンスがインストールされている必要があります。
+ただし、この機能を有効にするには、[アプリケーションに4D Write Proライセンスがインストールされている](../../Users/handling_users_groups.md#assigning-a-license-to-a-group)必要があります。
 
 ## Creating a 4D Write Pro area
 

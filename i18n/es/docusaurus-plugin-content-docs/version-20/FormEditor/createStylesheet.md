@@ -284,7 +284,7 @@ icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 * Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
   * Nombre del color CSS: `fill: red;`
-  * Valor hexadécimal: `fill: #FF0000;`
+  * Valor hexadecimal: `fill: #FF0000;` (solo 6 caracteres; no soporta transparencia)
   * función `rgb()`: `fill:rgb(255,0,0)`
 
 * Si una cadena utiliza caracteres prohibidos en CSS, puede rodear la cadena con comillas simples o dobles. Por ejemplo:

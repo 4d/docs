@@ -1634,14 +1634,14 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
-- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859).
+- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*. Par conséquent, vous devez convertir la chaîne *searchCriteria* dans le jeu de caractères spécifié si vous utilisez l'instruction \[CHARSET] (voir les commandes `CONVERT FROM TEXT` ou `Convert to text`).
   Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
 
-... La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->.
+... signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
 
 #### Mots-clés de recherche autorisés
 
@@ -1650,8 +1650,7 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 - **Valeurs de type date** : Les valeurs de type date sont placées dans des chaînes formatées de la manière suivante : *date-day+"-"+date-month+"-"+date-year* où date-day indique la date du jour dans le mois (2 caractères maxi), date-month indique le mois (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) et date-year indique l’année sur 4 chiffres.
   Exemple : `searchCriteria = SENTBEFORE 1-Feb-2020` (il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)
 
-- \*\*Valeurs de type chaîne
-  \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
+- **Valeurs de type chaîne** : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
   Exemple : `searchCriteria = FROM "SMITH"`
   Pour toutes les clés de recherche qui utilisent des chaînes, un message correspond à la clé si la chaîne est une sous-chaîne du champ. La recherche ne tient pas compte de la casse des caractères.
 

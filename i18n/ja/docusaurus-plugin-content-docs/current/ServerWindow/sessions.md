@@ -1,126 +1,126 @@
 ---
 id: sessions
-title: Sessions Page
+title: セッションページ
 ---
 
-The **Sessions** page lists all active sessions connected to the server, including Client, Web, REST, and SOAP sessions.
+**セッション** ページには、サーバーに接続している全てのアクティブなセッションが表示されます。これにはクライアント接続、Web 接続、REST 接続、そしてSOAP セッションが含まれます。
 
 ![](../assets/en/Admin/server-sessions-2.png)
 
-The **Sessions** button indicates, in parentheses, the total number of active sessions (this number does not take into account any display filters applied to the window).
+**ユーザー** ボタンには、アクティブなセッションの合計数が括弧内に表示されます(この数には、ウィンドウにて適用されるフィルターは考慮されません)。
 
-The page contains a dynamic search area, filtering controls, and administration buttons. ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。
+このページには、動的な検索エリアやフィルタリング制御、管理ボタンなどがあります。 ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。
 
-You can also sort the list by clicking a column header. Click repeatedly to toggle between ascending and descending order.
+また、ヘッダーをクリックすると、リストの値が並べ替えられます。 クリックするごとに昇順/降順が入れ替わります。
 
 ![](../assets/en/Admin/server-sessions-sort-1.png)
 
 ## セッションの一覧
 
-Each row represents one active session.
+各行は一つのアクティブなセッションを表します。
 
-The list provides the following information:
+リストには、以下の情報が表示されます:
 
-- Icon representing the type of session (Apple for macOS Client sessions, Windows for Windows Client sessions, globe for Web, REST, and SOAP sessions). And an additional visual indicator shows whether the session is authenticated.
-- **Origin**: Type of session (Client, Web, REST, or SOAP).
-- **User Name**: Name of the connected 4D user, or the alias defined using the [`SET USER ALIAS`](../commands/set-user-alias) command when applicable. For Web, REST, or SOAP sessions, no user name is displayed unless one has been associated with the session using the `userName` property of the [`setPrivileges()`](../API/SessionClass.md#setprivileges) function.
-- **Login Date**: Date and time when the session was established.
-- **CPU Time**: CPU time consumed by the session since it was created.
-- **Activity**: Percentage of server activity currently devoted to the session (dynamic value).
-- **Status**: Status of the session. Client sessions can be **Online**, **[Sleeping](../Desktop/clientServer.md#management-of-sleeping-client-sessions)**, or **[Unreachable](../Desktop/clientServer.md#management-of-unreachable-peer)**. Web, REST, and SOAP sessions always have the **Online** status.
+- セッションの種類を表すアイコン(macOS クライアントセッションにはApple アイコン、Windows クライアントにはWindows アイコン、Web、REST、SOAP セッションには地球アイコン)。 また、セッションが認証されているかどうかを表す追加のインジケーターも表示されます。
+- **オリジン**: セッションの種類(クライアント、Web、REST、あるいはSOAP)。
+- **ユーザー名**: 接続している4D ユーザーの名前、または[`SET USER ALIAS`](../commands/set-user-alias) コマンドを使用して定義されているエイリアス(適用可能な場合)。 Web、REST、あるいはSOAP セッションに対しては、[`setPrivileges()`](../API/SessionClass.md#setprivileges) 関数の`userName` プロパティを使用してセッションにユーザー名が割り当てられてない限り、ユーザー名は表示されません。
+- **ログイン日**: セッションが確立された日付と時刻。
+- **CPU時間**: セッションが作成されてから消費したCPU 時間。
+- **Activity**: セッションに対して現在割り当てられているサーバーアクティビティの割合(動的な値)。
+- **ステータス**: セッションのステータス。 クライアントセッションの場合、**オンライン**、 **[スリープ中](../Desktop/clientServer.md#スリープしたクライアントセッションの管理)**あるいは **[クライアント接続不可](../Desktop/clientServer.md#到達不能なピアの管理)** のいずれかになります。 Web、REST、およびSOAP セッションは常に**オンライン** ステータスとなります。
 
-Additional information is available in the detail panel when a session is selected.
+セッションが選択されていれば追加の情報が詳細パネル内に表示されます。
 
-## Session detail panel
+## セッション詳細パネル
 
-Selecting a session displays additional information in the lower panel.
+セッションを選択すると追加の情報が下側のパネルに表示されます。
 
-### Client sessions
+### クライアントセッション
 
-The following information is available:
+以下の情報が表示されます:
 
-- **System username**: Name of the operating system session opened on the remote machine.
-- **IP address**: IP address of the remote machine that opened the session.
+- **システムユーザー名**: リモートマシン上で開かれたOSセッションの名前。
+- **IP アドレス**: セッションを開いたリモートマシンのIP アドレス。
 - **マシン名**: リモートマシンの名前。
-- **4D Write Pro**: Indicates whether the session user belongs to a group that grants access to 4D Write Pro.
-- **4D View Pro**: Indicates whether the session user belongs to a group that grants access to 4D View Pro.
+- **4D Write Pro**: セッションユーザーが、4D Write Pro へのアクセスが付与されたグループに属しているかどうかを表します。
+- **4D View Pro**: セッションユーザーが、4D View Pro へのアクセスが付与されたグループに属しているかどうかを表します。
 
-### REST, Web, and SOAP sessions
+### REST、Web、およびSOAPセッション
 
-The detail panel displays information such as:
+詳細パネルは以下のような情報を表示します:
 
-- **Guest status**: Indicates whether the session is a Guest session. Guest sessions are unauthenticated Web sessions.
-- **Privileges**: List of privileges associated with the session.
-- **IP address**: IP address of the remote machine that opened the session.
-- **User agent**: Identifies the client application, browser, or service that initiated the session.
+- **ゲストステータス**: セッションがゲストセッションかどうかを表します。 ゲストセッションとは未認証のWeb セッションです。
+- **権限**: セッションに割り当てられた権限の一覧。
+- **IP アドレス**: セッションを開いたリモートマシンのIP アドレス。
+- **ユーザーエージェント**: クライアントアプリケーション、ブラウザ、あるいはセッションを開始したサービスを識別します。
 
-### IP Lookup button
+### IP検索ボタン
 
-IP Lookup button is enabled when a public IP address is displayed. You can click on the button to retrieve the geolocation of the selected session.
+公開IP アドレスが表示されている場合、IP 検索ボタンが有効化されます。 このボタンをクリックすることで、選択されたセッションの位置情報を取得することができます。
 
-If the information is available, the location is displayed next to the IP Lookup button in the format **City, Country**. Otherwise **Not found** is displayed.
+もしその情報が利用可能な場合、**City, Country** のフォーマットでIP 検索ボタンの横に位置が表示されます。 そうでない場合**Not found** が表示されます。
 
-## Search and Filtering
+## 検索とフィルタリング
 
-### Search bar
+### 検索バー
 
-The search field can be used to reduce the number of rows displayed in the list to those that correspond to the text entered. The search is performed on the **User Name**, **Machine name**, **Session name**, and **IP address** columns.
+検索フィールドを使用して、入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができます。 検索は、**ユーザー名**、**マシン名**、**セッション名**、および **IP アドレス** 列に対して実行されます。
 
-The list is updated in real time as you enter text.
+テキストが入力されると、リストはリアルタイムで更新されます。
 
-You can search for multiple values by separating them with a semicolon (`;`). In this case, the values are combined using the **OR** operator.
+値をセミコロン(`;`) で区切ることで、複数の値を使用して検索をおこなうことができます。 この場合、値は**OR** 演算子を使用して結合されます。
 
-For example, if you enter:
+例えば、以下のように入力した場合:
 
 ```
 John;Mary;REST
 ```
 
-only rows containing **John**, **Mary**, or **REST** in the searchable columns are displayed.
+検索可能カラム内で**John**、**Mary**、あるいは **REST** を格納している行のみが表示されます。
 
-### Session Type Filters
+### セッションタイプフィルター
 
-The Sessions page also provides quick filters to display only specific session types.
+セッションページでは特定のタイプのセッションのみを表示するクイックフィルターも提供しています。
 
-The following filters are available:
+以下のフィルターが利用可能です:
 
-- **Counted sessions**:  includes only sessions counted for floating license consumption.
-- **Clients**: includes only desktop client sessions.
-- **Web**: includes only Web and SOAP sessions.
-- **REST**: includes only REST sessions.
+- **カウントされたセッション**:  ライセンスを消費しているとカウントされるセッションのみを含めます。
+- **クライアント**: デスクトップクライアントセッションのみを含めます。
+- **Web**: Web およびSOAP セッションのみを含めます。
+- **REST**: REST セッションのみを含めます。
 
-Filters can be enabled or disabled independently, or combined with other filters, and are applied immediately to the session list.
+フィルターは個別に有効化/無効化したり、また他のフィルターと組み合わせることができ、セッションリストに即座に適用されます。
 
 ## 管理ボタン
 
-There are three administration buttons: **Send message** is available when one or more Client sessions are selected. **Watch Processes** is available when a single session of any type is selected, and **Drop session** is available when one or more sessions of any type are selected.
-You can select several rows by holding down the **Shift** key for an adjacent selection or the **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+管理ボタンは三つあります: **メッセージ送信** は一つ以上のクライアントセッションが選択されている場合に利用可能です。 **プロセス監視** はタイプに関わらず単一のセッションが選択されているときに利用可能で、また**セッションをドロップ** はタイプに関わらず一つ以上のセッションが選択されているときに利用可能です。
+**Shift** キーを押しながらクリックして連続した行を、あるいは **Ctrl (Windows) / Command (macOS)** キーを押しながらクリックして連続しない行を複数選択できます。
 
 ### メッセージ送信
 
-This button can be used to send a message to the selected **Client** session(s). If no Client session is selected, the button is not active. When you click this button, a dialog box appears that lets you enter the message. The dialog box also indicates the number of Client sessions that will receive the message:
+このボタンを使用して、選択した**クライアント**セッションにメッセージを送信できます。 クライアントセッションが選択されていないと、ボタンを使用できません。 ボタンをクリックするとダイアログボックスが表示され、メッセージを入力できます。 ダイアログにはメッセージを受信するクライアントセッションの数が表示されます:
 
 ![](../assets/en/Admin/server-message.png)
 
-The message is displayed as an alert on the corresponding remote machines.
+このメッセージは対応するリモートマシン上でアラートとして表示されます。
 
-You can perform the same action programmatically using the [`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user) command.
+[`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user) コマンドを使用することで同じアクションをプログラムで実行することができます。
 
 ### プロセス監視
 
-This button can be used to directly show the processes associated with the selected session on the [**Processes** page](processes.md).
+このボタンをクリックすると、選択されたセッションに割り当てられたプロセスを、管理ウィンドウの[**プロセス** ページ](processes.md) に直接表示させることができます。
 
-The process list is automatically filtered using the selected session UUID.
+プロセスのリストは選択されたセッションのUUID を使用して自動的にフィルタリングされます。
 
-When multiple sessions are selected, this button is disabled.
+複数のセッションが選択された場合、このボタンは無効化されます。
 
-### Drop session
+### セッションをドロップ
 
-This button can be used to force the selected Client session(s) to disconnect.
+このボタンは、選択したクライアントセッションの接続を強制的に解除するために使用します。
 
-A confirmation dialog is displayed before the session is disconnected to confirm or cancel this operation (Hold down the **Alt** key while clicking **Drop user** to disconnect immediately without displaying the confirmation dialog).
+セッションが接続解除される前に、操作を実行するかキャンセルするかを確認する確認ダイアログが表示されます(**Alt** キーを押しながら**ユーザーをドロップ** をクリックすることでこの確認ダイアログを表示せずに即座に接続解除することもできます)。
 
-You can perform the same action programmatically using the [`DROP REMOTE USER`](../commands/drop-remote-user) command.
+[`DROP REMOTE USER`](../commands/drop-remote-user) コマンドを使用することで同じアクションをプログラムで実行することができます。
 
 ## スリープしたクライアントセッションの管理
 

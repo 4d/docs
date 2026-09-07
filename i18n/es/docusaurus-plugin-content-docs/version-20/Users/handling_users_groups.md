@@ -138,15 +138,15 @@ La colocación de grupos dentro de otros grupos permite crear una jerarquía de 
 
 Para eliminar un usuario o grupo de otro grupo, basta con deseleccionar la opción correspondiente en el área de asignación de miembros.
 
-### Asignar un grupo a un plug-in o a un servidor
+### Asignación de una licencia a un grupo
 
-Puede asignar privilegios de grupo a cualquier plug-in instalado en el proyecto. Esto incluye todos los plug-ins de 4D y los de terceros.
+Puede asignar privilegios de grupo a cualquiera de las [extensiones](../Extensions/overview.md) instaladas en el proyecto. Esto incluye todos los plug-ins y componentes de 4D y de terceros.
 
-Distribuir los accesos a los plug-ins le permite controlar el uso de las licencias que posee para estos plug-ins. Todo usuario que no pertenezca al grupo de acceso de un plug-in no puede cargar este plug-in.
+Distribuir el acceso a las extensiones le permite controlar el uso de las licencias que posee para estas extensiones. Los usuarios que no pertenezcan al grupo de acceso de una extensión no podrán cargar dicha extensión.
 
 > Las licencias utilizadas permanecen vinculadas a las cuentas de usuario 4D del grupo durante toda la sesión 4D.
 
-El área "Plug-in" de la página Grupos de la caja de herramientas lista todos los plug-ins cargados por la aplicación 4D. Para dar acceso a un grupo a un complemento, basta con marcar la opción correspondiente.
+El área “Plug-in” en la página Grupos de la caja de herramientas lista todas las extensiones cargadas por la aplicación 4D que requieren una licencia. Para dar acceso a un grupo a una extensión, basta con marcar la opción correspondiente.
 
 ![](../assets/en/Users/plugins.png)
 
