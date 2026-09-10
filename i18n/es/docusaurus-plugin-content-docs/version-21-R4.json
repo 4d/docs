@@ -822,5 +822,21 @@
   "sidebar.docs.doc.Data Collection": {
     "message": "Recopilación de datos",
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.category.Server & Admin": {
+    "message": "Servidor y administrador",
+    "description": "The label for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.title": {
+    "message": "Administración",
+    "description": "The generated-index page title for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.description": {
+    "message": "Cómo controlar sus aplicaciones 4D",
+    "description": "The generated-index page description for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D Server Window": {
+    "message": "Ventana 4D Server",
+    "description": "The label for category '4D Server Window' in sidebar 'docs'"
   }
 }

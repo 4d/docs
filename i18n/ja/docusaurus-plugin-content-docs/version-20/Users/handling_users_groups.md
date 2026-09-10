@@ -138,15 +138,15 @@ title: 4Dユーザー＆グループの管理
 
 ユーザーやグループをグループから取り除くには、ユーザー/グループ一覧でチェックを解除します。
 
-### Assigning a license to a group
+### グループにライセンスを割り当てる
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. これには全ての4D 製/サードパーティ製のプラグインやコンポーネントを含みます。
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. ある拡張機能へのアクセス可能グループに属していないユーザーは、その拡張機能をロードすることができません。
 
 > 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. 拡張機能へのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
 ![](../assets/en/Users/plugins.png)
 

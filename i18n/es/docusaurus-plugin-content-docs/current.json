@@ -1634,5 +1634,41 @@
   "sidebar.docs.doc.Drag and Drop": {
     "message": "Arrastrar y soltar",
     "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access)": {
+    "message": "Registros y selecciones (acceso a datos heredado)",
+    "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
+    "message": "Registros y selecciones (acceso a datos heredado)",
+    "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
+    "message": "Acceso a datos heredado basado en registros, selecciones y conjuntos.",
+    "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin": {
+    "message": "Servidor y administrador",
+    "description": "The label for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.title": {
+    "message": "Administración",
+    "description": "The generated-index page title for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.description": {
+    "message": "Cómo controlar sus aplicaciones 4D",
+    "description": "The generated-index page description for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D Server": {
+    "message": "4D Server",
+    "description": "The label for category '4D Server' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Administration Window": {
+    "message": "Ventana de administración",
+    "description": "The label for category 'Administration Window' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Windows Features": {
+    "message": "Características de Windows",
+    "description": "The label for category 'Windows Features' in sidebar 'docs'"
   }
 }

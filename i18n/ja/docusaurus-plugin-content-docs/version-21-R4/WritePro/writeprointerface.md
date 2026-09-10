@@ -525,32 +525,32 @@ Level 7: – (破線)
 
 ### 定義済みテンプレートのカスタマイズ
 
-You can customize the available templates to provide users with predefined multi-level lists that match the needs of your application.
+利用可能なテンプレートをカスタマイズして、ユーザーに、アプリケーションに用途に合致したような定義済みマルチレベルリストを提供することができます。
 
-The predefined multi-level list templates are defined in a JSON file named `multiLevelStyles.json`. This file is located in the 4D Write Pro Interface component Resources folder.
+定義済みのマルチレベルリストテンプレートは、`multiLevelStyles.json` という名前のJSON ファイル内に定義されています。 このファイルは4D Write Pro インターフェースコンポーネントのResources フォルダ内に配置されています。
 
-You can customize the available templates by adding your own `multiLevelStyles.json` file in either:
+以下の場所のいずれかにあなた独自の`multiLevelStyles.json` ファイルを追加することで、利用可能なテンプレートをカスタマイズすることができます:
 
-- the project's local Resources folder directly,
-- a `4D WritePro Interface` folder located within the project Resources folder.
+- プロジェクトのローカルなResources フォルダに直接追加する
+- プロジェクトのResources フォルダ内に配置された`4D WritePro Interface` フォルダ。
 
-If a `multiLevelStyles.json` file is present in both locations, the file located in the `4D WritePro Interface` folder takes precedence.
+`multiLevelStyles.json` ファイルが両方の場所にある場合には、`4D WritePro Interface` フォルダに配置されたファイルの方が優先されます。
 
-Each template definition includes:
+各テンプレートの定義には、以下のものが含まれます:
 
-- a template name,
-- one or more list levels,
-- the 4D Write Pro attributes applied to each level. Any 4D Write Pro attribute can be used in a template definition.
+- テンプレート名
+- 一つまたはそれ以上のリストレベル
+- 各レベルに適用された4D Write Pro 属性。 テンプレート定義内ではあらゆる4D Write Pro 属性を使用することができます。
 
-You can use either the attribute names or the corresponding 4D Write Pro constants as JSON keys and values.
-For example, the following definitions are equivalent:
+属性名または対応する4D Write Pro 定数をJSON キーと値として使用することができます。
+例えば、以下の定義はどちらも同義です:
 
 - `"listStyleType": "wk upper roman"`
 - `"wk list style type": "wk upper roman"`
 
 #### 例題
 
-Example of a customized JSON file:
+カスタマイズされたJSON ファイルの一例:
 
 ```json
 {
@@ -569,5 +569,5 @@ Example of a customized JSON file:
 ### 参照
 
 - [Related blog post: Multi-Level Style Sheets in 4D Write Pro: Now With a Dedicated UI](https://blog.4d.com/multi-level-style-sheets-in-4d-write-pro-now-with-a-dedicated-ui)
-- [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets)
-- [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists)
+- [複数レベルリストスタイルシート](./user-legacy/stylesheets.md#複数レベルリストスタイルシート)
+- [複数レベルリスト](./user-legacy/using-a-4d-write-pro-area.md#複数レベルリスト)

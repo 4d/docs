@@ -822,5 +822,21 @@
   "sidebar.docs.doc.Data Collection": {
     "message": "Recolha de dados",
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.category.Server & Admin": {
+    "message": "Server & Admin",
+    "description": "The label for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.title": {
+    "message": "Administração",
+    "description": "The generated-index page title for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.description": {
+    "message": "Como monitorizar as suas aplicações 4D",
+    "description": "The generated-index page description for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D Server Window": {
+    "message": "4D Server Window",
+    "description": "The label for category '4D Server Window' in sidebar 'docs'"
   }
 }

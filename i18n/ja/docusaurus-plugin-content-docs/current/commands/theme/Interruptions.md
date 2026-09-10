@@ -10,6 +10,8 @@ slug: /commands/theme/Interruptions
 | [<!-- INCLUDE #_command_.ABORT.Syntax -->](../../commands/abort)<br/>                                   |
 | [<!-- INCLUDE #_command_.ASSERT.Syntax -->](../../commands/assert)<br/>                                 |
 | [<!-- INCLUDE #_command_.Asserted.Syntax -->](../../commands/asserted)<br/>                             |
+| [<!-- INCLUDE #_command_.defer.Syntax -->](../../commands/defer)<br/>                                   |
+| [<!-- INCLUDE #_command_.Deferred formulas.Syntax -->](../../commands/deferred-formulas)<br/>           |
 | [<!-- INCLUDE #_command_.FILTER EVENT.Syntax -->](../../commands/filter-event)<br/>                     |
 | [<!-- INCLUDE #_command_.Get assert enabled.Syntax -->](../../commands/get-assert-enabled)<br/>         |
 | [<!-- INCLUDE #_command_.Last errors.Syntax -->](../../commands/last-errors)<br/>                       |

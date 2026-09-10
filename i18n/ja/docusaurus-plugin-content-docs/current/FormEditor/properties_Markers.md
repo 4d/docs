@@ -33,7 +33,7 @@ title: マーカー
 
 詳細エリアの大きさは変更することができます。 詳細エリアに配置したオブジェクトはレコード毎に表示または印刷されます。 主にフィールドや変数を配置して、各レコードの情報を表示/印刷しますが、他のオブジェクトを配置することもできます。
 
-以下のフォームオブジェクトは詳細エリアでは**サポートされていません** (つまり各レコードに対しては繰り返されません): [Web エリア](../FormObjects/webArea_overview.md)、[4D View Pro エリア](../FormObjects/viewProArea_overview.md)、[リストボックス](../FormObjects/listbox_overview.md)、[階層リスト](../FormObjects/list_overview.md)、[スプリッター](../FormObjects/splitters.md)、および[サブフォーム](../FormObjects/subform_overview.md)。
+以下のフォームオブジェクトは詳細エリアでは**サポートされていません** (つまり各レコードに対しては繰り返されません): [Web エリア](../FormObjects/webArea_overview.md)、[4D View Pro エリア](../FormObjects/viewProArea_overview.md)、[リストボックス](../FormObjects/listbox_overview.md)、[階層リスト](../FormObjects/list_overview.md)、[スプリッター](../FormObjects/splitters.md)、[サブフォーム](../FormObjects/subform_overview.md)、および[プラグインエリア](../FormObjects/pluginArea_overview.md)。
 
 #### JSON 文法
 

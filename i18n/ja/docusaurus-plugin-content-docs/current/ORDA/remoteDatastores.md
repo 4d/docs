@@ -7,7 +7,7 @@ title: リモートデータストア
 
 ローカルの 4Dアプリケーションは、[`Open datastore`](../commands/open-datastore) コマンドを呼び出すことで、リモートデータストアに接続し参照します。
 
-リモートマシン上で、4D は [セッション](../WebServer/sessions.md) を開いて、`Open datastore` を呼び出したアプリケーションからのリクエストを処理します。 Requests internally use the [REST API](../REST/gettingStarted.md), which means that they require [**authentication** and **available licenses**](../REST/authUsers.md).
+リモートマシン上で、4D は [セッション](../WebServer/sessions.md) を開いて、`Open datastore` を呼び出したアプリケーションからのリクエストを処理します。 リクエストは内部的には [REST API](../REST/gettingStarted.md) を使用し、これには [**認証** および **利用可能なライセンス**](../REST/authUsers.md) が必要となります。
 
 ## Webセッションの使用
 
@@ -27,11 +27,11 @@ title: リモートデータストア
 
 ### セッションの監視
 
-Sessions for datastore access are shown in the 4D Server administration window as [**REST sessions**](../ServerWindow/sessions.md#rest-web-and-soap-sessions) with **4D** as user agent.
+データストアアクセスのセッションは4D Server 管理ウィンドウにて、ユーザーエージェントが **4D** である[**REST セッション**](../ServerWindow/sessions.md#rest-web-and-soap-sessions) として表示されます。
 
 ## セッションの終了
 
-[セッションの有効期限](../WebServer/sessions.md#セッションの有効期限) の段落で説明されているように、アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore) command.
+[セッションの有効期限](../WebServer/sessions.md#セッションの有効期限) の段落で説明されているように、アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 デフォルトのタイムアウト時間は60分です。ですが、[`Open datastore`](../commands/open-datastore) コマンドの*connectionInfo* 引数を使用することでこの値を変更することができます。
 
 セッション終了後にリクエストがリモートデータストアに送信された場合、セッションは可能な限り (ライセンスがあり、サーバーが停止していない、など) 再開されます。 ただしセッションが再開しても、ロックやトランザクションに関わるコンテキストは失われていることに留意が必要です (後述参照)。
 
@@ -40,7 +40,7 @@ Sessions for datastore access are shown in the 4D Server administration window a
 エンティティロッキングやトランザクションに関連した ORDA 機能は、ORDA のクライアント / サーバーモードと同様に、リモートデータストアにおいてもプロセスレベルで管理されます:
 
 - あるプロセスがリモートデータストアのエンティティをロックした場合、セッションの共有如何に関わらず、他のすべてのプロセスに対してそのエンティティはロックされた状態です ([エンティティロッキング](entities.md#エンティティロッキング) 参照)。 同一のレコードに対応する複数のエンティティが 1つのプロセスによってロックされている場合、同プロセス内でそれらがすべてアンロックされないと、ロックは解除されません。 なお、ロックされたエンティティに対する参照がメモリ上に存在しなくなった場合にも、ロックは解除されます。
-- Transactions can be started, validated or cancelled separately on each remote datastore using the [`dataStore.startTransaction()`](../API/DataStoreClass.md#starttransaction), [`dataStore.cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), and [`dataStore.validateTransaction()`](../API/DataStoreClass.md#starttransaction) functions. これらの操作は他のデータストアには影響しません。
+- トランザクションは、 [`dataStore.startTransaction()`](../API/DataStoreClass.md#starttransaction)、[`dataStore.cancelTransaction()`](../API/DataStoreClass.md#canceltransaction)、および [`dataStore.validateTransaction()`](../API/DataStoreClass.md#starttransaction) 関数を使用することで、各リモートデータストアにおいて個別に開始、検証、またはキャンセルすることができます。 これらの操作は他のデータストアには影響しません。
 - クラシックな4D ランゲージコマンド([`START TRANSACTION`](../commands/start-transaction)、 [`VALIDATE TRANSACTION`](../commands/validate-transaction)、 [`CANCEL TRANSACTION`](../commands/cancel-transaction)) は(`ds` から返される)メインのデータストアに対してのみ適用されます。
   リモートデータストアのエンティティがあるプロセスのトランザクションで使われている場合、セッションの共有如何に関わらず、他のすべてのプロセスはそのエンティティを更新できません。
 - 次の場合にエンティティのロックは解除され、トランザクションはキャンセルされます:

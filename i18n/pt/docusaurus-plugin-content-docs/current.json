@@ -1634,5 +1634,41 @@
   "sidebar.docs.doc.Drag and Drop": {
     "message": "Arrastar e Soltar",
     "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access)": {
+    "message": "Records & Selections (legacy data access)",
+    "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
+    "message": "Records & Selections (legacy data access)",
+    "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
+    "message": "Legacy data access based upon records, selections, and sets.",
+    "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin": {
+    "message": "Server & Admin",
+    "description": "The label for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.title": {
+    "message": "Administração",
+    "description": "The generated-index page title for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.description": {
+    "message": "Como monitorizar as suas aplicações 4D",
+    "description": "The generated-index page description for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D Server": {
+    "message": "4D Server",
+    "description": "The label for category '4D Server' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Administration Window": {
+    "message": "Administration Window",
+    "description": "The label for category 'Administration Window' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Windows Features": {
+    "message": "Windows Features",
+    "description": "The label for category 'Windows Features' in sidebar 'docs'"
   }
 }

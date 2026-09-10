@@ -35,30 +35,30 @@ El servidor solo se cerrará después de que todos los clientes activos se hayan
 
 :::note
 
-A *sleeping client* refers to a remote 4D application on a machine that has switched to [sleep mode](../ServerWindow/users.md#managing-sleeping-users) while the connection to the server machine was still active.
+Un *cliente inactivo* se refiere a una aplicación 4D remota en una máquina que ha pasado a [modo inactivo](../ServerWindow/users.md#managing-sleeping-users) mientras la conexión a la máquina servidor seguía activa.
 
 :::
 
-When you choose one of these options, the following window appears, which indicates the number of clients that are still connected:
+Cuando elige una de estas opciones, aparece la siguiente ventana, lo que indica el número de clientes que todavía están conectados:
 
 ![](../assets/en/server/exit-3.png)
 
-On each 4D client machine, the following window appears displaying a default message:
+En cada equipo cliente 4D, aparece la siguiente ventana con un mensaje predeterminado:
 
 ![](../assets/en/server/exit-4.png)
 
-If you entered a custom message in the 4D Server shutdown dialog box, it is displayed instead of the default message on each client machine. Por ejemplo:
+Si introduce un mensaje personalizado en el cuadro de diálogo de apagado de 4D Server, este se mostrará en cada máquina cliente en lugar del mensaje por defecto. Por ejemplo:
 
 ![](../assets/en/server/exit-5.png)
 
-- **Disconnect all clients and quit**
+- **Desconectar todos los clientes y salir**
 
-The server ends all processes and all connections and quits after a few seconds.
+El servidor termina todos los procesos y todas las conexiones y se cierra después de unos segundos.
 
 :::note Notas
 
-- In all cases, if no client is connected to the server when the shutting down window is validated, 4D Server quits immediately.
-- If you click **Cancel** in the 4D Server shutdown window, the process of shutting down the server is canceled.
-- You can close the database (and disconnect the clients) without quitting the 4D Server using the **Close project...** menu command.
+- En todos los casos, si no hay ningún cliente conectado al servidor en el momento de validar la ventana de apagado, 4D Server se cierra inmediatamente.
+- Si hace clic en **Cancelar** en la ventana de apagado de 4D Server, el proceso de apagado del servidor se cancela.
+- Puede cerrar el proyecto (y desconectar los clientes) sin salir de 4D Server utilizando el comando de menú **Cerrar el proyecto...**.
 
 :::
