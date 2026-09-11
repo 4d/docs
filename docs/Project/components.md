@@ -5,7 +5,7 @@ title: Dependencies
 
 
 
-The 4D [project architecture](../Project/architecture.md) is modular. You can provide additional functionalities to your 4D projects by installing [**components**](Concepts/components.md) and [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md). 
+The 4D [project architecture](../Project/architecture.md) is modular. You can provide additional functionalities to your 4D projects by installing [**components**](../Concepts/components.md) and [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md). 
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/). 
 
@@ -16,7 +16,7 @@ Once installed in your 4D environment, extensions are handled as **dependencies*
 
 ## Interpreted and compiled components
 
-Components can be interpreted or [compiled](../Desktop/building.md). 
+Components can be interpreted or [compiled](./compiler.md#compile-components). 
 
 - A 4D project running in interpreted mode can use either interpreted or compiled components. 
 - A 4D project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.

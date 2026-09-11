@@ -18,7 +18,7 @@ You can develop 4D components for your own needs and keep them private. You can 
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project
+You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
 
 :::
 
@@ -35,13 +35,13 @@ Creating and installing 4D components is carried out directly from 4D:
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](#editing-components) if the context is supported. 
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported. 
 
 :::
 
 ## Creating and editing components from the host
 
-In interpreted mode, the 4D IDE allows you to create and edit components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
+In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
 
 ### Creating components
 
@@ -55,9 +55,10 @@ This action opens a folder selection dialog where you choose where [the componen
 * If you decide to store the component **next to the project package**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file.
 * If you decide to store the component **elsewhere**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file and its path is added to the [`environment4d.json`](../Project/components.md#environment4djson) file, using either a [relative or an absolute path](../Project/components.md#relative-paths-vs-absolute-paths). A relative path is used if the component is located within no more than two levels above as the `environment4d.json` file, or in its subfolders. Otherwise, an absolute path is used.
 
-:::note 
+:::note Notes
 
-You cannot store a component **in the project package** but **outside the Components folder**.
+- You cannot store a component **in the project package** but **outside the Components folder**.
+- When a component is created from the host, it is assigned a [default namespace](#default-namespace). 
 
 :::
 
@@ -80,7 +81,7 @@ In this context, you can open, edit, and save your component code in the Code ed
 
 [Exposed component classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited from the **Component Methods** tab of the Explorer. 
 
-A specific icon indicates that the component contains shared code):<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Select **Edit...** to open your component code in the Code editor. You can edit and save it. 
@@ -115,6 +116,11 @@ Standard 4D IDE features are available for the component. You can execute the fo
 - preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md), 
 - run methods,
 - restore from trash or empty trash.
+
+### Compiling components
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
+
 
 
 ### Search and replace
@@ -206,7 +212,7 @@ By default, component classes cannot be called from the 4D Code Editor of the ho
 
 ### Declaring the component namespace
 
-To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. By default, the area is empty: component classes are not available outside of the component context.
+To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -237,6 +243,15 @@ Of course, it is recommended to use a distinguished name to avoid any conflict. 
 
 A component's ORDA classes are not available in its host project. For example, if there is a dataclass called Employees in your component, you will not be able to use a "cs.Mycomponent.Employee" class in the host project.
 
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component. 
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2". 
+
+
+
+
 ### Hidden classes
 
 Just like in any project, you can create hidden classes and functions in the component by prefixing names with an underscore ("_"). When a [component namespace is defined](#declaring-the-component-namespace), hidden classes and functions of the component will not appear as suggestions when using code completion.
@@ -248,6 +263,8 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
+
+
 
 
 ## Code completion for compiled components
