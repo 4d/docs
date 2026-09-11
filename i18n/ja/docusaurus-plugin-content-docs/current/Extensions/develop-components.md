@@ -7,7 +7,7 @@ title: コンポーネントの開発
 
 4D のコンポーネントとは、[4Dアプリケーションにインストール可能](Concepts/components.md) な、1つ以上の機能を持つ 4D関数やメソッド、フォームの一式です。 たとえば、メールの送受信をおこない、それらを 4D アプリケーションに格納するための機能を持ったコンポーネントを作成できます。
 
-ニーズに合わせて独自の 4Dコンポーネントを開発し、それを非公開とすることができます。 また、作成した [コンポーネントを4Dコミュニティで共有](https://github.com/topics/4d-component) することもできます。
+ニーズに合わせて独自の 4Dコンポーネントを開発し、それを非公開とすることができます。 You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
 
 ## 定義
 
@@ -541,4 +541,5 @@ macOS 上では、Finder からこの情報を見ることができます:
 
 開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 正しく参照されるためには、**`4d-component`** トピックをご利用ください。
 
+Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
 

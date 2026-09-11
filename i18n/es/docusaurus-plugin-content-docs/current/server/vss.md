@@ -7,18 +7,18 @@ title: Volume Shadow Copy Service (VSS)
 
 VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Thanks to this technology, you can recover, for example, a 4D Server database at the exact state it was at the moment of the snapshot. This mechanism requires that running application files are in a consistent state when the snapshot is performed. For this reason, a VSS-aware application must install a VSS writer application or service. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
 
-## Requirements for the virtualizer
+## Requisitos del sistema del host (hipervisor)
 
 On the host side, the following VSS requestors are supported:
 
-- VMware ESXI on any platform
+- VMware ESXI en toda plataforma
 - Microsoft Hyper-V Server 2016
 
-## Enabling the VSS
+## Activación del VSS
 
 The VSS feature is automatically installed/updated when the 4D Server application is launched. The VSS writer application service is started if the session user has admin privileges.
 
-Usually, the starting scenario will be:
+Generalmente, el escenario inicial será:
 
 1. 4D Server or merged Application Server is launched for the first time.
 2. If not launched with administration privileges, a warning icon is displayed.
@@ -35,7 +35,7 @@ Additional information about the Volume Shadow Copy status can be displayed in a
 
 ![](../assets/en/server/vss-2.png)
 
-## About VSS Writer
+## Acerca de VSS Writer
 
 The **vss_writer.exe** application is provided to handle Volume Shadow Copy Service (VSS) management for 4D applications.
 

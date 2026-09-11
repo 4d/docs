@@ -1,22 +1,22 @@
 ---
 id: service
-title: Registering as a Service
+title: Registrarse como servicio
 ---
 
-Under Windows, 4D Server can be launched as a Service.
+En Windows, 4D Server se puede iniciar como un servicio.
 
-A 4D Server application registered as a service is automatically launched on start-up of the machine with the current project, even before a user session is opened. It is not closed when the user exits their session.
+Una aplicación 4D Server registrada como servicio se inicia automáticamente al iniciar el equipo con el proyecto actual, incluso antes de que se abra una sesión de usuario. No se cierra cuando el usuario sale de su sesión.
 
-This operation lets you guarantee the availability of a 4D Server application even in the event of an incident that requires restarting the machine. Maintenance can be carried out remotely.
+Esta operación le permite garantizar la disponibilidad de una aplicación 4D Server incluso en el caso de un incidente que requiera reiniciar la máquina. El mantenimiento se puede realizar de forma remota.
 
 :::note Notas
 
-- In a 4D Server application registered as a service, the [headless mode](../Admin/cli.md) is implicit.
-- For more information about the mechanisms for managing Services, refer to the Windows documentation.
+- En una aplicación 4D Server registrada como servicio, el [modo sin interfaz gráfica](../Admin/cli.md) está activo por defecto.
+- Para más información sobre los mecanismos de gestión de Servicios, consulte la documentación de Windows.
 
 :::
 
-To register a 4D Server application as a Service, select **Register Current Application as Service** in the [**File** menu](./menus.md#file) of 4D Server. The next time the machine is started, 4D Server will be launched automatically and the current project opened. You can register any number of projects. Each project can be registered only once.
+To register a 4D Server application as a Service, select **Register Current Application as Service** in the [**File** menu](./menus.md#file) of 4D Server. The next time the machine is started, 4D Server will be launched automatically and the current project opened. Puede registrar cualquier número de proyectos. Cada proyecto solo se puede registrar una vez.
 
 :::note
 
@@ -34,5 +34,5 @@ To unregister your application, select **Unregister Current Application** from t
 
 To unregister all 4D Server databases at once, select **Unregister All Server Services** from the 4D Server **File** menu. This command is dimmed if no 4D Server service is enabled.
 
-You cannot change the service registration status of 4D Server from within 4D Server, if the application has been launched as a service on start-up. In this case, the three menu items are disabled. To stop the service, use the **Services** control panel.
+You cannot change the service registration status of 4D Server from within 4D Server, if the application has been launched as a service on start-up. En este caso, los tres elementos del menú están desactivados. To stop the service, use the **Services** control panel.
 

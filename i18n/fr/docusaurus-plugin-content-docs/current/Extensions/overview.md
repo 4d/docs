@@ -11,12 +11,12 @@ L'architecture des [projets 4D](../Project/architecture.md) est ouverte et peut 
 - les [**commandes SQL**](../commands/theme/SQL) vous permettent de vous connecter à diverses sources de données SQL et de les utiliser .
 - Le [**client HTTP intégré**](../API/HTTPRequestClass.md) peut envoyer des requêtes à n'importe quel serveur HTTP et traiter les données.
 - les [**zones web**](../FormObjects/webArea_overview.md) peuvent donner accès à des pages web ou à divers contenus HTML à l'intérieur de vos formulaires.
-- les [**Composants**](Concepts/components.md). Les composants sont faits de code 4D. 4D propose un ensemble de composants utilitaires (voir ci-dessous) que vous pouvez installer et utiliser en fonction de vos besoins. Vous pouvez également [développer vos propres composants 4D](develop-components.md), ou utiliser des composants tiers. De nombreux développeurs de la communauté 4D ont partagé des composants 4D (consultez Github pour obtenir une liste des composants 4D publics rassemblés dans le topic [`4d-component`](https://github.com/topics/4d-component)).
+- les [**Composants**](Concepts/components.md). Les composants sont faits de code 4D. 4D propose un ensemble de composants utilitaires (voir ci-dessous) que vous pouvez installer et utiliser en fonction de vos besoins. Vous pouvez également [développer vos propres composants 4D](develop-components.md), ou utiliser des composants tiers. Many developers from the 4D community have shared 4D components. Browse the [**4D Corner platform**](https://corner.4d.com/) to get a comprehensive list of published components.
 - les [**Plug-ins**](../Concepts/plug-ins.md). Les plug-ins peuvent être créés dans n'importe quel langage. Les plugins font des choses que 4D ne fait pas nativement (par exemple, une technologie de plateforme spécifique), ou qui seraient très difficiles à écrire en utilisant uniquement 4D. Comme décrit dans [cette page](develop-plug-ins.md), vous pouvez développer vos propres plugins. De nombreuses fonctionnalités sont couvertes par les plug-ins 4D existants. Parcourez GitHub pour obtenir la liste des plugins 4D publics rassemblés sous le topic [`4d-plugin`](https://github.com/topics/4d-plugin).
 
 ## Composants développés par 4D
 
-4D propose différents composants à la communauté 4D, couvrant de nombreux besoins de développement. Tous les composants 4D sont présents sur le [dépôt github de 4D](https://github.com/4d).
+4D propose différents composants à la communauté 4D, couvrant de nombreux besoins de développement. All 4D components can be found on the [**4D Corner platform**](https://corner.4d.com/).
 
 Un sous-ensemble de ces composants est listé par défaut dans le panneau Github du [Dependency Manager] (../Project/components.md#adding-a-github-or-gitlab-dependency), y compris :
 

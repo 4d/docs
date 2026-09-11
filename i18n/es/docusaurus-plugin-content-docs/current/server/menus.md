@@ -132,10 +132,10 @@ Este comando está disponible incluso cuando no hay ningún proyecto abierto en 
 
 Abre la página de inicio de la documentación 4D.
 
-### License manager...
+### Administrador de licencias...
 
-This command displays the License manager, used to view, manage, and activate [licenses](../Admin/licenses.md) in your 4D environment.
+Este comando muestra el Administrador de licencias, que permite ver, administrar y activar [licencias](../Admin/licenses.md) en su entorno 4D.
 
-### About 4D Server...
+### Acerca de 4D Server...
 
-Displays the 4D Server **About...** window.
+Muestra la ventana **Acerca de...** de 4D Server.

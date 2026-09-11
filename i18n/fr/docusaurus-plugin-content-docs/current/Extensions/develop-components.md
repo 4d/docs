@@ -7,7 +7,7 @@ title: Développement de composants
 
 Un composant 4D est un ensemble de fonctions, méthodes et de formulaires 4D représentant une ou plusieurs fonctionnalité(s) qu’il est possible [d’installer et d'utiliser dans des applications 4D](Concepts/components.md). Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des applications 4D.
 
-Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component).
+Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
 
 ## Définitions
 
@@ -538,4 +538,5 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 
 Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
 
+Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
 

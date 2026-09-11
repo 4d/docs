@@ -140,13 +140,13 @@ title: 4Dユーザー＆グループの管理
 
 ### グループにライセンスを割り当てる
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. これには全ての4D 製/サードパーティ製のプラグインやコンポーネントを含みます。
+プロジェクトにインストールされたあらゆる[拡張機能](../Extensions/overview.md) に、グループ権限を割り当てることができます。 これには全ての4D 製/サードパーティ製のプラグインやコンポーネントを含みます。
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. ある拡張機能へのアクセス可能グループに属していないユーザーは、その拡張機能をロードすることができません。
+拡張機能へのアクセス権を割り当てると、所有する拡張機能用のライセンスの使用を管理できるようになります。 ある拡張機能へのアクセス可能グループに属していないユーザーは、その拡張機能をロードすることができません。
 
 > 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. 拡張機能へのアクセス権をグループに与えるには、該当するオプションをチェックします。
+ツールボックス内のグループページの"プラグイン"エリアには、4D アプリケーションによってロードされた拡張機能のうちライセンスを必要とするものが全て一覧表示されています。 拡張機能へのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
 ![](../assets/en/Users/plugins.png)
 
