@@ -33,13 +33,13 @@ title: コンポーネントの開発
 
 :::note
 
-コンテキストがサポートされていれば、インタープリタ版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
+コンテキストがサポートされていれば、インタープリター版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
 
 :::
 
 ## ホストからのコンポーネント作成と編集
 
-インタープリタモードでは、4D IDE を使用することでホストプロジェクトからコンポーネントを直接作成および編集することができます。 これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
+インタープリターモードでは、4D IDE を使用することでホストプロジェクトからコンポーネントを直接作成および編集することができます。 これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
 
 ### コンポーネントの作成
 
@@ -50,9 +50,9 @@ title: コンポーネントの開発
 
 この操作でフォルダー選択ダイアログが開き、ここから[コンポーネントパッケージ](../Project/components.md#packageフォルダー) を保存する場所を選択することができます。
 
-- デフォルトの場所: 最初にコンポーネントを作成しようとすると、4D は[プロジェクトパッケージ内の**Components** フォルダ](../Project/architecture.md#components)をサジェストします。 それ以降は最後に使用したフォルダが自動的に記憶されてあらかじめ選択されます。
+- デフォルトの場所: 最初にコンポーネントを作成しようとすると、4D は[プロジェクトパッケージ内の**Components** フォルダー](../Project/architecture.md#components)をサジェストします。 それ以降は最後に使用したフォルダーが自動的に記憶されてあらかじめ選択されます。
 - コンポーネントを**プロジェクトパッケージの隣** に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加します。
-- コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダ内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
+- コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダー内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
 
 :::note
 
@@ -66,8 +66,8 @@ title: コンポーネントの開発
 
 以下の条件を満たしている限り、コンポーネントのコードは編集可能です:
 
-- ホストプロジェクトがインタープリタモードで実行中である
-- コンポーネントが、[インタープリタモードでロードされてい](../Project/components.md#interpreted-and-compiled-components) 、ソースコードが編集可能である
+- ホストプロジェクトがインタープリターモードで実行中である
+- コンポーネントが、[インタープリターモードでロードされており](../Project/components.md#インタープリターとコンパイル済みコンポーネント)、ソースコードが編集可能である
 - コンポーネントのファイルはローカルに保存されます(つまり、それらは[downloaded from GitHub からダウンロードされるわけではありません](../Project/components.md#github-依存関係を追加))。
 
 このコンテキストでは、以下の2箇所において、コンポーネントのコードをコードエディターで開き、編集して、保存することができます:
@@ -286,7 +286,7 @@ component_method($input_t)
 - `Get pointer` をコンポーネント内で使用した場合、このコマンドはホストプロジェクトの変数へのポインターを返しません。また逆にこのコマンドをホストプロジェクトで使用した場合も同様です。
 
 - コンパイル済みプロジェクトでは、コンパイルされたコンポーネントしか使用できませんが、インタープリタープロジェクトの場合には、インタープリターおよびコンパイル済みコンポーネントを同時に使用することができます。 この場合、ポインターの利用は以下の原則を守らなければなりません: インタープリターモードでは、コンパイルモードにおいて作成されたポインターを解釈できます。逆にコンパイルモードでは、インタープリターモードにて作成されたポインターを解釈することはできません。
-  以下の例でこの原則を説明します: 同じホストプロジェクトにインストールされた 2つのコンポーネント C ( コンパイル済) と I ( インタープリタ) があります:
+  以下の例でこの原則を説明します: 同じホストプロジェクトにインストールされた 2つのコンポーネント C ( コンパイル済) と I ( インタープリター) があります:
 
 - コンポーネントC が定義する変数 `myCvar` があるとき、コンポーネントI はポインター `->myCvar` を使用して変数の値にアクセスすることができます。
 
@@ -447,7 +447,7 @@ SAVE RECORD($tablepointer->)
 
 ## Info.plist
 
-コンポーネントは、その[root フォルダー](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
+コンポーネントは、その [root フォルダー](../Project/architecture.md) にシステム (macOS のみ) と[依存関係マネージャー](../Project/components.md#monitoring-project-dependencies)が読み取り可能な追加の情報を提供する、`Info.plist` ファイルを持っています。
 
 :::note
 
@@ -455,18 +455,18 @@ SAVE RECORD($tablepointer->)
 
 :::
 
-コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies) によって使用されます。
+コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらはすべてのプラットフォームにおいて[依存関係マネージャー](../Project/components.md#monitoring-project-dependencies) によって使用されます。
 
 定義可能なキーは以下の通りです:
 
-| key                                                        | description                                                                                                 |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | コンポーネント名(内部)                                                                             |
-| CFBundleDisplayName                                        | 表示するコンポーネント名                                                                                                |
-| NSHumanReadableCopyright                                   | 表示する著作権                                                                                                     |
-| CFBundleVersion                                            | コンポーネントのバージョン                                                                                               |
-| CFBundleShortVersionString                                 | 表示するコンポーネントのバージョン                                                                                           |
-| com.4d.minSupportedVersion | サポートされる最低限の4D のバージョン。これは依存関係マネージャの[4D のバージョンに従うコンポーネント](../Project/components.md#4Dバージョンタグの命名規則)において使用されます。 |
+| key                                                        | description                                                                                                   |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | コンポーネント名(内部)                                                                               |
+| CFBundleDisplayName                                        | 表示するコンポーネント名                                                                                                  |
+| NSHumanReadableCopyright                                   | 表示する著作権                                                                                                       |
+| CFBundleVersion                                            | コンポーネントのバージョン                                                                                                 |
+| CFBundleShortVersionString                                 | 表示するコンポーネントのバージョン                                                                                             |
+| com.4d.minSupportedVersion | サポートされる最低限の 4D のバージョン。これは依存関係マネージャーの[4D のバージョンに従うコンポーネント](../Project/components.md#4Dバージョンタグの命名規則)において使用されます。 |
 
 以下は、`Info.plist` ファイルの一例です:
 

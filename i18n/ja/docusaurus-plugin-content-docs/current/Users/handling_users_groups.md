@@ -149,19 +149,17 @@ title: 4Dユーザー＆グループの管理
 
 ユーザーやグループをグループから取り除くには、ユーザー/グループ一覧でチェックを解除します。
 
-### Assigning a license to a group
+### グループにライセンスを割り当てる
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+プロジェクトにインストールされたあらゆる[拡張機能](../Extensions/overview.md) に、グループ権限を割り当てることができます。 これには全ての4D 製/サードパーティ製のプラグインやコンポーネントを含みます。
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+アクセス件をこれらの拡張機能に分散させることで、クライアント/サーバー環境においてこれらの拡張機能に対してあなたが所持しているライセンスの使用を管理することができます。 ある拡張機能へのアクセス可能グループに属していないユーザーは、その拡張機能をロードすることができません。
 
 > 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+ツールボックス内のグループページの"プラグイン"エリアには、4D アプリケーションによってロードされた拡張機能のうち[ライセンスを必要とする](../Admin/licenses.md) ものが全て一覧表示されています。 拡張機能へのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
 ![](../assets/en/Users/plugins.png)
-
-The **4D Client Web Server** (*deprecated as of 4D 21*) and **4D Client SOAP Server** items let you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 ### アクセス権の階層構造
 

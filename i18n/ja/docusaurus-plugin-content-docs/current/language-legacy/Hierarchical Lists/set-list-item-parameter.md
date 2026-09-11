@@ -5,7 +5,7 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( * ; *list* : Integer, Text ; * ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : 倍長整数, 演算子 ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : 倍長整数, 演算子 ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
 | list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
+| itemRef | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
 | selector | Text | &#8594; | パラメタ定数 |
 | value | Text, Boolean, Real | &#8594; | パラメタ値 |
 </div>
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->**SET LIST ITEM PARAMETER**コマンドは、リスト参照またはオブジェクト名を*list*に指定したリスト中、*itemRef*引数で指定した項目の*selector* パラメタを設定するために使用します。<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->**SET LIST ITEM PARAMETER** コマンドは、リスト参照またはオブジェクト名を*list* に指定したリスト中、*itemRef* 引数で指定した項目の*selector* パラメタを設定するために使用します。<!-- END REF-->
 
 1番目の \* 引数を渡した場合、*list* 引数はフォーム中のリストオブジェクトのオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数はリスト参照番号 ([ListRef](# "階層リストへの参照")) です。1つしかフォーム上でリストオブジェクトを使用しない、または2番目の \* を省略してリスト構造を処理対象とする場合、いずれのシンタックスも使用できます。同じリストの複数のリストオブジェクトがフォーム上にあり、2番目の \* を渡してカレントの項目を処理する場合、リストオブジェクトごとにカレント項目が異なるため、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-*itemRef*には参照番号を渡すことができます。渡した項目参照番号を持つ項目が存在しない場合、コマンドは何も行いません。オプションとして*itemRef*に0を渡し、[APPEND TO LIST](../commands/append-to-list)コマンドを用いてリストへ最後に追加される項目を指定することができます。  
-最後に、*itemRef*には *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目になります。選択された項目が存在しない場合、コマンドは何も行いません。
+*itemRef* には参照番号を渡すことができます。渡した項目参照番号を持つ項目が存在しない場合、コマンドは何も行いません。オプションとして*itemRef* に0 を渡し、[APPEND TO LIST](../commands/append-to-list)コマンドを用いてリストへ最後に追加される項目を指定することができます。  
+最後に、*itemRef* には *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目になります。選択された項目が存在しない場合、コマンドは何も行いません。
 
 *selector* には、以下のいづれかを渡すことができます:
 

@@ -5,7 +5,7 @@ title: Dependencies
 
 A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found for example on GitHub](https://github.com/topics/4d-component).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
 
 Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
 
@@ -561,6 +561,36 @@ The current dependency version is displayed on the right side of the dependency 
 In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**. You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu.
 
 Modificar o intervalo de versão é útil, por exemplo, se você usar o recurso de atualização automática e deseja bloquear a dependência de um número de versão específico.
+
+### Using 4D Corner
+
+The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. You can browse or search the list to find any component meeting to your needs.
+
+![4d-corner](../assets/en/Project/4d-corner.png)
+
+You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
+
+![4d-corner-access](../assets/en/Project/4d-corner.png)
+
+To install a component from the 4D Corner platform:
+
+1. Click on the "Copy link" button on the top right corner of the component tile:
+
+![copy button](../assets/en/Project/4d-corner-copy.png)
+
+2. Open the Dependency manager and click on the **[+]** button.
+
+The dependency link is automatically added in the address area:
+
+![add dependency](../assets/en/Project/4d-corner-add.png)
+
+3. [Configure the dependency reference](#adding-a-github-or-gitlab-dependency) and click **Add**.
+
+:::tip Related blog post
+
+[4D Corner: Easily browse 4D components, add them to your project and share your own](https://blog.4d.com/4d-corner-easily-browse-4d-components-add-them-to-your-project-and-share-your-own/)
+
+:::
 
 ### Atualização de dependências
 

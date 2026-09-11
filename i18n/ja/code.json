@@ -882,5 +882,20 @@
   "theme.docs.versionDropdown.notAvailable": {
     "message": "このバージョンでは、このページは利用できません\n代わりにデフォルトのページが表示されます",
     "description": "Tooltip for version dropdown items where the current page does not exist"
+  },
+  "Database Structure": {
+    "message": "データベース・ストラクチャー"
+  },
+  "Methods": {
+    "message": "メソッド"
+  },
+  "XML Processing": {
+    "message": "XML Processing"
+  },
+  "Standard actions": {
+    "message": "標準アクション"
+  },
+  "Drag and Drop": {
+    "message": "ドラッグ＆ドロップ"
   }
 }

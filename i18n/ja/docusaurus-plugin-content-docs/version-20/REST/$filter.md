@@ -44,7 +44,7 @@ title: '$filter'
 
 :::note
 
-The use of the `eval()` statement is not allowed in REST queries (and thus in [remote datastore](../ORDA/remoteDatastores.md) queries).
+REST クエリ内における`eval()` ステートメントの使用は許可されません(そのため[remote datastore](../ORDA/remoteDatastores.md) クエリにおいても同様です)。
 
 :::
 
@@ -56,10 +56,10 @@ The use of the `eval()` statement is not allowed in REST queries (and thus in [r
 - 単一引用符 ('): \u0027
 - 二重引用符 ("): \u0022
 
-For example, you can write the following when passing a value with a quote when using the *params* property:  
+例えば*params* プロパティを使用して、値を二重引用符で括って渡すためには以下のように書くことができます:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+値を直接渡す場合は、次のように書けます:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::

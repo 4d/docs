@@ -17,7 +17,7 @@ title: リリースノート
 
 - 4D 20.8 LTS は Windows 11 25H2 対応です。
 - 4D 20.8 LTS は macOS Tahoe (macOS 26) 対応です。
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.8): 4D 20.8 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.8): 4D 20.8 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2025/252/release-note-version-20/))。
 
 
 
@@ -25,7 +25,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.7): 4D 20.7 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.7): 4D 20.7 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2025/98/release-note-version-20/))。
 
 :::caution 4D Server 20.7 以降の最小クライアントバージョンについて
 
@@ -57,7 +57,7 @@ Windows Server 2025 では、新しいWindows 印刷ダイアログボックス�
 :::
 
 - [スタンドアロンの4Dアプリケーションを使用するのに必要なライセンスを埋め込まずに](../Desktop/building.md#ライセンスについて)アプリケーションをビルドできるようになりました。
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.6): 4D 20.6 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.6): 4D 20.6 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/335/release-note-version-20/))。
 
 
 
@@ -74,14 +74,14 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 :::
 
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.5): 4D 20.5 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.5): 4D 20.5 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/245/release-note-version-20/))。
 
 
 ## 4D 20.4 LTS
 
 #### ハイライト
 
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.4): 4D 20.4 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.4): 4D 20.4 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/158/release-note-version-20/))。
 
 ## 4D 20.3 LTS
 
@@ -89,7 +89,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 - CEF が Chromium 5993 にアップデートされました。
 - SpreadJS は 4D 20.2 HF1 でバージョン 16.2.6 にアップデートされました。
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.3): 4D 20.3 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.3): 4D 20.3 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/35/release-note-version-20/))。
 
 #### 動作の変更
 
@@ -114,7 +114,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 :::
 
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.2): 4D 20.2 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.2): 4D 20.2 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/292/release-note-version-20/))。
 
 #### 動作の変更
 
@@ -135,7 +135,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 :::
 
 
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20.1): 4D 20.1 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.1): 4D 20.1 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/191/release-note-version-20/))。
 
 ## 4D 20 LTS
 
@@ -171,7 +171,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- [**修正リスト**](https://bugs.4d.com/fixes?version=20): 4D 20 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20): 4D 20 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/110/release-note-version-20/))。
 
 
 #### 動作の変更

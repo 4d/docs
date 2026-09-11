@@ -33,7 +33,7 @@ El área Detalle del formulario se muestra en la pantalla y se imprime una vez p
 
 Puede hacer el área Detalle más pequeña o más grande. Lo que coloque en el área Detalle se muestra o imprime una vez por cada registro. Lo más habitual es colocar campos o variables en el área Detalle para que se muestre o imprima la información de cada registro, pero también se pueden colocar otros elementos en el área Detalle.
 
-The following form objects are **not supported** in the Detail area (i.e. they are not repeated for each record): [Web areas](../FormObjects/webArea_overview.md), [4D View Pro areas](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [hierarchical lists](../FormObjects/list_overview.md), [splitters](../FormObjects/splitters.md), and [subforms](../FormObjects/subform_overview.md).
+Los siguientes objetos de formulario **no son compatibles** en el área Detalle (i.e. no se repiten para cada registro): [Áreas Web](../FormObjects/webArea_overview.md), [Áreas 4D View Pro](../FormObjects/viewProArea_overview.md), [listboxes](../FormObjects/listbox_overview.md), [listas jerárquicas](../FormObjects/list_overview.md), [separadores](../FormObjects/splitters.md),[subformularios](../FormObjects/subform_overview.md) y [áreas de plug-in](../FormObjects/pluginArea_overview.md).
 
 #### Gramática JSON
 

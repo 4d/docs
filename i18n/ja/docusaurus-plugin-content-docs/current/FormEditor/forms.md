@@ -333,7 +333,7 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 Possible values: "Classic", "FluentUI" or "LiquidGlass".
+- 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取りうる値: "Classic"、 "FluentUI" あるいは "LiquidGlass"。
 - [`Application info`](../commands/application-info) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
 - [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
@@ -341,7 +341,7 @@ Fluent UI で4D フォームを使用する場合、以下の点に注意を払�
 - [サークルボタン](../FormObjects/button_overview.md#サークル) はサポートされています(macOS と同様)。
 - [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
 - フォーカスの四角はピクチャーおよびテキストの[入力](../FormObjects/input_overview.md) に追加することができます。
-- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
+- [リストフォーム](../FormEditor/properties_FormProperties.md#フォームタイプ) においては、[ヘッダーまたはフッターエリア](./properties_Markers.md) に配置されているオブジェクトは常に背景レイヤーに表示されますが、詳細エリアの配置されたものは常に前面に表示されます。 クラシックレンダリングとは異なり、ヘッダーの境界線からはみ出したオブジェクトは、詳細エリア内のオブジェクトの下部分に描画されます。
 
 ## 継承フォーム
 

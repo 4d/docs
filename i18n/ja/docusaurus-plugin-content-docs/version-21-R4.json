@@ -822,5 +822,21 @@
   "sidebar.docs.doc.Data Collection": {
     "message": "データ収集",
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.category.Server & Admin": {
+    "message": "サーバー & 管理",
+    "description": "The label for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.title": {
+    "message": "管理",
+    "description": "The generated-index page title for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server & Admin.link.generated-index.description": {
+    "message": "4Dアプリケーションの管理",
+    "description": "The generated-index page description for category 'Server & Admin' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D Server Window": {
+    "message": "4D Server ウィンドウ",
+    "description": "The label for category '4D Server Window' in sidebar 'docs'"
   }
 }

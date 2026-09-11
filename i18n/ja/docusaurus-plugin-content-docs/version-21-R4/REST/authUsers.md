@@ -28,9 +28,9 @@ title: ユーザーとセッション
    記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
 2. 事前に用意した [`authentify()` 関数](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
-   The function can be called either directly from your 4D code (see [`Open datastore`](../commands/open-datastore) example) or through a `/rest/$catalog/authentify` request along with user credentials. This step only requires a basic login form that do not access data; it can be for example a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
+   この関数は、4D コードから直接([`Open datastore`](../commands/open-datastore) の例題参照)、あるいはユーザー認証情報とともに`/rest/$catalog/authentify` リクエストを通して呼び出すことが可能です。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。これには例えば`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](https://developer.4d.com/qodly/) を利用できます。
 
-3. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted as soon as the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called.
+3. ユーザーが正常に認証できた場合、サーバー上では4D ライセンスが1つ消費され、また[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数が呼ばれれば、全てのREST リクエストが受け入れられるようになります。
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 

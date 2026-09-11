@@ -882,5 +882,20 @@
   "theme.docs.versionDropdown.notAvailable": {
     "message": "La página no está disponible en esta versión\nEn su lugar, se abrirá la página predeterminada.",
     "description": "Tooltip for version dropdown items where the current page does not exist"
+  },
+  "Database Structure": {
+    "message": "Estructura de la base de datos"
+  },
+  "Methods": {
+    "message": "Métodos"
+  },
+  "XML Processing": {
+    "message": "Procesamiento de XML"
+  },
+  "Standard actions": {
+    "message": "Acciones estándar"
+  },
+  "Drag and Drop": {
+    "message": "Arrastrar y soltar"
   }
 }

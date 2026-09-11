@@ -147,19 +147,17 @@ La colocación de grupos dentro de otros grupos permite crear una jerarquía de 
 
 Para eliminar un usuario o grupo de otro grupo, basta con deseleccionar la opción correspondiente en el área de asignación de miembros.
 
-### Assigning a license to a group
+### Asignación de una licencia a un grupo
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+Puede asignar privilegios de grupo a todas las [extensiones](../Extensions/overview.md) instaladas en el proyecto. Esto incluye todos los plug-ins y componentes de 4D y de terceros.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+Distribuir el acceso a las extensiones le permite controlar el uso de las licencias que tenga para estas extensiones en un entorno cliente/servidor. Los usuarios que no pertenezcan al grupo de acceso de una extensión no podrán cargar dicha extensión.
 
 > Las licencias utilizadas permanecen vinculadas a las cuentas de usuario 4D del grupo durante toda la sesión 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+El área "Plugin" en la página de Grupos de la caja de herramientas muestra todas las extensiones [que requieren una licencia](../Admin/licenses.md) cargadas por la aplicación 4D. Para dar acceso a un grupo a una extensión, basta con marcar la opción correspondiente.
 
 ![](../assets/en/Users/plugins.png)
-
-The **4D Client Web Server** (*deprecated as of 4D 21*) and **4D Client SOAP Server** items let you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. Estas licencias son consideradas por 4D Server como licencias de plug-in. Por lo tanto, al igual que en el caso de los plug-ins, puede restringir el derecho de uso de estas licencias a un grupo específico de usuarios.
 
 ### Un esquema de acceso jerárquico
 

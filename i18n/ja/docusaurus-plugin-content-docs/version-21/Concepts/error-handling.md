@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
+3. [予測可能なエラーと予測不可能なエラー](#predictable-vs-unpredictable-errors) の両方を管理したい場合を考えます:
 
 ```4d
 var $e:=ds.Employee.new()
@@ -293,6 +293,6 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 - **メッセージ**。エラーがなぜ起きたかを説明します。
 - **コード**。コンポーネントによって返される任意の数値です。
 
-[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。 Click on the **Copy** button to store detailed information related to the error in the pasteboard.
+[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。 **コピー** ボタンをクリックすることで、エラーに関連した詳細な情報がペーストボードに保存されます。
 
 エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors.md) コマンドを呼び出す必要があります。 最終アプリケーションにおいて[エラー処理メソッド](#installing-an-error-handling-method) を使用してエラーへの割り込みと処理をする場合、[`Last errors`](../commands/last-errors.md) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。

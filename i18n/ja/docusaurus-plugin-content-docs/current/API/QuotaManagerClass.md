@@ -112,7 +112,7 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### 説明
 
-The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session<!-- END REF -->.
+`.nbEntitySets` プロパティには<!-- REF #QuotaManagerClass.nbEntitySets.Summary -->カレントのセッション内においてメモリ内に許可されているREST エンティティセットの最大数<!-- END REF --> が格納されています。
 
 デフォルトでは、エンティティセットが[REST リクエストによってメモリに保存される数](../REST/$info.md) には制約はありません(値は 0 に設定されています)。 特定のセッションに対して、サーバーのペイロードを抑えるために、上限を設定することができます。
 

@@ -1229,7 +1229,7 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
 
 #### 例題 3
 
-The `.filter()` function can be used to compare two collections and extract the differences between them:
+`.filter()` 関数を使用すると、二つのコレクションを比較してその差異を取得することができます:
 
 ```4d
 var $c1:=New collection(12; 45; 78; 99; 156)
@@ -2885,7 +2885,7 @@ $r:=$c.reduce(Formula($1.accumulator=$1.value); 1)  // 86400 を返す
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  // 86400 を返す
 
 
 ```

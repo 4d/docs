@@ -30,9 +30,9 @@ La secuencia de inicio de sesión del usuario es la siguiente:
    Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados por sesiones "invitado".
 
 2. `authentify()` debe ser una [función datastore class](../ORDA/ordaClasses.md#datastore-class). Llama a su [función `authentify()`](#function-authentify) (creada previamente), en la que revisa las credenciales de usuario y llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) con los privilegios apropiados.
-   The function can be called either directly from your 4D code (see [`Open datastore`](../commands/open-datastore) example) or through a `/rest/$catalog/authentify` request along with user credentials. This step only requires a basic login form that do not access data; it can be for example a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
+   La función se puede invocar directamente desde su código 4D (ver el ejemplo de [`Open datastore`](../commands/open-datastore)) o mediante una solicitud `/rest/$catalog/authentify` junto con las credenciales de usuario. Este paso solo requiere un formulario de inicio de sesión básico que no tenga acceso a datos; puede ser, por ejemplo, una [página Qodly](https://developer.4d.com/qodly/) (llamada a través de la solicitud `/rest/$getWebForm`).
 
-3. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted as soon as the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called.
+3. Si el usuario se autentica correctamente, se consume una licencia 4D en el servidor y se aceptan todas las solicitudes REST en cuanto se llama a la función [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges).
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 

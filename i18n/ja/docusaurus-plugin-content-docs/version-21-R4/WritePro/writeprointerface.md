@@ -434,55 +434,55 @@ AI に質問を送信するためには、送信ボタンをクリックしま�
 
 マルチレベルリストスタイルシーツを管理するためには、マルチレベルリストボタン![](../assets/en/WritePro/wp-multi-level-list-button.png) をクリックします。
 
-When the multi-level list mode is enabled, the Style Sheets panel displays the [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets) defined in the document as well as [predefined templates](#predefined-templates).
+マルチレベルリストモードが有効化されている場合、スタイルシートパネルにはドキュメント内で定義されている[マルチレベルリストスタイルシート](./user-legacy/stylesheets.md#複数レベルスタイルシート) に加えて、[定義済みのテンプレート](#定義済みテンプレートpredefined-templates) が表示されます。
 
 ![](../assets/en/WritePro/wp-multi-level-list-panel.png)
 
-### Managing multi-level style sheets
+### マルチレベルスタイルシートを管理する
 
-The Style Sheets panel allows you in general to:
+スタイルシートパネルでは一般的に以下のような操作を行うことができます:
 
-- ![](../assets/en/WritePro/wp-multi-level-list-button1.png) Create a new style sheet.
-- ![](../assets/en/WritePro/wp-multi-level-list-button2.png) Delete a style sheet.
-- ![](../assets/en/WritePro/wp-multi-level-list-button3.png) Update a style sheet.
+- ![](../assets/en/WritePro/wp-multi-level-list-button1.png) 新規スタイルシートを作成する。
+- ![](../assets/en/WritePro/wp-multi-level-list-button2.png) スタイルシートを削除する。
+- ![](../assets/en/WritePro/wp-multi-level-list-button3.png) スタイルシートを更新する。
 
-Once a multi-level list style sheet is selected, the panel provides also tools to manage the hierarchy and numbering of the list:
+マルチレベルリストスタイルシートが選択されると、パネルにはリストの階層や番号振りを管理するためのツールも提供されるようになります:
 
-- ![](../assets/en/WritePro/wp-multi-level-list-button4.png) Increase the list level of selected paragraphs.
-- ![](../assets/en/WritePro/wp-multi-level-list-button5.png) Decrease the list level of selected paragraphs.
-- ![](../assets/en/WritePro/wp-multi-level-list-button6.png) Append a level to the list and create a new sub-level.
-- ![](../assets/en/WritePro/wp-multi-level-list7.png) Modify numbering formats.
-- ![](../assets/en/WritePro/wp-multi-level-list-button8.png) Concatenate numbering markers between levels.
+- ![](../assets/en/WritePro/wp-multi-level-list-button4.png) 選択された段落のリストレベルを上げる。
+- ![](../assets/en/WritePro/wp-multi-level-list-button5.png) 選択された段落のリストレベルを下げる。
+- ![](../assets/en/WritePro/wp-multi-level-list-button6.png) リストにレベルを追加し新しいサブレベルを作成する。
+- ![](../assets/en/WritePro/wp-multi-level-list7.png) 番号振りのフォーマットを変更する。
+- ![](../assets/en/WritePro/wp-multi-level-list-button8.png) レベル間の番号マーカーを連結する。
 
-### Creating a style sheet
+### スタイルシートの作成
 
-To create a multi-level list style sheet you can either:
+マルチレベルリストのスタイルシートを作成するためには、以下の方法があります:
 
-- Select and apply one of the predefined templates to the paragraph(s), the selected template and all it sub-levels are then displayed on the top part of the sytle sheets panel. You can customize its levels and formatting (such as numbering styles, colors, fonts, or hierarchy), and then create a new style sheet based on the resulting selection.
+- 定義済みのテンプレートの一つを選択して段落に適用すると、選択されたテンプレートとその全てのサブレベルはスタイルシートパネルの上部に表示されます。 レベルと書式(番号スタイル、カラー、フォント、階層など)をカスタマイズすることができ、その結果に基づいて新しいスタイルシートを作成することができます。
 
-- Duplicate one of the existing style sheets via the Duplicate option in the ![](../assets/en/WritePro/wp-multi-level-list-button1.png) bottom menu.
+- ![](../assets/en/WritePro/wp-multi-level-list-button1.png) 下部のメニューの複製オブションを使用して既存のスタイルシートの一つを複製します。
 
-- Click the ![](../assets/en/WritePro/wp-multi-level-list-button1.png) button and then "New style sheet based on selection" after having selected paragraph(s) to use for the style sheet according to the following:
-  - If the selected paragraph(s) use(s) a list marker, a new multi-level list style sheet made of one level is created based on the current formatting.
-  - If the selected paragraph(s) already use(s) a root-level or a sub-level of a multi-level list style sheet, the complete hierarchy is duplicated.
+- ![](../assets/en/WritePro/wp-multi-level-list-button1.png) ボタンをクリックし、スタイルシートに使用する段落を以下のように選択したあとに"選択に基づいた新規スタイルシート" をクリックします:
+  - 選択された段落にリストマーカーを使用している場合、カレントの書式に基づいて、単一のレベルから作られた新しいマルチレベルリストスタイルシートが作成されます。
+  - 選択された段落が既にルートレベルまたはサブレベルのマルチレベルリストスタイルシートを使用している場合、階層全体が完全に複製されます。
 
 :::note
 
-For detailed information about creating and configuring multi-level list style sheets by programming, see [Multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets).
+プログラミングによってマルチレベルリストスタイルシートを作成・設定する詳細な情報については、[複数レベルリストスタイルシート](./user-legacy/stylesheets.md#複数レベルリストスタイルシート)の章を参照してください。
 
 :::
 
-### Applying a multi-level list
+### マルチレベルリストの適用
 
-You can apply either a multi-level list style sheet defined in the document or one of the predefined templates to the selected paragraphs using the Style Sheets panel:
+スタイルシートパネルを使用することで、ドキュメント内で定義されているマルチレベルリストスタイルシートか、定義済みテンプレートの一つのどちらかを、選択された段落に対して適用することができます:
 
 ![](../assets/en/WritePro/wp-multi-level-list-panel2.png)
 
-### Predefined templates
+### 定義済みテンプレート
 
-The interface provides the following predefined multi-level list templates:
+インターフェースには、以下の定義済みマルチレベルリストテンプレートが提示されています:
 
-**Technical Blueprint**
+**テクニカルブループリント**
 
 Level 1: 1  
 Level 2: 1.1  
@@ -490,7 +490,7 @@ Level 3: 1.1.1
 Level 4: 1.1.1.1  
 Level 5: 1.1.1.1.1
 
-**Legal & Governance**
+**リーガル & ガバナンス**
 
 Level 1: I.  
 Level 2: A.  
@@ -500,7 +500,7 @@ Level 5: (1)
 Level 6: (a)  
 Level 7: (i)
 
-**Educational Material**
+**教育的素材**
 
 Level 1: I.  
 Level 2: 1.  
@@ -508,49 +508,49 @@ Level 3: 1.1.
 Level 4: a.  
 Level 5: ●
 
-**Meeting Minutes**
+**会議詳細**
 
 Level 1: 1.  
 Level 2: ●
 
-**Visual Hierarchy**
+**視覚的階層**
 
-Level 1: ♣ (Club)  
-Level 2: ♦ (Diamond)  
-Level 3: ■ (Square)  
-Level 4: □ (Hollow Square)  
-Level 5: ● (Disc)  
-Level 6: ○ (Circle)  
-Level 7: – (Dash)
+Level 1: ♣ (クラブ)  
+Level 2: ♦ (ダイヤ)  
+Level 3: ■ (黒い四角)  
+Level 4: □ (白い四角)  
+Level 5: ● (黒丸)  
+Level 6: ○ (白丸)  
+Level 7: – (破線)
 
-### Customizing predefined templates
+### 定義済みテンプレートのカスタマイズ
 
-You can customize the available templates to provide users with predefined multi-level lists that match the needs of your application.
+利用可能なテンプレートをカスタマイズして、ユーザーに、アプリケーションに用途に合致したような定義済みマルチレベルリストを提供することができます。
 
-The predefined multi-level list templates are defined in a JSON file named `multiLevelStyles.json`. This file is located in the 4D Write Pro Interface component Resources folder.
+定義済みのマルチレベルリストテンプレートは、`multiLevelStyles.json` という名前のJSON ファイル内に定義されています。 このファイルは4D Write Pro インターフェースコンポーネントのResources フォルダ内に配置されています。
 
-You can customize the available templates by adding your own `multiLevelStyles.json` file in either:
+以下の場所のいずれかにあなた独自の`multiLevelStyles.json` ファイルを追加することで、利用可能なテンプレートをカスタマイズすることができます:
 
-- the project's local Resources folder directly,
-- a `4D WritePro Interface` folder located within the project Resources folder.
+- プロジェクトのローカルなResources フォルダに直接追加する
+- プロジェクトのResources フォルダ内に配置された`4D WritePro Interface` フォルダ。
 
-If a `multiLevelStyles.json` file is present in both locations, the file located in the `4D WritePro Interface` folder takes precedence.
+`multiLevelStyles.json` ファイルが両方の場所にある場合には、`4D WritePro Interface` フォルダに配置されたファイルの方が優先されます。
 
-Each template definition includes:
+各テンプレートの定義には、以下のものが含まれます:
 
-- a template name,
-- one or more list levels,
-- the 4D Write Pro attributes applied to each level. Any 4D Write Pro attribute can be used in a template definition.
+- テンプレート名
+- 一つまたはそれ以上のリストレベル
+- 各レベルに適用された4D Write Pro 属性。 テンプレート定義内ではあらゆる4D Write Pro 属性を使用することができます。
 
-You can use either the attribute names or the corresponding 4D Write Pro constants as JSON keys and values.
-For example, the following definitions are equivalent:
+属性名または対応する4D Write Pro 定数をJSON キーと値として使用することができます。
+例えば、以下の定義はどちらも同義です:
 
 - `"listStyleType": "wk upper roman"`
 - `"wk list style type": "wk upper roman"`
 
 #### 例題
 
-Example of a customized JSON file:
+カスタマイズされたJSON ファイルの一例:
 
 ```json
 {
@@ -569,5 +569,5 @@ Example of a customized JSON file:
 ### 参照
 
 - [Related blog post: Multi-Level Style Sheets in 4D Write Pro: Now With a Dedicated UI](https://blog.4d.com/multi-level-style-sheets-in-4d-write-pro-now-with-a-dedicated-ui)
-- [multi-level list style sheets](./user-legacy/stylesheets.md#multi-level-list-style-sheets)
-- [multi-level lists](./user-legacy/using-a-4d-write-pro-area.md#multi-level-lists)
+- [複数レベルリストスタイルシート](./user-legacy/stylesheets.md#複数レベルリストスタイルシート)
+- [複数レベルリスト](./user-legacy/using-a-4d-write-pro-area.md#複数レベルリスト)

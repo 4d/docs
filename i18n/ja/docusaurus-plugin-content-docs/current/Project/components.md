@@ -5,7 +5,7 @@ title: 依存関係
 
 4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは4D コードで書かれていますが、プラグインは[あらゆる言語を使用してビルドすることができます](../Extensions/develop-plug-ins.md)。
 
-独自の 4Dコンポーネントを[開発](../Extensions/develop-components.md)し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [例えばGitHubなどで見つけて](https://github.com/topics/4d-component) ダウンロードすることもできます。
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
 
 4D 環境にインストールされると、拡張機能は特別なプロパティを持つ**依存関係** として扱われます。
 
@@ -561,6 +561,36 @@ GitHubでリリースが作成されると、そこに**タグ** と**バージ�
 一覧に表示された依存関係に対して[バージョン設定](#依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
+
+### Using 4D Corner
+
+The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. You can browse or search the list to find any component meeting to your needs.
+
+![4d-corner](../assets/en/Project/4d-corner.png)
+
+You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
+
+![4d-corner-access](../assets/en/Project/4d-corner.png)
+
+To install a component from the 4D Corner platform:
+
+1. Click on the "Copy link" button on the top right corner of the component tile:
+
+![copy button](../assets/en/Project/4d-corner-copy.png)
+
+2. Open the Dependency manager and click on the **[+]** button.
+
+The dependency link is automatically added in the address area:
+
+![add dependency](../assets/en/Project/4d-corner-add.png)
+
+3. [Configure the dependency reference](#adding-a-github-or-gitlab-dependency) and click **Add**.
+
+:::tip 関連したblog 記事
+
+[4D Corner: Easily browse 4D components, add them to your project and share your own](https://blog.4d.com/4d-corner-easily-browse-4d-components-add-them-to-your-project-and-share-your-own/)
+
+:::
 
 ### 依存関係の更新
 

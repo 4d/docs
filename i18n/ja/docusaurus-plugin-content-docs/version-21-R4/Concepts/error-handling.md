@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
+3. [予測可能なエラーと予測不可能なエラー](#predictable-vs-unpredictable-errors) の両方を管理したい場合を考えます:
 
 ```4d
 var $e:=ds.Employee.new()
@@ -293,21 +293,21 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 - **メッセージ**。エラーがなぜ起きたかを説明します。
 - **コード**。コンポーネントによって返される任意の数値です。
 
-To have a full description of an error and especially its origin, you can use the [4D error dialog box](../Debugging/basics.md) or the [`Last errors`](../commands/last-errors) command.
+エラーと特にその原因の完全な詳細を取得するには、[4D エラーダイアログボックス](../Debugging/basics.md) あるいは[`Last errors`](../commands/last-errors.md) コマンドを使用することができます。
 
-### Error dialog box
+### エラーダイアログボックス
 
-[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。 Expand the **Details** area and click on the **Save...** or **Copy** button:
+[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。 **詳細** エリアを展開し、**保存...** あるいは **コピー** ボランをクリックします:
 
 ![copy-button](../assets/en/Concepts/error.png)
 
-Detailed information related to the error is then saved to a text file or copied to the pasteboard, including the context and the component:
+するとエラーに関連した詳細な情報は、コンテキストやコンポーネントといった情報も含めて、テキストファイルに保存されるかペーストボードにコピーされます:
 
 ![pasted-error](../assets/en/Concepts/error2.png)
 
-### `Last errors` command
+### `Last errors`コマンド
 
-You can call the [`Last errors`](../commands/last-errors) command in your code to get information about errors. This command must be called from an on error call method installed by the [`ON ERR CALL`](../commands/on-err-call) command or within a [`Try or Try/Catch`](#trycatchend-try) context.
+コード内で[`Last errors`](../commands/last-errors) コマンドを呼び出すことで、エラーに関する情報を取得することができます。 このコマンドは[`ON ERR CALL`](../commands/on-err-call) コマンドで実装されたエラー処理メソッドから、あるいは[`Try` または `Try/Catch`](#trycatchend-try) コンテキスト内から呼び出す必要があります。
 
-When you intercept and handle errors in your final applications, use [`Last errors`](../commands/last-errors) and make sure you log all properties of the *error* object since error codes depend on the components.
+最終アプリケーションにおいてエラーへの割り込みと処理をする場合、[`Last errors`](../commands/last-errors) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。
 
