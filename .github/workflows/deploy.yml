@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches: [main]
-
+    
 jobs:
   workflow-check:
     uses: ./.github/workflows/workflow-syntax-check.yml
@@ -16,15 +16,17 @@ jobs:
     needs: [workflow-build]
     name: 'Deploy website'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v8
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
         pattern: build-locale-*
         merge-multiple: true
         path: ./build
     - name: Publish
-      uses: peaceiris/actions-gh-pages@v4
+      uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
@@ -33,9 +35,11 @@ jobs:
     needs: [workflow-static]
     name: 'Publish Release'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Download artifact
-      uses: actions/download-artifact@v8
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
         pattern: static-doc-*
         path: ./release
@@ -46,7 +50,7 @@ jobs:
           zip -r "$dir.zip" "$dir"
         done
     - name: Upload Release Asset
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
       with:
         tag_name: "latest"
         files: |
