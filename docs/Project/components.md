@@ -614,7 +614,7 @@ The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive li
 
 You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
 
-![4d-corner-access](../assets/en/Project/4d-corner.png)
+![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
 
 To install a component from the 4D Corner platform:
