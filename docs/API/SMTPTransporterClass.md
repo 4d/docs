@@ -159,23 +159,6 @@ The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.cert
 [.certificateName](#certificatename)  
 
 
-<!-- INCLUDE transporter.logFile.Desc -->
-
-<!-- INCLUDE transporter.port.Desc -->
-
-## .send()
-
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17 R5|Support of mime contents|
-|17 R4|Added|
-
-</details>
-
-
-
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
