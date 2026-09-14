@@ -80,7 +80,7 @@ title: コンポーネントの開発
 
 コンポーネントの[公開されたコンポーネントクラス](#クラスの共有) および [共有されたメソッド](#プロジェクトメソッドの共有) はエクスプローラーの**コンポーネントメソッド** タブから編集することができます。
 
-エクスプローラーでは、コンポーネントに共有されたコードが含まれていることを表す特定のアイコンが表示されます:<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 **編集...** を選択するとコードエディターでコンポーネントのコードが開きます。そこで編集し保存することができます。
@@ -236,6 +236,12 @@ $area:=$rect.getArea()
 新しいコンポーネントが[ホストから作成された](#コンポーネントの作成) 場合、そのコンポーネントにはデフォルトの名前空間が自動的に割り当てられます。
 
 デフォルトの名前空間は、コンポーネントの名前から、[プロパティの命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に合致しない文字があればそれらを取り除いたものになります。例えば、"My Component-2" と名前がつけられたコンポーネントは、デフォルトの名前空間は"MyComponent2" となります。
+
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
 
 ### 非表示クラス
 
