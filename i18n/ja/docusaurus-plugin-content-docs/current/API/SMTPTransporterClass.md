@@ -155,21 +155,6 @@ $result:=$transporter.send($email)
 [.certificate](#certificate)  
 [.certificateName](#certificatename)
 
-<!-- INCLUDE transporter.logFile.Desc -->
-
-<!-- INCLUDE transporter.port.Desc -->
-
-## .send()
-
-<details><summary>履歴</summary>
-
-| リリース  | 内容             |
-| ----- | -------------- |
-| 17 R5 | MIMEコンテンツをサポート |
-| 17 R4 | 追加             |
-
-</details>
-
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 SMTPステータスコードについての詳細は [こちらのページ](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml) を参照ください。

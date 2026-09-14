@@ -17,7 +17,7 @@ title: コンポーネントの開発
 
 :::note
 
-個別にマトリックスプロジェクトを作成することなく、[ホストプロジェクトから直接コンポーネントを作成する](#コンポーネントの作成) ことができます。
+You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
 
 :::
 
@@ -33,13 +33,13 @@ title: コンポーネントの開発
 
 :::note
 
-コンテキストがサポートされていれば、インタープリター版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
 
 :::
 
 ## ホストからのコンポーネント作成と編集
 
-インタープリターモードでは、4D IDE を使用することでホストプロジェクトからコンポーネントを直接作成および編集することができます。 これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
+In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
 
 ### コンポーネントの作成
 
@@ -54,9 +54,10 @@ title: コンポーネントの開発
 - コンポーネントを**プロジェクトパッケージの隣** に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加します。
 - コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダー内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
 
-:::note
+:::note 注記
 
-コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダーの外** に保存することはできません。
+- コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダーの外** に保存することはできません。
+- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
 
 :::
 
@@ -79,7 +80,7 @@ title: コンポーネントの開発
 
 コンポーネントの[公開されたコンポーネントクラス](#クラスの共有) および [共有されたメソッド](#プロジェクトメソッドの共有) はエクスプローラーの**コンポーネントメソッド** タブから編集することができます。
 
-エクスプローラーでは、コンポーネントに共有されたコードが含まれていることを表す特定のアイコンが表示されます:<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 **編集...** を選択するとコードエディターでコンポーネントのコードが開きます。 そこで編集し保存することができます。
@@ -113,6 +114,10 @@ title: コンポーネントの開発
 - コードのプレビュー、[ドキュメンテーション](../Project/documentation.md) の表示/編集、[メソッドプロパティ](../Project/project-method-properties.md) の表示/編集
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
+
+### Compiling components
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
 
 ### 検索と置換
 
@@ -195,7 +200,7 @@ EXECUTE METHOD($param)
 
 ### コンポーネント名前空間の宣言
 
-ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 デフォルトでは、このエリアは空です。 つまり、コンポーネントのクラスはコンポーネント外で利用できません。
+ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -225,6 +230,12 @@ $area:=$rect.getArea()
 競合を避けるためには、優れた識別名の使用が推奨されます。 もし、コンポーネントの名前空間と同じ名前のユーザークラスがすでにプロジェクトに存在していた場合、そのユーザークラスが考慮され、コンポーネントクラスは無視されます。
 
 コンポーネントの ORDAクラスは、ホストプロジェクトでは使用できません。 たとえば、コンポーネントに Employees というデータクラスがある場合、ホストプロジェクトで "cs.Mycomponent.Employee" クラスを使用することはできません。
+
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
 
 ### 非表示クラス
 

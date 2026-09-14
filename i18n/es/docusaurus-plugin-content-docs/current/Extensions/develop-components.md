@@ -17,7 +17,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 
 :::note
 
-Puede [crear un componente directamente desde el proyecto local](#creating-components) sin necesidad de pasar por un proyecto matriz independiente
+Puede [crear un componente directamente desde el proyecto local](#creating-components) sin necesidad de pasar por un proyecto matriz independiente.
 
 :::
 
@@ -33,13 +33,13 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 :::note
 
-El código de un componente interpretado puede [editarse directamente desde el proyecto local](#editing-components) si el contexto es compatible.
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
 
 :::
 
 ## Creación y edición de componentes desde el host
 
-En modo interpretado, el IDE 4D le permite crear y editar componentes directamente desde el proyecto local. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
+In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
 
 ### Creación de componentes
 
@@ -54,9 +54,10 @@ Esta acción abre un cuadro de diálogo de selección de carpeta en el que se el
 - Si decide almacenar el componente **junto al paquete del proyecto**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si decide almacenar el componente **en otro lugar**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson) y su ruta se añade al archivo [`environment4d.json`](../Project/components.md#environment4djson), utilizando una [ruta relativa o absoluta](../Project/components.md#relative-paths-vs-absolute-paths). Se utiliza una ruta relativa si el componente se encuentra a no más de dos niveles por encima como el archivo `environment4d.json`, o en sus subcarpetas. En caso contrario, se utiliza una ruta absoluta.
 
-:::note
+:::note Notas
 
-No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
+- No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
+- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
 
 :::
 
@@ -79,7 +80,7 @@ En este contexto, puede abrir, editar y guardar el código de su componente en e
 
 Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
 
-Un icono específico indica que el componente contiene código compartido):<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Seleccione **Editar...** para abrir el código de su componente en el editor de código. Puede editarlo y guardarlo.
@@ -113,6 +114,10 @@ Las funcionalidades estándar del IDE 4D están disponibles para el componente. 
 - previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [Propiedades de método](../Project/project-method-properties.md),
 - ejecutar métodos,
 - restaurar desde la papelera o vaciar la papelera.
+
+### Compilación de componentes
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
 
 ### Buscar y reemplazar
 
@@ -195,7 +200,7 @@ Por defecto, las clases de los componentes no pueden ser llamadas desde el edito
 
 ### Declaración del namespace
 
-Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. Por defecto, el área está vacía: las clases de componentes no están disponibles fuera del contexto de los componentes.
+Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -225,6 +230,12 @@ El namespace de un componente [compilado](#protection-of-components-compilation)
 Por supuesto, se recomienda utilizar un nombre distintivo para evitar cualquier conflicto. Si en el proyecto ya existe una clase usuario con el mismo nombre que un namespace de componente, se tiene en cuenta la clase usuario y se ignoran las clases del componente.
 
 Las clases ORDA de un componente no están disponibles en el proyecto local. Por ejemplo, si hay una dataclass llamada Employees en su componente, no podrá utilizar una clase "cs.Mycomponent.Employee" en el proyecto local.
+
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
 
 ### Clases ocultas
 

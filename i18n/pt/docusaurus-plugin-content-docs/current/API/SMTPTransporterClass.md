@@ -155,21 +155,6 @@ The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.cert
 [.certificate](#certificate)  
 [.certificateName](#certificatename)
 
-<!-- INCLUDE transporter.logFile.Desc -->
-
-<!-- INCLUDE transporter.port.Desc -->
-
-## .send()
-
-<details><summary>História</summary>
-
-| Release | Mudanças                 |
-| ------- | ------------------------ |
-| 17 R5   | Suporte de conteúdo Mime |
-| 17 R4   | Adicionado               |
-
-</details>
-
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 Para obter informações sobre os códigos de estado SMTP, consulte [esta página](https://www.iana.org/assignments/smtp-enhanced-status-codes/smtp-enhanced-status-codes.xhtml).

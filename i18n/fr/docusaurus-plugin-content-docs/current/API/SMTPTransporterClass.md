@@ -68,13 +68,13 @@ La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summar
 
 #### Description
 
-The `.certificate` property contains <!-- REF #SMTPTransporterClass.certificate.Summary -->the certificate used to sign emails using S/MIME (Secure/MIME), provided as a [`4D.File`](./FileClass.md) object or a Blob<!-- END REF -->. This certificate contains the private key.
+La propriété `.certificate` contient <!-- REF #SMTPTransporterClass.certificate.Summary -->le certificat utilisé pour signer les e-mails via S/MIME (Secure/MIME), fourni sous la forme d'un objet [`4D.File`](./FileClass.md) ou d'un Blob<!-- END REF -->. Ce certificat contient la clé privée.
 
-If your certificate is already registered in your Certificate store (*keychain*), you can use [`.certificateName`](#certificatename) instead of this property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+Si votre certificat est déjà enregistré dans votre magasin de certificats (*keychain*), vous pouvez utiliser [`.certificateName`](#certificatename) à la place de cette propriété. Notez que vous ne pouvez pas utiliser les deux propriétés simultanément, sinon une erreur est retournée.
 
 :::tip Article(s) de blog sur le sujet
 
-[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+[Signer des e-mails avec S/MIME et SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
 
 :::
 
@@ -85,17 +85,17 @@ var $transporter : 4D.SMTPTransporter
 var $options ; $result : Object
 
 $options:=New object
-//Enter the information for the SMTP server
+//Saisir les informations pour le serveur SMTP
 
-//Enable S/MIME signing
-//Provide certificate file
+//Activer la signature S/MIME
+//Fournir le fichier de certificat
 $options.certificate:=File("myCertificateFile.p12")
 $options.certificatePassword:="myGreatPW123"
 
 $transporter:=4D.SMTPTransporter.new($options)
 
 $email:=New object
-//Fill the email content
+//Remplir le contenu du mail
 
 $result:=$transporter.send($email)
 ```
@@ -119,13 +119,13 @@ $result:=$transporter.send($email)
 
 #### Description
 
-The `.certificateName` property contains <!-- REF #SMTPTransporterClass.certificateName.Summary -->the name of the certificate used to sign emails using S/MIME (Secure/MIME) as it is registered in the system Certificate store (*keychain*)<!-- END REF -->. This certificate contains the private key.
+La propriété `.certificateName` contient <!-- REF #SMTPTransporterClass.certificateName.Summary -->le nom du certificat utilisé pour signer les e-mails via S/MIME (Secure/MIME), tel qu'il est enregistré dans le magasin de certificats du système (*keychain*)<!-- END REF -->. Ce certificat contient la clé privée.
 
-The certificate can also be provided directly as a file or blob using the [`.certificate`](#certificate) property. Note that you cannot use both properties simultaneously, otherwise an error is returned.
+Le certificat peut également être fourni directement sous forme de fichier ou de blob à l'aide de la propriété [`.certificate`](#certificate). Notez que vous ne pouvez pas utiliser les deux propriétés simultanément, sinon une erreur est retournée.
 
 :::tip Article(s) de blog sur le sujet
 
-[Signing emails with S/MIME and SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
+[Signer des e-mails avec S/MIME et SMTPTransporter](https://blog.4d.com/smtptransporter-signing-emails-with-s-mime)
 
 :::
 
@@ -148,27 +148,12 @@ The certificate can also be provided directly as a file or blob using the [`.cer
 
 #### Description
 
-The `.certificatePassword` property contains <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->the password of the certificate used to sign emails, if required<!-- END REF -->. An empty string is used if no password is required.
+La propriété `.certificatePassword` contient <!-- REF #SMTPTransporterClass.certificatePassword.Summary -->le mot de passe du certificat utilisé pour signer les e-mails, s'il est requis<!-- END REF -->. Une chaîne vide est utilisée si aucun mot de passe n'est requis.
 
 #### Voir également
 
 [.certificate](#certificate)  
 [.certificateName](#certificatename)
-
-<!-- INCLUDE transporter.logFile.Desc -->
-
-<!-- INCLUDE transporter.port.Desc -->
-
-## .send()
-
-<details><summary>Historique</summary>
-
-| Release | Modifications                     |
-| ------- | --------------------------------- |
-| 17 R5   | Prise en charge des contenus Mime |
-| 17 R4   | Ajout                             |
-
-</details>
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 

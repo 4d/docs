@@ -10,6 +10,7 @@ Leia [**O que há de novo no 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-
 #### Destaques
 
 - Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+- You can now [compile a component directly from the host](../Project/compiler.md#compile-components).
 - Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 - Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos os bugs corrigidos em 4D 21 R5.

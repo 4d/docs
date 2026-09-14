@@ -37,7 +37,67 @@ Utilice los comandos **Error anterior** / **Error siguiente** del menú **Métod
 
 El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. El compilador siempre ofrece un [diagnóstico preciso](#error-file) de los errores para ayudarle a corregirlos.
 
-> La compilación requiere una licencia apropiada. Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
+:::note
+
+La compilación requiere una [licencia apropiada](../Admin/licenses.md). Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
+
+:::
+
+### Compilar componentes
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 21 R5       | Añadidos       |
+
+</details>
+
+While developing your application, you can compile the components used by the host project directly from the host project, without having to open them separately. When the host project contains one or more *eligible* components (see [Requirements](#requirements) below), an additional menu is displayed in the Compiler window. Este menú le permite seleccionar el/los proyecto(s) a compilar:
+
+- solo el proyecto anfitrión (por defecto)
+- the host project and all its eligible components
+- un único componente elegible de la lista de todos los componentes elegibles.
+
+![](../assets/en/Project/compile-component.png)
+
+:::note
+
+You can open the Compiler window from the **Methods>Component Methods** section of the Explorer: right-click on an eligible component name and select **Compiler...** from the contextuel menu.
+
+:::
+
+En la ventana del compilador se muestra una lista de componentes que se están compilando. If an error is detected in a component, its compilation is stopped but the process continues for other components.
+
+- Los componentes que contengan al menos un error se pueden desplegar para mostrar la lista de errores y aparecen **en negrita**.
+- Components with at least one warning can be unfolded to display the list of warnings.
+- Components wihout errors cannot be unfolded.
+
+#### Requisitos
+
+To be eligible for compilation from the host project, a component must comply with the following requirements:
+
+- el componente utiliza la [arquitectura del proyecto](../Project/architecture.md),
+- the component's [interpreted code](../Concepts/interpreted.md) is available and the component is not [running in compiled mode](#run-compiled),
+- el componente utiliza declaraciones de [tipado directo](#enabling-direct-typing).
+
+:::note
+
+The additional menu is not displayed if the project does not contain any eligible component.
+
+:::
+
+#### Propiedades y ajustes del compilador
+
+All available features of the Compiler window are applied to the selected component(s): **Compile**, **Check syntax**, **Clear compiled code**.
+
+The [Settings](../settings/) cannot be edited when a component is selected (the button is dimmed).
+
+Each component's [settings](../settings/) are applied for the compilation, except the [error file and symbol file generation options](#compilation-options): settings of the host project override the component's options. When enabled, [error and warning file](#error-file) as well as [symbol file](#symbol-file) of each component are stored in the [**Logs** folder of the host project](../Project/architecture.md#logs), within a dedicated folder (the name of the folder is the component name).
+
+When you start a compilation or a syntax check, every processed project is listed in the compiler window. If errors or warnings are detected, they are displayed in hierarchical lists beneath the corresponding project. Projects that contain errors are displayed in **bold**:
+
+![](../assets/en/Project/compile-components-errors.png)
 
 ## Ejecutar la compilación
 

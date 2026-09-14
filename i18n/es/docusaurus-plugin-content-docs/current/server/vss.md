@@ -9,7 +9,7 @@ VSS is provided by Windows Server to allow backup applications to capture snapsh
 
 ## Requisitos del sistema del host (hipervisor)
 
-On the host side, the following VSS requestors are supported:
+Del lado del equipo anfitrión, se admiten los siguientes solicitantes VSS:
 
 - VMware ESXI en toda plataforma
 - Microsoft Hyper-V Server 2016
@@ -20,9 +20,9 @@ The VSS feature is automatically installed/updated when the 4D Server applicatio
 
 Generalmente, el escenario inicial será:
 
-1. 4D Server or merged Application Server is launched for the first time.
+1. Inicie 4D Server o la aplicación servidor fusionada por primera vez.
 2. If not launched with administration privileges, a warning icon is displayed.
-3. Quit and relaunch 4D Server or merged Application Server as administrator. The 4D VSS service is then automatically executed and registered in VSS.
+3. Salga y reinicie 4D Server o la aplicación servidor fusionada como administrador. El servicio 4D VSS se ejecuta y registra automáticamente en VSS.
 4. (Optional) Restart 4D Server or merged Application Server using standard privileges.
 
 The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
@@ -47,4 +47,4 @@ The 4D VSS management is handled through a separate application since this progr
 
 The 4D VSS writer executable is automatically installed by 4D Server at first launch.
 
-The 4D VSS Writer service handles and transfers VSS messages to 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.
+El servicio 4D VSS Writer gestiona y transmite las solicitudes VSS a 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.
