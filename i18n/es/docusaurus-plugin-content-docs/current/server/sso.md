@@ -11,7 +11,7 @@ Implementing SSO in your 4D solutions will allow users to access the 4D applicat
 
 La funcionalidad SSO está disponible:
 
-- with 4D Server applications on Windows (4D single-user applications do not support SSO),
+- con las aplicaciones 4D Server en Windows (las aplicaciones 4D monousuario no soportan la autenticación única),
 - with the [QUIC or ServerNet network layer](../settings/client-server.md#network-layer) enabled.
 
 ## Activar la funcionalidad SSO
@@ -39,12 +39,12 @@ El identificador SPN debe respetar este formato:
 
 Donde:
 
-- *ServiceName* is the name of the service which the client wants to authenticate.
+- *ServiceName* es el nombre del servicio en el que el cliente desea autenticarse.
 - The *Fully Qualified Domain Name* (FQDN) is a domain name that specifies its exact location in the tree hierarchy of the Active Directory for both computers and users.
 
 En las aplicaciones 4D, se puede configurar el SPN:
 
-- in the [structure settings](../Project/architecture.md#sources), for use with 4D Server.
+- en las [propiedades de estructura](../Project/architecture.md#sources), para su uso con 4D Server.
 - or in the [user settings](../Project/architecture.md#settings-user) for deployment needs.
 
 ## Implementar el SSO
@@ -95,10 +95,10 @@ $login:=Current client authentication($domain;$protocol)
 
 Donde:
 
-- *$login* is the ID used by the client to log into the Active Directory (text value). Debe utilizar este valor para identificar al usuario dentro de su proyecto. If the user is not correcty authenticated, an empty string is returned and no error is returned.
+- *$login* es el identificador que utiliza el cliente para iniciar sesión en Active Directory (valor de tipo texto). Debe utilizar este valor para identificar al usuario dentro de su proyecto. If the user is not correcty authenticated, an empty string is returned and no error is returned.
 - *$domain* y *$protocol* son parámetros texto opcionales. They are filled by the command and allow you to accept or reject connections depending on these values:
   - *$domain* es el nombre de dominio del Active Directory
-  - *$protocol* is the name of the protocol used by Windows to authenticate the user.
+  - *$protocol* es el nombre del protocolo que utiliza Windows para autenticar al usuario.
 
 ### Configuración requerida para el SSO
 
@@ -112,14 +112,14 @@ The following table provides the requirements for using NTLM or Kerberos authent
 | El usuario 4D Server está en el dominio                                             | sí                                                                              | sí                                                                                  |
 | El 4D remoto está en el mismo AD que el usuario de 4D Server                        | yes o no(\*)                                                 | sí                                                                                  |
 | El SPN se indica en 4D Server                                                       | no                                                                              | yes(\*\*)                                                        |
-| Information returned by Current client authentication if requirements are respected | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="NTLM" | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="Kerberos" |
+| Información devuelta por Current client authentication si se cumplen los requisitos | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="NTLM" | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="Kerberos" |
 
-(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. In this case, the domain parameter is filled with the 4D Server machine name. Note that the support depends on actual user settings: if not available, empty strings are returned.
+(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. En este caso, el parámetro dominio contiene el nombre de la máquina de 4D Server. Note that the support depends on actual user settings: if not available, empty strings are returned.
 
 (\*\*) If all Kerberos requirements are respected but the [`Current client authentication`](../commands/current-client-authentication) command returns "NTLM" in protocol, this means that you are facing one of the following situations:
 
 - The SPN syntax is not valid; in other words, it does not respect the [constraints imposed by Microsoft](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
-- O bien, el SPN tiene duplicados en el AD. This issue needs to be fixed by the AD administrator.
+- O bien, el SPN tiene duplicados en el AD. Este problema debe solucionarlo el administrador del AD.
 
 :::note
 

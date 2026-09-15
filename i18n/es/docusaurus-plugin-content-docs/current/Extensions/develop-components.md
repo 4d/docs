@@ -231,7 +231,7 @@ Por supuesto, se recomienda utilizar un nombre distintivo para evitar cualquier 
 
 Las clases ORDA de un componente no están disponibles en el proyecto local. Por ejemplo, si hay una dataclass llamada Employees en su componente, no podrá utilizar una clase "cs.Mycomponent.Employee" en el proyecto local.
 
-#### Default namespace
+#### Espacio de nombres por defecto
 
 When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
 

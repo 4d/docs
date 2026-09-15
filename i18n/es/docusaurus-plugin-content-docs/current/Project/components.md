@@ -564,7 +564,7 @@ Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de
 
 ### Uso de 4D Corner
 
-The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. You can browse or search the list to find any component meeting to your needs.
+The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. Puede navegar o buscar en la lista para encontrar el componente que mejor se ajuste a sus necesidades.
 
 ![4d-corner](../assets/en/Project/4d-corner.png)
 
@@ -572,9 +572,9 @@ You can open the [4D Corner platform](https://corner.4d.com/) from the Dependenc
 
 ![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
-To install a component from the 4D Corner platform:
+Para instalar un componente de la plataforma 4D Corner:
 
-1. Click on the "Copy link" button on the top right corner of the component tile:
+1. Haga clic en el botón "Copiar enlace" en la esquina superior derecha del título del componente:
 
 ![copy button](../assets/en/Project/4d-corner-copy.png)
 

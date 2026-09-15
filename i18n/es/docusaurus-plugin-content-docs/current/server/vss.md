@@ -16,16 +16,16 @@ Del lado del equipo anfitrión, se admiten los siguientes solicitantes VSS:
 
 ## Activación del VSS
 
-The VSS feature is automatically installed/updated when the 4D Server application is launched. The VSS writer application service is started if the session user has admin privileges.
+The VSS feature is automatically installed/updated when the 4D Server application is launched. El servicio de aplicación VSS writer se inicia si el usuario de la sesión tiene privilegios de administrador.
 
 Generalmente, el escenario inicial será:
 
 1. Inicie 4D Server o la aplicación servidor fusionada por primera vez.
-2. If not launched with administration privileges, a warning icon is displayed.
+2. Si no se inicia con privilegios de administrador, se mostrará un icono de advertencia.
 3. Salga y reinicie 4D Server o la aplicación servidor fusionada como administrador. El servicio 4D VSS se ejecuta y registra automáticamente en VSS.
-4. (Optional) Restart 4D Server or merged Application Server using standard privileges.
+4. (Opcional) Reinicie 4D Server o la aplicación servidor fusionada con los privilegios estándar.
 
-The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
+El ejecutable VSS writer se inicia como un servicio con el nombre "VSS \<appName\>". Se ejecutará un único servicio VSS para todas las instancias de 4D Server. One VSS service will run for each different engined application (different name) running on the machine (see below).
 
 The [Monitor Page](../ServerWindow/monitor.md) of the 4D Server Administration window displays the status of VSS writer service, in Application information area:
 
@@ -45,6 +45,6 @@ The 4D VSS management is handled through a separate application since this progr
 
 :::
 
-The 4D VSS writer executable is automatically installed by 4D Server at first launch.
+L'exécutable VSS writer de 4D est automatiquement installé par 4D Server au premier lancement.
 
 El servicio 4D VSS Writer gestiona y transmite las solicitudes VSS a 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.

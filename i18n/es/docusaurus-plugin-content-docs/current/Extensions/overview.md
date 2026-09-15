@@ -16,7 +16,7 @@ La [arquitectura del proyecto] 4D (../Project/architecture.md) es abierta y pued
 
 ## Componentes desarrollados por 4D
 
-4D propone diferentes componentes a la comunidad 4D, cubriendo muchas necesidades de desarrollo. All 4D components can be found on the [**4D Corner platform**](https://corner.4d.com/).
+4D propone diferentes componentes a la comunidad 4D, cubriendo muchas necesidades de desarrollo. Todos los componentes de 4D se pueden encontrar en la [**plataforma 4D Corner**](https://corner.4d.com/).
 
 Un subconjunto de estos componentes se muestra por defecto en el panel de Github del [Administrador de dependencias](../Project/components.md#adding-a-github-or-gitlab-dependency), incluyendo:
 

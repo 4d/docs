@@ -56,7 +56,7 @@ La compilación requiere una [licencia apropiada](../Admin/licenses.md). Sin est
 While developing your application, you can compile the components used by the host project directly from the host project, without having to open them separately. When the host project contains one or more *eligible* components (see [Requirements](#requirements) below), an additional menu is displayed in the Compiler window. Este menú le permite seleccionar el/los proyecto(s) a compilar:
 
 - solo el proyecto anfitrión (por defecto)
-- the host project and all its eligible components
+- el proyecto anfitrión y todos sus componentes elegibles
 - un único componente elegible de la lista de todos los componentes elegibles.
 
 ![](../assets/en/Project/compile-component.png)
@@ -70,8 +70,8 @@ You can open the Compiler window from the **Methods>Component Methods** section 
 En la ventana del compilador se muestra una lista de componentes que se están compilando. If an error is detected in a component, its compilation is stopped but the process continues for other components.
 
 - Los componentes que contengan al menos un error se pueden desplegar para mostrar la lista de errores y aparecen **en negrita**.
-- Components with at least one warning can be unfolded to display the list of warnings.
-- Components wihout errors cannot be unfolded.
+- Los componentes que tengan al menos una advertencia se pueden desplegar para mostrar la lista de advertencias.
+- Los componentes sin errores no se pueden desplegar.
 
 #### Requisitos
 
@@ -95,7 +95,7 @@ The [Settings](../settings/) cannot be edited when a component is selected (the 
 
 Each component's [settings](../settings/) are applied for the compilation, except the [error file and symbol file generation options](#compilation-options): settings of the host project override the component's options. When enabled, [error and warning file](#error-file) as well as [symbol file](#symbol-file) of each component are stored in the [**Logs** folder of the host project](../Project/architecture.md#logs), within a dedicated folder (the name of the folder is the component name).
 
-When you start a compilation or a syntax check, every processed project is listed in the compiler window. If errors or warnings are detected, they are displayed in hierarchical lists beneath the corresponding project. Projects that contain errors are displayed in **bold**:
+When you start a compilation or a syntax check, every processed project is listed in the compiler window. If errors or warnings are detected, they are displayed in hierarchical lists beneath the corresponding project. Los proyectos que contienen errores aparecen en **negrita**:
 
 ![](../assets/en/Project/compile-components-errors.png)
 
