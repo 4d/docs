@@ -39,7 +39,7 @@ Interpreted component code can be [edited](#editing-components) and [compiled](.
 
 ## Creación y edición de componentes desde el host
 
-In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
+En modo interpretado, el IDE 4D le permite crear, editar y compilar componentes directamente desde el proyecto principal. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
 
 ### Creación de componentes
 
@@ -57,7 +57,7 @@ Esta acción abre un cuadro de diálogo de selección de carpeta en el que se el
 :::note Notas
 
 - No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
-- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
+- Cuando se crea un componente desde el host, se le asigna un [espacio de nombres predeterminado](#default-namespace).
 
 :::
 
@@ -80,7 +80,7 @@ En este contexto, puede abrir, editar y guardar el código de su componente en e
 
 Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
 
-A specific icon indicates that the component contains shared code:<br/>
+Un icono específico indica que el componente contiene código compartido:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Seleccione **Editar...** para abrir el código de su componente en el editor de código. Puede editarlo y guardarlo.
@@ -235,7 +235,7 @@ Las clases ORDA de un componente no están disponibles en el proyecto local. Por
 
 When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
 
-The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. Por ejemplo, para un componente llamado "My Component-2", el espacio de nombres por defecto será "MyComponent2".
 
 ### Clases ocultas
 

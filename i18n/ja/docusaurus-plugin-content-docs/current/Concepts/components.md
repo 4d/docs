@@ -9,7 +9,7 @@ title: コンポーネント
 
 4D プロジェクト内へのコンポーネントのインストールとロードは、[4D 依存関係マネージャー](../Project/components.md) を通して管理されます。
 
-いくつかのコンポーネントが[4D によって開発](../Extensions/overview.md#components-developed-by-4d)されていますが、それ以外にも4D コミュニティによるたくさんの4D コンポーネントが提供されています。 Use the [4D Corner platform](https://corner.4d.com/) to get a detailed list of all available 4D components.
+いくつかのコンポーネントが[4D によって開発](../Extensions/overview.md#components-developed-by-4d)されていますが、それ以外にも4D コミュニティによるたくさんの4D コンポーネントが提供されています。 利用可能なすべての4D コンポーネントの詳細なリストを取得するには、[4D Corner platform](https://corner.4d.com/) を使用してください。
 
 また、[独自の 4Dコンポーネントを開発](../Extensions/develop-components.md) することもできます。
 

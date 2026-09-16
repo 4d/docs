@@ -5,7 +5,7 @@ title: Dependencias
 
 [La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](../Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Los componentes están hechos de código 4D, mientras que los plug-ins pueden [construirse utilizando cualquier lenguaje](../Extensions/develop-plug-ins.md).
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos propuestos por 4D o la comunidad 4D en la [**plataforma 4D Corner**](https://corner.4d.com/).
 
 Una vez instalados en su entorno 4D, las extensiones se manejan como **dependencias** con propiedades específicas.
 
@@ -568,7 +568,7 @@ The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive li
 
 ![4d-corner](../assets/en/Project/4d-corner.png)
 
-You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
+Puede abrir la [plataforma 4D Corner](https://corner.4d.com/) desde el administrador de dependencias, ya sea en la parte superior de la [ventana Agregar una dependencia](#adding-a-github-or-gitlab-dependency), o seleccionando **Descubra más componentes en 4D Corner...** en el menú de la parte inferior de la ventana del administrador de dependencias:
 
 ![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
@@ -584,7 +584,7 @@ El enlace de dependencia se añade automáticamente en el área de dirección:
 
 ![añadir dependencia](../assets/en/Project/4d-corner-add.png)
 
-3. [Configure the dependency reference](#adding-a-github-or-gitlab-dependency) and click **Add**.
+3. [Configure la referencia de dependencia](#adding-a-github-or-gitlab-dependency) y haga clic en **Añadir**.
 
 :::tip Entrada de blog relacionada
 

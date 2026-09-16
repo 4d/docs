@@ -43,7 +43,7 @@ Compilation requires an [appropriate license](../Admin/licenses.md). ライセ�
 
 :::
 
-### Compile components
+### コンポーネントのコンパイル
 
 <details><summary>履歴</summary>
 

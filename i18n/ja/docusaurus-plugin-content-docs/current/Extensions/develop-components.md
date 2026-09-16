@@ -7,7 +7,7 @@ title: コンポーネントの開発
 
 4D のコンポーネントとは、[4Dアプリケーションにインストール可能](Concepts/components.md) な、1つ以上の機能を持つ 4D関数やメソッド、フォームの一式です。 たとえば、メールの送受信をおこない、それらを 4D アプリケーションに格納するための機能を持ったコンポーネントを作成できます。
 
-ニーズに合わせて独自の 4Dコンポーネントを開発し、それを非公開とすることができます。 You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
+ニーズに合わせて独自の 4Dコンポーネントを開発し、それを非公開とすることができます。 また、[それらを4D Corner にアップロード](https://corner.4d.com/) して、[4D コミュニティと共有する](https://github.com/topics/4d-component)こともできます。
 
 ## 定義
 
@@ -17,7 +17,7 @@ title: コンポーネントの開発
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
+他の別のマトリックスプロジェクトを開くことなく、[ホストプロジェクトから直接コンポーネントを作成](#コンポーネントの作成) することができます。
 
 :::
 
@@ -33,13 +33,13 @@ You can [create a component directly from the host](#creating-components) projec
 
 :::note
 
-Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
+コンテキストがサポートされていれば、インタープリタコンポーネントのコードをホストプロジェクトから直接[編集](#コンポーネントの編集) し、[コンパイル](../Project/compiler.md#コンポーネントのコンパイル) することもできます。
 
 :::
 
 ## ホストからのコンポーネント作成と編集
 
-In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
+インタープリターモードでは、4D IDE を使用することでホストプロジェクトからコンポーネントを直接作成、編集およびコンパイルすることができます。 これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
 
 ### コンポーネントの作成
 
@@ -57,7 +57,7 @@ In interpreted mode, the 4D IDE allows you to create, edit, and compile componen
 :::note 注記
 
 - コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダーの外** に保存することはできません。
-- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
+- コンポーネントがホストからコンポーネント作成した場合、それらは[デフォルトの名前空間](#デフォルトの名前空間) が割り当てられます。
 
 :::
 
@@ -80,7 +80,7 @@ In interpreted mode, the 4D IDE allows you to create, edit, and compile componen
 
 コンポーネントの[公開されたコンポーネントクラス](#クラスの共有) および [共有されたメソッド](#プロジェクトメソッドの共有) はエクスプローラーの**コンポーネントメソッド** タブから編集することができます。
 
-A specific icon indicates that the component contains shared code:<br/>
+エクスプローラーでは、コンポーネントに共有されたコードが含まれていることを表す特定のアイコンが表示されます:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 **編集...** を選択するとコードエディターでコンポーネントのコードが開きます。 そこで編集し保存することができます。
@@ -115,9 +115,9 @@ A specific icon indicates that the component contains shared code:<br/>
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
-### Compiling components
+### コンポーネントのコンパイル
 
-You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
+状況が[要件](../Project/compiler.md#要件) を満たしている場合、別途開くことなく、コンポーネントを[ホストプロジェクトから直接コンパイルする](../Project/compiler.md#コンポーネントのコンパイル) ことができます。
 
 ### 検索と置換
 
@@ -200,7 +200,7 @@ EXECUTE METHOD($param)
 
 ### コンポーネント名前空間の宣言
 
-ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
+ホストプロジェクトおよび読み込まれているコンポーネントに対してコンポーネントのクラスを公開するには、マトリクスプロジェクトの設定の [一般ページにある **クラスストア内でのコンポーネント名前空間** オプション](../settings/general.md#クラスストア内でのコンポーネント名前空間) に値を入力します。 デフォルトでは、このエリアは空です(ただしコンポーネントが[ホストから作成された](#デフォルトの名前空間) 場合を除く): コンポーネントのクラスは、コンポーネントのコンテキスト外では利用できません。
 
 ![](../assets/en/settings/namespace.png)
 
@@ -231,11 +231,11 @@ $area:=$rect.getArea()
 
 コンポーネントの ORDAクラスは、ホストプロジェクトでは使用できません。 たとえば、コンポーネントに Employees というデータクラスがある場合、ホストプロジェクトで "cs.Mycomponent.Employee" クラスを使用することはできません。
 
-#### Default namespace
+#### デフォルトの名前空間
 
-When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+新しいコンポーネントが[ホストから作成された](#コンポーネントの作成) 場合、そのコンポーネントにはデフォルトの名前空間が自動的に割り当てられます。
 
-The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
+デフォルトの名前空間は、コンポーネントの名前から、[プロパティの命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に合致しない文字があればそれらを取り除いたものになります。 例えば、"My Component-2" と名前がつけられたコンポーネントは、デフォルトの名前空間は"MyComponent2" となります。
 
 ### 非表示クラス
 
@@ -552,5 +552,5 @@ macOS 上では、Finder からこの情報を見ることができます:
 
 開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 正しく参照されるためには、**`4d-component`** トピックをご利用ください。
 
-Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
+既存のコンポーネントを探したいとき、あるいは自分独自の4D コンポーネントを登録したい場合には、[4D Corner プラットフォーム](https://corner.4d.com/) を是非ご使用ください。
 

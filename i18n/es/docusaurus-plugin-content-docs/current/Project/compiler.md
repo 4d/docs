@@ -63,11 +63,11 @@ While developing your application, you can compile the components used by the ho
 
 :::note
 
-You can open the Compiler window from the **Methods>Component Methods** section of the Explorer: right-click on an eligible component name and select **Compiler...** from the contextuel menu.
+Puede abrir la ventana Compilador desde la sección **Métodos>Métodos de componentes** del Explorador: haga clic derecho en el nombre de un componente elegible y seleccione **Compilador...** en el menú contextual.
 
 :::
 
-En la ventana del compilador se muestra una lista de componentes que se están compilando. If an error is detected in a component, its compilation is stopped but the process continues for other components.
+En la ventana del compilador se muestra una lista de componentes que se están compilando. Si se detecta un error en un componente, se detiene su compilación, pero el proceso continúa con los demás componentes.
 
 - Los componentes que contengan al menos un error se pueden desplegar para mostrar la lista de errores y aparecen **en negrita**.
 - Los componentes que tengan al menos una advertencia se pueden desplegar para mostrar la lista de advertencias.
@@ -75,7 +75,7 @@ En la ventana del compilador se muestra una lista de componentes que se están c
 
 #### Requisitos
 
-To be eligible for compilation from the host project, a component must comply with the following requirements:
+Para que un componente pueda ser compilado desde el proyecto principal, debe cumplir los siguientes requisitos:
 
 - el componente utiliza la [arquitectura del proyecto](../Project/architecture.md),
 - the component's [interpreted code](../Concepts/interpreted.md) is available and the component is not [running in compiled mode](#run-compiled),
@@ -83,7 +83,7 @@ To be eligible for compilation from the host project, a component must comply wi
 
 :::note
 
-The additional menu is not displayed if the project does not contain any eligible component.
+El menú adicional no se muestra si el proyecto no contiene ningún componente elegible.
 
 :::
 
@@ -91,11 +91,11 @@ The additional menu is not displayed if the project does not contain any eligibl
 
 All available features of the Compiler window are applied to the selected component(s): **Compile**, **Check syntax**, **Clear compiled code**.
 
-The [Settings](../settings/) cannot be edited when a component is selected (the button is dimmed).
+Los [Parámetros](../settings/) no se pueden editar cuando hay un componente seleccionado (el botón aparece atenuado).
 
-Each component's [settings](../settings/) are applied for the compilation, except the [error file and symbol file generation options](#compilation-options): settings of the host project override the component's options. When enabled, [error and warning file](#error-file) as well as [symbol file](#symbol-file) of each component are stored in the [**Logs** folder of the host project](../Project/architecture.md#logs), within a dedicated folder (the name of the folder is the component name).
+Los [parámetros](../settings/) de cada componente se aplican durante la compilación, salvo las [opciones de generación de archivos de errores y de símbolos](#compilation-options): los ajustes del proyecto principal prevalecen sobre las opciones del componente. Cuando está activa esta opción, el [archivo de errores y advertencias](#error-file) y el [archivo de símbolos](#symbol-file) de cada componente se almacenan en la [carpeta **Logs** del proyecto principal](../Project/architecture.md#logs), en una carpeta específica (el nombre de la carpeta es el nombre del componente).
 
-When you start a compilation or a syntax check, every processed project is listed in the compiler window. If errors or warnings are detected, they are displayed in hierarchical lists beneath the corresponding project. Los proyectos que contienen errores aparecen en **negrita**:
+Cuando inicia una compilación o una verificación de sintaxis, cada proyecto procesado se muestra en la ventana del compilador. Si se detectan errores o advertencias, estos se muestran en listas jerárquicas debajo del proyecto correspondiente. Los proyectos que contienen errores aparecen en **negrita**:
 
 ![](../assets/en/Project/compile-components-errors.png)
 
