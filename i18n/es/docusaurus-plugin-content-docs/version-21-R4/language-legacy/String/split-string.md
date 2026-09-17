@@ -61,8 +61,8 @@ El parámetro *separador* puede ser una cadena de múltiples caracteres:
 ```4d
  var $vt : Text
  var $col : Collection
- $vt:="NameSmithage40"
- $col:=Split string($vt;"")
+ $vt:="Name<tab>Smith<tab>age<tab>40"
+ $col:=Split string($vt;"<tab>")
   //$col=["Name","Smith","age","40"]
 ```
 
