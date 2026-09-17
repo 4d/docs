@@ -7,7 +7,7 @@ title: Componentes de desarrollo
 
 Un componente 4D es un conjunto de funciones, métodos y formularios 4D que representan una o varias funcionalidades que pueden ser [instaladas y utilizadas en aplicaciones 4D](Concepts/components.md). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D.
 
-Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en privado. You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
+Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en privado. También puede [proponerlas a 4D Corner](https://corner.4d.com/) y [compartirlas con la comunidad 4D](https://github.com/topics/4d-component).
 
 ## Definiciones
 
@@ -17,7 +17,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 
 :::note
 
-Puede [crear un componente directamente desde el proyecto local](#creating-components) sin necesidad de pasar por un proyecto matriz independiente
+Puede [crear un componente directamente desde el proyecto local](#creating-components) sin necesidad de pasar por un proyecto matriz independiente.
 
 :::
 
@@ -33,13 +33,13 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 :::note
 
-El código de un componente interpretado puede [editarse directamente desde el proyecto local](#editing-components) si el contexto es compatible.
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
 
 :::
 
 ## Creación y edición de componentes desde el host
 
-En modo interpretado, el IDE 4D le permite crear y editar componentes directamente desde el proyecto local. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
+En modo interpretado, el IDE 4D le permite crear, editar y compilar componentes directamente desde el proyecto principal. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
 
 ### Creación de componentes
 
@@ -54,9 +54,10 @@ Esta acción abre un cuadro de diálogo de selección de carpeta en el que se el
 - Si decide almacenar el componente **junto al paquete del proyecto**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si decide almacenar el componente **en otro lugar**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson) y su ruta se añade al archivo [`environment4d.json`](../Project/components.md#environment4djson), utilizando una [ruta relativa o absoluta](../Project/components.md#relative-paths-vs-absolute-paths). Se utiliza una ruta relativa si el componente se encuentra a no más de dos niveles por encima como el archivo `environment4d.json`, o en sus subcarpetas. En caso contrario, se utiliza una ruta absoluta.
 
-:::note
+:::note Notas
 
-No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
+- No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
+- Cuando se crea un componente desde el host, se le asigna un [espacio de nombres predeterminado](#default-namespace).
 
 :::
 
@@ -79,7 +80,7 @@ En este contexto, puede abrir, editar y guardar el código de su componente en e
 
 Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
 
-Un icono específico indica que el componente contiene código compartido):<br/>
+Un icono específico indica que el componente contiene código compartido:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Seleccione **Editar...** para abrir el código de su componente en el editor de código. Puede editarlo y guardarlo.
@@ -113,6 +114,10 @@ Las funcionalidades estándar del IDE 4D están disponibles para el componente. 
 - previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [Propiedades de método](../Project/project-method-properties.md),
 - ejecutar métodos,
 - restaurar desde la papelera o vaciar la papelera.
+
+### Compilación de componentes
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
 
 ### Buscar y reemplazar
 
@@ -195,7 +200,7 @@ Por defecto, las clases de los componentes no pueden ser llamadas desde el edito
 
 ### Declaración del namespace
 
-Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. Por defecto, el área está vacía: las clases de componentes no están disponibles fuera del contexto de los componentes.
+Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -225,6 +230,12 @@ El namespace de un componente [compilado](#protection-of-components-compilation)
 Por supuesto, se recomienda utilizar un nombre distintivo para evitar cualquier conflicto. Si en el proyecto ya existe una clase usuario con el mismo nombre que un namespace de componente, se tiene en cuenta la clase usuario y se ignoran las clases del componente.
 
 Las clases ORDA de un componente no están disponibles en el proyecto local. Por ejemplo, si hay una dataclass llamada Employees en su componente, no podrá utilizar una clase "cs.Mycomponent.Employee" en el proyecto local.
+
+#### Espacio de nombres por defecto
+
+Cuando se [crea un nuevo componente desde el host](#creating-components), se le asigna automáticamente un espacio de nombres por defecto.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. Por ejemplo, para un componente llamado "My Component-2", el espacio de nombres por defecto será "MyComponent2".
 
 ### Clases ocultas
 
@@ -538,5 +549,5 @@ Para proteger eficazmente el código de un componente, basta con [compilar y gen
 
 Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.
 
-Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
+Utilice la [plataforma 4D Corner](https://corner.4d.com/) para navegar entre los componentes existentes y registrar sus propios componentes 4D.
 

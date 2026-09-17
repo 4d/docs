@@ -17,7 +17,7 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project
+You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
 
 :::
 
@@ -33,13 +33,13 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](#editing-components) if the context is supported.
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
 
 :::
 
 ## Creating and editing components from the host
 
-In interpreted mode, the 4D IDE allows you to create and edit components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
+In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
 
 ### Creating components
 
@@ -54,9 +54,10 @@ This action opens a folder selection dialog where you choose where [the componen
 - If you decide to store the component **next to the project package**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file.
 - If you decide to store the component **elsewhere**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file and its path is added to the [`environment4d.json`](../Project/components.md#environment4djson) file, using either a [relative or an absolute path](../Project/components.md#relative-paths-vs-absolute-paths). A relative path is used if the component is located within no more than two levels above as the `environment4d.json` file, or in its subfolders. Otherwise, an absolute path is used.
 
-:::note
+:::note Notas
 
-You cannot store a component **in the project package** but **outside the Components folder**.
+- You cannot store a component **in the project package** but **outside the Components folder**.
+- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
 
 :::
 
@@ -79,7 +80,7 @@ In this context, you can open, edit, and save your component code in the Code ed
 
 [Exposed component classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited from the **Component Methods** tab of the Explorer.
 
-A specific icon indicates that the component contains shared code):<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Select **Edit...** to open your component code in the Code editor. You can edit and save it.
@@ -113,6 +114,10 @@ Standard 4D IDE features are available for the component. You can execute the fo
 - preview code, show/edit [documentation](../Project/documentation.md), display/edit [Method Properties](../Project/project-method-properties.md),
 - run methods,
 - restore from trash or empty trash.
+
+### Compiling components
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
 
 ### Search and replace
 
@@ -196,7 +201,7 @@ By default, component classes cannot be called from the 4D Code Editor of the ho
 
 ### Declaração do namespace
 
-Para permitir que as classes de seu componente sejam expostas nos projetos host e em seus componentes carregados, insira um valor na opção [**Namespace do componente na class store** na página General](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz. Por padrão, a área está vazia: as classes de componentes não estão disponíveis fora do contexto do componente.
+Para permitir que as classes de seu componente sejam expostas nos projetos host e em seus componentes carregados, insira um valor na opção [**Namespace do componente na class store** na página General](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -226,6 +231,12 @@ The namespace of a [compiled](#protection-of-components-compilation) component i
 Obviamente, é recomendável usar um nome distinto para evitar qualquer conflito. If a user class with the same name as a component namespace already exists in the project, the user class is taken into account and the component classes are ignored.
 
 As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs. Mycomponent. Employee" no projeto host.
+
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
 
 ### Classes ocultas
 

@@ -1636,15 +1636,15 @@
     "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
   },
   "sidebar.docs.category.Records & Selections (legacy data access)": {
-    "message": "Records & Selections (legacy data access)",
+    "message": "Enregistrements et sélections (accès classique aux données)",
     "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
   },
   "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
-    "message": "Records & Selections (legacy data access)",
+    "message": "Enregistrements et sélections (accès classique aux données)",
     "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
   },
   "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
-    "message": "Legacy data access based upon records, selections, and sets.",
+    "message": "Accès historique aux données basé sur les enregistrements, les sélections et les ensembles.",
     "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
   },
   "sidebar.docs.category.Server & Admin": {
@@ -1664,11 +1664,11 @@
     "description": "The label for category '4D Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.Administration Window": {
-    "message": "Administration Window",
+    "message": "Fenêtre d'administration",
     "description": "The label for category 'Administration Window' in sidebar 'docs'"
   },
   "sidebar.docs.category.Windows Features": {
-    "message": "Windows Features",
+    "message": "Fonctionnalités Windows",
     "description": "The label for category 'Windows Features' in sidebar 'docs'"
   }
 }

@@ -17,7 +17,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 :::note
 
-Vous pouvez [créer un composant directement à partir du projet hôte](#creating-components) sans devoir passer par un projet matrice distinct.
+You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
 
 :::
 
@@ -33,13 +33,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 :::note
 
-Le code d'un composant interprété peut être [modifié directement à partir du projet hôte](#editing-components) si le contexte est pris en charge.
+Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
 
 :::
 
 ## Création et modification de composants à partir de l'hôte
 
-En mode interprété, l'IDE 4D vous permet de créer et de modifier des composants directement à partir du projet hôte. Cela facilite le développement et la mise au point des composants dans le contexte réel d'un projet hôte, sans avoir à quitter ou à redémarrer.
+In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. Cela facilite le développement et la mise au point des composants dans le contexte réel d'un projet hôte, sans avoir à quitter ou à redémarrer.
 
 ### Création de composants
 
@@ -54,9 +54,10 @@ Cette action ouvre une boîte de dialogue de sélection de dossier dans laquelle
 - Si vous décidez de stocker le composant **à côté du dossier racine du projet**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si vous décidez de stocker le composant **ailleurs**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson) et son chemin est ajouté au fichier [`environment4d.json`](../Project/components.md#environment4djson), en utilisant un [chemin relatif ou absolu](../Project/components.md#relative-paths-vs-absolute-paths). Un chemin relatif est utilisé si le composant est situé au maximum deux niveaux au-dessus du fichier `environment4d.json`, ou dans ses sous-dossiers. Sinon, un chemin absolu est utilisé.
 
-:::note
+:::note Notes
 
-Vous ne pouvez pas stocker un composant **dans le dossier racine du projet**, **en-dehors du dossier Components**.
+- Vous ne pouvez pas stocker un composant **dans le dossier racine du projet**, **en-dehors du dossier Components**.
+- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
 
 :::
 
@@ -79,7 +80,7 @@ Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos com
 
 Les [classes exposées](#sharing-of-classes) et les [méthodes partagées](#sharing-of-project-methods) de vos composants peuvent être modifiées à partir de l'onglet **Méthodes composant** de l'Explorateur.
 
-Une icône spécifique indique que le composant contient du code partagé) :<br/>
+A specific icon indicates that the component contains shared code:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Sélectionnez **Modifier...** pour ouvrir le code de votre composant dans l'éditeur de code. Vous pouvez le modifier et le sauvegarder.
@@ -113,6 +114,10 @@ Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vo
 - prévisualiser le code, afficher/modifier la [documentation](../Project/documentation.md), afficher/modifier les [propriétés des méthodes](../Project/project-method-properties.md),
 - exécuter des méthodes,
 - restaurer à partir de la corbeille ou vider la corbeille.
+
+### Compiling components
+
+You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
 
 ### Rechercher et Remplacer
 
@@ -195,7 +200,7 @@ Par défaut, les classes de composants ne peuvent pas être appelées à partir 
 
 ### Déclaration du namespace
 
-Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
+Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -225,6 +230,12 @@ Le namespace d'un composant [compilé](#protection-of-components-compilation) es
 Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. Si une classe utilisateur portant le même nom que le namespace d'un composant qui existe déjà dans le projet, la classe utilisateur est prise en compte et les classes de composants sont ignorées.
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
+
+#### Default namespace
+
+When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+
+The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
 
 ### Classes cachées
 

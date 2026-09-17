@@ -3,7 +3,7 @@ id: components
 title: Dépendances
 ---
 
-[L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être [construits à l'aide de n'importe quel langage](../Extensions/develop-plug-ins.md).
+[L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](../Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être [construits à l'aide de n'importe quel langage](../Extensions/develop-plug-ins.md).
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
 
@@ -11,7 +11,7 @@ Une fois installées dans votre environnement 4D, les extensions sont traitées 
 
 ## Composants interprétés et compilés
 
-Les composants peuvent être interprétés ou [compilés](../Desktop/building.md).
+Les composants peuvent être interprétés ou [compilés](./compiler.md#compile-components).
 
 - Un projet 4D fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés.
 - Un projet 4D exécuté en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
@@ -570,7 +570,7 @@ The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive li
 
 You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
 
-![4d-corner-access](../assets/en/Project/4d-corner.png)
+![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
 To install a component from the 4D Corner platform:
 

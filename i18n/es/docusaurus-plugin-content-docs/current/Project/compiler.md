@@ -37,7 +37,67 @@ Utilice los comandos **Error anterior** / **Error siguiente** del menú **Métod
 
 El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. El compilador siempre ofrece un [diagnóstico preciso](#error-file) de los errores para ayudarle a corregirlos.
 
-> La compilación requiere una licencia apropiada. Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
+:::note
+
+La compilación requiere una [licencia apropiada](../Admin/licenses.md). Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
+
+:::
+
+### Compilar componentes
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 21 R5       | Añadidos       |
+
+</details>
+
+While developing your application, you can compile the components used by the host project directly from the host project, without having to open them separately. When the host project contains one or more *eligible* components (see [Requirements](#requirements) below), an additional menu is displayed in the Compiler window. Este menú le permite seleccionar el/los proyecto(s) a compilar:
+
+- solo el proyecto anfitrión (por defecto)
+- el proyecto anfitrión y todos sus componentes elegibles
+- un único componente elegible de la lista de todos los componentes elegibles.
+
+![](../assets/en/Project/compile-component.png)
+
+:::note
+
+Puede abrir la ventana Compilador desde la sección **Métodos>Métodos de componentes** del Explorador: haga clic derecho en el nombre de un componente elegible y seleccione **Compilador...** en el menú contextual.
+
+:::
+
+En la ventana del compilador se muestra una lista de componentes que se están compilando. Si se detecta un error en un componente, se detiene su compilación, pero el proceso continúa con los demás componentes.
+
+- Los componentes que contengan al menos un error se pueden desplegar para mostrar la lista de errores y aparecen **en negrita**.
+- Los componentes que tengan al menos una advertencia se pueden desplegar para mostrar la lista de advertencias.
+- Los componentes sin errores no se pueden desplegar.
+
+#### Requisitos
+
+Para que un componente pueda ser compilado desde el proyecto principal, debe cumplir los siguientes requisitos:
+
+- el componente utiliza la [arquitectura del proyecto](../Project/architecture.md),
+- el [código interpretado](../Concepts/interpreted.md) del componente está disponible y el componente no se está [ejecutando en modo compilado](#run-compiled),
+- el componente utiliza declaraciones de [tipado directo](#enabling-direct-typing).
+
+:::note
+
+El menú adicional no se muestra si el proyecto no contiene ningún componente elegible.
+
+:::
+
+#### Propiedades y ajustes del compilador
+
+Todas las funcionalidades disponibles de la ventana del compilador se aplican a los componentes seleccionados: **Compilar**, **Verificar sintaxis**, **Borrar código compilado**.
+
+Los [Parámetros](../settings/) no se pueden editar cuando hay un componente seleccionado (el botón aparece atenuado).
+
+Los [parámetros](../settings/) de cada componente se aplican durante la compilación, salvo las [opciones de generación de archivos de errores y de símbolos](#compilation-options): los ajustes del proyecto principal prevalecen sobre las opciones del componente. Cuando está activa esta opción, el [archivo de errores y advertencias](#error-file) y el [archivo de símbolos](#symbol-file) de cada componente se almacenan en la [carpeta **Logs** del proyecto principal](../Project/architecture.md#logs), en una carpeta específica (el nombre de la carpeta es el nombre del componente).
+
+Cuando inicia una compilación o una verificación de sintaxis, cada proyecto procesado se muestra en la ventana del compilador. Si se detectan errores o advertencias, estos se muestran en listas jerárquicas debajo del proyecto correspondiente. Los proyectos que contienen errores aparecen en **negrita**:
+
+![](../assets/en/Project/compile-components-errors.png)
 
 ## Ejecutar la compilación
 

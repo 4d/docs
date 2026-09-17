@@ -5,46 +5,46 @@ title: Volume Shadow Copy Service (VSS)
 
 4D Server Windows comes with a dedicated **VSS writer** application that will automatically manage snapshot requests sent through Windows Volume Shadows Copy Service (VSS).
 
-VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Thanks to this technology, you can recover, for example, a 4D Server database at the exact state it was at the moment of the snapshot. This mechanism requires that running application files are in a consistent state when the snapshot is performed. For this reason, a VSS-aware application must install a VSS writer application or service. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
+VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Gracias a esta tecnología, puede recuperar, por ejemplo, una base 4D Server tal y como estaba en el momento de tomar la instantánea. Este mecanismo requiere que los archivos de la aplicación en ejecución estén en un estado consistente cuando se realiza la copia. Por esta razón, una aplicación compatible con VSS debe instalar una aplicación o un servicio VSS writer. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
 
 ## Requisitos del sistema del host (hipervisor)
 
-On the host side, the following VSS requestors are supported:
+Del lado del equipo anfitrión, se admiten los siguientes solicitantes VSS:
 
 - VMware ESXI en toda plataforma
 - Microsoft Hyper-V Server 2016
 
 ## Activación del VSS
 
-The VSS feature is automatically installed/updated when the 4D Server application is launched. The VSS writer application service is started if the session user has admin privileges.
+La funcionalidad VSS se instala o actualiza automáticamente al iniciar la aplicación 4D Server. El servicio de aplicación VSS writer se inicia si el usuario de la sesión tiene privilegios de administrador.
 
 Generalmente, el escenario inicial será:
 
-1. 4D Server or merged Application Server is launched for the first time.
-2. If not launched with administration privileges, a warning icon is displayed.
-3. Quit and relaunch 4D Server or merged Application Server as administrator. The 4D VSS service is then automatically executed and registered in VSS.
-4. (Optional) Restart 4D Server or merged Application Server using standard privileges.
+1. Inicie 4D Server o la aplicación servidor fusionada por primera vez.
+2. Si no se inicia con privilegios de administrador, se mostrará un icono de advertencia.
+3. Salga y reinicie 4D Server o la aplicación servidor fusionada como administrador. El servicio 4D VSS se ejecuta y registra automáticamente en VSS.
+4. (Opcional) Reinicie 4D Server o la aplicación servidor fusionada con los privilegios estándar.
 
-The VSS writer executable is started as a service with the name "VSS \<appName\>". One VSS service will run for all 4D Server instances. One VSS service will run for each different engined application (different name) running on the machine (see below).
+El ejecutable VSS writer se inicia como un servicio con el nombre "VSS \<appName\>". Se ejecutará un único servicio VSS para todas las instancias de 4D Server. Se ejecutará un servicio VSS por cada aplicación con motor integrado (con un nombre distinto) que se ejecute en el equipo (ver más abajo).
 
 The [Monitor Page](../ServerWindow/monitor.md) of the 4D Server Administration window displays the status of VSS writer service, in Application information area:
 
 ![](../assets/en/server/vss.png)
 
-Additional information about the Volume Shadow Copy status can be displayed in a tips when you hover the mouse over the area:
+Se puede mostrar información adicional sobre el estado Volume Shadow Copy en un globo de ayuda al pasar el ratón sobre el área:
 
 ![](../assets/en/server/vss-2.png)
 
 ## Acerca de VSS Writer
 
-The **vss_writer.exe** application is provided to handle Volume Shadow Copy Service (VSS) management for 4D applications.
+La aplicación **vss_writer.exe** se proporciona para gestionar el servicio Volume Shadow Copy Service (VSS) en las aplicaciones 4D.
 
 :::note
 
-The 4D VSS management is handled through a separate application since this program must run using administration privileges.
+La gestión del VSS de 4D se realiza a través de una aplicación independiente, ya que este programa debe ejecutarse con privilegios de administrador.
 
 :::
 
-The 4D VSS writer executable is automatically installed by 4D Server at first launch.
+L'exécutable VSS writer de 4D est automatiquement installé par 4D Server au premier lancement.
 
-The 4D VSS Writer service handles and transfers VSS messages to 4D Server. These messages are logged in the 4D Server diagnostic log, and in the Windows event viewer.
+El servicio 4D VSS Writer gestiona y transmite las solicitudes VSS a 4D Server. Estos mensajes se guardan en el registro de diagnóstico de 4D Server y en el Visor de eventos de Windows.

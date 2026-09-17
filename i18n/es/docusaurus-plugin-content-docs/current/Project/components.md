@@ -3,15 +3,15 @@ id: components
 title: Dependencias
 ---
 
-[La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Los componentes están hechos de código 4D, mientras que los plug-ins pueden [construirse utilizando cualquier lenguaje](../Extensions/develop-plug-ins.md).
+[La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](../Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Los componentes están hechos de código 4D, mientras que los plug-ins pueden [construirse utilizando cualquier lenguaje](../Extensions/develop-plug-ins.md).
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos propuestos por 4D o la comunidad 4D en la [**plataforma 4D Corner**](https://corner.4d.com/).
 
 Una vez instalados en su entorno 4D, las extensiones se manejan como **dependencias** con propiedades específicas.
 
 ## Componentes interpretados y compilados
 
-Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
+Los componentes pueden ser interpretados o [compilados](./compiler.md#compile-components).
 
 - Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados.
 - Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
@@ -562,29 +562,29 @@ En el cuadro de diálogo "Editar la dependencia", edite el menú Regla de depend
 
 Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de actualización automática y desea bloquear una dependencia a un número de versión específico.
 
-### Using 4D Corner
+### Uso de 4D Corner
 
-The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. You can browse or search the list to find any component meeting to your needs.
+The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. Puede navegar o buscar en la lista para encontrar el componente que mejor se ajuste a sus necesidades.
 
 ![4d-corner](../assets/en/Project/4d-corner.png)
 
-You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
+Puede abrir la [plataforma 4D Corner](https://corner.4d.com/) desde el administrador de dependencias, ya sea en la parte superior de la [ventana Agregar una dependencia](#adding-a-github-or-gitlab-dependency), o seleccionando **Descubra más componentes en 4D Corner...** en el menú de la parte inferior de la ventana del administrador de dependencias:
 
-![4d-corner-access](../assets/en/Project/4d-corner.png)
+![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
-To install a component from the 4D Corner platform:
+Para instalar un componente de la plataforma 4D Corner:
 
-1. Click on the "Copy link" button on the top right corner of the component tile:
+1. Haga clic en el botón "Copiar enlace" en la esquina superior derecha del título del componente:
 
 ![copy button](../assets/en/Project/4d-corner-copy.png)
 
-2. Open the Dependency manager and click on the **[+]** button.
+2. Abra el Gestor de dependencias y haga clic en el botón **[+]**.
 
-The dependency link is automatically added in the address area:
+El enlace de dependencia se añade automáticamente en el área de dirección:
 
-![add dependency](../assets/en/Project/4d-corner-add.png)
+![añadir dependencia](../assets/en/Project/4d-corner-add.png)
 
-3. [Configure the dependency reference](#adding-a-github-or-gitlab-dependency) and click **Add**.
+3. [Configure la referencia de dependencia](#adding-a-github-or-gitlab-dependency) y haga clic en **Añadir**.
 
 :::tip Entrada de blog relacionada
 

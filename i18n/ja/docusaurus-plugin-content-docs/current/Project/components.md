@@ -3,7 +3,7 @@ id: components
 title: 依存関係
 ---
 
-4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは4D コードで書かれていますが、プラグインは[あらゆる言語を使用してビルドすることができます](../Extensions/develop-plug-ins.md)。
+4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは4D コードで書かれていますが、プラグインは[あらゆる言語を使用してビルドすることができます](../Extensions/develop-plug-ins.md)。
 
 You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components proposed by 4D or the 4D community on the [**4D Corner platform**](https://corner.4d.com/).
 
@@ -11,7 +11,7 @@ You can [develop](../Extensions/develop-components.md) and [build](../Desktop/bu
 
 ## インタープリターとコンパイル済みコンポーネント
 
-コンポーネントは、インタープリターまたは [コンパイル済み](../Desktop/building.md) のものが使えます。
+コンポーネントは、インタープリターまたは [コンパイル済み](./compiler.md#compile-components) のものが使えます。
 
 - インタープリターモードで動作する 4Dプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。
 - コンパイルモードで実行される 4Dプロジェクトでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
@@ -570,7 +570,7 @@ The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive li
 
 You can open the [4D Corner platform](https://corner.4d.com/) from the Dependency manager, either in the top of the [Add a dependency window](#adding-a-github-or-gitlab-dependency), or by selecting **Discover more components on 4D Corner...** from the menu at the bottom of the Dependency manager window:
 
-![4d-corner-access](../assets/en/Project/4d-corner.png)
+![4d-corner-access](../assets/en/Project/4d-corner-access.png)
 
 To install a component from the 4D Corner platform:
 
