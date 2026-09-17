@@ -30,7 +30,7 @@ Si desea utilizar Kerberos como protocolo de autenticación, también debe compl
 
 ![](../assets/en/server/sso-2.png)
 
-Esta opción declara el SPN tal y como se configuró en Active Directory. Un nombre principal de servicio es un identificador único de una instancia de servicio. Los SPNs son utilizados por la autenticación Kerberos para asociar una instancia de servicio con una cuenta de inicio de sesión de servicio. This allows a client application to request that the service authenticates an account even if the client does not have the account name. For more information, please refer to the [SPN page on the MSDN web site](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
+Esta opción declara el SPN tal y como se configuró en Active Directory. Un nombre principal de servicio es un identificador único de una instancia de servicio. Los SPNs son utilizados por la autenticación Kerberos para asociar una instancia de servicio con una cuenta de inicio de sesión de servicio. Esto permite que una aplicación cliente solicite al servicio que autentifique una cuenta, incluso si el cliente no dispone del nombre de la cuenta. For more information, please refer to the [SPN page on the MSDN web site](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
 
 El identificador SPN debe respetar este formato:
 
@@ -49,7 +49,7 @@ En las aplicaciones 4D, se puede configurar el SPN:
 
 ## Implementar el SSO
 
-When SSO features are enabled, you can rely on user authentication based on Windows session credentials to open a user session on 4D Server.
+Cuando la funcionalidad SSO está activa, puede confiar en la autenticación basada en las credenciales de la sesión de Windows para abrir una sesión de usuario en 4D Server.
 
 Keep in mind that the SSO feature only provides you with an authenticated login; it is up to you to pass this login to your standard 4D login method. Cuando una aplicación remota 4D intenta conectarse al servidor, hay que ejecutar el comando [`Current client authentication`](../commands/current-client-authentication), que devolverá el nombre de usuario, tal y como está definido en Active Directory. You can then pass this login to your own identification system (using the built-in user and groups, the LDAP commands, or any custom mechanism) to open the appropriate session for the remote user in your 4D application.
 

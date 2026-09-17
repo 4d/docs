@@ -78,7 +78,7 @@ En la ventana del compilador se muestra una lista de componentes que se están c
 Para que un componente pueda ser compilado desde el proyecto principal, debe cumplir los siguientes requisitos:
 
 - el componente utiliza la [arquitectura del proyecto](../Project/architecture.md),
-- the component's [interpreted code](../Concepts/interpreted.md) is available and the component is not [running in compiled mode](#run-compiled),
+- el [código interpretado](../Concepts/interpreted.md) del componente está disponible y el componente no se está [ejecutando en modo compilado](#run-compiled),
 - el componente utiliza declaraciones de [tipado directo](#enabling-direct-typing).
 
 :::note
@@ -89,7 +89,7 @@ El menú adicional no se muestra si el proyecto no contiene ningún componente e
 
 #### Propiedades y ajustes del compilador
 
-All available features of the Compiler window are applied to the selected component(s): **Compile**, **Check syntax**, **Clear compiled code**.
+Todas las funcionalidades disponibles de la ventana del compilador se aplican a los componentes seleccionados: **Compilar**, **Verificar sintaxis**, **Borrar código compilado**.
 
 Los [Parámetros](../settings/) no se pueden editar cuando hay un componente seleccionado (el botón aparece atenuado).
 

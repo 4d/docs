@@ -5,7 +5,7 @@ title: Volume Shadow Copy Service (VSS)
 
 4D Server Windows comes with a dedicated **VSS writer** application that will automatically manage snapshot requests sent through Windows Volume Shadows Copy Service (VSS).
 
-VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Thanks to this technology, you can recover, for example, a 4D Server database at the exact state it was at the moment of the snapshot. Este mecanismo requiere que los archivos de la aplicación en ejecución estén en un estado consistente cuando se realiza la copia. Por esta razón, una aplicación compatible con VSS debe instalar una aplicación o un servicio VSS writer. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
+VSS is provided by Windows Server to allow backup applications to capture snapshots (shadow copies) of any files or entire hard disks at a given moment, while applications are running. Gracias a esta tecnología, puede recuperar, por ejemplo, una base 4D Server tal y como estaba en el momento de tomar la instantánea. Este mecanismo requiere que los archivos de la aplicación en ejecución estén en un estado consistente cuando se realiza la copia. Por esta razón, una aplicación compatible con VSS debe instalar una aplicación o un servicio VSS writer. This component is then "warned" by the service when a shadow copy is about to be done and tells the **VSS requestor** (basically the backup application) how to back up its file and data.
 
 ## Requisitos del sistema del host (hipervisor)
 
@@ -31,7 +31,7 @@ The [Monitor Page](../ServerWindow/monitor.md) of the 4D Server Administration w
 
 ![](../assets/en/server/vss.png)
 
-Additional information about the Volume Shadow Copy status can be displayed in a tips when you hover the mouse over the area:
+Se puede mostrar información adicional sobre el estado Volume Shadow Copy en un globo de ayuda al pasar el ratón sobre el área:
 
 ![](../assets/en/server/vss-2.png)
 

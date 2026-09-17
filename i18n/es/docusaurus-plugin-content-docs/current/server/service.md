@@ -26,7 +26,7 @@ Sous Windows, cette commande peut apparaître grisée lorsque l'accès aux fonct
 
 :::warning
 
-Por defecto, cuando se registra como servicio, 4D Server está configurado para usar la "Cuenta de sistema local". You must change this account and select a valid user account having the access rights and settings required to use your application. In particular, if you want to be able to print, you must open the session with a user account which has default print settings. El problema es similar si desea acceder a los volúmenes red. Para cambiar la cuenta, vaya a **Panel de control > Sistema y seguridad > Herramientas administrativas > Servicios**. En la lista **Servicios**, haga clic derecho en **4D Server**, seleccione la opción **Propiedades**, vaya a la pestaña **Iniciar sesión** y especifique la cuenta bajo la cual debe ejecutarse el servidor (ajuste que se aplicará en el próximo inicio).
+Por defecto, cuando se registra como servicio, 4D Server está configurado para usar la "Cuenta de sistema local". Debes cambiar esta cuenta y seleccionar una cuenta de usuario válida que cuente con los derechos de acceso y la configuración necesarios para utilizar su aplicación. En particular, si desea efectuar impresiones, debe abrir la sesión con una cuenta de usuario que tenga la configuración de impresión predeterminada. El problema es similar si desea acceder a los volúmenes red. Para cambiar la cuenta, vaya a **Panel de control > Sistema y seguridad > Herramientas administrativas > Servicios**. En la lista **Servicios**, haga clic derecho en **4D Server**, seleccione la opción **Propiedades**, vaya a la pestaña **Iniciar sesión** y especifique la cuenta bajo la cual debe ejecutarse el servidor (ajuste que se aplicará en el próximo inicio).
 
 :::
 

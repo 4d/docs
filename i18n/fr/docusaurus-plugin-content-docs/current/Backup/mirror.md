@@ -27,7 +27,7 @@ La base miroir ne reflète que les modifications apportées aux **données**. Ce
 
 ## Principes de fonctionnement
 
-Setting up a backup system using a logical mirror is based on two commands: [`New log file`](../commands/new-log-file) and [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
+La mise en place d'un système de sauvegarde à l'aide d'un miroir logique repose sur deux commandes : [`New log file`](../commands/new-log-file) et [`INTEGRATE MIRROR LOG FILE`](../commands/integrate-mirror-log-file).
 
 Les principes suivants sont mis en œuvre :
 
