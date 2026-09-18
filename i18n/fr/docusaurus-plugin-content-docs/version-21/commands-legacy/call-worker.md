@@ -65,23 +65,23 @@ Dans un formulaire, un bouton démarre un calcul, par exemple des statistiques p
 Voici la méthode du bouton :
 
 ```4d
-  //appelle le process worker vNomWorker avec le paramètre
- var $vAnn: éeInteger
- $vAnnée:=2015 //peut être sélectionné par l’utilisateur dans le formulaire
- CALL WORKER("monWorker";Formula(workerMethod);vAnnée;Current form window)
+  //appelle le worker monWorker avec le paramètre
+ var $vAnnée : Integer
+ $vAnnée:=2015 //peut avoir été sélectionné par l’utilisateur dans le formulaire
+ CALL WORKER("monWorker";Formula(workerMethod);$vAnnée;Current form window)
 ```
 
-Voici le code de *méthodeWorker* :
+Voici le code de *workerMethod* :
 
 ```4d
   //voici la méthode du worker
   //peut être préemptif ou coopératif
  #DECLARE($vAnnéeInteger;$fenetreInteger) //référence de l'année et de la fenêtre
- var $vR: ésultatStatistiquesObject //stockage de résultats statistiques
+ var $vRésultatStatistiques : Object //stockage de résultats statistiques
  ... //calcul des statistiques
   //une fois le calcul terminé, rappel du formulaire avec les valeurs calculées
   //$vRésultatStatistiques peut afficher les résultats dans le formulaire
- CALL FORM($fenetre;Formula(affichageStats);vRésultatStatistiques)
+ CALL FORM($fenetre;Formula(affichageStats);$vRésultatStatistiques)
 ```
 
 ## Voir aussi 
