@@ -49,7 +49,7 @@ displayed_sidebar: docs
 | プロパティ       | 型                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | compression | Integer                     | <li>`ZIP Compression standard`: Deflate圧縮 (デフォルト)</li><li>`ZIP Compression LZMA`: LZMA圧縮</li><li>`ZIP Compression XZ`: XZ圧縮</li><li>`ZIP Compression none`: 圧縮なし</li>                                                                                                                                                                                                                                                               |
-| level       | Integer                     | 圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li>                                                                                                                         |
+| level       | Integer                     | 圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <ul><li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li></ul>                                                                                                                         |
 | encryption  | Integer                     | パスワードが設定されていた場合に使用する暗号化方法:<li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li>              |
 | password    | Text                        | 暗号化が必要な場合に使用するパスワード                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | files       | Collection                  | <li>`4D.File` または` 4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>タイプ</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table> |
@@ -165,10 +165,10 @@ $err:=ZIP Create archive($zip; $destination)
 
 ## 参照
 
-[ZipArchive Class](../../API/ZipArchiveClass.md)
-[ZipFile Class](../../API/ZipFileClass.md)
-[ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Read archive`](../commands/zip-read-archive)
+[ZipArchive Class](../../API/ZipArchiveClass.md)   
+[ZipFile Class](../../API/ZipFileClass.md)   
+[ZipFolder Class](../../API/ZipFolderClass.md)   
+[`ZIP Read archive`](../commands/zip-read-archive)   
 
 ## プロパティ
 

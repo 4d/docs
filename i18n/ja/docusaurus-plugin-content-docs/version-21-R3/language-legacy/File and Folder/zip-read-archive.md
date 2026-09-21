@@ -86,10 +86,10 @@ root フォルダーから取り出します:
 
 ## 参照
 
-[ZipArchive Class](../../API/ZipArchiveClass.md)
-[ZipFile Class](../../API/ZipFileClass.md)
-[ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Create archive`](../commands/zip-create-archive)
+[ZipArchive Class](../../API/ZipArchiveClass.md)   
+[ZipFile Class](../../API/ZipFileClass.md)   
+[ZipFolder Class](../../API/ZipFolderClass.md)   
+[`ZIP Create archive`](../commands/zip-create-archive)   
 
 ## プロパティ
 

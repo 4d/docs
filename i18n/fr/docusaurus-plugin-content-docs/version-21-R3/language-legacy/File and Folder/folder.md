@@ -77,10 +77,10 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Voir également
 
-[classe `4D.Folder`](../../API/FolderClass.md)
-[File](../commands/file)\
-[Object to path](../../commands-legacy/object-to-path)\
-[Path to object](../../commands-legacy/path-to-object)
+[classe `4D.Folder`](../../API/FolderClass.md)  
+[File](../commands/file)   
+[Object to path](../../commands-legacy/object-to-path)   
+[Path to object](../../commands-legacy/path-to-object) 
 
 ## Propriétés
 
