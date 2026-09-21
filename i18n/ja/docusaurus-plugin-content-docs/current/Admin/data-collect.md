@@ -3,7 +3,7 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 個人データ保護に関する4D ポリシーの詳細については、[こちらのページ](https://us.4d.com/privacy-policy)を参照してください。
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。個人データは収集されません。個人データ保護に関する4D ポリシーの詳細については、[こちらのページ](https://us.4d.com/privacy-policy)を参照してください。
 
 以下の章では次のようなことを説明しています:
 
@@ -37,10 +37,12 @@ title: データ収集
 | cacheReadCount                                                                                                    | Object                            | キャッシュの読み出し回数                                                                                                |
 | classUsage                                                                                                        | Object                            | 特定の言語クラスのインスタンス数                                                                                            |
 | connectionSystems                                                                                                 | Collection                        | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数                                                |
+| databases[].backupSettings                    | Object                            | カレントのバックアップ設定値                                                                                              |
 | databases[].cacheSize                         | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
 | databases[].compatibilitySettings             | Object                            | 有効化された互換性設定                                                                                                 |
 | databases[].externalDatastoreOpened           | Number                            | `Open datastore` への呼び出し回数                                                                                   |
 | databases[].fluentUI                          | Boolean                           | Windows上でFluent UIを使用 設定がチェックされている場合にはTrue                                                                  |
+| databases[].flushCacheInterval                | Number                            | データキャッシュの各自動保存間の時間として定義された時間間隔                                                                              |
 | databases[].id                                | Number                            | データベースID                                                                                                    |
 | databases[].internalDatastoreOpened           | Number                            | 外部サーバーによってデータストアが開かれた回数                                                                                     |
 | databases[].maxConcurrent4DClients            | Number                            | 回収期間の中での、(4D クライアントライセンスを使用した)同時4Dクライアントセッションの最大数                                        |
@@ -52,6 +54,7 @@ title: データ収集
 | databases[].numberOfKeepRecordSyncInfo        | Number                            | "複製を許可"オプションがチェックされているテーブルの数                                                                                |
 | databases[].numberOfRecordsMax                | Number                            | レコードの総数                                                                                                     |
 | databases[].numberOfTables                    | Number                            | テーブルの総数                                                                                                     |
+| databases[].numberOfUncaughtExecutionErrors   | Number                            | 実行エラーがアラートとして表示された回数                                                                                        |
 | databases[].qodly.webforms    | Number                            | Qodly Webフォームの数                                                                                             |
 | databases[].remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガーの数                                                                                |
 | databases[].remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガーの数                                                                                 |
@@ -92,6 +95,7 @@ title: データ収集
 | isEncrypted                                                                                                       | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
 | isEngined                                                                                                         | Boolean                           | アプリケーションに 4D Volume Desktop が組み込まれている場合は true                                                               |
 | isProjectMode                                                                                                     | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
+| isShadowCopyActivated                                                                                             | Boolean                           | ボリュームシャドウコピー機能が有効化されていればTrue (Windows のみ)。                                               |
 | LDAPLogin                                                                                                         | Number                            | `LDAP LOGIN` の呼び出し回数                                                                                        |
 | license.sffPrimaryKey                                                                             | Number                            | サーバーのマスタープロダクト番号                                                                                            |
 | machine.CPU                                                                                       | Text                              | プロセッサーの名前、種類、および速度                                                                                          |
@@ -102,6 +106,7 @@ title: データ収集
 | maximumUsedPhysicalMemory                                                                                         | Number                            | 最大使用した物理メモリ                                                                                                 |
 | maximumUsedVirtualMemory                                                                                          | Number                            | 最大使用した仮想メモリ                                                                                                 |
 | mobile                                                                                                            | Collection                        | モバイルセッションに関する情報                                                                                             |
+| numberOfCrashes                                                                                                   | Number                            | 4D がクラッシュした回数                                                                                               |
 | numberOfWebServices                                                                                               | Number                            | Webサービスとして公開されているメソッドの数                                                                                     |
 | ODBCLogin                                                                                                         | Number                            | ODBC を使用しての `SQL LOGIN`への呼出回数                                                                               |
 | phpCall                                                                                                           | Number                            | `PHP execute` の呼び出し回数                                                                                       |
@@ -140,12 +145,12 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。 このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます:
+収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
-週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。 その後、ファイルは Active 4D Folder から削除されます。
+週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。その後、ファイルは Active 4D Folder から削除されます。
 
 ![](../assets/en/Admin/data-collect.png)
 
