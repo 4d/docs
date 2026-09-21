@@ -65,7 +65,7 @@ El objeto status devuelto contiene las siguientes propiedades:
 
 | Propiedad  | Tipo    | Descripción                                                                                                                                                                    |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| statusText | Text    | Mensaje de error (si lo hay):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li> |
+| statusText | Text    | Mensaje de error (si lo hay):<ul><li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li></ul> |
 | status     | Integer | Código de estado                                                                                                                                                               |
 | success    | Boolean | True si el archivo se ha creado con éxito, si no, false                                                                                                                        |
 

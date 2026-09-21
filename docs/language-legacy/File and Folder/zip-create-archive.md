@@ -49,7 +49,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 
 |Property|Type|Description|
 |---|---|---|
-|compression|Integer|<li>`ZIP Compression standard`: Deflate compression (default)</li><li>`ZIP Compression LZMA`: LZMA compression</li><li>`ZIP Compression XZ`: XZ compression</li><li>`ZIP Compression none`: No compression</li>|
+|compression|Integer|<ul><li>`ZIP Compression standard`: Deflate compression (default)</li><li>`ZIP Compression LZMA`: LZMA compression</li><li>`ZIP Compression XZ`: XZ compression</li><li>`ZIP Compression none`: No compression</li></ul>|
 |level|Integer|Compression level. Possible values: 1 to 10. A lower value will produce a larger file, while a higher value will produce a smaller file. Compression level has however an impact on performance. Default values if omitted: <ul><li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li></ul>|
 |encryption|Integer|The encryption to use if a password is set:<ul><li>`ZIP Encryption AES128`: AES encryption using 128-bit key.</li><li>`ZIP Encryption AES192`: AES encryption using 192-bit key.</li><li>`ZIP Encryption AES256`: AES encryption using 256-bit key (default if password is set).</li><li>`ZIP Encryption none`: Data is not encrypted (default if no password is set)</li></ul>|
 |password|Text|A password to use if encryption is required.|
@@ -66,7 +66,7 @@ The returned status object contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
-|statusText|Text|Error message (if any):<li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li>
+|statusText|Text|Error message (if any):<ul><li>Cannot open ZIP archive</li><li>Cannot create ZIP archive</li><li>Password is required for encryption</li></ul>
 |status|Integer|Status code|
 |success|Boolean|True if archive created successfully, else false|
 
