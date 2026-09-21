@@ -86,10 +86,10 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 
 ## Veja também
 
-[ZipArchive Class](../../API/ZipArchiveClass.md)
-[ZipFile Class](../../API/ZipFileClass.md)
-[ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Create archive`](../commands/zip-create-archive)
+[ZipArchive Class](../../API/ZipArchiveClass.md)   
+[ZipFile Class](../../API/ZipFileClass.md)   
+[ZipFolder Class](../../API/ZipFolderClass.md)   
+[`ZIP Create archive`](../commands/zip-create-archive)   
 
 ## Propriedades
 

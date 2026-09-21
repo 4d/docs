@@ -50,68 +50,68 @@ The number of objects involved in an event depends on the nature of the event.
 
 The following table summarizes how object and form methods are called for each event type:
 
-|Event|Object Methods|Form Method|Which Objects|
-|---|---|----|---|
-|On Load|Yes|Yes|All objects|
-|On Unload|Yes|Yes|All objects|
-|On Validate|Yes|Yes|All objects|
-|On Clicked|Yes |Yes|Involved object only|
-|On Double Clicked|Yes|Yes|Involved object only|
-|On Before Keystroke|Yes|Yes|Involved object only|
-|On After Keystroke|Yes|Yes|Involved object only|
-|On After Edit|Yes|Yes|Involved object only|
-|On Getting Focus|Yes|Yes|Involved object only|
-|On Losing Focus|Yes|Yes|Involved object only|
-|On Activate|Never|Yes|None|
-|On Deactivate|Never|Yes|None|
-|On Outside Call|Never|Yes|None|
-|On Page Change|Never|Yes|None|
-|On Begin Drag Over|Yes|Yes|Involved object only|
-|On Drop|Yes|Yes|Involved object only|
-|On Drag Over|Yes|Never	|Involved object only|
-|On Mouse Enter|Yes|Yes|All objects|
-|On Mouse Move|Yes|Yes|All objects|
-|On Mouse Leave|Yes|Yes|All objects|
-|On Mouse Up|Yes|Never|Involved object only|
-|On Menu Selected|Never|Yes|None|
-|On Bound variable change|Never|Yes|None|
-|On Data Change|Yes|Yes|Involved object only|
-|On Plug in Area|Yes|Yes|Involved object only|
-|On Header|Yes|Yes|All objects|
-|On Printing Detail|Yes|Yes	|All objects|
-|On Printing Break|Yes	|Yes|All objects|
-|On Printing Footer|Yes	|Yes|All objects|
-|On Close Box|Never|Yes	|None|
-|On Display Detail|Yes|Yes|All objects|
-|On Open Detail|Yes (List box)|Yes|None except List boxes|
-|On Close Detail|Yes (List box)|Yes|None except List boxes|
-|On Resize|Never|Yes|None|
-|On Selection Change|Yes|Yes|Involved object only|
-|On Load Record|Never|Yes|None|
-|On Timer|Never|Yes|None|
-|On Scroll|Yes|Never|Involved object only|
-|On Before Data Entry|Yes (List box)|Never|Involved object only|
-|On Column Moved|Yes (List box)|Never|Involved object only|
-|On Row Moved|Yes (List box)|Never|Involved object only|
-|On Column Resize|Yes (List box and 4D View Pro Area)|	Never|Involved object only|
-|On Header Click|Yes (List box and 4D View Pro Area)|Never|Involved object only|
-|On Footer Click|Yes (List box)|Never|Involved object only|
-|On After Sort|Yes (List box)|Never|Involved object only|
-|On Long Click|Yes (Button)|Yes|Involved object only|
-|On Alternative Click|Yes (Button and List box)|Never|	Involved object only|
-|On Expand|Yes (Hier. list and list box)|Never|Involved object only|
-|On Collapse|Yes (Hier. list and list box)|Never|Involved object only|
-|On Delete Action|Yes (Hier. list and list box)|Never|Involved object only|
-|On URL Resource Loading|Yes (Web Area)|Never|Involved object only|
-|On Begin URL Loading|Yes (Web Area)|Never|Involved object only|
-|On URL Loading Error|Yes (Web Area)|Never|Involved object only|
-|On URL Filtering|Yes (Web Area)|Never|Involved object only|
-|On End URL Loading|Yes (Web Area)|Never|Involved object only|
-|On Open External Link|Yes (Web Area)|Never|Involved object only|
-|On Window Opening Denied|Yes (Web Area)|Never|Involved object only|
-|On VP Range Changed|Yes (4D View Pro Area)|Never|Involved object only|
-|On VP Ready|Yes (4D View Pro Area)|Never|Involved object only|
-|On Row Resize|Yes (4D View Pro Area)|Never|Involved object only|
+|Event|Code|Object Methods|Form Method|Which Objects|
+|---|---|---|----|---|
+|On Activate|11|Never|Yes|None|
+|On After Edit|45|Yes|Yes|Involved object only|
+|On After Keystroke|28|Yes|Yes|Involved object only|
+|On After Sort|30|Yes (List box)|Never|Involved object only|
+|On Alternative Click|38|Yes (Button and List box)|Never|	Involved object only|
+|On Before Data Entry|41|Yes (List box)|Never|Involved object only|
+|On Before Keystroke|17|Yes|Yes|Involved object only|
+|On Begin Drag Over|46|Yes|Yes|Involved object only|
+|On Begin URL Loading|47|Yes (Web Area)|Never|Involved object only|
+|On Bound variable change|54|Never|Yes|None|
+|On Clicked|4|Yes |Yes|Involved object only|
+|On Close Box|22|Never|Yes	|None|
+|On Close Detail|26|Yes (List box)|Yes|None except List boxes|
+|On Collapse|44|Yes (Hier. list and list box)|Never|Involved object only|
+|On Column Moved|32|Yes (List box)|Never|Involved object only|
+|On Column Resize|33|Yes (List box and 4D View Pro Area)|	Never|Involved object only|
+|On Data Change|20|Yes|Yes|Involved object only|
+|On Deactivate|12|Never|Yes|None|
+|On Delete Action|58|Yes (Hier. list and list box)|Never|Involved object only|
+|On Display Detail|8|Yes|Yes|All objects|
+|On Double Clicked|13|Yes|Yes|Involved object only|
+|On Drag Over|21|Yes|Never	|Involved object only|
+|On Drop|16|Yes|Yes|Involved object only|
+|On End URL Loading|49|Yes (Web Area)|Never|Involved object only|
+|On Expand|43|Yes (Hier. list and list box)|Never|Involved object only|
+|On Footer Click|57|Yes (List box)|Never|Involved object only|
+|On Getting Focus|15|Yes|Yes|Involved object only|
+|On Header|5|Yes|Yes|All objects|
+|On Header Click|42|Yes (List box and 4D View Pro Area)|Never|Involved object only|
+|On Load|1|Yes|Yes|All objects|
+|On Load Record|40|Never|Yes|None|
+|On Long Click|39|Yes (Button)|Yes|Involved object only|
+|On Losing Focus|14|Yes|Yes|Involved object only|
+|On Menu Selected|18|Never|Yes|None|
+|On Mouse Enter|35|Yes|Yes|All objects|
+|On Mouse Leave|36|Yes|Yes|All objects|
+|On Mouse Move|37|Yes|Yes|All objects|
+|On Mouse Up|2|Yes|Never|Involved object only|
+|On Open Detail|25|Yes (List box)|Yes|None except List boxes|
+|On Open External Link|52|Yes (Web Area)|Never|Involved object only|
+|On Outside Call|10|Never|Yes|None|
+|On Page Change|56|Never|Yes|None|
+|On Plug in Area|19|Yes|Yes|Involved object only|
+|On Printing Break|6|Yes	|Yes|All objects|
+|On Printing Detail|23|Yes|Yes	|All objects|
+|On Printing Footer|7|Yes	|Yes|All objects|
+|On Resize|29|Never|Yes|None|
+|On Row Moved|34|Yes (List box)|Never|Involved object only|
+|On Row Resize|60|Yes (4D View Pro Area)|Never|Involved object only|
+|On Scroll|59|Yes|Never|Involved object only|
+|On Selection Change|31|Yes|Yes|Involved object only|
+|On Timer|27|Never|Yes|None|
+|On Unload|24|Yes|Yes|All objects|
+|On URL Filtering|51|Yes (Web Area)|Never|Involved object only|
+|On URL Loading Error|50|Yes (Web Area)|Never|Involved object only|
+|On URL Resource Loading|48|Yes (Web Area)|Never|Involved object only|
+|On Validate|3|Yes|Yes|All objects|
+|On VP Range Changed|61|Yes (4D View Pro Area)|Never|Involved object only|
+|On VP Ready|9|Yes (4D View Pro Area)|Never|Involved object only|
+|On Window Opening Denied|53|Yes (Web Area)|Never|Involved object only|
 
 Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
 

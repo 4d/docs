@@ -86,10 +86,10 @@ Para extraer desde la carpeta root:
 
 ## Ver también
 
-[ZipArchive Class](../../API/ZipArchiveClass.md)
-[ZipFile Class](../../API/ZipFileClass.md)
-[ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Create archive`](../commands/zip-create-archive)
+[ZipArchive Class](../../API/ZipArchiveClass.md)   
+[ZipFile Class](../../API/ZipFileClass.md)   
+[ZipFolder Class](../../API/ZipFolderClass.md)   
+[`ZIP Create archive`](../commands/zip-create-archive)   
 
 ## Propiedades
 

@@ -5,7 +5,7 @@ title: Evénements formulaire
 
 Les événements formulaire sont des événements qui peuvent conduire à l'exécution de la méthode de formulaire et/ou de la ou des méthodes objet de formulaire. Les événements de formulaire vous permettent de contrôler le flux de votre application et d'écrire du code qui n'est exécuté que lorsqu'un événement spécifique se produit.
 
-Dans votre code, vous contrôlez les événements à l'aide de la commande [`FORM Event`](../commands/form-event.md), qui renvoie l'événement déclenché. Par exemple :
+Dans votre code, vous contrôlez les événements à l'aide de la commande [`FORM Event`](../commands/form-event), qui renvoie l'événement déclenché. Par exemple :
 
 ```4d
 //code d'un bouton
@@ -18,7 +18,7 @@ End if
 
 ## Objet événement
 
-Chaque événement est renvoyé sous forme d'objet par la commande [`FORM Event`](../commands/form-event.md). Par défaut, il contient les propriétés suivantes :
+Chaque événement est renvoyé sous forme d'objet par la commande [`FORM Event`](../commands/form-event). Par défaut, il contient les propriétés suivantes :
 
 | Propriété   | Type        | Description                                                                                                      |
 | ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -48,70 +48,71 @@ Le nombre d'objets associés à un événement dépend de la nature de l'événe
 
 Le tableau suivant résume la manière dont les méthodes objet et formulaire sont appelées pour chaque type d'événement :
 
-| Evénement                | Méthode objet                                                      | Méthode formulaire | Objets                      |
-| ------------------------ | ------------------------------------------------------------------ | ------------------ | --------------------------- |
-| On Load                  | Oui                                                                | Oui                | Tous les objets             |
-| On Unload                | Oui                                                                | Oui                | Tous les objets             |
-| On Validate              | Oui                                                                | Oui                | Tous les objets             |
-| On Clicked               | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Double Clicked        | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Before Keystroke      | Oui                                                                | Oui                | Objets concernés uniquement |
-| On After Keystroke       | Oui                                                                | Oui                | Objets concernés uniquement |
-| On After Edit            | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Getting Focus         | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Losing Focus          | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Activate              | Jamais                                                             | Oui                | Aucun                       |
-| On Deactivate            | Jamais                                                             | Oui                | Aucun                       |
-| On Outside Call          | Jamais                                                             | Oui                | Aucun                       |
-| On Page Change           | Jamais                                                             | Oui                | Aucun                       |
-| On Begin Drag Over       | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Drop                  | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Drag Over             | Oui                                                                | Jamais             | Objets concernés uniquement |
-| On Mouse Enter           | Oui                                                                | Oui                | Tous les objets             |
-| On Mouse Move            | Oui                                                                | Oui                | Tous les objets             |
-| On Mouse Leave           | Oui                                                                | Oui                | Tous les objets             |
-| On Mouse Up              | Oui                                                                | Jamais             | Objets concernés uniquement |
-| On Menu Selected         | Jamais                                                             | Oui                | Aucun                       |
-| On Bound variable change | Jamais                                                             | Oui                | Aucun                       |
-| On Data Change           | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Plug in Area          | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Header                | Oui                                                                | Oui                | Tous les objets             |
-| On Printing Detail       | Oui                                                                | Oui                | Tous les objets             |
-| On Printing Break        | Oui                                                                | Oui                | Tous les objets             |
-| On Printing Footer       | Oui                                                                | Oui                | Tous les objets             |
-| On Close Box             | Jamais                                                             | Oui                | Aucun                       |
-| On Display Detail        | Oui                                                                | Oui                | Tous les objets             |
-| On Open Detail           | Oui (List box)                                  | Oui                | Aucun, excepté les List box |
-| On Close Detail          | Oui (List box)                                  | Oui                | Aucun, excepté les List box |
-| On Resize                | Jamais                                                             | Oui                | Aucun                       |
-| On Selection Change      | Oui                                                                | Oui                | Objets concernés uniquement |
-| On Load Record           | Jamais                                                             | Oui                | Aucun                       |
-| On Timer                 | Jamais                                                             | Oui                | Aucun                       |
-| On Scroll                | Oui                                                                | Jamais             | Objets concernés uniquement |
-| On Before Data Entry     | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| On Column Moved          | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| On Row Moved             | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| On Column Resize         | Oui (List box et Zone 4D View Pro)              | Jamais             | Objets concernés uniquement |
-| On Header Click          | Oui (List box et Zone 4D View Pro)              | Jamais             | Objets concernés uniquement |
-| On Footer Click          | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| On After Sort            | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
-| On Long Click            | Oui (Bouton)                                    | Oui                | Objets concernés uniquement |
-| On Alternative Click     | Oui (Bouton et List box)                        | Jamais             | Objets concernés uniquement |
-| On Expand                | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
-| On Collapse              | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
-| On Delete Action         | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
-| On URL Resource Loading  | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On Begin URL Loading     | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On URL Loading Error     | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On URL Filtering         | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On End URL Loading       | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On Open External Link    | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On Window Opening Denied | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
-| On VP Range Changed      | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
-| On VP Ready              | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
-| On Row Resize            | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
+| Evénement                | Code | Méthode objet                                                      | Méthode formulaire | Objets                      |
+| ------------------------ | ---- | ------------------------------------------------------------------ | ------------------ | --------------------------- |
+| On Activate              | 11   | Jamais                                                             | Oui                | Aucun                       |
+| On After Edit            | 45   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On After Keystroke       | 28   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On After Sort            | 30   | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
+| On Alternative Click     | 38   | Oui (Bouton et List box)                        | Jamais             | Objets concernés uniquement |
+| On Before Data Entry     | 41   | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
+| On Before Keystroke      | 17   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Begin Drag Over       | 46   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Begin URL Loading     | 47   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On Bound variable change | 54   | Jamais                                                             | Oui                | Aucun                       |
+| On Clicked               | 4    | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Close Box             | 22   | Jamais                                                             | Oui                | Aucun                       |
+| On Close Detail          | 26   | Oui (List box)                                  | Oui                | Aucun, excepté les List box |
+| On Collapse              | 44   | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
+| On Column Moved          | 32   | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
+| On Column Resize         | 33   | Oui (List box et Zone 4D View Pro)              | Jamais             | Objets concernés uniquement |
+| On Data Change           | 20   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Deactivate            | 12   | Jamais                                                             | Oui                | Aucun                       |
+| On Delete Action         | 58   | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
+| On Display Detail        | 8    | Oui                                                                | Oui                | Tous les objets             |
+| On Double Clicked        | 13   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Drag Over             | 21   | Oui                                                                | Jamais             | Objets concernés uniquement |
+| On Drop                  | 16   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On End URL Loading       | 49   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On Expand                | 43   | Oui (Liste hiérar. et list box) | Jamais             | Objets concernés uniquement |
+| On Footer Click          | 57   | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
+| On Getting Focus         | 15   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Header                | 5    | Oui                                                                | Oui                | Tous les objets             |
+| On Header Click          | 42   | Oui (List box et Zone 4D View Pro)              | Jamais             | Objets concernés uniquement |
+| On Load                  | 1    | Oui                                                                | Oui                | Tous les objets             |
+| On Load Record           | 40   | Jamais                                                             | Oui                | Aucun                       |
+| On Long Click            | 39   | Oui (Bouton)                                    | Oui                | Objets concernés uniquement |
+| On Losing Focus          | 14   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Menu Selected         | 18   | Jamais                                                             | Oui                | Aucun                       |
+| On Mouse Enter           | 35   | Oui                                                                | Oui                | Tous les objets             |
+| On Mouse Leave           | 36   | Oui                                                                | Oui                | Tous les objets             |
+| On Mouse Move            | 37   | Oui                                                                | Oui                | Tous les objets             |
+| On Mouse Up              | 2    | Oui                                                                | Jamais             | Objets concernés uniquement |
+| On Open Detail           | 25   | Oui (List box)                                  | Oui                | Aucun, excepté les List box |
+| On Open External Link    | 52   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On Outside Call          | 10   | Jamais                                                             | Oui                | Aucun                       |
+| On Page Change           | 56   | Jamais                                                             | Oui                | Aucun                       |
+| On Plug in Area          | 19   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Printing Break        | 6    | Oui                                                                | Oui                | Tous les objets             |
+| On Printing Detail       | 23   | Oui                                                                | Oui                | Tous les objets             |
+| On Printing Footer       | 7    | Oui                                                                | Oui                | Tous les objets             |
+| On Resize                | 29   | Jamais                                                             | Oui                | Aucun                       |
+| On Row Moved             | 34   | Oui (List box)                                  | Jamais             | Objets concernés uniquement |
+| On Row Resize            | 60   | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
+| On Scroll                | 59   | Oui                                                                | Jamais             | Objets concernés uniquement |
+| On Selection Change      | 31   | Oui                                                                | Oui                | Objets concernés uniquement |
+| On Timer                 | 27   | Jamais                                                             | Oui                | Aucun                       |
+| On Unload                | 24   | Oui                                                                | Oui                | Tous les objets             |
+| On URL Filtering         | 51   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On URL Loading Error     | 50   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On URL Resource Loading  | 48   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
+| On Validate              | 3    | Oui                                                                | Oui                | Tous les objets             |
+| On VP Range Changed      | 61   | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
+| On VP Ready              | 9    | Oui (4D View Pro Area)                          | Jamais             | Objets concernés uniquement |
+| On Window Opening Denied | 53   | Oui (Zone Web)                                  | Jamais             | Objets concernés uniquement |
 
 Gardez toujours à l'esprit que, pour tout événement, la méthode d'un formulaire ou d'un objet est appelée si la propriété d'événement correspondante est sélectionnée pour le formulaire ou les objets. L'avantage de la désactivation des événements dans l'environnement de développement (à l'aide de la liste des propriétés de l'éditeur de formulaires) est la réduction du nombre d'appels vers des méthodes et par conséquent l'optimisation de la vitesse d'exécution de vos formulaires.
 
 > ATTENTION : Les événements [On Load](onLoad.md) et [On Unload](onUnload.md) sont générés pour les objets s'ils sont activés à la fois pour les objets et pour le formulaire auquel appartiennent les objets. Si les événements sont activés pour les objets uniquement, ils ne se produiront pas; ces deux événements doivent également être activés au niveau du formulaire.
+
 

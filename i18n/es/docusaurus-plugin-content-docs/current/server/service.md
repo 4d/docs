@@ -34,5 +34,5 @@ Para dar de baja su aplicación, seleccione **Dar de baja la aplicación actual*
 
 Para anular el registro de todas las bases de datos de 4D Server a la vez, seleccione **Anular el registro de todos los servicios del servidor** en el menú **Archivo** de 4D Server. Este comando se atenúa si no hay ningún servicio 4D Server activado.
 
-You cannot change the service registration status of 4D Server from within 4D Server, if the application has been launched as a service on start-up. En este caso, los tres elementos del menú están desactivados. Para detener el servicio, utilice el panel de control **Servicios**.
+No es posible modificar el estado de registro del servicio de 4D Server desde el propio 4D Server si la aplicación se ha iniciado como servicio al arrancar el sistema. En este caso, los tres elementos del menú están desactivados. Para detener el servicio, utilice el panel de control **Servicios**.
 
