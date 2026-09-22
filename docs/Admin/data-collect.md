@@ -97,7 +97,7 @@ Some data is also collected at regular intervals.
 |isEncrypted|Boolean|True if the data file is encrypted|
 |isEngined|Boolean|True if the application is merged with 4D Volume Desktop|
 |isProjectMode|Boolean|True if the application is a project|
-|isShadowCopyActivated|Boolean|True if the Volume Shadow Copy feature is enabled (Windows only|
+|isShadowCopyActivated|Boolean|True if the Volume Shadow Copy feature is enabled (Windows only)|
 |LDAPLogin|Number|Number of calls to `LDAP LOGIN`|
 |license.sffPrimaryKey|Number|Server master product number|
 |machine.CPU|Text|Name, type, and speed of the processor|
