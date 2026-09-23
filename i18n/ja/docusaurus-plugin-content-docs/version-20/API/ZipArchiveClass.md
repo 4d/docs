@@ -77,11 +77,11 @@ End if
 
 | プロパティ       | 型           | 説明                                                                                                                   |
 | ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------- |
-| compression | Integer     | <li>`ZIP Compression standard`: Deflate圧縮 (デフォルト)</li><li>`ZIP Compression LZMA`: LZMA圧縮</li><li>`ZIP Compression XZ`: XZ圧縮</li><li>`ZIP Compression none`: 圧縮なし</li>                 |
+| compression | Integer     | <ul><li>`ZIP Compression standard`: Deflate圧縮 (デフォルト)</li><li>`ZIP Compression LZMA`: LZMA圧縮</li><li>`ZIP Compression XZ`: XZ圧縮</li><li>`ZIP Compression none`: 圧縮なし</li></ul>                                                                                            |
 | level       | Integer     | 圧縮レベル。とりうる値: 1 - 10。低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。ただし、圧縮レベルはパフォーマンスに影響します。デフォルト値 (省略時): <ul><li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li></ul> |
 | encryption  | Integer     | パスワードが設定されていた場合に使用する暗号化方法:<ul><li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li></ul>                                                                  |
 | password    | Text        | 暗号化が必要な場合に使用するパスワード                                                                                                  |
-| files       | Collection  | <li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>型</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                         |
+| files       | Collection  | <li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>型</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                          |
 | callback    | 4D.Function | $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ                                                                                |
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
@@ -92,11 +92,11 @@ End if
 
 戻り値のステータスオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | 型       | 説明                                                                                            |
-| ---------- | ------- | --------------------------------------------------------------------------------------------- |
-| statusText | Text    | エラーメッセージ (あれば):<li>ZIPアーカイブを開けません</li><li>ZIPアーカイブを作成できません</li><li>暗号化にはパスワードが必要です</li> |
-| status     | Integer | ステータスコード                                                                                      |
-| success    | Boolean | アーカイブが正常に作成された場合には true、それ以外は false                                                           |
+| プロパティ      | 型       | 説明                                       |
+| ---------- | ------- | ---------------------------------------- |
+| statusText | Text    | エラーメッセージ (あれば):<ul><li>ZIPアーカイブを開けません</li><li>ZIPアーカイブを作成できません</li><li>暗号化にはパスワードが必要です</li></ul> |
+| status     | Integer | ステータスコード                                 |
+| success    | Boolean | アーカイブが正常に作成された場合には true、それ以外は false      |
 
 #### 例題 1
 
