@@ -5,13 +5,14 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( manyTable | manyField ; *one* : Integer ; *many* : Integer )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* : Table ; *one* : Integer ; *many* : Integer )<br/>**SET FIELD RELATION** ( *manyField* : Field ; *one* : Integer ; *many* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 <div class="no-index">
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyTable &#124; manyField | テーブル, フィールド | &#8594; | リレーションの開始テーブル, または リレーションの開始フィールド |
+| manyTable | テーブル | &#8594; | リレーションの開始テーブル |
+| manyField | フィールド | &#8594;  | リレーションの開始フィールド |
 | one | Integer | &#8594; | テーブルまたはフィールドを開始点とする n対1リレーションの状態 |
 | many | Integer | &#8594; | テーブルまたはフィールドを開始点とする 1対nリレーションの状態 |
 </div>
@@ -33,9 +34,9 @@ displayed_sidebar: docs
 
 1番目の引数には、テーブルやフィールドの名前を渡します:
 
-* フィールド名 (*manyField*) を渡すと、コマンドは指定したnフィールドから開始するリレートに対してのみ適用されます。
-* テーブル名 (*manyTable*) を渡すと、コマンドは指定したnテーブルから開始するリレートに対してのみ適用されます。
-* *manyField*または*manyTable*から開始するリレートが存在しない場合、シンタックスエラー16（“このフィールドにはリレートが設定されていません。”）が生成され、システム変数OKには0が代入されます。
+* フィールド名 (*manyField*) を渡すと、コマンドは指定したn フィールドから開始するリレートに対してのみ適用されます。
+* テーブル名 (*manyTable*) を渡すと、コマンドは指定したn テーブルから開始するリレートに対してのみ適用されます。
+* *manyField* または*manyTable* から開始するリレートが存在しない場合、シンタックスエラー16（“このフィールドにはリレートが設定されていません。”）が生成され、システム変数OK には0\ が代入されます。
 
 引数*one*と*many*には、指定した1対nリレートやn対1リレートに適用される自動/マニュアルの状態を示す値を渡します。この値として、"*Relations*"テーマの定数を使用できます。
 
