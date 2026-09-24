@@ -5,13 +5,14 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* : any )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *aTable* : Table )<br/>**REDRAW** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 <div class="no-index">
 
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | any | &#8594; | サブフォームを再描画するテーブル、またはエリアを再描画するフィールド、またはエリアを再描画する変数、または更新されるべきリストボックス |
+| aTable | Table | &#8594;  | サブフォームを再描画するテーブル |
+| object | Field, Variable | &#8594; | エリアを再描画するフィールド、またはエリアを再描画する変数、または更新されるべきリストボックス |
 </div>
 <!-- END REF-->
 
@@ -32,8 +33,6 @@ displayed_sidebar: docs
 <!--REF #_command_.REDRAW.Summary-->メソッドを使用して、サブフォームで中に表示されるフィールドの値を変更する場合、フォームを確実に更新するために REDRAW コマンドを使用しなければなりません。<!-- END REF-->
 
 セレクション表示モードのリストボックスのコンテキストでは、REDRAWがリストボックスタイプのオブジェクトに適用されると、オブジェクトに表示されているデータが再描画されます。このステートメントは特にセレクションのレコードに対し、データの更新が行われた場合に呼び出されなければなりません。
-
-  
 
 ## 参照 
 
