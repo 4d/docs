@@ -1,4 +1,4 @@
-﻿---
+---
 id: object-set-border-style
 title: OBJECT SET BORDER STYLE
 slug: /commands/object-set-border-style
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R5|New Border Custom` constant |
 |14|Created|
 
 </details>
@@ -31,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->The **OBJECT SET BORDER STYLE** command modifies the border line style of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-The "Border Line Style" property modifies the appearance of the object outlines. For more information, refer to *Border Line Style* in the *Design Reference* manual. 
+The "Border Line Style" property modifies the appearance of the object outlines. For more information, see [*Border Line Style*](../../FormObjects/properties_BackgroundAndBorder.md#border-line-style) section. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -39,6 +40,7 @@ In the *borderStyle* parameter, pass the value of the border line style that you
 
 | Constant      | Type    | Value | Comment                                                                                         |
 | ------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
+| Border Custom | Integer | 9     | (buttons only) Enables the inner frame design for buttons, supporting extra properties |
 | Border Dotted | Integer | 2     | Objects appear framed with a dotted 1-pt. border line                                           |
 | Border Double | Integer | 5     | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel |
 | Border None   | Integer | 0     | Objects appear with no border                                                                   |
@@ -50,6 +52,7 @@ In the *borderStyle* parameter, pass the value of the border line style that you
 ## See also 
 
 [OBJECT Get border style](../commands/object-get-border-style)  
+[OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius)  
 
 ## Properties
 

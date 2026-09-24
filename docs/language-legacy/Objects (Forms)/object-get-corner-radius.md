@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R5|Support for custom-styled buttons, radio buttons and check boxes |
 |19 R7|Modified|
 |14 R4|Created|
 
@@ -30,13 +31,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius) command.
+<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the [**Corner radius property**](../../FormObjects/properties_BackgroundAndBorder.md#corner-radius) or for the current process using the [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius) command.
 
 The **OBJECT Get corner radius** command can be used with the following form objects:
 
-* rectangles
-* inputs (4D projects only)
-* text areas (4D projects only)
+- [rectangles](../../FormObjects/shapes_overview.md#rectangle)
+- [inputs](../../FormObjects/input_overview.md) (4D projects only)
+- [text areas](../../FormObjects/text.md) (4D projects only)
+- custom-styled [buttons](../../FormObjects/button_overview.md#custom) with ["custom" Border Line Style](#border-line-style), custom-styled [radio buttons](../../FormObjects/radio_overview.md#custom) and custom-styled [check boxes](../../FormObjects/checkbox_overview.md#custom) (4D projects only)
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 

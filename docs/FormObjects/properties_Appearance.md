@@ -15,9 +15,10 @@ In addition, on macOS, the default button property modifies the button's appeara
 
 > Button must have a standard height to get the default button appearance.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. However, in the 4D form editor, the default button is represented with a blue outline:
+On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#regular) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
+
 
 #### JSON Grammar
 
@@ -27,7 +28,7 @@ defaultButton|boolean|true, false |
 
 #### Objects Supported
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Custom Button](button_overview.md#custom) - [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
 
 ---
 
