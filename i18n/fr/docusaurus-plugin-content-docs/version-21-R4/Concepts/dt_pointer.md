@@ -142,7 +142,7 @@ Partout où le langage requiert un nom de champ, vous pouvez utiliser un pointeu
 $ChampPtr:=->[uneTable]CeChamp
 ```
 
-Vous pouvez également récupérer un pointeur vers un champ à l’aide de la fonction `Champ`. Par exemple :
+Vous pouvez également récupérer un pointeur vers un champ à l’aide de la fonction `Field`. Par exemple :
 
 ```4d
 $FieldPtr:=Field(1;2)

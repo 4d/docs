@@ -11,13 +11,21 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 :::
 
 
+## 4D 20.9 LTS
+
+#### Points forts
+
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.9) : liste de tous les bugs qui ont été corrigés dans 4D 20.9 LTS.
+
+
+
 ## 4D 20.8 LTS
 
 #### Points forts
 
 - 4D 20.8 LTS est certifié sur Windows 11 25H2.
 - 4D 20.8 LTS est certifié sur macOS Tahoe (macOS 26).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.8) : liste de tous les bugs qui ont été corrigés dans 4D 20.8 LTS.
 
 
 
