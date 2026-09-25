@@ -31,7 +31,7 @@ title: VP Get table theme
 
 ## 説明
 
-`VP Get table theme` コマンドは、<!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](vp-create-table.md) または [`VP SET TABLE THEME`](vp-set-table-theme.md) コマンド、もしくはインターフェースから設定することができます。
+`VP Get table theme` コマンドは、<!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。表組みのテーマは、[`VP CREATE TABLE`](vp-create-table.md) または [`VP SET TABLE THEME`](vp-set-table-theme.md) コマンド、もしくはインターフェースから設定することができます。
 
 *vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には表組みの名前を渡します。
 

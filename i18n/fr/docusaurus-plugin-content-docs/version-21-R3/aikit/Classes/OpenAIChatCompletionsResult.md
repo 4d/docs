@@ -11,41 +11,41 @@ title: OpenAIChatCompletionsResult
 
 ## Propriétés calculées
 
-| Propriété | Type         | Description                                                                                                          |
-| --------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `choices` | Collection   | Renvoie une collection de [OpenAIChoice](OpenAIChoice.md) de la réponse OpenAI.                      |
-| `choice`  | OpenAIChoice | Renvoie le premier [OpenAIChoice](OpenAIChoice.md) de la collection `choices`.                       |
-| `usage`   | Object       | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| Propriété | Type         | Description                                                                                                                       |
+| --------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| `choices` | Collection   | Renvoie une collection de [OpenAIChoice](OpenAIChoice.md) de la réponse OpenAI.                                   |
+| `choice`  | OpenAIChoice | Renvoie le premier [OpenAIChoice](OpenAIChoice.md) de la collection `choices`.                                    |
+| `usage`   | Object       | Renvoie les informations d'utilisation des tokens (hérité de [OpenAIResult](OpenAIResult.md)). |
 
 ### usage
 
-The `usage` property returns an object containing token usage information for chat completions.
+La propriété `usage` renvoie un objet contenant des informations sur l'utilisation des tokens pour les suggestions de conversations.
 
-| Champ                       | Type    | Description                                                                   |
-| --------------------------- | ------- | ----------------------------------------------------------------------------- |
-| `prompt_tokens`             | Integer | Number of tokens in the prompt.                               |
-| `completion_tokens`         | Integer | Number of tokens in the completion.                           |
-| `total_tokens`              | Integer | Total tokens used (prompt + completion).   |
-| `prompt_tokens_details`     | Object  | Breakdown of prompt tokens (optional).     |
-| `completion_tokens_details` | Object  | Breakdown of completion tokens (optional). |
+| Champ                       | Type    | Description                                                                        |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------- |
+| `prompt_tokens`             | Integer | Nombre de tokens dans l'invite.                                    |
+| `completion_tokens`         | Integer | Nombre de tokens dans la réponse.                                  |
+| `total_tokens`              | Integer | Total des tokens utilisés (invite + réponse).   |
+| `prompt_tokens_details`     | Object  | Répartition des tokens d'invite (facultatif).   |
+| `completion_tokens_details` | Object  | Répartition des tokens de réponse (facultatif). |
 
 #### prompt_tokens_details
 
-| Champ           | Type    | Description                                                                |
-| --------------- | ------- | -------------------------------------------------------------------------- |
-| `cached_tokens` | Integer | Number of tokens served from cache.                        |
-| `audio_tokens`  | Integer | Number of audio tokens (if applicable). |
+| Champ           | Type    | Description                                                                 |
+| --------------- | ------- | --------------------------------------------------------------------------- |
+| `cached_tokens` | Integer | Nombre de tokens servis depuis le cache.                    |
+| `audio_tokens`  | Integer | Nombre de tokens audio (le cas échéant). |
 
 #### completion_tokens_details
 
-| Champ                        | Type    | Description                                                                                                     |
-| ---------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
-| `reasoning_tokens`           | Integer | Tokens used for reasoning (e.g., o1 models). |
-| `audio_tokens`               | Integer | Number of audio tokens (if applicable).                                      |
-| `accepted_prediction_tokens` | Integer | Tokens from accepted predictions.                                                               |
-| `rejected_prediction_tokens` | Integer | Tokens from rejected predictions.                                                               |
+| Champ                        | Type    | Description                                                                                        |
+| ---------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| `reasoning_tokens`           | Integer | Tokens utilisés pour le raisonnement (par exemple, modèles o1). |
+| `audio_tokens`               | Integer | Nombre de tokens audio (le cas échéant).                        |
+| `accepted_prediction_tokens` | Integer | Tokens de prédictions acceptées.                                                   |
+| `rejected_prediction_tokens` | Integer | Tokens de prédictions rejetées.                                                    |
 
-**Example response:**
+**Exemple de réponse :**
 
 ```json
 {
@@ -65,7 +65,7 @@ The `usage` property returns an object containing token usage information for ch
 }
 ```
 
-> **Note:** The `*_tokens_details` objects may not be present in all responses or from all providers.
+> **Note :** Les objets `*_tokens_details` peuvent ne pas être présents dans toutes les réponses ou les réponses de tous les fournisseurs.
 
 ## Voir également
 

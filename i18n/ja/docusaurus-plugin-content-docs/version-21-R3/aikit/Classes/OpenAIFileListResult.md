@@ -18,7 +18,7 @@ title: OpenAIFileListResult
 | `files`    | Collection | API レスポンスからの[OpenAIFile](OpenAIFile.md) オブジェクトのコレクションを返します。ファイルが何も見つからない場合には空のコレクションが返されます。 |
 | `first_id` | Text       | リストの最初のファイルのID を返します。利用できない場合は空の文字列を返します。                                                   |
 | `last_id`  | Text       | リストの最後のファイルのID を返します。利用できない場合は空の文字列を返します。                                                   |
-| `has_more` | Boolean    | このページの後にまだファイルがあるかどうかを示します。 まだ取得するファイルがある場合には `True`、それ以外の場合には `False`。                     |
+| `has_more` | Boolean    | このページの後にまだファイルがあるかどうかを示します。まだ取得するファイルがある場合には `True`、それ以外の場合には `False`。                      |
 
 ## 使用例
 

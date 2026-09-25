@@ -27,7 +27,7 @@ title: OpenAIChatCompletionsStreamResult
 | プロパティ        | 型       | 説明                                                                                                                  |
 | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean | ストリーミングデータがオブジェクトとして正常にデコードされた場合には `True` を返します。                                                                    |
-| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                    |
+| `terminated` | Boolean | HTTP リクエストが終了したかどうかを示すブール値。言い換えると `onTerminate` が呼ばれたかどうかを表します。                                                     |
 | `usage`      | Object  | ストリームデータからのトークン使用状況を返します(`stream_options.include_usage` が`True` に設定されていた場合には最終チャンクにおいてのみ利用可能です)。 |
 
 ### usage
@@ -44,4 +44,4 @@ title: OpenAIChatCompletionsStreamResult
 | `prompt_tokens_details`     | Object  | プロンプトトークンの詳細な内訳(オプション)。   |
 | `completion_tokens_details` | Object  | 補完トークンの詳細な内訳(オプション)。      |
 
-> **Note:** ストリーミングのレスポンス内に使用状況を受信するためには、リクエストパラメーター内で`stream_options: {include_usage: True}` に設定する必要があります。 詳細については、[OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) を参照してください。
+> **Note:** ストリーミングのレスポンス内に使用状況を受信するためには、リクエストパラメーター内で`stream_options: {include_usage: True}` に設定する必要があります。詳細については、[OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) を参照してください。

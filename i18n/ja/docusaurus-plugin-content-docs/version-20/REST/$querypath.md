@@ -7,7 +7,7 @@ title: '$querypath'
 
 ## 説明
 
-`$querypath` は、4D Server によって実際に実行されたクエリを返します。 たとえば、クエリの一部がエンティティを返さなかった場合、残りのクエリは実行されません。 `$querypath` で確認されるとおり、クエリリクエストは最適化されます。
+`$querypath` は、4D Server によって実際に実行されたクエリを返します。たとえば、クエリの一部がエンティティを返さなかった場合、残りのクエリは実行されません。 `$querypath` で確認されるとおり、クエリリクエストは最適化されます。
 
 クエリパスについての詳細は [queryPlan と queryPath](genInfo.md#querypath-と-queryplan) を参照ください。
 
@@ -64,7 +64,7 @@ __queryPath: {
 }
 ```
 
-最初のクエリが一つ以上のエンティティを返した場合には、二つめのクエリが実行されます。 以下のクエリを実行した場合:
+最初のクエリが一つ以上のエンティティを返した場合には、二つめのクエリが実行されます。以下のクエリを実行した場合:
 
  `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 

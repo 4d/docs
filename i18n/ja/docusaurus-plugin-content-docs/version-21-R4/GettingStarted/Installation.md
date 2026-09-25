@@ -3,7 +3,7 @@ id: installation
 title: インストール
 ---
 
-4D へようこそ！ このページでは、4D 製品のインストールと起動について必要な情報をまとめています。
+4D へようこそ！このページでは、4D 製品のインストールと起動について必要な情報をまとめています。
 
 ## 最低動作環境
 
@@ -21,13 +21,13 @@ title: インストール
 
 :::info
 
-Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の4D においてFluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、このSDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
+Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の 4D において [Fluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、この SDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
 
 :::
 
 ## ログイン
 
-インストールが完了すると、4D を起動し、ログインすることができます。 起動するには、4D 製品のアイコンをダブルクリックします。
+インストールが完了すると、4D を起動し、ログインすることができます。起動するには、4D 製品のアイコンをダブルクリックします。
 
 ![](../assets/en/getStart/logo4d.png)
 

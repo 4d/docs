@@ -7,7 +7,7 @@ A medida que desarrolle una aplicación 4D, descubrirá muchas funcionalidades d
 
 ## ¿Qué es un plug-in y qué puede hacer?
 
-Un plug-in es una pieza de código, escrita en cualquier lenguaje como C o C++, que 4D lanza al inicio. Añade funcionalidad a 4D y aumenta así su capacidad. A plug-in usually contains a set of routines given to the 4D developer. Puede manejar las áreas externas y ejecutar los procesos externos.
+Un plug-in es una pieza de código, escrita en cualquier lenguaje como C o C++, que 4D lanza al inicio. Añade funcionalidad a 4D y aumenta así su capacidad. Un plug-in contiene generalmente un conjunto de rutinas dadas al desarrollador 4D. Puede manejar las áreas externas y ejecutar los procesos externos.
 
 ## ¿Dónde encontrar los plug-ins?
 

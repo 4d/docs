@@ -140,11 +140,11 @@ Utilisez un nom de modèle simple pour référencer un modèle nommé défini da
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use a named model alias
+// Utiliser un alias de modèle nommé
 var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
 var $result := $client.chat.completions.create($messages; {model: "my-claude"})
 
-// Embeddings with a named model alias
+// Embeddings avec un alias de modèle nommé
 var $result := $client.embeddings.create("text"; "my-embedding")
 ```
 
@@ -168,7 +168,7 @@ Lorsque vous utilisez la syntaxe `provider:model`, le client automatiquement :
 Lorsque vous utilisez un nom de modèle simple qui correspond à un alias configuré, le client automatiquement :
 
 1. **recherche** l'alias du modèle dans la section `models` de la configuration
-   - Example: `"my-gpt"` → finds entry with `provider: "openai"`, `model: "gpt-5.1"`
+   - Exemple : `"my-gpt"` → trouve une entrée avec `provider: "openai"`, `model: "gpt-5.1"`
 
 2. **résoud** le fournisseur associé pour obtenir `baseURL` et `apiKey`
 
@@ -176,18 +176,18 @@ Lorsque vous utilisez un nom de modèle simple qui correspond à un alias config
 
 ### Utiliser des noms de modèles seuls
 
-If you specify a model name **without** a provider prefix, the client uses the configuration from its constructor:
+Si vous spécifiez un nom de modèle **sans** préfixe de fournisseur, le client utilise la configuration de son constructeur :
 
 ```4d
-// Use constructor configuration
-var $client := cs.AIKit.OpenAI.new({apiKey: "sk-..."; baseURL: "https://api.openai.com/v1"})
-var $result := $client.chat.completions.create($messages; {model: "gpt-5.1"})
+// Utiliser la configuration du constructeur
+var $client := cs.AIKit.OpenAI.new({apiKey : "sk-..." ; baseURL : "https://api.openai.com/v1"})
+var $result := $client.chat.completions.create($messages; {model : "gpt-5.1"})
 
-// Override with provider alias
-var $result := $client.chat.completions.create($messages; {model: "anthropic:claude-3-opus"})
+// Surcharge avec l'alias du fournisseur
+var $result := $client.chat.completions.create($messages; {model : "anthropic:claude-3-opus"})
 
-// Override with model alias (bare name)
-var $result := $client.chat.completions.create($messages; {model: "my-gpt"})
+// Surcharge avec l'alias du modèle (nom simple)
+var $result := $client.chat.completions.create($messages; {model : "my-gpt"})
 ```
 
 ## Exemples
@@ -305,7 +305,7 @@ Définir les modèles une fois, les utiliser partout par leur nom :
 ```4d
 var $client := cs.AIKit.OpenAI.new()
 
-// Use named model aliases — no need to remember provider or model ID
+// Utiliser des alias de modèles nommés — pas besoin de se souvenir du fournisseur ou de l'ID du modèle
 var $result := $client.chat.completions.create($messages; {model: "chat"})
 var $result := $client.chat.completions.create($messages; {model: "fast"})
 var $embedding := $client.embeddings.create("text"; "embedding")

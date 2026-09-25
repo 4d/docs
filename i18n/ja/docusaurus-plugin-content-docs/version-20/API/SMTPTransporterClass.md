@@ -7,7 +7,7 @@ title: SMTPTransporter
 
 ### SMTP Transporter オブジェクト
 
-SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transporter) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
+SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transporter) コマンドによってインスタンス化されます。これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 説明
 
-`SMTP New transporter` コマンドは、 <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。 この SMTP接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
+`SMTP New transporter` コマンドは、 <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。 この SMTP接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。返された transporter オブジェクトは、通常メールの送信に使用されます。
 
 > このコマンドは SMTPサーバーとの接続を開始しません。 SMTP接続は、実際には [`.send()`](#send) 関数が実行された時に開かれます。  
 > 
@@ -82,7 +82,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 戻り値
 
-この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-オブジェクト) を返します。 返されるプロパティはすべて **読み取り専用** です。
+この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-オブジェクト) を返します。返されるプロパティはすべて **読み取り専用** です。
 
 #### 例題
 
@@ -131,7 +131,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->`4D.SMTPTransporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -231,13 +231,13 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 `.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
 
-*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
+*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
 #### 返されるオブジェクト
 
-この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+この関数は、SMTP ステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      | 型       | 説明                                      |
 | ---------- | ------- | --------------------------------------- |
@@ -245,7 +245,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
 | statusText | text    | SMTPから返されるステータスメッセージ                    |
 
-SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、`GET LAST ERROR STACK` コマンドを使用します。
+SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。エラー情報を取得するには、`GET LAST ERROR STACK` コマンドを使用します。
 
 この場合、結果のステータスオブジェクトには以下の値が含まれます:
 

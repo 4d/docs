@@ -7,7 +7,7 @@ title: Appel asynchrone
 
 Si vous ne souhaitez pas attendre la réponse de l'OpenAPI lorsque vous envoyez une requête à son API, vous devez utiliser un code asynchrone.
 
-Pour effectuer des appels asynchrones, vous devez fournir une `4D.Function`(`Formula`) de rappel (*callback*) dans le paramètre objet [OpenAIParameters](Classes/OpenAIParameters.md) pour recevoir le résultat. For streaming chat completion see [OpenAIChatCompletionsParameters](Classes/OpenAIChatCompletionsParameters.md).
+Pour effectuer des appels asynchrones, vous devez fournir une `4D.Function`(`Formula`) de rappel (*callback*) dans le paramètre objet [OpenAIParameters](Classes/OpenAIParameters.md) pour recevoir le résultat. Pour la complétion du chat en streaming, voir [OpenAIChatCompletionsParameters](Classes/OpenAIChatCompletionsParameters.md).
 
 La fonction de callback recevra le même type d'objet de résultat (l'une des classes enfant de [OpenAIResult](Classes/OpenAIResult.md)) que celui qui serait renvoyé par la fonction dans un code synchrone. Voir les exemples ci-dessous.
 
@@ -59,15 +59,15 @@ ASSERT($result.success) // Nous utilisons ici onResponse, le callback n'est reç
 Form.assistantMessage:=$result.choices[0].text
 ```
 
-### chat completions with streaming
+### Réponses conversationnelles avec streaming
 
-When you want to receive the response progressively as it's being generated (streaming), you can use the `stream` parameter along with an `onData` callback:
+Lorsque vous voulez recevoir la réponse progressivement car elle est générée en continu (streaming), vous pouvez utiliser le paramètre `stream` avec un callback `onData` :
 
 ```4d
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
 $messages.push({role: "user"; content: "Could you explain me why 42 is a special number"})
 
-// Enable streaming and provide onData callback
+// Activer le streaming et fournir la callback onData
 $client.chat.completions.create($messages; { \
     stream: True; \
     onData: Formula(MyStreamDataReceiveMethod($1)); \
@@ -75,39 +75,39 @@ $client.chat.completions.create($messages; { \
 })
 ```
 
-The `onData` callback will be called multiple times as data chunks arrive. `$1` will be an instance of [OpenAIChatCompletionsStreamResult](Classes/OpenAIChatCompletionsStreamResult.md):
+La fonction callback `onData` sera appelée plusieurs fois à mesure que les blocs de données arrivent. `$1` sera une instance de [OpenAIChatCompletionsStreamResult](Classes/OpenAIChatCompletionsStreamResult.md) :
 
 ```4d
 // MyStreamDataReceiveMethod
 #DECLARE($streamResult: cs.AIKit.OpenAIChatCompletionsStreamResult)
 
 If ($streamResult.success)
-    // Check if we have content in the delta
+    // Vérifier si on a du contenu dans le delta
     If ($streamResult.choices.length>0)
         var $choice: Object
         $choice:=$streamResult.choices[0]
         
         If ($choice.delta#Null) && ($choice.delta.content#Null)
-            // Append the new content chunk to the existing message
+            // Ajouter le  nouveau bloc de contenu au message existant
             Form.assistantMessage:=Form.assistantMessage+$choice.delta.content
         End if
     End if
 Else
-    // Handle streaming error
+    // Gérer une erreur de streaming
     ALERT("Streaming error: "+$streamResult.error.message)
 End if
 ```
 
-The `onTerminate` callback will be called once when the stream is complete:
+La callback `onTerminate` sera appelée une fois que le flux sera terminé :
 
 ```4d
 // MyStreamTerminateMethod
 #DECLARE($result: cs.AIKit.OpenAIChatCompletionsResult)
 
 If ($result.success)
-    // Stream completed successfully
+    // Flux terminé avec succès
 Else
-    // Handle final error
+    // Gérer erreur finale
     ALERT("Stream terminated with error: "+$result.errors.formula(Formula(JSON Stringify($1))).join("\n"))
 End if
 ```

@@ -21,7 +21,7 @@ title: VP SET CURRENT SHEET
 
 ## 説明
 
-`VP SET CURRENT SHEET` コマンドは、<!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します<!-- END REF --> 。 カレントシートとは、ドキュメント内で選択されているシートのことです。
+`VP SET CURRENT SHEET` コマンドは、<!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します<!-- END REF --> 。カレントシートとは、ドキュメント内で選択されているシートのことです。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 

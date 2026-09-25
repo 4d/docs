@@ -11,6 +11,14 @@ title: リリースノート
 :::
 
 
+## 4D 20.9 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.9): 4D 20.9 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2025/252/release-note-version-20/))。
+
+
+
 ## 4D 20.8 LTS
 
 #### ハイライト

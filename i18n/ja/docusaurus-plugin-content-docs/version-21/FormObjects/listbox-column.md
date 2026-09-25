@@ -3,49 +3,49 @@ id: listbox-column
 title: リストボックス列
 ---
 
-リストボックスは、それぞれ固有のプロパティを持つ 1つ以上の列オブジェクトから構成されています。 列を選択するには、フォームエディターでリストボックスオブジェクトが選択されているときに任意の列をクリックします:
+リストボックスは、それぞれ固有のプロパティを持つ 1つ以上の列オブジェクトから構成されています。列を選択するには、フォームエディターでリストボックスオブジェクトが選択されているときに任意の列をクリックします:
 
 ![](../assets/en/FormObjects/listbox_column.png)
 
-リストボックスの各列毎に標準のプロパティ (テキスト、背景色など)  を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
+リストボックスの各列毎に標準のプロパティ (テキスト、背景色など)を設定できます。設定すると、リストボックスに対する設定よりもこちらが優先されます。
 
 > 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式の型-式タイプ)
 > (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。
 
 ## カラム特有のプロパティ {#column-specific-properties}
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [選択リスト](properties_DataSource.md#選択リスト-静的リスト) - [式](properties_DataSource.md#式) - [幅](properties_CoordinatesAndSizing.md#幅) - [入力可](properties_Entry.md#入力可) - [フォーカス可](properties_Entry.md#フォーカス可) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) - [関連付け](properties_DataSource.md#関連付け) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) - [縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#d表示タイプ) - [文字フォ－マット](properties_Display.md#文字フォ－マット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [選択リスト](properties_DataSource.md#選択リスト-静的リスト) - [式](properties_DataSource.md#式) - [幅](properties_CoordinatesAndSizing.md#幅) - [入力可](properties_Entry.md#入力可) - [フォーカス可](properties_Entry.md#フォーカス可) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) - [関連付け](properties_DataSource.md#関連付け) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) - [縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#d表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ## サポートされるフォームイベント {#supported-form-events}
 
-| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                                                                                                                                                                                                         | コメント                                                                                                                         |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| On After Edit        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On After Keystroke   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On After Sort        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[headerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  | *複合フォーミュラはソート不可 <br/>(例: This.firstName + This.lastName)* |
-| On Alternative Click | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *配列リストボックスのみ*                                                                                                                |
-| On Before Data Entry | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Before Keystroke  | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Begin Drag Over   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Clicked           | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Column Moved      | <ul><li>[columnName](./listbox-object.md#additional-properties)</li><li>[newPosition](./listbox-object.md#additional-properties)</li><li>[oldPosition](./listbox-object.md#additional-properties)</li></ul>                                                                                                            |                                                                                                                              |
-| On Column Resize     | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[newSize](./listbox-object.md#additional-properties)</li><li>[oldSize](./listbox-object.md#additional-properties)</li></ul>                                                        |                                                                                                                              |
-| On Data Change       | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Double Clicked    | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Drag Over         | <ul><li>[area](./listbox-object.md#additional-properties)</li><li>[areaName](./listbox-object.md#additional-properties)</li><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul> |                                                                                                                              |
-| On Drop              | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
-| On Footer Click      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[footerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  | *配列、カレントセレクション&命名セレクションリストボックスのみ*                                                                        |
-| On Getting Focus     | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *追加プロパティの取得はセル編集時のみ*                                                                                                         |
-| On Header Click      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[headerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  |                                                                                                                              |
-| On Load              |                                                                                                                                                                                                                                                                                                                        |                                                                                                                              |
-| On Losing Focus      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *追加プロパティの取得はセル編集完了時のみ*                                                                                                       |
-| On Row Moved         | <ul><li>[newPosition](./listbox-object.md#additional-properties)</li><li>[oldPosition](./listbox-object.md#additional-properties)</li></ul>                                                                                                                                                                            | *配列リストボックスのみ*                                                                                                                |
-| On Unload            |                                                                                                                                                                                                                                                                                                                        |                                                                                                                              |
-| On Validate          |                                                                                                                                                                                                                                                                                                                        |                                                                                                                              |
+| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                                                                                                                                                                                                         | コメント                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| On After Edit        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On After Keystroke   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On After Sort        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[headerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  | *複合フォーミュラはソート不可<br/>(例: This.firstName + This.lastName)* |
+| On Alternative Click | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *配列リストボックスのみ*                                                                                                               |
+| On Before Data Entry | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Before Keystroke  | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Begin Drag Over   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Clicked           | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Column Moved      | <ul><li>[columnName](./listbox-object.md#additional-properties)</li><li>[newPosition](./listbox-object.md#additional-properties)</li><li>[oldPosition](./listbox-object.md#additional-properties)</li></ul>                                                                                                            |                                                                                                                             |
+| On Column Resize     | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[newSize](./listbox-object.md#additional-properties)</li><li>[oldSize](./listbox-object.md#additional-properties)</li></ul>                                                        |                                                                                                                             |
+| On Data Change       | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Double Clicked    | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Drag Over         | <ul><li>[area](./listbox-object.md#additional-properties)</li><li>[areaName](./listbox-object.md#additional-properties)</li><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul> |                                                                                                                             |
+| On Drop              | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                             |
+| On Footer Click      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[footerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  | *配列、カレントセレクション&命名セレクションリストボックスのみ*                                                                       |
+| On Getting Focus     | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *追加プロパティの取得はセル編集時のみ*                                                                                                        |
+| On Header Click      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[headerName](./listbox-object.md#additional-properties)</li></ul>                                                                                                                  |                                                                                                                             |
+| On Load              |                                                                                                                                                                                                                                                                                                                        |                                                                                                                             |
+| On Losing Focus      | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         | *追加プロパティの取得はセル編集完了時のみ*                                                                                                      |
+| On Row Moved         | <ul><li>[newPosition](./listbox-object.md#additional-properties)</li><li>[oldPosition](./listbox-object.md#additional-properties)</li></ul>                                                                                                                                                                            | *配列リストボックスのみ*                                                                                                               |
+| On Unload            |                                                                                                                                                                                                                                                                                                                        |                                                                                                                             |
+| On Validate          |                                                                                                                                                                                                                                                                                                                        |                                                                                                                             |
 
 ## オブジェクト配列の使用
 
-リストボックスのカラムはオブジェクト配列を扱えます。 オブジェクト配列は異なる種類のデータを格納できるので、この強力な機能を使用すれば、単一のカラム内の行ごとに異なる入力タイプを混ぜたり、様々なウィジェットを表示したりといったことができるようになります。 たとえば、最初の行にテキスト入力を挿入し、二行目にチェックボックスを、そして産業目にドロップダウンを挿入する、と言ったことが可能になります。 また、オブジェクト配列は、ボタンやカラーピッカーと言った新しいウィジェットへのアクセスも可能にします。
+リストボックスのカラムはオブジェクト配列を扱えます。オブジェクト配列は異なる種類のデータを格納できるので、この強力な機能を使用すれば、単一のカラム内の行ごとに異なる入力タイプを混ぜたり、様々なウィジェットを表示したりといったことができるようになります。たとえば、最初の行にテキスト入力を挿入し、二行目にチェックボックスを、そして産業目にドロップダウンを挿入する、と言ったことが可能になります。また、オブジェクト配列は、ボタンやカラーピッカーと言った新しいウィジェットへのアクセスも可能にします。
 
 以下のリストボックスはオブジェクト配列を使用してデザインされました:
 
@@ -57,15 +57,14 @@ title: リストボックス列
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
-オブジェクトカラムに対しては、座標、サイズ、スタイルなどに関連した標準のプロパティが使用可能です。 プロパティリストを使用して定義する方法のほかにも、オブジェクト型のリストボックスカラムのそれぞれの行に対してスタイル、フォントカラー、背景色、表示状態をプログラムで定義することもできます。 これらのタイプのカラムは非表示にすることも可能です。
+オブジェクトカラムに対しては、座標、サイズ、スタイルなどに関連した標準のプロパティが使用可能です。プロパティリストを使用して定義する方法のほかにも、オブジェクト型のリストボックスカラムのそれぞれの行に対してスタイル、フォントカラー、背景色、表示状態をプログラムで定義することもできます。これらのタイプのカラムは非表示にすることも可能です。
 
-しかしながら、データソーステーマは、オブジェクト型のリストボックスカラムに対しては選択できません。 実際、カラムの各セルの中身は、それに対応するオブジェクト配列の要素の属性に基づいています。 配列の各オブジェクト要素には、以下を定義できます:
+しかしながら、データソーステーマは、オブジェクト型のリストボックスカラムに対しては選択できません。実際、カラムの各セルの中身は、それに対応するオブジェクト配列の要素の属性に基づいています。配列の各オブジェクト要素には、以下を定義できます:
 
 値の型 (必須): テキスト、カラー、イベント、他<br />
-値そのもの (任意): 入力/出力に使用<br />
-セルの内容表示 (任意): ボタン、リスト、他<br />
+値そのもの (任意): 入力/出力に使用<br />セルの内容表示 (任意): ボタン、リスト、他<br />
 追加の設定 (任意): 値の型によります<br />
-これらのプロパティを定義するには、適切な属性をオブジェクト内に設定する必要があります (使用可能な属性は以下に一覧としてまとめてあります)。  たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
+これらのプロパティを定義するには、適切な属性をオブジェクト内に設定する必要があります (使用可能な属性は以下に一覧としてまとめてあります)。たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //カラム配列
@@ -77,11 +76,11 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
 
-> 表示フォーマットと入力フィルターはオブジェクトカラムに対しては設定できません。 これらは値の型に応じて自動的に変わるからです。
+> 表示フォーマットと入力フィルターはオブジェクトカラムに対しては設定できません。これらは値の型に応じて自動的に変わるからです。
 
 #### valueTypeとデータ表示
 
-リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。 次の valueType の値がサポートされています:
+リストボックスカラムにオブジェクト配列が割り当てられているとき、セルの表示・入力・編集の方法は、配列の要素の valueType 属性に基づきます。次の valueType の値がサポートされています:
 
 - "text": テキスト値
 - "real": セパレーターを含む数値。セパレーターの例: `<space>`, `<.>`, `<,>`
@@ -90,7 +89,7 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 - "color": 背景色を定義
 - "event": ラベル付ボタンを表示
 
-4D は "valueType" の値に応じたデフォルトのウィジェットを使用します (つまり、"text" と設定すればテキスト入力ウィジェットが表示され、"boolean" と設定すればチェックボックスが表示されます)。 しかし、オプションを使用することによって表示方法の選択が可能な場合もあります (たとえば、"real" と設定した場合、ドロップダウンメニューとしても表示できます)。 以下の一覧はそれぞれの値の型に対してのデフォルトの表示方法と、他に選択可能な表示方の一覧を表しています:
+4D は "valueType" の値に応じたデフォルトのウィジェットを使用します (つまり、"text" と設定すればテキスト入力ウィジェットが表示され、"boolean" と設定すればチェックボックスが表示されます)。 しかし、オプションを使用することによって表示方法の選択が可能な場合もあります (たとえば、"real" と設定した場合、ドロップダウンメニューとしても表示できます)。以下の一覧はそれぞれの値の型に対してのデフォルトの表示方法と、他に選択可能な表示方の一覧を表しています:
 
 | valueType | デフォルトのウィジェット                               | 他に選択可能なウィジェット                                                                                   |
 | --------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------- |
@@ -106,7 +105,7 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 
 #### 表示フォーマットと入力フィルター
 
-オブジェクト型のリストボックスのカラムにおいては、表示フォーマットと入力フィルターを設定することはできません。 これらは値の型に応じて自動的に定義されます。 どのように定義されるかについては、以下一覧にまとめてあります:
+オブジェクト型のリストボックスのカラムにおいては、表示フォーマットと入力フィルターを設定することはできません。これらは値の型に応じて自動的に定義されます。どのように定義されるかについては、以下一覧にまとめてあります:
 
 | 値の型     | デフォルトのフォーマット                                                | 入力コントロール                               |
 | ------- | ----------------------------------------------------------- | -------------------------------------- |
@@ -123,7 +122,7 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 
 オブジェクト配列の各要素は、セルの中身とデータ表示を定義する一つ以上の属性を格納するオブジェクトです (上記の例を参照ください)。
 
-唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
+唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。表示フォーマットに関しては、その更に下に詳細な説明と例があります。
 
 |                       | valueType                                   | text | real | integer | boolean | color | event |
 | --------------------- | ------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
@@ -147,7 +146,7 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 
 #### value
 
-セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
+セルの値は "value" 属性に保存されています。この属性は入力と出力に使用されるほか、リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
  ARRAY OBJECT(obColumn;0) //カラム配列
@@ -175,7 +174,7 @@ ARRAY OBJECT(obColumn;0) //カラム配列
 
 "valueType" が"real" または "integer" であるとき、min と max 属性もオブジェクトに設定できます (値は適切な範囲で、かつ、valueType と同じ型である必要があります)。
 
-これらの属性を使用すると入力値の範囲を管理することができます。 セルが評価されたとき (フォーカスを失ったとき)、入力された値が min の値より低い場合、または max の値より大きい場合には、その値は拒否されます。 この場合、入力をする前の値が保持され、tip として説明が表示されます。
+これらの属性を使用すると入力値の範囲を管理することができます。セルが評価されたとき (フォーカスを失ったとき)、入力された値が min の値より低い場合、または max の値より大きい場合には、その値は拒否されます。この場合、入力をする前の値が保持され、tip として説明が表示されます。
 
 ```4d
  var $ob3 : Object
@@ -211,16 +210,16 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 "choiceList" または "requiredList" 属性がオブジェクト内に存在しているとき、テキスト入力は以下の属性に応じて、ドロップダウンリストまたはコンボボックスで置き換えられます:
 
-- 属性が "choiceList" の場合、セルはコンボボックスとして表示されます。 これはつまり、ユーザーは値を選択、または入力できるということです。
+- 属性が "choiceList" の場合、セルはコンボボックスとして表示されます。これはつまり、ユーザーは値を選択、または入力できるということです。
 - 属性が "requiredList" の場合、セルはドロップダウンリストとして表示されます。 これはつまり、ユーザーはリストに提供されている値からどれか一つを選択するしかないということです。
 
 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
-> ウィジェットの値は配列を通して定義されます。 既存の 4Dリストをウィジェットに割り当てたい場合、"requiredListReference"、"requiredListName"、"choiceListReference"、または "choiceListName" 属性を使用する必要があります。
+> ウィジェットの値は配列を通して定義されます。既存の 4Dリストをウィジェットに割り当てたい場合、"requiredListReference"、"requiredListName"、"choiceListReference"、または "choiceListName" 属性を使用する必要があります。
 
 例:
 
-- 選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。 デフォルトでは "Closed" が選択された状態にしたいとします:
+- 選択肢が二つ ("Open" または "Closed") しかないドロップダウンリストを表示したい場合を考えます。デフォルトでは "Closed" が選択された状態にしたいとします:
 
 ```4d
 	ARRAY TEXT($RequiredList;0)
@@ -253,9 +252,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 #### requiredListName と requiredListReference
 
-"requiredListName" と "requiredListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (<code>New list</code> コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはドロップダウンリストとして表示されるようになります。 これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
+"requiredListName" と "requiredListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (<code>New list</code> コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。セルはドロップダウンリストとして表示されるようになります。これはつまり、ユーザーはリスト内に提供された値のどれか一つのみを選択できるということを意味します。
 
-"requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。 リストがツールボックスで作成された場合、リスト名を渡します。 リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
+"requiredListName" または "requiredListReference" は、リストの作成元に応じて使い分けます。 リストがツールボックスで作成された場合、リスト名を渡します。 リストがプログラミングによって定義された場合は、リストの参照を渡します。どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
 > - これらの値を単純な配列を通して定義したい場合は、"requiredList" 属性を使用する必要があります。
 > - リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。 例: "17.6" "1234.456"
@@ -295,9 +294,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 #### choiceListName と choiceListReference
 
-"choiceListName" と "choiceListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (<code>New list</code> コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。 セルはコンボボックスとして表示されるようになります。 これはつまり、ユーザーは値を選択、または入力できるということを意味します。
+"choiceListName" と "choiceListReference" 属性を使用すると、デザインモード (ツールボックス内) またはプログラミングによって (<code>New list</code> コマンドを使用して) 4Dで定義されたリストをリストボックスセル内において使用することが出来るようになります。セルはコンボボックスとして表示されるようになります。 これはつまり、ユーザーは値を選択、または入力できるということを意味します。
 
-"choiceListName" または "choiceListReference" は、リストの作成元に応じて使い分けます。 リストがツールボックスで作成された場合、リスト名を渡しま す。 リストがプログラミングによって定義された場合は、リストの参照を渡します。 どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
+"choiceListName" または "choiceListReference" は、リストの作成元に応じて使い分けます。 リストがツールボックスで作成された場合、リスト名を渡しま す。 リストがプログラミングによって定義された場合は、リストの参照を渡します。どちらの場合においても、"value" 属性を使用してウィジェット内の値を事前に選択することができます。
 
 > - これらの値を単純な配列を通して定義したい場合は、"choiceList" 属性を使用する必要があります。
 > - リストが実数値を表すテキストを含んでいる場合、小数点はローカル設定に関わらず、ピリオド (".") である必要があります。 例: "17.6" "1234.456"
@@ -322,9 +321,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します: 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
-- "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
+- "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。オブジェクト内で単位を定義するためには、この属性を使用します。
 - "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [`New list`](../commands-legacy/new-list.md) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
-- "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
+- "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
 
@@ -334,7 +333,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 
 例:
 
-数値の入力と、その後に可能性のある二つの単位 ("lines" または "pixels") を続けて表示したい場合を考えます。 カレントの値は "2" + "lines" と、 オブジェクト内で直接定義された値 ("unitsList" 属性) を使用するものとします:
+数値の入力と、その後に可能性のある二つの単位 ("lines" または "pixels") を続けて表示したい場合を考えます。カレントの値は "2" + "lines" と、オブジェクト内で直接定義された値 ("unitsList" 属性) を使用するものとします:
 
 ```4d
 ARRAY TEXT($_units;0)
@@ -351,7 +350,7 @@ OB SET ARRAY($ob;"unitsList";$_units)
 
 #### alternateButton
 
-セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に true の値を入れてオブジェクトに渡すだけです。 省略ボタンは自動的にセル内に表示されます。
+セルに省略ボタン [...] を追加したい場合、"alternateButton" 属性に true の値を入れてオブジェクトに渡すだけです。省略ボタンは自動的にセル内に表示されます。
 
 このボタンがユーザーによってクリックされた場合、`On Alternate Click` イベントが生成され、そのイベントを自由に管理することができます (詳細な情報に関しては [イベント管理](#イベント管理) の章を参照ください)。
 
@@ -371,7 +370,7 @@ OB SET($ob;"value";$entry)
 
 "color" valueType を使用すると、色、または色を表すテキストを表示することができます。
 
-- 値が数字の場合、色付けされた長方形がセル内に表示されます。 例:
+- 値が数字の場合、色付けされた長方形がセル内に表示されます。例:
 
   ```4d
   var $ob4 : Object
@@ -385,7 +384,7 @@ OB SET($ob;"value";$entry)
 
 #### event valueType
 
-"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。 データまたは値を渡す/返すことはできません。
+"event" valueType を使用すると、クリックした際に `On Clicked` イベントを生成する単純なボタンを表示します。データまたは値を渡す/返すことはできません。
 
 オプションとして、"label" 属性を渡すことができます。
 
@@ -409,6 +408,6 @@ OB SET($ob;"label";"Edit...")
   - コンボボックスエリア
   - 単位ボタン (値 x が値 x+1 へとスイッチしたとき)
   - チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
-- **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。
-- **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。
+- **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。このイベントはプログラマーによって管理されます。
+- **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。このイベントはプログラマーによって管理されます。
 

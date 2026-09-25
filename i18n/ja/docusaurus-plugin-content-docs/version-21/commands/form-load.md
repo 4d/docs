@@ -54,11 +54,11 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ### データの印刷
 
-このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。 ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
+このコマンドを実行するためには、[OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) コマンドを使って印刷ジョブを事前に開いておく必要があります。 [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) は[FORM UNLOAD](../commands-legacy/form-unload.md) を暗示的に呼び出すため、このコンテキストでは改めて **FORM LOAD** コマンドを使用する必要があります。ロードされた *form* はカレントの印刷フォームとなります。 [Print object](../commands-legacy/print-object.md) コマンドを含む、すべてのオブジェクト管理コマンドはこのフォームに対して動作します。
 
-**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。 ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレーク は生成されません。 ページブレークは開発者が別途指定する必要があります。
+**FORM LOAD** コマンドを呼び出す前に、別の印刷フォームがロードされていた場合には、そのフォームは閉じられ、*form* に置き換えられます。ひとつの印刷セッション内で複数のプロジェクトフォームを開いたり閉じたりすることができます。 **FORM LOAD** で印刷フォームを変更してもページブレーク は生成されません。ページブレークは開発者が別途指定する必要があります。
 
-プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、 [`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。  他のフォームイベントは無視されます。 印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
+プロジェクトフォーム (またはフォームのオブジェクトメソッド) を開く際には、 [`On Load` form event](../Events/onLoad.md) フォームイベントのみが実行されます。他のフォームイベントは無視されます。印刷の終わりには[`On Unload` form event](../Events/onUnload.md) フォームイベントが実行されます。
 
 フォームのグラフィックな一貫性を保持するために、プラットフォームにかかわらず"印刷"アピアランスプロパティを適用することをお勧めします。
 
@@ -66,9 +66,9 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ### フォームコンテンツの解析
 
-データ解析のためにスクリーン外にフォームをロードするには、 印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。 この場合、フォームイベントは実行されません。
+データ解析のためにスクリーン外にフォームをロードするには、印刷ジョブ外のコンテキストで**FORM LOAD** を呼び出します。この場合、フォームイベントは実行されません。
 
-**FORM LOAD** を [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併用することで、フォームコンテンツを任意に処理することができます。 その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
+**FORM LOAD** を [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) や[OBJECT Get type](../commands-legacy/object-get-type.md) コマンドと併用することで、フォームコンテンツを任意に処理することができます。その後、フォームをメモリから解放するために [FORM UNLOAD](../commands-legacy/form-unload.md) コマンドを呼び出す必要があります。
 
 いずれの場合においても、スクリーン上のフォームはロードされたままであるため(**FORM LOAD** コマンドに影響されない)、[FORM UNLOAD](../commands-legacy/form-unload.md)コマンドを呼び出した後にこれらをリロードする必要はありません。
 
@@ -131,7 +131,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 ## 例題 5
 
-リストボックスを含んでいるフォームを印刷したい場合を考えます。 リストボックスを含んでいるフォームを印刷したい場合を考えます。 そして *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
+リストボックスを含んでいるフォームを印刷したい場合を考えます。リストボックスを含んでいるフォームを印刷したい場合を考えます。 そして *on load* イベント中に、リストボックスのコンテンツを変更したいとします。
 
 1\. 印刷メソッド内に、以下のように書きます:
 

@@ -28,7 +28,7 @@ La classe `OpenAI` charge automatiquement les configurations des fournisseurs lo
 var $providers := cs.AIKit.OpenAIProviders.new()
 ```
 
-Creates a new instance that loads provider configuration from the `AIProviders.json` file. See [Configuration Files](../provider-model-aliases.md#configuration-files) in the Provider Model Aliases documentation for details on file locations and format.
+Crée une nouvelle instance qui charge la configuration du fournisseur à partir du fichier `AIProviders.json`. Voir [Fichiers de configuration](../provider-model-aliases.md#configuration-files) dans la documentation des Alias de Modèles de Fournisseurs pour plus de détails sur l'emplacement et le format des fichiers.
 
 **Important:**
 

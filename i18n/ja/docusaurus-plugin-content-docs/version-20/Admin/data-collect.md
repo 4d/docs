@@ -3,7 +3,7 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されるデータは完全に匿名で、データ収集がユーザーエクスペリエンスに影響を与えることはありません。
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。収集されるデータは完全に匿名で、データ収集がユーザーエクスペリエンスに影響を与えることはありません。
 
 このページは以下を説明します:
 
@@ -120,12 +120,12 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。 このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
+収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
-週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。 その後、ファイルは Active 4D Folder から削除されます。
+週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。その後、ファイルは Active 4D Folder から削除されます。
 
 ![](../assets/en/Admin/data-collect.png)
 

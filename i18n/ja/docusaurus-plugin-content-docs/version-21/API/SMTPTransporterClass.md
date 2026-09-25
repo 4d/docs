@@ -43,7 +43,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](../commands/smtp-new-transporter.md) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。この関数の機能は、[`SMTP New transporter`](../commands/smtp-new-transporter.md) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -141,13 +141,13 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](../commands/smtp-new-transporter.md) コマンドの説明を参照してください。
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。詳細については、[`SMTP New transporter`](../commands/smtp-new-transporter.md) コマンドの説明を参照してください。
 
-*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
+*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
 #### 返されるオブジェクト
 
-この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+この関数は、SMTP ステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      | 型       | 説明                                                         |
 | ---------- | ------- | ---------------------------------------------------------- |
@@ -155,7 +155,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
 | statusText | text    | SMTPから返されるステータスメッセージ                                       |
 
-SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、`Last errors` コマンドを使用します。
+SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。エラー情報を取得するには、`Last errors` コマンドを使用します。
 
 この場合、結果のステータスオブジェクトには以下の値が含まれます:
 

@@ -67,7 +67,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 </div>
 <!-- END REF -->
 
-El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles. Devuelve todas las clases de usuario [definidas](../Project/code-overview.md#creating-classes) en el proyecto o componente abierto.
+El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
 #### Ejemplo
 

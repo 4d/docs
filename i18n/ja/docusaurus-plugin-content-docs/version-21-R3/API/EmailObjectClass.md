@@ -79,9 +79,9 @@ Email オブジェクトは次のプロパティを提供します:
 
 ### メール本文の扱い
 
-[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。 プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。 メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
+[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
 
-[Email オブジェクト](#email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
+[Email オブジェクト](#email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
 
 #### bodyStructure および bodyValues オブジェクトの例
 
@@ -133,7 +133,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 
 #### 説明
 
-`.bodyStructure` プロパティは、<!-- REF #EmailObjectClass.bodyStructure.Summary -->(任意) メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクト<!-- END REF -->を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、<!-- REF #EmailObjectClass.bodyStructure.Summary -->(任意) メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクト<!-- END REF -->を格納します。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
@@ -156,14 +156,14 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 #### 説明
 
 `.bodyValues` プロパティは、<!-- REF #EmailObjectClass.bodyValues.Summary -->
-`bodyStructure` の <partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します (任意)。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`bodyStructure` の <partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクト<!-- END REF -->を格納します (任意)。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ                                      | 型       | 値                                                                                                         |
-| ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | 本文パートの値                                                                                                   |
-| *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
+| プロパティ                                      | 型       | 値                                                                                                        |
+| ------------------------------------------ | ------- | -------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | 本文パートの値                                                                                                  |
+| *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。デフォルトは false。 |
 
 ## .cc
 
@@ -206,7 +206,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 
 #### 説明
 
-`.headers` プロパティは、<!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクション<!-- END REF -->を格納します。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
+`.headers` プロパティは、<!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクション<!-- END REF -->を格納します。これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
 
 > メールレベルですでにプロパティとして設定されている "from" または "cc" などのヘッダーを `EmailHeader` オブジェクトプロパティが定義している場合、`EmailHeader` プロパティは無視されます。
 
@@ -223,7 +223,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 
 #### 説明
 
-`.htmlBody` プロパティは、<!-- REF #EmailObjectClass.htmlBody.Summary -->(任意、SMTPのみ) HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF --> を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.htmlBody` プロパティは、<!-- REF #EmailObjectClass.htmlBody.Summary -->(任意、SMTPのみ) HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF --> を格納します。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .id
 
@@ -282,7 +282,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 
 `.messageId` プロパティは、<!-- REF #EmailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id")<!-- END REF --> を格納します。
 
-通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。 この固有ID は特にフォーラムや公開メーリングリストで使用されています。 一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
+通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。この固有ID は特にフォーラムや公開メーリングリストで使用されています。一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
 
 ## .receivedAt
 
@@ -359,7 +359,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 
 #### 説明
 
-`.textBody` プロパティは、<!-- REF #EmailObjectClass.textBody.Summary -->(任意、SMTPのみ) 標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF --> を格納します。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.textBody` プロパティは、<!-- REF #EmailObjectClass.textBody.Summary -->(任意、SMTPのみ) 標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8)<!-- END REF --> を格納します。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .to
 

@@ -14,7 +14,7 @@ title: '$compute'
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-オブジェクト属性の場合は、プロパティを指定します。 例:
+オブジェクト属性の場合は、プロパティを指定します。例:
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 

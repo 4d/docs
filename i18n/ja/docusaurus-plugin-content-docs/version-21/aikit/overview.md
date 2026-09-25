@@ -41,7 +41,7 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
+`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
 
 また以下の例題も参照して下さい。
 
@@ -113,7 +113,7 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 #### 非同期コード
 
-リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。 戻り値のオブジェクトはコールバック関数内に受け取られます。
+リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。戻り値のオブジェクトはコールバック関数内に受け取られます。
 
 詳細については[例題の詳細なドキュメント](asynchronous-call.md) を参照して下さい。
 

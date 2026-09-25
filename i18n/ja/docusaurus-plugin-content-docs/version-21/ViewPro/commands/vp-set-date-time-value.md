@@ -31,7 +31,7 @@ title: VP SET DATE TIME VALUE
 
 *timeValue* 引数に、*rangeObj* 引数のレンジに割り当てたい時間値 (秒単位) を指定します。
 
-任意の *formatPattern* 引数は、*dateValue* および *timeValue* 引数に対するパターンを定義します。 パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](../configuring.md#日付と時間のフォーマット) の章を参照してください。
+任意の *formatPattern* 引数は、*dateValue* および *timeValue* 引数に対するパターンを定義します。パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](../configuring.md#日付と時間のフォーマット) の章を参照してください。
 
 ## 例題
 
