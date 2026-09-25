@@ -10,25 +10,25 @@ RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) �
 
 ## ユーザー認証
 
-この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。 これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
+この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
 
 ## セッションの開始
 
-[スケーラブルセッションを有効化](WebServer/sessions.md#セッションの有効化) (推奨) している場合に、`On REST Authentication` データベースメソッドが `true` を返すと、ユーザーセッションは自動的に開かれ、`Session` オブジェクトおよび [Session API](API/SessionClass.md) を介して管理することができます。 後続の RESTリクエストは同じセッションcookie を使用します。
+[スケーラブルセッションを有効化](WebServer/sessions.md#セッションの有効化) (推奨) している場合に、`On REST Authentication` データベースメソッドが `true` を返すと、ユーザーセッションは自動的に開かれ、`Session` オブジェクトおよび [Session API](API/SessionClass.md) を介して管理することができます。後続の RESTリクエストは同じセッションcookie を使用します。
 
 `On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
 
 ## プリエンプティブモード
 
-4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。 そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
+4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> サーバー上で実行されているインタープリターモードの Web コードをデバッグするには、[サーバー側](../Debugging/debugging-remote.md#有効化済デバッガー)またはクライアント側で[リモートデバッガー](../Debugging/debugging-remote.md)が有効さされている必要があります。 これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> サーバー上で実行されているインタープリターモードの Web コードをデバッグするには、[サーバー側](../Debugging/debugging-remote.md#有効化済デバッガー)またはクライアント側で[リモートデバッガー](../Debugging/debugging-remote.md)が有効さされている必要があります。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 
 ## 例題
 
-アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。 このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。
+アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。
 
 htmlログインページ:
 

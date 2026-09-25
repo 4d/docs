@@ -13,9 +13,14 @@ Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 - Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - You can now [compile a component directly from the host](../Project/compiler.md#compile-components). 
 - Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows. 
+- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [border color](../FormObjects/properties_BackgroundAndBorder.md#border-color) and [border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) properties. 
 - Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).   
+- [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes. 
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R5): list of all bugs that have been fixed in 4D 21 R5.  
 
+#### Behavior changes
+
+- For consistency, the **corner radius** property has been moved from the ["Coordinates & Sizing"](../FormObjects/properties_CoordinatesAndSizing.md) to the ["Background and Border"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) section of the Property List. 
 
 
 

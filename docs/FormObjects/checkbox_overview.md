@@ -106,6 +106,7 @@ The Regular check box button style is a standard system check box (*i.e.*, a rec
 		}
 ``` 
 
+The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
 
 
 ### Flat
@@ -129,6 +130,7 @@ The Flat check box button style is a minimalist appearance. The Flat style's gra
 			}
 ``` 
 
+The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
 
 
 ### Toolbar Button
@@ -385,11 +387,7 @@ The Disclosure style is named "roundedDisclosure" in the [button style JSON Gram
 
 ### Custom
 
-The Custom button style accepts a personalized background picture and allows managing specific properties:
-
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
-- [Icon Offset](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+The Custom check box style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-check-boxes) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin). 
 
 It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname). 
  
@@ -426,12 +424,21 @@ All check boxes share the same set of basic properties:
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
 > (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Additional specific properties are available, depending on the [button style](#check-box-button-styles):
+### Additional properties for custom check boxes
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
-- Flat, Regular: [Three-States](properties_Display.md#three-states)
+Additional specific properties are available for [custom](#custom) style check boxes:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+
+
+### Additional properties for flat and regular check boxes
+
+An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+
+[Three-States](properties_Display.md#three-states)
 
 
 ## Supported Events
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+

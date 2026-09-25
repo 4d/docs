@@ -5,7 +5,7 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *list* : Integer, Text ; * ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( * ; *list* : Text ; *itemRef* : 演算子, 倍長整数 ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( *list* : Integer ; * ; *itemRef* : 倍長整数, 演算子 ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
 | list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
+| itemRef | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
 | enterable | Boolean | &#8594; | TRUE = 入力可, FALSE = 入力不可 |
 | styles | Integer | &#8594; | 項目のフォントスタイル |
 | icon | Text, Integer | &#8594; | ピクチャー名または番号 (アイコンを使用しない場合は "" または 0) |
@@ -36,25 +36,25 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->**SET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡された参照番号またはオブジェクト名のリスト内で、*itemRef*によって指定された項目を変更します。<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->**SET LIST ITEM PROPERTIES** コマンドは、引数*list* に渡された参照番号またはオブジェクト名のリスト内で、*itemRef* によって指定された項目を変更します。<!-- END REF-->
 
 オプションの第一引数 *\** を渡すと、*list* 引数はフォーム上のリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。リストオブジェクトを一つしか使わない場合や、2番目の *\** を使用しない場合は、両方のシンタックスを使用できます。他方フォーム上に同じ階層リストを参照する複数のオブジェクトがある場合で、2番目の *\** を渡してカレント項目を参照する場合、それぞれのオブジェクトが個別にカレント項目をもつので、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-*itemRef*には参照番号を渡すことができます。渡された項目参照番号を持つ項目が存在しない場合、コマンドは何も動作しません。オプションとして*itemRef*に0を渡すことによって、[APPEND TO LIST](../commands/append-to-list) コマンドを使用してリストに追加した最後の項目を変更することができます。
+*itemRef* には参照番号を渡すことができます。渡された項目参照番号を持つ項目が存在しない場合、コマンドは何も動作しません。オプションとして*itemRef* に*0* を渡すことによって、[APPEND TO LIST](../commands/append-to-list) コマンドを使用してリストに追加した最後の項目を変更することができます。
 
-最後に、引数*itemRef*に *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目となります。選択された項目が存在しない場合、コマンドは何も行いません。
+最後に、引数*itemRef* に *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目となります。選択された項目が存在しない場合、コマンドは何も行いません。
 
-項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については、*階層リストの管理* を参照してください。
+項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については、[*階層リストフォームオブジェクト*](../../FormObjects/list_overview.md) を参照してください。
 
 **注:** 項目のテキストまたはそのサブリストを変更するには、[SET LIST ITEM](../commands/set-list-item) コマンドを使用します。
 
-項目を入力可能にする場合は、*enterable*引数にTRUEを渡し、そうでない場合はFALSEを渡します。
+項目を入力可能にする場合は、*enterable* 引数にTRUE を渡し、そうでない場合はFALSE を渡します。
 
 **重要**: 項目を入力可にするには、その項目が入力可であるリストに属している必要があります。
 
 [OBJECT SET ENTERABLE](../commands/object-set-enterable) コマンドを使用すると、リスト全体を入力可または入力不可にすることができます。**SET LIST ITEM PROPERTIES** コマンドを使用すると、個々のリスト項目を入力可または入力不可にすることができます。入力可プロパティをリストレベルで変更しても、項目の入力可プロパティは変更されません。しかし、項目に入力できるのは、そのリストが入力可な場合のみです。
 
-項目のフォントスタイルは、*styles*引数で指定します。以下の定義済定数の1つ、または複数を組み合わせて渡します:
+項目のフォントスタイルは、*styles* 引数で指定します。以下の(*Font Styles* テーマの)定義済定数の1つ、または複数を組み合わせて渡します:
 
 | 定数        | 型    | 値 |
 | --------- | ---- | - |
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
-*Hierarchical Lists*  
+[階層リスト](../../FormObjects/list_overview.md)  
 [SET LIST ITEM](../commands/set-list-item)  
 [SET LIST ITEM ICON](../commands/set-list-item-icon)  
 

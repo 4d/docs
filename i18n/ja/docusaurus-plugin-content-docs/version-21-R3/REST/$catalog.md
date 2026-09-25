@@ -22,7 +22,7 @@ title: $catalog
 
 `$catalog` を呼び出すと、プロジェクトのデータストア内のデータクラスのリストを、データクラス毎に 2つの URI とともに返します。
 
-プロジェクトのデータストア内の、公開されているデータクラスのみがリストされます。 詳細については、[**テーブルやフィールドの公開**](configuration.md#テーブルやフィールドの公開) を参照してください。
+プロジェクトのデータストア内の、公開されているデータクラスのみがリストされます。詳細については、[**テーブルやフィールドの公開**](configuration.md#テーブルやフィールドの公開) を参照してください。
 
 データクラス毎に返されるプロパティの説明です:
 
@@ -180,7 +180,7 @@ title: $catalog
 
 ### 説明
 
-`$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。 プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
+`$catalog/\{dataClass\}` を呼び出すと、指定したデータクラスとその属性について詳細な情報が返されます。プロジェクトのデータストア内のすべてのデータクラスに関して同様の情報を得るには [`$catalog/$all`](#catalogall) を使います。
 
 返される情報は次の通りです:
 
@@ -211,9 +211,9 @@ title: $catalog
 | kind        | Text    | 属性タイプ (ストレージ (storage) またはリレートエンティティ (relatedEntity))                                   |
 | fieldPos    | Number  | データベーステーブルのフィールド番号                                                                                                                               |
 | scope       | Text    | 属性のスコープ (公開 (public) に設定されている属性のみ返されます)                                                                    |
-| indexed     | Text    | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                         |
+| indexed     | Text    | 属性に **インデックス** が設定されていれば、このプロパティは true を返します。それ以外の場合には、このプロパティは表示されません。                                                                          |
 | type        | Text    | 属性タイプ (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, word)、または、N->1 リレーション属性の場合はリレーション先のデータクラス |
-| identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。 それ以外の場合には、このプロパティは表示されません。                                                                                     |
+| identifying | Boolean | 属性がプライマリーキーの場合、プロパティは true を返します。それ以外の場合には、このプロパティは表示されません。                                                                                      |
 | path        | Text    | relatedEntity 属性の場合はデータクラス名、relatedEntities 属性の場合はリレーション名                                                                                        |
 | foreignKey  | Text    | relatedEntity 属性の場合、リレート先の属性名                                                                                                                    |
 | inverseName | Text    | relatedEntity または relatedEntities 属性の逆方向リレーション名                                                                                                  |
@@ -328,7 +328,7 @@ key オブジェクトには、データクラスの **プライマリーキー*
 
 ## シングルトン
 
-1つ以上の [公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) を含む [共有シングルトン](../Concepts/classes.md#シングルトンクラス) を定義している場合、`/$catalog` と `/$catalog/$all` の両方の構文で、返される json に `singletons` セクションが追加されます。 コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
+1つ以上の [公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) を含む [共有シングルトン](../Concepts/classes.md#シングルトンクラス) を定義している場合、`/$catalog` と `/$catalog/$all` の両方の構文で、返される json に `singletons` セクションが追加されます。コレクションの形でまとめられたシングルトンクラスは、それぞれ **name** (クラス名) と **method** (公開関数名) を持つオブジェクト要素として格納されます。
 
 シングルトン関数は、[`$singleton` コマンド]($singleton.md) を使用した RESTリクエストで呼び出すことができます。
 

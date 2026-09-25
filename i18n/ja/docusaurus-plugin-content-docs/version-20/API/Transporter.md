@@ -204,7 +204,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.headerCharset` プロパティは、 <!-- REF #transporter.headerCharset.Summary --> メールヘッダーで使用される文字セットとエンコーディングを格納します<!-- END REF -->。 ヘッダーにはメールの次の要素を含みます:
+`.headerCharset` プロパティは、 <!-- REF #transporter.headerCharset.Summary --> メールヘッダーで使用される文字セットとエンコーディングを格納します<!-- END REF -->。ヘッダーにはメールの次の要素を含みます:
 
 - 内容
 - 添付ファイル名
@@ -238,7 +238,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.host` プロパティは、 <!-- REF #transporter.host.Summary -->ホストサーバーの名前または IPアドレスを格納します<!-- END REF -->。 この情報はメール通信 (SMTP、POP3、IMAP) に使用されます。
+`.host` プロパティは、 <!-- REF #transporter.host.Summary -->ホストサーバーの名前または IPアドレスを格納します<!-- END REF -->。この情報はメール通信 (SMTP、POP3、IMAP) に使用されます。
 
 <!-- END REF -->
 
@@ -259,9 +259,9 @@ title: Transporter クラス
 
 #### 説明
 
-`.logFile` プロパティは、 <!-- REF #transporter.logFile.Summary -->メール接続に対して定義された拡張ログファイル (あれば) へのフルパスを格納します<!-- END REF -->。 パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
+`.logFile` プロパティは、 <!-- REF #transporter.logFile.Summary -->メール接続に対して定義された拡張ログファイル (あれば) へのフルパスを格納します<!-- END REF -->。パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
 
-`SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。 拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
+`SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
 
 - **SMTP 接続** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - **POP3 接続** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -286,7 +286,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号を格納します<!-- END REF -->。 。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
+`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号を格納します<!-- END REF -->。。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -362,11 +362,11 @@ title: Transporter クラス
 
 #### 説明
 
-`.checkConnection()` 関数は、 <!-- REF #transporter.checkConnection().Summary --> transporter オブジェクトが保存する情報を使用して接続をチェックします<!-- END REF -->必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。
+`.checkConnection()` 関数は、 <!-- REF #transporter.checkConnection().Summary --> transporter オブジェクトが保存する情報を使用して接続をチェックします<!-- END REF -->必要なら再接続をし、そのステータスを返します。この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。
 
 #### 返されるオブジェクト
 
-この関数はメールサーバーにリクエストを送信し、メールステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+この関数はメールサーバーにリクエストを送信し、メールステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      |                          | 型          | 説明                                                |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------- |

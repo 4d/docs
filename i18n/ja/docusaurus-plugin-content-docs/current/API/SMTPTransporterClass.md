@@ -7,7 +7,7 @@ title: SMTPTransporter
 
 ### SMTP Transporter オブジェクト
 
-SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-new-transporter) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
+SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-new-transporter) コマンドによってインスタンス化されます。これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -46,7 +46,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 #### 説明
 
-`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](../commands/smtp-new-transporter) コマンドと同一です。
+`4D.SMTPTransporter.new()` 関数は、 <!-- REF #4D.SMTPTransporter.new().Summary -->新規の `4D.SMTPTransporter`型オブジェクトを作成して返します<!-- END REF -->。この関数の機能は、[`SMTP New transporter`](../commands/smtp-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -68,9 +68,9 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 #### 説明
 
-`.certificate` プロパティには<!-- REF #SMTPTransporterClass.certificate.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するのに使用される証明書を、[`4D.File`](./FileClass.md) オブジェクトまたはBlob 形式として格納<!-- END REF --> されています。 証明書には秘密鍵が含まれています。
+`.certificate` プロパティには<!-- REF #SMTPTransporterClass.certificate.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するのに使用される証明書を、[`4D.File`](./FileClass.md) オブジェクトまたはBlob 形式として格納<!-- END REF --> されています。証明書には秘密鍵が含まれています。
 
-証明書がすでに証明書ストア(*keychain*) に登録されている場合、このプロパティの代わりに[`.certificateName`](#certificatename) を使用することができます。 ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
+証明書がすでに証明書ストア(*keychain*) に登録されている場合、このプロパティの代わりに[`.certificateName`](#certificatename) を使用することができます。ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
 
 :::tip 関連したblog 記事
 
@@ -119,9 +119,9 @@ $result:=$transporter.send($email)
 
 #### 説明
 
-`.certificateName` プロパティは <!-- REF #SMTPTransporterClass.certificateName.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するために使用される、システム証明書ストア(*keychain*) に登録されている証明書の名前<!-- END REF --> を格納しています。 証明書には秘密鍵が含まれています。
+`.certificateName` プロパティは <!-- REF #SMTPTransporterClass.certificateName.Summary -->S/MIME (Secure/MIME) を使用してEメールを署名するために使用される、システム証明書ストア(*keychain*) に登録されている証明書の名前<!-- END REF --> を格納しています。証明書には秘密鍵が含まれています。
 
-この証明書は[`.certificate`](#certificate) プロパティを使用することで、ファイルまたはblob として直接提供することもできます。 ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
+この証明書は[`.certificate`](#certificate) プロパティを使用することで、ファイルまたはblob として直接提供することもできます。ただし両方のプロパティを同時に使用することはできないという点に注意してください。その場合にはエラーが返されます。
 
 :::tip 関連したblog 記事
 
@@ -148,7 +148,7 @@ $result:=$transporter.send($email)
 
 #### 説明
 
-`.certificatePassword` プロパティは<!-- REF #SMTPTransporterClass.certificatePassword.Summary -->Eメールを署名するのに証明書が使用するパスワード(必要であれば)<!-- END REF --> を格納しています。 パスワードが何も必要ない場合には空の文字列が使用されます。
+`.certificatePassword` プロパティは<!-- REF #SMTPTransporterClass.certificatePassword.Summary -->Eメールを署名するのに証明書が使用するパスワード(必要であれば)<!-- END REF --> を格納しています。パスワードが何も必要ない場合には空の文字列が使用されます。
 
 #### 参照
 
@@ -245,13 +245,13 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](../commands/smtp-new-transporter) コマンドの説明を参照してください。
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。詳細については、[`SMTP New transporter`](../commands/smtp-new-transporter) コマンドの説明を参照してください。
 
-*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
+*mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
 #### 返されるオブジェクト
 
-この関数は、SMTP ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+この関数は、SMTP ステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ      | 型       | 説明                                                         |
 | ---------- | ------- | ---------------------------------------------------------- |
@@ -259,7 +259,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 | status     | number  | SMTPサーバーから返されたコード (メール処理に関係ない問題の場合には 0) |
 | statusText | text    | SMTPから返されるステータスメッセージ                                       |
 
-SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、`Last errors` コマンドを使用します。
+SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、`ON ERR CALL` コマンドでインストールしたメソッドでインターセプトできます。エラー情報を取得するには、`Last errors` コマンドを使用します。
 
 この場合、結果のステータスオブジェクトには以下の値が含まれます:
 

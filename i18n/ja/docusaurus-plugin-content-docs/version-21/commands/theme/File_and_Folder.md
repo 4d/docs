@@ -1,7 +1,7 @@
 ---
 id: File_and_Folder_theme
-title: ファイルとフォルダ
-sidebar_label: ファイルとフォルダ
+title: ファイルとフォルダー
+sidebar_label: ファイルとフォルダー
 slug: /commands/theme/File-and-Folder
 ---
 

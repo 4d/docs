@@ -7,7 +7,7 @@ title: ユーザーとセッション
 
 [スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md#enabling-web-sessions) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
 
-開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
+開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。後続の RESTリクエストは同じセッションcookie を再使用します。
 
 セッションは、ユーザーが正常にログインした後に開かれます (後述参照)。
 
@@ -18,29 +18,28 @@ title: ユーザーとセッション
 
 :::note 互換性
 
-4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。 現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#function-authentify) の実装が推奨されています。 変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](https://developer.4d.com/qodly/4DQodlyPro/force-login) を使用してログインモードを設定することができます。
+4D 20 R6 以降、`On REST Authentication` データベースメソッドに基づく従来のログインモードは **非推奨** となりました。現在は、[**強制ログインモード**](../ORDA/privileges.md#rolesjson-ファイル) の使用 (新規プロジェクトでは自動的に有効) および [`ds.authentify()`関数](#function-authentify) の実装が推奨されています。変換されたプロジェクトでは、[設定ダイアログボックスのボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) を使用して、構成をアップグレードすることができます。 Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](https://developer.4d.com/qodly/4DQodlyPro/force-login) を使用してログインモードを設定することができます。
 
 :::
 
 ユーザーログインシーケンスは次のとおりです:
 
-1. 最初の RESTコール (たとえば Qodlyページコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。  
-   記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
+1. 最初の RESTコール (たとえば Qodlyページコール) では、"ゲスト" Webユーザーセッションが作成されます。[記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。  
+   記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。この場合、それらは "ゲスト" セッションを介して処理されます。
 
-2. 事前に用意した [`authentify()` 関数](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
-   この関数は、4D コードから直接([`Open datastore`](../commands/open-datastore) の例題参照)、あるいはユーザー認証情報とともに`/rest/$catalog/authentify` リクエストを通して呼び出すことが可能です。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。これには例えば`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](https://developer.4d.com/qodly/) を利用できます。
+2. 事前に用意した [`authentify()` 関数](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。この関数は、4D コードから直接([`Open datastore`](../commands/open-datastore) の例題参照)、あるいはユーザー認証情報とともに`/rest/$catalog/authentify` リクエストを通して呼び出すことが可能です。このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。これには例えば`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](https://developer.4d.com/qodly/) を利用できます。
 
 3. ユーザーが正常に認証できた場合、サーバー上では4D ライセンスが1つ消費され、また[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数が呼ばれれば、全てのREST リクエストが受け入れられるようになります。
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
-ユーザーログインの段階では、ライセンスの消費は Webユーザーセッションから切り離されます。 ライセンスは、[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) が実行された時にのみ必要なため、使用されるライセンスの数を制御することができます。
+ユーザーログインの段階では、ライセンスの消費は Webユーザーセッションから切り離されます。ライセンスは、[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) が実行された時にのみ必要なため、使用されるライセンスの数を制御することができます。
 
-他のすべての RESTリクエスト (データ処理や関数の実行) は、適切な権限を持つ Webセッション内で実行された場合にのみ処理されます。それ以外の場合はエラーを返します Webセッションに権限を割り当てるには、セッションに対して [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を実行する必要があります。 この関数を実行すると、4Dライセンスの消費が発生します。
+他のすべての RESTリクエスト (データ処理や関数の実行) は、適切な権限を持つ Webセッション内で実行された場合にのみ処理されます。それ以外の場合はエラーを返します Webセッションに権限を割り当てるには、セッションに対して [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を実行する必要があります。この関数を実行すると、4Dライセンスの消費が発生します。
 
 ### 記述的RESTリクエスト
 
-記述的RESTリクエストは、ライセンスを必要としない Webユーザーセッション ("ゲスト" セッション) で処理することができます。 記述的RESTリクエストとは以下のものを指します:
+記述的RESTリクエストは、ライセンスを必要としない Webユーザーセッション ("ゲスト" セッション) で処理することができます。記述的RESTリクエストとは以下のものを指します:
 
 - [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
 - `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
@@ -68,7 +67,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 :::
 
-この関数は、任意の認証またはコンテキスト情報を [引数](ClassFunctions.md#引数) として受け取り、任意の値を返すことができます。 この関数は RESTリクエストからのみ呼び出すことができるため、引数は POSTリクエストの本文で渡されなければなりません。
+この関数は、任意の認証またはコンテキスト情報を [引数](ClassFunctions.md#引数) として受け取り、任意の値を返すことができます。この関数は RESTリクエストからのみ呼び出すことができるため、引数は POSTリクエストの本文で渡されなければなりません。
 
 この関数は 2部構成で書かれる必要があります:
 

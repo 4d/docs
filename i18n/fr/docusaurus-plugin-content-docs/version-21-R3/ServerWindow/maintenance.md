@@ -1,6 +1,6 @@
 ---
 id: maintenance
-title: Page maintenance
+title: Page Maintenance
 ---
 
 La page **Maintenance** fournit diverses informations relatives au fonctionnement courant de la base. Elle donne également accès aux fonctions de maintenance élémentaires :

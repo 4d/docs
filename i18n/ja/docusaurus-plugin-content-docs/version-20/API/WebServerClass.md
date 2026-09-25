@@ -4,7 +4,7 @@ title: WebServer
 ---
 
 
-`WebServer` クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます ([Webサーバーオブジェクト](WebServer/webServerObject.md) 参照)。 このクラスは `4D` クラスストアより提供されます。
+`WebServer` クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます ([Webサーバーオブジェクト](WebServer/webServerObject.md) 参照)。このクラスは `4D` クラスストアより提供されます。
 
 ### Webサーバーオブジェクト
 
@@ -82,7 +82,7 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 `WEB Server` コマンドは、 <!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または *option* 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
 
-*option*が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
+*option*が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
 | 定数                             | 値 | 説明                                 |
 | ------------------------------ | - | ---------------------------------- |
@@ -136,7 +136,7 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 サーバーが実際に実行中か否かに関わらず、`WEB Server list` コマンドは利用可能な Webサーバーをすべて返します。
 
-> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 その一方で、コンポーネントの Webサーバーは、[`WEB Server`](#web-server) コマンドによってそれぞれインスタンス化しなくてはなりません。
+> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。その一方で、コンポーネントの Webサーバーは、[`WEB Server`](#web-server) コマンドによってそれぞれインスタンス化しなくてはなりません。
 
 Webサーバオブジェクトの [.name](#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
 
@@ -159,7 +159,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
 
-**.accessKeyDefined** プロパティは、 <!-- REF #WebServerClass.accessKeyDefined.Summary -->Webサーバーの設定にアクセスキーが定義されていれば true を格納します<!-- END REF -->。 このプロパティは WebAdmin Webサーバーによって、管理インターフェースのセキュリティ設定を有効化するのに使用されます。
+**.accessKeyDefined** プロパティは、 <!-- REF #WebServerClass.accessKeyDefined.Summary -->Webサーバーの設定にアクセスキーが定義されていれば true を格納します<!-- END REF -->。このプロパティは WebAdmin Webサーバーによって、管理インターフェースのセキュリティ設定を有効化するのに使用されます。
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -168,7 +168,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
 
-`.certificateFolder` プロパティは、 <!-- REF #WebServerClass.certificateFolder.Summary -->認証ファイルが保存されているフォルダーのパスを格納します<!-- END REF -->。 パスは、ファイルシステムを使用した POSIXフルパスの形式です。 [`.start()`](#start) 関数に渡す `settings` 引数内でこのプロパティを使用する場合、[`Folder` オブジェクト](FolderClass.md) も使用可能です。
+`.certificateFolder` プロパティは、 <!-- REF #WebServerClass.certificateFolder.Summary -->認証ファイルが保存されているフォルダーのパスを格納します<!-- END REF -->。パスは、ファイルシステムを使用した POSIXフルパスの形式です。 [`.start()`](#start) 関数に渡す `settings` 引数内でこのプロパティを使用する場合、[`Folder` オブジェクト](FolderClass.md) も使用可能です。
 
 <!-- END REF -->
 
@@ -179,7 +179,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 <!-- REF #WebServerClass.characterSet.Syntax -->**.characterSet** : Number<br/>**.characterSet** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.characterSet.Summary -->アプリケーションに接続してくるブラウザーとの通信に 4D Webサーバーが使用すべき文字セット<!-- END REF -->。 デフォルト値は OS の言語に依存します。 値には、MIBenum 整数や名称の文字列、[IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml) が定義する識別子を使用できます。 以下は、4D Webサーバーがサポートしている文字セットに対応する識別子のリストです:
+ <!-- REF #WebServerClass.characterSet.Summary -->アプリケーションに接続してくるブラウザーとの通信に 4D Webサーバーが使用すべき文字セット<!-- END REF -->。デフォルト値は OS の言語に依存します。値には、MIBenum 整数や名称の文字列、[IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml) が定義する識別子を使用できます。以下は、4D Webサーバーがサポートしている文字セットに対応する識別子のリストです:
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -204,7 +204,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.cipherSuite.Summary -->保護されたプロトコルのために使用される暗号スイートリスト<!-- END REF -->。 これは、4D Webサーバーが実装する暗号化アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
+ <!-- REF #WebServerClass.cipherSuite.Summary -->保護されたプロトコルのために使用される暗号スイートリスト<!-- END REF -->。これは、4D Webサーバーが実装する暗号化アルゴリズムの優先順位を設定します。コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
 <!-- END REF -->
 
@@ -215,7 +215,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
 
- <!-- REF #WebServerClass.CORSEnabled.Summary -->Web サーバーの CORS (*Cross-origin resource sharing*、オリジン間リソース共有) サービスステータス<!-- END REF -->。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合 (true)、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。 後述の `CORSSettings` 参照)。 無効化されている場合 (false、デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。 有効時 (true) に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
+ <!-- REF #WebServerClass.CORSEnabled.Summary -->Web サーバーの CORS (*Cross-origin resource sharing*、オリジン間リソース共有) サービスステータス<!-- END REF -->。セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。有効化されている場合 (true)、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。 後述の `CORSSettings` 参照)。無効化されている場合 (false、デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。有効時 (true) に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
 
 デフォルト: false (無効)
 
@@ -230,10 +230,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
- <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ( [`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。
+ <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ( [`CORSEnabled`](#corsenabled) プロパティ参照)。各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。
 
 
-- **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
+- **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。複数のシンタックスがサポートされています:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.*
@@ -245,7 +245,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
   - myProject.myDomain.com
   - \*
 
-- **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
+- **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
 <!-- END REF -->
 
@@ -284,7 +284,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
 
- <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) のステータス<!-- END REF -->。 HSTS によって、Webサーバーはブラウザーに対し、セキュアな HTTPS接続のみを許可すると宣言できます。 Webサーバーからの初回レスポンスを受け取った際にブラウザーは HSTS情報を記録し、以降の HTTPリクエストは自動的に HTTPSリクエストに変換されます。 ブラウザー側でこの情報が保存される時間は `HSTSMaxAge` プロパティによって指定されます。 HSTS のためには、サーバー上で HTTPS が有効になっていなくてはなりません。 また、初回のクライアント接続を許可するために、HTTP も有効でなくてはなりません。
+ <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) のステータス<!-- END REF -->。 HSTS によって、Webサーバーはブラウザーに対し、セキュアな HTTPS接続のみを許可すると宣言できます。 Webサーバーからの初回レスポンスを受け取った際にブラウザーは HSTS情報を記録し、以降の HTTPリクエストは自動的に HTTPSリクエストに変換されます。ブラウザー側でこの情報が保存される時間は `HSTSMaxAge` プロパティによって指定されます。 HSTS のためには、サーバー上で HTTPS が有効になっていなくてはなりません。また、初回のクライアント接続を許可するために、HTTP も有効でなくてはなりません。
 
 <!-- END REF -->
 
@@ -297,7 +297,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.HSTSMaxAge.Summary -->新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<!-- END REF -->。 この情報はクライアント側で指定された時間のあいだ保存されます。
+ <!-- REF #WebServerClass.HSTSMaxAge.Summary -->新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<!-- END REF -->。この情報はクライアント側で指定された時間のあいだ保存されます。
 
 デフォルト値: 63072000 (2年)。
 
@@ -310,7 +310,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->4D HTTPサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル<!-- END REF -->。 このセレクターを使って、実行速度を優先するか (圧縮少)、それとも圧縮レベルを優先するか (速度減) を指定し、通信を最適化することができます。
+ <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->4D HTTPサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル<!-- END REF -->。このセレクターを使って、実行速度を優先するか (圧縮少)、それとも圧縮レベルを優先するか (速度減) を指定し、通信を最適化することができます。
 
 とりうる値:
 
@@ -328,7 +328,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->HTTP圧縮のしきい値 (バイト単位) (このサイズ未満のリクエストについては、通信が圧縮されません)<!-- END REF -->。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
+ <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->HTTP圧縮のしきい値 (バイト単位) (このサイズ未満のリクエストについては、通信が圧縮されません)<!-- END REF -->。この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
 デフォルトのしきい値 = 1024 バイト
 
@@ -365,7 +365,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
 
- <!-- REF #WebServerClass.HTTPTrace.Summary -->`HTTP TRACE` の有効化状態<!-- END REF -->。 セキュリティ上の理由により、Webサーバーはデフォルトで `HTTP TRACE` リクエストをエラー405 で拒否します。 有効化されている場合、`HTTP TRACE` リクエストに対して Webサーバーは、リクエスト行、ヘッダー、および本文を返します。
+ <!-- REF #WebServerClass.HTTPTrace.Summary -->`HTTP TRACE` の有効化状態<!-- END REF -->。セキュリティ上の理由により、Webサーバーはデフォルトで `HTTP TRACE` リクエストをエラー405 で拒否します。有効化されている場合、`HTTP TRACE` リクエストに対して Webサーバーは、リクエスト行、ヘッダー、および本文を返します。
 
 <!-- END REF -->
 
@@ -399,7 +399,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Number<!-- END REF -->
 
-> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->旧式セッションプロセスの非アクティブタイムアウト時間 (分単位)<!-- END REF -->。 すると、`On Web Legacy Close Session` データベースメソッドが呼び出され、旧式セッションのコンテキストは削除されます。
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->旧式セッションプロセスの非アクティブタイムアウト時間 (分単位)<!-- END REF -->。すると、`On Web Legacy Close Session` データベースメソッドが呼び出され、旧式セッションのコンテキストは削除されます。
 
 デフォルト = 480 分
 
@@ -411,7 +411,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Number<!-- END REF -->
 
-> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->旧式セッションの非アクティブタイムアウト時間 (分単位; cookie の設定)<!-- END REF -->。 タイムアウト時間が経過するとセッションcookie が無効になり、HTTPクライアントによって送信されなくなります。
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->旧式セッションの非アクティブタイムアウト時間 (分単位; cookie の設定)<!-- END REF -->。タイムアウト時間が経過するとセッションcookie が無効になり、HTTPクライアントによって送信されなくなります。
 
 デフォルト = 480 分
 
@@ -424,7 +424,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.IPAddressToListen.Summary -->4D Webサーバーが HTTPリクエストを受信する IPアドレス<!-- END REF -->。 デフォルトでは、特定のアドレスは定義されていません。 IPv6 および IPv4 文字列形式の両方がサポートされています。
+ <!-- REF #WebServerClass.IPAddressToListen.Summary -->4D Webサーバーが HTTPリクエストを受信する IPアドレス<!-- END REF -->。デフォルトでは、特定のアドレスは定義されていません。 IPv6 および IPv4 文字列形式の両方がサポートされています。
 
 <!-- END REF -->
 
@@ -478,7 +478,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->Webサーバーにてサポートする最大同時Webプロセス数<!-- END REF -->。 この数値 (マイナス1) に達すると、4D はプロセスを作成しなくなり、新規リクエストに対して HTTPステータス 503 - Service Unavailable を返します。
+ <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->Webサーバーにてサポートする最大同時Webプロセス数<!-- END REF -->。この数値 (マイナス1) に達すると、4D はプロセスを作成しなくなり、新規リクエストに対して HTTPステータス 503 - Service Unavailable を返します。
 
 とりうる値: 10 - 32000
 
@@ -493,7 +493,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.maxRequestSize.Summary -->Webサーバーが処理してよい HTTPリクエスト (POST) の最大サイズ (バイト単位)<!-- END REF -->。 最大値 (2147483647) に設定した場合、実際には制限無しということになります。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、Webサーバーによって拒否されます。
+ <!-- REF #WebServerClass.maxRequestSize.Summary -->Webサーバーが処理してよい HTTPリクエスト (POST) の最大サイズ (バイト単位)<!-- END REF -->。最大値 (2147483647) に設定した場合、実際には制限無しということになります。制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。リクエストのサイズが制限に達していると、Webサーバーによって拒否されます。
 
 とりうる値: 500000 - 2147483647
 
@@ -505,7 +505,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Number<!-- END REF -->
 
-> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.maxSessions.Summary -->旧式セッションにおける同時セッションの最大数<!-- END REF -->。 制限に達すると、Webサーバーが新規セッションを作成するときに、一番古い旧式セッションが閉じられます (`On Web Legacy Close Session` データベースメソッドが呼び出されます)。 旧式セッションの同時セッション数は、Webプロセスの合計値を超えることはできません (`maxConcurrentProcesses` プロパティ、デフォルト値は 100)。
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは返されません。 <!-- REF #WebServerClass.maxSessions.Summary -->旧式セッションにおける同時セッションの最大数<!-- END REF -->。制限に達すると、Webサーバーが新規セッションを作成するときに、一番古い旧式セッションが閉じられます (`On Web Legacy Close Session` データベースメソッドが呼び出されます)。旧式セッションの同時セッション数は、Webプロセスの合計値を超えることはできません (`maxConcurrentProcesses` プロパティ、デフォルト値は 100)。
 
 <!-- END REF -->
 
@@ -516,7 +516,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
 
 
- <!-- REF #WebServerClass.minTLSVersion.Summary -->接続に必要な最低TLSバージョン<!-- END REF -->。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
+ <!-- REF #WebServerClass.minTLSVersion.Summary -->接続に必要な最低TLSバージョン<!-- END REF -->。これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 
 とりうる値:
 
@@ -568,7 +568,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.rootFolder.Summary -->Webサーバのルートフォルダーのパス<!-- END REF -->。 パスは、ファイルシステムを使用した POSIXフルパスの形式です。 `settings` 引数内でこのプロパティを使用する場合、`Folder` オブジェクトも使用可能です。
+ <!-- REF #WebServerClass.rootFolder.Summary -->Webサーバのルートフォルダーのパス<!-- END REF -->。パスは、ファイルシステムを使用した POSIXフルパスの形式です。 `settings` 引数内でこのプロパティを使用する場合、`Folder` オブジェクトも使用可能です。
 
 <!-- END REF -->
 
@@ -594,7 +594,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "domain" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
+ <!-- REF #WebServerClass.sessionCookieDomain.Summary -->セッションcookie の "domain" フィールド<!-- END REF -->。セッションcookie のスコープを制御するのに使用されます。たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
 
 <!-- END REF -->
 
@@ -618,7 +618,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
+ <!-- REF #WebServerClass.sessionCookiePath.Summary -->セッションcookie の "path" フィールド<!-- END REF -->。セッションcookie のスコープを制御するのに使用されます。たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 <!-- END REF -->
 
@@ -637,7 +637,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
- <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。 とりうる値 (定数使用):
+ <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。とりうる値 (定数使用):
 
 | 定数                  | 値        | 説明                                                              |
 | ------------------- | -------- | --------------------------------------------------------------- |
@@ -655,7 +655,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->**.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
-> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは使用されません (IPアドレスを検証しません)。 <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->セッションcookie の IPアドレス検証<!-- END REF -->。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。
+> [スケーラブルセッションモード](#scalablesession) の場合には、このプロパティは使用されません (IPアドレスを検証しません)。 <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->セッションcookie の IPアドレス検証<!-- END REF -->。セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。
 
 <!-- END REF -->
 
@@ -686,7 +686,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 `.start()` 関数は、 <!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。 この際、任意の *settings* オブジェクト引数に設定したプロパティを使用します。
 
-プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
+プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
 [Webサーバーオブジェクト](#webサーバーオブジェクト)の設定すべては、読み取り専用プロパティ([.isRunning](#isrunning)、[.name](#name)、[.openSSLVersion](#opensslversion)、[.perfectForwardSecrecy](#perfectforwardsecrecy)、[.sessionCookieName](#sessioncookiename))を除き、カスタマイズすることができます。
 
@@ -694,7 +694,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 #### 返されるオブジェクト
 
-関数は Webサーバーの開始ステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:
+関数は Webサーバーの開始ステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:
 
 | プロパティ   |                         | 型          | 説明                                    |
 | ------- | ----------------------- | ---------- | ------------------------------------- |

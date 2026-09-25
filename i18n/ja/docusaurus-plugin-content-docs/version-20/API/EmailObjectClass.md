@@ -72,9 +72,9 @@ Email オブジェクトは次のプロパティを提供します:
 
 ### メール本文の扱い
 
-[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。 プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。 メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
+[`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
 
-[Email オブジェクト](#email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
+[Email オブジェクト](#email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
 
 #### bodyStructure および bodyValues オブジェクトの例
 
@@ -126,7 +126,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
@@ -148,14 +148,14 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyValues` プロパティは、 <!-- REF #EmailObjectClass.bodyValues.Summary -->`bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクトを格納します (任意)。<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyValues` プロパティは、 <!-- REF #EmailObjectClass.bodyValues.Summary -->`bodyStructure` の \<partID\> 毎にオブジェクトを格納している *EmailBodyValue* オブジェクトを格納します (任意)。<!-- END REF -->。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ                      | 型       | 値                                                                                                         |
-| -------------------------- | ------- | --------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | 本文パートの値                                                                                                   |
-| *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
+| プロパティ                      | 型       | 値                                                                                                        |
+| -------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | 本文パートの値                                                                                                  |
+| *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。デフォルトは false。 |
 
 ## .cc
 
@@ -198,7 +198,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.headers` プロパティは、 <!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクションを格納します<!-- END REF -->。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
+`.headers` プロパティは、 <!-- REF #EmailObjectClass.headers.Summary -->メッセージ内で現れる順番どおりの `EmailHeader` オブジェクトのコレクションを格納します<!-- END REF -->。これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
 
 > メールレベルですでにプロパティとして設定されている "from" または "cc" などのヘッダーを `EmailHeader` オブジェクトプロパティが定義している場合、`EmailHeader` プロパティは無視されます。
 
@@ -215,7 +215,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.htmlBody` プロパティは、 <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.htmlBody` プロパティは、 <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .id
 
@@ -273,7 +273,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 `.messageId` プロパティは、 <!-- REF #EmailObjectClass.messageId.Summary -->メッセージ識別ヘッダー ("message-id") を格納します<!-- END REF -->。
 
-通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。 この固有ID は特にフォーラムや公開メーリングリストで使用されています。 一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
+通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。この固有ID は特にフォーラムや公開メーリングリストで使用されています。一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
 
 ## .receivedAt
 
@@ -350,7 +350,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.textBody` プロパティは、 <!-- REF #EmailObjectClass.textBody.Summary -->標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.textBody` プロパティは、 <!-- REF #EmailObjectClass.textBody.Summary -->標準テキスト形式のメールメッセージ (デフォルトの文字セットは UTF-8) を格納します (任意、SMTPのみ)<!-- END REF -->。[メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .to
 
@@ -388,7 +388,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 `MAIL Convert from MIME` コマンドは、 <!-- REF #_command_.MAIL Convert from MIME.Summary -->MIMEドキュメントを有効な Emailオブジェクトへと変換します<!-- END REF -->。
 > 4Dは戻り値の Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec/rfc8621/) に準拠します。
 
-*mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
+*mime* には、変換する有効な MIME ドキュメントを渡します。これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
 
 #### 返されるオブジェクト
 
@@ -474,17 +474,17 @@ $status:=$transporter.send($email)
 
 #### 説明
 
-`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL Convert to MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。 このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
+`MAIL Convert to MIME` コマンドは、 <!-- REF #_command_.MAIL Convert to MIME.Summary -->Emailオブジェクトを MIMEテキストへと変換します<!-- END REF -->。このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
 
-*mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
+*mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
 > 4D は Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec/rfc8621/) に準拠します。
 
-*options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定を指定することができます。 次のプロパティを利用することができます:
+*options* 引数を渡すと、メールに対して特定の文字セットとエンコーディング設定を指定することができます。次のプロパティを利用することができます:
 
-| プロパティ         | 型    | 説明                                                                                 |
-| ------------- | ---- | ---------------------------------------------------------------------------------- |
-| headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 とりうる値:<table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table> |
-| bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取りうる値: headerCharset と同じ(上記参照)       |
+| プロパティ         | 型    | 説明                                                                                |
+| ------------- | ---- | --------------------------------------------------------------------------------- |
+| headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。とりうる値:<table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li><i>bodyCharset</i>: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 &amp; Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 &amp; 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能なら US-ASCII、それが不可なら UTF-8 &amp; Quoted-printable (**デフォルト値**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &amp; <i>bodyCharset</i>: 可能な場合は US-ASCII、それ以外は UTF-8 &amp; base64</td></tr></table> |
+| bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。取りうる値: headerCharset と同じ(上記参照)       |
 
 *options* 引数が省略された場合、ヘッダーおよび本文においては mail mode UTF8 設定が使用されます。
 

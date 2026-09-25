@@ -29,7 +29,7 @@ title: VP SET BINDING PATH
 
 ## 説明
 
-`VP SET BINDING PATH` コマンドは、<!-- REF #_method_.VP SET BINDING PATH.Summary -->*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。 機能するには、[SET DATA CONTEXT](vp-set-data-context.md) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
+`VP SET BINDING PATH` コマンドは、<!-- REF #_method_.VP SET BINDING PATH.Summary -->*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。機能するには、[SET DATA CONTEXT](vp-set-data-context.md) を使ってデータコンテキストを設定する必要があります。読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
 
 *rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
 
@@ -38,7 +38,7 @@ title: VP SET BINDING PATH
 
 *dataContextAttribute* には、*rangeObj* にバインドする属性の名称を渡します。 *dataContextAttribute* が空の文字列だった場合、関数は属性のバインドを解除します。
 
-> コレクション型の属性はサポートされていません。 コレクション属性の名前を渡した場合、コマンドは何もしません。
+> コレクション型の属性はサポートされていません。コレクション属性の名前を渡した場合、コマンドは何もしません。
 
 ## 例題
 

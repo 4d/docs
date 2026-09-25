@@ -193,7 +193,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#predictable-vs-unpredictable-errors) errors:
+3. Vous voulez gérer à la fois les erreurs [prévisibles et non prévisibles](#predictable-vs-unpredictable-errors) :
 
 ```4d
 var $e:=ds.Employee.new()
@@ -293,21 +293,21 @@ Les exceptions qui interrompent l'exécution du code sont renvoyées par 4D mais
 - un **message**, qui explique pourquoi l'erreur s'est produite
 - un **code**, qui est un numéro arbitraire renvoyé par le composant
 
-To have a full description of an error and especially its origin, you can use the [4D error dialog box](../Debugging/basics.md) or the [`Last errors`](../commands/last-errors) command.
+Pour obtenir une description complète d'une erreur et notamment de son origine, vous pouvez utiliser la [boîte de dialogue d'erreur de 4D](../Debugging/basics.md) ou la commande [`Last errors`](../commands/last-errors).
 
-### Error dialog box
+### Boîte de dialogue d'erreur
 
-La [boîte de dialogue d'erreur 4D](../Debugging/basics.md) affiche le code et le message à l'utilisateur. Expand the **Details** area and click on the **Save...** or **Copy** button:
+La [boîte de dialogue d'erreur 4D](../Debugging/basics.md) affiche le code et le message à l'utilisateur. Dépliez la zone **Détails** et cliquez sur le bouton **Enregistrer...** ou **Copier** :
 
 ![copy-button](../assets/en/Concepts/error.png)
 
-Detailed information related to the error is then saved to a text file or copied to the pasteboard, including the context and the component:
+Les informations détaillées relatives à l'erreur sont ensuite enregistrées dans un fichier texte ou copiées dans le presse-papiers, y compris le contexte et le composant :
 
 ![pasted-error](../assets/en/Concepts/error2.png)
 
-### `Last errors` command
+### Commande `Last errors`
 
-You can call the [`Last errors`](../commands/last-errors) command in your code to get information about errors. This command must be called from an on error call method installed by the [`ON ERR CALL`](../commands/on-err-call) command or within a [`Try or Try/Catch`](#trycatchend-try) context.
+Vous pouvez appeler la commande [`Last errors`](../commands/last-errors) dans votre code pour obtenir des informations sur les erreurs. Cette commande doit être appelée à partir d'une méthode d'appel sur erreur installée par la commande [`ON ERR CALL`](../commands/on-err-call) ou dans un contexte [`Try ou Try/Catch`](#trycatchend-try).
 
-When you intercept and handle errors in your final applications, use [`Last errors`](../commands/last-errors) and make sure you log all properties of the *error* object since error codes depend on the components.
+Lorsque vous interceptez et traitez les erreurs dans vos applications finales, utilisez [`Last errors`](../commands/last-errors) et veillez à consigner toutes les propriétés de l'objet *error*, car les codes d'erreur dépendent des composants.
 

@@ -53,7 +53,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドと同一です。
+`4D.MailAttachment.new()` 関数は、<!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。この関数の機能は、[`MAIL New attachment`](../commands/mail-new-attachment.md) コマンドと同一です。
 
 ## .cid
 
@@ -61,7 +61,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID<!-- END REF -->を格納します。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
+`.cid` プロパティは、 <!-- REF #MailAttachmentClass.cid.Summary --> 添付ファイルの ID<!-- END REF -->を格納します。このプロパティは HTMLメッセージでのみ使用されます。このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
 
 ## .disposition
 
@@ -71,7 +71,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 `.disposition` プロパティは、<!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値<!-- END REF -->を格納します。 二つの値が利用可能です: 二つの値が利用可能です:
 
-- "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。
+- "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。レンダリングの結果はメールクライアントによって異なります。
 - "attachment": 添付ファイルはメッセージ内でリンクとして提供されます。
 
 ## .getContent()
