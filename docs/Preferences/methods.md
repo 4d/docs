@@ -183,6 +183,40 @@ Highlights the line that is currenty running in the debugger in addition to the 
 
 If you deselect this option, only the yellow arrow is shown.
 
+
+### Code editor
+
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added|
+
+</details>
+
+
+Lets you configure the default code editor to use when you open or create a method or a class from a 4D IDE window such the 4D Explorer, Debugger, or Form editor. The following options are available:
+
+- **Always 4D** (default): always use the [4D code editor](../code-editor/write-class-method.md).
+- **4D or VS Code when holding Alt key**: use preferably the 4D code editor but switch to VS Code if the **Alt** key is pressed. 
+- **VS Code or 4D when holding Alt key**: use preferably VS Code but switch to the 4D code editor if the **Alt** key is pressed. 
+
+Options using **VS Code** require that this editor be installed on the machine (see [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode)), otherwise an error will be sent when the 4D IDE will attempt to use it.  
+
+:::note
+
+When the **4D or VS Code when holding Alt key** option is selected, add the **Shift** key to existing shortcuts that already use **Alt** to access VS Code form the 4D IDE. For example, to open a method in VS Code from the 4D code editor, press **Alt+Shift** and double-click on the method name (**Alt** and double-click opens it in another window of the 4D code editor).
+
+:::
+
+:::tip Related blog post
+
+[Seamlessly open 4D code from 4D into VS Code](https://blog.4d.com/seamlessly-open-4d-code-from-4d-into-vs-code)
+
+:::
+
+
 ### Suggestions  
 
 This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
