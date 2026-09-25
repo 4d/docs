@@ -15,7 +15,7 @@ The 4D Code Editor provides basic syntax error-checking. Additional error-checki
 
 :::note
 
-If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension. 
+If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension. You can configure the editor to use in priority through the [**Code editor** preference](../Preferences/methods.md#code-editor).   
 
 :::
 
@@ -232,7 +232,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 |---|---|
 |**Selection and navigation**||
 | Double-click | Select a language element name|
-| [Alt]+Double-click | Select a language element name contaning spaces (constant, method, etc.) |
+| Triple-click | Select a line of code|
 | [Shift]+[right arrow] | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left |
 | [Shift]+[left arrow] | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left |
 | [Shift]+[down arrow] | Create and enlarge a selection, line by line, from the top to the bottom |
