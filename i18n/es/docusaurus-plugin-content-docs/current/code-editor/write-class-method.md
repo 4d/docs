@@ -15,7 +15,7 @@ El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis.
 
 :::note
 
-Si está acostumbrado a codificar con **VS Code**, también puede utilizar este editor con el lenguaje 4D después de instalar la extensión [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode).
+Si está acostumbrado a codificar con **VS Code**, también puede utilizar este editor con el lenguaje 4D después de instalar la extensión [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode). You can configure the editor to use in priority through the [**Code editor** preference](../Preferences/methods.md#code-editor).
 
 :::
 
@@ -227,7 +227,7 @@ En macOS, utilice la tecla **Command** en lugar de la tecla **Ctrl** mencionada 
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Selección y navegación**                                                                                                                                                                                  |                                                                                                                                                                                        |
 | Doble clic                                                                                                                                                                                                  | Seleccionar un nombre de elemento del lenguaje                                                                                                                                         |
-| [Alt]+doble clic                                                                                                                                        | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                      |
+| Triple-click                                                                                                                                                                                                | Select a line of code                                                                                                                                                                  |
 | [Shift]+[flecha derecha]                                                                            | Crear y ampliar la selección, caracter por caracter, hacia la derecha, o Reducir la selección, caracter por caracter, desde la izquierda                                               |
 | [Shift]+[flecha izquierda]                                                                          | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda                                                |
 | [Shift]+[flecha abajo]                                                                              | Crear y ampliar una selección, línea por línea, de arriba abajo                                                                                                                        |
