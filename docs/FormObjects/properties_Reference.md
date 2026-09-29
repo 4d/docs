@@ -40,11 +40,11 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`automaticInsertion`](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a id="b"></a>|
 |**b**|||
 |[`booleanFormat`](properties_Display.md#text-when-falsetext-when-true)|Specifies only two possible values.|true, false|
-|[`borderColor`](./properties_BackgroundAndBorder.md#frame-color)|Defines the border (frame) color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
+|[`borderColor`](./properties_BackgroundAndBorder.md#border-color)|Defines the border color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
 |[`borderFillColor`](properties_BackgroundAndBorder.md#fill-color)|Defines the background color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
 |[`borderRadius`](properties_BackgroundAndBorder.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double", "custom"|
-|[`borderWidth`](./properties_BackgroundAndBorder.md#frame-width)|Defines the border width of a custom-styled button, check box, or radio button. |minimum: 0. Must be used in conjunction with the "custom" style option.|
+|[`borderWidth`](./properties_BackgroundAndBorder.md#border-width)|Defines the border width of a custom-styled button, check box, or radio button. |minimum: 0. Must be used in conjunction with the "custom" style option.|
 |[`bottom`](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a id="c"></a>|
 |**c**|||
 |[`choiceList`](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
