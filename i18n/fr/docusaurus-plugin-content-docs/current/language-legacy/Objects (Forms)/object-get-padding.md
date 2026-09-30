@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.OBJECT Get padding.Summary-->La commande **OBJECT Get padding** retourne un objet contenant les valeurs actuelles des marges de l'objet désigné par les paramètres *object* et *\**.<!-- END REF-->
+<!--REF #_command_.OBJECT Get padding.Summary-->La commande **OBJECT Get padding** retourne un objet contenant les valeurs courantes des marges de l'objet désigné par les paramètres *object* et *\**.<!-- END REF-->
 
 Si vous passez le paramètre optionnel *\**, cela indique que le paramètre *object* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, cela indique que *object* est une variable ou un champ. Dans ce cas, vous passez une référence de variable ou de champ au lieu d'une chaîne.
 
