@@ -132,7 +132,7 @@ End if
 
 以下のような場合には、 *name* 引数を使用してメソッドに名前をつけることが推奨されます:
 
-- [デバッガーのカスタムウォッチエリア](../Debugging/debugger#カスタムウォッチエリア) 内で一貫したメソッド名を使用する (anonymous なメソッドはデバッガでは永続的ではありません)。
+- [デバッガーのカスタムウォッチエリア](../Debugging/debugger#カスタムウォッチエリア) 内で一貫したメソッド名を使用する (anonymous なメソッドはデバッガーでは永続的ではありません)。
 - [`Method get path`](../commands/method-get-path) や [`Method resolve path`](../commands/method-resolve-path) などのコマンドを使用して揮発性のメソッドを管理する(anonymous なメソッドはパスを持ちません)。
 
 :::

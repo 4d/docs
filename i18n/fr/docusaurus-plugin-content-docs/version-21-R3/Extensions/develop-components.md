@@ -27,7 +27,7 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 - Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). Vous pouvez également créer un nouveau composant directement à partir de l'hôte, auquel cas il est immédiatement utilisable.
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
-- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
+- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base suivantes peuvent être utilisées : [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
 - Un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données en utilisant des mécanismes de bases de données externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
 - Un projet hôte fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés. Un projet hôte fonctionnant en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
@@ -50,7 +50,7 @@ Vous pouvez créer un nouveau composant directement à partir du projet hôte :
 
 Cette action ouvre une boîte de dialogue de sélection de dossier dans laquelle vous choisissez l'endroit où [le dossier racine du composant](../Project/components.md#package-folder) sera stocké.
 
-- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet] (../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
+- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet](../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
 - Si vous décidez de stocker le composant **à côté du dossier racine du projet**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si vous décidez de stocker le composant **ailleurs**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson) et son chemin est ajouté au fichier [`environment4d.json`](../Project/components.md#environment4djson), en utilisant un [chemin relatif ou absolu](../Project/components.md#relative-paths-vs-absolute-paths). Un chemin relatif est utilisé si le composant est situé au maximum deux niveaux au-dessus du fichier `environment4d.json`, ou dans ses sous-dossiers. Sinon, un chemin absolu est utilisé.
 
@@ -68,7 +68,7 @@ Vous pouvez modifier le code du composant dans les conditions suivantes :
 
 - le projet hôte est exécuté en interprété,
 - le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
-- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'on,t pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
+- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'ont pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
 
@@ -169,7 +169,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
-A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte.
+A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. Pour ce faire, vous devez explicitement désigner les méthodes projet du projet hôte que vous souhaitez rendre accessibles aux composants (dans les propriétés de la méthode, cochez la case **Partagée entre composants et projet hôte**).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 

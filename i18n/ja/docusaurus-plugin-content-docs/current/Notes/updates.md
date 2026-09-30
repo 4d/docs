@@ -12,8 +12,14 @@ title: リリースノート
 - [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) クラスの新しいクラスプロパティを使用したS/MIME Eメール署名のサポート: [`.certificate`](../API/SMTPTransporterClass.md#certificate) または [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (証明書の提供)、および[`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword)。
 - [コンポーネントをホストから直接コンパイルする](../Project/compiler.md#コンポーネントのコンパイル) ことができるようになりました。
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) でのリストフォームのサポート。
+- [カスタムボタン](../FormObjects/button_overview.md#カスタム)、 [カスタムチェックボックス](../FormObjects/checkbox_overview.md#カスタム) および [カスタムラジオボタン](../FormObjects/radio_overview.md#カスタム) に対しての新しい内側の境界線デザイン: [塗りカラー](../FormObjects/properties_BackgroundAndBorder.md#fill-color) および [角の半径](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) プロパティのサポート; 新しい[境界線カラーborder color](../FormObjects/properties_BackgroundAndBorder.md#境界線カラー) および[境界線の幅](../FormObjects/properties_BackgroundAndBorder.md#境界線の幅) プロパティ。
 - [依存関係マネージャー](../Project/components.md#4d-cornerを使用) から[4D Corner プラットフォーム](https://corner.4d.com/) へと直接アクセスできるようになりました。
+- 4Dメソッドまたはクラスを作成または開くときに4D コードエディターを開くかVS Code を開くかを自動的に決定する[新しい**コードエディター** 設定](../Preferences/methods.md#コードエディター)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
+
+#### 動作の変更
+
+- 一貫性のために、**角の半径** プロパティはプロパティリストの["座標とサイズ"](../FormObjects/properties_CoordinatesAndSizing.md) セクションから["背景と境界線"](../FormObjects/properties_BackgroundAndBorder.md#角の半径) セクションへと移動されました。
 
 ## 4D 21 R4
 
@@ -104,15 +110,15 @@ title: リリースノート
 | libldap         | 2.6.10 | 21             |                                                                                                                                                      |
 | libsasl         | 2.1.28 | 20             |                                                                                                                                                      |
 | Liblsquic       | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                             |
-| Libuv           | 1.52.1 | **21 R4**      | QUIC に使用                                                                                                                                             |
+| Libuv           | 1.52.1 | 21 R4          | QUIC に使用                                                                                                                                             |
 | libZip          | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA            | 5.8.1  | 21             |                                                                                                                                                      |
-| ngtcp2          | 1.24.0 | **21 R4**      | QUIC に使用                                                                                                                                             |
+| ngtcp2          | 1.24.0 | 21 R4          | QUIC に使用                                                                                                                                             |
 | OpenSSL         | 4.0.1  | **21 R5**      |                                                                                                                                                      |
 | PDFWriter       | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS        | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit          | WKWebView                              | 19             |                                                                                                                                                      |
-| Windows App SDK | 2                                      | **21 R4**      | [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) に使用されます                                                                            |
+| Windows App SDK | 2                                      | 21 R4          | [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) に使用されます                                                                            |
 | Xerces          | 3.3.0  | 21             | XML コマンドにおいて使用されます                                                                                                                                   |
 | Zlib            | 1.3.1  | 21             |                                                                                                                                                      |
 
