@@ -134,6 +134,10 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`name`](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[`numberFormat`](properties_Display.md#number-format) |Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)<a id="p"></a>|
 |**p**|||
+|[`paddingBottom`](properties_CoordinatesAndSizing.md#bottom-padding)|Sets the padding between the bottom edge of the object and its text content.|minimum: 0|
+|[`paddingLeft`](properties_CoordinatesAndSizing.md#left-padding)|Sets the padding between the left edge of the object and its text content.|minimum: 0|
+|[`paddingRight`](properties_CoordinatesAndSizing.md#right-padding)|Sets the padding between the right edge of the object and its text content.|minimum: 0|
+|[`paddingTop`](properties_CoordinatesAndSizing.md#top-padding)|Sets the padding between the top edge of the object and its text content.|minimum: 0|
 |[`picture`](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable.|
 |[`pictureFormat`](properties_Display.md#picture-format) (input, list box column or footer)<br/>[`pictureFormat`](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[`placeholder`](properties_Entry.md#placeholder)	|Grays out text when the data source value is empty.|Text to be grayed out.|

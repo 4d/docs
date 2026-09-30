@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Prise en charge des zones de texte et des zones de saisie|
 |13|Créé|
 
 </details>
@@ -46,7 +47,9 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 
 * list box,
 * colonnes de list box,
-* en-tête et pieds de list box.
+* en-tête et pieds de list box,
+* zones de texte,
+* zones de saisie.
 
 ## Voir aussi 
 
