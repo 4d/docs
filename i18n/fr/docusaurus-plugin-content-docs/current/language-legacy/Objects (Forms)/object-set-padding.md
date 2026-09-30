@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.OBJECT SET PADDING.Summary-->La commande **OBJECT SET PADDING** définit les marges du ou des objets désignés par les paramètres *object* et *\**.<!-- END REF-->
+<!--REF #_command_.OBJECT SET PADDING.Summary-->La commande **OBJECT SET PADDING** définit les marges du ou des objet(s) désigné(s) par les paramètres *object* et *\**.<!-- END REF-->
 
 Si vous passez le paramètre optionnel *\**, cela indique que le paramètre *object* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, cela indique que *object* est une variable ou un champ. Dans ce cas, vous passez une référence de variable ou de champ au lieu d'une chaîne.
 
@@ -46,9 +46,9 @@ Dans *padding*, passez un objet contenant les propriétés suivantes :
 | `left` | Integer | Marge entre le contenu et la bordure gauche |
 | `right` | Integer | Marge entre le contenu et la bordure droite |
 
-Toutes les propriétés sont facultatives. Si une propriété est omise, sa valeur actuelle reste inchangée.
+Toutes les propriétés sont facultatives. Si une propriété est omise, sa valeur courante reste inchangée.
 
-Les valeurs de marge sont exprimées en pixels. Si une valeur négative est affectée, la marge effective est définie à 0.
+Les valeurs de marge sont exprimées en pixels. Si une valeur négative est passée, la marge effective est définie à 0.
 
 Les marges peuvent être appliquées aux types d'objets de formulaire suivants :
 
