@@ -322,7 +322,7 @@ This property can also be handled by the [`OBJECT Get vertical alignment`](../co
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers)
+[Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Text Area](text.md)
 
 #### Commands
 

@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R5|Support for text area and input objects|
 |13|Created|
 
 </details>
@@ -47,7 +48,9 @@ Vertical alignment can be applied to the following types of form objects:
 
 * list boxes,
 * list box columns,
-* list box headers and footers.
+* list box headers and footers,
+* text areas,
+* inputs.
 
 ## See also 
 

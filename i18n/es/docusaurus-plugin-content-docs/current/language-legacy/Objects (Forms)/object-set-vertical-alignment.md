@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R5|Compatibilidad con áreas de texto y áreas de entrada|
 |13|Creado por|
 
 </details>
@@ -46,7 +47,9 @@ En *alineacion*, puede pasar una de las siguientes constantes, del tema *Propied
 La alineación vertical puede aplicarse a los siguientes tipos de objetos de formulario:
 * list boxes,
 * columnas de list box,
-* encabezados y pies de list box.
+* encabezados y pies de list box,
+* áreas de texto,
+* áreas de entrada.
 
 ## Ver también 
 

@@ -40,6 +40,7 @@ slug: /commands/theme/Objects-Forms
 |[<!-- INCLUDE #_command_.OBJECT GET MINIMUM VALUE.Syntax -->](../../commands/object-get-minimum-value)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get multiline.Syntax -->](../../commands/object-get-multiline)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get name.Syntax -->](../../commands/object-get-name)<br/>|
+|[<!-- INCLUDE #_command_.OBJECT Get padding.Syntax -->](../../commands/object-get-padding)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get placeholder.Syntax -->](../../commands/object-get-placeholder)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get pointer.Syntax -->](../../commands/object-get-pointer)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax -->](../../commands/object-get-print-variable-frame)<br/>|
@@ -88,6 +89,7 @@ slug: /commands/theme/Objects-Forms
 |[<!-- INCLUDE #_command_.OBJECT SET MAXIMUM VALUE.Syntax -->](../../commands/object-set-maximum-value)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET MINIMUM VALUE.Syntax -->](../../commands/object-set-minimum-value)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET MULTILINE.Syntax -->](../../commands/object-set-multiline)<br/>|
+|[<!-- INCLUDE #_command_.OBJECT SET PADDING.Syntax -->](../../commands/object-set-padding)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET PLACEHOLDER.Syntax -->](../../commands/object-set-placeholder)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax -->](../../commands/object-set-print-variable-frame)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET RESIZING OPTIONS.Syntax -->](../../commands/object-set-resizing-options)<br/>|

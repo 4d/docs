@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Suporte a áreas de texto e áreas de entrada|
 |13|Criado por|
 
 </details>
@@ -46,7 +47,9 @@ Em *alinhamento*, pode passar uma das seguintes constantes, do tema *Propriedade
 A alienação vertical pode aplicar-se aos seguintes tipos de objetos de formulário:
 * list boxes
 * colunas de list box,
-* cabeçalhos e rodapés de list box.
+* cabeçalhos e rodapés de list box,
+* áreas de texto,
+* áreas de entrada.
 
 ## Ver também 
 
