@@ -176,6 +176,36 @@ Permet de mettre en surbrillance la ligne en exécution dans le Débogueur, en p
 
 Si vous désélectionnez cette option, seule la flèche jaune est affichée.
 
+### Éditeur de code
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 21 R5   | Ajout         |
+
+</details>
+
+Permet de configurer l'éditeur de code par défaut à utiliser lorsque vous ouvrez ou créez une méthode ou une classe à partir d'une fenêtre de l'IDE 4D, telle que l'Explorateur 4D, le débogueur ou l'éditeur de formulaires. Les options suivantes sont disponibles :
+
+- **Toujours 4D** (par défaut) : toujours utiliser l'[éditeur de code 4D](../code-editor/write-class-method.md).
+- **4D ou VS Code en maintenant la touche Alt** : utiliser de préférence l'éditeur de code 4D, mais basculer vers VS Code si la touche **Alt** est enfoncée.
+- **VS Code ou 4D en maintenant la touche Alt** : utiliser de préférence VS Code, mais basculer vers l'éditeur de code 4D si la touche **Alt** est enfoncée.
+
+Les options utilisant **VS Code** nécessitent que cet éditeur soit installé sur la machine (voir l'[extension 4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode)), faute de quoi une erreur sera générée lorsque l'IDE 4D tentera de l'utiliser.
+
+:::note
+
+Lorsque l'option **4D ou VS Code en maintenant la touche Alt** est sélectionnée, ajoutez la touche **Maj** aux raccourcis existants qui utilisent déjà la touche **Alt** pour accéder à VS Code depuis l'IDE 4D. Par exemple, pour ouvrir une méthode dans VS Code à partir de l'éditeur de code 4D, appuyez sur **Alt+Maj** puis double-cliquez sur le nom de la méthode (la combinaison **Alt** + double-clic permet de l'ouvrir dans une autre fenêtre de l'éditeur de code 4D).
+
+:::
+
+:::tip Article(s) de blog sur le sujet
+
+[Ouvrir simplement du code 4D depuis 4D dans VS Code](https://blog.4d.com/seamlessly-open-4d-code-from-4d-into-vs-code)
+
+:::
+
 ### Suggestions
 
 Cette zone vous permet de configurer les mécanismes d'autocomplétion de l'éditeur de code afin de l'adapter à vos propres habitudes de travail.

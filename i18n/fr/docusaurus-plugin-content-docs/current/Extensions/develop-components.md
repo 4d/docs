@@ -7,7 +7,7 @@ title: Développement de composants
 
 Un composant 4D est un ensemble de fonctions, méthodes et de formulaires 4D représentant une ou plusieurs fonctionnalité(s) qu’il est possible [d’installer et d'utiliser dans des applications 4D](Concepts/components.md). Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des applications 4D.
 
-Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
+Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Vous pouvez également [les proposer sur la plate-forme 4D Corner](https://corner.4d.com/) et [les partager avec la communauté 4D](https://github.com/topics/4d-component).
 
 ## Définitions
 
@@ -17,7 +17,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
+Vous pouvez [créer un composant directement depuis le projet hôte](#creating-components) sans avoir à passer par un projet matrice distinct.
 
 :::
 
@@ -27,19 +27,19 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 - Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). Vous pouvez également créer un nouveau composant directement à partir de l'hôte, auquel cas il est immédiatement utilisable.
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
-- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
+- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base suivantes peuvent être utilisées : [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
 - Un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données en utilisant des mécanismes de bases de données externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
 - Un projet hôte fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés. Un projet hôte fonctionnant en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
 :::note
 
-Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
+Le code des composants interprétés peut être [modifié](#editing-components) et [compilé](../Project/compiler.md#compile-components) directement depuis le projet hôte si le contexte le permet.
 
 :::
 
 ## Création et modification de composants à partir de l'hôte
 
-In interpreted mode, the 4D IDE allows you to create, edit, and compile components directly from the host project. Cela facilite le développement et la mise au point des composants dans le contexte réel d'un projet hôte, sans avoir à quitter ou à redémarrer.
+En mode interprété, l'IDE 4D vous permet de créer, modifier et compiler des composants directement à partir du projet hôte. Cela facilite le développement et la mise au point des composants dans le contexte réel d'un projet hôte, sans avoir à quitter ou à redémarrer.
 
 ### Création de composants
 
@@ -50,14 +50,14 @@ Vous pouvez créer un nouveau composant directement à partir du projet hôte :
 
 Cette action ouvre une boîte de dialogue de sélection de dossier dans laquelle vous choisissez l'endroit où [le dossier racine du composant](../Project/components.md#package-folder) sera stocké.
 
-- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet] (../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
+- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet](../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
 - Si vous décidez de stocker le composant **à côté du dossier racine du projet**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si vous décidez de stocker le composant **ailleurs**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson) et son chemin est ajouté au fichier [`environment4d.json`](../Project/components.md#environment4djson), en utilisant un [chemin relatif ou absolu](../Project/components.md#relative-paths-vs-absolute-paths). Un chemin relatif est utilisé si le composant est situé au maximum deux niveaux au-dessus du fichier `environment4d.json`, ou dans ses sous-dossiers. Sinon, un chemin absolu est utilisé.
 
 :::note Notes
 
 - Vous ne pouvez pas stocker un composant **dans le dossier racine du projet**, **en-dehors du dossier Components**.
-- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
+- Lorsqu'un composant est créé à partir de l'hôte, un [espace de nommage par défaut](#default-namespace) lui est attribué.
 
 :::
 
@@ -69,7 +69,7 @@ Vous pouvez modifier le code du composant dans les conditions suivantes :
 
 - le projet hôte est exécuté en interprété,
 - le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
-- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'on,t pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
+- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'ont pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-or-gitlab-dependency)).
 
 Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
 
@@ -80,7 +80,7 @@ Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos com
 
 Les [classes exposées](#sharing-of-classes) et les [méthodes partagées](#sharing-of-project-methods) de vos composants peuvent être modifiées à partir de l'onglet **Méthodes composant** de l'Explorateur.
 
-A specific icon indicates that the component contains shared code:<br/>
+Une icône spécifique indique que le composant contient du code partagé :<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 Sélectionnez **Modifier...** pour ouvrir le code de votre composant dans l'éditeur de code. Vous pouvez le modifier et le sauvegarder.
@@ -115,9 +115,9 @@ Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vo
 - exécuter des méthodes,
 - restaurer à partir de la corbeille ou vider la corbeille.
 
-### Compiling components
+### Compilation des composants
 
-You can compile a component [directly from the host project](../Project/compiler.md#compile-components) without having to open it separately, provided it is compliant with the [requirements](../Project/compiler.md#requirements).
+Vous pouvez compiler un composant [directement depuis le projet hôte](../Project/compiler.md#compile-components) sans avoir à l'ouvrir séparément, à condition qu'il réponde à certaines [conditions](../Project/compiler.md#requirements).
 
 ### Rechercher et Remplacer
 
@@ -174,7 +174,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
-A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte.
+A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. Pour ce faire, vous devez explicitement désigner les méthodes projet du projet hôte que vous souhaitez rendre accessibles aux composants (dans les propriétés de la méthode, cochez la case **Partagée entre composants et projet hôte**).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
@@ -200,7 +200,7 @@ Par défaut, les classes de composants ne peuvent pas être appelées à partir 
 
 ### Déclaration du namespace
 
-Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
+Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. Par défaut, cette zone est vide (sauf lorsque le composant est [créé à partir de l'hôte](#default-namespace)) : les classes de composant ne sont pas disponibles en dehors du contexte du composant.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -210,7 +210,7 @@ Un *namespace* garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilis
 
 :::
 
-Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans le [user class store (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que dans ses composants chargés, à travers le namespace `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
+Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans le [class store utilisateur (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que dans ses composants chargés, à travers le namespace `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
 //dans le projet hôte ou l'une de ses composantes
@@ -231,11 +231,11 @@ Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout 
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
 
-#### Default namespace
+#### Espace de nommage par défaut
 
-When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+Lorsqu'un nouveau composant est [créé à partir de l'hôte](#creating-components), un espace de nommage (*namespace*) par défaut lui est automatiquement attribué.
 
-The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
+L'espace de nommage par défaut correspond au nom du composant, sans les caractères non conformes aux [règles de nommage des propriétés](../Concepts/identifiers.md#object-properties), le cas échéant. Par exemple, pour un composant nommé "My Component-2", l'espace de nommage par défaut sera "MyComponent2".
 
 ### Classes cachées
 
@@ -549,5 +549,5 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 
 Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
 
-Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
+Utilisez la [plate-forme 4D Corner](https://corner.4d.com/) pour parcourir les composants existants et référencer vos propres composants 4D.
 

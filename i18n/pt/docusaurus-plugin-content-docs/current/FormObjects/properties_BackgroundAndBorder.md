@@ -25,31 +25,9 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ---
 
-## Cor de fundo / Cor de preenchimento
+## Cor de fundo
 
-Define a cor de fundo de um objeto.
-
-No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
-
-Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
-
-#### Gramática JSON
-
-| Nome | Tipo de dados | Valores possíveis                              |
-| ---- | ------------- | ---------------------------------------------- |
-| fill | string        | qualquer valor css; "transparent"; "automatic" |
-
-#### Objectos suportados
-
-[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox-column.md) - [Rodapé List Box](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
-
-#### Comandos
-
-[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
-
-#### Veja também
-
-[Transparente](#transparente)
+See [**Fill Color**](#fill-color). "Background color" is used in the Property list for [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
 
 ---
 
@@ -57,7 +35,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 `List box de tipo coleção e seleção de entidades`
 
-Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) no *Manual de Linguagem 4D*.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
 Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) com a constante `lk color expression`.
 
@@ -79,15 +57,55 @@ Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPE
 
 ---
 
+## Border Color {#border-color}
+
+Allows defining the color of the inner border for:
+
+- [custom buttons](./button_overview.md#custom) with the ["custom" Border Line Style](#border-line-style),
+- [custom check boxes](./checkbox_overview.md#custom),
+- [custom radio buttons](./radio_overview.md#custom).
+
+In other contexts, the property is ignored.
+
+Note that the border is only displayed when its [width](#border-width) is > 0.
+
+#### Gramática JSON
+
+| Nome        | Tipo de dados | Valores possíveis                              |
+| ----------- | ------------- | ---------------------------------------------- |
+| borderColor | string        | qualquer valor css; "transparent"; "automatic" |
+
+#### Objectos suportados
+
+[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+
+#### Comandos
+
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+
 ## Estilo de linha de borda {#border-line-style}
 
 Permite definir um estilo padrão para o contorno do objeto.
 
+:::note
+
+For [custom buttons](./button_overview.md#custom), the **custom** border line style enables the inner frame design, that includes a set of extra properties: [Fill color](#fill-color), [Frame color](#frame-color), [Frame width](#frame-width), and [Corner radius](./properties_BackgroundAndBorder.md#corner-radius).
+
+![](../assets/en/FormObjects/custom-button.png)
+
+:::
+
+:::tip Related blog post
+
+[Customize Buttons, Radio Buttons, and Check Boxes with Background and Border Properties](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+
+:::
+
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                 |
-| ----------- | ------------- | ----------------------------------------------------------------- |
-| borderStyle | text          | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| Nome        | Tipo de dados | Valores possíveis                                                           |
+| ----------- | ------------- | --------------------------------------------------------------------------- |
+| borderStyle | text          | "system", "none", "solid", "dotted", "raised", "sunken", "double", "custom" |
 
 #### Objectos suportados
 
@@ -96,6 +114,73 @@ Permite definir um estilo padrão para o contorno do objeto.
 #### Comandos
 
 [`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style)
+
+---
+
+## Border Width {#border-width}
+
+Allows defining the width of the inner border for:
+
+- [custom buttons](./button_overview.md#custom) with the ["custom" Border Line Style](#border-line-style),
+- [custom check boxes](./checkbox_overview.md#custom),
+- [custom radio buttons](./radio_overview.md#custom).
+
+In other contexts, the property is ignored.
+
+The value is expressed in pixels.
+
+#### Gramática JSON
+
+| Nome        | Tipo de dados | Valores possíveis                                                            |
+| ----------- | ------------- | ---------------------------------------------------------------------------- |
+| borderWidth | number        | Integer value (pixels). Minimum value = 0 |
+
+#### Objectos suportados
+
+[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+
+---
+
+## Retângulo
+
+<details><summary>História</summary>
+
+| Release | Mudanças                                                         |
+| ------- | ---------------------------------------------------------------- |
+| 21 R5   | Support for custom-styled buttons, radio buttons and check boxes |
+| 18 R6   | Suporte para entradas e áreas de texto                           |
+
+</details>
+
+Define o arredondamento do canto (em pixels) do objeto. Por padrão, o valor do raio é 0 pixels. Você pode alterar essa propriedade para desenhar objetos arredondados com formas personalizadas:
+
+![](../assets/en/FormObjects/shape_rectangle.png)
+
+O valor mínimo é 0; nesse caso, um retângulo de objeto padrão não arredondado é desenhado.
+O valor máximo depende do tamanho do retângulo (ele não pode exceder metade do tamanho do retângulo menor) sendo calculado dinamicamente.
+
+In [text areas](./text.md) and [inputs](./input_overview.md):
+
+- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](#border-line-style),
+- the corner roundness is drawn **outside** the area of the object (the object appears larger in the form but its [width](./properties_CoordinatesAndSizing.md#width) and [height](./properties_CoordinatesAndSizing.md#height) are not extended).
+
+![](../assets/en/FormObjects/radius-text.png)
+
+In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line Style](#border-line-style)), [custom check boxes](checkbox_overview.md#custom) and [custom radio buttons](radio_overview.md#custom), the corner radius is drawn **inside** the area of the object.
+
+#### Gramática JSON
+
+| Nome         | Tipo de dados | Valores possíveis         |
+| ------------ | ------------- | ------------------------- |
+| borderRadius | integer       | mínimo: 0 |
+
+#### Objectos suportados
+
+[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Custom Radio Button](radio_overview.md#custom)
+
+#### Comandos
+
+[OBJECT GET CORNER RADIUS](../commands/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius)
 
 ---
 
@@ -114,6 +199,56 @@ Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e branc
 [Rectângulo](shapes_overview.md#rectangle) - [Ovalo](shapes_overview.md#oval) - [Linha](shapes_overview.md#line)
 
 ---
+
+## Fill Color {#fill-color}
+
+Defines the fill color / background color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
+
+### Standard objects
+
+:::note
+
+This property is named [**Background color**](#background-color) with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+
+:::
+
+No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
+
+#### Gramática JSON
+
+| Nome | Tipo de dados | Valores possíveis                              |
+| ---- | ------------- | ---------------------------------------------- |
+| fill | string        | qualquer valor css; "transparent"; "automatic" |
+
+#### Objectos suportados
+
+[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox-column.md) - [Rodapé List Box](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+
+#### Comandos
+
+[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+
+### Custom button, custom check box, or custom radio button
+
+This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). In other contexts, the property is ignored.
+
+#### Gramática JSON
+
+| Nome            | Tipo de dados | Valores possíveis                              |
+| --------------- | ------------- | ---------------------------------------------- |
+| borderFillColor | string        | qualquer valor css; "transparent"; "automatic" |
+
+#### Objectos suportados
+
+[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+
+#### Comandos
+
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+
+#### Veja também
+
+[Transparente](#transparente)
 
 ## Esconder linhas em branco extras
 

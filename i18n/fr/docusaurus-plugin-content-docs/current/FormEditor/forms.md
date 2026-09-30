@@ -281,9 +281,9 @@ Cette fonction peut être utilisée **dans les projets 4D sous Windows**. Elle n
 
 :::tip Articles de blog sur le sujet
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
-[Fluent UI Comes to List Forms](https://blog.4d.com/fluent-ui-comes-to-list-forms)
+[Modernisez vos interfaces 4D avec Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>  
+[Déployez Fluent UI en toute simplicité dans vos applications 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)  
+[Fluent UI fait son entrée dans les formulaires liste](https://blog.4d.com/fluent-ui-comes-to-list-forms)
 
 :::
 
@@ -332,7 +332,7 @@ Le [media query CSS **form-theme**](./createStylesheet.md#media-queries) vous pe
 
 Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez prêter attention aux points suivants :
 
-- La commande [`FORM theme`](../commands/form-theme) renvoie le thème d'affichage réel du formulaire courant. Possible values: "Classic", "FluentUI" or "LiquidGlass".
+- La commande [`FORM theme`](../commands/form-theme) renvoie le thème d'affichage réel du formulaire courant. Valeurs possibles : "Classic", "FluentUI" ou "LiquidGlass".
 - La commande [`Application info`](../commands/application-info) vous permet de savoir si Fluent UI peut être utilisé (propriété `canUseFluentUI`) ou est utilisé (propriété `useFluentUI`).
 - Si [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) est appelée dans le contexte d'un formulaire, les informations renvoyées concernent l'apparence courante du formulaire (Classic ou FluentUI). Si la commande est appelée en dehors du contexte d'un formulaire, les informations renvoyées concernent les [propriétés globales du projet](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) avec le paramètre *itemStyle* `Underline` n'est pas pris en charge (ignoré) pour les menus pop up.
@@ -340,11 +340,11 @@ Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez pr�
 - Les [boutons circulaires](../FormObjects/button_overview.md#circle) sont pris en charge (comme sur macOS).
 - Les commandes [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) ne sont pas prises en charge dans les zones Web avec moteur de rendu système.
 - Un rectangle de focus peut être ajouté aux [zones de saisie](../FormObjects/input_overview.md) image et texte.
-- In [list forms](../FormEditor/properties_FormProperties.md#form-type), objects located in the [Header or Footer areas](./properties_Markers.md) are always displayed on a background layer, while those in the Detail area are displayed in the foreground. Unlike in the Classic rendering, an object that extends beyond the Header boundaries will always be drawn under the objects in the Detail area.
+- Dans les [formulaires liste](../FormEditor/properties_FormProperties.md#form-type), les objets situés dans les [zones d'en-tête ou de pied](./properties_Markers.md) s'affichent toujours sur un calque d'arrière-plan, tandis que ceux de la zone de détail s'affichent au premier plan. Contrairement au rendu "Classic", un objet qui dépasse les limites de l'en-tête sera toujours affiché sous les objets de la zone de détail.
 
 ## Formulaires hérités
 
-Les formulaires 4D peuvent utiliser et être utilisés comme «formulaires hérités», ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
+Les formulaires 4D peuvent utiliser et être utilisés commeo "formulaires hérités", ce qui signifie que tous les objets du *Formulaire A* peuvent être utilisés dans le *Formulaire B*. Dans ce cas, *Formulaire B* "hérite" des objets du *Formulaire A*.
 
 Les références à un formulaire hérité est toujours active : si un élément d'un formulaire hérité est modifié (par exemple le style des boutons), tous les formulaires qui l’utilisent seront automatiquement modifiés.
 
