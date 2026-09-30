@@ -400,6 +400,7 @@ module.exports =
             "WebServer/errorPages",
             "WebServer/authentication",
             "WebServer/sessions",
+            "WebServer/quotas",
             "WebServer/preemptiveWeb"
           ]
         },

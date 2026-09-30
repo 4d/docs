@@ -747,10 +747,10 @@ The following properties of the `4D.QuotaManager` object are available for the s
 
 |Property||Type|Writable|Description|
 |---|---|---|---|---|
-|[nbEntitySets](./QuotaManagerClass.md#nbentitysets)||Integer|yes|Maximum allowed number of entity sets in server's memory. *Undefined* = no quotas applied|
+|[nbEntitySets](./QuotaManagerClass.md#nbentitysets)||Integer|yes|Maximum allowed number of entity sets in server memory. *Undefined* = no quotas applied|
 |[defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) ||Integer|yes|Default inactivity timeout for entity sets in memory (seconds)|
 |[maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout) ||Integer|yes|Maximum inactivity timeout for entity sets in memory (seconds)|
-|currentValues||Object|no||
+|[currentValues](./QuotaManagerClass.md#currentvalues)||Object|no|Current usage values reported for the session.|
 ||nbEntitySets|Integer|no|Number of entity sets currently in memory. *Undefined* = no entity set in memory|
 
 When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests. 
@@ -774,7 +774,8 @@ Session.quotas.nbEntitySets:=50
 
 #### See also
 
-[QuotaManager class](./QuotaManagerClass.md)
+[QuotaManager class](./QuotaManagerClass.md)<br/>
+[Web server quotas](../WebServer/quotas.md)
 
 
 
