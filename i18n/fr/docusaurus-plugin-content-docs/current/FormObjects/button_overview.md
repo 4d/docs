@@ -55,7 +55,7 @@ Par défaut, le style Classique a un fond gris clair avec un libellé au centre.
 		}
 ```
 
-Seuls les styles Classique et Flat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
+The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
 
 ### A plat
 
@@ -82,7 +82,7 @@ Par défaut, le style A plat a un arrière-plan avec un libellé au centre, des 
                 }
 ```
 
-Seuls les styles Classique et Flat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
+The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
 
 ### Toolbar (Barre d’outils)
 
@@ -302,7 +302,7 @@ Sous Windows avec le thème UI classique, ce style n'est pas pris en charge.
 
 ### Personnalisé
 
-Le style de bouton Personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des paramètres supplémentaires tels que la marge et le décalage d'icône.
+The Custom button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 ![](../assets/en/FormObjects/button_custom.png)
 
@@ -310,16 +310,26 @@ Le style de bouton Personnalisé accepte une image d'arrière-plan personnalisé
 
 ```code
 	"myButton": {
-                "type": "button",	
-                "style":"custom",	
-                "text": "",	
-                "customBackgroundPicture": "/RESOURCES/bkgnd.png",
-                "icon": "/RESOURCES/custom.png",  
-                "textPlacement": "center",
-                "left": 60,	
-                "top": 160,		
-                "width": 100,	
-                "height": 20
+				"type": "button",
+				"text": "Custom",
+				"top": 211,
+				"left": 310,
+				"width": 112,
+				"height": 41,
+				"events": [
+					"onClick"
+				],
+				"style": "custom",
+				"fontWeight": "bold",
+				"icon": "/RESOURCES/custom.png",
+				"borderStyle": "custom",
+				"borderColor": "#696969",
+				"borderFillColor": "#c0c0c0",
+				"borderWidth": 2,
+				"customBackgroundPicture": "",
+				"textPlacement": "center",
+				"borderRadius": 5,
+				"iconFrames": 4
                 }
 ```
 
@@ -332,11 +342,19 @@ Tous les boutons partagent une même série de propriétés de base :
 > (1) Non pris en charge par le style [Help](#help).<br/>
 > (2) Non pris en charge par les styles [Help](#help), [Flat](#flat) et [Regular](#regular).
 
-Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
+### Additional properties for custom buttons
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
-- Flat, Regular : [Bouton par défaut](properties_Appearance.md#default-button)
+Additional specific properties are available for [custom](#custom) style buttons:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Default Button](properties_Appearance.md#default-button) - [Fill color](./properties_BackgroundAndBorder.md#fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+
+### Additional properties for flat and regular buttons
+
+An additional specific property is available for [flat](#flat) and [regular](#regular) style buttons:
+
+[Default Button](properties_Appearance.md#default-button)
 
 ## Événements pris en charge
 
 [On Alternative Click](../Events/onAlternativeClick.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Long Click](../Events/onLongClick.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+

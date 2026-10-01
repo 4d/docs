@@ -290,6 +290,17 @@ Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](F
 
 #### Correspondance d'attributs
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                 |
+| ------- | ----------------------------- |
+| 21 R5   | Support of padding attributes |
+
+</details>
+</div>
+<br />
+
 Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 
 | 4D               | CSS                |
@@ -300,6 +311,10 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `fontSize`       | `font-size`        |
 | `fontStyle`      | `font-style`       |
 | `fontWeight`     | `font-weight`      |
+| `paddingBottom`  | `padding-bottom`   |
+| `paddingLeft`    | `padding-left`     |
+| `paddingRight`   | `padding-right`    |
+| `paddingTop`     | `padding-top`      |
 | `stroke`         | `color`            |
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |

@@ -49,6 +49,7 @@ Eles oferecem as propriedades abaixo e funções:
 | [<!-- INCLUDE #WebServerClass.name.Syntax -->](#name)<br/><!-- INCLUDE #WebServerClass.name.Summary -->                                                                   |
 | [<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)<br/><!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->                                     |
 | [<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)<br/><!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Summary -->                |
+| [<!-- INCLUDE #WebServerClass.quotas.Syntax -->](#quotas)<br/><!-- INCLUDE #WebServerClass.quotas.Summary -->                                                             |
 | [<!-- INCLUDE #WebServerClass.rootFolder.Syntax -->](#rootfolder)<br/><!-- INCLUDE #WebServerClass.rootFolder.Summary -->                                                 |
 | [<!-- INCLUDE #WebServerClass.rules.Syntax -->](#rules)<br/><!-- INCLUDE #WebServerClass.rules.Summary -->                                                                |
 | [<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)<br/><!-- INCLUDE #WebServerClass.scalableSession.Summary -->                                  |
@@ -472,6 +473,115 @@ A <!-- REF #WebServerClass.perfectForwardSecrecy.Summary --> disponibilidade de 
 
 <!-- END REF -->
 
+<!-- REF WebServerClass.quotas.Desc -->
+
+## .quotas
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+
+</details>
+
+<!-- REF #WebServerClass.quotas.Syntax -->**.quotas** : 4D.QuotaManager<!-- END REF -->
+
+#### Descrição
+
+The `.quotas` property contains <!-- REF #WebServerClass.quotas.Summary -->a `4D.QuotaManager` object that allows you to configure and monitor quotas for the web server<!-- END REF -->.
+
+:::note
+
+Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property returns `Null`.
+
+:::
+
+##### Scope levels
+
+Accessing this property returns a `4D.QuotaManager` object that can be updated at runtime. Quotas can be configured at two different scope levels:
+
+- **Server global**: quotas are applied to the aggregate activity of all sessions on the web server. See [At startup](../WebServer/quotas.md#at-startup) and [At runtime](../WebServer/quotas.md#at-runtime).
+- **Session default**: quotas are applied by default to each new session when it is created. See [At startup](../WebServer/quotas.md#at-startup) and [At runtime](../WebServer/quotas.md#at-runtime).
+
+When both server global and session default quotas are configured, the session quota is checked first. If the request is accepted, the server global quota is then checked.
+
+For the complete list of quota properties, see the [`4D.QuotaManager` class](./QuotaManagerClass.md). For configuration and enforcement details, see [Web server quotas](../WebServer/quotas.md).
+
+By default, quota properties are *Undefined* and no quotas are applied.
+
+You can modify quota values while the web server is running. Changes to server global quotas are applied to subsequent web server activity. Changes to session default quotas are applied to new sessions created after the quota value is updated. The web server does not need to be restarted.
+
+:::note
+
+You can also configure quotas for the current REST session using the [`Session.quotas`](./SessionClass.md#quotas) property.
+
+:::
+
+The following properties of the `4D.QuotaManager` object are available for the web server:
+
+| Propriedade                                                                       |                 | Tipo    | Writable | Descrição                                                                                               |
+| --------------------------------------------------------------------------------- | --------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | não      | Current usage values reported by the Web server.                                        |
+|                                                                                   | nbEntitySets    | Integer | não      | Number of entity sets currently in memory.                                              |
+|                                                                                   | nbGuestSessions | Integer | não      | Number of active Guest sessions on the Web server.                                      |
+|                                                                                   | nbSessions      | Integer | não      | Number of active sessions on the Web server.                                            |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout)         |                 | Integer | sim      | Default inactivity timeout for REST entity sets in memory (seconds). |
+| [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | sim      | Maximum total number of bytes the Web server can receive in one hour.                   |
+| [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | sim      | Maximum total number of bytes the Web server can receive for a session in one hour.     |
+| [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | sim      | Maximum total number of bytes the Web server can receive in one minute.                 |
+| [inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)         |                 | Integer | sim      | Maximum total number of bytes the Web server can receive for a session in one minute.   |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)                 |                 | Integer | sim      | Maximum inactivity timeout for REST entity sets in memory (seconds). |
+| [nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)           |                 | Integer | sim      | Maximum number of entity sets allowed in memory for each REST session.                  |
+| [nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)                         |                 | Integer | sim      | Maximum total number of active Guest sessions on the Web server.                        |
+| [nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)                     |                 | Integer | sim      | Maximum total number of requests the Web server can receive in one hour.                |
+| [nbRequestsPerHourPerSession](./QuotaManagerClass.md#nbrequestsperhourpersession) |                 | Integer | sim      | Maximum total number of requests a session can receive in one hour.                     |
+| [nbRequestsPerMin](./QuotaManagerClass.md#nbrequestspermin)                       |                 | Integer | sim      | Maximum total number of requests the Web server can receive in one minute.              |
+| [nbRequestsPerMinPerSession](./QuotaManagerClass.md#nbrequestsperminpersession)   |                 | Integer | sim      | Maximum total number of requests a session can receive in one minute.                   |
+| [nbSessions](./QuotaManagerClass.md#nbsessions)                                   |                 | Integer | sim      | Maximum total number of active sessions on the Web server.                              |
+| [outBytesPerHour](./QuotaManagerClass.md#outbytesperhour)                         |                 | Integer | sim      | Maximum total number of bytes the Web server can send in one hour.                      |
+| [outBytesPerHourPerSession](./QuotaManagerClass.md#outbytesperhourpersession)     |                 | Integer | sim      | Maximum total number of bytes the Web server can send for a session in one hour.        |
+| [outBytesPerMin](./QuotaManagerClass.md#outbytespermin)                           |                 | Integer | sim      | Maximum total number of bytes the Web server can send in one minute.                    |
+| [outBytesPerMinPerSession](./QuotaManagerClass.md#outbytesperminpersession)       |                 | Integer | sim      | Maximum total number of bytes the Web server can send for a session in one minute.      |
+
+#### Exemplo
+
+Configure quotas at the server global and session default levels:
+
+```4d
+var $quotas : Object
+
+$quotas:={}
+$quotas.inBytesPerMin:=20000000
+$quotas.outBytesPerMinPerSession:=10000000
+$quotas.nbSessions:=50
+$quotas.nbGuestSessions:=10
+$quotas.nbRequestsPerMin:=500
+$quotas.nbRequestsPerHour:=20000
+
+// Server global quotas
+WEB Server.quotas.inBytesPerMin:=$quotas.inBytesPerMin
+WEB Server.quotas.nbSessions:=$quotas.nbSessions
+WEB Server.quotas.nbGuestSessions:=$quotas.nbGuestSessions
+WEB Server.quotas.nbRequestsPerMin:=$quotas.nbRequestsPerMin
+WEB Server.quotas.nbRequestsPerHour:=$quotas.nbRequestsPerHour
+
+// Session default quota
+WEB Server.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
+```
+
+:::tip Related Blog post
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
+
+#### Veja também
+
+[QuotaManager class](./QuotaManagerClass.md)
+
+<!-- END REF -->
+
 <!-- REF WebServerClass.rootFolder.Desc -->
 
 ## .rootFolder
@@ -592,9 +702,10 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R3   | Adicionado |
+| Release | Mudanças                                   |
+| ------- | ------------------------------------------ |
+| 21 R5   | Support quotas in the `settings` parameter |
+| 18 R3   | Adicionado                                 |
 
 </details>
 
@@ -618,6 +729,12 @@ O servidor web começa com as definições padrão definidas no ficheiro de defi
 
 Todas as configurações dos [objetos servidor web](../commands/web-server) podem ser personalizadas, exceto propriedades somente leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) e [.sessionCookieName](#sessioncookiename)).
 
+:::note
+
+You can configure quotas via the `quotas` property in *settings* parameter or for the main Web server via a [`QuotaManager.json`](../WebServer/quotas.md) file. When both a valid `settings.quotas` property and a **QuotaManager.json** file are provided, the `settings.quotas` configuration takes priority.
+
+::
+
 As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 
 #### Objeto devolvido
@@ -634,15 +751,21 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 > Se o servidor Web já tiver sido lançado, é devolvido um erro.
 
-#### Exemplo
+#### Exemplo 1
+
+The following example starts the web server with customized settings:
 
 ```4d
- var $settings;$result : Object
- var $webServer : 4D.WebServer
+ var $result : Object
 
- $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
+ var $quotas:={}
+ $quotas.inBytesPerMin:=20000000
+ $quotas.outBytesPerMinPerSession:=10000000
 
- $webServer:=WEB Server
+ var $settings:={HTTPPort:8080;defaultHomepage:"myAdminHomepage.html"; quotas: $quotas }
+
+
+ var $webServer:=WEB Server
  $result:=$webServer.start($settings)
  If($result.success)
   //...

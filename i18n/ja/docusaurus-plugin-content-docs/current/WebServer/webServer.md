@@ -37,7 +37,7 @@ Webアプリケーションの公開は、いつでも開始または停止す�
 
 - [デフォルトHTMLルート](webServerConfig.md#ルートフォルダー) フォルダーを定義することによる **サンドボックス化**
 
-- **サーバーによるリソース使用の管理** (例: [最大同時Webプロセス](webServerConfig.md#最大同時webプロセス)オプション)
+- **Control of server resource usage** through [web server quotas](quotas.md) and options such as [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes).
 
 > 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 

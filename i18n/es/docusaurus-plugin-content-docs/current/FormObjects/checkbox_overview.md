@@ -103,6 +103,8 @@ El estilo Clásico de botón casilla de selección corresponde a un sistema de c
 		}
 ```
 
+The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+
 ### Plano
 
 El estilo plano del botón casilla de selección tiene una apariencia minimalista. La naturaleza gráfica del estilo Flat es especialmente útil para los formularios que se van a imprimir.
@@ -123,6 +125,8 @@ El estilo plano del botón casilla de selección tiene una apariencia minimalist
 			"height": 20			
 			}
 ```
+
+The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
 
 ### Botón barra de herramientas
 
@@ -355,11 +359,7 @@ El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del 
 
 ### Personalizado
 
-El estilo del botón Personalizado acepta una imagen de fondo personalizada y permite gestionar propiedades específicas:
-
-- [Ruta de acceso al fondo de pantalla](properties_TextAndPicture.md#background-pathname)
-- [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset)
-- [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) y [Margen vertical](properties_TextAndPicture.md#vertical-margin)
+The Custom check box style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-check-boxes) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPicture.md#number-of-states), que puede ser usada en conjunto con una [imagen de fondo](properties_TextAndPicture.md#background-pathname) [4 estados](properties_TextAndPicture.md#number-of-states).
 
@@ -392,11 +392,19 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 > (1) No soportado por los estilos [Regular](#regular) y [Flat](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpanded).
 
-Propiedades específicas adicionales están disponibles en función del [estilo de botón](#check-box-button-styles):
+### Additional properties for custom check boxes
 
-- Personalizado: [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalmargin) - [Desplazamiento del ícono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalmargin)
-- Plana, Regular: [Tres Estados](properties_Display.md#three-states)
+Additional specific properties are available for [custom](#custom) style check boxes:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+
+### Additional properties for flat and regular check boxes
+
+An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+
+[Three-States](properties_Display.md#three-states)
 
 ## Eventos soportados
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+
