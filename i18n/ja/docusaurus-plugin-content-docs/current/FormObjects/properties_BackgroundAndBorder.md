@@ -25,7 +25,7 @@ title: 背景色と境界線
 
 ---
 
-## 背景色
+## Background Color / Fill color
 
 オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
@@ -260,56 +260,6 @@ title: 背景色と境界線
 [四角](shapes_overview.md#四角) - [楕円](shapes_overview.md#楕円) - [線](shapes_overview.md#線)
 
 ---
-
-## 塗りカラー{#fill-color}
-
-オブジェクトの塗りカラー/背景色を設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
-
-### 標準のオブジェクト
-
-:::note
-
-このプロパティは[リストボックス](listbox_overview.md)、[リストボックスカラム](listbox-column.md) および [リストボックスフッター](listbox-header-footer.md#フッター) オブジェクトでは[**背景色**](#背景色) という名前になっています。
-
-:::
-
-リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
-
-#### JSON 文法
-
-| 名称   | データタイプ | とりうる値                                |
-| ---- | ------ | ------------------------------------ |
-| fill | string | 任意の css値; "transparent"; "automatic" |
-
-#### 対象オブジェクト
-
-[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
-
-#### コマンド
-
-[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
-
-### カスタムボタン、カスタムチェックボックス、あるいはカスタムのラジオボタン
-
-このプロパティを使用することで、[カスタムボタン](./button_overview.md#カスタム) 、[カスタムのチェックボックス](./checkbox_overview.md#カスタム) 、あるいは[カスタムのラジオボタン](./radio_overview.md#カスタム) に対して塗りカラー属性を割り当てることができます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。
-
-#### JSON 文法
-
-| 名称              | データタイプ | とりうる値                                |
-| --------------- | ------ | ------------------------------------ |
-| borderFillColor | string | 任意の css値; "transparent"; "automatic" |
-
-#### 対象オブジェクト
-
-[カスタムボタン](button_overview.md#カスタム)(["カスタム" の境界線スタイル](#border-line-style) のもの) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
-
-#### コマンド
-
-[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
-
-#### 参照
-
-[透過](#透過)
 
 ## 追加の空白の行を非表示
 
