@@ -15,7 +15,7 @@ Além disso, no macOS, a propriedade do botão padrão modifica a aparência do 
 
 > O botão tem de ter uma altura padrão para obter o aspeto de botão predefinido.
 
-No Windows, o conceito de "escolha recomendada" não é compatível: somente o botão focalizado tem uma aparência diferente em tempo de execução e a tecla **Enter** está vinculada ao botão focalizado. However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#regular) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
+No Windows, o conceito de "escolha recomendada" não é compatível: somente o botão focalizado tem uma aparência diferente em tempo de execução e a tecla **Enter** está vinculada ao botão focalizado. However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#flat) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 

@@ -15,7 +15,7 @@ En outre, sur macOS, la propriété de bouton par défaut modifie l'apparence du
 
 > Le bouton doit avoir une hauteur standard pour obtenir l'apparence du bouton par défaut.
 
-Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul le bouton ayant le focus a une apparence différente au moment de l'exécution et la touche **Entrée** est liée au bouton ayant le focus. However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#regular) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
+Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul le bouton ayant le focus a une apparence différente au moment de l'exécution et la touche **Entrée** est liée au bouton ayant le focus. Cependant, dans l'éditeur de formulaires de 4D, le bouton par défaut est représenté avec un contour bleu lorsque l'on utilise le style [classique](button_overview.md#regular) ou [à plat](button_overview.md#flat) (aucun contour spécifique n'est tracé lorsque l'on utilise le style [personnalisé](button_overview.md#custom)) :
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
