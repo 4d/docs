@@ -261,15 +261,15 @@ title: 背景色と境界線
 
 ---
 
-## Fill Color {#fill-color}
+## 塗りカラー{#fill-color}
 
-Defines the fill color / background color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
+オブジェクトの塗りカラー/背景色を設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
-### Standard objects
+### 標準のオブジェクト
 
 :::note
 
-This property is named [**Background color**](#background-color) with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+このプロパティは[リストボックス](listbox_overview.md)、[リストボックスカラム](listbox-column.md) および [リストボックスフッター](listbox-header-footer.md#フッター) オブジェクトでは[**背景色**](#背景色) という名前になっています。
 
 :::
 
@@ -289,9 +289,9 @@ This property is named [**Background color**](#background-color) with [List Box]
 
 [`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-### Custom button, custom check box, or custom radio button
+### カスタムボタン、カスタムチェックボックス、あるいはカスタムのラジオボタン
 
-This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). その他のコンテキストにおいては、このプロパティは無視されます。
+このプロパティを使用することで、[カスタムボタン](./button_overview.md#カスタム) 、[カスタムのチェックボックス](./checkbox_overview.md#カスタム) 、あるいは[カスタムのラジオボタン](./radio_overview.md#カスタム) に対して塗りカラー属性を割り当てることができます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。
 
 #### JSON 文法
 

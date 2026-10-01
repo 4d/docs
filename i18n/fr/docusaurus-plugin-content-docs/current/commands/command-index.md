@@ -728,7 +728,7 @@ title: Commandes par nom
 [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)<br/>
 [`OBJECT Get corner radius`](../commands/object-get-corner-radius)<br/>
 [`OBJECT Get data source`](../commands/object-get-data-source)<br/>
-[`OBJECT Get data source formula`](../commands/object-get-data-source-formula) **nouveau 4D 20 R10**<br/>
+[`OBJECT Get data source formula`](../commands/object-get-data-source-formula) **new 4D 20 R10**<br/>
 [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)<br/>
 [`OBJECT Get enabled`](../commands/object-get-enabled)<br/>
 [`OBJECT Get enterable`](../commands/object-get-enterable)<br/>
@@ -778,7 +778,7 @@ title: Commandes par nom
 [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)<br/>
 [`OBJECT SET CORNER RADIUS`](../commands/object-set-corner-radius)<br/>
 [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)<br/>
-[`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula) **nouveau 4D 20 R10**<br/>
+[`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula) **new 4D 20 R10**<br/>
 [`OBJECT SET DRAG AND DROP OPTIONS`](../commands/object-set-drag-and-drop-options)<br/>
 [`OBJECT SET ENABLED`](../commands/object-set-enabled)<br/>
 [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)<br/>
