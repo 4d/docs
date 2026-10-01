@@ -139,7 +139,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ### カスタム
 
-カスタムスタイルのラジオボタンは、カスタムされた背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます ([アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) や [マージン](properties_TextAndPicture.md#横方向マージン))。
+The Custom radio button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-radio-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 ## プロパティ一覧
 
@@ -150,12 +150,11 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
 
-[ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
+### Additional properties for custom radio buttons
 
-- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
-  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
-  [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
-  [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
+Additional specific properties are available for [custom](#custom) style radio buttons:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
 ## サポートされるイベント
 

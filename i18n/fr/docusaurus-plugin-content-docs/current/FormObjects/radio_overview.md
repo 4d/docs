@@ -139,7 +139,7 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 ### Personnalisé
 
-Le style de bouton radio Personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des paramètres supplémentaires tels que [décalage icône](properties_TextAndPicture.md#icon-offset) et [marges](properties_TextAndPicture.md#horizontal-margin).
+The Custom radio button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-radio-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 ## Propriétés prises en charge
 
@@ -150,9 +150,11 @@ Tous les boutons radio partagent une même série de propriétés de base :
 > (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat).<br/>
 > (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
 
-Des propriétés spécifiques supplémentaires sont disponibles en fonction du [style de bouton](#button-styles) :
+### Additional properties for custom radio buttons
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+Additional specific properties are available for [custom](#custom) style radio buttons:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
 ## Événements pris en charge
 

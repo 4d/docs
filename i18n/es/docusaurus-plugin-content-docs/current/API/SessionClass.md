@@ -702,10 +702,10 @@ Las siguientes propiedades del objeto `4D.QuotaManager` están disponibles para 
 
 | Propiedad                                                                 |              | Tipo    | Modificable | Descripción                                                                                                                           |
 | ------------------------------------------------------------------------- | ------------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí          | Número máximo permitido de conjuntos de entidades en la memoria del servidor. *Undefined* = no se aplican cuotas      |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí          | Maximum allowed number of entity sets in server memory. *Undefined* = no se aplican cuotas                            |
 | [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí          | Tiempo de espera predeterminado por inactividad para los conjuntos de entidades en memoria (segundos)              |
 | [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí          | Tiempo máximo de espera por inactividad para los conjuntos de entidades en memoria (segundos)                      |
-| currentValues                                                             |              | Object  | no          |                                                                                                                                       |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | no          | Current usage values reported for the session.                                                                        |
 |                                                                           | nbEntitySets | Integer | no          | Número de conjuntos de entidades actualmente en memoria. *Undefined* = no hay ningún conjunto de entidades en memoria |
 
 Cuando modifique un valor, es tomado inmediatamente en cuenta por el servidor (no es necesario reiniciar) y se aplicará a otras solicitudes REST.
@@ -728,7 +728,8 @@ Session.quotas.nbEntitySets:=50
 
 #### Ver también
 
-[Clase QuotaManager](./QuotaManagerClass.md)
+[QuotaManager class](./QuotaManagerClass.md)<br/>
+[Web server quotas](../WebServer/quotas.md)
 
 <!-- REF SessionClass.restore().Desc -->
 

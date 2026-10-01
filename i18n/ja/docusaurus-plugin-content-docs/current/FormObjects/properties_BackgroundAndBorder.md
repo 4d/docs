@@ -89,7 +89,7 @@ title: 背景色と境界線
 
 :::note
 
-For [custom buttons](./button_overview.md#custom), the **custom** border line style enables the inner frame design, that includes a set of extra properties: [Fill color](#fill-color), [Frame color](#frame-color), [Frame width](#frame-width), and [Corner radius](./properties_BackgroundAndBorder.md#corner-radius).
+[カスタムボタン](./button_overview.md#カスタム) においては、**カスタム** の境界線スタイルを使用すると内部フレームデザインが有効化され、これによって以下のプロパティのセットが追加されます: [塗りカラー](#fill-color)、[フレームカラー](#frame-color)、[フレーム幅](#frame-width)、および[角の半径](./properties_BackgroundAndBorder.md#角の半径)。
 
 ![](../assets/en/FormObjects/custom-button.png)
 
@@ -133,9 +133,9 @@ For [custom buttons](./button_overview.md#custom), the **custom** border line st
 
 ---
 
-## Border Width {#border-width}
+## 境界線幅{#border-width}
 
-Allows defining the width of the inner border for:
+以下のオブジェクトに対して、内側の境界線の幅を定義します:
 
 - ["カスタム" 境界線スタイル](#境界線スタイル) を持った[カスタムボタン](./button_overview.md#カスタム)
 - [カスタムチェックボックス](./checkbox_overview.md#カスタム)
@@ -143,13 +143,13 @@ Allows defining the width of the inner border for:
 
 その他のコンテキストにおいては、このプロパティは無視されます。
 
-The value is expressed in pixels.
+値はピクセル単位で指定しなければなりません。
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                                                        |
-| ----------- | ------ | ---------------------------------------------------------------------------- |
-| borderWidth | number | Integer value (pixels). Minimum value = 0 |
+| 名称          | データタイプ | とりうる値                                |
+| ----------- | ------ | ------------------------------------ |
+| borderWidth | number | 整数値(ピクセル)。最小値 = 0 |
 
 #### 対象オブジェクト
 
@@ -161,10 +161,10 @@ The value is expressed in pixels.
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                               |
-| ----- | ---------------------------------------------------------------- |
-| 21 R5 | Support for custom-styled buttons, radio buttons and check boxes |
-| 19 R7 | テキストと入力オブジェクトをサポート                                               |
+| リリース  | 内容                                |
+| ----- | --------------------------------- |
+| 21 R5 | カスタムスタイルのボタン、ラジオボタン、チェックボックスのサポート |
+| 19 R7 | テキストと入力オブジェクトをサポート                |
 
 </details>
 
@@ -174,14 +174,14 @@ The value is expressed in pixels.
 
 最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
 
-In [text areas](./text.md) and [inputs](./input_overview.md):
+[テキストエリア](./text.md) および[入力](./input_overview.md) では以下のように振る舞います:
 
-- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](#border-line-style),
-- the corner roundness is drawn **outside** the area of the object (the object appears larger in the form but its [width](./properties_CoordinatesAndSizing.md#width) and [height](./properties_CoordinatesAndSizing.md#height) are not extended).
+- 角の半径プロパティは、[境界線スタイル](#border-line-style)が "なし"、"標準"、"ドット" の場合にのみ利用可能です
+- 角の丸みはフォームオブジェクトの**外側**に描画されます (つまり、オブジェクトはより大きく表示されますが、[幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) プロパティは変更されません)。
 
 ![](../assets/en/FormObjects/radius-text.png)
 
-In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line Style](#border-line-style)), [custom check boxes](checkbox_overview.md#custom) and [custom radio buttons](radio_overview.md#custom), the corner radius is drawn **inside** the area of the object.
+[カスタムボタン](./button_overview.md#カスタム) (["カスタム" 境界線スタイル](#border-line-style)を使用)、 [カスタムチェックボックス](checkbox_overview.md#カスタム) および[カスタムラジオボタン](radio_overview.md#カスタム) においては、角の丸みはオブジェクトのエリアの**内側**に描画されます。
 
 #### JSON 文法
 
@@ -191,7 +191,7 @@ In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line S
 
 #### 対象オブジェクト
 
-[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Custom Radio Button](radio_overview.md#custom)
+[カスタムボタン](./button_overview.md#カスタム) (["カスタム" 境界線スタイル](#border-line-style)を使用しているもの) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [入力](input_overview.md) - [四角形](shapes_overview.md#四角形) - [テキストエリア](text.md) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
 #### コマンド
 
@@ -215,15 +215,15 @@ In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line S
 
 ---
 
-## Fill Color {#fill-color}
+## 塗りカラー{#fill-color}
 
-Defines the fill color / background color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
+オブジェクトの塗りカラー/背景色を設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
-### Standard objects
+### 標準のオブジェクト
 
 :::note
 
-This property is named [**Background color**](#background-color) with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+このプロパティは[リストボックス](listbox_overview.md)、[リストボックスカラム](listbox-column.md) および [リストボックスフッター](listbox-header-footer.md#フッター) オブジェクトでは[**背景色**](#背景色) という名前になっています。
 
 :::
 
@@ -243,9 +243,9 @@ This property is named [**Background color**](#background-color) with [List Box]
 
 [`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
-### Custom button, custom check box, or custom radio button
+### カスタムボタン、カスタムチェックボックス、あるいはカスタムのラジオボタン
 
-This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). その他のコンテキストにおいては、このプロパティは無視されます。
+このプロパティを使用することで、[カスタムボタン](./button_overview.md#カスタム) 、[カスタムのチェックボックス](./checkbox_overview.md#カスタム) 、あるいは[カスタムのラジオボタン](./radio_overview.md#カスタム) に対して塗りカラー属性を割り当てることができます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。
 
 #### JSON 文法
 

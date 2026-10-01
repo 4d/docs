@@ -37,7 +37,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 - **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-- **Contrôle de l'utilisation des ressources du serveur** (par exemple, option [nombre maximal de process web simultanés](webServerConfig.md#maximum-concurrent-web-processes)).
+- **Control of server resource usage** through [web server quotas](quotas.md) and options such as [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 

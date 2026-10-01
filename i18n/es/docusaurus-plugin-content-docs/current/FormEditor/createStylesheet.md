@@ -290,6 +290,17 @@ Los atributos del objeto formulario pueden declararse con su [nombre JSON](FormO
 
 #### Mapa de atributos
 
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 21 R5       | Support of padding attributes |
+
+</details>
+</div>
+<br />
+
 Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre CSS.
 
 | 4D               | CSS                |
@@ -300,6 +311,10 @@ Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre C
 | `fontSize`       | `font-size`        |
 | `fontStyle`      | `font-style`       |
 | `fontWeight`     | `font-weight`      |
+| `paddingBottom`  | `padding-bottom`   |
+| `paddingLeft`    | `padding-left`     |
+| `paddingRight`   | `padding-right`    |
+| `paddingTop`     | `padding-top`      |
 | `stroke`         | `color`            |
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |

@@ -290,6 +290,17 @@ text[text|=Hello]
 
 #### 属性マッピング
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 21 R5 | Support of padding attributes |
+
+</details>
+</div>
+<br />
+
 次の属性については、4D の名称または CSS の名称を使用することができます:
 
 | 4D               | CSS                |
@@ -300,6 +311,10 @@ text[text|=Hello]
 | `fontSize`       | `font-size`        |
 | `fontStyle`      | `font-style`       |
 | `fontWeight`     | `font-weight`      |
+| `paddingBottom`  | `padding-bottom`   |
+| `paddingLeft`    | `padding-left`     |
+| `paddingRight`   | `padding-right`    |
+| `paddingTop`     | `padding-top`      |
 | `stroke`         | `color`            |
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
