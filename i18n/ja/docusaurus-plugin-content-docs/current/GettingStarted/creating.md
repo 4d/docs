@@ -65,17 +65,21 @@ OS によって許可されている名称であれば使用可能です。し�
   - **インタープリター** または **コンパイル済み**: これらのオプションは、選択したプロジェクトが [インタープリターおよびコンパイル済みコード](Concepts/interpreted.md) を含んでいる場合に選択可能となります。
   - **[Maintenance Security Center](MSC/overview.md)**: 損傷を受けたプロジェクトに必要な修復を施すために、保護モードでプロジェクトを開きます。
 
-- **データファイル** - プロジェクトで使用するデータファイルを指定できます。デフォルトでは、**現在のデータファイル** オプションが選択されています。 This menu includes two additional options since 4D allows you to use the same project with different data files. Data and structure files must however correspond. In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. These numbers are verified when the data file is opened.
-
+- **データファイル** - プロジェクトで使用するデータファイルを指定できます。デフォルトでは、**現在のデータファイル** オプションが選択されています。 This menu includes two additional options since 4D allows you to use the same project with different data files.
   - **Choose another data file**: Opens the project with an existing data file other than the current one. When you select this option and then click on **Open**, the standard Open data file dialog box appears so that you can designate a data file.
   - **Create a new data file**: Creates a blank data file for the project. When you select this option and then click on **Open**, the standard Save data file dialog box appears.
 
-  Once you have changed the current data file, 4D opens it by default subsequently.  
-  If you move or rename the data file, you will need to locate it again. It is possible to change the data file using a keyboard shortcut on startup. You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
+:::note
+
+In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. These numbers are verified when the data file is opened.
+
+:::
+
+Once you have changed the current data file, 4D opens it by default subsequently. If you move or rename the data file, you will need to locate it again. It is possible to change the data file using a keyboard shortcut on startup (see below). You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
 
 ### Startup Maintenance Dialog
 
-If you need to interrupt the startup sequence, for example if the project isn't launching properly or if you want to switch to a different data file, hold down the **Alt** (Windows) or **Option** (macOS) key during database startup to display the startup maintenance dialog box:
+If you need to interrupt the startup sequence, for example if the project is not launching properly or if you want to switch to a different data file, hold down the **Alt** (Windows) or **Option** (macOS) key during database startup to display the startup maintenance dialog box:
 
 ![](../assets/en/getStart/startup.png)
 

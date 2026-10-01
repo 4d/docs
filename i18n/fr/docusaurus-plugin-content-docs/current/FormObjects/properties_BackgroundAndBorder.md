@@ -25,9 +25,55 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 ---
 
-## Couleur de fond
+## Background Color / Fill color
 
-See [**Fill Color**](#fill-color). "Background color" is used in the Property list for [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property). [hh](#)
+
+:::note
+
+The **Fill color** property is named **Background color** with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+
+:::
+
+### Standard objects
+
+Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
+
+#### Grammaire JSON
+
+| Nom  | Type de données | Valeurs possibles                          |
+| ---- | --------------- | ------------------------------------------ |
+| fill | string          | une valeur css; "transparent"; "automatic" |
+
+#### Objets pris en charge
+
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+
+#### Commandes
+
+[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+
+### Custom button, custom check box, or custom radio button
+
+This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). In other contexts, the property is ignored.
+
+#### Grammaire JSON
+
+| Nom             | Type de données | Valeurs possibles                          |
+| --------------- | --------------- | ------------------------------------------ |
+| borderFillColor | string          | une valeur css; "transparent"; "automatic" |
+
+#### Objets pris en charge
+
+[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+
+#### Commandes
+
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
+
+#### Voir également
+
+[Transparent](#transparent)
 
 ---
 
@@ -89,7 +135,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 :::note
 
-For [custom buttons](./button_overview.md#custom), the **custom** border line style enables the inner frame design, that includes a set of extra properties: [Fill color](#fill-color), [Frame color](#frame-color), [Frame width](#frame-width), and [Corner radius](./properties_BackgroundAndBorder.md#corner-radius).
+For [custom buttons](./button_overview.md#custom), the **custom** border line style enables the inner frame design, that includes a set of extra properties: [Fill color](#background-color--fill-color), [Frame color](#frame-color), [Frame width](#frame-width), and [Corner radius](./properties_BackgroundAndBorder.md#corner-radius).
 
 ![](../assets/en/FormObjects/custom-button.png)
 
@@ -199,56 +245,6 @@ Décrit le type de ligne en pointillé comme une séquence de points noirs et bl
 [Rectangle](shapes_overview.md#rectangle) - [Ovale](shapes_overview.md#oval) - [Ligne](shapes_overview.md#line)
 
 ---
-
-## Fill Color {#fill-color}
-
-Defines the fill color / background color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
-
-### Standard objects
-
-:::note
-
-This property is named [**Background color**](#background-color) with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
-
-:::
-
-Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
-
-#### Grammaire JSON
-
-| Nom  | Type de données | Valeurs possibles                          |
-| ---- | --------------- | ------------------------------------------ |
-| fill | string          | une valeur css; "transparent"; "automatic" |
-
-#### Objets pris en charge
-
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
-
-#### Commandes
-
-[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
-
-### Custom button, custom check box, or custom radio button
-
-This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). In other contexts, the property is ignored.
-
-#### Grammaire JSON
-
-| Nom             | Type de données | Valeurs possibles                          |
-| --------------- | --------------- | ------------------------------------------ |
-| borderFillColor | string          | une valeur css; "transparent"; "automatic" |
-
-#### Objets pris en charge
-
-[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
-
-#### Commandes
-
-[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
-
-#### Voir également
-
-[Transparent](#transparent)
 
 ## Masquer lignes vides finales
 

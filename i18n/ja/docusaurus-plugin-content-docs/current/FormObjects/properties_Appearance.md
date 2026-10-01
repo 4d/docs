@@ -15,7 +15,7 @@ macOS上では、デフォルトボタンプロパティによってボタンの
 
 > このデフォルトボタンとしての外観を得るには、ボタンの高さが 22以下に設定されている必要があります。
 
-Windows上では "推奨選択肢" の概念はサポートされていないため、フォーカスされているボタンのみがランタイムにおいて異なる外観を持ち、**Enter** キーはフォーカスされたボタンに関連付けられます。 However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#regular) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
+Windows上では "推奨選択肢" の概念はサポートされていないため、フォーカスされているボタンのみがランタイムにおいて異なる外観を持ち、**Enter** キーはフォーカスされたボタンに関連付けられます。 However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#flat) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
