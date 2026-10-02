@@ -527,7 +527,7 @@ The `.quotas` property contains <!-- REF #WebServerClass.quotas.Summary -->a `4D
 
 :::note 
 
-Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property returns `Null`.
+Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property is *Undefined*.
 
 :::
 
@@ -552,7 +552,7 @@ You can also configure quotas for the current REST session using the [`Session.q
 
 :::
 
-The following properties of the `4D.QuotaManager` object are available for the web server:
+The following properties of the `4D.QuotaManager` object are available for the Web server:
 
 |Property||Type|Writable|Description|
 |---|---|---|---|---|
@@ -560,12 +560,10 @@ The following properties of the `4D.QuotaManager` object are available for the w
 ||nbEntitySets|Integer|no|Number of entity sets currently in memory.|
 ||nbGuestSessions|Integer|no|Number of active Guest sessions on the Web server.|
 ||nbSessions|Integer|no|Number of active sessions on the Web server.|
-|[defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout)||Integer|yes|Default inactivity timeout for REST entity sets in memory (seconds).|
 |[inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)||Integer|yes|Maximum total number of bytes the Web server can receive in one hour.|
 |[inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)||Integer|yes|Maximum total number of bytes the Web server can receive for a session in one hour.|
 |[inBytesPerMin](./QuotaManagerClass.md#inbytespermin)||Integer|yes|Maximum total number of bytes the Web server can receive in one minute.|
 |[inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)||Integer|yes|Maximum total number of bytes the Web server can receive for a session in one minute.|
-|[maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)||Integer|yes|Maximum inactivity timeout for REST entity sets in memory (seconds).|
 |[nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)||Integer|yes|Maximum number of entity sets allowed in memory for each REST session.|
 |[nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)||Integer|yes|Maximum total number of active Guest sessions on the Web server.|
 |[nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)||Integer|yes|Maximum total number of requests the Web server can receive in one hour.|
@@ -772,7 +770,7 @@ All settings of [Web Server objects](../commands/web-server) can be customized, 
 
 :::note
 
-You can configure quotas via the `quotas` property in *settings* parameter or for the main Web server via a [`QuotaManager.json`](../WebServer/quotas.md) file. When both a valid `settings.quotas` property and a **QuotaManager.json** file are provided, the `settings.quotas` configuration takes priority.
+You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via a [`QuotaManager.json`](../WebServer/quotas.md) file. If `settings.quotas` is provided, **QuotaManager.json** is ignored.
 
 :: 
 

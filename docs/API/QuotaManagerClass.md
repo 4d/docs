@@ -4,7 +4,7 @@ title: QuotaManager
 ---
 
 
-The `4D.QuotaManager` class provides you with an interface to configure and monitor some usage limits you apply to your 4D application. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. Typically, the quota manager allows you to provide thresholds to ORDA resources a REST server session can access. 
+The `4D.QuotaManager` class provides you with an interface to configure and monitor some usage limits you apply to your 4D application. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session.
 
 `4D.QuotaManager` objects can be instantiated by:
 - the [`quotas` property of a Session](./SessionClass.md#quotas) object
@@ -65,7 +65,13 @@ The `4D.QuotaManager` object itself cannot be directly assigned, and properties 
 
 #### Description
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->the current usage values related to the quota properties<!-- END REF -->. This object is automatically updated by the server and is read-only.
+The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. It is automatically updated by 4D and is read-only.
+
+The object has the same properties as the `4D.QuotaManager` object, but only the following properties report current usage:
+
+- [`nbEntitySets`](#nbentitysets)
+- [`nbSessions`](#nbsessions)
+- [`nbGuestSessions`](#nbguestsessions)
 
 <!-- END REF -->
 
@@ -75,6 +81,12 @@ The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues
 <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Syntax -->**defaultEntitySetTimeout** : Integer<!-- END REF -->
 
 #### Description
+
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
 
 The `.defaultEntitySetTimeout` property contains <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->the default inactivity timeout for REST entity sets stored in memory during the current session (in seconds)<!-- END REF -->.
 
@@ -163,6 +175,12 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
+
 The `.maxEntitySetTimeout` property contains <!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->the maximum inactivity timeout value for REST entity sets stored in memory during the current session (in seconds)<!-- END REF -->.
 
 Scope: current session level
@@ -199,6 +217,12 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### Description
 
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
+
 The `.nbEntitySets` property contains <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->the maximum number of REST entity sets allowed in memory for the current session<!-- END REF -->.
 
 Scope: current session level
@@ -227,6 +251,12 @@ Session.quotas.nbEntitySets:=50
 <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Syntax -->**nbEntitySetsPerSession** : Integer<!-- END REF -->
 
 #### Description
+
+:::note
+
+This quota applies only to a REST session.
+
+:::
 
 The `.nbEntitySetsPerSession` property contains <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->the maximum number of entity sets allowed in memory for each REST session<!-- END REF -->.
 
