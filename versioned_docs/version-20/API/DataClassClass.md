@@ -1065,7 +1065,7 @@ $notMarried:=ds.Person.query("info.married#true | info.married=null") //finds fa
 
 #### Not equal to in collections
 
-When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
+When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*)". For example, with the following entities:
 
 ```
 Entity 1:
@@ -1104,7 +1104,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // returns A only
 // finds "entities where all val properties are different from 0"
 // which is the equivalent to
-ds.Class.query(not("info.coll[].val = :1";0))
+ds.Class.query("Not(info.coll[].val = :1";0))
 ```
 
 If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
