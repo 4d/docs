@@ -139,7 +139,7 @@ O estilo Disclosure é denominado "roundedDisclosure" na [gramática JSON do est
 
 ### Personalizado
 
-The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+The Custom radio button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-radio-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 ## Propriedades compatíveis
 
@@ -150,9 +150,11 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 > (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
 > (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
-Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
+### Additional properties for custom radio buttons
 
-- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertical](properties_TextAndPicture.md#vertical-margin)
+Additional specific properties are available for [custom](#custom) style radio buttons:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
 ## Supported Events
 

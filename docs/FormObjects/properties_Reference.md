@@ -40,11 +40,11 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`automaticInsertion`](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a id="b"></a>|
 |**b**|||
 |[`booleanFormat`](properties_Display.md#text-when-falsetext-when-true)|Specifies only two possible values.|true, false|
-|[`borderColor`](./properties_BackgroundAndBorder.md#frame-color)|Defines the border (frame) color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
-|[`borderFillColor`](properties_BackgroundAndBorder.md#fill-color)|Defines the background color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
+|[`borderColor`](./properties_BackgroundAndBorder.md#border-color)|Defines the border color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
+|[`borderFillColor`](properties_BackgroundAndBorder.md#background-color--fill-color)|Defines the background color of a custom-styled button, check box, or radio button. |Any CSS value, "transparent", "automatic". Must be used in conjunction with the "custom" style option.|
 |[`borderRadius`](properties_BackgroundAndBorder.md#corner-radius)|The radius value for round rectangles. |minimum: 0|
 |[`borderStyle`](properties_BackgroundAndBorder.md#border-line-style)|Allows setting a standard style for the object border. |"system", "none", "solid", "dotted", "raised", "sunken", "double", "custom"|
-|[`borderWidth`](./properties_BackgroundAndBorder.md#frame-width)|Defines the border width of a custom-styled button, check box, or radio button. |minimum: 0. Must be used in conjunction with the "custom" style option.|
+|[`borderWidth`](./properties_BackgroundAndBorder.md#border-width)|Defines the border width of a custom-styled button, check box, or radio button. |minimum: 0. Must be used in conjunction with the "custom" style option.|
 |[`bottom`](properties_CoordinatesAndSizing.md#bottom)|Positions an object at the bottom (centered).|minimum: 0<a id="c"></a>|
 |**c**|||
 |[`choiceList`](properties_DataSource.md#choice-list)|A list of choices associated with an object|A list of choices|
@@ -82,7 +82,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`events`](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[`excludedList`](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a id="f"></a>|
 |**f**|||
-|[`fill`](properties_BackgroundAndBorder.md#fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
+|[`fill`](properties_BackgroundAndBorder.md#background-color--fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
 |[`focusable`](properties_Entry.md#focusable)|Indicates whether the object can have the focus (and can thus be activated by the keyboard for instance)|true, false|
 |[`fontFamily`](properties_Text.md#font)|Specifies the name of font family used in the object. |CSS font family name  |  
 |[`fontSize`](properties_Text.md#font-size)|Sets the font size in points when no font theme is selected|minimum: 0| 
@@ -134,6 +134,10 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`name`](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[`numberFormat`](properties_Display.md#number-format) |Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)<a id="p"></a>|
 |**p**|||
+|[`paddingBottom`](properties_CoordinatesAndSizing.md#bottom-padding)|Sets the padding between the bottom edge of the object and its text content.|minimum: 0|
+|[`paddingLeft`](properties_CoordinatesAndSizing.md#left-padding)|Sets the padding between the left edge of the object and its text content.|minimum: 0|
+|[`paddingRight`](properties_CoordinatesAndSizing.md#right-padding)|Sets the padding between the right edge of the object and its text content.|minimum: 0|
+|[`paddingTop`](properties_CoordinatesAndSizing.md#top-padding)|Sets the padding between the top edge of the object and its text content.|minimum: 0|
 |[`picture`](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable.|
 |[`pictureFormat`](properties_Display.md#picture-format) (input, list box column or footer)<br/>[`pictureFormat`](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[`placeholder`](properties_Entry.md#placeholder)	|Grays out text when the data source value is empty.|Text to be grayed out.|

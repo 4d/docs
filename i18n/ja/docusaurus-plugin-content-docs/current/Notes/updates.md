@@ -13,7 +13,17 @@ title: リリースノート
 - [コンポーネントをホストから直接コンパイルする](../Project/compiler.md#コンポーネントのコンパイル) ことができるようになりました。
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) でのリストフォームのサポート。
 - [依存関係マネージャー](../Project/components.md#4d-cornerを使用) から[4D Corner プラットフォーム](https://corner.4d.com/) へと直接アクセスできるようになりました。
+- New [`WebServer.quotas`](../API/WebServerClass.md#quotas) property and enhanced [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to configure [Web server quotas](../WebServer/quotas.md).
+- Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Support for [vertical alignment](../FormObjects/properties_Text.md#vertical-alignment).
+- New [`OBJECT SET PADDING`](../commands/object-set-padding) and [`OBJECT Get padding`](../commands/object-get-padding) commands to manage padding by programming.
+- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [border color](../FormObjects/properties_BackgroundAndBorder.md#border-color) and [border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) properties.
+- [依存関係マネージャー](../Project/components.md#4d-cornerを使用) から[4D Corner プラットフォーム](https://corner.4d.com/) へと直接アクセスできるようになりました。
+- 4Dメソッドまたはクラスを作成または開くときに4D コードエディターを開くかVS Code を開くかを自動的に決定する[新しい**コードエディター** 設定](../Preferences/methods.md#コードエディター)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
+
+#### 動作の変更
+
+- 一貫性のために、**角の半径** プロパティはプロパティリストの["座標とサイズ"](../FormObjects/properties_CoordinatesAndSizing.md) セクションから["背景と境界線"](../FormObjects/properties_BackgroundAndBorder.md#角の半径) セクションへと移動されました。
 
 ## 4D 21 R4
 
@@ -104,15 +114,15 @@ title: リリースノート
 | libldap         | 2.6.10 | 21             |                                                                                                                                                      |
 | libsasl         | 2.1.28 | 20             |                                                                                                                                                      |
 | Liblsquic       | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                             |
-| Libuv           | 1.52.1 | **21 R4**      | QUIC に使用                                                                                                                                             |
+| Libuv           | 1.52.1 | 21 R4          | QUIC に使用                                                                                                                                             |
 | libZip          | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA            | 5.8.1  | 21             |                                                                                                                                                      |
-| ngtcp2          | 1.24.0 | **21 R4**      | QUIC に使用                                                                                                                                             |
+| ngtcp2          | 1.24.0 | 21 R4          | QUIC に使用                                                                                                                                             |
 | OpenSSL         | 4.0.1  | **21 R5**      |                                                                                                                                                      |
 | PDFWriter       | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS        | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit          | WKWebView                              | 19             |                                                                                                                                                      |
-| Windows App SDK | 2                                      | **21 R4**      | [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) に使用されます                                                                            |
+| Windows App SDK | 2                                      | 21 R4          | [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) に使用されます                                                                            |
 | Xerces          | 3.3.0  | 21             | XML コマンドにおいて使用されます                                                                                                                                   |
 | Zlib            | 1.3.1  | 21             |                                                                                                                                                      |
 

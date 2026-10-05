@@ -103,6 +103,8 @@ Le style Classique du bouton case à cocher correspond à un système de case à
 		}
 ```
 
+Le style Classique propose une [propriété supplémentaire](#additional-properties-for-flat-and-regular-check-boxes) : la propriété [Three-States](properties_Display.md#three-states).
+
 ### A plat
 
 Le style plat du bouton case à cocher a un design minimaliste. Le graphisme du style A plat est particulièrement utile pour les formulaires à imprimer.
@@ -123,6 +125,8 @@ Le style plat du bouton case à cocher a un design minimaliste. Le graphisme du 
 			"height": 20			
 			}
 ```
+
+Le style A plat propose une [propriété supplémentaire](#additional-properties-for-flat-and-regular-check-boxes) : la propriété [Three-States](properties_Display.md#three-states).
 
 ### Bouton barre outils
 
@@ -355,11 +359,7 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 ### Personnalisé
 
-Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques :
-
-- [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#background-pathname)
-- [Décalage de l'icône](properties_TextAndPicture.md#icon-offset)
-- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
+Le style de case à cocher Personnalisé permet d'utiliser une image d'arrière-plan personnalisée et de gérer des [propriétés supplémentaires](#additional-properties-for-custom-check-boxes) telles que le [décalage de l'icône](properties_TextAndPicture.md#icon-offset) et les [marges](properties_TextAndPicture.md#horizontal-margin).
 
 Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée en conjonction avec une [image d'arrière-plan à 4 états](properties_TextAndPicture.md#background-pathname).
 
@@ -392,11 +392,19 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 > (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat).<br/>
 > (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
 
-Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#check-box-button-styles) :
+### Propriétés supplémentaires pour les cases à cocher personnalisées
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
-- Flat, Regular: [Trois états](properties_Display.md#three-states)
+Des propriétés spécifiques supplémentaires sont disponibles pour les cases à cocher de type [personnalisé](#custom) :
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+
+### Propriétés supplémentaires pour les cases à cocher à plat et classiques
+
+Une propriété spécifique supplémentaire est disponible pour les cases à cocher de style [A plat](#flat) et [Classique](#regular) :
+
+[Three-States](properties_Display.md#three-states)
 
 ## Événements pris en charge
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+

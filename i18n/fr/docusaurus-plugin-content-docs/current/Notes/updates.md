@@ -5,15 +5,25 @@ title: Release Notes
 
 ## 4D 21 R5
 
-Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), the blog post that lists all new features and enhancements in 4D 21 R5.
+Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-21-r5), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R5.
 
 #### Points forts
 
-- Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
-- You can now [compile a component directly from the host](../Project/compiler.md#compile-components).
-- Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
-- Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).
+- Prise en charge de la signature S/MIME des e-mails grâce aux nouvelles propriétés de la classe [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) : [`.certificate`](../API/SMTPTransporterClass.md#certificate) ou [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (fourniture du certificat), et [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
+- Vous pouvez désormais [compiler un composant directement depuis l'hôte](../Project/compiler.md#compile-components).
+- Prise en charge des formulaires liste par le [**rendu Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows.
+- Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
+- New [`WebServer.quotas`](../API/WebServerClass.md#quotas) property and enhanced [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to configure [Web server quotas](../WebServer/quotas.md).
+- Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Support for [vertical alignment](../FormObjects/properties_Text.md#vertical-alignment).
+- New [`OBJECT SET PADDING`](../commands/object-set-padding) and [`OBJECT Get padding`](../commands/object-get-padding) commands to manage padding by programming.
+- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [border color](../FormObjects/properties_BackgroundAndBorder.md#border-color) and [border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) properties.
+- Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
+- [Nouvelle préférence **Éditeur de code**](../Preferences/methods.md#code-editor) permettant d'utiliser automatiquement l'éditeur de code 4D ou VS Code lors de la création ou l'ouverture de méthodes et de classes 4D.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R5) : liste de tous les bugs qui ont été corrigés dans 4D 21 R5.
+
+#### Changements de comportement
+
+- Par souci de cohérence, la propriété **corner radius** a été déplacée de la section ["Coordonnées et dimensions"](../FormObjects/properties_CoordinatesAndSizing.md) vers la section ["Arrière-plan et bordure"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) de la liste des propriétés.
 
 ## 4D 21 R4
 
@@ -104,15 +114,15 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
 | libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
 | Liblsquic       | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
-| Libuv           | 1.52.1 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.52.1 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
-| ngtcp2          | 1.24.0 | **21 R4**           | Utilisé pour QUIC                                                                                                                                     |
+| ngtcp2          | 1.24.0 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL         | 4.0.1  | **21 R5**           |                                                                                                                                                       |
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit          | WKWebView                              | 19                  |                                                                                                                                                       |
-| Windows App SDK | 2                                      | **21 R4**           | Utilisé pour le [rendu Fluent UI](../FormEditor/forms.md#fluent-ui-rendering)                                                                         |
+| Windows App SDK | 2                                      | 21 R4               | Utilisé pour le [rendu Fluent UI](../FormEditor/forms.md#fluent-ui-rendering)                                                                         |
 | Xerces          | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib            | 1.3.1  | 21                  |                                                                                                                                                       |
 

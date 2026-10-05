@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Suporte a áreas de texto e áreas de entrada|
 |13|Criado por|
 
 </details>
@@ -47,7 +48,9 @@ O valor devolvido corresponde a uma das seguintes constantes, do tema *Proprieda
 O alinhamento vertical pode ser aplicado aos seguintes tipos de objetos de formulário:
 * list boxes,
 * colunas de list box,
-* cabeçalhos e rodapés de list box.
+* cabeçalhos e rodapés de list box,
+* áreas de texto,
+* áreas de entrada.
 
 ## Ver também 
 

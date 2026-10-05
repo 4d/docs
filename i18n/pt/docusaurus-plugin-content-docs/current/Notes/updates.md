@@ -13,7 +13,17 @@ Leia [**O que há de novo no 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-
 - You can now [compile a component directly from the host](../Project/compiler.md#compile-components).
 - Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 - Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).
+- New [`WebServer.quotas`](../API/WebServerClass.md#quotas) property and enhanced [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to configure [Web server quotas](../WebServer/quotas.md).
+- Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Support for [vertical alignment](../FormObjects/properties_Text.md#vertical-alignment).
+- New [`OBJECT SET PADDING`](../commands/object-set-padding) and [`OBJECT Get padding`](../commands/object-get-padding) commands to manage padding by programming.
+- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [border color](../FormObjects/properties_BackgroundAndBorder.md#border-color) and [border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) properties.
+- Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).
+- [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos os bugs corrigidos em 4D 21 R5.
+
+#### Mudanças de comportamento
+
+- For consistency, the **corner radius** property has been moved from the ["Coordinates & Sizing"](../FormObjects/properties_CoordinatesAndSizing.md) to the ["Background and Border"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) section of the Property List.
 
 ## 4D 21 R4
 
@@ -104,15 +114,15 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 | libldap         | 2.6.10 | 21               |                                                                                                                                                    |
 | libsasl         | 2.1.28 | 20               |                                                                                                                                                    |
 | Liblsquic       | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                                                    |
-| Libuv           | 1.52.1 | **21 R4**        | Usado para QUIC                                                                                                                                    |
+| Libuv           | 1.52.1 | 21 R4            | Usado para QUIC                                                                                                                                    |
 | libZip          | 1.11.4 | 21               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                               |
 | LZMA            | 5.8.1  | 21               |                                                                                                                                                    |
-| ngtcp2          | 1.24.0 | **21 R4**        | Usado para QUIC                                                                                                                                    |
+| ngtcp2          | 1.24.0 | 21 R4            | Usado para QUIC                                                                                                                                    |
 | OpenSSL         | 4.0.1  | **21 R5**        |                                                                                                                                                    |
 | PDFWriter       | 4.7.0  | 21               | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para uma visão geral dos novos recursos                           |
 | webKit          | WKWebView                              | 19               |                                                                                                                                                    |
-| Windows App SDK | 2                                      | **21 R4**        | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                         |
+| Windows App SDK | 2                                      | 21 R4            | Used for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)                                                                         |
 | Xerces          | 3.3.0  | 21               | Used for XML commands                                                                                                                              |
 | Zlib            | 1.3.1  | 21               |                                                                                                                                                    |
 

@@ -296,6 +296,18 @@ Form object attributes can be declared with their [JSON name](FormObjects/proper
 
 #### Attribute Mapping
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Support of padding attributes|
+
+</details>
+</div>
+<br />
+
+
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
 |4D|CSS|
@@ -306,6 +318,10 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 |`fontSize`|`font-size`|
 |`fontStyle`|`font-style`|
 |`fontWeight`|`font-weight`|
+|`paddingBottom`|`padding-bottom`|
+|`paddingLeft`|`padding-left`|
+|`paddingRight`|`padding-right`|
+|`paddingTop`|`padding-top`|
 |`stroke`|`color`|
 |`textAlign`|`text-align`|
 |`textDecoration`|`text-decoration`|

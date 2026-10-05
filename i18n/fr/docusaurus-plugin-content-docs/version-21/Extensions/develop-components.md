@@ -50,7 +50,7 @@ Vous pouvez créer un nouveau composant directement à partir du projet hôte :
 
 Cette action ouvre une boîte de dialogue de sélection de dossier dans laquelle vous choisissez l'endroit où [le dossier racine du composant](../Project/components.md#package-folder) sera stocké.
 
-- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet] (../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
+- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet](../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
 - Si vous décidez de stocker le composant **à côté du dossier racine du projet**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson).
 - Si vous décidez de stocker le composant **ailleurs**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson) et son chemin est ajouté au fichier [`environment4d.json`](../Project/components.md#environment4djson), en utilisant un [chemin relatif ou absolu](../Project/components.md#relative-paths-vs-absolute-paths). Un chemin relatif est utilisé si le composant est situé au maximum deux niveaux au-dessus du fichier `environment4d.json`, ou dans ses sous-dossiers. Sinon, un chemin absolu est utilisé.
 
@@ -163,7 +163,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
-A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte.
+A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. Pour ce faire, vous devez explicitement désigner les méthodes projet du projet hôte que vous souhaitez rendre accessibles aux composants (dans les propriétés de la méthode, cochez la case **Partagée entre composants et projet hôte**).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 

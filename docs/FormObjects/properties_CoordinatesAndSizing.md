@@ -74,64 +74,27 @@ Bottom coordinate of the object in the form.
 [OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
+## Bottom Padding
 
-## Left
-
-Left coordinate of the object on the form.
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|left|number |minimum: 0|
-
-#### Objects Supported
-
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
-
-#### Commands
-
-[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
-
----
-
-## Right
-
-Right coordinate of the object in the form.
+Sets the padding between the bottom edge of the object and its text content. The value is set in pixels (default = 0).
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|right|number |minimum: 0|
+|paddingBottom|integer|Value in pixels (must be >=0)|
 
 #### Objects Supported
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Input](input_overview.md) - [Text Area](text.md)
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
+[`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
 
----
+#### See also
 
-## Top
-
-Top coordinate of the object in the form.
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|top |number |minimum: 0|
-
-#### Objects Supported
-
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
-
-#### Commands
-
-[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
+[Top Padding](#top-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
 
 ---
 
@@ -158,27 +121,75 @@ This property designates an object's vertical size.
 
 ---
 
-## Width
+## Horizontal Padding
 
-This property designates an object's horizontal size.
+Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
 
->* Some objects may have a predefined height that cannot be altered.
->* If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox-column.md), the user can also manually resize the column.
->* When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+![](../assets/en/FormObjects/padding.png)
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|width|number |minimum: 0|
+|horizontalPadding|number |Number of pixels (must be >=0)|
 
 #### Objects Supported
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+
+
+#### Commands
+
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) - [`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
+
+
+
+#### See also
+
+[Vertical Padding](#vertical-padding)
+---
+
+## Left
+
+Left coordinate of the object on the form.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|left|number |minimum: 0|
+
+#### Objects Supported
+
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 #### Commands
 
 [OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
+
+---
+
+## Left Padding
+
+Sets the padding between the left edge of the object and its text content. The value is set in pixels (default = 0).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|paddingLeft|integer|Value in pixels (must be >=0)|
+
+#### Objects Supported
+
+[Input](input_overview.md) - [Text Area](text.md)
+
+#### Commands
+
+[`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
+
+#### See also
+
+[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Right Padding](#right-padding)
 
 ---
 
@@ -223,6 +234,51 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 #### Commands
 
 [LISTBOX Get column width](../commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)
+
+
+---
+
+## Right
+
+Right coordinate of the object in the form.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|right|number |minimum: 0|
+
+#### Objects Supported
+
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+
+#### Commands
+
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
+
+---
+
+## Right Padding
+
+Sets the padding between the right edge of the object and its text content. The value is set in pixels (default = 0).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|paddingRight|integer|Value in pixels (must be >=0)|
+
+#### Objects Supported
+
+[Input](input_overview.md) - [Text Area](text.md)
+
+#### Commands
+
+[`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
+
+#### See also
+
+[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Left Padding](#left-padding)
 
 ---
 
@@ -290,34 +346,50 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 [Row Height](#row-height)
 
+
 ---
 
-## Horizontal Padding
+## Top
 
-Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
-
-![](../assets/en/FormObjects/padding.png)
+Top coordinate of the object in the form.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|horizontalPadding|number |Number of pixels (must be >=0)|
+|top |number |minimum: 0|
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
-
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
+---
 
+## Top Padding
+
+Sets the padding between the top edge of the object and its text content. The value is set in pixels (default = 0).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|paddingTop|integer|Value in pixels (must be >=0)|
+
+#### Objects Supported
+
+[Input](input_overview.md) - [Text Area](text.md)
+
+#### Commands
+
+[`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
 
 #### See also
 
-[Vertical Padding](#vertical-padding)
+[Bottom Padding](#bottom-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
 
 ---
 
@@ -337,10 +409,34 @@ Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) - [`OBJECT Get padding`](../commands/object-get-padding) - [`OBJECT SET PADDING`](../commands/object-set-padding)
 
 
 #### See also
 
 [Horizontal Padding](#horizontal-padding)
+
+---
+
+## Width
+
+This property designates an object's horizontal size.
+
+>* Some objects may have a predefined height that cannot be altered.
+>* If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox-column.md), the user can also manually resize the column.
+>* When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|width|number |minimum: 0|
+
+#### Objects Supported
+
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+
+#### Commands
+
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 

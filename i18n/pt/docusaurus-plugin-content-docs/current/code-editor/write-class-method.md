@@ -15,7 +15,7 @@ O Editor de código 4D fornece verificação básica de erros de sintaxe. É efe
 
 :::note
 
-If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension.
+If you are used to coding with **VS Code**, you can also use this editor with 4D code after installing the [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) extension. You can configure the editor to use in priority through the [**Code editor** preference](../Preferences/methods.md#code-editor).
 
 :::
 
@@ -227,7 +227,7 @@ No macOS, use a tecla **Command** em vez da tecla **Ctrl** mencionada (Windows).
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Selecção e navegação**                                                                                                                                                                                       |                                                                                                                                                                                 |
 | Duplo clique                                                                                                                                                                                                   | Selecionar o nome de um elemento da linguagem                                                                                                                                   |
-| [Alt]+Clique duas vezes                                                                                                                                    | Selecionar um nome de elemento de língua contendo espaços (constante, método, etc.)                                                          |
+| Triple-click                                                                                                                                                                                                   | Select a line of code                                                                                                                                                           |
 | [Shift]+[seta para a direita]                                                                          | Criar e ampliar a seleção, personagem por caractere, para a direita ou Reduzir a seleção, personagem por caracter a partir da esquerda                                          |
 | [Shift]+[seta para a esquerda]                                                                         | Reduzir a seleção, caractere por caractere, da direita ou Criar e ampliar a seleção, caractere por caractere, para a esquerda                                                   |
 | [Shift]+[seta para baixo]                                                                              | Criar e ampliar uma seleção, linha por linha, da parte superior à parte inferior                                                                                                |

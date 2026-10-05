@@ -103,6 +103,8 @@ true/false ステータスで表すことのできるアクション ("checkable
 		}
 ```
 
+The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+
 ### フラット
 
 フラットスタイルのチェックボックスでは、装飾が最小限に抑えられています。このグラフィック的特性により、フラットスタイルは印刷フォームでの使用に適しています。
@@ -123,6 +125,8 @@ true/false ステータスで表すことのできるアクション ("checkable
 			"height": 20			
 			}
 ```
+
+The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
 
 ### ツールバーボタン
 
@@ -355,11 +359,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 ### カスタム
 
-カスタムスタイルのチェックボックスは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます:
-
-- [背景パス名](properties_TextAndPicture.md#背景パス名)
-- [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット)
-- [横方向マージン](properties_TextAndPicture.md#横方向マージン) と [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
+The Custom check box style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-check-boxes) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
 
 カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく4つの状態を持つ [背景ピクチャー](properties_TextAndPicture.md#背景パス名) と同時に使用することができます。
 
@@ -392,14 +392,19 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
 
-[ボタンスタイル](#チェックボックスのボタンスタイル) に応じて、次の追加プロパティが使用できます:
+### Additional properties for custom check boxes
 
-- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) -
-  [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) -
-  [横方向マージン](properties_TextAndPicture.md#横方向マージン) -
-  [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
-- 通常、フラット: [スリーステート](properties_Display.md#スリーステート)
+Additional specific properties are available for [custom](#custom) style check boxes:
+
+[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+
+### Additional properties for flat and regular check boxes
+
+An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+
+[Three-States](properties_Display.md#three-states)
 
 ## サポートされるイベント
 
 [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+

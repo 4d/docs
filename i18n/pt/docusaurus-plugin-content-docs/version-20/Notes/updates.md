@@ -17,6 +17,7 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 - [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.9): lista de todos os erros corrigidos no 4D 20.9 LTS.
 
+The version of 4D clients connecting to 4D Server 20.9 and later must be at least 20.9.
 
 
 ## 4D 20.8 LTS
@@ -35,7 +36,7 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 - [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.7): lista de todos os erros corrigidos no 4D 20.7 LTS.
 
-:::caution Versão mínima cliente para 4D Server v20.7 e posterior
+:::note Minimal client version for 4D Server 20.7 and later
 
 Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.7 e posterior deve ser pelo menos 4D 20.7.
 

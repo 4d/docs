@@ -41,10 +41,11 @@ title: テキスト
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容        |
-| ----- | --------- |
-| 19 R7 | 角の半径をサポート |
+| リリース  | 内容                                                   |
+| ----- | ---------------------------------------------------- |
+| 21 R5 | Support of vertical alignment and padding properties |
+| 19 R7 | 角の半径をサポート                                            |
 
 </details>
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [方向](properties_Text.md#方向)
+[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Bottom Padding](properties_CoordinatesAndSizing.md#bottom-padding) - [Class](properties_Object.md#css-class) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Left Padding](properties_CoordinatesAndSizing.md#left-padding) - [Object Name](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Right](properties_CoordinatesAndSizing.md#right) - [Right Padding](properties_CoordinatesAndSizing.md#right-padding) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Top Padding](properties_CoordinatesAndSizing.md#top-padding) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
