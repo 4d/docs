@@ -493,7 +493,7 @@ The `.quotas` property contains <!-- REF #WebServerClass.quotas.Summary -->a `4D
 
 :::note
 
-Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property returns `Null`.
+Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property is *Undefined*.
 
 :::
 
@@ -518,31 +518,29 @@ You can also configure quotas for the current REST session using the [`Session.q
 
 :::
 
-The following properties of the `4D.QuotaManager` object are available for the web server:
+The following properties of the `4D.QuotaManager` object are available for the Web server:
 
-| Propiedad                                                                         |                 | Tipo    | Modificable | Descripción                                                                                             |
-| --------------------------------------------------------------------------------- | --------------- | ------- | ----------- | ------------------------------------------------------------------------------------------------------- |
-| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | no          | Current usage values reported by the Web server.                                        |
-|                                                                                   | nbEntitySets    | Integer | no          | Número de conjuntos de entidades actualmente en memoria.                                |
-|                                                                                   | nbGuestSessions | Integer | no          | Number of active Guest sessions on the Web server.                                      |
-|                                                                                   | nbSessions      | Integer | no          | Number of active sessions on the Web server.                                            |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout)         |                 | Integer | sí          | Default inactivity timeout for REST entity sets in memory (seconds). |
-| [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | sí          | Maximum total number of bytes the Web server can receive in one hour.                   |
-| [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | sí          | Maximum total number of bytes the Web server can receive for a session in one hour.     |
-| [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | sí          | Maximum total number of bytes the Web server can receive in one minute.                 |
-| [inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)         |                 | Integer | sí          | Maximum total number of bytes the Web server can receive for a session in one minute.   |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)                 |                 | Integer | sí          | Maximum inactivity timeout for REST entity sets in memory (seconds). |
-| [nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)           |                 | Integer | sí          | Maximum number of entity sets allowed in memory for each REST session.                  |
-| [nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)                         |                 | Integer | sí          | Maximum total number of active Guest sessions on the Web server.                        |
-| [nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)                     |                 | Integer | sí          | Maximum total number of requests the Web server can receive in one hour.                |
-| [nbRequestsPerHourPerSession](./QuotaManagerClass.md#nbrequestsperhourpersession) |                 | Integer | sí          | Maximum total number of requests a session can receive in one hour.                     |
-| [nbRequestsPerMin](./QuotaManagerClass.md#nbrequestspermin)                       |                 | Integer | sí          | Maximum total number of requests the Web server can receive in one minute.              |
-| [nbRequestsPerMinPerSession](./QuotaManagerClass.md#nbrequestsperminpersession)   |                 | Integer | sí          | Maximum total number of requests a session can receive in one minute.                   |
-| [nbSessions](./QuotaManagerClass.md#nbsessions)                                   |                 | Integer | sí          | Maximum total number of active sessions on the Web server.                              |
-| [outBytesPerHour](./QuotaManagerClass.md#outbytesperhour)                         |                 | Integer | sí          | Maximum total number of bytes the Web server can send in one hour.                      |
-| [outBytesPerHourPerSession](./QuotaManagerClass.md#outbytesperhourpersession)     |                 | Integer | sí          | Maximum total number of bytes the Web server can send for a session in one hour.        |
-| [outBytesPerMin](./QuotaManagerClass.md#outbytespermin)                           |                 | Integer | sí          | Maximum total number of bytes the Web server can send in one minute.                    |
-| [outBytesPerMinPerSession](./QuotaManagerClass.md#outbytesperminpersession)       |                 | Integer | sí          | Maximum total number of bytes the Web server can send for a session in one minute.      |
+| Propiedad                                                                         |                 | Tipo    | Modificable | Descripción                                                                                           |
+| --------------------------------------------------------------------------------- | --------------- | ------- | ----------- | ----------------------------------------------------------------------------------------------------- |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | no          | Current usage values reported by the Web server.                                      |
+|                                                                                   | nbEntitySets    | Integer | no          | Número de conjuntos de entidades actualmente en memoria.                              |
+|                                                                                   | nbGuestSessions | Integer | no          | Number of active Guest sessions on the Web server.                                    |
+|                                                                                   | nbSessions      | Integer | no          | Number of active sessions on the Web server.                                          |
+| [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | sí          | Maximum total number of bytes the Web server can receive in one hour.                 |
+| [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | sí          | Maximum total number of bytes the Web server can receive for a session in one hour.   |
+| [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | sí          | Maximum total number of bytes the Web server can receive in one minute.               |
+| [inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)         |                 | Integer | sí          | Maximum total number of bytes the Web server can receive for a session in one minute. |
+| [nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)           |                 | Integer | sí          | Maximum number of entity sets allowed in memory for each REST session.                |
+| [nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)                         |                 | Integer | sí          | Maximum total number of active Guest sessions on the Web server.                      |
+| [nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)                     |                 | Integer | sí          | Maximum total number of requests the Web server can receive in one hour.              |
+| [nbRequestsPerHourPerSession](./QuotaManagerClass.md#nbrequestsperhourpersession) |                 | Integer | sí          | Maximum total number of requests a session can receive in one hour.                   |
+| [nbRequestsPerMin](./QuotaManagerClass.md#nbrequestspermin)                       |                 | Integer | sí          | Maximum total number of requests the Web server can receive in one minute.            |
+| [nbRequestsPerMinPerSession](./QuotaManagerClass.md#nbrequestsperminpersession)   |                 | Integer | sí          | Maximum total number of requests a session can receive in one minute.                 |
+| [nbSessions](./QuotaManagerClass.md#nbsessions)                                   |                 | Integer | sí          | Maximum total number of active sessions on the Web server.                            |
+| [outBytesPerHour](./QuotaManagerClass.md#outbytesperhour)                         |                 | Integer | sí          | Maximum total number of bytes the Web server can send in one hour.                    |
+| [outBytesPerHourPerSession](./QuotaManagerClass.md#outbytesperhourpersession)     |                 | Integer | sí          | Maximum total number of bytes the Web server can send for a session in one hour.      |
+| [outBytesPerMin](./QuotaManagerClass.md#outbytespermin)                           |                 | Integer | sí          | Maximum total number of bytes the Web server can send in one minute.                  |
+| [outBytesPerMinPerSession](./QuotaManagerClass.md#outbytesperminpersession)       |                 | Integer | sí          | Maximum total number of bytes the Web server can send for a session in one minute.    |
 
 #### Ejemplo
 
@@ -731,7 +729,7 @@ Todas los parámetros de los [objetos Servidor Web](../commands/web-server) pued
 
 :::note
 
-You can configure quotas via the `quotas` property in *settings* parameter or for the main Web server via a [`QuotaManager.json`](../WebServer/quotas.md) file. When both a valid `settings.quotas` property and a **QuotaManager.json** file are provided, the `settings.quotas` configuration takes priority.
+You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via a [`QuotaManager.json`](../WebServer/quotas.md) file. If `settings.quotas` is provided, **QuotaManager.json** is ignored.
 
 ::
 

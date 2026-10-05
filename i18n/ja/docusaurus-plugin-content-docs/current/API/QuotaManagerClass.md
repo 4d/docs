@@ -3,7 +3,7 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。 Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. 一般的に、クォータマネージャーを使用することでREST サーバーセッションがアクセスできるORDA リソースに対してしきい値を儲けることができます。
+`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。 Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session.
 
 `4D.QuotaManager` objects can be instantiated by:
 
@@ -59,7 +59,13 @@ The `4D.QuotaManager` object itself cannot be directly assigned, and properties 
 
 #### 説明
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->the current usage values related to the quota properties<!-- END REF -->. This object is automatically updated by the server and is read-only.
+The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. It is automatically updated by 4D and is read-only.
+
+The object has the same properties as the `4D.QuotaManager` object, but only the following properties report current usage:
+
+- [`nbEntitySets`](#nbentitysets)
+- [`nbSessions`](#nbsessions)
+- [`nbGuestSessions`](#nbguestsessions)
 
 <!-- END REF -->
 
@@ -70,6 +76,12 @@ The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues
 <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Syntax -->**defaultEntitySetTimeout** : Integer<!-- END REF -->
 
 #### 説明
+
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
 
 `.defaultEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->カレントセッションに保存されているREST エンティティセットのデフォルトの非アクティブタイムアウト(秒単位)<!-- END REF --> が格納されています。
 
@@ -161,6 +173,12 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
+
 `.maxEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->カレントセッションの途中にメモリ内に保存されているREST エンティティセットの非アクティブタイムアウトの最大値(秒単位)<!-- END REF --> が格納されています。
 
 Scope: current session level
@@ -197,6 +215,12 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 #### 説明
 
+:::note
+
+This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+
+:::
+
 `.nbEntitySets` プロパティには<!-- REF #QuotaManagerClass.nbEntitySets.Summary -->カレントのセッション内においてメモリ内に許可されているREST エンティティセットの最大数<!-- END REF --> が格納されています。
 
 Scope: current session level
@@ -225,6 +249,12 @@ Session.quotas.nbEntitySets:=50
 <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Syntax -->**nbEntitySetsPerSession** : Integer<!-- END REF -->
 
 #### 説明
+
+:::note
+
+This quota applies only to a REST session.
+
+:::
 
 The `.nbEntitySetsPerSession` property contains <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->the maximum number of entity sets allowed in memory for each REST session<!-- END REF -->.
 
