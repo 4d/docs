@@ -1079,7 +1079,7 @@ $notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra
 
 ### Não igual a em colecções
 
-Ao pesquisar nos atributos de objectos de classe de dados que contêm colecções, o comparador "não igual a valor" (`#` ou `!=`) encontrará elementos em que TODAS as propriedades são diferentes de valor (e não aqueles em que PELO MENOS uma propriedade é diferente de valor, que é como funcionam outros comparadores). Basicamente, é equivalente à pesquisa por "Not(encontrar elementos da coleção onde a propriedade é igual a *value*"). Por exemplo, com as seguintes entidades:
+Ao pesquisar nos atributos de objectos de classe de dados que contêm colecções, o comparador "não igual a valor" (`#` ou `!=`) encontrará elementos em que TODAS as propriedades são diferentes de valor (e não aqueles em que PELO MENOS uma propriedade é diferente de valor, que é como funcionam outros comparadores). Basicamente, é equivalente à pesquisa por "Not(encontrar elementos da coleção onde a propriedade é igual a *value*)". Por exemplo, com as seguintes entidades:
 
 ```
 Entity 1:
@@ -1106,15 +1106,15 @@ ds.Class.info:
 Considere os seguintes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
-// retorna B e C
-// encontra "entities with 0 in at least one val property"
+ds.Class.query("info.coll[].val = :1";0)
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// retorna apenas A
-// encontra "entities where all val properties are different from 0"
-// que é equivalente a 
-ds.Class.query(not("info.coll[].val = :1";0))
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
+ds.Class.query("Not(info.coll[].val = :1";0))
 ```
 
 Se você quer implementar uma consulta que encontra entidades onde "pelo menos uma propriedade é diferente de *valor*", você precisa usar uma notação especial usando uma carta no `[]`:
