@@ -28,7 +28,6 @@ Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 
 
 
-
 ## 4D 21 R4
 
 Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), the blog post that lists all new features and enhancements in 4D 21 R4.

@@ -14,7 +14,7 @@ Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sess
 
 ### 開始時
 
-You can configure quotas using the `quotas` property passed to the [`start()`](../API/WebServerClass.md#start) function or (main Web server only) through a **QuotaManager.json** file.
+At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from a **QuotaManager.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
 
 #### Using the `quotas` property
 
@@ -30,7 +30,7 @@ WEB Server().start({quotas: $quotas})
 
 #### Using a QuotaManager.json file
 
-For the main Web server, you can create a **QuotaManager.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file will loaded at startup by the main Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+For the host Web server, you can create a **QuotaManager.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file will loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
 
 ```json title="/Project/Sources/QuotaManager.json"
 {
@@ -43,7 +43,7 @@ For the main Web server, you can create a **QuotaManager.json** file and store i
 
 If the **QuotaManager.json** file contains malformed JSON, the Web server does not start and returns error *551 - JSON malformed*.
 
-When both a `settings.quotas` property and a **QuotaManager.json** file are provided, the `settings.quotas` configuration takes priority.
+If `settings.quotas` is provided when the Web server starts, **QuotaManager.json** is ignored.
 
 ### At runtime
 
@@ -79,7 +79,7 @@ $quotas.nbRequestsPerMin:=500
 // Maximum number of requests accepted in a one-hour time window on the web server
 $quotas.nbRequestsPerHour:=20000
 
-// We launch the main Web server
+// We launch the Web server
 WEB Server().start({quotas: $quotas})
 ```
 
@@ -105,7 +105,7 @@ The input byte quotas apply to all data received for a request, including its he
 
 ## Quota values
 
-Quota limits must be positive integers. An *Undefined* value means that the quota is not configured and is not enforced. Values less than or equal to zero or values that are not integers are treated as *Undefined*.
+Quota limits must be positive integers. An *Undefined* value means that the quota is not configured and is not enforced. Setting a quota value to zero or a negative number raises an error, and the existing quota value remains unchanged.
 
 Quota counters are stored in memory for each 4D Server instance and are not shared between multiple server instances.
 
@@ -113,7 +113,7 @@ Quota counters are stored in memory for each 4D Server instance and are not shar
 
 Quotas configured for a component Web server apply only to that server and are independent of the quotas configured for the host Web server or other component Web servers.
 
-The [**QuotaManager.json**](#using-a-quotamanagerjson-file) configuration file applies only to the main Web server. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session  [`.quotas`](../API/SessionClass.md#quotas) property.
+The [**QuotaManager.json**](#using-a-quotamanagerjson-file) configuration file applies only to the host Web server. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session  [`.quotas`](../API/SessionClass.md#quotas) property.
 
 ## 参照
 
