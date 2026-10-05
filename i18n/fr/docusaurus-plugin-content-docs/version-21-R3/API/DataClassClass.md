@@ -1078,7 +1078,7 @@ $notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve l
 
 ### Not equal to et les collections
 
-Lors d'une recherche dans les attributs d'objets de dataclass contenant des collections, le comparateur "not equal to *value*" (`#` ou `!=`) trouvera les éléments dont TOUTES les propriétés sont différentes de *value* (et non ceux dont AU MOINS une propriété est différente de *value*, ce qui est le cas des autres comparateurs). Fondamentalement, cela équivaut à rechercher "Not(chercher éléments de la collection pour lesquels la propriété vaut *value*"). Par exemple, avec les entités suivantes :
+Lors d'une recherche dans les attributs d'objets de dataclass contenant des collections, le comparateur "not equal to *value*" (`#` ou `!=`) trouvera les éléments dont TOUTES les propriétés sont différentes de *value* (et non ceux dont AU MOINS une propriété est différente de *value*, ce qui est le cas des autres comparateurs). Fondamentalement, cela équivaut à rechercher "Not(chercher éléments de la collection pour lesquels la propriété vaut *value*)". Par exemple, avec les entités suivantes :
 
 ```
 Entity 1:
@@ -1110,14 +1110,14 @@ Considérons les résultats suivants :
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// renvoie B et C
-// trouve "entités avec 0 dans au moins une propriété val"
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// renvoie uniquement A
-// trouve les "entités dont toutes les propriétés val sont différentes de 0"
-// ce qui est équivalent à
-ds.Class.query(not("info.coll[].val = :1";0))
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to
+ds.Class.query("Not(info.coll[].val = :1";0))
 ```
 
 Si vous souhaitez mettre en œuvre une recherche qui trouve les entités dont "au moins une propriété est différente de *value*", vous devez utiliser une notation spéciale en utilisant une lettre dans les `[]` :
