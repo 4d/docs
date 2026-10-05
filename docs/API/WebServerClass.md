@@ -772,7 +772,7 @@ All settings of [Web Server objects](../commands/web-server) can be customized, 
 
 You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via a [`QuotaManager.json`](../WebServer/quotas.md) file. If `settings.quotas` is provided, **QuotaManager.json** is ignored.
 
-:: 
+::: 
 
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
