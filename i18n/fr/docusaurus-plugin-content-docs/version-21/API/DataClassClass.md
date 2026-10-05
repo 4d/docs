@@ -1108,8 +1108,8 @@ Considérons les résultats suivants :
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// renvoie B et C
-// trouve "entités avec 0 dans au moins une propriété val"
+// returns B and C
+// finds "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
 // renvoie uniquement A
