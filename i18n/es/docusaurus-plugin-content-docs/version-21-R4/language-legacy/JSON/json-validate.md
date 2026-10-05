@@ -13,9 +13,9 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo   |                             | Descripción                                              |
 | ---------- | ------ | --------------------------- | -------------------------------------------------------- |
-| vJson      | Object | &#8594; | Objeto JSON a validar                                    |
-| vSchema    | Object | &#8594; | JSON schema used to validate JSON objects                |
-| Resultado  | Object | &#8592; | Validation status and errors (if any) |
+| vJson      | Object, Collection | &#8594; | Objeto o colección JSON que se va a validar |
+| vSchema    | Object | &#8594; | Esquema JSON utilizado para validar objetos JSON |
+| Resultado  | Object | &#8592; | Estado de la validación y errores (si los hay) |
 
 </div>
 <!-- END REF-->
@@ -25,37 +25,37 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                       |
 | ----------- | ------------------------------------ |
-| 21 R2       | Support of JSON Schema draft 2020-12 |
-| 16 R4       | Created                              |
+| 21 R2       | Compatibilidad con JSON Schema draft 2020-12 |
+| 16 R4       | Creado |
 
 </details>
 </div>
 
 ## Descripción
 
-<!--REF #_command_.JSON Validate.Summary-->The **JSON Validate** command checks the compliance of the *vJson* JSON contents with the rules defined in the *vSchema* JSON schema.<!-- END REF--> If the JSON is invalid, the command returns a detailed description of error(s). 
+<!--REF #_command_.JSON Validate.Summary-->El comando **JSON Validate** comprueba que el contenido JSON de *vJson* cumple las reglas definidas en el esquema JSON *vSchema*.<!-- END REF--> Si el JSON no es válido, el comando devuelve una descripción detallada de los errores.
 
-In *vJson*, pass a JSON object containing the JSON contents to be validated.
+En *vJson*, pase un objeto JSON que contenga los datos JSON que se van a validar.
 
-**Note:** Validating a JSON string consists of checking that it follows the rules defined in a JSON schema. Esto es diferente de la comprobación de que el JSON está bien formado, que se realiza mediante el comando [JSON Parse](../commands/json-parse).
+**Nota:** Validar una cadena JSON consiste en comprobar que sigue las reglas definidas en un esquema JSON. Esto es distinto de comprobar que el JSON está bien formado, lo que realiza el comando [JSON Parse](../commands/json-parse).
 
-In *vSchema*, pass the JSON schema to use for the validation. For more information on how to create a JSON schema, you may consult the [json-schema.org](http://json-schema.org/) web site.
+En *vSchema*, pase el esquema JSON que se utilizará para la validación. Para obtener más información sobre cómo crear un esquema JSON, consulte el sitio web [json-schema.org](http://json-schema.org/).
 
-### Supported JSON schema validation drafts
+### Drafts de validación JSON Schema compatibles
 
-To validate a JSON object, 4D uses the norm described in a **JSON Schema Validation draft document**. Several versions of these documents have been produced over time.
+Para validar un objeto JSON, 4D utiliza la norma descrita en un **documento draft de JSON Schema Validation**. A lo largo del tiempo se han publicado varias versiones de estos documentos.
 
-4D supports two versions of the draft:
+4D admite dos versiones del draft:
 
-- [versión 2020-12](https://json-schema.org/draft/2020-12/json-schema-validation) (recomendado). Se soportan todas las partes de la norma, excepto:
+- [versión 2020-12](https://json-schema.org/draft/2020-12/json-schema-validation) (recomendada). Se admiten todas las partes de la norma, excepto:
   - vocabulary
-  - `contentEncoding`, `contentMediaType`, and `contentSchema` (validation of non-JSON content)
-  - for references: `$dynamicRef`/`$dynamicAnchor` and references in `https:...`
-- [versión 4](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (implementación heredada, utilizada por defecto). Note that the support of this norm has more limitations than version 2020-12.
+  - `contentEncoding`, `contentMediaType` y `contentSchema` (validación de contenido que no es JSON)
+  - para las referencias: `$dynamicRef`/`$dynamicAnchor` y las referencias en `https:...`
+- [versión 4](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (implementación heredada, utilizada por defecto). La compatibilidad con esta norma tiene más limitaciones que la versión 2020-12.
 
-#### Specifying the version to use
+#### Especificar la versión que se va a utilizar
 
-The version to use should be inserted in the schema using the *$schema* key:
+La versión que se va a utilizar debe indicarse en el esquema mediante la clave *$schema*:
 
 - versión 2020-12:
 
@@ -63,83 +63,83 @@ The version to use should be inserted in the schema using the *$schema* key:
 "$schema": "https://json-schema.org/draft/2020-12/schema",
 ```
 
-- version 4:
+- versión 4:
 
 ```json
 "$schema": "http://json-schema.org/draft-04/schema#",
 ```
 
-For compatibility reasons, the version 4 is used if the *$schema* key is omitted. However, it is recommended to use the version 2020-12 which provides the most reliable controls.
+Por motivos de compatibilidad, se utiliza la versión 4 si se omite la clave *$schema*. No obstante, se recomienda utilizar la versión 2020-12, que proporciona las validaciones más fiables.
 
 :::note
 
-If you declare another schema version using the *$schema* key, an error is returned.
+Si declara otra versión del esquema mediante la clave *$schema*, se devuelve un error.
 
 :::
 
-### Validation result
+### Resultado de la validación
 
-If the JSON schema is not valid, 4D returns a [Null](../commands/null) object and throws an error that can be caught by an [on error call method](../../Concepts/error-handling.md#installing-an-error-handling-method).
+Si el esquema JSON no es válido, 4D devuelve un objeto [Null](../commands/null) y genera un error que puede capturarse mediante un [método de gestión de errores](../../Concepts/error-handling.md#installing-an-error-handling-method).
 
-The **JSON Validate** returns an object that provides the status of the validation. Este objeto puede contener las siguientes propiedades:
+**JSON Validate** devuelve un objeto que indica el estado de la validación. Este objeto puede contener las siguientes propiedades:
 
-| **Nombre de propiedad** | **Tipo**          | **Description**                                                                                                          |
-| ----------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| *success*               | Boolean           | True si *vJson* está validado, false en caso contrario. If false, the *errors* property is also returned |
-| *errors*                | Object collection | List of error objects if the *vJson* is not validated (see below)                                     |
+| **Nombre de propiedad** | **Tipo**          | **Descripción** |
+| ----------------------- | ----------------- | -------------- |
+| *success*               | Boolean           | True si *vJson* es válido; false en caso contrario. Si es false, también se devuelve la propiedad *errors*. |
+| *errors*                | Object collection | Lista de objetos de error si *vJson* no es válido (véase más abajo). |
 
 Cada objeto de error de la colección *errors* contiene las siguientes propiedades:
 
-| **Nombre de propiedad** | **Tipo** | **Description**                                                                                                                                                                                                                                    |
-| ----------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *code*                  | Number   | Código de error                                                                                                                                                                                                                                    |
-| *jsonPath*              | Text     | JSON path that cannot be validated in *vJson*                                                                                                                                                                                                      |
-| *line*                  | Number   | Line number of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](../commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
-| *message*               | Text     | Mensaje de error                                                                                                                                                                                                                                   |
-| *offset*                | Number   | Line offset of the error in the JSON file. This property is filled if the JSON has been parsed by [JSON Parse](../commands/json-parse) with the *\** parameter. Otherwise, the property is omitted. |
-| *schemaPaths*           | Text     | JSON path in the schema that causes the validation error                                                                                                                                                                                           |
+| **Nombre de propiedad** | **Tipo** | **Descripción** |
+| ----------------------- | -------- | -------------- |
+| *code*                  | Number   | Código de error |
+| *jsonPath*              | Text     | Ruta JSON que no se puede validar en *vJson* |
+| *line*                  | Number   | Número de línea del error en el archivo JSON. Esta propiedad se completa si el JSON se ha analizado con el parámetro *\** de [JSON Parse](../commands/json-parse). De lo contrario, se omite. |
+| *message*               | Text     | Mensaje de error |
+| *offset*                | Number   | Desplazamiento de línea del error en el archivo JSON. Esta propiedad se completa si el JSON se ha analizado con el parámetro *\** de [JSON Parse](../commands/json-parse). De lo contrario, se omite. |
+| *schemaPaths*           | Text     | Ruta JSON del esquema que provoca el error de validación |
 
-### Error list
+### Lista de errores
 
-<details>Se pueden producir los siguientes errores:
+<details>Se pueden devolver los siguientes errores:
 
-| **Code** | \*\*Palabra clave JSON | **Message**                                                                                                                                                       |
-| -------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2        | multipleOf             | Error while validating against 'multipleOf' key.                                                                                                  |
-| 3        | maximum                | El valor proporcionado no debe ser superior al especificado en el esquema ("{s1}").                                            |
-| 4        | exclusiveMaximum       | The value provided should be less than specified in the schema ("{s1}").                                                       |
-| 5        | mínimo                 | The value provided should not be less than specified in the schema ("{s1}").                                                   |
-| 6        | exclusiveMinimum       | The value provided should be greater than specified in the schema ("{s1}").                                                    |
-| 7        | maxLength              | The string is longer than specified in the schema.                                                                                                |
-| 8        | minLength              | The string is shorter than specified in the schema.                                                                                               |
-| 9        | modelo                 | The string "{s1}" does not match the pattern in the schema:{s2}.                                                                  |
-| 10       | additionalItems        | Error while validating an array. JSON contains more elements than specified in the schema.                                        |
-| 11       | maxItems               | The array contains more items than specified in the schema.                                                                                       |
-| 12       | minItems               | The array contains less items than specified in the schema.                                                                                       |
-| 13       | uniqueItems            | Error while validating an array. Los elementos no son únicos. Another instance of "{s1}" is already in the array. |
-| 14       | maxProperties          | The number of properties is greater than specified in the schema.                                                                                 |
-| 15       | minProperties          | The number of properties is less than specified in the schema.                                                                                    |
-| 16       | requerido              | Falta la propiedad requerida "{s1}".                                                                                                              |
-| 17       | additionalProperties   | No hay propiedades adicionales permitidas por el esquema. The property(ies) {s1} should be removed.            |
-| 18       | dependencias           | The property "{s1}" requires the property "{s2}".                                                                                                 |
-| 19       | enum                   | Error while validating against 'enum' key. "{s1}" does not match any enum element in the schema.                                  |
-| 20       | type                   | Tipo incorrecto. El tipo esperado es: {s1}                                                                                        |
-| 21       | oneOf                  | El JSON coincide con más de un valor.                                                                                                             |
-| 22       | oneOf                  | El JSON no coincide con ningún valor.                                                                                                             |
-| 23       | not                    | El JSON no es válido para el valor 'not'.                                                                                                         |
-| 24       | format                 | The string does not match ("{s1}")                                                                                                             |
-| 25       | const                  | Value "{s1}" does not match the 'const' value in the schema.                                                                                      |
-| 26       | unevalutedProperties   | Unevaluated properties are not allowed by the schema. The property(ies) {s1} should be removed.                |
-| 27       | unevalutedItems        | Unevaluated array items are not allowed. Item at index {s1} is not covered by any schema.                                         |
-| 28       | propertyNames          | Property name "{s1}" does not validate against the 'propertyNames' schema.                                                                        |
-| 29       | contiene               | El array no contiene ningún elemento que coincida con el esquema 'contains'.                                                                      |
-| 30       | contiene               | Array must contain at least {s1} items matching the 'contains' schema, but only {s2} were found.                                                  |
-| 31       | contiene               | El array debe contener como máximo {s1} elementos que coincidan con el esquema 'contains', pero se ha encontrado {s2}.                            |
-| 32       | requerido              | The property "{s1}" requires the property "{s2}" to be present.                                                                                   |
-| 35       | prefixItems            | Array items at the beginning do not match the 'prefixItems' schemas.                                                                              |
-| 36       | dependentSchemas       | Validation failed against 'dependentSchemas'.                                                                                                     |
-| 37       | $ref                   | Reference could not be resolved.                                                                                                                  |
-| 38       | $ref                   | Circular reference detected.                                                                                                                      |
+| **Código** | **Palabra clave JSON** | **Mensaje** |
+| -------- | ---------------------- | ----------- |
+| 2 | multipleOf | Error al validar la clave 'multipleOf'. |
+| 3 | maximum | El valor proporcionado no debe superar el especificado en el esquema ("{s1}"). |
+| 4 | exclusiveMaximum | El valor proporcionado debe ser inferior al especificado en el esquema ("{s1}"). |
+| 5 | minimum | El valor proporcionado no debe ser inferior al especificado en el esquema ("{s1}"). |
+| 6 | exclusiveMinimum | El valor proporcionado debe ser superior al especificado en el esquema ("{s1}"). |
+| 7 | maxLength | La cadena supera la longitud especificada en el esquema. |
+| 8 | minLength | La cadena no alcanza la longitud especificada en el esquema. |
+| 9 | pattern | La cadena "{s1}" no coincide con el patrón del esquema: {s2}. |
+| 10 | additionalItems | Error al validar un array. El JSON contiene más elementos de los especificados en el esquema. |
+| 11 | maxItems | El array contiene más elementos de los especificados en el esquema. |
+| 12 | minItems | El array contiene menos elementos de los especificados en el esquema. |
+| 13 | uniqueItems | Error al validar un array. Los elementos no son únicos. Ya existe otra instancia de "{s1}" en el array. |
+| 14 | maxProperties | El número de propiedades supera el especificado en el esquema. |
+| 15 | minProperties | El número de propiedades es inferior al especificado en el esquema. |
+| 16 | required | Falta la propiedad obligatoria "{s1}". |
+| 17 | additionalProperties | El esquema no permite propiedades adicionales. Se debe eliminar la(s) propiedad(es) {s1}. |
+| 18 | dependencies | La propiedad "{s1}" requiere la propiedad "{s2}". |
+| 19 | enum | Error al validar la clave 'enum'. "{s1}" no coincide con ningún elemento enum del esquema. |
+| 20 | type | Tipo incorrecto. El tipo esperado es: {s1}. |
+| 21 | oneOf | El JSON coincide con más de un valor. |
+| 22 | oneOf | El JSON no coincide con ningún valor. |
+| 23 | not | El JSON no es válido frente al valor de 'not'. |
+| 24 | format | La cadena no coincide con ("{s1}"). |
+| 25 | const | El valor "{s1}" no coincide con el valor 'const' del esquema. |
+| 26 | unevalutedProperties | El esquema no permite propiedades no evaluadas. Se debe eliminar la(s) propiedad(es) {s1}. |
+| 27 | unevalutedItems | No se permiten elementos de array no evaluados. El elemento del índice {s1} no está cubierto por ningún esquema. |
+| 28 | propertyNames | El nombre de propiedad "{s1}" no se valida con el esquema 'propertyNames'. |
+| 29 | contains | El array no contiene elementos que coincidan con el esquema 'contains'. |
+| 30 | contains | El array debe contener al menos {s1} elementos que coincidan con el esquema 'contains', pero solo se encontraron {s2}. |
+| 31 | contains | El array debe contener como máximo {s1} elementos que coincidan con el esquema 'contains', pero se encontraron {s2}. |
+| 32 | required | La propiedad "{s1}" requiere que esté presente la propiedad "{s2}". |
+| 35 | prefixItems | Los elementos iniciales del array no coinciden con los esquemas 'prefixItems'. |
+| 36 | dependentSchemas | Error de validación en 'dependentSchemas'. |
+| 37 | $ref | No se pudo resolver la referencia. |
+| 38 | $ref | Se ha detectado una referencia circular. |
 
 </details>
 
@@ -151,7 +151,7 @@ Cada objeto de error de la colección *errors* contiene las siguientes propiedad
 
 ## Ejemplo
 
-You want to validate a JSON object with a schema and get the list of validation errors, if any, and store error lines and messages in a text variable:
+Desea validar un objeto JSON con un esquema, obtener la lista de errores de validación si los hay y almacenar las líneas y los mensajes de error en una variable de texto:
 
 ```4d
  var $oResult : Object
