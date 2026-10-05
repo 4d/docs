@@ -1113,7 +1113,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // returns A only
 // finds "entities where all val properties are different from 0"
 // which is the equivalent to
-ds.Class.query("Not(info.coll[].val = :1";0))
+ds.Class.query("Not(info.coll[].val = :1)";0)
 ```
 
 If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
