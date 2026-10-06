@@ -702,7 +702,7 @@ Las siguientes propiedades del objeto `4D.QuotaManager` están disponibles para 
 
 | Propiedad                                                                 |              | Tipo    | Modificable | Descripción                                                                                                                           |
 | ------------------------------------------------------------------------- | ------------ | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí          | Maximum allowed number of entity sets in server memory. *Undefined* = no se aplican cuotas                            |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | sí          | Número máximo permitido de conjuntos de entidades en la memoria del servidor. *Undefined* = no se aplican cuotas      |
 | [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | sí          | Tiempo de espera predeterminado por inactividad para los conjuntos de entidades en memoria (segundos)              |
 | [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | sí          | Tiempo máximo de espera por inactividad para los conjuntos de entidades en memoria (segundos)                      |
 | [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | no          | Valores de uso actuales reportados para la sesión.                                                                    |

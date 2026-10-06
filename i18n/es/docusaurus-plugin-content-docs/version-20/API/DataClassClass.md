@@ -1088,8 +1088,8 @@ Considere los siguientes resultados:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// devuelve B y C
+// encuentra "entidades con 0 en al menos una propiedad val"
 
 ds.Class.query("info.coll[].val != :1";0)
 // sólo devuelve A
