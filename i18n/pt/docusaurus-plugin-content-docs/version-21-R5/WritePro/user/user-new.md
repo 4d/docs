@@ -25,11 +25,11 @@ to import
 - `listStyleType` あるいは `listStyleImage` の[標準アクション](./standard-actions)
 - あるいは[WP SET ATTRIBUTE](../commands/wp-set-attributes) コマンドを使用して[プログラムで作成する](../commands-legacy/4d-write-pro-attributes.md#リスト)。
 
-標準アクション(`listStyleType` あるいは `listStyleImage`) あるいはツールバー/サイドバーを使用してリストが作成された場合、4D Write Pro はマーカーがテキストの内側に表示されるように、自動的にテキストの前に余白を挿入します。 挿入される余白の値は、デフォルトタブのオフセット(`wk tab default`) に対応します。
+標準アクション(`listStyleType` あるいは `listStyleImage`) あるいはツールバー/サイドバーを使用してリストが作成された場合、4D Write Pro はマーカーがテキストの内側に表示されるように、自動的にテキストの前に余白を挿入します。挿入される余白の値は、デフォルトタブのオフセット(`wk tab default`) に対応します。
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 
-[WP SET ATTRIBUTE コマンド](../commands-legacy/4d-write-pro-attributes.md#リスト)コマンドを使用してリストが作成された場合、具体的な余白は設定されておらず、デフォルトでマーカーは段落の左端に追加されます。 必要であれば開発者はカスタムの余白を追加することができます。
+[WP SET ATTRIBUTE コマンド](../commands-legacy/4d-write-pro-attributes.md#リスト)コマンドを使用してリストが作成された場合、具体的な余白は設定されておらず、デフォルトでマーカーは段落の左端に追加されます。必要であれば開発者はカスタムの余白を追加することができます。
 
 :::tip Related blog post
 
@@ -41,7 +41,7 @@ to import
 
 Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
-新しいサブレベルが作成されると、レベルの番号振り分けは1 から再スタートします。 マルチレベルリスト内で要素を追加または削除した場合、番号は自動的に調整されます。
+新しいサブレベルが作成されると、レベルの番号振り分けは1 から再スタートします。マルチレベルリスト内で要素を追加または削除した場合、番号は自動的に調整されます。
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
