@@ -25,7 +25,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 ---
 
-## Color de fondo / Color de relleno
+## Background Color / Fill color
 
 Define el color de fondo o el color de relleno de un objeto. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
 

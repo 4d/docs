@@ -12,7 +12,7 @@ Usar el servidor web en un cliente 4D remoto (4D) es **obsoleto** a partir de 4D
 
 :::
 
-## Fácil de supervisar
+## Administración simplificada
 
 Puede iniciar o detener la publicación de la aplicación web en cualquier momento. Para ello, basta con seleccionar un comando del menú o ejecutar una sola línea de código.
 
