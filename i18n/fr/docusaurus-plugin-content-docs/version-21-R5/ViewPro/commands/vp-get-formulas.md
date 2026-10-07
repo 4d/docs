@@ -1,0 +1,53 @@
+---
+id: vp-get-formulas
+title: VP Get formulas
+---
+
+<!-- REF #_method_.VP Get formulas.Syntax -->
+
+**VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
+
+<!-- REF #_method_.VP Get formulas.Params -->
+
+<div class="no-index">
+
+| Paramètres | Type       |                             | Description                         |
+| ---------- | ---------- | --------------------------- | ----------------------------------- |
+| rangeObj   | Object     | ->                          | Objet plage                         |
+| Résultat   | Collection | <- | Collection de valeurs d'une formule |
+
+</div>
+<!-- END REF -->
+
+## Description
+
+La commande `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->récupère les formules d'une *rangeObj* désignée<!-- END REF -->.
+
+Dans *rangeObj*, passez une plage dont vous voulez récupérer les formules. Si *rangeObj* désigne plusieurs plages, la formule de la première plage est retournée. Si *rangeObj* ne contient aucune formule, la commande retourne une chaîne vide.
+
+La collection retournée est bidemensionnelle :
+
+- La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection représente une ligne.
+- Chaque sous-collection définit les valeurs des cellules de la ligne. Les données passées en paramètre sont une collection qui contient des sous-collections.
+
+## Exemple
+
+Vous souhaitez récupérer les formules des colonnes Sum et Average de ce document :
+
+![](../../assets/en/ViewPro/cmd_vpGetFormulas.PNG)
+
+Vous pouvez utiliser ce code :
+
+```4d
+$formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
+//$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
+//$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
+//$formulas[2]=[Sum(B4:D4),Average(C4:D4)]
+```
+
+## Voir également
+
+[VP Get formula](vp-get-formula.md)<br/>
+[VP Get values](vp-get-values.md)<br/>
+[VP SET FORMULAS](vp-set-formulas.md)<br/>
+[VP SET VALUES](vp-set-values.md)
