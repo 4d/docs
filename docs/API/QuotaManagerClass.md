@@ -4,7 +4,13 @@ title: QuotaManager
 ---
 
 
-The `4D.QuotaManager` class provides you with an interface to configure and monitor some usage limits you apply to your 4D application. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session. For more information, see the [A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/) blog post.
+The `4D.QuotaManager` class provides you with an interface to configure and monitor some usage limits you apply to your 4D application. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session.
+
+:::tip Related Blog post
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
 
 :::tip Related Blog post
 
