@@ -1083,7 +1083,7 @@ $notMarried:=ds.Person.query("info.married#true | info.married=null") // 属性�
 
 ### コレクションにおける "等しくない"
 
-コレクションを含むデータクラス属性内を検索する場合、"*値* と等しくない" 比較演算子 (`#` または `!=`) は、すべてのプロパティが *値* と異なる要素を検索します (ほかの比較演算子とは異なり、少なくとも 1つのプロパティが*値* と異なる要素は検索しません)。 Basically, it is equivalent to search for "Not(find collection elements where property equals *value*)". たとえば、以下のような エンティティがあるとき:
+コレクションを含むデータクラス属性内を検索する場合、"*値* と等しくない" 比較演算子 (`#` または `!=`) は、すべてのプロパティが *値* と異なる要素を検索します (ほかの比較演算子とは異なり、少なくとも 1つのプロパティが*値* と異なる要素は検索しません)。つまり、"Not(プロパティ値が *value* と等しいコレクション要素を検索する)" を検索することと同じです。たとえば、以下のような エンティティがあるとき:
 
 ```
 エンティティ1:
@@ -1115,8 +1115,8 @@ ds.Class.info:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// B と C を返します
+// "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
 
 ds.Class.query("info.coll[].val != :1";0)
 // A のみを返します
