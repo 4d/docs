@@ -176,7 +176,7 @@ Resalta la línea que se está ejecutando actualmente en el depurador, además d
 
 Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
-### Code editor
+### Editor de código
 
 <details><summary>Historia</summary>
 
