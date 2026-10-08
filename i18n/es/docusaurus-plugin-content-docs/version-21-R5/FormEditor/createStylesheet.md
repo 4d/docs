@@ -293,9 +293,9 @@ Los atributos del objeto formulario pueden declararse con su [nombre JSON](FormO
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                |
-| ----------- | ----------------------------- |
-| 21 R5       | Support of padding attributes |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 21 R5       | Soporte de atributos padding |
 
 </details>
 </div>
@@ -377,27 +377,27 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 - un archivo para ambas plataformas:
 
-```json
-"css": "<path>" 
-```
+ ```json
+ "css": "<path>" 
+ ```
 
 - o una lista de archivos para ambas plataformas:
 
-```json
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```json
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - o una lista de archivos por plataforma:
 
-```json
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```json
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 :::note
 

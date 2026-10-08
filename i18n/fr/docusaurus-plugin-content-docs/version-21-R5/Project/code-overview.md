@@ -91,7 +91,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées avec le constructeur `<ClassName>` ou le format `<ClassName>.<FunctionName>`.
+- Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées avec le `<ClassName>` constructeur ou `<ClassName>.<FunctionName>` le format.
 
 ## Supprimer des méthodes ou des classes
 

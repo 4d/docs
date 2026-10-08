@@ -1088,13 +1088,13 @@ ds.Class.info:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// B と C を返します
+// "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
+// A のみを返します
+// "すべての valプロパティ値が 0 と異なるエンティティ" を探します
+// これは、次のクエリと同義です: 
 ds.Class.query("Not(info.coll[].val = :1)";0)
 ```
 

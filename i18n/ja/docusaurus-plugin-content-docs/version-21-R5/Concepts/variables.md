@@ -59,23 +59,23 @@ var $myVar // バリアント型変数
 
 サポートされている `varType` 値の一覧です:
 
-| varType                     | 内容                               |
-| --------------------------- | -------------------------------- |
-| `Text`                      | テキスト値                            |
-| `Date`                      | 日付値                              |
-| `Time`                      | 時間値                              |
-| `Boolean`                   | ブール値                             |
-| `Integer`                   | 倍長整数値                            |
-| `Real`                      | 実数値                              |
-| `Pointer`                   | ポインター値                           |
-| `Picture`                   | ピクチャー値                           |
-| `Blob`                      | スカラーBLOB値                        |
-| `Collection`                | コレクション値                          |
-| `Variant`                   | バリアント値                           |
-| `Object`                    | デフォルトクラスのオブジェクト                  |
-| `4D.<className>`            | 4Dクラス名のオブジェクト                    |
-| `cs.<className>`            | ユーザークラス名のオブジェクト                  |
-| `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
+| varType                                        | 内容                               |
+| ---------------------------------------------- | -------------------------------- |
+| `Text`                                         | テキスト値                            |
+| `Date`                                         | 日付値                              |
+| `Time`                                         | 時間値                              |
+| `Boolean`                                      | ブール値                             |
+| `Integer`                                      | 倍長整数値                            |
+| `Real`                                         | 実数値                              |
+| `Pointer`                                      | ポインター値                           |
+| `Picture`                                      | ピクチャー値                           |
+| `Blob`                                         | スカラーBLOB値                        |
+| `Collection`                                   | コレクション値                          |
+| `Variant`                                      | バリアント値                           |
+| `Object`                                       | デフォルトクラスのオブジェクト                  |
+| `4D.<className>`                               | 4Dクラス名のオブジェクト                    |
+| `cs.<className>`                               | ユーザークラス名のオブジェクト                  |
+| `cs.<namespace>`cs.<namespace> | `<namespace>` コンポーネントクラス名のオブジェクト |
 
 :::note 互換性
 

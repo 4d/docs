@@ -1110,13 +1110,13 @@ Considérons les résultats suivants :
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// renvoie B et C
+// trouve "entités avec 0 dans au moins une propriété val"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
+// renvoie uniquement A
+// trouve les "entités dont toutes les propriétés val sont différentes de 0"
+// ce qui est équivalent à
 ds.Class.query("Not(info.coll[].val = :1)";0)
 ```
 

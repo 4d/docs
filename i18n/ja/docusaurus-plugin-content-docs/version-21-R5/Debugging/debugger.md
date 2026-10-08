@@ -303,10 +303,10 @@ $c:=$a+$b
 - 変数
 - オブジェクトとオブジェクトのプロパティ
 - フィールド
-- ポインター
+- pointer
 - 演算
 - 4Dコマンド
-- メソッド
+- method
 - ほか値を返すものなら何でも
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)

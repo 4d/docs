@@ -510,7 +510,7 @@ For the complete list of quota properties, see the [`4D.QuotaManager` class](./Q
 
 By default, quota properties are *Undefined* and no quotas are applied.
 
-You can modify quota values while the web server is running. Changes to server global quotas are applied to subsequent web server activity. Changes to session default quotas are applied to new sessions created after the quota value is updated. The web server does not need to be restarted.
+Puede modificar los valores de las cuotas mientras el servidor web se está ejecutando. Changes to server global quotas are applied to subsequent web server activity. Changes to session default quotas are applied to new sessions created after the quota value is updated. No es necesario reiniciar el servidor web.
 
 :::note
 
@@ -522,10 +522,10 @@ The following properties of the `4D.QuotaManager` object are available for the W
 
 | Propiedad                                                                         |                 | Tipo    | Modificable | Descripción                                                                                                           |
 | --------------------------------------------------------------------------------- | --------------- | ------- | ----------- | --------------------------------------------------------------------------------------------------------------------- |
-| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | no          | Current usage values reported by the Web server.                                                      |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | no          | Valores actuales reportados por el servidor web.                                                      |
 |                                                                                   | nbEntitySets    | Integer | no          | Número de conjuntos de entidades actualmente en memoria.                                              |
-|                                                                                   | nbGuestSessions | Integer | no          | Number of active Guest sessions on the Web server.                                                    |
-|                                                                                   | nbSessions      | Integer | no          | Number of active sessions on the Web server.                                                          |
+|                                                                                   | nbGuestSessions | Integer | no          | Número de sesiones Guest activas en el servidor web.                                                  |
+|                                                                                   | nbSessions      | Integer | no          | Número de sesiones activas en el servidor web.                                                        |
 | [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | sí          | Maximum total number of bytes the Web server can receive in one hour.                                 |
 | [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | sí          | Número máximo total de bytes que el servidor web puede recibir en una sesión en el plazo de una hora. |
 | [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | sí          | Número máximo total de bytes que el servidor web puede recibir en un minuto.                          |
@@ -701,10 +701,10 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                             |
-| ----------- | ------------------------------------------ |
-| 21 R5       | Support quotas in the `settings` parameter |
-| 18 R3       | Añadidos                                   |
+| Lanzamiento | Modificaciones                            |
+| ----------- | ----------------------------------------- |
+| 21 R5       | Soporta cuotas en el parámetro `settings` |
+| 18 R3       | Añadidos                                  |
 
 </details>
 

@@ -71,7 +71,7 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
 
 :::note
 
-In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. These numbers are verified when the data file is opened.
+In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. Estos números se verifican cuando se abre el archivo de datos.
 
 :::
 
@@ -83,7 +83,7 @@ If you need to interrupt the startup sequence, for example if the project is not
 
 ![](../assets/en/getStart/startup.png)
 
-The following maintenance options are available:
+Se ofrecen las siguientes opciones de mantenimiento:
 
 - **Open the application with the default data file**: continues the standard opening process.
 - **Select another data file** / **Create a new data file**: allows you to change of data file (see above).

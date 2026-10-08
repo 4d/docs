@@ -103,7 +103,7 @@ true/false ステータスで表すことのできるアクション ("checkable
 		}
 ```
 
-The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+通常スタイルの場合には[追加のプロパティ](#フラットおよび通常チェックボックスにおける追加のプロパティ) が提供されます: [スリーステート](properties_Display.md#スリーステート) プロパティです。
 
 ### フラット
 
@@ -126,7 +126,7 @@ The Regular style offers an [additional property](#additional-properties-for-fla
 			}
 ```
 
-The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+フラットスタイルの場合には[追加のプロパティ](#フラットおよび通常チェックボックスにおける追加のプロパティ) が提供されます: [スリーステート](properties_Display.md#スリーステート) プロパティです。
 
 ### ツールバーボタン
 
@@ -359,7 +359,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 ### カスタム
 
-The Custom check box style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-check-boxes) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+カスタムチェックボックススタイルはパーソナライズされた背景画像を受け入れるとともに、[アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) および [余白](properties_TextAndPicture.md#縦方向余白) などの[追加のプロパティ](#カスタムチェックボックスにおける追加のプロパティ) を管理することができます。
 
 カスタムチェックボックスには通常、[4つの状態を持つ画像](properties_TextAndPicture.md#状態の数) が関連付けられ、これは同じく4つの状態を持つ [背景ピクチャー](properties_TextAndPicture.md#背景パス名) と同時に使用することができます。
 
@@ -391,18 +391,19 @@ The Custom check box style accepts a personalized background picture and allows 
 
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
+> (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
 
-### Additional properties for custom check boxes
+### カスタムチェックボックスにおける追加のプロパティ
 
-Additional specific properties are available for [custom](#custom) style check boxes:
+[カスタム](#カスタム) スタイルのチェックボックスに対しては特有の追加のプロパティが利用可能です:
 
-[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+[背景パス名](properties_TextAndPicture.md#背景パス名) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線幅](./properties_BackgroundAndBorder.md#境界線幅) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [塗りカラー](./properties_BackgroundAndBorder.md#背景色塗りカラー)
 
-### Additional properties for flat and regular check boxes
+### フラットおよび通常チェックボックスにおける追加のプロパティ
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+[フラット](#フラット) および [通常](#通常) スタイルのチェックボックスに対しては特有の追加のプロパティが利用可能です:
 
-[Three-States](properties_Display.md#three-states)
+[スリーステート](properties_Display.md#スリーステート)
 
 ## サポートされるイベント
 

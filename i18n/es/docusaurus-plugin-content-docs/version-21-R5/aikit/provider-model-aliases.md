@@ -3,7 +3,7 @@ id: provider-model-aliases
 title: Alias de proveedores y modelos
 ---
 
-# Alias de proveedores y de modelos
+# Alias de proveedores y modelos
 
 El cliente OpenAI soporta alias de proveedores y de modelos, permitiéndole definir las configuraciones de proveedores y de los alias de los modelos nombrados en los archivos JSON y referenciarlos utilizando sintaxis simples.
 

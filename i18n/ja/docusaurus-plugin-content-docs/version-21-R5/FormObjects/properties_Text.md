@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: テキスト
+title: Text
 ---
 
 ---
@@ -27,7 +27,7 @@ title: テキスト
 
 このプロパティは[**OBJECT SET FONT STYLE**](../commands/object-set-font-style) コマンドを使用しても設定することができます。
 
-> これは通常のテキストです。<br/>
+> これは通常のテキストです。<br/>これは通常のテキストです。<br/>
 > **これは太字のテキストです。**
 
 #### JSON 文法
@@ -64,8 +64,7 @@ title: テキスト
 
 このプロパティは[**OBJECT SET FONT STYLE**](../commands/object-set-font-style) コマンドを使用しても設定することができます。
 
-> これは通常のテキストです。<br/>
-> *これはイタリックのテキストです。*
+> これは通常のテキストです。<br/>*これはイタリックのテキストです。*
 
 #### JSON 文法
 

@@ -342,7 +342,7 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 > (1) No soportado por el estilo [Help](#help).<br/>
 > (2) No soportado por los estilos [Help](#help), [Flat](#flat) y [Regular](#regular).
 
-### Additional properties for custom buttons
+### Propiedades adicionales para botones personalizados
 
 Additional specific properties are available for [custom](#custom) style buttons:
 

@@ -54,7 +54,7 @@ title: ボタン
   }
 ```
 
-The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+通常スタイルの場合には[追加のプロパティ](#フラットおよび通常ボタンにおける追加のプロパティ) が提供されます: [デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティです。
 
 ### フラット
 
@@ -81,7 +81,7 @@ The Regular style offers an [additional property](#additional-properties-for-fla
                 }
 ```
 
-The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+フラットスタイルの場合には[追加のプロパティ](#フラットおよび通常ボタンにおける追加のプロパティ) が提供されます: [デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティです。
 
 ### ツールバー
 
@@ -301,7 +301,7 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 
 ### カスタム
 
-The Custom button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+カスタムボタンスタイルはパーソナライズされた背景画像を受け入れるとともに、[アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) および [余白](properties_TextAndPicture.md#縦方向余白) などの[追加のプロパティ](#カスタムボタンにおける追加のプロパティ) を管理することができます。
 
 ![](../assets/en/FormObjects/button_custom.png)
 
@@ -338,20 +338,21 @@ The Custom button style accepts a personalized background picture and allows man
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssclass) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(1) - [状態の数](properties_TextAndPicture.md#状態の数)(1) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(1) - [ポップアップメニューあり](properties_TextAndPicture.md#ポップアップメニューあり)(2) - [タイトルと画像を隣接させる](properties_TextAndPicture.md#タイトルと画像を隣接させる)(1) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション) - [ドロップ有効](properties_Action.md#ドロップ有効)
 
-> (1) [ヘルプ](#ヘルプ) スタイルではサポートされていません。<br/>
-> (2) [ヘルプ](#ヘルプ)、[フラット](#フラット) および [通常](#通常) スタイルではサポートされていません。
+> (1) [Help](#help) スタイルではサポートされていません。<br/>
+> (2) [Help](#help)、[Flat](#flat)、[Regular](#regular) スタイルではサポートされていません。
+> (2) [Help](#help)、[Flat](#flat)、[Regular](#regular) スタイルではサポートされていません。
 
-### Additional properties for custom buttons
+### カスタムボタンにおける追加のプロパティ
 
-Additional specific properties are available for [custom](#custom) style buttons:
+[カスタム](#カスタム) スタイルのボタンに対しては特有の追加のプロパティが利用可能です:
 
-[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Default Button](properties_Appearance.md#default-button) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+[背景パス名](properties_TextAndPicture.md#背景パス名) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線幅](./properties_BackgroundAndBorder.md#境界線幅) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [デフォルトボタン](properties_Appearance.md#デフォルトボタン) - [塗りカラー](./properties_BackgroundAndBorder.md#背景色塗りカラー)
 
-### Additional properties for flat and regular buttons
+### フラットおよび通常ボタンにおける追加のプロパティ
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style buttons:
+[フラット](#フラット) および [通常](#通常) スタイルのボタンに対しては特有の追加のプロパティが利用可能です:
 
-[Default Button](properties_Appearance.md#default-button)
+[デフォルトボタン](properties_Appearance.md#デフォルトボタン)
 
 ## サポートされるイベント
 
