@@ -1,4 +1,4 @@
-﻿---
+---
 id: get-4d-folder
 title: Get 4D folder
 slug: /commands/get-4d-folder
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Get 4D folder.Summary-->O comando **Get 4D folder** retorna o caminho para a pasta 4D ativa do aplicativo atual, ou para a pasta do ambiente 4D especificado pelo parâmetro *pasta*, se fornecido.<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Summary-->O comando **Get 4D folder** retorna o caminho para a pasta 4D ativa do aplicativo atual, ou para a pasta do ambiente 4D especificado pelo parâmetro *pasta*, se fornecido.<!-- END REF--> O caminho é retornado usando a [sintaxe do sistema](../../Concepts/paths.md#platform-specific-syntax).
 
 Este comando lhe permite obter o caminho real das pastas utilizadas pela aplicação 4D. Ao usar este comando, você garante que seu código irá funcionar em qualquer plataforma rodando qualquer sistema localizado.
 
