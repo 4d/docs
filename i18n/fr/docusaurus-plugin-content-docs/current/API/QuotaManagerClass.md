@@ -3,29 +3,35 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-La classe `4D.QuotaManager` vous offre une interface permettant de configurer et de surveiller certaines limites d'utilisation que vous appliquez à votre application 4D. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session. For more information, see the [A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/) blog post.
+La classe `4D.QuotaManager` vous offre une interface permettant de configurer et de surveiller certaines limites d'utilisation que vous appliquez à votre application 4D. Les seuils sont utiles, par exemple, pour protéger le serveur contre les requêtes mal optimisées ou l'utilisation excessive de ses ressources. Pour le serveur REST, par exemple, des quotas peuvent limiter les ressources ORDA accessibles pour une session REST.
 
-`4D.QuotaManager` objects can be instantiated by:
+:::tip Article de blog lié
 
-- the [`quotas` property of a Session](./SessionClass.md#quotas) object
-- the [`quotas` property of a Web server](./WebServerClass.md#quotas) object
+[Un serveur web 4D qui sait quand dire « non »](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
 
-For Web server configuration and enforcement details, see [Web server quotas](../WebServer/quotas.md).
+:::
+
+Les objets `4D.QuotaManager` peuvent être instanciés par:
+
+- la [propriété `quotas` d'un objet Session](./SessionClass.md#quotas)
+- la [propriété `quotas` d'un serveur Web](./WebServerClass.md#quotas)
+
+Pour plus d'informations sur la configuration et l'application des quotas sur le serveur Web, consultez la page [Quotas du serveur Web](../WebServer/quotas.md).
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                |
-| ------- | ---------------------------- |
-| 21 R5   | Support of Web server quotas |
-| 21 R4   | Classe ajoutée               |
+| Release | Modifications                                 |
+| ------- | --------------------------------------------- |
+| 21 R5   | Prise en charge des quotas sur le serveur Web |
+| 21 R4   | Classe ajoutée                                |
 
 </details>
 
 ### Objet QuotaManager
 
-By default, the properties of a `4D.QuotaManager` object are *Undefined*, meaning that no corresponding quota is applied.
+Par défaut, les propriétés d'un objet `4D.QuotaManager` sont *Undefined*, ce qui signifie qu'aucun quota correspondant n'est appliqué.
 
-The `4D.QuotaManager` object itself cannot be directly assigned, and properties cannot be added to or removed from it. Quotas are configured by modifying the corresponding properties of the existing object.
+L'objet `4D.QuotaManager` ne peut pas être affecté directement, et aucune propriété ne peut y être ajoutée ni supprimée. Les quotas sont configurés en modifiant les propriétés correspondantes de l'objet existant.
 
 Les objets 4D.QuotaManager exposent les propriétés suivantes :
 
@@ -59,9 +65,9 @@ Les objets 4D.QuotaManager exposent les propriétés suivantes :
 
 #### Description
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. It is automatically updated by 4D and is read-only.
+La propriété `.currentValues` contient les <!-- REF #QuotaManagerClass.currentValues.Summary -->valeurs courantes utilisées par le gestionnaire de quotas<!-- END REF -->. Elle est mise à jour automatiquement par 4D et est en lecture seule.
 
-The object has the same properties as the `4D.QuotaManager` object, but only the following properties report current usage:
+Cet objet possède les mêmes propriétés que l'objet `4D.QuotaManager`, mais seules les propriétés suivantes indiquent des valeurs courantes :
 
 - [`nbEntitySets`](#nbentitysets)
 - [`nbSessions`](#nbsessions)
@@ -79,13 +85,13 @@ The object has the same properties as the `4D.QuotaManager` object, but only the
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Ce quota peut être également configuré pour la session REST courante uniquement via [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
 La propriété `.defaultEntitySetTimeout` contient <!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->le délai d'inactivité par défaut pour les entity sets REST stockés en mémoire pendant la session courante (en secondes)<!-- END REF -->.
 
-Scope: current session level
+Portée : session courante
 
 Par défaut, cette valeur est de 2 heures (7200 secondes). Elle peut également être définie lors de la création de l'entity set à l'aide de l'API REST [`$timeout`](../REST/$timeout.md).
 
@@ -117,9 +123,9 @@ Session.quotas.defaultEntitySetTimeout:=1200
 
 #### Description
 
-The `.inBytesPerHour` property contains <!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->the maximum total number of bytes that the Web server can receive in one hour<!-- END REF -->.
+La propriété `.inBytesPerHour` contient <!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->le nombre maximal d'octets que le serveur Web peut recevoir en une heure<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -131,9 +137,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.inBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one hour<!-- END REF -->.
+La propriété `.inBytesPerHourPerSession` contient <!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->le nombre maximal d'octets que le serveur Web peut recevoir pour une session en une heure<!-- END REF -->.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -145,9 +151,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.inBytesPerMin` property contains <!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->the maximum total number of bytes that the Web server can receive in one minute<!-- END REF -->.
+La propriété `.inBytesPerMin` contient <!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->le nombre maximal d'octets que le serveur Web peut recevoir en une minute<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -159,9 +165,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.inBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one minute<!-- END REF -->.
+La propriété `.inBytesPerMinPerSession` contient <!-- REF #QuotaManagerClass.inBytesPerMinPerSession.Summary -->le nombre maximal d'octets que le serveur Web peut recevoir pour une session en une minute<!-- END REF -->.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -175,13 +181,13 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Ce quota peut être également configuré pour la session REST courante uniquement via [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
 La propriété `.maxEntitySetTimeout` contient <!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->la valeur du délai d'inactivité maximal pour les entity sets REST stockés en mémoire pendant la session courante (en secondes)<!-- END REF -->.
 
-Scope: current session level
+Portée : session courante
 
 Vous pouvez définir cette valeur à l'aide de la propriété [`quotas.maxEntitySetTimeout` de la session](./SessionClass.md#quotas), afin qu'elle s'applique à tout entity set créé par la suite au cours de la session (les valeurs de délai d'inactivité maximale des entity sets existants ne sont pas modifiées).
 
@@ -217,13 +223,13 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Ce quota peut être également configuré pour la session REST courante uniquement via [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
 La propriété `.nbEntitySets` contient <!-- REF #QuotaManagerClass.nbEntitySets.Summary -->le nombre maximal d'entity sets REST autorisés en mémoire pour la session courante<!-- END REF -->.
 
-Scope: current session level
+Portée : session courante
 
 Par défaut, il n'y a pas de limite pour les entity sets [stockés en mémoire par les requêtes REST](../REST/$info.md) (la valeur est 0). Vous pouvez définir une limite afin de contrôler la charge utile du serveur pour une session spécifique.
 
@@ -252,13 +258,13 @@ Session.quotas.nbEntitySets:=50
 
 :::note
 
-This quota applies only to a REST session.
+Ce quota s'applique uniquement à une session REST.
 
 :::
 
-The `.nbEntitySetsPerSession` property contains <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->the maximum number of entity sets allowed in memory for each REST session<!-- END REF -->.
+La propriété `.nbEntitySetsPerSession` contient <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->le nombre maximal d'entity sets autorisés en mémoire pour chaque session REST<!-- END REF -->.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -270,9 +276,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbGuestSessions` property contains <!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->the maximum total number of active [Guest sessions](./SessionClass.md#isguest) on the Web server<!-- END REF -->.
+La propriété `.nbGuestSessions` contient <!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->le nombre total maximal de [sessions Guest](./SessionClass.md#isguest) actives sur le serveur Web<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -284,9 +290,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbRequestsPerHour` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->the maximum total number of requests that the Web server can receive in one hour<!-- END REF -->.
+La propriété `.nbRequestsPerHour` contient <!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->le nombre total maximal de requêtes que le serveur Web peut recevoir en une heure<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -298,9 +304,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbRequestsPerHourPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHourPerSession.Summary -->the maximum total number of requests that a session can receive in one hour<!-- END REF -->.
+La propriété `.nbRequestsPerHourPerSession` contient <!-- REF #QuotaManagerClass.nbRequestsPerHourPerSession.Summary -->le nombre maximal de requêtes qu'une session peut recevoir en une heure<!-- END REF -->.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -312,9 +318,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbRequestsPerMin` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->the maximum total number of requests that the Web server can receive in one minute<!-- END REF -->.
+La propriété `.nbRequestsPerMin` contient <!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->le nombre maximal de requêtes que le serveur Web peut recevoir en une minute<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -326,9 +332,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbRequestsPerMinPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMinPerSession.Summary -->the maximum total number of requests that a session can receive in one minute<!-- END REF -->.
+La propriété `.nbRequestsPerMinPerSession` contient <!-- REF #QuotaManagerClass.nbRequestsPerMinPerSession.Summary -->le nombre maximal de requêtes qu'une session peut recevoir en une minute<!-- END REF -->.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -340,9 +346,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.nbSessions` property contains <!-- REF #QuotaManagerClass.nbSessions.Summary -->the maximum total number of active sessions on the Web server<!-- END REF -->.
+La propriété `.nbSessions` contient <!-- REF #QuotaManagerClass.nbSessions.Summary -->le nombre maximal de sessions actives sur le serveur Web<!-- END REF -->.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -354,9 +360,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.outBytesPerHour` property contains <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->the maximum total number of bytes that the Web server can send in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+La propriété `.outBytesPerHour` contient <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->le nombre maximal d'octets que le serveur Web peut envoyer en une heure<!-- END REF -->. Le quota est calculé avec la taille non compressée de la charge utile de la réponse, quels que soient les paramètres de compression du serveur Web.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -368,9 +374,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.outBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+La propriété `.outBytesPerHourPerSession` contient <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->le nombre maximal d'octets que le serveur Web peut envoyer pour une session en une heure<!-- END REF -->. Le quota est calculé avec la taille non compressée de la charge utile de la réponse, quels que soient les paramètres de compression du serveur Web.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -382,9 +388,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.outBytesPerMin` property contains <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->the maximum total number of bytes that the Web server can send in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+La propriété `.outBytesPerMin` contient <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->le nombre maximal d'octets que le serveur Web peut envoyer en une minute<!-- END REF -->. Le quota est calculé avec la taille non compressée de la charge utile de la réponse, quels que soient les paramètres de compression du serveur Web.
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+Portée : [serveur global](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
@@ -396,9 +402,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### Description
 
-The `.outBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+La propriété `.outBytesPerMinPerSession` contient <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->le nombre maximal d'octets que le serveur Web peut envoyer pour une session en une minute<!-- END REF -->. Le quota est calculé avec la taille non compressée de la charge utile de la réponse, quels que soient les paramètres de compression du serveur Web.
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+Portée : [session par défaut](./WebServerClass.md#scope-levels)
 
 <!-- END REF -->
 
