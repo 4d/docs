@@ -3,7 +3,13 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。しきい値は、例えば、ほとんど最適化されていないリクエストやサーバーリソースの過度な使用などからサーバーを保護することなどに有用です。例えばREST サーバーの場合、クォータを使用することでREST セッションがアクセス可能なORDA リソースを制限することができます。 For more information, see the [A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/) blog post.
+`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。しきい値は、例えば、ほとんど最適化されていないリクエストやサーバーリソースの過度な使用などからサーバーを保護することなどに有用です。例えばREST サーバーの場合、クォータを使用することでREST セッションがアクセス可能なORDA リソースを制限することができます。
+
+:::tip 関連したBlog 記事
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
 
 :::tip 関連したBlog 記事
 
