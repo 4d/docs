@@ -1,22 +1,28 @@
 ---
 id: quotas
-title: Web server quotas
+title: Cuotas del servidor web
 ---
 
 Web applications can receive requests from many different clients, generating varying levels of traffic and resource consumption. Without appropriate limits, excessive activity from one or more clients can affect Web server performance and availability.
-Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level. For more information, see the [A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/) blog post.
+Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+
+:::tip Entradas de blog relacionadas
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
 
 ## Requisitos
 
 Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sessions) to be enabled.
 
-## How to configure quotas
+## Cómo configurar las cuotas
 
 ### Al inicio
 
 At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from an **HTTPQuotas.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
 
-#### Using the `quotas` property
+#### Uso de la propiedad `quotas`
 
 Quotas can be defined using the `quotas` property in the *settings* parameter passed to the [`start()`](../API/WebServerClass.md#start) function.
 
@@ -28,9 +34,9 @@ $quotas.inBytesPerMin:=20000000
 WEB Server().start({quotas: $quotas})
 ```
 
-#### Using an HTTPQuotas.json file
+#### Usando un archivo HTTPQuotas.json
 
-For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. El servidor web del host carga este archivo al iniciarse. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
 
 ```json title="/Project/Sources/HTTPQuotas.json"
 {
@@ -90,27 +96,27 @@ For each incoming request, the Web server checks quotas during preprocessing, be
 
 1. If a session quota is configured, it is checked first.
 2. If the request is accepted, the server global quota is checked.
-3. If both checks pass, the request is processed.
+3. Si ambas verificaciones pasan, la solicitud se procesa.
 
 If either quota is exceeded, the request is rejected with an **HTTP 429 Too Many Requests** response. No web process is created and [`On Web Connection`](./httpRequests.md#on-web-connection) is not called (if defined).
 
 If an output byte quota is exceeded while a response is being sent, the current request is interrupted. The preprocessing rules above apply to the next request in the same time window.
 
-### Rate limiting responses
+### Respuestas de limitación de velocidad
 
-Rate-limiting quotas use fixed time windows. When a quota is reached, subsequent requests are rejected until the current one-minute or one-hour window ends. The **HTTP 429 Too Many Requests** response includes a `Retry-After` header containing the time to wait before sending another request.
+Las cuotas de limitación de velocidad utilizan intervalos de tiempo fijos. When a quota is reached, subsequent requests are rejected until the current one-minute or one-hour window ends. The **HTTP 429 Too Many Requests** response includes a `Retry-After` header containing the time to wait before sending another request.
 
 When one of concurrent quotas (`nbSessions`, `nbGuestSessions`, and `nbEntitySetsPerSession`) is reached, the response includes an empty `Retry-After` header until the quota is no longer reached.
 
 The input byte quotas apply to all data received for a request, including its headers and body. The output byte quotas are evaluated against the uncompressed response size, regardless of the Web server compression settings.
 
-## Quota values
+## Valores de las cuotas
 
-Quota limits must be positive integers. An *Undefined* value means that the quota is not configured and is not enforced. Setting a quota value to zero or a negative number raises an error, and the existing quota value remains unchanged.
+Los límites de cuota deben ser números enteros positivos. An *Undefined* value means that the quota is not configured and is not enforced. Setting a quota value to zero or a negative number raises an error, and the existing quota value remains unchanged.
 
 Quota counters are stored in memory for each 4D Server instance and are not shared between multiple server instances.
 
-## Component Web servers
+## Servidores web de componentes
 
 Quotas configured for a component Web server apply only to that server and are independent of the quotas configured for the host Web server or other component Web servers.
 
