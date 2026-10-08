@@ -4,7 +4,13 @@ title: Web server quotas
 ---
 
 Web applications can receive requests from many different clients, generating varying levels of traffic and resource consumption. Without appropriate limits, excessive activity from one or more clients can affect Web server performance and availability.
-Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level. より詳細な情報については、[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/) のblog 記事を参照してください。
+Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+
+:::tip 関連したBlog 記事
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
 
 ## 要件
 
