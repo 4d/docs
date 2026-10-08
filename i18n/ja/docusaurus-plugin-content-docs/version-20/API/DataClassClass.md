@@ -1088,8 +1088,8 @@ ds.Class.info:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// B と C を返します
+// "少なくとも 1つの valプロパティ値が 0 と等しいエンティティ" を探します
 
 ds.Class.query("info.coll[].val != :1";0)
 // A のみを返します
