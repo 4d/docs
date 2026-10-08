@@ -35,7 +35,8 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get 4D folder.Summary-->La commande **Get 4D folder** renvoie le chemin d'accès du dossier 4D actif de l'application courante, ou du dossier de l'environnement 4D spécifié par les paramètres *dossier* et *options*, s'ils sont passés.<!-- END REF-->  
+<!--REF #_command_.Get 4D folder.Summary-->La commande **Get 4D folder** renvoie le chemin d'accès du dossier 4D actif de l'application courante, ou du dossier de l'environnement 4D spécifié par les paramètres *dossier* et *options*, s'ils sont passés.<!-- END REF--> Le chemin d'accès est retourné en utilisant la [syntaxe système](../../Concepts/paths.md#platform-specific-syntax).
+
 Cette commande vous permet d'obtenir avec certitude le chemin d'accès réel des dossiers utilisés par l'application. En utilisant cette commande, vous êtes certain que votre code fonctionnera correctement sur toute plate-forme, quelles que soient la langue du système et l'application 4D.
 
 Vous pouvez passer dans *dossier* une des constantes suivantes, placées dans le thème *Environnement 4D* (voir ci-dessous pour une description de chacun de ces dossiers) :

@@ -35,7 +35,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Get 4D folder.Summary-->El comando **Get 4D folder** devuelve la ruta de acceso a la carpeta 4D activa de la aplicación actual o de la carpeta del entorno 4D especificada por los parámetros *opciones* y *carpeta*, si se pasa.<!-- END REF--> Este comando le permite obtener la ruta de acceso actual a las carpetas utilizadas por la aplicación 4D. Utilizando este comando, asegura que su código funcionará correctamente en todas las plataformas que se ejecuten en un sistema localizado.
+<!--REF #_command_.Get 4D folder.Summary-->El comando **Get 4D folder** devuelve la ruta de acceso a la carpeta 4D activa de la aplicación actual o de la carpeta del entorno 4D especificada por los parámetros *opciones* y *carpeta*, si se pasa.<!-- END REF--> La ruta se devuelve utilizando la [sintaxis del sistema](../../Concepts/paths.md#platform-specific-syntax).
+
+Este comando le permite obtener la ruta de acceso actual a las carpetas utilizadas por la aplicación 4D. Utilizando este comando, asegura que su código funcionará correctamente en todas las plataformas que se ejecuten en un sistema localizado.
 
 En *carpeta*, puede pasar una de las siguientes constantes, ubicadas en el tema "*Entorno 4D*" (a continuación encontrará una descripción de cada carpeta):
 

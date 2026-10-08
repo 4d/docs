@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Get 4D file.Summary-->**Get 4D file**コマンドは、*file* パラメーターで指定された4D環境ファイルへのパス名を返します。<!-- END REF-->パスはシステムシンタックスで返されます。
+<!--REF #_command_.Get 4D file.Summary-->**Get 4D file**コマンドは、*file* パラメーターで指定された4D環境ファイルへのパス名を返します。<!-- END REF-->パスは[システム構文](../../Concepts/paths.md#platform-specific-syntax)で返されます。
 
 このコマンドを使用して、データベースのコンテキストに依存する可能性のある、実際のファイル名や保存先を取得できます。このコマンドは 4D のバージョンやOSに限定されない、汎用的なコードを書くのに便利です。
 

@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get 4D file.Summary-->La commande **Get 4D file** retourne le chemin d'accès au fichier de l'environnement 4D spécifié par le paramètre *fichier*.<!-- END REF--> Le chemin d'accès est retourné en utilisant la syntaxe système.
+<!--REF #_command_.Get 4D file.Summary-->La commande **Get 4D file** retourne le chemin d'accès au fichier de l'environnement 4D spécifié par le paramètre *fichier*.<!-- END REF--> Le chemin d'accès est retourné en utilisant la [syntaxe système](../../Concepts/paths.md#platform-specific-syntax).
 
 Cette commande vous permet de récupérer le chemin d'accès actuel à des fichiers, dont le nom et l'emplacement sont spécifiques à 4D. Elle peut aussi vous permettre d'écrire du code générique indépendant de la version de 4D et de la version de l'OS.
 

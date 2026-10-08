@@ -35,7 +35,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.
+<!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> The path is returned using the [system syntax](../../Concepts/paths.md#platform-specific-syntax). 
+
+This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.
 
 In *folder*, you can pass one of the following constants, which are located in the "*4D Environment*" theme (you will find below a description of each folder):
 

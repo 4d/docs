@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Get 4D file.Summary-->El comando **Get 4D file** devuelve la ruta de acceso al archivo del entorno 4D especificado por el parámetro *archivo*.<!-- END REF--> La ruta se devuelve utilizando la sintaxis sistema.
+<!--REF #_command_.Get 4D file.Summary-->El comando **Get 4D file** devuelve la ruta de acceso al archivo del entorno 4D especificado por el parámetro *archivo*.<!-- END REF--> La ruta se devuelve utilizando la [sintaxis del sistema](../../Concepts/paths.md#platform-specific-syntax).
 
 Este comando le permite obtener la ruta de acceso actual de los archivos, cuyo nombre o ubicación pueden depender del contexto de la base. También le ayuda a escribir código genérico independiente de la versión de 4D o del sistema operativo.
 

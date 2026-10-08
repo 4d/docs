@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get 4D file.Summary-->The **Get 4D file** command returns the pathname to the 4D environment file specified by the *file* parameter.<!-- END REF--> The path is returned using the system syntax. 
+<!--REF #_command_.Get 4D file.Summary-->The **Get 4D file** command returns the pathname to the 4D environment file specified by the *file* parameter.<!-- END REF--> The path is returned using the [system syntax](../../Concepts/paths.md#platform-specific-syntax).
 
 This command allows you to get the actual pathname of specific files, whose name or location can depend on database context. It also helps you to write generic code which is independent from the 4D version or the OS. 
 
