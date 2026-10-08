@@ -293,9 +293,9 @@ Los atributos del objeto formulario pueden declararse con su [nombre JSON](FormO
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                |
-| ----------- | ----------------------------- |
-| 21 R5       | Support of padding attributes |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 21 R5       | Soporte de atributos padding |
 
 </details>
 </div>
