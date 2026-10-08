@@ -150,7 +150,7 @@ Todos los botones radio comparten el mismo conjunto de propiedades básicas:
 > (1) No compatible con los estilos [Regular](#regular) y [Plano](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpand).
 
-### Additional properties for custom radio buttons
+### Propiedades adicionales para los botones de opción personalizados
 
 Additional specific properties are available for [custom](#custom) style radio buttons:
 
