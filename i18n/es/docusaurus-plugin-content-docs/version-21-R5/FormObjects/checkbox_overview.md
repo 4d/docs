@@ -392,7 +392,7 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 > (1) No compatible con los estilos [Regular](#regular) y [Plano](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpand).
 
-### Additional properties for custom check boxes
+### Propiedades adicionales para las casillas de selección personalizadas
 
 Additional specific properties are available for [custom](#custom) style check boxes:
 
