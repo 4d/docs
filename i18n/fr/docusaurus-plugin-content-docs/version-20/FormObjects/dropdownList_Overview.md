@@ -67,7 +67,7 @@ Form.myDrop.currentValue //"oranges"
 Form.myDrop.index //3
 ```
 
-### Utiliser une énumération
+### Utiliser un tableau
 
 Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Une liste déroulante peut afficher un tableau comme une liste de valeurs lorsque vous cliquez dessus.
 
@@ -75,7 +75,7 @@ Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
 * Entrer une liste de valeurs par défaut dans les propriétés de l'objet en sélectionnant `\&#060; Static List&#062;` dans le thème [Source de données](properties_DataSource.md) de la liste des propriétés. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
-* Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :
+* Avant que l’objet ne soit affiché, exécuter une méthode qui affecte des valeurs au tableau. Par exemple :
 
 ```4d
   ARRAY TEXT(aCities;6) 
