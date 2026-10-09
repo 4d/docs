@@ -1635,17 +1635,17 @@
     "message": "Drag and Drop",
     "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access)": {
-    "message": "Records & Selections (legacy data access)",
-    "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections": {
+    "message": "Records & Selections",
+    "description": "The label for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
-    "message": "Records & Selections (legacy data access)",
-    "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections.link.generated-index.title": {
+    "message": "Records & Selections",
+    "description": "The generated-index page title for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
+  "sidebar.docs.category.Records & Selections.link.generated-index.description": {
     "message": "Legacy data access based upon records, selections, and sets.",
-    "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+    "description": "The generated-index page description for category 'Records & Selections' in sidebar 'docs'"
   },
   "sidebar.docs.category.Server & Admin": {
     "message": "Server & Admin",
