@@ -3,7 +3,7 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar algunos límites de uso que aplica a su aplicación 4D. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session.
+La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar algunos límites de uso que aplica a su aplicación 4D. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. Para el servidor REST, por ejemplo, las cuotas pueden limitar los recursos ORDA accesibles para una sesión REST.
 
 :::tip Entradas de blog relacionadas
 
@@ -13,10 +13,10 @@ La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar 
 
 Los objetos `4D.QuotaManager` se pueden instanciar de las siguientes maneras:
 
-- the [`quotas` property of a Session](./SessionClass.md#quotas) object
-- the [`quotas` property of a Web server](./WebServerClass.md#quotas) object
+- la [propiedad `quotas` de un objeto Session](./SessionClass.md#quotas)
+- la propiedad [`quotas` de un servidor web](./WebServerClass.md#quotas)
 
-For Web server configuration and enforcement details, see [Web server quotas](../WebServer/quotas.md).
+Para obtener más información sobre la configuración y la aplicación de cuotas en el servidor web, consulte [Cuotas del servidor web](../WebServer/quotas.md).
 
 <details><summary>Historia</summary>
 
@@ -31,7 +31,7 @@ For Web server configuration and enforcement details, see [Web server quotas](..
 
 By default, the properties of a `4D.QuotaManager` object are *Undefined*, meaning that no corresponding quota is applied.
 
-The `4D.QuotaManager` object itself cannot be directly assigned, and properties cannot be added to or removed from it. Quotas are configured by modifying the corresponding properties of the existing object.
+The `4D.QuotaManager` object itself cannot be directly assigned, and properties cannot be added to or removed from it. Las cuotas se configuran modificando las propiedades correspondientes del objeto existente.
 
 Los objetos 4D.QuotaManager ofrecen las siguientes propiedades:
 
@@ -85,7 +85,7 @@ The object has the same properties as the `4D.QuotaManager` object, but only the
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Esta cuota solo se puede configurar para la sesión REST actual a través de [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
@@ -181,7 +181,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Esta cuota solo se puede configurar para la sesión REST actual a través de [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
@@ -223,7 +223,7 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+Esta cuota solo se puede configurar para la sesión REST actual a través de [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
@@ -360,7 +360,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerHour` property contains <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->the maximum total number of bytes that the Web server can send in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+The `.outBytesPerHour` property contains <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->the maximum total number of bytes that the Web server can send in one hour<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -374,7 +374,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+The `.outBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one hour<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -388,7 +388,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerMin` property contains <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->the maximum total number of bytes that the Web server can send in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+The `.outBytesPerMin` property contains <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->the maximum total number of bytes that the Web server can send in one minute<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -402,7 +402,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+The `.outBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one minute<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 

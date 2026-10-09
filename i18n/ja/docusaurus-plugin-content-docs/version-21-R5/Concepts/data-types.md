@@ -75,9 +75,9 @@ Object型、Collection型、Pointer型、Picture型の変数は、デフォル�
 | -------------------------- | -------- | ----- | ------ | ------ | ------ |
 | 文字列 (1) |          | `Num` | `Date` | `Time` | `Bool` |
 | 数値 (2)  | `String` |       |        |        | `Bool` |
-| Date                       | `String` |       |        |        | `Bool` |
-| Time                       | `String` |       |        |        | `Bool` |
-| Boolean                    |          | `Num` |        |        |        |
+| 日付                         | `String` |       |        |        | `Bool` |
+| 時間                         | `String` |       |        |        | `Bool` |
+| ブール                        |          | `Num` |        |        |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 

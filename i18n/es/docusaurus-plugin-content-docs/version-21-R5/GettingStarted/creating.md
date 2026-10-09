@@ -66,8 +66,8 @@ Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofr
   - **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
 
 - **Archivo de datos** - especifica el archivo de datos a utilizar con el proyecto. Por defecto, está seleccionada la opción **Archivo de datos actual**. This menu includes two additional options since 4D allows you to use the same project with different data files.
-  - **Choose another data file**: Opens the project with an existing data file other than the current one. When you select this option and then click on **Open**, the standard Open data file dialog box appears so that you can designate a data file.
-  - **Create a new data file**: Creates a blank data file for the project. When you select this option and then click on **Open**, the standard Save data file dialog box appears.
+  - **Elegir otro archivo de datos**: abre el proyecto con un archivo de datos existente distinto del actual. When you select this option and then click on **Open**, the standard Open data file dialog box appears so that you can designate a data file.
+  - **Crear un nuevo archivo de datos**: crea un archivo de datos en blanco para el proyecto. Al seleccionar esta opción y hacer clic en **Abrir**, aparecerá el cuadro de diálogo estándar para guardar archivos de datos.
 
 :::note
 
@@ -75,7 +75,7 @@ In order to preserve data integrity, 4D does not allow a data file to be opened 
 
 :::
 
-Once you have changed the current data file, 4D opens it by default subsequently. If you move or rename the data file, you will need to locate it again. It is possible to change the data file using a keyboard shortcut on startup (see below). You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
+Una vez cambiado el archivo de datos actual, 4D lo abre de forma predeterminada. Si mueve o renombra el archivo de datos, deberá localizarlo de nuevo. Es posible cambiar el archivo de datos mediante un atajo de teclado al iniciar el programa (ver abajo). You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
 
 ### Startup Maintenance Dialog
 
@@ -85,8 +85,8 @@ If you need to interrupt the startup sequence, for example if the project is not
 
 Se ofrecen las siguientes opciones de mantenimiento:
 
-- **Open the application with the default data file**: continues the standard opening process.
-- **Select another data file** / **Create a new data file**: allows you to change of data file (see above).
+- **Abrir la aplicación con el archivo de datos predeterminado**: continúa con el proceso de apertura habitual.
+- **Seleccionar otro archivo de datos** / **Crear un nuevo archivo de datos**: le permite cambiar de archivo de datos (ver arriba).
 - **Restore a backup file**: opens standard Open file dialog box, so that you can select a backup file (.4bk) or a log backup file (.4bl) to [restore](../Backup/restore.md#manually-restoring-a-backup-standard-dialog).
 - **Open the Maintenance and Security Center**: opens the project in [maintenance mode](../MSC/overview.md#display-in-maintenance-mode).
 
@@ -94,9 +94,9 @@ Se ofrecen las siguientes opciones de mantenimiento:
 
 4D ofrece varias formas de abrir proyectos directamente y evitar el diálogo de apertura:
 
-- via the **Open Recent Projects / {project name}** submenu of the **File** menu or **Open** toolbar button.  
+- a través del submenú **Abrir proyectos recientes / {nombre del proyecto}** del menú **Archivo** o del botón **Abrir** de la barra de herramientas.  
   ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
-- double-click or drag and drop a `.4DLink` file onto the 4D application (see below).
+- haga doble clic o arrastre y suelte un archivo `.4DLink` en la aplicación 4D (ver abajo).
 - by setting the **At startup** general preference to [**Open last used project**](../Preferences/general.md#at-startup).
 
 :::note Notas

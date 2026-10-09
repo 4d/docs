@@ -25,13 +25,13 @@ title: 背景色と境界線
 
 ---
 
-## Background Color / Fill color
+## 背景色/塗りカラー
 
-Defines the background color / fill color of an object. 一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。 [hh](#)
+オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
 :::note
 
-The **Fill color** property is named **Background color** with [List Box](listbox_overview.md), [List Box Column](listbox-column.md) and [List Box Footer](listbox-header-footer.md#footers) objects.
+**塗りカラー** プロパティは[リストボックス](listbox_overview.md)、[リストボックスカラム](listbox-column.md) および[List Box Footer](listbox-header-footer.md#フッター) オブジェクトでは**背景色** という名前になっています。
 
 :::
 

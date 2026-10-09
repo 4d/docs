@@ -33,7 +33,7 @@ API 参照: <https://developers.openai.com/api/reference/resources/files>
 | `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                    | 失効期限のポリシーを含めた、オブションの引数。                                    |
 | 戻り値          | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                            | ファイルの結果                                                    |
 
-**エラーのスロー:** `file` が4D.File あるいは 4D.Blob ではない場合、あるいは`purpose` がからの場合にはエラーがスローされます。
+**エラーのスロー:** `file` が4D.File あるいは 4D.Blob ではない場合、あるいは`purpose` が空の場合にはエラーがスローされます。
 
 #### サポートされている目的
 

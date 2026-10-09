@@ -39,11 +39,11 @@ Le nombre d'erreurs trouvées lors de vos premières compilations peut être dé
 
 :::note
 
-Compilation requires an [appropriate license](../Admin/licenses.md). Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
+La compilation nécessite une [licence adéquate](../Admin/licenses.md). Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
 :::
 
-### Compile components
+### Compilation des composants
 
 <details><summary>Historique</summary>
 
@@ -53,49 +53,49 @@ Compilation requires an [appropriate license](../Admin/licenses.md). Sans cette 
 
 </details>
 
-While developing your application, you can compile the components used by the host project directly from the host project, without having to open them separately. When the host project contains one or more *eligible* components (see [Requirements](#requirements) below), an additional menu is displayed in the Compiler window. This menu lets you select which project(s) you want to compile:
+Lors du développement de votre application, vous pouvez compiler les composants utilisés par le projet hôte directement à partir de ce dernier, sans avoir à les ouvrir séparément. Lorsque le projet hôte contient un ou plusieurs composants *éligibles* (voir [Conditions requises](#requirements) ci-dessous), un menu supplémentaire s'affiche dans la fenêtre du compilateur. Ce menu vous permet de sélectionner le ou les projet(s) que vous souhaitez compiler :
 
-- the host project only (default)
-- the host project and all its eligible components
-- a single eligible component among the list of all eligible components.
+- uniquement le projet hôte (par défaut)
+- le projet hôte et tous ses composants éligibles
+- un seul composant parmi la liste de tous les composants éligibles.
 
 ![](../assets/en/Project/compile-component.png)
 
 :::note
 
-You can open the Compiler window from the **Methods>Component Methods** section of the Explorer: right-click on an eligible component name and select **Compiler...** from the contextuel menu.
+Vous pouvez ouvrir la fenêtre « Compilateur » à partir de la section **Méthodes > Méthodes des composants** de l'Explorateur : cliquez avec le bouton droit sur le nom d'un composant éligible et sélectionnez **Compilateur...** dans le menu contextuel.
 
 :::
 
-A list of components being compiled is displayed in the Compiler window. If an error is detected in a component, its compilation is stopped but the process continues for other components.
+La liste des composants en cours de compilation s'affiche dans la fenêtre du compilateur. Si une erreur est détectée dans un composant, sa compilation est interrompue, mais le processus se poursuit pour les autres composants.
 
-- Components with at least one error can be unfolded to display the list of errors and appear **in bold**.
-- Components with at least one warning can be unfolded to display the list of warnings.
-- Components wihout errors cannot be unfolded.
+- Les composants comportant au moins une erreur peuvent être dépliés pour afficher la liste des erreurs et apparaissent **en gras**.
+- Les composants comportant au moins un warning peuvent être dépliés pour afficher la liste des warnings.
+- Les composants ne comportant aucune erreur ne peuvent pas être dépliés.
 
 #### Conditions requises
 
-To be eligible for compilation from the host project, a component must comply with the following requirements:
+Pour pouvoir être compilé à partir du projet hôte, un composant doit respecter les exigences suivantes :
 
-- the component uses the [project architecture](../Project/architecture.md),
-- the component's [interpreted code](../Concepts/interpreted.md) is available and the component is not [running in compiled mode](#run-compiled),
-- the component uses [direct typing](#enabling-direct-typing) declarations.
+- le composant utilise l'[architecture projet](../Project/architecture.md),
+- le [code interprété](../Concepts/interpreted.md) du composant est disponible et le composant ne [fonctionne pas en mode compilé](#run-compiled),
+- Le composant utilise des déclarations de [typage direct](#enabling-direct-typing).
 
 :::note
 
-The additional menu is not displayed if the project does not contain any eligible component.
+Le menu supplémentaire ne s'affiche pas si le projet ne contient aucun composant éligible.
 
 :::
 
-#### Compiler features & Settings
+#### Fonctionnalités et paramètres du compilateur
 
-All available features of the Compiler window are applied to the selected component(s): **Compile**, **Check syntax**, **Clear compiled code**.
+Toutes les fonctionnalités disponibles dans la fenêtre du compilateur sont appliquées au(x) composant(s) sélectionné(s) : **Compiler**, **Vérifier la syntaxe**, **Effacer le code compilé**.
 
-The [Settings](../settings/) cannot be edited when a component is selected (the button is dimmed).
+Les [paramètres](../settings/) ne peuvent pas être modifiés lorsqu'un composant est sélectionné (le bouton est grisé).
 
-Each component's [settings](../settings/) are applied for the compilation, except the [error file and symbol file generation options](#compilation-options): settings of the host project override the component's options. When enabled, [error and warning file](#error-file) as well as [symbol file](#symbol-file) of each component are stored in the [**Logs** folder of the host project](../Project/architecture.md#logs), within a dedicated folder (the name of the folder is the component name).
+Les [paramètres](../settings/) de chaque composant sont pris en compte lors de la compilation, à l'exception des [options de génération des fichiers d'erreurs et des fichiers de symboles](#compilation-options) : les paramètres du projet hôte prévalent sur les options du composant. Lorsqu'ils sont activés, le [fichier d'erreurs et d'avertissements](#error-file) ainsi que le [fichier de symboles](#symbol-file) de chaque composant sont stockés dans le [dossier **Logs** du projet hôte](../Project/architecture.md#logs), au sein d'un dossier dédié (le nom du dossier correspond au nom du composant).
 
-When you start a compilation or a syntax check, every processed project is listed in the compiler window. If errors or warnings are detected, they are displayed in hierarchical lists beneath the corresponding project. Projects that contain errors are displayed in **bold**:
+Lorsque vous lancez une compilation ou une vérification syntaxique, tous les projets traités s'affichent dans la fenêtre du compilateur. Si des erreurs ou des warnings sont détectés, ils s'affichent sous forme de listes hiérarchiques sous le projet correspondant. Les projets contenant des erreurs sont affichés en **gras** :
 
 ![](../assets/en/Project/compile-components-errors.png)
 

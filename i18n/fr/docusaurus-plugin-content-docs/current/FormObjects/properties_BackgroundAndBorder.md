@@ -27,7 +27,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 ## Couleur de fond
 
-Définit la couleur de fond / couleur de remplissage d'un objet. Elle peut être définie pour certains objets standard (propriété JSON `fill`) ou pour des [objets de style "Custom"](#custom-style-button-check-box-or-radio-button) (propriété JSON `borderFillColor`). [hh](#)
+Définit la couleur de fond / couleur de remplissage d'un objet. Elle peut être définie pour certains objets standard (propriété JSON `fill`) ou pour des [objets de style "Custom"](#custom-style-button-check-box-or-radio-button) (propriété JSON `borderFillColor`).
 
 :::note
 

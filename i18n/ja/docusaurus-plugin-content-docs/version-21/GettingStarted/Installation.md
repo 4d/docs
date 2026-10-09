@@ -9,7 +9,7 @@ title: インストール
 
 4D 製品の macOS / Windows における最小動作環境については、4D Webサイトの [製品ダウンロード](https://jp.4d.com/product-download) ページを参照してください。
 
-追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/) にてご確認いただけます。
+追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/Feature-Release) にてご確認いただけます。
 
 ## ディスクへのインストール
 

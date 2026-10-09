@@ -9,7 +9,7 @@ title: インストール
 
 4D 製品の macOS / Windows における最小動作環境については、4D Webサイトの [製品ダウンロード](https://jp.4d.com/product-download) ページを参照してください。
 
-追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/) にてご確認いただけます。
+追加の情報は 4D Webサイトの [リソースページ](https://jp.4d.com/resources/Feature-Release) にてご確認いただけます。
 
 ## ディスクへのインストール
 
@@ -21,7 +21,7 @@ title: インストール
 
 :::info
 
-Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の 4D において [Fluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、この SDK をインストール必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
+Windows 用のセットアップパネルには、**Windows App SDK** のインストーラーをダウンロードするためのリンクが含まれています。 Windows 用の 4D において [Fluent UI を使用する](../FormEditor/forms.md#fluent-ui-レンダリング) ためには、この SDK をインストールする必要があるかもしれません (OS にまだインストールがされていない場合には、[こちらの blog 記事](https://blog.4d.com/ja/deploy-fluent-ui-effortlessly-in-your-4d-applications) を参照してください)。
 
 :::
 

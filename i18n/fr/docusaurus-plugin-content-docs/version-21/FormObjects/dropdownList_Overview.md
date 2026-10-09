@@ -67,7 +67,7 @@ Form.myDrop.currentValue //"oranges"
 Form.myDrop.index //3
 ```
 
-### Utiliser une énumération
+### Utiliser un tableau
 
 Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Une liste déroulante peut afficher un tableau comme une liste de valeurs lorsque vous cliquez dessus.
 
@@ -75,7 +75,7 @@ Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
 - Entrer une liste de valeurs par défaut dans les propriétés de l'objet en sélectionnant `<Static List>` dans le thème [Data Source](properties_DataSource.md) de la liste des propriétés. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
-- Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :
+- Avant que l’objet ne soit affiché, exécuter une méthode qui affecte des valeurs au tableau. Par exemple :
 
 ```4d
   ARRAY TEXT(aCities;6) 
@@ -125,7 +125,7 @@ Si vous souhaitez utiliser une liste déroulante pour gérer les valeurs d'une z
 
 Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous souhaitez afficher un contenu hiérarchique, vous devez utiliser une [liste hiérarchique](#using-a-hierarchical-choice-list).
 
 Pour associer une liste déroulante à un champ ou à une variable, saisissez le nom du champ ou de la variable directement dans le champ [Variable ou expression](properties_Object.md#variable-or-expression) de la liste déroulante dans la liste des propriétés.
 
@@ -158,7 +158,7 @@ Vous pouvez construire automatiquement une liste déroulante en utilisant une [a
 - Utilisation de l'action standard `gotoPage`. Dans ce cas, 4D affichera automatiquement la [page du formulaire](FormEditor/forms.md#form-pages) correspondant au numéro de l'élément sélectionné. Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe). Au moment de l'exécution, la liste déroulante affiche par défaut les numéros de page (1, 2...).
 
 - Utilisation d'une action standard qui affiche une sous-liste d'éléments, par exemple `backgroundColor`. Cette fonctionnalité nécessite que :
-  - une zone de texte stylée (zone [4D Write Pro](writeProArea_overview.md) ou [input](input_overview.md) avec propriété [multistyle](properties_Text.md#multi-style)) est présente dans le formulaire comme cible de l'action standard.
+  - une zone de texte stylée (zone [4D Write Pro](writeProArea_overview.md) ou [input](input_overview.md) avec propriété [multistyle](properties_Text.md#multi-style)) soit présente dans le formulaire comme cible de l'action standard.
   - la propriété [focusable](properties_Entry.md#focusable) n'est pas attribuée à la liste déroulante.
     Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
 

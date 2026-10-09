@@ -202,7 +202,7 @@ When the **4D or VS Code when holding Alt key** option is selected, add the **Sh
 
 :::tip Entrada de blog relacionada
 
-[Seamlessly open 4D code from 4D into VS Code](https://blog.4d.com/seamlessly-open-4d-code-from-4d-into-vs-code)
+[Abrir código 4D directamente desde 4D en VS Code](https://blog.4d.com/seamlessly-open-4d-code-from-4d-into-vs-code)
 
 :::
 

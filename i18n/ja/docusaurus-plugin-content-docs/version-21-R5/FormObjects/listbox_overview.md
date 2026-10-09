@@ -104,7 +104,7 @@ title: リストボックス
 | セルの値が編集されたとき                                                      | すべて                 | On Before Keystroke                                                                                                                                                                     |
 |                                                                   | すべて                 | On After Keystroke                                                                                                                                                                      |
 |                                                                   | すべて                 | On After Edit                                                                                                                                                                           |
-| ユーザーがセルを確定し、セルを移動したとき                                             | セレクションリストボックス       | 保存                                                                                                                                                                                      |
+| ユーザーがセルを確定し、セルを移動したとき                                             | セレクションリストボックス       | Save                                                                                                                                                                                    |
 |                                                                   | レコードセレクションリストボックス   | On saving an existing record トリガー (設定されていれば)                                                                                                                         |
 |                                                                   | セレクションリストボックス       | On Data Change(\*)                                                                                                                                                   |
 |                                                                   | エンティティセレクションリストボックス | エンティティはオートマージオプション、オプティミスティック・ロックモードで保存されます (entity.save( ) を参照ください)。正常に保存できた場合には、エンティティは更新され最新の状態が表示されます。保存処理が失敗した場合、エラーが表示されます。 |
@@ -710,11 +710,11 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 | イベント                                                     | `Object with focus`                   | `Object current`                      |
 | -------------------------------------------------------- | ------------------------------------- | ------------------------------------- |
-| [`On Clicked`](../Events/onClicked.md)                   | リストボックス                               | column                                |
-| [`On Double Clicked`](../Events/onDoubleClicked.md)      | リストボックス                               | column                                |
-| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | column                                | column                                |
-| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | column                                | column                                |
-| [`On After Edit`](../Events/onAfterEdit.md)              | column                                | column                                |
+| [`On Clicked`](../Events/onClicked.md)                   | リストボックス                               | 列                                     |
+| [`On Double Clicked`](../Events/onDoubleClicked.md)      | リストボックス                               | 列                                     |
+| [`On Before Keystroke`](../Events/onBeforeKeystroke.md)  | 列                                     | 列                                     |
+| [`On After Keystroke`](../Events/onAfterKeystroke.md)    | 列                                     | 列                                     |
+| [`On After Edit`](../Events/onAfterEdit.md)              | 列                                     | 列                                     |
 | [`On Getting Focus`](../Events/onGettingFocus.md)        | カラムまたはリストボックス (\*) | カラムまたはリストボックス (\*) |
 | [`On Losing Focus`](../Events/onLosingFocus.md)          | カラムまたはリストボックス (\*) | カラムまたはリストボックス (\*) |
 | [`On Drop`](../Events/onDrop.md)                         | リストボックス(ソース)       | リストボックス (\*)       |
@@ -723,17 +723,17 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 | [`On Mouse Enter`](../Events/onMouseEnter.md)            | リストボックス (\*\*)     | リストボックス (\*\*)     |
 | [`On Mouse Move`](../Events/onMouseMove.md)              | リストボックス (\*\*)     | リストボックス (\*\*)     |
 | [`On Mouse Leave`](../Events/onMouseLeave.md)            | リストボックス (\*\*)     | リストボックス (\*\*)     |
-| [`On Data Change`](../Events/onDataChange.md)            | column                                | column                                |
+| [`On Data Change`](../Events/onDataChange.md)            | 列                                     | 列                                     |
 | [`On Selection Change`](../Events/onSelectionChange.md)  | リストボックス (\*\*)     | リストボックス (\*\*)     |
-| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | column                                | column                                |
-| [`On Column Moved`](../Events/onColumnMoved.md)          | リストボックス                               | column                                |
+| [`On Before Data Entry`](../Events/onBeforeDataEntry.md) | 列                                     | 列                                     |
+| [`On Column Moved`](../Events/onColumnMoved.md)          | リストボックス                               | 列                                     |
 | [`On Row Moved`](../Events/onRowMoved.md)                | リストボックス                               | リストボックス                               |
-| [`On Column Resize`](../Events/onColumnResize.md)        | リストボックス                               | column                                |
+| [`On Column Resize`](../Events/onColumnResize.md)        | リストボックス                               | 列                                     |
 | [`On Open Detail`](../Events/onOpenDetail.md)            | Nil                                   | リストボックス (\*\*)     |
 | [`On Close Detail`](../Events/onCloseDetail.md)          | Nil                                   | リストボックス (\*\*)     |
-| [`On Header Click`](../Events/onHeaderClick.md)          | リストボックス                               | header                                |
-| [`On Footer Click`](../Events/onFooterClick.md)          | リストボックス                               | footer                                |
-| [`On After Sort`](../Events/onAfterSort.md)              | リストボックス                               | header                                |
+| [`On Header Click`](../Events/onHeaderClick.md)          | リストボックス                               | ヘッダー                                  |
+| [`On Footer Click`](../Events/onFooterClick.md)          | リストボックス                               | フッター                                  |
+| [`On After Sort`](../Events/onAfterSort.md)              | リストボックス                               | ヘッダー                                  |
 
 (\*) フォーカスがリストボックス内で変更された場合、カラムへのポインターが返されます。フォーカスがフォーム全体のレベルで変更された場合、リストボックスへのポインターが返されます。カラムのオブジェクトメソッドのコンテキストにおいては、カラムへのポインターが返されます。
 (\*\*) カラムのオブジェクトメソッドのコンテキストにおいては実行されません。

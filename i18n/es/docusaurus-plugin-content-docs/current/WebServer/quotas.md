@@ -49,7 +49,7 @@ For the host Web server, you can create an **HTTPQuotas.json** file and store it
 
 If the **HTTPQuotas.json** file contains malformed JSON, the Web server does not start and returns error *551 - JSON malformed*.
 
-If `settings.quotas` is provided when the Web server starts, **HTTPQuotas.json** is ignored.
+Si se especifica `settings.quotas` al iniciar el servidor web, se ignora el archivo **HTTPQuotas.json**.
 
 ### At runtime
 
@@ -57,7 +57,7 @@ For a running Web server, you can update quotas through the [`WebServer.quotas`]
 
 ### Current REST session quotas
 
-The [`Session.quotas`](../API/SessionClass.md#quotas) property configures quotas for the current REST session. It provides current usage values and lets you configure the session's REST entity-set limits and timeouts. These quotas are distinct from the session default quotas configured through [`WebServer.quotas`](../API/WebServerClass.md#quotas), which are applied when new Web sessions are created.
+The [`Session.quotas`](../API/SessionClass.md#quotas) property configures quotas for the current REST session. Proporciona los valores de uso actuales y permite configurar los límites de conjuntos de entidades REST y los tiempos de espera de la sesión. These quotas are distinct from the session default quotas configured through [`WebServer.quotas`](../API/WebServerClass.md#quotas), which are applied when new Web sessions are created.
 
 ### Ejemplo
 
@@ -94,13 +94,13 @@ $webServer.start({quotas: $quotas})
 
 For each incoming request, the Web server checks quotas during preprocessing, before the [`On Web Connection`](./httpRequests.md#on-web-connection) database method is called (if defined):
 
-1. If a session quota is configured, it is checked first.
-2. If the request is accepted, the server global quota is checked.
+1. Si se configura una cuota de sesión, se verifica primero.
+2. Si se acepta la solicitud, se comprueba el límite global del servidor.
 3. Si ambas verificaciones pasan, la solicitud se procesa.
 
-If either quota is exceeded, the request is rejected with an **HTTP 429 Too Many Requests** response. No web process is created and [`On Web Connection`](./httpRequests.md#on-web-connection) is not called (if defined).
+Si se supera cualquiera de las dos cuotas, la solicitud se rechaza con una respuesta **HTTP 429 Too Many Requests**. No se crea ningún proceso web y no se llama a [`On Web Connection`](./httpRequests.md#on-web-connection) (si está definido).
 
-If an output byte quota is exceeded while a response is being sent, the current request is interrupted. The preprocessing rules above apply to the next request in the same time window.
+Si se supera una cuota de bytes de salida mientras se envía una respuesta, se interrumpe la solicitud actual. Las reglas de preprocesamiento anteriores se aplican a la siguiente solicitud dentro de la misma ventana de tiempo.
 
 ### Respuestas de limitación de velocidad
 
@@ -108,13 +108,13 @@ Las cuotas de limitación de velocidad utilizan intervalos de tiempo fijos. When
 
 When one of concurrent quotas (`nbSessions`, `nbGuestSessions`, and `nbEntitySetsPerSession`) is reached, the response includes an empty `Retry-After` header until the quota is no longer reached.
 
-The input byte quotas apply to all data received for a request, including its headers and body. The output byte quotas are evaluated against the uncompressed response size, regardless of the Web server compression settings.
+Las cuotas de bytes de entrada se aplican a todos los datos recibidos en una solicitud, incluidos sus encabezados y su cuerpo. The output byte quotas are evaluated against the uncompressed response size, regardless of the Web server compression settings.
 
 ## Valores de las cuotas
 
-Los límites de cuota deben ser números enteros positivos. An *Undefined* value means that the quota is not configured and is not enforced. Setting a quota value to zero or a negative number raises an error, and the existing quota value remains unchanged.
+Los límites de cuota deben ser números enteros positivos. Un valor *Undefined* significa que la cuota no está configurada y no se aplica. Establecer un valor de cuota en cero o en un número negativo genera un error, y el valor de cuota existente permanece sin cambios.
 
-Quota counters are stored in memory for each 4D Server instance and are not shared between multiple server instances.
+Los contadores de cuota se almacenan en la memoria de cada instancia de 4D Server y no se comparten entre las distintas instancias del servidor.
 
 ## Servidores web de componentes
 

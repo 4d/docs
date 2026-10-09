@@ -1,10 +1,10 @@
 ---
 id: quotas
-title: Web server quotas
+title: Quotas du serveur Web
 ---
 
-Web applications can receive requests from many different clients, generating varying levels of traffic and resource consumption. Without appropriate limits, excessive activity from one or more clients can affect Web server performance and availability.
-Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+Les applications web peuvent recevoir des requêtes provenant d'un grand nombre de clients différents, ce qui génère divers niveaux de trafic et de consommation de ressources. En l'absence de limites, une activité excessive de la part d'un ou plusieurs clients peut nuire aux performances et à la disponibilité du serveur Web.
+Les quotas du serveur Web vous permettent de contrôler l'utilisation des ressources en limitant le trafic, les requêtes, les sessions actives, les sessions guest et les entity set REST. Les quotas peuvent être configurés au niveau global du serveur web (pour l'ensemble des sessions), au niveau des sessions par défaut (pour chaque nouvelle session) ou au niveau de la session REST en cours.
 
 :::tip Article de blog lié
 
@@ -14,17 +14,17 @@ Web server quotas let you control resource usage by limiting traffic, requests, 
 
 ## Conditions requises
 
-Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sessions) to be enabled.
+La configuration des quotas nécessite l'activation des [sessions évolutives](./sessions.md#enabling-web-sessions).
 
-## How to configure quotas
+## Configurer les quotas
 
 ### Au démarrage
 
-At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from an **HTTPQuotas.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+Au démarrage, vous pouvez configurer les quotas via la propriété `quotas` passée à [`WebServer.start()`](../API/WebServerClass.md#start) pour le serveur Web hôte ou un serveur Web de composant. Pour le serveur Web hôte uniquement, vous pouvez également charger les quotas à partir d'un fichier **HTTPQuotas.json** stocké dans le dossier [`Project/Sources`](../Project/architecture.md#sources).
 
-#### Using the `quotas` property
+#### Utilisation de la propriété `quotas`
 
-Quotas can be defined using the `quotas` property in the *settings* parameter passed to the [`start()`](../API/WebServerClass.md#start) function.
+Les quotas peuvent être définis à l'aide de la propriété `quotas` du paramètre *settings* transmis à la fonction [`start()`](../API/WebServerClass.md#start).
 
 ```4d
 
@@ -34,9 +34,9 @@ $quotas.inBytesPerMin:=20000000
 WEB Server().start({quotas: $quotas})
 ```
 
-#### Using an HTTPQuotas.json file
+#### Utilisation d'un fichier HTTPQuotas.json
 
-For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+Pour le serveur Web hôte, vous pouvez créer un fichier **HTTPQuotas.json** et l'enregistrer dans le dossier [`Project/Sources`](../Project/architecture.md#sources). Ce fichier est chargé au démarrage par le serveur Web hôte. Le fichier doit contenir un objet JSON dont les propriétés sont les [noms des propriétés de quotas](../API/QuotaManagerClass.md) :
 
 ```json title="/Project/Sources/HTTPQuotas.json"
 {
@@ -47,80 +47,80 @@ For the host Web server, you can create an **HTTPQuotas.json** file and store it
 }
 ```
 
-If the **HTTPQuotas.json** file contains malformed JSON, the Web server does not start and returns error *551 - JSON malformed*.
+Si le fichier **HTTPQuotas.json** contient du code JSON mal formé, le serveur Web ne démarre pas et renvoie l'erreur *551 - JSON malformed*.
 
-If `settings.quotas` is provided when the Web server starts, **HTTPQuotas.json** is ignored.
+Si `settings.quotas` est fourni au démarrage du serveur Web, le fichier **HTTPQuotas.json** est ignoré.
 
-### At runtime
+### A l'exécution
 
-For a running Web server, you can update quotas through the [`WebServer.quotas`](../API/WebServerClass.md#quotas) property. Changes are applied to subsequent Web server activity; session default quotas apply to new sessions created after the quota value is updated.
+Dans un serveur Web en cours d'exécution, vous pouvez modifier les quotas via la propriété [`WebServer.quotas`](../API/WebServerClass.md#quotas). Les modifications s'appliquent à l'activité ultérieure du serveur Web ; les quotas par défaut des sessions s'appliquent aux nouvelles sessions créées après la mise à jour de la valeur du quota.
 
-### Current REST session quotas
+### Quotas de session REST courante
 
-The [`Session.quotas`](../API/SessionClass.md#quotas) property configures quotas for the current REST session. It provides current usage values and lets you configure the session's REST entity-set limits and timeouts. These quotas are distinct from the session default quotas configured through [`WebServer.quotas`](../API/WebServerClass.md#quotas), which are applied when new Web sessions are created.
+La propriété [`Session.quotas`](../API/SessionClass.md#quotas) permet de configurer les quotas pour la session REST courante. Elle fournit les valeurs d'utilisation courantes et vous permet de configurer les limites des entity sets et les délais d'expiration de la session REST. Ces quotas sont distincts des quotas par défaut des sessions configurés via [`WebServer.quotas`](../API/WebServerClass.md#quotas), qui s'appliquent lors de la création de nouvelles sessions Web.
 
 ### Exemple
 
-The following example configures web server quotas at startup for an internal application used by approximately 20 people with occasional usage:
+L'exemple suivant permet de configurer les quotas du serveur web au démarrage pour une application interne utilisée par une vingtaine de personnes de manière occasionnelle :
 
 ```4d
 
 var $quotas:={}
 var $webServer : Object:=WEB Server
 
-// Maximum number of input bytes accepted in a one-minute time window on the web server
+// Nombre maximal d'octets en entrée acceptés par fenêtre d'une minute sur le serveur web
 $quotas.inBytesPerMin:=20000000
 
-// Maximum number of output bytes sent in a one-minute time window for a session
+// Nombre maximal d’octets en sortie envoyés par session au cours d’une fenêtre d’une minute
 $quotas.outBytesPerMinPerSession:=10000000
 
-// Maximum number of active sessions on the web server
+// Nombre maximal de sessions actives sur le serveur web
 $quotas.nbSessions:=50
 
-// Maximum number of unauthenticated sessions on the web server
+// Nombre maximal de sessions non authentifiées sur le serveur web
 $quotas.nbGuestSessions:=10
 
-// Maximum number of requests accepted in a one-minute time window on the web server
+// Nombre maximal de requêtes acceptées par minute sur le serveur web
 $quotas.nbRequestsPerMin:=500
 
-// Maximum number of requests accepted in a one-hour time window on the web server
+// Nombre maximal de requêtes acceptées par le serveur web sur une période d’une heure
 $quotas.nbRequestsPerHour:=20000
 
-// We launch the Web server
+// Démarrage du serveur web
 $webServer.start({quotas: $quotas})
 ```
 
-## Quota enforcement
+## Application des quotas
 
-For each incoming request, the Web server checks quotas during preprocessing, before the [`On Web Connection`](./httpRequests.md#on-web-connection) database method is called (if defined):
+Pour chaque requête entrante, le serveur Web vérifie les quotas lors du prétraitement, avant l'appel de la méthode base [`On Web Connection`](./httpRequests.md#on-web-connection) (si elle est définie) :
 
-1. If a session quota is configured, it is checked first.
-2. If the request is accepted, the server global quota is checked.
-3. If both checks pass, the request is processed.
+1. Si un quota de session est configuré, c'est celui-ci qui est vérifié en premier.
+2. Si la requête est acceptée, le quota global du serveur est vérifié.
+3. Si les deux vérifications sont satisfaites, la demande est traitée.
 
-If either quota is exceeded, the request is rejected with an **HTTP 429 Too Many Requests** response. No web process is created and [`On Web Connection`](./httpRequests.md#on-web-connection) is not called (if defined).
+Si l'un ou l'autre de ces quotas est dépassé, la requête est rejetée avec une réponse **HTTP 429 Too Many Requests**. Aucun process Web n'est créé et la méthode [`On Web Connection`](./httpRequests.md#on-web-connection) n'est pas appelée (si elle est définie).
 
-If an output byte quota is exceeded while a response is being sent, the current request is interrupted. The preprocessing rules above apply to the next request in the same time window.
+Si le quota d'octets de sortie est dépassé pendant l'envoi d'une réponse, la requête en cours est interrompue. Les règles de prétraitement ci-dessus s'appliquent à la requête suivante dans la même fenêtre temporelle.
 
-### Rate limiting responses
+### Réponses de limitation de débit
 
-Rate-limiting quotas use fixed time windows. When a quota is reached, subsequent requests are rejected until the current one-minute or one-hour window ends. The **HTTP 429 Too Many Requests** response includes a `Retry-After` header containing the time to wait before sending another request.
+Les quotas de limitation de débit s'appuient sur des fenêtres horaires définies. Lorsqu'un quota est atteint, les requêtes suivantes sont rejetées jusqu'à la fin de la fenêtre courante d'une minute ou d'une heure. La réponse **HTTP 429 Too Many Requests** comprend un en-tête `Retry-After` indiquant le délai à respecter avant d'envoyer une nouvelle requête.
 
-When one of concurrent quotas (`nbSessions`, `nbGuestSessions`, and `nbEntitySetsPerSession`) is reached, the response includes an empty `Retry-After` header until the quota is no longer reached.
+Lorsqu'un des quotas simultanés (`nbSessions`, `nbGuestSessions` et `nbEntitySetsPerSession`) est atteint, la réponse comprend un en-tête `Retry-After` vide jusqu'à ce que le quota ne soit plus atteint.
 
-The input byte quotas apply to all data received for a request, including its headers and body. The output byte quotas are evaluated against the uncompressed response size, regardless of the Web server compression settings.
+Les limites d'octets en entrée s'appliquent à l'ensemble des données reçues pour une requête, y compris ses en-têtes et son corps. Les limites d'octets en sortie sont calculées par rapport à la taille non compressée de la réponse, quels que soient les paramètres de compression du serveur Web.
 
-## Quota values
+## Valeurs des quotas
 
-Quota limits must be positive integers. An *Undefined* value means that the quota is not configured and is not enforced. Setting a quota value to zero or a negative number raises an error, and the existing quota value remains unchanged.
+Les limites de quota doivent être des nombres entiers positifs. Une valeur *Undefined* signifie que le quota n'est pas configuré et n'est pas appliqué. Si vous définissez une valeur de quota égale à zéro ou à un nombre négatif, une erreur se produit et la valeur de quota existante reste inchangée.
 
-Quota counters are stored in memory for each 4D Server instance and are not shared between multiple server instances.
+Les compteurs de quotas sont stockés en mémoire pour chaque instance de 4D Server et ne sont pas partagés entre plusieurs instances du serveur.
 
-## Component Web servers
+## Serveurs Web des composants
 
-Quotas configured for a component Web server apply only to that server and are independent of the quotas configured for the host Web server or other component Web servers.
+Les quotas configurés pour le serveur Web d'un composant s'appliquent uniquement à ce serveur et sont indépendants des quotas configurés pour le serveur Web hôte ou pour d'autres serveurs Web de composants.
 
-The [**HTTPQuotas.json**](#using-an-httpquotasjson-file) configuration file applies only to the host Web server. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session [`.quotas`](../API/SessionClass.md#quotas) property.
+Le fichier de configuration [**HTTPQuotas.json**](#using-an-httpquotasjson-file) s'applique uniquement au serveur Web hôte. Les serveurs Web des composants doivent être configurés avec la propriété [`.quotas`](../API/WebServerClass.md#quotas) du serveur Web et/ou la propriété [`.quotas`](../API/SessionClass.md#quotas) de la session.
 
 ## Voir également
 

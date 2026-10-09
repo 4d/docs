@@ -27,7 +27,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 ## Color de fondo / Color de relleno
 
-Define el color de fondo o el color de relleno de un objeto. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property). [hh](#)
+Define el color de fondo o el color de relleno de un objeto. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).
 
 :::note
 
@@ -107,13 +107,13 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 Permite definir el color del borde interior de:
 
-- [custom buttons](./button_overview.md#custom) with the ["custom" Border Line Style](#border-line-style),
+- los [botones personalizados](./button_overview.md#custom) con el [estilo de borde "personalizado"](#border-line-style),
 - las [casillas de selección personalizadas](./checkbox_overview.md#custom),
 - los [botones radio personalizados](./radio_overview.md#custom).
 
 En otros contextos, esta propiedad se ignora.
 
-Note that the border is only displayed when its [width](#border-width) is > 0.
+Tenga en cuenta que el borde solo se muestra cuando su [ancho](#border-width) es > 0.
 
 #### Gramática JSON
 
@@ -167,7 +167,7 @@ For [custom buttons](./button_overview.md#custom), the **custom** border line st
 
 Permite definir el ancho del borde interior para:
 
-- [custom buttons](./button_overview.md#custom) with the ["custom" Border Line Style](#border-line-style),
+- los [botones personalizados](./button_overview.md#custom) con el [estilo de borde "personalizado"](#border-line-style),
 - las [casillas de selección personalizadas](./checkbox_overview.md#custom),
 - los [botones radio personalizados](./radio_overview.md#custom).
 

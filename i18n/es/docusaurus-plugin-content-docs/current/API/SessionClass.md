@@ -728,8 +728,8 @@ Session.quotas.nbEntitySets:=50
 
 #### Ver también
 
-[QuotaManager class](./QuotaManagerClass.md)<br/>
-[Web server quotas](../WebServer/quotas.md)
+[Clase QuotaManager](./QuotaManagerClass.md)<br/>
+[Cuotas del servidor web](../WebServer/quotas.md)
 
 <!-- REF SessionClass.restore().Desc -->
 

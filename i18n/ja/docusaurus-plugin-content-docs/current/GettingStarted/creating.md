@@ -12,12 +12,11 @@ title: プロジェクトの作成・開始
 1. 4D または 4D Server を起動します。
 2. 次のいずれかの方法をおこないます:
    - **ファイル** メニューより \*\*新規 > プロジェクト...\*\*を選択します: ![](../assets/en/getStart/projectCreate-1.png)
-   - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate-2.png)   <br/>
-     A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+   - (4D のみ) **新規** ツールバーボタンより \*\*プロジェクト...\*\*を選択します:<p>![](../assets/en/getStart/projectCreate-2.png)<br/>標準の **保存** ダイアログが表示され、4D プロジェクトの名前と保存場所を指定します。
 
 :::note
 
-The **Database...** and **Database From Structure Definition...** items are only available if you have selected the [**Enable binary database creation** option](../Preferences/general.md#enable-binary-database-creation) in your Preferences (disabled by default).
+**データベース...** および **ストラクチャー定義を使用したデータベス...** の項目は、環境設定において[**バイナリー形式のデータベース作成を有効化する** オプション](../Preferences/general.md#バイナリー形式のデータベース作成を有効化する) をチェックしている場合にのみ利用可能です。
 
 :::
 
@@ -65,44 +64,44 @@ OS によって許可されている名称であれば使用可能です。し�
   - **インタープリター** または **コンパイル済み**: これらのオプションは、選択したプロジェクトが [インタープリターおよびコンパイル済みコード](Concepts/interpreted.md) を含んでいる場合に選択可能となります。
   - **[Maintenance Security Center](MSC/overview.md)**: 損傷を受けたプロジェクトに必要な修復を施すために、保護モードでプロジェクトを開きます。
 
-- **データファイル** - プロジェクトで使用するデータファイルを指定できます。デフォルトでは、**現在のデータファイル** オプションが選択されています。 This menu includes two additional options since 4D allows you to use the same project with different data files.
-  - **Choose another data file**: Opens the project with an existing data file other than the current one. When you select this option and then click on **Open**, the standard Open data file dialog box appears so that you can designate a data file.
-  - **Create a new data file**: Creates a blank data file for the project. When you select this option and then click on **Open**, the standard Save data file dialog box appears.
+- **データファイル** - プロジェクトで使用するデータファイルを指定できます。デフォルトでは、**現在のデータファイル** オプションが選択されています。 4D では同じプロジェクトに対して異なるデータファイルを使用することができるため、このメニューには二つの追加のオプションが提供されています。
+  - **他のデータファイルを選択**: プロジェクトを、カレントのものとは異なる既存のデータファイルで開きます。このオプションを選択して**開く** をクリックした場合、標準のファイルを開くダイアログボックスが開かれ、データファイルを選択することができます。
+  - **新しいデータファイルを作成**: プロジェクトに対して空のデータファイルを作成します。このオプションを選択して**開く** をクリックした場合、標準のファイルを保存ダイアログボックスが開かれます。
 
 :::note
 
-In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. These numbers are verified when the data file is opened.
+データの整合性を保持するため、4D は、カレントのプロジェクトによって作成されたものではないデータファイルの場合にはそれを開くことを許可しません。プログラムは、データファイルとプロジェクトファイルに対して作成時とプロジェクトの変換時に、内部的なリンク番号(UUID) を自動的に割り当てます。これらの番号はデータファイルが開かれるときに検証されます。
 
 :::
 
-Once you have changed the current data file, 4D opens it by default subsequently. If you move or rename the data file, you will need to locate it again. It is possible to change the data file using a keyboard shortcut on startup (see below). You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
+カレントのデータファイルを変更したあとは、4D はその後そのファイルをデフォルトで開くようになります。データファイルを移動したり名称変更したりした場合には、そのファイルを再度指定する必要があります。キーボードショートカットを使用することで起動時にデータファイルを変更することが可能です(以下参照)。カレントのデータファイルは、[MSC の情報ページ](../MSC/information.md#データ)においていつでも閲覧することができます。
 
-### Startup Maintenance Dialog
+### メンテナンスダイアログを起動
 
-If you need to interrupt the startup sequence, for example if the project is not launching properly or if you want to switch to a different data file, hold down the **Alt** (Windows) or **Option** (macOS) key during database startup to display the startup maintenance dialog box:
+プロジェクトが正常に起動しない、あるいは異なるデータファイルに切り替えたいなど、起動シークエンスを中断したいような場合には、データベース開始時に**Alt** (Windows) あるいは **Option** (macOS) キーを押すことでスタートアップメンテナンスダイアログボックスを表示することができます。
 
 ![](../assets/en/getStart/startup.png)
 
-The following maintenance options are available:
+以下のメンテナンスオプションが利用可能です:
 
-- **Open the application with the default data file**: continues the standard opening process.
-- **Select another data file** / **Create a new data file**: allows you to change of data file (see above).
-- **Restore a backup file**: opens standard Open file dialog box, so that you can select a backup file (.4bk) or a log backup file (.4bl) to [restore](../Backup/restore.md#manually-restoring-a-backup-standard-dialog).
-- **Open the Maintenance and Security Center**: opens the project in [maintenance mode](../MSC/overview.md#display-in-maintenance-mode).
+- **アプリケーションをデフォルトのデータファイルで開く**: 標準の開始プロセスをそのまま継続します。
+- **他のデータファイルを選択** / **新しいデータファイルを作成**: データファイルを切り替えることができます(上記参照)。
+- **バックアップファイルを復元**: 標準のファイルを開くダイアログボックスが開かれ、[復元](../Backup/restore.md#手動でバックアップから復元する-標準ダイアログ) したいバックアップファイル(.4bk) またはジャーナルファイル(.4bl) を選択することができます。
+- **MSC を開く**: プロジェクトを[メンテナンスモード](../MSC/overview.md#メンテナンスモードでの表示) で開きます。
 
 ## プロジェクトを開く (その他の方法)
 
 4D では、開くダイアログを経由しなくてもプロジェクトを開くことのできる方法がいくつかあります:
 
-- via the **Open Recent Projects / {project name}** submenu of the **File** menu or **Open** toolbar button.  
+- **ファイル** メニューまたは**開く** ツールバーボタンの**最近開いたプロジェクトを開く / {プロジェクト名}** サブメニューを使用する。  
   ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
-- double-click or drag and drop a `.4DLink` file onto the 4D application (see below).
-- by setting the **At startup** general preference to [**Open last used project**](../Preferences/general.md#at-startup).
+- `.4DLink` ファイルをダブルクリックするか4D アプリケーション上にドラッグ&ドロップする(以下参照)。
+- 環境設定の**開始時** 設定を[**最後に使用したプロジェクトを開く**](../Preferences/general.md#開始時) に設定する。
 
 :::note 注記
 
 - Windows 上では、4D Server プロジェクトが[サービスとして登録](../server/service.md) されていれば、セッションの開始時に自動的に開始されるようにすることができます。
-- A [built 4D application](../Desktop/building.md) can be launched by a double-click on the application icon.
+- [ビルドされた4D アプリケーション](../Desktop/building.md) はアプリケーションアイコンをダブルクリックすることで起動することができます。
 
 :::
 

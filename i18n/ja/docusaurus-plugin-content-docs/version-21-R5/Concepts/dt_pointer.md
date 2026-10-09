@@ -20,7 +20,7 @@ title: Pointer
 | 変数     | vpVar:=->Variable                                                           | ALERT(vpVar->)           | vpVar->:="John"             |
 | 配列     | vpArr:=->Array                                                              | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}                                                          | ALERT (vpElem->)         | vpElem->:="John"            |
-| Object | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
+| オブジェクト | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
 
 ## ポインターの使用例
 

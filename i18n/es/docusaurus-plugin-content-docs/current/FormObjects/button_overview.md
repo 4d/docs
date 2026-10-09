@@ -344,7 +344,7 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 
 ### Propiedades adicionales para botones personalizados
 
-Additional specific properties are available for [custom](#custom) style buttons:
+Las propiedades específicas adicionales están disponibles para los botones de estilo [personalizado](#custom):
 
 [Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Default Button](properties_Appearance.md#default-button) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 

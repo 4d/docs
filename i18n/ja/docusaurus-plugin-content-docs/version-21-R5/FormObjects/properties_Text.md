@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: テキスト
 ---
 
 ---
@@ -416,7 +416,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Text Area](text.md)
+[入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [テキストエリア](text.md)
 
 #### コマンド
 

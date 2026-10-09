@@ -24,10 +24,10 @@ L'ancien mode de connexion basé sur la méthode base `On REST Authentication` e
 
 La séquence de connexion d'un utilisateur est la suivante :
 
-1. Dans ce cas, elles sont traitées à travers des sessions "guest". Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), et aucune licence n'est consommée.  
-   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée.
+1. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée. Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), et aucune licence n'est consommée.  
+   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Dans ce cas, elles sont traitées à travers des sessions "guest".
 
-2. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés.
+2. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée.
 
 3. La requête `/rest/$catalog/authentify` est envoyée au serveur avec les informations d'identification de l'utilisateur. Cette étape nécessite seulement un formulaire de connexion basique qui n'accède pas aux données ; cela peut être une [page Qodly](developer.4d.com/qodly/) (appelée via la requête `/rest/$getWebForm`).
 

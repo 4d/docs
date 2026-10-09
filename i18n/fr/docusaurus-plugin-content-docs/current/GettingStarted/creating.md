@@ -12,12 +12,12 @@ Pour créer un nouveau projet :
 1. Lancez 4D ou 4D Server.
 2. Effectuez l'une des opérations suivantes :
    - Sélectionnez **Nouveau > Projet...** dans le menu **Fichier** : ![](../assets/en/getStart/projectCreate-1.png)
-   - (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate-2.png)   <br/>
-     A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+   - (4D uniquement) Sélectionnez **Projet...** à partir du bouton **Nouveau** de la barre d'outils :<p>![](../assets/en/getStart/projectCreate-2.png)  <br/>
+     Une boîte de dialogue **Enregistrer** standard s'affiche pour vous permettre de choisir le nom et l'emplacement du dossier principal du projet 4D.
 
 :::note
 
-The **Database...** and **Database From Structure Definition...** items are only available if you have selected the [**Enable binary database creation** option](../Preferences/general.md#enable-binary-database-creation) in your Preferences (disabled by default).
+Les commandes **Base de données...** et **Base de données à partir d'une définition de structure...** ne sont disponibles que si vous avez sélectionné l'option [**Activer la création de bases de données binaires**](../Preferences/general.md#enable-binary-database-creation) dans vos Préférences (désactivée par défaut).
 
 :::
 
@@ -65,44 +65,44 @@ Outre les options standard du système, la boîte de dialogue *Ouvrir* de 4D pro
   - **Interprété** ou **Compilé** : Ces options sont disponibles lorsque le projet sélectionné contient à la fois [du code interprété et du code compilé](Concepts/interpreted.md).
   - **[Maintenance Security Center](MSC/overview.md)**: Ouverture en mode sécurisé permettant d'accéder aux projets endommagés afin d'effectuer les réparations nécessaires.
 
-- **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée. This menu includes two additional options since 4D allows you to use the same project with different data files.
-  - **Choose another data file**: Opens the project with an existing data file other than the current one. When you select this option and then click on **Open**, the standard Open data file dialog box appears so that you can designate a data file.
-  - **Create a new data file**: Creates a blank data file for the project. When you select this option and then click on **Open**, the standard Save data file dialog box appears.
+- **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée. Ce menu comporte deux options supplémentaires, car 4D vous permet d'utiliser le même projet avec différents fichiers de données.
+  - **Choisir un autre fichier de données** : ouvre le projet avec un fichier de données existant autre que le fichier courant. Lorsque vous sélectionnez cette option puis cliquez sur **Ouvrir**, la boîte de dialogue standard d'ouverture de fichier de données s'affiche pour vous permettre de choisir un fichier de données.
+  - **Créer un nouveau fichier de données** : permet de créer un fichier de données vierge pour le projet. Lorsque vous sélectionnez cette option puis cliquez sur **Ouvrir**, la boîte de dialogue standard d'enregistrement de fichier de données s'affiche.
 
 :::note
 
-In order to preserve data integrity, 4D does not allow a data file to be opened if it has not been created by the current project file. The program automatically assigns internal link numbers (UUID) to the data and project files when they are created or when the project is converted. These numbers are verified when the data file is opened.
+Afin de préserver l'intégrité des données, 4D ne permet pas d'ouvrir un fichier de données s'il n'a pas été créé par le fichier de projet courant. Le programme attribue automatiquement des numéros de lien internes (UUID) aux fichiers de données et aux fichiers de projet lors de leur création ou lors de la conversion du projet. Ces numéros sont vérifiés lors de l'ouverture du fichier de données.
 
 :::
 
-Once you have changed the current data file, 4D opens it by default subsequently. If you move or rename the data file, you will need to locate it again. It is possible to change the data file using a keyboard shortcut on startup (see below). You can view the current data file at any time on the [Information page of the MSC](../MSC/information.md#data).
+Une fois que vous avez changé de fichier de données courant, 4D l'ouvre par défaut par la suite. Si vous déplacez ou renommez le fichier de données, vous devrez le localiser à nouveau. Il est possible de changer de fichier de données à l'aide d'un raccourci clavier au démarrage (voir ci-dessous). Vous pouvez connaître à tout moment le fichier de données courant dans la [page d'informations du MSC](../MSC/information.md#data).
 
-### Startup Maintenance Dialog
+### Dialogue de maintenance au démarrage
 
-If you need to interrupt the startup sequence, for example if the project is not launching properly or if you want to switch to a different data file, hold down the **Alt** (Windows) or **Option** (macOS) key during database startup to display the startup maintenance dialog box:
+Si vous devez interrompre la séquence de démarrage, par exemple si le projet ne se lance pas correctement ou si vous souhaitez utiliser un autre fichier de données, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant le démarrage de la base de données pour afficher la boîte de dialogue de maintenance au démarrage :
 
 ![](../assets/en/getStart/startup.png)
 
-The following maintenance options are available:
+Les options de maintenance suivantes sont disponibles :
 
-- **Open the application with the default data file**: continues the standard opening process.
-- **Select another data file** / **Create a new data file**: allows you to change of data file (see above).
-- **Restore a backup file**: opens standard Open file dialog box, so that you can select a backup file (.4bk) or a log backup file (.4bl) to [restore](../Backup/restore.md#manually-restoring-a-backup-standard-dialog).
-- **Open the Maintenance and Security Center**: opens the project in [maintenance mode](../MSC/overview.md#display-in-maintenance-mode).
+- **Ouvrir l'application avec le fichier de données par défaut** : poursuit la séquence d'ouverture standard.
+- **Sélectionner un autre fichier de données** / **Créer un nouveau fichier de données** : vous permet de changer de fichier de données (voir ci-dessus).
+- **Restaurer un fichier de sauvegarde** : ouvre la boîte de dialogue standard d'ouverture de fichier afin que vous puissiez sélectionner un fichier de sauvegarde (.4bk) ou un fichier de sauvegarde de journal (.4bl) à [restaurer](../Backup/restore.md#manually-restoring-a-backup-standard-dialog).
+- **Ouvrir le Centre de maintenance et de sécurité** : ouvre le projet en [mode maintenance](../MSC/overview.md#display-in-maintenance-mode).
 
 ## Raccourcis d’ouverture des projets
 
 4D offre plusieurs façons d'ouvrir des projets directement sans devoir utiliser la boîte de dialogue Ouvrir :
 
-- via the **Open Recent Projects / {project name}** submenu of the **File** menu or **Open** toolbar button.  
+- via le sous-menu **Ouvrir les projets récents / {nom du projet}** du menu **Fichier** ou via le bouton **Ouvrir** de la barre d'outils.  
   ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
-- double-click or drag and drop a `.4DLink` file onto the 4D application (see below).
-- by setting the **At startup** general preference to [**Open last used project**](../Preferences/general.md#at-startup).
+- double-cliquer sur un fichier `.4DLink` ou le glisser-déposer sur l'application 4D (voir ci-dessous).
+- en configurant la préférence générale **Au démarrage** sur [**Ouvrir le dernier projet utilisé**](../Preferences/general.md#at-startup).
 
 :::note Notes
 
 - Sous Windows, un projet 4D Server peut être lancé automatiquement au démarrage de la session s'il est [enregistré en tant que Service](../server/service.md).
-- A [built 4D application](../Desktop/building.md) can be launched by a double-click on the application icon.
+- Une [application 4D générée](../Desktop/building.md) peut être lancée en double-cliquant sur l'icône de l'application.
 
 :::
 

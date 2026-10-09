@@ -1,10 +1,10 @@
 ---
 id: quotas
-title: Web server quotas
+title: Web サーバークォータ
 ---
 
-Web applications can receive requests from many different clients, generating varying levels of traffic and resource consumption. Without appropriate limits, excessive activity from one or more clients can affect Web server performance and availability.
-Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+Web アプリケーションはたくさんの異なるクライアントからリクエストを受信することで、様々なレベルのトラフィックやリソース消費が発生することが有り得ます。適切な制限なしでは、単一または複数のクライアントからの過剰のアクティビティによってWeb サーバーのパフォーマンスや利用可能性に影響を及ぼす可能性があります。
+Web サーバークォータを使用して、トラフィック、リクエスト、アクティブなセッション数、ゲストセッション、そしてREST エンティティセットを制約することで、リソースの使用状況を管理することができます。 Web サーバークォータは、グローバルレベル(全てのセッションに対して)、セッションデフォルトレベル(それぞれの新しいセッションに対して)、あるいはカレントのREST セッションレベルにおいて設定することができます。
 
 :::tip 関連したBlog 記事
 
@@ -14,9 +14,9 @@ Web server quotas let you control resource usage by limiting traffic, requests, 
 
 ## 要件
 
-Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sessions) to be enabled.
+クォータの設定のためには、[スケーラブルセッション](./sessions.md#Webセッションの有効化) が有効化されている必要があります。
 
-## How to configure quotas
+## クォータの設定方法
 
 ### 開始時
 

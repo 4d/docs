@@ -394,13 +394,13 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 
 ### Propiedades adicionales para las casillas de selección personalizadas
 
-Additional specific properties are available for [custom](#custom) style check boxes:
+Las propiedades específicas adicionales están disponibles para las casillas de selección [personalizadas](#custom):
 
 [Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Color del borde](./properties_BackgroundAndBorder.md#border-color) - [Ancho del borde](./properties_BackgroundAndBorder.md#border-width) - [Radio de las esquinas](./properties_BackgroundAndBorder.md#corner-radius) - [Color de relleno](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 
 ### Propiedades adicionales para las casillas de selección planas y clásicas
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+Una propiedad específica adicional está disponible para las casillas de selección de estilo [plano](#flat) y [clásico](#regular):
 
 [Three-States](properties_Display.md#three-states)
 

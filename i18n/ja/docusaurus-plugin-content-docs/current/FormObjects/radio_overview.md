@@ -139,7 +139,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ### カスタム
 
-The Custom radio button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-radio-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+カスタムラジオボタンスタイルはパーソナライズされた背景画像を受け入れるとともに、[アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) および [余白](properties_TextAndPicture.md#縦方向余白) などの[追加のプロパティ](#カスタムラジオボタンにおける追加のプロパティ) を管理することができます。
 
 ## プロパティ一覧
 
@@ -150,9 +150,9 @@ The Custom radio button style accepts a personalized background picture and allo
 > (1) [通常](#通常) および [フラット](#フラット) スタイルではサポートされていません。<br/>
 > (2) [通常](#通常)、[フラット](#フラット)、[開示ボタン](#開示ボタン) および [折りたたみ/展開](#折りたたみ展開) スタイルではサポートされていません。
 
-### Additional properties for custom radio buttons
+### カスタムラジオボタンにおける追加のプロパティ
 
-Additional specific properties are available for [custom](#custom) style radio buttons:
+[カスタム](#カスタム) スタイルのラジオボタンに対しては特有の追加のプロパティが利用可能です:
 
 [背景パス名](properties_TextAndPicture.md#背景パス名) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線幅](./properties_BackgroundAndBorder.md#境界線幅) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [塗りカラー](./properties_BackgroundAndBorder.md#背景色塗りカラー)
 
