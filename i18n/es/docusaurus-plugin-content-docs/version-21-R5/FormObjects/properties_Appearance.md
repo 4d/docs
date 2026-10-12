@@ -27,7 +27,7 @@ En Windows, el concepto de "opción recomendada" no está soportado: sólo el bo
 
 #### Objetos soportados
 
-[Custom Button](button_overview.md#custom) - [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Botón personalizado](button_overview.md#custom) - [Botón normal](button_overview.md#regular) - [Botón plano](button_overview.md#regular)
 
 ---
 

@@ -3,11 +3,11 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar algunos límites de uso que aplica a su aplicación 4D. Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. Para el servidor REST, por ejemplo, las cuotas pueden limitar los recursos ORDA accesibles para una sesión REST.
+La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar algunos límites de uso que aplica a su aplicación 4D. Los umbrales son útiles, por ejemplo, para proteger el servidor frente a solicitudes mal optimizadas o del uso excesivo de los recursos del servidor. Para el servidor REST, por ejemplo, las cuotas pueden limitar los recursos ORDA accesibles para una sesión REST.
 
 :::tip Entradas de blog relacionadas
 
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+[Un servidor web 4D que sabe cuándo decir No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
 
 :::
 
@@ -29,9 +29,9 @@ Para obtener más información sobre la configuración y la aplicación de cuota
 
 ### Objeto QuotaManager
 
-By default, the properties of a `4D.QuotaManager` object are *Undefined*, meaning that no corresponding quota is applied.
+Por defecto, las propiedades de un objeto `4D.QuotaManager` son *Undefined*, lo que significa que no se aplica ninguna cuota correspondiente.
 
-The `4D.QuotaManager` object itself cannot be directly assigned, and properties cannot be added to or removed from it. Las cuotas se configuran modificando las propiedades correspondientes del objeto existente.
+El objeto `4D.QuotaManager` no se puede asignar directamente, ni se le pueden añadir ni eliminar propiedades. Las cuotas se configuran modificando las propiedades correspondientes del objeto existente.
 
 Los objetos 4D.QuotaManager ofrecen las siguientes propiedades:
 
@@ -67,7 +67,7 @@ Los objetos 4D.QuotaManager ofrecen las siguientes propiedades:
 
 The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. 4D lo actualiza automáticamente y es de solo lectura.
 
-The object has the same properties as the `4D.QuotaManager` object, but only the following properties report current usage:
+El objeto tiene las mismas propiedades que el objeto `4D.QuotaManager`, pero solo las siguientes propiedades indican el uso actual:
 
 - [`nbEntitySets`](#nbentitysets)
 - [`nbSessions`](#nbsessions)

@@ -51,7 +51,7 @@ En las aplicaciones 4D, se puede configurar el SPN:
 
 Cuando la funcionalidad SSO está activa, puede confiar en la autenticación basada en las credenciales de la sesión de Windows para abrir una sesión de usuario en 4D Server.
 
-Keep in mind that the SSO feature only provides you with an authenticated login; it is up to you to pass this login to your standard 4D login method. Cuando una aplicación remota 4D intenta conectarse al servidor, hay que ejecutar el comando [`Current client authentication`](../commands/current-client-authentication), que devolverá el nombre de usuario, tal y como está definido en Active Directory. You can then pass this login to your own identification system (using the built-in user and groups, the LDAP commands, or any custom mechanism) to open the appropriate session for the remote user in your 4D application.
+Tenga en cuenta que la funcionalidad SSO solo ofrece un inicio de sesión autenticado; depende de usted transferir este inicio de sesión a su método de inicio de sesión estándar de 4D. Cuando una aplicación remota 4D intenta conectarse al servidor, hay que ejecutar el comando [`Current client authentication`](../commands/current-client-authentication), que devolverá el nombre de usuario, tal y como está definido en Active Directory. You can then pass this login to your own identification system (using the built-in user and groups, the LDAP commands, or any custom mechanism) to open the appropriate session for the remote user in your 4D application.
 
 Este principio se ilustra en el siguiente gráfico:
 
@@ -114,7 +114,7 @@ La siguiente tabla muestra los requisitos para utilizar la autenticación NTLM o
 | El SPN se indica en 4D Server                                                       | no                                                                              | yes(\*\*)                                                        |
 | Información devuelta por Current client authentication si se cumplen los requisitos | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="NTLM" | *login*=inicio de sesión esperado, *domain*=dominio esperado, *protocol*="Kerberos" |
 
-(\*) The following specific configuration is supported: the 4D remote user is a local account on a machine that belongs to the same AD as 4D Server. En este caso, el parámetro dominio contiene el nombre de la máquina de 4D Server. Tenga en cuenta que esta función depende de los parámetros de usuario: si no está disponible, se devuelven cadenas vacías.
+(\*) Se admite la siguiente configuración específica: el usuario remoto 4D es una cuenta local en una máquina que pertenece al mismo AD que 4D Server. En este caso, el parámetro dominio contiene el nombre de la máquina de 4D Server. Tenga en cuenta que esta función depende de los parámetros de usuario: si no está disponible, se devuelven cadenas vacías.
 
 (\*\*) Si se cumplen todos los requisitos de Kerberos pero el comando [`Current client authentication`](../commands/current-client-authentication) devuelve "NTLM" como protocolo, esto significa que se enfrenta a una de las siguientes situaciones:
 

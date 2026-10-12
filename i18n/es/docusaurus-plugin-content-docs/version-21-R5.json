@@ -415,17 +415,17 @@
     "message": "Procesos",
     "description": "The generated-index page title for category 'Processes' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access)": {
-    "message": "Registros y selecciones (acceso a datos heredado)",
-    "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections": {
+    "message": "Registros y selecciones",
+    "description": "The label for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
-    "message": "Registros y selecciones (acceso a datos heredado)",
-    "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections.link.generated-index.title": {
+    "message": "Registros y selecciones",
+    "description": "The generated-index page title for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
+  "sidebar.docs.category.Records & Selections.link.generated-index.description": {
     "message": "Acceso a datos heredado basado en registros, selecciones y conjuntos.",
-    "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+    "description": "The generated-index page description for category 'Records & Selections' in sidebar 'docs'"
   },
   "sidebar.docs.category.Web Applications": {
     "message": "Aplicaciones web",

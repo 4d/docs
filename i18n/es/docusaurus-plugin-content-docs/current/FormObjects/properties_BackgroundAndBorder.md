@@ -55,7 +55,7 @@ En el caso de un list box, por defecto se selecciona *Automático*: la columna u
 
 ### Botón personalizado, casilla de selección personalizada o botón radio personalizado
 
-This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). In addition, [custom buttons](./button_overview.md#custom) must have the ["custom" Border Line Style](#border-line-style). En otros contextos, esta propiedad se ignora.
+This property allows you to assign a fill color attribute to [custom buttons](./button_overview.md#custom), [custom check boxes](./checkbox_overview.md#custom), or [custom radio buttons](./radio_overview.md#custom). Además, los [botones personalizados](./button_overview.md#custom) deben tener el [estilo de línea de borde "personalizado"](#border-line-style). En otros contextos, esta propiedad se ignora.
 
 #### Gramática JSON
 
@@ -81,7 +81,7 @@ This property allows you to assign a fill color attribute to [custom buttons](./
 
 `List box de tipo colección y de tipo selección de entidades`
 
-Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
 También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) con la constante `lk background color expression`.
 
@@ -207,7 +207,7 @@ El valor máximo depende del tamaño del rectángulo (no puede superar la mitad 
 
 En las [áreas de texto](./text.md) y las [áreas de entrada](./input_overview.md):
 
-- the corner radius property is only available with "none", "solid", or "dotted" [border line styles](#border-line-style),
+- la propiedad de radio de la esquina solo está disponible con los [estilos de línea de borde](#border-line-style) "ninguno", "sólido" o "punteado",
 - the corner roundness is drawn **outside** the area of the object (the object appears larger in the form but its [width](./properties_CoordinatesAndSizing.md#width) and [height](./properties_CoordinatesAndSizing.md#height) are not extended).
 
 ![](../assets/en/FormObjects/radius-text.png)

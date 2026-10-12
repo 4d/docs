@@ -189,8 +189,8 @@ Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 Lets you configure the default code editor to use when you open or create a method or a class from a 4D IDE window such the 4D Explorer, Debugger, or Form editor. Las siguientes opciones están disponibles:
 
 - **Siempre 4D** (por defecto): utiliza siempre el [editor de código 4D](../code-editor/write-class-method.md).
-- **4D or VS Code when holding Alt key**: use preferably the 4D code editor but switch to VS Code if the **Alt** key is pressed.
-- **VS Code or 4D when holding Alt key**: use preferably VS Code but switch to the 4D code editor if the **Alt** key is pressed.
+- **4D o VS Code al mantener pulsada la tecla Alt**: utilizar preferiblemente el editor de código 4D, pero cambia a VS Code si se presiona la tecla **Alt**.
+- **VS Code o 4D al mantener presionada la tecla Alt**: utilizar preferiblemente VS Code, pero cambiar al editor de código de 4D si se presiona la tecla **Alt**.
 
 Options using **VS Code** require that this editor be installed on the machine (see [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode)), otherwise an error will be sent when the 4D IDE will attempt to use it.
 

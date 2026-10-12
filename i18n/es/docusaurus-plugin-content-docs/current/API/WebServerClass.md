@@ -514,7 +514,7 @@ Puede modificar los valores de las cuotas mientras el servidor web se está ejec
 
 :::note
 
-You can also configure quotas for the current REST session using the [`Session.quotas`](./SessionClass.md#quotas) property.
+También puede configurar cuotas para la sesión REST actual usando la propiedad [`Session.quotas`](./SessionClass.md#quotas).
 
 :::
 
@@ -571,7 +571,7 @@ $webServer.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
 
 :::tip Entradas de blog relacionadas
 
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+[Un servidor web 4D que sabe cuándo decir No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
 
 :::
 
