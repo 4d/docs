@@ -11,7 +11,6 @@ Os seguintes elementos do projeto aceitam documentação:
 
 - Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile, triggers e classes)
 - Formulários
-- Tabela
 
 Seus arquivos de documentação são escritos na sintaxe Markdown (arquivos .md) usando qualquer editor compatível com Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
