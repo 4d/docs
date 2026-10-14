@@ -11,6 +11,12 @@ Las transacciones son una serie de modificaciones de datos relacionadas que se r
 
 Durante una transacción, todos los cambios realizados en los datos de la base de datos dentro de un proceso se almacenan localmente en un buffer temporal. Si la transacción se acepta con [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) o [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), los cambios se guardan permanentemente. Si la transacción se cancela con [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) o [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), los cambios no se guardan. En todos los casos, ni la selección actual ni el registro actual son modificados por los comandos de gestión de transacciones.
 
+:::warning Limitación: índices vectoriales y transacciones
+
+Los [índices vectoriales](../Develop/structure-indexes.md#vector-index) no son compatibles con el procesamiento de transacciones. Cuando se insertan, actualizan o eliminan registros indexados por vectores dentro de una transacción, los cambios correspondientes en el índice no se confirman ni se revierten junto con la transacción. Por consiguiente, tras una reversión, el índice vectorial puede dejar de ser coherente con el estado de la base de datos y los resultados de búsqueda pueden no reflejar los datos persistidos.
+
+:::
+
 4D soporta transacciones anidadas, es decir, transacciones en varios niveles jerárquicos. El número de subtransacciones permitidas es ilimitado. El comando [`Transaction level`](../commands-legacy/transaction-level) puede utilizarse para averiguar el nivel de transacción actual en el que se ejecuta el código. Cuando se utilizan transacciones anidadas, el resultado de cada subtransacción depende de la validación o cancelación de la transacción de nivel superior. Si se valida la transacción de nivel superior, se confirman los resultados de las subtransacciones (validación o cancelación). Por el contrario, si se anula la operación de nivel superior, se anulan todas las suboperaciones, independientemente de sus respectivos resultados.
 
 4D incluye una funcionalidad que le permite [suspender y resumir transacciones](#suspending-transactions) dentro de su código 4D. Cuando una transacción está suspendida, puede ejecutar operaciones independientemente de la transacción misma y luego reanudar la transacción para validarla o cancelarla como de costumbre. 
@@ -220,5 +226,4 @@ Ambos comandos, sin embargo, también devuelven False si no se ha iniciado ningu
 El siguiente gráfico ilustra los distintos contextos de transacción y los valores correspondientes devueltos por los comandos de transacción:
 
 ![](../assets/en/Develop/transactions-schema2.png)
-
 

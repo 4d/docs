@@ -11,6 +11,12 @@ Transactions are a series of related data modifications made to a database or da
 
 During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
 
+:::warning 制限事項: ベクターインデックスとトランザクション
+
+[ベクターインデックス](../Develop/structure-indexes.md#vector-index)はトランザクション処理と互換性がありません。トランザクション内でベクターインデックスが設定されたレコードを追加、更新、または削除しても、対応するインデックスの変更はトランザクションとともにコミットまたはロールバックされません。そのため、ロールバック後にベクターインデックスとデータベースの状態に不整合が生じ、検索結果が永続化されたデータを反映しない場合があります。
+
+:::
+
 4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands-legacy/transaction-level) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is canceled, all the subtransactions are canceled, regardless of their respective results.
 
 4D includes a feature allowing you to [suspend and resume transactions](#suspending-transactions) within your 4D code. When a transaction is suspended, you can execute operations independently from the transaction itself and then resume the transaction to validate or cancel it as usual. 
@@ -219,5 +225,4 @@ Both commands, however, also return False if no transaction has been started. Yo
 The following graphic illustrates the various transaction contexts and the corresponding values returned by the transaction commands:
 
 ![](../assets/en/Develop/transactions-schema2.png)
-
 
