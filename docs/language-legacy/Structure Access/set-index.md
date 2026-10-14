@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Field for which to create or delete the index |
-| index | Boolean, Integer | &#8594;  | True=Create index, False=Delete index, orCreate an index of the type: -1=Keywords, 0=by default, 1=B-Tree standard, 3=B-Tree cluster |
+| index | Boolean, Integer | &#8594;  | True = Create index, False = Delete index, or<br/>Create an index of the type: -1 = Keywords, 0 = default, 1 = B-Tree standard, 3 = B-Tree cluster, 4 = Cosine, 5 = Dot, 6 = Euclidean  |
 | * | Operator |  &#8594;  | Asynchronous indexing if * is passed |
 </div>
 <!-- END REF-->
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R5|Support for Cosine, Dot, Euclidean vector indexes|
 |11 SQL|Modified|
 |<6|Created|
 
@@ -46,16 +47,24 @@ If you pass False in *index*, the command will delete all the standard indexes (
 **index = Integer**  
 In this case, the command creates an index of the type specified for *aField*. You can pass one of the following constants, found in the “*Index Type*” theme:
 
-| Constant             | Type    | Value | Comment                                                                                                                                                         |
-| -------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Constant             | Type    | Value | Comment    |
+| -------------------- | ------- | ----- | ----- |
 | Cluster BTree Index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data. |
-| Default Index Type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                     |
-| Keywords Index       | Integer | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text or Alpha type.                                     |
-| Standard BTree Index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                    |
+| Default Index Type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.  |
+| Keywords Index       | Integer | -1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text or Alpha type. |
+| Standard BTree Index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D  |
+| Vector cosine index | Integer | 4    | Index optimized for AI queries using [cosine similarity](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Integer | 5    | Index optimized for AI queries using [dot similarity](../../API/VectorClass.md#dotsimilarity)  |
+| Vector euclidean index | Integer | 6    | Index optimized for AI queries using [euclidean distance](../../API/VectorClass.md#euclideandistance)  |
 
-**Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail.
 
-SET INDEX will not index locked records; it will wait until the record becomes unlocked.
+:::note
+
+A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
+
+:::
+
+**SET INDEX** will not index locked records; it will wait until the record becomes unlocked.
 
 The optional *\** parameter indicates an asynchronous (simultaneous) indexing. Asynchronous indexing allows the execution of the calling method to continue immediately, whether or not indexing is completed. However, execution will halt at any command that requires the index.
 

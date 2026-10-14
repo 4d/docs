@@ -17,6 +17,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 |[<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<br/><!-- INCLUDE #DataClassClass.get().Summary --> |
 |[<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<br/><!-- INCLUDE #DataClassClass.getCount().Summary --> |
 |[<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<br/><!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
+|[<!-- INCLUDE #DataClassClass.getIndexes().Syntax -->](#getindexes)<br/><!-- INCLUDE #DataClassClass.getIndexes().Summary --> |
 |[<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataClassClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<br/><!-- INCLUDE #DataClassClass.getRemoteCache().Summary --> |
 |[<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #DataClassClass.new().Summary --> |
@@ -617,6 +618,84 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ```
 
 <!-- END REF -->
+
+
+
+<!-- REF DataClassClass.getIndexes().Desc -->
+## .getIndexes()
+
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added|
+
+</details>
+
+
+
+<!-- REF #DataClassClass.getIndexes().Syntax -->**.getIndexes()** : Collection <!-- END REF -->
+
+
+<!-- REF #DataClassClass.getIndexes().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Collection|<-|Collection of index objects|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.getIndexes()` function <!-- REF #DataClassClass.getIndexes().Summary -->returns a collection of all indexes related to the dataclass<!-- END REF -->. 
+
+Each index is an object of the collection. Indexes are returned in the creation/modification order. An empty collection is returned if there is no index in the dataclass.  
+
+**Returned collection**
+
+Each object of the returned collection has the following properties:
+
+|Property| Type| Description|
+|---|---|---|
+|type|Integer|Index type: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean. If the index is set to Automatic, the type property represents the type of the indexing algorithm used|
+|automatic| Boolean |True if "automatic" index is selected|
+|name |Text| Index name if defined|
+|kind |Text| "keywords" if *keyword index* checked, otherwise "regular"|
+|attributes |Collection| Index attribute or list of attributes (for composite index)  |
+|UUID |Text| Index UUID|
+|uniqueKey |Boolean| True if index has the Unique key property|
+
+:::tip Related blog post
+
+[Managing 4D Indexes Programmatically with getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
+
+:::
+
+#### Example
+
+Considering the following table:
+
+![table-indexes](../assets/en/API/table-index.png)
+
+```4d
+
+var $colIndex:=ds.Products.getIndexes()
+
+//$colIndex[0]={"automatic":true,"kind":"regular","type":1,"uniqueKey":true,"UUID":"ADE...","attributes":["ID"]}
+//$colIndex[1]={"automatic":true,"kind":"regular","type":1,"uniqueKey":false,"UUID":"00D...","attributes":["name"]}
+//$colIndex[2]={"name":"Description","automatic":false,"kind":"keywords","type":-1,"uniqueKey":false,"UUID":"37B...","attributes":["description"]}
+//$colIndex[3]={"automatic":false,"kind":"regular","type":5,"uniqueKey":false,"UUID":"618...","attributes":["embedding"]}
+//$colIndex[4]={"automatic":true,"kind":"regular","type":3,"uniqueKey":false,"UUID":"297...","attributes":["embedding"]}
+//$colIndex[5]={"automatic":false,"kind":"regular","type":4,"uniqueKey":false,"UUID":"EA8...","attributes":["embedding"]}
+```
+
+<!-- END REF -->
+
+
+
+
 
 <!-- REF DataClassClass.getInfo().Desc -->
 ## .getInfo()
