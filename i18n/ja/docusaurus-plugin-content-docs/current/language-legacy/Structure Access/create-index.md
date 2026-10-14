@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594; | インデックスを作成するためのテーブル |
 | fieldsArray | Pointer array | &#8594; | インデックスされるフィールドへのポインタ |
-| indexType | Integer | &#8594; | 作成されるインデックスのタイプ: -1 = キーワード、 0 = デフォルト、 1 = 標準 B-Tree、 3 = クラスタ B-Tree |
+| indexType | Integer | &#8594; | 作成されるインデックスのタイプ: -1 = キーワード、 0 = デフォルト、 1 = 標準 B-Tree、 3 = クラスタ B-Tree、 4 = コサイン、 5 = 内積、 6 = ユークリッド |
 | indexName | Text | &#8594; | 作成するインデックスの名前 |
 | * | 演算子 | &#8594; | 渡されると = 非同期インデックス |
 </div>
@@ -24,6 +24,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
+|21 R5|コサイン、ドット、ユークリッドのベクターインデックスに対応|
 |11 SQL|初出|
 
 </details>
@@ -31,10 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.CREATE INDEX.Summary-->**CREATE INDEX**コマンドを使用して以下のインデックスを作成します。<!-- END REF-->
-
-* １つ以上のフィールドの標準インデックス(複合インデックス) または
-* フィールドのキーワードインデックス
+<!--REF #_command_.CREATE INDEX.Summary-->**CREATE INDEX**コマンドは、1つ以上のフィールドに標準インデックス（複合インデックス）を作成するか、単一フィールドにキーワードインデックスを作成します。<!-- END REF-->
 
 *fieldsArray*ポインタ配列で指定された1つ以上のフィールドを使用して、*theTable*テーブルのインデックスを作成します。簡単なインデックスを作成する場合、この配列は1行だけ格納します。複合インデックスを作成する場合、この配列は2つ以上の行を格納します (キーワードインデックスの場合は例外) 。複合インデックスでは、インデックスを作成する配列内でのフィールドの順番が重要となります。
 
@@ -46,8 +44,15 @@ displayed_sidebar: docs
 | Default index type   | 倍長整数 | 0   | 4Dはフィールドに応じて最適なインデックスのタイプを設定します (キーワードインデックスを除く) 。                                        |
 | Keywords index       | 倍長整数 | \-1 | フィールドの内容を単語に分割してインデックス化します。このタイプのインデックスはテキスト、文字、ピクチャー型で使用できます。警告: キーワードを複合タイプにすることはできません。 |
 | Standard BTree index | 倍長整数 | 1   | 標準 B-Treeタイプのインデックス。この多目的用のインデックスタイプは4Dの以前のバージョンで使用されています。                                |
+| Vector cosine index | 倍長整数 | 4 | [コサイン類似度](../../API/VectorClass.md#cosinesimilarity)を使用するAIクエリに最適化されたインデックス |
+| Vector dot index | 倍長整数 | 5 | [内積類似度](../../API/VectorClass.md#dotsimilarity)を使用するAIクエリに最適化されたインデックス |
+| Vector euclidean index | 倍長整数 | 6 | [ユークリッド距離](../../API/VectorClass.md#euclideandistance)を使用するAIクエリに最適化されたインデックス |
 
-**注:** テキスト型のフィールドに設定されたBツリーインデックスは最大で最初の1024文字をインデックス化します。この場合、1024文字以上を含む文字列の検索結果は正しくなりません。
+:::note
+
+テキスト型フィールドに設定されたBツリーインデックスは、フィールドの先頭から最大1024文字を格納します。そのため、この場合、1024文字を超える文字列の検索は失敗します。
+
+:::
 
 作成するインデックスの名前を*indexName*引数に渡すことができます。インデックスの命名は、複数の異なるタイプのインデックスを同じフィールドに割り当て、それを個々に[DELETE INDEX](../commands/delete-index)コマンドで削除する場合に必要となります。*indexName*インデックスが既に存在する場合、コマンドは何もしません。
 
@@ -94,6 +99,19 @@ displayed_sidebar: docs
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
 ```
 
+## 例題 4
+
+"Customers"テーブルの"embedding"フィールドにベクターインデックスを作成します:
+
+```4d
+
+ARRAY POINTER(fieldPtrArr; 1)
+fieldPtrArr{1}:=->[Customers]embedding
+CREATE INDEX([Customers]; fieldPtrArr; Vector cosine index; "cosine")
+
+
+```
+
 ## 参照 
 
 [DELETE INDEX](../commands/delete-index)  
@@ -106,5 +124,3 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 966 |
 | スレッドセーフである | yes |
-
-

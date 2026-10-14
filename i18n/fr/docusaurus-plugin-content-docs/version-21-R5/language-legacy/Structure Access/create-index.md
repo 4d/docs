@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table pour laquelle créer un index |
 | tabChamps | Pointer array | &#8594;  | Pointeur(s) vers le(s) champ(s) à indexer |
-| typeIndex | Integer | &#8594;  | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster |
+| typeIndex | Integer | &#8594;  | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster, 4 = Cosinus, 5 = Produit scalaire, 6 = Euclidien |
 | nomIndex | Text | &#8594;  | Nom de l'index à créer |
 | * | Opérateur | &#8594;  | Si passé = indexation asynchrone |
 </div>
@@ -24,6 +24,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Prise en charge des index vectoriels Cosine, Dot et Euclidean|
 |11 SQL|Créé|
 
 </details>
@@ -31,10 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-La commande **CREATE INDEX** permet de créer :
-
-* un <!--REF #_command_.CREATE INDEX.Summary-->index standard sur un ou plusieurs champs (index composite)<!-- END REF--> ou
-* un index de mots-clés sur un champ.
+La commande <!--REF #_command_.CREATE INDEX.Summary-->**CREATE INDEX** crée un index standard sur un ou plusieurs champs (index composite) ou un index de mots-clés sur un seul champ.<!-- END REF-->
 
 L’index est créé pour la table *laTable* en utilisant le ou les champ(s) désigné(s) par le tableau de pointeurs *tabChamps*. Ce tableau contient une seule ligne si vous souhaitez créer un index simple et deux ou plusieurs lignes si vous souhaitez créer un index composite (sauf index de mots-clés). Dans le cas d’index composites, l’ordre des champs dans le tableau est important lors de la construction de l’index.
 
@@ -46,8 +44,15 @@ Le paramètre *typeIndex* vous permet de définir le type d’index à créer. V
 | Default index type   | Entier long | 0      | 4D définit le type d’index (hors index de mots-clés) le plus optimisé en fonction du contenu du champ.                                                                                             |
 | Keywords index       | Entier long | \-1    | Permet l’indexation mot à mot du contenu du champ. Ce type d’index est utilisable avec les champs de type Texte, Alpha et Image. Attention, les index de mots-clés ne peuvent pas être composites. |
 | Standard BTree index | Entier long | 1      | Index de type B-Tree classique. Ce type d’index polyvalent est utilisé dans les versions précédentes de 4D                                                                                         |
+| Vector cosine index | Entier long | 4 | Index optimisé pour les requêtes d'IA utilisant la [similarité cosinus](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Entier long | 5 | Index optimisé pour les requêtes d'IA utilisant la [similarité du produit scalaire](../../API/VectorClass.md#dotsimilarity) |
+| Vector euclidean index | Entier long | 6 | Index optimisé pour les requêtes d'IA utilisant la [distance euclidienne](../../API/VectorClass.md#euclideandistance) |
 
-**Note :** Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir. 
+:::note
+
+Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir.
+
+:::
 
 Passez dans *nomIndex* le nom de l’index à créer. Nommer les index est nécessaire si plusieurs index de types différents peuvent être associés à un même champ et si vous souhaitez pouvoir les supprimer individuellement à l'aide de la commande [DELETE INDEX](../commands/delete-index). Si l’index *nomIndex* existe déjà, la commande ne fait rien.
 
@@ -63,7 +68,7 @@ Si une erreur se produit durant l’exécution de la commande (champ non indexab
 
 ## Exemple 1 
 
-Création de deux index standard sur les champs “Nom” et “Téléphone” de la table \[Clients\] :
+Création de deux index standard sur les champs "Nom" et "Téléphone" de la table \[Clients\] :
 
 ```4d
  ARRAY POINTER(tabPtrChp;1)
@@ -75,7 +80,7 @@ Création de deux index standard sur les champs “Nom” et “Téléphone” d
 
 ## Exemple 2 
 
-Création d’un index de mots-clés sur le champ “Observations” de la table \[Clients\] :
+Création d’un index de mots-clés sur le champ "Observations" de la table \[Clients\] :
 
 ```4d
  ARRAY POINTER(tabPtrChp;1)
@@ -85,13 +90,26 @@ Création d’un index de mots-clés sur le champ “Observations” de la table
 
 ## Exemple 3 
 
-Création d’un index composite sur les champs “CodePostal” et “Ville” de la table \[Clients\] :
+Création d’un index composite sur les champs "CodePostal" et "Ville" de la table \[Clients\] :
 
 ```4d
  ARRAY POINTER(tabPtrChp;2)
  tabPtrChp{1}:=->[Clients]CodePostal
  tabPtrChp{2}:=->[Clients]Ville
  CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"CPVille")
+```
+
+## Exemple 4
+
+Création d'un index vectoriel sur le champ "embedding" de la table "Clients" :
+
+```4d
+
+ARRAY POINTER(tabPtrChp; 1)
+tabPtrChp{1}:=->[Clients]embedding
+CREATE INDEX([Clients]; tabPtrChp; Vector cosine index; "cosine")
+
+
 ```
 
 ## Voir aussi 
@@ -106,5 +124,3 @@ Création d’un index composite sur les champs “CodePostal” et “Ville” 
 | --- | --- |
 | Numéro de commande | 966 |
 | Thread safe | yes |
-
-

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | unField | Field | &#8594; | Campo del cual crear o borrar el índice |
-| index | Boolean, Integer | &#8594; | • True=Crear el índice, False=Borrar el índice, o • Crear un índice de tipo: -1=palabras claves, 0=por defecto, 1=B-Tree estándar, 3=B-Tree cluster |
+| index | Boolean, Integer | &#8594; | True = crear el índice, False = borrar el índice, o<br/>Crear un índice del tipo: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster, 4 = Coseno, 5 = Producto escalar, 6 = Euclídeo |
 | * | Operator | &#8594; | Si se pasa * indexación asincrónica |
 </div>
 <!-- END REF-->
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R5|Soporte para índices vectoriales Cosine, Dot y Euclidean|
 |11 SQL|Modificado|
 |<6|Creado|
 
@@ -53,10 +54,17 @@ En este caso, el comando crea un índice del tipo especificado por *campo*. Pued
 | Default Index Type   | Entero largo | 0     | 4D define el tipo de índice (excepto los índices de palabras claves) que es el más optimizado en función del contenido del campo.                                                                        |
 | Keywords Index       | Entero largo | \-1   | Permite la indexación palabra por palabra del contenido del campo. Este tipo de índice sólo puede utilizarse con campos de tipo Texto o Alfa.                                                            |
 | Standard BTree Index | Entero largo | 1     | Índice de tipo B-Tree clásico. Este tipo de índice multi propósito se utiliza en las versiones anteriores de 4D                                                                                          |
+| Vector cosine index | Entero largo | 4 | Índice optimizado para consultas de IA que utilizan la [similitud coseno](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Entero largo | 5 | Índice optimizado para consultas de IA que utilizan la [similitud del producto escalar](../../API/VectorClass.md#dotsimilarity) |
+| Vector euclidean index | Entero largo | 6 | Índice optimizado para consultas de IA que utilizan la [distancia euclídea](../../API/VectorClass.md#euclideandistance) |
 
-**Nota:** un índice B-Tree asociado a un campo de tipo texto almacena como máximo los primeros 1024 caracteres del campo. Por lo tanto en este contexto, las búsquedas en las cadenas que contengan más de 1024 caracteres fallarán.
+:::note
 
-**SET INDEX** no indexará registros bloqueados; el comando esperará a que el registro sea desbloqueado.
+Un índice B-Tree asociado a un campo de tipo texto almacena como máximo los primeros 1024 caracteres del campo. Por lo tanto, en este contexto, las búsquedas de cadenas que contienen más de 1024 caracteres fallarán.
+
+:::
+
+El comando **SET INDEX** no indexará los registros bloqueados; esperará a que se desbloqueen.
 
 El parámetro opcional *\** indica una indexación asincrónica (simultánea). Una indexación asincrónica permite al método llamante continuar su ejecución inmediatamente después de la llamada, bien sea que la indexación haya terminado o no. Sin embargo, la ejecución se detendrá si un comando requiere la indexación.
 
@@ -109,5 +117,3 @@ Creación de un índice de palabras claves:
 | --- | --- |
 | Número de comando | 344 |
 | Hilo seguro | yes |
-
-
