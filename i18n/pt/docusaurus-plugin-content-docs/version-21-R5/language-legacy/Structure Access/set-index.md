@@ -1,4 +1,4 @@
-﻿---
+---
 id: set-index
 title: SET INDEX
 slug: /commands/set-index
@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | campo | Field | &#8594; | campo para o qual criar ou apagar o índice |
-| indice | Boolean, Integer | &#8594; | True = criar índice, False = apagar índice, ou Criar um índice do tipo: -1=palavras chaves, 0= por padrão, 1=B-Tree padrão, 3=B-Tree cluster |
+| indice | Boolean, Integer | &#8594; | True = criar índice, False = apagar índice, ou<br/>Criar um índice do tipo: -1 = palavras chaves, 0 = por padrão, 1 = B-Tree padrão, 3 = B-Tree cluster, 4 = Cosine, 5 = Dot, 6 = Euclidean  |
 | * | Operator | &#8594; | Índice assincrônico se * for passado |
 </div>
 <!-- END REF-->
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Suporte para índices vetoriais Cosine, Dot, Euclidean|
 |11 SQL|Modificado|
 |<6|Criado|
 
@@ -46,14 +47,22 @@ Se passar False em *índice*, o comando apagará todos os índices (não-compost
 **índice = Inteiro**  
 Nesse caso, o comando cria um índice do tipo especificado por *Campo*. Pode passar uma das seguintes constantes, que são encontradas no tema “*Tipo de Índice*” :
 
-| Constante            | Tipo          | Valor |
-| -------------------- | ------------- | ----- |
-| Cluster BTree Index  | Inteiro longo | 3     |
-| Default Index Type   | Inteiro longo | 0     |
-| Keywords Index       | Inteiro longo | \-1   |
-| Standard BTree Index | Inteiro longo | 1     |
+| Constante            | Tipo          | Valor | Comentário    |
+| -------------------- | ------------- | ----- | ----- |
+| Cluster BTree Index  | Inteiro longo | 3     | Índice do tipo B-Tree usando clusters. Este tipo de índice é otimizado quando o índice contém poucas palavras-chave, ou seja, quando os mesmos valores ocorrem frequentemente nos dados. |
+| Default Index Type   | Inteiro longo | 0     | O 4D especifica o tipo de índice (excluindo índices de palavras-chave) que é o mais otimizado de acordo com o conteúdo do campo.  |
+| Keywords Index       | Inteiro longo | -1   | Permite a indexação palavra por palavra do conteúdo do campo. Este tipo de índice só pode ser usado com campos do tipo Texto ou Alfa. |
+| Standard BTree Index | Inteiro longo | 1     | Índice padrão do tipo B-Tree. Este tipo de índice multiuso é usado em versões anteriores do 4D  |
+| Vector cosine index | Inteiro longo | 4    | Índice otimizado para consultas de IA usando [cosine similarity](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Inteiro longo | 5    | Índice otimizado para consultas de IA usando [dot similarity](../../API/VectorClass.md#dotsimilarity)  |
+| Vector euclidean index | Inteiro longo | 6    | Índice otimizado para consultas de IA usando [euclidean distance](../../API/VectorClass.md#euclideandistance)  |
 
-**Nota:** um índice B-Tree associado a um campo de tipo texto armazena como máximo os primeiros 1024 caracteres do campo. Portanto, nesse contexto, as pesquisas nas strings que contenham mais de 1024 caracteres falharão.
+
+:::note
+
+Um índice B-Tree associado a um campo de tipo texto armazena como máximo os primeiros 1024 caracteres do campo. Portanto, nesse contexto, as pesquisas nas strings que contenham mais de 1024 caracteres falharão.
+
+:::
 
 SET INDEX não indexará registros bloqueados; o comando esperará que o registro seja desbloqueado.
 
@@ -89,11 +98,10 @@ Suponha que queira indexar o campo *\[Clientes\]Nome* em modo assincrônico:
 
 ## Exemplo 3 
 
-O exemplo abaixo indexa o campo *\[Clientes\]Num*: 
+O exemplo abaixo indexa o campo *\[Books\]Summary* com índice de palavras-chave:
 
 ```4d
- UNLOAD RECORD([Clientes])
- SET INDEX([Clientes]Num;True)
+ SET INDEX([Books]Summary;Keywords Index)
 ```
 
 ## Ver também 

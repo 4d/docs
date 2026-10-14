@@ -1,11 +1,11 @@
 ---
 id: structure-fields
-title: Field properties
+title: Campos
 ---
 
-For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.en.html).
+<!-- INCLUDE my.section.id.Desc -->
 
-## Class
+### Class
 
 ![](../assets/en/Develop/inspector-class.png)
 
@@ -29,8 +29,23 @@ In your code, when assigning a value to a class-typed object field, 4D verifies 
 
 To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
 
-### Veja também
+:::tip Post relacionado no blog
 
-- [Blog post: Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
+[Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
 
+:::
+
+### Classe `4D.Vector`
+
+Se você atribuir `4D.Vector` como a classe de um campo do tipo Object, você define um **campo vetor**. Esses campos armazenam embeddings e podem ser usados para consultar dados usando recursos de IA. Consulte a documentação da [classe `4D.Vector`](../API/VectorClass.md) para ver como consultar com vetores.
+
+Observe que o componente [**4D Embedding Studio**](corner.4d.com/component/4d-embedding-studio) pode ajudar você a configurar e atualizar seus campos 4D.Vector.
+
+Quando você atribui `4D.Vector` como a classe de um campo do tipo Object, um ícone específico é exibido como tipo de campo no editor de Estrutura: ![](../assets/en/Develop/ai-icon.png)
+
+:::tip Post relacionado no blog
+
+[Vector Indexing in 4D: Faster Similarity Search for 4D.Vector Fields](https://blog.4d.com/vector-indexing-in-4d-faster-similarity-search-for-4d-vector-fields)
+
+:::
 

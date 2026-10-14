@@ -155,7 +155,7 @@ title: Commands by name
 [`CREATE EMPTY SET`](../commands/create-empty-set)<br/>
 [`Create entity selection`](../commands/create-entity-selection)<br/>
 [`CREATE FOLDER`](../commands/create-folder)<br/>
-[`CREATE INDEX`](../commands/create-index)<br/>
+[`CREATE INDEX`](../commands/create-index) **modified 4D 21 R5**<br/>
 [`Create menu`](../commands/create-menu)<br/>
 [`CREATE RECORD`](../commands/create-record)<br/>
 [`CREATE RELATED ONE`](../commands/create-related-one)<br/>
@@ -629,7 +629,7 @@ title: Commands by name
 [`LONGINT TO BLOB`](../commands/longint-to-blob)<br/>
 [`Lowercase`](../commands/lowercase)<br/>
 
-<a id="M"><b>L</b></a>
+<a id="M"><b>M</b></a>
 
 [`Macintosh command down`](../commands/macintosh-command-down)<br/>
 [`Macintosh control down`](../commands/macintosh-control-down)<br/>
@@ -1072,7 +1072,7 @@ title: Commands by name
 [`SET GROUP ACCESS`](../commands/set-group-access)<br/>
 [`Set group properties`](../commands/set-group-properties)<br/>
 [`SET HELP MENU`](../commands/set-help-menu)<br/>
-[`SET INDEX`](../commands/set-index)<br/>
+[`SET INDEX`](../commands/set-index) **modified 4D 21 R5**<br/>
 [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority)<br/>
 [`SET LIST ITEM`](../commands/set-list-item)<br/>
 [`SET LIST ITEM FONT`](../commands/set-list-item-font)<br/>

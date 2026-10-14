@@ -35,6 +35,7 @@ Vector objects are shared, immutable, and streamable.
 | [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
+| [<!-- INCLUDE #VectorClass.precision.Syntax -->](#precision)<br/><!-- INCLUDE #VectorClass.precision.Summary -->                             |
 | [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
@@ -43,11 +44,12 @@ Vector objects are shared, immutable, and streamable.
 
 | Release | Mudanças   |
 | ------- | ---------- |
+| 21 R5   | Novo parâmetro *precision* |
 | 20 R10  | Adicionado |
 
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection {; precision : Integer} ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 
@@ -56,6 +58,7 @@ Vector objects are shared, immutable, and streamable.
 | Parâmetro  | Tipo                      |                             | Descrição                                        |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------------------ |
 | parâmetro  | Collection                | ->                          | Collection of real numbers representing a vector |
+| precision  | Integer                   | ->                          | Vector precision: `mk single precision` (default) or `mk double precision` |
 | Resultados | 4D.Vector | <- | New Vector object                                |
 
 </div>
@@ -67,7 +70,16 @@ The `4D.Vector.new()` function <!-- REF #4D.Vector.new().Summary -->creates and 
 
 In *parameter*, pass a collection of real numbers representing the vector to create. These values are provided by artifical intelligences and represent mathematically objects like words or data.
 
-#### Exemplo
+No parâmetro opcional *precision*, você pode passar a precisão numérica que deseja aplicar à criação do vetor. Você pode usar as seguintes constantes:
+
+|Constante|Valor|Comentário|
+|--------|-----|----------|
+|`mk single precision`|32|Precisão de ponto flutuante simples (32 bits) (padrão)|
+|`mk double precision`|64|Precisão de ponto flutuante dupla (64 bits)|
+
+Por padrão, se você omitir o parâmetro *precision*, o vetor será criado com precisão de ponto flutuante de 32 bits. Uma precisão de ponto flutuante de 32 bits reduz o espaço de armazenamento pela metade em comparação com vetores de 64 bits, mantendo precisão suficiente para cálculos de similaridade e distância, por isso é o padrão recomendado para a maioria dos casos de uso.
+
+#### Exemplo 1
 
 To create a vector:
 
@@ -80,6 +92,16 @@ You can access individual components or convert the entire vector back to a coll
 ```4d
 var $firstComponent := $vector[0]
 var $collection := $vector.toCollection()
+```
+
+#### Exemplo 2
+
+Para criar um vetor com precisão dupla de ponto flutuante:
+
+```4d
+var $col: Collection
+  //$col is filled by AI provider
+var $vector := 4D.Vector.new($col; mk double precision) 
 ```
 
 ## .cosineSimilarity()
@@ -300,6 +322,21 @@ ALERT("Nearest monument: "+$places[0].name)
 #### Descrição
 
 The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
+
+## .precision
+
+<details><summary>Histórico</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+</details>
+
+<!-- REF #VectorClass.precision.Syntax -->**precision** : Integer<!-- END REF -->
+
+#### Descrição
+
+The `.precision` property contains <!-- REF #VectorClass.precision.Summary -->the precision value used to build the vector<!-- END REF -->: 32 (`mk single precision`, default) or 64 (`mk double precision`).
 
 ## .toCollection()
 
