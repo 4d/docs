@@ -15,18 +15,19 @@ Esta propiedad permite asociar los mensajes de ayuda a los objetos activos de su
 Puede:
 
 - designar un mensajes de ayuda existente, previamente especificado en el editor de [mensajes de ayuda](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
-- o introducir el mensaje de ayuda directamente como una cadena. Esto le permite aprovechar la arquitectura XLIFF. Aquí puede introducir una referencia XLIFF para mostrar un mensaje en el lenguaje de la aplicación (para más información sobre XLIFF, consulte [Anexo B: Arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
-> > > In macOS, displaying help tips is not supported in pop-up type windows.
+- o introducir el mensaje de ayuda directamente como una cadena. Esto le permite aprovechar la arquitectura XLIFF. Aquí puede introducir una referencia XLIFF para mostrar un mensaje en el lenguaje de la aplicación (para más información sobre XLIFF, consulte el [Apéndice B: Arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+
+> &#062; &#062; In macOS, displaying help tips is not supported in pop-up type windows.
 
 #### Gramática JSON
 
-| Nombre  | Tipos de datos | Valores posibles                             |
-|:-------:|:--------------:| -------------------------------------------- |
+|  Nombre | Tipos de datos | Valores posibles                             |
+| :-----: | :------------: | -------------------------------------------- |
 | tooltip |      text      | información adicional para ayudar al usuario |
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md)  - [Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Pie de List Box](listbox-header-footer.md#footers) - [Botón Imagen](pictureButton_overview.md) - [Menu Pop-up Imagen](picturePopupMenu_overview.md) - [Botón de opción](radio_overview.md)
+[Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md)  - [Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Encabezado de lista de List Box](listbox-header-footer.md#headers) - [Pie de lista de List Box](listbox-header-footer.md#footers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Botón de opción](radio_overview.md)
 
 #### Otras funcionalidades de ayuda
 
@@ -43,4 +44,4 @@ Cuando se asocian consejos diferentes a un mismo objeto en varias ubicaciones, s
 
 #### Ver también
 
-[Marcador](properties_Entry.md#placeholder)
+[Marcador de posición](properties_Entry.md#placeholder)

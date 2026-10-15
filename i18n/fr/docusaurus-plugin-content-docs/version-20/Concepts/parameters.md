@@ -3,7 +3,6 @@ id: parameters
 title: Paramètres
 ---
 
-
 Vous aurez souvent besoin de fournir des valeurs à vos méthodes et fonctions. Vous pouvez facilement effectuer cette opération grâce aux paramètres.
 
 ## Passer des paramètres
@@ -31,12 +30,12 @@ Les paramètres d'entrée sont séparés par des points-virgules (;).
 Les mêmes principes s'appliquent lorsque des méthodes sont exécutées via des commandes dédiées, comme par exemple :
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//passez la date du !05/05/20! comme paramètre de SetCalendarDate  
-// dans le contexte d'un sous-formulaire
+EXECUTER METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
+//passer la date !05/05/20! comme paramètre à SetCalendarDate  
+//dans le contexte d'un sous-formulaire
 ```
 
-Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. La valeur retournée par `Longueur` est placée dans une variable appelée *MaLongueur*.
+Les données peuvent également être **retournées** à partir de méthodes et de fonctions de classe. Par exemple, la ligne d’instruction suivante utilise une commande 4D, `Length`, qui retourne la longueur d’une chaîne. Dans cette instruction, la valeur retournée par `Length` est placée dans une variable appelée *MaLongueur* :
 
 ```4d
 MaLongueur:=Length("Comment suis-je arrivé là ?")
@@ -46,13 +45,11 @@ Toute sous-routine peut retourner une valeur. Un seul paramètre de sortie peut 
 
 Les valeurs d'entrée et de sortie sont [évaluées](#values-or-references) au moment de l'appel et copiées dans ou à partir de variables locales au sein de la fonction ou de la méthode appelée. Les variables de paramètres doivent être [déclarées](#declaring-parameters) dans le code appelé.
 
-
 :::info Compatibilité
 
-Dans la documentation de 4D, vous pouvez voir des exemples où les paramètres sont automatiquement copiés dans des variables locales numérotées séquentiellement ($0, $1, etc.) et déclarées à l'aide de directives de compilation. Ex : `C_TEXT($1;$2)`. Cette ancienne syntaxe est toujours prise en charge mais n'est plus recommandée.
+Dans la documentation de 4D, vous pouvez voir des exemples où les paramètres sont automatiquement copiés dans des variables locales numérotées séquentiellement ($0, $1, etc.) et déclarés en utilisant des directives du compilateur. Ex : `C_TEXT($1;$2)`. Cette ancienne syntaxe est toujours prise en charge mais n'est plus recommandée.
 
 :::
-
 
 ## Déclaration des paramètres
 
@@ -67,11 +64,10 @@ Exemples :
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 
-```4d  
+```4d
  //myProjectMethod
 #DECLARE ($i : Integer) -> $myResult : Object
 ```
-
 
 Les règles suivantes s'appliquent :
 
@@ -79,7 +75,6 @@ Les règles suivantes s'appliquent :
 - Les noms des paramètres doivent commencer par un caractère `$` et être conformes aux [règles de nommage des propriétés](identifiers.md#propriétés-des-objets).
 - Les paramètres multiples (et leurs types) sont séparés par des points-virgules (;).
 - Les syntaxes multilignes sont prises en charge (en utilisant le caractère "\").
-
 
 Par exemple, lorsque vous appelez une fonction `getArea()` avec deux paramètres :
 
@@ -89,28 +84,29 @@ $area:=$o.getArea(50;100)
 
 Dans le code de la fonction de classe, la valeur de chaque paramètre est copiée dans le paramètre déclaré correspondant :
 
-```4d    
+```4d
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
-    $area:=$width*$height
+	$area:=$width*$height
 ```
+
 > Si le type n'est pas défini, le paramètre sera défini comme [`Variant`](dt_variant.md).
 
 Tous les types de méthodes 4D prennent en charge le mot-clé `#DECLARE`, y compris les méthodes base. Par exemple, dans la méthode base `On Web Authentication`, vous pouvez déclarer des paramètres nommés :
 
-```4d    
-    // méthode base On Web Authentication
+```4d
+	// On Web Authentication database method
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
-// vérifier le hash du mot de passe...
+// Vérifier le hash du mot passe...
 ```
 
 :::note
 
-Ne pas confondre les **déclarations de paramètres** avec les [**déclarations de variables**](variables.md#declaring-variables). L'utilisation du mot-clé `var` avec des paramètres génère des erreurs.
+Ne confondez pas les **déclarations de paramètres** avec les [**déclarations de variables**](variables.md#declaring-variables). L'utilisation du mot-clé `var` avec des paramètres génère des erreurs.
 
 :::
 
@@ -126,27 +122,24 @@ Vous pouvez également déclarer le paramètre de retour en ajoutant uniquement 
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
-    return $x+$y
+	return $x+$y
 ```
-
 
 :::warning
 
 Les paramètres, y compris la valeur retournée, doivent être déclarés une seule fois. En particulier, vous ne pouvez pas déclarer le même paramètre en tant qu'entrée et sortie, même avec le même type. Par exemple :
 
 ```qs
-    //déclaration invalide
+	//invalid declaration
 Function myTransform ($x : Integer) -> $x : Integer 
-    //erreur: $x est déclaré deux fois
+	//erreurr: $x est déclaré deux fois
 ```
 
 :::
 
-
-
 ### Type de données pris en charge
 
-Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets des classes. Par exemple :
+Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets de classe. Par exemple :
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -154,15 +147,13 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 :::note
 
-Les expressions tables ou arrays (tableaux) peuvent être passées uniquement [par référence en utilisant un pointeur](dt_pointer.md#pointers-as-parameters-to-methods).
+Les expressions tables ou tableaux (arrays) peuvent uniquement être passées [par référence en utilisant un pointeur](dt_pointer.md#pointers-as-parameters-to-methods).
 
 :::
 
 ### Initialisation
 
-Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant que l'on ne leur aura pas affecté une valeur.
-
-
+Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant qu'ils n'auront pas été assignés.
 
 ## `return {expression}`
 
@@ -171,6 +162,7 @@ Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur p
 | Release | Modifications |
 | ------- | ------------- |
 | 19 R4   | Ajout         |
+
 </details>
 
 L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode et peut être utilisée pour retourner une expression à l'appelant.
@@ -182,31 +174,25 @@ Function square($x : Integer)
    return $x * $x
 ```
 
-> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *indéfinie*.
-
+> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *undefined*.
 
 L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). Cependant, notez qu'elle met immédiatement fin à l'exécution du code. Par exemple :
 
-
 ```4d
 Function getValue
-    $0:=10
-    return 20
-    // retourne 20
+	$0:=10
+	return 20
+	// renvoie 20
 
 Function getValue -> $v : Integer
-    return 10
-    $v:=20 // jamais exécutée
-    // retourne 10
+	return 10
+	$v:=20 // jamais exécuté
+	// renvoie 10
 ```
-
-
 
 ## Indirections sur les paramètres (${N})
 
-Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouvez adresser ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) et **la syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique. On qualifie `${N}` de **paramètre générique**.
-
-
+Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouvez traiter ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique. `${N}` is called a **generic parameter**.
 
 ### Utilisation des paramètres génériques
 
@@ -230,13 +216,13 @@ Les paramètres de la méthode doivent être passés dans le bon ordre : le form
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Notez que même si vous avez déclaré 0, 1, ou plus paramètres dans la méthode, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles dans la méthode appelée via la syntaxe `${N}`, et leur type est [Variant](dt_variant.md) par défaut (vous pouvez déclarer ces paramètres à l'aide d'une [directive de compilation](#déclaration-des-paramètres-génériques)). Il vous suffit simplement de vous assurer que ces paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html). Par exemple :
+Notez que même si vous avez déclaré 0, 1, ou plus paramètres dans la méthode, vous pouvez toujours passer le nombre de paramètres que vous voulez. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). Il suffit de s'assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html). Par exemple :
 
 ```4d
 //foo method
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
 For($i;1;Count parameters)
-    ALERT("param "+String($i)+" = "+String(${$i}))
+	ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
 
@@ -248,10 +234,9 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //des paramètres supplémentair
 
 > Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste.
 
-
 ### Déclaration des paramètres génériques
 
-De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Les paramètres génériques non déclarés obtiennent automatiquement le type [Variant](dt_variant.md).
+De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
 
 Pour déclarer des paramètres génériques, utilisez une directive du compilateur à laquelle vous passez ${N} comme paramètre, où N spécifie le premier paramètre générique.
 
@@ -259,35 +244,30 @@ Pour déclarer des paramètres génériques, utilisez une directive du compilate
  C_TEXT(${4})
 ```
 
-
 La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type text. Les trois premiers paramètres peuvent être de n'importe quel type. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type texte, même si pour vous, par exemple, il était de type Réel.
 
 > Le nombre, dans la déclaration, doit être une constante et non une variable.
 
+## `Compiler` method
 
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-
-
-## Méthode `Compiler`
-
-Même si ce n'est pas obligatoire en [mode interprété](interpreted.md), vous devez déclarer chaque paramètre dans les méthodes appelées dès que vous avez l'intention de compiler votre projet.
-
-Lors de l'utilisation du mot-clé `#DECLARE`, les paramètres sont automatiquement déclarés. Par exemple :
+When using the `#DECLARE` keyword, parameters are automatically declared. Par exemple :
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // tous les paramètres de la méthode sont déclarés avec leur type
+	// all parameters are declared with their type
 ```
 
 Cependant, une fonctionnalité du compilateur 4D vous permet de déclarer tous vos paramètres dans une méthode spécifique à l'aide d'une syntaxe spéciale :
 
 - vous pouvez regrouper tous les paramètres des variables locales des méthodes projet dans une ou plusieurs méthode(s) projet
-- le nom de la ou des méthode(s) doit commencer par "**Compiler**", par exemple "Compiler_MyParameters".
-- à l'intérieur d'une telle méthode, vous pouvez prédéclarer les paramètres de chaque méthode en utilisant la syntaxe suivante : `C_XXX(nomMéthode;paramètre)`.
+- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
+- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 Par exemple :
 
-```4d  
+```4d
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
@@ -298,16 +278,16 @@ Cette syntaxe n'est pas exécutable en mode interprété.
 
 :::
 
-Vous pouvez créer et remplir automatiquement une méthode `Compiler` contenant tous vos paramètres en utilisant le bouton [**Méthodes Compilateur pour...**](../Project/compiler.md#compiler-methods-for) **Méthodes** dans la boîte de dialogue des Propriétés du compilateur.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
 :::info
 
 Certains contextes ne prennent pas en charge la déclaration dans une méthode "Compiler", ils sont donc gérés de manière spécifique :
 
-- Méthodes base - Par exemple, la méthode base `On Web Connection` reçoit six paramètres de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
+- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
-// Sur connexion Web
+// On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 
 ```
@@ -316,27 +296,27 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-    // tous les paramètres sont déclarés avec leur type
+    // all parameters are declared with their type
 ```
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
-- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple :
+- Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet.
+  **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple :
 
 ```4d
- If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
-    C_LONGINT($0)
+ C_LONGINT($0)
  If(Form event code=On Drag Over)
     $0:=0
+    ...
+    If($DataType=Is picture)
+       $0:=-1
+    End if
     ...
  End if
 ```
 
 :::
-
 
 ## Type de paramètre erroné
 
@@ -356,13 +336,8 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-    + si le paramètre a été déclaré en utilisant [la syntaxe standard par nom](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
-    + si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
-
-
-
-
-
+  - if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
+  - si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 ## Utilisation des propriétés d'objet comme paramètres nommés
 
@@ -389,6 +364,7 @@ Dans la méthode `ChangeAge`, vous pouvez écrire :
 ```
 
 C'est un moyen puissant de définir des [paramètres optionnels](#optional-parameters) (voir ci-dessous également). Pour gérer les paramètres manquants, vous pouvez :
+
 - vérifier si tous les paramètres attendus sont fournis en les comparant à la valeur `Null`, ou
 - prédéfinir les valeurs des paramètres, ou
 - les utiliser sous forme de valeurs vides.
@@ -402,6 +378,7 @@ Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligat
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
+
 Les deux paramètres sont alors optionnels. S'ils ne sont pas renseignés, le résultat sera "a 10 ans", mais aucune erreur ne sera générée.
 
 Enfin, les paramètres nommés permettent de maintenir et de reproduire des applications en toutes simplicité et sécurité. Imaginez que vous réalisez, par la suite, qu'ajouter 10 ans n'est pas toujours approprié. Vous aurez besoin d'un autre paramètre pour définir le nombre d'années à ajouter. Vous pouvez écrire :
@@ -414,7 +391,7 @@ ChangeAge($person)
 var $1;$para : Object
 $para:=$1  
 If ($para.toAdd=Null)
-    $para.toAdd:=10
+	$para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
@@ -424,11 +401,9 @@ Ici, toute la puissance réside dans le fait de ne pas avoir à changer votre co
 
 Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dans l'exemple ci-dessus, tous les paramètres sont optionnels et peuvent être donnés, dans n'importe quel ordre.
 
-
-
 ## Paramètres optionnels
 
-Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
+Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* peut être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
 ```4d
 ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres
@@ -442,6 +417,7 @@ Les méthodes et les fonctions 4D acceptent également de ces paramètres option
 Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
+
 ```4d
   // Méthode appelante
  $class:=cs.myClass.new()
@@ -459,9 +435,9 @@ L'exemple suivant affiche un message et peut insérer le texte dans un document 
 // APPEND TEXT Project Method
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
-
+ 
  #DECLARE ($message : Text; $path : Text; $wpArea : Object)
-
+  
  ALERT($message)
  If(Count parameters>=3)
     WP SET TEXT($wpArea;$1;wk append)
@@ -471,44 +447,43 @@ L'exemple suivant affiche un message et peut insérer le texte dans un document 
     End if
  End if
 ```
+
 Une fois que cette méthode projet a été ajoutée à votre application, vous pouvez écrire :
 
-```4d  
+```4d
 APPEND TEXT(vtSomeText) //Affichera uniquement le message
 APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans $path
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 ```
 
-> Lorsque des paramètres facultatifs sont nécessaires dans vos méthodes, vous pouvez également envisager d'utiliser des [propriétés d'objet en tant que paramètres nommés](#using-object-properties-as-named-parameters), ce qui constitue un moyen souple de gérer un nombre variable de paramètres.
-
-
+> Lorsque les paramètres sont nécessaires dans vos méthodes, vous pouvez également envisager des [propriétés d'objet comme paramètres nommés](#using-object-properties-as-named-parameters) pour gérer plusieurs paramètres de manière flexible.
 
 ## Valeurs ou références
 
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la**valeur résultante** sur les variables locales dans la fonction de classe ou la sous-routine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Par exemple :
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et affecte la **valeur résultante** aux variables locales dans la fonction de classe ou la sous-routine. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Par exemple :
 
 ```4d
-    //Voici du code extrait de la méthode MY_METHOD
-DO_SOMETHING([People]Name) //La valeur de [People]Name est "williams"
+	//Voici du code extrait de la méthode MY_METHOD
+DO_SOMETHING([People]Name) //Supposons que la valeur de [People]Name soit "williams"
 ALERT([People]Name)
-
-    //Voici du code extrait de la méthode  DO_SOMETHING
+ 
+	//Voici le code de la méthode DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
 
-La boîte de dialogue d'alerte affichée par `DO_SOMETHING` contiendra "WILLIAMS" et celle affichée par `MA METHODE` contiendra "williams". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[[People]Name` passé en paramètre par la méthode `MY_METHOD`.
+La boîte de dialogue d'alerte affichée par `DO_SOMETHING` contiendra "WILLIAM" et celle affichée par `MY_METHOD` contiendra "william". La méthode a modifié localement la valeur du paramètre $1, mais cela n'affecte pas la valeur du champ `[People]Name` passé en paramètre par la méthode `MY_METHOD`.
 
 Si vous voulez réellement que la méthode `DO_SOMETHING` modifie la valeur du champ, deux solutions s'offrent à vous :
 
 1. Plutôt que de passer le champ à la méthode, vous lui passez un pointeur :
 
 ```4d
-  //Voici du code extrait de la méthode  MY_METHOD
- DO_SOMETHING(->[People]Name) //La valeur de [People]Name est "williams"
- ALERT([People]Last Name)
-
-  //Voici du code extrait de la méthode  DO_SOMETHING
+  	//Voici du code extrait de la méthode MY_METHOD
+DO_SOMETHING(->[People]Name) //Supposons que la valeur de [People]Name soit "williams"
+ALERT([People]Name)
+ 
+	//Voici le code de la méthode DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
@@ -518,25 +493,24 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
 2. Plutôt que la méthode `DO_SOMETHING` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
 
 ```4d
-    //Voici du code extrait de la méthode MY METHOD
- [People]Name:=DO_SOMETHING([People]Name)
+	//Voici du code extrait de la méthode MY METHOD
+ [People]Name:=DO_SOMETHING([People]Name) //Supposons que la valeur de [People]Name soit "williams"
  ALERT([People]Name)
 
-    //Voici du code extrait de la méthode DO SOMETHING
+	//Voici le code de la méthode DO SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returned-value).
-
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs de retour](#returned-value).
 
 ### Cas particuliers : objets et collections
 
-Veillez à ce que les types de données d'Objet et Collection ne puissent être gérés que via une référence (c'est-à-dire un* pointeur* interne).
+Vous devez faire attention au fait que les types de données Objet et Collection ne peuvent être gérés que par une référence (c'est-à-dire un *pointeur interne*).
 
-Par conséquent, lorsque vous utilisez des types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](dt_pointer.md#passer-des-pointeurs-aux-méthodes), à la différence que les paramètres `$1, $2...` n'ont pas besoin d'être déréférencés dans la sous-routine.
+Par conséquent, lorsque vous utilisez ces types de données comme paramètres, `$1, $2 ...` ne contiennent pas des *valeurs*, mais des *références*. La modification de la valeur des paramètres `$1, $2 ...` dans la sous-routine sera propagée à chaque fois que l'objet ou la collection source est utilisé(e). C'est le même principe que pour [les pointeurs](dt_pointer.md#passer-des-pointeurs-aux-méthodes), à la différence que les paramètres `$1, $2...` n'ont pas besoin d'être déréférencés dans la sous-routine.
 
-Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
+Par exemple, considérons la méthode `CreatePerson`, qui crée un objet et qui l'envoie comme paramètre :
 
 ```4d
   //CreatePerson

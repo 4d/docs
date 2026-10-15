@@ -5,7 +5,7 @@ title: Trabajar con un proyecto
 
 Los proyectos 4D se crean y desarrollan utilizando la aplicación **4D**, que ofrece un completo Entorno de Desarrollo Integrado (IDE). **4D Server** también puede crear nuevos proyectos vacíos.
 
-El desarrollo multiusuario se gestiona a través de herramientas estándar del repositorio de **control de fuentes** (Perforce, Git, SVN, etc.), que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificaciones.
+El desarrollo multiusuario se gestiona a través de herramientas estándar del repositorio de **control de fuentes** (Perforce, Git, SVN, etc.), que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificacion
 
 ## Crear un proyecto
 
@@ -14,16 +14,17 @@ Se pueden crear nuevos proyectos de aplicaciones 4D desde **4D** o **4D Server**
 Para crear un nuevo proyecto:
 
 1. Lance 4D o 4D Server.
+
 2. Haga una de las siguientes cosas:
-    * Seleccione **Nuevo > Proyecto** desde el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
-    * (Sólo 4D) Seleccione **Proyecto...** en el botón de la barra de herramientas **Nuevo**:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo estándar **Guardar** para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
+   - Selecciona **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
+   - (solo 4D) Seleccione **Proyecto...** desde el **Nuevo** botón de la barra de herramientas:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo **Guardar** estándar para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nombre se utilizará:
 
-    * como nombre de la carpeta del proyecto,
-    * como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
+   - como nombre de la carpeta del proyecto,
+   - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
 
- Puedes elegir cualquier nombre permitido por su sistema operativo. Sin embargo, si su proyecto está destinado a funcionar en otros sistemas o a ser guardado a través de una herramienta de control de fuente, debe tener en cuenta sus recomendaciones de denominación específicas.
+Puedes elegir cualquier nombre permitido por su sistema operativo. Sin embargo, si su proyecto está destinado a funcionar en otros sistemas o a ser guardado a través de una herramienta de control de fuente, debe tener en cuenta sus recomendaciones de denominación específicas.
 
 Al validar el diálogo **Guardar**, 4D cierra el proyecto actual (si lo hay), crea una carpeta de proyecto en la ubicación indicada y coloca en ella todos los archivos necesarios para el proyecto. Para más información, consulte [Arquitectura de un proyecto 4D](Project/architecture.md).
 
@@ -35,52 +36,53 @@ Para abrir un proyecto existente desde 4D:
 
 1. Haga una de las siguientes cosas:
 
-    * Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
-    * Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
+   - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+   - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
 
 Aparece la caja de diálogo estándar de apertura de archivos.
 
 2. Seleccione el archivo `.4dproject` del proyecto (situado dentro de la carpeta ["Project" del proyecto](../Project/architecture.md#project-folder)) y haga clic en **Abrir**.
 
-    Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
+   Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
 
-    * *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
-    * *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
-    * *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
+   - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
+   - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
+   - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
 ### Opciones
 
 Además de las opciones sistema estándar, la caja de diálogo *Abrir* de 4D ofrece dos menús con opciones específicas disponibles utilizando el botón **Abrir** y el menú **Archivo de datos**.
 
-* **Abrir** - modo de apertura del proyecto:
-  * **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
-  * **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
+- **Abrir** - modo de apertura del proyecto:
+  - **Interpretado** o **Compilado**: estas opciones están disponibles cuando el proyecto seleccionado contiene [código interpretado y compilado](Concepts/interpreted.md).
+  - **[Centro de seguridad y de mantenimiento](MSC/overview.md)**: apertura en modo seguro que permite el acceso a los proyectos dañados para realizar las reparaciones necesarias.
 
-* **Archivo de datos** - especifica el archivo de datos a utilizar con el proyecto. Por defecto, está seleccionada la opción **Archivo de datos actual**.
+- **Archivo de datos** - especifica el archivo de datos a utilizar con el proyecto. Por defecto, está seleccionada la opción **Archivo de datos actual**.
 
 ## Atajos de apertura de los proyectos
 
 4D ofrece varias formas de abrir proyectos directamente y evitar el diálogo de apertura:
 
-* mediante las opciones de menú:
-  * *Barra de menús* - **Archivo** > **Abrir proyectos recientes / {project name}**
-  * *Barra de herramientas 4D* - Seleccione el proyecto en el menú asociado al botón **Abrir**
+- mediante las opciones de menú:
+  - *Barra de menús* - **Archivo** > **Abrir proyectos recientes / {project name}**
+  - *Barra de herramientas 4D* - Seleccione el proyecto en el menú asociado al botón **Abrir**
 
-* vía las preferencias:
-  * Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
+- vía las preferencias:
+  - Fije la preferencia general **Al inicio** en **Abrir el último proyecto utilizado**.
 
-* utilizando un archivo `.4DLink`.
+- utilizando un archivo `.4DLink`.
 
 ### Abrir un proyecto con un archivo 4DLink
 
 Puede utilizar un archivo [`.4DLink`](#about-4dlink-files) para lanzar la aplicación 4D y abrir el proyecto 4D objetivo. Hay dos maneras de hacer esto:
 
-* haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
-* vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto
+- haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
+- vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto
 
 ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
 Un archivo .4DLink de tipo "proyecto remoto" puede copiarse y utilizarse en varias máquinas.
+
 > También es posible seleccionar un archivo 4DLink en la caja de diálogo de apertura de 4D y 4D Server (abriendo sólo el proyecto local).
 
 ## Sobre 4DLink Files
@@ -91,15 +93,15 @@ Los archivos `.4DLink` pueden guardar la dirección de un proyecto 4D, así como
 
 4D genera automáticamente un archivo `.4DLink` cuando se abre un proyecto local por primera vez o cuando se conecta a un servidor por primera vez. El archivo se almacena en la carpeta de preferencias locales en la siguiente ubicación:
 
-* Windows 7 y superior: C:|Users\NuserName\NappData\Roaming\4D\Favorites vXX\
-* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
+- Windows 7 y superior: C:|Users\NuserName\NappData\Roaming\4D\Favorites vXX\
+- macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa el número de versión de la aplicación. Por ejemplo, "Favoritos v19" para 4D v19.
 
 Esa carpeta está dividida en dos subcarpetas:
 
-* la carpeta **Local** contiene los archivos `.4DLink` que pueden utilizarse para abrir proyectos locales
-* la carpeta **Remote** contiene los archivos `.4DLink` de proyectos remotos recientes
+- la carpeta **Local** contiene los archivos `.4DLink` que pueden utilizarse para abrir proyectos locales
+- la carpeta **Remote** contiene los archivos `.4DLink` de proyectos remotos recientes
 
 Los archivos `.4DLink` también pueden crearse con un editor XML.
 
@@ -107,19 +109,20 @@ Los archivos `.4DLink` también pueden crearse con un editor XML.
 
 ## Guardado de archivos
 
-Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Las modificaciones se guardan en el disco cuando se selecciona una opción de menú **Guardar**, o cuando la ventana del editor pierde o recupera el foco.
+Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
-Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Por ejemplo, si se edita el mismo método en una ventana del Editor de Código *y* en un editor de texto, al guardar ambas modificaciones se producirá un conflicto.
+Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 El marco de desarrollo 4D incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
-* if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
-* si un archivo abierto se edita simultáneamente desde diferentes ubicaciones, 4D muestra un diálogo de alerta al intentar guardar los cambios:
+- if an open file is read-only at the OS level, a locked icon is displayed in the editor:
+  ![](../assets/en/Project/lockicon.png)
+- si un archivo abierto se edita simultáneamente desde diferentes ubicaciones, 4D muestra un diálogo de alerta al intentar guardar los cambios:
 
 ![](../assets/en/Project/projectReload.png)
 
-* **Sí**: ignorar los cambios del editor y volver a cargar la versión modificada
-* **No**: guardar los cambios y sobrescribir la otra versión
-* **Cancelar**: no guardar
+- **Yes**: discard editor changes and reload the modified version
+- **No**: save changes and overwrite the other version
+- **Cancel**: do not save
 
 Esta funcionalidad está activa para todos los editores 4D integrados (Estructura, Formulario, Método, Parámetros y Caja de herramientas).

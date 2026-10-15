@@ -1,6 +1,6 @@
 ---
 id: triggers-new
-title: トリガー
+title: Triggers
 ---
 
 to import

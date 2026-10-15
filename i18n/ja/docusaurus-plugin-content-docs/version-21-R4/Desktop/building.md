@@ -182,7 +182,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\(�
 ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を *Final Application* 内のアプリケーション名サブフォルダーにコピーします。必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。たとえば:
 
 - 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
-- Add a custom *Plugins* folder;
+- カスタムプラグインを*Plugins* フォルダに置く
 - *Resources* フォルダーの内容をカスタマイズする
 
 > <em x-id="3">Resources</em> フォルダーの内容をカスタマイズする

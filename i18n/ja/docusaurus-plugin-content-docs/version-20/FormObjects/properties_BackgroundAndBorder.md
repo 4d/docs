@@ -3,7 +3,6 @@ id: propertiesBackgroundAndBorder
 title: 背景色と境界線
 ---
 
-
 ## 交互に使用する背景色
 
 奇数番の行/列に使用するための異なる背景色を設定することができます。デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
@@ -38,7 +37,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
+[階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
 
 #### 参照
 
@@ -53,6 +52,7 @@ title: 背景色と境界線
 リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドの説明を参照ください。
 
 また、このプロパティは [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/ja/page1440.html) コマンドに `lk background color expression` 定数を指定して設定することもできます。
+
 > コレクション/エンティティセレクション型リストボックスでは、このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
 #### JSON 文法
@@ -79,7 +79,23 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [テキスト](text.md) - [Webエリア](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[スピナー](spinner.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[テキストエリア](text.md) -
+[Web エリア](webArea_overview.md)
 
 ---
 
@@ -89,8 +105,8 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称              | データタイプ     | とりうる値                                                  |
-| --------------- | ---------- | ------------------------------------------------------ |
+| 名称              | データタイプ     | とりうる値                                                                                                                                      |
+| --------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | strokeDashArray | 数値配列または文字列 | 例:  例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
 
 #### 対象オブジェクト
@@ -125,9 +141,9 @@ title: 背景色と境界線
 
 オブジェクトの線の色を指定します。カラーは次の方法で指定できます:
 
-* カラーネーム - 例: "red"
-* 16進数値 - 例: "#ff0000"
-* RGB値 - 例: "rgb(255,0,0)"
+- カラーネーム - 例: "red"
+- 16進数値 - 例: "#ff0000"
+- RGB値 - 例: "rgb(255,0,0)"
 
 このプロパティは [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/ja/page628.html) コマンドでも設定できます。
 
@@ -137,7 +153,7 @@ title: 背景色と境界線
 | ------ | ------ | ------------------------------------ |
 | stroke | string | 任意の css値; "transparent"; "automatic" |
 
-> この場合、このプロパティはフォントカラーおよびオブジェクトの線カラーの両方を指定します ([フォントカラー](properties_Text.md#フォントカラー) 参照)。
+> このプロパティはテキスト系のオブジェクトでも利用可能です。この場合、このプロパティはフォントカラーおよびオブジェクトの線カラーの両方を指定します ([フォントカラー](properties_Text.md#フォントカラー) 参照)。
 
 #### 対象オブジェクト
 
@@ -151,8 +167,8 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                             |
-| ----------- | ------ | --------------------------------- |
+| 名称          | データタイプ | とりうる値                                                      |
+| ----------- | ------ | ---------------------------------------------------------- |
 | strokeWidth | number | 印刷されるフォームにおける最小幅 0 から、整数値 < 20 まで |
 
 #### 対象オブジェクト
@@ -178,7 +194,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-次に、負の値を持つセルの色を濃いオレンジで示したい場合、次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
+次に、負の値を持つセルの色を濃いオレンジで示したい場合、各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
@@ -219,4 +235,4 @@ title: 背景色と境界線
 
 #### 参照
 
-[背景色/塗りカラー](#background-color--fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)

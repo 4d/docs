@@ -5,29 +5,30 @@ title: On Before Keystroke
 
 | コード | 呼び出し元                                                                                                                                                                                                                                          | 定義                                                                                 |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox-column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
+| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox_column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
 
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                         |
 | ----- | ------------------------------------------ |
 | 18 R5 | - 入力不可リストボックスのサポート - イベントは IME確定後にトリガーされます |
+
 </details>
 
 ## 説明
 
-`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
+`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke event`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
 
 > これらのイベントは `POST KEY` のようなユーザーアクションをシミュレートするコマンドによっても生成されます。
 
 `On Before Keystroke` イベントは次の場合には生成されません:
 
-- [リストボックスカラム](FormObjects/listbox-column.md) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
+- in a [List Box Column](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。これらのイベントを処理するには [`On After Edit`](onAfterEdit.md) を使用します。
 
 ### 入力不可オブジェクト
 
-`On Before Keystroke` イベントは、入力不可能なオブジェクトでも発生させることができます。 たとえば、リストボックスのセルが入力不可能であったり、行が選択不可能であったりしても、リストボックスで発生させることができます。これにより、ユーザーが値の最初の文字を入力することで、リストボックスの特定の行に動的にスクロールできるようなインターフェースを構築することができます。リストボックスのセルが入力可能な場合は、`Is editing text` コマンドを使用して、ユーザーが実際にセルにテキストを入力しているのか、タイプアヘッド機能を使用しているのかを確認し、適切なコードを実行することができます。
+`On Before Keystroke` イベントは、入力不可能なオブジェクトでも発生させることができます。たとえば、リストボックスのセルが入力不可能であったり、行が選択不可能であったりしても、リストボックスで発生させることができます。これにより、ユーザーが値の最初の文字を入力することで、リストボックスの特定の行に動的にスクロールできるようなインターフェースを構築することができます。リストボックスのセルが入力可能な場合は、`Is editing text` コマンドを使用して、ユーザーが実際にセルにテキストを入力しているのか、タイプアヘッド機能を使用しているのかを確認し、適切なコードを実行することができます。
 
 ### キーストロークシーケンス
 
@@ -38,4 +39,4 @@ title: On Before Keystroke
 
 ### 参照
 
-[On After Keystroke](onAfterKeystroke.md)。
+[On After Keystroke](onAfterKeystroke.md)

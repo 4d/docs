@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-Los objetos `File` se crean con el comando [`File`](#file). Contienen referencias a archivos de disco que pueden o no existir realmente en el disco. Por ejemplo, cuando se ejecuta el comando `File` para crear un nuevo archivo, se crea un objeto `File` válido, pero en realidad no se almacena nada en el disco hasta que se llama a la función [`file.create( )`](#create).
+Los objetos `File` son creados con el comando [`File`](#file). Contienen referencias a archivos de disco que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando `File` para crear un nuevo archivo, se crea un objeto `File` válido pero en realidad nada se guarda en el disco hasta que se llama a la función [`file.create( )`](#create).
 
 ### Ejemplo
 
@@ -16,50 +16,48 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Rutas de acceso
 
-Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxis `filesystems` o `posix`. Los nombres de ruta soportados se detallan en la página [**Pathnames**](../Concepts/paths.md).
-
-
+Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `filesystems` o `posix`. Los nombres de ruta soportados se detallan en la página [**Rutas de acceso**](../Concepts/paths.md).
 
 ### Objeto File
 
-|                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #document.copyTo().Syntax -->](#copyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->|
-| [<!-- INCLUDE #FileClass.create().Syntax -->](#create)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.create().Summary -->|
-| [<!-- INCLUDE #FileClass.createAlias().Syntax -->](#createalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.createAlias().Summary -->|
-| [<!-- INCLUDE #document.creationDate.Syntax -->](#creationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->|
-| [<!-- INCLUDE #document.creationTime.Syntax -->](#creationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->|
-| [<!-- INCLUDE #FileClass.delete().Syntax -->](#delete)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.delete().Summary -->|
-| [<!-- INCLUDE #document.exists.Syntax -->](#exists)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->|
-| [<!-- INCLUDE #document.extension.Syntax -->](#extension)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
-| [<!-- INCLUDE #document.fullName.Syntax -->](#fullname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
-| [<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->|
-| [<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<!-- INCLUDE #document.getContent().Summary -->|
-| [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
-| [<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
-| [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
-| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
-| [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
-| [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
-| [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
-| [<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary -->|
-| [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
-| [<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->|
-| [<!-- INCLUDE #document.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
-| [<!-- INCLUDE #FileClass.open().Syntax -->](#open)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.open().Summary -->|
-| [<!-- INCLUDE #document.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
-| [<!-- INCLUDE #document.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
-| [<!-- INCLUDE #document.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
-| [<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->|
-| [<!-- INCLUDE #FileClass.rename().Syntax -->](#rename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.rename().Summary -->|
-| [<!-- INCLUDE #FileClass.setAppInfo().Syntax -->](#setappinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setAppInfo().Summary -->|
-| [<!-- INCLUDE #FileClass.setContent().Syntax -->](#setcontent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setContent().Summary -->|
-| [<!-- INCLUDE #FileClass.setText().Syntax -->](#settext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setText().Summary -->|
-| [<!-- INCLUDE #document.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
+|                                                                                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #document.copyTo().Syntax -->](#copyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.copyTo().Summary -->                           |
+| [<!-- INCLUDE #FileClass.create().Syntax -->](#create)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.create().Summary -->                         |
+| [<!-- INCLUDE #FileClass.createAlias().Syntax -->](#createalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.createAlias().Summary -->          |
+| [<!-- INCLUDE #document.creationDate.Syntax -->](#creationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationDate.Summary -->             |
+| [<!-- INCLUDE #document.creationTime.Syntax -->](#creationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.creationTime.Summary -->             |
+| [<!-- INCLUDE #FileClass.delete().Syntax -->](#delete)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.delete().Summary -->                         |
+| [<!-- INCLUDE #document.exists.Syntax -->](#exists)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.exists.Summary -->                               |
+| [<!-- INCLUDE #document.extension.Syntax -->](#extension)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->                      |
+| [<!-- INCLUDE #document.fullName.Syntax -->](#fullname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->                         |
+| [<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->             |
+| [<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<!-- INCLUDE #document.getContent().Summary -->                                                                                                                       |
+| [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->                        |
+| [<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->                        |
+| [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->                               |
+| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->                            |
+| [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->                               |
+| [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->                         |
+| [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->                   |
+| [<!-- INCLUDE #document.modificationDate.Syntax -->](#modificationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationDate.Summary --> |
+| [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary --> |
+| [<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->                         |
+| [<!-- INCLUDE #document.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->                                     |
+| [<!-- INCLUDE #FileClass.open().Syntax -->](#open)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.open().Summary -->                               |
+| [<!-- INCLUDE #document.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->                         |
+| [<!-- INCLUDE #document.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->                               |
+| [<!-- INCLUDE #document.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->                                     |
+| [<!-- INCLUDE #document.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.platformPath.Summary -->             |
+| [<!-- INCLUDE #FileClass.rename().Syntax -->](#rename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.rename().Summary -->                         |
+| [<!-- INCLUDE #FileClass.setAppInfo().Syntax -->](#setappinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setAppInfo().Summary -->             |
+| [<!-- INCLUDE #FileClass.setContent().Syntax -->](#setcontent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setContent().Summary -->             |
+| [<!-- INCLUDE #FileClass.setText().Syntax -->](#settext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setText().Summary -->                      |
+| [<!-- INCLUDE #document.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->                                     |
 
 ## File
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                         |
 | ----------- | -------------------------------------- |
@@ -70,34 +68,35 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 
 <!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
-
 <!-- REF #_command_.File.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---------|--- |:---:|------|
-|path|Text|->|Ruta de archivo|
-|fileConstant|Integer|->|Constante de archivo 4D|
-|pathType|Integer|->|`fk posix path` (por defecto) o `fk platform path`|
-|*||->|* para devolver el archivo de la base de datos host|
-|Resultado|4D.File|<-|New file object|
+| Parámetros   | Tipo                    |                             | Descripción                                                           |
+| ------------ | ----------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                    |              ->             | Ruta del archivo                                                      |
+| fileConstant | Integer                 |              ->             | Constante del archivo 4D                                              |
+| pathType     | Integer                 |              ->             | `fk posix path` (por defecto) o `fk platform path` |
+| \*           |                         |              ->             | \* para devolver el archivo de la base local                          |
+| Resultado    | 4D.File | <- | Nuevo objeto de archivo                                               |
+
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo `4D.File`<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto de tipo `4D.File`<!-- END REF -->. El comando acepta dos sintaxis:
 
 **File ( path { ; pathType } { ; \* })**
 
 En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un [filesystem](../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA/myfile.txt").
 
-> Sólo se admiten nombres de ruta absolutos con el comando `File`.
+> Sólo se soportan los nombres de ruta absolutos con el comando `File`.
 
 Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
-| Constante        | Valor | Comentario                                                                                                        |
-| ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| Constante        | Valor | Comentario                                                                                                                           |
+| ---------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | fk platform path | 1     | Ruta expresada con una sintaxis específica de la plataforma (obligatoria en caso de nombre de ruta de plataforma) |
 | fk posix path    | 0     | Ruta expresada con sintaxis POSIX (por defecto)                                                                   |
 
@@ -105,79 +104,84 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 
 En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizando una de las siguientes constantes:
 
-| Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Backup history file               | 19    | Archivo de historial de copias de seguridad (ver Archivos de configuración y rastreo). Se almacena en la carpeta de destino de la copia de seguridad.                                                                                                                                                                                                                                                                                                                              |
-| Backup log file                   | 13    | Archivo historial de copias de seguridad actual. Almacenado en la carpeta Logs de la aplicación.                                                                                                                                                                                                                                                                                                                                                                                   |
-| Backup settings file              | 1     | Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto                                                                                                                                                                                                                                                                                                                                                                                |
-| Backup settings file for data     | 17    | archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data                                                                                                                                                                                                                                                                                                                                                                 |
-| Build application log file        | 14    | Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                           |
-| Build application settings file   | 20    | Archivo de configuración por defecto del generador de aplicaciones ("buildApp.4DSettings"). Almacenado en la carpeta Settings del proyecto.                                                                                                                                                                                                                                                                                                                                        |
-| Compacting log file               | 6     | Archivo de historial de la compactación más reciente realizada con el comando Compact data file o el Centro de seguridad y mantenimiento. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                           |
-| Current backup settings file      | 18    | archivo backup.4DSettings utilizado actualmente por la aplicación. Puede ser el archivo de configuración de la copia de seguridad (por defecto) o un archivo de configuración de la copia de seguridad personalizado por el usuario definido para el archivo de datos                                                                                                                                                                                                              |
-| Debug log file                    | 12    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Debug log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                            |
-| Diagnostic log file               | 11    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Diagnostic log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                       |
+| Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Backup history file               | 19    | Archivo de historial de copias de seguridad (ver Archivos de configuración y rastreo). Se almacena en la carpeta de destino de la copia de seguridad.                                                                                                                                                                                                                                                                                                                                                                                    |
+| Backup log file                   | 13    | Archivo historial de copias de seguridad actual. Almacenado en la carpeta Logs de la aplicación.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Backup settings file              | 1     | Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Backup settings file for data     | 17    | archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Build application log file        | 14    | Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Build application settings file   | 20    | Archivo de configuración por defecto del generador de aplicaciones ("buildApp.4DSettings"). Almacenado en la carpeta Settings del proyecto.                                                                                                                                                                                                                                                                                                                                                                              |
+| Compacting log file               | 6     | Archivo de historial de la compactación más reciente realizada con el comando Compact data file o el Centro de seguridad y mantenimiento. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                    |
+| Current backup settings file      | 18    | archivo backup.4DSettings utilizado actualmente por la aplicación. Puede ser el archivo de configuración de la copia de seguridad (por defecto) o un archivo de configuración de la copia de seguridad personalizado por el usuario definido para el archivo de datos                                                                                                                                                                                                                                                                    |
+| Debug log file                    | 12    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Debug log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Diagnostic log file               | 11    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(Diagnostic log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Directory file                    | 16    | archivo directory.json, que contiene la descripción de los usuarios y grupos (si los hay) del proyecto. Puede situarse en la carpeta user settings (por defecto, se aplica a todo el proyecto), o en la carpeta data settings (específica para un archivo de datos).                                                                                                                                                                                                               |
-| HTTP Client log file              | 24    | Archivo de historial creado por el comando `HTTP SET OPTION(HTTP client log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                      |
-| HTTP debug log file               | 9     | Archivo de registro creado por el comando `WEB SET OPTION(Web debug log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                          |
-| HTTP log file                     | 8     | Archivo de registro creado por el comando `WEB SET OPTION(Web log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                      |
-| IMAP Log file                     | 23    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(IMAP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                       |
-| Last backup file                  | 2     | El último archivo de copia de seguridad, llamado `\<applicationName>[bkpNum].4BK`, se almacena en una ubicación personalizada.                                                                                                                                                                                                                                                                                                                                              |
-| Last journal integration log file | 22    | Nombre completo del último archivo de registro de integración del historial (almacenado en la carpeta Logs de la aplicación restaurada), si la hay. Este archivo se crea, en modo de reparación automática, tan pronto como se produce una integración de archivos de historial                                                                                                                                                                                                    |
-| Repair log file                   | 7     | Archivo de historial de las reparaciones realizadas en la base por el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                    |
+| HTTP Client log file              | 24    | Archivo de historial creado por el comando `HTTP SET OPTION(HTTP client log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| HTTP debug log file               | 9     | Archivo de registro creado por el comando `WEB SET OPTION(Web debug log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| HTTP log file                     | 8     | Archivo de registro creado por el comando `WEB SET OPTION(Web log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| IMAP Log file                     | 23    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(IMAP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Last backup file                  | 2     | El último archivo de copia de seguridad, llamado `\<applicationName>[bkpNum].4BK`, se almacena en una ubicación personalizada.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Last journal integration log file | 22    | Nombre completo del último archivo de registro de integración del historial (almacenado en la carpeta Logs de la aplicación restaurada), si la hay. Este archivo se crea, en modo de reparación automática, tan pronto como se produce una integración de archivos de historial                                                                                                                                                                                                                                                                          |
+| Repair log file                   | 7     | Archivo de historial de las reparaciones realizadas en la base por el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                          |
 | Request log file                  | 10    | Archivo de registro de peticiones cliente/servidor estándar (excluyendo las peticiones web) creado por los comandos `SET DATABASE PARAMETER(4D Server log recording)` o `SET DATABASE PARAMETER(Client log recording)`. Si se ejecuta en el servidor, se devuelve el archivo de registro del servidor (almacenado en la carpeta Logs del servidor). Si se ejecuta en el cliente, se devuelve el archivo de registro del cliente (almacenado en la carpeta Logs local del cliente). |
-| SMTP log file                     | 15    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(SMTP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                       |
-| User settings file                | 3     | archivo settings.4DSettings para todos los archivos de datos, almacenados en la carpeta Preferences junto a la estructura del archivo si está activado.                                                                                                                                                                                                                                                                                                                            |
-| User settings file for data       | 4     | archivo settings.4DSettings para el archivo de datos actual, almacenado en la carpeta Preferences junto al archivo de datos.                                                                                                                                                                                                                                                                                                                                                       |
-| Verification log file             | 5     | Archivos de historial creados por los comandos `VERIFY CURRENT DATA FILE` y `VERIFY DATA FILE` o el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                      |
+| SMTP log file                     | 15    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(SMTP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| User settings file                | 3     | archivo settings.4DSettings para todos los archivos de datos, almacenados en la carpeta Preferences junto a la estructura del archivo si está activado.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| User settings file for data       | 4     | archivo settings.4DSettings para el archivo de datos actual, almacenado en la carpeta Preferences junto al archivo de datos.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Verification log file             | 5     | Archivos de historial creados por los comandos `VERIFY CURRENT DATA FILE` y `VERIFY DATA FILE` o el Centro de seguridad y mantenimiento (MSC). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                            |
 
 Si el objetivo *fileConstant* no existe, se devuelve un objeto null. No se produce ningún error.
 
-Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. En caso contrario, si se omite el parámetro `*`, siempre se devuelve un objeto null.
+Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. De lo contrario, si omite el parámetro `*`, siempre se devuelve un objeto null.
 
 ## 4D.File.new()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 18 R6       | Añadidos       |
+
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
+
 **4D.File.new** ( *path* : Text { ; *pathType* : Integer } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer ) : 4D.File<!-- END REF -->
 
 #### Descripción
 
-La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.File`<!-- END REF -->. Es idéntico al comando [`File`](#file) (acceso directo).
+Lanzamiento Es idéntico al comando [`File`](#file) (acceso directo).
 
-> Se recomienda utilizar el comando de acceso directo[`File<`](#file) en lugar de `4D.File.new()`.
+> Se recomienda utilizar el comando de acceso directo [`File`](#file) en lugar de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
 <!-- REF file.create().Desc -->
+
 ## .create()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
 <!--REF file.create().Note -->
-**No disponible para archivos ZIP**<!-- END REF -->
 
+**No disponible para archivos ZIP**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
-
 <!--REF #FileClass.create().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|-|-|-|-|
-|Resultado|Boolean|<-|True if the file was created successfully, false otherwise|
+| Parámetros | Tipo    |                             | Descripción                                                        |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
+| Resultado  | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario |
+
 </div>
 <!-- END REF -->
 
@@ -189,8 +193,8 @@ Si es necesario, la función crea la jerarquía de carpetas como se describe en 
 
 **Valor devuelto**
 
-* **True** si el archivo se crea con éxito;
-* **False** si ya existe un archivo con el mismo nombre o si ha ocurrido un error.
+- **True** si el archivo se crea con éxito;
+- **False** si ya existe un archivo con el mismo nombre o si ha ocurrido un error.
 
 #### Ejemplo
 
@@ -200,30 +204,34 @@ Creación de un archivo de preferencias en la carpeta principal:
  var $created : Boolean
  $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
+
 <!-- END REF -->
 
 <!-- REF file.createAlias().Desc -->
+
 ## .createAlias()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
-
 <!--REF #FileClass.createAlias().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|-|---|
-|destinationFolder|4D.Folder|->|Carpeta de destino para el alias o acceso directo|
-|aliasName|Text|->|Nombre del alias o acceso directo|
-|aliasType|Integer|->|Tipo del enlace del alias|
-|Result|4D.File|<-|Alias or shortcut file reference|
+| Parámetros        | Tipo                      |                             | Descripción                                          |
+| ----------------- | ------------------------- | --------------------------- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Text                      | ->                          | Nombre del alias o del atajo                         |
+| aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
+| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
+
 </div>
 <!-- END REF -->
 
@@ -235,8 +243,8 @@ Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasNam
 
 Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro *aliasType*. Las siguientes constantes están disponibles:
 
-| Constante          | Valor | Comentario                         |
-| ------------------ | ----- | ---------------------------------- |
+| Constante          | Valor | Comentario                                            |
+| ------------------ | ----- | ----------------------------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
@@ -254,6 +262,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
  $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")
 ```
+
 <!-- END REF -->
 
 <!-- INCLUDE document.creationDate.Desc -->
@@ -261,32 +270,33 @@ Quiere crear un alias para un archivo en su carpeta principal:
 <!-- INCLUDE document.creationTime.Desc -->
 
 <!-- REF file.delete().Desc -->
+
 ## .delete()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
-
 <!-- REF #FileClass.delete().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|----|---|-|
-||||No requiere ningún parámetro|
+| Parámetros | Tipo |   | Descripción                  |
+| ---------- | ---- | - | ---------------------------- |
+|            |      |   | No requiere ningún parámetro |
+
 </div>
 <!-- END REF -->
 
-
-
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->La función `.delete()`<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->borra el archivo<!-- END REF -->.
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
 
@@ -311,9 +321,8 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
     $tempo.delete()
     ALERT("User preference file deleted.")
  End if
- End if
- End if
 ```
+
 <!-- END REF -->
 
 <!-- INCLUDE document.exists.Desc -->
@@ -323,27 +332,29 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 <!-- INCLUDE document.fullName.Desc -->
 
 <!-- REF file.getAppInfo().Desc -->
+
 ## .getAppInfo()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19          | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
-
 <!--REF #FileClass.getAppInfo().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción| 
-|---|---|---|---|
-|Resultado|Object|<-|Contents of .exe/.dll version resource or .plist file|
+| Parámetros | Tipo   |                             | Descripción                                                                                                 |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Resultado  | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist |
+
 </div>
 <!-- END REF -->
-
 
 #### Descripción
 
@@ -419,41 +430,43 @@ ALERT($info.Copyright)
 <!-- INCLUDE document.modificationTime.Desc -->
 
 <!-- REF file.moveTo().Desc -->
+
 ## .moveTo()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
-
 <!--REF #FileClass.moveTo().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|----|---|---|
-|destinationFolder|4D.Folder|->|Carpeta de destino|
-|newName|Text|->|Nombre completo de la carpeta movida|
-|Resultado|4D.File|<-|Moved file|
+| Parámetros        | Tipo                      |                             | Descripción                            |
+| ----------------- | ------------------------- | --------------------------- | -------------------------------------- |
+| destinationFolder | 4D.Folder | ->                          | Carpeta de destino                     |
+| newName           | Text                      | ->                          | Nombre completo del archivo trasladado |
+| Resultado         | 4D.File   | <- | Archivo movido                         |
+
 </div>
 <!-- END REF -->
 
-
 #### Descripción
 
-La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra el objeto `File` en el *destinationFolder* especificado<!-- END REF -->.
+La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra el objeto `File` en la carpeta especificada *destinationFolder*<!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, el archivo conserva su nombre cuando se mueve. Si desea renombrar el archivo desplazado, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, el archivo conserva su nombre cuando se mueve. Por defecto, el archivo conserva su nombre cuando se mueve. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
-El objeto `File` desplazado.
+El objeto `File` movido.
 
 #### Ejemplo
 
@@ -462,68 +475,69 @@ $DocFolder:=Folder(fk documents folder)
 $myFile:=$DocFolder.file("Current/Infos.txt")
 $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
+
 <!-- END REF -->
 
 <!-- INCLUDE document.name.Desc -->
 
 <!-- REF file.open().Desc -->
+
 ## .open()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 19 R7       | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
 
-
 <!--REF #FileClass.open().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|mode|Text|->|Modo de apertura: "read", "write", "append"|
-|options|Object|->|Opciones de apertura|
-|Resultado|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+| Parámetros | Tipo                                             |                             | Descripción                                                 |
+| ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
+| mode       | Text                                             | ->                          | Modo de apertura: "read", "write", "append" |
+| options    | Object                                           | ->                          | Opciones de apertura                                        |
+| Resultado  | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle                                    |
+
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.setContent( )` <!-- REF #FileClass.open().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
+La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) sobre el archivo, en el *modo* especificado o con las *opciones* especificadas<!-- END REF -->. Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
 
-Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file handle:
+Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file handle:
 
-
-
-
-| *mode*   | Descripción                                                                                                                                                                                                                                |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *mode*   | Descripción                                                                                                                                                                                                                                                                                                   |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Por defecto) Crea un file handle para leer los valores en el archivo. Si el archivo no existe en el disco, se devuelve un error. Puede abrir tantos file handles como quiera en modo "read" en el mismo objeto File.                      |
 | "write"  | Crea un file handle para escribir valores en el archivo (empezando por el inicio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "write" en el mismo objeto File.     |
 | "append" | Crea un file handle para escribir los valores en el archivo (empezando por el final del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "append" en el mismo objeto File. |
 
-> El valor *mode* distingue entre mayúsculas y minúsculas.
+> El valor de *mode* es sensible a las mayúsculas y minúsculas.
 
-Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el [objeto file handle](FileHandleClass) abierto):
+Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el objeto [file handle](FileHandleClass) abierto):
 
-| *options*         | Tipo           | Descripción                                                                                                                                      | Por defecto  |
-| ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                             | "read"       |
+| *opciones*        | Tipo           | Descripción                                                                                                                                                                         | Por defecto  |
+| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                                             | "read"       |
 | `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
-| `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
-| `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
+| `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                                           | "native" o 1 |
+| `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                                    | "native" o 1 |
 
-La función reemplaza todos los delimitadores originales de final de línea. Por defecto, se utiliza el delimitador nativo, pero puede definir otro delimitador. `.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
+La función reemplaza todos los delimitadores originales de final de línea. Por defecto, se utiliza el delimitador nativo, pero puede definir otro delimitador. Las propiedades `.breakModeRead` y `.breakModeWrite` indican el procesamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
 
-| Modo de ruptura en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
-| ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modo de ruptura en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                                                                                         |
+| ------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "native"                 | 1 (`Document with native format`)  | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (retorno de carro + salto de línea) en Windows |
-| "crlf"                   | 2 (`Document with CRLF`)           | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| "cr"                     | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| "lf"                     | 4 (`Document with LF`)             | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| "crlf"                   | 2 (`Document with CRLF`)           | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                                                                               |
+| "cr"                     | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                                                                              |
+| "lf"                     | 4 (`Document with LF`)             | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                                                                                     |
 
 > El valor del parámetro *break mode as text* es sensible a las mayúsculas y minúsculas.
 
@@ -539,6 +553,7 @@ $f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
 $fhandle:=$f.open("read")
 
 ```
+
 <!-- END REF -->
 
 <!-- INCLUDE document.original.Desc -->
@@ -550,31 +565,34 @@ $fhandle:=$f.open("read")
 <!-- INCLUDE document.platformPath.Desc -->
 
 <!-- REF file.rename().Desc -->
+
 ## .rename()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
-<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ): 4D.File<!-- END REF -->
-
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|newName|Text|->|Nuevo nombre completo para el archivo|
-|Resultado|4D.Archivo|<-|Renamed file|
+| Parámetros | Tipo                    |                             | Descripción                       |
+| ---------- | ----------------------- | --------------------------- | --------------------------------- |
+| newName    | Text                    | ->                          | Nuevo nombre completo del archivo |
+| Resultado  | 4D.File | <- | Archivo renombrado                |
+
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FileClass.rename().Summary -->La función `.rename()`<!-- END REF -->.
+La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
 
 El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
@@ -592,62 +610,62 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
  $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)
 ```
-<!-- END REF -->
 
+<!-- END REF -->
 
 ## .setAppInfo()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones     |
 | ----------- | ------------------ |
 | 20          | Soporte de WinIcon |
 | 19          | Añadidos           |
+
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
-
 <!--REF #FileClass.setAppInfo().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|info|Object|->|Propiedades para escribir en el recurso de versión .exe/.dll o archivo .plist|
+| Parámetros | Tipo   |    | Descripción                                                                                                                            |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| info       | Object | -> | Propiedades a escribir en el archivo .plist o el recurso versión del archivo .exe/.dll |
+
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades de *info* como contenido informativo de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
+La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades *info* como contenido de información de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
 
-
-**Parámetro *info* con un archivo .exe o .dll**
+***Parámetro info* con un archivo .exe o .dll**
 
 La función debe ser usada con un archivo .exe o .dll existente y válido, de lo contrario no hace nada (no se genera ningún error).
-
 
 > Escribir la información de archivos .exe o .dll sólo es posible en Windows.
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Tipo | Comentario                                                                                              |
-| ---------------- | ---- | ------------------------------------------------------------------------------------------------------- |
-| InternalName     | Text |                                                                                                         |
-| ProductName      | Text |                                                                                                         |
-| CompanyName      | Text |                                                                                                         |
-| LegalCopyright   | Text |                                                                                                         |
-| ProductVersion   | Text |                                                                                                         |
-| FileDescription  | Text |                                                                                                         |
-| FileVersion      | Text |                                                                                                         |
-| OriginalFilename | Text |                                                                                                         |
+| Propiedad        | Tipo | Comentario                                                                                                                                              |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                                                                                         |
+| ProductName      | Text |                                                                                                                                                         |
+| CompanyName      | Text |                                                                                                                                                         |
+| LegalCopyright   | Text |                                                                                                                                                         |
+| ProductVersion   | Text |                                                                                                                                                         |
+| FileDescription  | Text |                                                                                                                                                         |
+| FileVersion      | Text |                                                                                                                                                         |
+| OriginalFilename | Text |                                                                                                                                                         |
 | WinIcon          | Text | Ruta Posix del archivo .ico. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
 
 Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
 
 Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
-**Parámetro *info* con un un archivo .plist**
+***Parámetro info* con un un archivo .plist**
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
@@ -681,7 +699,7 @@ $info:=New object
 $info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.CFBundleIconFile:="myApp.icns" //para macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -690,30 +708,33 @@ $infoPlistFile.setAppInfo($info)
 [.getAppInfo()](#getappinfo)
 
 <!-- REF file.setContent().Desc -->
+
 ## .setContent()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
 | 17 R5       | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
-
 <!--REF #FileClass.setContent().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|contenido|BLOB|->|Nuevo contenido para el archivo|
+| Parámetros | Tipo |    | Descripción                   |
+| ---------- | ---- | -- | ----------------------------- |
+| content    | BLOB | -> | Nuevos contenidos del archivo |
+
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.open()` <!-- REF #FileClass.setContent().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el *modo* >especificado o con las *opciones* especificadas<!-- END REF -->. .
+La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 
@@ -721,40 +742,41 @@ La función `.open()` <!-- REF #FileClass.setContent().Summary -->crea y devuelv
  $myFile:=Folder(fk documents folder).file("Archives/data.txt")
  $myFile.setContent([aTable]aBlobField)
 ```
+
 <!-- END REF -->
 
 <!-- REF file.setText().Desc -->
+
 ## .setText()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                       |
-| ----------- | -------------------------------------------------------------------- |
+| Lanzamiento | Modificaciones                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
 | 19 R3       | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
-| 17 R5       | Añadidos                                                             |
+| 17 R5       | Añadidos                                                                                                |
 
 </details>
 
 <!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->
 
-
-
 <!--REF #FileClass.setText().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---------|----|---|--------|
-|text|Text|->|Texto a almacenar en el archivo|
-|charSetName|Text|->Nombre del conjunto de caracteres|
-|charSetNum|Integer|->|Número del conjunto de caracteres|
-|breakMode|Integer|->|Modo de procesamiento para saltos de línea|
+| Parámetros  | Tipo    |    | Descripción                                |
+| ----------- | ------- | -- | ------------------------------------------ |
+| text        | Text    | -> | Texto a almacenar en el archivo            |
+| charSetName | Text    | -> | Nombre del juego de caracteres             |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres          |
+| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
+
 </div>
 <!-- END REF -->
 
-
 #### Descripción
 
-La función `.setText()` <!-- REF #FileClass.setText().Summary -->escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
+La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
 Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
@@ -762,8 +784,8 @@ En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 
-* en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
-* o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
+- en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
+- o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
 
 > Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
@@ -771,17 +793,17 @@ Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D l
 
 En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
-| Constante                     | Valor | Comentario                                                                                                                                                                 |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
+| Constante                     | Valor | Comentario                                                                                                                                                                                                                                          |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                                                                                                        |
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |
-| `Document with CRLF`          | 2     | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| `Document with CRLF`          | 2     | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                                                                               |
+| `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                                                                              |
+| `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                                                                                     |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-> **Nota de compatibilidad**: las opciones de compatibilidad están disponibles para la gestión de EOL y de BOM. Ver[Página Compatibilidad](https://doc.4d.com/4dv19R/help/title/en/page3239.html) en doc.4d.com.
+> **Nota de compatibilidad**: las opciones de compatibilidad están disponibles para la gestión de EOL y de BOM. Ver la [página Compatibilidad](https://doc.4d.com/4dv19R/help/title/en/page3239.html) en doc.4d.com.
 
 #### Ejemplo
 
@@ -789,6 +811,7 @@ Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se 
 $myFile:=File("C:\\Documents\\Hello.txt";fk platform path)
 $myFile.setText("Hello world")
 ```
+
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->

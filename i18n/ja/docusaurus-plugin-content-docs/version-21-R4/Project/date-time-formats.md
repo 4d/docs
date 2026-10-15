@@ -49,24 +49,24 @@ title: 日付と時間のフォーマット
 | d   | 日                                                                  | d          | 2                                                                                         |
 |     |                                                                    | dd         | 2                                                                                         |
 | D   | 日 (年始からの日数)                                     | D          | 189                                                                                       |
-| E   | 曜日                                                                 | E, EE, EEE | 火                                                                                         |
-|     |                                                                    | EEEE       | 火曜日                                                                                       |
-|     |                                                                    | EEEEE      | 火                                                                                         |
+| E   | 曜日                                                                 | E, EE, EEE | Tue                                                                                       |
+|     |                                                                    | EEEE       | Tuesday                                                                                   |
+|     |                                                                    | EEEEE      | T                                                                                         |
 |     |                                                                    | EEEEEE     | 火                                                                                         |
-| e   | ローカル曜日                                                             | e          | 3                                                                                         |
-|     |                                                                    | ee         | 03                                                                                        |
-|     |                                                                    | eee        | 火                                                                                         |
-|     |                                                                    | eeee       | 火曜日                                                                                       |
-|     |                                                                    | eeeee      | 火                                                                                         |
+| e   | ローカル曜日                                                             | e          | 2                                                                                         |
+|     |                                                                    | ee         | 02                                                                                        |
+|     |                                                                    | eee        | Tue                                                                                       |
+|     |                                                                    | eeee       | Tuesday                                                                                   |
+|     |                                                                    | eeeee      | T                                                                                         |
 |     |                                                                    | eeeeee     | 火                                                                                         |
-| c   | ローカル曜日 (単独)                                     | c, cc      | 3                                                                                         |
-|     |                                                                    | ccc        | 火                                                                                         |
-|     |                                                                    | cccc       | 火曜日                                                                                       |
-|     |                                                                    | ccccc      | 火                                                                                         |
+| c   | ローカル曜日 (単独)                                     | c, cc      | 2                                                                                         |
+|     |                                                                    | ccc        | Tue                                                                                       |
+|     |                                                                    | cccc       | Tuesday                                                                                   |
+|     |                                                                    | ccccc      | T                                                                                         |
 |     |                                                                    | cccccc     | 火                                                                                         |
 | a   | 午前、午後                                                              | a, aa, aaa | 午後                                                                                        |
 |     |                                                                    | aaaa       | 午後                                                                                        |
-|     |                                                                    | aaaaa      | 午後                                                                                        |
+|     |                                                                    | aaaaa      | p                                                                                         |
 | b   | 午前、午後、正午                                                           | b, bb, bbb | 正午                                                                                        |
 |     |                                                                    | bbbb       | 正午                                                                                        |
 |     |                                                                    | bbbbb      | 正午                                                                                        |
@@ -97,8 +97,8 @@ title: 日付と時間のフォーマット
 |     | タイムゾーン: ISO8601 拡張 hms?, Z 表示なし                    | xxxxx      | -08:00, -07:52:58, +00:00 |
 | O   | タイムゾーン: 短いローカライズされた GMT                            | O          | GMT+9                                                                                     |
 |     | タイムゾーン: 長いローカライズされた GMT (=ZZZZ) | OOOO       | GMT+09:00                                                                 |
-| z   | タイムゾーン: 共通形式                                       | z, zz, zzz | JST                                                                                       |
-|     |                                                                    | zzzz       | 日本標準時                                                                                     |
+| z   | タイムゾーン: 共通形式                                       | z, zz, zzz | -0800, +0000                                                                              |
+|     |                                                                    | zzzz       | GMT+09:00                                                                 |
 |     |                                                                    | zzzzz      | -08:00, -07:52:58, Z                      |
 |     |                                                                    |            |                                                                                           |
 | '   | テキスト用エスケープ                                                         | '          | '                                                                                         |

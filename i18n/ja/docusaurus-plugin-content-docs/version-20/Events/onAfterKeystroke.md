@@ -5,13 +5,14 @@ title: On After Keystroke
 
 | コード | 呼び出し元                                                                                                                                                                                                                                          | 定義                                                                               |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 28  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox-column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含む** オブジェクトのテキストを返します。 |
+| 28  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox_column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含む** オブジェクトのテキストを返します。 |
 
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                         |
 | ----- | ------------------------------------------ |
 | 18 R5 | - 入力不可リストボックスのサポート - イベントは IME確定後にトリガーされます |
+
 </details>
 
 ## 説明
@@ -29,11 +30,11 @@ title: On After Keystroke
 
 ### キーストロークシーケンス
 
-入力に一連のキーストロークが必要な場合、[`On Before Keystroke`](onBeforeKeystroke.md) と `On After Keystroke` イベントは、入力がユーザーによって完全に確定されたときにのみ生成されます。 `Keystroke` コマンドは、確定済みの文字を返します。このケースは主に以下のように発生します:
+入力に一連のキーストロークが必要な場合、 [`On Before Keystroke`](onBeforeKeystroke.md) と `On After Keystroke` イベントは、入力がユーザーによって完全に確定されたときにのみ生成されます。 `Keystroke` コマンドは、確定済みの文字を返します。このケースは主に以下のように発生します:
 
 - ^ や ~ のような特殊キーが使用された場合: その後に拡張された文字が入力された場合にのみ生成されます (例: "ê" や "ñ")。
 - IME (Input Method Editor) が、文字の組み合わせを入力するための中間的なダイアログボックスを表示している場合: IME のダイアログが確定されたときにのみイベントが発生します。
 
 ### 参照
 
-[On Before Keystroke](onBeforeKeystroke.md)。
+[On Before Keystroke](onBeforeKeystroke.md)

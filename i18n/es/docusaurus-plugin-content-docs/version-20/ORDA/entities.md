@@ -5,17 +5,16 @@ title: Trabajar con los datos
 
 En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [selecciones de entidades](dsMapping.md#entity-selection). Estos objetos permiten crear, actualizar, buscar u ordenar los datos del datastore.
 
-
 ## Crear una entidad
 
 Hay dos maneras de crear una nueva entidad en una dataclass:
 
-*   Como las entidades son referencias a registros de base de datos, puede crear entidades creando registros utilizando el lenguaje 4D "clásico" y luego referenciarlos con métodos ORDA tales como `entity.next( )` o `entitySelection.first( )`.
-*   También puede crear una entidad utilizando el método `dataClass.new( )`.
+- Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
+- You can also create an entity using the `dataClass.new( )` method.
 
-Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al almacén de datos, debe llamar al método `entity.save( )`.
+Tenga en cuenta que la entidad sólo se crea en la memoria. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
-Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
+Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad.
 
 Por ejemplo, queremos crear una nueva entidad en la dataclass "Employee" en el datastore actual con "John" y "Dupont" asignados a los atributos firstname y name:
 
@@ -26,6 +25,7 @@ $myEntity.name:="Dupont" //asignar 'Dupont' al atributo 'name'
 $myEntity.firstname:="John" //asignar 'John' al atributo 'firstname'
 $myEntity.save() //guardar la entidad
 ```
+
 > Una entidad se define sólo en el proceso en el que fue creada. No se puede, por ejemplo, almacenar una referencia a una entidad en una variable interproceso y utilizarla en otro proceso.
 
 ## Entidades y referencias
@@ -85,12 +85,13 @@ Y el método es:
 ```
 
 Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referencias directamente como [parámetros](Concepts/parameters.md).
-> Con las entidades, no existe el concepto de "registro actual" como en el lenguaje clásico de 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
 
+> Con las entidades, no existe el concepto de "registro actual" como en el lenguaje clásico de 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
 
 ## Uso de los atributos de entidades
 
-Los atributos de entidad almacenan los datos y mapean los campos correspondientes en la tabla correspondiente. Los atributos de entidad del tipo de almacenamiento pueden definirse u obtenerse en forma de propiedades simples del objeto entidad, mientras que las entidades de tipo **relatedEntity** o **relatedEntities** devolverán una entidad o una selección de entidades.
+Los atributos de entidad almacenan los datos y mapean los campos correspondientes en la tabla correspondiente. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+
 > Para más información sobre el tipo de atributo, consulte el párrafo [Atributos de almacenamiento y de relación](dsMapping.md#storage-and-relation-attributes).
 
 Por ejemplo, para definir un atributo de almacenamiento:
@@ -102,7 +103,7 @@ $entity.lastname:="Jones" //definir el nombr del empleado
 $entity.save() //guardar los cambios
 ```
 
-> Los campos Blob de las bases de datos (los [blobs escalares](Concepts/dt_blob.md) se convierten automáticamente en atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) cuando se manejan a través de ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
+> Los campos Blob de las bases de datos ([blobs escalares](Concepts/dt_blob.md) se convierten automáticamente a y desde atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) cuando se manejan a través de ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
 
 El acceso a un atributo relacionado depende del tipo de atributo. Por ejemplo, con la siguiente estructura:
 
@@ -130,14 +131,15 @@ Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerent
 
 En la arquitectura ORDA, los atributos de relación contienen directamente los datos relacionados con las entidades:
 
-*   Un atributo de relación de tipo N->1 (**relatedEntity** kind) contiene una entidad
-*   Un atributo de relación de tipo 1->N (**relatedEntities** kind) contiene una selección de entidades
+- Un atributo de relación de tipo N->1 (**relatedEntity** kind) contiene una entidad
+- Un atributo de relación de tipo 1->N (**relatedEntities** kind) contiene una selección de entidades
 
 Veamos la siguiente estructura (simplificada):
 
 ![](../assets/en/ORDA/entityAttributes3.png)
 
 En este ejemplo, una entidad de la dataclass "Employee" contiene un objeto de tipo Entity en el atributo "employer" (o un valor nulo). Una entidad de la dataclass "Company" contiene un objeto de tipo EntitySelection en el atributo "staff" (o un valor nulo).
+
 > En ORDA, la propiedad Automática o Manual de las relaciones no tiene ningún efecto.
 
 Para asignar un valor directamente al atributo "employer", debe pasar una entidad existente de la dataclass "Company". Por ejemplo:
@@ -162,32 +164,31 @@ También puede obtener directamente la entidad relacionada "uno" a través de su
 
 Esto resulta especialmente útil cuando se importan grandes cantidades de datos de una base de datos relacional. Este tipo de importación suele contener una columna "ID", que hace referencia a una llave primaria que puede asignarse directamente a un atributo de relación.
 
-
 Puede asignar o modificar el valor de un atributo de entidad asociado "1" a partir de la dataclass "N" directamente vía el atributo relacionado. Por ejemplo, si desea modificar el atributo de nombre de una entidad Company asociada de una entidad Employee, puede escribir:
 
 ```code4d
- $emp:=ds.Empleado.get(2) // carga la entidad Employee con la llave primaria 2
- $emp.employer.name:="4D, Inc." //modificar el atributo de nombre de la empresa asociada
- $emp.employer.save() //guardar el atributo asociado
-  //la entidad asociada se actualiza
+ $emp:=ds.Employee.get(2) //cargar la entidad Employee con la llave primaria 2
+ $emp.employer.name:="4D, Inc." //modificar el atributo name de la empresa relacionada
+ $emp.employer.save() //guardar el atributo relacionado
+  //se actualiza la entidad relacionada
 ```
 
 ## Crear una entity selection
 
 Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
 
-*   Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
-*   Utilice la función de dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-*   Utilice el comando `Create entity selection` o la función de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) para crear una selección de entidades vacía;
-*   Utilice la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una selección de entidades existente;
-*   Utilice una de las diversas funciones de [Entity selection class](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
-*   Utilizando un atributo de relación de tipo "related entities" (ver abajo).
+- Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
+- Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
+- Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
+- Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
+- Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
 Puede crear y utilizar simultáneamente tantas selecciones de entidades diferentes como desee para una dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
 
 ### Entity selections compartibles o modificables
 
-Una entity selection puede ser **compartible** (legible por múltiples procesos, pero no alterable después de la creación) o **modificable** (soporta la función [`.add()`](API/EntitySelectionClass.md#add), pero sólo utilizable por el proceso actual).
+Una entity selection puede ser **compartible** (legible por múltiples procesos, pero no alterable tras su creación) o **modificable** (soporta la función [`.add()`](API/EntitySelectionClass.md#add), pero sólo utilizable por el proceso actual).
 
 #### Propiedades
 
@@ -195,28 +196,27 @@ Una entity selection **compartible** tiene las siguientes características:
 
 - puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o workers;
 - puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo;
-- no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a una entity selection compartible, primero debe transformarla en una entity selection no compartible mediante la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
+- no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a unaentity selection compartible, primero debe transformarla en una entity selection no compartible utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
-> La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportan selecciones de entidades compartibles, ya que no necesitan alterar la selección de entidades original (devuelven una nueva).
+> La mayoría de las funciones de selección de entidades (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportar selecciones de entidades compartibles ya que no es necesario modificar la selección de entidades original (devuelven una nueva).
 
 Una entity selection **modificable** tiene las siguientes características:
 
 - no puede compartirse entre los procesos, ni almacenarse en un objeto o colección compartido. Si se intenta almacenar una entity selection no compartible en un objeto o colección compartido, se producirá un error (-10721 - Tipo de valor no soportado en un objeto o colección compartido);
 - acepta la adición de nuevas entidades, es decir, soporta la función [`.add()`](API/EntitySelectionClass.md#add).
 
-
 #### ¿Cómo se definen?
 
 La naturaleza **compartible** o **modificable** de una entity selection se define cuando se crea (no puede modificarse posteriormente). Puede conocer la naturaleza de una entity selection utilizando la función [.isAlterable()](API/EntitySelectionClass.md#isalterable) o el comando `OB Is shared`.
 
-
 Una nueva entity selection es **compartible** en los siguientes casos:
 
 - la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- la nueva entity selection se basa en una relación [entidad.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
+- la nueva entity selection se basa en una relación [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
 - la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
+
 ```4d
 $myComp:=ds.Empresa.get(2) //$myComp no pertenece a una entity selection
 $employees:=$myComp.empleados //$employees es compartible
@@ -228,52 +228,51 @@ Una nueva entity selection es **compartible** en los siguientes casos:
 - la nueva entity selection se copia explícitamente como modificable con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, sin la opción `ck shared`).
 
 Ejemplo:
+
 ```4d
 $toModify:=ds.Company.all().copy() //$toModify es modificable
 ```
 
-
 Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
 
-- la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) . .
+- la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nueva entity selection se basa en una relación:
-    - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado de uno a muchos y la entidad pertenece a una entity selection (de la misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
-    - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (de la misma naturaleza que la entity selection),
-    - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos y la entidad pertenece a una entity selection (misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (misma naturaleza que la entity selection),
+  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
-    //$highSal es compartible debido a la búsqueda en dataClass
-$comp:=$highSal.employer //$comp es compartible porque $highSal es compartible
+	//$highSal is shareable because of the query on dataClass
+$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal es modificable debido a copy()
-$comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
+	//$lowSal is alterable because of the copy()
+$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::note Selecciones de entidades devueltas por el servidor
+:::note Entity selections devueltas por el servidor
 
-En la arquitectura cliente/servidor, las selecciones de entidades devueltas por el servidor son siempre compartibles en el cliente, incluso si [`copy()`](API/EntitySelectionClass.md#copy) fue llamada en el servidor. Para que dicha selección de entidades sea alterable en el cliente, es necesario ejecutar [`copa()`](API/EntitySelectionClass.md#copa) del lado del cliente. Ejemplo:
+En la arquitectura cliente/servidor, las entity selections devueltas por el servidor son siempre compartibles en el cliente, incluso si [`copy()`](API/EntitySelectionClass.md#copy) fue llamada en el servidor. Para que dicha selección de entidades sea modificable en el cliente, es necesario ejecutar [`copy()`](API/EntitySelectionClass.md#copy) del lado del cliente. Ejemplo:
 
 ```4d
-    /una función se ejecuta siempre en el servidor
+	//a function is always executed on the server
 exposed Function getSome() : cs.MembersSelection
-    devuelve This.query("ID >= :1"; 15).orderBy("ID ASC")
-
-    //en un método, se ejecuta en el lado remoto
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+ 
+	//in a method, executes on the remote side
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result es compartible
+$result:=ds.Members.getSome() //$result is shareable
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result es ahora alterable
+$result:=ds.Members.getSome().copy() // $result is now alterable
 $alterable:=$result.isAlterable() // True
 ```
 
 :::
-
 
 #### Compartir una selección de entidades entre procesos (ejemplo)
 
@@ -282,25 +281,26 @@ Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso wo
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
+//We get entity selections for paid and unpaid invoices
+
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//Pasamos referencias de selección de entidades como parámetros al worker
+//We pass entity selection references as parameters to the worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
-
+ 
 ```
 
 El método `sendMails`:
 
-```4d 
+```4d
 
  #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
-
+ 
  var $server; $transporter; $email; $status : Object
-
-  //Preparar emails
+ 
+  //Prepare emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -308,30 +308,29 @@ El método `sendMails`:
  $transporter:=SMTP New transporter($server)
  $email:=New object()
  $email.from:="myName@company.com"
-
-  //Bucles en selecciones de entidades
+ 
+  //Loops on entity selections
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
+    $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
 
     $status:=$transporter.send($email)
  End for each
-
+ 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
+    $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Please pay invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 ```
-
 
 ### Selecciones de entidades y atributos de almacenamiento
 
 Todos los atributos de almacenamiento (texto, número, booleano, fecha) están disponibles como propiedades de las selecciones de entidades, así como de las entidades. Cuando se utiliza junto con una selección de entidad, un atributo escalar devuelve una colección de valores escalares. Por ejemplo:
 
 ```4d
- $locals:=ds.Person.query("ciudad = :1"; "San José") //entity selection de personas
- $localEmails:=$locals.emailAddress //colección de direcciones de correo electrónico (cadenas)
+ $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
+ $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
@@ -343,13 +342,12 @@ Además de la variedad de formas en que puede consultar, también puede utilizar
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Devuelve las piezas con ID inferior a 100
+ $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
  $myInvoices:=$myParts.invoiceItems.invoice
-  //Todas las facturas con al menos un elemento relacionado con una pieza en $myParts
+  //All invoices with at least one line item related to a part in $myParts
 ```
 
 La última línea devolverá en $myInvoices una selección de entidades de todas las facturas que tengan al menos un elemento de factura relacionado con una pieza en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad.
-
 
 ## Bloqueo de una entidad
 
@@ -364,11 +362,11 @@ ORDA le ofrece dos modos de bloqueo de entidad:
 
 Este mecanismo automático se basa en el concepto de "bloqueo optimista", especialmente adaptado a los problemas de las aplicaciones web. Este concepto se caracteriza por los siguientes principios de funcionamiento:
 
-*   Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
-*   Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
-*   Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
-    *   Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
-    *   Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
+- Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
+- Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
+- Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
+  - Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
+  - Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
 
 El siguiente diagrama ilustra el bloqueo optimista:
 
@@ -376,8 +374,7 @@ El siguiente diagrama ilustra el bloqueo optimista:
 
 2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Como corresponden, la entidad se guarda y el valor de su marcador se incrementa.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Dado que el valor del marcador de la entidad modificada no coincide con el de la entidad almacenada en los datos, no se realiza el guardado y se devuelve un error.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
-
+3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Dado que el valor del sello de la entidad modificada no coincide con el de la entidad almacenada en los datos, no se realiza el guardado y se devuelve un error.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Esto también puede ilustrarse con el siguiente código:
 
@@ -402,21 +399,19 @@ Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos
 
 Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 
-*   [`entity.lock()`](../API/EntityClass.md#lock)
-*   [`entity.unlock()`](../API/EntityClass.md#unlock)
+- [`entity.lock()`](../API/EntityClass.md#lock)
+- [`entity.unlock()`](../API/EntityClass.md#unlock)
 
 Para más información, consulte las descripciones de estas funciones.
 
 > Los bloqueos pesimistas también pueden gestionarse a través de la [REST API](../REST/$lock.md).
 
-
-
 ### Utilización simultánea de los bloqueos clásicos 4D y de los bloqueos pesimistas ORDA
 
 El uso de comandos clásicos y ORDA para bloquear registros se basa en los siguientes principios:
 
-*   Un bloqueo definido con un comando 4D clásico en un registro impide a ORDA bloquear la entidad correspondiente al registro.
-*   Un bloqueo definido con ORDA en una entidad impide que los comandos 4D clásicos bloqueen el registro que coincide a la entidad.
+- Un bloqueo definido con un comando 4D clásico en un registro impide a ORDA bloquear la entidad correspondiente al registro.
+- Un bloqueo definido con ORDA en una entidad impide que los comandos 4D clásicos bloqueen el registro que coincide a la entidad.
 
 Estos principios se muestran en el siguiente diagrama:
 
@@ -424,5 +419,5 @@ Estos principios se muestran en el siguiente diagrama:
 
 Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. En una aplicación multiproceso o multiusuario, un bloqueo definido en una transacción en un registro por un comando clásico tendrá como resultado impedir que cualquier otro proceso bloquee las entidades relacionadas con este registro (o a la inversa), hasta que la transacción sea validada o cancelada.
 
-*   Ejemplo con un bloqueo definido por un comando clásico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-*   Ejemplo con un bloqueo definido por una función ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+- Ejemplo con un bloqueo definido por un comando clásico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+- Ejemplo con un bloqueo definido por una función ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

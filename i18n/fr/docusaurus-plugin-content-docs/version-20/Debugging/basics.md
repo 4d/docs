@@ -15,12 +15,11 @@ Les fautes de frappe sont détectées par l'éditeur de méthode. Elles sont aff
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
-
 Ces erreurs de frappe provoquent généralement des erreurs de syntaxe (dans l'image ci-dessus, le nom de la table est inconnu). Vous obtenez la description de l'erreur lorsque vous validez la ligne de code. Lorsque cela se produit, corrigez l'erreur de frappe et tapez Entrée pour valider la correction.
 
 ### Erreurs de syntaxe
 
-Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. La [fenêtre d'erreur de syntaxe](#syntax-error-window) apparaît lorsqu'une erreur se produit pendant l'exécution du code. Par exemple :
+Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Certaines erreurs ne peuvent être détectées que lorsque vous exécutez la méthode. Par exemple :
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -71,16 +70,16 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 - **Continuer** : L'exécution se poursuit. La ligne contenant l'erreur peut être partiellement exécutée, selon l'endroit où se trouve l'erreur. Continuez avec prudence : l'erreur peut empêcher le reste de votre méthode de s'exécuter correctement. Nous vous recommandons de cliquer sur **Continuer** uniquement si l'erreur se trouve dans un appel trivial (tel que `SET WINDOW TITLE`) qui n'empêche pas d'exécuter et de tester le reste de votre code.
 
-> Astuce : pour ignorer une erreur qui se répète (par exemple, dans les boucles), vous pouvez transformer le bouton **Continuer** en bouton **Ignorer**. Maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée et cliquez sur le bouton **Continuer** la première fois qu'il apparaît. L'étiquette du bouton devient **Ignorer** si la boîte de dialogue est appelée à nouveau pour la même erreur.
+> Astuce : pour ignorer une erreur qui se répète (par exemple, dans les boucles), vous pouvez transformer le bouton **Continuer** en bouton **Ignorer**. Maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée et cliquez sur le bouton **Continuer** la première fois qu'il apparaît. Le libellé du bouton devient **Ignorer** si la boîte de dialogue est appelée à nouveau pour la même erreur.
 
 - **Abandonner** : Stoppe l'exécution de la méthode et revient à l'état antérieur au début de l'exécution de la méthode :
 
-    - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
-    - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
+  - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
+  - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
 - **Copier** : Copie les informations de débogage dans le presse-papiers. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 
-- **Enregistrer...** : Enregistre le contenu de la fenêtre d'erreur syntaxique et de la chaîne d'appel dans un fichier `.txt`.
+- **Enregistrer...**: Enregistre le contenu de la fenêtre d'erreur de syntaxe et la chaîne d'appel dans un fichier `.txt`.
 
 ## Débogueur
 
@@ -94,4 +93,4 @@ Une autre raison d'utiliser le débogueur est le développement du code. Il peut
 
 Dans le processus de débogage, vous pouvez avoir besoin de sauter le traçage de certaines parties du code jusqu'à une certaine ligne. Ou bien, vous pouvez vouloir tracer le code lorsqu'une expression donnée a une certaine valeur (par exemple "$myVar > 1000"), ou chaque fois qu'une commande 4D spécifique est appelée.
 
-Ces besoins sont couverts par les fonctions **points d'arrêt** et **points d'arrêt sur commande**. Ils peuvent être configurés à partir de l'éditeur de code, du débogueur ou de l'explorateur d'exécution.
+Ces besoins sont couverts par les fonctionnalités **Points d'arrêt** et **Points d'arrêt sur commandes**. Ils peuvent être configurés à partir de l'éditeur de code, du débogueur ou de l'explorateur d'exécution.

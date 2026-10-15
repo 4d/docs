@@ -3,10 +3,9 @@ id: propertiesBackgroundAndBorder
 title: Fondo y borde
 ---
 
-
 ## Color de fondo alternado
 
-Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Por defecto, *Automático* está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
+Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
 También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -18,7 +17,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -38,11 +37,11 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[Lista Jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de Texto](text.md)
+[Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Ver también
 
-[Transparente](#transparent)
+[Transparente](#transparente)
 
 ---
 
@@ -50,9 +49,10 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 `List box de tipo colección y de tipo selección de entidades`
 
-Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) en el manual *de Lenguaje 4D*.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) en el *Manual de Referencia del Lenguaje 4D*.
 
-También puede definir esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) con la constante `lk background color expression`.
+También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) con la constante `lk background color expression`.
+
 > Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
@@ -63,7 +63,7 @@ También puede definir esta propiedad utilizando el comando [`LISTBOX SET PROPER
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -79,7 +79,7 @@ Permite definir un estilo estándar para el borde del objeto.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Botón Imagen](pictureButton_overview.md) - [Menú Pop-up imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -89,8 +89,8 @@ Describe el tipo de línea punteada como una secuencia de puntos blancos y negro
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos             | Valores posibles                                                             |
-| --------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| Nombre          | Tipos de datos             | Valores posibles                                                                                                                                 |
+| --------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | strokeDashArray | arrays numéricos o cadenas | Ej. "6 1" o \[6,1\] para una secuencia de 6 puntos negros y 1 punto blanco |
 
 #### Objetos soportados
@@ -123,11 +123,12 @@ Puede eliminar estas líneas vacías seleccionando esta opción. La parte inferi
 
 ## Color de línea
 
-Designa el color de las líneas del objeto. El color puede ser especificado por:
+Designa el color de las líneas del objeto.
+El color puede ser especificado por:
 
-* un nombre de color - como "red"
-* un valor HEX - como "# ff0000"
-* un valor RVA - como "rgb (255,0,0)"
+- un nombre de color - como "red"
+- un valor HEX - como "# ff0000"
+- un valor RVA - como "rgb (255,0,0)"
 
 También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -151,8 +152,8 @@ Designa el grosor de una línea.
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                       |
-| ----------- | -------------- | -------------------------------------------------------------------------------------- |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
 | strokeWidth | number         | 0 para el ancho más pequeño en un formulario impreso, o cualquier valor de entero < 20 |
 
 #### Objetos soportados
@@ -163,22 +164,22 @@ Designa el grosor de una línea.
 
 ## Array colores de fondo {#row-background-color-array}
 
-`List box de tipo array`
+`List boxes de tipo array`
 
 El nombre de un array para aplicar un color de fondo personalizado a cada línea o columna del list box.
 
-Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html).
+Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Puede utilizar las constantes del tema <a href="https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html">SET RGB COLORS</a>.
 
 Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris claro alternado, definido en las propiedades del list box. También se ha definido para el list box un array de color de fondo con el fin de cambiar a naranja claro el color de las líneas en las que al menos un valor es negativo:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
+ <>_BgndColors{$i}:=0x00FFD0B0 // naranja
  <>_BgndColors{$i}:=-255 // valor por defecto
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Para ello, se define un array de colores de fondo para cada columna, por ejemplo `<>_BgndColor_1`, `<>_BgndColor_2` y `<>_BgndColor_3`. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
+A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. A continuación, quiere colorear las celdas con valores negativos en naranja oscuro. Los valores de estos arrays tienen prioridad sobre los definidos en las propiedades del list box, así como los del array de color de fondo general:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // naranja oscuro
@@ -193,13 +194,13 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                    |
-| ------------- | -------------- | ----------------------------------- |
+| Nombre        | Tipos de datos | Valores posibles                                    |
+| ------------- | -------------- | --------------------------------------------------- |
 | rowFillSource | string         | El nombre de un array entero largo. |
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 

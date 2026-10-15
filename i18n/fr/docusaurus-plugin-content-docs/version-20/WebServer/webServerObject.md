@@ -3,7 +3,6 @@ id: webServerObject
 title: Objet Web Server
 ---
 
-
 Un projet 4D peut démarrer et piloter un serveur Web pour l'application principale (hôte) ainsi que pour chaque composant hébergé.
 
 Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
@@ -19,12 +18,12 @@ Chaque serveur web 4D, y compris le serveur web de l'application principale, est
 > Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
 Chaque serveur web (application hôte ou composant) peut être utilisé dans son propre contexte, notamment :
+
 - les appels vers la méthode base `On Web Authentication` et `On Web Connection`
 - le traitement des balises 4D et les appels de méthodes,
 - sessions web et gestion du protocole TLS.
 
 Cela vous permet de développer des composants indépendants et des fonctionnalités qui accompagnent leurs propres interfaces Web.
-
 
 ## Instancier un objet serveur web
 
@@ -38,16 +37,17 @@ $nbSrv:=WEB Server list.length
 Pour instancier un objet serveur web, appelez la commande [`WEB Server`](API/WebServerClass.md#web-server) :
 
 ```4d
-    //créer une variable objet de la classe 4D.WebServer
+	//créer une variable objet de la classe 4D.WebServer
 var webServer : 4D.WebServer 
-    //appeler le serveur Web depuis le contexte courant
+	//appeler le serveur web depuis le contexte courant
 webServer:=WEB Server  
 
-    //équivalent à
+	//équivalent à
 webServer:=WEB Server(Web server database)
 ```
 
 Si l'application utilise des composants et que vous souhaitez appeler :
+
 - le serveur Web de l'application hôte à partir d'un composant ou
 - le serveur qui a reçu la requête (quel que soit le serveur)
 
@@ -55,36 +55,34 @@ vous pouvez également utiliser :
 
 ```4d
 var webServer : 4D.WebServer 
-    //appler le serveur web hôte depuis un composant  
+	//appeler le serveur web hôte depuis un composant  
 webServer:=WEB Server(Web server host database)  
-    //appeler le serveur web cible
+	//appeler le serveur web cible
 webServer:=WEB Server(Web server receiving request)  
 ```
-
 
 ## Fonctions du serveur web
 
 Un [objet de classe Web server](API/WebServerClass.md#web-server-object) contient les fonctions suivantes :
 
-| Fonctions                                | Paramètres       | Valeur retournée | Description            |
-| ---------------------------------------- | ---------------- | ---------------- | ---------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (object)  | Démarre le serveur web |
-| [`stop()`](API/WebServerClass.md#start)  | -                | -                | Stoppe le serveur web  |
+| Fonctions                                | Paramètres                          | Valeur retournée                   | Description            |
+| ---------------------------------------- | ----------------------------------- | ---------------------------------- | ---------------------- |
+| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (object) | Démarre le serveur web |
+| [`stop()`](API/WebServerClass.md#start)  | -                                   | -                                  | Stoppe le serveur web  |
 
 Pour démarrer et arrêter un serveur Web, il suffit d'appeler les fonctions [`start()`](API/WebServerClass.md#start) et [`stop()`](API/WebServerClass.md#stop) de l'objet serveur Web :
 
 ```4d
 var $status : Object
-    //pour démarrer un serveur web avec les paramètres par défaut
+  	//démarrer un serveur web avec les paramètres par défaut
 $status:=webServer.start()
-    //pour démarrer un serveur web avec des paramètres personnalisés   
-    //objet $settings contenant des propriétés du serveur web
+	//démarrer le serveur web avec des paramètres personnalisés  
+	//$settings objet contient les propriétés du serveur web
 webServer.start($settings)
 
-    //pour stopper le serveur web
+	//stopper le serveur web
 $status:=webServer.stop()
 ```
-
 
 ## Propriétés du serveur web
 
@@ -92,7 +90,7 @@ Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-
 
 Ces propriétés sont définies :
 
-1. de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
+1. à l'aide du paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les propriétés de l'application hôte ou du composant.
 
@@ -101,10 +99,9 @@ Ces propriétés sont définies :
 
 > *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 
-
 ## Portée des commandes 4D Web
 
-Le langage 4D contient [plusieurs commandes](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
+Portée Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
 
 | Commande                        | Portée                            |
 | ------------------------------- | --------------------------------- |

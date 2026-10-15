@@ -12,6 +12,10 @@ title: リリースノート
 - [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) クラスの新しいクラスプロパティを使用したS/MIME Eメール署名のサポート: [`.certificate`](../API/SMTPTransporterClass.md#certificate) または [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (証明書の提供)、および[`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword)。
 - [コンポーネントをホストから直接コンパイルする](../Project/compiler.md#コンポーネントのコンパイル) ことができるようになりました。
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) でのリストフォームのサポート。
+- 4D.Vector fields: [new specific icon](../Develop/field-properties.md#4dvector-class) and new [dedicated index types](../Develop/structure-indexes.md#vector-index).
+- Support of vector indexes in [`CREATE INDEX`](../commands/create-index) and [`SET INDEX`](../commands/set-index) 4D language commands.
+- New [dataClass.getIndexes()](../API/DataClassClass.md#getindexes) API function.
+- New [`.precision` property](../API/VectorClass.md#precision) in `4D.Vector` class objects.
 - [依存関係マネージャー](../Project/components.md#4d-cornerを使用) から[4D Corner プラットフォーム](https://corner.4d.com/) へと直接アクセスできるようになりました。
 - 新しい[`WebServer.quotas`](../API/WebServerClass.md#クォータ) プロパティと改善された[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラスを使用して[Web サーバークォータ](../WebServer/quotas.md) を設定することができます。
 - テキストエリアと入力オブジェクト: 新しい[上パディング](../FormObjects/properties_CoordinatesAndSizing.md#上パディング)、 [下パディング](../FormObjects/properties_CoordinatesAndSizing.md#下パディング)、[左パディング](../FormObjects/properties_CoordinatesAndSizing.md#左パディング)、[右パディング](../FormObjects/properties_CoordinatesAndSizing.md#右パディング) と関連した[CSS サポート](../FormEditor/createStylesheet.md#属性マッピング)。[縦揃え](../FormObjects/properties_Text.md#縦揃え) のサポート。
@@ -29,6 +33,12 @@ title: リリースノート
 #### 動作の変更
 
 - 一貫性のために、**角の半径** プロパティはプロパティリストの["座標とサイズ"](../FormObjects/properties_CoordinatesAndSizing.md) セクションから["背景と境界線"](../FormObjects/properties_BackgroundAndBorder.md#角の半径) セクションへと移動されました。
+
+:::warning Default vector precision
+
+In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default](../API/VectorClass.md#4dvectornew). In previous releases, only 64-bit precision was available. If you reopen a project containing vectors created in 4D 21 R5 or later using default precision (or explicitly set to 32-bit) with an ealier version, those vectors will be empty and their values will be lost.
+
+:::
 
 ## 4D 21 R4
 
@@ -119,11 +129,11 @@ title: リリースノート
 | libldap         | 2.6.10 | 21             |                                                                                                                                                      |
 | libsasl         | 2.1.28 | 20             |                                                                                                                                                      |
 | Liblsquic       | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                             |
-| Libuv           | 1.52.1 | 21 R4          | QUIC に使用                                                                                                                                             |
+| Libuv           | 1.53.0 | **21 R6**      | QUIC に使用                                                                                                                                             |
 | libZip          | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA            | 5.8.1  | 21             |                                                                                                                                                      |
 | ngtcp2          | 1.24.0 | 21 R4          | QUIC に使用                                                                                                                                             |
-| OpenSSL         | 4.0.1  | **21 R5**      |                                                                                                                                                      |
+| OpenSSL         | 4.0.3  | **21 R6**      |                                                                                                                                                      |
 | PDFWriter       | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS        | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit          | WKWebView                              | 19             |                                                                                                                                                      |

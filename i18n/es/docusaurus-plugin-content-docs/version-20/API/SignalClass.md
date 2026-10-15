@@ -7,7 +7,6 @@ Las señales son herramientas que ofrece el lenguaje 4D para gestionar las inter
 
 > Los semáforos también pueden utilizarse para gestionar las interacciones. Los semáforos permiten asegurarse de que dos o más procesos no modifican el mismo recurso (archivo, registro...) al mismo tiempo. Sólo el proceso que define el semáforo puede eliminarlo.
 
-
 ### Objeto signal
 
 Una señal es un objeto compartido que debe ser pasado como parámetro a los comandos que llaman o crean trabajadores o procesos.
@@ -19,20 +18,18 @@ Un objeto `4D.Signal` contiene los siguientes métodos y propiedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Todo worker/proceso que llame al método `.wait()` suspenderá su ejecución hasta que la propiedad `.signaled` sea verdadera. Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. La propiedad `.signaled` se convierte en true cuando cualquier worker/proceso llama al método `.trigger()`.
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
-Tenga en cuenta que para evitar situaciones de bloqueo, el `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
+Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
 Los objetos signal se crean con el comando [New signal](#new-signal).
 
-
 ### Trabajar con señales
 
-En 4D, se crea un nuevo objeto signal llamando al comando [`New signal`](#new-signal). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que la modifiquen cuando hayan terminado la tarea que quiere esperar.
+En 4D, se crea un nuevo objeto signal llamando al comando [`New signal`](#new-signal). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
 
 - `signal.wait()` debe ser llamado desde el worker/proceso que necesita que otro worker/proceso termine una tarea para poder continuar.
 - `signal.trigger()` debe llamarse desde el worker/proceso que terminó su ejecución para liberar a todos los demás.
-
 
 ![](../assets/en/API/signal.png)
 
@@ -45,21 +42,21 @@ Dado que un objeto signal es un [objeto compartido](Concepts/shared.md), puede u
 ```4d
  var $signal : 4D.Signal
 
-  // Creación de un signal
+  // Creación de una signal
  $signal:=New signal
 
   // llamar al proceso principal y ejecutar el método OpenForm
- CALL WORKER(1;"OpenForm";$signal)
+ CALL WORKER(1; "OpenForm";$signal)
   // hacer otro cálculo
  ...
-  // Esperando el final del proceso
+  // Esperar el final del proceso
  $signaled:=$signal.wait()
 
-  // Procesamiento de los resultados
+  // Procesar los resultados
  $calc:=$signal.result+...
 ```
 
-Método ***OpenForm***:
+Método ***OpenForm*** :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)  
@@ -82,22 +79,18 @@ Método ***OpenForm***:
 
 ### Resumen
 
-
-|                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary -->|
-| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary --> |
-| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary --> |
-| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary --> |
-
-
-
+|                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary --> |
+| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary -->          |
+| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary -->         |
+| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary -->                  |
 
 <!-- REF SignalClass.New signal.Desc -->
+
 ## New signal
 
-
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -107,17 +100,17 @@ Método ***OpenForm***:
 
 <!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-
 <!-- REF #_command_.New signal.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---------|--- |:---:|------|
-|description|Text|->|Descripción de la señal|
-|Resultado|4D.Señal|<-|Native object encapsulating the signal|
+| Parámetros  | Tipo                      |                             | Descripción                          |
+| ----------- | ------------------------- | :-------------------------: | ------------------------------------ |
+| description | Text                      |              ->             | Descripción para la señal            |
+| Resultado   | 4D.Signal | <- | Objeto nativo que encapsula la señal |
+
 </div>
 <!-- END REF -->
-
 
 #### Descripción
 
@@ -125,13 +118,12 @@ El comando `New signal` <!-- REF #_command_.New signal.Summary -->crea un objeto
 
 Una señal es un objeto compartido que puede ser pasado como parámetro de un worker o proceso a otro worker o proceso, de manera que:
 
-*   el worker/proceso llamado puede actualizar el objeto de la señal después de que se haya completado el procesamiento específico
-*   el worker/proceso que llama puede detener su ejecución y esperar hasta que se actualice la señal, sin consumir recursos de la CPU.
+- el worker/proceso llamado puede actualizar el objeto de la señal después de que se haya completado el procesamiento específico
+- el worker/proceso que llama puede detener su ejecución y esperar hasta que se actualice la señal, sin consumir recursos de la CPU.
 
 Opcionalmente, en el parámetro *description* puede pasar un texto personalizado que describa la señal. Este texto también puede definirse después de la creación de la señal.
 
-Dado que el objeto señal es un objeto compartido, también se puede utilizar para mantener las propiedades del usuario, incluyendo la propiedad [`.description`](#description), llamando a la estructura `Use...End use`.
-
+Dado que el objeto signal es un objeto compartido, también puede utilizarse para mantener propiedades de usuario, incluida la propiedad [`.description`](#description), llamando a la estructura `Use...End use`.
 
 **Valor devuelto**
 
@@ -143,38 +135,37 @@ Este es un ejemplo típico de un worker que fija una señal:
 
 ```4d
  var $signal : 4D.Signal
- $signal:=New signal("This is my first signal")
+ $signal:=New signal("Esta es mi primer signal")
 
- CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //espera 1 segundo como máximo
+ CALL WORKER("myworker"; "doSomething";$signal)
+ $signaled:=$signal.wait(1) //espera 1 segundo máximo
 
  If($signaled)
-    ALERT("myworker finished the work. Result: "+$signal.myresult)
+    ALERT("myworker ha terminado el trabajo. Resultado: "+$signal.myresult)
  Else
     ALERT("myworker no ha terminado en menos de 1s")
  End if
 ```
 
-
-El método ***doSomething*** puede ser:
+El método ***doSomething*** puede ser como:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
-  //todo proceso
+  //cualquier procesamiento
   //...
  Use($signal)
-    $signal.myresult:=$processingResult  //devolver el resultado
+    $signal.myresult:=$processingResult  //devuelve el resultado
  End use
- $signal.trigger() //La operación se ha terminado
+ $signal.trigger() // El trabajo ha terminado
 ```
 
 <!-- END REF -->
 
-
 <!-- REF SignalClass.description.Desc -->
+
 ## .description
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -188,18 +179,17 @@ El método ***doSomething*** puede ser:
 
 La propiedad `.description` <!-- REF #SignalClass.description.Summary -->contiene una descripción personalizada para el objeto `Signal`.<!-- END REF -->.
 
-`.description` puede definirse al crear el objeto signal o en cualquier momento. Tenga en cuenta que, dado que el objeto `Signal` es un objeto compartido, cualquier acceso en modo de escritura a la propiedad `.description` debe estar rodeado por una estructura `Use...End use`.
+`.description` puede definirse al crear el objeto signal o en cualquier momento. Tenga en cuenta que, dado que el objeto `Signal` es un objeto compartido, cualquier acceso en modo escritura a la propiedad `.description` debe ir rodeado de una estructura `Use...End use`.
 
-Esta propiedad es **lectura-escritura**.
+Esta propiedad está en **lectura-escritura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF SignalClass.signaled.Desc -->
+
 ## .signaled
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -207,22 +197,21 @@ Esta propiedad es **lectura-escritura**.
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->**.signaled**: Boolean<!-- END REF -->
+<!-- REF #SignalClass.signaled.Syntax -->**.signaled** : Boolean<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. . When the signal is created, `.signaled` is **False**.
+La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el estado actual del objeto `Signal`<!-- END REF -->. Lanzamiento Cuando se crea la señal, `.signaled` es **False**. Se convierte en **True** cuando la función `.trigger( )` se llama en el objeto.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF SignalClass.trigger().Desc -->
+
 ## .trigger()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -232,31 +221,30 @@ Esta propiedad es **de sólo lectura**.
 
 <!-- REF #SignalClass.trigger().Syntax -->**.trigger( )**<!-- END REF -->
 
-
 <!-- REF #SignalClass.trigger().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---------|--- |:---:|------|
-||||No requiere ningún parámetro|
+| Parámetros | Tipo |     | Descripción                  |
+| ---------- | ---- | :-: | ---------------------------- |
+|            |      |     | No requiere ningún parámetro |
+
 </div>
 <!-- END REF -->
 
-
 #### Descripción
 
-La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->establece la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta señal.
+La función `.trigger( )` <!-- REF #SignalClass.trigger().Summary -->define la propiedad `signaled` del objeto signal como **true**<!-- END REF --> y despierta a todos los workers o procesos que esperan esta signal.
 
 Si la señal ya está en el estado de señalización (es decir, la propiedad `signaled` ya es **true**), la función no hace nada.
 
 <!-- END REF -->
 
-
-
 <!-- REF SignalClass.wait().Desc -->
+
 ## .wait()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -266,29 +254,30 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 <!-- REF #SignalClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-
 <!-- REF #SignalClass.wait().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|-|-|-|-|-|
-|timeout|Real|->|Tiempo máximo de espera de la señal en segundos|
-|Resultado|Boolean|<-|State of the `.signaled` property|
+| Parámetros | Tipo    |                             | Descripción                                     |
+| ---------- | ------- | --------------------------- | ----------------------------------------------- |
+| timeout    | Real    | ->                          | Tiempo máximo de espera de la señal en segundos |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`              |
+
 </div>
 <!-- END REF -->
 
-
 #### Descripción
 
-La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proceso actual espere hasta que la propiedad `.signaled` del objeto signal se convierta en **true** o que el *timeout* terminé<!-- END REF -->.
+La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proceso actual espere hasta que la propiedad `.signaled` del objeto signal se convierta en **true** o que el *timeout* opcional expire<!-- END REF -->.
 
 Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales).
+
 > **Atención**: la llamada a `.wait( )` sin un *timeout* en el proceso principal de 4D no es recomendable porque podría congelar toda la aplicación 4D.
 
-Si signal ya está en el estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función devuelve inmediatamente, sin esperar.
+Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
 
-La función devuelve el valor de la propiedad `.signaled`. La evaluación de este valor permite saber si la función devuelta porque el `.trigger( )` se ha llamado (`.signaled` es **true**) o si el *timeout* vencido (`.signaled` es **false**).
+La función devuelve el valor de la propiedad `.signaled`. Evaluar este valor permite saber si la función retornó porque el `.trigger( )` ha sido llamado (`.signaled` es **true**) o si el *timeout* expiró (`.signaled` es **false**).
+
 > El estado de un proceso que espera un signal es `Waiting for internal flag`.
-
 
 <!-- END REF -->

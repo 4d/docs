@@ -3,11 +3,9 @@ id: maintenance
 title: Página Mantenimiento
 ---
 
-
 La página **Mantenimiento** de la ventana de administración de 4D Server ofrece información relativa al funcionamiento actual de la aplicación. También ofrece acceso a las funciones básicas de mantenimiento:
 
 ![](../assets/en/Admin/server-maintenance.png)
-
 
 ## Última verificación/compactación
 
@@ -19,7 +17,7 @@ Este botón permite lanzar directamente la operación de verificación, sin inte
 
 Se verifican todos los registros y todos los índices de la base de datos. Si desea poder orientar la verificación o disponer de opciones adicionales, deberá utilizar el [Centro de mantenimiento y seguridad](MSC/overview.md) (CSM).
 
-Después de la verificación, un archivo de reporte se genera en formato XML en el servidor en la carpeta [Registros de mantenimiento](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
+Tras la verificación, se genera un archivo de informe en formato XML en el servidor, en la carpeta [maintenance Logs](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
 
 ### Compactar los datos...
 
@@ -33,13 +31,11 @@ Una vez finalizada la compactación, 4D Server relanza automáticamente la aplic
 
 > Si la solicitud de compactación se realizó desde una máquina remota 4D, esta máquina es reconectada automáticamente por 4D Server.
 
-Después de la verificación, un archivo de reporte se genera en formato XML en el servidor en la carpeta [Registros de mantenimiento](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
-
+Tras la verificación, se genera un archivo de informe en formato XML en el servidor, en la carpeta [maintenance Logs](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
 
 ## Tiempo de funcionamiento
 
 Esta área indica la duración de la ejecución de la aplicación 4D Server desde la última vez que se inició (días, horas y minutos).
-
 
 ### Reiniciar el servidor...
 
@@ -53,12 +49,10 @@ Esta área indica la fecha y la hora de la [última copia de seguridad](MSC/back
 
 - **Última copia de seguridad**: fecha y hora de la última copia de seguridad.
 - **Próxima copia de seguridad**: fecha y hora de la próxima copia de seguridad programada.
-- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. El tamaño real del archivo de copia de seguridad puede variar en función de los parámetros (compresión, etc.) y de las variaciones del archivo de datos.
+- **Espacio necesario**: espacio estimado necesario para la copia de seguridad. El tamaño real del archivo de copia de seguridad puede variar en función de la configuración (compresión, etc.) y de acuerdo a las variaciones del archivo de datos.
 - **Espacio disponible**: espacio disponible en el volumen de copia de seguridad.
 
-
 El botón **Iniciar copia de seguridad** permite realizar una copia de seguridad inmediata de la base utilizando los parámetros de copia de seguridad actuales (archivos de copia de seguridad, ubicación de los archivos, opciones, etc.). Puede ver estos parámetros haciendo clic en el botón **Propiedades...**. Durante una copia de seguridad en el servidor, los equipos cliente quedan "bloqueados" (pero no desconectados) y no es posible que se conecten nuevos clientes.
-
 
 ## Historial de peticiones y depuración
 
@@ -81,7 +75,6 @@ El botón **Ver informe** (llamado **Descargar el informe** si la operación se 
 ### Cargar archivo de configuración de logs
 
 Este botón le permite cargar un [archivo de configuración de log](Debugging/debugLogFiles.md#using-a-log-configuration-file)(archivo`.json`) para un servidor específico. Este archivo puede ser facilitado por los servicios técnicos de 4D para el seguimiento y estudio de casos concretos.
-
 
 ### Detener el registro
 

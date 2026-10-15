@@ -3,14 +3,13 @@ id: allowProject
 title: Autoriser les méthodes projet
 ---
 
-  
-Les balises 4D telles que `4DEVAL`, `4DTEXT`, `4DHTML`, etc. ainsi que l'[`URL /4DACTION`](./httpRequests.md#4daction) vous permettent de déclencher l'exécution de toute méthode projet d'un projet 4D publié sur le Web. Par exemple, la requête *http://www.server.com/4DACTION/login* entraîne l'exécution de la méthode projet ***login***, si elle existe.
+Les balises 4D telles que `4DEVAL`, `4DTEXT`, `4DHTML`... Par exemple, la requête *http://www.server.com/4DACTION/login* entraîne l'exécution de la méthode projet ***login***, si elle existe. ainsi que l'URL [`/4DACTION`](./httpRequests.md#4daction) vous permettent de déclencher l'exécution de toute méthode projet d'un projet 4D publié sur le Web.
 
 Ce mécanisme présente donc un risque de sécurité pour l'application, notamment si un internaute déclenche intentionnellement (ou non) une méthode non destinée à être exécutée via le web. Vous pouvez éviter ce risque comme suit :
 
-*   Filtrez les méthodes appelées via les URL à l'aide de la méthode base [`On Web Authentication`](authentication.md#on-web-authentication). Inconvénients : si le projet comprend un grand nombre de méthodes, ce système peut être difficile à gérer.
+- Filtrez les méthodes appelées via les URL à l'aide de la méthode base [`On Web Authentication`](authentication.md#on-web-authentication). Inconvénients : si le projet comprend un grand nombre de méthodes, ce système peut être difficile à gérer.
 
-*   Utilisez l'option **Available through 4D tags and URLs (4DACTION...)** de la boîte de dialogue Propriétés de la méthode :
+- Utilisez l'option **Disponible via Balises HTML et URLs 4D (4DACTION...)** située dans la boîte de dialogue des Propriétés de la méthode :
 
 ![](../assets/en/WebServer/methodProperties.png)
 
@@ -20,4 +19,4 @@ Cette option n'est pas cochée par défaut. Les méthodes qui peuvent être exé
 
 Dans l'Explorateur, les méthodes projet avec cette propriété bénéficient d'une icône spécifique :
 
- ![](../assets/en/WebServer/methodIcon.png)
+![](../assets/en/WebServer/methodIcon.png)

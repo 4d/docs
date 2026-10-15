@@ -35,28 +35,31 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 | [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
+| [<!-- INCLUDE #VectorClass.precision.Syntax -->](#precision)<br/><!-- INCLUDE #VectorClass.precision.Summary -->                             |
 | [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容 |
-| ------ | -- |
-| 20 R10 | 追加 |
+| リリース   | 内容                        |
+| ------ | ------------------------- |
+| 21 R5  | New *precision* parameter |
+| 20 R10 | 追加                        |
 
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection {; precision : Integer} ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 
 <div class="no-index">
 
-| 引数  | 型                         |                             | 説明                 |
-| --- | ------------------------- | --------------------------- | ------------------ |
-| 引数  | Collection                | ->                          | ベクトルを表せる実数値のコレクション |
-| 戻り値 | 4D.Vector | <- | 新規ベクトルオブジェクト       |
+| 引数        | 型                         |                             | 説明                                                                                                            |
+| --------- | ------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 引数        | Collection                | ->                          | ベクトルを表せる実数値のコレクション                                                                                            |
+| precision | Integer                   | ->                          | Vector precision: `mk single precision` (default) or `mk double precision` |
+| 戻り値       | 4D.Vector | <- | 新規ベクトルオブジェクト                                                                                                  |
 
 </div>
 <!-- END REF -->
@@ -67,7 +70,16 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 *parameter* 引数には、作成したベクトルを表す実数値のコレクションを渡します。これらの値は人工知能によって提供されるものであり、単語やデータなどのオブジェクトを数学的に表します。
 
-#### 例題
+In the *precision* optional parameter, you can pass the numeric precision you want to apply to the vector creation. 次の定数が利用できます:
+
+| 定数                    | 値  | 説明                                                                                       |
+| --------------------- | -- | ---------------------------------------------------------------------------------------- |
+| `mk single precision` | 32 | Single (32-bit) floating-point precision (default) |
+| `mk double precision` | 64 | Double (64-bit) floating-point precision                              |
+
+By default, if you omit the *precision* parameter, the vector is created with a 32-bit floating-point precision. A 32-bit floating-point precision reduces the storage footprint by half compared to 64-bit vectors while retaining enough precision for similarity and distance calculations, which is why it is the recommended default for most use cases.
+
+#### 例題 1
 
 ベクトルを作成します:
 
@@ -80,6 +92,16 @@ var $vector := 4D.Vector.new([0.123; -0.456; 0.789])
 ```4d
 var $firstComponent := $vector[0]
 var $collection := $vector.toCollection()
+```
+
+#### 例題 2
+
+To create a vector with a double floating-point precision:
+
+```4d
+var $col: Collection
+  //$col is filled by AI provider
+var $vector := 4D.Vector.new($col; mk double precision) 
 ```
 
 ## .cosineSimilarity()
@@ -302,6 +324,22 @@ ALERT("Nearest monument: "+$places[0].name)
 #### 説明
 
 `.length` プロパティには<!-- REF #VectorClass.length.Summary -->ベクトル成分の数<!-- END REF -->が格納されています。
+
+## .precision
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 21 R5 | 追加 |
+
+</details>
+
+<!-- REF #VectorClass.precision.Syntax -->**precision** : Integer<!-- END REF -->
+
+#### 説明
+
+The `.precision` property contains <!-- REF #VectorClass.precision.Summary -->the precision value used to build the vector<!-- END REF -->: 32 (`mk single precision`, default) or 64 (`mk double precision`).
 
 ## .toCollection()
 

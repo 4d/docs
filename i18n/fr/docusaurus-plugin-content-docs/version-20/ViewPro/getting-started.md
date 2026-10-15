@@ -3,31 +3,27 @@ id: getting-started
 title: Prise en main
 ---
 
-
-4D View Pro est un [composant 4D](Concepts/components.md) qui comprend une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [méthodes](method-list.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
-
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro est alimenté par la [solution de tableur SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) intégrée à 4D.
+Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro est alimenté par la [solution de feuille de calcul SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) intégrée en 4D.
 
 :::note
 
-Consultez le [tableau des bibliothèques](../Notes/updates.md#library-table-4d-20-lts) pour connaître la version de SpreadJS intégrée dans votre version de 4D.
+Consultez le [tableau des bibliothèques](../Notes/updates.md#library-table-4d-20-lts) pour connaître la version de SpreadJS intégrée à votre version de 4D.
 
 :::
 
 L'intégration de zones 4D View Pro dans vos formulaires vous permet d'importer et d'exporter des documents de type tableur à l'aide des commandes 4D View Pro.
 
-
 ## Installation et activation
 
 Les fonctionnalités de 4D View Pro sont directement inclues dans 4D, ce qui en facilite le déploiement et la gestion. Aucune installation supplémentaire n'est nécessaire.
 
-Cependant, 4D View Pro nécessite une licence. You need to activate and [assign this license in your application](../Users/handling_users_groups.md#assigning-a-license-to-a-group) in order to use its features. Lorsque vous utilisez ce composant sans licence, le contenu d'un objet nécessitant une fonctionnalité 4D View Pro ne s'affiche pas au moment de l'exécution; au lieu de cela, un message d'erreur :
+Cependant, 4D View Pro nécessite une licence. Vous devez activer et [attribuer cette licence dans votre application](../Users/handling_users_groups.md#assigning-a-license-to-a-group) pour pouvoir utiliser ses fonctionnalités. Lorsque vous utilisez ce composant sans licence, le contenu d'un objet nécessitant une fonctionnalité 4D View Pro ne s'affiche pas au moment de l'exécution; au lieu de cela, un message d'erreur :
 
 ![](../assets/en/ViewPro/licenseError.png)
-
 
 ## Insertion d'une zone 4D View Pro
 
@@ -39,8 +35,7 @@ Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans l
 
 > Les zones 4D View Pro peuvent également être [créées et utilisées hors écran](method-list.md#vp-run-offscreen-area).
 
-Vous pouvez [configurer la zone](configuring.md) à l'aide de la liste de propriétés et des méthodes 4D View Pro.
-
+You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
 
 ## Fondamentaux de la sélection, de la saisie et de la navigation
 
@@ -48,19 +43,20 @@ Les feuilles de calcul sont composées de lignes et de colonnes. Un numéro est 
 
 ### Sélection des cellules, des colonnes et des lignes
 
-*   Pour sélectionner une cellule, il suffit de cliquer dessus ou d'utiliser les flèches de direction du clavier. Son contenu (ou sa formule) s'affiche dans la cellule.
+- Pour sélectionner une cellule, il suffit de cliquer dessus ou d'utiliser les flèches de direction du clavier. Son contenu (ou sa formule) s'affiche dans la cellule.
 
-*   Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
+- Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
 
-*   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
+- Pour sélectionner toutes les cellules dans la feuille de calcul, cliquez sur la cellule en haut à gauche de la zone :
+  ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-*   Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
+- Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
 
-*   Pour sélectionner une ligne, cliquez sur le chiffre correspondant.
+- Pour sélectionner une ligne, cliquez sur le chiffre correspondant.
 
-*   Pour sélectionner un groupe de cellules non continues, maintenez la touche **Ctrl** (Windows) ou **Command** (macOS) enfoncée et cliquez sur chaque cellule à sélectionner.
+- Pour sélectionner un groupe de cellules non continues, maintenez la touche **Ctrl** (Windows) ou **Command** (macOS) enfoncée et cliquez sur chaque cellule à sélectionner.
 
-*   Pour désélectionner des cellules, il suffit de cliquer n'importe où dans la feuille de calcul.
+- Pour désélectionner des cellules, il suffit de cliquer n'importe où dans la feuille de calcul.
 
 ### Saisie de données
 
@@ -72,38 +68,36 @@ Les données peuvent être saisies directement lorsqu'une cellule est déjà sé
 
 La touche **Tab** valide la saisie de la cellule et sélectionne la cellule à sa droite. La combinaison des touches **Shift + Tab** valide la saisie de la cellule et sélectionne la cellule située à sa gauche.
 
-
 La touche **Retour chariot** valide la saisie de la cellule et sélectionne la cellule située en dessous. La combinaison des touches **Shift + Retour chariot** valide la saisie de la cellule et sélectionne la cellule située au-dessus.
 
 Les touches de direction (flèches) permettent de déplacer une cellule dans la direction indiquée par la flèche.
-
 
 ### Utilisation du menu contextuel
 
 Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre des fonctions d'édition standard telles que le copier-coller, mais aussi des fonctions de base de tableur :
 
 ![](../assets/en/ViewPro/vpContext.PNG)
+
 > Les fonctions Copier/Couper et Coller du menu contextuel fonctionnent uniquement dans la zone de la feuille de calcul, elles n'ont pas accès au presse-papiers du système. Les raccourcis système tels que **Ctrl+c/Ctrl+v** fonctionnent néanmoins et peuvent être utilisés pour échanger des données entre la zone et d'autres applications.
 
- En fonction de la zone cliquée, les options suivantes sont également disponibles :
+En fonction de la zone cliquée, les options suivantes sont également disponibles :
 
-*   cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
-*   cliquez sur une cellule ou une plage de cellules :
-    *   **Filtrer** : permet de masquer la ligne via des filtres (voir [Filtrer les lignes](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) dans la documentation SpreadJS).
-    *   **Trier** : permet de trier le contenu des colonnes.
-    *   **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
-      ![](../assets/en/ViewPro/vpContext2.PNG)
-
+- cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
+- cliquez sur une cellule ou une plage de cellules :
+  - **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+  - **Trier** : permet de trier le contenu des colonnes.
+  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
+    ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilisation des méthodes 4D View Pro
 
 Les méthodes 4D View Pro peuvent être utilisées dans l'éditeur de code 4D, tout comme les commandes du langage 4D.
 
-4D View Pro étant un composant 4D intégré, vous pouvez accéder à sa liste de méthodes à partir de l'Explorateur, dans la section **Méthodes composants** :
+Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-Pour une liste détaillée des méthodes composants, voir [Liste des méthodes](method-list.md).
+For a detailed list of component methods, see [Method list](method-list.md).
 
 ### Traiter une zone 4D View Pro
 
@@ -111,7 +105,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-La plupart des méthodes 4D View Pro nécessitent un paramètre *vpAreaName*, qui est le [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -119,57 +113,48 @@ Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone n
 VP SET COLUMN COUNT("myVpArea";5)
 ```
 
-
-
 > Lorsque vous chargez un objet 4D View Pro dans une zone de formulaire, 4D génère l'événement formulaire [On VP Ready](../Events/onVpReady.md) une fois que toute la zone est chargée. Vous devez exécuter tout code 4D View Pro manipulant la zone dans cet événement, sinon une erreur est retournée.
-
 
 ### Utilisation d'objets de plage
 
-Certaines méthodes 4D View Pro nécessitent un paramètre *rangeObj*. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des méthodes 4D View Pro, vous pouvez créer des plages et les passer à d'autres méthodes pour lire ou écrire dans des emplacements spécifiques de votre document.
+Some 4D View Pro methods require a *rangeObj* parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des méthodes 4D View Pro, vous pouvez créer des plages et les passer à d'autres méthodes pour lire ou écrire dans des emplacements spécifiques de votre document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-Vous pouvez utiliser la méthode [VP Cells](method-list.md#vp-cells) :
+Vous pouvez utiliser la méthode [VP Cells](method-list.md#vp-cells) :
 
-```4d 
+```4d
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 ```
 
-Vous pouvez ensuite passer `$myRange` à une autre méthode 4D View Pro pour modifier ces cellules (par exemple ajouter une bordure à l'ensemble des cellules avec [VP SET BORDER](method-list.md#vp-set-border)).
+Ensuite, vous pouvez passer `$myRange` à une autre méthode 4D View Pro pour modifier ces cellules (par exemple ajouter une bordure à l'ensemble des cellules avec [VP SET BORDER](method-list.md#vp-set-border)).
 
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
-*   area - Le nom de la zone 4D View Pro
-*   ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
+- area - Le nom de la zone 4D View Pro
+- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
 
-| Propriété |                   | Type       | Description                                                                                | Disponible pour                                                |
-| --------- | ----------------- | ---------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| area      |                   | text       | Nom d'objet formulaire zone 4D View Pro                                                    | toujours disponible                                            |
-| ranges    |                   | collection | Collection de plage(s)                                                                     | toujours disponible                                            |
-|           | \[ ].name        | text       | Nom de plage                                                                               | name                                                           |
+| Propriété |                                                                                       | Type       | Description                                                                                                                      | Disponible pour                                                |
+| --------- | ------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| area      |                                                                                       | text       | Nom d'objet formulaire zone 4D View Pro                                                                                          | toujours disponible                                            |
+| ranges    |                                                                                       | collection | Collection de plage(s)                                                                                        | toujours disponible                                            |
+|           | \[ ].name        | text       | Nom de plage                                                                                                                     | name                                                           |
 |           | \[ ].sheet       | number     | Indice de la feuille (par défaut, indice de la feuille courante) (le comptage démarre à 0) | cellule, cellules, ligne, lignes, colonne, colonnes, tout, nom |
-|           | \[ ].row         | number     | Indice de la ligne (le comptage démarre à 0)                                               | cellule, cellules, ligne, lignes                               |
-|           | \[ ].rowCount    | number     | Nombre de lignes                                                                           | cellule, lignes                                                |
-|           | \[ ].column      | number     | Indice de la colonne (le comptage démarre à 0)                                             | cellule, cellules, colonne, colonnes                           |
-|           | \[ ].columnCount | number     | Nombre de colonnes                                                                         | cellules, colonnes                                             |
-
-
-
-
-
-
+|           | \[ ].row         | number     | Indice de la ligne (le comptage démarre à 0)                                                                  | cellule, cellules, ligne, lignes                               |
+|           | \[ ].rowCount    | number     | Nombre de lignes                                                                                                                 | cellule, lignes                                                |
+|           | \[ ].column      | number     | Indice de la colonne (le comptage démarre à 0)                                                                | cellule, cellules, colonne, colonnes                           |
+|           | \[ ].columnCount | number     | Nombre de colonnes                                                                                                               | cellules, colonnes                                             |
 
 ## Import et export de documents
 
 4D View Pro prend en charge l'import et l'export de plusieurs formats de documents :
 
-* .4vp
-* .xlsx
-* .txt et .csv
-* .pdf (à des fins d'export uniquement)
+- .4vp
+- .xlsx
+- .txt et .csv
+- .pdf (à des fins d'export uniquement)
 
 Pour plus de détails, consultez la description de [VP IMPORT DOCUMENT](method-list.md#vp-import-document) et [VP EXPORT DOCUMENT](method-list.md#vp-export-document).

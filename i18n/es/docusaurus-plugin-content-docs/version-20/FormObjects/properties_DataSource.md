@@ -11,7 +11,7 @@ Cuando la opción **inserción automática** no está definida (por defecto), el
 
 Esta propiedad es soportada por:
 
-- objetos formulario [Combo box](comboBox_overview.md) y [columna de list box](listbox-column.md) y asociados a una lista de selección.
+- objetos formulario [Combo box](comboBox_overview.md) y [columna list box](listbox-column.md) asociadoa a una lista de selección.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
 Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Italia" que está asociada a un combo box "Países": si la propiedad **inserción automática** está activada y un usuario introduce "España", entonces el valor "España" se añade automáticamente a la lista en memoria:
@@ -40,14 +40,15 @@ También se pueden asociar listas de selección a objetos utilizando los comando
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos   | Valores posibles                                              |
-| ---------- | ---------------- | ------------------------------------------------------------- |
-| choiceList | list, collection | Una lista de valores posibles                                 |
+| Nombre     | Tipos de datos   | Valores posibles                                                                 |
+| ---------- | ---------------- | -------------------------------------------------------------------------------- |
+| choiceList | list, collection | Una lista de valores posibles                                                    |
 | lista      | list, collection | Una lista de valores posibles (listas jerárquicas únicamente) |
 
 #### Objetos soportados
 
-[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Columna List Box](listbox-column.md)
+[Lista desplegable](dropdownList_Overview.md) -
+[Combo box](comboBox_overview.md) - [Lista Jerárquica](list_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -63,15 +64,16 @@ Lista de valores estáticos a utilizar como etiquetas para el objeto de control 
 
 #### Objetos soportados
 
-[Pestañas](tabControl.md)
+[Control de pestañas](tabControl.md)
 
 ---
 
 ## Elemento actual {#current-item}
 
-`List boxes colección o entity selection`
+`List box colección o entity selection`
 
 Especifica una variable o expresión a la que se asignará el elemento/entidad de la colección seleccionado por el usuario. Debe utilizar una variable objeto o una expresión asignable que acepte objetos. Si el usuario no selecciona nada o si ha utilizado una colección de valores escalares, se asigna el valor Null.
+
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
@@ -86,15 +88,16 @@ Especifica una variable o expresión a la que se asignará el elemento/entidad d
 
 ---
 
-## Posición elemento actual {#current-item-position}
+## Posición actual del elemento {#current-item-position}
 
-`List boxes colección o entity selection`
+`List box colección o entity selection`
 
 Indica una variable o expresión a la que se le asignará un entero largo que indica la posición del elemento/entidad de colección seleccionado por el usuario.
 
 - si no se selecciona ningún elemento/entidad, la variable o expresión recibe cero,
 - si se selecciona un solo elemento/entidad, la variable o expresión recibe su ubicación,
 - si se seleccionan varios elementos/entidades, la variable o expresión recibe la posición del elemento/entidad que se seleccionó de última.
+
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
@@ -113,20 +116,20 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 
 Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza con:
 
-- [Columnas de List box](listbox-column.md) de los tipos selección y collection.
+- [Columnas del List box](listbox-column.md) de los tipos de selección y colección.
 - [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
-Ver también la sección [**Tipo de expresión**](properties_Object.md#expression-type).
+Ver también la sección [**Tipo de Expresión**](properties_Object.md#expression-type).
 
 #### Gramática JSON
 
-| Nombre             | Tipos de datos | Valores posibles                                   |
-| ------------------ | -------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string         | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li><li>**listas desplegables:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| Nombre             | Tipos de datos | Valores posibles                                                                                                                                                                                                                            |
+| ------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string         | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Sólo array/list box selección*: "integer", "object"</li><li>**listas desplegables:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objetos soportados
 
-[Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays - [Columna de List Box ](listbox-column.md)
+[Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -165,7 +168,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 ## Valores por defecto (lista de)
 
-Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
+Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
 > No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-value)" que permite definir un valor de campo en los nuevos registros.
 
@@ -177,8 +180,8 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                                                |
-| ------ | -------------- | ------------------------------------------------------------------------------- |
+| Nombre | Tipos de datos | Valores posibles                                                                                                   |
+| ------ | -------------- | ------------------------------------------------------------------------------------------------------------------ |
 | values | collection     | Una colección de valores por defecto (cadenas), por ejemplo: "a", "b", "c", "d" |
 
 #### Objetos soportados
@@ -189,39 +192,43 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 ## Expression
 
-Esta descripción es específica para la [selección](FormObjects/listbox-object.md#selection-list-boxes) y las columnas de list box de tipo [colección](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes). Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
+This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes) and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
 - Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
-- Un **campo** que utiliza la sintaxis estándar [Table]Field([list box de tipo selección](listbox_overview.md#selection-list-boxes) únicamente), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
+- Un **campo** que utiliza la sintaxis estándar [Tabla]Campo (solo [list box tipo selección](listbox_overview.md#selection-list-boxes)), por ejemplo: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
   - Numeric
   - Fecha
   - Time
   - Picture
-  - Boolean  
+  - Boolean\
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
+- Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. La expresión debe devolver un valor. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. La expresión se evaluará para cada registro de la selección (actual o temporal) de la tabla maestra (para list boxes de tipo selección), cada elemento de la colección (para list boxes de tipo colección) o cada entidad de la selección (para list boxes selección de entidades). Si está vacía, la columna no mostrará ningún resultado.
+  Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
   - Fecha
   - Picture
   - Boolean
 
- En los list boxes colecciones/selección de entidades, los tipos Null o no soportados se muestran como cadenas vacías.  
-Al utilizar selecciones de entidades o colecciones, normalmente declarará la propiedad de elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\&#060;propertyPath&#062;` donde `\&#060;propertyPath&#062;` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad. Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
+Para los list boxes colección/entity selection, Null o tipos no soportados se muestran como cadenas vacías.\
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).  
+Cuando utilice colecciones o selecciones de entidades, normalmente declarará la propiedad del elemento o el atributo de entidad asociado a una columna dentro de una expresión que contenga [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
+Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
- Si se utiliza una expresión no asignable [](Concepts/quick-tour.md#expressions) (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
+Si se utiliza una expresión no asignable  (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
 
 Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Person.lastName*), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                      |
-| ---------- | -------------- | ------------------------------------------------------------------------------------- |
+| Nombre     | Tipos de datos | Valores posibles                                                                                      |
+| ---------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | dataSource | string         | Una variable 4D, un nombre de campo o una expresión del lenguaje compleja arbitraria. |
 
 #### Objetos soportados
@@ -232,7 +239,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 ## Tabla principal
 
-`Listbox de tipo selección actual`
+`Current selection list boxes`
 
 Especifica la tabla cuya selección actual se utilizará. Esta tabla y su selección actual constituirán la referencia de los campos asociados a las columnas del list box (referencias de campo o expresiones que contienen campos). Aunque algunas columnas contengan campos de otras tablas, el número de líneas mostradas será definido por la tabla maestra.
 
@@ -255,7 +262,7 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 Esta propiedad está disponible en las siguientes condiciones:
 
 - una [lista de selección](#choice-list) está asociada al objeto
-- para [entradas](input_overview.md) y [columnas de list box](listbox-column.md), una [lista obligatoria](properties_RangeOfValues.md#required-list), también se define para el objeto (ambas opciones deben utilizar normalmente la misma lista), de modo que el usuario sólo pueda introducir valores de la lista.
+- para [entradas](input_overview.md) y [columnas list box](listbox-column.md), también se define una [lista requerida](properties_RangeOfValues.md#lista-requerida) para el objeto (ambas opciones deben usar normalmente la misma lista), de modo que solo se puedan ingresar valores de la lista por parte del usuario.
 
 Esta propiedad especifica, en el contexto de un campo o variable asociado a una lista de valores, el tipo de contenido a guardar:
 
@@ -277,18 +284,19 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 #### Objetos soportados
 
-[Entrada](input_overview.md) - [Columna de List Box](listbox-column.md)
+[Área de entrada](input_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
 ## Elementos seleccionados {#selected-items}
 
-`List boxes colección o entity selection`
+`List box colección o entity selection`
 
 Especifica una variable o expresión a la que se asignarán los elementos o entidades seleccionados por el usuario.
 
 - para un list box colección, debe utilizar una variable colección o una expresión asignable que acepte colecciones,
 - para un list box selección de entidades, se crea un objeto de selección de entidades. Debe utilizar una variable objeto o una expresión asignable que acepte objetos.
+
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
@@ -305,7 +313,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 ## Selección temporal
 
-`List boxes de tipo selección temporal`
+`List boxes de tipo selección nombrada`
 
 Especifica la selección temporal a utilizar. Debe introducir el nombre de una selección temporal válida. Puede ser una selección temporal proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 

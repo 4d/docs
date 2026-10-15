@@ -5,22 +5,19 @@ title: 拡張機能
 
 4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。[**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。コンポーネントは 4Dコードで構成されていますが、プラグインはどんな言語でも作成できます。
 
-
 ## 4Dコンポーネントの一覧
 
 4D にはビルトインの 4Dコンポーネントがあらかじめ組み込まれており、エクスプローラーのメソッドページにて、**コンポーネントメソッド** テーマ内で確認することができます。これらのコンポーネントはすべて、[4D github リポジトリ](https://github.com/4d) にもあります。
 
-
-| コンポーネント                                                              | 説明                                                                                                | 主な機能                                                                                    |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [4D Labels](https://github.com/4d/4D-Labels)                         | ラベルテンプレートを作成するための内部コンポーネント                                                                        |                                                                                         |
-| [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x)               | サードパーティAPI に接続するためのツール                                                                            | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`        |
-| [4D Progress](https://github.com/4d/4D-Progress)                     | 1つ以上の進捗バーを同じウィンドウで開く                                                                              | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                               | 一般的な svgグラフィックオブジェクトの作成・操作                                                                        | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                               |
-| [4D ViewPro](ViewPro/getting-started.md)                             | フォームに追加できる表計算機能                                                                                   | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                       | DatePicker, TimePicker, SearchPicker 4Dウィジェットの管理                                                  | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | [4D Write Pro](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.ja.html) パレットの管理 | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`          |
-
+| コンポーネント                                                              | 説明                                                                                                        | 主な機能                                                                                                                                    |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [4D Labels](https://github.com/4d/4D-Labels)                         | ラベルテンプレートを作成するための内部コンポーネント                                                                                |                                                                                                                                         |
+| [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x)               | サードパーティAPI に接続するためのツール                                                                                    | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
+| [4D Progress](https://github.com/4d/4D-Progress)                     | 1つ以上の進捗バーを同じウィンドウで開く                                                                                      | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
+| [4D SVG](https://github.com/4d/4D-SVG)                               | 一般的な svgグラフィックオブジェクトの作成・操作                                                                                | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                                                                               |
+| [4D ViewPro](ViewPro/getting-started.md)                             | フォームに追加できる表計算機能                                                                                           | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                                                                |
+| [4D Widgets](https://github.com/4d/4D-Widgets)                       | DatePicker, TimePicker, SearchPicker 4Dウィジェットの管理                                                          | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
+| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html) palettes | `WP PictureSettings`、`WP ShowTabPages`、`WP SwitchToolbar`、`WP UpdateWidget`                                                             |
 
 ## サードパーティコンポーネント
 
@@ -29,7 +26,6 @@ title: 拡張機能
 4Dコミュニティの多くの開発者が 4Dコンポーネントを公開しています。 それらをインストールしてプロジェクトで使用することができます。
 
 [`4d-component`](https://github.com/topics/4d-component) のトピックで公開されている 4Dコンポーネントの一覧を Github で閲覧することができます。
-
 
 ## Plugins
 

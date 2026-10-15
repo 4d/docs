@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
 データクラスまたはメソッドが返すデータをフィルターします *(例*: `$filter="firstName!='' AND salary>30000"`)
-
 
 ## 説明
 
@@ -26,7 +23,6 @@ title: '$filter'
 
 **\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
-
 たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
 
 ### paramsプロパティの使用
@@ -37,17 +33,13 @@ title: '$filter'
 
 たとえば: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` (firstName および salary は Employee データクラスの属性です)。
 
-4D においてデータをクエリする方法についての詳細は、[dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.ja.html) ドキュメンテーションを参照ください。
-
-
-
+4D においてデータをクエリする方法についての詳細は、[dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) ドキュメンテーションを参照ください。
 
 :::note
 
-REST クエリ内における`eval()` ステートメントの使用は許可されません(そのため[remote datastore](../ORDA/remoteDatastores.md) クエリにおいても同様です)。
+`eval()` ステートメントの使用は、REST クエリ内(ひいては[リモートデータストア](../ORDA/remoteDatastores.md) クエリ内)では許可されていません。
 
 :::
-
 
 :::note
 
@@ -56,10 +48,10 @@ REST クエリ内における`eval()` ステートメントの使用は許可さ
 - 単一引用符 ('): \u0027
 - 二重引用符 ("): \u0022
 
-例えば*params* プロパティを使用して、値を二重引用符で括って渡すためには以下のように書くことができます:  
+たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-値を直接渡す場合は、次のように書けます:  
+値を直接渡す場合は、次のように書けます:
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::
@@ -80,21 +72,21 @@ REST クエリ内における`eval()` ステートメントの使用は許可さ
 
 このオブジェクトをクエリするには、次のように書きます:
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## 比較演算子
 
 以下の比較演算子を使用できます:
 
-| 比較演算子 | 説明    |
-| ----- | ----- |
-| =     | 等しい   |
-| !=    | 等しくない |
-| >     | 大きい   |
-| >=    | 以上    |
-| <     | 小さい   |
-| <=    | 以下    |
-| begin | 前方一致  |
+| 比較演算子                       | 説明    |
+| --------------------------- | ----- |
+| =                           | 等しい   |
+| !=                          | 等しくない |
+| >                           | 大きい   |
+| > =                         | 以上    |
+| <  | 小さい   |
+| <= | 以下    |
+| begin                       | 前方一致  |
 
 ## 例題
 

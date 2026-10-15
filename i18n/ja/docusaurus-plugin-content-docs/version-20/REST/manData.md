@@ -11,9 +11,6 @@ REST によって、すべての [公開されているデータクラス、属�
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
-
-
-
 ## エンティティの追加・編集・削除
 
 REST API を使って、4D内と同等のデータ操作をおこなうことができます。
@@ -22,14 +19,11 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 [\{dataClass\}(\{key\})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
 
-戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
-
+戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を一つ以上の属性(リレーション属性も可)に使うことで並べ替えることもできます。
 
 ## データのナビゲーション
 
 エンティティのコレクションをナビゲートするにあたっては、クエリやエンティティセレクションに次の RESTリクエストを追加することができます: [`$skip`]($skip.md) (開始エンティティの指定)、[`$top/$limit`]($top_$limit.md) (返されるエンティティ数の指定)。
-
-
 
 ## エンティティセットの作成と管理
 
@@ -37,12 +31,11 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティセットを作成するには、RESTリクエスト内で [`$method=entityset`]($method.md#methodentityset) を呼び出します。エンティティセットがタイムアウトした場合やサーバーから削除されてしまった場合への安全対策として、[`$filter`]($filter.md) や [`$orderby`]($orderby.md) を呼び出す際に [`$savedfilter`]($savedfilter.md) および [`$savedorderby`]($savedorderby.md) を使用することで、以前と同じ ID で再取得することができます。
 
-エンティティセットにアクセスするには、`$entityset/\{entitySetID\}` を使います。 例:
+エンティティセットにアクセスするには、`$entityset/\{entitySetID\}` を使います。例:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
-
-デフォルトで、エンティティセットは 2時間保存されます。 [`$timeout`]($timeout.md) に新しい値を渡すことで、タイムアウトを変更できます。エンティティセットを使用するたびに、タイムアウトはデフォルト値または指定値にリセットされます。
+デフォルトで、エンティティセットは 2時間保存されます。[`$timeout`]($timeout.md) に新しい値を渡すことで、タイムアウトを変更できます。エンティティセットを使用するたびに、タイムアウトはデフォルト値または指定値にリセットされます。
 
 4D Server のキャッシュからエンティティセットを削除したい場合には [`$method=release`]($method.md#methodrelease) を使います。
 
@@ -52,9 +45,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection) を使って、事前に作成した 2つのセンティティセットを統合できます。両セットの内容を統合する (集合の和) ほか、共通のエンティティのみを返したり (集合の積) 、共通でないエンティティのみを返したり (集合の対称差) することができます。
 
-この場合m新規のエンティティセレクションが返されます。 RESTリクエストの最後に [`$method=entityset`]($method.md#methodentityset) を追加することで新規のエンティティセットを作成することもできます。
-
-
+この場合m新規のエンティティセレクションが返されます。RESTリクエストの最後に [`$method=entityset`]($method.md#methodentityset) を追加することで新規のエンティティセットを作成することもできます。
 
 ## データの計算
 
@@ -68,7 +59,6 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 `/rest/Employee/salary/?$compute=$all`
 
-
 ## データモデルクラス関数の呼び出し
 
 POSTリクエストを使って、ORDAデータモデルの [ユーザークラス関数](ClassFunctions.md) を呼び出すことで、ターゲットアプリケーションの公開API を活用できます。たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
@@ -77,26 +67,24 @@ POSTリクエストを使って、ORDAデータモデルの [ユーザークラ�
 
 データはリクエストボディに含めます: `["Paris"]`
 
-
-
 ## 取得する属性の選択
 
 RESTレスポンスにどの属性を含めて返してもらうかを指定するには、初期リクエストに属性のパスを追加します (*例*: `Company(1)/name,revenues/`)。
 
 このフィルターは次の方法で適用できます:
 
-| Object        | シンタックス                                                      | 例題                                                            |
-| ------------- | ----------------------------------------------------------- | ------------------------------------------------------------- |
-| データクラス        | \{dataClass\}/{att1,att2...}                              | /People/firstName,lastName                                    |
-| エンティティのコレクション | \{dataClass\}/{att1,att2...}/?$filter="{filter}"          | /People/firstName,lastName/?$filter="lastName='a@'"           |
-| 特定のエンティティ     | \{dataClass\}({ID})/{att1,att2...}                        | /People(1)/firstName,lastName                                 |
-|               | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
-| エンティティセレクション  | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\} | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61 |
+| Object        | シンタックス                                                                                                                                    | 例題                                                                              |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| データクラス        | \{dataClass\}/{att1,att2...}                                                            | /People/firstName,lastName                                                      |
+| エンティティのコレクション | \{dataClass\}/{att1,att2...}/?$filter="{filter}"                                        | /People/firstName,lastName/?$filter="lastName='a@'"                |
+| 特定のエンティティ     | \{dataClass\}({ID})/{att1,att2...}                                   | /People(1)/firstName,lastName                                |
+|               | \{dataClass\}:\{attribute\}(value)/{att1,att2...}/ | /People:firstName(Larry)/firstName,lastName/ |
+| エンティティセレクション  | \{dataClass\}/{att1,att2...}/$entityset/\{entitySetID\}                               | /People/firstName/$entityset/528BF90F10894915A4290158B4281E61                   |
 
 属性名はコンマ区切りで渡します (*例*: `/Employee/firstName,lastName,salary`)。ストレージ属性およびリレーション属性を渡すことができます。
 
-
 ### 例題
+
 エンティティを取得する際に、レスポンスに含める属性を指定する例をいくつか紹介します。
 
 この方法は次を対象に使用できます:
@@ -109,12 +97,11 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 次のリクエストは、People データクラス (データクラス全体または `$filter` の定義に応じたエンティティセレクション) から名字 (firstName) と名前 (lastName) 属性のみを取得します。
 
- `GET  /rest/People/firstName,lastName/`
-
+`GET  /rest/People/firstName,lastName/`
 
 **結果**:
 
-````
+```
 {
     __entityModel: "People",
     __COUNT: 4,
@@ -147,14 +134,13 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
         }
     ]
 }
-````
-
+```
 
 `GET  /rest/People/firstName,lastName/?$filter="lastName='A@'"/`
 
 **結果**:
 
-````
+```
 {
     __entityModel: "People",
     __COUNT: 1,
@@ -169,18 +155,17 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
         }
     ]
 }
-````
-
+```
 
 #### 特定エンティティの例
 
 次のリクエストは、People データクラスの特定エンティティについて、名字 (firstName) と名前 (lastName) 属性のみを取得します。
 
- `GET  /rest/People(3)/firstName,lastName/`
+`GET  /rest/People(3)/firstName,lastName/`
 
 **結果**:
 
-````
+```
 {
     __entityModel: "People",
     __KEY: "3",
@@ -188,14 +173,13 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
     firstName: "Pete",
     lastName: "Marley"
 }
-````
+```
 
-
- `GET  /rest/People(3)/`
+`GET  /rest/People(3)/`
 
 **結果**:
 
-````
+```
 {
     __entityModel: "People",
     __KEY: "3",
@@ -214,34 +198,31 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
     employerName: "microsoft"
 
 }
-````
+
+```
 
 #### エンティティセットの例
 
 [エンティティセットの作成](#エンティティセットの作成と管理) 後に、どの属性を返すかを指定して、エンティティセットの情報をフィルターできます:
 
- `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
-
+`GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
 ## 画像属性の表示
 
 画像属性の全体像を表示させるには、次のように書きます:
 
- `GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=best&$version=1&$expand=photo`
 
-画像形式についての詳細は [`$imageformat`]($imageformat.md) を参照ください。 version パラメーターについての詳細は [`$version`]($version.md) を参照ください。
+画像形式についての詳細は [`$imageformat`]($imageformat.md) を参照ください。パラメーターについての詳細は [`$version`]($version.md) を参照ください。
 
 ## BLOB属性のディスク保存
 
 データクラスに保存されている BLOB をディスクに保存するには、次のように書きます:
 
-  `GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
-
+`GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt`
 
 ## 1件のエンティティの取得
 
 エンティティを 1件のみ取得したい場合には [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) シンタックスを利用できます。これは、データクラスの主キーに基づかないリレーション検索をしたい場合に便利です。たとえば:
 
- `GET  /rest/Company:companyCode("Acme001")`
- 
- 
+`GET  /rest/Company:companyCode("Acme001")`

@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: '$imageformat'
+title: $imageformat
 ---
 
 Define qué formato de imagen utilizar para recuperar imágenes (por ejemplo, `$imageformat=png`)
@@ -9,15 +9,15 @@ Define qué formato de imagen utilizar para recuperar imágenes (por ejemplo, `$
 
 Definir el formato a utilizar para mostrar las imágenes. Puede utilizar uno de los siguientes formatos (se soportan extensiones, tipos mime y OsType Mac):
 
-| Tipo                   | Descripción                              |
-| ---------------------- | ---------------------------------------- |
-| "best"                 | El mejor formato en función de la imagen |
+| Tipo                                   | Descripción                              |
+| -------------------------------------- | ---------------------------------------- |
+| "best"                                 | El mejor formato en función de la imagen |
 | ".gif" o "image/gif"   | Formato GIF                              |
 | ".png" o "image/png"   | Formato PNG                              |
 | ".jpeg" o "image/jpeg" | Formato JPEG                             |
 | ".tiff" o "image/tiff" | Formato TIFF                             |
 
-Una vez que haya definido el formato, debe pasar el atributo de imagen a [`$expand`]($expand.md) para cargar la foto completamente.
+Una vez definido el formato, debe pasar el atributo de imagen a [`$expand`]($expand.md) para cargar la foto por completo.
 
 Si no hay ninguna imagen para cargar o el formato no permite cargar la imagen, la respuesta será un objeto vacío `{}`.
 

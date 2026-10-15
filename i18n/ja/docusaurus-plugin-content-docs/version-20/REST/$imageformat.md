@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: '$imageformat'
+title: $imageformat
 ---
 
 画像取得の際に使用する画像形式を指定します (*例*: `$imageformat=png`)
@@ -9,9 +9,9 @@ title: '$imageformat'
 
 画像の表示に使う形式を指定します。次の形式が指定できます (拡張子、MIMEタイプ、OSType Mac がサポートされています):
 
-| 型                        | 説明       |
-| ------------------------ | -------- |
-| "best"                   | 画像に最適な形式 |
+| 型                                        | 説明       |
+| ---------------------------------------- | -------- |
+| "best"                                   | 画像に最適な形式 |
 | ".gif" または "image/gif"   | GIF 形式   |
 | ".png" または "image/png"   | PNG 形式   |
 | ".jpeg" または "image/jpeg" | JPEG 形式  |

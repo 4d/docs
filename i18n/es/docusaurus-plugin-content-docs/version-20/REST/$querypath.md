@@ -1,9 +1,9 @@
 ---
 id: querypath
-title: '$querypath'
+title: $querypath
 ---
-   	
-Devuelve la petición tal y como se ejecutó por 4D Server (*por ejemplo, *, `$querypath=true`)
+
+Devuelve la petición tal y como se ejecutó por 4D Server (\*por ejemplo, \*, `$querypath=true`)
 
 ## Descripción
 
@@ -24,17 +24,17 @@ En la colección de pasos, hay un objeto con las siguientes propiedades que defi
 
 Si pasó la siguiente petición:
 
- `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
+`GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
 Y no se encontraron entidades, se devolvería la siguiente ruta de petición, si escribe lo siguiente:
 
-`GET  /rest/$querypath`
+` GET /rest/$querypath`
 
-**Respuesta**:
+**Response**:
 
 ```
 __queryPath: {
-
+ 
     steps: [
         {
             description: "AND",
@@ -42,7 +42,7 @@ __queryPath: {
             recordsfounds: 0,
             steps: [
                 {
-                    description: "Join on Table : Company : People.employer = Company. ID",
+                    description: "Join on Table : Company : People.employer = Company.ID",
                     time: 0,
                     recordsfounds: 0,
                     steps: [
@@ -60,17 +60,17 @@ __queryPath: {
             ]
         }
     ]
-
+ 
 }
 ```
 
 Si, por el contrario, la primera consulta devuelve más de una entidad, se ejecutará la segunda. Si ejecutamos la siguiente consulta:
 
- `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
+`GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 
 Si se encuentra al menos una entidad, se devolverá la siguiente ruta de consulta, si se escribe lo siguiente:
 
- `GET  /rest/$querypath`
+`GET  /rest/$querypath`
 
 **Respuesta**:
 

@@ -16,6 +16,7 @@ title: DataClass
 | [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<br/><!-- INCLUDE #DataClassClass.get().Summary -->                                                          |
 | [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<br/><!-- INCLUDE #DataClassClass.getCount().Summary -->                                           |
 | [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<br/><!-- INCLUDE #DataClassClass.getDataStore().Summary -->                               |
+| [<!-- INCLUDE #DataClassClass.getIndexes().Syntax -->](#getindexes)<br/><!-- INCLUDE #DataClassClass.getIndexes().Summary -->                                     |
 | [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataClassClass.getInfo().Summary -->                                              |
 | [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<br/><!-- INCLUDE #DataClassClass.getRemoteCache().Summary -->                         |
 | [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #DataClassClass.new().Summary -->                                                          |
@@ -50,24 +51,24 @@ title: DataClass
 
 返される属性オブジェクトには以下のプロパティが格納されています:
 
-| プロパティ            | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| autoFilled       | Boolean | 属性値が 4D によって自動生成される場合に true です。このプロパティは次の 4Dフィールドプロパティに対応しています: 数値型フィールドの "自動インクリメント" および UUID (文字型)フィールドの "自動UUID"。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| exposed          | Boolean | 属性が REST で公開されている場合に trueです                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| fieldNumber      | integer | 属性の内部的な 4Dフィールド番号。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| fieldType        | Integer | 属性の 4Dデータベースフィールドタイプ。これは属性の種類 (`kind`) によります。とりうる値:<li>`.kind` = "storage" の場合は、対応する 4Dフィールドタイプ ([`Value type`](../commands/value-type) 参照)</li><li>`.kind` = "relatedEntity" の場合: 38 (`is object`)</li><li>`.kind` = "relatedEntities" の場合: 42 (`is collection`)</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値 (フィールドタイプ、relatedEntity または relatedEntities) に応じて、上に同じ</li>                                                                                                                                                                                                                                                                                          |
-| indexed          | Boolean | 属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| inverseName      | Text    | リレーション先の属性名。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| keywordIndexed   | Boolean | 属性にキーワードインデックスが存在すれば true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| kind             | Text    | 属性の種類。属性の種類。 とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"calculated": 計算属性。[`get`](../ORDA/ordaClasses.md#function-get-attributename) 関数 によって定義されます。</li><li>"alias": [他の属性](../ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。</li><li>"relatedEntity": N対1 リレーション属性 (エンティティへの参照) </li><li>"relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)</li>                                                                                                                                                                                                                                                                                                |
-| 必須               | Boolean | 属性において Null値の入力が拒否されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。注記: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| name             | Text    | 属性名 (文字列)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| path             | Text    | リレーションに基づく [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) のパス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| readOnly         | Boolean | 読み取り専用属性の場合に trueです。たとえば、[`set` 関数](../ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| relatedDataClass | Text    | 属性にリレートされているデータクラスの名称。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| type             | Text    | 属性の概念的な値タイプ。 汎用的なプログラミングに有用です。これは属性の種類 (`kind`) によります。とりうる値: <li>`.kind` = "storage" の場合: "blob", "bool", "date", "image", "number", "object", または "string"。属性の概念的な値タイプ。汎用的なプログラミングに有用です。 これは属性の種類 (`kind`) によります。 とりうる値: <li>`.kind` = "storage" の場合: "blob", "bool", "date", "image", "number", "object", または "string"。 数値型の場合 "number" が返されます (時間を含む)。UUID、文字およびテキスト型フィールドの場合 "string" が返されます。"blob" 属性は [BLOB オブジェクト](../Concepts/dt_blob.md#blob-の種類) です。</li><li>`.kind` = "relatedEntity" の場合: リレートされたデータクラス名</li><li>`.kind` = "relatedEntities" の場合: リレートされたデータクラス名 + "Selection" 接尾辞</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値に応じて、上に同じ</li> |
-| unique           | Boolean | 属性値が重複不可の場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| classID          | Text    | `.type = "object"` でかつクラスがストラクチャーエディター内で指定されていた場合にのみ利用可能です。</br>オブジェクトのインスタンス下に使用したクラスの名前を返します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| プロパティ            | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autoFilled       | Boolean | 属性値が 4D によって自動生成される場合に true です。このプロパティは次の 4Dフィールドプロパティに対応しています: 数値型フィールドの "自動インクリメント" および UUID (文字型)フィールドの "自動UUID"。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                     |
+| exposed          | Boolean | 属性が REST で公開されている場合に trueです                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| fieldNumber      | integer | 属性の内部的な 4Dフィールド番号。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| fieldType        | Integer | 属性の 4Dデータベースフィールドタイプ。これは属性の種類 (`kind`) によります。とりうる値:<li>`.kind` = "storage" の場合は、対応する 4Dフィールドタイプ ([`Value type`](../commands/value-type) 参照)</li><li>`.kind` = "relatedEntity" の場合: 38 (`is object`)</li><li>`.kind` = "relatedEntities" の場合: 42 (`is collection`)</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値 (フィールドタイプ、relatedEntity または relatedEntities) に応じて、上に同じ</li> |
+| indexed          | Boolean | 属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| inverseName      | Text    | リレーション先の属性名。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| keywordIndexed   | Boolean | 属性にキーワードインデックスが存在すれば true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| kind             | Text    | 属性の種類。属性の種類。 とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"calculated": 計算属性。[`get`](../ORDA/ordaClasses.md#function-get-attributename) 関数 によって定義されます。</li><li>"alias": [他の属性](../ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。</li><li>"relatedEntity": N対1 リレーション属性 (エンティティへの参照) </li><li>"relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)</li>       |
+| 必須               | Boolean | 属性において Null値の入力が拒否されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。注記: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。                                                                                                                                                                                                                                                                                                                 |
+| name             | Text    | 属性名 (文字列)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| path             | Text    | リレーションに基づく [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) のパス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| readOnly         | Boolean | 読み取り専用属性の場合に trueです。たとえば、[`set` 関数](../ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| relatedDataClass | Text    | 属性にリレートされているデータクラスの名称。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| type             | Text    | 属性の概念的な値タイプ。 汎用的なプログラミングに有用です。これは属性の種類 (`kind`) によります。とりうる値: <li>`.kind` = "storage" の場合: "blob", "bool", "date", "image", "number", "object", または "string"。時間を含め、数値型の場合は "number" が返されます; UUID、文字列、テキスト型属性の場合は "string" が返されます; [BLOBオブジェクト](../Concepts/dt_blob.md#blob-types) の場合は "blob" が返されます。</li>属性にリレートされているデータクラスの名称。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                   |
+| unique           | Boolean | 属性値が重複不可の場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| classID          | Text    | `.type = "object"` でかつクラスがストラクチャーエディター内で指定されていた場合にのみ利用可能です。</br>オブジェクトのインスタンス下に使用したクラスの名前を返します。                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 :::tip
 
@@ -623,6 +624,77 @@ $number:=$ds.Persons.getCount()
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.getIndexes().Desc -->
+
+## .getIndexes()
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 21 R5 | 追加 |
+
+</details>
+
+<!-- REF #DataClassClass.getIndexes().Syntax -->**.getIndexes()** : Collection <!-- END REF -->
+
+<!-- REF #DataClassClass.getIndexes().Params -->
+
+<div class="no-index">
+
+| 引数  | 型          |                             | 説明                          |
+| --- | ---------- | --------------------------- | --------------------------- |
+| 戻り値 | Collection | <- | Collection of index objects |
+
+</div>
+<!-- END REF -->
+
+#### 説明
+
+The `.getIndexes()` function <!-- REF #DataClassClass.getIndexes().Summary -->returns a collection of all indexes related to the dataclass<!-- END REF -->.
+
+Each index is an object of the collection. Indexes are returned in the creation/modification order. An empty collection is returned if there is no index in the dataclass.
+
+**返されるコレクション**
+
+Each object of the returned collection has the following properties:
+
+| プロパティ      | 型          | 説明                                                                                                                                                                                                                                                          |
+| ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | Integer    | Index type: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean. If the index is set to Automatic, the type property represents the type of the indexing algorithm used |
+| automatic  | Boolean    | True if "automatic" index is selected                                                                                                                                                                                                                       |
+| name       | Text       | Index name if defined                                                                                                                                                                                                                                       |
+| kind       | Text       | "keywords" if *keyword index* checked, otherwise "regular"                                                                                                                                                                                                  |
+| attributes | Collection | Index attribute or list of attributes (for composite index)                                                                                                                                                                              |
+| UUID       | Text       | Index UUID                                                                                                                                                                                                                                                  |
+| uniqueKey  | Boolean    | True if index has the Unique key property                                                                                                                                                                                                                   |
+
+:::tip 関連したblog 記事
+
+[Managing 4D Indexes Programmatically with getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
+
+:::
+
+#### 例題
+
+Considering the following table:
+
+![table-indexes](../assets/en/API/table-index.png)
+
+```4d
+
+var $colIndex:=ds.Products.getIndexes()
+
+//$colIndex[0]={"automatic":true,"kind":"regular","type":1,"uniqueKey":true,"UUID":"ADE...","attributes":["ID"]}
+//$colIndex[1]={"automatic":true,"kind":"regular","type":1,"uniqueKey":false,"UUID":"00D...","attributes":["name"]}
+//$colIndex[2]={"name":"Description","automatic":false,"kind":"keywords","type":-1,"uniqueKey":false,"UUID":"37B...","attributes":["description"]}
+//$colIndex[3]={"automatic":false,"kind":"regular","type":5,"uniqueKey":false,"UUID":"618...","attributes":["embedding"]}
+//$colIndex[4]={"automatic":true,"kind":"regular","type":3,"uniqueKey":false,"UUID":"297...","attributes":["embedding"]}
+//$colIndex[5]={"automatic":false,"kind":"regular","type":4,"uniqueKey":false,"UUID":"EA8...","attributes":["embedding"]}
+```
+
+<!-- END REF -->
+
 <!-- REF DataClassClass.getInfo().Desc -->
 
 ## .getInfo()
@@ -727,7 +799,7 @@ $number:=$ds.Persons.getCount()
 
 #### 説明
 
-`.getRemoteCache()` 関数は、<!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。
+`.getRemoteCache()` 関数は、<!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。。
 
 4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
 
@@ -1029,18 +1101,18 @@ attributePath|formula 比較演算子 値
 
 1. 悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。たとえば、以下のようなクエリ文字列を考えます:
 
-```4d
- $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
+  $result:=$col.query($vquery)
+ ```
 
 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
 
 プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 この場合、ユーザーが *myname* エリアに *smith OR status='private'* と入力した場合でも、それはクエリ文字列 とはみなされず、値として渡されるだけです。 "smith OR status='private' " という名前の人物を検索したところで、結果は失敗に終わるだけです。
 
@@ -1048,10 +1120,10 @@ attributePath|formula 比較演算子 値
 
 3. クエリに変数や式を使用することができます。例:
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 ### null値を検索する
 
@@ -1221,11 +1293,11 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 この場合、*value* 引数は、以下のプロパティを格納した**比較ベクトルオブジェクト** である必要があります:
 
-| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| metric    | Text                                               | 任意。クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。以下の(テキストの)定数のいずれか一つを使用することができます:<li>`mk cosine` (省略時にデフォルト): ベクトル間の[コサイン類似度](./VectorClass.md#cosinesimilarity)を計算します。</li><li>`mk dot`: ベクトル間の[ドット類似度](VectorClass.md#dotsimilarity)を計算します。</li><li>`mk euclidean`: ベクトル間の[ユークリッド距離](./VectorClass.md#euclideandistance)を計算します。 |
-| threshold | Real                                               | 任意(デフォルト: 0.5)。選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                                                                                                                                    |
+| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| metric    | Text                                               | 任意。クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。以下の(テキスト)定数のうちのいずれか一つを使用できます:<li>`mk cosine` (省略時のデフォルト): ベクトル間の[コサイン類似度](./VectorClass.md#cosinesimilarity) を計算します。</li><li>`mk dot`: ベクトル間の[ドット類似度](VectorClass.md#dotsimilarity) を計算します</li><li>`mk euclidean`: ベクトル間の[ユークリッド距離](./VectorClass.md#euclideandistance) を計算します。 |
+| threshold | Real                                               | 任意(デフォルト: 0.5)。選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                                                                                                                                   |
 
 **comparator** 記号の、一部のみがサポートされます。これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
@@ -1699,7 +1771,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### 説明
 
-`.setRemoteCacheSettings()` 関数は、<!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->。
+`.setRemoteCacheSettings()` 関数は、<!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->。。
 
 *settings* には、以下のプロパティを持つオブジェクトを渡します:
 

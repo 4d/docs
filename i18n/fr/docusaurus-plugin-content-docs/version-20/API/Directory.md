@@ -3,8 +3,8 @@ id: Directory
 title: Classe Directory
 ---
 
-
 <!-- REF directory.creationDate.Desc -->
+
 ## .creationDate
 
 <details><summary>Historique</summary>
@@ -12,6 +12,7 @@ title: Classe Directory
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -27,6 +28,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.creationTime.Desc -->
+
 ## .creationTime
 
 <details><summary>Historique</summary>
@@ -34,13 +36,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
 #### Description
 
-La propriété `.creationTime` retourne <!-- REF #directory.creationTime.Summary -->l'heure de création du dossier<!-- END REF --> (exprimé en nombre de secondes commençant à 00:00).
+La propriété `.creationTime` renvoie <!-- REF #directory.creationTime.Summary -->l'heure de création du dossier<!-- END REF --> (exprimée en nombre de secondes commençant à 00:00).
 
 Cette propriété est en **lecture seule**.
 
@@ -49,6 +52,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.exists.Desc -->
+
 ## .exists
 
 <details><summary>Historique</summary>
@@ -56,13 +60,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.exists` retourne <!-- REF #directory.exists.Summary -->vrai si le dossier existe sur le disque<!-- END REF -->, et faux sinon.
+La propriété `.exists` renvoie <!-- REF #directory.exists.Summary -->true si le dossier existe sur le disque<!-- END REF -->, et false sinon.
 
 Cette propriété est en **lecture seule**.
 
@@ -71,6 +76,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.extension.Desc -->
+
 ## .extension
 
 <details><summary>Historique</summary>
@@ -78,23 +84,23 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.extension` <!-- REF #directory.extension.Summary -->retourne l'extension du nom du dossier (le cas échéant)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaîne vide si le nom du dossier n'a pas d'extension.
+La propriété `.extension` <!-- REF #directory.extension.Summary -->renvoie l'extension du nom du dossier (s'il y en a une)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaîne vide si le nom du dossier n'a pas d'extension.
 
 Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
 ---
 
 <!-- REF directory.fullName.Desc -->
+
 ## .fullName
 
 <details><summary>Historique</summary>
@@ -102,13 +108,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.fullName` <!-- REF #directory.fullName.Summary -->retourne le nom complet du dossier, y compris son extension (le cas échéant)<!-- END REF -->.
+La propriété `.fullName` <!-- REF #directory.fullName.Summary -->retourne le nom complet du dossier, extension comprise (le cas échéant)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -117,6 +124,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.hidden.Desc -->
+
 ## .hidden
 
 <details><summary>Historique</summary>
@@ -124,13 +132,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.hidden` retourne <!-- REF #directory.hidden.Summary --> vrai si le dossier est défini comme "caché" au niveau du système<!-- END REF -->, et faux sinon.
+La propriété `.hidden` renvoie <!-- REF #directory.hidden.Summary --> true si le dossier est défini comme "hidden" au niveau du système<!-- END REF -->, et false dans le cas contraire.
 
 Cette propriété est en **lecture seule**.
 
@@ -139,6 +148,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.isAlias.Desc -->
+
 ## .isAlias
 
 <details><summary>Historique</summary>
@@ -146,13 +156,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.isAlias` retourne <!-- REF #directory.isAlias.Summary -->toujours **faux** pour un objet `Folder`<!-- END REF -->.
+La propriété `.isAlias` retourne<!-- REF #directory.isAlias.Summary -->toujours **false** pour un objet `Dossier`<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -161,6 +172,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.isFile.Desc -->
+
 ## .isFile
 
 <details><summary>Historique</summary>
@@ -168,13 +180,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.isFile` retourne <!-- REF #directory.isFile.Summary -->toujours **faux** pour un objet Folder<!-- END REF -->.
+La propriété `.isFile` retourne <!-- REF #directory.isFile.Summary -->toujours **false** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -183,6 +196,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.isFolder.Desc -->
+
 ## .isFolder
 
 <details><summary>Historique</summary>
@@ -190,13 +204,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.isFolder` retourne <!-- REF #directory.isFolder.Summary -->toujours **vrai** pour un objet Folder<!-- END REF -->.
+La propriété `.isFolder` renvoie <!-- REF #directory.isFolder.Summary -->toujours **true** pour un dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -205,6 +220,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.isPackage.Desc -->
+
 ## .isPackage
 
 <details><summary>Historique</summary>
@@ -212,13 +228,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
 
 #### Description
 
-La propriété `.isPackage` retourne <!-- REF #directory.isPackage.Summary -->vrai si le dossier est un paquet sur macOS (et existe sur le disque)<!-- END REF -->. Sinon, elle retourne false.
+La propriété `.isPackage` renvoie <!-- REF #directory.isPackage.Summary -->true si le dossier est un paquet sous macOS (et existe sur le disque)<!-- END REF -->. Sinon, elle retourne false.
 
 Sous Windows, `.isPackage` retourne toujours **false**.
 
@@ -229,6 +246,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.modificationDate.Desc -->
+
 ## .modificationDate
 
 <details><summary>Historique</summary>
@@ -236,13 +254,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
 #### Description
 
-La propriété `.modificationDate` retourne <!-- REF #directory.modificationDate.Summary --> la date de la dernière modification du dossier<!-- END REF -->.
+La propriété `.modificationDate` renvoie <!-- REF #directory.modificationDate.Summary --> la date de la dernière modification du dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -251,6 +270,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.modificationTime.Desc -->
+
 ## .modificationTime
 
 <details><summary>Historique</summary>
@@ -258,13 +278,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
 #### Description
 
-La propriété `.modificationTime` retourne <!-- REF #directory.modificationTime.Summary -->l'heure de la dernière modification du dossier<!-- END REF --> (exprimé en nombre de secondes commençant à 00:00).
+La propriété `.modificationTime` retourne <!-- REF #directory.modificationTime.Summary -->l'heure de la dernière modification du dossier<!-- END REF --> (exprimée en nombre de secondes depuis 00:00).
 
 Cette propriété est en **lecture seule**.
 
@@ -273,6 +294,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.name.Desc -->
+
 ## .name
 
 <details><summary>Historique</summary>
@@ -280,13 +302,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.name` retourne <!-- REF #directory.name.Summary --> le nom du dossier, sans extension (le cas échéant)<!-- END REF -->.
+La propriété `.name` renvoie <!-- REF #directory.name.Summary --> le nom du dossier, sans l'extension (s'il y en a une)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -295,6 +318,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.original.Desc -->
+
 ## .original
 
 <details><summary>Historique</summary>
@@ -302,15 +326,17 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
 
 #### Description
 
-La propriété `.original` retourne <!-- REF #directory.original.Summary -->le même objet Folder que le dossier<!-- END REF -->.
+La propriété `.original` retourne <!-- REF #directory.original.Summary -->le même objet Dossier que le dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
+
 > Cette propriété est disponible sur les dossiers pour permettre au code générique de traiter les dossiers ou les fichiers.
 
 <!-- END REF -->
@@ -318,6 +344,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.parent.Desc -->
+
 ## .parent
 
 <details><summary>Historique</summary>
@@ -325,13 +352,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
 
 #### Description
 
-La propriété `.parent` retourne <!-- REF #directory.parent.Summary -->l'objet Folder parent du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
+La propriété `.parent` retourne <!-- REF #directory.parent.Summary -->l'objet dossier parent du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Si le dossier n'a pas de parent (racine), la valeur nulle est retournée.
 
@@ -342,6 +370,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.path.Desc -->
+
 ## .path
 
 <details><summary>Historique</summary>
@@ -349,6 +378,7 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -364,6 +394,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.platformPath.Desc -->
+
 ## .platformPath
 
 <details><summary>Historique</summary>
@@ -371,13 +402,14 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.platformPath` retourne <!-- REF #directory.platformPath.Summary -->le chemin du dossier exprimé avec la syntaxe de la plate-forme actuelle<!-- END REF -->.
+La propriété `.platformPath` retourne <!-- REF #directory.platformPath.Summary -->le chemin du dossier exprimé dans la syntaxe de la plate-forme courante<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -386,6 +418,7 @@ Cette propriété est en **lecture seule**.
 ---
 
 <!-- REF directory.copyTo().Desc -->
+
 ## .copyTo()
 
 <details><summary>Historique</summary>
@@ -393,30 +426,32 @@ Cette propriété est en **lecture seule**.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
-
 <!-- REF #directory.copyTo().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|Dossier de destination|
-|newName|Text|->|Nom de la copie|
-|overwrite|Integer|->|`fk overwrite` pour remplacer les éléments existants|
-|Résultat|4D.Folder|<-|Copied file or folder|
+| Paramètres         | Type                      |                             | Description                                        |
+| ------------------ | ------------------------- | :-------------------------: | -------------------------------------------------- |
+| dossierDestination | 4D.Folder |              ->             | Dossier de destination                             |
+| nouveauNom         | Text                      |              ->             | Nom de la copie                                    |
+| overwrite          | Integer                   |              ->             | `fk overwrite` pour écraser les éléments existants |
+| Résultat           | 4D.Folder | <- | Dossier copié                                      |
+
 </div>
 <!-- END REF -->
 
 #### Description
 
-La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` dans l'objet *destinationFolder* spécifié<!-- END REF -->.
+La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` dans le *destinationFolder* spécifié<!-- END REF -->.
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le dossier est copié avec le nom du dossier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+Par défaut, le dossier est copié avec le nom du dossier original. Par défaut, le dossier est copié avec le nom du dossier original. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 S'il existe déjà un dossier portant le même nom dans *destinationFolder*, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre *overwrite* pour ignorer et écraser le dossier existant :
 
@@ -443,6 +478,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ---
 
 <!-- REF directory.file().Desc -->
+
 ## .file()
 
 <details><summary>Historique</summary>
@@ -450,24 +486,26 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
-
 <!-- REF #directory.file().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---|----|---|
-|Path|Text|->|Chemin d'accès POSIX relatif du fichier |
-|Résultat|4D.File|<-|`File` object (null if invalid path)|
+| Paramètres | Type                    |                             | Description                                               |
+| ---------- | ----------------------- | --------------------------- | --------------------------------------------------------- |
+| path       | Text                    | ->                          | Chemin POSIX relatif                                      |
+| Résultat   | 4D.File | <- | Objet `File` (null si chemin invalide) |
+
 </div>
 <!-- END REF -->
 
 #### Description
 
-La fonction `.file()` crée <!-- REF #directory.file().Summary -->un objet `File` à l'intérieur de l'objet `Folder` et renvoie sa référence<!-- END REF -->.
+La fonction `.file()` crée <!-- REF #directory.file().Summary -->un objet `File` à l'intérieur de l'objet `Folder` et retourne sa référence<!-- END REF -->.
 
 Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
@@ -487,6 +525,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ---
 
 <!-- REF directory.files().Desc -->
+
 ## .files()
 
 <details><summary>Historique</summary>
@@ -494,27 +533,30 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-
 <!-- REF #directory.files().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---|----|---|
-|options|Integer|->|Options de la liste des fichiers|
-|Résultat|Collection|<-|Collection of children file objects|
+| Paramètres | Type       |                             | Description                        |
+| ---------- | ---------- | --------------------------- | ---------------------------------- |
+| options    | Integer    | ->                          | Options de liste de fichiers       |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
+
 </div>
 <!-- END REF -->
 
 #### Description
 
-La fonction `.files()` retourne <!-- REF #directory.files().Summary -->une collection des objets `File` contenus dans le dossier<!-- END REF -->.
+La fonction `.files()` <!-- REF #directory.files().Summary -->retourne une collection d'objets `File` contenus dans le dossier<!-- END REF -->.
+
 > Les alias ou les liens symboliques ne sont pas résolus.
 
-Par défaut, si vous omettez le paramètre *options*, seuls les fichiers au premier niveau du dossier sont retournés dans la collection, y compris les fichiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
+Par défaut, si vous ne passez pas le paramètre *options*, seuls les fichiers situés au premier niveau du dossier sont renvoyés dans la collection, incluant les fichiers cachés. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
 | Constante             | Valeur | Commentaire                                                                            |
 | --------------------- | ------ | -------------------------------------------------------------------------------------- |
@@ -552,6 +594,7 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 ---
 
 <!-- REF directory.folder().Desc -->
+
 ## .folder()
 
 <details><summary>Historique</summary>
@@ -559,18 +602,20 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
-
 <!-- REF #directory.folder().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---|----|---|
-|Path|Text|->|Chemin d'accès POSIX relatif du fichier |
-|Résultat|4D.Folder|<-|Created folder object (null if invalid *path*)|
+| Paramètres | Type                      |                             | Description                                                |
+| ---------- | ------------------------- | --------------------------- | ---------------------------------------------------------- |
+| path       | Text                      | ->                          | Chemin POSIX relatif                                       |
+| Résultat   | 4D.Folder | <- | Objet dossier (null si *path* invalide) |
+
 </div>
 <!-- END REF -->
 
@@ -596,6 +641,7 @@ Un objet `Folder` object ou null si *path* est invalide.
 ---
 
 <!-- REF directory.folders().Desc -->
+
 ## .folders()
 
 <details><summary>Historique</summary>
@@ -603,18 +649,20 @@ Un objet `Folder` object ou null si *path* est invalide.
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-
 <!-- REF #directory.folders().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---|----|---|
-|options|Integer|->|Options de la liste des dossiers|
-|Résultat|Collection|<-|Collection of children folder objects|
+| Paramètres | Type       |                             | Description                        |
+| ---------- | ---------- | --------------------------- | ---------------------------------- |
+| options    | Integer    | ->                          | Options de liste des dossiers      |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
+
 </div>
 <!-- END REF -->
 
@@ -647,6 +695,7 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 ---
 
 <!-- REF directory.getIcon().Desc -->
+
 ## .getIcon()
 
 <details><summary>Historique</summary>
@@ -654,18 +703,20 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 | Release | Modifications |
 | ------- | ------------- |
 | 17 R5   | Ajout         |
+
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-
 <!-- REF #directory.getIcon().Params -->
+
 <div class="no-index">
 
-|Paramètre|Type||Description|
-|---|----|---|
-|size|Integer|->|Longueur du côté de l'image renvoyée (pixels)|
-|Résultat|Picture|<-|Icon|
+| Paramètres | Type    |                             | Description                                                       |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------------- |
+| size       | Integer | ->                          | Longueur du côté de l'image retournée (pixels) |
+| Résultat   | Picture | <- | Icône                                                             |
+
 </div>
 <!-- END REF -->
 

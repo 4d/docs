@@ -14,6 +14,7 @@ Puede tener varias barras de menús separadas para cada aplicación. Por ejemplo
 Puede utilizar el mismo menú en varias barras de menús o en otros menús, o puede dejarlo suelto y gestionarlo sólo por programación (en este caso, se conoce como menú independiente).
 
 Cuando diseñe los menús, tenga en cuenta las dos reglas siguientes:
+
 - Utilice los menús para las funciones que se adaptan a los menús: los comandos del menú deben realizar tareas como añadir un registro, buscar registros o imprimir un informe.
 - Agrupe los comandos de menú por función: por ejemplo, todos los comandos de menú que imprimen informes deben estar en el mismo menú. Por ejemplo, puede tener todas las operaciones de una determinada tabla en un solo menú.
 
@@ -23,8 +24,8 @@ Para crear menús y barras de menús, puede utilizar:
 - los comandos de lenguaje para el tema "Menús",
 - una combinación de ambos.
 
-
 ## Editor de menús
+
 Se accede al editor de menús mediante el botón **Menús** de la caja de herramientas.
 
 ![](../assets/en/Menus/editor1.png)

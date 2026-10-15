@@ -9,29 +9,31 @@ L'Explorateur de données fournit une interface web pour visualiser et recherche
 
 ## Configuration
 
-L'Explorateur de données s'appuie sur le composant serveur web [`WebAdmin`](webAdmin.md) pour la configuration et les paramètres d'authentification.
+L'Explorateur de données s'appuie sur le composant serveur web [`WebAdmin`](webAdmin.md) pour les paramètres
+de configuration et d'authentification.
 
-- **configuration** : la configuration de l'Explorateur de données réutilise les [paramètres du serveur web `WebAdmin`](webAdmin.md#webadmin-settings),
+- **configuration** : la configuration de l'Explorateur de données réutilise les paramètres du serveur web [`WebAdmin`](webAdmin.md#webadmin-settings),
 - **authentification** : l'accès à l'Explorateur de données est accordé lorsque [l'utilisateur de la session est authentifié](webAdmin.md#authentication-and-session) et détient le privilège "WebAdmin". Lorsque l'on accède à l'Explorateur de données via l'élément de menu **Explorateur de données** (voir ci-dessous), une authentification automatique est fournie.
 
-> L'accès à l'Explorateur de données peut être désactivé à l'aide de la fonction [`.setAdminProtection().`](API/DataStoreClass.md#setadminprotection)
+> L'accès à l'Explorateur de données peut être désactivé à l'aide de la fonction [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 
 ## Ouverture de l'Explorateur de données
 
-[Le serveur web `WebAdmin`](webAdmin.md#starting-the-webadmin-web-server) est démarré automatiquement si nécessaire lorsque l'on clique sur l'explorateur de données.
+[Le serveur web `WebAdmin`](webAdmin.md#starting-the-webadmin-web-server) est démarré automatiquement si nécessaire lorsque l'on clique sur l'Explorateur de données.
 
 Pour se connecter à la page web de l'Explorateur de données :
 
 - A partir d'une application 4D (avec interface) :
   - Pour ouvrir une nouvelle fenêtre 4D avec la page de l'Explorateur de données affichée dans une zone web, sélectionnez **Explorateur de données** dans le menu **Enregistrements** ou cliquez sur le bouton **Données** dans la barre d'outils principale.
-  - Pour ouvrir l'Explorateur de données dans un onglet de navigateur externe, sélectionnez **Explorateur de données dans le navigateur** dans le menu **Enregistrements** ou appuyez sur la touche **Alt** (Windows)/**Option** (macOS) et cliquez sur le bouton **Données** dans la barre d'outils principale.
+  - Pour ouvrir l'Explorateur de données dans un onglet de navigateur externe, sélectionnez **Explorateur de données dans le navigateur** dans le menu **Enregistrements** ou appuyez sur la touche **Alt** (Windows)/**Option** (macOS) et cliquez sur le bouton \*
+
 - À partir de 4D Server, sélectionnez **Explorateur de données dans le navigateur** dans le menu **Fenêtre** (l'Explorateur de données ne peut être ouvert que dans un navigateur externe).
 
 - Que vous utilisiez une application 4D sans interface ou non, vous pouvez ouvrir votre navigateur web et entrer l'adresse suivante :
 
- `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
+`IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
- Dans ce contexte, vous serez invité à saisir la [clé d'accès](webAdmin.md#access-key) pour ouvrir une session `WebAdmin` sur le serveur :
+Dans ce contexte, vous serez invité à saisir la [clé d'accès](webAdmin.md#access-key) pour ouvrir une session `WebAdmin` sur le serveur :
 
 ![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
@@ -64,18 +66,23 @@ Vous pouvez passer au thème d'affichage **mode sombre** à l'aide du sélecteur
 
 La page contient plusieurs zones :
 
-- Sur le côté gauche, se trouvent la **zone des Dataclass** et la **zone des attributs**, pour sélectionner les dataclass et les attributs à afficher. Les attributs sont classés selon l'ordre de création de la structure sous-jacente. Les clés primaires et les attributs indexés ont une icône spécifique. Vous pouvez filtrer la liste des noms de dataclasses et d'attributs proposés en utilisant les zones de recherche respectives. ![alt-text](../assets/en/Admin/dataExplorer3.png)
+- Sur le côté gauche, se trouvent la **zone des Dataclass** et la **zone des attributs**, pour sélectionner les dataclass et les attributs à afficher. Les attributs sont classés selon l'ordre de création de la structure sous-jacente. Les clés primaires et les attributs indexés ont une icône spécifique. Vous pouvez filtrer la liste des noms de dataclasses et d'attributs proposés en utilisant les zones de recherche respectives.
+  ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
-- La partie centrale contient la **Zone de recherche** et la **Grille de données** (liste des entités de la dataclass sélectionnée). Chaque colonne de la grille représente un attribut du datastore.
-  - Par défaut, toutes les entités sont affichées. Vous pouvez filtrer les entités affichées en utilisant la zone de recherche. Vous sélectionnez le mode de requête en cliquant sur le bouton correspondant (le bouton **X** permet de réinitialiser la zone de requête et donc de stopper le filtrage) : Deux modes de requête sont disponibles : [Recherche sur les attributs](#query-on-attributes) (sélectionné par défaut), et la [Recherche avancée avec expression](#advanced-queries-with-expression). ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+- Résultats Chaque colonne de la grille représente un attribut du datastore.
+  - Par défaut, toutes les entités sont affichées. Vous pouvez filtrer les entités affichées en utilisant la zone de recherche. Deux modes de requête sont disponibles : [Requête sur les attributs](#query-on-attributes) (sélectionné par défaut), et la [Requête avancée avec expression](#advanced-queries-with-expression). Vous sélectionnez le mode de requête en cliquant sur le bouton correspondant (le bouton **X** permet de réinitialiser la zone de requête et donc de stopper le filtrage):
+    ![alt-text](../assets/en/Admin/dataExplorer4b.png)
   - Le nom de la dataclass sélectionnée est ajouté sous forme d'onglet au-dessus de la grille de données. A l'aide de ces onglets, vous pouvez passer d'une dataclasse à une autre qui a déjà été sélectionnée. Vous pouvez supprimer une dataclasse référencée en cliquant sur l'icône "supprimer" à droite du nom de la dataclass.
   - Vous pouvez réduire le nombre de colonnes en décochant les attributs dans la partie gauche. Vous pouvez également changer les colonnes dans la grille de données à l'aide du glisser-déposer. Vous pouvez cliquer sur l'en-tête d'une colonne pour [trier les entités](#ordering-entities) en fonction de ses valeurs (lorsque cela est possible).
-  - Si une opération nécessite beaucoup de temps, une barre de progression s'affiche. Vous pouvez arrêter l'opération en cours à tout moment en cliquant sur le bouton rouge :<br/> ![alt-text](../assets/en/Admin/dataExplorer5.png)
+  - Si une opération nécessite beaucoup de temps, une barre de progression s'affiche. Vous pouvez arrêter l'opération en cours à tout moment en cliquant sur le bouton rouge :<br/>
+    ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
 - Sur la droite se trouve la zone **Détails** : elle affiche les valeurs des attributs de l'entité actuellement sélectionnée ainsi que les **données liées**, le cas échéant. Vous pouvez naviguer entre les entités de la dataclass en cliquant sur les liens **Premier** / **Précédent** / **Suivant** / **Dernier** en bas de la zone.
   - Tous les types d'attributs sont affichés, y compris les images, les objets (exprimés en json) ainsi que les [attributs calculés](../ORDA/ordaClasses.md#computed-attributes-1) et les [alias](../ORDA/ordaClasses.md#alias-attributes-1) .
-  - Les données liées (relations N-vers-1 et 1-versN) peuvent être affichées par le biais de zones extensibles/réductibles :<br/> ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) sur un nom d'attribut lié dans la zone de droite affiche les valeurs de l'attribut dans une zone flottante indépendante :<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
+  - Les données liées (relations N-vers-1 et 1-vers-N) peuvent être affichées par le biais de zones extensibles/réductibles :<br/>
+    ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
+  - **Ctrl+Clic** (Windows) ou **Command+Clic** (macOS) sur un nom d'attribut lié dans la zone de droite affiche les valeurs de l'attribut dans une zone flottante indépendante :<br/>
+    ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
 ### Mise à jour des contenus
 
@@ -136,11 +143,11 @@ Le filtre est du type "commence par". Par exemple, si vous saisissez "Jim", vous
 
 Vous pouvez également utiliser le caractère générique (@) pour remplacer un ou plusieurs caractères de départ. Par exemple :
 
-| Un filtre avec | Résultats                                                 |
-| -------------- | --------------------------------------------------------- |
-| Bel            | Toutes les valeurs qui commencent par "Bel"               |
-| @do            | Toutes les valeurs contenant "do"                         |
-| Bel@do         | Toutes les valeurs commençant par "Bel" et contenant "do" |
+| Un filtre avec      | Résultats                                                 |
+| ------------------- | --------------------------------------------------------- |
+| Bel                 | Toutes les valeurs qui commencent par "Bel"               |
+| @do    | Toutes les valeurs contenant "do"                         |
+| Bel@do | Toutes les valeurs commençant par "Bel" et contenant "do" |
 
 Si vous souhaitez créer des requêtes plus spécifiques, telles que "est exactement", vous devrez utiliser la fonction de requêtes avancées.
 
@@ -156,7 +163,7 @@ Vous pouvez saisir des requêtes avancées qui ne sont pas disponibles en tant q
 firstname=="Jim"
 ```
 
-Vous pouvez utiliser n'importe quelle expression de requête ORDA, comme [documenté avec la fonction `query()`](API/DataClassClass.md#query), avec les limitations ou différences suivantes :
+Vous pouvez utiliser n'importe quelle expression de requête ORDA comme documenté dans la fonction [`query()`] (API/DataClassClass.md#query), avec les limitations ou différences suivantes :
 
 - Par sécurité, vous ne pouvez pas exécuter de formules en utilisant `eval()`.
 - Les placeholders ne peuvent pas être utilisés ; vous devez saisir une *queryString* avec des valeurs.
@@ -168,7 +175,7 @@ Par exemple, avec la dataclass Employee, vous pouvez écrire :
 firstname = "Marie Sophie" ET manager.lastname = "@th"
 ```
 
-Vous pouvez cliquer sur l'icône `v` pour afficher le [`queryPlan`](API/EntitySelectionClass.md#queryplan) et le [`queryPath`](API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
+Vous pouvez cliquer sur l'icône `v` pour afficher à la fois le [`queryPlan`](API/EntitySelectionClass.md#queryplan) et le [`queryPath`](API/EntitySelectionClass.md#querypath). Dans cette zone, vous pouvez survoler les blocs de sous-requêtes pour avoir des informations détaillées par sous-requête :
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 

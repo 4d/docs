@@ -20,18 +20,19 @@ Le serveur web 4D crée automatiquement un dossier racine et une page d'accueil 
 
 La sécurité des données est présente à tous les stades d'implémentation du serveur web 4D. Les niveaux de sécurité sont évolutifs, et les options les plus sécurisées sont généralement sélectionées par défaut. La sécurité du serveur web 4D est basée sur les éléments suivants :
 
-* Prise en charge étendue du [**protocole TLS (HTTPS)**](../Admin/tls.md),
+- Extension du support du [**Protocole TLS (HTTPS)**](../Admin/tls.md),
 
-* **Authentification**: [fonctions d'authentification](authentication.md) souples et personnalisables basées sur des paramètres intégrés ainsi que sur des méthodes base "fallback" ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables basées sur des paramètres inclus et des méthodes base ([`On Web Authentication`](authentication.md#on-web-authentication) pour le serveur web et [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
-* **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  * les [méthodes projet](templates.md#accessing-4d-methods-via-the-web) exposées à travers des requêtes HTTP
-  * les [fonctions ORDA](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées par le biais de requêtes REST
-  * les [tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST.
+- **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
+  - [Les méthodes projet](templates.md#accessing-4d-methods-via-the-web) exposées via des requêtes HTTP
+  - Les [fonctions ORDA](../ORDA/ordaClasses.md#fonctions-exposées-vs-non-exposées) exposées via des requêtes REST
+  - [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via des requêtes REST.
 
-* **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
+- **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Contrôle de l'utilisation des ressources du serveur** (par exemple, option relative au [nombre maximal de process web simultanés](webServerConfig.md#maximum-concurrent-web-processes) ).
+- **Contrôle de l'utilisation des ressources du serveur** (par exemple, option [nombre maximal de process web simultanés](webServerConfig.md#maximum-concurrent-web-processes)).
+
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
 ## Sessions Utilisateur
@@ -46,15 +47,15 @@ Les requêtes REST sont détaillées dans la section [serveur REST](REST/getting
 
 ## Extension des paramètres
 
-La configuration du serveur web 4D est définie par un ensemble complet de paramètres au niveau de l'application qui peuvent également être personnalisés pour la session à l'aide des propriétés de l'objet `webServer` ou de la commande `WEB SET OPTION`.
+Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
 
 ## Templates et URLs
 
 Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
-* **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([](authentication.md#on-web-authentication) pour le serveur web et []
 
-* [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des formulaires HTML.
+- [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des form
 
 ## Méthodes base dédiées
 

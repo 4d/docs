@@ -106,7 +106,7 @@ El mensaje se muestra como una alerta en los equipos remotos correspondientes.
 
 Puede realizar la misma acción por programación utilizando el comando [`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user).
 
-### Ver procesos
+### Visualizar procesos
 
 Este botón se puede utilizar para mostrar directamente los procesos asociados con la sesión seleccionada en la [página **Procesos**](processes.md).
 

@@ -60,19 +60,19 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずロー
 
 | イベント                                  | レベル    | 関数名                                                     |       (C/S の場合) 実行される場所       | エラーを返すことでアクションを停止できる |
 | :------------------------------------ | :----- | :------------------------------------------------------ | :----------------------------------------------: | -------------------- |
-| エンティティのインスタンス化                        | エンティティ | [`constructor()`](./ordaClasses.md#class-constructor-1) |                       local                      | ×                    |
+| エンティティのインスタンス化                        | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                       local                      | ×                    |
 | 属性がタッチされた                             | 属性     | `event touched <attrName>()`                            | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |
-|                                       | エンティティ | `event touched()`                                       | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |
+|                                       | Entity | `event touched()`                                       | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |
 | エンティティを保存する前                          | 属性     | `validateSave <attrName>()`                             |                      server                      | ◯                    |
-|                                       | エンティティ | `validateSave()`                                        |                      server                      | ◯                    |
+|                                       | Entity | `validateSave()`                                        |                      server                      | ◯                    |
 | エンティティの保存時                            | 属性     | `saving <attrName>()`                                   |                      server                      | ◯                    |
-|                                       | エンティティ | `saving()`                                              |                      server                      | ◯                    |
-| エンティティを保存した後                          | エンティティ | `afterSave()`                                           |                      server                      | ×                    |
+|                                       | Entity | `saving()`                                              |                      server                      | ◯                    |
+| エンティティを保存した後                          | Entity | `afterSave()`                                           |                      server                      | ×                    |
 | エンティティをドロップ(削除)する前 | 属性     | `validateDrop <attrName>()`                             |                      server                      | ◯                    |
-|                                       | エンティティ | `validateDrop()`                                        |                      server                      | ◯                    |
+|                                       | Entity | `validateDrop()`                                        |                      server                      | ◯                    |
 | エンティティのドロップ(削除)時   | 属性     | `dropping <attrName>()`                                 |                      server                      | ◯                    |
-|                                       | エンティティ | `dropping()`                                            |                      server                      | ◯                    |
-| エンティティをドロップした後                        | エンティティ | `afterDrop()`                                           |                      server                      | ×                    |
+|                                       | Entity | `dropping()`                                            |                      server                      | ◯                    |
+| エンティティをドロップした後                        | Entity | `afterDrop()`                                           |                      server                      | ×                    |
 
 :::note
 

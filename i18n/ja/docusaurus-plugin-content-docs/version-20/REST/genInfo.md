@@ -10,12 +10,11 @@ RESTサーバーの次の情報を取得することができます:
 
 ## カタログ
 
-[公開されているデータクラスや属性](configuration.md#テーブルやフィールドの公開)のリストは、[`$catalog`]($catalog.md)、[`$catalog/{dataClass}`]($catalog.md#catalogdataclass) および [`$catalog/$all`]($catalog.md#catalogall) APIで取得することができます。
+[公開されているデータクラスとデータクラス属性](configuration.md#テーブルやフィールドの公開) のリストを取得するには [`$catalog`]($catalog.md)、[`$catalog/{dataClass}`]($catalog.md#catalogdataclass)、または [`$catalog/$all`]($catalog.md#catalogall) パラメーターを使います。
 
 公開されている全データクラスとデータクラス属性のコレクションを取得するには:
 
 `GET /rest/$catalog/$all`
-
 
 ## キャッシュ情報
 
@@ -30,6 +29,7 @@ RESTサーバーの次の情報を取得することができます:
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
 これらのプロパティは、データクラスやリレーションに対する複合クエリをサーバーが内部的にどのようにおこなっているかの情報を格納するオブジェクトです:
+
 - **queryPlan**: 実行前のクエリについての詳細な情報 (クエリプラン) を格納するオブジェクト。
 - **queryPath**: 実際に実行されたクエリ処理の詳細な情報 (クエリパス) を格納するオブジェクト。
 

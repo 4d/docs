@@ -19,10 +19,10 @@ title: 変数
 
 変数の作成は通常、宣言によっておこないます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合)
+- using the `var` keyword (recommended, specially if your code uses objects and classes),
 - "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (旧シンタックス)。
 
-変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#default-values) に初期化されます。 別の値が [代入](#assigning-data) されない限り、セッション中はこの値が保持されます。
+変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。
 
 :::note
 
@@ -38,13 +38,11 @@ title: 変数
 
 :::
 
+### Using the `var` keyword
 
+Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. このシンタックスはコードエディターの自動補完機能を強化します。
 
-### `var` キーワードによる宣言
-
-オブジェクト変数をクラスに紐づけることができるため、`var` キーワードを使った変数宣言が推奨されます。このシンタックスはコードエディターの自動補完機能を強化します。
-
-`var` キーワードを使って変数を宣言するには、次のシンタックスを用います:
+To declare a variable of any type with the `var` keyword, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -57,7 +55,7 @@ var $myFile : 4D.File  // File クラスオブジェクト変数
 var $myVar // バリアント型変数
 ```
 
-`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。このシンタックスは [ローカル変数とプロセス変数](#local-process-and-interprocess-variables) の宣言のみサポートしています。 [インタープロセス変数](#interprocess-variables) および [配列](Concepts/arrays.md) には使用できません。
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。[インタープロセス変数](#インタープロセス変数) および [配列](Concepts/arrays.md) には使用できません。
 
 `varType` には次が指定できます:
 
@@ -68,24 +66,23 @@ var $myVar // バリアント型変数
 
 サポートされている `varType` 値の一覧です:
 
-| varType                                 | 内容                                     |
-| --------------------------------------- | -------------------------------------- |
-| `Text`                                  | テキスト値                                  |
-| `Date`                                  | 日付値                                    |
-| `Time`                                  | 時間値                                    |
-| `Boolean`                               | ブール値                                   |
-| `Integer`                               | 倍長整数値                                  |
-| `Real`                                  | 実数値                                    |
-| `Pointer`                               | ポインター値                                 |
-| `Picture`                               | ピクチャー値                                 |
-| `BLOB`                                  | スカラーBLOB値                              |
-| `Collection`                            | コレクション値                                |
-| `Variant`                               | バリアント値                                 |
-| `Object`                                | デフォルトクラス (4D.Object) のオブジェクト           |
-| `4D.<className>`                  | 4Dクラス名のオブジェクト                          |
-| `cs.<className>`                  | ユーザークラス名のオブジェクト                        |
-| `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
-
+| varType                                        | 内容                                                              |
+| ---------------------------------------------- | --------------------------------------------------------------- |
+| `Text`                                         | テキスト値                                                           |
+| `Date`                                         | 日付値                                                             |
+| `Time`                                         | 時間値                                                             |
+| `Boolean`                                      | ブール値                                                            |
+| `Integer`                                      | 倍長整数値                                                           |
+| `Real`                                         | 実数値                                                             |
+| `Pointer`                                      | ポインター値                                                          |
+| `Picture`                                      | ピクチャー値                                                          |
+| `Blob`                                         | スカラーBLOB値                                                       |
+| `Collection`                                   | コレクション値                                                         |
+| `Variant`                                      | バリアント値                                                          |
+| `Object`                                       | デフォルトクラス (4D.Object) のオブジェクト |
+| `4D.<className>`                               | 4Dクラス名のオブジェクト                                                   |
+| `cs.<className>`                               | ユーザークラス名のオブジェクト                                                 |
+| `cs.<namespace>`cs.<namespace> | `<namespace>` コンポーネントクラス名のオブジェクト                                |
 
 #### 例題
 
@@ -118,7 +115,7 @@ var $entity : cs.EmployeeEntity
 
 ### C_ 指示子による宣言
 
-> **互換性に関する注記:** メソッド内で変数を宣言するにあたって、この方法は推奨されません。 [var](#using-the-var-keyword) キーワードの使用が推奨されます。
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
 "コンパイラー" テーマコマンドの指示子を使って、基本のデータ型の変数を宣言することができます。
 
@@ -131,19 +128,17 @@ var $entity : cs.EmployeeEntity
 いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します
- C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
+ C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
  C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
  C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
  C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します
 ```
 
-**注:** 配列とは変数の一種で、同じタイプの変数を番号付きで並べたものです。配列は、配列宣言コマンド (例: `ARRAY LONGINT(alAnArray;10)`) を使用して作成します。詳細については [配列](Concepts/arrays.md) を参照ください。
-
+**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 ## 変数への代入
 
-変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。変数にデータを格納することを、**変数にデータを代入する**と言い、代入演算子 (:=) を使っておこないます。代入演算子はフィールドに対してデータを代入する場合にも使います。
+変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。変数にデータを格納することを、**変数にデータを代入する** と言い、代入演算子 (:=) を使っておこないます。代入演算子はフィールドに対してデータを代入する場合にも使います。
 
 代入演算子は、変数を作成し、変数にデータを代入するために使用します。作成する変数名を代入演算子の左側に書きます。例:
 
@@ -151,17 +146,17 @@ var $entity : cs.EmployeeEntity
 MyNumber:=3
 ```
 
-は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
+は変数 *MyNumber* を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
 > [データ型の宣言](#変数の宣言) をせずに変数を作成することは通常推奨されません。
 
-もちろん、変数からデータを取り出すことができなければ、便利とはいえません。再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
+もちろん、変数からデータを取り出すことができなければ、便利とはいえません。再度代入演算子を使用します。もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに *MyNumber* 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-これで、_[Products]Size_ の値は3になります。この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
+これで、*[Products]Size* の値は 3 になります。この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
 
 配列要素にデータを代入するには中カッコ ({...}) を使用します:
 
@@ -208,7 +203,7 @@ atNames{1}:="Richard"
 
 インタープリターモードでは、変数は動的にメモリ上に作成・消去されます。これに対してコンパイルモードでは、作成したすべてのプロセス (ユーザープロセス) で同じプロセス変数定義が共有されますが、変数のインスタンスはプロセス毎に異なるものとなります。たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
 
-バージョン6より、`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできるようになりました。これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
+`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできます。これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
 
 - コード内の特定の箇所におけるプロセス間通信
 - プロセス間のドラッグ＆ドロップ処理
@@ -226,10 +221,9 @@ atNames{1}:="Richard"
 
 インタープロセス変数はプロジェクト全体で使用することができ、すべてのコオペラティブプロセスで共有されます。これらは主としてプロセス間で情報を共有するために使われます。
 
-インタープロセス変数の名前は、必ずインタープロセス記号 (`<>`) で始めます。 記号の後に31バイトまでの名前を指定できます。
+インタープロセス変数の名前は、必ずインタープロセス記号 (`<>`) で始めます。記号の後に31バイトまでの名前を指定できます。
 
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
-
 
 ## システム変数
 
@@ -237,19 +231,17 @@ atNames{1}:="Richard"
 
 システム変数は [4Dコマンド](commands.md) によって使用されます。コマンドがシステム変数に影響を与えるかどうかを確認するには、コマンドの説明の "システム変数およびセット" の項目を参照ください。
 
-
-| システム変数名                                                | 型             | 説明                                                                                                                                                                                                          |
-| ------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OK`                                                   | Integer       | 通常、コマンドがダイアログボックスを表示して、ユーザーが **OK** ボタンをクリックすると 1 に、**キャンセル** ボタンをクリックした場合は 0 に設定されます。一部のコマンドは、処理が成功すると `OK` システム変数の値を変更します。                                                                                |
-| `Document`                                             | Text          | [Open document](https://doc.4d.com/4dv20/help/command/ja/page264.html) や [SELECT LOG FILE](https://doc.4d.com/4dv20/help/command/ja/page345.html) などのコマンドを使用して最後に開いたファイルまたは作成したファイルのパス名 (フルパス + 名前) が含まれます。 |
-| `FldDelimit`, `RecDelimit`                             | Integer       | テキストを読み込んだり書き出したりする際に、フィールドの区切りとして (デフォルトは **タブ** (9))、あるいはレコードの区切り文字として (デフォルトは **キャリッジリターン** (13)) 使用する文字コードが格納されています。区切り文字を変更する場合は、システム変数の値を変更します。                                                       |
-| `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/ja/page155.html) コマンドでインストールされたエラー処理メソッド内で使用されます。[メソッド内でのエラー処理](../Concepts/error-handling.md#メソッド内でのエラー処理) 参照。                                       |
-| `MouseDown`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。マウスボタンが押されたときに 1 が、それ以外の場合は 0 に設定されます。                                                                  |
-| `MouseX`, `MouseY`                                     | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。 <li><code>MouseDown=1</code> イベントの時、<code>MouseX</code> と <code>MouseY</code> にはクリックされた場所の水平 / 垂直座標がそれぞれ代入されます。両方の値ともピクセル単位で表わされ、ウィンドウのローカルな座標システムを使用します。 </li><li>ピクチャーフィールドや変数の場合は、<a href="../Events/onClicked.md"><code>On Clicked</code></a> や <a href="../Events/onDoubleClicked.md"><code>On Double Clicked</code></a>、および <a href="../Events/onMouseUp.md"><code>On Mouse Up</code></a> フォームイベント内で、クリックのローカル座標が <code>MouseX</code> と <code>MouseY</code> に返されます。また、[`On Mouse Enter`](../Events/onMouseEnter.md) および [`On Mouse Move`](../Events/onMouseMove.md) フォームイベントでもマウスカーソルのローカル座標が返されます。詳細については、[ピクチャー上のマウス座標](../FormEditor/pictures.md#ピクチャー上のマウス座標) を参照ください。</li>                                                      |
-| `KeyCode`                                              | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。押されたキーの文字コードが代入されます。押されたキーがファンクションキーの場合、`KeyCode` には特殊コードがセットされます。                                      |
-| `Modifiers`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。キーボードのモディファイアキーの値を格納します (Ctrl/Command、Alt/Option、Shift、Caps Lock)。                                      |
-| `MouseProc`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。最後のイベントが発生したプロセス番号を格納します。                                                                               |
-
+| システム変数名                                                | 型             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OK`                                                   | Integer       | 通常、コマンドがダイアログボックスを表示して、ユーザーが **OK** ボタンをクリックすると 1 に、**キャンセル** ボタンをクリックした場合は 0 に設定されます。一部のコマンドは、処理が成功すると `OK` システム変数の値を変更します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `Document`                                             | Text          | [Open document](https://doc.4d.com/4dv20/help/command/ja/page264.html) や [SELECT LOG FILE](https://doc.4d.com/4dv20/help/command/ja/page345.html) などのコマンドを使用して最後に開いたファイルまたは作成したファイルのパス名 (フルパス + 名前) が含まれます。                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `FldDelimit`, `RecDelimit`                             | Integer       | テキストを読み込んだり書き出したりする際に、フィールドの区切りとして (デフォルトは **タブ** (9))、あるいはレコードの区切り文字として (デフォルトは **キャリッジリターン** (13)) 使用する文字コードが格納されています。区切り文字を変更する場合は、システム変数の値を変更します。                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/ja/page155.html) コマンドでインストールされたエラー処理メソッド内で使用されます。 [メソッド内でのエラー処理](../Concepts/error-handling.md#メソッド内でのエラー処理)参照。 [メソッド内でのエラー処理](../Concepts/error-handling.md#メソッド内でのエラー処理)参照。[メソッド内でのエラー処理](../Concepts/error-handling.md#メソッド内でのエラー処理)参照。                                                                                                                                                                                                                                                                                                                                                                 |
+| `MouseDown`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。マウスボタンが押されたときに 1 が、それ以外の場合は 0 に設定されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `MouseX`, `MouseY`                                     | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。 <li>`MouseDown=1` イベントの時、`MouseX` と `MouseY` にはクリックされた場所の水平 / 垂直座標がそれぞれ代入されます。両方の値ともピクセル単位で表わされ、ウィンドウのローカルな座標システムを使用します。</li><li>ピクチャーフィールドや変数の場合は、[`On Clicked`](../Events/onClicked.md) や [`On Double Clicked`](../Events/onDoubleClicked.md)、および [`On Mouse Up`](../Events/onMouseUp.md) フォームイベント内で、クリックのローカル座標が `MouseX` と `MouseY` に返されます。また、[`On Mouse Enter`](../Events/onMouseEnter.md) および [`On Mouse Move`](../Events/onMouseMove.md) フォームイベントでもマウスカーソルのローカル座標が返されます。詳細については、[ピクチャー上のマウス座標](../FormEditor/pictures.md#ピクチャー上のマウス座標) を参照ください。</li> |
+| `KeyCode`                                              | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。押されたキーの文字コードが代入されます。押されたキーがファンクションキーの場合、`KeyCode` には特殊コードがセットされます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `Modifiers`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。キーボードのモディファイアキーの値を格納します (Ctrl/Command、Alt/Option、Shift、Caps Lock)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `MouseProc`                                            | Integer       | [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/ja/page190.html) コマンドでインストールされたメソッド内で使用されます。最後のイベントが発生したプロセス番号を格納します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 :::note
 

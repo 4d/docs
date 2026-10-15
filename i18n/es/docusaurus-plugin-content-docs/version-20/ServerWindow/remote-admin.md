@@ -16,7 +16,6 @@ Se puede acceder a esta ventana de dos maneras:
 
 A continuación, aparecerá una [ventana de administración del servidor](monitor.md) en el equipo cliente.
 
-
 ## Especificidades de la administración a través de una máquina 4D remota
 
 Una máquina cliente que muestre la ventana de administración del servidor tiene acceso a toda la información disponible y puede actuar sobre los procesos y el arranque/detención de los servidores. Cuando la ventana de administración del servidor se muestra en una máquina remota, existen no obstante ciertas restricciones y características específicas relativas a su funcionamiento:

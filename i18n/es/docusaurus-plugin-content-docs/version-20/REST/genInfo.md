@@ -10,12 +10,11 @@ Puede obtener varias informaciones del servidor REST:
 
 ## Catálogo
 
-Utilice los parámetros [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) para obtener la lista de [las clases de datos expuestas y sus atributos](configuration.md#exposing-tables-and-fields).
+Utilice los parámetros [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), o [`$catalog/$all`]($catalog.md#catalogall) para obtener la lista de [clases de datos expuestas y sus atributos](configuration.md#exposing-tables-and-fields).
 
 Para obtener la colección de todas las clases de datos expuestas junto con sus atributos:
 
 `GET /rest/$catalog/$all`
-
 
 ## Información de la caché
 
@@ -30,6 +29,7 @@ Por ejemplo:
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
 Estas propiedades son objetos que contienen información sobre cómo el servidor realiza consultas compuestas internamente a través de clases de datos y relaciones:
+
 - **queryPlan**: objeto que contiene la descripción detallada de la petición justo antes de ser ejecutada (es decir, la consulta planificada).
 - **queryPath**: objeto que contiene la descripción detallada de la consulta tal y como se ha realizado realmente.
 

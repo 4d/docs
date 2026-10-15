@@ -700,7 +700,7 @@
     "description": "The label for category 'Spell Checker' in sidebar 'docs'"
   },
   "sidebar.docs.category.String": {
-    "message": "文字列",
+    "message": "String",
     "description": "The label for category 'String' in sidebar 'docs'"
   },
   "sidebar.docs.category.Structure Access": {

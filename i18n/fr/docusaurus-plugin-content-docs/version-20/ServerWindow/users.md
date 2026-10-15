@@ -3,9 +3,7 @@ id: users
 title: Page Utilisateurs
 ---
 
-
 La page **Utilisateurs** liste les utilisateurs 4D connectés au serveur.
-
 
 ![](../assets/en/Admin/server-users.png)
 
@@ -20,13 +18,13 @@ Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquan
 Pour chaque utilisateur connecté à la base, la liste fournit les informations suivantes :
 
 - Système de la machine cliente (macOS ou Windows) sous forme d’icône.
-- **Utilisateur 4D** : Nom d’utilisateur 4D ou alias s'il est défini avec la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) sur le poste de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
+- **Utilisateur 4D** : Nom de l'utilisateur 4D, ou alias s'il a été défini à l'aide de la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) sur la machine de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
 - **Nom de machine** : Nom de la machine distante.
 - **Nom de session** : Nom de la session ouverte sur la machine distante.
 - **Adresse IP** : Adresse IP de la machine distante.
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
-- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
+- Déconnecter "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
 ### Gestion des utilisateurs endormis
 
@@ -38,15 +36,13 @@ Ce statut libère les ressources sur le serveur. En outre, l'application 4D dist
 
 Le scénario suivant est pris en charge : un utilisateur distant cesse de travailler durant un certain laps de temps, par exemple durant la pause déjeuner, mais garde ouverte la connexion au serveur. La machine passe en mode veille. Au retour de l'utilisateur, la machine sort du mode veille et l'application 4D distante récupère automatiquement sa connexion au serveur ainsi que son contexte de session.
 
-> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce timeout par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) avec le sélecteur `Remote connection sleep timeout`.
-
+> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce délai d'expiration par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) avec le sélecteur `Remote connection sleep timeout`.
 
 ## Zone de recherche/filtrage
 
 Cette fonction permet de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de recherche. La zone indique les colonnes dans lesquelles la recherche/le filtrage sera effectué(e). Dans la page Utilisateurs, il s’agit des colonnes Utilisateur 4D, Nom de machine et Nom de session.
 
 La mise à jour de la liste est effectuée en temps réel à mesure que vous saisissez du texte dans la zone. Il est possible de saisir plus d’une valeur à chercher. Utilisez un point-virgule pour séparer les valeurs. L’opérateur utilisé dans ce cas est du type `OU`. Par exemple, si vous saisissez "Jean;Marie;Pierre", seules les lignes comportant Jean OU Marie OU Pierre dans l’une des colonnes cibles seront conservées.
-
 
 ## Boutons d’administration
 
@@ -60,16 +56,15 @@ Ce bouton permet d’envoyer un message aux utilisateurs 4D sélectionnés dans 
 
 Le message sera affiché sous forme d’alerte sur les postes distants.
 
-> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
-
+> Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 ### Visualiser process
 
-Ce bouton permet de visualiser directement les process du ou des utilisateur(s) sélectionné(s) dans la [page **Process**](processes.md) de la fenêtre d’administration. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
+Ce bouton permet de visualiser directement les process du ou des utilisateur(s) sélectionné(s) dans la [page **Processus** ](processes.md) de la fenêtre d’administration. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
 
 ### Déconnecter
 
-Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération (appuyez sur la touche **Alt** avant de cliquer sur le bouton **Déconnecter** pour déconnecter directement les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
+Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte s'affiche pour vous permettre de confirmer ou d'annuler cette opération (maintenez la touche **Alt** enfoncée tout en cliquant sur le bouton **Drop user** pour déconnecter directement le ou les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
 
-> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
+> Vous pouvez effectuer la même action pour les utilisateurs distants avec la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
 

@@ -10,26 +10,26 @@ Vous pouvez obtenir plusieurs informations du serveur REST :
 
 ## Catalogue
 
-Utilisez les paramètres [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste des [dataclass exposées et de leurs attributs](configuration.md#exposing-tables-and-fields).
+Utilisez les paramètres [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass) ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste des [dataclass exposées et de leurs attributs](configuration.md#exposing-tables-and-fields).
 
 Pour obtenir la collection de toutes les dataclass exposées avec leurs attributs :
 
 `GET /rest/$catalog/$all`
 
-
 ## Informations sur le cache
 
-Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les entity selections stockées dans le cache du 4D Server et sur l'exécution des sessions utilisateur.
+Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les entity selections actuellement stockées dans le cache de 4D Server ainsi que sur les sessions utilisateur en cours.
 
 ## queryPath et queryPlan
 
-Les entity selections générées par via des requêtes peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et retourner ces propriétés, il vous suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la requête REST.
+Les entity selections générées par via des recherches peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et renvoyer ces propriétés, il suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la requête REST.
 
 Par exemple :
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
 Ces propriétés sont des objets contenant des informations sur la façon dont le serveur exécute les requêtes composites en interne via des dataclass et des relations :
+
 - **queryPlan** : objet contenant la description détaillée de la requête juste avant son exécution (c'est-à-dire la requête planifiée).
 - **queryPath** : objet contenant la description détaillée de la requête telle qu'elle a été réellement effectuée.
 

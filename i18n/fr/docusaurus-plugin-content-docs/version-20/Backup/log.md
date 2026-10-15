@@ -7,7 +7,7 @@ Une application exploitée de manière continue enregistre en permanence des mod
 
 En outre, 4D travaille en permanence avec un cache de données situé en mémoire. Toute modification apportée aux données de l'application est stockée temporairement dans le cache avant d'être écrite sur le disque dur. Ce principe permet d’accélérer le fonctionnement des applications ; en effet, les accès mémoire sont bien plus rapides que les accès disque. Si un incident survient sur l'application avant que les données stockées dans le cache aient pu être écrites sur le disque, vous devrez intégrer le fichier d’historique courant afin de récupérer entièrement l'application.
 
-Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Ces fonctions sont accessibles via le CSM : reportez-vous aux sections [Page Analyse d'activités](MSC/analysis.md) et [Page Retour arrière](MSC/rollback.md).
+Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, permettant également de faire remonter en arrière les opérations exécutées sur les données de l'application. Fonctionnement du fichier d'historique
 
 ## Fonctionnement du fichier d'historique
 
@@ -30,12 +30,10 @@ Ce schéma résume le principe général de fonctionnement du fichier d’histor
 
 ![](../assets/en/Backup/backup05.png)
 
-
 Le fichier d’historique courant est automatiquement sauvegardé avec le fichier de données courant. Ce mécanisme procure deux avantages principaux :
 
 - Eviter la saturation du disque accueillant le fichier d’historique. En effet, sans sauvegarde, l’historique grossirait indéfiniment au fur et à mesure de l’exploitation de la base et finirait par saturer votre disque. A chaque sauvegarde du fichier de données, 4D ou 4D Server ferme le fichier d’historique courant et débute immédiatement un nouveau fichier vide, évitant ainsi le risque de saturation. L’ancien fichier d’historique est alors archivé puis éventuellement détruit, conformément au mécanisme des jeux de sauvegarde.
 - Conserver les fichiers d’historique correspondant aux sauvegardes, afin de pouvoir analyser ou réparer a posteriori une application. En effet, l’intégration du fichier d’historique ne peut se faire que dans l'application qui lui correspond. Il est donc important, pour pouvoir intégrer correctement un fichier d’historique dans une sauvegarde, de disposer de sauvegardes et d’historiques archivés simultanément.
-
 
 ## Créer le fichier d’historique
 
@@ -45,11 +43,14 @@ Vous pouvez à tout moment savoir si votre application utilise un fichier d’hi
 
 Pour créer un fichier d’historique :
 
-1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** . Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
+1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** .
+   Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier.
 
-2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier. Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
+2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier.
+   Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
 
-3. Cliquez sur **Enregistrer**. Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
+3. Cliquez sur **Enregistrer**.
+   Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
 4. Validez la boîte de dialogue des Propriétés.
 
@@ -58,13 +59,11 @@ Pour que vous puissiez directement créer un fichier d’historique, les donnée
 - Le fichier de données est vierge,
 - Vous venez d’effectuer une sauvegarde et aucune modification sur les données n’a encore été effectuée.
 
-Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. Si vous cliquez sur **Annuler**, la requête est enregistrée mais la création du fichier d’historique est différée et sera créée uniquement après la prochaine sauvegarde de l'application. Cette précaution est indispensable car il vous faudra, pour restituer une application après un éventuel incident, disposer d’une copie de l'application dans laquelle pourront s’intégrer les opérations enregistrées dans le fichier d’historique.
+Si vous cliquez sur <strong x-id="1">OK</strong>, la sauvegarde démarre immédiatement puis l’historique est activé. Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. Si vous cliquez sur **Annuler**, la requête est enregistrée mais la création du fichier d’historique est différée et sera créée uniquement après la prochaine sauvegarde de l'application. Cette précaution est indispensable car il vous faudra, pour restituer une application après un éventuel incident, disposer d’une copie de l'application dans laquelle pourront s’intégrer les opérations enregistrées dans le fichier d’historique.
 
 Sans autre manipulation de votre part, toutes les opérations effectuées sur les données s’inscriront dans ce fichier, et il sera utilisé également lors des ouvertures ultérieures de l'application.
 
 Vous devrez créer un autre fichier d’historique si vous créez un nouveau fichier de données. Vous devrez désigner ou créer un autre fichier d’historique si vous ouvrez un autre fichier de données non associé à un fichier d’historique (ou si le fichier d’historique est manquant).
-
-
 
 ## Fermer l’historique
 
@@ -78,4 +77,5 @@ Si vous cliquez sur le bouton **Fermer**, le fichier d’historique courant est 
 
 Si vous souhaitez fermer votre fichier d’historique courant parce qu’il devient trop important, il est préférable d’effectuer une sauvegarde du fichier de données, ce qui entraînera la sauvegarde de l’historique.
 
-> **4D Server** : La commande `New log file` permet de refermer automatiquement l’historique courant et d’en démarrer un nouveau. Si le fichier d'historique devient inaccessible au cours de la session de travail, l'erreur 1274 est générée et 4D Server ne permet plus aux utilisateurs d'écrire ou de modifier des données. Lorsque le fichier d'historique est de nouveau accessible, il est nécessaire d'effectuer une sauvegarde.
+> **4D Server** : La commande `New log file` permet de refermer automatiquement l’historique courant et d’en démarrer un nouveau.
+> Si le fichier d'historique devient inaccessible au cours de la session de travail, l'erreur 1274 est générée et 4D Server ne permet plus aux utilisateurs d'écrire ou de modifier des données. Lorsque le fichier d'historique est de nouveau accessible, il est nécessaire d'effectuer une sauvegarde.

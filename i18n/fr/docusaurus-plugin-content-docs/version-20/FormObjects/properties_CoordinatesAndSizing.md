@@ -1,11 +1,11 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordonnées & dimensions
+title: Coordonnées et dimensions
 ---
 
 ## Hauteur de ligne automatique
 
-Cette propriété n'est disponible que pour les listbox avec les [sources de données](properties_Object.md#data-source) suivantes :
+Cette propriété n'est disponible que pour les list box avec les [sources de données](properties_Object.md#data-source) suivantes :
 
 - collection ou entity selection,
 - tableau (non hiérarchique).
@@ -14,28 +14,27 @@ Par défaut, cette option n'est pas sélectionnée. Lorsqu'elle est utilisée po
 
 :::note
 
-Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 :::
 
 Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiquement calculée afin d'ajuster entièrement le contenu de la cellule ajusté sans être tronqué (sauf si l'option [Wordwrap](properties_Display.md#wordwrap) est désactivée.
 
-* Le calcul de la hauteur de ligne prend en compte :
-  * tout type de contenu (texte, numérique, dates, heures, images (le calcul dépend du format de l'image), objets),
-  * tout types de contrôle (zones de saisie, cases à cocher, listes, listes déroulantes),
-  * polices, styles de polices et tailles de polices,
-  * l'option [Retour à la ligne](properties_Display.md#wordwrap) : si elle est désactivée, la hauteur est basée sur le nombre de paragraphes (les lignes sont tronquées); si elle est activée, la hauteur est basée sur le nombre de lignes (non tronquées).
+- Le calcul de la hauteur de ligne prend en compte :
+  - tout type de contenu (texte, numérique, dates, heures, images (le calcul dépend du format de l'image), objets),
+  - tout types de contrôle (zones de saisie, cases à cocher, listes, listes déroulantes),
+  - polices, styles de polices et tailles de polices,
+  - l'option [Retour à la ligne](properties_Display.md#wordwrap) : si elle est désactivée, la hauteur est basée sur le nombre de paragraphes (les lignes sont tronquées); si elle est activée, la hauteur est basée sur le nombre de lignes (non tronquées).
 
-* Le calcul de la hauteur de ligne ne tient pas compte de :
-  * du contenu de colonne masqué
-  * des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
+- Le calcul de la hauteur de ligne ne tient pas compte de :
+  - du contenu de colonne masqué
+  - des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
 
 :::caution
 
 Etant donné qu'elle nécessite des calculs supplémentaires lors de l'exécution, l'option "hauteur de ligne automatique" peut avoir une incidence sur la fluidité du défilement de votre list box, en particulier lorsqu'elle contient un grand nombre de lignes.
 
 :::
-
 
 #### Grammaire JSON
 
@@ -55,9 +54,9 @@ Coordonnées inférieures de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles |
-| ------ | --------------- | ----------------- |
-| bottom | number          | minimum : 0       |
+| Nom    | Type de données | Valeurs possibles           |
+| ------ | --------------- | --------------------------- |
+| bottom | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -71,9 +70,9 @@ Coordonnées de gauche de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
-| Nom  | Type de données | Valeurs possibles |
-| ---- | --------------- | ----------------- |
-| left | number          | minimum : 0       |
+| Nom  | Type de données | Valeurs possibles           |
+| ---- | --------------- | --------------------------- |
+| left | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -87,9 +86,9 @@ Coordonnées de droite de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles |
-| ----- | --------------- | ----------------- |
-| right | number          | minimum : 0       |
+| Nom   | Type de données | Valeurs possibles           |
+| ----- | --------------- | --------------------------- |
+| right | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -103,9 +102,9 @@ Coordonnées supérieures de l'objet dans le formulaire.
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-| top | number          | minimum : 0       |
+| Nom | Type de données | Valeurs possibles           |
+| --- | --------------- | --------------------------- |
+| top | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -127,7 +126,8 @@ Définit l'arrondi des coins (en pixels) de l'objet. Par défaut, la valeur du r
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-La valeur minimale est de 0. Dans ce cas, un rectangle d'objet standard non arrondi est dessiné. La valeur maximale dépend de la taille du rectangle (elle ne peut pas dépasser la moitié de la taille du côté le plus court du rectangle) et est calculée dynamiquement.
+La valeur minimale est de 0. Dans ce cas, un rectangle d'objet standard non arrondi est dessiné.
+La valeur maximale dépend de la taille du rectangle (elle ne peut pas dépasser la moitié de la taille du côté le plus court du rectangle) et est calculée dynamiquement.
 
 :::note
 
@@ -144,9 +144,9 @@ Vous pouvez également définir cette propriété à l'aide des commandes [OBJEC
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| borderRadius | integer         | minimum : 0       |
+| Nom          | Type de données | Valeurs possibles           |
+| ------------ | --------------- | --------------------------- |
+| borderRadius | integer         | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -157,13 +157,14 @@ Vous pouvez également définir cette propriété à l'aide des commandes [OBJEC
 ## Hauteur
 
 Cette propriété désigne la taille verticale d'un objet.
+
 > Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles |
-| ------ | --------------- | ----------------- |
-| height | number          | minimum : 0       |
+| Nom    | Type de données | Valeurs possibles           |
+| ------ | --------------- | --------------------------- |
+| height | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -174,15 +175,16 @@ Cette propriété désigne la taille verticale d'un objet.
 ## Largeur
 
 Cette propriété désigne la taille horizontale d'un objet.
-> * Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
-> * Si la propriété [Resizable](properties_ResizingOptions.md#resizable) est utilisée pour une [colonne de liste déroulante](listbox-column.md), l'utilisateur peut également redimensionner manuellement la colonne.
-> * Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+
+> - Certains objets peuvent avoir une hauteur prédéfinie qui ne peut pas être modifiée.
+> - Si la propriété [Redimensionnable](properties_ResizingOptions.md#resizable) est utilisée pour une [colonne de list box](listbox-column.md), l'utilisateur peut également redimensionner manuellement la colonne.
+> - Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
-| Nom   | Type de données | Valeurs possibles |
-| ----- | --------------- | ----------------- |
-| width | number          | minimum : 0       |
+| Nom   | Type de données | Valeurs possibles           |
+| ----- | --------------- | --------------------------- |
+| width | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -193,13 +195,14 @@ Cette propriété désigne la taille horizontale d'un objet.
 ## Largeur maxi
 
 La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut pas être augmentée au-delà de cette valeur lors du redimensionnement de la colonne ou du formulaire.
-> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles |
-| -------- | --------------- | ----------------- |
-| maxWidth | number          | minimum : 0       |
+| Nom      | Type de données | Valeurs possibles           |
+| -------- | --------------- | --------------------------- |
+| maxWidth | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -210,13 +213,14 @@ La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut 
 ## Largeur mini
 
 La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut pas être réduite en dessous de cette valeur lors du redimensionnement de la colonne ou du formulaire.
-> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+
+> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal "Agrandir"](properties_ResizingOptions.md#horizontal-sizing) a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maxi
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles |
-| -------- | --------------- | ----------------- |
-| minWidth | number          | minimum : 0       |
+| Nom      | Type de données | Valeurs possibles           |
+| -------- | --------------- | --------------------------- |
+| minWidth | number          | minimum : 0 |
 
 #### Objets pris en charge
 
@@ -230,8 +234,8 @@ Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Pa
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                 |
-| --------- | --------------- | ------------------------------------------------- |
+| Nom       | Type de données | Valeurs possibles                                                    |
+| --------- | --------------- | -------------------------------------------------------------------- |
 | rowHeight | string          | valeur css dans l'unité "em" ou "px" (par défaut) |
 
 #### Objets pris en charge
@@ -240,7 +244,7 @@ Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Pa
 
 #### Voir également
 
-[Tableau hauteurs des lignes](#row-height-array)
+[Tableau hauteurs de lignes](#row-height-array)
 
 ---
 
@@ -258,13 +262,14 @@ RowHeights{5}:=3
 ```
 
 En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne de la list box aura une hauteur de trois lignes, tandis que chaque autre ligne conservera sa hauteur par défaut.
-> * La propriété Row Height Array n'est pas prise en compte pour les list box hiérarchiques.
-> * Pour les list box de type tableau et collection/entity selection, cette propriété n'est disponible que si l'option [Hauteur de ligne automatique](#automatic-row-height) n'est pas sélectionnée.
+
+> - La propriété Row Height Array n'est pas prise en compte pour les list box hiérarchiques.
+> - Pour les list box de type tableau et collection/entity selection, cette propriété n'est disponible que si l'option [Hauteur de ligne automatique](#automatic-row-height) n'est pas sélectionnée.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles              |
-| --------------- | --------------- | ------------------------------ |
+| Nom             | Type de données | Valeurs possibles                              |
+| --------------- | --------------- | ---------------------------------------------- |
 | rowHeightSource | string          | Nom d'une variable tableau 4D. |
 
 #### Objets pris en charge
@@ -285,8 +290,8 @@ Définit une marge horizontale pour les cellules. La valeur est définie en pixe
 
 #### Grammaire JSON
 
-| Nom               | Type de données | Valeurs possibles                |
-| ----------------- | --------------- | -------------------------------- |
+| Nom               | Type de données | Valeurs possibles                                   |
+| ----------------- | --------------- | --------------------------------------------------- |
 | horizontalPadding | number          | Nombre de pixels (doit être >=0) |
 
 #### Objets pris en charge
@@ -305,8 +310,8 @@ Définit une marge verticale pour les cellules. La valeur est définie en pixels
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                |
-| --------------- | --------------- | -------------------------------- |
+| Nom             | Type de données | Valeurs possibles                                   |
+| --------------- | --------------- | --------------------------------------------------- |
 | verticalPadding | number          | Nombre de pixels (doit être >=0) |
 
 #### Objets pris en charge
