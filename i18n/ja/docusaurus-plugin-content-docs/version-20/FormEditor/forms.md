@@ -3,7 +3,6 @@ id: forms
 title: フォーム
 ---
 
-
 フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。フォームを使用することで、ユーザーはデータベースのデータをやり取りし、レポートを印刷します。フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
 
 ![](../assets/en/FormObjects/form1.png)
@@ -11,15 +10,15 @@ title: フォーム
 また、以下の機能により、フォームは他のフォームを含むことができます:
 
 - [サブフォームオブジェクト](FormObjects/subform_overview.md)
-- [継承フォーム](./properties_FormProperties.md#inherited-form-name)
+- [継承されたフォーム](./properties_FormProperties.md#継承するフォーム名)
 
 ## フォームを作成する
 
 4Dフォームの追加や変更は、以下の要素を使っておこないます:
 
-- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
+- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラー** ウィンドウから新規フォームを作成できます。
 - **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
-- **JSONソースコード:**JSONファイルとして作成・編集したフォームを[適切なフォルダー](/Project/architecture#sources)に保存します。例:
+- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources) に保存します。例:
 
 ```
 {
@@ -112,7 +111,7 @@ title: フォーム
 3. 開かれたフォームの 0ページ
 4. 開かれたフォームのカレントページ
 
-この順序により、フォームにおけるオブジェクトの [入力順](formEditor.md#データの入力順) が決まります。
+この順番はフォーム内でのオブジェクトのデフォルトの[入力順](formEditor.md#データ入力順) を決定します。
 
 > 継承フォームの 0ページと 1ページだけが他のフォームに表示可能です。
 
@@ -123,8 +122,29 @@ title: フォーム
 プロジェクトフォームを継承するには [継承されたフォームテーブル](properties_FormProperties.md#継承されたフォームテーブル) プロパティで `\<なし>` を選択します (JSON の場合は " ")。
 
 フォームの継承をやめるには、プロパティリストの [継承されたフォーム名](properties_FormProperties.md#継承されたフォーム名) プロパティで `\<なし>` オプション (JSONの場合は " ") を選択します。
+
 > 任意のフォームで継承フォームを設定し、そのフォームを第3のフォームの継承フォームとして使用することができます。再帰的な方法で各オブジェクトが連結されます。 4Dは、再帰的ループを見つけ出し (たとえば、[テーブル1]フォーム1 が [テーブル1]フォーム1 を継承フォームとして定義している、つまり自分自身を継承している場合)、フォームの連鎖を中断します。
 
 ## プロパティ一覧
 
-[フォームタイプ](properties_FormProperties.md#フォームタイプ) - [フォーム名](properties_FormProperties.md#フォーム名) - [継承されたフォームテーブル](properties_FormProperties.md#継承されたフォームテーブル) - [継承されたフォーム名](properties_FormProperties.md#継承されたフォーム名) - [ウィンドウタイトル](properties_FormProperties.md#ウィンドウタイトル) - [配置を記憶](properties_FormProperties.md#配置を記憶) - [サブフォームとして公開](properties_FormProperties.md#サブフォームとして公開) - [固定幅](properties_WindowSize.md#固定幅) - [最小幅](properties_WindowSize.md#最大幅-最小幅) - [最大幅](properties_WindowSize.md#最大幅-最小幅) - [固定高さ](properties_WindowSize.md#固定高さ) - [最小高さ](properties_WindowSize.md#最大高さ-最小高さ) - [最大高さ](properties_WindowSize.md#最大高さ-最小高さ) - [印刷設定](properties_Print.md#設定) - [連結メニューバー](properties_Menu.md#連結メニューバー) - [フォームヘッダー](properties_Markers.md#フォームヘッダー) - [フォーム詳細](properties_Markers.md#フォーム詳細) - [フォームブレーク](properties_Markers.md#フォームブレーク) - [フォームフッター](properties_Markers.md#フォームフッター) - [メソッド](properties_Action.md#メソッド) - [Pages](properties_FormProperties.md#pages)
+[フォームタイプ](properties_FormProperties.md#フォームタイプ) -
+[フォーム名](properties_FormProperties.md#フォーム名) -
+[継承されたフォームテーブル](properties_FormProperties.md#継承されたフォームテーブル) -
+[継承されたフォーム名](properties_FormProperties.md#継承されたフォーム名) -
+[ウィンドウタイトル](properties_FormProperties.md#ウィンドウタイトル) -
+[配置を記憶](properties_FormProperties.md#配置を記憶) -
+[サブフォームとして公開](properties_FormProperties.md#サブフォームとして公開) -
+[固定幅](properties_WindowSize.md#固定幅) -
+[最小幅](properties_WindowSize.md#最大幅-最小幅) -
+[最大幅](properties_WindowSize.md#最大幅-最小幅) -
+[固定高さ](properties_WindowSize.md#固定高さ) -
+[最小高さ](properties_WindowSize.md#最大高さ-最小高さ) -
+[最大高さ](properties_WindowSize.md#最大高さ-最小高さ) -
+[印刷設定](properties_Print.md#設定) -
+[連結メニューバー](properties_Menu.md#連結メニューバー) -
+[フォームヘッダー](properties_Markers.md#フォームヘッダー) -
+[フォーム詳細](properties_Markers.md#フォーム詳細) -
+[フォームブレーク](properties_Markers.md#フォームブレーク) -
+[フォームフッター](properties_Markers.md#フォームフッター) -
+[メソッド](properties_Action.md#メソッド) -
+[Pages](properties_FormProperties.md#pages)

@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
 Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
-
 
 ## Description
 
@@ -16,7 +13,7 @@ Ce paramètre vous permet de définir le filtre de votre dataclass ou de votre m
 
 Un filtre est composé des éléments suivants :
 
-**\{attribut\} {comparateur} {valeur}**
+**\{attribute\} {comparator} {value}**
 
 Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=` est le **comparateur** et `john` est la **valeur**.
 
@@ -24,30 +21,25 @@ Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=`
 
 Un filtre plus complexe est composé des éléments suivants, qui joint deux requêtes :
 
-**\{attribut\} {comparateur} {valeur} {AND/OR/EXCEPT} \{attribut\} {comparateur} {valeur}**
+**\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
-
-Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
+Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclass "Employee".
 
 ### Utiliser la propriété params
 
 Vous pouvez également utiliser la propriété params de 4D.
 
-**\{attribut\} {comparateur} {placeholder} {AND/OR/EXCEPT} \{attribut\} {comparateur} {placeholder}&$params='["{valeur1}","{valeur2}"]"'**
+**\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
 
-Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la documentation de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
-
-
-
+Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la [documentation de dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
 
 :::note
 
 L'utilisation de l'instruction `eval()` est interdite dans les requêtes REST (et donc dans les requêtes vers un [datastore distant](../ORDA/remoteDatastores.md)).
 
 :::
-
 
 :::note
 
@@ -56,10 +48,10 @@ Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous dev
 - Quotes ('): \u0027
 - Guillemets doubles ("): \u0022
 
-For example, you can write the following when passing a value with a quote when using the *params* property:  
+Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :\
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
-If you pass the value directly, you can write the following:  
+Si vous passez la valeur directement, vous pouvez écrire :
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 :::
@@ -80,21 +72,21 @@ Vous pouvez également rechercher des attributs de type Objet en utilisant la no
 
 Vous pouvez rechercher dans l'objet en écrivant ce qui suit :
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## Comparateur
 
 Le comparateur doit être l'une des valeurs suivantes :
 
-| Comparateur | Description         |
-| ----------- | ------------------- |
-| =           | est égal à          |
-| !=          | différent de        |
-| >           | supérieur à         |
-| >=          | supérieur ou égal à |
-|             | inférieur à         |
-| <=          | inférieur ou égal à |
-| begin       | commence avec       |
+| Comparateur                 | Description         |
+| --------------------------- | ------------------- |
+| =                           | est égal à          |
+| !=                          | différent de        |
+| >                           | supérieur à         |
+| > =                         | supérieur ou égal à |
+| <  | inférieur à         |
+| <= | inférieur ou égal à |
+| begin                       | commence avec       |
 
 ## Exemples
 

@@ -18,7 +18,7 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 Las rutas de los filesystem son útiles por dos razones principales:
 
 - Independencia: puede trasladar su solución de un lugar a otro independientemente del sistema operativo, sin tener que preocuparse por las rutas,
-- Seguridad: ningún código puede acceder a los elementos situados por encima de la raíz del sistema de archivos en el disco (sandboxing).
+- Seguridad: ningún código puede acceder a los elementos situados por encima de la raíz del sistema de los file system en el disco (sandboxing).
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
@@ -39,7 +39,7 @@ Con esta sintaxis:
 
 - las carpetas están separadas por "/"
 - los nombres de ruta absolutos empiezan por "/"
-- para subir un nivel en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir por encima de la raíz del sistema de archivos).
+- para subir una carpeta en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir en el sistema de archivos).
 
 En la sintaxis POSIX, generalmente usará los nombres de ruta `filesystem` con comandos [`File`](../commands/file) y [`Folder`](../commands/folder), por ejemplo:
 
@@ -86,7 +86,7 @@ Ejemplos con [`Folder`](../commands/folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
-$ok:=Folder("Monday:Tuesday";fk platform path).create() //un volumen debe llamarse Monday
+$ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamarse Monday
 ```
 
 ## Rutas absolutas y relativas

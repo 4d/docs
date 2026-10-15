@@ -16,7 +16,7 @@ Esta operación le permite garantizar la disponibilidad de una aplicación 4D Se
 
 :::
 
-To register a 4D Server application as a Service, select **Register Current Application as Service** in the [**File** menu](./menus.md#file) of 4D Server. La próxima vez que se inicie el equipo, 4D Server se ejecutará automáticamente y se abrirá el proyecto actual. Puede registrar cualquier número de proyectos. Cada proyecto solo se puede registrar una vez.
+Para registrar una aplicación 4D Server como servicio, seleccione **Registrar la aplicación actual como un servicio** en el [**menú Archivo**](./menus.md#file) de 4D Server. La próxima vez que se inicie el equipo, 4D Server se ejecutará automáticamente y se abrirá el proyecto actual. Puede registrar cualquier número de proyectos. Cada proyecto solo se puede registrar una vez.
 
 :::note
 

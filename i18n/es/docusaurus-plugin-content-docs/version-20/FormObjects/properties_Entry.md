@@ -27,18 +27,19 @@ Permite al usuario acceder a un menú contextual estándar en el objeto cuando s
 
 Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
-Para una [área de entrada](input_overview.md) tipo texto [multiestilo](properties_Text.md#multi-style) o [columna de listbox](listbox-column.md), además de los comandos de edición estándar, el menú contextual proporciona los siguientes comandos:
+En el caso de un tipo de texto [multiestilo](properties_Text.md#multi-style), [campo de entrada](input_overview.md) o [columna de listbox](listbox-column.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
-- comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo. Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
+- comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo.
+  Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. Es posible controlar el acceso al menú contextual mediante el comando `WA SET PREFERENCE`.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                          |
-| ----------- | -------------- | ----------------------------------------- |
+| Nombre      | Tipos de datos | Valores posibles                                             |
+| ----------- | -------------- | ------------------------------------------------------------ |
 | contextMenu | string         | "automatic" (se utiliza si falta), "none" |
 
 #### Objetos soportados
@@ -63,13 +64,13 @@ Cuando esta propiedad está desactivada, se desactiva todo menú emergente asoci
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [Columna de list box](listbox-column.md) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Stepper](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox-column.md) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Contador](stepper.md)
 
 ---
 
 ## Filtro de entrada
 
-Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. Por ejemplo, si un número de componente siempre tiene dos letras seguidas de tres dígitos, puede utilizar un filtro de entrada para restringir al usuario a respetar ese patrón. Incluso puede controlar las letras y números en particular.
+Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Por ejemplo, si un número de componente siempre tiene dos letras seguidas de tres dígitos, puede utilizar un filtro de entrada para restringir al usuario a respetar ese patrón. Incluso puede controlar las letras y números en particular.
 
 Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto en la visualización de los datos después de que el usuario deseleccione el objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). El filtro restringe la entrada de datos y el formato asegura la correcta visualización del valor tras la entrada de datos.
 
@@ -90,36 +91,36 @@ Para obtener información sobre la creación de filtros de entrada, consulte [C�
 
 A continuación se presenta una tabla que explica cada una de las opciones de filtro de entrada en la lista desplegable Filtro de entrada:
 
-| Filtro de entrada                      | Descripción                                                                                                                                                              |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ~A                                     | Permite la entrada de todas las letras, pero las conviete a mayúsculas.                                                                                                  |
-| &9                                     | Permitir sólo números.                                                                                                                                                   |
-| &A                                     | Permitir sólo letras mayúsculas.                                                                                                                                         |
-| &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                          |
-| &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                                    |
-| ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                                     |
-| !0&9##/##/##                           | Formato de entrada de fechas estándar. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                              |
+| Filtro de entrada                                                                                          | Descripción                                                                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                                                                                         | Permite la entrada de todas las letras, pero las conviete a mayúsculas.                                                                                                                                                  |
+| &9                                                                                     | Permitir sólo números.                                                                                                                                                                                                   |
+| &A                                                                                     | Permitir sólo letras mayúsculas.                                                                                                                                                                                         |
+| &a                                                                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                                                       |
+| &@                                                                        | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                                                                    |
+| ~a##                                                                                       | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                                  |
+| !0&9##/##/##                                                                           | Formato de entrada de fechas estándar. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                              |
 | !0&9 Día: ## Mes: ## Año: ##           | Time entry format. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Limited to hours and minutes.                                                    |
-| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Mostrar ceros en los espacios de entrada. Permitir cuatro números, separados por dos puntos.                     |
-| !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                        |
-| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                      |
-| !0&9##-##-##-##                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                         |
-| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Mostrar guiones bajos en los tres primeros espacios de entrada, ceros en el resto.                                                |
-| !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, tres entradas, guión, cuatro entradas. |
-| !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                      |
-| ~"A-Z;0-9; ;,;.;-"                     | Letras mayúsculas y puntuación. Permita sólo letras mayúsculas, números, espacios, comas, puntos y guiones.                                                              |
-| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Permite letras minúsculas, números, espacios, comas, puntos y guiones.                                                      |
-| &"0-9;.;-"                             | Números. Sólo se permiten números, puntos decimales y guiones (signo menos).                                                                                             |
+| !0&9##:##                                                              | Formato de entrada de hora. Limitado a horas y minutos. Mostrar ceros en los espacios de entrada. Permitir cuatro números, separados por dos puntos.                     |
+| !0&9## Horas ## Minutos ## Segundos                                                    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                                        |
+| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                                      |
+| !0&9##-##-##-##                                                                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                         |
+| !_&9(###)!0###-####                            | Número de teléfono de larga distancia. Mostrar guiones bajos en los tres primeros espacios de entrada, ceros en el resto.                                                                                |
+| !0&9###-###-###                                                                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, tres entradas, guión, cuatro entradas. |
+| !0&9###-##-###                                                                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                                      |
+| ~"A-Z;0-9; ;,;.;-"                                                         | Letras mayúsculas y puntuación. Permita sólo letras mayúsculas, números, espacios, comas, puntos y guiones.                                                                                              |
+| &"a-z;0-9; ;,;.;-"                                                     | Letras mayúsculas y minúsculas y puntuación. Permite letras minúsculas, números, espacios, comas, puntos y guiones.                                                                                      |
+| &"0-9;.;-"                                                             | Números. Sólo se permiten números, puntos decimales y guiones (signo menos).                                                                                                          |
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                    |
-| ----------- | -------------- | --------------------------------------------------- |
-| entryFilter | string         | <li>Código de filtro de entrada</li> o <li>Nombre del filtro de entrada (los nombres de los filtros empiezan por &#124;)</li> |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                             |
+| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string         | <li>Código de filtro de entrada</li> o <li>Nombre de filtro de entrada (los nombres de filtro empiezan por &#124; )</li> |
 
 #### Objetos soportados
 
-[Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [Columna de List Box](listbox-column.md)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [ Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -129,9 +130,9 @@ Cuando la propiedad **Enfocable** está activada para un objeto, el objeto puede
 
 > Un [objeto de entrada](input_overview.md) es siempre enfocable si tiene la propiedad [Editable](#enterable).
 
-- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Casilla de verificación muestra el foco cuando se selecciona
+- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
 
-- ![](../assets/en/FormObjects/property_focusable2.png)<br/>La casilla de verificación está seleccionada pero no se puede mostrar el foco|
+- ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
 
 Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el usuario puede seleccionar, copiar o incluso arrastrar y soltar el contenido del área.
 
@@ -143,7 +144,7 @@ Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el u
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón de radio](radio_overview.md) - [Subformulario](subform_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Botón de opción](radio_overview.md) - [Subformulario](subform_overview.md)
 
 ---
 
@@ -157,8 +158,8 @@ Por defecto, el objeto utiliza la disposición actual del teclado.
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                               |
-| --------------- | -------------- | ------------------------------------------------------------------------------ |
+| Nombre          | Tipos de datos | Valores posibles                                                                               |
+| --------------- | -------------- | ---------------------------------------------------------------------------------------------- |
 | keyboardDialect | text           | Código del lenguaje, por ejemplo "ar-ma" o "cs". Ver RFC3066, ISO639 e ISO3166 |
 
 #### Objetos soportados
@@ -174,13 +175,13 @@ Esta propiedad está disponible para [objetos de entrada](input_overview.md) que
 #### Automático
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
-- En las entradas multilínea, 4D realiza retornos de línea automáticos:  
+- En las entradas multilínea, 4D realiza retornos de línea automáticos:\
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### No
 
 - En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
-- Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o la variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:  
+- Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:\
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Sí
@@ -189,8 +190,8 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                       |
-| ---------- | -------------- | ------------------------------------------------------ |
+| Nombre     | Tipos de datos | Valores posibles                                                          |
+| ---------- | -------------- | ------------------------------------------------------------------------- |
 | multilínea | text           | "yes", "no", "automatic" (por defecto si no se define) |
 
 #### Objetos soportados
@@ -216,15 +217,16 @@ Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador de posición, por ejemplo:
 
- :xliff:PH_Lastname
+:xliff:PH_Lastname
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
-> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos `OBJECT SET PLACEHOLDER` y `OBJECT Get placeholder`.
+
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                    |
-| ----------- | -------------- | ------------------------------------------------------------------- |
+| Nombre      | Tipos de datos | Valores posibles                                                                       |
+| ----------- | -------------- | -------------------------------------------------------------------------------------- |
 | placeholder | string         | Texto a mostrar (en gris) cuando el objeto no contiene ningún valor |
 
 #### Objetos soportados
@@ -257,23 +259,24 @@ Esta propiedad mantiene la selección visible dentro del objeto después de habe
 
 Esta propiedad permite definir teclas de significado especial (atajos de teclado) para los [botones](button_overview.md), los [botones radio](radio_overview.md) y las [casillas de selección](checkbox_overview.md). Permiten al usuario utilizar el control utilizando el teclado en lugar de tener que utilizar el ratón.
 
-Puede configurar esta opción haciendo clic en el botón [...] de la propiedad Accesos directos de la Lista de propiedades.
+Puede configurar esta opción haciendo clic en [...] en la propiedad Accesos directos de la Lista de propiedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para obtener más información sobre cómo asociar accesos directos a los menús, consulte [Definición de las propiedades de los menús](../Menus/properties.md).
 
-Para ver una lista de todos los atajos utilizados en el entorno de desarrollo de 4D, consulte la página [Atajos](../Preferences/shortcuts.md) en la caja de diálogo Preferencias.
+> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](../Menus/properties.md).
+
+Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la [página Atajos](../Preferences/shortcuts.md) en la caja de diálogo Preferencias.
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                   |
-| --------------- | -------------- | -------------------------------------------------- |
-| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)         |
-| shortcutAlt     | boolean        | true, false                                        |
-| shortcutControl | boolean        | true, false (macOS: Control)                       |
-| shortcutShift   | boolean        | true, false                                        |
-|                 |                |                                                    |
-| shortcutKey     | string         | <li>toda llave de caracter: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                |
+| --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean        | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                   |
+| shortcutAlt     | boolean        | true, false                                                                                                                                                                                                                                                     |
+| shortcutControl | boolean        | true, false (macOS: Control)                                                                                                                                                                                                 |
+| shortcutShift   | boolean        | true, false                                                                                                                                                                                                                                                     |
+|                 |                |                                                                                                                                                                                                                                                                 |
+| shortcutKey     | string         | <li>toda tecla de caracter: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objetos soportados
 
@@ -285,7 +288,7 @@ Para ver una lista de todos los atajos utilizados en el entorno de desarrollo de
 
 Permite el paso directo al modo de edición en list boxes.
 
-Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no. Tenga en cuenta que esta opción permite editar celdas incluso cuando el list box [modo selección](properties_ListBox.md#selection-mode) está en "Ninguno".
+Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no. Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no.
 
 Cuando esta opción no está activa, los usuarios deben seleccionar primero la línea de celdas y luego, hacer clic en una celda para editar su contenido.
 

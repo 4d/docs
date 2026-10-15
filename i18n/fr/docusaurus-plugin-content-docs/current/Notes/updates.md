@@ -12,6 +12,10 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Prise en charge de la signature S/MIME des e-mails grâce aux nouvelles propriétés de la classe [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) : [`.certificate`](../API/SMTPTransporterClass.md#certificate) ou [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (fourniture du certificat), et [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - Vous pouvez désormais [compiler un composant directement depuis l'hôte](../Project/compiler.md#compile-components).
 - Prise en charge des formulaires liste par le [**rendu Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows.
+- 4D.Vector fields: [new specific icon](../Develop/field-properties.md#4dvector-class) and new [dedicated index types](../Develop/structure-indexes.md#vector-index).
+- Support of vector indexes in [`CREATE INDEX`](../commands/create-index) and [`SET INDEX`](../commands/set-index) 4D language commands.
+- New [dataClass.getIndexes()](../API/DataClassClass.md#getindexes) API function.
+- New [`.precision` property](../API/VectorClass.md#precision) in `4D.Vector` class objects.
 - Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
 - Nouvelle propriété [`WebServer.quotas`](../API/WebServerClass.md#quotas) et classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) étendue pour configurer les [quotas du serveur Web](../WebServer/quotas.md).
 - Objets Zone de texte et Zone de saisie : nouvelles propriétés [marge supérieure](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [marge inférieure](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [marge gauche](../FormObjects/properties_CoordinatesAndSizing.md#left-padding) et [marge droite](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) avec [prise en charge CSS](../FormEditor/createStylesheet.md#attribute-mapping) correspondante. Prise en charge de l'[alignement vertical](../FormObjects/properties_Text.md#vertical-alignment).
@@ -24,6 +28,12 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 #### Changements de comportement
 
 - Par souci de cohérence, la propriété **corner radius** a été déplacée de la section ["Coordonnées et dimensions"](../FormObjects/properties_CoordinatesAndSizing.md) vers la section ["Arrière-plan et bordure"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) de la liste des propriétés.
+
+:::warning Default vector precision
+
+In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default](../API/VectorClass.md#4dvectornew). In previous releases, only 64-bit precision was available. If you reopen a project containing vectors created in 4D 21 R5 or later using default precision (or explicitly set to 32-bit) with an ealier version, those vectors will be empty and their values will be lost.
+
+:::
 
 ## 4D 21 R4
 
@@ -114,11 +124,11 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
 | libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
 | Liblsquic       | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
-| Libuv           | 1.52.1 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.53.0 | **21 R6**           | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
 | ngtcp2          | 1.24.0 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
-| OpenSSL         | 4.0.1  | **21 R5**           |                                                                                                                                                       |
+| OpenSSL         | 4.0.3  | **21 R6**           |                                                                                                                                                       |
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit          | WKWebView                              | 19                  |                                                                                                                                                       |

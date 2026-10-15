@@ -16,13 +16,11 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 :::
 
-
 ## Error o estado
 
 Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto *status*. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
 
 Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. Esta categoría de errores genera excepciones y necesita ser manejada a través de un método de gestión de errores.
-
 
 ## Instalación de un método de gestión de errores
 
@@ -42,7 +40,7 @@ Para dejar de interceptar los errores en un contexto de ejecución y devolver la
 ON ERR CALL("";ek local) //devuelve el control al proceso local
 ```
 
-El comando [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+El comando [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) le permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -76,8 +74,7 @@ Se puede definir un único método de captura de errores para toda la aplicació
 
 Cuando se produce un error, sólo se llama a un método, como se describe en el siguiente diagrama:
 
-![gestión de errores](../assets/en/Concepts/error-schema.png)
-
+![error management](../assets/en/Concepts/error-schema.png)
 
 ### Manejo de errores e el método
 
@@ -98,7 +95,6 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 - el comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D. También puede utilizar el comando [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que devuelve la misma información que los arrays.
 - el comando `Get call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
-
 #### Ejemplo
 
 He aquí un sistema de gestión de errores sencillo:
@@ -112,9 +108,9 @@ He aquí un sistema de gestión de errores sencillo:
 
 ```4d
 // método proyecto errorMethod
- If(Error#1006) //esto no es una interrupción del usuario
-    ALERT("Se ha producido el error "+String(Error)+". El código en cuestión es: \""+Error formula+"\"")
- End if
+ If (Error#1006) //este no es una interrupción del usuario
+    ALERT("El error "+String(Error)+" ocurrido". El código en cuestión es: \""+Error formula+"\"")
+  End if
 ```
 
 ### Utilizar un método de gestión de errores vacío
@@ -122,14 +118,10 @@ He aquí un sistema de gestión de errores sencillo:
 Si desea principalmente que la caja de diálogo de error estándar esté oculta, puede instalar un método de gestión de errores vacío. La variable sistema `Error` puede ser probada en cualquier método, es decir, fuera del método de gestión de errores:
 
 ```4d
-ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
+ON ERR CALL("emptyMethod") //emptyMethod existe pero está vacío
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-    ALERT("File not found.")
-End if
-ON ERR CALL("")
-End if
-ON ERR CALL("")
+	ALERT("Archivo no encontrado.")
 End if
 ON ERR CALL("")
 ```

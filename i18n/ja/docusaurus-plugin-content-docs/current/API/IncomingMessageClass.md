@@ -255,7 +255,7 @@ $value := $request.getHeader("content-type")
 
 `.headers` プロパティは、読み出し専用です。
 
-ヘッダー名(キー)は全て小文字となっています。ヘッダー名では大文字と小文字が区別されることに注意してください。
+ヘッダー名(キー)は全て小文字となっています。ヘッダー名は全て大文字・小文字は区別されます。
 
 <!-- END REF -->
 
@@ -334,10 +334,10 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 例: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
-````4d
+```4d
 //urlQuery.mdcode = ```4d
 $test:=Length($r.urlQuery.mdcode) //5
-````
+```
 
 :::note
 

@@ -3,16 +3,15 @@ id: components
 title: Componentes
 ---
 
-Un componente 4D es un conjunto de código y de formularios 4D que representan una o varias funcionalidades que pueden instalarse y utilizarse en sus proyectos. Por ejemplo, el [componente 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para mostrar los archivos SVG.
+Un componente 4D es un conjunto de código y de formularios 4D que representan una o varias funcionalidades que pueden instalarse y utilizarse en sus proyectos. Por ejemplo, el [componente 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
 ## ¿Dónde encontrar los componentes?
 
-Adicionalmente, puede [desarrollar sus propios componentes 4D](Extensions/develop-components.md). Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/topics/4d-component).
-
+Varios componentes están [preinstalados en el entorno de desarrollo 4D](Extensions/overview.md), pero muchos componentes 4D de la comunidad 4D [están disponibles en GitHub](https://github.com/topics/4d-component). Adicionalmente, puede [desarrollar sus propios componentes 4D](Extensions/develop-components.md).
 
 ## Instalación de los componentes
 
-Para instalar un componente, basta con copiar la carpeta del componente en la carpeta [`Components` del proyecto](Project/architecture.md). Puede utilizar alias o atajos.
+To install a component, you simply need to copy the component package folder into the [`Components` folder of the project](Project/architecture.md). Puede utilizar alias o atajos.
 
 Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 

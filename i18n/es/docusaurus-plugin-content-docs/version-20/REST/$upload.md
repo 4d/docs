@@ -1,8 +1,7 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
-
 
 Devuelve un ID del archivo subido al servidor
 
@@ -20,17 +19,17 @@ Para cargar una imagen (o cualquier archivo binario), primero debe seleccionar e
 
 A continuación, se sube la imagen seleccionada a 4D Server mediante una petición como:
 
- `POST  /rest/$upload?$rawPict=true`
+`POST  /rest/$upload?$rawPict=true`
 
 Como resultado, el servidor devuelve un ID que identifica el archivo:
 
-**Respuesta**:
+**Response**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Después, se utiliza este ID para añadirlo a un atributo utilizando [`$method=update`]($method.md#methodupdate)para añadir la imagen a una entidad. La petición se ve así:
+Después, se utiliza este ID para añadirlo a un atributo utilizando [`$method=update`]($method.md#methodupdate) para añadir la imagen a una entidad. La petición se ve así:
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
 **Datos POST**:
 
@@ -42,7 +41,7 @@ Después, se utiliza este ID para añadirlo a un atributo utilizando [`$method=u
 }
 ```
 
-**Respuesta**:
+**Response**:
 
 Se devuelve la entidad modificada:
 
@@ -89,7 +88,7 @@ DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Cargar el binario
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
 
 If ($result=200) 
-    var $data : Object
+	var $data : Object
     $data:=New object
     $data.__KEY:="3"
     $data.__STAMP:="3"
@@ -102,6 +101,6 @@ If ($result=200)
 
     $result:=HTTP Request(HTTP POST method; $url; $data; $response; $headerNames; $headerValues)
 Else
-    ALERT(String($result)+" Error")
+	ALERT(String($result)+" Error")
 End if
 ```

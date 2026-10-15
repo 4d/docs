@@ -17,7 +17,6 @@ En esta área se pueden configurar las opciones relativas a la puesta en marcha 
 
 Este menú le permite seleccionar el modo en el que desea que la base se abra por defecto: **Diseño** ou **Aplicación**. A menos que se especifique, 4D se abre por defecto en el entorno Diseño si no se activa un sistema de acceso con contraseña.
 
-
 ## Componente
 
 Esta área permite a los [desarrolladores de componentes](../Extensions/develop-components.md) configurar cómo se expondrán las clases y funciones de sus componentes en el Editor de código 4D una vez instalado el componente.
@@ -28,4 +27,4 @@ Utilice esta área para declarar un espacio de nombres para las clases y las fun
 
 ### Generar el archivo de sintaxis para completar el código cuando se compila
 
-Al marcar esta opción, se crea automáticamente un archivo de sintaxis (formato JSON) durante la fase de compilación. Ver [Completar código para los componentes compilados](../Extensions/develop-components.md#code-completion-for-compiled-components). 
+Al marcar esta opción, se crea automáticamente un archivo de sintaxis (formato JSON) durante la fase de compilación. Ver [Completar código para los componentes compilados](../Extensions/develop-components.md#code-completion-for-compiled-components).

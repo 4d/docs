@@ -428,7 +428,7 @@ Esta propiedad está en **lectura-escritura**.
 
 ## .pid
 
-<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.pid.Syntax -->**.pid**: Integer<!-- END REF -->
 
 #### Descripción
 

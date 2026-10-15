@@ -195,7 +195,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Pour une fonction de classe, la commande `Current method name` retourne : `<ClassName>.<FunctionName>`, par exemple "MyClass.myFunction".
+Pour une fonction de classe, la commande `Current method name` retourne: `<ClassName>.<FunctionName>`, par exemple "MyClass.myFunction".
 
 Dans le code de l'application, les fonctions de classes sont appelées comme des méthodes membres des instances d'objets et peuvent recevoir des [paramètres](#parameters) si besoin. Les syntaxes suivantes sont prises en charge :
 
@@ -735,7 +735,7 @@ Vous déclarez des classes singleton en ajoutant le(s) mot(s) clé(s) approprié
 
 :::
 
-Le singleton de la classe est instancié lors du premier appel de la propriété [`cs.<class>.me`](../API/ClassClass.md#me). Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
+Le singleton de la classe est instancié au premier appel de la fonction [`cs.<class>.me`](../API/ClassClass.md#me) propriété. Le singleton instancié de la classe est ensuite toujours renvoyé lorsque la propriété [`me`](../API/ClassClass.md#me) est utilisée.
 
 Si vous avez besoin d'instancier un singleton avec des paramètres, vous pouvez également appeler la fonction [`new()`](../API/ClassClass.md#new). Dans ce cas, il est recommandé d'instancier le singleton dans du code exécuté au démarrage de l'application.
 

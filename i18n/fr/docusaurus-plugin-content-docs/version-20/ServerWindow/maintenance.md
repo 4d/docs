@@ -3,11 +3,9 @@ id: maintenance
 title: Page Maintenance
 ---
 
-
 La page **Maintenance** fournit diverses informations relatives au fonctionnement courant de la base. Elle donne également accès aux fonctions de maintenance élémentaires :
 
 ![](../assets/en/Admin/server-maintenance.png)
-
 
 ## Dernière vérification/dernier compactage
 
@@ -17,7 +15,7 @@ Ces zones indiquent la date, l’heure et le statut de la dernière [vérificati
 
 Ce bouton permet de lancer directement l’opération de vérification, sans interruption du serveur. A noter que le serveur peut être sensiblement ralenti durant l’opération.
 
-Tous les enregistrements et tous les index de la base sont vérifiés. Si vous souhaitez pouvoir cibler la vérification ou disposer d’options supplémentaires, vous devez utiliser le [Centre de sécurité et de maintenance](MSC/overview.md) (CSM).
+Tous les enregistrements et tous les index de la base sont vérifiés. Si vous souhaitez disposer d’options supplémentaires, vous devez utiliser le [Centre de sécurité et de maintenance (CSM)](MSC/overview.md).
 
 A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](../Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
@@ -35,11 +33,9 @@ Une fois le compactage terminé, 4D Server relance automatiquement l'application
 
 A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](../Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
-
 ## Durée de fonctionnement
 
 Cette zone indique la durée de fonctionnement du serveur depuis son dernier démarrage (jours, heures et minutes).
-
 
 ### Redémarrer le serveur...
 
@@ -53,18 +49,16 @@ Cette zone indique la date et l’heure de la [dernière sauvegarde](MSC/backup.
 
 - **Dernière sauvegarde** : date et heure de la dernière sauvegarde automatique.
 - **Prochaine sauvegarde** : date et heure de la prochaine sauvegarde.
-- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. La véritable taille réelle du fichier de sauvegarde pourra varier en fonction des paramétrages (compression...) et des variations du fichier de données.
+- **Place nécessaire estimée** : estimation de la taille nécessaire pour la sauvegarde. La taille réelle du fichier de sauvegarde peut varier selon les paramètres (compression, etc.) et selon les variations du fichier de données.
 - **Place disponible** : place disponible sur le volume de sauvegarde.
 
-
 Le bouton **Sauvegarder la base** permet de démarrer une sauvegarde immédiate de la base en utilisant les paramètres de sauvegarde courants (fichiers sauvegardés, emplacement des archives, options, etc.). Vous pouvez visualiser ces paramètres en cliquant sur le bouton **Propriétés...**. Pendant une sauvegarde sur le serveur, les postes clients sont "bloqués" (mais pas déconnectés) et il n’est pas possible à de nouveaux clients de se connecter.
-
 
 ## Requêtes et débogage
 
 Cette zone indique la durée d’enregistrement des fichiers d'historique (lorsqu’ils sont activés) et vous permet de gérer leur activation.
 
-Consultez la section [**Description des fichiers d'historique**](Debugging/debugLogFiles.md) pour obtenir plus de détails sur les fichiers d'historique.
+Pour plus d'informations sur ces fichiers, consultez la section [**Fichiers journaux**](Debugging/debugLogFiles.md).
 
 ### Démarrer/Arrêter les journaux des requêtes et de débogage
 
@@ -82,11 +76,10 @@ Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si 
 
 Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Un tel fichier peut être fourni par les services techniques de 4D pour surveiller et étudier des cas particuliers.
 
-
 ### Mettre en pause les journaux
 
 Ce bouton suspend toutes les opérations de log actuellement lancées sur le serveur. Cette fonctionnalité peut être utile pour alléger temporairement les tâches du serveur.
 
-Lorsque les logs ont été mis en pause, le titre du bouton change en **Reprendre la journalisation** pour que vous puissiez reprendre les opérations de journalisation.
+Lorsque les logs ont été mis en pause, le titre du bouton change en **Reprendre les journaux** pour que vous puissiez reprendre les opérations de journalisation.
 
-> Vous pouvez mettre en pause et reprendre l'enregistrement en utilisant la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).
+> Vous pouvez suspendre et reprendre la journalisation à l'aide de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).

@@ -15,7 +15,7 @@ title: String
 ```4d
 "レコード追加"
 "レコードが見つかりません"
-"送り状""送り状"
+"送り状"
 ```
 
 空の文字列は、2つの引用符の間に何も入れない状態 ("") で表します。
@@ -24,41 +24,41 @@ title: String
 
 以下のエスケープシーケンスを文字列内で使用できます:
 
-| エスケープシーケンス | 意味する文字        |
-| ---------- | ------------- |
-| \n        | LF (行送り)      |
-| \t        | HT (タブ)       |
-| \r        | CR (改行)       |
-| \\\     | \ (バックスラッシュ) |
-| \\"      | " (引用符)       |
+| エスケープシーケンス | 意味する文字                      |
+| ---------- | --------------------------- |
+| \n         | LF (行送り) |
+| \t         | HT (タブ)  |
+| \r         | CR (改行)  |
+| \\\\   |                             |
+| \\"      | " (引用符)  |
 
 **注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。 このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。
 
 ## 文字列演算子
 
-| 演算       | シンタックス           | 戻り値     | 式                       | 値        |
-| -------- | ---------------- | ------- | ----------------------- | -------- |
-| 連結 (結合)  | String + String  | Text    | "abc" + "def"           | "abcdef" |
-| 繰り返し     | String * Number  | Text    | "ab" * 3                | "ababab" |
-| 等しい      | String = String  | Boolean | "abc" = "abc"           | true     |
-|          |                  |         | "abc" = "abd"           | false    |
-| 異なる      | String # String  | Boolean | "abc" # "abd"           | true     |
-|          |                  |         | "abc" # "abc"           | false    |
-| 大きい      | String > String  | Boolean | "abd" > "abc"           | true     |
-|          |                  |         | "abc" > "abc"           | false    |
-| 小さい      | String < String  | Boolean | "abc" < "abd"           | true     |
-|          |                  |         | "abc" < "abc"           | false    |
-| 以上       | String >= String | Boolean | "abd" >= "abc"          | true     |
-|          |                  |         | "abc" >= "abd"          | false    |
-| 以下       | String <= String | Boolean | "abc" <= "abd"          | true     |
-|          |                  |         | "abd" <= "abc"          | false    |
-| キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
-|          |                  |         | "Alpha Bravo" % "ravo"  | false    |
+| 演算                         | シンタックス                                    | 戻り値     | 式                                       | 値        |
+| -------------------------- | ----------------------------------------- | ------- | --------------------------------------- | -------- |
+| 連結 (結合) | String + String                           | Text    | "abc" + "def"                           | "abcdef" |
+| 繰り返し                       | String \* Number                          | Text    | "ab" \* 3                               | "ababab" |
+| 等しい                        | String = String                           | Boolean | "abc" = "abc"                           | true     |
+|                            |                                           |         | "abc" = "abd"                           | false    |
+| 異なる                        | String # String                           | Boolean | "abc" # "abd"                           | true     |
+|                            |                                           |         | "abc" # "abc"                           | false    |
+| 大きい                        | String > String                           | Boolean | "abd" > "abc"                           | true     |
+|                            |                                           |         | "abc" > "abc"                           | false    |
+| 小さい                        | String < String  | Boolean | "abc" < "abd"  | true     |
+|                            |                                           |         | "abc" < "abc"  | false    |
+| 以上                         | String >= String                          | Boolean | "abd" >= "abc"                          | true     |
+|                            |                                           |         | "abc" >= "abd"                          | false    |
+| 以下                         | String <= String | Boolean | "abc" <= "abd" | true     |
+|                            |                                           |         | "abd" <= "abc" | false    |
+| キーワードを含む                   | String % String                           | Boolean | "Alpha Bravo" % "Bravo"                 | true     |
+|                            |                                           |         | "Alpha Bravo" % "ravo"                  | false    |
 
 ## 文字列比較の詳細
 
 - 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
-- ただし、複数の文字を比較する目的のワイルドカード記号は、比較演算子の右側の式で使用しなければなりません。比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
 
 ```4d
 Character code("A")=Character code("a")
@@ -66,7 +66,7 @@ Character code("A")=Character code("a")
 // Character code("a") は 97
 ```
 
-- 文字列の比較にあたっては、アクセント等の発音記号付きの文字は、お使いのコンピューターのシステム文字比較表を使って比較されます。例えば次の式は `FALSE` です:
+- 文字列の比較にあたっては、アクセント等の発音記号付きの文字は、お使いのコンピューターのシステム文字比較表を使って比較されます。たとえば、日本語においては以下の式は `true` を返します:
 
 ```4d
      "あ"="ア"
@@ -74,7 +74,7 @@ Character code("A")=Character code("a")
      "１"="1"
 ```
 
-**注:** 文字列比較にあたっては、**4D のデータファイルに定義された** 言語の特性が考慮されます。 これは、システムの使用言語とは異なる場合がありえます。
+**注:** 文字列比較にあたっては、**4D のデータファイルに定義された** 言語の特性が考慮されます。これは、システムの使用言語とは異なる場合がありえます。
 
 ### ワイルドカード記号 (@)
 
@@ -84,7 +84,7 @@ Character code("A")=Character code("a")
 "abcdefghij"="abc@"
 ```
 
-一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。次の式は `FALSE` になります:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に <code>FALSE</code> を返します。比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
 
 ```4d
     "abc@"="abcdefghij"
@@ -100,7 +100,7 @@ Character code("A")=Character code("a")
      "abcdefghij"="@abcde@fghij@"
 ```
 
-文字列の比較にあたっては、アクセント等の発音記号付きの文字は、お使いのコンピューターのシステム文字比較表を使って比較されます。たとえば、日本語においては以下の式は `true` を返します:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。次の式は `FALSE` になります:
 
 ```4d
 "abcdefghij"="abc@@fg"
@@ -138,9 +138,10 @@ Character code("A")=Character code("a")
      "Alpha,Bravo,Charlie"%"Alpha" // true
      "Software and Computers"%"comput@" // true
 ```
+
 > **注:**
-> 
-> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。実装されているルールの詳細に関しては、以下のアドレスを参照ください: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/reports/tr29/#Word_Boundaries)
+>
+> - 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。実装されているルールの詳細に関しては、以下のアドレスを参照ください: <http://www.unicode.org/reports/tr29/#Word_Boundaries>
 > - 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。
 
 ## 文字参照記号
@@ -185,7 +186,6 @@ End if
 
 ```
 // 真似をしないでください
- // 真似をしないでください
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```

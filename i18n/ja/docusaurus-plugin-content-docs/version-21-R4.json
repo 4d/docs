@@ -296,7 +296,7 @@
     "description": "The label for category 'SQL' in sidebar 'docs'"
   },
   "sidebar.docs.category.String-key": {
-    "message": "文字列",
+    "message": "String",
     "description": "The label for category 'String' in sidebar 'docs'"
   },
   "sidebar.docs.category.Structure-Access-key": {

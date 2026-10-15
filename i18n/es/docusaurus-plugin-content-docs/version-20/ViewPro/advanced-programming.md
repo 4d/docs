@@ -3,7 +3,7 @@ id: advanced-programming
 title: Programación avanzada con Javascript
 ---
 
-Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, se comporta como cualquier otra área web, y puede hacer ejecutar código Javascript llamando al comando 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/en/page1029.html).
+Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, se comporta como cualquier otra área web y puede ejecutar código JavaScript mediante el comando 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/en/page1029.html).
 
 Dado que 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html), también puede llamar a los métodos Javascript de SpreadJS en las áreas 4D View Pro.
 
@@ -27,7 +27,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 Puede aprovechar la librería de métodos Javascript de SpreadJS y llamarlos directamente para controlar sus hojas de cálculo.
 
-4D tiene una propiedad `Utils.spread` integrada que da acceso al documento de la hoja de cálculo (también llamado libro de trabajo) dentro del área 4D View Pro, haciendo más sencillo llamar a los [métodos de Workbook](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html) SpreadJS.
+4D tiene una propiedad integrada `Utils.spread` que da acceso al documento de la hoja de cálculo (también llamado libro de trabajo) dentro del área 4D View Pro, haciendo más sencillo llamar a los [métodos Workbook]SpreadJS (https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
 
 #### Ejemplo
 
@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Repositorio 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho más! Siéntase libre de clonarlo y experimentar con el proyecto. 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho m Siéntase libre de clonarlo y experimentar con el proyecto. Siéntase libre de clonarlo y experimentar con el proyecto.

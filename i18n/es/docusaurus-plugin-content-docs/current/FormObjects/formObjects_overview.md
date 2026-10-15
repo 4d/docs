@@ -9,7 +9,7 @@ Usted crea y personaliza los formularios de su aplicación manipulando los objet
 
 Los formularios 4D soportan una gran cantidad de objetos **activos** y **estáticos** integrados:
 
-- **Los objetos activos** realizan una tarea o una función de la interfaz. Los campos son objetos activos. Los otros objetos activos (objetos editables (variables), combo box, listas desplegables, botones imagen, etc.) almacenan los datos temporalmente en la memoria o realizan alguna acción, como abrir un cuadro de diálogo, imprimir un informe o iniciar un proceso en segundo plano.
+- **Los objetos activos** realizan una tarea o una función de la interfaz. Los campos son objetos activos. Los otros objetos activos -objetos editable (variables), combo box, listas desplegables, botones imagen, etc.- almacenan los datos temporalmente en la memoria o realizan alguna acción, como abrir una caja de diálogo, imprimir un informe o iniciar un proceso en segundo plano.
 - **Los objetos estáticos** se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Los objetos estáticos no tienen variables asociadas como los objetos activos. Sin embargo, se pueden insertar objetos dinámicos en objetos estáticos.
 
 ## Gestión de objetos de formulario

@@ -22,7 +22,7 @@ title: VP SET TABLE THEME
 | Parámetros | Tipo                                                                              |    | Descripción                                                    |
 | ---------- | --------------------------------------------------------------------------------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text                                                                              | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text                                                                              | -> | Nombre de la tabla                                             |
+| tableName  | Text                                                                              | -> | Table name                                                     |
 | options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Propiedades del tema de la tabla a modificar                   |
 | sheet      | Integer                                                                           | -> | Índice de la hoja (hoja actual si se omite) |
 

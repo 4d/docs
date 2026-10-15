@@ -59,7 +59,7 @@ Sous macOS, la commande **Quitter** se trouve dans le menu **4D Server** (menu a
 
 :::
 
-## Edition
+## Editer méthode
 
 Le menu **Édition** de 4D Server comprend les commandes classiques de copier/coller, la commande **Afficher le presse-papiers**, etc.
 

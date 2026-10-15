@@ -19,7 +19,7 @@ Indica si el servidor web aceptará o no conexiones no seguras. Ver [Activar HTT
 
 #### Puerto HTTP
 
-Número de puerto IP (TCP) de escucha para HTTP. Ver [Puerto HTTP](../WebServer/webServerConfig.md#http-port).
+Número de puerto IP (TCP) de escucha para HTTP. Número de puerto IP (TCP) de escucha para HTTP.
 
 #### Dirección IP
 
@@ -35,7 +35,7 @@ Permite modificar el número de puerto TCP/IP utilizado por el servidor web para
 
 #### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
-_Nota de compatibilidad_: esta opción [es obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
+*Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
 
 ### Rutas
 
@@ -45,7 +45,7 @@ Definir la ubicación por defecto de los archivos del sitio web e indicar el niv
 
 #### Página de inicio por defecto
 
-Designa una página de inicio por defecto para el servidor web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
+Designa una página de inicio por defecto para el servidor web. Designa una página de inicio por defecto para el servidor web.
 
 ## Options (I)
 
@@ -61,7 +61,8 @@ Define el tamaño de la caché. Ver [Caché](../WebServer/webServerConfig.md#cac
 
 #### Vaciar la caché
 
-En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). La caché se borra inmediatamente.
+En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché).
+En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). La caché se borra inmediatamente.
 
 > También puede utilizar la URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -81,15 +82,15 @@ Cuando se selecciona esta opción, el servidor web no ofrece ningún soporte esp
 
 En este modo, puede configurar los parámetros del servidor web adicionales:
 
-- [Procesos Web simultáneos maximos](#maximum-concurrent-web-processes)
-- [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
-- [Utilizar procesos apropiativos](#use-preemptive-processes)
+- [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
+- [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
+- [Usar procesos apropiativos](#use-preemptive-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
-_Nota de compatibilidad:_ esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
+*Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
-Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
+Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D.
 
 Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts) es marcada automáticamente (y bloqueada).
 
@@ -97,7 +98,7 @@ Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Límite estrictamente superior de procesos web simultáneos. Ver [Procesos Web simultáneos máximos](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Límite estrictamente superior de procesos web simultáneos. Límite estrictamente superior de procesos web simultáneos.
 
 #### Reutilización de los contextos temporales
 
@@ -111,13 +112,13 @@ No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
 Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
 
-> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente). Ver [Activando el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente). Ver [Activar el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tiempo de espera del proceso inactivo
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Ver [Duración de los procesos inactivos](../WebServer/webServerConfig.md#inactive-process-timeout).
+Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor.
 
 ### Contraseñas Web
 
@@ -125,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación de _Desarrollo Web_.
+Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
 
 ## Options (II)
 
@@ -137,7 +138,7 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings)
 
 #### Standard Set
 
-Define el conjunto de caracteres a utilizar por el servidor web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
+Define el conjunto de caracteres a utilizar por el servidor web 4D. Define el conjunto de caracteres a utilizar por el servidor web 4D.
 
 ### Conexiones Keep-Alive
 
@@ -157,7 +158,7 @@ Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros COR
 
 ### Formato del historial
 
-Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo _logweb.txt_ y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
 > La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
@@ -165,9 +166,9 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
-- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. En el formato CLF, cada línea del archivo representa una solicitud, como por ejemplo:\
+- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
   host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
-  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (carácter 13, carácter 10).
+  Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
   - host: dirección IP del cliente (por ejemplo: "192.100.100.10)
   - rfc931: información no generada por 4D, siempre es - (un signo menos)
   - usuario: nombre del usuario como está autenticado, o - (un signo menos). Si el nombre de usuario contiene espacios, se remplazan por \_ (un guión bajo).
@@ -179,7 +180,17 @@ El menú de formato de registro ofrece las siguientes opciones:
 - estado: respuesta dada por el servidor.
 - longitud: tamaño de los datos devueltos (excepto el encabezado HTTP) o 0.
 
-> **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos. Los posibles valores de estado son los siguientes 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error El formato CLF no puede personalizarse.
+> **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos.
+> Los posibles valores de estado son los siguientes
+> 200: OK
+> 204: No contents
+> 302: Redirection
+> 304: Not modified
+> 400: Incorrect request
+> 401: Authentication required
+> 404: Not found
+> 500: Internal error
+> El formato CLF no puede personalizarse.
 
 - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
   - Referer: contiene la URL de la página que apunta al documento solicitado.
@@ -197,44 +208,48 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 La siguiente tabla enumera los campos disponibles para cada formato (en orden alfabético) y describe su contenido:
 
-| Campo          | ELF | WLF | Valor                                                                            |
-| -------------- | --- | --- | -------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                        |
-| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                              |
-| C_DNS          | X   | X   | Dirección IP del DNS (ELF: campo idéntico al campo C_IP)                         |
-| C_IP           | X   | X   | Dirección IP del cliente (por ejemplo 192.100.100.10)                            |
-| CONNECTION_ID  |     | X   | Número de identificación de la conexión                                          |
-| CS(COOKIE)     | X   | X   | Información sobre las cookies contenidas en la petición HTTP                     |
-| CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                                   |
-| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                              |
-| CS(USER_AGENT) | X   | X   | Información sobre el software y el sistema operativo del cliente                 |
-| CS_SIP         | X   | X   | Dirección IP del servidor                                                        |
-| CS_URI         | X   | X   | URI sobre el que se realiza la petición                                          |
-| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                            |
-| CS_URI_STEM  | X   | X   | Parte de la solicitud sin los parámetros de la consulta                          |
-| DATE           | X   | X   | DD: día, MMM: abreviación de 3 letras para el mes (Jan, Feb,...), YYYY: año      |
-| METHOD         | X   | X   | Método HTTP utilizado para la solicitud enviada al servidor                      |
-| PATH_ARGS      |     | X   | Parámetros de la CGI: cadena situada después del caracter "$"                    |
-| STATUS         | X   | X   | Respuesta ofrecida por el servidor                                               |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                              |
-| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                      |
-| USER           | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos).       |
-|                |     |     | Si el nombre de usuario contiene espacios, son reemplazados por \_ (subrayado) |
-| URL            |     | X   | URL solicitado por el cliente                                                    |
+| Campo                                                  | ELF | WLF | Valor                                                                                                                                                                                          |
+| ------------------------------------------------------ | --- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED                    |     | X   | Número de bytes recibidos por el servidor                                                                                                                                                      |
+| BYTES_SENT                        | X   | X   | Número de bytes enviados por el servidor al cliente                                                                                                                                            |
+| C_DNS                             | X   | X   | Dirección IP del DNS (ELF: campo idéntico al campo C_IP)                                                                               |
+| C_IP                              | X   | X   | Dirección IP del cliente (por ejemplo 192.100.100.10)                                                                       |
+| CONNECTION_ID                     |     | X   | Número de identificación de la conexión                                                                                                                                                        |
+| CS(COOKIE)                          | X   | X   | Información sobre las cookies contenidas en la petición HTTP                                                                                                                                   |
+| CS(HOST)                            | X   | X   | Campo Host de la petición HTTP                                                                                                                                                                 |
+| CS(REFERER)                         | X   | X   | URL de la página que apunta al documento solicitado                                                                                                                                            |
+| CS(USER_AGENT) | X   | X   | Información sobre el software y el sistema operativo del cliente                                                                                                                               |
+| CS_SIP                            | X   | X   | Dirección IP del servidor                                                                                                                                                                      |
+| CS_URI                            | X   | X   | URI sobre el que se realiza la petición                                                                                                                                                        |
+| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                                                                                          |
+| CS_URI_STEM  | X   | X   | Parte de la solicitud sin los parámetros de la consulta                                                                                                                                        |
+| DATE                                                   | X   | X   | DD: día, MMM: abreviación de 3 letras para el mes (Jan, Feb,...), YYYY: año |
+| METHOD                                                 | X   | X   | Método HTTP utilizado para la solicitud enviada al servidor                                                                                                                                    |
+| PATH_ARGS                         |     | X   | Parámetros de la CGI: cadena situada después del caracter "$"                                                                                                                  |
+| STATUS                                                 | X   | X   | Respuesta ofrecida por el servidor                                                                                                                                                             |
+| TIME                                                   | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                            |
+| TRANSFER_TIME                     | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                                                                                    |
+| USER                                                   | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos).                                                                                  |
+|                                                        |     |     | Si el nombre de usuario contiene espacios, son reemplazados por \_ (subrayado)                                                                        |
+| URL                                                    |     | X   | URL solicitado por el cliente                                                                                                                                                                  |
 
 > Las fechas y horas se indican en GMT.
 
 ## Historial (periodicidad)
 
-Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
+
 - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
   - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
+
 - **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+
 - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.
+
 - **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Una copia de seguridad se activa automáticamente cuando el archivo alcanza el tamaño especificado. Puedes definir un límite de tamaño de 1, 10, 100 o 1000 MB.
 
 > En el caso de las copias de seguridad programadas, si el servidor web no fue lanzado cuando se programó la copia de seguridad, en el siguiente lanzamiento 4D considera que la copia de seguridad ha fallado y aplica los parámetros adecuados, definidos en las Propiedades de la base.
@@ -249,7 +264,7 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Cuando esta opción está marcada, 4D crea el archivo WSDL. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo _Publicado en WSDL_.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo <em x-id="4">Publicado en WSDL</em>.
 - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
 - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
 

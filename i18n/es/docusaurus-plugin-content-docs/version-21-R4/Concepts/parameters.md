@@ -106,7 +106,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 
 :::note
 
-No confunda las **declaraciones de parámetros** con las [**declaraciones de variables**](variables.md#declaring-variables). Usar la palabra clave 'var' con parámetros generará errores.
+No confunda las **declaraciones de parámetros** con las [**declaraciones de variables**](variables.md#declaring-variables). El uso de la palabra clave `var` con parámetros generará errores.
 
 :::
 

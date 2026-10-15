@@ -1,18 +1,18 @@
 ---
 id: propertiesText
-title: テキスト
+title: Text
 ---
 
 ---
 
 ## ピッカーの使用を許可
 
-このプロパティが有効化されていると、[OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.ja.html) または [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.ja.html) を使用してユーザーがフォントピッカー/カラーピッカーを呼び出すことを許可します。これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
+このプロパティが有効化されていると、[OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.ja.html) または [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.ja.html) コマンドを使用してユーザーがフォントピッカー/カラーピッカーを呼び出すことを許可します。これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 #### JSON 文法
 
-| プロパティ                | データタイプ  | とりうる値               |
-| -------------------- | ------- | ------------------- |
+| プロパティ                | データタイプ  | とりうる値                                  |
+| -------------------- | ------- | -------------------------------------- |
 | allowFontColorPicker | boolean | false (デフォルト), true |
 
 #### 対象オブジェクト
@@ -26,7 +26,9 @@ title: テキスト
 選択テキストの線を太くし、濃く見えるようにします。
 
 このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
-> これは通常のテキストです。 <br/> **これは太字のテキストです。 **
+
+> これは通常のテキストです。<br/>これは通常のテキストです。<br/>
+> **これは太字のテキストです。**
 
 #### JSON 文法
 
@@ -36,7 +38,19 @@ title: テキスト
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
@@ -45,7 +59,8 @@ title: テキスト
 選択テキストの線を右斜めに傾けます。
 
 このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
-> これは通常のテキストです。 <br/> **これは太字のテキストです。
+
+> これは通常のテキストです。<br/>*これはイタリックのテキストです。*
 
 #### JSON 文法
 
@@ -55,7 +70,19 @@ title: テキスト
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
@@ -71,13 +98,26 @@ title: テキスト
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
 ## フォント
 
 このプロパティは、オブジェクトで使用される **フォントテーマ** または **フォントファミリー** を指定します。
+
 > **フォントテーマ** と **フォントファミリー** プロパティは、どちらか一方しか指定できません。フォントテーマは、サイズを含めたフォント属性を定めます。フォントファミリーの場合は、フォント名・フォントサイズ・フォントカラーをそれぞれ定義することができます。
 
 ### フォントテーマ
@@ -107,7 +147,19 @@ title: テキスト
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ### フォントファミリー
 
@@ -123,11 +175,24 @@ title: テキスト
 | 名称         | データタイプ | とりうる値          |
 | ---------- | ------ | -------------- |
 | fontFamily | string | CSS フォントファミリー名 |
+
 > 4D では [Webセーフ](https://www.w3schools.com/cssref/css_websafe_fonts.asp) フォントだけを使うことを推奨しています。
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
@@ -137,13 +202,25 @@ title: テキスト
 
 #### JSON 文法
 
-| 名称       | データタイプ  | とりうる値                                 |
-| -------- | ------- | ------------------------------------- |
+| 名称       | データタイプ  | とりうる値                                                                                                    |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------- |
 | fontSize | integer | フォントサイズ (ポイント単位) 最小値: 0 最小値: 0 最小値: 0 |
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックス列](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
@@ -169,7 +246,21 @@ title: テキスト
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ラジオボタン](radio_overview.md) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[進捗インジケーター](progressIndicator.md) -
+[ルーラー](ruler.md) -
+[ラジオボタン](radio_overview.md) -
+[テキストエリア](text.md)
 
 ---
 
@@ -182,9 +273,10 @@ title: テキスト
 式または変数 (配列を除く) を入力します。表示される行ごとに式や変数は評価されます。ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
 
 また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font color expression` 定数を指定して設定することもできます。
+
 > このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
-以下の例は変数名を使用しています。 **フォントカラー式** に *CompanyColor* を入力し、フォームメソッドに以下のコードを書きます:
+以下の例は変数名を使用しています。**フォントカラー式** に *CompanyColor* を入力し、フォームメソッドに以下のコードを書きます:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -218,6 +310,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
 また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font style expression` 定数を指定して設定することもできます。
+
 > このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
 #### JSON 文法
@@ -251,7 +344,18 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) (通常、フラット以外のスタイル) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー) - [リストボックスフッター](listbox-header-footer.md#フッター) - [ラジオボタン](radio_overview.md) (通常、フラット以外のスタイル) - [テキスト](text.md)
+[ボタン](button_overview.md) -
+[チェックボックス](checkbox_overview.md) (通常とフラット以外のスタイル) -
+[コンボボックス](comboBox_overview.md) -
+[ドロップダウンリスト](dropdownList_Overview.md) -
+[グループボックス](groupBox.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[リストボックスカラム](listbox-column.md) -
+[リストボックスヘッダー](listbox-header-footer.md#ヘッダー) -
+[リストボックスフッター](listbox-header-footer.md#フッター) -
+[ラジオボタン](radio_overview.md) (通常とフラット以外のスタイル) -
+[テキストエリア](text.md)
 
 ---
 
@@ -274,7 +378,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### 対象オブジェクト
 
-[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#フッター) - [リストボックスヘッダー](listbox-header-footer.md#ヘッダー)
+[リストボックス](listbox_overview.md) - [リストボックスカラム](listbox-column.md) - [リストボックスフッター](listbox-header-footer.md#footers) - [リストボックスヘッダー](listbox-header-footer.md#headers)
 
 ---
 
@@ -284,22 +388,22 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 表示される行ごとに評価される式あるいは変数を指定します。行テキスト属性全体を定義することができます。**オブジェクト変数**、あるいは **オブジェクトを返す式** を指定する必要があります。以下のプロパティがサポートされています:
 
-| プロパティ名         | 型       | 説明                                                                                                                                                                                                                |
-| -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke         | string  | フォントカラー。任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                     |
-| fill           | string  | 背景色。任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                         |
-| fontStyle      | string  | "normal","italic"                                                                                                                                                                                                 |
-| fontWeight     | string  | "normal","bold"                                                                                                                                                                                                   |
-| textDecoration | string  | "normal","underline"                                                                                                                                                                                              |
+| プロパティ名         | 型       | 説明                                                                                                                                                                                                                                                                      |
+| -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke         | string  | フォントカラー。任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                        |
+| fill           | string  | 背景色。任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                            |
+| fontStyle      | string  | "normal","italic"                                                                                                                                                                                                                                                       |
+| fontWeight     | string  | "normal","bold"                                                                                                                                                                                                                                                         |
+| textDecoration | string  | "normal","underline"                                                                                                                                                                                                                                                    |
 | unselectable   | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。チェックボックスやリストといったコントロール類は引き続き稼働します。この設定はリストボックスの選択モードが "なし" の場合には無視されます。デフォルト値: false。 |
-| disabled       | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                               |
+| disabled       | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの)コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                                                   |
 
 特別な "cell" プロパティを使用すると、特定の列にプロパティをまとめて適用することができます:
 
-| プロパティ名 |              |                | 型      | 説明                                                                                                                                                                     |
-| ------ | ------------ | -------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cell   |              |                | object | 特定の列に適用するプロパティ                                                                                                                                                         |
-|        | *columnName* |                | object | *columnName* はリストボックス列のオブジェクト名です。                                                                                                                                      |
+| プロパティ名 |              |                | 型      | 説明                                                                                                                                                                                                        |
+| ------ | ------------ | -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cell   |              |                | object | 特定の列に適用するプロパティ                                                                                                                                                                                            |
+|        | *columnName* |                | object | *columnName* はリストボックス列のオブジェクト名です。                                                                                                                                                                         |
 |        |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", または "textDecoration" プロパティ (前述参照)。**注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。"セル" オブジェクトに指定した場合、これらは無視されます。 |
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](./properties_BackgroundAndBorder.md#背景色式))。
@@ -347,10 +451,7 @@ End if
     Form.meta.stroke:="orange"
     Form.meta.cell:=Form.colStyle2
  End if
- ...
 ```
-
-
 
 #### JSON 文法
 
@@ -366,7 +467,7 @@ End if
 
 ## マルチスタイル
 
-プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。このプロパティにより、選択エリアで[スタイルタグ](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html#1072408)が使用できるようになります。
+このプロパティは、選択された領域で[特定のスタイル](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.ja.html)を使用する可能性を有効にします。プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
 
 デフォルトでは、このオプションは有効化されていません。
 
@@ -386,12 +487,12 @@ End if
 
 テキストエリアの角度 (回転) を変更します。テキストエリアは、90°単位で回転させることができます。それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 
-| 戻り値       | 戻り値                                            |
-| --------- | ---------------------------------------------- |
+| 戻り値                          | 戻り値                                            |
+| ---------------------------- | ---------------------------------------------- |
 | 0 (デフォルト) | ![](../assets/en/FormObjects/orientation1.png) |
-| 90        | ![](../assets/en/FormObjects/orientation2.png) |
-| 180       | ![](../assets/en/FormObjects/orientation3.png) |
-| 270       | ![](../assets/en/FormObjects/orientation4.png) |
+| 90                           | ![](../assets/en/FormObjects/orientation2.png) |
+| 180                          | ![](../assets/en/FormObjects/orientation3.png) |
+| 270                          | ![](../assets/en/FormObjects/orientation4.png) |
 
 [スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。その際、このオブジェクトは入力順から自動的に除外されます。
 
@@ -469,8 +570,8 @@ What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!
 
 #### JSON 文法
 
-| 名称                | データタイプ  | とりうる値               |
-| ----------------- | ------- | ------------------- |
+| 名称                | データタイプ  | とりうる値                                  |
+| ----------------- | ------- | -------------------------------------- |
 | storeDefaultStyle | boolean | true, false (デフォルト) |
 
 #### 対象オブジェクト

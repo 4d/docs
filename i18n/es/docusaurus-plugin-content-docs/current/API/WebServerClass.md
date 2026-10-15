@@ -510,7 +510,7 @@ Para consultar la lista completa de propiedades de cuota, consulte la [clase `4D
 
 Por defecto, las propiedades de cuota son *Undefined* y no se aplica ninguna cuota.
 
-Puede modificar los valores de las cuotas mientras el servidor web se está ejecutando. Los cambios en las cuotas globales del servidor se aplican a la actividad posterior del servidor web. Los cambios en las cuotas por defecto de las sesiones se aplican a las nuevas sesiones creadas después de actualizar el valor de la cuota. El servidor web no necesita reiniciarse.
+Puede modificar los valores de las cuotas mientras el servidor web se está ejecutando. Los cambios en las cuotas globales del servidor se aplican a la actividad posterior del servidor web. Los cambios en las cuotas por defecto de las sesiones se aplican a las nuevas sesiones creadas después de actualizar el valor de la cuota. No es necesario reiniciar el servidor web.
 
 :::note
 
@@ -730,7 +730,7 @@ Todas los parámetros de los [objetos Servidor Web](../commands/web-server) pued
 
 :::note
 
-You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via an [`HTTPQuotas.json`](../WebServer/quotas.md) file. Si `settings.quotas` se especifica, **HTTPQuotas.json** se ignora.
+Puede configurar las cuotas a través de la propiedad `quotas` en el parámetro *settings* o, para el servidor web principal, a través de un archivo [`HTTPQuotas.json`](../WebServer/quotas.md). Si `settings.quotas` se especifica, **HTTPQuotas.json** se ignora.
 
 :::
 

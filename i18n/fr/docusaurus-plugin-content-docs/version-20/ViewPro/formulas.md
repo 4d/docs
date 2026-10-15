@@ -2,7 +2,7 @@
 id: formulas
 title: Formules et fonctions
 ---
-   
+
 ## Utilisation des formules
 
 Une formule de feuille de calcul est une expression qui calcule la valeur d'une cellule.
@@ -11,9 +11,9 @@ Une formule de feuille de calcul est une expression qui calcule la valeur d'une 
 
 Pour saisir une formule dans une zone de 4D View Pro :
 
-1.  Sélectionnez la cellule dans laquelle vous allez saisir la formule ou la fonction.
-2.  Saisissez = (le signe égal).
-3.  Tapez la formule et appuyez sur la touche **Entrée**.
+1. Sélectionnez la cellule dans laquelle vous allez saisir la formule ou la fonction.
+2. Saisissez = (le signe égal).
+3. Tapez la formule et appuyez sur la touche **Entrée**.
 
 Lorsque vous écrivez une formule, vous pouvez utiliser différents raccourcis :
 
@@ -31,58 +31,53 @@ Vous pouvez également créer des formules nommées qui peuvent être appelées 
 
 Toutes les formules ont des opérandes et des opérateurs :
 
-*   **Opérateurs** : voir [Valeurs et opérateurs](#values-and-operators) ci-dessous.
-*   Les **opérandes** comprennent plusieurs catégories :
-    *   Les [valeurs](#values-and-operators) (5 types de données sont pris en charge)
-    *   Les [références](#cell-references) à d'autres cellules (relatives, absolues, mixtes ou par nom)
-    *   [fonctions standard de tableur](#built-in-functions)
-    *   Les [fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
+- **Opérateurs** : voir [Valeurs et opérateurs](#values-and-operators) ci-dessous.
+- **Les opérandes** comprennent plusieurs catégories:
+  - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
+  - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
+  - [fonctions de feuille de calcul standard](#built-in-functions)
+  - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
 
 ## Valeurs et opérateurs
 
 4D View Pro prend en charge cinq types de données. Pour chaque type de données, des valeurs littérales et des opérateurs spécifiques sont pris en charge.
 
-| Types de données                  | Valeurs                                               | Opérateurs                                                                                                                                                                                                                                                       |
-| --------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (soustraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (date + nombre de jours -> date)<br/>+ (date + heure -> date + heure)<br/>- (date - nombre de jours -> date)<br/>- (date - date -> nombre de jours entre les deux)                                                                           |
-| [Time](Concepts/dt_time.md)       | 10:12:10                                              | Opérateurs de durée :<br/>+ (addition)<br/>- (soustraction)<br/>* (durée * nombre -> durée)<br/>/ (durée / nombre -> durée)                                                                                                            |
-| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                  | & (concaténation)                                                                                                                                                                                                                                                |
-| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                                |
-
+| Types de données                  | Valeurs                                                                                             | Opérateurs                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (soustraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | + (date + nombre de jours -> date)<br/>+ (date + heure -> date + heure de la journée)<br/>- (date - nombre de jours -> date)<br/>- (date - date -> nombre de jours entre les deux)                                                                                        |
+| [Time](Concepts/dt_time.md)       | 10:12:10                                                            | Opérateurs de durée :<br/>+ (addition)<br/>- (soustraction)<br/>\* (durée \* nombre -> durée)<br/>/ (durée / nombre -> durée)                                                                                                                             |
+| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concaténation)                                                                                                                                                                                                                                                                                              |
+| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                                                                       | -                                                                                                                                                                                                                                                                                                                                                     |
 
 ### Opérateurs de comparaison
 
 Les opérateurs suivants peuvent être utilisés avec deux opérandes de même type :
 
-| Opérateur  | Comparaison         |
-| ---------- | ------------------- |
-| =          | est égal à          |
-| `<>` | est différent de    |
-| >          | supérieur à         |
-|            | inférieur à         |
-| >=         | supérieur ou égal à |
-| <=         | inférieur ou égal à |
-
+| Opérateur                   | Comparaison         |
+| --------------------------- | ------------------- |
+| =                           | est égal à          |
+| `<>`                        | est différent de    |
+| >                           | supérieur à         |
+| <  | inférieur à         |
+| > =                         | supérieur ou égal à |
+| <= | inférieur ou égal à |
 
 ### Préséance des opérateurs
 
 Liste des opérateurs, du plus important au moins important :
 
-| Opérateur                                     | Description                 |
-| --------------------------------------------- | --------------------------- |
-| ()                                            | Parenthèse (pour regrouper) |
-| -                                             | Négatif                     |
-| +                                             | Plus                        |
-| %                                             | Pourcentage                 |
-| ^                                             | Exposant                    |
-| * et /                                        | Multiplier et diviser       |
-| + et -                                        | Ajouter et soustraire       |
-| &                                             | Concaténer                  |
-| `=`  `>` `<` `>=` `<=` `<>` | Comparer                    |
-
-
-
+| Opérateur                   | Description                                    |
+| --------------------------- | ---------------------------------------------- |
+| ()       | Parenthèse (pour regrouper) |
+| -                           | Négatif                                        |
+| +                           | Plus                                           |
+| %                           | Pourcentage                                    |
+| ^                           | Exposant                                       |
+| \* et /                     | Multiplier et diviser                          |
+| + et -                      | Ajouter et soustraire                          |
+| &       | Concaténer                                     |
+| `=`  `>` `<` `>=` `<=` `<>` | Comparer                                       |
 
 ## Références de cellules
 
@@ -96,31 +91,27 @@ Cette formule fait référence aux cellules C6 et C7. En d'autres termes, le log
 
 Lorsque vous copiez ou déplacez ces formules vers de nouveaux emplacements, chaque adresse de cellule dans cette formule change ou reste la même, selon la façon dont elle est tapée.
 
-*   Une référence qui change est appelée **référence relative** et fait référence à une cellule en fonction de sa distance à gauche/droite et en haut/bas par rapport à la cellule contenant la formule.
-*   Une référence qui pointe toujours vers une cellule particulière est appelée **référence absolue**.
-*   Vous pouvez également créer une référence mixte qui pointe toujours vers une ligne ou une colonne fixe.
-
-
+- Une référence qui change est appelée une **référence relative**, et fait référence à une cellule en fonction de sa distance à gauche/droite et en haut/bas par rapport à la cellule contenant la formule.
+- Une référence qui pointe toujours vers une cellule particulière est appelée une **référence absolue**.
+- Vous pouvez également créer une référence mixte qui pointe toujours vers une ligne ou une colonne fixe.
 
 ### Notation des références
 
-Si vous utilisez uniquement des coordonnées de cellule, telle qu'une cellule `C5` par exemple, 4D View Pro interprète la référence comme étant relative. Vous pouvez faire de la référence une référence absolue en précédant la lettre et le chiffre du signe dollar, comme dans `$C$5`.
+Si vous utilisez uniquement des coordonnées de cellule, telle qu'une cellule C5 par exemple, 4D View Pro interprète la référence comme étant relative. Vous pouvez faire de la référence une référence absolue en précédant la lettre et le chiffre du signe dollar, comme dans `$C$5`.
 
 Vous pouvez combiner les références absolues et relatives en insérant un signe dollar devant la lettre ou le chiffre seul, par exemple, `$C5` ou `C$5`. Une référence mixte vous permet de spécifier la ligne ou la colonne comme absolue, tout en permettant à l'autre partie de l'adresse de se référer de manière relative.
 
-Un moyen pratique, rapide et précis de spécifier une référence absolue consiste à nommer la cellule et à utiliser ce nom à la place de l'adresse de la cellule. Une référence à une cellule nommée est toujours absolue. Vous pouvez créer ou modifier des cellules ou des plages de cellules nommées à l'aide de la méthode [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
+Un moyen pratique, rapide et précis de spécifier une référence absolue consiste à nommer la cellule et à utiliser ce nom à la place de l'adresse de la cellule. Une référence à une cellule nommée est toujours absolue. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
 
 Le tableau suivant montre l'effet des différentes notations :
 
-| Exemple        | Type de référence | Description                                                                                                                                                                          |
-| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C5             | Relative          | La référence concerne l'emplacement relatif de la cellule C5, en fonction de l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois               |
-| $C$5           | Absolue           | La référence est absolue. Elle fait toujours référence à la cellule C5, quel que soit l'endroit où elle est utilisée.                                                                |
-| $C5            | Mixed             | La référence est toujours faite à la colonne C, mais la référence de ligne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois. |
-| C$5            | Mixed             | La référence est toujours la ligne 5, mais la référence de la colonne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois       |
-| Nom de cellule | Absolue           | La référence est absolue. Elle fait toujours référence à la [cellule ou à la plage nommée](method-list.md#vp-add-range-name), quel que soit l'endroit où la référence est utilisée.  |
-
-
+| Exemple        | Type de référence | Description                                                                                                                                                                                                        |
+| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| C5             | Relative          | La référence concerne l'emplacement relatif de la cellule C5, en fonction de l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois                                             |
+| $C$5           | Absolue           | La référence est absolue. Elle fait toujours référence à la cellule C5, quel que soit l'endroit où elle est utilisée.                                                              |
+| $C5            | Mixed             | La référence est toujours faite à la colonne C, mais la référence de ligne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois.               |
+| C$5            | Mixed             | La référence est toujours la ligne 5, mais la référence de la colonne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois                                     |
+| Nom de cellule | Absolue           | La référence est absolue. Elle fait toujours référence à la [cellule ou à la plage nommée](method-list.md#vp-add-range-name) quel que soit l'endroit où la référence est utilisée. |
 
 ## Fonctions intégrées
 
@@ -128,12 +119,11 @@ Les fonctions de tableur sont des formules prédéfinies utilisées pour calcule
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-Consultez la [**liste étendue des fonctions de SpreadJS**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) pour obtenir des détails et des exemples.
-
+Voir [**la liste étendue des fonctions de SpreadJS**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) pour plus de détails et d'exemples.
 
 ## Fonctions 4D
 
-4D View Pro vous permet de définir et d'appeler **des fonctions 4D personnalisées**, qui exécutent des [formules 4D](API/FunctionClass.md). L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
+Absolue L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
 
 Les fonctions personnalisées 4D permettent d'accéder, à partir de vos formules 4D View Pro :
 
@@ -145,7 +135,7 @@ Les fonctions personnalisées 4D permettent d'accéder, à partir de vos formule
 
 Les fonctions personnalisées 4D peuvent recevoir des [paramètres](#parameters) de la zone 4D View Pro, et retourner des valeurs.
 
-Déclarez toutes vos fonctions à l'aide de la méthode [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions). Exemples :
+You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemples :
 
 ```4d
 o:=New object
@@ -171,14 +161,13 @@ $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
 
-> **Voir également** [4D View Pro : Utilisation des formules 4D dans votre feuille de calcul (article de blog)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/)
-
+> **Voir aussi** [4D View Pro : Utilisez des formules 4D dans votre feuille de calcul (article de blog)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/)
 
 ### Exemple avec Hello World
 
 Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro en utilisant une méthode projet 4D :
 
-1.  Créez une méthode projet "myMethod" avec le code suivant :
+1. Créez une méthode projet "myMethod" avec le code suivant :
 
 ```4d
  #DECLARE->$hw Text
@@ -186,7 +175,7 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
 
 ```
 
-2.  Exécutez le code suivant avant d'ouvrir tout formulaire contenant une zone 4D View Pro :
+2. Exécutez le code suivant avant d'ouvrir tout formulaire contenant une zone 4D View Pro :
 
 ```4d
   Case of
@@ -200,15 +189,13 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
  End case
 ```
 
-3.  Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
+3. Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
 
-    ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-    "myMethod" est alors appelé par 4D et la cellule s'affiche :
+   "myMethod" est alors appelé par 4D et la cellule s'affiche :
 
-    ![](../assets/en/ViewPro/vpProjMeth2.PNG)
-
-
+   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Paramètres
 
@@ -226,34 +213,38 @@ A noter que les ( ) sont obligatoires, même si aucun paramètre n'est passé :
 =METHODWITHOUTNAME()
 ```
 
-Vous pouvez déclarer le nom, le type et le nombre de paramètres via la collection de *paramètres* de la fonction que vous avez déclarée à l'aide de la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions). En option, vous pouvez contrôler le nombre de paramètres passés par l'utilisateur à l'aide des propriétés *minParams* et *maxParams*.
+You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method. En option, vous pouvez contrôler le nombre de paramètres passés par l'utilisateur à l'aide des propriétés *minParams* et *maxParams*.
 
-Pour plus d'informations sur les types de paramètres entrants pris en charge, veuillez vous reporter à la description de la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
+For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
 
-> Si vous ne déclarez pas de paramètres, les valeurs peuvent être passées séquentiellement aux méthodes (elles seront reçues dans $1, $2...) et leur type sera automatiquement converti. Les dates dans *jstype* seront passées en tant qu'[objet](Concepts/dt_object.md) dans le code 4D avec deux propriétés :   
-> |Propriété|    Type|   Description| |---|---|---| |value| Date| Valeur de la date| |time |Real| Heure en secondes|
+> Si vous ne déclarez pas de paramètres, les valeurs peuvent être passées séquentiellement aux méthodes (elles seront reçues dans $1, $2...) et leur type sera automatiquement converti. Les dates en *jstype* seront passées en tant que [object](Concepts/dt_object.md) dans le code 4D avec deux propriétés :
+>
+> | Propriété | Type | Description       |
+> | --------- | ---- | ----------------- |
+> | value     | Date | Valeur date       |
+> | time      | Real | Heure en secondes |
 
 Les méthodes projet 4D peuvent également retourner des valeurs dans la formule de la cellule 4D View Pro via $0. Les types de données suivants sont pris en charge pour les paramètres retournés :
 
-* [text](Concepts/dt_string.md) (converti en chaîne de caractères dans 4D View Pro)
-* [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converti en numérique dans 4D View Pro)
-* [date](Concepts/dt_date.md) (converti en type JS Date dans 4D View Pro - heure, minute, seconde = 0)
-* [time](Concepts/dt_time.md) (converti en type JS Date dans 4D View Pro - date en date de base, c'est-à-dire 30/12/1899)
-* [boolean](Concepts/dt_boolean.md) (converti en bool dans 4D View Pro)
-* [image](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
-* [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
+- [text](Concepts/dt_string.md) (converti en chaîne de caractères dans 4D View Pro)
+- [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converti en nombre dans 4D View Pro)
+- [date](Concepts/dt_date.md) (converti en type JS Date dans 4D View Pro - heure, minute, seconde = 0)
+- [time](Concepts/dt_time.md) (converti en type JS Date dans 4D View Pro - date dans la date de base, c'est-à-dire 30/12/1899)
+- [boolean](Concepts/dt_boolean.md) (converti en bool dans 4D View Pro)
+- [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
+- [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
 
-    | Propriété | Type | Description       |
-    | --------- | ---- | ----------------- |
-    | value     | Date | Valeur date       |
-    | time      | Real | Heure en secondes |
+  | Propriété | Type | Description       |
+  | --------- | ---- | ----------------- |
+  | value     | Date | Valeur date       |
+  | time      | Real | Heure en secondes |
 
 Si la méthode 4D ne retourne rien, une chaîne vide est automatiquement retournée.
 
 Une erreur est retournée dans la cellule 4D View Pro si :
 
-*   la méthode 4D retourne un autre type que ceux listés ci-dessus,
-*   une erreur s'est produite pendant l'exécution de la méthode 4D (lorsque l'utilisateur clique sur le bouton "abort").
+- la méthode 4D retourne un autre type que ceux listés ci-dessus,
+- une erreur s'est produite pendant l'exécution de la méthode 4D (lorsque l'utilisateur clique sur le bouton "abort").
 
 #### Exemple
 
@@ -273,23 +264,21 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ![](../assets/en/ViewPro/params.png)
 
-
 ## Compatibilité
 
-Des solutions alternatives sont disponibles pour déclarer des champs ou des méthodes en tant que fonctions dans vos zones 4D View Pro. Ces solutions sont maintenues pour des raisons de compatibilité et peuvent être utilisées dans des cas spécifiques. Toutefois, il est recommandé d'utiliser la méthode [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
+Des solutions alternatives sont disponibles pour déclarer des champs ou des méthodes en tant que fonctions dans vos zones 4D View Pro. Ces solutions sont maintenues pour des raisons de compatibilité et peuvent être utilisées dans des cas spécifiques. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
 
 ### Référencement de champs à l'aide de la structure virtuelle
 
-
-4D View Pro vous permet de référencer des champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire en les déclarant à l'aide des commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) avec le paramètre \*. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, il est recommandé d'[utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro vous permet de référencer des champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire déclarée à travers les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/fr/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/fr/page602.html) avec le paramètre \*. **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément.
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 
 #### Conditions requises
 
-*   Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) avec le paramètre \* (voir exemple),
-*   Les noms des tables et des champs doivent être conformes à la norme ECMA (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
-*   Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
+- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/fr/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/fr/page602.html) avec le paramètre \* (voir exemple),
+- Les noms de table et de champ doivent être conformes à ECMA (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
+- Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
 
 Une erreur est retournée dans la cellule 4D View Pro si la formule appelle un champ qui n'est pas conforme.
 
@@ -314,54 +303,51 @@ Par exemple, si vous avez déclaré le champ "Name" de la table "People" dans la
 
 Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D View Pro en utilisant un champ virtuel 4D :
 
-1.  Créez une table "Employee" avec un champ "L_Name" :
+1. Créez une table "Employee" avec un champ "L_Name" :
 
 ![](../assets/en/ViewPro/vpFieldMeth1.PNG)
 
+2. Exécuter le code suivant pour initialiser une structure virtuelle :
 
-2.  Exécuter le code suivant pour initialiser une structure virtuelle :
+   ```4d
+   ARRAY TEXT($tableTitles;1)
+   ARRAY LONGINT($tableNum;1)
+   $tableTitles{1}:="Emp"
+   $tableNum{1}:=2
+   SET TABLE TITLES($tableTitles;$tableNum;*)
+    
+   ARRAY TEXT($fieldTitles;1)
+   ARRAY LONGINT($fieldNum;1)
+   $fieldTitles{1}:="Name"
+   $fieldNum{1}:=2 //nom de famille
+   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+   ```
 
-    ```4d
-    ARRAY TEXT($tableTitles;1)
-    ARRAY LONGINT($tableNum;1)
-    $tableTitles{1}:="Emp"
-    $tableNum{1}:=2
-    SET TABLE TITLES($tableTitles;$tableNum;*)
-
-    ARRAY TEXT($fieldTitles;1)
-    ARRAY LONGINT($fieldNum;1)
-    $fieldTitles{1}:="Name"
-    $fieldNum{1}:=2 //last name
-    SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-    ```
-
-3.  Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
+3. Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
 
 ![](../assets/en/ViewPro/vpFieldMeth2.PNG)
 
-
-4.  Sélectionnez EMP_NAME (utilisez la touche Tab) et saisissez la fermeture ).
+4. Sélectionnez EMP_NAME (utilisez la touche Tab) et saisissez la fermeture ).
 
 ![](../assets/en/ViewPro/vpFieldMeth3.PNG)
 
-
-5.  Validez le champ pour afficher le nom de l'employé courant :
+5. Validez le champ pour afficher le nom de l'employé courant :
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
-> La table \[Employee] doit avoir un enregistrement en cours.
 
+> La table \[Employee] doit avoir un enregistrement en cours.
 
 ### Déclarer des méthodes autorisées
 
-Vous pouvez appeler directement des méthodes du projet 4D à partir de vos formules 4D View Pro. Pour des raisons de sécurité, vous devez déclarer explicitement les méthodes qui peuvent être appelées par l'utilisateur avec la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-
+Vous pouvez appeler directement des méthodes du projet 4D à partir de vos formules 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 
 #### Conditions requises
 
 Pour être appelée dans une formule 4D View Pro, une méthode projet doit être :
 
-*   **Autorisée :** elle a été déclarée explicitement avec la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-*   **Exécutable :** elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Extensions/develop-components.md#sharing-of-project-methods)).
-*   **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
-> > Si ni la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) ni la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro reposent sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms des méthodes projet doivent être conformes à la grammaire d'identification JavaScript (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global de la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
+- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+- **Exécutable** : elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Extensions/develop-components.md#sharing-of-project-methods)).
+- **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
+
+> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. Dans ce cas, les noms de méthode du projet doivent être conformes à la grammaire des identifiants JavaScript (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global dans la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
 

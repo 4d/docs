@@ -22,7 +22,7 @@ title: VP Get table column index
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text    | ->                          | Nombre de la tabla                                             |
+| tableName  | Text    | ->                          | Table name                                                     |
 | columnName | Text    | ->                          | Nombre de la columna de la tabla                               |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
 | Resultado  | Integer | <- | Índice de *columnName*                                         |

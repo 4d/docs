@@ -30,7 +30,7 @@ Si desea utilizar Kerberos como protocolo de autenticación, también debe compl
 
 ![](../assets/en/server/sso-2.png)
 
-Esta opción declara el SPN tal y como se configuró en Active Directory. Un nombre principal de servicio es un identificador único de una instancia de servicio. Los SPNs son utilizados por la autenticación Kerberos para asociar una instancia de servicio con una cuenta de inicio de sesión de servicio. Esto permite que una aplicación cliente solicite al servicio que autentifique una cuenta, incluso si el cliente no dispone del nombre de la cuenta. For more information, please refer to the [SPN page on the MSDN web site](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
+Esta opción declara el SPN tal y como se configuró en Active Directory. Un nombre principal de servicio es un identificador único de una instancia de servicio. Los SPNs son utilizados por la autenticación Kerberos para asociar una instancia de servicio con una cuenta de inicio de sesión de servicio. Esto permite que una aplicación cliente solicite al servicio que autentifique una cuenta, incluso si el cliente no dispone del nombre de la cuenta. Para más información, consulte la [página SPN en el sitio web MSDN](https://msdn.microsoft.com/en-us/library/windows/desktop/ms677949%28v=vs.85%29.aspx).
 
 El identificador SPN debe respetar este formato:
 
@@ -40,7 +40,7 @@ El identificador SPN debe respetar este formato:
 Donde:
 
 - *ServiceName* es el nombre del servicio en el que el cliente desea autenticarse.
-- The *Fully Qualified Domain Name* (FQDN) is a domain name that specifies its exact location in the tree hierarchy of the Active Directory for both computers and users.
+- El *Fully Qualified Domain Name* (FQDN) es un nombre de dominio que especifica su ubicación exacta en la jerarquía de árbol del Active Directory, tanto para las máquinas como para los usuarios.
 
 En las aplicaciones 4D, se puede configurar el SPN:
 
@@ -102,7 +102,7 @@ Donde:
 
 ### Configuración requerida para el SSO
 
-4D Server admite diversas configuraciones de SSO, en función de la arquitectura y los ajustes actuales. El protocolo utilizado para la autenticación (NTLM o Kerberos), así como la información que devuelve el comando [`Current client authentication`](../commands/current-client-authentication), depende de la configuración real, siempre que se cumplan todos los requisitos (ver más abajo). The protocol actually used for authentication is returned in the protocol parameter of the [`Current client authentication`](../commands/current-client-authentication) command.
+4D Server admite diversas configuraciones de SSO, en función de la arquitectura y los ajustes actuales. El protocolo utilizado para la autenticación (NTLM o Kerberos), así como la información que devuelve el comando [`Current client authentication`](../commands/current-client-authentication), depende de la configuración real, siempre que se cumplan todos los requisitos (ver más abajo). El protocolo utilizado para la autenticación se devuelve en el parámetro protocolo del comando [`Current client authentication`](../commands/current-client-authentication).
 
 La siguiente tabla muestra los requisitos para utilizar la autenticación NTLM o Kerberos:
 

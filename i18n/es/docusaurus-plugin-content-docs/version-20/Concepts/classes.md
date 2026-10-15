@@ -3,18 +3,17 @@ id: classes
 title: Clases
 ---
 
-
 ## Generalidades
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. Una clase puede extenderse a otra clase con la palabra clave [`extender`](#class-extends-classname) y entonces hereda sus [funciones](#function) y sus propiedades ([declarada](#property) y [calculada](#function-get-and-function-set)).
+Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una vez definida una clase usuario, puede <strong x-id="1">instanciar</strong> los objetos de esta clase en cualquier parte de su código. Una clase puede [`extend`](#class-extends-classname) otra clase, y luego hereda sus [funciones](#function) y propiedades ([declaradas](#property) y [calculadas](#function-get-and-function-set)).
 
 > El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
 Por ejemplo, puede crear una clase `Person` con la siguiente definición:
 
-```4d  
+```4d
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
@@ -58,7 +57,7 @@ Project folder Project Sources Classes Polygon.4dm
 Para eliminar una clase existente, puede:
 
 - en su disco, elimine el archivo de clase .4dm de la carpeta "Classes",
-- en el Explorador 4D, seleccionar la clase y hacer clic en ![](../assets/en/Users/MinussNew.png) o elegir **Mover a la papelera** en el menú contextual.
+- en el Explorador 4D, seleccione la clase y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
 ### Utilizar la interfaz 4D
 
@@ -77,7 +76,8 @@ En la página **Métodos** del Explorador, las clases se agrupan en la categorí
 Para crear una nueva clase, puede:
 
 - seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
-- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases. ![](../assets/en/Concepts/newClass.png)
+- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
+  ![](../assets/en/Concepts/newClass.png)
 - seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
 
 #### Soporte del código de clase
@@ -89,15 +89,13 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
   - una función de clase es un bloque de código
   - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
   - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
-- En el explorador de ejecución y en el depurador, las funciones clase se muestran con el constructor `\&#060;ClassName&#062;` o formato `\&#060;ClassName&#062;.\&#060;FunctionName&#062;`.
+- In the Runtime explorer and Debugger, class functions are displayed with the `\<ClassName>` constructor or `\<ClassName>.\<FunctionName>` format.
 
 ## Class stores
 
 Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
-
-
-- `cs` para el class store usuario
+- `cs` para el almacén de clases de usuario
 - `4D` para el class store integrado
 
 ### `cs`
@@ -105,16 +103,17 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 <!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
 <!-- REF #_command_.cs.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|classStore|Object|<-|User class store for the project or component|
+| Parámetros | Tipo   |                             | Descripción                                       |
+| ---------- | ------ | --------------------------- | ------------------------------------------------- |
+| classStore | Object | <- | Class store usuario para el proyecto o componente |
+
 </div>
 <!-- END REF -->
 
-El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario del proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
-
+El comando `cs` <!-- REF #_command_.cs.Summary -->devuelve el almacén de clases de usuario para el proyecto o componente actual<!-- END REF -->. Devuelve todas las clases de usuario [definidas](#class-definition) en el proyecto o componente abierto. Por defecto, sólo las [clases ORDA](ORDA/ordaClasses.md) están disponibles.
 
 #### Ejemplo
 
@@ -129,15 +128,17 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
 <!-- REF #_command_.4D.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---|---|---|---|
-|classStore|Object|<-|4D class store|
+| Parámetros | Tipo   |                             | Descripción    |
+| ---------- | ------ | --------------------------- | -------------- |
+| classStore | Object | <- | Class store 4D |
+
 </div>
 <!-- END REF -->
 
-El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases integradas disponibles en 4D<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
+El comando `4D` <!-- REF #_command_.4D.Summary -->devuelve el almacén de clases para las clases 4D integradas<!-- END REF -->. Ofrece acceso a las APIs específicas como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Ejemplo
 
@@ -149,15 +150,15 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Un objeto clase tiene las siguientes propiedades y funciones:
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Cuando una clase es [definida](../Project/code-overview.md#creating-classes) en el proyecto, se carga en el entorno del lenguaje 4D. Un objeto clase tiene las siguientes propiedades y funciones:
 
 - cadena [`name`](API/ClassClass.md#name)
-- objeto [`superclass`](API/ClassClass.md#superclass) (null si ninguno)
-- función [`new()`](API/ClassClass.md#new), que permite instanciar objetos de clase.
+- objeto [`superclass`](API/ClassClass.md#superclass) (null si no hay)
+- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
 
-Un objeto de clase es un [objeto compartido](shared.md) y, por tanto, se puede acceder a él desde diferentes procesos de 4D simultáneamente.
+A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 ### Herencia
 
@@ -186,13 +187,13 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-No hay palabra clave final para el código de una función. No hay palabra clave final para el código de una función.
+No hay palabra clave final para el código de una función. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
 
 :::
 
-Las funciones de clase son propiedades específicas de la clase. Las funciones de clase son propiedades específicas de la clase.
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md).
 
-En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
+In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
 :::tip
 
@@ -208,7 +209,7 @@ Function computeArea($width : Integer; $height : Integer)->$area : Integer
 
 En una función de clase, el comando `This` se utiliza como instancia del objeto. Por ejemplo:
 
-```4d  
+```4d
 Function setFullname($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
@@ -217,17 +218,17 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myFunction".
+Para una función de clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myFunction".
 
 En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#parameters) si los hay. Se soportan las siguientes sintaxis:
 
-- utilización del operador `()`. Por ejemplo, `myObject.methodName("hello")`
+- uso del operador `()`. Por ejemplo, `myObject.methodName("hello")`
 - utilización de un método miembro de la clase "4D.Function":
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Advertencia hilo seguro:** si una función clase no es hilo seguro y es llamada por un método con el atributo "Puede ser ejecutado en proceso apropiativo":
-> 
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+>
 > - el compilador no genera ningún error (lo que es diferente en comparación con los métodos regulares),
 > - un error es lanzado por 4D sólo en tiempo de ejecución.
 
@@ -235,12 +236,11 @@ En el código de la aplicación, las funciones de clases se llaman como los mét
 
 Los parámetros de las funciones se declaran utilizando el nombre del parámetro y su tipo, separados por dos puntos. El nombre del parámetro debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties). Múltiples parámetros (y tipos) están separados por punto y coma (;).
 
-```4d  
+```4d
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
+
 > Si no se declaró el tipo, el parámetro se definirá como `Variant`.
-
-
 
 #### Valor devuelto
 
@@ -251,7 +251,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
  $result:=$x+$y
 ```
 
-También puede declarar el parámetro de retorno añadiendo sólo`: type` y utilizar la expresión [`retorno`](parameters.md#return-expression) (también terminará la ejecución de la función). Por ejemplo:
+También puedes declarar el parámetro de retorno añadiendo sólo `: type` y utilizar la [`expresión return`](parameters.md#return-expression) (también terminará la ejecución de la función). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -262,7 +262,7 @@ Function add($x : Variant; $y : Integer): Integer
 #### Ejemplo 1
 
 ```4d
-// Clase: Rectangle
+// Class: Rectangle
 property name : Text
 property height; width : Integer
 
@@ -271,7 +271,7 @@ Class constructor($width : Integer; $height : Integer)
  This.height:=$height
  This.width:=$width
 
-// Definición de función
+// Function definition
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -288,7 +288,7 @@ $area:=$rect.getArea() //5000
 
 #### Ejemplo 2
 
-Este ejemplo utiliza la [`expresión retorno`](parameters.md#return-expression):
+Este ejemplo utiliza la [`expresión return`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -304,27 +304,24 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### Sintaxis
 
 ```4d
-MyClass
+// Class: MyClass
 Class constructor({$parameterName : type; ...})
-// Class:
-// Class:
+// code
 ```
 
 :::note
 
-No hay palabra clave final para el código de función class constructor. No hay palabra clave final para el código de una función.
+No hay palabra clave final para el código de función class constructor. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
 
 :::
 
-
 Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 
-Cuando se llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
+Cuando llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
-Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). Un constructor puede utilizar la palabra clave [`Super`](#super) para llamar al constructor de la superclase.
+Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). El comando [`Super`](../commands/super) permite realizar llamadas a [`superclass`](../API/ClassClass#superclass), es decir, a la clase padre de la función.
 
-Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de sus propiedades de instancia no dependen de parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
-
+Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de las propiedades de instancia no dependen de los parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
 
 #### Ejemplo
 
@@ -344,8 +341,7 @@ $o:=cs.MyClass.new("John";42)
 // $o = {"name":"John";"age":42}
 ```
 
-
-### `property`
+### `propiedad`
 
 #### Sintaxis
 
@@ -355,37 +351,35 @@ La palabra clave`property` se puede utilizar para declarar una propiedad dentro 
 
 La declaración de propiedades de clase mejora las sugerencias del editor de código, las funciones de tecleo predictivo y la detección de errores.
 
-Las propiedades se declaran para los objetos nuevos cuando se llama a la función [`new()`](API/ClassClass.md#new), sin embargo no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
+Las propiedades se declaran para nuevos objetos cuando llama a [`new()`](API/ClassClass.md#new), sin embargo, no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
 
 Los nombres de las propiedades deben cumplir [las normas de denominación de propiedades](Concepts/identifiers.md#object-properties).
 
-
 El tipo de propiedad puede ser uno de los siguientes tipos soportados:
 
-| propertyType                             | Contenido                                                        |
-| ---------------------------------------- | ---------------------------------------------------------------- |
-| `Text`                                   | Valor texto                                                      |
-| `Fecha`                                  | Valor fecha                                                      |
-| `Time`                                   | Valor Hora                                                       |
-| `Boolean`                                | Valor booleano                                                   |
-| `Integer`                                | Valor entero largo                                               |
-| `Real`                                   | Valor real                                                       |
-| `Puntero`                                | Valor puntero                                                    |
-| `Picture`                                | Valor imagen                                                     |
-| `Blob`                                   | Valeor Blob escalar                                              |
-| `Collection`                             | Valor colección                                                  |
-| `Variant`                                | Valor variant                                                    |
-| `Object`                                 | Objeto con clase por defecto (4D.object)                         |
-| `4D.<className>`                   | Objeto del nombre de la clase 4D                                 |
-| `cs.<className>`                   | Objeto del nombre de la clase usuario                            |
-| `cs.<namespace>.<className>` | Objeto del nombre de la clase del componente `<namespace>` |
+| propertyType                 | Contenido                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `Text`                       | Valor texto                                                                 |
+| `Date`                       | Valor fecha                                                                 |
+| `Time`                       | Valor Hora                                                                  |
+| `Boolean`                    | Valor booleano                                                              |
+| `Integer`                    | Valor entero largo                                                          |
+| `Real`                       | Valor real                                                                  |
+| `Pointer`                    | Valor puntero                                                               |
+| `Picture`                    | Valor imagen                                                                |
+| `Blob`                       | Valeor Blob escalar                                                         |
+| `Collection`                 | Valor colección                                                             |
+| `Variant`                    | Valor variant                                                               |
+| `Object`                     | Objeto con clase por defecto (4D.object) |
+| `4D.<className>`             | Objeto del nombre de la clase 4D                                            |
+| `cs.<className>`             | Objeto del nombre de la clase usuario                                       |
+| `cs.<namespace>.<className>` | Objeto del componente `<namespace>` nombre de la clase                      |
 
 :::info
 
 La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class constructor`.
 
 :::
-
 
 #### Ejemplo
 
@@ -405,14 +399,13 @@ $o.name:="John" //$o:{"name" : "John"}
 $o.age:="Smith" //error con sintaxis de verificación
 ```
 
-
 ### `Function get` y `Function set`
 
 #### Sintaxis
 
 ```4d
 Function get <name>()->$result : type
-// código
+// code
 ```
 
 ```4d
@@ -427,30 +420,22 @@ Function set <name>($parameterName : type)
 
 Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
-
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
-
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. Por ejemplo, si un objeto de clase contiene como propiedad persistente el *precio bruto* y el *tipo de IVA*, El *precio neto* podría ser manejado por una propiedad calculada.
 
 En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
 `Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
 
-Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. En este caso, se devuelve un error si el código intenta modificar la propiedad.
 
-The type of the computed property is defined by the `$return` type declaration of the *getter*.
-
-The type of the computed property is defined by the `$return` type declaration of the *getter*.
-
-El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del *getter *. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
+El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
 > Asignar *undefined* a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
 
 #### Ejemplo 1
 
-```4d  
-//Class: Person.4dm
+```4d
+//Clase: Person.4dm
 property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
@@ -534,23 +519,23 @@ Class constructor ($side : Integer)
   $0:=This.height*This.width
 ```
 
-
-
 ### `Super`
 
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|  
-|---|---|---|---|
-|param|cualquiera|->|Parámetro(s) que se deben pasar al constructor padre|
-|Resultado|Object|<-|Object's parent|
+| Parámetros | Tipo   |                             | Descripción                                                              |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
+| param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
+| Resultado  | Object | <- | Padre del objeto                                                         |
+
 </div>
 <!-- END REF -->
 
-La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite realizar llamadas a la `superclase`, es decir, a la clase padre<!-- END REF -->.
+La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a la `superclass`, es decir, la clase padre<!-- END REF -->.
 
 `Super` tiene dos propósitos diferentes:
 
@@ -579,24 +564,21 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-//Class: Square
+// Clase: Rectangle
+Class constructor($width : Integer; $height : Integer)
+ This.name:="Rectangle"
+ This.height:=$height
+ This.width:=$width
 
-Class extends Rectangle
 
-Class constructor ($side : Integer)
+Function sayName()
+ ALERT("Hi, I am a "+This.name+".")
 
- // Llama al class constructor de la clase padre con longitudes
- // proporcionadas para el ancho y alto del rectángulo
- Super($side;$side)
- // En las clases derivadas, Super debe ser llamado antes de que 
- // pueda utilizar 'This'
- This.
-
-ame:="Square"
-
+// Definición de función
 Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
+ var $0 : Integer
+
+ $0:=(This.height)*(This.width)
 ```
 
 ```4d
@@ -663,26 +645,28 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|  
-|---|---|---|---|
-|Resultado|Object|<-|Current object|
+| Parámetros | Tipo   |                             | Descripción   |
+| ---------- | ------ | --------------------------- | ------------- |
+| Resultado  | Object | <- | Objeto actual |
+
 </div>
 <!-- END REF -->
 
-La palabra clave `This` <!-- REF #_command_.This.Summary -->devuelve una referencia al objeto procesado actualmente<!-- END REF -->.
+La palabra clave `This` <!-- REF #_command_.This.Summary -->devuelve una referencia al objeto que se está procesando actualmente<!-- END REF -->.
 
 En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-Cuando una fórmula es llamada como un método miembro de un objeto, su `This` está definido en el objeto en el que se llama el método. Por ejemplo:
+When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Por ejemplo:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-Cuando se utiliza una función [class constructor](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` está vinculado al nuevo objeto que se está construyendo.
+Cuando se utiliza una [función constructora de clase](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` está vinculado al nuevo objeto que se está construyendo.
 
 ```4d
 //Class: ob
@@ -699,7 +683,6 @@ Class constructor
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
-
 
 > Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](#super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](#example-1).
 

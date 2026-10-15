@@ -7,15 +7,16 @@ title: On Drag Over
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | 21   | [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Button](FormObjects/button_overview.md) - [Button Grid](FormObjects/buttonGrid_overview.md) - [Check Box](FormObjects/checkbox_overview.md) - [Dropdown list](FormObjects/dropdownList_Overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) - [Picture Button](FormObjects/pictureButton_overview.md) - [Picture Pop up menu](FormObjects/picturePopupMenu_overview.md) - [Plug-in Area](FormObjects/pluginArea_overview.md) - [Progress Indicators](FormObjects/progressIndicator.md) - [Radio Button](FormObjects/radio_overview.md) - [Ruler](FormObjects/ruler.md) - [Spinner](FormObjects/spinner.md) - [Splitter](FormObjects/splitters.md) - [Stepper](FormObjects/stepper.md) - [Tab control](FormObjects/tabControl.md) | Les données peuvent être déposées sur un objet |
 
-
 ## Description
 
 L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de destination lorsque le pointeur de la souris est déplacé sur l'objet. Généralement, en réponse à cet événement :
 
 - Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
--  En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
+- En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
 
-Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`. Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner -1 (moins un), vous devez donc écrire `$0:=-1`. Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
+Pour **accepter** le glissement, la méthode de l'objet de destination doit retourner 0 (zéro), vous devez donc écrire `$0:=0`.
+Pour **rejeter** le glissement, la méthode de l'objet de destination doit retourner -1 (moins un), vous devez donc écrire `$0:=-1`.
+Pour **rejeter** le glisser, la méthode de l'objet de destination doit retourner -1. Si aucun résultat n'est retourné, 4D suppose que le glissement est accepté.
 
 Si vous acceptez le glissement, l'objet de destination est mis en surbrillance. Si vous refusez le glissement, la destination n'est pas mise en surbrillance. Accepter le glissement ne signifie pas que les données déplacées vont être insérées dans l'objet de destination. Cela signifie seulement que si le bouton de la souris était relâché à ce stade, l'objet de destination accepterait les données glissées et l'événement [`On Drop`](onDrop.md) serait déclenché.
 
@@ -25,6 +26,6 @@ L'événement `On Drag Over` est le moyen par lequel vous contrôlez la premièr
 
 Le code gérant un événement `On Drag Over` doit être court et s'exécuter rapidement, car cet événement est envoyé à plusieurs reprises à l'objet de destination courant, en raison des mouvements de la souris.
 
-
 #### Voir également
+
 [`On Begin Drag Over`](onBeginDragOver.md)

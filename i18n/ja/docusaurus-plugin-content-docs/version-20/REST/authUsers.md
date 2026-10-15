@@ -3,18 +3,17 @@ id: authUsers
 title: ユーザーとセッション
 ---
 
-RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) の恩恵を受けることができます。 これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限などの追加機能を利用することができます。
+REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
 
 4D Server上で RESTセッションを開くには、まずリクエストを送信するユーザーが認証されなければなりません。
 
-
 ## ユーザー認証
 
-この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
+You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。このメソッド内でユーザーの認証をおこなうことができます (後述参照)。
 
 ## セッションの開始
 
-[スケーラブルセッションを有効化](WebServer/sessions.md#セッションの有効化) (推奨) している場合に、`On REST Authentication` データベースメソッドが `true` を返すと、ユーザーセッションは自動的に開かれ、`Session` オブジェクトおよび [Session API](API/SessionClass.md) を介して管理することができます。後続の RESTリクエストは同じセッションcookie を使用します。
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). 後続の RESTリクエストは同じセッションcookie を使用します。
 
 `On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
 
@@ -22,18 +21,17 @@ RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) �
 
 4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> サーバー上で実行されているインタープリターモードの Web コードをデバッグするには、[サーバー側](../Debugging/debugging-remote.md#有効化済デバッガー)またはクライアント側で[リモートデバッガー](../Debugging/debugging-remote.md)が有効さされている必要があります。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> インタープリター版の Webコードをサーバーマシン側でデバッグするためには、デバッガーが[サーバー側で有効化されている](../Debugging/debugging-remote.md) かあるいは [リモートマシン側で有効化されている](../Debugging/debugging-remote.md) ことを確認してください。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 
 ## 例題
 
-アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。
+この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
 
 htmlログインページ:
 
 ![alt-text](../assets/en/REST/login.png)
-
 
 ```html
 <html><body bgcolor="#ffffff">
@@ -76,12 +74,13 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 }
 </script></body></html>
 
+
 ```
 
 サーバーにログイン情報が送信されると、`On REST Authentication` データベースメソッドが呼び出されます:
 
 ```4d
-    // On REST Authentication データベースメソッド
+// On REST Authentication データベースメソッド
 
 #DECLARE($userId : Text; $password : Text) -> $Accepted : Boolean
 var $sales : cs.SalesPersonsEntity
@@ -98,6 +97,7 @@ If ($userId#"")
         End if 
     End if 
 End if 
+
 ```
 
 > 一旦呼び出されて `True` を返すと、同セッションにおいて `On REST Authentication` データベースメソッドはそれ以上呼び出されません。

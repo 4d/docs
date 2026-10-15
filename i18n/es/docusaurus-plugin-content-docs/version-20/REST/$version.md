@@ -1,6 +1,6 @@
 ---
 id: version
-title: '$version'
+title: $version
 ---
 
 Número de versión de la imagen
@@ -15,4 +15,4 @@ El valor del parámetro de versión de la imagen es modificado por el servidor.
 
 El siguiente ejemplo define el formato de la imagen a JPEG independientemente del tipo real de la foto y pasa el número de versión real enviado por el servidor:
 
- `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
+`GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`

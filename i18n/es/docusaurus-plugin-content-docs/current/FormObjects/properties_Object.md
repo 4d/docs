@@ -90,9 +90,9 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                  |
-| ---------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>Variable 4D, nombre de campo o cualquier expresión.</li><li>Cadena vacía para [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de arrays) para una columna de [listbox jerárquico](listbox_overview.md#hierarchical-list-boxes)</li> |
+| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                      |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D.</li><li>Cadena vacía para las [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de array) para una columna de [listbox jerárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expresiones
 

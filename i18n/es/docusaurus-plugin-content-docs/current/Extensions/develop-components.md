@@ -33,7 +33,7 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 :::note
 
-Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
+El código de los componentes interpretados se puede [editar](#editing-components) y [compilar](../Project/compiler.md#compile-components) directamente desde el proyecto anfitrión, siempre que el contexto lo permita.
 
 :::
 
@@ -200,7 +200,7 @@ Por defecto, las clases de los componentes no pueden ser llamadas desde el edito
 
 ### Declaración del namespace
 
-Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. By default, the area is empty (except when the component is [created from the host](#default-namespace)): component classes are not available outside of the component context.
+Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. De forma predeterminada, el espacio de nombres está vacío (excepto cuando el componente se [crea desde el anfitrión](#default-namespace): las clases del componente no están disponibles fuera del contexto del componente.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -210,7 +210,7 @@ Un *namespace* garantiza que no surja ningún conflicto cuando un proyecto local
 
 :::
 
-Al introducir un valor, se declara que las clases de los componentes estarán disponibles en el [almacén de clases de usuario (**cs**)](../Concepts/classes.md#cs) del proyecto principal, así como sus componentes cargados, a través del espacio de nombres `cs.<value>`. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir:
+Al introducir un valor, se declara que las clases de los componentes estarán disponibles en el [almacén de clases de usuario (**cs**)](../Concepts/classes.md#cs) del proyecto principal, así como sus componentes cargados, a través del `cs.<value>`. Por ejemplo, si introduce "eGeometry" como namespace del componente, asumiendo que ha creado una clase `Rectangle` que contiene una función `getArea()`, una vez que su proyecto se instala como componente, el desarrollador del proyecto local puede escribir:
 
 ```4d
 //en el proyecto principal o en uno de sus componentes
@@ -235,7 +235,7 @@ Las clases ORDA de un componente no están disponibles en el proyecto local. Por
 
 Cuando se [crea un nuevo componente desde el host](#creating-components), se le asigna automáticamente un espacio de nombres por defecto.
 
-The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. Por ejemplo, para un componente llamado "My Component-2", el espacio de nombres por defecto será "MyComponent2".
+El espacio de nombres predeterminado es el nombre del componente, sin caracteres que no cumplan con las [reglas de nomenclatura de propiedades](../Concepts/identifiers.md#object-properties), si los hay. Por ejemplo, para un componente llamado "My Component-2", el espacio de nombres por defecto será "MyComponent2".
 
 ### Clases ocultas
 
@@ -497,7 +497,7 @@ Las llaves soportadas en los archivos `Info.plist` de los componentes son en su 
 
 Se pueden definir las siguientes teclas:
 
-| tecla                                                      | descripción                                                                                                                                                                                      |
+| key                                                        | description                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | CFBundleName                                               | Nombre del componente (interno)                                                                                                                                               |
 | CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |

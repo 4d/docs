@@ -3,26 +3,25 @@ id: stylesheets
 title: Feuilles de style (style sheets)
 ---
 
-
 Une feuille de style regroupe une combinaison d’attributs d'objets formulaire —  allant des attributs de texte à quasiment tous les attributs d'objet disponibles.
 
 Outre l’harmonisation de l’interface de vos applications, l’usage de feuilles de style a trois avantages majeurs :
 
-* Gain de temps en développement : pour chaque objet, vous définissez en une seule opération un ensemble de paramétrages.
-* Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
-* Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
+- Gain de temps en développement : pour chaque objet, vous définissez en une seule opération un ensemble de paramétrages.
+- Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
+- Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
 
 ## Création ou modification d'une feuille de style
 
 Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
 
-La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
+La Boîte à Outils comporte une page **Style** qui est un raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
 
-1. Ouvrez la page **Style Sheets** en choisissant **Tool Box > Style Sheet** dans le menu Développement ou en cliquant sur l'icône **Tool Box** dans la barre d'outils de l'éditeur de formulaires.
+1. Ouvrez la page **Styles** en choisissant **Boîte à outils > Feuilles de style** dans le menu Développement ou en cliquant sur l'icône **Boîte outils** dans la barre d'outils de 4D.
 
- ![](../assets/en/FormEditor/stylesheets.png)
+![](../assets/en/FormEditor/stylesheets.png)
 
-2. Choisissez le type de feuille de style que vous souhaitez créer et cliquez sur le bouton **Créer** ou **Editer** : ![](../assets/en/FormEditor/createButton.png)
+2. Sélectionnez le type de feuille de style à créer et cliquez sur le bouton **Créer** ou **Modifier** : ![](../assets/en/FormEditor/createButton.png)
 
 3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.
 
@@ -30,9 +29,9 @@ La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccour
 
 4D accepte trois fichiers feuilles de style spécifiques :
 
-| Feuille de style        | Plate-forme                                                             |
-| ----------------------- | ----------------------------------------------------------------------- |
-| styleSheets.css         | Feuille de style globale par défaut pour macOS et Windows               |
+| Feuille de style                                             | Plate-forme                                                             |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| styleSheets.css                              | Feuille de style globale par défaut pour macOS et Windows               |
 | styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
 | styleSheets_windows.css | Pour définir des styles d'attributs spécifiques pour Windows uniquement |
 
@@ -44,9 +43,9 @@ Bien qu'elles soient adaptées pour répondre aux besoins spécifiques des formu
 
 Chaque règle de style d'une feuille de style contient deux parties :
 
-* un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
+- un *sélecteur* - Un sélecteur définit où appliquer le style. 4D prend en charge les sélecteurs "object type", "object name", "class", "all objects", et "attribute value".
 
-* une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
+- une *déclaration* - La déclaration définit le style à appliquer. Plusieurs lignes de déclaration peuvent être regroupées pour former un bloc de déclaration. Chaque ligne d'un bloc de déclaration CSS doit se terminer par un point-virgule et l'intégralité du bloc doit être entourée d'accolades.
 
 ## Sélecteurs de feuilles de style
 
@@ -59,11 +58,11 @@ Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à ap
 :::note
 
 - Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
-- Pour les list box, les types spécifiques suivants sont disponibles : *column*, *header*, *footer*.
+- Pour les listbox, les types spécifiques suivants sont disponibles : *column*, *header*, *footer*.
 
 :::
 
-Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
+Dans l'exemple suivant, tous les objets du type *button* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -83,7 +82,7 @@ text, input {
 
 ### Nom d'objet
 
-Le nom de l'objet correspond au **ID selector** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
+Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -92,7 +91,6 @@ Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre acc
 Le nom de l'objet correspond à la propriété JSON [object name](../FormObjects/properties_Object.md#object-name) des objets de formulaire.
 
 :::
-
 
 Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels :
 
@@ -105,7 +103,7 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 ### Class
 
-Class correspond au **class selector** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
+Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
 Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarer le(s) style(s) à appliquer.
 
@@ -136,9 +134,9 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Le caractère "*" correspond au **universal selector** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
+Le caractère "\*" correspond au **sélecteur universel** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
 
-Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
+Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "\*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
 Dans l'exemple suivant, tous les objets auront un fond gris :
 
@@ -156,11 +154,11 @@ Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) 
 
 #### Syntaxes prises en charge
 
-| Syntaxe                    | Description                                                                                                               |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                | les objets ayant un `attribute`                                                                                           |
-| [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
-| [attribute~="valeur"]      | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| Syntaxe                                                                                            | Description                                                                                                               |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                                    | les objets ayant un `attribute`                                                                                           |
+| [attribute="valeur"]                           | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
+| [attribute~="valeur"]          | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
 | [attribute&#124;="valeur"] | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
 #### Exemples
@@ -210,16 +208,16 @@ text[text|=Hello]
 
 Les Media queries sont utilisées pour appliquer des schémas de couleurs à une application.
 
-Une media query est composée d'une fonctionnalité média et d'une valeur (i.e. `<media feature><value>`).
+Une media query est composée d'une fonctionnalité média et d'une valeur (`<fonctionnalité média>:<valeur>`).
 
 Fonctionnalités média disponibles :
 
-* `prefers-color-scheme`
+- `prefers-color-scheme`
 
 Expressions de fonctionnalité média disponibles :
 
-* **light**<br/>Pour utiliser un schéma de couleur clair
-* **dark**<br/>Pour utiliser un schéma de couleur sombre
+- **light**<br/>Pour utiliser un schéma de couleur clair
+- **dark**<br/>Pour utiliser un schéma de couleur sombre
 
 > Les schémas de couleurs sont pris en charge sur macOS uniquement.
 
@@ -246,11 +244,12 @@ Cette CSS définit une combinaison de couleurs pour le texte et l'arrière-plan 
 ### Attributs d'objets
 
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
- - `method`
- - `type`
- - `class`
- - `event`
- - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+
+- `method`
+- `type`
+- `class`
+- `event`
+- `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjects/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).
 
@@ -270,26 +269,27 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> Les valeurs spécifiques à 4D (par exemple `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
+
+> Les valeurs spécifiques à 4D (*par exemple*, `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 #### Valeurs d'attributs spécifiques
 
-* Pour les attributs `icon`, `picture`, et `customBackgroundPicture` qui prennent en charge un chemin vers une image, la syntaxe est la suivante :
+- Pour les attributs `icon`, `picture`, et `customBackgroundPicture` qui prennent en charge un chemin vers une image, la syntaxe est la suivante :
 
 ```
 icon: url("/RESOURCES/Images/Buttons/edit.png"); /* chemin absolu */
 icon: url("edit.png"); /* chemin relatif vers le fichier du formulaire */
 ```
 
-* Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
+- Pour `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` et `verticalLineStroke`, trois syntaxes sont prises en charge :
 
-  * Nom la couleur CSS : `fill: red;`
-  * Hexa value: `fill: #FF0000;` (only 6 characters, transparency is not supported)
-  * fonction `rgb()` : `fill:rgb(255,0,0)`
+  - Nom la couleur CSS : `fill: red;`
+  - Valeur hexadécimale : `fill: #FF0000;` (6 caractères seulement, la transparence n'est pas prise en charge)
+  - fonction `rgb()` : `fill:rgb(255,0,0)`
 
-* Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
-  * une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
-  * un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
+- Si une chaîne utilise des caractères interdits en CSS, vous pouvez l'entourer de guillemets simples ou doubles. Par exemple :
+  - une référence xliff : `tooltip: ":xliff:CommonMenuFile";`
+  - un datasource avec l'expression de champ : `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordre de priorité
 
@@ -299,15 +299,15 @@ Les projets 4D hiérarchisent les définitions de style en conflit, d'abord par 
 
 Si un attribut est défini dans la description du formulaire JSON et dans une feuille de style, 4D utilisera la valeur du fichier JSON.
 
-Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `! Important`.
+Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `!Important`.
 
-**Exemple 1 :**
+**Exemple 1**
 
 | Description du formulaire JSON | Feuille de style | 4D affiche |
 | ------------------------------ | ---------------- | ---------- |
 | `"text": "Button",`            | `text: Edit;`    | `"Button"` |
 
-**Exemple 2 :**
+**Exemple 2**
 
 | Description du formulaire JSON | Feuille de style         | 4D affiche |
 | ------------------------------ | ------------------------ | ---------- |
@@ -319,15 +319,15 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
 2. Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
-3. Si un [attribut "css" de propriété de formulaire](../FormEditor/properties_FormProperties.md#css) est défini dans le formulaire 4D, celui-ci chargera un ou plusieurs fichier(s) CSS spécifique(s). Vous pouvez passer :
+3. Si un [attribut "css" ](../FormEditor/properties_FormProperties.md#css) est défini dans le formulaire 4D, celui-ci chargera un ou plusieurs fichiers CSS spécifiques. Vous pouvez passer :
 
- * un fichier pour les deux plates-formes :
+- un fichier pour les deux plates-formes :
 
  ```
  "css": "<path>" 
  ```
 
- * ou une liste de fichiers pour les deux plates-formes :
+- ou une liste de fichiers pour les deux plates-formes :
 
  ```
  "css": [
@@ -336,7 +336,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
        ],
  ```
 
- * ou une liste de fichiers par plate-forme :
+- ou une liste de fichiers par plate-forme :
 
  ```
   "css": [
@@ -346,10 +346,10 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
  ```
 
 > Les chemins de fichiers peuvent être relatifs ou absolus.
-> 
-> * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
-> * Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
+>
+> - Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON.
+> - Pour des raisons de sécurité, seuls les chemins filesystem sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 ## Voir également
 
-Voir la présentation vidéo [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).
+Voir la présentation vidéo [**CSS pour les formulaires 4D**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

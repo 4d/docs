@@ -5,7 +5,6 @@ title: Développement Web
 
 Cette section d'initiation est destinée aux nouveaux utilisateurs qui souhaitent avoir une vue d'ensemble sur la façon de créer à partir de rien un site Web 4D qui gère des données provenant de la base. C'est parti !
 
-
 ## Hello World Example
 
 Commençons par faire en sorte que le serveur web envoie "Hello World" au navigateur. La manière la plus simple de faire cela est de créer un projet, démarrer le serveur web et écrire un petit code qui retourne un texte dans la méthode base `On Web Connection`.
@@ -37,17 +36,14 @@ La page d'accueil par défaut est affichée :
 
 ```4d
 Case of 
-    : ($1="/hello")
-        WEB SEND TEXT("Hello World!")
-    Else 
-        // Error 404 for example
-End case
-    Else 
-        // Erreur 404 par exemple
+	: ($1="/hello")
+		WEB SEND TEXT("Hello World!")
+	Else 
+		// Error 404 par exemple
 End case 
 ```
 
-La méthode base `On Web Connection` est appelée pour les requêtes entrantes et reçoit l'URL cible dans le paramètre `$1`. Ce code très simple envoie simplement le texte au navigateur.
+La méthode base [`On Web Connection`](httpRequests.md#on-web-connection) est appelée pour les requêtes entrantes et reçoit l'URL cible dans le paramètre `$1`. Ce code très simple envoie simplement le texte au navigateur.
 
 3. Dans votre navigateur, saisissez l'URL suivante :
 
@@ -59,18 +55,18 @@ Le serveur web traite la demande et renvoie :
 
 ![](../assets/en/WebServer/hello.png)
 
-
 ## Obtenir des données à partir de la base
 
 Maintenant, nous allons voir à quel point il est simple de récupérer des données de la base. Tout d'abord, nous allons créer une table et la remplir avec quelques données.
 
 Créez une base de données basique avec, par exemple, une seule table contenant quelques enregistrements :
 
-![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
+![](../assets/en/WebServer/hello2.png)
+![](../assets/en/WebServer/hello3.png)
 
 ### Affichage des données dans une page
 
-La solution la plus simple pour afficher des données consiste à appeler une [page de modèle](templates.md) contenant des balises.
+La solution la plus simple pour afficher des données est d'appeler une [page de modèle](templates.md) contenant des balises.
 
 1. À l'aide de n'importe quel éditeur de texte, créez un fichier contenant les lignes suivantes :
 
@@ -98,10 +94,9 @@ Les pages `.shtml` sont automatiquement traitées par le serveur web. Votre page
 
 ### Requête REST
 
-Si nous ne voulons pas seulement *afficher* des données, mais aussi les *utiliser*, nous pouvons faire appel à ORDA et au serveur REST. Grâce au [concept ORDA](ORDA/overview.md), la table `Friends` est automatiquement mappée sur une dataclass et est disponible via [REST](REST/gettingStarted.md).
+Si nous ne voulons pas seulement *afficher* des données, mais aussi les *utiliser*, nous pouvons faire appel à ORDA et au serveur REST. Grâce au concept [ORDA](ORDA/overview.md), la table `Friends` est automatiquement disponible sous forme de dataclass et est disponible via [REST](REST/gettingStarted.md).
 
-
-1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des ** Paramètres**, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
+1. Nous allons utiliser le serveur REST pour accéder aux données : dans la boîte de dialogue des \*\* Paramètres\*\*, sélectionnez **Web** > **Fonctionnalités Web**, et cochez l'option **Exposer en tant que serveur REST**.
 
 ![](../assets/en/WebServer/hello5.png)
 
@@ -115,14 +110,14 @@ Le serveur web renvoie les résultats en JSON :
 
 ```json
 {
-    "__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
-    "dataClasses": [
-        {
-            "name": "Friends",
-            "uri": "/rest/$catalog/Friends",
-            "dataURI": "/rest/Friends"
-        }
-    ]
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
 }
 ```
 
@@ -140,53 +135,50 @@ Le serveur renvoie les entités, c'est-à-dire les données, de la dataclass Fri
 
 ```json
 {
-    "__DATACLASS": "Friends",
-    "__entityModel": "Friends",
-    "__GlobalStamp": 0,
-    "__COUNT": 4,
-    "__FIRST": 0,
-    "__ENTITIES": [
-        {
-            "__KEY": "1",
-            "__TIMESTAMP": "2020-10-27T14:29:01.914Z",
-            "__STAMP": 1,
-            "ID": 1,
-            "lastName": "Smith",
-            "firstName": "John"
-        },
-        {
-            "__KEY": "2",
-            "__TIMESTAMP": "2020-10-27T14:29:16.035Z",
-            "__STAMP": 1,
-            "ID": 2,
-            "lastName": "Brown",
-            "firstName": "Danny"
-        },
-        {
-            "__KEY": "3",
-            "__TIMESTAMP": "2020-10-27T14:29:43.945Z",
-            "__STAMP": 1,
-            "ID": 3,
-            "lastName": "Purple",
-            "firstName": "Mark"
-        },
-        {
-            "__KEY": "4",
-            "__TIMESTAMP": "2020-10-27T14:34:58.457Z",
-            "__STAMP": 1,
-            "ID": 4,
-            "lastName": "Dupont",
-            "firstName": "Jenny"
-        }
-    ],
-    "__SENT": 4
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
 }
 ```
 
-Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Affichez l'[Explorateur de données](Admin/dataExplorer.md) intégré pour avoir un exemple d'interface Web sophistiquée liée à des dataclasses.
-
-
-
+Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées.
 
 ## Connexion et session
 
@@ -197,7 +189,7 @@ Dans les sections ci-dessus, nous obtenons un accès libre à l'application à p
 La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
 - Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée *WebUsers* par exemple)
-- La table *WebUsers* pourrait être [cryptée](MSC/encrypt.md) et stocke l'identifiant de l'utilisateur et un hachage de son mot de passe.
+- La table *WebUsers* pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
 
 1. Créez une table avec certains champs, par exemple :
 
@@ -217,15 +209,13 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-
-
 ### Authentification des utilisateurs
 
-> Pour être sécurisé de bout en bout, il est nécessaire que toute la connexion soit établie via [https](webServerConfig.md#enable-https).
+> Pour être en sécurité de bout en bout, il est nécessaire que la connexion entière soit établie via [https](webServerConfig.md#enable-https).
 
 1. Ouvrez l'Explorateur et créez une méthode projet nommée "login".
 
-3. Écrivez le code suivant :
+2. Écrivez le code suivant :
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -234,43 +224,38 @@ var $user; $info : Object
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
-// get values sent in the header of the request
+// récupérer les valeurs envoyées dans le header de la requête
 WEB GET VARIABLES($anames; $avalues)
 
-// look for header login fields
+// chercher les champs de login dans le header
 $indexUserId:=Find in array($anames; "userId")
 $userId:=$avalues{$indexUserId}
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
-//look for a user with the entered name in the users table
+//chercher l'utilisateur saisi dans la table des utilisateurs
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
-If ($user#Null) //a user was found
-        //check the password
+If ($user#Null) //un utilisateur a été trouvé
+		//vérifier le mot de passe
     If (Verify password hash($password; $user.password))
-            //password ok, fill the session
+    		//mot de passe ok, on remplit la session
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-            //You can use the user session to store any information
+        	//On peut utiliser la session utilisateur pour stocker toute information
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")
-End if
-    End if 
-Else 
-    WEB SEND TEXT("Wrong user name or password.")
 End if 
 ```
 
-3. Affichez les propriétés de la méthode en cliquant sur le bouton **[i]** de l'éditeur de code, cochez l'option `Balises and URLs 4D (4DACTION...)` et cliquez sur **OK**.
+3. Affichez les propriétés de la méthode en cliquant sur le bouton **[i]** dans l'éditeur de code, cochez l'option `Balises et URLs 4D (4DACTION...)` et cliquez sur **OK**.
 
 ![](../assets/en/WebServer/hello0.png)
-
 
 4. Dans votre navigateur, saisissez l'URL suivante :
 
@@ -288,5 +273,5 @@ Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
-Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions](sessions.md). 
+Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la commande `WEB Get Current Session ID`. Voir la page [Sessions Web](sessions.md) .
 

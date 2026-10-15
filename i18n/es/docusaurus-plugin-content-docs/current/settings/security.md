@@ -23,13 +23,13 @@ Note que:
 
 #### Usuario por defecto
 
-When a Default User has been set, every user that opens the database or logs onto it has the same access privileges and restrictions defined for this Default User. Ya no es necesario ingresar un nombre de usuario. Además, si no ha asociado una contraseña al usuario por defecto, la caja de diálogo Contraseña ya no aparece y la base se abre directamente.
+Cuando se ha definido un Usuario por defecto, todos los usuarios que abren o se conectan a la base tienen los mismos privilegios y restricciones de acceso definidos para este Usuario por defecto. Ya no es necesario ingresar un nombre de usuario. Además, si no ha asociado una contraseña al usuario por defecto, la caja de diálogo Contraseña ya no aparece y la base se abre directamente.
 
 Esta opción simplifica el acceso a la base de datos a la vez que mantiene un sistema completo de control de datos.
 
 - Si ha asociado una contraseña al usuario predeterminado, al abrir la base aparece una caja de diálogo en el que los usuarios deben introducir una contraseña.
 - Si no ha asociado una contraseña al usuario por defecto, el cuadro de diálogo de identificación de usuario no aparecerá.  
-  **Note:** You can "force" the display of the User Identification dialog box when the "Default User" mode is active, for instance in order to connect as Administrator or Designer. Para ello, presione la tecla **Mayús** mientras abre la base de datos o se conecta a ella.
+  **Nota:** puede "forzar" la visualización del cuadro de diálogo de identificación de usuario cuando el modo "Usuario por defecto" está activo, por ejemplo para conectarse como Administrador o Diseñador. Para ello, presione la tecla **Mayús** mientras abre la base de datos o se conecta a ella.
 
 #### Mostrar la lista de usuarios en el cuadro de diálogo Contraseña
 
@@ -63,7 +63,7 @@ Debe seleccionar esta opción para poder mostrar cuadros de diálogo independien
 
 #### Ejecutar el método "On Host Database Event" de los componentes
 
-The [On Host Database Event database method](../commands/on-host-database-event-database-method) facilitates the initialization and backup phases for 4D components. Por razones de seguridad, debe autorizar explícitamente la ejecución de este método en cada base de datos local. Para hacer esto, debe marcar esta opción. Por defecto, no está marcado.
+El [método base On Host Database Event](../commands/on-host-database-event-database-method) facilita las fases de inicialización y de copia de seguridad de los componentes 4D. Por razones de seguridad, debe autorizar explícitamente la ejecución de este método en cada base de datos local. Para hacer esto, debe marcar esta opción. Por defecto, no está marcado.
 
 Cuando esta opción está seleccionada:
 

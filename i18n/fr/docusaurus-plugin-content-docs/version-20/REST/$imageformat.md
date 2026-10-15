@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: '$imageformat'
+title: $imageformat
 ---
 
 Définit le format d'image à utiliser pour récupérer des images (par exemple, `$imageformat=png`)
@@ -9,9 +9,9 @@ Définit le format d'image à utiliser pour récupérer des images (par exemple,
 
 Définissez le format à utiliser pour afficher les images. Vous pouvez utiliser l'un des formats suivants (extensions, types MIME et OsType Mac sont pris en charge) :
 
-| Type                    | Description                      |
-| ----------------------- | -------------------------------- |
-| "best"                  | Meilleur format basé sur l'image |
+| Type                                    | Description                      |
+| --------------------------------------- | -------------------------------- |
+| "best"                                  | Meilleur format basé sur l'image |
 | ".gif" or "image/gif"   | Format GIF                       |
 | ".png" or "image/png"   | Format PNG                       |
 | ".jpeg" or "image/jpeg" | Format JPEG                      |

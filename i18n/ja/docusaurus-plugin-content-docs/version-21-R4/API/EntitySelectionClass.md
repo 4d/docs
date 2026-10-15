@@ -797,7 +797,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 *attribute* が、インデックスされているオブジェクト属性でない場合、エラーが生成されます。
 
-呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて *attribute* で指定したオブジェクト属性が持つ重複しないパスの数に等しくなります。パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 *attribute* が null 値のエンティティは考慮されません。
+呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて *attribute* で指定したオブジェクト属性が持つ重複しないのパスの数に等しくなります。パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 *attribute* が null 値のエンティティは考慮されません。
 
 #### 例題
 

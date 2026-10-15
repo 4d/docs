@@ -1,15 +1,16 @@
 ---
 id: info
-title: '$info'
+title: $info
 ---
 
 Renvoie des informations sur les entity sets actuellement stockés dans le cache de 4D Server ainsi que sur les sessions utilisateur
 
 ## Description
+
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Propriété      | Type       | Description                                                                                         |
-| -------------- | ---------- | --------------------------------------------------------------------------------------------------- |
+| Propriété      | Type       | Description                                                                                                         |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------- |
 | cacheSize      | Number     | Taille du cache du serveur 4D.                                                                      |
 | usedCache      | Number     | La quantité de cache du serveur 4D utilisée.                                                        |
 | entitySetCount | Number     | Nombre d'entity sets.                                                                               |
@@ -18,32 +19,35 @@ En appelant cette requête pour votre projet, vous récupérez des informations 
 | sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
 
 ### entitySet
+
 Pour chaque sélection d'entités stocké dans le cache de 4D Server, les informations retournées sont les suivantes :
 
-
-| Propriété     | Type    | Description                                                                                                                                                                                                                                                                                               |
-| ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | Text    | Un UUID qui référence l'entity set.                                                                                                                                                                                                                                                                       |
-| dataClass     | Text    | Nom de la dataclass.                                                                                                                                                                                                                                                                                      |
-| selectionSize | Number  | Nombre d'entités dans l'entity set.                                                                                                                                                                                                                                                                       |
-| sorted        | Boolean | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                              |
-| refreshed     | Date    | Date de la création ou de la dernière utilisation de l'entity set.                                                                                                                                                                                                                                        |
+| Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | Text    | Un UUID qui référence l'entity set.                                                                                                                                                                                                                                                                                                                          |
+| dataClass     | Text    | Nom de la dataclass.                                                                                                                                                                                                                                                                                                                                         |
+| selectionSize | Number  | Nombre d'entités dans l'entity set.                                                                                                                                                                                                                                                                                                                          |
+| sorted        | Boolean | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                                                              |
+| refreshed     | Date    | Date de la création ou de la dernière utilisation de l'entity set.                                                                                                                                                                                                                                                                                           |
 | expires       | Date    | Date d'expiration de l'entity set (cette date/heure change chaque fois que l'entity set est actualisé). La différence entre refreshed et expires est le timeout pour un entity set. Cette valeur correspond soit à deux heures par défaut, soit à la valeur que vous avez définie à l'aide de `$timeout`. |
 
-Pour plus d'informations sur la création d'une sélection d'entités, reportez-vous à `$method=entityset`. Si vous souhaitez supprimer la sélection d'entités du cache de 4D Server, utilisez `$method=release`.
-> 4D crée également ses propres sélections d'entités à des fins d'optimisation, de sorte que ceux que vous créez avec `$method=entityset` ne soient pas les seuls à être retournés.
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+Pour plus d'informations sur la création d'un entity set, reportez-vous à `$method=entityset`. Si vous souhaitez supprimer la sélection d'entités du cache de 4D Server, utilisez `$method=release`.
+
+> 4D crée également ses propres entity sets à des fins d'optimisation, de sorte que ceux que vous créez avec `$method=entityset` ne soient pas les seuls à être retournés.
+
+> **IMPORTANT**
+> Si votre projet est en **mode d'accès administrateur contrôlé**, vous devez d'abord vous connecter au projet en tant qu'utilisateur du groupe Admin.
 
 ### sessionInfo
 
 Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection *sessionInfo* :
 
-| Propriété  | Type   | Description                                                       |
-| ---------- | ------ | ----------------------------------------------------------------- |
-| sessionID  | Text   | Un UUID qui référence la session.                                 |
-| userName   | Text   | Nom de l'utilisateur qui lance la session.                        |
+| Propriété  | Type   | Description                                                                                          |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------- |
+| sessionID  | Text   | Un UUID qui référence la session.                                                    |
+| userName   | Text   | Nom de l'utilisateur qui lance la session.                                           |
 | lifeTime   | Number | La durée d'une session utilisateur en secondes (3600 par défaut). |
-| expiration | Date   | Date et heure d'expiration courante de la session utilisateur.    |
+| expiration | Date   | Date et heure d'expiration courante de la session utilisateur.                       |
 
 ## Exemple
 
@@ -114,4 +118,5 @@ sessionInfo: [
 ]
 }
 ```
+
 > Les informations de l'indicateur de progression répertoriées après les sélections d'entités sont utilisées en interne par 4D.

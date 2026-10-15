@@ -3,52 +3,50 @@ id: webAreaOverview
 title: Webエリア
 ---
 
+Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Web エリアのレンダリングエンジンは、アプリケーションの実行プラットフォームと選択した[レンダリングエンジンオプション](properties_WebArea.md#use-embedded-web-rendering-engine) に応じて変化します。
 
-Webエリアは、静的および動的な HTMLページ、ファイル、ピクチャー、JavaScript などの様々な Webコンテンツをフォーム中で表示することのできるオブジェクトです。 Webエリアの描画エンジンは、アプリケーションの実行プラットフォームおよび [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) オプションの設定状態により異なります。
+同じフォーム内に複数の Webエリアを配置できます。しかしながら、Webエリアの使用には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
 
-同じフォーム内に複数の Webエリアを配置できます。しかしながら、Webエリアの挿入には [いくつかの制約](#webエリアのルール) がつく事に注意して下さい。
-
-いくつかの専用の [標準アクション](#標準アクション)、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.ja.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用して、Webエリアの動作を制御することができます。特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
-
+いくつかの専用の[標準アクション](#標準アクション) 、多数の [ランゲージコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用することで、Webエリアの機能を管理することができます。特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
 
 ## 特有のプロパティ
 
 ### 割り当てられる変数
 
 Webエリアには 2つの特別な変数が自動で割り当てられます:
-- [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
-- [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
-> 4D 19 R5 以降、[Windows システムレンダリングエンジン](./webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでは、進捗状況変数が更新されません。
+- [`URL`](properties_WebArea.md#url) --Web エリアが表示するURL をコントロールします。
+- [`Progression`](properties_WebArea.md#progression) -- Web エリア内に表示されているページのロード率をコントロールします。
+
+> 4D 19 R5 以降、Progression 変数は、[Windows のシステムレンダリングエンジン](./webArea_overview.md#Webレンダリングエンジン) を使用しているWeb エリアにおいては更新されなくなりました。
 
 ### Webレンダリングエンジン
 
-Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) うちから使用するものを選択することができます。
+アプリケーションの使用に応じて、Web エリアでは[2つのレンダリングエンジン](properties_WebArea.md#use-embedded-web-rendering-engine) からどちらを使用するかを選択することができます。
 
 "埋め込みWebレンダリングエンジンを使用" プロパティを選択している場合、"4Dメソッドコールを許可" プロパティが選択可能になり、また、macOS と Windows 上の動作が同様であるようにできます。 Webエリアがインターネットに接続されている場合には、最新のセキュリティアップデートの恩恵を受けられるため、システムレンダリングエンジンを選択することが推奨されます。
 
 ### 4Dメソッドコールを許可
 
-[4Dメソッドコールを許可](properties_WebArea.md#4dメソッドコールを許可) プロパティを選択している場合、Webエリアから 4Dメソッドを呼び出すことができます。
+[4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) プロパティが選択されている場合、Web エリアから4D メソッドを呼び出すことができます。
 
 :::note 注記
 
-- この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
+- この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
 - このオプションは 4Dコードの実行を許可するため、セキュリティ上の理由から、アプリケーションによって生成されたページなど、信頼できるページに対してのみ有効にするべきです。
 
 :::
 
-
 ### $4dオブジェクトの使用
 
-
-[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。 $4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+[4D の埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、 $4d という JavaScriptオブジェクトをエリアに提供します。 $4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
 ```js
 $4d.HelloWorld();
 ```
+
 > JavaScript は大文字小文字を区別するため、オブジェクトの名前は $4d (dは小文字) であることに注意が必要です。
 
 4Dメソッドへの呼び出しのシンタックスは以下のようになります:
@@ -56,13 +54,15 @@ $4d.HelloWorld();
 ```js
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
+
 - `param1...paramN`: 4Dメソッドに対して必要なだけ引数を渡すことができます。これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。
 
-- `function(result)`: 最後の引数として渡される関数です。この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。この関数は `result` 引数を受け取ります:
+- `function(result)`: 最後の引数として渡される関数です。  この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。 この関数は `result` 引数を受け取ります。この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。この関数は `result` 引数を受け取ります。
 
-- `result`: "$0" 式に返される、4Dメソッド実行の戻り値です。戻り値は JavaScript でサポートされている型 (文字列、数値、配列、オブジェクト) のいずれかになります。 `C_OBJECT` コマンドを使用して、オブジェクトを返すことができます。
+- `result`: Execution result of the 4D method, returned in the "$0" expression. 戻り値は JavaScript でサポートされている型 (文字列、数値、配列、オブジェクト) のいずれかになります。 You can use the `C_OBJECT` command to return the objects.
 
-> デフォルトとして、4Dは UTF-8 文字コードで動作しています。(アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。この場合、以下の 1行を HTMLページに追加して文字コードを宣言してください: <br /> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> デフォルトとして、4Dは UTF-8 文字コードで動作しています。(アクセントが付いた文字などの) 拡張文字を含むテキストを返す場合には、Webエリアで表示されるページの文字コードが UTF-8 に宣言されていることを確認してください。この場合、HTML ページに以下の行を追加してエンコーディングを宣言して下さい:
+> `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### 例題 1
 
@@ -97,16 +97,16 @@ $4d.today(function(dollarZero)
 });
 </script>
 </head>
-<body>今日は: <div id="mydiv"></div>
+<body>Today is: <div id="mydiv"></div>
 </body>
 </html>
 ```
 
 #### 例題 2
 
-`calcSum` という 4Dプロジェクトメソッドがあり、そのメソッドが (``$1...$n) という引数を受け取り、その合計を `$0` に返すという場合について考えます。
+The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
-`calcSum` メソッドの 4Dコードです:
+`calcSum` メソッドの4Dコード:
 
 ```4d
  C_REAL(${1}) // n個の実数型引数を受け取ります
@@ -127,11 +127,9 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
     });
 ```
 
-
 ## 標準アクション
 
-Webエリアを自動で管理するために、4つの特別な自動アクション (`openBackURL`、`openForwardURL`、`refreshCurrentURL`、そして `stopLoadingURL`) を使用できます。ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。これらのアクションについては [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) で説明しています。
-
+Webエリアを自動で管理するために、4つの特別な自動アクションを使用できます: `Open Back URL`、 `Open Forward URL`、 `Refresh Current URL` そして`Stop Loading URL` です。ボタンやメニューコマンドにこれらのアクションを割り当てることで、基本の Webインターフェースを素早く実装できます。これらのアクションは、[標準アクション](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html) のページに詳細な説明があります。
 
 ## フォームイベント
 
@@ -152,7 +150,6 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 - [`On Getting Focus`](Events/onGettingFocus.md)
 - [`On Losing Focus`](Events/onLosingFocus.md)
 
-
 ## Webエリアのルール
 
 ### ユーザーインターフェース
@@ -160,11 +157,10 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 フォームが実行されると、他のフォームエリアとの対話を可能にする、標準のブラウザーインターフェース機能が Web エリア内で利用可能になります。
 
 - **編集メニューコマンド**: Webエリアにフォーカスがあるとき、**編集** メニューコマンドを使用してコピーやペースト、すべてを選択などのアクションを選択に応じて実行できます。
-- **コンテキストメニュー**: Webエリアで、システム標準の [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用できます。コンテキストメニューの表示は、`WA SET PREFERENCE` コマンドを使用することで管理可能です。
-- **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。この場合、カーソルは "禁止" アイコン ![](../assets/en/FormObjects/forbidden.png) を表示します。"ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` 文を使います。このイベントでは、[`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/ja/page1020.html)コマンドを呼び出したり、ユーザードロップに対する [URL変数](properties_WebArea.md#url) を設定することができます。
+- **コンテキストメニュー**: Web エリアでは、システムの標準の[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用することができます。  Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
+- **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。この場合、カーソルは"禁止"アイコン![](../assets/en/FormObjects/forbidden.png) を表示します。"ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` 文を使う必要があります。このイベントにおいては、[`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) コマンドを呼び出すか、または[URL 変数](properties_WebArea.md#url) を設定することでユーザードロップに対応することができます。
 
-> 上記のドラッグ＆ドロップ機能は、[macOS のシステムレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用している Webエリアではサポートされません。
-
+> 上記のドラッグ&ドロップ機能は[macOS のシステムレンダリングエンジン](properties_WebArea.md#use-embedded-web-rendering-engine) を使用したWeb エリアではサポートされていません。
 
 ### サブフォーム
 
@@ -175,7 +171,6 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 
 > 他のフォームオブジェクトの上や下に Webエリアを重ねることはサポートされていません。
 
-
 ### Webエリアと Webサーバーのコンフリクト (Windows)
 
 Windows においては、Webエリアから、同じ 4Dアプリケーションで起動中の Webサーバーへのアクセスはお勧めできません。もちろん、リモートの 4D から 4D Server の Webサーバーにアクセスすることはできます。 自身の Webサーバーにアクセスできないということです。
@@ -184,36 +179,34 @@ Windows においては、Webエリアから、同じ 4Dアプリケーション
 
 macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
-
 ## Webインスペクターへのアクセス
 
 オフスクリーンの Webエリアや、フォームのWeb エリア内において、Webインスペクターを見たり使用したりすることができます。 Webインスペクターは、埋め込みWebエンジンによって提供されているデバッガーです。 Webページの情報の、コードとフローを解析します。
 
 Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
-- **`WA OPEN WEB INSPECTOR` コマンドの実行**<br/> このコマンドはスクリーン上 (フォームオブジェクト) の、またはオフスクリーンの Webエリアに対して直接使用することができます。
+- **`WA OPEN WEB INSPECTOR` コマンドを実行する**<br/>
+  このコマンドは、オンスクリーンのWeb エリア(フォームオブジェクト)とオフスクリーンのWeb エリアでも直接使用することができます。
 
-- **Webエリアコンテキストメニューの使用**<br/> この機能はオンスクリーンの Webエリアでのみ使用することができ、以下の条件を満たしている必要があります:
-    - エリアに対して [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている。
-    - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
-    ```4d
-        WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-    ```
+- **Web エリアのコンテキストメニューを使用する**<br/>
+  この機能はオンスクリーンのWeb エリアでのみ使用することができ、以下の条件を満たしている必要があります:
+  - Web エリアにおいて[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている
+  - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
+  ```4d
+  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+  ```
 
-> [Windows のシステムレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) の場合にこの環境設定を変更すると、変更を反映するのにエリア内でのナビゲーション操作 (たとえば、ページの更新) が必要です。
+> [Windows のシステムレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) の場合にこの環境設定を変更すると、変更を反映するのにエリア内でのナビゲーション操作 (たとえば、ページの更新など) が必要です。
 
-詳細は `WA SET PREFERENCE` コマンドの説明を参照してください。
+For more information, refer to the description of the `WA SET PREFERENCE` command.
 
-上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。この項目を選択すると、Webインスペクターウィンドウが表示されます。
+上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。
 
 > このデバッガーの機能の詳細に関しては、Webレンダリングエンジンにより提供されているドキュメントを参照してください。
 
-
-
-
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#css-class) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド) - [URL](properties_WebArea.md#url) - [進捗状況変数](properties_WebArea.md#進捗状況変数) - [埋め込みWebレンダリングエンジンを使用](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) - [4Dメソッドコールを許可](properties_WebArea.md#4Dメソッドコールを許可) 
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド)
 
 
 

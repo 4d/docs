@@ -3,9 +3,9 @@ id: onAfterEdit
 title: On After Edit
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                | Définition                                                            |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 45   | [Zone 4D View Pro](../FormObjects/viewProArea_overview.md) - [Zone 4D Write Pro](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Liste hiérarchique](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox-column.md) | Le contenu de l'objet saisissable qui a le focus vient d'être modifié |
+| Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                           | Définition                                                            |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
+| 45   | [Zone 4D View Pro](../FormObjects/viewProArea_overview.md) - [Zone 4D Write Pro](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | Le contenu de l'objet saisissable qui a le focus vient d'être modifié |
 
 ## Description
 
@@ -17,10 +17,10 @@ Lorsqu'il est utilisé, cet événement est généré après chaque modification
 
 - Actions d'édition standard qui modifient le contenu comme les actions coller, couper, supprimer ou annuler;
 - Déposer une valeur (action similaire à coller);
-- Toute entrée au clavier effectuée par l'utilisateur; dans ce cas, l'événement `On After Edit` est généré après les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke`](onAfterKeystroke.md), s'ils sont utilisés.
+- Toute saisie au clavier effectuée par l'utilisateur ; dans ce cas, l'événement `On After Edit` est généré après les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke`](onAfterKeystroke.md), s'ils sont utilisés.
 - Toute modification apportée à l'aide d'une commande de langage qui simule une action de l'utilisateur (c'est-à-dire `POST KEY`).
 
-Dans le cadre de l'événement `On After Edit`, les données textuelles en cours de saisie sont retournées par la commande [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html).
+Dans l'événement `On After Edit`, les données textuelles entrées sont renvoyées par la commande [`Get edited text`](https://doc.4d.com/4dv20/help/command/fr/page655.html).
 
 ### 4D View Pro
 
@@ -53,19 +53,20 @@ En fonction de la valeur de la propriété `action`, l'[objet event](overview.md
 
 #### action = DragDropBlock
 
-| Propriété | Type    | Description                                       |
-| --------- | ------- | ------------------------------------------------- |
+| Propriété | Type    | Description                                                          |
+| --------- | ------- | -------------------------------------------------------------------- |
 | fromRange | object  | Plage de cellule source (qui est glissée)         |
 | toRange   | object  | Plage de cellule de destination (qui est déposée) |
-| copy      | boolean | Indique si la plage source est copiée ou non      |
-| insert    | boolean | Indique si la plage source est insérée ou non     |
+| copy      | boolean | Indique si la plage source est copiée ou non                         |
+| insert    | boolean | Indique si la plage source est insérée ou non                        |
 
 #### action = DragFillBlock
 
-| Propriété | Type   | Description                        |
-| --------- | ------ | ---------------------------------- |
-| fillRange | object | Plage utilisée pour le remplissage |
- autoFillType|longint|Valeur utilisée pour le remplissage.<li>0 : les cellules contiennent toutes les données (valeurs, formatage et formules)</li><li>1 : les cellules contiennent des données automatiquement séquentielles</li><li>2 : les cellules contiennent uniquement le formatage</li><li>3 : les cellules contiennent des valeurs mais pas de formatage</li><li>4 : les valeurs des cellules sont supprimées</li><li>5 : Les cellules sont remplies automatiquement</li>| |fillDirection|longint|Direction du remplissage.<li>0 : les cellules à gauche sont remplies</li><li>1 : les cellules à droite sont remplies</li><li>2 : Les cellules ci-dessus sont remplies</li><li>3 : Les cellules ci-dessous sont remplies</li>|
+| Propriété     | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fillRange     | object      | Plage utilisée pour le remplissage                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| autoFillType  | entier long | Valeur utilisée pour le remplissage.<li>0 : Les cellules sont remplies avec toutes les données (valeurs, formatage et formules)</li><li>1 : Les cellules sont remplies avec des données séquentielles automatiques</li><li>2 : Les cellules sont remplies avec la mise en forme uniquement</li><li>3 : Les cellules sont remplies avec les valeurs mais pas la mise en forme</li><li>4 : Les valeurs sont supprimées des cellules</li><li>5 : Les cellules sont remplies automatiquement</li> |
+| fillDirection | entier long | Direction du remplissage.<li>0 : Les cellules de gauche sont remplies</li><li>1 : Les cellules de droite sont remplies</li><li>2 : Les cellules du haut sont remplies</li><li>3 : Les cellules du bas sont remplies</li>                                                                                                                                                                                                                                                                                                                         |
 
 #### action = formulaChanged
 
@@ -76,11 +77,11 @@ En fonction de la valeur de la propriété `action`, l'[objet event](overview.md
 
 #### action = clipboardPasted
 
-| Propriété   | Type        | Description                                                                                                                                                                                                       |
-| ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object      | Plage de cellule                                                                                                                                                                                                  |
-| pasteOption | entier long | Indique ce qui est collé à partir du presse-papiers :<li>0 : tout est collé (valeurs, mise en forme et formules)</li><li>1 : seules les valeurs sont collées</li><li>2 : seul le formatage est collé</li><li>3 : seules les formules sont collées</li><li>4 : les valeurs et la mise en forme sont collées (pas les formules)</li><li>5 : Les formules et la mise en forme sont collées (pas les valeurs)</li> |
-| pasteData   | object      | Les données du presse-papiers à coller<li>"text" (texte) : le texte du presse-papiers</li><li>"html" (texte) : le code HTML du presse-papiers</li>                                                                                                                        |
+| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object      | Plage de cellule                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| pasteOption | entier long | Spécifie ce qui est collé depuis le presse-papiers :<li>0: Tout est collé (valeurs, formatage, et formules)</li><li> 1: Seules les valeurs sont collées</li><li>2: Seul le formatage est collé</li><li>3: Seules les formules sont collées</li><li>4: Les valeurs et le formatage sont collés (pas les formules)</li><li>5: Les formules et le formatage sont collés (pas les valeurs)</li> |
+| pasteData   | object      | Les données du presse-papiers à coller<li>"text" (texte) : Le texte du presse-papiers</li><li>"html" (texte) : Le HTML du presse-papiers</li>                                                                                                                                                                                                                                                                                                                                                  |
 
 #### Exemple
 
@@ -92,8 +93,6 @@ Voici un exemple qui gère l'événement `On After Edit` :
        ALERT("WARNING: You are currently changing the value\  
        from "+String(FORM Event.oldValue)+\  
        " to "+String(FORM Event.newValue)+"!")
-    End if
- End if
     End if
  End if
 ```

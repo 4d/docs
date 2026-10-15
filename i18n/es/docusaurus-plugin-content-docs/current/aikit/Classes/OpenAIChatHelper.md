@@ -25,7 +25,7 @@ El asistente de chat permite conservar una lista de mensajes en memoria y efectu
 Para crear una nueva instancia de `OpenAIChatHelper`, lo mejor es utilizar el método `create()` de la [API de chat del cliente OpenAI](OpenAIChatAPI.md):
 
 ```4D
-var $chatHelper:=$client.chat.create("You are a helpful assistant.")
+var $chatHelper:=$client.chat.create("Eres un asistente útil.")
 ```
 
 Este método crea un nuevo asistente de chat con el prompt sistema especificado y lo inicializa con los parámetros por defecto. El prompt del sistema define el rol y comportamiento del asistente a lo largo de la conversación.

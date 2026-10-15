@@ -3,11 +3,9 @@ id: application-server
 title: Página Servidor de aplicación
 ---
 
-
 La página Servidor de aplicaciones agrupa información sobre la aplicación de escritorio publicada por 4D Server y puede utilizarse para gestionar esta publicación.
 
 ![](../assets/en/Admin/server-admin-application-page.png)
-
 
 La parte superior de la página ofrece información sobre el estado actual del servidor de aplicaciones de 4D Server.
 
@@ -20,11 +18,13 @@ La parte superior de la página ofrece información sobre el estado actual del s
 Este botón se activa y se puede utilizar para gestionar el acceso de nuevas máquinas cliente de escritorio al servidor de aplicaciones.
 
 Por defecto, cuando se publica el proyecto:
+
 - La etiqueta del botón es "Rechazar nuevas conexiones."
 - Los nuevos clientes de escritorio pueden conectarse libremente (dentro de los límites de las conexiones permitidas por la licencia).
 - El nombre del proyecto se publica en la caja de diálogo de conexión remota (si la opción "Publicar el nombre de la base al inicio en el diálogo de conexión" está marcada en las Preferencias).
 
 Si presiona el botón **Rechazar nuevas conexiones**:
+
 - El título del botón cambia a "Aceptar nuevas conexiones."
 - Ningún nuevo cliente puede entonces conectarse. Los clientes que intenten conectarse recibirán el siguiente mensaje:
 
@@ -52,7 +52,6 @@ La parte inferior del área indica los parámetros de configuración del servido
 ### Memoria
 
 Esta área indica la **memoria caché total** (parámetro definido en las preferencias de la base) y la **memoria caché utilizada** (asignación dinámica por 4D Server en función de sus necesidades).
-
 
 ### Conexiones aplicación servidor
 

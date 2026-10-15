@@ -11,4 +11,4 @@ Pour modifier un raccourci, il suffit de sélectionner/désélectionner l’él�
 
 A noter que chaque raccourci clavier inclut implicitement la touche **Ctrl** (Windows) ou **Commande** (macOS).
 
-Si vous modifiez cette liste, vos paramètres de raccourcis personnalisés sont stockés dans un fichier *4DShortcutsvXX.xml*, créé au même niveau que [le fichier de préférences utilisateur](overview.md#storage). Ainsi, à chaque mise à jour de 4D, vous conservez vos préférences de raccourcis clavier. 
+Si vous modifiez cette liste, vos paramètres de raccourcis personnalisés sont stockés dans un fichier *4DShortcutsvXX.xml*, créé au même niveau que [le fichier de préférences utilisateur](overview.md#storage). Ainsi, à chaque mise à jour de 4D, vous conservez vos préférences de raccourcis clavier.
