@@ -28,15 +28,18 @@ concurrency:
 
 jobs:
   translate:
+    # Fork-only guard applies to all runs, including manual dispatch.
     # Loop prevention ([i18n-bot] commits) and Crowdin commits/merges (l10n_* branches) are ignored
     if: >-
-      github.event_name == 'workflow_dispatch' || (
-        !contains(github.event.head_commit.message, '[i18n-bot]') &&
-        !contains(github.event.head_commit.message, 'l10n_') &&
-        !contains(github.event.head_commit.message, 'New Crowdin') &&
-        !contains(github.event.head_commit.message, 'New translations') &&
-        !contains(github.event.head_commit.author.name, 'crowdin') &&
-        !contains(github.actor, 'crowdin')
+      github.repository == 'doc4d/docs' && (
+        github.event_name == 'workflow_dispatch' || (
+          !contains(github.event.head_commit.message, '[i18n-bot]') &&
+          !contains(github.event.head_commit.message, 'l10n_') &&
+          !contains(github.event.head_commit.message, 'New Crowdin') &&
+          !contains(github.event.head_commit.message, 'New translations') &&
+          !contains(github.event.head_commit.author.name, 'crowdin') &&
+          !contains(github.actor, 'crowdin')
+        )
       )
     runs-on: ubuntu-latest
     timeout-minutes: 60
