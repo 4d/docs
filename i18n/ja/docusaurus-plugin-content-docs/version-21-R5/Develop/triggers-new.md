@@ -1,0 +1,22 @@
+---
+id: triggers-new
+title: Triggers
+---
+
+to import
+
+<!-- REF triggers.vs-events.Desc -->
+
+## トリガーとORDAエンティティイベントの比較
+
+**トリガー** (別名データベースイベント) と[**ORDA エンティティイベント**](../ORDA/orda-events.md) には類似した目的があります。どちらもデータに対する基礎的な操作(作成、編集、削除)を管理するためのルールを設定するということです。しかしながら、両者は同じレベルでは動作しません:
+
+- トリガーはデータベースレベルで管理されます。これはもっとも低いレベルに当たります。
+- ORDA エンティティイベントは[データストア](../ORDA/dsMapping.md#datastore) レベルで管理されます。これはあなたのビジネスロジックに関連しています。
+
+[`.save()`](../API/EntityClass.md#save) や [`.drop`](../API/EntityClass.md#drop)などの、データストアを通して実行されたデータに対するアクションは、設定されていればトリガーを呼び出します。
+
+その一方で、[`SAVE RECORD`](../commands/save-record) あるいは [標準アクション](/Desktop/standard-actions) などの4D のクラシック言語を使用した4D データベースレベルでトリガーされたアクションは、ORDA エンティティイベントは**呼び出しません**。
+
+<!-- END REF -->
+

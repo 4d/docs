@@ -87,9 +87,8 @@ When you execute this code:
 ```
 
 ## See also 
-
-*System Documents*  
-[TEXT TO DOCUMENT](../commands/text-to-document)  
+[`.setText()`](../../API/FileClass.md#settext)   
+[TEXT TO DOCUMENT](../commands/text-to-document)   
 
 ## Properties
 

@@ -28,7 +28,10 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get document position.Summary-->Cette commande ne fonctionne qu'avec un document déjà ouvert, dont vous avez passé le numéro de référence dans le paramètre *docRef*.<!-- END REF-->retourne la position, à partir du début du document, à laquelle la prochaine lecture ([RECEIVE PACKET](../commands/receive-packet)) ou écriture ([SEND PACKET](../commands/send-packet)) aura lieu.
+<!--REF #_command_.Get document position.Summary-->La commande **Get document position** renvoie la position, à partir du début du document, à laquelle aura lieu la prochaine lecture ([RECEIVE PACKET](../commands/receive-packet)) ou écriture ([SEND PACKET](../commands/send-packet)).
+<!-- END REF-->
+
+Cette commande fonctionne uniquement sur un document actuellement ouvert dont le numéro de référence est passé dans *docRef*.
 
 ## Voir aussi 
 

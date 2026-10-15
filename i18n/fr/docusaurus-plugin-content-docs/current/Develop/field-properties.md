@@ -1,5 +1,5 @@
 ---
-id: field-properties
+id: structure-fields
 title: Propriétés des champs
 ---
 

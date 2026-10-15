@@ -150,15 +150,15 @@ Placer des groupes dans d’autres groupes permet de créer une hiérarchie d’
 
 Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de désélectionner l’option correspondante dans la liste des membres.
 
-### Assigning a license to a group
+### Attribution d'une licence à un groupe
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+Vous pouvez attribuer des privilèges de groupe à n'importe quelle [extension](../Extensions/overview.md) installée dans le projet. Cela inclut l'ensemble des plug-ins et composants 4D ainsi que ceux développés par des tiers.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
+La répartition des droits d'accès aux extensions vous permet de contrôler l'utilisation des licences dont vous disposez pour ces extensions en environnement client/serveur. Les utilisateurs qui n'appartiennent pas au groupe d'accès d'une extension ne peuvent pas charger cette extension.
 
 > Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+La zone "Plug-ins" de la page **Groupes** de la Boîte à outils répertorie toutes les extensions [nécessitant une licence](../Admin/licenses.md) chargées par l'application 4D. Pour donner à un groupe l'accès à une extension, il suffit de cocher l'option correspondante.
 
 ![](../assets/en/Users/plugins.png)
 
@@ -173,12 +173,12 @@ Les groupes sont hiérarchisés afin que les privilèges soient correctement aff
 - Le groupe Direction générale ne contient que les utilisateurs de “haut niveau”.
   ![](../assets/en/Users/schema1.png)
 
-- finance contient les utilisateurs du groupe Direction générale.
+- Le groupe Finances comprend à la fois des utilisateurs chargés de la gestion des données et des utilisateurs de la Direction générale ; par conséquent, les utilisateurs de la Direction générale disposent également des privilèges du groupe Finances.
   ![](../assets/en/Users/schema2.png)
 
 - Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. Super_Utilisateur et Administrateur
   Super_Utilisateur et Administrateur
-  Super_Utilisateur et Administrateur
+  ![](../assets/en/Users/schema3.png)
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 

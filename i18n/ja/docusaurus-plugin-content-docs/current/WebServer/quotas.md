@@ -1,20 +1,26 @@
 ---
 id: quotas
-title: Web server quotas
+title: Web サーバークォータ
 ---
 
-Web applications can receive requests from many different clients, generating varying levels of traffic and resource consumption. Without appropriate limits, excessive activity from one or more clients can affect Web server performance and availability.
-Web server quotas let you control resource usage by limiting traffic, requests, active sessions, Guest sessions, and REST entity sets. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+Web アプリケーションはたくさんの異なるクライアントからリクエストを受信することで、様々なレベルのトラフィックやリソース消費が発生することが有り得ます。適切な制限なしでは、単一または複数のクライアントからの過剰のアクティビティによってWeb サーバーのパフォーマンスや利用可能性に影響を及ぼす可能性があります。
+Web サーバークォータを使用して、トラフィック、リクエスト、アクティブなセッション数、ゲストセッション、そしてREST エンティティセットを制約することで、リソースの使用状況を管理することができます。 Web サーバークォータは、グローバルレベル(全てのセッションに対して)、セッションデフォルトレベル(それぞれの新しいセッションに対して)、あるいはカレントのREST セッションレベルにおいて設定することができます。
+
+:::tip 関連したBlog 記事
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
 
 ## 要件
 
-Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sessions) to be enabled.
+クォータの設定のためには、[スケーラブルセッション](./sessions.md#Webセッションの有効化) が有効化されている必要があります。
 
-## How to configure quotas
+## クォータの設定方法
 
 ### 開始時
 
-At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from a **QuotaManager.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from an **HTTPQuotas.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
 
 #### Using the `quotas` property
 
@@ -28,11 +34,11 @@ $quotas.inBytesPerMin:=20000000
 WEB Server().start({quotas: $quotas})
 ```
 
-#### Using a QuotaManager.json file
+#### Using an HTTPQuotas.json file
 
-For the host Web server, you can create a **QuotaManager.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file will loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
 
-```json title="/Project/Sources/QuotaManager.json"
+```json title="/Project/Sources/HTTPQuotas.json"
 {
     "inBytesPerHour": 100000000,
     "inBytesPerHourPerSession": 10000000,
@@ -41,9 +47,9 @@ For the host Web server, you can create a **QuotaManager.json** file and store i
 }
 ```
 
-If the **QuotaManager.json** file contains malformed JSON, the Web server does not start and returns error *551 - JSON malformed*.
+If the **HTTPQuotas.json** file contains malformed JSON, the Web server does not start and returns error *551 - JSON malformed*.
 
-If `settings.quotas` is provided when the Web server starts, **QuotaManager.json** is ignored.
+If `settings.quotas` is provided when the Web server starts, **HTTPQuotas.json** is ignored.
 
 ### At runtime
 
@@ -60,6 +66,7 @@ The following example configures web server quotas at startup for an internal ap
 ```4d
 
 var $quotas:={}
+var $webServer : Object:=WEB Server
 
 // Maximum number of input bytes accepted in a one-minute time window on the web server
 $quotas.inBytesPerMin:=20000000
@@ -80,7 +87,7 @@ $quotas.nbRequestsPerMin:=500
 $quotas.nbRequestsPerHour:=20000
 
 // We launch the Web server
-WEB Server().start({quotas: $quotas})
+$webServer.start({quotas: $quotas})
 ```
 
 ## Quota enforcement
@@ -113,7 +120,7 @@ Quota counters are stored in memory for each 4D Server instance and are not shar
 
 Quotas configured for a component Web server apply only to that server and are independent of the quotas configured for the host Web server or other component Web servers.
 
-The [**QuotaManager.json**](#using-a-quotamanagerjson-file) configuration file applies only to the host Web server. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session  [`.quotas`](../API/SessionClass.md#quotas) property.
+The [**HTTPQuotas.json**](#using-an-httpquotasjson-file) configuration file applies only to the host Web server. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session [`.quotas`](../API/SessionClass.md#quotas) property.
 
 ## 参照
 

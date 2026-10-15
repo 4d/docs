@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET DOCUMENT ICON.Summary-->La commande **GET DOCUMENT ICON** retourne dans le champ ou la variable image 4D *icône*, l’icône du document dont vous avez passé le nom ou le chemin d’accès complet dans *cheminDoc*.<!-- END REF-->peut désigner un fichier de tout type (document, exécutable, raccourci ou alias...) ou un dossier.
+<!--REF #_command_.GET DOCUMENT ICON.Summary-->La commande **GET DOCUMENT ICON** retourne dans le champ ou la variable image 4D *icône*, l’icône du document dont vous avez passé le nom ou le chemin d’accès complet dans *cheminDoc*.<!-- END REF-->*cheminDoc* peut désigner un fichier de tout type (document, exécutable, raccourci ou alias...) ou un dossier.
 
 Passez dans *cheminDoc* le chemin d’accès absolu du document dont vous souhaitez récupérer l’icône. Vous pouvez passer uniquement le nom du document ou un chemin d’accès relatif, dans ce cas il doit se trouver dans le dossier courant de la base (généralement, le dossier contenant le fichier de structure de la base).   
 Si vous passez une chaîne vide dans *cheminDoc*, la boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner un fichier. Une fois la boîte de dialogue validée, la variable système Document contient le chemin d’accès complet du fichier sélectionné. 

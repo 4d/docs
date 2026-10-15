@@ -1,0 +1,62 @@
+﻿---
+id: current-user
+title: Current user
+slug: /commands/current-user
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Current user.Syntax-->**Current user** ({ *utilisateur* : Integer }) : Text<!-- END REF-->
+<!--REF #_command_.Current user.Params-->
+<div class="no-index">
+
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| utilisateur | Integer | &#8594;  | Alias utilisateur ou compte utilisateur 4D |
+| Résultat | Text | &#8592; | Nom de l'utilisateur courant |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.Current user.Summary-->**Current user** retourne l'alias ou le compte de l'utilisateur courant.<!-- END REF-->
+
+Par défaut, la commande retourne l'alias utilisateur si le paramètre *utilisateur* est omis, ou si un alias a été défini à l'aide de [SET USER ALIAS](../commands/set-user-alias) durant la session. Sinon, elle retourne le nom du compte utilisateur 4D.
+
+Dans le paramètre optionnel *utilisateur*, vous pouvez indiquer, parmi les constantes suivantes, celle que vous voulez retourner :
+
+| Constante                | Valeur | Comment                                                                                                                                                                                                   |
+| ------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4D user account          | 1      | Nom du compte utilisateur 4D.                                                                                                                                                                             |
+| 4D user alias            | 2      | Autre dénomination pour le nom du compte utilisateur 4D s'il a été défini avec la commande [SET USER ALIAS](../commands/set-user-alias), ou chaîne vide ("") si aucun alias n'a été défini pour l'utilisateur 4D.  |
+| 4D user alias or account | 0      | Autre dénomination pour le nom du compte utilisateur 4D tel qu'il est défini avec la commande [SET USER ALIAS](../commands/set-user-alias), ou nom courant du compte utilisateur 4D si aucun alias n'a été défini. |
+
+## Exemple 
+
+Reportez-vous à l'exemple de la commande [User in group](../commands/user-in-group).
+
+## Voir aussi 
+
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[CHANGE PASSWORD](../commands/change-password)  
+[SET USER ALIAS](../commands/set-user-alias)  
+[User in group](../commands/user-in-group)  
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 182 |
+| Thread safe | yes |
+
+

@@ -62,7 +62,7 @@ Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à ap
 
 :::
 
-Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
+Dans l'exemple suivant, tous les objets du type *button* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
 ```
 button {
@@ -299,7 +299,7 @@ Les projets 4D hiérarchisent les définitions de style en conflit, d'abord par 
 
 Si un attribut est défini dans la description du formulaire JSON et dans une feuille de style, 4D utilisera la valeur du fichier JSON.
 
-Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `! Important`.
+Pour remplacer ce comportement, la valeur du style doit être suivie d'une déclaration `!Important`.
 
 **Exemple 1**
 

@@ -28,9 +28,10 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Get document position.Summary-->このコマンドは*DocRef*に渡したドキュメント参照番号を持つ、現在開いているドキュメントだけに機能します。<!-- END REF-->
+<!--REF #_command_.Get document position.Summary-->**Get document position** コマンドは、ドキュメントの先頭からの位置を返します。これは、次の読み込み ([RECEIVE PACKET](../commands/receive-packet)) または書き込み ([SEND PACKET](../commands/send-packet)) が行われる位置です。
+<!-- END REF-->
 
-Get document positionは、ドキュメントの最初から見て、次の読み込み([RECEIVE PACKET](receive-packet.md "RECEIVE PACKET")) または書き込み([SEND PACKET](send-packet.md "SEND PACKET")) が発生する位置を返します。
+このコマンドは、*docRef* に渡されたドキュメント参照番号を持つ、現在開いているドキュメントに対してのみ機能します。
 
 ## 参照 
 

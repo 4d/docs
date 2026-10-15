@@ -68,7 +68,11 @@ module.exports =
           type: "category",
           label: "Database Structure",
           items: [
-            "Develop/field-properties",
+            "Develop/structure-editor",
+            "Develop/structure-tables",
+            "Develop/structure-fields",
+            "Develop/structure-indexes",
+            "Develop-legacy/structure-exporting-and-importing",
           ]
         },
         {
@@ -340,10 +344,10 @@ module.exports =
         // not ready yet, needs imports from Design ref for records and selection concepts,
         {
             type: "category",
-            label: "Records & Selections (legacy data access)",
+            label: "Records & Selections",
             link: {
               type: "generated-index",
-            title: "Records & Selections (legacy data access)",
+            title: "Records & Selections",
             description: "Legacy data access based upon records, selections, and sets.",
             slug: "/category/records-selections",
             keywords: [

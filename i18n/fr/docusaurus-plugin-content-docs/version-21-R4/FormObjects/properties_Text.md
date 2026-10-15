@@ -305,7 +305,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 Emplacement vertical du texte dans la zone où il apparait.
 
-L'option **Default** (valeur JSON `automatique`) définit l'alignement en fonction du type de données identifiées dans chaque colonne :
+L'option **Par défaut** (valeur JSON `automatic`) définit l'alignement en fonction du type de données identifiées dans chaque colonne :
 
 - `bas` pour toutes les données (sauf les images) et
 - `haut` pour les données de type image.

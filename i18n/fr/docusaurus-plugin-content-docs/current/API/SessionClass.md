@@ -700,13 +700,13 @@ Cette propriété est en **lecture seule**.
 
 Les propriétés suivantes de l'objet `4D.QuotaManager` sont disponibles pour la session :
 
-| Propriété                                                                 |              | Type    | Modifiable | Description                                                                                                |
-| ------------------------------------------------------------------------- | ------------ | ------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | oui        | Maximum allowed number of entity sets in server memory. *Undefined* = aucun quota appliqué |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | oui        | Délai d'inactivité par défaut pour les entity sets en mémoire (en secondes)             |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | oui        | Délai d'inactivité maximal pour les entity sets en mémoire (en secondes)                |
-| [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | non        | Current usage values reported for the session.                                             |
-|                                                                           | nbEntitySets | Integer | non        | Nombre d'entity sets actuellement en mémoire. *Undefined* = aucun entity set en mémoire    |
+| Propriété                                                                 |              | Type    | Modifiable | Description                                                                                                          |
+| ------------------------------------------------------------------------- | ------------ | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | oui        | Nombre maximal d'entity sets autorisé dans la mémoire du serveur. *Undefined* = aucun quota appliqué |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | oui        | Délai d'inactivité par défaut pour les entity sets en mémoire (en secondes)                       |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | oui        | Délai d'inactivité maximal pour les entity sets en mémoire (en secondes)                          |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | non        | Valeurs d'utilisation courantes de la session.                                                       |
+|                                                                           | nbEntitySets | Integer | non        | Nombre d'entity sets actuellement en mémoire. *Undefined* = aucun entity set en mémoire              |
 
 Lorsque vous modifiez une valeur, celle-ci est immédiatement prise en compte par le serveur (aucun redémarrage n'est nécessaire) et sera appliquée aux prochaines requêtes REST.
 
@@ -728,8 +728,8 @@ Session.quotas.nbEntitySets := 50
 
 #### Voir également
 
-[QuotaManager class](./QuotaManagerClass.md)<br/>
-[Web server quotas](../WebServer/quotas.md)
+[Classe QuotaManager](./QuotaManagerClass.md)<br/>
+[Quotas du serveur Web](../WebServer/quotas.md)
 
 <!-- REF SessionClass.restore().Desc -->
 

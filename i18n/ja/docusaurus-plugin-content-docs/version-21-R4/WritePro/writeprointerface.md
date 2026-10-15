@@ -527,14 +527,14 @@ Level 7: – (破線)
 
 利用可能なテンプレートをカスタマイズして、ユーザーに、アプリケーションに用途に合致したような定義済みマルチレベルリストを提供することができます。
 
-定義済みのマルチレベルリストテンプレートは、`multiLevelStyles.json` という名前のJSON ファイル内に定義されています。このファイルは4D Write Pro インターフェースコンポーネントのResources フォルダ内に配置されています。
+定義済みのマルチレベルリストテンプレートは、`multiLevelStyles.json` という名前のJSON ファイル内に定義されています。このファイルは 4D Write Pro インターフェースコンポーネントのResources フォルダー内に配置されています。
 
 以下の場所のいずれかにあなた独自の`multiLevelStyles.json` ファイルを追加することで、利用可能なテンプレートをカスタマイズすることができます:
 
-- プロジェクトのローカルなResources フォルダに直接追加する
-- プロジェクトのResources フォルダ内に配置された`4D WritePro Interface` フォルダ。
+- プロジェクトのローカルな Resources フォルダーに直接追加する
+- プロジェクトの Resources フォルダー内に配置された `4D WritePro Interface` フォルダー。
 
-`multiLevelStyles.json` ファイルが両方の場所にある場合には、`4D WritePro Interface` フォルダに配置されたファイルの方が優先されます。
+`multiLevelStyles.json` ファイルが両方の場所にある場合には、`4D WritePro Interface` フォルダーに配置されたファイルの方が優先されます。
 
 各テンプレートの定義には、以下のものが含まれます:
 

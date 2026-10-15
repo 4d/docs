@@ -1116,14 +1116,14 @@ Considere los siguientes resultados:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0)
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// devuelve B y C
+// encuentra "entidades con 0 en al menos una propiedad val"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to
-ds.Class.query("Not(info.coll[].val = :1";0))
+// sólo devuelve A
+// encuentra "entidades en las que todas las propiedades val son distintas de 0"
+// lo que equivale a 
+ds.Class.query("Not(info.coll[].val = :1)";0)
 ```
 
 Si desea implementar una búsqueda que encuentre entidades en las que "al menos una propiedad sea diferente del *value*", deberá utilizar una notación especial utilizando una letra en el `[]`:

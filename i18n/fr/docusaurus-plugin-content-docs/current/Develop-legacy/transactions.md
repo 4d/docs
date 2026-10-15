@@ -11,6 +11,12 @@ Les transactions sont une série de modifications effectuées à l'intérieur d'
 
 Pendant une transaction, toutes les modifications effectuées sur les données de la base dans le process sont stockées localement dans un buffer temporaire. Si la transaction est acceptée avec [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), les changements sont sauvegardés de façon définitive. Si la transaction est annulée avec [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), les changements ne sont pas sauvegardés. Dans tous les cas, ni la sélection courante ni l'enregistrement courant ne sont modifiés par les commandes de gestion des transactions.
 
+:::warning Limitation : index vectoriels et transactions
+
+Les [index vectoriels](../Develop/structure-indexes.md#vector-index) ne sont pas compatibles avec le traitement des transactions. Lorsque des enregistrements indexés par vecteur sont insérés, mis à jour ou supprimés dans une transaction, les modifications correspondantes de l'index ne sont ni validées ni annulées avec la transaction. Par conséquent, après une annulation, l'index vectoriel peut devenir incohérent avec l'état de la base de données, et les résultats de recherche peuvent ne pas refléter les données persistantes.
+
+:::
+
 4D prend en charge les transactions imbriquées, c'est-à-dire les transactions sur plusieurs niveaux hiérarchiques. Le nombre de sous-transactions autorisées est illimité. La commande [`Transaction level`](../commands-legacy/transaction-level) permet de connaître le niveau courant de transaction dans lequel le code est exécuté. Lorsque vous utilisez des transactions imbriquées, le résultat de chaque sous-transaction dépend de la validation ou de l'annulation de la transaction du niveau supérieur. Si la transaction supérieure est validée, les résultats des sous-transactions sont entérinés (validation ou annulation). En revanche, si la transaction supérieure est annulée, toutes les sous-transactions sont annulées, quels que soient leurs sous-résultats.
 
 
@@ -231,5 +237,4 @@ Ces deux commandes, cependant, retournent également Faux si aucune transaction 
 Le schéma suivant illustre les différents contextes de transaction et les valeurs correspondantes retournées par les commandes de transaction :
 
 ![](../assets/en/Develop/transactions-schema2.png)
-
 

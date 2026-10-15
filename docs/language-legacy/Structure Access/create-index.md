@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to create an index |
 | fieldsArray | Pointer array | &#8594;  | Pointer(s) to field(s) to be indexed |
-| indexType | Integer | &#8594;  | Type of index to create: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree |
+| indexType | Integer | &#8594;  | Type of index to create: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean |
 | indexName | Text | &#8594;  | Name of index to create |
 | * | Operator | &#8594;  | If passed = asynchronous indexing |
 </div>
@@ -24,6 +24,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R5|Support for Cosine, Dot, Euclidean vector indexes|
 |11 SQL|Created|
 
 </details>
@@ -31,23 +32,27 @@ displayed_sidebar: docs
 
 ## Description 
 
-The **CREATE INDEX** command creates:
-
-* A <!--REF #_command_.CREATE INDEX.Summary-->standard index on one or more fields (composite index)<!-- END REF--> or
-* A keyword index on a field.
+The **CREATE INDEX** command <!--REF #_command_.CREATE INDEX.Summary-->creates a standard index on one or more fields (composite index) or a keyword index on a single field.<!-- END REF-->
 
 The index is created for the *aTable* table by using one or more fields designated by the *fieldsArray* pointer array. This array contains a single row when you want to create a simple index and two or more rows when you want to create a composite index (except in the case of a keyword index). In the case of composite indexes, the order of the fields in the array is important when the index is being built.
 
 The *indexType* parameter sets the type of index to be created. You can pass one of the following constants, found in the *Index Type* theme:
 
-| Constant             | Type    | Value | Comment                                                                                                                                                                             |
-| -------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cluster BTree index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data.                     |
-| Default index type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                                         |
-| Keywords index       | Integer | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text, Alpha or Picture type. Warning: Keywords indexes cannot be composite. |
-| Standard BTree index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                                        |
+| Constant             | Type    | Value | Comment  |
+| -------------------- | ------- | ----- | ----- |
+| Cluster BTree index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data. |
+| Default index type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.   |
+| Keywords index       | Integer | -1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text, Alpha or Picture type. Warning: Keywords indexes cannot be composite. |
+| Standard BTree index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D  |
+| Vector cosine index | Integer | 4    | Index optimized for AI queries using [cosine similarity](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Integer | 5    | Index optimized for AI queries using [dot similarity](../../API/VectorClass.md#dotsimilarity)  |
+| Vector euclidean index | Integer | 6    | Index optimized for AI queries using [euclidean distance](../../API/VectorClass.md#euclideandistance)  |
 
-**Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
+:::note
+
+A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
+
+:::
 
 In the *indexName* parameter, you pass the name of the index to be created. Naming the index is necessary if several different types of indexes can be associated with the same field and if you want to be able to delete them individually using the [DELETE INDEX](../commands/delete-index) command. If the *indexName* index already exists, the command does nothing.
 
@@ -92,6 +97,21 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
  fieldPtrArr{1}:=->[Customers]City
  fieldPtrArr{2}:=->[Customers]Zipcode
  CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
+```
+
+
+## Example 4
+
+Creation of a vector index on the "embedding" field of the "Customers" table:
+
+
+```4d
+
+ARRAY POINTER(fieldPtrArr; 1)
+fieldPtrArr{1}:=->[Customers]embedding
+CREATE INDEX([Customers]; fieldPtrArr; Vector cosine index; "cosine")
+
+
 ```
 
 ## See also 

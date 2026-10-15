@@ -72,15 +72,15 @@ Coordenadas inferiores del objeto en el formulario.
 
 ---
 
-## Bottom Padding
+## Margen inferior
 
-Sets the padding between the bottom edge of the object and its text content. El valor se establece en píxeles (por defecto = 0).
+Define el espacio entre el borde inferior del objeto y su contenido de texto. El valor se establece en píxeles (por defecto = 0).
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                 |
-| ------------- | -------------- | ------------------------------------------------ |
-| paddingBottom | integer        | Value in pixels (must be >=0) |
+| Nombre        | Tipos de datos | Valores posibles                                   |
+| ------------- | -------------- | -------------------------------------------------- |
+| paddingBottom | integer        | Valor en píxeles (debe ser ≥ 0) |
 
 #### Objetos soportados
 
@@ -92,7 +92,7 @@ Sets the padding between the bottom edge of the object and its text content. El 
 
 #### Ver también
 
-[Top Padding](#top-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
+[Margen superior](#top-padding) - [Margen izquierdo](#left-padding) - [Margen derecho](#right-padding)
 
 ---
 
@@ -162,15 +162,15 @@ Coordenadas de izquierda del objeto en el formulario.
 
 ---
 
-## Left Padding
+## Margen izquierdo
 
-Sets the padding between the left edge of the object and its text content. El valor se establece en píxeles (por defecto = 0).
+Define el espacio entre el borde izquierdo del objeto y su contenido de texto. El valor se establece en píxeles (por defecto = 0).
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                 |
-| ----------- | -------------- | ------------------------------------------------ |
-| paddingLeft | integer        | Value in pixels (must be >=0) |
+| Nombre      | Tipos de datos | Valores posibles                                   |
+| ----------- | -------------- | -------------------------------------------------- |
+| paddingLeft | integer        | Valor en píxeles (debe ser ≥ 0) |
 
 #### Objetos soportados
 
@@ -182,7 +182,7 @@ Sets the padding between the left edge of the object and its text content. El va
 
 #### Ver también
 
-[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Right Padding](#right-padding)
+[Margen superior](#top-padding) - [Margen inferior](#bottom-padding) - [Margenderecho](#right-padding)
 
 ---
 
@@ -250,15 +250,15 @@ Coordenadas de derecha del objeto en el formulario.
 
 ---
 
-## Right Padding
+## Margen derecho
 
-Sets the padding between the right edge of the object and its text content. El valor se establece en píxeles (por defecto = 0).
+Define el espacio entre el borde derecho del objeto y su contenido de texto. El valor se establece en píxeles (por defecto = 0).
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles                                 |
-| ------------ | -------------- | ------------------------------------------------ |
-| paddingRight | integer        | Value in pixels (must be >=0) |
+| Nombre       | Tipos de datos | Valores posibles                                   |
+| ------------ | -------------- | -------------------------------------------------- |
+| paddingRight | integer        | Valor en píxeles (debe ser ≥ 0) |
 
 #### Objetos soportados
 
@@ -270,7 +270,7 @@ Sets the padding between the right edge of the object and its text content. El v
 
 #### Ver también
 
-[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Left Padding](#left-padding)
+[Margen superior](#top-padding) - [Margen inferior](#bottom-padding) - [Margen izquierdo](#left-padding)
 
 ---
 
@@ -356,15 +356,15 @@ Coordenadas superiores del objeto en el formulario.
 
 ---
 
-## Top Padding
+## Margen superior
 
-Sets the padding between the top edge of the object and its text content. El valor se establece en píxeles (por defecto = 0).
+Define el espacio entre el borde superior del objeto y su contenido de texto. El valor se establece en píxeles (por defecto = 0).
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                 |
-| ---------- | -------------- | ------------------------------------------------ |
-| paddingTop | integer        | Value in pixels (must be >=0) |
+| Nombre     | Tipos de datos | Valores posibles                                   |
+| ---------- | -------------- | -------------------------------------------------- |
+| paddingTop | integer        | Valor en píxeles (debe ser ≥ 0) |
 
 #### Objetos soportados
 
@@ -376,7 +376,7 @@ Sets the padding between the top edge of the object and its text content. El val
 
 #### Ver también
 
-[Bottom Padding](#bottom-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
+[Margen inferior](#bottom-padding) - [Margen izquierdo](#left-padding) - [Margen derecho](#right-padding)
 
 ---
 

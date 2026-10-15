@@ -3,29 +3,35 @@ id: QuotaManagerClass
 title: QuotaManager
 ---
 
-`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。 Thresholds are useful, for example, to protect the server from poorly optimized requests or excessive use of server resources. For the REST server for example, quotas can limit the ORDA resources accessible to a REST session.
+`4D.QuotaManager` クラスは、4D アプリケーションに適用する使用制限を設定およびモニターするためのインターフェースを提供します。しきい値は、例えば、ほとんど最適化されていないリクエストやサーバーリソースの過度な使用などからサーバーを保護することなどに有用です。例えばREST サーバーの場合、クォータを使用することでREST セッションがアクセス可能なORDA リソースを制限することができます。
 
-`4D.QuotaManager` objects can be instantiated by:
+:::tip 関連したBlog 記事
 
-- the [`quotas` property of a Session](./SessionClass.md#quotas) object
-- the [`quotas` property of a Web server](./WebServerClass.md#quotas) object
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
 
-For Web server configuration and enforcement details, see [Web server quotas](../WebServer/quotas.md).
+:::
+
+`4D.QuotaManager` オブジェクトは以下の方法でインスタンス化することが可能です:
+
+- [Session オブジェクトの`quotas` プロパティ](./SessionClass.md#quotas)
+- [Web サーバーオブジェクトの`quotas` プロパティ](./WebServerClass.md#quotas)
+
+Web サーバーの設定と適用に関する詳細については、[Web server クォータ](../WebServer/quotas.md) を参照してください。
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                           |
-| ----- | ---------------------------- |
-| 21 R5 | Support of Web server quotas |
-| 21 R4 | クラスを追加                       |
+| リリース  | 内容                |
+| ----- | ----------------- |
+| 21 R5 | Web サーバークォータのサポート |
+| 21 R4 | クラスを追加            |
 
 </details>
 
 ### QuotaManagerオブジェクト
 
-By default, the properties of a `4D.QuotaManager` object are *Undefined*, meaning that no corresponding quota is applied.
+デフォルトでは、`4D.QuotaManager` オブジェクトのプロパティは*Undefined*(未定義)となっており、これは対応するクォータが何も適用されていないことを意味します。
 
-The `4D.QuotaManager` object itself cannot be directly assigned, and properties cannot be added to or removed from it. Quotas are configured by modifying the corresponding properties of the existing object.
+`4D.QuotaManager` オブジェクト自体は直接代入することはできず、プロパティを追加することや削除することもできません。クォータは、既存のオブジェクトの対応するプロパティを変更することで設定されます。
 
 4D.QuotaManager オブジェクトは以下のプロパティを提供します:
 
@@ -59,9 +65,9 @@ The `4D.QuotaManager` object itself cannot be directly assigned, and properties 
 
 #### 説明
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. It is automatically updated by 4D and is read-only.
+`.currentValues` プロパティには<!-- REF #QuotaManagerClass.currentValues.Summary -->クォータマネージャーの現在使用されている値<!-- END REF --> が格納されています。これは4D によって自動的に更新され、また読み出し専用です。
 
-The object has the same properties as the `4D.QuotaManager` object, but only the following properties report current usage:
+このオブジェクトは`4D.QuotaManager` オブジェクトと同じプロパティを持ちますが、以下のプロパティのみが現在の使用状況を方向します:
 
 - [`nbEntitySets`](#nbentitysets)
 - [`nbSessions`](#nbsessions)
@@ -79,13 +85,13 @@ The object has the same properties as the `4D.QuotaManager` object, but only the
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+このクォータは、[`Session.quotas`](./SessionClass.md#quotas) を使用することで、カレントのREST セッションに対してのみ設定することができます。
 
 :::
 
 `.defaultEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.defaultEntitySetTimeout.Summary -->カレントセッションに保存されているREST エンティティセットのデフォルトの非アクティブタイムアウト(秒単位)<!-- END REF --> が格納されています。
 
-Scope: current session level
+スコープ: カレントセッションレベル
 
 デフォルトでは、値は2時間(7200 秒)です。これはまた、[`$timeout` REST API](../REST/$timeout.md) を使用してエンティティセット作成時に定義することもできます。
 
@@ -117,9 +123,9 @@ Session.quotas.defaultEntitySetTimeout:=1200
 
 #### 説明
 
-The `.inBytesPerHour` property contains <!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->the maximum total number of bytes that the Web server can receive in one hour<!-- END REF -->.
+`.inBytesPerHour` プロパティには<!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->Web サーバーが1時間に受信できる最大バイト数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -131,9 +137,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.inBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one hour<!-- END REF -->.
+`.inBytesPerHourPerSession` プロパティには<!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->Web サーバーがセッションに対して1時間に受信できる最大の総バイト数<!-- END REF --> が格納されています。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -145,9 +151,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.inBytesPerMin` property contains <!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->the maximum total number of bytes that the Web server can receive in one minute<!-- END REF -->.
+`.inBytesPerMin` プロパティには<!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->Web サーバーが1分間に受信できる最大の総バイト数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -159,9 +165,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.inBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one minute<!-- END REF -->.
+`.inBytesPerMinPerSession` プロパティには<!-- REF #QuotaManagerClass.inBytesPerMinPerSession.Summary -->Web サーバーがセッションに対して1分間に受信できる最大の総バイト数<!-- END REF --> が格納されています。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -175,13 +181,13 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+このクォータは、[`Session.quotas`](./SessionClass.md#quotas) を使用することで、カレントのREST セッションに対してのみ設定することができます。
 
 :::
 
 `.maxEntitySetTimeout` プロパティには<!-- REF #QuotaManagerClass.maxEntitySetTimeout.Summary -->カレントセッションの途中にメモリ内に保存されているREST エンティティセットの非アクティブタイムアウトの最大値(秒単位)<!-- END REF --> が格納されています。
 
-Scope: current session level
+スコープ: カレントセッションレベル
 
 この値は[セッションの`quotas.maxEntitySetTimeout` プロパティ](./SessionClass.md#quotas) を使用することで設定することもできます。これらはセッション内で後で作成されたあらゆるエンティティセットに対して使用することができます(この場合既存のエンティティセットのタイムアウトの最大値は変更されません)。
 
@@ -217,13 +223,13 @@ Session.quotas.maxEntitySetTimeout:=2400
 
 :::note
 
-This quota can only be configured for the current REST session through [`Session.quotas`](./SessionClass.md#quotas).
+このクォータは、[`Session.quotas`](./SessionClass.md#quotas) を使用することで、カレントのREST セッションに対してのみ設定することができます。
 
 :::
 
 `.nbEntitySets` プロパティには<!-- REF #QuotaManagerClass.nbEntitySets.Summary -->カレントのセッション内においてメモリ内に許可されているREST エンティティセットの最大数<!-- END REF --> が格納されています。
 
-Scope: current session level
+スコープ: カレントセッションレベル
 
 デフォルトでは、エンティティセットが[REST リクエストによってメモリに保存される数](../REST/$info.md) には制約はありません(値は 0 に設定されています)。特定のセッションに対して、サーバーのペイロードを抑えるために、上限を設定することができます。
 
@@ -252,13 +258,13 @@ Session.quotas.nbEntitySets:=50
 
 :::note
 
-This quota applies only to a REST session.
+このクォータはREST セッションに対してのみ適用されます。
 
 :::
 
-The `.nbEntitySetsPerSession` property contains <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->the maximum number of entity sets allowed in memory for each REST session<!-- END REF -->.
+`.nbEntitySetsPerSession` プロパティには<!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->各REST セッションに対してメモリ内に許可されているエンティティセットの最大数<!-- END REF --> が格納されています。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -270,9 +276,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbGuestSessions` property contains <!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->the maximum total number of active [Guest sessions](./SessionClass.md#isguest) on the Web server<!-- END REF -->.
+`.nbGuestSessions` プロパティには<!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->Web サーバー上のアクティブな[ゲストセッション](./SessionClass.md#isguest) の最大総数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -284,9 +290,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbRequestsPerHour` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->the maximum total number of requests that the Web server can receive in one hour<!-- END REF -->.
+`.nbRequestsPerHour` プロパティには<!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->Web サーバーが1時間に受信できるリクエストの最大総数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -298,9 +304,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbRequestsPerHourPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHourPerSession.Summary -->the maximum total number of requests that a session can receive in one hour<!-- END REF -->.
+`.nbRequestsPerHourPerSession` プロパティには<!-- REF #QuotaManagerClass.nbRequestsPerHourPerSession.Summary -->セッションが1時間に受信できるリクエストの最大総数<!-- END REF --> が格納されています。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -312,9 +318,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbRequestsPerMin` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->the maximum total number of requests that the Web server can receive in one minute<!-- END REF -->.
+`.nbRequestsPerMin` プロパティには<!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->Web サーバーが1分間に受信できるリクエストの最大総数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -326,9 +332,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbRequestsPerMinPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMinPerSession.Summary -->the maximum total number of requests that a session can receive in one minute<!-- END REF -->.
+`.nbRequestsPerMinPerSession` プロパティには<!-- REF #QuotaManagerClass.nbRequestsPerMinPerSession.Summary -->セッションが1分間に受信できるリクエストの最大総数<!-- END REF --> が格納されています。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -340,9 +346,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.nbSessions` property contains <!-- REF #QuotaManagerClass.nbSessions.Summary -->the maximum total number of active sessions on the Web server<!-- END REF -->.
+`.nbSessions` プロパティには<!-- REF #QuotaManagerClass.nbSessions.Summary -->Web サーバー上のアクティブセッションの最大総数<!-- END REF --> が格納されています。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -354,9 +360,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.outBytesPerHour` property contains <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->the maximum total number of bytes that the Web server can send in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+`.outBytesPerHour` プロパティには<!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->Web サーバーが1時間に送信できる最大バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -368,9 +374,9 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.outBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one hour<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+`.outBytesPerHourPerSession` プロパティには<!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->Web サーバーがセッションに対して1時間に送信できる最大の総バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -382,9 +388,9 @@ Scope: [session default level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.outBytesPerMin` property contains <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->the maximum total number of bytes that the Web server can send in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+`.outBytesPerMin` プロパティには<!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->Web サーバーが1分間に送信できる最大バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
-Scope: [server global level](./WebServerClass.md#scope-levels)
+スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 
@@ -396,9 +402,10 @@ Scope: [server global level](./WebServerClass.md#scope-levels)
 
 #### 説明
 
-The `.outBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one minute<!-- END REF -->. The quota is evaluated on the uncompressed response payload size, regardless of the Web server compression settings.
+`.outBytesPerMinPerSession` プロパティには<!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->Web サーバーがセッションに対して
+1分間に送信できる最大の総バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
-Scope: [session default level](./WebServerClass.md#scope-levels)
+スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 
 <!-- END REF -->
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | leField | Field | &#8594;  | Champ duquel créer ou supprimer l’index |
-| index | Boolean, Integer | &#8594;  | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
+| index | Boolean, Integer | &#8594;  | Vrai = créer l’index, Faux = supprimer l’index, ou<br/>Créer un index de type : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = B-Tree cluster, 4 = Cosinus, 5 = Produit scalaire, 6 = Euclidien |
 | * | Operator |  &#8594;  | Indexation asynchrone si * est passé |
 </div>
 <!-- END REF-->
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Prise en charge des index vectoriels Cosine, Dot et Euclidean|
 |11 SQL|Modifié|
 |<6|Créé|
 
@@ -44,7 +45,7 @@ Pour indexer le champ, passez Vrai dans *index*. La commande crée un index du t
 Si vous passez Faux dans *index*, la commande supprimera tous les index standard (c'est-à-dire, non composites et non mots-clés) associés au champ. S'il n'existe pas d'index, la commande ne fait rien.
 
 **index = entier**  
-Dans ce cas, la commande crée un index du type spécifié pour *leChamp*. Vous pouvez passer une des constantes suivantes, placées dans le thème “*Type index*” :
+Dans ce cas, la commande crée un index du type spécifié pour *leChamp*. Vous pouvez passer une des constantes suivantes, placées dans le thème "*Type index*" :
 
 | Constante            | Type        | Valeur | Comment                                                                                                                                                                                          |
 | -------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -52,10 +53,17 @@ Dans ce cas, la commande crée un index du type spécifié pour *leChamp*. Vous 
 | Default Index Type   | Entier long | 0      | 4D définit le type d’index (hors index de mots-clés) le plus optimisé en fonction du contenu du champ.                                                                                           |
 | Keywords Index       | Entier long | \-1    | Permet l’indexation mot à mot du contenu du champ. Ce type d’index n’est utilisable qu’avec les champs de type Texte ou Alpha. Attention, les index de mots-clés ne peuvent pas être composites. |
 | Standard BTree Index | Entier long | 1      | Index de type B-Tree classique. Ce type d’index polyvalent est utilisé dans les versions précédentes de 4D                                                                                       |
+| Vector cosine index | Entier long | 4 | Index optimisé pour les requêtes d'IA utilisant la [similarité cosinus](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Entier long | 5 | Index optimisé pour les requêtes d'IA utilisant la [similarité du produit scalaire](../../API/VectorClass.md#dotsimilarity) |
+| Vector euclidean index | Entier long | 6 | Index optimisé pour les requêtes d'IA utilisant la [distance euclidienne](../../API/VectorClass.md#euclideandistance) |
 
-**Note :** Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir.
+:::note
 
-**SET INDEX** n'indexera pas les enregistrements verrouillés ; la commande attendra que les enregistrements soient libérés.
+Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir.
+
+:::
+
+La commande **SET INDEX** n'indexera pas les enregistrements verrouillés ; elle attendra que les enregistrements soient libérés.
 
 Le paramètre optionnel *\** indique une indexation asynchrone (simultanée). Une indexation asynchrone permet à la méthode appelante de poursuivre son exécution immédiatement après l'appel, que l'indexation soit terminée ou non. Cependant, l'exécution sera stoppée si une commande requiert l'index.
 
@@ -108,5 +116,3 @@ Création d'un index de mots-clés :
 | --- | --- |
 | Numéro de commande | 344 |
 | Thread safe | yes |
-
-

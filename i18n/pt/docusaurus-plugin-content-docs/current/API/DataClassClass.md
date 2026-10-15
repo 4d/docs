@@ -16,6 +16,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) fornece uma interface de objeto para 
 | [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<br/><!-- INCLUDE #DataClassClass.get().Summary -->                                                          |
 | [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<br/><!-- INCLUDE #DataClassClass.getCount().Summary -->                                           |
 | [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<br/><!-- INCLUDE #DataClassClass.getDataStore().Summary -->                               |
+| [<!-- INCLUDE #DataClassClass.getIndexes().Syntax -->](#getindexes)<br/><!-- INCLUDE #DataClassClass.getIndexes().Summary -->                                     |
 | [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataClassClass.getInfo().Summary -->                                              |
 | [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<br/><!-- INCLUDE #DataClassClass.getRemoteCache().Summary -->                         |
 | [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #DataClassClass.new().Summary -->                                                          |
@@ -622,6 +623,85 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 <!-- END REF -->
 
+
+
+<!-- REF DataClassClass.getIndexes().Desc -->
+## .getIndexes()
+
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R5   | Adicionado |
+
+</details>
+
+
+
+<!-- REF #DataClassClass.getIndexes().Syntax -->**.getIndexes()** : Collection <!-- END REF -->
+
+
+<!-- REF #DataClassClass.getIndexes().Params -->
+<div class="no-index">
+
+| Parâmetro | Tipo       |                             | Descrição                              |
+| --------- | ---------- | --------------------------- | -------------------------------------- |
+| Resultados | Collection | <- | Coleção de objetos de índice |
+
+</div>
+<!-- END REF -->
+
+#### Descrição
+
+A função `.getIndexes()` <!-- REF #DataClassClass.getIndexes().Summary -->retorna uma coleção de todos os índices relacionados à dataclass<!-- END REF -->.
+
+Cada índice é um objeto da coleção. Os índices são retornados na ordem de criação/modificação. Uma coleção vazia é retornada se não houver índice na dataclass.
+
+**Coleção retornada**
+
+Cada objeto da coleção retornada possui as seguintes propriedades:
+
+| Propriedade | Tipo    | Descrição                                                                                                                                                                                                                      |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type        | Integer | Tipo de índice: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean. Se o índice estiver definido como Automático, a propriedade type representa o tipo do algoritmo de indexação usado |
+| automatic   | Boolean | True se o índice "automático" estiver selecionado                                                                                                                                                                              |
+| name        | Text    | Nome do índice, se definido                                                                                                                                                                                                   |
+| kind        | Text    | "keywords" se *keyword index* estiver marcado, caso contrário "regular"                                                                                                                |
+| attributes  | Collection | Atributo do índice ou lista de atributos (para índice composto)  |
+| UUID        | Text    | UUID do índice                                                                                                                                                                                                                |
+| uniqueKey   | Boolean | True se o índice tiver a propriedade Unique key                                                                                                                                        |
+
+:::tip Related blog post
+
+[Managing 4D Indexes Programmatically with getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
+
+:::
+
+#### Exemplo
+
+Considerando a seguinte tabela:
+
+![table-indexes](../assets/en/API/table-index.png)
+
+```4d
+
+var $colIndex:=ds.Products.getIndexes()
+
+//$colIndex[0]={"automatic":true,"kind":"regular","type":1,"uniqueKey":true,"UUID":"ADE...","attributes":["ID"]}
+//$colIndex[1]={"automatic":true,"kind":"regular","type":1,"uniqueKey":false,"UUID":"00D...","attributes":["name"]}
+//$colIndex[2]={"name":"Description","automatic":false,"kind":"keywords","type":-1,"uniqueKey":false,"UUID":"37B...","attributes":["description"]}
+//$colIndex[3]={"automatic":false,"kind":"regular","type":5,"uniqueKey":false,"UUID":"618...","attributes":["embedding"]}
+//$colIndex[4]={"automatic":true,"kind":"regular","type":3,"uniqueKey":false,"UUID":"297...","attributes":["embedding"]}
+//$colIndex[5]={"automatic":false,"kind":"regular","type":4,"uniqueKey":false,"UUID":"EA8...","attributes":["embedding"]}
+```
+
+<!-- END REF -->
+
+
+
+
+
 <!-- REF DataClassClass.getInfo().Desc -->
 
 ## .getInfo()
@@ -1116,7 +1196,7 @@ ds.Class.query("info.coll[].val != :1";0)
 // returns A only
 // finds "entities where all val properties are different from 0"
 // which is the equivalent to
-ds.Class.query("Not(info.coll[].val = :1";0))
+ds.Class.query("Not(info.coll[].val = :1)";0)
 ```
 
 Se você quer implementar uma consulta que encontra entidades onde "pelo menos uma propriedade é diferente de *valor*", você precisa usar uma notação especial usando uma carta no `[]`:

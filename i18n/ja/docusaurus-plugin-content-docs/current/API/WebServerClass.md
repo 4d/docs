@@ -489,65 +489,66 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 #### 説明
 
-The `.quotas` property contains <!-- REF #WebServerClass.quotas.Summary -->a `4D.QuotaManager` object that allows you to configure and monitor quotas for the web server<!-- END REF -->.
+`.quotas` プロパティには<!-- REF #WebServerClass.quotas.Summary -->Web サーバーに対してクォータを設定し監視することを可能にする `4D.QuotaManager` オブジェクト<!-- END REF --> を格納しています。
 
 :::note
 
-Quotas are available only when scalable sessions are enabled. When scalable sessions are disabled, this property is *Undefined*.
+クォータは、スケーラブルセッションが有効化されている場合にのみ使用可能です。スケーラブルセッションが無効化されている場合、このプロパティは*Undefined*(未定義) となります。
 
 :::
 
-##### Scope levels
+##### スコープレベル
 
-Accessing this property returns a `4D.QuotaManager` object that can be updated at runtime. Quotas can be configured at two different scope levels:
+このプロパティにアクセスすると、`4D.QuotaManager` オブジェクトが返され、これはランタイムで更新していくことができます。クォータは2つの異なるスコープレベルで設定することが可能です:
 
-- **Server global**: quotas are applied to the aggregate activity of all sessions on the web server. See [At startup](../WebServer/quotas.md#at-startup) and [At runtime](../WebServer/quotas.md#at-runtime).
-- **Session default**: quotas are applied by default to each new session when it is created. See [At startup](../WebServer/quotas.md#at-startup) and [At runtime](../WebServer/quotas.md#at-runtime).
+- **サーバーグローバル**: クォータは、Web サーバー上の全てのセッションの合計アクティビティに対して適用されます。詳細については[At startup](../WebServer/quotas.md#at-startup) および[At runtime](../WebServer/quotas.md#at-runtime) を参照してください。
+- **セッションデフォルト**: クォータはセッションの作成時にそれぞれの新しいセッションに対してデフォルトで適用されます。詳細については[At startup](../WebServer/quotas.md#at-startup) および[At runtime](../WebServer/quotas.md#at-runtime) を参照してください。
 
-When both server global and session default quotas are configured, the session quota is checked first. If the request is accepted, the server global quota is then checked.
+サーバーグローバルとセッションデフォルトのクォータの両方が設定されている場合、セッションクォータが先にチェックされます。リクエストが受け入れられると、次にサーバーグローバルクォータがチェックされます。
 
-For the complete list of quota properties, see the [`4D.QuotaManager` class](./QuotaManagerClass.md). For configuration and enforcement details, see [Web server quotas](../WebServer/quotas.md).
+クォータのプロパティの完全な一覧については、[`4D.QuotaManager` クラス](./QuotaManagerClass.md) を参照してください。設定と適用に関する詳細については、[Web サーバークォータ](../WebServer/quotas.md) を参照してください。
 
-By default, quota properties are *Undefined* and no quotas are applied.
+デフォルトではクォータプロパティは*Undefined* (未定義)であり、クォータは何も適用されていません。
 
-You can modify quota values while the web server is running. Changes to server global quotas are applied to subsequent web server activity. Changes to session default quotas are applied to new sessions created after the quota value is updated. The web server does not need to be restarted.
+クォータの値は、Web サーバーの実行中にも変更することが可能です。サーバーグローバルクォータに対する変更は、それ以降のWeb サーバーのアクティビティに対して適用されます。セッションデフォルトのクォータに対する変更は、クォータの値が変更されたあとに新規に作成されたセッションに対して適用されます。 Web サーバーを再起動する必要はありません。
 
 :::note
 
-You can also configure quotas for the current REST session using the [`Session.quotas`](./SessionClass.md#quotas) property.
+また[`Session.quotas`](./SessionClass.md#quotas) プロパティを使用することでカレントのREST セッションに対してクォータを設定することもできます。
 
 :::
 
-The following properties of the `4D.QuotaManager` object are available for the Web server:
+Web サーバーに対しては`4D.QuotaManager` オブジェクトの以下のプロパティが利用可能です:
 
-| プロパティ                                                                             |                 | 型       | 書込可能 | 説明                                                                                                    |
-| --------------------------------------------------------------------------------- | --------------- | ------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | ×    | Current usage values reported by the Web server.                                      |
-|                                                                                   | nbEntitySets    | Integer | ×    | メモリ内のエンティティセットのカレントの数。                                                                                |
-|                                                                                   | nbGuestSessions | Integer | ×    | Number of active Guest sessions on the Web server.                                    |
-|                                                                                   | nbSessions      | Integer | ×    | Number of active sessions on the Web server.                                          |
-| [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | ◯    | Maximum total number of bytes the Web server can receive in one hour.                 |
-| [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | ◯    | Maximum total number of bytes the Web server can receive for a session in one hour.   |
-| [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | ◯    | Maximum total number of bytes the Web server can receive in one minute.               |
-| [inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)         |                 | Integer | ◯    | Maximum total number of bytes the Web server can receive for a session in one minute. |
-| [nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)           |                 | Integer | ◯    | Maximum number of entity sets allowed in memory for each REST session.                |
-| [nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)                         |                 | Integer | ◯    | Maximum total number of active Guest sessions on the Web server.                      |
-| [nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)                     |                 | Integer | ◯    | Maximum total number of requests the Web server can receive in one hour.              |
-| [nbRequestsPerHourPerSession](./QuotaManagerClass.md#nbrequestsperhourpersession) |                 | Integer | ◯    | Maximum total number of requests a session can receive in one hour.                   |
-| [nbRequestsPerMin](./QuotaManagerClass.md#nbrequestspermin)                       |                 | Integer | ◯    | Maximum total number of requests the Web server can receive in one minute.            |
-| [nbRequestsPerMinPerSession](./QuotaManagerClass.md#nbrequestsperminpersession)   |                 | Integer | ◯    | Maximum total number of requests a session can receive in one minute.                 |
-| [nbSessions](./QuotaManagerClass.md#nbsessions)                                   |                 | Integer | ◯    | Maximum total number of active sessions on the Web server.                            |
-| [outBytesPerHour](./QuotaManagerClass.md#outbytesperhour)                         |                 | Integer | ◯    | Maximum total number of bytes the Web server can send in one hour.                    |
-| [outBytesPerHourPerSession](./QuotaManagerClass.md#outbytesperhourpersession)     |                 | Integer | ◯    | Maximum total number of bytes the Web server can send for a session in one hour.      |
-| [outBytesPerMin](./QuotaManagerClass.md#outbytespermin)                           |                 | Integer | ◯    | Maximum total number of bytes the Web server can send in one minute.                  |
-| [outBytesPerMinPerSession](./QuotaManagerClass.md#outbytesperminpersession)       |                 | Integer | ◯    | Maximum total number of bytes the Web server can send for a session in one minute.    |
+| プロパティ                                                                             |                 | 型       | 書込可能 | 説明                                      |
+| --------------------------------------------------------------------------------- | --------------- | ------- | ---- | --------------------------------------- |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                             |                 | Object  | ×    | Web サーバーによって報告されるカレントの使用量の値。            |
+|                                                                                   | nbEntitySets    | Integer | ×    | メモリ内のエンティティセットのカレントの数。                  |
+|                                                                                   | nbGuestSessions | Integer | ×    | Web サーバ上のアクティブなゲストセッションの数。              |
+|                                                                                   | nbSessions      | Integer | ×    | Web サーバー上のアクティブなセッションの数。                |
+| [inBytesPerHour](./QuotaManagerClass.md#inbytesperhour)                           |                 | Integer | ◯    | Web サーバーが1時間に受信できる最大の総バイト数。             |
+| [inBytesPerHourPerSession](./QuotaManagerClass.md#inbytesperhourpersession)       |                 | Integer | ◯    | Web サーバーがセッションに対して1時間に受信できる最大の総バイト数。    |
+| [inBytesPerMin](./QuotaManagerClass.md#inbytespermin)                             |                 | Integer | ◯    | Web サーバーが1分間に受信できる総バイト数。                |
+| [inBytesPerMinPerSession](./QuotaManagerClass.md#inbytesperminpersession)         |                 | Integer | ◯    | Web サーバーがセッションに対して1分間に受信できる最大の総バイト数。    |
+| [nbEntitySetsPerSession](./QuotaManagerClass.md#nbentitysetspersession)           |                 | Integer | ◯    | 各REST セッションに対してメモリ内に保持できるエンティティセットの最大数。 |
+| [nbGuestSessions](./QuotaManagerClass.md#nbguestsessions)                         |                 | Integer | ◯    | Web サーバー上のアクティブなゲストセッションの最大総数。          |
+| [nbRequestsPerHour](./QuotaManagerClass.md#nbrequestsperhour)                     |                 | Integer | ◯    | Web サーバーが1時間に受け入れることのできる最大のリクエスト総数。     |
+| [nbRequestsPerHourPerSession](./QuotaManagerClass.md#nbrequestsperhourpersession) |                 | Integer | ◯    | セッションが1時間に受け入れることのできる最大のリクエスト総数。        |
+| [nbRequestsPerMin](./QuotaManagerClass.md#nbrequestspermin)                       |                 | Integer | ◯    | Web サーバーが1分間に受け入れることのできる最大のリクエスト総数。     |
+| [nbRequestsPerMinPerSession](./QuotaManagerClass.md#nbrequestsperminpersession)   |                 | Integer | ◯    | セッションが1分間に受け入れることのできる最大のリクエスト総数。        |
+| [nbSessions](./QuotaManagerClass.md#nbsessions)                                   |                 | Integer | ◯    | Web サーバー上のアクティブなセッションの最大総数。             |
+| [outBytesPerHour](./QuotaManagerClass.md#outbytesperhour)                         |                 | Integer | ◯    | Web サーバーが1時間に送信できる最大の総バイト数。             |
+| [outBytesPerHourPerSession](./QuotaManagerClass.md#outbytesperhourpersession)     |                 | Integer | ◯    | Web サーバーがセッションに対して1時間に送信できる最大の総バイト数。    |
+| [outBytesPerMin](./QuotaManagerClass.md#outbytespermin)                           |                 | Integer | ◯    | Web サーバーが1分間に送信できる最大の総バイト数。             |
+| [outBytesPerMinPerSession](./QuotaManagerClass.md#outbytesperminpersession)       |                 | Integer | ◯    | Web サーバーがセッションに対して1分間に送信できる最大の総バイト数。    |
 
 #### 例題
 
-Configure quotas at the server global and session default levels:
+クォータを、サーバーグローバルとセッションデフォルトのレベルで設定します:
 
 ```4d
 var $quotas : Object
+var $webServer : Object:=WEB Server
 
 $quotas:={}
 $quotas.inBytesPerMin:=20000000
@@ -557,15 +558,15 @@ $quotas.nbGuestSessions:=10
 $quotas.nbRequestsPerMin:=500
 $quotas.nbRequestsPerHour:=20000
 
-// Server global quotas
-WEB Server.quotas.inBytesPerMin:=$quotas.inBytesPerMin
-WEB Server.quotas.nbSessions:=$quotas.nbSessions
-WEB Server.quotas.nbGuestSessions:=$quotas.nbGuestSessions
-WEB Server.quotas.nbRequestsPerMin:=$quotas.nbRequestsPerMin
-WEB Server.quotas.nbRequestsPerHour:=$quotas.nbRequestsPerHour
+// サーバーグローバルクォータ
+$webServer.quotas.inBytesPerMin:=$quotas.inBytesPerMin
+$webServer.quotas.nbSessions:=$quotas.nbSessions
+$webServer.quotas.nbGuestSessions:=$quotas.nbGuestSessions
+$webServer.quotas.nbRequestsPerMin:=$quotas.nbRequestsPerMin
+$webServer.quotas.nbRequestsPerHour:=$quotas.nbRequestsPerHour
 
-// Session default quota
-WEB Server.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
+// セッションデフォルトクォータ
+$webServer.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
 ```
 
 :::tip 関連したBlog 記事
@@ -700,10 +701,10 @@ WEB Server.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                         |
-| ----- | ------------------------------------------ |
-| 21 R5 | Support quotas in the `settings` parameter |
-| 18 R3 | 追加                                         |
+| リリース  | 内容                        |
+| ----- | ------------------------- |
+| 21 R5 | `settings` 引数内でのクォータのサポート |
+| 18 R3 | 追加                        |
 
 </details>
 
@@ -729,9 +730,9 @@ WEB Server.quotas.outBytesPerMinPerSession:=$quotas.outBytesPerMinPerSession
 
 :::note
 
-You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via a [`QuotaManager.json`](../WebServer/quotas.md) file. If `settings.quotas` is provided, **QuotaManager.json** is ignored.
+クォータは、*settings* 引数の`quotas` プロパティを使用して設定できるほか、メインWeb サーバーに対しては、[`HTTPQuotas.json`](../WebServer/quotas.md) ファイルを使用することで設定することもできます。 `settings.quotas` が渡された場合、**HTTPQuotas.json** は無視されます。
 
-::
+:::
 
 カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 
@@ -751,7 +752,7 @@ You can configure quotas via the `quotas` property in the *settings* parameter o
 
 #### 例題 1
 
-The following example starts the web server with customized settings:
+以下のコードを実行すると、カスタマイズされた設定でWeb サーバーを起動します:
 
 ```4d
  var $result : Object

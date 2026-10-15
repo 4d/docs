@@ -11,25 +11,25 @@ title: OpenAIEmbeddingsResult
 
 ## Propriétés calculées
 
-| Propriété    | Type                                  | Description                                                                                                          |
-| ------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `model`      | Text                                  | Retourne le modèle utilisé pour calculer la représentation vectorielle                                               |
-| `vector`     | `4D.Vector`                           | Retourne le premier `4D.Vector` de la collection `vectors`.                                          |
-| `vectors`    | Collection                            | Retourne une collection de `4D.Vector`.                                                              |
-| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Retourne le premier [OpenAIEmbedding](OpenAIEmbedding.md) de la collection `embeddings`.             |
-| `embeddings` | Collection                            | Retourne une collection de [OpenAIEmbedding](OpenAIEmbedding.md).                                    |
-| `usage`      | Object                                | Returns token usage information (inherited from [OpenAIResult](OpenAIResult.md)). |
+| Propriété    | Type                                  | Description                                                                                                                       |
+| ------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `model`      | Text                                  | Retourne le modèle utilisé pour calculer la représentation vectorielle                                                            |
+| `vector`     | `4D.Vector`                           | Retourne le premier `4D.Vector` de la collection `vectors`.                                                       |
+| `vectors`    | Collection                            | Retourne une collection de `4D.Vector`.                                                                           |
+| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Retourne le premier [OpenAIEmbedding](OpenAIEmbedding.md) de la collection `embeddings`.                          |
+| `embeddings` | Collection                            | Retourne une collection de [OpenAIEmbedding](OpenAIEmbedding.md).                                                 |
+| `usage`      | Object                                | Renvoie les informations d'utilisation des tokens (hérité de [OpenAIResult](OpenAIResult.md)). |
 
 ### usage
 
-The `usage` property returns an object containing token usage information for embeddings.
+La propriété `usage` retourne un objet contenant des informations d'utilisation des tokens pour les embeddings.
 
-| Champ           | Type    | Description                                                                                                       |
-| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
-| `prompt_tokens` | Integer | Number of tokens in the input text(s).                                         |
-| `total_tokens`  | Integer | Total tokens used (same as prompt_tokens for embeddings). |
+| Champ           | Type    | Description                                                                                                                        |
+| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `prompt_tokens` | Integer | Nombre de tokens dans le(s) texte(s) d'entrée.                               |
+| `total_tokens`  | Integer | Total des tokens utilisés (identique à prompt_tokens pour les embeddings). |
 
-**Example response:**
+**Exemple de réponse :**
 
 ```json
 {
@@ -38,7 +38,7 @@ The `usage` property returns an object containing token usage information for em
 }
 ```
 
-> **Note:** Embeddings only consume prompt tokens (there is no completion), so `total_tokens` equals `prompt_tokens`.
+> **Note :** Les emneddings ne consomment que des tokens d'invite (il n'y a pas de réponse), donc `total_tokens` équivaut à `prompt_tokens`.
 
 ## Voir également
 

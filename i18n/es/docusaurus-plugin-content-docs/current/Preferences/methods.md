@@ -176,6 +176,36 @@ Resalta la línea que se está ejecutando actualmente en el depurador, además d
 
 Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
+### Editor de código
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 21 R5       | Añadidos       |
+
+</details>
+
+Lets you configure the default code editor to use when you open or create a method or a class from a 4D IDE window such the 4D Explorer, Debugger, or Form editor. Las siguientes opciones están disponibles:
+
+- **Siempre 4D** (por defecto): utiliza siempre el [editor de código 4D](../code-editor/write-class-method.md).
+- **4D o VS Code al mantener pulsada la tecla Alt**: utilizar preferiblemente el editor de código 4D, pero cambia a VS Code si se presiona la tecla **Alt**.
+- **VS Code o 4D al mantener presionada la tecla Alt**: utilizar preferiblemente VS Code, pero cambiar al editor de código de 4D si se presiona la tecla **Alt**.
+
+Options using **VS Code** require that this editor be installed on the machine (see [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode)), otherwise an error will be sent when the 4D IDE will attempt to use it.
+
+:::note
+
+When the **4D or VS Code when holding Alt key** option is selected, add the **Shift** key to existing shortcuts that already use **Alt** to access VS Code form the 4D IDE. For example, to open a method in VS Code from the 4D code editor, press **Alt+Shift** and double-click on the method name (**Alt** and double-click opens it in another window of the 4D code editor).
+
+:::
+
+:::tip Entrada de blog relacionada
+
+[Abrir código 4D directamente desde 4D en VS Code](https://blog.4d.com/seamlessly-open-4d-code-from-4d-into-vs-code)
+
+:::
+
 ### Sugerencias
 
 Esta área le permite configurar los mecanismos de autocompletar en el Editor de código para adaptarlo a sus propios hábitos de trabajo.

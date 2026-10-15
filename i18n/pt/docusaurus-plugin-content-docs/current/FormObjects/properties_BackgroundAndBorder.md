@@ -13,7 +13,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 | Nome          | Tipo de dados | Valores possíveis                              |
 | ------------- | ------------- | ---------------------------------------------- |
-| alternateFill | string        | qualquer valor css; "transparent"; "automatic" |
+| alternateFill | string        | qualquer valor css; "transparent"; "automatic"; "automaticAlternate" |
 
 #### Objectos suportados
 
@@ -27,7 +27,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ## Background Color / Fill color
 
-Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property). [hh](#)
+Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).  
 
 :::note
 
@@ -83,7 +83,7 @@ This property allows you to assign a fill color attribute to [custom buttons](./
 
 Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
-Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) com a constante `lk color expression`.
+Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) com a constante `lk background color expression`.
 
 > Com os list box de tipo coleção ou seleção de entidades, esta propriedade também pode ser definida usando uma [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -194,7 +194,7 @@ The value is expressed in pixels.
 | Release | Mudanças                                                         |
 | ------- | ---------------------------------------------------------------- |
 | 21 R5   | Support for custom-styled buttons, radio buttons and check boxes |
-| 18 R6   | Suporte para entradas e áreas de texto                           |
+| 19 R7   | Support for inputs and text areas                                |
 
 </details>
 
@@ -309,7 +309,7 @@ Designa a espessura de uma linha.
 
 | Nome        | Tipo de dados | Valores possíveis                                                                                               |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, o cualquier valor de entero < 20 |
+| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, o qualquer valor de inteiro < 20 |
 
 #### Objectos suportados
 
@@ -323,7 +323,7 @@ Designa a espessura de uma linha.
 
 O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
-Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes descritas no comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors). Você pode usar as constantes do tema <a href="https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html">SET RGB COLORS</a>.
+Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes descritas no comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors). Se você quiser que a célula herde a cor de fundo definida em um nível superior, passe o valor -255 para o elemento correspondente do array.
 
 Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada de cinza/cinza claro, definida nas propriedades da caixa de listagem. Um array de cor de fundo também foi definida para a caixa de listagem, a fim de mudar a cor das linhas em que pelo menos um valor é negativo para laranja claro:
 
@@ -345,7 +345,7 @@ De seguida, deve colorir as células com valores negativos a laranja-escuro. Par
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW STYLE`](../commands/listbox-set-row-font-style) e [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color). Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
+Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) e [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color). Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
 
 #### Gramática JSON
 

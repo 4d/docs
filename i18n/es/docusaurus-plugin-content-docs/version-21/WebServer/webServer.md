@@ -8,7 +8,7 @@ title: Servidor Web
 
 :::warning Funcionalidad obsoleta
 
-El uso del servidor web en un 4D remoto es **obsoleto** a partir de 4D 21. Ya no se recomienda utilizar esta funcionalidad.
+Usar el servidor web en un cliente 4D remoto (4D) es **obsoleto** a partir de 4D 21. Ya no se recomienda utilizar esta funcionalidad.
 
 :::
 

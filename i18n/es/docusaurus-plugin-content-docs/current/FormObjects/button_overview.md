@@ -55,7 +55,7 @@ Por defecto, el estilo Clásico tiene un fondo gris claro con una etiqueta en el
 }
 ```
 
-The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+El estilo Clásico ofrece una [propiedad adicional](#additional-properties-for-flat-and-regular-buttons): la propiedad [Botón por defecto](properties_Appearance.md#default-button).
 
 ### Plano
 
@@ -82,7 +82,7 @@ Por defecto, el estilo Plano tiene un fondo blanco con una etiqueta en el centro
                 }
 ```
 
-The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+El estilo Plano ofrece una [propiedad adicional](#additional-properties-for-flat-and-regular-buttons): la propiedad [Botón por defecto](properties_Appearance.md#default-button).
 
 ### Toolbar (Barra de herramientas)
 
@@ -342,17 +342,17 @@ Todos los botones comparten el mismo conjunto de propiedades básicas:
 > (1) No soportado por el estilo [Help](#help).<br/>
 > (2) No soportado por los estilos [Help](#help), [Flat](#flat) y [Regular](#regular).
 
-### Additional properties for custom buttons
+### Propiedades adicionales para botones personalizados
 
-Additional specific properties are available for [custom](#custom) style buttons:
+Las propiedades específicas adicionales están disponibles para los botones de estilo [personalizado](#custom):
 
 [Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Default Button](properties_Appearance.md#default-button) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
-### Additional properties for flat and regular buttons
+### Propiedades adicionales para botones planos y clásicos
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style buttons:
+Una propiedad específica adicional está disponible para botones de estilo [plano](#flat) y [clásico](#regular):
 
-[Default Button](properties_Appearance.md#default-button)
+[Botón por defecto](properties_Appearance.md#default-button)
 
 ## Eventos soportados
 

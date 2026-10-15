@@ -293,9 +293,9 @@ text[text|=Hello]
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                            |
-| ----- | ----------------------------- |
-| 21 R5 | Support of padding attributes |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 21 R5 | padding 属性のサポート |
 
 </details>
 </div>

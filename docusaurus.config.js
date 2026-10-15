@@ -237,12 +237,12 @@ sidebarItemsGenerator: async function (args) {
   return items;
 },
           versions: {
-              '21-R4': {
-              label: '21 R4 BETA',
+              '21-R5': {
+              label: '21 R5 BETA',
               banner: 'none',
             },
-              '21-R3': {
-              label: '21 R3',
+              '21-R4': {
+              label: '21 R4',
               banner: 'none',
             },
               '21': {

@@ -700,13 +700,13 @@ End if
 
 セッションに対しては、`4D.QuotaManager` オブジェクトの以下のプロパティが利用可能です:
 
-| プロパティ                                                                     |              | 型       | 書込可能 | 説明                                                                                         |
-| ------------------------------------------------------------------------- | ------------ | ------- | ---- | ------------------------------------------------------------------------------------------ |
-| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯    | Maximum allowed number of entity sets in server memory. *Undefined* = 定数なし |
-| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯    | メモリ内のエンティティセットのデフォルトの非アクティブタイムアウト(秒単位)                                  |
-| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯    | メモリ内のエンティティセットの非アクティブタイムアウトの最大値(秒単位)                                    |
-| [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | ×    | Current usage values reported for the session.                             |
-|                                                                           | nbEntitySets | Integer | ×    | メモリ内のエンティティセットのカレントの数。 *Undefined* = メモリ内にエンティティセットはなし                                     |
+| プロパティ                                                                     |              | 型       | 書込可能 | 説明                                                        |
+| ------------------------------------------------------------------------- | ------------ | ------- | ---- | --------------------------------------------------------- |
+| [nbEntitySets](./QuotaManagerClass.md#nbentitysets)                       |              | Integer | ◯    | サーバーメモリ内で許可されたエンティティセットの最大数。 *Undefined* = 定数なし           |
+| [defaultEntitySetTimeout](./QuotaManagerClass.md#defaultentitysettimeout) |              | Integer | ◯    | メモリ内のエンティティセットのデフォルトの非アクティブタイムアウト(秒単位) |
+| [maxEntitySetTimeout](./QuotaManagerClass.md#maxentitysettimeout)         |              | Integer | ◯    | メモリ内のエンティティセットの非アクティブタイムアウトの最大値(秒単位)   |
+| [currentValues](./QuotaManagerClass.md#currentvalues)                     |              | Object  | ×    | セッションに対して報告されているカレントの使用量の値。                               |
+|                                                                           | nbEntitySets | Integer | ×    | メモリ内のエンティティセットのカレントの数。 *Undefined* = メモリ内にエンティティセットはなし    |
 
 値を編集すると、それはサーバー側で直ちに反映され(再起動の必要はありません)、それ以降のREST リクエストに対して適用されます。
 
@@ -728,8 +728,8 @@ Session.quotas.nbEntitySets:=50
 
 #### 参照
 
-[QuotaManager class](./QuotaManagerClass.md)<br/>
-[Web server quotas](../WebServer/quotas.md)
+[QuotaManager クラス](./QuotaManagerClass.md)<br/>
+[Web サーバークォータ](../WebServer/quotas.md)
 
 <!-- REF SessionClass.restore().Desc -->
 

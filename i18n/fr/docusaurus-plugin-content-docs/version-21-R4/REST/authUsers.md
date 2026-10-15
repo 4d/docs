@@ -24,13 +24,13 @@ L'ancien mode de connexion basé sur la méthode base `On REST Authentication` e
 
 La séquence de connexion d'un utilisateur est la suivante :
 
-1. Dans ce cas, elles sont traitées à travers des sessions "guest". Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), et aucune licence n'est consommée.  
-   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée.
+1. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée. Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), et aucune licence n'est consommée.  
+   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Dans ce cas, elles sont traitées à travers des sessions "guest".
 
-2. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés.
-   The function can be called either directly from your 4D code (see [`Open datastore`](../commands/open-datastore) example) or through a `/rest/$catalog/authentify` request along with user credentials. This step only requires a basic login form that do not access data; it can be for example a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
+2. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée.
+   La fonction peut être appelée soit directement depuis votre code 4D (voir l'exemple [`Open datastore`](../commands/open-datastore)), soit via une requête `/rest/$catalog/authentify` accompagnée des identifiants de l'utilisateur. Cette étape ne nécessite qu'un simple formulaire de connexion qui n'accède pas aux données ; il peut s'agir, par exemple, d'une [page Qodly](https://developer.4d.com/qodly/) (appelée via la requête `/rest/$getWebForm`).
 
-3. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted as soon as the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called.
+3. Si l'utilisateur est authentifié avec succès, une licence 4D est consommée sur le serveur et toutes les requêtes REST sont acceptées dès que la fonction [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) est appelée.
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 

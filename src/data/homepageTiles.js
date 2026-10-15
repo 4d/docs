@@ -176,6 +176,9 @@ title: (
         <Link to="Develop/XML">
           <Translate>XML Processing</Translate>
         </Link>
+        <Link to="category/records-selections">
+          <Translate>Records & Selections</Translate>
+        </Link>
       </div>
     ),
   },

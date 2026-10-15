@@ -138,15 +138,15 @@ Placer des groupes dans d’autres groupes permet de créer une hiérarchie d’
 
 Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de désélectionner l’option correspondante dans la liste des membres.
 
-### Assigning a license to a group
+### Attribution d'une licence à un groupe
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. Cela inclut l'ensemble des plug-ins et composants 4D ainsi que ceux développés par des tiers.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Any users that do not belong to the access group of an extension cannot load this extension.
+Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Les utilisateurs qui n'appartiennent pas au groupe d'accès d'une extension ne peuvent pas charger cette extension.
 
 > Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. Pour donner à un groupe l'accès à une extension, il suffit de cocher l'option correspondante.
 
 ![](../assets/en/Users/plugins.png)
 

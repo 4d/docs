@@ -1635,17 +1635,17 @@
     "message": "Glisser-Déposer",
     "description": "The label for the doc item 'Drag and Drop' in sidebar 'docs', linking to the doc Desktop/drag-and-drop"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access)": {
-    "message": "Enregistrements et sélections (accès classique aux données)",
-    "description": "The label for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections": {
+    "message": "Enregistrements & Sélections",
+    "description": "The label for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.title": {
-    "message": "Enregistrements et sélections (accès classique aux données)",
-    "description": "The generated-index page title for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+  "sidebar.docs.category.Records & Selections.link.generated-index.title": {
+    "message": "Enregistrements & Sélections",
+    "description": "The generated-index page title for category 'Records & Selections' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Records & Selections (legacy data access).link.generated-index.description": {
+  "sidebar.docs.category.Records & Selections.link.generated-index.description": {
     "message": "Accès historique aux données basé sur les enregistrements, les sélections et les ensembles.",
-    "description": "The generated-index page description for category 'Records & Selections (legacy data access)' in sidebar 'docs'"
+    "description": "The generated-index page description for category 'Records & Selections' in sidebar 'docs'"
   },
   "sidebar.docs.category.Server & Admin": {
     "message": "Serveur & Admin",

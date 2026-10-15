@@ -103,7 +103,7 @@ El estilo Clásico de botón casilla de selección corresponde a un sistema de c
 		}
 ```
 
-The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+El estilo Clásico ofrece una [propiedad adicional](#additional-properties-for-flat-and-regular-check-boxes): la propiedad [Three-States](properties_Display.md#three-states).
 
 ### Plano
 
@@ -392,15 +392,15 @@ Todas las casillas de selección comparten un mismo conjunto de propiedades bás
 > (1) No soportado por los estilos [Regular](#regular) y [Flat](#flat).<br/>
 > (2) No soportado por los estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) y [Collapse/Expand](#collapseexpanded).
 
-### Additional properties for custom check boxes
+### Propiedades adicionales para las casillas de selección personalizadas
 
-Additional specific properties are available for [custom](#custom) style check boxes:
+Las propiedades específicas adicionales están disponibles para las casillas de selección [personalizadas](#custom):
 
-[Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+[Ruta de fondo](properties_TextAndPicture.md#background-pathname) - [Color del borde](./properties_BackgroundAndBorder.md#border-color) - [Ancho del borde](./properties_BackgroundAndBorder.md#border-width) - [Radio de las esquinas](./properties_BackgroundAndBorder.md#corner-radius) - [Color de relleno](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Margen horizontal](properties_TextAndPicture.md#horizontal-margin) - [Desplazamiento del icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#vertical-margin)
 
-### Additional properties for flat and regular check boxes
+### Propiedades adicionales para las casillas de selección planas y clásicas
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style check boxes:
+Una propiedad específica adicional está disponible para las casillas de selección de estilo [plano](#flat) y [clásico](#regular):
 
 [Three-States](properties_Display.md#three-states)
 

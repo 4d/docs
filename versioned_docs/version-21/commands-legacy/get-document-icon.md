@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET DOCUMENT ICON.Summary-->The GET DOCUMENT ICON command returns, in the 4D picture variable or field *icon*, the icon of the document whose name or complete pathname is passed in *docPath*.<!-- END REF-->can specify a file of any type (executable, document, shortcut or alias, etc.) or a folder. 
+<!--REF #_command_.GET DOCUMENT ICON.Summary-->The GET DOCUMENT ICON command returns, in the 4D picture variable or field *icon*, the icon of the document whose name or complete pathname is passed in *docPath*.<!-- END REF-->*docPath* can specify a file of any type (executable, document, shortcut or alias, etc.) or a folder. 
 
 *docPath* contains the full pathname of the document. You can also pass the document name only or a relative pathname, in this case the document must be placed in the database current working directory (usually, the folder containing the database structure file).  
 If you pass an empty string in *docPath*, the standard Open File dialog box appears. The user can then select the file to read. Once the dialog box is validated, the Document system variable contains the full pathname to the selected file. 

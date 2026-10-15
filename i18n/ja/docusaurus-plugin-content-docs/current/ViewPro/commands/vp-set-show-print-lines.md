@@ -26,7 +26,7 @@ title: VP SET SHOW PRINT LINES
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*visible* には、印刷線を表示するには `True`、非表示にするには `False` を渡します。 デフォルトでは `True` が渡されます。
+*visible* には、印刷線を表示するには `True`、非表示にするには `False` を渡します。デフォルトでは `True` が渡されます。
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 

@@ -8,7 +8,7 @@ title: Web サーバー
 
 :::warning 廃止予定の機能
 
-リモート4D においてWeb サーバーを使用する機能は4D 21 においてと **廃止予定** なっています。この機能を使用することは今後推奨されません。
+Using the web server on a remote 4D (4D client) is **deprecated** as of 4D 21. この機能を使用することは今後推奨されません。
 
 :::
 

@@ -41,10 +41,10 @@ Una vez que un texto está rotado, puede seguir cambiando su tamaño o posición
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                       |
-| ----------- | ---------------------------------------------------- |
-| 21 R5       | Support of vertical alignment and padding properties |
-| 19 R7       | Soporte de la propiedad Radio de esquina             |
+| Lanzamiento | Modificaciones                                             |
+| ----------- | ---------------------------------------------------------- |
+| 21 R5       | Soporte de propiedades de alineación vertical y de padding |
+| 19 R7       | Soporte de la propiedad Radio de esquina                   |
 
 </details>
 

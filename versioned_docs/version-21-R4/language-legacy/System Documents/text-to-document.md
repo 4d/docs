@@ -92,8 +92,8 @@ Example allowing the user to indicate the location of the file to create:
 
 ## See also 
 
+[`.setText()`](../../API/FileClass.md#settext)   
 [Document to text](../commands/document-to-text)  
-*System Documents*  
 
 ## Properties
 

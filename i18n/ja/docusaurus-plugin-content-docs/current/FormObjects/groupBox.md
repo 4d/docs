@@ -22,7 +22,7 @@ title: グループボックス
 		}
 ```
 
-#### プロパティ一覧
+## プロパティ一覧
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -

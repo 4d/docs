@@ -15,7 +15,7 @@ Además, en macOS, la propiedad del botón por defecto modifica la apariencia de
 
 > El botón debe tener una altura estándar para obtener la apariencia de botón por defecto.
 
-En Windows, el concepto de "opción recomendada" no está soportado: sólo el botón enfocado tiene una apariencia diferente en tiempo de ejecución y la tecla **Intro** está vinculada al botón enfocado. However, in the 4D form editor, the default button is represented with a blue outline when using [regular](button_overview.md#regular) or [flat](button_overview.md#flat) style (no specific outline is drawn when using [custom](button_overview.md#custom) style):
+En Windows, el concepto de "opción recomendada" no está soportado: sólo el botón enfocado tiene una apariencia diferente en tiempo de ejecución y la tecla **Intro** está vinculada al botón enfocado. Sin embargo, en el editor de formularios 4D, el botón predeterminado se representa con un contorno azul cuando se utiliza el estilo [clásico](button_overview.md#regular) o [plano](button_overview.md#flat) (no se dibuja ningún contorno específico cuando se utiliza el estilo [personalizado](button_overview.md#custom)):
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -27,7 +27,7 @@ En Windows, el concepto de "opción recomendada" no está soportado: sólo el bo
 
 #### Objetos soportados
 
-[Custom Button](button_overview.md#custom) - [Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Botón personalizado](button_overview.md#custom) - [Botón normal](button_overview.md#regular) - [Botón plano](button_overview.md#regular)
 
 ---
 

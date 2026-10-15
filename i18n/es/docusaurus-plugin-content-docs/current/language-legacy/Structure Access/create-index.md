@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tabla | Table | &#8594; | Tabla para la cual crear un índice |
 | arrayCampos | Pointer array | &#8594; | Puntero(s) a el/los campo(s) a indexar |
-| tipoIndice | Integer | &#8594; | Tipo de índice a crear: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster |
+| tipoIndice | Integer | &#8594; | Tipo de índice a crear: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster, 4 = Coseno, 5 = Producto escalar, 6 = Euclídeo |
 | nombreIndice | Text | &#8594; | Nombre del índice a crear |
 | * | Operador | &#8594; | Si pasa = indexación asincrónica |
 </div>
@@ -24,6 +24,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R5|Soporte para índices vectoriales Cosine, Dot y Euclidean|
 |11 SQL|Creado por|
 
 </details>
@@ -31,10 +32,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-El comando **CREATE INDEX** permite crear: 
-
-* Un <!--REF #_command_.CREATE INDEX.Summary-->índice estándar en uno o más campos (índice compuesto) <!-- END REF-->o
-* Un índice de palabras claves en un campo.
+El comando <!--REF #_command_.CREATE INDEX.Summary-->**CREATE INDEX** crea un índice estándar en uno o más campos (índice compuesto) o un índice de palabras claves en un solo campo.<!-- END REF-->
 
 El índice se crea para la tabla *laTabla* utilizando uno o más campos designados por el array de punteros *arrayCampos*. Este array contiene una sola línea si quiere crear un índice simple y dos o más cuando quiere crear un índice compuesto (excepto en el caso de un índice de palabras claves). En el caso de los índices compuestos, el orden de los campos en el array es importante durante la construcción del índice.
 
@@ -46,8 +44,15 @@ El parámetro *tipoIndice* permite definir el tipo de índice a crear. Puede pas
 | Default index type   | Entero largo | 0     | 4D define el tipo de índice (excepto los índices de palabras claves) que es el más optimizado en función del contenido del campo.                                                                                      |
 | Keywords index       | Entero largo | \-1   | Permite la indexación palabra por palabra del contenido del campo. Este tipo de índice sólo puede utilizarse con campos de tipo Texto, Alfa e Imagen. Atención los índices de palabras claves no pueden ser compuestos |
 | Standard BTree index | Entero largo | 1     | Índice de tipo B-Tree clásico. Este tipo de índice multi propósito se utiliza en las versiones anteriores de 4D                                                                                                        |
+| Vector cosine index | Entero largo | 4 | Índice optimizado para consultas de IA que utilizan la [similitud coseno](../../API/VectorClass.md#cosinesimilarity) |
+| Vector dot index | Entero largo | 5 | Índice optimizado para consultas de IA que utilizan la [similitud del producto escalar](../../API/VectorClass.md#dotsimilarity) |
+| Vector euclidean index | Entero largo | 6 | Índice optimizado para consultas de IA que utilizan la [distancia euclídea](../../API/VectorClass.md#euclideandistance) |
 
-**Nota:** un índice B-Tree asociado a un campo de tipo texto almacena como máximo los primeros 1024 caracteres del campo. Por lo tanto en este contexto, las búsquedas en las cadenas que contienen más de 1024 caracteres fallarán. 
+:::note
+
+Un índice B-Tree asociado a un campo de tipo texto almacena como máximo los primeros 1024 caracteres del campo. Por lo tanto, en este contexto, las búsquedas de cadenas que contienen más de 1024 caracteres fallarán.
+
+:::
 
 Pase en *nomIndice* el nombre del índice a crear. Es necesario dar nombres a los índices si varios índices de diferentes tipos pueden asociarse a un mismo campo y si prefiere poder borrarlos individualmente con la ayuda del comando [DELETE INDEX](../commands/delete-index). Si el índice *nomIndice* ya existe, el comando no hace nada.
 
@@ -94,6 +99,19 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
  CREATE INDEX([Clientes];arrayPtrCampo;Standard BTree Index;"CityZip")
 ```
 
+## Ejemplo 4
+
+Creación de un índice vectorial en el campo "embedding" de la tabla "Clientes":
+
+```4d
+
+ARRAY POINTER(arrayPtrCampo; 1)
+fieldPtrArr{1}:=->[Clientes]embedding
+CREATE INDEX([Clientes]; arrayPtrCampo; Vector cosine index; "cosine")
+
+
+```
+
 ## Ver también 
 
 [DELETE INDEX](../commands/delete-index)  
@@ -106,5 +124,3 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
 | --- | --- |
 | Número de comando | 966 |
 | Hilo seguro | yes |
-
-

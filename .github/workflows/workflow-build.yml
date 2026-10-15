@@ -36,15 +36,14 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '22.x'
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
       - name: Build
         env:
           LANGUAGE_TO_BUILD: ${{ matrix.language }}
         run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
           if [ "$LANGUAGE_TO_BUILD" = 'en' ]; then
             npm run build -- --locale $LANGUAGE_TO_BUILD
           else

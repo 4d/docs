@@ -100,19 +100,19 @@ title: 座標とサイズ
 
 ---
 
-## Bottom Padding
+## 下パディング
 
-Sets the padding between the bottom edge of the object and its text content. 値はピクセル単位です (デフォルトは 0)。
+オブジェクトの下端とそのテキストコンテンツの間のパディングを設定します。値はピクセル単位です (デフォルトは 0)。
 
 #### JSON 文法
 
-| 名称            | データタイプ  | とりうる値                                            |
-| ------------- | ------- | ------------------------------------------------ |
-| paddingBottom | integer | Value in pixels (must be >=0) |
+| 名称            | データタイプ  | とりうる値                                       |
+| ------------- | ------- | ------------------------------------------- |
+| paddingBottom | integer | ピクセル単位の値(0 以上でなければなりません) |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Text Area](text.md)
+[入力](input_overview.md) - [テキストエリア](text.md)
 
 #### コマンド
 
@@ -120,7 +120,7 @@ Sets the padding between the bottom edge of the object and its text content. 値
 
 #### 参照
 
-[Top Padding](#top-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
+[上パディング](#上パディング) - [左パディング](#左パディング) - [右パディング](#右パディング)
 
 ---
 
@@ -246,19 +246,19 @@ Sets the padding between the bottom edge of the object and its text content. 値
 
 ---
 
-## Left Padding
+## 左パディング
 
-Sets the padding between the left edge of the object and its text content. 値はピクセル単位です (デフォルトは 0)。
+オブジェクトの左端とそのテキストコンテンツの間のパディングを設定します。値はピクセル単位です (デフォルトは 0)。
 
 #### JSON 文法
 
-| 名称          | データタイプ  | とりうる値                                            |
-| ----------- | ------- | ------------------------------------------------ |
-| paddingLeft | integer | Value in pixels (must be >=0) |
+| 名称          | データタイプ  | とりうる値                                       |
+| ----------- | ------- | ------------------------------------------- |
+| paddingLeft | integer | ピクセル単位の値(0 以上でなければなりません) |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Text Area](text.md)
+[入力](input_overview.md) - [テキストエリア](text.md)
 
 #### コマンド
 
@@ -266,7 +266,7 @@ Sets the padding between the left edge of the object and its text content. 値�
 
 #### 参照
 
-[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Right Padding](#right-padding)
+[上パディング](#上パディング) - [下パディング](#下パディング) - [右パディング](#右パディング)
 
 ---
 
@@ -362,19 +362,19 @@ Sets the padding between the left edge of the object and its text content. 値�
 
 ---
 
-## Right Padding
+## 右パディング
 
-Sets the padding between the right edge of the object and its text content. 値はピクセル単位です (デフォルトは 0)。
+オブジェクトの右端とそのテキストコンテンツの間のパディングを設定します。値はピクセル単位です (デフォルトは 0)。
 
 #### JSON 文法
 
-| 名称           | データタイプ  | とりうる値                                            |
-| ------------ | ------- | ------------------------------------------------ |
-| paddingRight | integer | Value in pixels (must be >=0) |
+| 名称           | データタイプ  | とりうる値                                       |
+| ------------ | ------- | ------------------------------------------- |
+| paddingRight | integer | ピクセル単位の値(0 以上でなければなりません) |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Text Area](text.md)
+[入力](input_overview.md) - [テキストエリア](text.md)
 
 #### コマンド
 
@@ -382,7 +382,7 @@ Sets the padding between the right edge of the object and its text content. 値�
 
 #### 参照
 
-[Top Padding](#top-padding) - [Bottom Padding](#bottom-padding) - [Left Padding](#left-padding)
+[上パディング](#上パディング) - [下パディング](#下パディング) - [左パディング](#左パディング)
 
 ---
 
@@ -496,19 +496,19 @@ RowHeights{5}:=3
 
 ---
 
-## Top Padding
+## 上パディング
 
-Sets the padding between the top edge of the object and its text content. 値はピクセル単位です (デフォルトは 0)。
+オブジェクトの上端とそのテキストコンテンツの間のパディングを設定します。値はピクセル単位です (デフォルトは 0)。
 
 #### JSON 文法
 
-| 名称         | データタイプ  | とりうる値                                            |
-| ---------- | ------- | ------------------------------------------------ |
-| paddingTop | integer | Value in pixels (must be >=0) |
+| 名称         | データタイプ  | とりうる値                                       |
+| ---------- | ------- | ------------------------------------------- |
+| paddingTop | integer | ピクセル単位の値(0 以上でなければなりません) |
 
 #### 対象オブジェクト
 
-[Input](input_overview.md) - [Text Area](text.md)
+[入力](input_overview.md) - [テキストエリア](text.md)
 
 #### コマンド
 
@@ -516,7 +516,7 @@ Sets the padding between the top edge of the object and its text content. 値は
 
 #### 参照
 
-[Bottom Padding](#bottom-padding) - [Left Padding](#left-padding) - [Right Padding](#right-padding)
+[下パディング](#下パディング) - [左パディング](#左パディング) - [右パディング](#右パディング)
 
 ---
 

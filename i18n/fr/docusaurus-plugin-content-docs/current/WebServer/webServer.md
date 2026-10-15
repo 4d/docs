@@ -8,7 +8,7 @@ title: Serveur Web
 
 :::warning Fonctionnalité obsolète
 
-L'utilisation du serveur web sur un 4D distant est **dépréciée** à partir de 4D 21. Il n'est plus recommandé d'utiliser cette fonctionnalité.
+L'utilisation du serveur web sur un 4D distant (4D client) est **dépréciée** à partir de 4D 21. Il est recommandé de ne plus utiliser cette fonctionnalité.
 
 :::
 
@@ -37,7 +37,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 - **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-- **Control of server resource usage** through [web server quotas](quotas.md) and options such as [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes).
+- **Contrôle de l'utilisation des ressources du serveur** grâce aux [quotas du serveur web](quotas.md) et à des options telles que le [nombre maximal de process web simultanés](webServerConfig.md#maximum-concurrent-web-processes).
 
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 

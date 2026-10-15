@@ -38,6 +38,7 @@ Vector objects are shared, immutable, and streamable.
 |[<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->|
 |[<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 |[<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->|
+|[<!-- INCLUDE #VectorClass.precision.Syntax -->](#precision)<br/><!-- INCLUDE #VectorClass.precision.Summary -->|
 |[<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->|
 
 
@@ -48,10 +49,11 @@ Vector objects are shared, immutable, and streamable.
 
 |Release|Changes|
 |---|---|
+|21 R5|New *precision* parameter 
 |20 R10|Added
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection {; precision : Integer} ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 <div class="no-index">
@@ -59,6 +61,7 @@ Vector objects are shared, immutable, and streamable.
 |Parameter|Type||Description|
 |---|---|---|---|
 |parameter|Collection|->|Collection of real numbers representing a vector|
+|precision|Integer|->|Vector precision: `mk single precision` (default) or `mk double precision`|
 |Result|4D.Vector|<-|New Vector object|
 </div>
 <!-- END REF -->
@@ -70,8 +73,17 @@ The `4D.Vector.new()` function <!-- REF #4D.Vector.new().Summary -->creates and 
 
 In *parameter*, pass a collection of real numbers representing the vector to create. These values are provided by artifical intelligences and represent mathematically objects like words or data.  
 
+In the *precision* optional parameter, you can pass the numeric precision you want to apply to the vector creation. You can use the following constants:
 
-#### Example
+|Constant|Value|Comment|
+|--------|-----|-------|
+|`mk single precision`|32|Single (32-bit) floating-point precision (default)|
+|`mk double precision`|64|Double (64-bit) floating-point precision|
+
+By default, if you omit the *precision* parameter, the vector is created with a 32-bit floating-point precision. A 32-bit floating-point precision reduces the storage footprint by half compared to 64-bit vectors while retaining enough precision for similarity and distance calculations, which is why it is the recommended default for most use cases.
+
+
+#### Example 1
 
 To create a vector:
 
@@ -84,6 +96,16 @@ You can access individual components or convert the entire vector back to a coll
 ```4d
 var $firstComponent := $vector[0]
 var $collection := $vector.toCollection()
+```
+
+#### Example 2
+
+To create a vector with a double floating-point precision:
+
+```4d
+var $col: Collection
+  //$col is filled by AI provider
+var $vector := 4D.Vector.new($col; mk double precision) 
 ```
 
 
@@ -318,6 +340,24 @@ ALERT("Nearest monument: "+$places[0].name)
 #### Description
 
 The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
+
+
+## .precision
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R5|Added 
+</details>
+
+
+<!-- REF #VectorClass.precision.Syntax -->**precision** : Integer<!-- END REF -->
+
+#### Description
+
+The `.precision` property contains <!-- REF #VectorClass.precision.Summary -->the precision value used to build the vector<!-- END REF -->: 32 (`mk single precision`, default) or 64 (`mk double precision`).
+
 
 
 ## .toCollection()

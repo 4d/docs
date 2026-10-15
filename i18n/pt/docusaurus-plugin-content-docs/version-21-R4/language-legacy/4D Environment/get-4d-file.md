@@ -1,4 +1,4 @@
-﻿---
+---
 id: get-4d-file
 title: Get 4D file
 slug: /commands/get-4d-file
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Get 4D file.Summary-->O comando **Get 4D file** devolve a rota de acesso ao arquivo de ambiente 4D especificado pelo parâmetro *arquivo*.<!-- END REF--> A rota será devolvida utilizando a sintaxe de sistema.
+<!--REF #_command_.Get 4D file.Summary-->O comando **Get 4D file** devolve a rota de acesso ao arquivo de ambiente 4D especificado pelo parâmetro *arquivo*.<!-- END REF--> A rota será devolvida utilizando a [sintaxe de sistema](../../Concepts/paths.md#platform-specific-syntax).
 
 Este comando lhe permite obter a rota de acesso real de arquivos específicos, cujo nome ou localização pode depender do contexto do banco de dados. Também lhe ajuda a escrever código genérico independente da versão 4D ou o sistema operativo.
 

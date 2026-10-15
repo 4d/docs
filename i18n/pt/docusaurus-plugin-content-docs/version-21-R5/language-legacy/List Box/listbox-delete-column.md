@@ -1,0 +1,57 @@
+﻿---
+id: listbox-delete-column
+title: LISTBOX DELETE COLUMN
+slug: /commands/listbox-delete-column
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( * ; *objeto* : Text ; *posiçaoCol* : Integer {; *numero* : Integer} )<br/>**LISTBOX DELETE COLUMN** ( *objeto* : Variable ; *posiçaoCol* : Integer {; *numero* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é a variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#8594; | Número de coluna a remover |
+| numero | Integer | &#8594; | Número de colunas a remover |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Renomear|
+|2004|Criado por|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->O comando LISTBOX DELETE COLUMN apaga uma ou mais colunas (visíveis ou não) no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
+
+**Nota:** este comando não faz nada se é aplicada a primeira coluna de um list box mostrado em modo hierárquico.
+
+Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (string). Se omitir este parâmetro, indica que o parâmetro *objeto* é uma variável. Nesse caso, não passa uma string, mas uma referência de variável. Para maior informação sobre nomes de objetos, consulte a seção . 
+
+Se não passa o parâmetro opcional *número*, o comando simplesmente elimina a coluna definida no parâmetro *posicaoCol*.   
+Do contrário, o parâmetro *número* indica o número de colunas a eliminar a direita começando desde a coluna *posicaoCol* (esta incluída). 
+
+Se o parâmetro *posicionCol* é maior que o número de colunas no list box, o comando não faz nada.
+
+## Ver também 
+
+[LISTBOX Get number of columns](../commands/listbox-get-number-of-columns)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 830 |
+| Thread-seguro | no |
+
+

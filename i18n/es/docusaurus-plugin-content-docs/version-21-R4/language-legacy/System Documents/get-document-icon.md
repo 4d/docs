@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET DOCUMENT ICON.Summary-->El comando GET DOCUMENT ICON devuelve en el campo o la variable imagen 4D *icono*, el icono del documento cuyo nombre o ruta de acceso se pasa en *rutaDoc*.<!-- END REF-->puede especificar un archivo de todo tipo (ejecutable, documento, atajo o alias, etc.) o una carpeta. 
+<!--REF #_command_.GET DOCUMENT ICON.Summary-->El comando GET DOCUMENT ICON devuelve en el campo o la variable imagen 4D *icono*, el icono del documento cuyo nombre o ruta de acceso se pasa en *rutaDoc*.<!-- END REF-->*rutaDoc* puede especificar un archivo de todo tipo (ejecutable, documento, atajo o alias, etc.) o una carpeta.
 
 Pase en *rutaDoc* la ruta de acceso absoluta del documento. Igualmente, puede pasar únicamente el nombre del documento o ruta de acceso relativa, en este caso el documento debe encontrarse en el directorio actual de la base (generalmente, la carpeta que contiene el archivo de estructura de la base).
 

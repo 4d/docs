@@ -1,0 +1,28 @@
+{
+  "doNotTranslate": [
+    "4D",
+    "ORDA",
+    "4D Server",
+    "4D View Pro",
+    "4D Write Pro",
+    "4D NetKit",
+    "Qodly",
+    "Qodly Studio"
+  ],
+  "fr": {
+    "project method": "méthode projet",
+    "entity selection": "entity selection"
+  },
+  "es": {
+    "project method": "método proyecto",
+    "entity selection": "entity selection"
+  },
+  "ja": {
+    "project method": "プロジェクトメソッド",
+    "entity selection": "エンティティセレクション"
+  },
+  "pt": {
+    "project method": "método de projeto",
+    "entity selection": "entity selection"
+  }
+}
