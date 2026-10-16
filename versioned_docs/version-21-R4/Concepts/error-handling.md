@@ -101,7 +101,7 @@ Within a custom error method, you have access to several pieces of information t
 :::
 
 - the [`Last errors`](../commands/last-errors) command that returns a collection of the current stack of errors that occurred in the 4D application. 
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process. 
+- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process. 
 
 
 #### Example
