@@ -12,20 +12,20 @@ Manejo de erros responde à duas necessidades principais:
 
 Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
-- [instalar un método de gestión de errores](#installing-an-error-handling-method), o
+- [instalar un método de gestão de erros](#installing-an-error-handling-method), o
 - use uma palavra-chave [`Try()`](#tryexpression) ou uma estrutura [`Try/Catch`](#trycatchend-try) antes de pedaços de código que chamem uma função, método ou expressão que possam lançar um erro.
 
 :::tip Boas práticas
 
-É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](.. ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Depuring/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
+É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando o servidor 4D não estiver executando [headless](../Admin/cli.md) (ou seja, inicializado com sua [janela de administração](../ServerWindow/overview.md)), este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor. No modo headless, erros são registrados no [arquivo 4DDebugLog](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
 
 :::
 
 ## Predictable vs unpredictable errors {#predictable-vs-unpredictable-errors}
 
-Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. They are not listed in the [`Last errors`](../commands/last-errors) collection. The error is only returned in the `status` and `statusText` properties of the returned object.
+Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. The error is only returned in the `status` and `statusText` properties of the returned object. It can be processed according to your business logic.
 
-The other category of errors are **unpredictable** errors, also named **serious errors**. They include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes). They interrupt the execution and trigger the error processing of the [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or [error-handling method](#installing-an-error-handling-method) features. They are listed in the [`Last errors`](../commands/last-errors.md) collection. They are listed in the [`Last errors`](../commands/last-errors) collection.
+The other category of errors are **unpredictable** errors, also named **serious errors**. They include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes). They interrupt the execution and trigger the error processing of the [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or [error-handling method](#installing-an-error-handling-method) features. They are listed in the [`Last errors`](../commands/last-errors.md) collection. Note that serious errors can also return values in the `status` and `statusText` properties, e.g. `dk status serious error` - "Other error".
 
 ## Instalação de um método de gestão de erros
 
@@ -36,7 +36,7 @@ Uma vez instalados, os manipuladores de erros são automaticamente chamados em m
 Para *instalar* um método de projeto de tratamento de erros, você só precisa chamar o comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) com o nome do método do projeto e (opcionalmente) o escopo como parâmetros. Por exemplo:
 
 ```4d
-ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
+ON ERR CALL("IO_Errors";ek local) //Instala um método local de tratamento de erros
 ```
 
 Para deixar de detectar erros para um contexto de execução e devolver o controle, chame `ON ERR CALL` com uma string vazia:
@@ -68,7 +68,9 @@ Um método de tratamento de erros pode ser definido para diferentes contextos de
 Exemplos:
 
 ```4d
-ON ERR CALL("IO_Errors";ek local) //Instala um método local de tratamento de erros ON ERR CALL("globalHandler";ek global) //Instala um método global de tratamento de erros ON ERR CALL("componentHandler";ek erros de componentes) //Instala um método de tratamento de erros de componentes
+ON ERR CALL("IO_Errors";ek local) //Instala um método local de tratamento de erros
+ON ERR CALL("globalHandler";ek global) //Instala um método global de tratamento de erros
+ON ERR CALL("componentHandler";ek errors from components) //Instala um método de tratamento de erros de componentes
 ```
 
 Pode instalar um gerenciador de erros global que servirá como "fallback" e métodos de erros locais específicos para certos processos. Um manipulador de erros global é também útil no servidor para evitar diálogos de erro no servidor quando executado com interface.
@@ -81,22 +83,23 @@ Quando ocorre um erro, apenas um método é chamado, como descrito no diagrama s
 
 ### Manejo de erros dentro do método
 
-Within the custom error method, you have access to several pieces of information that will help you identifying the error:
+Dentro de um método de erro personalizado, você tem acesso a várias informações que irão ajudá-lo a identificar o erro:
 
 - variáveis sistema (\*):
 
   - `Erro` (inteiro longo): código de erro
+  - `Error method` (text): nome do método que desencadeou o erro
   - `Error line` (entero largo): número de línea del método que ha provocado el error
   - `Linha de erro` (longin): número de linha no método que desencadeou o erro
   - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
 
 :::info
 
-4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
+4D automaticamente mantém várias variáveis chamadas [**variáveis de sistema**](variables.md#system-variables), para diferentes necessidades.
 :::
 
 - o comando [`Last errors`](../commands/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- o comando [`Call chain`](../commands/call-chain) que retorna uma coleção de objetos descrevendo cada etapa da cadeia de chamadas de métodos dentro do processo atual.
 
 #### Exemplo
 
@@ -121,12 +124,12 @@ Aqui está um sistema de gestão de erros simples:
 Se quiser que a caixa de diálogo fique escondida, pode instalar um método de gestão de erros vazio. A variável `Error` do sistema pode ser testada em qualquer método, ou seja, fora do método de gestão de erros:
 
 ```4d
-ERR CALL("emptyMethod") //vazityMethod existe mas está vazio
-$doc:=Open document( "myFile. xt")
-Se (Error=-43)
-	├ALERT("Arquivo não encontrado.")
-Finalize se
-NO ERR CALL("")
+ON ERR CALL("emptyMethod") //emptyMethod existe mas está vazio
+$doc:=Open document( "myFile.txt")
+If (Error=-43)
+	ALERT("File not found.")
+End if
+ON ERR CALL("")
 ```
 
 ## Try(expression)
@@ -226,8 +229,8 @@ O código colocado entre as palavras-chave `Try` e `Catch` é executado primeiro
 
 - Se nenhum erro for lançado, a execução do código continuará após a palavra-chave `End try` correspondente. O código colocado entre as palavras-chave `Catch` e `End try` não é executado.
 - Se a execução do bloco de código lançar um *erro não diferido*, o fluxo de execução é interrompido e o bloco de código `Catch` correspondente é executado.
-- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- Se o bloco de código chamar um método que lança um *erro diferido*, o fluxo de execução salta diretamente para o bloco de código `Catch` correspondente.
+- Se um erro diferido for lançado diretamente do bloco `Try`, o fluxo de execução continua até o final do bloco `Try` e não executa o bloco `Catch` correspondente.
 
 :::note
 
@@ -284,12 +287,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Códigos de erro
 
-Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw.md) no seu código, etc. An error is therefore defined by three elements:
+Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw.md) no seu código, etc. Um erro é, portanto, definido por três elementos:
 
 - um **assinatura do componente**, sendo a origem do erro (veja [`Last errors`](../commands/last-errors.md) para ter uma lista de assinaturas)
 - uma **mensagem**, que explica porque o erro ocorreu
 - um **código**, que é um número arbitrário retornado pelo componente
 
-A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário. Click on the **Copy** button to store detailed information related to the error in the pasteboard.
+A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário. Clique no botão **Copy** para armazenar informações detalhadas relacionadas ao erro na área de transferência.
 
 Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). Ao interceptar e tratar erros usando um [método de tratamento de erros](#installing-an-error-handling-method) em seus aplicativos finais, use [`Last errors`](../commands/last-errors.md) e certifique-se de registrar todas as propriedades do objeto *error*, pois os códigos de erro dependem dos componentes.
