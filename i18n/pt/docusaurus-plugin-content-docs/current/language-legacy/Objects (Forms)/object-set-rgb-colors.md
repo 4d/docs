@@ -1,11 +1,11 @@
-﻿---
+---
 id: object-set-rgb-colors
 title: OBJECT SET RGB COLORS
 slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Variable, Field ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer {; corBorda : Text, Integer}}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Variable, Field ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer {; corBorda : Text, Integer}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 <div class="no-index">
 
@@ -13,9 +13,10 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
 | objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| corPrimeiroPlano | Text, Integer | &#8594; | Valor de cor RGB para a cor de Primeiro Plano |
-| corFundo | Text, Integer | &#8594; | Valor RGB da cor de Fundo |
-| corFundoAlternativo | Text, Integer | &#8594; | Valor RGB da cor de fundo alternativa |
+| corPrimeiroPlano | Text, Integer | &#8594; | Valor de cor RGB para a cor de Primeiro Plano ("" = sem alteração)|
+| corFundo | Text, Integer | &#8594; | Valor RGB da cor de Fundo ("" = sem alteração)|
+| corFundoAlternativo | Text, Integer | &#8594; | Valor RGB da cor de fundo alternativa ("" = sem alteração)|
+| corBorda | Text, Integer | &#8594; | Valor RGB da cor da borda ("" = sem alteração)|
 </div>
 <!-- END REF-->
 
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Suporte ao parâmetro *corBorda*|
 |17 R6|Modificado|
 |14|Modificado|
 |12|Renomear|
@@ -35,18 +37,30 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->O comando OBJECT SET RGB COLORS modifica as cores de fundo e primeiro plano dos objetos especificados por objeto e o parâmetro opcional \*.<!-- END REF--> Quando o comando é aplicado a um objeto list box, um parâmetro adicional lhe permite modificar a cor alternativa das filas.
+<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->O comando OBJECT SET RGB COLORS modifica as cores de fundo e primeiro plano dos objetos especificados por objeto e o parâmetro opcional \*.<!-- END REF--> Dois outros parâmetros de cor podem estar disponíveis, dependendo de qual objeto o comando é aplicado.
 
   
-Se passa o parâmetro opcional \*, indica que o parâmetro objeto é um nome de objeto (string). Se não passa este parâmetro, indica que o parâmetro objeto é um campo ou uma variável. Neste caso, não passe uma referência de campo ou de variável ao invés de uma string. Para maior informação sobre nomes de objetos, consulte a seção *Propriedades dos objetos*  
+Se passa o parâmetro opcional \*, indica que o parâmetro objeto é um nome de objeto (string). Se não passa este parâmetro, indica que o parâmetro objeto é um campo ou uma variável. Neste caso, não passe uma referência de campo ou de variável ao invés de uma string. 
   
+
 O parâmetro opcional corFundoAlt lhe permite definir uma cor alternativa para o fundo das linhas pares. Este parâmetro só é utilizado quando o objeto é especificado como List box ou coluna de List box. Quando é utilizado este parâmetro, o parâmetro corFundo é utilizado para as linhas ímpares unicamente. A utilização de cores alternativos faz com que as listas sejam mais fáceis de ler.   
   
 Se objeto especifica um objeto List box, as cores alternativas são utilizadas em todo o List box. Se objeto especifica uma coluna da List box, só a coluna utilizará as cores definidas.
 
+
+O parâmetro opcional *corBorda* permite alterar a cor da borda em tempo de execução. Este parâmetro só pode ser aplicado a objetos que suportam a propriedade `borderColor`, e requer que o estilo da borda seja "plain" ou "dotted" (exceto para botões com estilo personalizado). Veja explicações detalhadas na seção ["Cor da Borda"](../../FormObjects/properties_BackgroundAndBorder.md#border-color).
+ 
+:::note
+
+O parâmetro *corBorda* não está disponível em bases de dados binárias.
+
+:::
+
+Você pode usar "" (string vazia) em *corPrimeiroPlano*, *corFundo*, *corFundoAlternativo* e/ou *corBorda* para deixá-los sem alteração.
+
 **Definição de cores**
 
-Os valores das cores RGB são indicados nos parâmetros *corPrimeirpoPlano*, *corFundo* e *corFundoAlt*. Os formatos abaixo são compatíveis:
+Os valores das cores RGB são indicados nos parâmetros *corPrimeirpoPlano*, *corFundo*, *corFundoAlt* e *corBorda*. Os formatos abaixo são compatíveis:
 
 | **Nombre del formato<br/>** | **Tipo**      | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **Ejemplos**                                                                                     |
 | ----------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -115,6 +129,24 @@ Muda o fundo transparente com uma cor de fonte clara:
 ```
 
 ![](../../assets/en/commands/pict1210702.en.png)
+
+
+## Exemplo 3
+
+Alterando apenas a cor da borda do list box:
+
+![](../../assets/en/commands/set-rgb-colors.png)
+
+
+```4d
+    //altera o estilo da borda para plain (padrão é system)
+OBJECT SET BORDER STYLE(*; "listOfDays"; Border Plain)
+    //define a cor da borda para vermelho
+OBJECT SET RGB COLORS(*; "listOfDays"; ""; ""; ""; "#ff0000")
+
+```
+
+![](../../assets/en/commands/set-rgb-colors-2.png)
 
 ## Ver também 
 
