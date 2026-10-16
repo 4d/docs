@@ -71,6 +71,7 @@ Supported properties depend on the list box type.
 |[Background Color](properties_BackgroundAndBorder.md#background-color--fill-color)|X|X|X|
 |[Bold](properties_Text.md#bold)|X|X|X|
 |[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)||X|X|
+|[Border color](./properties_BackgroundAndBorder.md#border-color)|X|X|X|
 |[Border Line Style](properties_BackgroundAndBorder.md#border-line-style)|X|X|X|
 |[Bottom](properties_CoordinatesAndSizing.md#bottom)|X|X|X|
 |[Class](properties_Object.md#css-class)|X|X|X|

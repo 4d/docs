@@ -313,6 +313,7 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 |4D|CSS|
 |---|---|
 |`borderStyle`|`border-style`|
+|`borderColor`|`border-color`|
 |`fill`|`background-color`|
 |`fontFamily`|`font-family`|
 |`fontSize`|`font-size`|
