@@ -98,7 +98,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 :::
 
 - el comando [`Last errors`](../commands/last-errors.md) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
-- el comando `Call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
+- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Ejemplo
 

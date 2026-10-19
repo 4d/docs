@@ -29,7 +29,7 @@ Par exemple, l'URL "*a/b/c*" appellera la méthode base, mais "*a/b/c.html*" n'a
 
 | Paramètres | Type |                             | Description                                                                 |
 | ---------- | ---- | :-------------------------: | --------------------------------------------------------------------------- |
-| $1         | Text | <- | Variable URL                                                                |
+| $1         | Text | <- | URL                                                                         |
 | $2         | Text | <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
 | $3         | Text | <- | Adresse IP du client web (navigateur)                    |
 | $4         | Text | <- | Adresse IP du serveur                                                       |

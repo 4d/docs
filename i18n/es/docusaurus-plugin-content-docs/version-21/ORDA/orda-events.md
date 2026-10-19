@@ -52,7 +52,7 @@ Las funciones ORDA [`constructor()`](./ordaClasses.md#class-constructor) se ejec
 
 :::
 
-Con otras configuraciones remotas (p. ej. [aplicaciones Qodly](https://developer.4d.com/qodly), [peticiones API REST](../REST/REST_requests.md), o peticiones a través de [`Open datastore`](../commands/open-datastore.md)), la función de evento `touched()` se ejecuta siempre **del lado del servidor**. Esto significa que tiene que asegurarse de que el servidor puede "ver" que se ha tocado un atributo para activar el evento (ver abajo).
+en **cliente/servidor sin la palabra clave `local`**, en una **[aplicación Qodly](https://developer.4d.com/qodly)** y **[datastore remoto](../commands/open-datastore.md)**: la entidad se recibe en el servidor 4D mientras se llama a una función ORDA (en la entidad o con la entidad como parámetro). Significa que puede que tenga que implementar una función *refresh* o *preview* en la aplicación remota que envía una petición ORDA al servidor y activa el evento.
 
 ### Tabla resumen
 

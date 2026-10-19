@@ -11,9 +11,9 @@ title: TLSプロトコル (HTTPS)
 
 ## 概要
 
-TLSプロトコル (SSLプロトコルの後継版) は 2つのアプリケーション、主に Webサーバーとブラウザー間でのデータ交換を保護するために設計されています。このプロトコルは幅広く使用されていて、多くの Webブラウザーとの互換性があります。
+TLSプロトコル (SSLプロトコルの後継版) は 2つのアプリケーション、主に Webサーバーとブラウザー間でのデータ交換を保護するために設計されています。このプロトコルは幅広く使用されていて、多くの Webブラウザーとの互換性があります。このプロトコルは幅広く使用されていて、多くの Webブラウザーとの互換性があります。
 
-ネットワークレベルにおいては、TLSプロトコルは TCP/IPレイヤー (低レベル) とHTTP高レベルプロトコルとの間に挿入されます。 TLS は主に HTTP で動作するように設計されました。
+ネットワークレベルにおいては、TLSプロトコルは TCP/IPレイヤー (低レベル) とHTTP高レベルプロトコルとの間に挿入されます。 TLS は主に HTTP で動作するように設計されました。 TLS は主に HTTP で動作するように設計されました。
 
 TLS を用いたネットワーク設定:
 
@@ -25,13 +25,13 @@ TLSプロトコルは、送信者と受信者を認証するために設計さ�
 - **機密性**: 送信データを暗号化します。そのため第三者はメッセージを解読することができません。
 - **整合性**: 受信データが偶発的にまたは故意に修正されることはありません。
 
-TLS は公開鍵暗号化技術を用います。 これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。秘密鍵はデータを暗号化するために使用されます。送信者 (Webサイト) は、それを誰にも渡しません。公開鍵は情報を復号化するために使用され、証明書を通して受信者 (Webブラウザー) へ送信されます。インターネットで TLS を使用する際、証明書は Verisign® などの認証機関を通して発行されます。 Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
+TLS は公開鍵暗号化技術を用います。 これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。秘密鍵はデータを暗号化するために使用されます。送信者 (Webサイト) は、それを誰にも渡しません。秘密鍵はデータを暗号化するために使用されます。送信者 (Webサイト) は、それを誰にも渡しません。公開鍵は情報を復号化するために使用され、証明書を通して受信者 (Webブラウザー) へ送信されます。インターネットで TLS を使用する際、証明書は Verisign® などの認証機関を通して発行されます。 Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
 
 > For more information on the encryption method and the public and private key issues, refer to the `ENCRYPT BLOB` command description.
 
 ## 最低バージョン
 
-デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。 You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
+デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。 You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
 
 You can control the level of security of your web server by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
 
@@ -43,7 +43,7 @@ You can control the level of security of your web server by defining the [minimu
 
 ![](../assets/en/WebServer/tls2.png)
 
-認証機関は複数の条件によって選択されます。認証機関が一般によく知られていると、証明書は多くのブラウザーによって許可されます。ただし、費用は高くなるかもしれません。
+認証機関は複数の条件によって選択されます。認証機関は複数の条件によって選択されます。認証機関が一般によく知られていると、証明書は多くのブラウザーによって許可されます。ただし、費用は高くなるかもしれません。
 
 デジタル証明書の取得:
 
@@ -51,7 +51,7 @@ You can control the level of security of your web server by defining the [minimu
 
 :::caution
 
-セキュリティ上の理由により、秘密鍵は常に機密でなければなりません。実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。 Webサーバーの場合、Key.pem ファイルは Projectフォルダーに保存されていなければなりません。
+セキュリティ上の理由により、秘密鍵は常に機密でなければなりません。実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。**警告**: セキュリティ上の理由により、秘密鍵は常に機密でなければなりません。実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。 Webサーバーの場合、Key.pem ファイルは Projectフォルダーに保存されていなければなりません。
 
 :::
 
@@ -66,7 +66,7 @@ You can control the level of security of your web server by defining the [minimu
 
 5. Place the “cert.pem” file in the [appropriate location](#installation-and-activation).
 
-4Dサーバーが保護モードで動作するようになります。証明書は 3ヶ月から1年間の間で有効です。
+4Dサーバーが保護モードで動作するようになります。証明書は通常、3ヶ月から1年間の間で有効です。証明書は 3ヶ月から1年間の間で有効です。
 
 ## インストールとアクティベーション
 
@@ -109,7 +109,7 @@ The installation of **key.pem** and **cert.pem** files makes it possible to use 
 
 ## Perfect Forward Secrecy (PFS)
 
-[PFS](https://ja.wikipedia.org/wiki/Forward_secrecy) は通信の中に新たなレイヤーのセキュリティを追加します。事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。
+[PFS](https://ja.wikipedia.org/wiki/Forward_secrecy) は通信の中に新たなレイヤーのセキュリティを追加します。事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。
 
 サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。このファイルの生成には数分間かかる可能性があります。 The file is placed with the [*key.pem* and *cert.pem* files](#installing-keypem-and-certpem-files).
 

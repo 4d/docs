@@ -24,7 +24,7 @@ title: OpenAIChatCompletionsStreamResult
 
 ### Propriétés surchargées
 
-| Propriété    | Type                            | Description                                                                                                      |
-| ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `success`    | [OpenAIChoice](OpenAIChoice.md) | Retourne `True` si le flux de données a été décodé avec succès en tant qu'objet.                 |
-| `terminated` | Boolean                         | Un booléen indiquant si la requête HTTP a été close, c'est-à-dire si `onTerminate` a été appelé. |
+| Propriété    | Type                            | Description                                                                                                                                                                  |
+| ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | Retourne `True` si le flux de données a été décodé avec succès en tant qu'objet.                                                                             |
+| `terminated` | Boolean                         | Un booléen indiquant si la requête HTTP a été close, c'est-à-dire si `onTerminate` a été appelé. c'est-à-dire si `onTerminate` a été appelé. |

@@ -17,7 +17,7 @@ Si ha utilizado tanto `$savedfilter` como [`$savedorderby`]($savedorderby.md) en
 
 ## Ejemplo
 
-En nuestro ejemplo, primero llamamos a \`\`$savedfilter\` con la llamada inicial para crear un conjunto de entidades como se muestra a continuación:
+En nuestro ejemplo, primero llamamos a \`\`$savedfilter\\` con la llamada inicial para crear un conjunto de entidades como se muestra a continuación:
 
 ` GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
 

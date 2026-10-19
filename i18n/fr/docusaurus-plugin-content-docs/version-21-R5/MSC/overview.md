@@ -19,7 +19,7 @@ Vous pouvez ouvrir le CSM en mode maintenance depuis deux emplacements :
 - **À partir de la boîte de dialogue standard d'ouverture de projet**
   La boîte de dialogue standard d'ouverture inclut l'option **Centre de sécurité de maintenance** dans le menu associé au bouton **Ouvrir** :
   ![](../assets/en/MSC/MSC_standardOpen.png)
-- Accès au CSM en mode standard Le projet ne sera pas ouvert par 4D.
+- Accès au CSM en mode standard Accès au CSM en mode standard Le projet ne sera pas ouvert par 4D.
 
 ## Accès au CSM en mode standard
 

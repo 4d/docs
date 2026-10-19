@@ -658,7 +658,7 @@ En un almacén de datos remoto:
 
 #### Descripción
 
-La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore<!-- END REF -->..
+La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore<!-- END REF -->...
 
 Para obtener más información sobre cómo se pueden crear contextos de optimización, consulte [optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
 
@@ -1143,11 +1143,12 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 - Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
   En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+  En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
   Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
-- Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro.Conserva las peticiones *reqNum* en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br/>
+- Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro.Conserva las peticiones *reqNum* en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br/>Conserva las peticiones *reqNum* en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br/>
 
 - Si no ha pasado ningún parámetro, el registro se inicia en la memoria. Si `.startRequestLog()` fue llamado previamente con un *reqNum* (antes de una `.stopRequestLog()`), los datos del registro se apilan en memoria hasta la próxima vez que se vacíe el registro o se llame a `.stopRequestLog()`.
 

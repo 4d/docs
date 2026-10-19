@@ -304,9 +304,9 @@ Sous Windows avec le thème UI classique, ce style n'est pas pris en charge.
 
 Le style de bouton Personnalisé permet d'utiliser une image d'arrière-plan personnalisée et de gérer des [propriétés supplémentaires](#additional-properties-for-custom-buttons) telles que [le décalage de l'icône](properties_TextAndPicture.md#icon-offset) et [les marges](properties_TextAndPicture.md#horizontal-margin).
 
-![](../assets/en/FormObjects/button_custom.png)
-
 #### Exemple JSON :
+
+![](../assets/en/FormObjects/button_custom.png)
 
 ```code
 	"myButton": {

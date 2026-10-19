@@ -64,6 +64,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color)                  | X              | X                  | X                                     |
 | [Negrita](properties_Text.md#bold)                                                                | X              | X                  | X                                     |
 | [Expresión del color de fondo](properties_BackgroundAndBorder.md#background-color-expression)     |                | X                  | X                                     |
+| [Border color](./properties_BackgroundAndBorder.md#border-color)                                  | X              | X                  | X                                     |
 | [Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style)                   | X              | X                  | X                                     |
 | [Inferior](properties_CoordinatesAndSizing.md#bottom)                                             | X              | X                  | X                                     |
 | [Clase](properties_Object.md#css-class)                                                           | X              | X                  | X                                     |

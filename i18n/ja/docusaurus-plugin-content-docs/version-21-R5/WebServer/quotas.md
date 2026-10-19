@@ -20,11 +20,11 @@ Web サーバークォータを使用して、トラフィック、リクエス�
 
 ### 開始時
 
-At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from an **HTTPQuotas.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+開始時に、ホストWeb サーバーまたはコンポーネントのWeb サーバーの[`WebServer.start()`](../API/WebServerClass.md#start) に渡したオブジェクトの`quotas` プロパティ内にてクォータを設定することができます。ホストWeb サーバーの場合に限り、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存された**HTTPQuotas.json** ファイルからクォータをロードすることもできます。ホストWeb サーバーの場合に限り、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存された**HTTPQuotas.json** ファイルからクォータをロードすることもできます。
 
-#### Using the `quotas` property
+#### `quotas` プロパティの使用
 
-Quotas can be defined using the `quotas` property in the *settings* parameter passed to the [`start()`](../API/WebServerClass.md#start) function.
+クォータは、[`start()`](../API/WebServerClass.md#start) 関数に渡した*settings* 引数内の`quotas` プロパティを使用して定義することが可能です。
 
 ```4d
 
@@ -34,9 +34,9 @@ $quotas.inBytesPerMin:=20000000
 WEB Server().start({quotas: $quotas})
 ```
 
-#### Using an HTTPQuotas.json file
+#### HTTPQuotas.json ファイルを使用して設定する
 
-For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+ホストWeb サーバーの場合、**HTTPQuotas.json** ファイルを作成し、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保管しておくことができます。 This file is loaded at startup by the host Web server. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
 
 ```json title="/Project/Sources/HTTPQuotas.json"
 {

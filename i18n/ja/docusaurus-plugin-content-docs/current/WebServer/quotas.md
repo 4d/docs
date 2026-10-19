@@ -20,7 +20,7 @@ Web サーバークォータを使用して、トラフィック、リクエス�
 
 ### 開始時
 
-開始時に、ホストWeb サーバーまたはコンポーネントのWeb サーバーの[`WebServer.start()`](../API/WebServerClass.md#start) に渡したオブジェクトの`quotas` プロパティ内にてクォータを設定することができます。ホストWeb サーバーの場合に限り、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存された**HTTPQuotas.json** ファイルからクォータをロードすることもできます。
+開始時に、ホストWeb サーバーまたはコンポーネントのWeb サーバーの[`WebServer.start()`](../API/WebServerClass.md#start) に渡したオブジェクトの`quotas` プロパティ内にてクォータを設定することができます。ホストWeb サーバーの場合に限り、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存された**HTTPQuotas.json** ファイルからクォータをロードすることもできます。ホストWeb サーバーの場合に限り、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存された**HTTPQuotas.json** ファイルからクォータをロードすることもできます。
 
 #### `quotas` プロパティの使用
 
@@ -36,7 +36,7 @@ WEB Server().start({quotas: $quotas})
 
 #### HTTPQuotas.json ファイルを使用して設定する
 
-ホストWeb サーバーの場合、**HTTPQuotas.json** ファイルを作成し、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保管しておくことができます。 This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
+ホストWeb サーバーの場合、**HTTPQuotas.json** ファイルを作成し、[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保管しておくことができます。 This file is loaded at startup by the host Web server. This file is loaded at startup by the host Web server. The file must contain a JSON object whose properties are [quota property names](../API/QuotaManagerClass.md):
 
 ```json title="/Project/Sources/HTTPQuotas.json"
 {

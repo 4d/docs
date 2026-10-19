@@ -352,7 +352,7 @@ La propriété `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.
 
 #### Description
 
-La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du body de la réponse<!-- END REF -->. .
+La propriété `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contient l'encodage du contenu du body de la réponse<!-- END REF -->. Cette propriété n'est disponible que si le [`dataType`](#datatype) est "text".
 
 Cette propriété est en **lecture seule**.
 
@@ -368,7 +368,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La propriété `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contient l'encodage du contenu du body de la réponse<!-- END REF -->. Cette propriété n'est disponible que si le [`dataType`](#datatype) est "text".
+La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du body de la réponse<!-- END REF -->. . Cette propriété n'est disponible que si le [`dataType`](#datatype) est "text".
 
 Cette propriété est en **lecture seule**.
 

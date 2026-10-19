@@ -1026,7 +1026,7 @@ Le paramètre facultatif *options* vous permet de passer un objet définissant d
 
 > - La fonction génère une erreur et retourne **Null** si *msgID* désigne un message non existant,
 > - Si aucune boite de réception n'est sélectionnée avec la [fonction `.selectBox()`](#selectbox), une erreur est générée,
-> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\\`.
+> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\\\`.
 
 #### Résultat
 
@@ -1128,10 +1128,10 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 
 `.getMails()` retourne un objet contenant les collections suivantes :
 
-| Propriété | Type       | Description                                                                                                                                                                                                                                                                                                                                   |
-| --------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| list      | Collection | Collection d'[objets Email](EmailObjectClass.md#objet-email). Si aucun objet Email n'est trouvé, une collection vide est retournée.                                                                                                                                                                           |
-| notFound  | Collection | Collection de :<br/><ul><li>première syntaxe - ID de messages passés précédemment qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas.</li></ul>Une collection vide est renvoyée si tous les messages ont été trouvés. |
+| Propriété | Type       | Description                                                                                                                                                                                                                                                                                                                                    |
+| --------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| list      | Collection | Collection d'[objets Email](EmailObjectClass.md#objet-email). Si aucun objet Email n'est trouvé, une collection vide est retournée.                                                                                                                                                                            |
+| notFound  | Collection | Collection de :<br/><ul><li>première syntaxe - ID de messages passés précédemment qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas.</li> </ul>Une collection vide est renvoyée si tous les messages ont été trouvés. |
 
 #### Exemple
 
@@ -1632,7 +1632,7 @@ End if
 
 > Cette fonction est basée sur la spécification du [protocole IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->. .
+La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->. . .
 
 *searchCriteria* est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
 

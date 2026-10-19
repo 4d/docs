@@ -115,7 +115,7 @@ Cette propriété désigne le [formulaire à hériter](forms.md#inherited-forms)
 
 Pour hériter d'un formulaire table, définissez la table dans la propriété [Table du formulaire hérité](#inherited-form-table).
 
-Pour supprimer l'héritage, sélectionnez \<Aucun>\\` dans la liste des propriétés (ou " " en JSON).
+Pour supprimer l'héritage, sélectionnez \<Aucun>\\\` dans la liste des propriétés (ou " " en JSON).
 
 #### Grammaire JSON
 
@@ -129,7 +129,7 @@ Pour supprimer l'héritage, sélectionnez \<Aucun>\\` dans la liste des proprié
 
 Cette propriété spécifie la table de la base de données à partir de laquelle [hériter d'un formulaire](forms.md#inherited-forms) dans le formulaire courant.
 
-Fixé à \<Aucun>\\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
+Fixé à \<Aucun>\\\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
 
 #### Grammaire JSON
 

@@ -22,7 +22,7 @@ title: VP Get table dirty rows
 | Parámetros | Tipo       |                             | Descripción                                                                                                          |
 | ---------- | ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                                                                         |
-| tableName  | Text       | ->                          | Nombre de la tabla                                                                                                   |
+| tableName  | Text       | ->                          | Table name                                                                                                           |
 | reset      | Boolean    | ->                          | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |
 | sheet      | Integer    | ->                          | Índice de la hoja (hoja actual si se omite)                                                       |
 | Resultado  | Collection | <- | Colección de objetos con todos los elementos modificados desde el último reinicio                                    |

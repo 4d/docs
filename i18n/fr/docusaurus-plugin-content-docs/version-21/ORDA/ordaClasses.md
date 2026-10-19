@@ -32,7 +32,7 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -268,7 +268,7 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - Ne donnez pas le même nom à une table 4D et à une [classe utilisateur](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
   - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
@@ -282,7 +282,7 @@ Lors de la création ou de la modification de classes de modèles de données, v
 Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :
 
 - dans **des process préemptifs ou coopératifs** (en fonction du process appelant) dans les applications monoposte,
-- dans des **process préemptifs** dans les applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas cela dépend du process d'appel comme en mono-utilisateur).
+- dans **des process préemptifs** dans des applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas il dépend du process appelant comme dans le cas d'un monoposte).
 
 Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).
 
@@ -1089,7 +1089,7 @@ Par défaut dans l'architecture client/serveur, les fonctions de modèle de donn
 Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
 
 ```4d
-// déclarer une fonction à exécuter localement en client/serveur
+// déclarer une fonction à exécuter localement en client/serveur 
 local Function <functionName>   
 ```
 
@@ -1100,10 +1100,10 @@ Avec ce mot-clé, la fonction sera toujours exécutée côté client.
 A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
-// Trouver les étudiants les plus jeunes  
+// Obtenir les élèves les plus jeunes  
 // Utilisation inappropriée du mot-clé local
 local Function getYoungest
-	var $0 : Object
+    var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
@@ -1169,7 +1169,7 @@ End if
 
 ### Fichiers de classe (class files)
 
-Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
+Une classe utilisateur ORDA du modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
 
 ### Créer des classes
 

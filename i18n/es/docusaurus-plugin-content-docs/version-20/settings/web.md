@@ -19,7 +19,7 @@ Indica si el servidor web aceptará o no conexiones no seguras. Ver [Activar HTT
 
 #### Puerto HTTP
 
-Número de puerto IP (TCP) de escucha para HTTP. Número de puerto IP (TCP) de escucha para HTTP.
+Número de puerto IP (TCP) de escucha para HTTP. Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
 #### Dirección IP
 

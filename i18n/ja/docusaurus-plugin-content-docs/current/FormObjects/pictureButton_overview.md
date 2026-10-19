@@ -3,7 +3,7 @@ id: pictureButtonOverview
 title: ピクチャーボタン
 ---
 
-ピクチャーボタンは [標準のボタン](button_overview.md) と似ていますが、 3つの状態 (有効、無効、クリック) を持てる標準ボタンとは異なり、ピクチャーボタンでは、その名前が表わすようにそれぞれの状態を別々のピクチャーにより表わします。
+ピクチャーボタンは [標準のボタン](button_overview.md) と似ていますが、 3つの状態 (有効、無効、クリック) を持てる標準ボタンとは異なり、ピクチャーボタンでは、その名前が表わすようにそれぞれの状態を別々のピクチャーにより表わします。 3つの状態 (有効、無効、クリック) を持てる標準ボタンとは異なり、ピクチャーボタンでは、その名前が表わすようにそれぞれの状態を別々のピクチャーにより表わします。
 
 ピクチャーボタンは、次の 2つの方法で使用します:
 
@@ -43,9 +43,9 @@ title: ピクチャーボタン
 
 ## アニメーション
 
-ピクチャーボタンは、標準的な配置や見た目の設定以外にも、表示モードと動作モードを指定する専用プロパティを設定することができます。これらのオプションは組み合わせて使用することができます。
+ピクチャーボタンは、標準的な配置や見た目の設定以外にも、表示モードと動作モードを指定する専用プロパティを設定することができます。これらのオプションは組み合わせて使用することができます。これらのオプションは組み合わせて使用することができます。
 
-- デフォルト ([アニメーションオプション](properties_Animation.md) 未選択) の場合、ユーザーがクリックすると、系列中の次のピクチャーを表示します。**Shift** キーを押しながらクリックすると、系列中の前のピクチャーを表示します。系列中の最後のピクチャーに到達すると、もう一度クリックしてもピクチャーは変わりません。つまりこの設定では、系列中の最初のピクチャーへ一巡して戻ることはありません。
+- デフォルト ([アニメーションオプション](properties_Animation.md) 未選択) の場合、ユーザーがクリックすると、系列中の次のピクチャーを表示します。**Shift** キーを押しながらクリックすると、系列中の前のピクチャーを表示します。系列中の最後のピクチャーに到達すると、もう一度クリックしてもピクチャーは変わりません。つまりこの設定では、系列中の最初のピクチャーへ一巡して戻ることはありません。系列中の最後のピクチャーに到達すると、もう一度クリックしてもピクチャーは変わりません。つまりこの設定では、系列中の最初のピクチャーへ一巡して戻ることはありません。
 
 次のモードを選択することができます:
 
@@ -56,11 +56,11 @@ title: ピクチャーボタン
 - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
 - [アニメーション間隔 (秒)](./properties_Animation.md#アニメーション間隔-秒)
 
-> ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
+> ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。このテーブル内のピクチャー番号は 0 から始まります。
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [パス名](properties_Picture.md#パス名) - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新) - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る) - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果) - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用) - [アニメーション間隔 (tick)](properties_Animation.md#アニメーション間隔-tick) - [行](properties_Crop.md#行) - [列](properties_Crop.md#列) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [ショートカット](properties_Entry.md#ショートカット) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [イタリック](properties_Text.md#イタリック) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
+[Border color](./properties_BackgroundAndBorder.md#border-color) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Switch back when released](properties_Animation.md#switch-back-when-released) - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks) - [Switch every x seconds](properties_Animation.md#switch-every-x-seconds) - [Title](properties_Object.md#title) - [Switch when roll over](properties_Animation.md#switch-when-roll-over) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## サポートされるイベント
 

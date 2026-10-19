@@ -1700,7 +1700,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### Descripción
 
-La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->..
+La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->...
 
 En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 

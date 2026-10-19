@@ -16,6 +16,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece un objeto de interfaz a una 
 | [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<br/><!-- INCLUDE #DataClassClass.get().Summary -->                                                          |
 | [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<br/><!-- INCLUDE #DataClassClass.getCount().Summary -->                                           |
 | [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<br/><!-- INCLUDE #DataClassClass.getDataStore().Summary -->                               |
+| [<!-- INCLUDE #DataClassClass.getIndexes().Syntax -->](#getindexes)<br/><!-- INCLUDE #DataClassClass.getIndexes().Summary -->                                     |
 | [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataClassClass.getInfo().Summary -->                                              |
 | [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<br/><!-- INCLUDE #DataClassClass.getRemoteCache().Summary -->                         |
 | [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<br/><!-- INCLUDE #DataClassClass.new().Summary -->                                                          |
@@ -619,6 +620,77 @@ El método proyecto ***SearchDuplicate*** busca valores duplicados en cualquier 
 
  $dataStore:=$pet.getDataClass().getDataStore()
  $duplicates:=$dataStore[$dataClassName].query("name=:1";$pet.name)
+```
+
+<!-- END REF -->
+
+<!-- REF DataClassClass.getIndexes().Desc -->
+
+## .getIndexes()
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 21 R5       | Añadidos       |
+
+</details>
+
+<!-- REF #DataClassClass.getIndexes().Syntax -->**.getIndexes()** : Collection <!-- END REF -->
+
+<!-- REF #DataClassClass.getIndexes().Params -->
+
+<div class="no-index">
+
+| Parámetros | Tipo       |                             | Descripción                 |
+| ---------- | ---------- | --------------------------- | --------------------------- |
+| Resultado  | Collection | <- | Collection of index objects |
+
+</div>
+<!-- END REF -->
+
+#### Descripción
+
+The `.getIndexes()` function <!-- REF #DataClassClass.getIndexes().Summary -->returns a collection of all indexes related to the dataclass<!-- END REF -->.
+
+Each index is an object of the collection. Indexes are returned in the creation/modification order. An empty collection is returned if there is no index in the dataclass.
+
+**Colección devuelta**
+
+Each object of the returned collection has the following properties:
+
+| Propiedad  | Tipo       | Descripción                                                                                                                                                                                                                                                 |
+| ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | Integer    | Index type: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean. If the index is set to Automatic, the type property represents the type of the indexing algorithm used |
+| automatic  | Boolean    | True if "automatic" index is selected                                                                                                                                                                                                                       |
+| name       | Text       | Index name if defined                                                                                                                                                                                                                                       |
+| kind       | Text       | "keywords" if *keyword index* checked, otherwise "regular"                                                                                                                                                                                                  |
+| attributes | Collection | Index attribute or list of attributes (for composite index)                                                                                                                                                                              |
+| UUID       | Text       | Index UUID                                                                                                                                                                                                                                                  |
+| uniqueKey  | Boolean    | True if index has the Unique key property                                                                                                                                                                                                                   |
+
+:::tip Entrada de blog relacionada
+
+[Managing 4D Indexes Programmatically with getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
+
+:::
+
+#### Ejemplo
+
+Considering the following table:
+
+![table-indexes](../assets/en/API/table-index.png)
+
+```4d
+
+var $colIndex:=ds.Products.getIndexes()
+
+//$colIndex[0]={"automatic":true,"kind":"regular","type":1,"uniqueKey":true,"UUID":"ADE...","attributes":["ID"]}
+//$colIndex[1]={"automatic":true,"kind":"regular","type":1,"uniqueKey":false,"UUID":"00D...","attributes":["name"]}
+//$colIndex[2]={"name":"Description","automatic":false,"kind":"keywords","type":-1,"uniqueKey":false,"UUID":"37B...","attributes":["description"]}
+//$colIndex[3]={"automatic":false,"kind":"regular","type":5,"uniqueKey":false,"UUID":"618...","attributes":["embedding"]}
+//$colIndex[4]={"automatic":true,"kind":"regular","type":3,"uniqueKey":false,"UUID":"297...","attributes":["embedding"]}
+//$colIndex[5]={"automatic":false,"kind":"regular","type":4,"uniqueKey":false,"UUID":"EA8...","attributes":["embedding"]}
 ```
 
 <!-- END REF -->
@@ -1700,7 +1772,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### Descripción
 
-La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->..
+La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->...
 
 En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 

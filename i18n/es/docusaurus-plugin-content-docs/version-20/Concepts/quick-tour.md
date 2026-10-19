@@ -35,7 +35,7 @@ Debe distinguir el operador de asignación := de los demás operadores. En lugar
 
 ## Variables
 
-El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave <code>var</code>.
+El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave <code>var</code>.
 
 ```4d
 var MyDate : Date

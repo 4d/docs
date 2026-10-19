@@ -969,7 +969,7 @@ El parámetro opcional *options* permite pasar un objeto que define las instrucc
 
 > - La función genera un error y devuelve **Null** si *msgID* designa un mensaje inexistente,
 > - Si no se selecciona ningún buzón con la función [`.selectBox()`](#selectbox), se genera un error,
-> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\\`.
+> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\\\`.
 
 #### Resultado
 
@@ -1059,10 +1059,10 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 **Options**
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                  |
-| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | Boolean | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: True |
-| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True                                                                           |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                                        |
+| ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True |
+| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True |
 
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).

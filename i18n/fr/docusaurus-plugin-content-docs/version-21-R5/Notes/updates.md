@@ -12,6 +12,10 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Prise en charge de la signature S/MIME des e-mails grâce aux nouvelles propriétés de la classe [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) : [`.certificate`](../API/SMTPTransporterClass.md#certificate) ou [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (fourniture du certificat), et [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - Vous pouvez désormais [compiler un composant directement depuis l'hôte](../Project/compiler.md#compile-components).
 - Prise en charge des formulaires liste par le [**rendu Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows.
+- Champs 4D.Vector : [nouvelle icône spécifique](../Develop/field-properties.md#4dvector-class) et nouveaux [types d'index vectoriels dédiés](../Develop/structure-indexes.md#vector-index).
+- Prise en charge des index vectoriels dans les commandes 4D [`CREATE INDEX`](../commands/create-index) et [`SET INDEX`](../commands/set-index).
+- Nouvelle fonction [dataClass.getIndexes()](../API/DataClassClass.md#getindexes).
+- Nouvelle [propriété `.precision`](../API/VectorClass.md#precision) dans les objets de la classe `4D.Vector`.
 - Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
 - Nouvelle propriété [`WebServer.quotas`](../API/WebServerClass.md#quotas) et classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) étendue pour configurer les [quotas du serveur Web](../WebServer/quotas.md).
 - Objets Zone de texte et Zone de saisie : nouvelles propriétés [marge supérieure](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [marge inférieure](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [marge gauche](../FormObjects/properties_CoordinatesAndSizing.md#left-padding) et [marge droite](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) avec [prise en charge CSS](../FormEditor/createStylesheet.md#attribute-mapping) correspondante. Prise en charge de l'[alignement vertical](../FormObjects/properties_Text.md#vertical-alignment).
@@ -24,6 +28,12 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 #### Changements de comportement
 
 - Par souci de cohérence, la propriété **corner radius** a été déplacée de la section ["Coordonnées et dimensions"](../FormObjects/properties_CoordinatesAndSizing.md) vers la section ["Arrière-plan et bordure"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) de la liste des propriétés.
+
+:::warning Précision par défaut des vecteurs
+
+Dans 4D 21 R5 et les versions ultérieures, les vecteurs sont créés avec une [précision de 32 bits par défaut](../API/VectorClass.md#4dvectornew). Dans les versions précédentes, seule la précision 64 bits était disponible. Si vous rouvrez avec une version antérieure un projet contenant des vecteurs créés dans 4D 21 R5 ou suivante avec la précision par défaut (ou explicitement définie sur 32 bits), ces vecteurs seront vides et leurs valeurs seront perdues.
+
+:::
 
 ## 4D 21 R4
 
