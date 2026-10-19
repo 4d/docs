@@ -5,7 +5,7 @@ title: Authentification unique (SSO)
 
 4D Server vous permet d'implémenter des solutions d'authentification unique (*Single Sign On* ou *SSO*) dans vos applications client-serveur sous Windows.
 
-Grâce au SSO, vous pouvez mettre en place des solutions permettant aux utilisateurs sous Windows d'accéder directement aux applications 4D Server, sans avoir à saisir leurs identifiants, lorsqu'ils sont déjà connectés au domaine Windows de leur entreprise (via Active Directory).  En coulisses, l'application 4D Server délègue l'authentification à Active Directory et récupère l'identifiant de session Windows, que vous pouvez utiliser pour identifier l'utilisateur 4D dans votre application à l'aide de votre méthode standard de connexion.
+Grâce au SSO, vous pouvez mettre en place des solutions permettant aux utilisateurs sous Windows d'accéder directement aux applications 4D Server, sans avoir à saisir leurs identifiants, lorsqu'ils sont déjà connectés au domaine Windows de leur entreprise (via Active Directory). En coulisses, l'application 4D Server délègue l'authentification à Active Directory et récupère l'identifiant de session Windows, que vous pouvez utiliser pour identifier l'utilisateur 4D dans votre application à l'aide de votre méthode standard de connexion.
 
 ## Conditions requises
 
@@ -51,7 +51,7 @@ Dans les applications 4D, il est possible de configurer le SPN :
 
 Une fois que la fonctionnalité SSO est activée, vous pouvez vous appuyer sur l'authentification de l'utilisateur de la session Windows pour ouvrir une session utilisateur sur 4D Server.
 
-Il est important de comprendre que la fonctionnalité SSO vous fournit uniquement un nom d'utilisateur authentifié (login), que vous devez ensuite passer à votre méthode de connexion 4D standard.  Lorsqu'une application distante 4D tente de se connecter au serveur, vous devez appeler la commande [`Current client authentication`](../commands/current-client-authentication), qui renvoie l'identifiant de connexion de l'utilisateur, tel qu'il est défini dans Active Directory. Vous pouvez ensuite transmettre ces identifiants à votre propre système d'authentification (en utilisant les utilisateurs et groupes intégrés, les commandes LDAP ou tout autre mécanisme personnalisé) afin d'ouvrir la session appropriée pour l'utilisateur distant dans votre application 4D.
+Il est important de comprendre que la fonctionnalité SSO vous fournit uniquement un nom d'utilisateur authentifié (login), que vous devez ensuite passer à votre méthode de connexion 4D standard. Lorsqu'une application distante 4D tente de se connecter au serveur, vous devez appeler la commande [`Current client authentication`](../commands/current-client-authentication), qui renvoie l'identifiant de connexion de l'utilisateur, tel qu'il est défini dans Active Directory. Vous pouvez ensuite transmettre ces identifiants à votre propre système d'authentification (en utilisant les utilisateurs et groupes intégrés, les commandes LDAP ou tout autre mécanisme personnalisé) afin d'ouvrir la session appropriée pour l'utilisateur distant dans votre application 4D.
 
 Ces principes sont décrits dans le schéma suivant :
 

@@ -323,7 +323,7 @@ Comme tous les process, chaque procédure stockée, méthode base et trigger a s
 
 - Ensembles/Sélections temporaires process : Un objet process n'est "visible" que par le process dans lequel il a été créé et, s'il a été créé dans un process client, par le process "jumeau" créé sur le serveur. Les ensembles process sont effacés dès que la méthode process est terminée. Les objets process n'ont pas besoin de préfixe spécial dans le nom.
 - Ensembles/Sélections temporaires interprocess (*obsolète*): Un objet interprocessus est visible pour tous les process sur la machine (client ou serveur) où il a été créé. Un objet est interprocess lorsque son nom est préfixé des symboles (\<>) — le signe “inférieur à” suivi du signe “supérieur à”.
-- Ensembles/Sélections temporaires locaux/clients : Un objet local/client est visible uniquement dans le process qui l'a créé.  Le nom d'un objet local/client est préfixé du symbole dollar ($).
+- Ensembles/Sélections temporaires locaux/clients : Un objet local/client est visible uniquement dans le process qui l'a créé. Le nom d'un objet local/client est préfixé du symbole dollar ($).
   Note: Bien que son nom ne commence pas par un `$`, l'ensemble système `UserSet` est un ensemble local/client.
 
 Le tableau suivant indique les principes de visibilité des sélections temporaires et des ensembles en fonction de leur lieu de création (le tableau est identique pour les deux types d’objets) :

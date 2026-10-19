@@ -19,15 +19,15 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 ## プリエンプティブモード
 
-4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
+4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> インタープリター版の Webコードをサーバーマシン側でデバッグするためには、デバッガーが[サーバー側で有効化されている](../Debugging/debugging-remote.md) かあるいは [リモートマシン側で有効化されている](../Debugging/debugging-remote.md) ことを確認してください。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> インタープリター版の Webコードをサーバーマシン側でデバッグするためには、デバッガーが[サーバー側で有効化されている](../Debugging/debugging-remote.md) かあるいは [リモートマシン側で有効化されている](../Debugging/debugging-remote.md) ことを確認してください。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 
 ## 例題
 
-この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
+この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
 
 htmlログインページ:
 

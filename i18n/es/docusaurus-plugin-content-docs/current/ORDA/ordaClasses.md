@@ -334,7 +334,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\`__STAMP
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\\`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Notas
@@ -803,7 +803,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 Un atributo **alias** se crea sobre otro atributo del modelo de datos, denominado **atributo de destino**. El atributo de destino puede pertenecer a una clase de datos relacionada (disponible a través de todo número de niveles de relación) o a la misma clase de datos. Un atributo alias no almacena ningún dato, sino la ruta a su atributo de destino. Puede definir tantos atributos de alias como desee en una clase de datos.
 
-Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
+Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
 
 ### Cómo definir los atributos alias
 

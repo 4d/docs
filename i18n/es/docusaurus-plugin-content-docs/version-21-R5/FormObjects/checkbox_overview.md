@@ -126,7 +126,7 @@ El estilo plano del botón casilla de selección tiene una apariencia minimalist
 			}
 ```
 
-The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-check-boxes): the [Three-States](properties_Display.md#three-states) property.
+El estilo Plano ofrece una [propiedad adicional](#additional-properties-for-flat-and-regular-check-boxes): la propiedad [Tres estados](properties_Display.md#three-states).
 
 ### Botón barra de herramientas
 

@@ -379,6 +379,8 @@ Dans ce mode :
 
 - La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l’objet effectivement imprimé peut être obtenue via la commande `LISTBOX GET PRINT INFORMATION`.
 - L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
+  L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
+  Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) avant de lancer l'impression, la première ligne imprimée dans la zone de liste sera celle désignée par la commande.
   Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande `OBJECT SET SCROLL POSITION` avant de lancer l’impression, la première ligne imprimée dans la list box sera celle désignée par la commande.
 - Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande `LISTBOX GET PRINT INFORMATION` permet de contrôler le statut de l’impression durant l'opération.
 

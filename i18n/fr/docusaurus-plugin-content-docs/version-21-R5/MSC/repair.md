@@ -55,7 +55,7 @@ La zone "Enregistrements trouvés dans le fichier de données" comporte deux tab
   - La colonne **Ordre** indique l’ordre de récupération des groupes d’enregistrements.
   - La colonne **Nombre** indique le nombre d'enregistrements contenus dans la table.
   - Si tous les enregistrements et toutes les tables ont été attribués, seule la zone principale est affichée. Les noms des tables attribuées automatiquement sont affichés en caractères verts. Les groupes qui n'ont pas encore été attribués, c'est-à-dire, les tables qui n'ont pas pu être associées à des enregistrements sont affichées en caractères rouges.
-  - Voir le compte rendu Par défaut, l’option est cochée pour tous les groupes avec les enregistrements qui peuvent être associés à une table.
+  - Voir le compte rendu Voir le compte rendu Par défaut, l’option est cochée pour tous les groupes avec les enregistrements qui peuvent être associés à une table.
 
 - Le deuxième tableau liste les tables du fichier de structure.
 

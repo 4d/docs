@@ -104,7 +104,7 @@ Se pueden crear formatos de fecha personalizados utilizando varios patrones desc
 
 :::note blankIfNull
 
-- La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Por defecto, una [fecha nula](../Concepts/dt_date.md#date-literals) se muestra con ceros, por ejemplo, 00/00/00. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Con la opción "blankIfNull", una fecha null se muestra como un área vacía.
+- Por defecto, una hora null se muestra con ceros, por ejemplo "00:00:00". Con la opción "blankIfNull", una hora null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "MM_SS blankIfNull" o "hh:mm aa blankIfNull"
 - Las [columnas list box](listbox-column.md) y los [pies List box](listbox-header-footer.md#footers) de tipo fecha utilizan siempre el comportamiento "blank if null" (no se puede desactivar).
 
 :::
@@ -392,7 +392,7 @@ Se pueden crear formatos de hora personalizados utilizando varios patrones descr
 
 :::note blankIfNull
 
-Por defecto, una hora null se muestra con ceros, por ejemplo "00:00:00". Con la opción "blankIfNull", una hora null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "MM_SS blankIfNull" o "hh:mm aa blankIfNull"
+La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Por defecto, una [fecha nula](../Concepts/dt_date.md#date-literals) se muestra con ceros, por ejemplo, 00/00/00. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Con la opción "blankIfNull", una fecha null se muestra como un área vacía.
 
 :::
 

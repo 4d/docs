@@ -3,7 +3,6 @@ id: forms
 title: Página formulario
 ---
 
- 
 Esta página le permite establecer el funcionamiento y la visualización por defecto del editor de formularios 4D.
 
 ## Mover
@@ -18,14 +17,14 @@ Esta opción permite establecer el valor (en puntos) del paso utilizado para mov
 
 Esta opción permite definir el funcionamiento del editor de formularios cuando se mueve un objeto con el ratón más allá de los límites de la ventana.
 
-*   **Provocar un desplazamiento automático**: cuando esta opción está marcada, esta acción provoca el desplazamiento del formulario en la ventana, como si se hiciera clic en las barras de desplazamiento. Este comportamiento es útil para mover los objetos en los formularios de gran tamaño.
-*   **Comenzar un arrastrar y soltar**: cuando se marca esta opción, esta acción se interpreta como un arrastrar y soltar. La ventana del formulario no se modifica y el objeto desplazado puede colocarse en otra ventana (si su contenido es compatible), por ejemplo, en otro formulario. Este funcionamiento es útil para reciclar los objetos entre varios formularios o para utilizar las librerías de objetos (ver [Crear y utilizar librerías de objetos personalizadas](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
+- **Provocar un desplazamiento automático**: cuando esta opción está marcada, esta acción provoca el desplazamiento del formulario en la ventana, como si se hiciera clic en las barras de desplazamiento. Este comportamiento es útil para mover los objetos en los formularios de gran tamaño.
+- **Comenzar un arrastrar y soltar**: cuando se marca esta opción, esta acción se interpreta como un arrastrar y soltar. La ventana del formulario no se modifica y el objeto desplazado puede colocarse en otra ventana (si su contenido es compatible), por ejemplo, en otro formulario. Este funcionamiento es útil para reciclar los objetos entre varios formularios o para utilizar las librerías de objetos (ver [Crear y utilizar librerías de objetos personalizadas](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
 
 Puede configurar esta opción en función de sus hábitos de trabajo y necesidades de desarrollo.
 
 ### Activar alineación automática por defecto
 
-Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
+Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios. Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios.
 
 ## Nueva visualización por defecto del formulario
 

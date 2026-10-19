@@ -35,28 +35,31 @@ Los objetos vectoriales son compartidos, inmutables y transmisibles.
 | [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
+| [<!-- INCLUDE #VectorClass.precision.Syntax -->](#precision)<br/><!-- INCLUDE #VectorClass.precision.Summary -->                             |
 | [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R10      | Añadidos       |
+| Lanzamiento | Modificaciones            |
+| ----------- | ------------------------- |
+| 21 R5       | New *precision* parameter |
+| 20 R10      | Añadidos                  |
 
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection {; precision : Integer} ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 
 <div class="no-index">
 
-| Parámetros | Tipo                      |                             | Descripción                                           |
-| ---------- | ------------------------- | --------------------------- | ----------------------------------------------------- |
-| parámetros | Collection                | ->                          | Colección de números reales que representan un vector |
-| Resultado  | 4D.Vector | <- | Nuevo objeto vector                                   |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                   |
+| ---------- | ------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| parámetros | Collection                | ->                          | Colección de números reales que representan un vector                                                         |
+| precision  | Integer                   | ->                          | Vector precision: `mk single precision` (default) or `mk double precision` |
+| Resultado  | 4D.Vector | <- | Nuevo objeto vector                                                                                           |
 
 </div>
 <!-- END REF -->
@@ -67,7 +70,16 @@ La función `4D.Vector.new()` <!-- REF #4D.Vector.new().Summary -->crea y devuel
 
 En *parameter*, pase una colección de números reales que representen el vector a crear. Estos valores los ofrecen las inteligencias artificiales y representan matemáticamente objetos como palabras o datos.
 
-#### Ejemplo
+In the *precision* optional parameter, you can pass the numeric precision you want to apply to the vector creation. Puede utilizar las siguientes constantes:
+
+| Constante             | Valor | Comentario                                                                               |
+| --------------------- | ----- | ---------------------------------------------------------------------------------------- |
+| `mk single precision` | 32    | Single (32-bit) floating-point precision (default) |
+| `mk double precision` | 64    | Double (64-bit) floating-point precision                              |
+
+By default, if you omit the *precision* parameter, the vector is created with a 32-bit floating-point precision. A 32-bit floating-point precision reduces the storage footprint by half compared to 64-bit vectors while retaining enough precision for similarity and distance calculations, which is why it is the recommended default for most use cases.
+
+#### Ejemplo 1
 
 Para crear un vector:
 
@@ -80,6 +92,16 @@ Puede acceder a componentes individuales o convertir todo el vector en una colec
 ```4d
 var $firstComponent := $vector[0]
 var $collection := $vector.toCollection()
+```
+
+#### Ejemplo 2
+
+To create a vector with a double floating-point precision:
+
+```4d
+var $col: Collection
+  //$col is filled by AI provider
+var $vector := 4D.Vector.new($col; mk double precision) 
 ```
 
 ## .cosineSimilarity()
@@ -300,6 +322,22 @@ ALERT("Nearest monument: "+$places[0].name)
 #### Descripción
 
 La propiedad `.length` contiene <!-- REF #VectorClass.length.Summary -->el número de componentes del vector<!-- END REF -->.
+
+## .precision
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 21 R5       | Añadidos       |
+
+</details>
+
+<!-- REF #VectorClass.precision.Syntax -->**precision** : Integer<!-- END REF -->
+
+#### Descripción
+
+The `.precision` property contains <!-- REF #VectorClass.precision.Summary -->the precision value used to build the vector<!-- END REF -->: 32 (`mk single precision`, default) or 64 (`mk double precision`).
 
 ## .toCollection()
 

@@ -1,22 +1,22 @@
 ---
 id: structure-indexes
-title: Indexes
+title: Index
 ---
 
-You can associate indexes with fields that you frequently use for searching and sorting. For example, you might index LastName, CompanyName, or ProductName if you plan to search or sort entities using these attributes. You also use this property for fields that establish relations between tables.
+Vous pouvez associer des index aux champs que vous utilisez fréquemment pour effectuer des recherches et des tris. Par exemple, vous pouvez indexer "Nom", "NomEntreprise" ou "NomProduit" si vous prévoyez d'effectuer des recherches ou de trier des entités à l'aide de ces attributs. Vous utilisez également cette propriété pour les champs qui établissent des relations entre les tables.
 
-When an index is associated with a field, 4D creates an internal index table for the field. This table allows 4D to perform rapid searches and sorts on the field. When searching or sorting on an unindexed field, 4D moves through data sequentially, examining each record in order. Indexing allows 4D to search and sort without going through every record.
+Lorsqu'un index est associé à un champ, 4D crée une table d'index interne pour ce champ. Cette table permet à 4D d'effectuer des recherches et des tris rapides sur ce champ. Lors d'une recherche ou d'un tri sur un champ non indexé, 4D parcourt les données de manière séquentielle, en examinant chaque enregistrement dans l'ordre. Grâce à l'indexation, 4D peut effectuer des recherches et des tris sans avoir à parcourir chaque enregistrement.
 
-You can index fields of the Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture and Object type. As you add and delete records, 4D automatically updates its index table. If you create an index for a field that already exists, 4D automatically indexes the existing data. You can specify as many indexed fields as you want. Indexes are also rebuilt during specific operations such as conversion of earlier databases or [data compacting](../MSC/compact.md).
+Vous pouvez indexer les champs des types Alpha, Texte, Date, Heure, Booléen, Entier, Entier long, Entier 64 bits, Réel, Image et Objet. Lorsque vous ajoutez ou supprimez des enregistrements, 4D met automatiquement à jour sa table d'index. Si vous créez un index pour un champ qui existe déjà, 4D indexe automatiquement les données existantes. Vous pouvez définir autant de champs indexés que vous le souhaitez. Les index sont également reconstruits lors d'opérations spécifiques, telles que la conversion d'anciennes bases de données ou le [compactage des données](../MSC/compact.md).
 
-Each index table can contain up to:
+Chaque table d'index peut contenir au maximum :
 
-- 128 billion keys for Alpha, Text, and Float indexes
-- 256 billion keys for other index types (scalar data)
+- 128 milliards de clés pour les index Alpha et Texte
+- 256 milliards de clés pour les autres types d'index (données scalaires)
 
-Do not index every field. An index increases the size of the database, using more space on disk. Using many indexes also increases the time needed to save a record since 4D updates the index table with each record validation.
+N'indexez pas tous les champs. Un index augmente la taille de la base de données, ce qui mobilise davantage d'espace sur le disque. L'utilisation d'un grand nombre d'index allonge également le temps nécessaire à l'écriture d'un enregistrement, car 4D met à jour la table d'index à chaque validation d'enregistrement.
 
-Indexed fields are displayed in **bold** type in the Structure editor.
+Les champs indexés apparaissent en **gras** dans l'éditeur de structure.
 
 ## Types of indexes
 

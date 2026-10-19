@@ -65,7 +65,7 @@ Los objetos 4D.QuotaManager ofrecen las siguientes propiedades:
 
 #### Descripción
 
-The `.currentValues` property contains <!-- REF #QuotaManagerClass.currentValues.Summary -->current usage values for the quota manager<!-- END REF -->. 4D lo actualiza automáticamente y es de solo lectura.
+La propiedad `.currentValues` contiene los <!-- REF #QuotaManagerClass.currentValues.Summary -->valores actuales utilizado para el gestor de cuotas<!-- END REF -->. 4D lo actualiza automáticamente y es de solo lectura.
 
 El objeto tiene las mismas propiedades que el objeto `4D.QuotaManager`, pero solo las siguientes propiedades indican el uso actual:
 
@@ -123,7 +123,7 @@ Session.quotas.defaultEntitySetTimeout:=1200
 
 #### Descripción
 
-The `.inBytesPerHour` property contains <!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->the maximum total number of bytes that the Web server can receive in one hour<!-- END REF -->.
+La propiedad `.inBytesPerHour` contiene <!-- REF #QuotaManagerClass.inBytesPerHour.Summary -->el número total máximo de bytes que el servidor web puede recibir en una hora<!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -151,7 +151,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.inBytesPerMin` property contains <!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->the maximum total number of bytes that the Web server can receive in one minute<!-- END REF -->.
+La propiedad `.inBytesPerMin` contiene <!-- REF #QuotaManagerClass.inBytesPerMin.Summary -->el número total máximo de bytes que el servidor web puede recibir en un minuto<!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -276,7 +276,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbGuestSessions` property contains <!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->the maximum total number of active [Guest sessions](./SessionClass.md#isguest) on the Web server<!-- END REF -->.
+La propiedad `.nbGuestSessions` contiene <!-- REF #QuotaManagerClass.nbGuestSessions.Summary -->el número total máximo de [sesiones de invitado](./SessionClass.md#isguest) activas en el servidor web<!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -346,7 +346,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbSessions` property contains <!-- REF #QuotaManagerClass.nbSessions.Summary -->the maximum total number of active sessions on the Web server<!-- END REF -->.
+La propiedad `.nbSessions` contiene <!-- REF #QuotaManagerClass.nbSessions.Summary -->el número total máximo de sesiones activas en el servidor web<!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -360,7 +360,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerHour` property contains <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->the maximum total number of bytes that the Web server can send in one hour<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
+La propiedad `.outBytesPerHour` contiene <!-- REF #QuotaManagerClass.outBytesPerHour.Summary -->el número total máximo de bytes que el servidor web puede enviar en una hora<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -374,7 +374,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one hour<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
+La propiedad `.outBytesPerHourPerSession` contiene <!-- REF #QuotaManagerClass.outBytesPerHourPerSession.Summary -->el número máximo total de bytes que el servidor web puede enviar durante una sesión en una hora<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -388,7 +388,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerMin` property contains <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->the maximum total number of bytes that the Web server can send in one minute<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
+La propiedad `.outBytesPerMin` contiene <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->el número máximo total de bytes que el servidor web puede enviar en un minuto<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -402,7 +402,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.outBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can send for a session in one minute<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
+La propiedad `.outBytesPerMinPerSession` contiene <!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->el número máximo total de bytes que el servidor web puede enviar durante una sesión en un minuto<!-- END REF -->. La cuota se calcula en función del tamaño de la carga útil de la respuesta sin comprimir, independientemente de la configuración de compresión del servidor web.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 

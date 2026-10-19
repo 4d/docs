@@ -219,12 +219,12 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
+Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
 
-Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'existe pas deux personnes avec le même nom). A partir d'un nom, vous voulez écrire la phrase “Un de mes amis, Pierre, qui est le rejeton de Paul qui est le rejeton de Martine qui est le rejeton de Robert qui est le rejeton de Gertrude, fait cela pour gagner sa vie !” :
+Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'existe pas deux personnes avec le même nom). A partir d'un nom, vous voulez écrire la phrase “Un de mes amis, Pierre, qui est le rejeton de Paul qui est le rejeton de Martine qui est le rejeton de Robert qui est le rejeton de Gertrude, fait cela pour gagner sa vie !”
 
 1. Vous pouvez procéder de la manière suivante :
 

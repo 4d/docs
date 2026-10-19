@@ -43,7 +43,7 @@ La variable "Progression" est de type Entier long. Elle contient une valeur entr
 
 ---
 
-## Variable URL
+## URL
 
 La variable "URL" est de type chaîne. Elle contient l’URL chargé ou en cours de chargement par la zone Web associée. L’association entre la variable et la zone Web s’effectue dans les deux sens :
 

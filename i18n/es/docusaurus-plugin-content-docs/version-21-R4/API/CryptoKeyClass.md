@@ -142,7 +142,7 @@ ASSERT($status.success)
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
-Definido sólo para las llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave<!-- END REF -->. .
+Definido sólo para las llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave<!-- END REF -->. . .
 
 <!-- END REF -->
 

@@ -9,19 +9,19 @@ title: フォームオブジェクト
 
 4D フォームでは多くのビルトイン **アクティブ** オブジェクトおよび **スタティック** オブジェクトが提供されています:
 
-- **アクティブオブジェクト** はインターフェース機能やデータベースタスクを実行します。アクティブオブジェクトの種類は、アクティブオブジェクトの種類は、 入力フィールド、コンボボックス、ドロップダウンリスト、ピクチャーボタンなど様々ですが、いずれもデータを表示したり、メモリに一時保存したり、ダイアログボックスを開く・レポートを印刷する・バックグラウンドプロセスを開始するなどの動作を実行したりします。
+- **アクティブオブジェクト** はインターフェース機能やデータベースタスクを実行します。アクティブオブジェクトの種類は、アクティブオブジェクトの種類は、 入力フィールド、コンボボックス、ドロップダウンリスト、ピクチャーボタンなど様々ですが、いずれもデータを表示したり、メモリに一時保存したり、ダイアログボックスを開く・レポートを印刷する・バックグラウンドプロセスを開始するなどの動作を実行したりします。アクティブオブジェクトの種類は、アクティブオブジェクトの種類は、 入力フィールド、コンボボックス、ドロップダウンリスト、ピクチャーボタンなど様々ですが、いずれもデータを表示したり、メモリに一時保存したり、ダイアログボックスを開く・レポートを印刷する・バックグラウンドプロセスを開始するなどの動作を実行したりします。
 - **スタティックオブジェクト** (線、枠、背景ピクチャー等) は一般的に、フォームのアピアランスやラベル、グラフィックインターフェースを設定するために使用されます。アクティブオブジェクトと異なり、スタティックオブジェクトには変数や式が割り当てられません。しかし、スタティックオブジェクトにダイナミックオブジェクトを挿入することは可能です。
 
 ## オブジェクトの操作
 
 4D フォームオブジェクトの追加や編集は次の方法でおこなえます:
 
-- **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。次に、プロパティリストでオブジェクトのプロパティを指定します。  
+- **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。次に、プロパティリストでオブジェクトのプロパティを指定します。次に、プロパティリストでオブジェクトのプロパティを指定します。  
   See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.
 
 - **4D language**: Commands from the [Objects (Forms)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html) theme such as `OBJECT DUPLICATE` or `OBJECT SET FONT STYLE` allow to create and define form objects.
 
-- **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 Use the [type](properties_Object.md#type) property to define the object type, then set its available properties.  See the [Dynamic Forms](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) page for information.  
+- **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他の [プロパティ](properties_Reference.md) のうち必要なものを設定します。次はボタンオブジェクトの例です: Use the [type](properties_Object.md#type) property to define the object type, then set its available properties.  See the [Dynamic Forms](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) page for information.  
   次はボタンオブジェクトの例です:
   ```
   {

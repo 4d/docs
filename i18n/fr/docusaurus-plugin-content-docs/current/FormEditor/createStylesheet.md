@@ -306,6 +306,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | 4D               | CSS                |
 | ---------------- | ------------------ |
 | `borderStyle`    | `border-style`     |
+| `borderColor`    | `border-color`     |
 | `fill`           | `background-color` |
 | `fontFamily`     | `font-family`      |
 | `fontSize`       | `font-size`        |

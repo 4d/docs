@@ -78,10 +78,10 @@ Une collection est initialisée avec :
 
 <div class="no-index">
 
-| Paramètres | Type                                                                    |                             | Description                                                                                                                              |
-| ---------- | ----------------------------------------------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |              ->             | Valeur(s) de collection                                                                                               |
-| Résultat   | Collection                                                              | <- | *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. |
+| Paramètres | Type                                                                    |                             | Description                                |
+| ---------- | ----------------------------------------------------------------------- | :-------------------------: | ------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |              ->             | Valeur(s) de collection |
+| Résultat   | Collection                                                              | <- | nombres                                    |
 
 </div>
 <!-- END REF -->
@@ -163,10 +163,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 <div class="no-index">
 
-| Paramètres | Type                                                  |                             | Description                                                                                                                                            |
-| ---------- | ----------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection |              ->             | Valeur(s) de la collection partagée                                                                                                 |
-| Résultat   | Collection                                            | <- | *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode. |
+| Paramètres | Type                                                  |                             | Description                                            |
+| ---------- | ----------------------------------------------------- | :-------------------------: | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection |              ->             | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                            | <- | La nouvelle collection partagée                        |
 
 </div>
 <!-- END REF -->
@@ -175,7 +175,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou préremplie<!-- END REF --> et retourne sa référence.
 
-Par exemple : La lecture d'un élément sans structure *Use...End use* est cependant possible.
+Par exemple : Par exemple : La lecture d'un élément sans structure *Use...End use* est cependant possible.
 
 :::info
 
@@ -202,7 +202,7 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 - heure (stockée en nombre de milliseconds - réel)
 - Null
 - Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
-- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode.
+- Sommaire
 
 :::note
 
@@ -1224,7 +1224,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1315,7 +1315,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1499,7 +1499,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1597,7 +1597,7 @@ Dans *toSearch*, passez l'expression à trouver dans la collection. Vous pouvez 
 Optionnellement, vous pouvez passer l'indice de la collection à partir duquel démarrer la recherche dans *startFrom*.
 
 - Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la recherche n'est pas effectuée.
-- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention** : N'oubliez pas que la numérotation des éléments de collection débute à 0.
+- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -2023,7 +2023,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 

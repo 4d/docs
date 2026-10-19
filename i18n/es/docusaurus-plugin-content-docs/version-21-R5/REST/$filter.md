@@ -136,7 +136,7 @@ En este ejemplo, buscamos en la clase de datos Person todas las personas cuya pr
  GET  /rest/Person/?filter="anotherobj.mynum > 50"
 ```
 
-En este ejemplo, hacemos una búsqueda vectorial con valores de base:
+En este ejemplo, hacemos una búsqueda vectorial con los valores de base:
 
 ```
  GET  /rest/Person/?filter="VectorAtt>=:1"&$params='[{vector:[1,2,3],threshold:1}]'

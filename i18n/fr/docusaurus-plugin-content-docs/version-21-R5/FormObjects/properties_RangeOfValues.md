@@ -41,7 +41,7 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 ## Exclusion
 
-Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans l'objet. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
+Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans l'objet. `valeurs` Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
 
 > Si une énumération spécifiée est hiérarchique, seuls les éléments du premier niveau sont pris en compte.
 

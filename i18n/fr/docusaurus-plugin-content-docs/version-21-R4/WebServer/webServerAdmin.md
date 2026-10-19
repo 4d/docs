@@ -205,7 +205,7 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 | TIME                                                   | X   | X   | HH: heure, MM: minutes, SS: secondes                                                                                                                                                            |
 | TRANSFER_TIME                     | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                                                                                                                                                                   |
 | USER                                                   | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins). Si le nom d’utilisateur contient des espaces, ils sont remplacés par des _ (traits de soulignement) |
-| Variable URL                                           |     | X   | URL demandé par le client                                                                                                                                                                                                                       |
+| URL                                                    |     | X   | URL demandé par le client                                                                                                                                                                                                                       |
 
 > Les dates et heures sont données au format GMT
 
@@ -215,7 +215,7 @@ Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est pos
 
 Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier *logweb.txt*.
 
-Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un fichier archivé le 4 septembre 2020 à 15h50  et 7 secondes : “D2020_09_04_T15_50_07.txt.” et 7 secondes : “D2020_09_04_T15_50_07.txt.”
+Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un fichier archivé le 4 septembre 2020 à 15h50  et 7 secondes : “D2020_09_04_T15_50_07.txt.” et 7 secondes : “D2020_09_04_T15_50_07.txt.” et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 
 #### Paramètres de sauvegarde
 

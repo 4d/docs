@@ -164,7 +164,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ## `roles.json`
 
-La syntaxe du fichier `roles.json` est la suivante: Le fichier `roles.json` décrit l'ensemble des paramètres de sécurité du projet.
+La syntaxe du fichier `roles.json` est la suivante: Le fichier `roles.json` décrit l'ensemble des paramètres de sécurité du projet. Le fichier `roles.json` décrit l'ensemble des paramètres de sécurité du projet.
 
 | Nom de propriété    |                                                                                     |                                                                                  | Type                             | Obligatoire | Description                                                                                                                        |
 | ------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------- |

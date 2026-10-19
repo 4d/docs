@@ -390,9 +390,9 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 
 La plupart des structures `For...End for` que vous écrirez dans vos projets ressembleront à celles présentées ci-dessus.
 
-### Variable compteur
+### Décrémenter la variable compteur
 
-#### Décrémenter la variable compteur
+#### Variable compteur
 
 Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 

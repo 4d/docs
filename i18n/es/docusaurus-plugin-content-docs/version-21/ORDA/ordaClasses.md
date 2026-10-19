@@ -268,7 +268,7 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
-  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No dé el mismo nombre a una tabla 4D y a un [nombre de clase de usuario](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
   - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
@@ -333,7 +333,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\`__STAMP
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\\`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Notas
@@ -792,7 +792,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 Un atributo **alias** se crea sobre otro atributo del modelo de datos, denominado **atributo de destino**. El atributo de destino puede pertenecer a una clase de datos relacionada (disponible a través de todo número de niveles de relación) o a la misma clase de datos. Un atributo alias no almacena ningún dato, sino la ruta a su atributo de destino. Puede definir tantos atributos de alias como desee en una clase de datos.
 
-Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
+Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
 
 ### Cómo definir los atributos alias
 
@@ -1100,10 +1100,10 @@ Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Obtener los estudiantes más jóvenes
+// Obtener los estudiantes más jóvenes  
 // Utilización inapropiada de la palabra clave local
 local Function getYoungest
-	var $0 : Object
+    var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
@@ -1169,7 +1169,7 @@ End if
 
 ### Archivos de clase (class files)
 
-Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
+Una clase usuario ORDA del modelo de datos se define añadiendo, en la [misma ubicación que los archivos de clase usuarles](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
 
 ### Crear las clases
 
