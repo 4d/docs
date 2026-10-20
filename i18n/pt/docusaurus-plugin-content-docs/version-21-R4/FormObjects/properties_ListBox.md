@@ -164,15 +164,9 @@ Número de colunas que não podem ser movidas durante a execução.
 
 ## Número de colunas trancadas
 
-Define o número de colunas do list box.
+Define o comprimento da [coleção de colunas](#columns) do list box.
 
 > Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
-
-#### Gramática JSON
-
-| Nome        | Tipo de dados | Valores possíveis         |
-| ----------- | ------------- | ------------------------- |
-| columnCount | integer       | mínimo: 1 |
 
 #### Objectos suportados
 

@@ -21,9 +21,9 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                            |
-| -------- | ------------- | ------------------------------------------------------------ |
-| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| Nome     | Tipo de dados | Valores possíveis                                                                                      |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------ |
+| dragging | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto button e list box)            |
 
 
 #### Objectos suportados
@@ -53,9 +53,9 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                            |
-| -------- | ------------- | ------------------------------------------------------------ |
-| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| Nome     | Tipo de dados | Valores possíveis                                                                                      |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------ |
+| dropping | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto button e list box)            |
 
 #### Objectos suportados
 

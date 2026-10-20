@@ -12,7 +12,7 @@ Quando a opção **inserção automática** não está definida (padrão), o val
 Esta propriedade é suportada por:
 
 - Objetos formulário [Combo box](comboBox_overview.md) e [coluna list box](listbox-column.md) associado para uma lista de seleção.
-- objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
+- Objetos formulário [Combo box](comboBox_overview.md) cuja lista associada é preenchida pelo seu array ou datasource de objeto.
 
 Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" que está associada a um combo box "Countries": se a propriedade **inserção automática** estiver definida e um usuário digitar "Espanha", o valor "Espanha" será automaticamente adicionado à lista na memória:
 
@@ -147,7 +147,7 @@ Veja também [**Tipo de expressão**](properties_Object.md#expression-type).
 Define o tipo de dados a serem salvos no campo ou na variável associada à [lista suspensa](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - Listas suspensas [associadas a uma lista de opções](dropdownList_Overview.md#using-a-choice-list).
-- Listas desdobráveis [associadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+- Listas desdobráveis [associadas a una lista de seleção jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
 
 Estão disponíveis três opções:
 
@@ -274,13 +274,13 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 
 Esta propriedade está disponível nas seguintes condições:
 
-- una [lista de selección](#choice-list) está asociada al objeto
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- uma [lista de seleção](#choice-list) está associada ao objeto
+- para [inputs](input_overview.md) e [list box columns](listbox-column.md), uma [required list](properties_RangeOfValues.md#required-list) também está definida para o objeto (ambas as opções geralmente devem usar a mesma lista), para que apenas valores da lista possam ser inseridos pelo usuário.
 
 Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
-- **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands/append-to-list) ou [`SET LIST ITEM`](../commands/set-list-item), ou no editor de listas.
+- **Guardar como valor** (opção padrão): o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
+- **Guardar como referência**: a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands/append-to-list) ou [`SET LIST ITEM`](../commands/set-list-item), ou no editor de listas.
 
 Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
@@ -340,7 +340,7 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 | Nome           | Tipo de dados | Valores possíveis |
 | -------------- | ------------- | ----------------- |
-| namedSelection | string        | Nome da selecção  |
+| selectionName  | string        | Nome da selecção  |
 
 #### Objectos suportados
 

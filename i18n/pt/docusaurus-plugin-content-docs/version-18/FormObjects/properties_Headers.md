@@ -29,17 +29,19 @@ This property is used to set the row height for a list box header in **pixels** 
   * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   * Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
-> > > This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
+
+>This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
 
 Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
 
 Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. Este facto é ilustrado nas sequências seguintes:
 
-*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels
+*(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
 #### JSON Exemplo
 
-```
+```json
  "List Box": {
   "type": "listbox",
   "showHeaders": true,
@@ -52,7 +54,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 | Nome         | Tipo de dados | Valores possíveis                   |
 | ------------ | ------------- | ----------------------------------- |
-| headerHeight | string        | décimales positives +px &#124; em ) |
+| headerHeight | string        | value+px &#124; em ) |
 
 #### Objectos suportados
 

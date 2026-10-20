@@ -46,7 +46,7 @@ Associa uma lista de opções a um objeto. It can be a choice list name (a list 
 
 #### Objectos suportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -271,7 +271,7 @@ Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma
 
 | Nome           | Tipo de dados | Valores possíveis |
 | -------------- | ------------- | ----------------- |
-| namedSelection | string        | Nome da selecção  |
+| selectionName  | string        | Nome da selecção  |
 
 #### Objectos suportados
 

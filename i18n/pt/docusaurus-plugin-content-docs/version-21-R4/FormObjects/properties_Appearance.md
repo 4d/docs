@@ -31,6 +31,26 @@ No Windows, o conceito de "escolha recomendada" não é compatível: somente o b
 
 ---
 
+## Exibir fonte da fórmula como símbolo
+
+Exibe o texto fonte das fórmulas como símbolos quando as expressões são mostradas como referências.
+
+#### Gramática JSON
+
+| Nome                   | Tipo de dados | Valores possíveis         |
+| ---------------------- | ------------- | ------------------------ |
+| displayFormulaAsSymbol | boolean       | true (padrão), false     |
+
+#### Objectos suportados
+
+[Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+---
+
 ## Esconder retangulo foco
 
 Durante a execução, um campo ou qualquer área introduzível é delineado por um retângulo de seleção quando tem o foco (através da tecla Tab ou de um único clique). Pode ocultar este retângulo ativando esta propriedade. Ocultar o retângulo de foco pode ser útil no caso de interfaces específicas.
@@ -137,7 +157,7 @@ Define a resolução do ecrã para o conteúdo da área 4D Write Pro. Por padrã
 
 ---
 
-## Mostrar fundo
+## Mostrar fundo e elementos ancorados
 
 Apresenta/oculta as imagens de fundo e a cor de fundo.
 
@@ -146,6 +166,26 @@ Apresenta/oculta as imagens de fundo e a cor de fundo.
 | Nome           | Tipo de dados | Valores possíveis                       |
 | -------------- | ------------- | --------------------------------------- |
 | showBackground | boolean       | true (padrão), false |
+
+#### Objectos suportados
+
+[Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+---
+
+## Mostrar imagens vazias ou não suportadas
+
+Exibe/oculta um retângulo preto para imagens que não podem ser carregadas ou calculadas (imagens vazias ou imagens em um formato não suportado).
+
+#### Gramática JSON
+
+| Nome             | Tipo de dados | Valores possíveis         |
+| ---------------- | ------------- | ------------------------ |
+| showEmptyImages  | boolean       | true (padrão), false     |
 
 #### Objectos suportados
 
@@ -325,6 +365,28 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 ---
 
+## Mostrar bordas de tabela
+
+Exibe bordas internas e externas da tabela como linhas pontilhadas quando essas bordas estão parcial ou totalmente invisíveis. Isso facilita o layout da página (mais acessível, redimensionamento mais visual) e a entrada de dados (conveniente no caso de células mescladas, por exemplo).
+
+![](../assets/en/FormObjects/visible.png)
+
+#### Gramática JSON
+
+| Nome             | Tipo de dados | Valores possíveis         |
+| ---------------- | ------------- | ------------------------ |
+| showTableBorders | boolean       | true, false (padrão)     |
+
+#### Objectos suportados
+
+[Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+---
+
 ## Mostrar régua vertical
 
 Muestra/oculta la regla vertical cuando la vista del documento está en modo [Página](#view-mode).
@@ -355,7 +417,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 | Nome            | Tipo de dados | Valores possíveis |
 | --------------- | ------------- | ----------------- |
-| labelsPlacement | boolean       | "top", "bottom"   |
+| labelsPlacement | text          | "top", "bottom"   |
 
 #### Objectos suportados
 
@@ -379,7 +441,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 #### Veja também
 
-[Guia de referência de 4D View Pro](.../ViewPro/getting-started.md)
+[Guia de referência de 4D View Pro](../ViewPro/getting-started.md)
 
 ---
 

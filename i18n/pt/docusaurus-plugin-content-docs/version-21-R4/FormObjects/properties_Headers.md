@@ -45,7 +45,7 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Exemplo JSON
 
-```
+```json
  "List Box": {
   "type": "listbox",
   "showHeaders": true,
@@ -58,7 +58,7 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 | Nome         | Tipo de dados | Valores possíveis                                     |
 | ------------ | ------------- | ----------------------------------------------------- |
-| headerHeight | string        | décimales positives +px &#124; em |
+| headerHeight | string        | valor+px &#124; em |
 
 #### Objectos suportados
 

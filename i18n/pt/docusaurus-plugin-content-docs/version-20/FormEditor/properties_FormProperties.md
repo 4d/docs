@@ -12,7 +12,8 @@ Esta propriedade define o esquema de cores para o formulário. Por defeito, quan
 
 *   dark - texto claro sobre um fundo escuro
 *   light - texto escuro sobre um fundo claro
-> light - texto escuro sobre um fundo claro > > A defined color scheme can not be overridden by a CSS.
+
+> Um esquema de cores definido não pode ser sobrescrito por um CSS.
 
 #### Gramática JSON
 
@@ -33,7 +34,7 @@ Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de 
 
 | Nome | Tipo de dados      | Valores possíveis                                                                                                              |
 | ---- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| css  | cadeia ou colecção | Caminho(s) do(s) ficheiro(s) CSS fornecido(s) como:<li>uma cadeia de caracteres (um ficheiro para ambas plataformas)</li><li>uma coleção de cadeias de caracteres (uma lista de ficheiros para ambas as plataformas)</li><li>uma coleção de objectos {"path":string; "media": "mac" &#124; "win"} </li> |
+| css  | cadeia ou colecção | Caminho(s) do(s) ficheiro(s) CSS fornecido(s) como:<li>uma cadeia de caracteres (um ficheiro para ambas plataformas)</li><li>uma coleção de cadeias de caracteres (uma lista de ficheiros para ambas as plataformas)</li><li>uma coleção de objectos {"path":string; "media": "mac" &#124; "windows"} </li> |
 
 ---
 
@@ -158,7 +159,8 @@ Quando a opção é usada, se a janela for aberta usando o comando `Open form wi
 
 *   a página atual,
 *   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
-> > Esta opção não considera objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
+
+> Esta opção não considera objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
 Quando essa opção é selecionada, a opção [Save Value](FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 

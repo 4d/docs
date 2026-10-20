@@ -24,7 +24,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 | Nome     | Tipo de dados | Valores possíveis                                                                                  |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| dragging | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto botão e list box) |
 
 #### Objectos suportados
 
@@ -56,7 +56,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 | Nome     | Tipo de dados | Valores possíveis                                                                                  |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| dropping | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto botão e list box) |
 
 #### Objectos suportados
 

@@ -3,7 +3,7 @@ id: dropdownListOverview
 title: Lista suspensa ou drop down
 ---
 
-Listas drop-down são objetos que permitem que os usuários selecionem de uma lista. Gerenciar os itens exibidos na lista drop down usando um array, uma lista de escolha ou uma ação padrão.
+Listas drop-down são objetos que permitem que os usuários selecionem de uma lista. Gerenciar os itens exibidos na lista drop down usando um objeto, um array, uma lista de escolha ou uma ação padrão.
 
 Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes referem aos mesmos objetos. Ambos os nomes referem aos mesmos objetos. Como no exemplo abaixo, a aparência desses objetos podem diferenciar levemente de acordo com a plataforma:
 
@@ -38,7 +38,7 @@ Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_col
 
 Se o objeto contiver outras propriedades, estas são ignoradas.
 
-Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
+Para inicializar o objeto associado à lista suspensa, você pode:
 
 * Insira uma lista de valores padrão nas propriedades do objeto selecionando `\&#060;Static List&#062;` no tema [Fonte de dados](properties_DataSource.md) da Lista de propriedades. Os valores por defeito são carregados automaticamente para um objeto.
 
@@ -63,7 +63,8 @@ Depois de o utilizador selecionar um valor:
 
 ```4d
 Form.myDrop.values // ["apples","nuts","pears","oranges","carrots"]
-Form.myDrop.currentValue //"oranges" Form.myDrop.index //3
+Form.myDrop.currentValue //"oranges"
+Form.myDrop.index //3
 ```
 
 ### Usar um array
@@ -77,24 +78,24 @@ Para inicializar o array associado à lista pendente, pode:
 * Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 
 ```4d
-  ARRAY TEXT($aCities;6)
-  $aCities{1}:="Philadelphia"
-  $aCities{2}:="Pittsburg"
-  $aCities{3}:="Grand Blanc"
-  $aCities{4}:="Bad Axe"
-  $aCities{5}:="Frostbite Falls"
-  $aCities{6}:="Green Bay" 
+  ARRAY TEXT(aCities;6) 
+  aCities{1}:="Philadelphia" 
+  aCities{2}:="Pittsburg" 
+  aCities{3}:="Grand Blanc" 
+  aCities{4}:="Bad Axe" 
+  aCities{5}:="Frostbite Falls" 
+  aCities{6}:="Green Bay" 
 ```
 
-Neste caso, o nome da variável associada ao objeto de formulário deve ser *$aCities*. Esse código pode ser colocado no método formulário e executado quando o evento de formulário `On Load` acontecer.
+Neste caso, o nome da variável associada ao objeto de formulário deve ser *aCities*. Esse código pode ser colocado no método formulário e executado quando o evento de formulário `On Load` acontecer.
 
 * Antes que o objeto seja exibido, carregue os valores para uma lista em um array usando o comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Por exemplo:
 
 ```4d
-   LIST TO ARRAY("Cities";$aCities)
+   LIST TO ARRAY("Cities";aCities)
 ```
 
-Neste caso também o nome da variável asociada al objeto del formulario debe ser *$aCities*. Este código pode ser executado ao invés das sentenças de atribuição mostradas anteriormente.
+Neste caso também o nome da variável associada ao objeto do formulário deve ser *aCities*. Este código pode ser executado ao invés das sentenças de atribuição mostradas anteriormente.
 
 Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declaração de atribuição que rode depois que o registro seja aceito. O código poderia ser assim:
 
@@ -123,7 +124,7 @@ Deve selecionar cada event que teste nas estruturas Case. Os arrays sempre cont�
 Se quiser usar uma lista drop down para gerenciar os valores de um campo ou lista variável, 4D permite referir o campo ou variável diretamente como fonte de dados do objeto. Isso facilita gerenciar variáveis/campos listados.
 
 Por exemplo, no caso de um campo "Cor" que só possa conter os valores "White", "Blue", "Green" ou "Red", agora é possível criar uma lista que contenha esses valores e associe-os a um objeto emergente menu que faça referência ao campo "Color". 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, precisa usar uma [lista de seleção hierárquica](#using-a-hierarchical-choice-list).
 
 Para associar um menu pop up/lista drop down ou um combo box com um campo ou variável, pode digitar o nome do campo ou variável diretamente no campo [Variável ou Expressão](properties_Object.md#variable-or-expression) do objeto na Lista Propriedade.
 > Não é possível combinar esse princípio com o uso de um array para iniciar o objeto. Se digitar um nome de campo na área Nome da variável, deve usar uma lista de seleção.
@@ -136,7 +137,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 Quando você tiver associado uma lista suspensa com uma lista de escolha e com um campo ou uma variável, você pode definir a propriedade [**Data Type**](properties_DataSource.md#data-type-list) para **Valor do item selecionado** ou **Item selecionado para referência**. Essa opção permite otimizar o tamanho dos dados salvos.
 
-### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
+### Usar uma lista de seleção hierárquica
 
 Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista. Eis um exemplo de uma lista pendente hierárquica:
 
@@ -162,4 +163,4 @@ Pode atribuir uma ação padrão a menu pop up ou lista drop down ([Action](prop
 
 ## Propriedades compatíveis
 
-[Formato alfa](properties_Display.md#alpha-format) - [Negrito](properties_Text.md#bold) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botão](properties_TextAndPicture.md#button-style) - [Lista de opções](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Tipo de dados (tipo de expressão)](properties_DataSource.md#data-type-expression-type) - [Tipo de dados (lista)](properties_DataSource.md#data-type-list) - [Formato de data](properties_Display.md#date-format) - [Tipo de expressão](properties_Object.md#expression-type) - [Foco](properties_Entry.md#focusable) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Não renderizado](properties_Display.md#not-rendered) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Ação padrão](properties_Action.md#standard-action) - [Salvar valor](properties_Object.md#save-value) - [Formato de hora](properties_Display.md#time-format) - [Parte superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)  
+[Formato alfa](properties_Display.md#alpha-format) - [Negrito](properties_Text.md#bold) - [Parte inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botão](properties_TextAndPicture.md#button-style) - [Lista de opções](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Tipo de dados (tipo de expressão)](properties_DataSource.md#data-type-expression-type) - [Tipo de dados (lista)](properties_DataSource.md#data-type-list) - [Formato de data](properties_Display.md#date-format) - [Tipo de expressão](properties_Object.md#expression-type) - [Foco](properties_Entry.md#focusable) - [Fonte](properties_Text.md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Não renderizado](properties_Display.md#not-rendered) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Ação padrão](properties_Action.md#standard-action) - [Salvar valor](properties_Object.md#save-value) - [Formato de hora](properties_Display.md#time-format) - [Parte superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Dimensionamento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)

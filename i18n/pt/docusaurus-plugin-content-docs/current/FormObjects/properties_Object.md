@@ -328,7 +328,7 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 | Nome                | Tipo de dados | Valores possíveis                                                                                     |
 | ------------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objectos suportados
 
