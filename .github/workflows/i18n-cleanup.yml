@@ -1,0 +1,83 @@
+name: i18n branch cleanup
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions: {}
+
+jobs:
+  cleanup:
+    if: >-
+      github.repository == 'doc4d/docs' &&
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      # Metadata only: never check out or execute code from the PR.
+      - name: Delete merged translation branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from urllib.error import HTTPError
+          from urllib.parse import quote
+          from urllib.request import Request, urlopen
+
+          with open(os.environ["GITHUB_EVENT_PATH"]) as event_file:
+              event = json.load(event_file)
+          pr = event["pull_request"]
+          repo = event["repository"]
+          head = pr["head"]
+          branch = head["ref"]
+          prefix = "i18n/auto-pt-"
+          if (
+              repo["full_name"] != "doc4d/docs"
+              or not pr["merged"]
+              or (head.get("repo") or {}).get("full_name") != repo["full_name"]
+              or not branch.startswith(prefix)
+              or len(branch) == len(prefix)
+              or branch in ("main", repo["default_branch"], pr["base"]["ref"])
+          ):
+              print("Branch is not eligible for cleanup.")
+              raise SystemExit(0)
+
+          def api(method, path):
+              request = Request(
+                  f'{os.environ["GITHUB_API_URL"]}/repos/{repo["full_name"]}/{path}',
+                  method=method,
+                  headers={
+                      "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+              )
+              with urlopen(request, timeout=30) as response:
+                  body = response.read()
+                  return json.loads(body) if body else None
+
+          ref = f"heads/{branch}"
+          # matching-refs returns [] for a missing branch; API/auth errors still fail.
+          refs = api("GET", f"git/matching-refs/{quote(ref, safe='')}")
+          current = next((item for item in refs if item["ref"] == f"refs/{ref}"), None)
+          if current is None:
+              print("Branch is already deleted.")
+          elif current["object"]["sha"] != head["sha"]:
+              print("Branch tip has changed; preserving it.")
+          else:
+              try:
+                  api("DELETE", f"git/refs/{quote(ref, safe='')}")
+              except HTTPError as error:
+                  # Another cleanup may have deleted the ref after our SHA check.
+                  body = error.read()
+                  if error.code != 422 or json.loads(body).get("message") != "Reference does not exist":
+                      raise
+                  print("Branch is already deleted.")
+              else:
+                  print("Merged translation branch deleted.")
+          PY
