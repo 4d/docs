@@ -24,7 +24,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dragging|text |"none" (default), "custom", "automatic" (excluding list box)|
+|dragging|text |"none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box)|
 
 
 #### Objects Supported
@@ -60,7 +60,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dropping|text |"none" (default), "custom", "automatic" (excluding list box)|
+|dropping|text |"none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box)|
 
 #### Objects Supported
 

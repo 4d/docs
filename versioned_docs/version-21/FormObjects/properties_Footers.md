@@ -59,7 +59,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|footerHeight|string |positive decimal+px &#124; em|
+|footerHeight|string |value+px &#124; em|
 
 #### Objects Supported
 

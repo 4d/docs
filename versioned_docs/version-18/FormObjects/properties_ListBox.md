@@ -152,15 +152,11 @@ Number of columns that cannot be moved during execution.
 
 ## Number of Columns
 
-Sets the number of columns of the list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 >You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
-#### JSON Grammar
 
-|Name|Data Type|Possible Values|
-|---|---|---|
-|columnCount|integer |minimum: 1
 
 #### Objects Supported
 

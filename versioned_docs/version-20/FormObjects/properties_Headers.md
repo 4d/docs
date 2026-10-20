@@ -41,7 +41,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### JSON Example
 
-```
+```json
  "List Box": {
   "type": "listbox",
   "showHeaders": true,
@@ -54,7 +54,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|headerHeight|string |positive decimal+px &#124; em |
+|headerHeight|string |value+px &#124; em |
 
 #### Objects Supported
 

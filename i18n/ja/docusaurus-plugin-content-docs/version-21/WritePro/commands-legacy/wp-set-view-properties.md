@@ -42,12 +42,13 @@ displayed_sidebar: docs
 | wk visible HTML WYSIWYG                     | htmlWYSIWIGEnabled     | HTML WYSISYG ビューを有効化します。取りうる値: True/False                                                                                                                                                                                                                        |
 | wk visible page frames                      | visiblePageFrames      | ページフレームを表示します(ページビューモードでのみ表示されるエフェクトです)。取りうる値: True/False                                                                                                                                                                                                        |
 | wk visible references                       | visibleReferences      | ドキュメントに挿入されている4D 式を参照として表示または書き出しします。取りうる値: True/False                                                                                                                                                                                                           |
+| wk visible table borders | visibleTableBorders | テーブルの内側および外側の境界線が部分的または完全に非表示の場合、それらを点線で表示します。取りうる値: True/False |
 | wk visible vertical ruler                   | visibleVerticalRuler   | 垂直ルーラーを表示します(ページビューモードでのみ表示されるエフェクトです)。取りうる値: True/False                                                                                                                                                                                                         |
 | wk zoom                                     | zoom                   | 4D Write Pro エリアのコンテンツを表示するズーム倍率。取りうる値: 1より大きい数値                                                                                                                                                                                                                 |
 
 どのプロパティもいつでも編集可能ですが、一部のプロパティはそれに対応している4D Write Pro 表示モードが使用されている時のみ考慮されます。そのため、ビュープロパティが変更されたとしても、カレントの表示モードでは視覚的には何も変化がない場合も有り得ます。
 
-**注:** ビュープロパティについてのより詳細な情報については、*4D Write Pro エリアを定義する* のページを参照してください。
+**注:** ビュープロパティの詳細については、[ビュープロパティ](../configuring-4d-write-pro-areas#view-properties)を参照してください。
 
 このコマンドを使用して*wpArea* 引数で指定したエリアに対してビュープロパティを設定した場合、フォームエリアが他の呼び出しで変更されない限りは指定したフォームエリアに適用され続けます。ただしプロパティの編集はドキュメントまたはフォームには保存されません。
 

@@ -70,7 +70,7 @@ Sets the text to have a line running beneath it.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textDecoration|string|"normal", "underline"|
+|textDecoration|string|"none", "underline"|
 
 #### Objects Supported
 

@@ -78,7 +78,7 @@ Sets the text to have a line running beneath it.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textDecoration|string|"normal", "underline"|
+|textDecoration|string|"none", "underline"|
 
 #### Objects Supported
 
@@ -287,7 +287,7 @@ Horizontal location of text within the area that contains it.
 
 :::note
 
-- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
  
 :::
