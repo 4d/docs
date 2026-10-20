@@ -330,7 +330,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|variableCalculation|string|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
+|variableCalculation|string|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares"|
 
 #### Objects Supported
 

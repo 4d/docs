@@ -48,7 +48,8 @@ Document view settings are handled through specific items in the **Appearance** 
 * **Show horizontal ruler**: Displays/hides the horizontal ruler. F
 * **Show vertical ruler**: Displays/hides the vertical ruler when the document is in Page mode. 
 * **Show empty or unsupported images**: Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format). 
-* **Display formula source as symbol**: Displays source text of formulas as ![](../../assets/en/WritePro/pict6013182.en.png) symbols when expressions are shown as references (see above). Displaying formulas as symbols makes template documents more compact and more *wysiwyg*.
+* **Display formula source as symbol**: Displays source text of formulas as ![](../../assets/en/WritePro/pict6013182.en.png) symbols when expressions are shown as references (see above). Displaying formulas as symbols makes template documents more compact and more *wysiwyg*.  
+* **Show table borders**: Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. This facilitates page layout (more accessible, more visual resizing) and data entry (convenient in the case of merged cells, for example). See also [this blog post](https://blog.4d.com/4d-write-pro-make-hidden-table-borders-visible-temporarily/).
 
 ## Context menu 
 

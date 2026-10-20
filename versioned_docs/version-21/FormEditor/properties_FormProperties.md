@@ -35,7 +35,7 @@ A CSS file defined at the form level will override default style sheet(s). For m
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|css |string or collection |CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+|css |string or collection |CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "windows"} objects </li> |
 
 ---
 

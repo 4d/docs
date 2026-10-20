@@ -345,7 +345,7 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|namedSelection| string|Named selection name|
+|selectionName| string|Named selection name|
 
 #### Objects Supported
 

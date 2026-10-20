@@ -17,7 +17,7 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|datasource|string array |Collection of array names defining the hierarchy|
+|dataSource|string array |Collection of array names defining the hierarchy|
 
 #### Objects Supported
 
