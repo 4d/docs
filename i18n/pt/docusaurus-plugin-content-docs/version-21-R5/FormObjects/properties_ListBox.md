@@ -60,7 +60,7 @@ Define a ação a ser executada quando um usuário clica duas vezes em uma linha
 
 Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
-For the last two actions, the `On Open Detail` form event is also generated. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
+Para as duas últimas ações, o evento de formulário `On Open Detail` também é gerado. `On Close Detail` é gerado quando um registro exibido no formulário detalhado associado à list box está prestes a ser fechado (independentemente de o registro ter sido modificado ou não).
 
 #### Gramática JSON
 
@@ -164,15 +164,9 @@ Número de colunas que não podem ser movidas durante a execução.
 
 ## Número de colunas trancadas
 
-Define o número de colunas do list box.
+Define o comprimento da [coleção de colunas](#columns) do list box.
 
 > Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
-
-#### Gramática JSON
-
-| Nome        | Tipo de dados | Valores possíveis         |
-| ----------- | ------------- | ------------------------- |
-| columnCount | integer       | mínimo: 1 |
 
 #### Objectos suportados
 

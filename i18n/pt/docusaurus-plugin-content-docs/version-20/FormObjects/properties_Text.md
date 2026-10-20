@@ -67,7 +67,7 @@ Define o texto para ter uma linha por baixo.
 
 | Nome           | Tipo de dados | Valores possíveis     |
 | -------------- | ------------- | --------------------- |
-| textDecoration | string        | "normal", "underline" |
+| textDecoration | string        | "none", "underline"   |
 
 #### Objectos suportados
 
@@ -243,8 +243,8 @@ Localização horizontal do texto na área que o contém.
 
 :::note
 
-- "automatic" não é suportado por [caixas de verificação](checkbox_overview.md) e [botões rádio](radio_overview.md)
-- "justify" só é suportado por [entradas](input_overview.md) e [áreas de texto](texto.md)
+- "automatic" não é suportado por [botões](button_overview.md), [caixas de verificação](checkbox_overview.md) e [botões rádio](radio_overview.md)
+- "justify" só é suportado por [entradas](input_overview.md) e [áreas de texto](text.md)
 
 :::
 

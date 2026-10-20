@@ -37,7 +37,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md)  
 
 #### Comandos
 

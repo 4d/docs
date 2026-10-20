@@ -37,7 +37,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md)  
 
 #### Comandos
 
@@ -241,7 +241,7 @@ Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> Esta propiedad funciona junto con la propiedad [Margen horizontal](#horizontal-margin).
+> Esta propiedad funciona junto con la propiedad [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 

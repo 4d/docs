@@ -57,7 +57,7 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 | Nome         | Tipo de dados | Valores possíveis                                     |
 | ------------ | ------------- | ----------------------------------------------------- |
-| footerHeight | string        | décimales positives +px &#124; em |
+| footerHeight | string        | value+px &#124; em |
 
 #### Objectos suportados
 

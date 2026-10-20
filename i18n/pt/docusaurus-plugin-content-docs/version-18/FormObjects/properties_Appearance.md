@@ -10,13 +10,13 @@ A propriedade default button designa o botão que recebe o foco inicial em tempo
 
 Só pode haver um botão predefinido por página de formulário.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
+Além disso, no macOS, a propriedade default button modifica a aparência do botão para indicar uma "escolha recomendada" ao usuário. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > O botão tem de ter uma altura padrão para obter o aspeto de botão predefinido.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. No entanto, no editor de formulários 4D, o botão padrão é representado por um contorno azul:
+No Windows, o conceito de "escolha recomendada" não é suportado: apenas o botão com foco tem uma aparência diferente em tempo de execução. No entanto, no editor de formulários 4D, o botão padrão é representado por um contorno azul:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -93,7 +93,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista hierárquica](list_overview.md) - [Subformulário](subform_overview.md) - [Caixa de listagem](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -144,7 +144,7 @@ Apresenta/oculta os rodapés quando o [modo de visualização da página](#view-
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showFooters|boolean|true (por padrão), false|
+ showFooters|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -311,7 +311,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- labelsPlacement|boolean|"top", "bottom" |
+ labelsPlacement|text|"top", "bottom" |
 
 #### Objectos suportados
 
@@ -364,7 +364,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
+[Lista hierárquica](list_overview.md) - [Subformulário](subform_overview.md) - [Caixa de listagem](listbox_overview.md) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -378,7 +378,7 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 - **Página**: o modo de visualização mais completo, que inclui contornos de página, orientação, margens, quebras de página, cabeçalhos e rodapés, etc.
 - **Rascunho**: modo rascunho com propriedades básicas do documento
-- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)). Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
+- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
 
 > A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 

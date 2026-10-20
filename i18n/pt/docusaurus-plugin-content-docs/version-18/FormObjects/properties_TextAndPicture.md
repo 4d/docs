@@ -34,7 +34,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Botão rádio](radio_overview.md) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
+[Botão](button_overview.md) - [Botão rádio](radio_overview.md) - [Caixa de verificação](checkbox_overview.md)  
 
 ---
 
@@ -171,11 +171,11 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 ## Margem vertical {#vertical-margin}
 
-This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
+Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+> Esta propriedade funciona em conjunto com a propriedade [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -191,30 +191,30 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Com menu pop-up
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+Esta propriedade permite exibir um símbolo que aparece como um triângulo no botão para indicar a presença de um menu pop-up anexado:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+A aparência e a localização deste símbolo dependem do estilo do botão e da plataforma atual.
 
 ### Ligados e Separados
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+Para anexar um símbolo de menu pop-up a um botão, existem duas opções de exibição disponíveis:
 
 |                         Linked                          |                          Separado                          |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
 > The actual availability of a "separated" mode depends on the style of the button and the platform.
 
-Each option specifies the relation between the button and the attached pop-up menu:
+Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
-* When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
+* Quando o menu pop-up está **separado**, clicar na parte esquerda do botão executa diretamente a ação atual do botão; esta ação pode ser modificada usando o menu pop-up acessível na parte direita do botão.
 
-* When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.
+* Quando o menu pop-up está **ligado**, um simples clique no botão apenas exibe o menu pop-up. Apenas a seleção da ação no menu pop-up provoca a sua execução.
 
 ### Gerir o menu pop-up
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+É importante notar que a propriedade "Com menu pop-up" apenas gere o aspeto gráfico do botão. A exibição do menu pop-up e seus valores deve ser totalmente gerida pelo programador, mais particularmente usando `form events` e os comandos **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** e **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
 
 #### Gramática JSON
 
@@ -224,4 +224,4 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### Objectos suportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)

@@ -3,7 +3,7 @@ id: dropdownListOverview
 title: Lista suspensa ou drop down
 ---
 
-Listas drop-down são objetos que permitem que os usuários selecionem de uma lista. Gerenciar os itens exibidos na lista drop down usando um array, uma lista de escolha ou uma ação padrão.
+Listas drop-down são objetos que permitem que os usuários selecionem de uma lista. Gerenciar os itens exibidos na lista drop down usando um objeto, um array, uma lista de escolha ou uma ação padrão.
 
 Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes referem aos mesmos objetos. Ambos os nomes referem aos mesmos objetos. Como no exemplo abaixo, a aparência desses objetos podem diferenciar levemente de acordo com a plataforma:
 
@@ -11,7 +11,7 @@ Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes
 
 ## Tipos de listas pendentes
 
-Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. Para definir un tipo, seleccione los valores apropiados **Tipo de expresión** y **Tipo de datos** en la lista Propiedades o utilice su equivalente JSON.
+Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. Para definir un tipo, seleccione los valores apropiados **Tipo de expressão** y **Tipo de dados** en la lista Propiedades o utilice su equivalente JSON.
 
 | Tipo                                | Funcionalidades                                                                      | Tipo de expressão | Tipo de dados                         | Definição JSON                                                                                                                      |
 | ----------------------------------- | ------------------------------------------------------------------------------------ | ----------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,7 +32,7 @@ Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_col
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `valores`      | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>cadeias</li><li>números</li><li>datas</li><li>horas</li>se estiver vazio ou não, a lista suspensa está vazia |
+| `values`      | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>cadeias</li><li>números</li><li>datas</li><li>horas</li>se estiver vazio ou não, a lista suspensa está vazia |
 | `index`        | number           | Índice do item selecionado no momento (valor entre 0 e `collection.length-1`). Se você definir -1, `currentValue` será exibido como uma cadeia de caracteres de espaço reservado                                                     |
 | `currentValue` | igual a Colecção | Item atualmente selecionado (utilizado como valor de marcador de posição se definido por código)                                                                                                                                                     |
 
@@ -63,7 +63,8 @@ Depois de o utilizador selecionar um valor:
 
 ```4d
 Form.myDrop.values // ["apples","nuts","pears","oranges","carrots"]
-Form.myDrop.currentValue //"oranges" Form.myDrop.index //3
+Form.myDrop.currentValue //"oranges"
+Form.myDrop.index //3
 ```
 
 ### Usar um array
@@ -77,13 +78,13 @@ Para inicializar o array associado à lista pendente, pode:
 - Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 
 ```4d
-  ARRAY TEXT($aCities;6)
-  $aCities{1}:="Philadelphia"
-  $aCities{2}:="Pittsburg"
-  $aCities{3}:="Grand Blanc"
-  $aCities{4}:="Bad Axe"
-  $aCities{5}:="Frostbite Falls"
-  $aCities{6}:="Green Bay" 
+  ARRAY TEXT(aCities;6) 
+  aCities{1}:="Philadelphia" 
+  aCities{2}:="Pittsburg" 
+  aCities{3}:="Grand Blanc" 
+  aCities{4}:="Bad Axe" 
+  aCities{5}:="Frostbite Falls" 
+  aCities{6}:="Green Bay" 
 ```
 
 Nesse caso, o nome da [variável](properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
@@ -91,7 +92,7 @@ Nesse caso, o nome da [variável](properties_Object.md#variable-or-expression) a
 - Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands-legacy/list-to-array.md). Por exemplo:
 
 ```4d
-   LIST TO ARRAY("Cities";$aCities)
+   LIST TO ARRAY("Cities";aCities)
 ```
 
 Nesse caso também, o nome da [variável](properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Este código pode ser executado ao invés das sentenças de atribuição mostradas anteriormente.
@@ -120,15 +121,15 @@ Deve selecionar cada event que teste nas estruturas Case. Os arrays sempre cont�
 
 ### Utilizar uma lista de seleção
 
-Se quiser usar uma lista suspensa para gerenciar os valores de uma área de entrada (campo ou variável listada), 4D permite que você faça referência ao campo ou à variável diretamente como [fonte de dados] da lista suspensa (properties_Object.md#variable-or-expression). Isso facilita gerenciar variáveis/campos listados.
+Se quiser usar uma lista suspensa para gerenciar os valores de uma área de entrada (campo ou variável listada), 4D permite que você faça referência ao campo ou à variável diretamente como fonte de dados da lista suspensa ([properties_Object.md#variable-or-expression](properties_Object.md#variable-or-expression)). Isso facilita gerenciar variáveis/campos listados.
 
 Por exemplo, no caso de um campo "Cor" que só possa conter os valores "White", "Blue", "Green" ou "Red", agora é possível criar uma lista que contenha esses valores e associe-os a um objeto emergente menu que faça referência ao campo "Color". 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
 
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, precisa usar uma [lista de seleção hierárquica](#using-a-hierarchical-choice-list).
 
 Para associar uma lista suspensa a um campo ou variável, digite o nome do campo ou da variável diretamente como o campo [Variable or Expression](properties_Object.md#variable-or-expression) da lista suspensa na Lista de propriedades.
 
-> Não é possível combinar esse princípio com o uso de um array para iniciar o objeto. Se digitar um nome de campo na área Nome da variável, deve usar uma lista de seleção.
+> Não é possível combinar esse princípio com o uso de um objeto ou array para iniciar o objeto. Se digitar um nome de campo na área Nome da variável, deve usar uma lista de seleção.
 
 Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou com box durante a entrada ou a visualização: quando um usuário escolher um valor, é salvo no campo; esse valor de campo é mostrado no menu pop up quando o formulário for exibido:
 
@@ -138,7 +139,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 Quando você tiver associado uma lista suspensa com uma lista de escolha e com um campo ou uma variável, você pode definir a propriedade [**Tipo de dados**](properties_DataSource.md#data-type-list) para **O valor do item selecionado** ou **Referência do item selecionado**. Essa opção permite otimizar o tamanho dos dados salvos.
 
-### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
+### Utilizar uma lista de seleção hierárquica
 
 Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista. Eis um exemplo de uma lista pendente hierárquica:
 

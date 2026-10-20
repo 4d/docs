@@ -41,7 +41,7 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 
 | Nome       | Tipo de dados | Valores possíveis                                                                                |
 | ---------- | ------------- | ------------------------------------------------------------------------------------------------ |
-| textFormat | string        | "####", "(#####) ### ####", "### ### ### ####", "#### ## ####", "00000", formatos personalizados |
+| textFormat | string        | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", formatos personalizados |
 
 #### Objectos suportados
 
@@ -502,7 +502,7 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### Gramática JSON
 
@@ -548,7 +548,7 @@ Nas caixas de lista, qualquer texto muito longo é truncado e exibido com uma el
 
 Observe que, independentemente do valor da opção Wordwrap, a altura da linha não será alterada. Se o texto com quebras de linha não puder ser exibido inteiramente na coluna, ele é truncado (sem uma elipse). No caso de caixas de lista exibindo apenas uma única linha, somente a primeira linha do texto é exibida:
 
-![](../assets/en/FormObjects/property_wordwrap1.png)
+![](../assets/en/FormObjects/property_wordwrap2.png)
 
 #### Automático para entrada (opção padrão)
 
@@ -563,7 +563,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 | Nome     | Tipo de dados | Valores possíveis                                 |
 | -------- | ------------- | ------------------------------------------------- |
-| wordwrap | string        | "automatic" (exceto list box), "normal", "nenhum" |
+| wordwrap | string        | "automatic" (exceto coluna e rodapé de list box), "normal", "nenhum" |
 
 #### Objectos suportados
 

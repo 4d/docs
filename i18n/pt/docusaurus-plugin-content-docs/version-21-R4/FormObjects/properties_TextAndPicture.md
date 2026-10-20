@@ -37,7 +37,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md)  
 
 #### Comandos
 
@@ -241,7 +241,7 @@ Esta propriedade permite definir o tamanho (em píxeis) das margens verticais do
 
 Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
-> Esta propiedad funciona junto con la propiedad [Margen horizontal](#horizontal-margin).
+> Esta propiedad funciona junto con la propiedad [Margem horizontal](#horizontal-margin).
 
 #### Gramática JSON
 
@@ -290,7 +290,7 @@ Consulte a [descrição do evento `On Alternative Click`](../Events/onAlternativ
 
 ### Gerir o menu pop-up
 
-É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using [`form events`](../Events/overview.md) and the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu) and [`Pop up menu`](../commands/pop-up-menu) commands.
+É importante notar que a propriedade "Com o Menu Popup" apenas gerencia o aspecto gráfico do botão. A exibição do menu pop-up e seus valores deve ser totalmente gerenciada pelo desenvolvedor, mais particularmente usando [`form events`](../Events/overview.md) e os comandos [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu) e [`Pop up menu`](../commands/pop-up-menu).
 
 #### Gramática JSON
 

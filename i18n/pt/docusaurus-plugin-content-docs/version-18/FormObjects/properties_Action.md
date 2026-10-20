@@ -21,13 +21,13 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                            |
-| -------- | ------------- | ------------------------------------------------------------ |
-| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| Nome     | Tipo de dados | Valores possíveis                                                                                      |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------ |
+| dragging | text          | "none" (por padrão), "custom" (exceto área de plug-in), "automatic" (exceto botão e list box)          |
 
 #### Objectos suportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de plug-in](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Combo Box](comboBox_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de plug-in](pluginArea_overview.md#overview)
 
 #### Veja também
 
@@ -48,9 +48,9 @@ Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                            |
-| -------- | ------------- | ------------------------------------------------------------ |
-| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| Nome     | Tipo de dados | Valores possíveis                                                                                      |
+| -------- | ------------- | ------------------------------------------------------------------------------------------------------ |
+| dropping | text          | "none" (por padrão), "custom" (exceto área de plug-in), "automatic" (exceto botão e list box)          |
 
 #### Objectos suportados
 
