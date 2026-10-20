@@ -103,7 +103,7 @@ $myTextVar:=[myTable]myTextField
 
 The **Autoincrement** property generates sequence numbers in the table. It can be used with fields of the [Integer, Long Integer and Integer 64 bits types](../Concepts/data-types.md).
 
-A field with this property is automatically incremented each time a record is created in the table. The sequence number assigned to the field matches that of the "internal counter" of the table, maintained by 4D. This internal counter can also be accessed using 4D commands [`Sequence number`](../commands/sequence-number) and [`Get database parameter`](../commands/get-database-parameter) and using the `#N` marker (see Default values).
+A field with this property is automatically incremented each time a record is created in the table. The sequence number assigned to the field matches that of the "internal counter" of the table, maintained by 4D. This internal counter can also be accessed using 4D commands [`Sequence number`](../commands/sequence-number) and [`Get database parameter`](../commands/get-database-parameter) and using the `#N` marker (see [**Default value**](../FormObjects/properties_RangeOfValues.md#default-value).
 
 The numbers assigned are never reused in the table, even when records are deleted. Numbers generated during a transaction that is cancelled are "lost”. The Autoincrement property corresponds to the SQL AUTO_INCREMENT attribute and can be specified using this language. The AUTO INCREMENT label also appears in the SQL information area of the [Inspector](../Develop/structure-editor.md#inspector-palette) for fields having this attribute.
 

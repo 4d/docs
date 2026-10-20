@@ -31,7 +31,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|defaultValue |string, number, date, time, boolean|Any value and/or a stamp: "#D", "#H", "#N"|
+|defaultValue |string|Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"...|
 
 #### Objects Supported
 
