@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R5|Nuevas constantes `Border Custom` y `Border System Rounded`|
 |14|Creado por|
 
 </details>
@@ -37,8 +38,9 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
 
 El comando devuelve un valor que corresponde al estilo de la línea fronteriza. Puede comparar el valor recibido con las siguientes constantes, que se encuentran en el tema "*Propiedades de los objetos*":
 
-| Constante     | Tipo         | Valor | Comentario                                                                                                          |
-| ------------- | ------------ | ----- | ------------------------------------------------------------------------------------------------------------------- |
+| Constante     | Tipo         | Valor | Comentario |
+| ------------- | ------------ | ----- | ---------- |
+| Border Custom | Entero largo | 9     | (solo botones) Activa el diseño del marco interior de los botones y admite propiedades adicionales |
 | Border Dotted | Entero largo | 2     | Los objetos aparecen enmarcados con una línea punteada de 1-pt.                                                     |
 | Border Double | Entero largo | 5     | Los objetos aparecen enmarcados con una línea doble, es decir, dos líneas continuas de 1-pt. separadas por un píxel |
 | Border None   | Entero largo | 0     | Los objetos aparecen sin borde                                                                                      |
@@ -46,6 +48,7 @@ El comando devuelve un valor que corresponde al estilo de la línea fronteriza. 
 | Border Raised | Entero largo | 3     | Los objetos aparecen con un efecto 3D (relieve)                                                                     |
 | Border Sunken | Entero largo | 4     | Los objetos aparecen enmarcados con un efecto 3D hundido (relieve inverso)                                          |
 | Border System | Entero largo | 6     | La línea del borde se dibuja en función de las especificaciones gráficas del sistema                                |
+| Border System Rounded | Entero largo | 8 | En macOS, la línea del borde utiliza la apariencia gráfica "Liquid Glass". En Windows, el resultado es similar a `Border System`. |
 
 ## Ver también 
 
@@ -57,5 +60,4 @@ El comando devuelve un valor que corresponde al estilo de la línea fronteriza. 
 | --- | --- |
 | Número de comando | 1263 |
 | Hilo seguro | no |
-
 

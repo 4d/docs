@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Nouvelles constantes `Border Custom` et `Border System Rounded`|
 |14|Créé|
 
 </details>
@@ -37,8 +38,9 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 La commande retourne une valeur correspondant au style de la bordure. Vous pouvez comparer la valeur reçue aux constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constante     | Type        | Valeur | Comment                                                                                                                 |
-| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Constante     | Type        | Valeur | Comment |
+| ------------- | ----------- | ------ | ------- |
+| Border Custom | Entier long | 9      | (boutons uniquement) Active le design du cadre intérieur des boutons et prend en charge des propriétés supplémentaires |
 | Border Dotted | Entier long | 2      | Les objets apparaissent dans un cadre pointillé de 1 pt                                                                 |
 | Border Double | Entier long | 5      | Les objets apparaissent encadrés par une double ligne, c’est-à-dire deux lignes continues de 1 pt séparées par un pixel |
 | Border None   | Entier long | 0      | Les objets apparaissent sans encadrement                                                                                |
@@ -46,6 +48,7 @@ La commande retourne une valeur correspondant au style de la bordure. Vous pouve
 | Border Raised | Entier long | 3      | Les objets apparaissent avec un effet 3D (relief)                                                                       |
 | Border Sunken | Entier long | 4      | Les objets apparaissent avec un effet 3D en creux (relief inversé)                                                      |
 | Border System | Entier long | 6      | Le cadre est dessiné en fonction des spécifications graphiques du système                                               |
+| Border System Rounded | Entier long | 8 | Sur macOS, la bordure utilise l'apparence graphique "Liquid Glass". Sous Windows, le rendu est similaire à `Border System`. |
 
 ## Voir aussi 
 
@@ -57,5 +60,4 @@ La commande retourne une valeur correspondant au style de la bordure. Vous pouve
 | --- | --- |
 | Numéro de commande | 1263 |
 | Thread safe | no |
-
 
