@@ -69,7 +69,7 @@ The modulo operator % divides the first number by the second number and returns 
 
 :::warning
 
-The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the [`Mod`](https://doc.4d.com/4dv20/help/command/en/page98.html) command.
 
 :::
 
