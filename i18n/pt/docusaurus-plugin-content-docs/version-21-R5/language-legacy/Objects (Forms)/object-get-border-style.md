@@ -1,4 +1,4 @@
-﻿---
+---
 id: object-get-border-style
 title: OBJECT Get border style
 slug: /commands/object-get-border-style
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Nova constante `Border Custom` e `Border System Rounded` |
 |14|Criado por|
 
 </details>
@@ -39,6 +40,7 @@ O comando devolve um valor que corresponde ao estilo da linha fronteira. Pode co
 
 | Constante     | Tipo          | Valor | Comentário                                                                                                       |
 | ------------- | ------------- | ----- | ---------------------------------------------------------------------------------------------------------------- |
+| Border Custom | Integer | 9     | (apenas botões) Ativa o design de moldura interna para botões, suportando propriedades extras |
 | Border Dotted | Inteiro longo | 2     | Os objetos aparecem moldados com uma linha pontilhada de 1-pt.                                                   |
 | Border Double | Inteiro longo | 5     | Os objetos aparecem moldados com uma linha dupla, ou seja, duas linhas contínuas de 1-pt. separadas por um píxel |
 | Border None   | Inteiro longo | 0     | Os objetos aparecem sem borde                                                                                    |
@@ -46,9 +48,11 @@ O comando devolve um valor que corresponde ao estilo da linha fronteira. Pode co
 | Border Raised | Inteiro longo | 3     | Os objetos aparecem com um efeito 3D (relieve)                                                                   |
 | Border Sunken | Inteiro longo | 4     | Os objetos aparecem moldados com um efeito 3D afundado (releve inverso)                                          |
 | Border System | Inteiro longo | 6     | A linha do borde se desenha em função das especificações gráficas do sistema                                     |
+| Border System Rounded | Integer | 8  | No macOS, a linha do borde é desenhada com aparência gráfica "Liquid Glass". No Windows, o desenho é semelhante ao `Border System` |
 
 ## Ver também 
 
+[OBJECT Get corner radius](../commands/object-get-corner-radius)  
 [OBJECT SET BORDER STYLE](../commands/object-set-border-style)  
 
 ## Propriedades
