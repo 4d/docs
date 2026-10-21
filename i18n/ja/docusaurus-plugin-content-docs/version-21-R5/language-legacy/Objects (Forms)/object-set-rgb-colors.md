@@ -5,7 +5,7 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *object* : Text ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *object* : Variable, Field ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *object* : Text ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer {; *borderColor* : Text, Integer}}} )<br/>**OBJECT SET RGB COLORS** ( *object* : Variable, Field ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer {; *borderColor* : Text, Integer}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 <div class="no-index">
 
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 | foregroundColor | Text, Integer | &#8594; | 前景色のRGBカラー |
 | backgroundColor | Text, Integer | &#8594; | 背景色のRGBカラー |
 | altBackgrndColor | Text, Integer | &#8594; | 奇数行の背景色RGBカラー |
+| borderColor | Text, Integer | &#8594; | 境界線のRGBカラー値 ("" = 変更なし) |
 </div>
 <!-- END REF-->
 
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
+|21 R5|*borderColor* 引数に対応|
 |17 R6|変更|
 |14|変更|
 |12|名称変更|
@@ -35,7 +37,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->**OBJECT SET RGB COLORS** コマンドは、引数*object*とオプション引数の *\** によって指定されるオブジェクトの前景色と背景色を変更します。<!-- END REF-->コマンドがリストボックスに対して適用される場合、引数を更に使用して奇数行の背景色を変更することができます。
+<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->**OBJECT SET RGB COLORS**コマンドは、*object* 引数とオプションの *\** 引数で指定したオブジェクトの前景色と背景色を変更します。<!-- END REF-->コマンドを適用するオブジェクトに応じて、さらに2つのカラー引数を使用できます。
 
 オプションの *\** 引数を指定した場合、*object*はオブジェクト名です (文字列) 。オプションの \* 引数を省略すると、*object*はフィールドまたは変数です。この場合、文字列ではなくフィールドまたは変数参照 (フィールドまたは変数のみ) を指定します。オブジェクト名に関する詳細は*オブジェクトプロパティ* を参照してください。
 
@@ -43,9 +45,19 @@ displayed_sidebar: docs
 
 *object* がリストボックスオブジェクトを指す場合、奇数行背景色はリストボックス全体に対して使用されます。*object* がリストボックスの任意の列を指す場合、設定した色はその列に対してだけ使用されます。
 
+オプションの *borderColor* 引数を使用すると、実行時に境界線の色を変更できます。この引数は `borderColor` プロパティをサポートするオブジェクトにのみ適用できます。また、境界線スタイルを "plain" または "dotted" にする必要があります（カスタムスタイルのボタンを除く）。詳細については、["境界線の色"](../../FormObjects/properties_BackgroundAndBorder.md#border-color)を参照してください。
+
+:::note
+
+*borderColor* 引数はバイナリデータベースでは使用できません。
+
+:::
+
+*foregroundColor*、*backgroundColor*、*altBackgrndColor*、および/または *borderColor* に "" (空の文字列) を渡すと、色を変更せずに保持できます。
+
 **カラーの定義**
 
-*foregroundColor*, *backgroundColor*, および *altBackgrndColor* 引数にRGB カラーを渡して指定します。以下のフォーマットがサポートされています:
+*foregroundColor* と、必要に応じて *backgroundColor*、*altBackgrndColor*、*borderColor* 引数にRGBカラー値を指定します。次の形式を使用できます:
 
 | **フォーマット名**                 | **型** | **詳細**                                                                                                                                                                                                                                                                                                                                                                          | **例**                                                     |
 | --------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -115,6 +127,21 @@ displayed_sidebar: docs
 
 ![](../../assets/en/commands/pict1210702.en.png)
 
+## 例題 3
+
+リストボックスの境界線の色だけを変更します:
+
+![](../../assets/en/commands/set-rgb-colors.png)
+
+```4d
+    //境界線スタイルを plain に変更 (デフォルトは system)
+OBJECT SET BORDER STYLE(*; "listOfDays"; Border Plain)
+    //境界線の色を赤に設定
+OBJECT SET RGB COLORS(*; "listOfDays"; ""; ""; ""; "#ff0000")
+```
+
+![](../../assets/en/commands/set-rgb-colors-2.png)
+
 ## 参照 
 
 [OBJECT GET RGB COLORS](../commands/object-get-rgb-colors)  
@@ -126,5 +153,4 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 628 |
 | スレッドセーフである | no |
-
 

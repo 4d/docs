@@ -5,7 +5,7 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Variable, Field ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer {; *borderColor* : Text, Integer}}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Variable, Field ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer {; *borderColor* : Text, Integer}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 <div class="no-index">
 
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 | colorPrimerPlano | Text, Integer | &#8594; | Valor del color RGB del primer plano |
 | colorFondo | Text, Integer | &#8594; | Valor del color RGB del fondo |
 | colorFondoAlt | Text, Integer | &#8594; | Valor del color RGB del fondo alterno |
+| borderColor | Text, Integer | &#8594; | Valor del color RGB del borde ("" = sin cambios) |
 </div>
 <!-- END REF-->
 
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21 R5|Compatibilidad con el parámetro *borderColor*|
 |17 R6|Modificado|
 |14|Modificado|
 |12|Renombrar|
@@ -35,17 +37,27 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->El comando **OBJECT SET RGB COLORS** cambia los colores de fondo y primer plano de los objetos especificados por *objeto* y el parámetro opcional *\**.<!-- END REF--> Cuando el comando se aplica a un objeto list box, un parámetro adicional le permite modificar el color alterno de las filas.
+<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->El comando **OBJECT SET RGB COLORS** cambia los colores de primer plano y de fondo de los objetos especificados por el parámetro *objeto* y el parámetro opcional *\**.<!-- END REF--> Según el objeto al que se aplique el comando, pueden estar disponibles otros dos parámetros de color.
 
 Si pasa el parámetro opcional *\**, especifica que el parámetro *objeto* es el nombre de objeto (una cadena). Si omite el parámetro opcional \*, especifica que *objeto* es un campo o una variable. En este caso, no pasa en *objeto* una cadena sino una referencia a un campo o a una variable (campo o variable de tipo objeto únicamente) en lugar de una cadena. Para mayor información sobre nombres de objetos, consulte la sección *Propiedades de los objetos*.
 
-El parámetro opcional *colorFondoAlt* le permite definir un color alternativo para el fondo de las líneas pares. Este parámetro sólo se utiliza cuando el objeto se especifica como List box o columna de List box. Cuando se utiliza este parámetro, el parámetro *c* *olorFondo* se utiliza para las líneas impares únicamente. La utilización de colores alternativos hace que las listas sean más fáciles de leer. 
+El parámetro opcional *colorFondoAlt* permite definir un color de fondo alternativo para las filas pares. Este parámetro solo se utiliza cuando el objeto especificado es un list box o una columna de list box. Cuando se utiliza, el parámetro *colorFondo* se aplica únicamente al fondo de las filas impares. El uso de colores alternos facilita la lectura de las listas.
 
 Si *objeto* especifica un objeto List box, los colores alternos se utilizan en todo el List box. Si *objeto* especifica una columna del List box, sólo la columna utilizará los colores definidos.
 
+El parámetro opcional *borderColor* permite cambiar el color del borde en tiempo de ejecución. Solo se puede aplicar a objetos que admitan la propiedad `borderColor` y requiere que el estilo del borde sea "plain" o "dotted" (excepto en los botones con estilo personalizado). Para más información, consulte la sección ["Color del borde"](../../FormObjects/properties_BackgroundAndBorder.md#border-color).
+
+:::note
+
+El parámetro *borderColor* no está disponible en las bases de datos binarias.
+
+:::
+
+Puede utilizar "" (cadena vacía) en *colorPrimerPlano*, *colorFondo*, *colorFondoAlt* y/o *borderColor* para dejar el color sin cambios.
+
 **Definición de colores**
 
-Los valores de los colores RGB se indican en los parámetros *colorPrimerPlano* y opcionalmente en *colorFondo* y *colorFondoAlt*. Los siguientes formatos se soportan:
+Los valores RGB se indican en el parámetro *colorPrimerPlano* y, opcionalmente, en *colorFondo*, *colorFondoAlt* y *borderColor*. Se admiten los siguientes formatos:
 
 | **Nombre del formato<br/>** | **Tipo**     | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Ejemplos**                                                                                      |
 | ----------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -115,6 +127,21 @@ Cambia a fondo transparente con un color de fuente claro:
 
 ![](../../assets/en/commands/pict1210702.en.png)
 
+## Ejemplo 3
+
+Cambiar únicamente el color del borde del list box:
+
+![](../../assets/en/commands/set-rgb-colors.png)
+
+```4d
+    //cambiar el estilo del borde a plain (system por defecto)
+OBJECT SET BORDER STYLE(*; "listOfDays"; Border Plain)
+    //definir el color del borde en rojo
+OBJECT SET RGB COLORS(*; "listOfDays"; ""; ""; ""; "#ff0000")
+```
+
+![](../../assets/en/commands/set-rgb-colors-2.png)
+
 ## Ver también 
 
 [OBJECT GET RGB COLORS](../commands/object-get-rgb-colors)  
@@ -126,5 +153,4 @@ Cambia a fondo transparente con un color de fuente claro:
 | --- | --- |
 | Número de comando | 628 |
 | Hilo seguro | no |
-
 
