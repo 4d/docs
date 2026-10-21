@@ -13,6 +13,10 @@ Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 - Support of S/MIME email signing through new [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) class properties: [`.certificate`](../API/SMTPTransporterClass.md#certificate) or [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (certificate providing), and [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - You can now [compile a component directly from the host](../Project/compiler.md#compile-components). 
 - Support of list forms in [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows. 
+- 4D.Vector fields: [new specific icon](../Develop/field-properties.md#4dvector-class) and new [dedicated index types](../Develop/structure-indexes.md#vector-index). 
+- Support of vector indexes in [`CREATE INDEX`](../commands/create-index) and [`SET INDEX`](../commands/set-index) 4D language commands.  
+- New [dataClass.getIndexes()](../API/DataClassClass.md#getindexes) API function. 
+- New [`.precision` property](../API/VectorClass.md#precision) in `4D.Vector` class objects.  
 - Direct access to the [4D Corner platform](https://corner.4d.com/) from the [Dependency manager](../Project/components.md#using-4d-corner).
 - New [`WebServer.quotas`](../API/WebServerClass.md#quotas) property and enhanced [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to configure [Web server quotas](../WebServer/quotas.md).
 - Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Support for [vertical alignment](../FormObjects/properties_Text.md#vertical-alignment). 
