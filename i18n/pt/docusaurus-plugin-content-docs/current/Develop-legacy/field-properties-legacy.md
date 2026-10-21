@@ -103,7 +103,7 @@ $myTextVar:=[myTable]myTextField
 
 A propriedade **Autoincremento** gera números de sequência na tabela. Pode ser usada com campos dos tipos [Integer, Long Integer e Integer 64 bits](../Concepts/data-types.md).
 
-Um campo com esta propriedade é automaticamente incrementado cada vez que um registro é criado na tabela. O número de sequência atribuído ao campo corresponde ao "contador interno" da tabela, mantido pelo 4D. Este contador interno também pode ser acessado usando os comandos 4D [`Sequence number`](../commands/sequence-number) e [`Get database parameter`](../commands/get-database-parameter) e usando o marcador `#N` (veja Valores padrão).
+Um campo com esta propriedade é automaticamente incrementado cada vez que um registro é criado na tabela. O número de sequência atribuído ao campo corresponde ao "contador interno" da tabela, mantido pelo 4D. Este contador interno também pode ser acessado usando os comandos 4D [`Sequence number`](../commands/sequence-number) e [`Get database parameter`](../commands/get-database-parameter) e usando o marcador `#N` (veja [**Valor padrão**](../FormObjects/properties_RangeOfValues.md#default-value).
 
 Os números atribuídos nunca são reutilizados na tabela, mesmo quando registros são excluídos. Números gerados durante uma transação que é cancelada são "perdidos". A propriedade Autoincremento corresponde ao atributo SQL AUTO_INCREMENT e pode ser especificada usando esta linguagem. O rótulo AUTO INCREMENT também aparece na área de informações SQL do [Inspetor](../Develop/structure-editor.md#inspector-palette) para campos com este atributo.
 
