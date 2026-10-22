@@ -72,6 +72,6 @@ Using an object as an hash map (key / value system) provides a quick and direct 
 |  |  |
 | --- | --- |
 | Command number | 1720 |
-| Thread safe | no |
+| Thread safe | yes | |
 
 
