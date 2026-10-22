@@ -49,7 +49,7 @@ A null time is specified by ?00:00:00?
 |Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
 ||||		?01:02:03? > ?01:02:03?	|False| 
 |Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True| 
-		||||	?01:02:03? < ?01:02:03?	|False| 
+||||	?01:02:03? < ?01:02:03?	|False| 
 |Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
 ||||?01:02:03? >=?01:02:04?	|False| 
 |Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
