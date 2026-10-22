@@ -644,7 +644,7 @@ El método proyecto ***SearchDuplicate*** busca valores duplicados en cualquier 
 
 | Parámetros | Tipo       |                             | Descripción                 |
 | ---------- | ---------- | --------------------------- | --------------------------- |
-| Resultado  | Collection | <- | Collection of index objects |
+| Resultado  | Collection | <- | Colección de objetos índice |
 
 </div>
 <!-- END REF -->
@@ -666,7 +666,7 @@ Each object of the returned collection has the following properties:
 | name       | Text       | Index name if defined                                                                                                                                                                                                                                       |
 | kind       | Text       | "keywords" if *keyword index* checked, otherwise "regular"                                                                                                                                                                                                  |
 | attributes | Collection | Index attribute or list of attributes (for composite index)                                                                                                                                                                              |
-| UUID       | Text       | Index UUID                                                                                                                                                                                                                                                  |
+| UUID       | Text       | Índice UUID                                                                                                                                                                                                                                                 |
 | uniqueKey  | Boolean    | True if index has the Unique key property                                                                                                                                                                                                                   |
 
 :::tip Entrada de blog relacionada
@@ -1772,7 +1772,7 @@ var $results := ds.MyTable.query("myVectorField <= :1 AND salary>100000 order by
 
 #### Descripción
 
-La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->...
+La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos<!-- END REF -->..
 
 En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 
