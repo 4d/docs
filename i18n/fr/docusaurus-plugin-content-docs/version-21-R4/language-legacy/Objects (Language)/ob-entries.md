@@ -72,6 +72,6 @@ L'utilisation d'un objet comme une hashmap (système clé/valeur) permet d'accé
 |  |  |
 | --- | --- |
 | Numéro de commande | 1720 |
-| Thread safe | no |
+| Thread safe | yes | |
 
 

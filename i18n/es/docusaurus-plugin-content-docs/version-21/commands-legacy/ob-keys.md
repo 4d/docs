@@ -62,6 +62,6 @@ Quiere una colección con todos los nombres de propiedad de primer nivel de un o
 |  |  |
 | --- | --- |
 | Número de comando | 1719 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 
