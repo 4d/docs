@@ -154,7 +154,7 @@ Para adicionar um campo ao índice, clique no botão **[+]**. A lista de campos 
 
 - Se você quiser criar um índice composto, adicione cada campo a ser incluído no índice sucessivamente. Uma vez que a lista esteja completa, você pode reordenar os campos usando os botões de seta ou arrastando e soltando.  
 - Se você criar um índice composto baseado em campos de chave primária, certifique-se de colocar os campos na mesma ordem na chave primária e no índice.  
-- Se você escolheu o tipo “Índice de Palavras-chave”, apenas campos Alpha ou Text podem ser selecionados. Também nesse caso, você não pode incluir apenas um campo no índice.
+- Se você escolheu o tipo “Índice de Palavras-chave”, apenas campos Alpha, Text ou Picture podem ser selecionados. Também nesse caso, você pode incluir apenas um campo no índice.
 
 Para excluir um campo do índice, selecione-o na lista e clique no botão **[-]**.
 
