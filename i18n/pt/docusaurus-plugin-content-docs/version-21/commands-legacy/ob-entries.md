@@ -72,6 +72,6 @@ Usando um objeto com um map hash (sistema key/value) oferece um acesso rápido e
 |  |  |
 | --- | --- |
 | Número do comando | 1720 |
-| Thread-seguro | no |
+| Thread-seguro | yes | |
 
 

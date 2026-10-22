@@ -1,4 +1,4 @@
-﻿---
+---
 id: ob-keys
 title: OB Keys
 slug: /commands/ob-keys
@@ -64,6 +64,6 @@ Se quiser uma coleção com todos os nomes de propriedade de primeiro-nível de 
 |  |  |
 | --- | --- |
 | Número do comando | 1719 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 
