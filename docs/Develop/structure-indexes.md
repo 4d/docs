@@ -154,7 +154,7 @@ To add a field to the index, click on the **[+]** button. The list of fields of 
 
 - If you want to create a composite index, add each field to be included in the index successively. Once the list is completed, you can reorder the fields using the arrow buttons or using drag and drop.  
 - If you create a composite index based on primary key fields, make sure you put the fields in the same order in the primary key and in the index.  
-- If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
+- If you have chosen the “Keyword Index” type, only Alpha, Text, or Picture fields can be selected. Also in this case, you can include only one field in the index.
 
 To delete a field from the index, select it in the list and click on the **[-]** button. 
 
