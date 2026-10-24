@@ -409,6 +409,8 @@ If the characters typed correspond to different types of objects, the list displ
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes**, **tables** and/or **prototypes**. These options are found in **Preferences** > **Methods** > **Options**
 
+When a suggested class function or class constructor is documented with a [comment block above its declaration](../Concepts/classes.md#function-comments), its description and parameter comments are displayed with its signature in the suggestion details.
+
 #### Object property names
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
@@ -569,6 +571,25 @@ The [status bar](#status-bar) also provides contextual information.
         ![](../assets/en/code-editor/help-tip.png)  
 
 - You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
+
+- **Class function and class constructor comments**: When you call a class function or a class constructor (`cs.MyClass.new()`), the help tip and the signature help display its signature along with the [comment block written right above its declaration](../Concepts/classes.md#function-comments): the description lines, then the `$name:` parameter lines. `MCP:` lines are not displayed. This applies to project classes, shared and singleton classes, and component classes, and works the same in VS Code.
+
+  - The text is displayed as plain text: Markdown markers are shown as written.
+  - Only the saved code is used: an edited comment is displayed once the class is saved.
+  - If there is no comment block right above the declaration (for example, if a blank line separates them), only the signature is displayed.
+
+  For example, with the following class function:
+
+  ```4d
+  // Class: Invoice
+
+  // Returns the price with taxes
+  // $rate: tax rate to apply (20 for 20%)
+  Function priceWithTaxes($rate : Real) : Real
+  	return This.price*(1+($rate/100))
+  ```
+
+  typing `$invoice.priceWithTaxes(` displays "Returns the price with taxes" and "$rate: tax rate to apply (20 for 20%)" below the signature.
 
 
 ## Comment / Uncomment  
