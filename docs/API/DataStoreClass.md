@@ -17,14 +17,19 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 |[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.generateFineGrainedToken().Syntax -->](#generatefinegrainedtoken)<br/><!-- INCLUDE #DataStoreClass.generateFineGrainedToken().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)<br/><!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<br/><!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.listFineGrainedTokens().Syntax -->](#listfinegrainedtokens)<br/><!-- INCLUDE #DataStoreClass.listFineGrainedTokens().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.listOAuthGrants().Syntax -->](#listoauthgrants)<br/><!-- INCLUDE #DataStoreClass.listOAuthGrants().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)<br/><!-- INCLUDE #DataStoreClass.locked().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<br/><!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<br/><!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.revokeFineGrainedToken().Syntax -->](#revokefinegrainedtoken)<br/><!-- INCLUDE #DataStoreClass.revokeFineGrainedToken().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.revokeOAuthGrant().Syntax -->](#revokeoauthgrant)<br/><!-- INCLUDE #DataStoreClass.revokeOAuthGrant().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<br/><!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)<br/><!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)<br/><!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
@@ -297,6 +302,82 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 #### See also
 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
+
+
+<!-- REF DataStoreClass.generateFineGrainedToken().Desc -->
+## .generateFineGrainedToken()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R6|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.generateFineGrainedToken().Syntax -->**.generateFineGrainedToken**( *privilege* : Text ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *privileges* : Collection ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *settings* : Object ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.generateFineGrainedToken().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|privilege|Text|&#8594;|Privilege name, or comma-separated privilege names|
+|privileges|Collection|&#8594;|Collection of privilege names|
+|settings|Object|&#8594;|Object with a "privileges" and/or "roles" property|
+|name|Text|&#8594;|Name of the token|
+|expiry|Date|&#8594;|Expiration date of the token|
+|info|Object|&#8594;|Information stored with the token and passed to `ds.mcpAuthenticated()`|
+|Result|Object|&#8592;|`{id; token}`|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.generateFineGrainedToken()` function <!-- REF #DataStoreClass.generateFineGrainedToken().Summary -->generates a Fine-Grained Token that gives access to the MCP server with the privileges you pass<!-- END REF -->. For more information, see [Fine-Grained Tokens](../WebServer/mcp-server.md#fine-grained-tokens).
+
+You pass the privileges and/or roles of the token in the same forms as for [`Session.setPrivileges()`](SessionClass.md#setprivileges):
+
+- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- In the *privileges* parameter, pass a collection of strings containing privilege names.
+- In the *settings* parameter, pass an object with a `privileges` and/or a `roles` property (string or collection of strings).
+
+Unlike `Session.setPrivileges()`, a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file raises an error.
+
+In *name*, pass a name that identifies the token, for example the user and the client that will use it. It is the user name of the MCP sessions opened with the token.
+
+In *expiry*, pass the expiration date of the token. It is required, and it must be later than the current date and at most 366 days ahead.
+
+In *info*, you can pass an object that 4D stores with the token as is, and passes to the [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) function when an MCP session is opened with the token. Since it cannot be modified later, store stable identifiers (such as a user ID) and read the current values in `ds.mcpAuthenticated()`. Build *info* from the authenticated session, never from values sent by the client.
+
+The function can only be called in a web context, i.e. from code executed for a web or REST request (for example an exposed function called after the user was authenticated). Every privilege of the token must be held by the current session ([`Session.getPrivileges()`](SessionClass.md#getprivileges), roles included, promoted privileges excluded). Otherwise, an error is raised.
+
+If an error is raised, no token is created.
+
+**Returned object**
+
+|Property|Type|Description|
+|---|---|---|
+|id|Text|Identifier of the token. It is not secret: use it to [revoke](#revokefinegrainedtoken) the token|
+|token|Text|The token, starting with "4dfgt_". It is returned only once: 4D only stores its hash, in the `fgt.json` file of the data folder|
+
+#### Example
+
+In an exposed function of the DataStore class, called by an authenticated user, you generate a token valid for 3 months:
+
+```4d
+exposed Function getMCPToken() : Text
+	var $expiry:=Add to date(Current date; 0; 3; 0)
+	var $result:=ds.generateFineGrainedToken({roles: "salesperson"}; "Claude Desktop - "+Session.userName; $expiry; {userName: Session.userName})
+	return $result.token // "4dfgt_..."
+```
+
+#### See also
+
+[.listFineGrainedTokens()](#listfinegrainedtokens)<br/>[.revokeFineGrainedToken()](#revokefinegrainedtoken)
+
+<!-- END REF -->
 
 
 ## .getAllRemoteContexts()
@@ -632,6 +713,114 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- END REF -->
 
 
+<!-- REF DataStoreClass.listFineGrainedTokens().Desc -->
+## .listFineGrainedTokens()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R6|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.listFineGrainedTokens().Syntax -->**.listFineGrainedTokens**() : Collection<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.listFineGrainedTokens().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Collection|&#8592;|Collection of token description objects|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.listFineGrainedTokens()` function <!-- REF #DataStoreClass.listFineGrainedTokens().Summary -->returns the description of the Fine-Grained Tokens generated for the MCP server<!-- END REF --> (see [`.generateFineGrainedToken()`](#generatefinegrainedtoken)).
+
+When the function is called in a web context (code executed for a web or REST request), the collection only contains the tokens whose privileges are all held by the current session. Elsewhere (for example in a method or a stored procedure), it contains all the tokens.
+
+Each object of the returned collection contains the following properties. The token itself and its hash are never returned.
+
+|Property|Type|Description|
+|---|---|---|
+|id|Text|Identifier of the token|
+|name|Text|Name of the token|
+|privileges|Text, Collection or Object|Privileges and roles of the token, as passed at generation|
+|expiry|Text|Expiration date of the token|
+|info|Object|Information stored with the token|
+|createdAt|Text|Date and time of the token generation|
+
+#### Example
+
+You revoke all the tokens generated for a user:
+
+```4d
+var $tokens:=ds.listFineGrainedTokens().query("info.userName = :1"; "jsmith")
+var $token : Object
+For each ($token; $tokens)
+	ds.revokeFineGrainedToken($token.id)
+End for each
+```
+
+<!-- END REF -->
+
+
+<!-- REF DataStoreClass.listOAuthGrants().Desc -->
+## .listOAuthGrants()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R6|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.listOAuthGrants().Syntax -->**.listOAuthGrants**() : Collection<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.listOAuthGrants().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Collection|&#8592;|Collection of grant description objects|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.listOAuthGrants()` function <!-- REF #DataStoreClass.listOAuthGrants().Summary -->returns the description of the grants given to users through the OAuth mode of the MCP server<!-- END REF -->. A grant is created each time a user logs in from an MCP client (see [OAuth 2.1 mode](../WebServer/mcp-server.md#oauth-21-mode)).
+
+When the function is called in a web context (code executed for a web or REST request), the collection only contains the grants whose privileges are all held by the current session. Elsewhere, it contains all the grants.
+
+Each object of the returned collection contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|id|Text|Identifier of the grant|
+|userName|Text|User name of the grant (`userName` returned by [`ds.mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant), or the login name)|
+|clientId|Text|Identifier of the MCP client|
+|clientName|Text|Name of the MCP client|
+|privileges|Text, Collection or Object|Privileges and roles returned by `ds.mcpGrant()`|
+|createdAt|Text|Date and time of the login|
+|lastUsedAt|Text|Date and time of the last use of the grant|
+|expiresAt|Text|Expiration date and time of the grant|
+
+#### Example
+
+You list the MCP clients in which a user is logged in:
+
+```4d
+var $clients:=ds.listOAuthGrants().query("userName = :1"; "jsmith").extract("clientName")
+```
+
+<!-- END REF -->
+
+
 ## .locked()
 
 <details><summary>History</summary>
@@ -784,6 +973,108 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
     End if
  End if
 ```
+
+<!-- END REF -->
+
+<!-- REF DataStoreClass.revokeFineGrainedToken().Desc -->
+## .revokeFineGrainedToken()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R6|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.revokeFineGrainedToken().Syntax -->**.revokeFineGrainedToken**( *id* : Text )<br/>**.revokeFineGrainedToken**( *tokenObj* : Object )<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.revokeFineGrainedToken().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|id|Text|&#8594;|Identifier of the token to revoke|
+|tokenObj|Object|&#8594;|Object with a `token` property containing the token to revoke|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.revokeFineGrainedToken()` function <!-- REF #DataStoreClass.revokeFineGrainedToken().Summary -->revokes a Fine-Grained Token of the MCP server<!-- END REF -->.
+
+You designate the token:
+
+- in the *id* parameter, with its identifier (returned by [`.generateFineGrainedToken()`](#generatefinegrainedtoken) and [`.listFineGrainedTokens()`](#listfinegrainedtokens)),
+- or in the *tokenObj* parameter, with an object whose `token` property contains the token itself (`"4dfgt_..."`), for example to let the holder of a token revoke it.
+
+The token stops working at the next request, and the MCP sessions opened with it are closed. [Binary URLs](../WebServer/mcp-server.md#binary-attributes) already returned to the client remain valid until they expire (10 minutes at most).
+
+When the function is called in a web context (code executed for a web or REST request), it can only revoke a token whose privileges are all held by the current session.
+
+#### Example
+
+You revoke a token by its id:
+
+```4d
+var $tokens:=ds.listFineGrainedTokens().query("name = :1"; "Claude Desktop - jsmith")
+If ($tokens.length>0)
+	ds.revokeFineGrainedToken($tokens[0].id)
+End if
+```
+
+#### See also
+
+[.generateFineGrainedToken()](#generatefinegrainedtoken)<br/>[.listFineGrainedTokens()](#listfinegrainedtokens)
+
+<!-- END REF -->
+
+<!-- REF DataStoreClass.revokeOAuthGrant().Desc -->
+## .revokeOAuthGrant()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R6|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.revokeOAuthGrant().Syntax -->**.revokeOAuthGrant**( *id* : Text )<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.revokeOAuthGrant().Params -->
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|id|Text|&#8594;|Identifier of the grant to revoke|
+</div>
+<!-- END REF -->
+
+#### Description
+
+The `.revokeOAuthGrant()` function <!-- REF #DataStoreClass.revokeOAuthGrant().Summary -->revokes a grant given to a user through the OAuth mode of the MCP server<!-- END REF --> (see [`.listOAuthGrants()`](#listoauthgrants)).
+
+The access tokens of the grant get an HTTP 401 status from the next request, its refresh token is refused, and its MCP sessions are closed. The user must log in again from the MCP client.
+
+When the function is called in a web context (code executed for a web or REST request), it can only revoke a grant whose privileges are all held by the current session.
+
+#### Example
+
+When you deactivate a user of your application, you revoke their OAuth grants:
+
+```4d
+var $grant : Object
+For each ($grant; ds.listOAuthGrants().query("userName = :1"; "jsmith"))
+	ds.revokeOAuthGrant($grant.id)
+End for each
+```
+
+#### See also
+
+[.listOAuthGrants()](#listoauthgrants)<br/>[.revokeFineGrainedToken()](#revokefinegrainedtoken)
 
 <!-- END REF -->
 
