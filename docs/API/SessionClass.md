@@ -23,7 +23,7 @@ Session objects are returned by the [`Session`](../commands/session) command. Th
 
 The following types of sessions are supported by this class:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
+- [**Web user sessions**](../WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](../WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access and [MCP server](../WebServer/mcp-server.md) access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions, managed from the client and from the server.
 - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
 - [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications). 
@@ -535,6 +535,7 @@ End if
 
 |Release|Changes|
 |---|---|
+|21 R6|New "mcp" session type|
 |21 R4|New *unreachableSince* property|
 |20 R5|Added|
 
@@ -556,7 +557,7 @@ The `.info` object contains the following properties:
 
 |Property|Type|Description|
 |---|---|---|
-|type|Text|Session type: "remote", "storedProcedure", "standalone", "rest", "web"|
+|type|Text|Session type: "remote", "storedProcedure", "standalone", "rest", "web", "mcp" (session of the [MCP server](../WebServer/mcp-server.md#mcp-sessions))|
 |userName|Text|4D user name (same value as [`.userName`](#username))|
 |machineName|Text|<ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul>|
 |systemUserName|Text|<ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul> |
@@ -575,6 +576,16 @@ Since `.info` is a computed property, it is recommended to call it once and then
 :::
 
 This property is **read only**.
+
+#### Example
+
+You run specific code for the requests of MCP clients:
+
+```4d
+If (Session.info.type="mcp")
+	// the request comes from an MCP client through the MCP server
+End if
+```
 
 
 <!-- END REF -->

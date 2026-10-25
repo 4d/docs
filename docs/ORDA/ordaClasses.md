@@ -66,6 +66,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 |Release|Changes|
 |---|---|
+|21 R6|Support for the `MCP` keyword. New reserved `mcpAuthenticated()` and `mcpGrant()` DataStore class functions.
 |21 R3|Support for the `server` keyword.
 |19 R4|Alias attributes in the Entity Class
 |19 R3|Computed attributes in the Entity Class
@@ -82,6 +83,8 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 - **Class name**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object.
+
+The `mcpAuthenticated()` and `mcpGrant()` function names are reserved for the [MCP server](../WebServer/mcp-server.md) (see [`Function mcpAuthenticated`](#function-mcpauthenticated) and [`Function mcpGrant`](#function-mcpgrant)).
 
 
 
@@ -1140,5 +1143,159 @@ It can be called by the following HTTP GET request:
 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
+```
+
+
+## MCP functions
+
+The [MCP server](../WebServer/mcp-server.md) of the 4D Web Server publishes data model class functions as tools for AI clients, and calls specific functions of the DataStore class to authenticate the clients.
+
+### `exposed MCP Function`
+
+#### Syntax
+
+```4d
+exposed MCP Function <functionName>({$parameterName : type; ...}){->$parameterName : type}
+// code
+```
+
+The `MCP` keyword publishes an exposed function as a [custom tool](../WebServer/mcp-server.md#custom-tools) of the MCP server. It is a second opt-in on top of the `exposed` keyword:
+
+- a function declared `exposed` without `MCP` can be called by REST requests but is not an MCP tool,
+- a function declared with `MCP` but without `exposed` is not published at all.
+
+The `MCP` keyword is supported in the following classes:
+
+- the DataStore class: the tool name is the function name,
+- DataClass classes and Entity classes: the tool name is `ClassName-functionName`,
+- shared [singleton classes](../Concepts/classes.md#singleton-classes): the tool name is `ClassName-functionName`.
+
+Functions of EntitySelection classes are not published.
+
+The [comment block](../Concepts/classes.md#function-comments) written above the declaration describes the tool and its parameters for the AI client. The client can call the tool if its session has the **execute** permission on the function in the [`roles.json`](privileges.md#rolesjson-file) file, as for a REST request.
+
+**Entity class functions**
+
+A tool published from an Entity class function gets a required `key` argument (string or integer): the primary key of the entity on which the function is called. 4D loads this entity as `This`, with the **read** permission of the dataclass and its [restriction filter](entities.md#restricting-entity-selections). If the entity cannot be found or read, the call returns the "Entity not found" error and the function does not run.
+
+An Entity class function that declares a `$key` parameter is not published, and 4D logs a message.
+
+#### Example
+
+You publish an Entity class function. The client calls the tool with the primary key of the invoice in the `key` argument:
+
+```4d
+// cs.InvoiceEntity class
+Class extends Entity
+
+// Returns the amount still due on the invoice
+// MCP: @readOnly
+exposed MCP Function getAmountDue() : Real
+	return This.amount-This.payments.sum("amount")
+```
+
+
+### `Function mcpAuthenticated`
+
+#### Syntax
+
+```4d
+// DataStore class
+Function mcpAuthenticated($info : Object)
+// code
+```
+
+The `mcpAuthenticated()` function of the DataStore class is called by 4D when an [MCP session](../WebServer/mcp-server.md#mcp-sessions) is created, after the privileges of the token are applied and before any other code of the application runs for this session. It is called once per session.
+
+Use it to prepare the session from the information stored with the token, for example to fill [`Session.storage`](../API/SessionClass.md#storage) with the current values of the user, which your [restriction filters](entities.md#restricting-entity-selections) can use.
+
+The *$info* parameter contains:
+
+|Property|Type|Description|
+|---|---|---|
+|type|Text|"fineGrainedToken" for a [Fine-Grained Token](../WebServer/mcp-server.md#fine-grained-tokens), "oauth" for an [OAuth](../WebServer/mcp-server.md#oauth-21-mode) access token|
+|id|Text|Identifier of the token or of the OAuth grant|
+|name|Text|Fine-Grained Token: name of the token|
+|userName|Text|OAuth: user name of the grant|
+|clientId|Text|OAuth: identifier of the MCP client|
+|clientName|Text|OAuth: name of the MCP client|
+|privileges|Text, Collection or Object|Privileges and roles of the token or of the grant|
+|expiry|Text|Fine-Grained Token: expiration date of the token|
+|expiresAt|Text|OAuth: expiration date and time of the grant|
+|info|Object|Fine-Grained Token: *info* object passed to [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) (*Null* if none)|
+|createdAt|Text|Date and time of the token generation or of the login|
+|IPAddress|Text|IP address of the MCP client|
+
+The following rules apply:
+
+- Only 4D calls this function. A REST request or a remote datastore call to `mcpAuthenticated()` gets an HTTP 403 error, even if the function is declared `exposed` (in this case, 4D also logs a warning).
+- The function cannot change the privileges of the session: calling [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) or [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) in it raises an error.
+- The function cannot refuse the session. To stop the access of a user, revoke their tokens with [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken) or [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant).
+- If the function fails, 4D logs an error and the session is still created.
+
+#### Example
+
+You store the user of the token in the session storage:
+
+```4d
+// cs.DataStore class
+Class extends DataStoreImplementation
+
+Function mcpAuthenticated($info : Object)
+	var $login : Text:=($info.type="oauth") ? $info.userName : $info.info.userName
+	var $user : cs.UsersEntity:=ds.Users.query("login = :1"; $login).first()
+	If ($user#Null)
+		Use (Session.storage)
+			Session.storage.user:=New shared object("ID"; $user.ID; "name"; $user.name)
+		End use
+	End if
+```
+
+
+### `Function mcpGrant`
+
+#### Syntax
+
+```4d
+// DataStore class
+Function mcpGrant($user : Text; $password : Text; $clientId : Text) : Variant
+// code
+```
+
+When the DataStore class defines the `mcpGrant()` function, the [OAuth 2.1 mode](../WebServer/mcp-server.md#oauth-21-mode) of the MCP server is enabled. 4D calls this function when a user submits the login page of the MCP server, to check the credentials and get the privileges to give to the user in this MCP client.
+
+The function receives:
+
+- *$user* and *$password*: the user name and the password entered in the login page,
+- *$clientId*: the identifier of the MCP client (the URL of its metadata document, or the id issued at its [registration](../WebServer/mcp-server.md#client-registration)).
+
+It returns the privileges to give, in any form accepted by [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges):
+
+- a privilege name, or several comma-separated privilege names (Text),
+- a collection of privilege names,
+- an object with `privileges` and/or `roles` properties. The object can also contain a `userName` property: it becomes the user name of the grant and of the MCP sessions (otherwise, *$user* is used).
+
+An empty value or *Null* refuses the login. A privilege or role that is not declared in the [`roles.json`](privileges.md#rolesjson-file) file also refuses the login, and 4D logs a message.
+
+The following rules apply:
+
+- Only 4D calls this function. A REST request or a remote datastore call to `mcpGrant()` gets an HTTP 403 error, even if the function is declared `exposed` (in this case, 4D also logs a warning).
+- The function runs in a session without privileges. It cannot change the privileges of the session: calling [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) or [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) in it raises an error.
+- Never store or compare passwords in clear: use [`Generate password hash`](../commands/generate-password-hash) and [`Verify password hash`](../commands/verify-password-hash).
+
+#### Example
+
+Users are stored in the Users dataclass, with a hashed password and a role:
+
+```4d
+// cs.DataStore class
+Class extends DataStoreImplementation
+
+Function mcpGrant($user : Text; $password : Text; $clientId : Text) : Variant
+	var $account : cs.UsersEntity:=ds.Users.query("login = :1"; $user).first()
+	If ($account=Null) || (Not(Verify password hash($password; $account.password)))
+		return Null // login refused
+	End if
+	return {roles: $account.role; userName: $account.login}
 ```
 

@@ -167,6 +167,8 @@ If the function is declared in a [shared class](#shared-classes), you can use th
 
 In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below. 
 
+In ORDA data model classes and singleton classes, the [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) keyword allows a function to be called by REST requests, and the `exposed MCP Function` declaration publishes the function as a tool of the [MCP server](../WebServer/mcp-server.md). The `MCP` keyword is supported in the DataStore class, DataClass and Entity classes, and shared singleton classes. A function declared with `MCP` but without `exposed` is not published. For more information, refer to [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
+
 
 The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
 
@@ -631,10 +633,11 @@ Each line of the block is interpreted according to its beginning:
 |`// $name: <text>`|Description of the *$name* parameter.|
 |`// {$name}: <text>`|Description of the *$name* parameter, marked as optional for MCP.|
 |`// ...: <text>`|Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : Type`).|
+|`// param: $name <text>`, `// param: {$name} <text>`, `// param: ... <text>`|Same as `$name:`, `{$name}:`, and `...:` lines.|
 |`// MCP: <text>`|Description of the function for MCP only. Several `MCP:` description lines are combined in order.|
-|`// MCP: @tag {@tag}`|MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is an MCP description line.|
+|`// MCP: @tag {@tag}` or `// @tag {@tag}`|MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is a description line.|
 
-A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters. An `@tag` line without the `MCP:` prefix is a description line.
+A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters.
 
 The code assistance displays the description lines, then a blank line, then the parameter lines as written. `MCP:` lines are never displayed in the code assistance.
 
@@ -703,6 +706,14 @@ Functions of EntitySelection classes and of other classes, as well as functions 
 If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
 
 :::
+
+The [MCP server](../WebServer/mcp-server.md) of 4D builds its tool catalog from the same comment blocks and the same type conversions, using the running code: in interpreted mode, a function you add or modify is published at the next `tools/list` request, without restarting. The catalog of the MCP server also adds the elements needed to call the tools, such as a `key` argument for Entity class functions and `"additionalProperties": false` in `inputSchema` (see [Tool catalog](../WebServer/mcp-server.md#tool-catalog)). The following functions are not published, and 4D logs a message:
+
+- a function whose tool name is longer than 64 characters, contains characters other than letters, digits, `_` and `-`, or is the name of another tool (including a built-in CRUD tool),
+- an Entity class function that declares a `$key` parameter,
+- a function that declares both a `$args` parameter and variadic parameters.
+
+A function without description is published, and 4D logs a warning.
 
 Each tool of the `toolList` array is an object with the following properties:
 
@@ -824,6 +835,28 @@ var $metadata : Object:=JSON Parse($file.getText())
 var $names : Collection:=$metadata.toolList.extract("name")
 // $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
 ```
+
+#### Example 5
+
+You document a tool with `param:` lines and a behavior tag line without the `MCP:` prefix:
+
+```4d
+// Class: Stock
+
+shared singleton Class constructor()
+
+// Returns the quantity in stock of a product
+// param: $reference reference of the product
+// param: {$warehouse} code of the warehouse (all warehouses if omitted)
+// @readOnly
+exposed MCP Function getQuantity($reference : Text; $warehouse : Text) : Integer
+	If ($warehouse="")
+		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
+	End if
+	return ds.Stock.query("reference = :1 and warehouse = :2"; $reference; $warehouse).sum("quantity")
+```
+
+The `Stock-getQuantity` tool has a required `reference` property, an optional `warehouse` property, and the `"readOnlyHint": true` annotation.
 
 
 ## Class function commands
