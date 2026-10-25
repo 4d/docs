@@ -611,6 +611,221 @@ Class constructor ($side : Integer)
 ```
 
 
+## Function comments
+
+You can document a class function or a class constructor with comment lines written right above its `Function` or `Class constructor` declaration. 4D reads this comment block and shows it in the code assistance of the [4D code editor](../code-editor/write-class-method.md#help-tips) and of VS Code (completion details, help tips, and signature help), together with the function signature. The same comments also provide the [MCP tool metadata](#mcp-tool-metadata) of the function.
+
+The comment block follows these rules:
+
+- It is made of `//` lines and/or a `/* */` block. Each line of a `/* */` block is handled like a `//` line, and the `/*` and `*/` markers are not displayed.
+- It must be placed immediately above the declaration. A blank line between the comment block and the declaration breaks the association: only the signature is displayed.
+- Each comment block is associated only with the next declaration, even when it is written right after the code of the previous function.
+- Only the saved code is read: after you edit a comment, the code assistance shows the new text once the class is saved.
+- The text is displayed as plain text: Markdown markers such as `**` or `*` are shown as written.
+
+Each line of the block is interpreted according to its beginning:
+
+|Line|Meaning|
+|---|---|
+|`// <text>`|Description of the function. Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored.|
+|`// $name: <text>`|Description of the *$name* parameter.|
+|`// {$name}: <text>`|Description of the *$name* parameter, marked as optional for MCP.|
+|`// ...: <text>`|Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : Type`).|
+|`// MCP: <text>`|Description of the function for MCP only. Several `MCP:` description lines are combined in order.|
+|`// MCP: @tag {@tag}`|MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is an MCP description line.|
+
+A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters. An `@tag` line without the `MCP:` prefix is a description line.
+
+The code assistance displays the description lines, then a blank line, then the parameter lines as written. `MCP:` lines are never displayed in the code assistance.
+
+When you [compile](../Project/compiler.md) the project, the compiler reports a [warning](../Project/compiler.md#warnings-on-function-comments) for each parameter of the signature that has no `$name:` or `{$name}:` line in the comment block, and for contradictory MCP behavior tags. Functions without a comment block are not checked.
+
+:::note
+
+Comment blocks are supported in project classes (including shared and singleton classes) and in component classes. For compiled components, the descriptions are provided by the [syntax file](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
+:::
+
+#### Example 1
+
+You want to document a function and its parameter so that they are displayed in the code editor:
+
+```4d
+// Class: Invoice
+
+// Returns the price with taxes
+// The rate is a percentage
+// $rate: tax rate to apply (20 for 20%)
+Function priceWithTaxes($rate : Real) : Real
+	return This.price*(1+($rate/100))
+```
+
+When you type `$invoice.priceWithTaxes(` in a method, the help displays the signature with:
+
+```
+Returns the price with taxes
+The rate is a percentage
+
+$rate: tax rate to apply (20 for 20%)
+```
+
+#### Example 2
+
+You want to document a class constructor with a `/* */` block:
+
+```4d
+// Class: Counter
+
+/*
+Creates a counter starting at a value
+$start: initial value of the counter
+*/
+Class constructor($start : Integer)
+	This.value:=$start
+```
+
+The description and the `$start:` line are displayed when you type `cs.Counter.new(`.
+
+### MCP tool metadata
+
+The comment blocks of `exposed MCP Function` declarations also describe these functions as MCP tools. When the project is compiled, 4D generates the `Project/DerivedData/syntaxMCP.json` file, which contains the metadata of these tools in a `toolList` array.
+
+Only functions of the following classes are listed:
+
+- the DataStore class,
+- DataClass and Entity classes,
+- singleton classes.
+
+Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed MCP Function`, are not listed, even if their comment block contains `MCP:` lines.
+
+:::note
+
+If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
+
+:::
+
+Each tool of the `toolList` array is an object with the following properties:
+
+|Property|Description|
+|---|---|
+|`name`|Name of the tool: the function name for a DataStore class function, `ClassName-functionName` for other classes|
+|`description`|Text of the `MCP:` description lines, or the description lines if there is no `MCP:` description. Omitted if there is no description|
+|`inputSchema`|`{"type": "object", "properties": {...}, "required": [...]}`: one property per parameter of the signature, named without the `$`, with the parameter comment as `description`|
+|`outputSchema`|Schema of the return type. Omitted if the function returns nothing or a Variant|
+|`annotations`|Behavior hints derived from the `MCP:` behavior tags|
+
+In `inputSchema`:
+
+- every parameter is listed in `required`, except those documented with a `{$name}:` line. `required` is omitted if it is empty.
+- typed variadic parameters (`... : Type`) are represented by an optional `args` property of type `array`, whose `items` have the schema of *Type*. The `...:` line is its description.
+
+Parameter and return types are converted to JSON Schema as follows:
+
+|4D type|JSON Schema|
+|---|---|
+|Text|`{"type": "string"}`|
+|Integer|`{"type": "integer"}`|
+|Real|`{"type": "number"}`|
+|Boolean|`{"type": "boolean"}`|
+|Date|`{"type": "string", "format": "date"}`|
+|Time|`{"type": "integer", "description": "duration in seconds"}`|
+|Object, class instance|`{"type": "object"}`|
+|Collection|`{"type": "array"}`|
+|Blob, 4D.Blob, Picture|`{"type": "string", "contentEncoding": "base64"}`|
+|Variant, or no type|`{}`|
+
+The supported behavior tags are converted to annotations as follows:
+
+|Tag|Annotation|
+|---|---|
+|`@readOnly`|`"readOnlyHint": true`|
+|`@destructive`|`"destructiveHint": true`|
+|`@additive`|`"destructiveHint": false`|
+|`@idempotent`|`"idempotentHint": true`|
+|`@openWorld`|`"openWorldHint": true`|
+
+`openWorldHint` is always present: it is `false` if `@openWorld` is not used. Other hints are omitted when their tag is not used. `@readOnly`, `@destructive`, and `@additive` contradict each other: if a function uses two or more of them, the compiler reports a warning and the corresponding hints are omitted. Unknown tags are ignored.
+
+#### Example 3
+
+You document the MCP tools of a `DateTime` singleton class:
+
+```4d
+// Class: DateTime
+
+singleton Class constructor()
+	This.date:=Current date
+
+// Adds a number of days to the date
+// MCP: Add days to the date-time
+// $days: number of days to add (negative to subtract)
+exposed MCP Function addDays($days : Integer) : Date
+	This.date:=Add to date(This.date; 0; 0; $days)
+	return This.date
+
+// Adds zero or more day offsets to the date and returns the updated date
+// MCP: Add day offsets to the date-time
+// MCP: @idempotent
+// ...: day offsets to add (negative to subtract)
+exposed MCP Function addDayOffsets(... : Integer) : Date
+	var $offsetIndex; $totalDays : Integer
+	For ($offsetIndex; 1; Count parameters)
+		$totalDays+=${$offsetIndex}
+	End for
+	This.date:=Add to date(This.date; 0; 0; $totalDays)
+	return This.date
+```
+
+After compilation, `Project/DerivedData/syntaxMCP.json` contains:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
+        },
+        "required": ["days"]
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "openWorldHint": false }
+    },
+    {
+      "name": "DateTime-addDayOffsets",
+      "description": "Add day offsets to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "day offsets to add (negative to subtract)"
+          }
+        }
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "idempotentHint": true, "openWorldHint": false }
+    }
+  ]
+}
+```
+
+#### Example 4
+
+You want to read the names of the MCP tools generated by the last compilation:
+
+```4d
+var $file : 4D.File:=File("/PACKAGE/Project/DerivedData/syntaxMCP.json")
+var $metadata : Object:=JSON Parse($file.getText())
+var $names : Collection:=$metadata.toolList.extract("name")
+// $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
+```
+
+
 ## Class function commands
 
 The following commands have specific features when they are used within class functions: 
