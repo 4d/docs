@@ -23,7 +23,7 @@ Session objects are returned by the [`Session`](../commands/session) command. Th
 
 The following types of sessions are supported by this class:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access and [MCP server](../WebServer/mcp-server.md) access), and are controlled by assigned [privileges](../ORDA/privileges.md).
+- [**Web user sessions**](../WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](../WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access and [MCP server](../WebServer/mcp-server.md) access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions, managed from the client and from the server.
 - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
 - [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications). 
