@@ -641,6 +641,7 @@ title: Commands by name
 [`Match regex`](../commands/match-regex)<br/>
 [`Max`](../commands/max)<br/>
 [`MAXIMIZE WINDOW`](../commands/maximize-window)<br/>
+[`MCP`](../commands/mcp) **new 4D 21 R6**<br/>
 [`MEMORY STATISTICS`](../commands/memory-statistics)<br/>
 [`Menu bar height`](../commands/menu-bar-height)<br/>
 [`Menu bar screen`](../commands/menu-bar-screen)<br/>
