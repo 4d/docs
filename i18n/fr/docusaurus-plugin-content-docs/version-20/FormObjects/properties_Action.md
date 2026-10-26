@@ -22,9 +22,9 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                                |
-| -------- | --------------- | ------------------------------------------------------------------------------------------------ |
-| dragging | text            | "none" (par défaut), "custom", "automatic" (hors list box) |
+| Nom      | Type de données | Valeurs possibles                                                                                                                                         |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dragging | text            | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
 
 #### Objets pris en charge
 
@@ -50,9 +50,9 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                                |
-| -------- | --------------- | ------------------------------------------------------------------------------------------------ |
-| dropping | text            | "none" (par défaut), "custom", "automatic" (hors list box) |
+| Nom      | Type de données | Valeurs possibles                                                                                                                                         |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dropping | text            | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
 
 #### Objets pris en charge
 

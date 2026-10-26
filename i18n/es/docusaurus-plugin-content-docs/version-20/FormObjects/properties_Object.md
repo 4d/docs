@@ -328,9 +328,9 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                                                                                      |
-| ------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Nombre              | Tipos de datos | Valores posibles                                                                                       |
+| ------------------- | -------------- | ------------------------------------------------------------------------------------------------------ |
+| variableCalculation | string         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objetos soportados
 

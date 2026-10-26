@@ -81,7 +81,7 @@ Los objetos `Folder` admiten varios nombres de ruta, incluida la sintaxis `files
 
 #### Descripción
 
-La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. El comando acepta dos sintaxis:
+Comentario El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 

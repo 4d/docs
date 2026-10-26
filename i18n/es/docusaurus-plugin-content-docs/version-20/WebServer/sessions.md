@@ -75,7 +75,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 ## Privilegios
 
-Los privilegios pueden asociarse a las sesiones. Fecha de caducidad de la sesión En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
+Los privilegios pueden asociarse a las sesiones. En el servidor web, puede proporcionar un acceso o unas funcionalidades específicas en función de los privilegios de la sesión.
 
 You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. En su código, puede comprobar los privilegios de la sesión para permitir o denegar el acceso utilizando la función [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 

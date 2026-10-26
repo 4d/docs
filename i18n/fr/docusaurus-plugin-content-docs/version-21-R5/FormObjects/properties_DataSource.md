@@ -226,7 +226,7 @@ Une expression 4D à associer à une colonne. Vous pouvez saisir :
   - Boolean
 
 Pour les listbox collection/entity selection, les types null ou non pris en charge sont affichés sous forme de chaînes vides.  
-Lorsque vous utilisez des collections ou des entity selections, vous déclarez généralement la propriété de l'élément ou l'attribut de l'entité associé(e) à une colonne dans une expression contenant [This](../commands/this). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath> ` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
+Lorsque vous utilisez des collections ou des entity selections, vous déclarez généralement la propriété de l'élément ou l'attribut de l'entité associé(e) à une colonne dans une expression contenant [This](../commands/this). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath>` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
 Si vous utilisez une collection de valeurs scalaires, 4D créera un objet pour chaque élément de la collection avec une seule propriété (nommée "value"), remplie avec la valeur de l'élément. Dans ce cas, vous utiliserez `This.value` comme expression.
 
 Si une [expression non assignable](Concepts/quick-tour.md#expressions) est utilisée (par exemple `[Person]FirstName+" "+[Person]LastName`), la colonne n'est jamais saisissable, même si la propriété [Saisissable](properties_Entry.md#enterable) est activée.
@@ -333,13 +333,13 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 
-> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections temporaires** du langage 4D.
+> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. For more information, refer to [**Named Selections**](../Develop/named-selections) section.
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles   |
-| -------------- | --------------- | ------------------- |
-| namedSelection | string          | Nom de la sélection |
+| Nom           | Type de données | Valeurs possibles   |
+| ------------- | --------------- | ------------------- |
+| selectionName | string          | Nom de la sélection |
 
 #### Objets pris en charge
 

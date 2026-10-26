@@ -73,7 +73,7 @@ Le tableau suivant répertorie les pages de paramètres des boîtes de dialogue 
 | [Page Sécurité](../settings/security.md)                                                                          | N/a                                             | N/a                                                         |
 | [Page Compatibilité](../settings/compatibility.md)                                                                | N/a                                             | N/a                                                         |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
+Lorsque vous modifiez des paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier *settings.4DSettings* correspondant (voir ci-dessous).
 
 ## `SET DATABASE PARAMETER` et propriétés utilisateur
 

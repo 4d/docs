@@ -307,7 +307,7 @@ RowHeights{5}:=3
 
 Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea del list box tendrá una altura de tres líneas, mientras que todas las demás líneas mantendrán su altura por defecto.
 
-> - Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
+> - Para los list box de tipo array, esta propiedad sólo está disponible si la opción <a href="#automatic-row-height">Altura de línea automática</a> no está seleccionada.
 > - Para los array y list boxes colecciones/selección de entidades, esta propiedad sólo está disponible si la opción [Alto de línea automático](#automatic-row-height) no está seleccionada.
 
 #### Gramática JSON

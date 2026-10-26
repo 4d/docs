@@ -425,9 +425,9 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名称                  | データタイプ | とりうる値                                                                                                 |
-| ------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| 名称                  | データタイプ | とりうる値                                                                                                  |
+| ------------------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### 対象オブジェクト
 

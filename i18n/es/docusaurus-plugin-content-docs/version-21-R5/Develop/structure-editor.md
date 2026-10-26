@@ -20,9 +20,9 @@ The structure editor has a toolbar containing functions like the addition of obj
 From left to right, the icons perform the following actions:
 
 - add objects (tables, fields, index, relations)
-- search in editor
+- buscar en el editor
 - hide/display tables according to folders defined in the Home page of the Explorer
-- display filters
+- mostrar filtros
 - Tools (size, alignment, sort)
 - colores
 - Index list window
@@ -38,7 +38,7 @@ Locking can occur in both project and client/server modes when:
 
 In both cases, the structure can be opened in *Read-only*, but cannot be used until the lock is removed.
 
-## Information bar
+## Barra de información
 
 The lower part of the editor window is an information bar displaying data corresponding to the area the mouse is over: table, field or relation.
 
@@ -46,9 +46,9 @@ The lower part of the editor window is an information bar displaying data corres
 
 - Table name and number
 - Table triggers:
-  - **NEW:** On saving new record
+  - **NEW:** al guardar un nuevo registro
   - **SAVE:** On saving existing record
-  - **DEL:** On deleting a record
+  - **DEL:** al eliminar un registro
 
 #### Information about a field
 
@@ -57,7 +57,7 @@ The lower part of the editor window is an information bar displaying data corres
 - Tipo de campo
 - Field attributes:
   - **NUL:** Map null values to blank values
-  - **UNI:** Unique
+  - **UNI:** único
 
 #### Information about a relation
 
@@ -91,11 +91,11 @@ The following shortcuts can be used:
 
 The position of the palette and the expanded/collapsed states of its panels are saved.
 
-## Selecting an object
+## Seleccionar un objeto
 
 To work with an image of an object in the Structure editor, you must first select it. You can then specify its properties, move it, resize it, delete it, etc. You can select several objects of the same type simultaneously to modify their common properties in the Inspector palette.
 
-To select:
+Para seleccionar:
 
 - **A table:** Click the image of the table, or press `Tab` / `Shift+Tab` to select each table successively.
 - **A field or relation:** Click the field or relation, or use the arrow keys to navigate.
@@ -136,7 +136,7 @@ To apply the **Collapse** command to one or more tables, you can:
 
 - A standard double-click on the table name area opens the **Inspector**.
 - **Alt** (Windows) or **Option** (macOS) + double-click opens the trigger method of the table in the **Method editor**.
-- **Ctrl** (Windows) or **Command** (macOS) + double-click opens the **Explorer** on the Form page.
+- **Ctrl** (Windows) o **Comando** (macOS) + doble clic abre el **Explorador** en la página Formulario.
 
 :::
 
@@ -172,7 +172,7 @@ You can [configure the graphic rendering of the Structure editor during a zoom](
 
 :::
 
-## Object type display
+## Mostrar tipo de objeto
 
 The **Display** button in the toolbar of the Structure editor is associated with a menu and lets you choose the objects to be displayed in the structure according to their type:
 
@@ -206,7 +206,7 @@ You can set the appearance of dimmed tables in the Structure editor to either *D
 
 :::
 
-## Customizing the editor window
+## Personalizar la ventana del editor
 
 The Structure editor window has specific properties that can be set using the **Inspector**.
 

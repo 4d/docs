@@ -774,6 +774,7 @@ Aquí está la lista de etiquetas y su modo de uso:
 |                            | - index: portapapeles a pegar. Valores = número del portapapeles (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 - Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).<br s-id="1" />
+  \*\* If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 
 - Si desea ajustarse a las especificaciones del lenguaje XML, no debe utilizar caracteres extendidos (caracteres acentuados, comillas, etc.).
 

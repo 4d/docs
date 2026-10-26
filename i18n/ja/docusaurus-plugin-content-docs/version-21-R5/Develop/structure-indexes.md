@@ -1,55 +1,54 @@
 ---
 id: structure-indexes
-title: Indexes
+title: インデックス
 ---
 
-You can associate indexes with fields that you frequently use for searching and sorting. For example, you might index LastName, CompanyName, or ProductName if you plan to search or sort entities using these attributes. You also use this property for fields that establish relations between tables.
+頻繁に検索や並び替えで使用されるフィールドに、インデックスを設定できます。例えば姓、会社名、製品名などの属性(フィールド)を使用してエンティティ(レコード)の検索や並び替えを行う場合、これらのフィールドにインデックスを設定することができます。またこのプロパティはテーブル間でのリレーションを確立するためにも使用されます。
 
-When an index is associated with a field, 4D creates an internal index table for the field. This table allows 4D to perform rapid searches and sorts on the field. When searching or sorting on an unindexed field, 4D moves through data sequentially, examining each record in order. Indexing allows 4D to search and sort without going through every record.
+フィールドにインデックスが設定されると、4D はそのフィールド用に内部的なインデックステーブルを作成します。このテーブルを使用して、4D はそのフィールドに対する素早い検索や並び替えを実行できるようになります。インデックスが設定されていないフィールドを使用して検索や並び替えを行う場合、4D はシーケンシャルにデータをロードし、レコード毎順番に評価します。インデックスを使用すれば、4D はすべてのレコードを読み込むことなく検索や並び替えを行えます。
 
-You can index fields of the Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture and Object type. As you add and delete records, 4D automatically updates its index table. If you create an index for a field that already exists, 4D automatically indexes the existing data. You can specify as many indexed fields as you want. Indexes are also rebuilt during specific operations such as conversion of earlier databases or [data compacting](../MSC/compact.md).
+インデックスは文字、テキスト、日付、時間、ブール、整数、倍長整数、64bit 整数、実数、ピクチャー、そしてオブジェクト型に設定できます。レコードの作成、削除、編集を行うと、4D は自動でそのインデックステーブルを更新します。既に存在するフィールドにインデックスを作成すると、4D は自動で既存のデータをインデックス化します。必要なだけフィールドにインデックスを設定できます。データベースを上位バージョンに変換する際や[データ圧縮](../MSC/compact.md) 時など、特定の処理を行った際にもインデックスが再構築されます。
 
-Each index table can contain up to:
+各インデックステーブルの上限は次のとおりです:
 
-- 128 billion keys for Alpha, Text, and Float indexes
-- 256 billion keys for other index types (scalar data)
+- 文字、テキスト、フロートインデックスのキー: 1280億
+- そのほかのインデックスタイプ (スカラーデータ) のキー: 2560億
 
-Do not index every field. An index increases the size of the database, using more space on disk. Using many indexes also increases the time needed to save a record since 4D updates the index table with each record validation.
+すべてのフィールドにインデックスを設定するようなことはしないでください。インデックスはデータベースのサイズを増大させ、ディスク上のスペースを消費します。またインデックスを設定すればするほど、レコードの保存に時間を要するようになる点に留意してください。4D はレコードを受け入れるたびにインデックステーブルを更新しなければならないためです。
 
-Indexed fields are displayed in **bold** type in the Structure editor.
+ストラクチャーエディター中で、インデックスが設定されたフィールドは**太字**で表示されます。
 
-## Types of indexes
+## インデックスのタイプ
 
-4D provides different types of indexes. Choosing between the different types is generally based on the result expected and the type of data present in the field. There are four main types of indexes:
+4D では4種類のインデックスタイプを提供しています。そのいずれを選択するかは一般的に期待する結果と、フィールドに現れるデータに基づきます。各インデックスタイプの説明は以下の通りです:
 
-- **Standard indexes:** These are single-field indexes used to accelerate standard database operations (searches and sorts). 4D lets you choose the internal architecture of this type of index (except for Object fields): B-Tree or Cluster B-Tree.
-- **Composite indexes:** This index stores the combined values of two or more fields that are often searched for together, for example LastName+FirstName.
-- **Keyword indexes:** These indexes are only available for Alpha, Text and Picture type fields. They are intended to facilitate fast searching inside text or, in the case of pictures, among the keywords associated with the pictures.
-- **Vector indexes**: These indexes are designed to accelerate AI-based queries on Object fields storing [embeddings](./field-properties.md#4dvector-class).
+- **標準インデックス:** これは1つのフィールドで構成されるインデックスで、標準のデータベース処理 (検索や並び替え) の速度を向上するために使用します。 4Dではさらにこのタイプのインデックスに対し、BツリーまたはクラスターBツリーを選択できます(ただしオブジェクトフィールドを除く)。
+- **複合インデックス:** このインデックスは、しばしばともに検索条件に使用される2つ以上のフィールドの合成値(例えば LastName+FirstName) を格納します。
+- **キーワードインデックス:** このインデックスは文字、テキストおよびピクチャーフィールドでのみ使用できます。テキスト内部の検索を容易にする目的で使用されます。またピクチャーの場合は、ピクチャーに割り当てたキーワードで検索を行うために使用できます。
+- **ベクトルインデックス:** このインデックスは、[埋め込み](./field-properties.md#4dvectorクラス) を保存しているオブジェクトフィールドに対するAI ベースのクエリの速度を向上させるために設計されています。
 
-### Standard indexes
+### 標準インデックス
 
-A standard index is intended to accelerate database operations (a standard index refers to a generic index as opposed to a keyword or composite index). 4D offers two types of architectures for standard indexes: B-Tree and Cluster B-Tree.
+標準インデックスはデータベース処理の速度を向上する目的で使用されます(標準のインデックスは、キーワードインデックスや複合インデックスとは異なり、一般的なインデックスを参照します)。 4D は2つのタイプの標準インデックス、BツリーとクラスターBツリーを提供します。
 
-- **B-Tree:** Standard B-Tree type index. This multipurpose index type meets most indexing requirements.
-- **Cluster B-Tree:** B-Tree type index using clusters. This architecture is more efficient when the index does not contain a large number of keys, i.e. when the same values occur frequently in the data.
+- **Bツリー:** 標準のBツリータイプインデックス。この汎用目的のインデックスはほとんどのインデックスの要件を満たします。
+- **クラスターBツリー:** クラスターを使用したBツリータイプのインデックス。このアーキテクチャーはインデックスに含まれるキーの量が少ない場合 (例えば同じ値がデータ中に繰り返し現れる場合) に有効です。
 
 :::note
 
-A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail.
+テキストタイプのフィールドに割り当てたBツリーインデックスは、フィールドの最初の1024文字 (最大) を格納します。そのため、このコンテキストにおいては、1024文字を超える検索をインデックスを使用して行うと失敗します。
 
 :::
 
-When you choose the index architecture, 4D also provides the Automatic option. In this case, 4D automatically selects the architecture according to the type of data concerned.
-The **Automatic** option is the only option available for Object type fields, except if you associated a 4D.Vector class to the field ([see below](#vector-index)). In fact, with the **Automatic** option, all attribute paths are automatically indexed.
+インデックスアーキテクチャーの選択を容易にするために、自動オプションを選択できます。この場合4D は自動でデータのタイプに応じインデックスのタイプを選択します。オブジェクト型のフィールドでは、選択できるオプションは**自動** オプションのみです(ただしそのフィールドに4D.Vector クラスを割り当てた場合を除く([以下参照](#ベクトルインデックス)))。この場合、**自動** オプションを使用すれば、全ての属性パスは自動的にインデックスされます。
 
-### Composite indexes
+### 複合インデックス
 
-Composite indexes store the combined values of two or more fields for each entry. The classic example is a composite index based on the FirstName+LastName fields. Searching for “Peter Smith” will therefore be optimized compared with a standard search (searching for “Smith” then searching for “Peter”).
+複合インデックスでは、レコード毎に2つ以上のフィールドの値の合成値を格納します。よく見られる例はFirstName+LastName フィールドの複合インデックスです。この場合、“Peter Smith”の検索は標準の検索(まず“Smith”を検索し次に“Peter”を検索する) よりも速くなります。
 
-4D automatically takes advantage of composite indexes during queries and sorts. For example, if a composite index “City+ZipCode” exists, it will be used in the case of a query of the type “lastname=carter and city=new york and zipcode =102@”.
+4D は検索や並び替えの際に自動で複合インデックスを利用します。例えば複合インデックス “City+ZipCode” が存在するとき、“lastname=carter & city=new york & zipcode =102@”のような検索を行うと、自動でその複合インデックスが利用されます。
 
-In the structure editor, composite indexes can only be created using the index creation dialog box. For a detailed description of this dialog box, refer to the “Creating an index” section below.
+ストラクチャーエディターでは、複合インデックスはインデックス作成ダイアログでのみ作成することができます。このダイアログボックスについては後述の“インデックスの作成”を参照してください。
 
 ### Keywords index
 
@@ -147,7 +146,7 @@ To add a field to the index, click on the **[+]** button. The list of fields of 
 
 - If you want to create a composite index, add each field to be included in the index successively. Once the list is completed, you can reorder the fields using the arrow buttons or using drag and drop.
 - If you create a composite index based on primary key fields, make sure you put the fields in the same order in the primary key and in the index.
-- If you have chosen the “Keyword Index” type, only Alpha, Text, or Picture fields can be selected. Also in this case, you can include only one field in the index.
+- If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
 
 To delete a field from the index, select it in the list and click on the **[-]** button.
 

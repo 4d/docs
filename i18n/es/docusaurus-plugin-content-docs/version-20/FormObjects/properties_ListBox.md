@@ -152,15 +152,9 @@ Número de columnas que no se pueden mover durante la ejecución.
 
 ## Número de columnas
 
-Define el número de columnas del list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 > Puede añadir o eliminar columnas dinámicamente por programación, utilizando comandos como [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) o [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
-
-#### Gramática JSON
-
-| Nombre      | Tipos de datos | Valores posibles          |
-| ----------- | -------------- | ------------------------- |
-| columnCount | integer        | mínimo: 1 |
 
 #### Objetos soportados
 

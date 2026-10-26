@@ -221,7 +221,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 
 | Caracter               | Descripción                                                                                                                 | Ejemplo                                      |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| + y -                  | Signos más y menos                                                                                                          | ### + ### = ###,##\\#                       |
+| + y -                  | Signos más y menos                                                                                                          | ### + ### = ###,##\#                         |
 | ( ) | Paréntesis izquierdo y derecho                                                                                              | (-###.##) |
 | :      | Dos puntos                                                                                                                  | hh:mm:ss     |
 | ^                      | Circunflejo                                                                                                                 | #\^#                                        |

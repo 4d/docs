@@ -521,7 +521,7 @@ Puede designar otra página carpeta HTML raíz por defecto introduciendo su ruta
 
 - La ruta es relativa a la [carpeta del proyecto](Project/architecture.md#project-folder) (4D local y 4D Server) o a la carpeta que contiene la aplicación 4D o el paquete de software (4D en modo remoto).
 - La ruta se expresa con la sintaxis POSIX (las carpetas se separan con una barra ("/"))
-- Para "subir" un nivel en la jerarquía de las carpetas, introduzca "." (dos puntos) antes del nombre de la carpeta (dos puntos) antes del nombre de la carpeta
+- Para "subir" un nivel en la jerarquía de las carpetas, introduzca "." (dos puntos) antes del nombre de la carpeta
 - La ruta no debe comenzar con una barra (excepto si quiere que la carpeta raíz HTML sea la carpeta remota del proyecto o de 4D, pero que el acceso a las carpetas anteriores esté prohibido, en cuyo caso puede pasar "/" como carpeta raíz).
 
 Por ejemplo, si quiere que la carpeta raíz HTML sea la subcarpeta "Web" de la carpeta "MyWebApp", introduzca "MyWebApp/Web".

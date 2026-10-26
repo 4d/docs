@@ -11,7 +11,7 @@ Un objet **`4D.Function`** contient un morceau de code qui peut être exécuté 
 
 ### Objets Formula
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create `4D.Function` objects to execute any 4D expression or code expressed as text.
+Les commandes [Formula](#formula) et [Formula from string](#formula-from-string) vous permettent de créer des objets  pour exécuter tout(e) expression ou code 4D exprimé sous forme de texte.
 
 Les objets Formula peuvent être encapsulés dans des propriétés d'objet :
 
@@ -130,7 +130,7 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 La formule retournée peut être appelée avec :
 
 - les méthodes [`call()`](#call) ou [`apply()`](#apply), ou
-- object notation syntax (see [formula objects](#formula-objects)).
+- la syntaxe de la notation objet (voir [objets formula](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
@@ -256,9 +256,9 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->.  *formulaString* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet 4D.Function basé sur *formulaString*<!-- END REF -->.  *formulaString* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). Dans ce contexte, l'utilisation de la syntaxe avec des tokens est fortement conseillée.
+Cette commande est similaire à [`Formula`](#formula), à la différence qu'elle prend en charge une formule sous forme de texte. Dans la plupart des cas, il est recommandé d'utiliser la commande `Formula`. `Formula from string` ne doit être utilisée que lorsque la formule d'origine a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON). Dans ce contexte, l'utilisation de la syntaxe avec des tokens est fortement conseillée.
 
 > Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
 

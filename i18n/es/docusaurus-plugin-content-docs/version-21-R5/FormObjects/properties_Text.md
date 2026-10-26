@@ -77,9 +77,9 @@ Hace que el texto tenga una línea por debajo.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles      |
-| -------------- | -------------- | --------------------- |
-| textDecoration | string         | "normal", "underline" |
+| Nombre         | Tipos de datos | Valores posibles    |
+| -------------- | -------------- | ------------------- |
+| textDecoration | string         | "none", "underline" |
 
 #### Objetos soportados
 
@@ -286,7 +286,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 :::note
 
-- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" sólo es compatible con las [entradas ](input_overview.md) y [áreas de texto](text.md)
 
 :::
@@ -494,7 +494,7 @@ En este párrafo se enumeran los atributos de las etiquetas \<SPAN> que soporta 
 
 - Nombre de la fuente: `<SPAN STYLE="font-family: DESDEMONA">... </SPAN>`
 - Tamaño de la fuente: `<SPAN STYLE="font-size: 20pt">... </SPAN>`
-- Font style:
+- Estilo de fuente:
   - Negrita `<SPAN STYLE="font-weight: bold">... </SPAN>`
   - Itálica `<SPAN STYLE="font-style: italic"> ... </SPAN>`
   - Normal `<SPAN STYLE="font-style: normal"> ... </SPAN>`
@@ -519,7 +519,7 @@ En el caso de los atributos de color de fuente y de fondo, el valor del color pu
 
 Los comandos que pueden utilizarse para manipular objetos de texto por programación no tienen en cuenta ninguna etiqueta de estilo integrada en el texto. Sólo actúan sobre el texto visualizado. Esto afecta a los siguientes comandos:
 
-- [User Interface](../commands/theme/User_Interface.md) theme commands
+- Comandos del tema [Interfaz de usuario](../commands/theme/User_Interface.md)
 - [`HIGHLIGHT TEXT`](../commands/highlight-text)
 - [`GET HIGHLIGHT`](../commands/get-highlight)
 

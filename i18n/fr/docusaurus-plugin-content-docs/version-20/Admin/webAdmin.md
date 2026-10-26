@@ -21,7 +21,7 @@ Vous pouvez configurer le server web `WebAdmin` pour qu'il se lance au démarrag
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Web server administration automatic startup** option in the settings dialog box:
+Cochez l'option **Lancer le serveur WebAdmin au démarrage** dans la boîte de dialogue des paramètres :
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
@@ -80,7 +80,7 @@ Numéro de port utilisé pour les connexions au serveur web `WebAdmin` via HTTP 
 
 #### HTTPS Accepté
 
-Lorsque cette option est activé, vous pourrez vous connecter au serveur web `WebAdmin` via HTTPS. Cette option est activée par défaut.
+Lorsque cette option est activée, vous pourrez vous connecter au serveur web `WebAdmin` via HTTPS. Cette option est activée par défaut.
 
 #### Port HTTPS
 
@@ -137,7 +137,7 @@ Exemple :
 
 - Lorsqu'on accède à une page de gestion web en entrant une URL et sans identification préalable, une authentification est nécessaire. L'utilisateur doit entrer la [clé d'accès](#access-key) dans une fenêtre d'authentification. Si aucune clé d'accès n'a été définie dans les propriétés `WebAdmin`, aucun accès via URL n'est possible.
 
-- Qand une page d'administration web est ouverte directement depuis un menu 4D ou 4D Server, tel que **Enregistrements> Data Explorer**ou**Fenêtre> Explorateur de données**(4D Server), l'accès est autorisé sans authentification.
+- Quand une page d'administration web est ouverte directement depuis un menu de 4D ou 4D Server, tel que **Enregistrements> Data Explorer** ou **Fenêtre> Explorateur de données** (4D Server), l'accès est autorisé sans authentification.
 
 Une fois l'accès autorisé, une [session web](WebServer/sessions.md) est créée avec les privilèges "WebAdmin" sur l'application 4D. Tant que la session courante a le privilège "WebAdmin", le composant `WebAdmin` sert les pages demandées dans les requêtes.
 

@@ -108,12 +108,12 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます: このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
+収集されたデータは、4D Server の起動やシャットダウンなどの特定のイベントが発生した際に、データベースごとにテキストファイル(JSON 形式)に書き込まれます。このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
-週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。その後、ファイルは Active 4D Folder から削除されます。その後、ファイルは Active 4D Folder から削除されます。
+週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。その後、ファイルは Active 4D Folder から削除されます。
 
 ![](../assets/en/Admin/data-collect.png)
 

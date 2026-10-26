@@ -285,7 +285,7 @@ Le caractère backslash (`\`) bénéficie d'un support spécifique dans le langa
 
 :::caution
 
-Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash `\\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété incorrectement comme `\N` (une [séquence d'échappement](../Concepts/quick-tour.md#s%C3%A9quences-d%C3%A9chappement) existante). You must therefore enter a double backslash `\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemin Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple `\` par une barre oblique inverse double `\\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété incorrectement comme `\N` (une [séquence d'échappement](../Concepts/quick-tour.md#s%C3%A9quences-d%C3%A9chappement) existante). Vous devez donc saisir une double barre oblique inversée `\\` lorsque vous souhaitez placer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 
 :::
 
@@ -383,7 +383,7 @@ Si les caractères saisis correspondent à différents types d'objets, la liste 
 - Mots-clés SQL
 - Macros (affichées entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
+> Pour des raisons pratiques, vous pouvez désactiver l'affichage automatique de la liste des suggestions pour les **constantes**, les **variables (locales ou interprocess) et les attributs d'objets**, et/ou les **tables**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
 
 #### Noms de propriétés d'objets
 
@@ -463,11 +463,11 @@ La commande **Edition > Tout marquer** est activée lorsqu'une recherche a déj�
 
 ## Erreurs de syntaxe
 
-4D vérifie automatiquement la syntaxe de la méthode pour s'assurer qu'elle est correcte. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). Lorsque vous passez la souris sur le symbole, une infobulle affiche la cause de l'erreur :
+4D vérifie automatiquement la syntaxe de la méthode pour s'assurer qu'elle est correcte. Si vous saisissez un texte ou sélectionnez un composant dont la syntaxe n'est pas correcte, 4D affiche un symbole pour désigner l'expression incorrecte ![](../assets/en/code-editor/incorrect-expression-icon.png). Lorsque vous passez la souris sur le symbole, une infobulle affiche la cause de l'erreur :
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. You can also force validation by pressing the **Enter** key.
+Lors de la saisie du code, il est possible de vérifier immédiatement la syntaxe de la ligne en cours (sans passer à la ligne suivante) en appuyant sur la touche **Entrée** du clavier numérique. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. Vous pouvez également forcer la validation en appuyant sur la touche **Entrée**.
 
 Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les éléments suivants :
 
@@ -477,11 +477,11 @@ Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les él�
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la manière dont 4D affiche les caractères d'encadrement correspondants ou désactiver cette fonctionnalité dans **Préférences** > **Méthodes** > **Options** > **Parenthèses correspondantes**.
 
 L'éditeur de code ne peut vérifier que les erreurs de syntaxe évidentes (fautes d'orthographe, etc.). Il ne vérifie pas les erreurs qui ne se produisent que pendant l'exécution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. Le compilateur fournit également une aide indispensable à la détection des erreurs. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+4D dispose d'un débogueur intégré (voir [Débogage](../Debugging/debugger.md)) permettant de gérer et de corriger ces erreurs. Le compilateur fournit également une aide indispensable à la détection des erreurs. Pour plus d'informations sur le compilateur, consultez le chapitre [Compilation](../Project/compiler.md).
 
 ## Infobulles
 

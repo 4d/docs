@@ -75,7 +75,7 @@ Vous pouvez également placer et utiliser des objets actifs dans la zone d'en-t�
 
 Les actions standard telles que `Add Subrecord`, `Cancel` (listes affichées en utilisant `DISPLAY SELECTION` et `MODIFY SELECTION`) ou `Automatic splitter` peuvent être assignées aux boutons insérés. Les événements suivants s'appliquent aux objets actifs que vous insérez dans la zone d'en-tête : `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. A noter que la méthode formulaire est appelée avec l’événement `On Header` après l’appel des méthodes de tous les objets de la zone.
 
-Des taquets de contrôle supplémentaires des en-têtes sont associés aux ruptures. Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
+Zone de rupture Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
 
 #### Grammaire JSON
 

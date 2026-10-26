@@ -89,7 +89,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
   - une fonction de classe est un bloc de code
   - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
   - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the `\<ClassName>` constructor or `\<ClassName>.\<FunctionName>` format.
+- Dans l'explorateur d'exécution et le débogueur, les fonctions de classe s'affichent sous la forme du constructeur `\<ClassName>` ou `\<ClassName>.\<FunctionName>`.
 
 ## Class stores
 
@@ -148,17 +148,17 @@ Vous souhaitez créer une nouvelle clé dans la classe `CryptoKey` :
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
-## L'objet class
+## L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Lorsqu'une classe est [définie](../Project/code-overview.md#creating-classes) dans le projet, elle est chargée dans l'environnement de langage 4D. Un objet classe possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet lui-même de la [classe "Class"](API/ClassClass.md). Un objet classe possède les propriétés et fonctions suivantes :
 
 - chaîne [`name`](API/ClassClass.md#name)
 - objet [`superclass`](API/ClassClass.md#superclass) (null s'il n'y en a pas)
-- [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
+- La fonction [`new()`](API/ClassClass.md#new), qui permet de créer des instances d'objets de classe.
 
 De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).
 
-A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+Un objet de classe est un [objet partagé](shared.md) et peut donc être consulté simultanément depuis différents process 4D.
 
 ### Héritage
 
@@ -193,7 +193,7 @@ Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D déte
 
 Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md).
 
-In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+Dans le fichier de définition de classe, les déclarations de fonctions utilisent le mot-clé `Function`, suivi du nom de la fonction. Le nom de la fonction doit respecter les [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
 :::tip
 
@@ -227,7 +227,7 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+> **Attention thread-safe** : Si une fonction de classe n'est pas thread-safe et est appelée par une méthode ayant l'attribut "Can be run in preemptive process" :
 >
 > - le compilateur ne génère pas d'erreur (ce qui est différent par rapport aux méthodes standard),
 > - une erreur est déclenchée par 4D uniquement au moment de l'exécution.
@@ -654,7 +654,7 @@ Le mot-clé `This` <!-- REF #_command_.This.Summary -->retourne une référence 
 
 Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Elle ne peut pas être définie par affectation lors de l'exécution, et elle peut être différente à chaque fois que la fonction est appelée.
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Par exemple :
+Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` est défini sur l'objet sur lequel la méthode est appelée. Par exemple :
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))

@@ -27,7 +27,6 @@ El diseñador puede:
 - crear usuarios y grupos,
 - asignar privilegios de acceso a los grupos,
 - acceder al entorno Diseño.
-  acceder al entorno Diseño.
   En un entorno monopuesto, siempre se utilizan los derechos de acceso del Diseñador.
   En el entorno cliente/servidor, la asignación de una contraseña al Diseñador activa la visualización del diálogo de inicio de sesión del usuario 4D.  El acceso al entorno Diseño es de sólo lectura.
 

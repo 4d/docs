@@ -29,14 +29,14 @@ $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
-Fin pour
+End for
 
 //Ecriture ligne par ligne à partir de la fin
 $fhandle:=$f.open("append")
 $text:="Hello New World !"
 For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
-Fin pour
+End for
 
 //Lecture en utilisant un caractère d'arrêt et un paramètre objet
 $o:=Nouvel objet()
@@ -364,7 +364,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 La fonction `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->renvoie une ligne de texte à partir de la position courante jusqu'à ce qu'un délimiteur de fin de ligne soit rencontré ou que la fin du document soit atteinte<!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated.
+Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour.
 
 :::caution Attention
 

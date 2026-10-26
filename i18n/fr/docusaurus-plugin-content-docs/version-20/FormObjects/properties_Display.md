@@ -571,9 +571,9 @@ Notez que quelle que soit la valeur de l'option de renvoi à la ligne automatiqu
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                            |
-| -------- | --------------- | ---------------------------------------------------------------------------- |
-| wordwrap | string          | "automatic" (à l'exception de list box), "normal", "none" |
+| Nom      | Type de données | Valeurs possibles                                                                       |
+| -------- | --------------- | --------------------------------------------------------------------------------------- |
+| wordwrap | string          | "automatic" (excluding list box column and footer), "normal", "none" |
 
 #### Objets pris en charge
 

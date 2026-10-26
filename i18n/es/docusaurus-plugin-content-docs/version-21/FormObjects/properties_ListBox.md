@@ -164,15 +164,9 @@ Número de columnas que no se pueden mover durante la ejecución.
 
 ## Número de columnas
 
-Define el número de columnas del list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 > Puede añadir o eliminar columnas dinámicamente por programación, utilizando comandos como [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) o [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
-
-#### Gramática JSON
-
-| Nombre      | Tipos de datos | Valores posibles          |
-| ----------- | -------------- | ------------------------- |
-| columnCount | integer        | mínimo: 1 |
 
 #### Objetos soportados
 

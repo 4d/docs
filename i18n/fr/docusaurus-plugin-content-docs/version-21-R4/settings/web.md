@@ -19,7 +19,7 @@ Indique si le Web server accepte des connexions non sécurisées. Voir [Activer 
 
 #### Port HTTP
 
-Numéro de port IP (TCP) d'écoute pour HTTP. Voir [Port HTTPS](../WebServer/webServerConfig.md#https-port).
+Numéro de port IP (TCP) d'écoute pour HTTP. Voir [Port HTTP](../WebServer/webServerConfig.md#http-port).
 
 #### Adresse IP
 
@@ -31,7 +31,7 @@ Indique si le Web server accepte des connexions sécurisées. Voir [Activer HTTP
 
 #### Port HTTPS
 
-Numéro de port IP (TCP) d'écoute pour HTTP. Numéro de port IP (TCP) d'écoute pour HTTP.
+Permet de modifier le numéro du port TCP/IP utilisé par le serveur Web pour les connexions HTTP sécurisées sur TLS (protocole HTTPS). Voir [Port HTTPS](../WebServer/webServerConfig.md#https-port).
 
 ### Chemins
 

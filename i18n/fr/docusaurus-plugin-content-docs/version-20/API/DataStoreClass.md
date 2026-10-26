@@ -133,19 +133,19 @@ Utilisation du datastore principal de la base 4D :
 
 #### Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `4D.DataStoreImplementation` correspondant, associé à l'alias local *localID*.
 
 La base de données *connectionInfo* 4D doit être disponible en tant que datastore distant, c'est-à-dire :
 
 - son serveur Web doit être lancé avec http et/ou https activé,
-- its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
+- l'option [**Exposer en tant que serveur REST**](REST/configuration.md#starting-the-rest-server) doit être cochée,
 - au moins une licence client est disponible.
 
 Si aucune base de données correspondante n'est trouvée, `Open datastore` retourne **Null**.
 
 *localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
 
-Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Les objets disponibles dans `4D.DataStoreImplementation` sont mappés à partir de la base de données cible conformément aux [règles générales ORDA](ORDA/dsMapping.md#general-rules).
 
 Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :
 
@@ -658,7 +658,7 @@ Sur un datastore distant :
 
 #### Description
 
-La fonction `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> renvoie un objet qui contient des informations sur le contexte d'optimisation *contextName* dans le datastore<!-- END REF -->...
+La fonction `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> renvoie un objet qui contient des informations sur le contexte d'optimisation *contextName* dans le datastore<!-- END REF -->..
 
 Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#clientserver-optimization).
 
@@ -1147,7 +1147,7 @@ Pour créer un journal des requêtes ORDA côté client, appelez cette fonction 
 
 > Un caractère \] doit être ajouté manuellement à la fin du fichier pour effectuer une validation JSON
 
-- Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé.Il conserve les demandes *reqNum* en mémoire jusqu'à ce que le nombre soit atteint, auquel cas les entrées les plus anciennes sont vidées (pile FIFO).<br/>Il conserve les demandes *reqNum* en mémoire jusqu'à ce que le nombre soit atteint, auquel cas les entrées les plus anciennes sont vidées (pile FIFO).<br/>
+- Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé.Il conserve les demandes *reqNum* en mémoire jusqu'à ce que le nombre soit atteint, auquel cas les entrées les plus anciennes sont vidées (pile FIFO).<br/>
 
 - Si vous n'avez passé aucun paramètre, l'enregistrement est lancé dans la mémoire. Si `.startRequestLog()` a été préalablement appelée avec un *reqNum* (avant un `.stopRequestLog()`), les données enregistrées sont empilées dans la mémoire jusqu'au prochain vidage ou appel de `.stopRequestLog()`.
 

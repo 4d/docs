@@ -123,7 +123,7 @@ Voir [**la liste étendue des fonctions de SpreadJS**](https://www.grapecity.com
 
 ## Fonctions 4D
 
-Absolue Absolue L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
+Absolue L'utilisation de fonctions personnalisées 4D étend les possibilités de vos documents 4D View Pro et permet des interactions avancées avec la base de données 4D.
 
 Les fonctions personnalisées 4D permettent d'accéder, à partir de vos formules 4D View Pro :
 

@@ -192,7 +192,7 @@ Function getValue -> $v : Integer
 
 ## Indirections sur les paramètres (${N})
 
-Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouvez traiter ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique. `${N}` is called a **generic parameter**.
+Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouvez traiter ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique. `${N}` est appelé **paramètre générique**.
 
 ### Utilisation des paramètres génériques
 
@@ -216,7 +216,7 @@ Les paramètres de la méthode doivent être passés dans le bon ordre : le form
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Notez que même si vous avez déclaré 0, 1, ou plus paramètres dans la méthode, vous pouvez toujours passer le nombre de paramètres que vous voulez. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). Il suffit de s'assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html). Par exemple :
+Notez que même si vous avez déclaré 0, 1, ou plus paramètres dans la méthode, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles au sein de la méthode appelée via la syntaxe `${N}`, et le type des paramètres supplémentaires est [Variant](dt_variant.md) par défaut (vous pouvez les déclarer à l'aide d'une [directive de compilation](#declaring-generic-parameters)). Il suffit de s'assurer que les paramètres existent, grâce à la commande [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html). Par exemple :
 
 ```4d
 //foo method
@@ -236,7 +236,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //des paramètres supplémentair
 
 ### Déclaration des paramètres génériques
 
-De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
+De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Les paramètres génériques non déclarés se voient automatiquement attribuer le type [Variant](dt_variant.md).
 
 Pour déclarer des paramètres génériques, utilisez une directive du compilateur à laquelle vous passez ${N} comme paramètre, où N spécifie le premier paramètre générique.
 
@@ -248,22 +248,22 @@ La commande ci-dessus signifie que tous les paramètres à partir du quatrième 
 
 > Le nombre, dans la déclaration, doit être une constante et non une variable.
 
-## `Compiler` method
+## Méthode `Compiler`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Même si cela n'est pas obligatoire en [mode interprété](interpreted.md), vous devez déclarer chaque paramètre des méthodes appelées dès que vous comptez compiler votre projet.
 
-When using the `#DECLARE` keyword, parameters are automatically declared. Par exemple :
+Lorsque l'on utilise le mot-clé `#DECLARE`, les paramètres sont automatiquement déclarés. Par exemple :
 
 ```4d
-#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-	// all parameters are declared with their type
+#DECLARE($myParam : Text ; $myOtherParam : Integer) : Boolean
+	// tous les paramètres sont déclarés avec leur type
 ```
 
 Cependant, une fonctionnalité du compilateur 4D vous permet de déclarer tous vos paramètres dans une méthode spécifique à l'aide d'une syntaxe spéciale :
 
 - vous pouvez regrouper tous les paramètres des variables locales des méthodes projet dans une ou plusieurs méthode(s) projet
-- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
-- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- le nom de la méthode doit commencer par "**Compiler**", par exemple "Compiler_MyParameters".
+- au sein d'une telle méthode, vous pouvez prédéclarer les paramètres de chaque méthode en utilisant la syntaxe suivante : `C_XXX(nomDeLaMéthode;paramètre)`.
 
 Par exemple :
 
@@ -278,13 +278,13 @@ Cette syntaxe n'est pas exécutable en mode interprété.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Vous pouvez créer et remplir automatiquement une méthode `Compiler` contenant tous vos paramètres à l'aide du bouton [**Méthodes du compilateur pour...**](../Project/compiler.md#compiler-methods-for) **Méthodes** des Paramètres du compilateur.
 
 :::info
 
 Certains contextes ne prennent pas en charge la déclaration dans une méthode "Compiler", ils sont donc gérés de manière spécifique :
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
+- Méthodes base - Par exemple, la méthode base `On Web Connection` reçoit six paramètres de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
 // On Web Connection
@@ -295,8 +295,8 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 - Fonctions - Les paramètres des fonctions sont automatiquement déclarés pour la compilation dans le prototype de la fonction. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all parameters are declared with their type
+Fonction add($x : Variant; $y : Integer)-> $result : Integer
+    // tous les paramètres sont déclarés avec leur type
 ```
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
@@ -336,7 +336,7 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-  - if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
+  - si le paramètre a été déclaré à l'aide de la [syntaxe standard nommée](#declaring-parameters) (`#DECLARE` ou `Function`), une erreur est générée lors de l'appel de la méthode.
   - si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 ## Utilisation des propriétés d'objet comme paramètres nommés

@@ -26,7 +26,7 @@ title: $entityset
 
 ### 例題
 
-エンティティセットを作成すると、データとともにエンティティセットIDが返されます。このIDは次のように使います: このIDは次のように使います:
+エンティティセットを作成すると、データとともにエンティティセットIDが返されます。このIDは次のように使います:
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
@@ -41,7 +41,7 @@ title: $entityset
 
 ### 説明
 
-`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$logicOperator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
@@ -84,7 +84,7 @@ title: $entityset
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-共通のエンティティが存在する場合、このクエリは true を返します。それ以外の場合は false を返します。それ以外の場合は false を返します。
+共通のエンティティが存在する場合、このクエリは true を返します。それ以外の場合は false を返します。
 
 次の例では、2つのエンティティセットのいずれかあるいは両方に含まれているエンティティすべてを格納した新しいエンティティセットを作成します:
 

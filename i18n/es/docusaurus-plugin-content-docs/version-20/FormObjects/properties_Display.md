@@ -571,9 +571,9 @@ Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto,
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                                                       |
-| -------- | -------------- | ---------------------------------------------------------------------- |
-| wordwrap | string         | "automatic" (excluyendo list box), "normal", "none" |
+| Nombre   | Tipos de datos | Valores posibles                                                                        |
+| -------- | -------------- | --------------------------------------------------------------------------------------- |
+| wordwrap | string         | "automatic" (excluding list box column and footer), "normal", "none" |
 
 #### Objetos soportados
 

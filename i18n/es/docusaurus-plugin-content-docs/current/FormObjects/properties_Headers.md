@@ -45,7 +45,7 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Ejemplo JSON
 
-```
+```json
  "List Box": {
   "type": "listbox",
   "showHeaders": true,
@@ -56,9 +56,9 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles                                      |
-| ------------ | -------------- | ----------------------------------------------------- |
-| headerHeight | string         | decimales positivos +px &#124; em |
+| Nombre       | Tipos de datos | Valores posibles                       |
+| ------------ | -------------- | -------------------------------------- |
+| headerHeight | string         | value+px &#124; em |
 
 #### Objetos soportados
 

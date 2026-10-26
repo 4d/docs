@@ -11,7 +11,7 @@ title: Function
 
 ### フォーミュラオブジェクト
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create `4D.Function` objects to execute any 4D expression or code expressed as text.
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、`4D.Function`オブジェクトを作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 
@@ -21,7 +21,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-このようなプロパティは "オブジェクト関数"、つまり親オブジェクトに紐づいた関数です。このようなプロパティは "オブジェクト関数"、つまり親オブジェクトに紐づいた関数です。オブジェクトプロパティに保存されている関数を実行するには、プロパティ名のあとに **()** をつけます:
+このようなプロパティは "オブジェクト関数"、つまり親オブジェクトに紐づいた関数です。オブジェクトプロパティに保存されている関数を実行するには、プロパティ名のあとに **()** をつけます:
 
 ```4d
  $f.message() // "Hello world" を表示します
@@ -33,7 +33,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $f["message"]() // "Hello world" と表示します
 ```
 
-たとえ引数を受け取らなかったとしても (後述参照)、オブジェクト関数を実行するためにはカッコ ( ) をつけて呼び出す必要があるという点に注意してください。オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません): オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
+たとえ引数を受け取らなかったとしても (後述参照)、オブジェクト関数を実行するためにはカッコ ( ) をつけて呼び出す必要があるという点に注意してください。オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
 
 ```4d
  $o:=$f.message // $o にはフォーミュラオブジェクトが返されます
@@ -47,7 +47,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 引数の受け渡し
 
-フォーミュラには、順番引数シンタックス $1, $2...$n を使用して引数を渡すことができます。たとえば: たとえば:
+フォーミュラには、順番引数シンタックス $1, $2...$n を使用して引数を渡すことができます。たとえば:
 
 ```4d
  var $f : Object
@@ -123,14 +123,14 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 説明
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->. *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
 フォーミュラがオブジェクトとして存在することで、コマンドやメソッドに対して引数 (計算された属性) として渡したり、"コンポーネントとホストデータベース間で共有" として宣言せずとも様々なコンポーネントから実行したりできるようになります。呼び出されたフォーミュラオブジェクトは、それを作成したデータベースあるいはコンポーネントのコンテキストにおいて評価されます。
 
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
 - [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-- object notation syntax (see [formula objects](#formula-objects)).
+- オブジェクト記法シンタックス ([Formula オブジェクト](#formula-objects) 参照)
 
 ```4d
  var $f : 4D.Function
@@ -147,7 +147,7 @@ The `Formula from string` command <!-- REF #_command_.Formula from string.Summar
 
 フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、 `This` コマンドでアクセス可能です。
 
-*formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。  実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。ローカル変数として配列を使用することはサポートされていない点に注意してください。実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。ローカル変数として配列を使用することはサポートされていない点に注意してください。
+*formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。  実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。ローカル変数として配列を使用することはサポートされていない点に注意してください。
 
 `Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
 
@@ -254,11 +254,11 @@ The `Formula from string` command <!-- REF #_command_.Formula from string.Summar
 
 #### 説明
 
-`Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula from string` コマンドは、<!-- REF #_command_.Formula from string.Summary -->*formulaString* に基づいた <code>4D Function</code> オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula. In most cases, it is recommended to use the `Formula` command. `Formula from string` should only be used when the original formula was expressed as text (e.g., stored externally in a JSON file). このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
+このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
 
-> ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、 *formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー (-10737) が生成されます。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー (-10737) が生成されます。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー (-10737) が生成されます。
+> ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、 *formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー (-10737) が生成されます。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー (-10737) が生成されます。
 
 #### 例題
 
@@ -309,13 +309,13 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 
 #### 説明
 
-`.apply()` 関数は、<!-- REF #FunctionClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
+`.apply()` 関数は、<!-- REF #FunctionClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
 任意の *formulaParams* 引数を渡すことで、フォーミュラ内で $1...$n の引数として使用されるコレクションを渡すこともできます。
 
-`.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。これは計算された結果を渡すのに便利です。これは計算された結果を渡すのに便利です。
+`.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。これは計算された結果を渡すのに便利です。
 
 #### 例題 1
 
@@ -372,7 +372,7 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 
 #### 説明
 
-`.call()` 関数は、<!-- REF #FunctionClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
+`.call()` 関数は、<!-- REF #FunctionClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 

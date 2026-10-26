@@ -39,7 +39,7 @@ Esta opción le permite cambiar el número del puerto TCP en el que 4D Server pu
 La personalización de este valor es necesaria cuando desea utilizar varias aplicaciones 4D en la misma máquina; en este caso, debe especificar un número de puerto diferente para cada aplicación.
 Cuando se modifica este valor desde 4D Server o 4D, se transmite automáticamente a todas las máquinas 4D conectadas a la base de datos.
 
-Para actualizar las otras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos puntos) después de la dirección IP del equipo servidor en la pestaña **Personalizado** de la caja de diálogo de conexión  Por ejemplo, si el nuevo número de puerto es 19888: Por ejemplo, si el nuevo número de puerto es 19888: Por ejemplo, si el nuevo número de puerto es 19888: Por ejemplo, si el nuevo número de puerto es 19888:
+Para actualizar las otras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos puntos) después de la dirección IP del equipo servidor en la pestaña **Personalizado** de la caja de diálogo de conexión  Por ejemplo, si el nuevo número de puerto es 19888: Por ejemplo, si el nuevo número de puerto es 19888: Por ejemplo, si el nuevo número de puerto es 19888:
 
 ![](../assets/en/settings/client-server-network.png)
 

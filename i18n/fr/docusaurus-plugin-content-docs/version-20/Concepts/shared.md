@@ -3,11 +3,11 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+**Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](Concepts/variables.md#interprocess-variables), les objets partagés et les collections partagées présentent l'avantage d'être compatibles avec les **process 4D préemptifs** : ils peuvent être passés par référence en tant que paramètres à des commandes telles que `New process` ou `CALL WORKER`.
 
-Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
+Les objets partagés et les collections partagées peuvent être stockés dans des variables de type standard `Object` et `Collection`, mais doivent être instanciés à l'aide de commandes spécifiques :
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- Pour créer un objet partagé, utilisez la commande [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html),
 - pour créer une collection partagée, utilisez la commande [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
 
 :::note
@@ -18,7 +18,7 @@ Les objets et collections partagés peuvent être définis comme des propriété
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Un catalogue unique et global, renvoyé par la commande `Storage`, est toujours disponible dans l'ensemble de l'application et de ses composants, et peut être utilisé pour stocker tous les objets et collections partagés.
 
 ## Utilisation des objets et collections partagés
 
@@ -83,7 +83,7 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
-For more information, refer to the `Storage` command description.
+Pour plus d'informations, reportez-vous à la description de la commande `Storage`.
 
 ## Use...End use
 
@@ -108,7 +108,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 :::note
 
-[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
+Les [fonctions de collection](../API/CollectionClass.md) qui modifient des collections partagées déclenchent automatiquement un **Use** interne pour cette collection partagée pendant l'exécution de la fonction, ce qui rend inutile tout appel explicite à la structure. C'est également le cas pour les commandes `ARRAY TO COLLECTION` et `OB REMOVE`.
 
 :::
 
@@ -118,7 +118,7 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //remplir le tableau d'éléments à compter
  $nbItems:=Size of array($_items)
  var $inventory : Object
  $inventory:=New shared object
@@ -126,22 +126,22 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
     $inventory.nbItems:=$nbItems
  End use
  
-  //Create processes
+  //Créer les process
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
+  //Objet $inventory envoyé par référence
  End for
 ```
 
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
 ```4d
-	//HowMany
+//HowMany
  #DECLARE ($what : Text ; $inventory : Object)
- 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+
+ $count:=CountMethod($what) //méthode pour compter les produits
+ Use($inventory) //utiliser l'objet partagé
+    $inventory[$what]:=$count  //sauvegarder les résultats pour cet élément
  End use
 ```
 
@@ -153,28 +153,28 @@ Les exemples suivants illustrent les règles spécifiques à observer lorsque vo
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
- End use
- 
+    $ob1.a:=$ob2  //un premier groupe est créé
+  End use
+
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //un 2e groupe est créé
  End use
- 
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
- End use
- 
+
+ Use($ob1) //Utilisation d'un objet du groupe 1
+    $ob1.b:=$ob4  //ERREUR
+  //$ob4 appartient déjà à un autre groupe
+  //son assignation n'est pas permise
+End use
+
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //on enlève la référence de $ob4 du groupe 2
  End use
- 
- Use($ob1) //use an object from group 1
-    $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+
+ Use($ob1) //Utilisation d'un objet du groupe 1
+    $ob1.b:=$ob4  //ERREUR
+  //$ob4 appartient toujours au groupe 2
+  //son assignation n'est pas permise
  End use
 ```

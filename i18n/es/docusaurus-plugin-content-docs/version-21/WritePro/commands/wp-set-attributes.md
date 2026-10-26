@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de todo atributo en un rango, elemento, documento.<!-- END REF--> Este comando le da acceso a todo de atributo interno 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
+El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de cualquier atributo en un rango, elemento, documento.<!-- END REF--> Este comando le da acceso a cualquier tipo de atributo interno de 4D Write Pro: caracter, párrafo, documento, tabla o imagen.
 
 En *targetObj*, puede pasar:
 

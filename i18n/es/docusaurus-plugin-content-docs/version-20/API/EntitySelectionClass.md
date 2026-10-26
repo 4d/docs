@@ -311,7 +311,7 @@ La entity selection debe ser *modificable*, es decir, ha sido creada, por ejempl
 **Añadir una selección de entidades**
 
 - Si la selección de entidades está ordenada, se mantiene su orden y se añade *entitySelection* al final de la selección. Si las referencias a las mismas entidades de *entitySelection* ya pertenecen a la selección de entidades, se duplican y se añaden nuevas referencias.
-- Si la entity selection contiene entidades que se han eliminado mientras tanto, también se devuelven.
+- Si no se encuentran entidades coincidentes, se devuelve una <code>EntitySelection</code> vacía.
 
 > Para más información, consulte la sección [Selección de entidades ordenadas o no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 

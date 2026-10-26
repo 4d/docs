@@ -75,7 +75,7 @@ In the *precision* optional parameter, you can pass the numeric precision you wa
 | Constante             | Valor | Comentario                                                                               |
 | --------------------- | ----- | ---------------------------------------------------------------------------------------- |
 | `mk single precision` | 32    | Single (32-bit) floating-point precision (default) |
-| `mk double precision` | 64    | Double (64-bit) floating-point precision                              |
+| `mk double precision` | 64    | Precisión de coma flotante doble (64 bits)                            |
 
 By default, if you omit the *precision* parameter, the vector is created with a 32-bit floating-point precision. A 32-bit floating-point precision reduces the storage footprint by half compared to 64-bit vectors while retaining enough precision for similarity and distance calculations, which is why it is the recommended default for most use cases.
 

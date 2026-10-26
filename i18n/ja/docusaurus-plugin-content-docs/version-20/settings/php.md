@@ -13,7 +13,7 @@ In 4D, you can execute PHP scripts directly by configuring the PHP page of the D
 
 - **External interpreter**
   If you use an external PHP interpreter, it must be compiled in FastCGI and be on the same machine as 4D (see "Using another PHP interpreter or another php.ini file" in [Executing PHP scripts in 4D](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.en.html)).
-  このオプションを選択すると 4D は内部の PHPインタープリターに接続しなくなります。この設定では、外部インタープリターの制御を開発者がおこなわなくてはならない点に留意してください。この設定では、外部インタープリターの制御を開発者がおこなわなくてはならない点に留意してください。
+  このオプションを選択すると 4D は内部の PHPインタープリターに接続しなくなります。この設定では、外部インタープリターの制御を開発者がおこなわなくてはならない点に留意してください。
 
 **4D Server:** These settings are shared between 4D Server and the 4D remote machines so it is not possible to use an external interpreter on the server machine and simultaneously use the internal interpreter on the client machines (and vice versa). もしサーバーがポート 9002 で外部インタープリターを利用する場合には、クライアントマシンでも同じポート番号でインタープリターを利用しなければなりません。
 
@@ -25,6 +25,6 @@ These options are related to the automatic management of the 4D PHP interpreter 
 
   > **Note:** Under Mac OS, all child processes share the same port. Windows では子プロセスごとにポート番号が異なります。最初に使用されるポートは PHPインタープリター用に設定されたポートです。そして次の子プロセスはインクリメントされた番号を使用します。たとえば、デフォルトポート番号が 8002 で 5つの子プロセスを起動すると、8002 から 8006 が使用されます。
 
-- **Restart the interpreter after X requests**: This sets the maximum number of requests that the 4D PHP interpreter accepts. この数に達すると、インタープリターが再起動されます。この数に達すると、インタープリターが再起動されます。このパラメーターに関する詳細は FastCGI-PHP のドキュメントを参照ください。
+- **Restart the interpreter after X requests**: This sets the maximum number of requests that the 4D PHP interpreter accepts. この数に達すると、インタープリターが再起動されます。このパラメーターに関する詳細は FastCGI-PHP のドキュメントを参照ください。
 
   > **Note:** In this dialog box, the parameters are specified by default for all connected machines and all sessions. You can also modify and read them separately for each machine and each session using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) and [Get database parameter](https://doc.4d.com/4dv19R/help/command/en/page643.html) commands. The parameters modified by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command have priority for the current session.

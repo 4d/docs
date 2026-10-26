@@ -210,7 +210,7 @@ Un *namespace* garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilis
 
 :::
 
-Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans la [class store utilisateurs (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que ses composants chargés, à travers les espaces de noms `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
+Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans la [class store utilisateurs (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que ses composants chargés, à travers les espaces de noms `cs.<value>. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle`contenant une fonction`getArea()\`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
 //dans le projet hôte ou l'une de ses composantes
@@ -449,7 +449,7 @@ Les composants peuvent utiliser des ressources situées dans le dossier Ressourc
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
+Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
 
 ## Exécution du code d'initialisation
 
