@@ -90,7 +90,7 @@ title: (
         <Link to="settings/overview" >
           <Translate>Settings</Translate>
         </Link>
-        <Link to="Develop/field-properties">
+        <Link to="Develop/structure-editor">
           <Translate>Database Structure</Translate>
         </Link>
         <Link to="Project/code-overview" >
