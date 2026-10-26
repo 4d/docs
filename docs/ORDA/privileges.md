@@ -73,6 +73,41 @@ Available actions are related to target resource.
 
 Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
 
+:::warning
+
+When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+
+:::
+
+
+### MCP tools
+
+The same permissions apply to the sessions of the [MCP server](../WebServer/mcp-server.md), with nothing specific to configure:
+
+- A [custom tool](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requires the **execute** permission on its function, and benefits from its **promote** permission.
+- The [built-in CRUD tools](../WebServer/mcp-server.md#built-in-crud-tools) require the **read**, **create**, **update**, or **drop** permission on the dataclass, and the attribute permissions apply. Each attribute of a path used in a filter, a sort, or a projection requires the **read** permission.
+- The CRUD tools are listed only if the session has at least one data permission on a dataclass, and the `describeModel` tool only describes the dataclasses on which the session has a data permission, with their readable or writable attributes.
+- A tool, a dataclass, or an attribute that the session cannot access is reported as if it did not exist.
+
+#### Example
+
+MCP clients authenticated with the "salesReader" privilege can read the Customer and Order dataclasses with the CRUD tools, and call the tools published by the `OrderManager` singleton (for example `OrderManager-getYearTotal`):
+
+```json
+{
+	"privileges": [{"privilege": "salesReader", "includes": []}],
+	"roles": [],
+	"permissions": {
+		"allowed": [
+			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
+			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
+			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
+		]
+	},
+	"restrictedByDefault": true
+}
+```
+
 
 ### MCP tools
 

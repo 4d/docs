@@ -73,6 +73,11 @@ Available actions are related to target resource.
 
 Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
 
+:::warning
+
+When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+
+:::
 
 
 ### Inherited permissions

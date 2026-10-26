@@ -12,12 +12,6 @@ Web server quotas let you control resource usage by limiting traffic, requests, 
 
 :::
 
-:::tip Related Blog post
-
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## Requisitos
 
 Quota configuration requires [scalable sessions](./sessions.md#enabling-web-sessions) to be enabled.
