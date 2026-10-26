@@ -78,7 +78,7 @@ Sets the text to have a line running beneath it.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textDecoration|string|"normal", "underline"|
+|textDecoration|string|"none", "underline"|
 
 #### Objects Supported
 
@@ -166,7 +166,7 @@ Allows defining the object's font size in points.
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Text Area](text.md)
 
 #### Commands
 
@@ -178,7 +178,13 @@ Allows defining the object's font size in points.
 
 Designates the font color.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+
+:::note
+
+For objects with text properties, this property also sets the color of the border when "plain" or "dotted" [border style](./properties_BackgroundAndBorder.md#border-line-style) is used, except if you used the [Border color](./properties_BackgroundAndBorder.md#border-color) property.
+
+:::
+
 
 The color can be specified by:
 
@@ -196,7 +202,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](../commands
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Text Area](text.md)
 
 #### Commands
 
@@ -287,7 +293,7 @@ Horizontal location of text within the area that contains it.
 
 :::note
 
-- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
  
 :::

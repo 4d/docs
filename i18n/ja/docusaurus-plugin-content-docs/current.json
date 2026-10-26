@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "開発中",
+    "message": "次へ",
     "description": "The label for version current"
   },
   "sidebar.docs.category.Getting Started": {
@@ -720,7 +720,7 @@
     "description": "The label for category 'Spell Checker' in sidebar 'docs'"
   },
   "sidebar.docs.category.String": {
-    "message": "文字列",
+    "message": "String",
     "description": "The label for category 'String' in sidebar 'docs'"
   },
   "sidebar.docs.category.Structure Access": {
@@ -1044,7 +1044,7 @@
     "description": "The generated-index page title for category Spell Checker in sidebar docs"
   },
   "sidebar.docs.category.String.link.generated-index.title": {
-    "message": "文字列",
+    "message": "String",
     "description": "The generated-index page title for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access.link.generated-index.title": {
@@ -1520,7 +1520,7 @@
     "description": "The label for category 'SQL' in sidebar 'docs'"
   },
   "sidebar.docs.category.String-key": {
-    "message": "文字列",
+    "message": "String",
     "description": "The label for category 'String' in sidebar 'docs'"
   },
   "sidebar.docs.category.Structure-Access-key": {

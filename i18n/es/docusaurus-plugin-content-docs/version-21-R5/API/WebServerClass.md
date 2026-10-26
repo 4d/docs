@@ -730,7 +730,7 @@ Todas los parámetros de los [objetos Servidor Web](../commands/web-server) pued
 
 :::note
 
-You can configure quotas via the `quotas` property in the *settings* parameter or, for the main Web server, via an [`HTTPQuotas.json`](../WebServer/quotas.md) file. Si `settings.quotas` se especifica, **HTTPQuotas.json** se ignora.
+Puede configurar las cuotas a través de la propiedad `quotas` en el parámetro *settings* o, para el servidor web principal, a través de un archivo [`HTTPQuotas.json`](../WebServer/quotas.md). Si `settings.quotas` se especifica, **HTTPQuotas.json** se ignora.
 
 :::
 

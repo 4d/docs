@@ -3,12 +3,11 @@ id: clientServer
 title: Gestion Client/Serveur
 ---
 
-
 Les applications 4D Desktop peuvent être utilisées dans une configuration Client/Serveur, en tant qu'applications client/serveur fusionnées ou en tant que projets distants.
 
-- Les **applications client/serveur fusionnées** sont construites avec le [Générateur d'applications](building.md#clientserver-page). Elles sont utilisées pour les déploiements d'applications.
+- Les **applications client/serveur fusionnées** sont générées par le [Générateur d'application](building.md#clientserver-page). Elles sont utilisées pour les déploiements d'applications.
 
-- Les **projets distants** sont des fichiers \[.4DProject\](Project/architecture.md) ouverts par 4D Server et accessibles avec 4D en mode distant. Le serveur envoie une version .4dz du projet (\[format compressé\](building.md#build-compiled-structure)) au 4D distant, donc les fichiers de structure sont en lecture seule. Cette configuration est généralement utilisée pour les tests d'application.
+- Les **projets distants** sont des fichiers [.4DProject](Project/architecture.md) ouverts par 4D Server et accessibles avec 4D en mode distant. Le serveur envoie une version .4dz du projet ([format compressé](building.md#build-compiled-structure)) au 4D distant, donc les fichiers de structure sont en lecture seule. Cette configuration est généralement utilisée pour les tests d'application.
 
 ![](../assets/en/getStart/localremote.png)
 
@@ -21,11 +20,11 @@ Une application client/serveur fusionnée est personnalisée et son démarrage e
 - Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur. Il n’est pas nécessaire de sélectionner le fichier projet.
 - Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur.
 
-Ces principes sont détaillés dans la page [Générateur d'application](building.md#what-is-a-clientserver-application).
+Ces principes sont détaillés dans la page du [Générateur d'application](building.md#what-is-a-clientserver-application).
 
 ## Ouvrir un projet distant
 
-La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. Par la suite, vous pourrez vous connecter directement en utilisant le menu **Ouvrir projets récents** ou un fichier de raccourci 4DLink.
+La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. A chaque fois que 4D effectue une action **Enregistrer tout** depuis l'environnement de développement (explicitement depuis le menu **Fichier** ou implicitement en passant en mode application par exemple), 4D Server recharge de manière synchrone les fichiers du projet.
 
 Pour vous connecter à distance à un projet 4D Server :
 
@@ -52,7 +51,7 @@ Si le projet publié n'est pas affiché dans la liste **Disponible**, sélection
   - Si deux serveurs sont exécutés simultanément sur la même machine, l'adresse IP doit être suivie de deux points et d'un numéro de port, par exemple : `192.168.92.104:19814`.
   - Par défaut, le port de publication d'un 4D Server est 19813. Ce numéro peut être modifié dans les paramètres du projet.
 
-> L'option **Activer le mode développement** ouvre la connexion à distance dans un mode spécial de lecture/écriture et nécessite d'accéder au dossier du projet à partir du 4D distant (option de compatibilité).
+> L'option **Activer le mode développement** ouvre la connexion à distance dans un mode lecture/écriture spécial et nécessite d'accéder au dossier du projet depuis le 4D distant (option de compatibilité).
 
 Une fois que cette page attribue un serveur, cliquez sur le bouton **OK** pour vous connecter au serveur.
 
@@ -60,7 +59,7 @@ Une fois la connexion au serveur établie, le projet distant sera répertorié d
 
 ### Mettre à jour des fichiers de projet sur le serveur
 
-4D Server crée et envoie automatiquement aux machines distantes une version \[.4dz\](building.md#build-compiled-structure) du fichier de projet *.4DProject* (non compressé) en mode interprété.
+4D Server crée et envoie automatiquement aux machines distantes une version [.4dz](building.md#build-compiled-structure) du fichier de projet *.4DProject* (non compressé) en mode interprété.
 
 - Une version .4dz mise à jour du projet est automatiquement produite lorsque cela est nécessaire, c'est-à-dire lorsque le projet a été modifié et rechargé par 4D Server. Le projet est rechargé :
   - automatiquement, lorsque la fenêtre de l'application 4D Server arrive à l'avant de l'OS ou lorsque l'application 4D sur la même machine enregistre une modification (voir ci-dessous).

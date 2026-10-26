@@ -35,28 +35,31 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 | [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
+| [<!-- INCLUDE #VectorClass.precision.Syntax -->](#precision)<br/><!-- INCLUDE #VectorClass.precision.Summary -->                             |
 | [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容 |
-| ------ | -- |
-| 20 R10 | 追加 |
+| リリース   | 内容                 |
+| ------ | ------------------ |
+| 21 R5  | 新しい *precision* 引数 |
+| 20 R10 | 追加                 |
 
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection {; precision : Integer} ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 
 <div class="no-index">
 
-| 引数  | 型                         |                             | 説明                 |
-| --- | ------------------------- | --------------------------- | ------------------ |
-| 引数  | Collection                | ->                          | ベクトルを表せる実数値のコレクション |
-| 戻り値 | 4D.Vector | <- | 新規ベクトルオブジェクト       |
+| 引数        | 型                         |                             | 説明                                                                                                 |
+| --------- | ------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
+| 引数        | Collection                | ->                          | ベクトルを表せる実数値のコレクション                                                                                 |
+| precision | Integer                   | ->                          | ベクトル精度: `mk single precision` (デフォルト) または `mk double precision` |
+| 戻り値       | 4D.Vector | <- | 新規ベクトルオブジェクト                                                                                       |
 
 </div>
 <!-- END REF -->
@@ -67,7 +70,16 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 *parameter* 引数には、作成したベクトルを表す実数値のコレクションを渡します。これらの値は人工知能によって提供されるものであり、単語やデータなどのオブジェクトを数学的に表します。
 
-#### 例題
+オプションの*precision* 引数には、ベクトル作成に適用したい数値の精度を渡すことができます。次の定数が利用できます:
+
+| 定数                    | 値  | 説明                                                             |
+| --------------------- | -- | -------------------------------------------------------------- |
+| `mk single precision` | 32 | 単精度(32-bit) 浮動小数点(デフォルト) |
+| `mk double precision` | 64 | 倍精度(64-bit) 浮動小数点                           |
+
+デフォルトで*precision* 引数を省略した場合、ベクトルは32-bit の浮動小数点の精度で作成されます。 32-bit 浮動小数点精度は、64-bit ベクトルと比較してメモリ使用量を半分に抑えつつ、類似度と距離の計算に必要な精度を十分確保しているため、ほとんどのユースケースにおいて推奨されるデフォルト設定となっています。
+
+#### 例題 1
 
 ベクトルを作成します:
 
@@ -80,6 +92,16 @@ var $vector := 4D.Vector.new([0.123; -0.456; 0.789])
 ```4d
 var $firstComponent := $vector[0]
 var $collection := $vector.toCollection()
+```
+
+#### 例題 2
+
+倍精度浮動小数点のベクトルを作成したい場合を考えます:
+
+```4d
+var $col: Collection
+  //$col はAI プロバイダーによって値が入れられている
+var $vector := 4D.Vector.new($col; mk double precision) 
 ```
 
 ## .cosineSimilarity()
@@ -302,6 +324,22 @@ ALERT("Nearest monument: "+$places[0].name)
 #### 説明
 
 `.length` プロパティには<!-- REF #VectorClass.length.Summary -->ベクトル成分の数<!-- END REF -->が格納されています。
+
+## .precision
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 21 R5 | 追加 |
+
+</details>
+
+<!-- REF #VectorClass.precision.Syntax -->**precision** : Integer<!-- END REF -->
+
+#### 説明
+
+`.precision` プロパティには<!-- REF #VectorClass.precision.Summary -->ベクトルを構築するのに使用された精度の値<!-- END REF --> が格納されています: 32 (`mk single precision`、デフォルト) または 64 (`mk double precision`)。
 
 ## .toCollection()
 

@@ -654,7 +654,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 | Nome     | Tipo de dados | Valores possíveis                                                    |
 | -------- | ------------- | -------------------------------------------------------------------- |
-| wordwrap | string        | "automatic" (exceto list box), "normal", "nenhum" |
+| wordwrap | string        | "automatic" (exceto coluna e rodapé de list box), "normal", "nenhum" |
 
 #### Objectos suportados
 

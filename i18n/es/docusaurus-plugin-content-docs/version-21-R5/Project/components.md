@@ -382,7 +382,7 @@ Para mostrar el panel Dependencias:
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- con el servidor 4D, seleccione el elemento de menú **Ventana/Dependencias del proyecto**.<br/>
+- con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
@@ -564,7 +564,7 @@ Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de
 
 ### Uso de 4D Corner
 
-The [**4D Corner platform**](https://corner.4d.com/) proposes a comprehensive list of ready-to-use 4D components, proposed from the 4D company or from the 4D community. Puede navegar o buscar en la lista para encontrar el componente que mejor se ajuste a sus necesidades.
+La [**plataforma 4D Corner**](https://corner.4d.com/) ofrece una lista completa de componentes 4D listos para usar, propuestos tanto por la empresa 4D como por la comunidad 4D. Puede navegar o buscar en la lista para encontrar el componente que mejor se ajuste a sus necesidades.
 
 ![4d-corner](../assets/en/Project/4d-corner.png)
 
@@ -588,7 +588,7 @@ El enlace de dependencia se añade automáticamente en el área de dirección:
 
 :::tip Entrada de blog relacionada
 
-[4D Corner: Easily browse 4D components, add them to your project and share your own](https://blog.4d.com/4d-corner-easily-browse-4d-components-add-them-to-your-project-and-share-your-own/)
+[4D Corner: navegue fácilmente por los componentes 4D, añádalos a su proyecto y comparta los suyos](https://blog.4d.com/4d-corner-easily-browse-4d-components-add-them-to-your-project-and-share-your-own/)
 
 :::
 

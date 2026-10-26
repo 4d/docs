@@ -29,7 +29,7 @@ Les noms de fonctions doivent être conformes aux [règles standard de nommage d
 
 Le nom d'une propriété d'objet (aussi appelé *attribut*) peut contenir jusqu'à 255 caractères.
 
-Les propriétés d'objets peuvent référencer des valeurs scalaires, des éléments ORDA, des fonctions de classe, d'autres objets, etc. Quelle que soit leur nature, les noms des propriétés d'objets doivent respecter les règles suivantes **si vous souhaitez utiliser la [notation à points :](./dt_object.md#properties)**
+Les propriétés d'objets peuvent référencer des valeurs scalaires, des éléments ORDA, des fonctions de classe, d'autres objets, etc. Quelle que soit leur nature, les noms des propriétés des objets doivent suivre les règles suivantes **si vous voulez utiliser la [notation à points](./dt_object.md#properties)** :
 
 - Un nom de propriété doit commencer par une lettre, un trait de soulignement ("_") ou un dollar ("$").
 - Ensuite, le nom peut inclure des lettres, des chiffres, des traits de soulignement ("_") ou des dollars ("$").
@@ -55,7 +55,6 @@ Voir également le [standard ECMA Script](https://www.ecma-international.org/ecm
 Si vous utilisez la **notation chaine** avec des crochets, les noms de propriété peuvent contenir n'importe quel caractère (ex: `myObject["1. First property"]`).
 
 :::
-
 
 ## Paramètres
 
@@ -88,16 +87,16 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D. Ecrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez un projet au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
- > Lorsque vous appelez une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes 4D intégrées telles que `ON EVENT CALL`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est attendu.
+> Lorsque vous appelez une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes 4D intégrées telles que `ON EVENT CALL`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est attendu.
 
 Exemples :
 
 ```4d
  // Cette commande attend une méthode (fonction) ou une formule
  QUERY BY FORMULA([aTable];Special query)
-  // Cette commande attend une méthode (procédure) ou une formule
+ // Cette commande attend une méthode (procédure) ou une formule
  APPLY TO SELECTION([Employees];INCREASE SALARIES)
-  // Mais cette commande attend un nom de méthode
+ // Mais cette commande attend un nom de méthode
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
@@ -129,10 +128,10 @@ QUERY([Clients];[Clients]Name="Smith")
 
 Le nom d'une variable peut comporter jusqu'à 31 caractères, sans compter les symboles de portée (`$` ou `<>`).
 
-- Le nom d'une variable doit commencer par une lettre, un trait de soulignement ou un dollar ("$") pour les [paramètres](parameters.md) et [les variables locales](variables.md#local-variables), ou `<>` pour les [variables interprocess](variables.md#interprocess-variables).
-- Un chiffre en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la [déclaration de syntaxe `var`](variables.md#utilisation-du-mot-clé-var).
+- Le nom d'une variable doit commencer par une lettre, un trait de soulignement ou un dollar ("$") pour les [paramètres](parameters.md) et [les variables locales](variables.md#local-variables), ou `<>` pour les [variables interprocess](variables.md#interpro
+- Un chiffre en tant que premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la syntaxe de la déclaration [`var`](variables.md#utilisation-du-mot-clé-var).
 - Ensuite, le nom peut inclure des lettres, chiffres, et traits de soulignement ("_").
-- Un espace en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la [déclaration de syntaxe `var`](variables.md#utilisation-du-mot-clé-var).
+- Un espace en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la syntaxe de déclaration [`var`](variables.md#utilisation-du-mot-clé-var).
 - N'utilisez pas de noms réservés, i.e. des noms de commandes 4D (`Date`, `Time`, etc), des mots-clés (`If`, `For`, etc.), des noms de constantes (`Euro`, `Black`, `Friday`), etc.
 - Les noms de variables ne sont PAS sensibles à la casse.
 
@@ -161,10 +160,10 @@ Exemples :
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
 USE NAMED SELECTION([Customers];"Closed")//Sélection temporaire process
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Sélection temporaire interprocess
-    //Démarrage du process global "Add Customers"
+USE NAMED SELECTION([Customers];"<>;ByZipcode") //Sélection temporaire interprocess
+ //Démarrage du process global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
-    //Démarrage du process local "$Follow Mouse Moves"
+ //Démarrage du process local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 CREATE SET([Customers];"Customer Orders")//Ensemble process
 USE SET("<>Deleted Records") //Ensemble interprocess

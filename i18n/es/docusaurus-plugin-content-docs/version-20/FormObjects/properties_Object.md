@@ -7,7 +7,7 @@ title: Objetos
 
 ## Tipo
 
- `PARÁMETRO OBLIGATORIO`
+`PARÁMETRO OBLIGATORIO`
 
 Esta propiedad designa el tipo del [objeto formulario activo o inactivo](formObjects_overview.md).
 
@@ -19,13 +19,14 @@ Esta propiedad designa el tipo del [objeto formulario activo o inactivo](formObj
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Cuadro combinado](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Cuadro de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Control giratorio](spinner.md) - [Separador](splitters.md) - [Imagen estática](staticPicture.md) - [Control de paso](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
 ## Nombre del objeto
 
 Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nombre de objeto debe ser único.
+
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
 Cuando utilice el lenguaje 4D, puede referirse a un objeto de formulario activo por su nombre de objeto (para más información sobre esto, consulte [Propiedades Objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) en el manual de Referencia del Lenguaje 4D).
@@ -40,7 +41,7 @@ Para más información sobre las reglas de denominación de los objetos de formu
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Cuadro combinado](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) - [Stepper](stepper.md) - [Botón de radio](radio_overview.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado List Box](listbox-header-footer.md#headers) - [Botón con imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Imagen estática](staticPicture.md) - [Pasos](stepper.md) - [Botón de opción](radio_overview.md) - [Subformulario](subform_overview.md#overview) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -52,12 +53,12 @@ Esta funcionalidad sólo es soportada con los objetos que contribuyen a la geome
 
 Esta es la lista de objetos cuyo valor se puede guardar:
 
-| Object                                        | Valor guardado                                                                           |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| [Casilla a seleccionar](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
-| [Lista desplegable](dropdownList_Overview.md) | Número de línea seleccionada                                                             |
-| [Botón radio](radio_overview.md)              | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
-| [Control de pestañas](tabControl.md)          | Número de pestaña seleccionada                                                           |
+| Object                                          | Valor guardado                                                                                              |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Casilla de verificación](checkbox_overview.md) | Valor de la variable asociada (0, 1, 2)                                                  |
+| [Lista desplegable](dropdownList_Overview.md)   | Número de línea seleccionada                                                                                |
+| [Botón de radio](radio_overview.md)             | Valor de la variable asociada (1, 0, True o False para los botones de acuerdo a su tipo) |
+| [Control de pestañas](tabControl.md)            | Número de pestaña seleccionada                                                                              |
 
 #### Gramática JSON
 
@@ -76,6 +77,7 @@ Esta es la lista de objetos cuyo valor se puede guardar:
 > Ver también **[Expression](properties_DataSource.md#expression)** para las columnas de list box de tipo selección y colección.
 
 Esta propiedad especifica la fuente de los datos. Cada objeto de formulario activo está asociado a un nombre de objeto y a un nombre de variable. El nombre de la variable puede ser diferente del nombre del objeto. En el mismo formulario, puede utilizar la misma variable varias veces, mientras que cada [nombre de objeto](#object-name) debe ser único.
+
 > El tamaño del nombre de la variable está limitado a 31 bytes. Consulte la sección [Identificadores](Concepts/identifiers.md) para obtener más información sobre las reglas de asignación de nombres.
 
 Las variables de los objetos del formulario permiten controlar y supervisar los objetos. Por ejemplo, cuando se presiona un botón, su variable se pone en 1; el resto del tiempo, en 0. La expresión asociada a un indicador de progreso permite leer y modificar el parámetro actual.
@@ -84,20 +86,22 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos            | Valores posibles                                                            |
-| ---------- | ------------------------- | --------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D.</li><li>Cadena vacía para [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de array) para una columna [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes)]</li> |
+| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                      |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D.</li><li>Cadena vacía para las [variables dinámicas](#dynamic-variables).</li><li>Array de cadenas (colección de nombres de array) para una columna de [listbox jerárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expresiones
 
 Puede utilizar una [expresión](Concepts/quick-tour.md#expressions) como fuente de datos para un objeto. Se permite toda expresión 4D válida: expresión simple, propiedad de objeto, fórmula, función 4D, nombre de método proyecto o campo que utilice la sintaxis estándar `[Table]Field`. La expresión se evalúa cuando se ejecuta el formulario y se reevalúa para cada evento del formulario. Tenga en cuenta que las expresiones pueden ser [asignables o no asignables](Concepts/quick-tour.md#expressions).
+
 > Si el valor introducido corresponde a la vez a un nombre de variable y a un nombre de método, 4D considera que está indicando el método.
 
 ### Variables dinámicas
 
-Puede dejar en manos de 4D la creación de variables asociadas a sus objetos de formulario (botones, variables introducibles, casillas de selección, etc.) de forma dinámica y según sus necesidades. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
+Puede dejarle a 4D crear variables asociadas con los objetos de su formulario (botones, variables editables, casillas de verificación, etc.) dinámicamente y de acuerdo a sus necesidades. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
 
-Cuando una variable no tiene nombre, al cargar el formulario, 4D crea una nueva variable para el objeto, con un nombre calculado que es único en el espacio de las variables de proceso del intérprete (lo que significa que este mecanismo puede utilizarse incluso en modo compilado). Esta variable temporal se destruirá cuando se cierre el formulario. Para que este principio funcione en modo compilado, es imprescindible que las variables dinámicas estén explícitamente declaradas. Hay dos maneras de hacer esto:
+Cuando una variable no tiene nombre, al cargar el formulario, 4D crea una nueva variable para el objeto, con un nombre calculado que es único en el espacio de las variables de proceso del intérprete (lo que significa que este mecanismo puede utilizarse incluso en modo compilado). Esta variable temporal se destruirá cuando se cierre el formulario.
+Para que este principio funcione en modo compilado, es imprescindible que las variables dinámicas estén explícitamente declaradas. Hay dos maneras de hacer esto:
 
 - Puede definir el tipo utilizando la propiedad [tipo de expresión](#expression-type).
 - Puede utilizar un código de inicialización específico cuando se carga el formulario que utilice, por ejemplo, el comando `VARIABLE TO VARIABLE`:
@@ -130,13 +134,13 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Pie de List Box](listbox-header-footer.md#footers) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área Web](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Pie de List Box](listbox-header-footer.md#footers) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md)
 
 ---
 
 ## Tipo de expresión
 
-> Esta propiedad se denomina [**Tipo de datos**](properties_DataSource.md#data-type-expression-type) en la Lista de Propiedades para las columnas de los list box de tipo [selección](FormObjects/listbox-object.md#selection-list-boxes) y [colección](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) y para [las Listas Desplegables](dropdownList_Overview.md) asociadas a un [objeto](FormObjects/dropdownList_Overview.md#using-an-object) o a un [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> Esta propiedad se denomina [**Tipo de datos**](properties_DataSource.md#data-type-expression-type) en la Lista de propiedades para [selección](FormObjects/listbox-object.md#selection-list-boxes) y [colección](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) y para [Listas desplegables](dropdownList_Overview.md) asociadas a un [objeto](FormObjects/dropdownList_Overview.md#using-an-object) o un [array](FormObjects/dropdownList_Overview.md#using-an-array).
 
 Especifique el tipo de datos para la expresión o variable asociada al objeto. Tenga en cuenta que el objetivo principal de este ajuste es configurar las opciones (como los formatos de visualización) disponibles para el tipo de datos. En realidad, no escribe la variable en sí. De cara a la compilación del proyecto, debe [declarar la variable](Concepts/variables.md#declaring-variables).
 
@@ -144,17 +148,18 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 - **[Variables dinámicas](#dynamic-variables)**: puede utilizar esta propiedad para declarar el tipo de variables dinámicas.
 - **[Columnas List Box](listbox-column.md)**: esta propiedad se utiliza para asociar un formato de visualización a los datos de la columna. Los formatos suministrados dependerán del tipo de variable (list box de tipo array) o del tipo datos/campo (list boxes de tipo selección y colección). Los formatos 4D estándar que pueden utilizarse son: Alfa, Numérico, Fecha, Hora, Imagen y Booleano. El tipo Texto no tiene formatos de visualización específicos. Todos los formatos personalizados existentes también están disponibles.
-- **[Variables imagen](input_overview.md)**: puede utilizar este menú para declarar las variables antes de cargar el formulario en modo interpretado. Mecanismos nativos específicos rigen la visualización de variables de imagen en los formularios. Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de variables. Para ello, es necesario que la instrucción `C_PICTURE(varName)` se haya ejecutado antes de cargar el formulario (normalmente, en el método que llama al comando `DIALOG`), o que la variable se haya digitado a nivel de formulario utilizando la propiedad tipo de expresión. De lo contrario, la variable imagen no se mostrará correctamente (sólo en modo interpretado).
+- **[Variables imagen](input_overview.md)**: puede utilizar este menú para declarar las variables antes de cargar el formulario en modo interpretado. Mecanismos nativos específicos rigen la visualización de variables de imagen en los formularios. Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de  Estos mecanismos exigen una mayor precisión a la hora de configurar las variables: a partir de ahora, deberán haber sido declaradas antes de cargar el formulario -es decir, incluso antes del evento de formulario `On Load` - a diferencia de otros tipos de  Para hacer esto, necesitas que la instrucción `C_PICTURE(varName)` se haya ejecutado antes de cargar el formulario (normalmente, en el método que llama al comando `DIALOG`), o que la variable se haya digitado a nivel de formulario utilizando la propiedad tipo de expresión.
+  De lo contrario, la variable imagen no se mostrará correctamente (sólo en modo interpretado).
 
 #### Gramática JSON
 
-| Nombre             | Tipos de datos | Valores posibles                                   |
-| ------------------ | -------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string         | <li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li> |
+| Nombre             | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string         | **<li>Objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas de lista:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li> |
 
 #### Objetos soportados
 
-[Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Área de plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md)
+[Casilla de verificación](checkbox_overview.md) - [Cuadro combinado](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Entrada](input_overview.md) - [Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Regla](ruler.md) - [Selector](spinner.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestaña](tabControl.md)
 
 ---
 
@@ -170,7 +175,7 @@ Lista de palabras separadas por espacios que se utilizan como selectores de clas
 
 #### Objetos soportados
 
-[Área 4D View Pro](writeProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Caja de grupo](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Botón de imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón radio](radio_overview.md) - [Imagen estática](staticPicture.md) - [Subformulario](subform_overview.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Botón de opción](radio_overview.md) - [Imagen estática](staticPicture.md) - [Subformulario](subform_overview.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -180,17 +185,17 @@ Para utilizar elementos de colección o entidades para definir el contenido de l
 
 Introduzca una expresión que devuelva una colección o una selección de entidades. Normalmente, introducirá el nombre de una variable, un elemento de una colección o una propiedad que contenga una colección o una selección de entidades.
 
-La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Cada elemento de la colección o cada entidad de la selección de entidades se asociará a una línea del list box y estará disponible como objeto a través de la palabra clave [`This`](../Concepts/classes.md#this):
+La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Cada elemento de la colección o cada entidad de la selección de entidades se asociará a una fila del list box y estará disponible como objeto a través de la palabra clave [`This`](../Concepts/classes.md#this):
 
 - si ha utilizado una colección de objetos, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de propiedad, por ejemplo `This.<propertyPath>`.
 - si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder a cada valor de atributo, por ejemplo `This.<attributePath>`.
-> > > > Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. Sin embargo, en este caso no podrá modificar valores ni acceder al objeto actual (ver más adelante).
 
+> Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a **This.value** en la expresión datasource. Sin embargo, en este caso no podrá modificar valores ni acceder al objeto actual (ver más adelante).
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                   |
-| ---------- | -------------- | ------------------------------------------------------------------ |
+| Nombre     | Tipos de datos | Valores posibles                                                                   |
+| ---------- | -------------- | ---------------------------------------------------------------------------------- |
 | dataSource | string         | Expresión que devuelve una colección o una selección de entidades. |
 
 #### Objetos soportados
@@ -228,13 +233,13 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                                 |
-| -------------- | -------------- | ---------------------------------------------------------------- |
+| Nombre         | Tipos de datos | Valores posibles                                                                    |
+| -------------- | -------------- | ----------------------------------------------------------------------------------- |
 | pluginAreaKind | string         | Nombre del área externa del plug-in (comienza con un carácter %) |
 
 #### Objetos soportados
 
-[Área de plug-in](pluginArea_overview.md)
+[Área de plugin](pluginArea_overview.md)
 
 ---
 
@@ -250,7 +255,7 @@ Permite utilizar los botones de radio en conjuntos coordinados: sólo se puede s
 
 #### Objetos soportados
 
-[Botón radio](radio_overview.md)
+[Botón de radio](radio_overview.md)
 
 ---
 
@@ -276,30 +281,31 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Encabezado de List Box](./listbox-header-footer.md#headers) - [Botón de radio](radio_overview.md) - [Área de texto](text.md)
+[Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](./listbox-header-footer.md#headers) - [Botón radio](radio_overview.md) - [ÁreaTexto](text.md)
 
 ---
 
 ## Cálculo de variables
 
-Esta propiedad establece el tipo de cálculo que se realizará en un área de [pie de columna](./listbox-header-footer.md#footers).
-> El cálculo de los pies de página también puede definirse con el comando 4D [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html).
+Esta propiedad define el tipo de cálculo que se realizará en un área [pie de columna](./listbox-header-footer.md#footers).
+
+> El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html).
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
-| Cálculo                 | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
-| ----------------------- | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
-| Mínimo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
-| Máximo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
-| Suma                    | X   |      |       | X    | X    |          | Igual que el tipo de columna        |
-| Conteo                  | X   | X    | X     | X    | X    | X        | Integer                             |
-| Promedio                | X   |      |       | X    |      |          | Real                                |
-| Desviación estándar(*)  | X   |      |       | X    |      |          | Real                                |
-| Varianza(*)             | X   |      |       | X    |      |          | Real                                |
-| Suma de cuadrados(*)    | X   |      |       | X    |      |          | Real                                |
+| Cálculo                                    | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
+| ------------------------------------------ | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
+| Mínimo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
+| Máximo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
+| Suma                                       | X   |      |       | X    | X    |          | Igual que el tipo de columna        |
+| Conteo                                     | X   | X    | X     | X    | X    | X        | Integer                             |
+| Promedio                                   | X   |      |       | X    |      |          | Real                                |
+| Desviación estándar(\*) | X   |      |       | X    |      |          | Real                                |
+| Varianza(\*)            | X   |      |       | X    |      |          | Real                                |
+| Suma de cuadrados(\*)   | X   |      |       | X    |      |          | Real                                |
 | Personalizado ("None ") | X   | X    | X     | X    | X    | X        | Cualquiera                          |
 
-(*) Sólo para list boxes de tipo array.
+(\*) Sólo para list boxes de tipo array.
 
 > Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse para mostrar los cálculos de pie de página. No se soportan otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.value`.
 
@@ -322,10 +328,10 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                                                                                      |
-| ------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Nombre              | Tipos de datos | Valores posibles                                                                                       |
+| ------------------- | -------------- | ------------------------------------------------------------------------------------------------------ |
+| variableCalculation | string         | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objetos soportados
 
-[Pie de list box](listbox-header-footer.md#footers)
+[List Box Footer](listbox-header-footer.md#footers)

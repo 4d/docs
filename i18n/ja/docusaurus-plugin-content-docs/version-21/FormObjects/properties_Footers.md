@@ -33,7 +33,6 @@ title: フッター
   - 複数の異なるサイズが設定されている場合、4D はもっとも大きなものを使用します。たとえば、行に "Verdana 18", "Geneva 12" そして "Arial 9" が設定されている場合、4D は行の高さの決定に "Verdana 18" を使用します。複数行の場合はこの高さの倍数が使用されます。
   - この計算にはピクチャーのサイズや、フォントに適用されるスタイルは考慮されません。
   - macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。
-    &#062; This property can also be set dynamically using the <a href="https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html">LISTBOX SET FOOTERS HEIGHT</a> command.
 
 > このプロパティは、[LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md) コマンドを使用することで動的に設定することも可能です。
 
@@ -57,9 +56,9 @@ title: フッター
 
 #### JSON 文法
 
-| 名称           | データタイプ | とりうる値                                     |
-| ------------ | ------ | ----------------------------------------- |
-| footerHeight | string | 正の10進数 + px &#124; em |
+| 名称           | データタイプ | とりうる値                                  |
+| ------------ | ------ | -------------------------------------- |
+| footerHeight | string | value+px &#124; em |
 
 #### 対象オブジェクト
 

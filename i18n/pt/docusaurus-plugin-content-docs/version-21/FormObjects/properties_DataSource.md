@@ -12,7 +12,7 @@ Quando a opção **inserção automática** não está definida (padrão), o val
 Esta propriedade é suportada por:
 
 - Objetos formulário [Combo box](comboBox_overview.md) e [coluna list box](listbox-column.md) associado para uma lista de seleção.
-- objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
+- Objetos formulário [Combo box](comboBox_overview.md) cuja lista associada é preenchida pelo seu array ou datasource de objeto.
 
 Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" que está associada a um combo box "Countries": se a propriedade **inserção automática** estiver definida e um usuário digitar "Espanha", o valor "Espanha" será automaticamente adicionado à lista na memória:
 
@@ -147,19 +147,19 @@ Veja também [**Tipo de expressão**](properties_Object.md#expression-type).
 Define o tipo de dados a serem salvos no campo ou na variável associada à [lista suspensa](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - Listas suspensas [associadas a uma lista de opções](dropdownList_Overview.md#using-a-choice-list).
-- Listas desdobráveis [associadas a una lista de selección jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+- Listas desdobráveis [associadas a una lista de seleção jerárquica](dropdownList_Overview.md#using-a-hierarchical-choice-list).
 
 Estão disponíveis três opções:
 
 - **Referência de lista**: declara que a lista suspensa é hierárquica. Isso significa que a lista suspensa pode exibir até dois níveis hierárquicos e seu conteúdo pode ser gerenciado pelos comandos de linguagem 4D do tema **Listas hierárquicas**.
 - **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
+- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Esta referência é o valor numérico associado a cada item, seja através do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands-legacy/append-to-list.md) ou [`SET LIST ITEM`](../commands-legacy/set-list-item.md), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
 O uso da opção **Referência de item selecionado** exige a conformidade com os seguintes princípios:
 
 - Para poder armazenar a referência, a fonte de dados do campo ou da variável deve ser do tipo Número (independentemente do tipo de valor exibido na lista). A propriedade [expressão](properties_Object.md#expression-type) é definida automaticamente.
 - Devem ser associadas referências válidas e únicas aos itens da lista.
-- A lista pendente deve estar associada a um campo ou a uma variável.
+- A lista suspensa deve estar associada a um campo ou a uma variável.
 
 #### Gramática JSON
 
@@ -217,7 +217,7 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
   - Booliano\
     Você pode usar campos da tabela mestre ou de outras tabelas.
 
-- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. A expressão deve devolver um valor. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
+- Uma **expressão 4D** (expressão simples, fórmula ou método 4D). A expressão deve devolver um valor. O valor será avaliado nos eventos `On Display Detail` e `On Data Change`. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. A expressão será avaliada para cada registro da seleção (atual ou nomeada) da Tabela mestre (para os list box de tipo de seleção), cada elemento da coleção (para as list box de tipo coleção) ou cada entidade da seleção (para os list box de tipo entity selection). Se estiver vazia, a coluna não apresentará nenhum resultado.
   São suportados os seguintes tipos de expressão:
   - String
   - Numeric
@@ -226,12 +226,12 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
   - Parâmetros
 
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.  
-Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias. `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
+Ao usar coleções ou entity selections, normalmente você declarará a propriedade do elemento ou atributo da entidade associado a uma coluna dentro de uma expressão contendo [This](../commands/this.md). `This` é um comando 4D dedicado que retorna uma referência ao elemento atualmente processado. Por exemplo, você pode usar `This.\<propertyPath>` onde `\<propertyPath>` é o caminho de uma propriedade na coleção ou um caminho de atributo de entidade para acessar o valor atual de cada elemento/entidade.
 Se você usar uma coleção de valores escalares, o 4D criará um objeto para cada elemento da coleção com uma única propriedade (denominada "value"), preenchida com o valor do elemento. Nesse caso, você usará `This.value` como expressão.
 
-Si se utiliza una expresión no asignable [](Concepts/quick-tour.md#expressions) (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
+Se uma [expressão não atribuível](Concepts/quick-tour.md#expressions) for usada (por exemplo, `[Person]FirstName+" "+[Person]LastName`), a coluna nunca será editável mesmo que a propriedade [Enterable](properties_Entry.md#enterable) esteja ativada.
 
-Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Person.lastName*), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
+Se um campo, uma variável ou uma expressão atribuível (*por exemplo Person.lastName*) for usado, a coluna pode ser editável ou não dependendo da propriedade [Enterable](properties_Entry.md#enterable).
 
 #### Gramática JSON
 
@@ -273,13 +273,13 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 
 Esta propriedade está disponível nas seguintes condições:
 
-- una [lista de selección](#choice-list) está asociada al objeto
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- uma [lista de seleção](#choice-list) está associada ao objeto
+- para [inputs](input_overview.md) e [list box columns](listbox-column.md), uma [required list](properties_RangeOfValues.md#required-list) também está definida para o objeto (ambas as opções geralmente devem usar a mesma lista), para que apenas valores da lista possam ser inseridos pelo usuário.
 
 Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
-- **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto.
+- **Salvar como valor** (opção padrão): o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
+- **Salvar como referência**: a referência do item da lista de opções é salva no objeto. Esta referência é o valor numérico associado a cada item, seja através do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands-legacy/append-to-list.md) ou [`SET LIST ITEM`](../commands-legacy/set-list-item.md), ou no editor de listas.
 
 Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
@@ -339,7 +339,7 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 | Nome           | Tipo de dados | Valores possíveis |
 | -------------- | ------------- | ----------------- |
-| namedSelection | string        | Nome da selecção  |
+| selectionName  | string        | Nome da selecção  |
 
 #### Objectos suportados
 

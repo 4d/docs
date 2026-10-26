@@ -3,15 +3,16 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Peut être appelé par                            | Définition                       |
-| ---- | ----------------------------------------------- | -------------------------------- |
-| 53   | [Zones Web](../FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
+| Code | Peut être appelé par                           | Définition                       |
+| ---- | ---------------------------------------------- | -------------------------------- |
+| 53   | [Zone Web](../FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
 
 <details><summary>Historique</summary>
 
 | Release | Modifications            |
 | ------- | ------------------------ |
 | 19 R5   | Déclenché sur le déposer |
+
 </details>
 
 ## Description
@@ -20,17 +21,17 @@ Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloq
 
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
-Cet événement est également déclenché lorsqu'une opération de dépôt a été effectuée dans la zone Web (avec les [moteurs](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) système intégrés et Windows) si l'option [Glisser-Déposer](../FormObjects/webArea_overview.md#user-interface) est également activée pour la zone. Vous pouvez accepter l'action de déposer en appelant :
+Cet événement est également déclenché lorsqu'un déposer a été effectué dans la zone Web (avec les [moteurs de rendu](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) système et Windows) si l'option [Glisser-déposer](../FormObjects/webArea_overview.md#user-interface) est également activée pour la zone. Vous pouvez accepter l'action de déposer en appelant :
 
 ```4d
 //méthode objet zone web
 If (FORM Event.code=On Window Opening Denied)
-    WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-    // ou UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-    // où UrlVariable est la variable URL associé à la zone web
+	WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
+	// ou UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+	// où UrlVariable est la variable URL associée à la zone web
 End if 
 ```
 
-
 ### Voir également
+
 [`On Open External Link`](onOpenExternalLink.md)

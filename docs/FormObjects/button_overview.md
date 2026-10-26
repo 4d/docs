@@ -328,11 +328,12 @@ On Windows Classic UI theme, this style is not supported.
 
 The Custom button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin). 
 
+ 
+#### JSON Example: 
 
 ![](../assets/en/FormObjects/button_custom.png)
 
- 
-#### JSON Example:    
+
 
 ```code
 	"myButton": {
@@ -358,7 +359,6 @@ The Custom button style accepts a personalized background picture and allows man
 				"iconFrames": 4
                 }
 ``` 
-
 
 
 

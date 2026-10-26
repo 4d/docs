@@ -42,18 +42,18 @@ A null time is specified by ?00:00:00?
 |Longint division	|Time \ Number	|Number	|?02:03:04? \ 2	|3692|
 |Modulo	|Time % Time	|Time	|?20:10:00? % ?04:20:00?	|?02:50:00?|
 |Modulo	|Time % Number	|Number	|?02:03:04? % 2	|0|
-|Equality	|Time = Time	|Boolean	|?01:02:03? = ?01:02:03?	|True|
-			||||?01:02:03? = ?01:02:04?	|False|
-|Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|
-			||||?01:02:03? # ?01:02:03?	|False|
+|Equality	|Time = Time	|Boolean	|?01:02:03? = ?01:02:03?	|True|  
+||||?01:02:03? = ?01:02:04?	|False|  
+|Inequality	|Time # Time	|Boolean	|?01:02:03? # ?01:02:04?	|True|  
+||||?01:02:03? # ?01:02:03?	|False|  
 |Greater than	|Time > Time	|Boolean	|?01:02:04? > ?01:02:03?	|True|
-	||||		?01:02:03? > ?01:02:03?	|False|
-|Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True|
-		||||	?01:02:03? < ?01:02:03?	|False|
+||||		?01:02:03? > ?01:02:03?	|False| 
+|Less than	|Time < Time	|Boolean	|?01:02:03? < ?01:02:04?	|True| 
+||||	?01:02:03? < ?01:02:03?	|False| 
 |Greater than or equal to	|Time >= Time	|Boolean	|?01:02:03? >=?01:02:03?	|True|
-			||||?01:02:03? >=?01:02:04?	|False|
+||||?01:02:03? >=?01:02:04?	|False| 
 |Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
-			||||?01:02:04? <=?01:02:03?	|False|
+||||?01:02:04? <=?01:02:03?	|False| 
 
 ### Example 1 
 

@@ -29,7 +29,23 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [カスタムボタン](button_overview.md#カスタム) - [通常ボタン](button_overview.md#通常) - [フラットボタン](button_overview.md#フラット)
 
----
+## Display formula source as symbol
+
+Displays source text of formulas as symbols when expressions are shown as references.
+
+#### JSON 文法
+
+| 名称                     | データタイプ  | とりうる値                                  |
+| ---------------------- | ------- | -------------------------------------- |
+| displayFormulaAsSymbol | boolean | true (デフォルト), false |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## フォーカスの四角を隠す
 
@@ -91,8 +107,8 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 | プロパティリスト | JSON 値      | 説明                                                                       |
 | -------- | ----------- | ------------------------------------------------------------------------ |
-| あり       | "visible"   | スクロールバーは必要のない場合でも常に表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
-| なし       | "hidden"    | スクロールバーは表示されません。                                                         |
+| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| ×        | "hidden"    | スクロールバーは表示されません。                                                         |
 | 自動       | "automatic" | スクロールバーは必要なときに表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 > ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。
@@ -137,7 +153,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ---
 
-## 背景を表示
+## Show background and anchored elements
 
 ページの背景画像および背景色を表示/非表示にします。
 
@@ -155,7 +171,23 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
----
+## Show empty or unsupported images
+
+Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+
+#### JSON 文法
+
+| 名称              | データタイプ  | とりうる値                                  |
+| --------------- | ------- | -------------------------------------- |
+| showEmptyImages | boolean | true (デフォルト), false |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## フッター表示
 
@@ -323,7 +355,31 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
----
+## Show table borders
+
+Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. This facilitates page layout (more accessible, more visual resizing) and data entry (convenient in the case of merged cells, for example).
+
+![](../assets/en/FormObjects/visible.png)
+
+:::tip 関連したblog 記事
+
+[4D Write Pro: Make Hidden Table Borders Visible (Temporarily)](https://blog.4d.com/4d-write-pro-make-hidden-table-borders-visible-temporarily/)
+
+:::
+
+#### JSON 文法
+
+| 名称               | データタイプ  | とりうる値                                  |
+| ---------------- | ------- | -------------------------------------- |
+| showTableBorders | boolean | true, false (デフォルト) |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## 垂直ルーラーを表示
 
@@ -353,9 +409,9 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 #### JSON 文法
 
-| 名称              | データタイプ  | とりうる値           |
-| --------------- | ------- | --------------- |
-| labelsPlacement | boolean | "top", "bottom" |
+| 名称              | データタイプ | とりうる値           |
+| --------------- | ------ | --------------- |
+| labelsPlacement | text   | "top", "bottom" |
 
 #### 対象オブジェクト
 
@@ -391,8 +447,8 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 | プロパティリスト | JSON 値      | 説明                                                                       |
 | -------- | ----------- | ------------------------------------------------------------------------ |
-| あり       | "visible"   | スクロールバーは必要のない場合でも常に表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
-| なし       | "hidden"    | スクロールバーは表示されません。                                                         |
+| ◯        | "visible"   | スクロールバーは必要のない場合でも常に表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより小さい場合でも表示されます。 |
+| ×        | "hidden"    | スクロールバーは表示されません。                                                         |
 | 自動       | "automatic" | スクロールバーは必要なときに表示されます。 つまり、オブジェクトのコンテンツのサイズがフレームのサイズより大きい場合には表示されます。      |
 
 > ピクチャー型のオブジェクトは、表示フォーマットが "トランケート (中央合わせなし)" に設定されているときに、スクロールバーを持つことができます。

@@ -12,24 +12,24 @@ to import
 
 4D Write Pro supports flat lists (single-level) and multi-level lists.
 
-### Single-level lists
+### 単一レベルのリスト
 
-4D Write Pro supports two main types of single-level lists:
+4D Write Pro は主に2つのタイプの単一レベルのリストをサポートします:
 
-- unordered lists: where list items are marked with bullets, custom bullets, or images used as markers.
-- ordered lists: where list items are marked with numbers or letters
+- 順番なしリスト: リストの項目は箇条書き記号、カスタムの箇条書き記号、あるいはマーカーとして使用される画像でマークされます。
+- 順番付きリスト: リストの項目は番号または文字でマークされます。
 
-They can be created using:
+これらは以下の方法で作成することができます:
 
-- the toolbar or sidebar of the [4D Write Pro interface](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
-- the `listStyleType` or `listStyleImage` [standard actions](./standard-actions) ,
-- or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](../commands/wp-set-attributes).
+- [4D Write Pro インターフェース](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.ja.html#5865253) のツールバーまたはサイドバー
+- `listStyleType` あるいは `listStyleImage` の[標準アクション](./standard-actions)
+- あるいは[WP SET ATTRIBUTE](../commands/wp-set-attributes) コマンドを使用して[プログラムで作成する](../commands-legacy/4d-write-pro-attributes.md#リスト)。
 
-When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`).
+標準アクション(`listStyleType` あるいは `listStyleImage`) あるいはツールバー/サイドバーを使用してリストが作成された場合、4D Write Pro はマーカーがテキストの内側に表示されるように、自動的にテキストの前に余白を挿入します。挿入される余白の値は、デフォルトタブのオフセット(`wk tab default`) に対応します。
 
 ![](../../assets/en/WritePro/margin-bullets.png)
 
-When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. The developer can add a custom margin if necessary.
+[WP SET ATTRIBUTE コマンド](../commands-legacy/4d-write-pro-attributes.md#リスト)コマンドを使用してリストが作成された場合、具体的な余白は設定されておらず、デフォルトでマーカーは段落の左端に追加されます。必要であれば開発者はカスタムの余白を追加することができます。
 
 :::tip Related blog post
 
@@ -37,21 +37,21 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 :::
 
-### Multi-level lists
+### 複数レベルのリスト
 
 Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Multi-level lists are based on [multi-level list style sheets](../user-legacy/stylesheets.md#multi-level-list-style-sheets). Each level is attached to a multi-level list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
-When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+新しいサブレベルが作成されると、レベルの番号振り分けは1 から再スタートします。マルチレベルリスト内で要素を追加または削除した場合、番号は自動的に調整されます。
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+[WP New style sheet](../commands/wp-new-style-sheet.md) コマンドで作成され、[WP SET ATTRIBUTE](../commands/wp-set-attributes.md) を使用して段落に適用することができます。
 
-Multi-level lists can be managed using:
+マルチレベルリストは以下の方法で管理することができます:
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
-- dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
+- 段落[スタイルシート属性](../commands-legacy/4d-write-pro-attributes.md#スタイルシート) (例えば`wk list level index`、 `wk list level count`、および `wk list concat string format` など)
+- レベル管理専用の[標準アクション](../user-legacy/standard-actions.md) (`listLevelAppend`、 `listLevelInc`、 `listLevelDec` など)
+- マーカー管理の番号管理専用の標準アクション(`listConcatStringFormat`、 `listNumberFormat`)。
 
 :::tip Related blog post
 
@@ -101,34 +101,34 @@ WP SET ATTRIBUTES($paragraphs[1]; wk style sheet; $level2)
 WP SET ATTRIBUTES($paragraphs[2]; wk style sheet; $level3)
 ```
 
-result:
+実行結果:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-1.png)
 
-To delete the first sub-leve:
+最初のサブレベルを削除するには以下を実行します:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
 ```
 
-result:
+実行結果:
 
 ![](../../assets/en/WritePro/multi-level-paragraph-stylesheets-2.png)
 
-### Predefined attribute values
+### 定義済属性値
 
 When created, multi-level list style sheets use predefined values:
 
-- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
+- カレントのレイアウト単位によって、`wk margin left` = 0.75 cm \* (そこまでのレベルの数) あるいは 0.25 インチ \* (そこまでのレベルの数)
 - `wk list type` = `wk decimal`
 - `wk name` is derived from the root style sheet name (Read-only for sub-levels)
 - `wk list level count` is set to the specified value for all levels
 
   - Exemplo:
 
-    - Root level: `"MyList"`
-    - First sub-level: `"MyList lvl 2"`
-    - Second sub-level: `"MyList lvl 3"`
+    - ルートレベル: `"MyList"`
+    - 最初のサブレベル: `"MyList lvl 2"`
+    - 二つ目のサブレベル: `"MyList lvl 3"`
 
 <!-- END REF -->
 

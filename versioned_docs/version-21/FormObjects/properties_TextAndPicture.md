@@ -39,7 +39,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)  
 
 
 #### Commands

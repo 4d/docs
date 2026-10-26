@@ -16,18 +16,12 @@ Una constante literal de tipo fecha está rodeada de signos de exclamación (!..
 ```4d
 !1976-01-01!
 !2004-09-29!
-!1976-01-01!
-!2004-09-29!
-!2015-12-31!
-!2004-09-29!
-!1976-01-01!
-!2004-09-29!
 !2015-12-31!
 ```
 
-Una fecha nula es especificada por _!00-00-00!_.
+Una fecha null es especificada por *!00-00-00!*.
 
-**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha nula, introduzca el carácter de exclamación (!) y pulse Intro.
+**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha null, introduzca el signo de exclamación (!) y presione Intro.
 
 **Notas:**
 
@@ -36,20 +30,20 @@ Una fecha nula es especificada por _!00-00-00!_.
 
 ## Operadores de fechas
 
-| Operación         | Sintaxis       | Devuelve | Expression                                  | Valor        |
-| ----------------- | -------------- | -------- | ------------------------------------------- | ------------ |
-| Diferencia        | Fecha – Fecha  | Number   | !2017-01-20! - !2017-01-01!                 | 19           |
-| Adición           | Fecha + Número | Fecha    | !2017-01-20! + 9                            | !2017-01-29! |
-| Resta             | Fecha - Número | Fecha    | !2017-01-20! - 9                            | !2017-01-11! |
-| Igual             | Fecha = Fecha  | Boolean  | !2017-01-20! - !2017-01-01! =!2017-01-01!   | True         |
-|                   |                |          | !2017-01-20! !2017-01-01! =!2017-01-01!     | False        |
-| Desigualdad       | Fecha # Fecha  | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!    | True         |
-|                   |                |          | !2017-01-20! !2017-01-20! # !2017-01-20!    | False        |
-| Mayor que         | Fecha > Fecha  | Boolean  | !2017-01-20! !2017-01-20! > !2017-01-01!    | True         |
-|                   |                |          | !2017-01-20! !2017-01-20! < !2017-01-20!    | False        |
-| Menor que         | Fecha < Fecha  | Boolean  | !2017-01-20! - !2017-01-01! < !2017-01-20!  | True         |
-|                   |                |          | !2017-01-20! < !2017-01-20!                 | False        |
-| Mayor o igual que | Fecha >= Fecha | Boolean  | !2017-01-20! !2017-01-20! <= !2017-01-01!   | True         |
-|                   |                |          | !2017-01-01!>=!2017-01-20!                  | False        |
-| Menor o igual que | Date <= Date   | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
-|                   |                |          | !2017-01-20! <= !2017-01-01!                | False        |
+| Operación         | Sintaxis                              | Devuelve | Expression                                | Valor        |
+| ----------------- | ------------------------------------- | -------- | ----------------------------------------- | ------------ |
+| Diferencia        | Fecha – Fecha                         | Number   | !2017-01-20! - !2017-01-01!               | 19           |
+| Adición           | Fecha + Número                        | Fecha    | !2017-01-20! + 9                          | !2017-01-29! |
+| Resta             | Fecha - Número                        | Fecha    | !2017-01-20! - 9                          | !2017-01-11! |
+| Igual             | Fecha = Fecha                         | Boolean  | !2017-01-20! - !2017-01-01! =!2017-01-01! | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-01! =!2017-01-01!   | False        |
+| Desigualdad       | Fecha # Fecha                         | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20! # !2017-01-20!  | False        |
+| Mayor que         | Date > Date                           | Boolean  | !2017-01-20! !2017-01-20!                 | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |
+| Menor que         | Date < Date  | Boolean  | !2017-01-20! - !2017-01-01! !2017-01-20!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |
+| Mayor o igual que | Date >= Date                          | Boolean  | !2017-01-20! !2017-01-20!                 | True         |
+|                   |                                       |          | !2017-01-01!>=!2017-01-20!                | False        |
+| Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! !2017-01-20!  | True         |
+|                   |                                       |          | !2017-01-20! !2017-01-20!                 | False        |

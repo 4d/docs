@@ -81,7 +81,7 @@ title: 入力
 [縦スクロールバー](properties_Appearance.md#縦スクロールバー)
 [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー)
 [塗りカラー](properties_BackgroundAndBorder.md#背景色-塗りカラー)
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル)
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style)
 [フォント](properties_Text.md#フォント)
 [フォントサイズ](properties_Text.md#フォントサイズ)
 [太字](properties_Text.md#太字)

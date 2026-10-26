@@ -3,12 +3,11 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dコードやフォームの一式です。たとえば、[4D SVGコンポーネント](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.ja.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dコードやフォームの一式です。たとえば、[4D SVG コンポーネント](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
 ## コンポーネントの見つけ方
 
-また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/topics/4d-component) されています。
-
+いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/topics/4d-component) されています。また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
 
 ## コンポーネントのインストール
 

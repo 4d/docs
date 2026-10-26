@@ -3,7 +3,6 @@ id: markers
 title: Taquets
 ---
 
-
 Ces propriétés vous permettent de spécifier l'emplacement précis des taquets sur la règle verticale d'un **formulaire table**. Les taquets sont principalement utilisés dans les formulaires de sortie. Ils contrôlent les informations listées et définissent les zones d'en-tête, de ruptures, de détail et de pied de page du formulaire. Tout objet placé dans ces zones est affiché ou imprimé à l'endroit approprié.
 
 Chaque fois qu'un formulaire est utilisé pour la sortie, que ce soit pour l'affichage ou l'impression, les lignes de taquet de sortie prennent effet et les zones sont affichées ou imprimées aux endroits désignés. Les taquets prennent également effet lorsqu'un formulaire est utilisé comme formulaire liste dans une zone de sous-formulaire. Ils n'ont aucun effet quand un formulaire est utilisé pour la saisie.
@@ -16,14 +15,14 @@ Les méthodes qui sont associées à des objets dans ces zones sont exécutées 
 
 Les zones de rupture sont affichées une fois à la fin de la liste des enregistrements et sont imprimées une fois après que les enregistrements ont été imprimés dans un état.
 
-La zone de rupture est située entre la ligne du taquet du corps et la ligne du taquet de la zone de rupture. Il peut y avoir [plusieurs zones de rupture](#additional-areas) dans un état.
+La zone de rupture est située entre la ligne du taquet du corps et la ligne du taquet de la zone de rupture. Il peut y avoir [plusieurs zones de rupture](#zones-supplementaires) dans votre état.
 
 Vous agrandissez ou réduisez la zone de rupture en faisant glisser le taquet vers le bas ou vers le haut. Vous pouvez utiliser une zone de rupture pour afficher des informations qui ne font pas partie des enregistrements (instructions, date courante, heure courante, etc.) ou pour afficher un trait ou un autre élément graphique qui marque la fin de l’affichage écran. Dans un état imprimé, vous pouvez utiliser une zone de rupture pour calculer et imprimer des sous-totaux et des calculs globaux.
 
 #### Grammaire JSON
 
-| Nom         | Type de données                   | Valeurs possibles                                                                                                        |
-| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Nom         | Type de données                                       | Valeurs possibles                                                                                                                                  |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | markerBreak | integer &#x7c; integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
 
 ---
@@ -36,8 +35,8 @@ Vous agrandissez ou réduisez la taille de cette zone en faisant glisser le taqu
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                       |
-| ---------- | --------------- | --------------------------------------- |
+| Nom        | Type de données | Valeurs possibles                                                       |
+| ---------- | --------------- | ----------------------------------------------------------------------- |
 | markerBody | integer         | Position du taquet de corps. Minimum: 0 |
 
 ---
@@ -52,9 +51,9 @@ Vous pouvez utiliser la zone de pied de page pour imprimer la date courante, le 
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles |
-| ------------ | --------------- | ----------------- |
-| markerFooter | integer         | minimum : 0       |
+| Nom          | Type de données | Valeurs possibles           |
+| ------------ | --------------- | --------------------------- |
+| markerFooter | integer         | minimum : 0 |
 
 ---
 
@@ -64,7 +63,7 @@ La zone d’en-tête est affichée en haut de chaque écran et est imprimée en 
 
 Vous agrandissez ou réduisez sa taille en déplaçant ce taquet vers le bas ou vers le haut. Vous pouvez utiliser la zone d’en-tête pour les noms de colonnes, les instructions, des informations supplémentaires ou des images telles qu’un logo ou un motif de décoration.
 
-Vous pouvez également placer et utiliser des objets actifs dans les en-têtes des formulaires sortie affichés comme sous-formulaires, dans la fenêtre d’affichage des enregistrements ou par les commandes `DISPLAY SELECTION` et `MODIFY SELECTION`. Les objets actifs suivants sont acceptés :
+Vous pouvez également placer et utiliser des objets actifs dans la zone d'en-tête des formulaires de sortie affichés sous forme de sous-formulaires, dans la fenêtre d'affichage des enregistrements ou en utilisant les commandes `DISPLAY SELECTION` et `MODIFY SELECTION`. Les objets actifs suivants sont acceptés :
 
 - Boutons, boutons image,
 - Combo boxes, drop-down lists, picture pop-up menus,
@@ -72,23 +71,23 @@ Vous pouvez également placer et utiliser des objets actifs dans les en-têtes d
 - Boutons radio, cases à cocher, cases à cocher 3D,
 - Indicateurs de progression, règles, steppers, spinners.
 
-Des actions standard telles que `Add Subrecord`, `Cancel` (listes affichées à l'aide de `DISPLAY SELECTION` et `MODIFY SELECTION`) ou `Automatic splitter` peuvent être assignées aux boutons insérés. En outre, tous ces objets acceptent les événements formulaire suivants : `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. A noter que la méthode formulaire est appelée avec l’événement `On Header` après l’appel des méthodes de tous les objets de la zone.
+Les actions standard telles que `Add Subrecord`, `Cancel` (listes affichées en utilisant `DISPLAY SELECTION` et `MODIFY SELECTION`) ou `Automatic splitter` peuvent être assignées aux boutons insérés. Les événements suivants s'appliquent aux objets actifs que vous insérez dans la zone d'en-tête : `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. A noter que la méthode formulaire est appelée avec l’événement `On Header` après l’appel des méthodes de tous les objets de la zone.
 
-Le formulaire peut contenir des [zones d'en-tête supplémentaires](#additional-areas) à associer à des ruptures supplémentaires. Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
+Zone de rupture Un en-tête de niveau 1 est imprimé juste avant que les enregistrements regroupés par le premier champ trié soient imprimés.
 
 #### Grammaire JSON
 
-| Nom          | Type de données                   | Valeurs possibles                                                                                                      |
-| ------------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Nom          | Type de données                                       | Valeurs possibles                                                                                                                                |
+| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | markerHeader | integer &#x7c; integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
 
 ## Zones supplémentaires
 
 Vous pouvez créer des zones de rupture et d'en-tête supplémentaires pour un rapport. Ces zones supplémentaires vous permettent d'imprimer des sous-totaux et d'autres calculs dans un rapport et d'afficher efficacement d'autres informations.
 
-Les zones supplémentaires sont définies lorsque vous utilisez une collection de positions dans les propriétés [Zone de rupture](#form-break) et [Zone d'en-tête](#form-header).
+Des zones supplémentaires sont définies lorsque vous utilisez une collection de positions dans les propriétés [Zone de rupture](#form-break) et [Zone d'en-tête](#form-header).
 
-> Dans l'éditeur de formulaires 4D, vous créez des lignes de contrôle supplémentaires en maintenant enfoncée la touche **Alt** tout en cliquant sur le taquet de contrôle approprié.
+> Dans l'éditeur de formulaires de 4D, vous créez des lignes de contrôle supplémentaires en maintenant la touche **Alt** enfoncée tout en cliquant sur le taquet de contrôle approprié.
 
 Un formulaire commence toujours par les zones entête, corps, niveau de rupture 0, et pied de page.
 

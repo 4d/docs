@@ -1,10 +1,9 @@
 ---
 id: directory
-title: '$directory'
+title: $directory
 ---
 
 Le répertoire gère l'accès des utilisateurs via les requêtes REST.
-
 
 ## $directory/login
 
@@ -16,10 +15,10 @@ Utilisez `$directory/login` pour ouvrir une session dans votre application 4D vi
 
 Tous les paramètres doivent être passés dans les **en-têtes** d'une méthode POST :
 
-| Clé de l'en-tête  | Valeur de l'en-tête                                                                                |
-| ----------------- | -------------------------------------------------------------------------------------------------- |
-| username-4D       | Utilisateur - Non obligatoire                                                                      |
-| password-4D       | Mot de passe en texte clair - Non obligatoire                                                      |
+| Clé de l'en-tête  | Valeur de l'en-tête                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| username-4D       | Utilisateur - Non obligatoire                                                                                                         |
+| password-4D       | Mot de passe en texte clair - Non obligatoire                                                                                         |
 | session-4D-length | Timeout d'inactivité de la session (en minutes). Ne peut pas être inférieur à 60 - Non obligatoire |
 
 :::caution

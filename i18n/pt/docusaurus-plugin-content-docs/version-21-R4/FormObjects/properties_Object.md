@@ -72,7 +72,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 #### Objectos suportados
 
-[Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Botón de radio](radio_overview.md) - [Control de pestañas](tabControl.md)
+[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
 
 ---
 
@@ -207,7 +207,7 @@ Especifique o tipo de list box.
 - **Arrays**(por defecto): utiliza elementos de array como líneas del list box.
 - **Selección actual**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de la selección actual de una tabla.
 - **Selección temporal**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de una selección temporal.
-- **Colección o Selección de entidades**: utilice elementos de colección o entidades para definir el contenido de las líneas del list box. Tenga en cuenta que con este tipo de list box, debe definir la propiedad [Colección o Selección de entidades](properties_Object.md#collection-or-entity-selection).
+- **Coleção ou Seleção de entidades**: use elementos de coleção ou entidades para definir o conteúdo das linhas do list box. Observe que com esse tipo de list box, você precisa definir a propriedade [Coleção ou Seleção de entidades](properties_Object.md#collection-or-entity-selection).
 
 #### Gramática JSON
 
@@ -285,9 +285,9 @@ Para fins de tradução da aplicação, você pode inserir uma referência XLIFF
 
 ## Cálculo de variáveis
 
-This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
+Esta propriedade define o tipo de cálculo a ser feito em uma área de [rodapé de coluna](listbox-header-footer.md#footers).
 
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation) 4D command.
+> O cálculo para rodapés também pode ser definido usando o comando 4D [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation).
 
 Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais cálculos podem ser usados conforme o tipo de dados encontrados em cada coluna e indica que o tipo é automaticamente afetado por 4D para a variável de rodapé (se não for digitado pelo código):
 
@@ -305,30 +305,30 @@ Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais 
 
 (\*) Apenas para list boxes do tipo array.
 
-> Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse para mostrar los cálculos de pie de página. No se soportan otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.value`.
+> Apenas [variáveis](Concepts/variables.md) declaradas ou dinâmicas podem ser usadas para exibir cálculos de rodapé. Outros tipos de [expressões](Concepts/quick-tour.md#expressions) como `Form.value` não são suportados.
 
 Os cálculos automáticos ignoram o estado mostrado/oculto das linhas de list box. Se você quiser restringir um cálculo para apenas linhas visíveis, você deve usar um cálculo personalizado.
 
-*Null* no se tienen en cuenta para ningún cálculo.
+*Null* valores não são levados em consideração para quaisquer cálculos.
 
 Se a coluna contiver diferentes tipos de valores (coluna baseada em coleção, por exemplo):
 
 - A média e a soma consideram apenas os elementos numéricos (outros tipos de elementos são ignorados).
-- Mínimo y Máximo devuelven un resultado según el orden habitual de las listas de tipos, tal como se define en la función [collection.sort()](API/CollectionClass.md#sort).
+- Mínimo e Máximo retornam um resultado de acordo com a ordem usual da lista de tipos, conforme definido na função [collection.sort()](API/CollectionClass.md#sort).
 
 O uso de cálculos automáticos em rodapés de colunas com base em expressões tem as seguintes limitações:
 
-- es **soportado** con todos los tipos de list boxes cuando la expresión es "simple" (como `[table]field` o `this.attribute`),
-- se **soporta pero no se recomienda** por razones de rendimiento con list boxes colección/selección de entidades cuando la expresión es "compleja" (distinta de `this.attribute`) y el list box contiene un gran número de líneas,
-- **no se soporta** con list boxes selección actual/selección temporal cuando la expresión es "compleja". Precisa utilizar cálculos personalizados.
+- é **suportado** com todos os tipos de list box quando a expressão é "simples" (como `[table]field` ou `this.attribute`),
+- é **suportado mas não recomendado** por razões de desempenho com list boxes de coleção/seleção de entidades quando a expressão é "complexa" (diferente de `this.attribute`) e o list box contém um grande número de linhas,
+- **não é suportado** com list boxes de seleção atual/seleção nomeada quando a expressão é "complexa". Você precisa usar cálculos personalizados.
 
-Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálculos automáticos y debe asignar el valor de la variable en esta área por programación.
+Quando **Personalizado** ("none" no JSON) está definido, 4D não realiza cálculos automáticos e você deve atribuir o valor da variável nesta área por programação.
 
 #### Gramática JSON
 
 | Nome                | Tipo de dados | Valores possíveis                                                                                     |
 | ------------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objectos suportados
 

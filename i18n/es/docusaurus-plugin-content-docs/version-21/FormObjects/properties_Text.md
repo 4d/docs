@@ -77,9 +77,9 @@ Hace que el texto tenga una línea por debajo.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles      |
-| -------------- | -------------- | --------------------- |
-| textDecoration | string         | "normal", "underline" |
+| Nombre         | Tipos de datos | Valores posibles    |
+| -------------- | -------------- | ------------------- |
+| textDecoration | string         | "none", "underline" |
 
 #### Objetos soportados
 
@@ -286,7 +286,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 :::note
 
-- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" sólo es compatible con las [entradas ](input_overview.md) y [áreas de texto](text.md)
 
 :::

@@ -25,7 +25,11 @@ title: メソッドとクラスの管理
 4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。ファイル名がクラス名になります。例えば、"Polygon" という名前のクラスは、以下のようなファイル内に保存されます:
 
 ```
-Project フォルダー Project Sources Classes Polygon.4dm
+Project フォルダー
+ Project
+  Sources
+   Classes
+    Polygon.4dm
 ```
 
 クラスファイルは、**ファイル** メニューやツールバー (**新規 > クラス...**)、あるいは **エクスプローラー** ウィンドウの **メソッド** ページにて作成可能です。 **Ctrl+Shift+Alt+k** ショートカットも使用できます。
@@ -90,7 +94,7 @@ Class extends Entity
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
-- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>`形式で表示されます。
+- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## メソッドやクラスの削除
 

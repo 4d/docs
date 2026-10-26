@@ -170,15 +170,11 @@ Number of columns that cannot be moved during execution.
 ---
 ## Number of Columns
 
-Sets the number of columns of the list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 >You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) or [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
 
-#### JSON Grammar
 
-|Name|Data Type|Possible Values|
-|---|---|---|
-|columnCount|integer |minimum: 1
 
 #### Objects Supported
 

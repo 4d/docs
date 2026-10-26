@@ -19,7 +19,7 @@ Indique si le Web server accepte des connexions non sécurisées. Voir [Activer 
 
 #### Port HTTP
 
-Numéro de port IP (TCP) d'écoute pour HTTP. Numéro de port IP (TCP) d'écoute pour HTTP.
+Numéro de port IP (TCP) d'écoute pour HTTP. Voir [Port HTTP](../WebServer/webServerConfig.md#http-port).
 
 #### Adresse IP
 
@@ -234,7 +234,7 @@ Le tableau suivant répertorie les champs disponibles pour chaque format (par or
 | TRANSFER_TIME                     | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                                                                                                                       |
 | USER                                                   | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins).                                                                                                 |
 |                                                        |     |     | Si le nom d’utilisateur contient des espaces, ils sont remplacés par des _ (traits de soulignement)                                                         |
-| Variable URL                                           |     | X   | URL demandé par le client                                                                                                                                                                           |
+| URL                                                    |     | X   | URL demandé par le client                                                                                                                                                                           |
 
 > Les dates et heures sont données au format GMT
 

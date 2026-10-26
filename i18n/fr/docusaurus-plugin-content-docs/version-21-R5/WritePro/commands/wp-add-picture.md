@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande **WP Add picture**<!--REF #_command_.WP Add picture.Summary--> ancre l'image passée en paramètre à un emplacement fixe dans le *wpDoc* spécifié et renvoie sa référence.<!-- END REF--> La référence renvoyée peut ensuite être transmise à la commande [WP SET ATTRIBUTES](wp-set-attributes.md) pour placer l'image à n'importe quel endroit du *wpDoc* (page, section, en-tête, pied de page, etc.) avec une couche définie, taille, etc.
+La commande **WP Add picture**<!--REF #_command_.WP Add picture.Summary--> ancre l'image passée en paramètre à un emplacement fixe dans le *wpDoc* spécifié et retourne sa référence.<!-- END REF--> La référence retournée peut alors être passée à la commande [WP SET ATTRIBUTES](wp-set-attributes.md) pour déplacer l'image à n'importe quel emplacement dans le *wpDoc* (page, section, en-tête, pied de page, etc.) avec une couche définie, taille, etc.
 
 Dans *wpDoc*, passez le nom d'un objet document 4D Write Pro.
 
@@ -35,7 +35,7 @@ Pour le deuxième paramètre facultatif, vous pouvez passer soit :
 
 :::note
 
-N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands/picture-codec-list).
+N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés. Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
 
 :::
 

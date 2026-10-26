@@ -81,7 +81,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `param1...paramN`: 4Dメソッドに対して必要なだけ引数を渡すことができます。これらの引数は、JavaScript にサポートされている型であればどんなものでも渡せます (文字列、数値、配列、オブジェクト)。
 
-- `function(result)`: 最後の引数として渡される関数です。  この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。 この関数は `result` 引数を受け取ります。この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。この関数は `result` 引数を受け取ります。
+- `function(result)`: 最後の引数として渡される関数です。この "コールバック" 関数は、4Dメソッドが実行を終えると同時に呼び出されます。この関数は `result` 引数を受け取ります。
 
 - `result`: 4D メソッドの実行結果。戻り値は JavaScript でサポートされている型 (文字列、数値、配列、オブジェクト) のいずれかになります。
 
@@ -212,7 +212,7 @@ Windows においては、Webエリアから、同じ 4Dアプリケーション
 
 ### プロトコルの挿入 (macOS)
 
-macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。つまり、"www.mysite.com" ではなく、"http://www.mysite.com" 文字列を渡さなければならないということです。
+macOS 上の Webエリアで、プログラムにより処理される URL は、プロトコルで開始されていなければなりません。つまり、"www.mysite.com" ではな、"http://www.mysite.com" 文字列を渡さなければならないということです。
 
 ## Webインスペクターへのアクセス
 
@@ -241,7 +241,22 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [メソッド](properties_Action.md#メソッド)
+[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) -
+[境界線カラー](./properties_BackgroundAndBorder.md#border-color) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
+[メソッド](properties_Action.md#メソッド)
 
 ## サポートされるイベント
 
@@ -293,7 +308,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 - **macOS.switches**: macOS 専用のCEF スイッチ。
 - **windows.switches**: Windows 専用のCEF スイッチ。
 
-カスタムファイル内のスイッチが優先されます。カスタムファイル内のスイッチが優先されます。 同一ファイル内においてスイッチが重複して定義されていた場合、プラットフォーム固有のサブセクション内 ("macOS.switches" or "windows.switches")で定義されているスイッチが優先され、設定として使用されます。
+カスタムファイル内のスイッチが優先されます。同一ファイル内においてスイッチが重複して定義されていた場合、プラットフォーム固有のサブセクション内("macOS.switches" or "windows.switches")で定義されているスイッチが優先され、設定として使用されます。
 
 :::note
 

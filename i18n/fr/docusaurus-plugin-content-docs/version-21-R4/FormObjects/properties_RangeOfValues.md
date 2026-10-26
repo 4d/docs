@@ -29,9 +29,9 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 #### Grammaire JSON
 
-| Nom          | Type de données                     | Valeurs possibles                                                |
-| ------------ | ----------------------------------- | ---------------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Toute valeur et/ou une balise : "#D", "#H", "#N" |
+| Nom          | Type de données | Valeurs possibles                                                                                                                       |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | string          | Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"... |
 
 #### Objets pris en charge
 

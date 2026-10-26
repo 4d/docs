@@ -5,7 +5,7 @@ title: Fond et bordure
 
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. By default, *Automatic* is selected for list box columns: the column uses the alternate background color set at the list box level.
 
 Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
@@ -37,7 +37,7 @@ La propriété **Couleur de fond** est parfois appelée **Couleur d'arrière-pla
 
 ### Objets standard
 
-Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
+In the case of a list box column, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
 #### Grammaire JSON
 
@@ -105,15 +105,17 @@ Vous pouvez également définir cette propriété en utilisant la commande [`LIS
 
 ## Couleur de bordure {#border-color}
 
-Permet de définir la couleur de la bordure intérieure pour :
+Allows defining the border color. The effect of this property varies slightly depending on the type of object to which it is applied.
 
-- les [boutons personnalisés](./button_overview.md#custom) avec le [style de bordure "personnalisé"](#border-line-style),
-- les [cases à cocher personnalisées](./checkbox_overview.md#custom),
-- les [boutons radio personnalisés](./radio_overview.md#custom).
+- **objects with text properties**: [buttons](./button_overview.md) (all styles except "custom", see  below), [hierarchical lists](list_overview.md), [inputs](input_overview.md), [list boxes](listbox_overview.md), [progress indicators](./progressIndicator.md), [rulers](./ruler.md), and [text areas](text.md).  
+  By default, the border color of these objects is automatically set to their [**font color**](./properties_Text.md#font-color) property. This default configuration corresponds to the **Same as font** option in the Property List (`borderColor` property is undefined in JSON).  
+  You can separate these two properties by setting a color value for the object's "Border color" property (only available when the [**border line style**](#border-line-style) property is **plain** (`solid` in JSON property) or **dotted**).
 
-Dans les autres contextes, cette propriété n'est pas prise en compte.
+- **objects without text properties**: [4D View Pro areas](viewProArea_overview.md), [4D Write Pro areas](writeProArea_overview.md), [button grids](buttonGrid_overview.md), [picture buttons](pictureButton_overview.md), [picture pop-up menus](picturePopupMenu_overview.md), [plug-in areas](pluginArea_overview.md), [subforms](subform_overview.md), [spinners](spinner.md), [splitters](splitters.md), [steppers](stepper.md), [web areas](webArea_overview.md).  
+  The border color property sets the color of the borders. The default color value is "Automatic", i.e. the border is displayed with the automatic color set by your OS.
 
-Notez que la bordure n'apparaît que lorsque sa [largeur](#border-width) est supérieure à 0.
+- **custom-styled buttons**: [custom buttons](./button_overview.md#custom) with ["custom" Border Line Style](#border-line-style), [custom check boxes](./checkbox_overview.md#custom), and [custom radio buttons](./radio_overview.md#custom).  
+  In this case, the border color property defines the color of an *inner* border, which is an attribute of the object itself ans not a decoration property. This inner border can also have a [width](#border-width) (it is displayed only if the width > 0).
 
 #### Grammaire JSON
 
@@ -123,35 +125,47 @@ Notez que la bordure n'apparaît que lorsque sa [largeur](#border-width) est sup
 
 #### Objets pris en charge
 
-[Bouton personnalisé](./button_overview.md#custom) (avec le [style de bordure "Personnalisé"](#border-line-style)) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](./button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](./progressIndicator.md) - [Radio Button ("custom" style)](radio_overview.md#custom) - [Ruler](./ruler.md) - [Text Area](text.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Web Area](webArea_overview.md)
 
 #### Commandes
 
 [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
+#### Voir également
+
+[Line Color](#line-color) (for shapes)
+
 ## Style de la bordure {#border-line-style}
 
-Permet de définir un style standard pour la bordure de l'objet.
+Allows setting a style for the object border. The following choices are available (all choices are not possible depending on the object):
 
-:::note
+| Style          | Objects (\*)                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aucun          | all                                                                  | Objects appear with no border.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Plain          | all                                                                  | Objects appear framed with a continuous 1-pt. border line. ("solid" json value)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Dotted         | all                                                                  | Objects appear framed with a dotted 1-pt. border line.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Raised         | all                                                                  | Objects appear framed with a 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Sunken         | all                                                                  | Objects appear framed with a sunken 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Double         | all                                                                  | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| System         | all *except* [buttons](button_overview.md) and [text areas](text.md) | Objects appear with a border line based on the graphic specifications of the OS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| System rounded | [inputs](input_overview.md)                                          | On macOS, objects appear with a native "Liquid Glass" system border effect (for information about Liquid Glass, see [this 4D blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications/)). It includes system-defined inner border, corner radius, grey border color, and inner padding. Note that the "Liquid Glass" appearance is *not* used in a multiline input object if the [scroll bars property](./properties_Appearance.md#vertical-scroll-bar) is enabled ("System" is used in this case).<br/> On Windows, this style is similar to "System" at runtime. |
+| Personnalisé   | [custom buttons](./button_overview.md#custom)                        | Enables the inner border design, that includes a set of extra properties: [Fill color](#fill-color), [Border color](#border-color), [Border width](#border-width), and [Corner radius](#corner-radius). <br/>![](../assets/en/FormObjects/custom-button.png)                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-Pour les [boutons personnalisés](./button_overview.md#custom), le style de bordure **personnalisé** permet de créer une bordure intérieure, qui inclut un ensemble de propriétés supplémentaires : [Couleur de remplissage](#background-color--fill-color), [Couleur de bordure](#frame-color), [Largeur de bordure](#frame-width) et [Rayon d'arrondi](./properties_BackgroundAndBorder.md#corner-radius).
+(\*) "all" means "all objects supported" listed below.
 
-![](../assets/en/FormObjects/custom-button.png)
+:::tip Articles de blog sur le sujet
 
-:::
-
-:::tip Article(s) de blog sur le sujet
-
-[Personnaliser les boutons, les boutons radio et les cases à cocher à l'aide des propriétés de fond et de bordure](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+- [Personnaliser les boutons, les boutons radio et les cases à cocher à l'aide des propriétés de fond et de bordure](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+- [Give Your Form Objects the Border Color They Deserve](https://blog.4d.com/give-your-form-objects-the-border-color-they-deserve)
+- [Choose the Right Native Input Style for Your Interface on macOS](https://blog.4d.com/choose-the-right-native-input-style-for-your-interface-on-macos)
 
 :::
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                           |
-| ----------- | --------------- | --------------------------------------------------------------------------- |
-| borderStyle | text            | "system", "none", "solid", "dotted", "raised", "sunken", "double", "custom" |
+| Nom         | Type de données | Valeurs possibles                                                                            |
+| ----------- | --------------- | -------------------------------------------------------------------------------------------- |
+| borderStyle | text            | "custom", "dotted", "double", "none", "raised", "solid", "sunken", "system", "systemRounded" |
 
 #### Objets pris en charge
 
@@ -160,6 +174,10 @@ Pour les [boutons personnalisés](./button_overview.md#custom), le style de bord
 #### Commandes
 
 [`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style)
+
+#### Voir également
+
+[Dotted Line Type](#dotted-line-type) (shapes)
 
 ---
 
@@ -183,7 +201,7 @@ La valeur est exprimée en pixels.
 
 #### Objets pris en charge
 
-[Bouton personnalisé](./button_overview.md#custom) (avec le [style de bordure "Personnalisé"](#border-line-style)) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Bouton radio personnalisé](radio_overview.md#custom)
+[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom style")](checkbox_overview.md#custom) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 ---
 
@@ -222,7 +240,7 @@ Dans les [boutons personnalisés](./button_overview.md#custom) (avec un [style d
 
 #### Objets pris en charge
 
-[Bouton personnalisé](./button_overview.md#custom) (avec [style de bordure "personnalisé"](#border-line-style)) - [Case à cocher personnalisée](checkbox_overview.md#custom) - [Champ de saisie](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Zone de texte](text.md) - [Bouton radio personnalisé](radio_overview.md#custom)
+[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 #### Commandes
 
@@ -289,7 +307,11 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 | ------ | --------------- | ------------------------------------------ |
 | stroke | string          | une valeur css; "transparent"; "automatic" |
 
-> Cette propriété est également disponible pour les objets à base de texte, auquel cas elle désigne à la fois la couleur de la police et les lignes de l'objet, voir [Couleur de la police](properties_Text.md#font-color).
+:::note
+
+This property is also available for objects with text properties, in which case it designates both the [Font color](properties_Text.md#font-color) and the object's lines, except if you used the [Border color](#border-color) property.
+
+:::
 
 #### Objets pris en charge
 

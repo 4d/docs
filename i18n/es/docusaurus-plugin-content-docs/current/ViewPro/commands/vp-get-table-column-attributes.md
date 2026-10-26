@@ -22,7 +22,7 @@ title: VP Get column attributes
 | Parámetros | Tipo    |                             | Descripción                                                    |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text    | ->                          | Nombre de la tabla                                             |
+| tableName  | Text    | ->                          | Table name                                                     |
 | column     | Integer | ->                          | Índice de la columna en la tabla                               |
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
 | Resultado  | Object  | <- | Atributos de la *columna*                                      |

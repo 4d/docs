@@ -13,16 +13,14 @@ Un plug-in es una pieza de código, escrita en cualquier lenguaje como C o C++, 
 
 La comunidad 4D ya ha escrito múltiples plug-ins. Los plug-ins publicados [están disponibles en GitHub](https://github.com/search?q=4d-plugin&type=Repositories). Adicionalmente, puede [desarrollar sus propios plug-ins](Extensions/develop-plug-ins.md).
 
-
 ## Instalación de plug-ins
 
-Los plug-ins se instalan en el entorno 4D copiando sus archivos en la carpeta **Plugins**, en el [mismo nivel que la carpeta Project](../Project/architecture.md#plugins).
+Los plug-ins se instalan en el entorno 4D copiando sus archivos en la carpeta **Plugins**, al [mismo nivel que la carpeta Project](../Project/architecture.md#plugins).
 
 Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. Si el uso de un plug-in requiere una licencia específica, el plug-in se cargará pero no estará disponible para su uso.
 
-
 ## Utilización de los plug-ins
 
-Los comandos de plug-ins se pueden utilizar como comandos 4D estándar en su desarrollo 4D. Los comandos de plugins aparecen en la página **Plug-ins** del Explorador. 
+Los comandos de plug-ins se pueden utilizar como comandos 4D estándar en su desarrollo 4D. Los comandos de plugins aparecen en la página **Plug-ins** del Explorador.
 
 

@@ -333,13 +333,13 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 
-> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections temporaires** du langage 4D.
+> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. For more information, refer to [**Named Selections**](../Develop/named-selections) section.
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles   |
-| -------------- | --------------- | ------------------- |
-| namedSelection | string          | Nom de la sélection |
+| Nom           | Type de données | Valeurs possibles   |
+| ------------- | --------------- | ------------------- |
+| selectionName | string          | Nom de la sélection |
 
 #### Objets pris en charge
 

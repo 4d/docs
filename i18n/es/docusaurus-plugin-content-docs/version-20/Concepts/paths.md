@@ -22,14 +22,14 @@ Las rutas de los filesystem son útiles por dos razones principales:
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                                | Ejemplo                                              |
-| ------------ | ------------------------------------------------------ | ---------------------------------------------------- |
-| "/DATA"      | Carpeta de datos actual                                | "C:\\MyApps\\Students\\Data\\"               |
-| "/LOGS"      | Carpeta Logs                                           | "C:\\MyApps\\Students\\Data\\Logs\\"       |
-| "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                       |
-| "/PROJECT"   | Carpeta Project                                        | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | Carpeta de recursos actual del proyecto                | "C:\\MyApps\\Students\\Resources\\"          |
-| "/SOURCES"   | Carpeta de fuentes del proyecto actual                 | "C:\\MyApps\\Students\\Project\\Sources\\" |
+| filesystem   | Designa                                                                   | Ejemplo                                                          |
+| ------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| "/DATA"      | Carpeta de datos actual                                                   | "C:\\MyApps\\Students\\Data\\"              |
+| "/LOGS"      | Carpeta Logs                                                              | "C:\\MyApps\\Students\\Data\\Logs\\"       |
+| "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) | "C:\\MyApps\\Students\\"                     |
+| "/PROJECT"   | Carpeta Project                                                           | "C:\\MyApps\\Students\\Project\\"           |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                                   | "C:\\MyApps\\Students\\Resources\\"         |
+| "/SOURCES"   | Carpeta de fuentes del proyecto actual                                    | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Sintaxis POSIX
 
@@ -50,9 +50,6 @@ var $pathFolder : 4D.Folder
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
-
-
-
 
 ## Sintaxis específica de la plataforma
 
@@ -97,10 +94,10 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamars
 
 ### Constructores `File` y `Folder`
 
-Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no está permitido:
+Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas de acceso absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no está permitido:
 
 ```4d
-    //ERROR
+//ERROR
 $ko:=Folder("myFolder").create() //nombre de ruta relativo con constructor
 ```
 
@@ -113,7 +110,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta d
 
 ### Funciones de carpeta `.file()` y `.folder()`
 
-Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan nombres de ruta POSIX relativos. Por ejemplo:
+Funciones de objetos folder tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan rutas POSIX relativas. Por ejemplo:
 
 ```4d
 var $userImages : 4D.Folder
@@ -127,10 +124,10 @@ $ok:=Folder(fk desktop folder).folder("myFolder").create()
 
 Las rutas absolutas no están soportadas y devolverán errores.
 
-
 ## Ejemplos
 
 La flexibilidad de las funciones de archivos y de carpetas le ofrecen varias posibilidades para manipular los archivos y las carpetas, como en los siguientes ejemplos:
+
 ```4d
 var $fold : 4D.Folder
 var $file : 4D.File

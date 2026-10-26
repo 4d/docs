@@ -50,7 +50,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`columns`](properties_ListBox.md#columns)|A collection of list box columns|Collection of column objects with defined column properties
 |[`contextMenu`](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|
 |[`continuousExecution`](properties_Action.md#execute-object-method)|Designates whether or not to run the method of an object while the user is tracking the control. |true, false|
-|[`controlType`](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
+|[`controlType`](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"automatic" or "checkbox" for numeric columns, "popup" or "checkbox" for boolean columns|
 |[`currentItemSource`](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[`currentItemPositionSource`](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
 |[`customBackgroundPicture`](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.| 
@@ -67,6 +67,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`deletableInList`](properties_Subform.md#allow-deletion)|Specifies if the user can delete subrecords in a list subform|true, false|
 |[`detailForm`](properties_ListBox.md#detail-form-name) (list box)<br/>[`detailForm`](properties_Subform.md#detail-form) (subform)|Associates a detail form with a list subform.|Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 |[`display`](properties_Display.md#not-rendered)|The object is drawn or not on the form.|true, false|
+|[`displayFormulaAsSymbol`](properties_Display.md#display-formula-source-as-symbol)|Displays source text of formulas as symbols.|true, false|
 |[`doubleClickInEmptyAreaAction`](properties_Subform.md#double-click-on-empty-row)|Action to perform in case of a double-click on an empty line of a list subform.|"addSubrecord" or "" to do nothing|
 |[`doubleClickInRowAction`](properties_ListBox.md#double-click-on-row) (list box)<br/>[`doubleClickInRowAction`](properties_Subform.md#double-click-on-row) (subform)|Action to perform in case of a double-click on a record. |"editSubrecord", "displaySubrecord"|
 |[`dpi`](properties_Appearance.md#resolution)|Screen resolution for the 4D Write Pro area contents.|0=automatic, 72, 96|
@@ -166,7 +167,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`shortcutControl`](properties_Entry.md#shortcut)|Designates the Control key (Windows)|true, false|
 |[`shortcutKey`](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"a", "b",... or "[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 |[`shortcutShift`](properties_Entry.md#shortcut)	|Designates the Shift key	|true, false|
-|[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
+|[`showBackground`](properties_Appearance.md#show-background-and-anchored-elements)| Displays or hides background contents. |true, false|   
+|[`showEmptyImages`](properties_Appearance.md#show-empty-or-unsupported-images)|Displays/hides a black rectangle for empty images|true, false||[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
 |[`showGraduations`](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |true, false|
 |[`showHeaders`](properties_Headers.md#display-headers)|Displays or hides column headers. |true, false|
 |[`showHiddenChars`](properties_Appearance.md#show-hidden-characters)|Displays/hides invisible characters.|true, false|
@@ -175,6 +177,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`showPageFrames`](properties_Appearance.md#show-page-frame)|Displays/hides the page frame when the document view is in Page view mode|true, false|
 |[`showReferences`](properties_Appearance.md#show-references)|Displays all 4D expressions inserted in the 4D Write Pro document as *references*|true, false|
 |[`showSelection`](properties_Entry.md#selection-always-visible)|Keeps the selection visible within the object after it has lost the focus |true, false|  
+|[`showTableBorders`](properties_Appearance.md#show-table-borders)|Displays internal and external table borders as dotted lines when these borders are invisible|true, false|   
 |[`showVerticalRuler`](properties_Appearance.md#show-vertical-ruler)|Displays/hides the vertical ruler when the document view is in Page view mode|true, false|
 |[`singleClickEdit`](properties_Entry.md#single-click-edit)|Enables direct passage to edit mode.|true, false|
 |[`sizingX`](properties_ResizingOptions.md#horizontal-sizing)|Specifies if the horizontal size of an object should be moved or resized when a user resizes the form.|"grow", "move", "fixed"|
@@ -214,7 +217,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`userInterface`](properties_Appearance.md#user-interface)|4D View Pro area interface.|"none" (default), "ribbon", "toolbar"<a id="v"></a>|
 |**v**|||
 |[`values`](properties_DataSource.md#default-list-of-values)|List of default values for an array listbox column|ex: "A","B","42"...|
-|[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
+|[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares"|
 |[`verticalAlign`](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
 |[`verticalPadding`](./properties_CoordinatesAndSizing.md#vertical-padding)|Sets a vertical padding for listbox cells.|Number of pixels (must be >=0)|
@@ -223,6 +226,6 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`webEngine`](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[`width`](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
 |[`withFormulaBar`](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
-|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"<a id="z"></a>|
+|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box column and footer), "normal", "none"<a id="z"></a>|
 |**z**|||
 |[`zoom`](properties_Appearance.md#zoom)|Zoom percentage for displaying 4D Write Pro area|number (minimum=0)|

@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Nouvelles constantes `Border Custom` et `Border System Rounded`|
 |14|Créé|
 
 </details>
@@ -37,8 +38,9 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous souhaitez appliquer à l’objet. Vous pouvez passer une des constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constante     | Type        | Valeur | Comment                                                                                                                 |
-| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Constante     | Type        | Valeur | Comment |
+| ------------- | ----------- | ------ | ------- |
+| Border Custom | Entier long | 9      | (boutons uniquement) Active le design du cadre intérieur des boutons et prend en charge des propriétés supplémentaires |
 | Border Dotted | Entier long | 2      | Les objets apparaissent dans un cadre pointillé de 1 pt                                                                 |
 | Border Double | Entier long | 5      | Les objets apparaissent encadrés par une double ligne, c’est-à-dire deux lignes continues de 1 pt séparées par un pixel |
 | Border None   | Entier long | 0      | Les objets apparaissent sans encadrement                                                                                |
@@ -46,6 +48,7 @@ Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous so
 | Border Raised | Entier long | 3      | Les objets apparaissent avec un effet 3D (relief)                                                                       |
 | Border Sunken | Entier long | 4      | Les objets apparaissent avec un effet 3D en creux (relief inversé)                                                      |
 | Border System | Entier long | 6      | Le cadre est dessiné en fonction des spécifications graphiques du système                                               |
+| Border System Rounded | Entier long | 8 | Sur macOS, la bordure utilise l'apparence graphique "Liquid Glass". Notez que cette apparence n'est *pas* utilisée dans un objet de saisie multiligne lorsque la [propriété Barres de défilement](../../FormObjects/properties_Appearance.md#vertical-scroll-bar) est activée (`Border System` est alors utilisé). Sous Windows, le rendu est similaire à `Border System`. |
 
 ## Voir aussi 
 
@@ -57,5 +60,4 @@ Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous so
 | --- | --- |
 | Numéro de commande | 1262 |
 | Thread safe | no |
-
 

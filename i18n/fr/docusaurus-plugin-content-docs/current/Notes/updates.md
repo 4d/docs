@@ -12,18 +12,29 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Prise en charge de la signature S/MIME des e-mails grâce aux nouvelles propriétés de la classe [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md) : [`.certificate`](../API/SMTPTransporterClass.md#certificate) ou [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (fourniture du certificat), et [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - Vous pouvez désormais [compiler un composant directement depuis l'hôte](../Project/compiler.md#compile-components).
 - Prise en charge des formulaires liste par le [**rendu Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows.
+- Champs 4D.Vector : [nouvelle icône spécifique](../Develop/field-properties.md#4dvector-class) et nouveaux [types d'index vectoriels dédiés](../Develop/structure-indexes.md#vector-index).
+- Prise en charge des index vectoriels dans les commandes 4D [`CREATE INDEX`](../commands/create-index) et [`SET INDEX`](../commands/set-index).
+- Nouvelle fonction [dataClass.getIndexes()](../API/DataClassClass.md#getindexes).
+- Nouvelle [propriété `.precision`](../API/VectorClass.md#precision) dans les objets de la classe `4D.Vector`.
 - Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
 - Nouvelle propriété [`WebServer.quotas`](../API/WebServerClass.md#quotas) et classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) étendue pour configurer les [quotas du serveur Web](../WebServer/quotas.md).
 - Objets Zone de texte et Zone de saisie : nouvelles propriétés [marge supérieure](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [marge inférieure](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [marge gauche](../FormObjects/properties_CoordinatesAndSizing.md#left-padding) et [marge droite](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) avec [prise en charge CSS](../FormEditor/createStylesheet.md#attribute-mapping) correspondante. Prise en charge de l'[alignement vertical](../FormObjects/properties_Text.md#vertical-alignment).
 - Nouvelles commandes [`OBJECT SET PADDING`](../commands/object-set-padding) et [`OBJECT Get padding`](../commands/object-get-padding) permettant de gérer les marges intérieures par programmation.
-- Nouvelles bordures intérieures pour les [boutons personnalisés](../FormObjects/button_overview.md#custom), les [cases à cocher personnalisées](../FormObjects/checkbox_overview.md#custom) et les [boutons radio personnalisés](../FormObjects/radio_overview.md#custom) : prise en charge des propriétés [couleur de fond](../FormObjects/properties_BackgroundAndBorder.md#fill-color) et [angle d'arrondi](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) ; nouvelles propriétés [couleur de bordure](../FormObjects/properties_BackgroundAndBorder.md#border-color) et [largeur de bordure](../FormObjects/properties_BackgroundAndBorder.md#border-width).
-- Accès direct à la [plate-forme 4D Corner](https://corner.4d.com/) depuis le [gestionnaire de dépendances](../Project/components.md#using-4d-corner).
+- Nouveau design de bordures intérieures pour les [boutons personnalisés](../FormObjects/button_overview.md#custom), les [cases à cocher personnalisées](../FormObjects/checkbox_overview.md#custom) et les [boutons radio personnalisés](../FormObjects/radio_overview.md#custom) : prise en charge des propriétés [couleur de remplissage](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) et [rayon d'arrondi](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) ; nouvelle propriété [Largeur de bordure](../FormObjects/properties_BackgroundAndBorder.md#border-width).
+- Prise en charge de la propriété [style de bordure "Système arrondie"](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) pour les [champs de saisie](../FormObjects/input_overview.md), conforme au design *Liquid glass* de macOS. Également prise en charge par les commandes [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) et [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style).
+- Nouvelle propriété ["Couleur de la bordure"](../FormObjects/properties_BackgroundAndBorder.md#border-color) disponible pour la plupart des objets de formulaire. Les commandes [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) et [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) prennent désormais en charge un nouveau paramètre *borderColor*.
 - [Nouvelle préférence **Éditeur de code**](../Preferences/methods.md#code-editor) permettant d'utiliser automatiquement l'éditeur de code 4D ou VS Code lors de la création ou l'ouverture de méthodes et de classes 4D.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R5) : liste de tous les bugs qui ont été corrigés dans 4D 21 R5.
 
 #### Changements de comportement
 
 - Par souci de cohérence, la propriété **corner radius** a été déplacée de la section ["Coordonnées et dimensions"](../FormObjects/properties_CoordinatesAndSizing.md) vers la section ["Arrière-plan et bordure"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) de la liste des propriétés.
+
+:::warning Précision par défaut des vecteurs
+
+Dans 4D 21 R5 et les versions ultérieures, les vecteurs sont créés avec une [précision de 32 bits par défaut](../API/VectorClass.md#4dvectornew). Dans les versions précédentes, seule la précision 64 bits était disponible. Si vous rouvrez avec une version antérieure un projet contenant des vecteurs créés dans 4D 21 R5 ou suivante avec la précision par défaut (ou explicitement définie sur 32 bits), ces vecteurs seront vides et leurs valeurs seront perdues.
+
+:::
 
 ## 4D 21 R4
 
@@ -114,11 +125,11 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
 | libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
 | Liblsquic       | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                     |
-| Libuv           | 1.52.1 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.53.0 | **21 R6**           | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
 | ngtcp2          | 1.24.0 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
-| OpenSSL         | 4.0.1  | **21 R5**           |                                                                                                                                                       |
+| OpenSSL         | 4.0.3  | **21 R6**           |                                                                                                                                                       |
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit          | WKWebView                              | 19                  |                                                                                                                                                       |

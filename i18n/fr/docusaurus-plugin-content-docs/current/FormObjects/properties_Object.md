@@ -19,7 +19,7 @@ Cette propriété désigne le type [objet de formulaire actif ou inactif](formOb
 
 #### Objets pris en charge
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 ---
 
@@ -90,9 +90,9 @@ Les variables ou expressions peuvent être saisissables ou non saisissables et p
 
 #### Grammaire JSON
 
-| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                                                |
-| ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | texte, ou tableau de textes | <li>variable, nom de champ, ou toute expression 4D.</li><li>Chaîne vide pour [variables dynamiques](#dynamic-variables).</li><li>Tableau de chaînes (collection de noms de tableau) pour une [colonne de listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes)</li> |
+| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                                                     |
+| ---------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | texte, ou tableau de textes | <li>Variable, nom de champ, ou toute expression 4D.</li><li>Chaîne vide pour les [variables dynamiques](#dynamic-variables).</li><li>Tableau de textes (collection de noms de tableaux) pour une colonne de [listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expressions
 
@@ -178,7 +178,7 @@ Saisissez une expression qui renvoie une collection ou une entity selection. En 
 La collection ou l'entity selection doit être disponible pour le formulaire lors de son chargement. Chaque élément de la collection ou de chaque entité de l'entity selection sera associé(e) à une ligne de list box et sera disponible en tant qu'objet via le mot-clé [`This`](../Concepts/classes.md#this) :
 
 - si vous avez utilisé une collection d'objets, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur de propriété, par exemple `This.<propertyPath>`.
-- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression detasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
+- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
 
 > Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
 
@@ -326,9 +326,9 @@ Lorsque **Custom** ("none" en JSON) est défini, aucun calcul automatique n'est 
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles                                                                                     |
-| ------------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string          | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Nom                 | Type de données | Valeurs possibles                                                                                      |
+| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
+| variableCalculation | string          | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objets pris en charge
 

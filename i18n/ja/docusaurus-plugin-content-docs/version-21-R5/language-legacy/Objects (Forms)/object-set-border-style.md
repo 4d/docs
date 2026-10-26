@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
+|21 R5|`Border Custom`および`Border System Rounded`定数を追加|
 |14|初出|
 
 </details>
@@ -37,8 +38,9 @@ displayed_sidebar: docs
 
 *borderStyle* 引数には、オブジェクトに適用したい境界線スタイルを指定する値を渡します。"*Form Objects (Properties)*" テーマ内にある、以下の定数のどれかを使用することができます:
 
-| 定数            | 型    | 値 | コメント                                   |
-| ------------- | ---- | - | -------------------------------------- |
+| 定数            | 型    | 値 | コメント |
+| ------------- | ---- | - | ------- |
+| Border Custom | 倍長整数 | 9 | (ボタンのみ) ボタンの内側フレームデザインを有効にし、追加プロパティをサポートします。 |
 | Border Dotted | 倍長整数 | 2 | オブジェクトの境界線は1ptの点線になります。                |
 | Border Double | 倍長整数 | 5 | オブジェクトの境界線は二重線(1ピクセル離れた2本の1ptの線)になります。 |
 | Border None   | 倍長整数 | 0 | オブジェクトは境界線を持ちません。                      |
@@ -46,6 +48,7 @@ displayed_sidebar: docs
 | Border Raised | 倍長整数 | 3 | オブジェクトの境界線は浮き上がったような3Dエフェクトになります。      |
 | Border Sunken | 倍長整数 | 4 | オブジェクトの境界線は沈み込んだような3Dエフェクトになります。       |
 | Border System | 倍長整数 | 6 | オブジェクトの境界線はシステムのグラフィック仕様に沿ったものになります。   |
+| Border System Rounded | 倍長整数 | 8 | macOSでは、境界線に"Liquid Glass"の外観が使用されます。[スクロールバーのプロパティ](../../FormObjects/properties_Appearance.md#vertical-scroll-bar)が有効な複数行入力オブジェクトではこの外観は*使用されず*（この場合は`Border System`が使用されます）、Windowsでは`Border System`と同様に描画されます。 |
 
 ## 参照 
 
@@ -57,5 +60,4 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 1262 |
 | スレッドセーフである | no |
-
 

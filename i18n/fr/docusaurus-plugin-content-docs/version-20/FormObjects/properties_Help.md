@@ -9,20 +9,21 @@ Cette propriété permet d'associer les messages d'aide aux objets actifs de vos
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - Le délai d'affichage et la durée maximale des messages d'aide peuvent être définis à l'aide des sélecteurs de délai et de durée des conseils de la commande **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)**.
-> - Ces infobulles peuvent être désactivées ou activées pour l'application à l'aide du sélecteur de la commande [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html).
+> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
+> - Les info-bulles peuvent être globalement désactivées ou activées pour l'application en utilisant le sélecteur Tips enabled de la commande [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html).
 
 Vous pouvez soit :
 
 - désigner une info-bulle existante, préalablement spécifiée dans l'éditeur de [messages d'aide](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
-- ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. Vous pouvez saisir ici une référence XLIFF afin d'afficher un message dans le langage de l'application (pour plus d'informations sur XLIFF, reportez-vous à [l'Annexe B: Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+- ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. Vous pouvez saisir ici une référence XLIFF afin d'afficher un message dans la langue de l'application (pour plus d'informations sur XLIFF, voir [Annexe B : Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+
 > Sous macOS, l'affichage des messages d'aide n'est pas pris en charge dans les fenêtres de type pop-up.
 
 #### Grammaire JSON
 
 |   Nom   | Type de données | Valeurs possibles                                            |
-|:-------:|:---------------:| ------------------------------------------------------------ |
-| tooltip |      text       | informations supplémentaires destinées à aider l'utilisateur |
+| :-----: | :-------------: | ------------------------------------------------------------ |
+| tooltip |       text      | informations supplémentaires destinées à aider l'utilisateur |
 
 #### Objets pris en charge
 

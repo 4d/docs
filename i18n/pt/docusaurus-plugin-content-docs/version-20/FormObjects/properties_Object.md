@@ -86,11 +86,11 @@ As variáveis ou expressões podem ser digitáveis ou não digitáveis e podem r
 
 | Nome       | Tipo de dados              | Valores possíveis                                                           |
 | ---------- | -------------------------- | --------------------------------------------------------------------------- |
-| dataSource | string ou array de strings | <li>4D variable, field name, or arbitrary complex language expression.</li><li>Cadeia vazia para [variáveis dinâmicas](#dynamic-variables).</li><li>Array de strings (coleção de nomes de array) para uma coluna de [listbox hierárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
+| dataSource | string ou array de strings | <li>4D variable, field name, or any expression.</li><li>Cadeia vazia para [variáveis dinâmicas](#dynamic-variables).</li><li>Array de strings (coleção de nomes de array) para uma coluna de [listbox hierárquico](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expressões
 
-Você pode usar uma [expressão](Concepts/quick-tour.md#expressions) como fonte de dados para um objeto. Qualquer expressão 4D válida é permitida: expressão simples, propriedade do objeto, fórmula, função 4D, nome do método do projeto ou campo usando a sintaxe padrão `[Table]Field`. A expressão é avaliada quando o formulário é executado e reavaliado para cada evento de formulário. Tenga en cuenta que las expresiones pueden ser [asignables o no asignables](Concepts/quick-tour.md#expressions).
+Você pode usar uma [expressão](Concepts/quick-tour.md#expressions) como fonte de dados para um objeto. Qualquer expressão 4D válida é permitida: expressão simples, propriedade do objeto, fórmula, função 4D, nome do método do projeto ou campo usando a sintaxe padrão `[Table]Field`. A expressão é avaliada quando o formulário é executado e reavaliado para cada evento de formulário. Note que as expressões podem ser [atribuíveis ou não atribuíveis](Concepts/quick-tour.md#expressions).
 > Se o valor inserido corresponde a um nome de variável e a um nome de método, 4D considera que você está indicando o método.
 
 ### Variáveis dinâmicas
@@ -103,8 +103,8 @@ Quando uma variável não é nomeada, quando o formulário é carregado, 4D cria
 - É possível utilizar um código de inicialização específico quando o formulário é carregado, que utiliza, por exemplo, o comando `VARIABLE TO VARIABLE`:
 
 ```4d
- If(Form event=On Load)
-    C_TEXT($init)
+ If(Form event code=On Load)
+    var $init : Text
     $Ptr_object:=OBJECT Get pointer(Object named;"comments")
     $init:=""
     VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
@@ -115,7 +115,7 @@ No código 4D, as variáveis dinâmicas podem ser acedidas através de um pontei
 
 ```4d
   // atribuir a hora 12:00:00 à variável do objeto "tstart"
- $p :=OBJECT Get pointer(Object named; "tstart")
+ $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```
 
@@ -184,7 +184,7 @@ A coleção ou a seleção da entidade deve estar disponível para o formulário
 
 - se você usou uma coleção de objetos, poderá chamar **This** na expressão do datasource para acessar cada valor de propriedade, por exemplo, `This.<propertyPath>`.
 - se você usou uma seleção de entidade, poderá chamar **This** na expressão de fonte de dados para acessar cada valor de atributo, por exemplo, `This.<attributePath>`.
-> > Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão de fonte de dados. No entanto, neste caso, você não conseguirá modificar valores ou acessar o objeto atual (veja abaixo).
+> Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão de fonte de dados. No entanto, neste caso, você não conseguirá modificar valores ou acessar o objeto atual (veja abaixo).
 
 
 #### Gramática JSON
@@ -208,7 +208,7 @@ Especifique o tipo de list box.
 - **Arrays**(padrão): usa elementos de array como as linhas de list box.
 - **Seleção atual**: use expressões, campos ou métodos cujos valores serão avaliados para cada registro da seleção atual de uma tabela.
 - **Seleção temporária**: use expressões, campos ou métodos cujos valores serão avaliados para cada registro de uma seleção temporária.
-- ** Coleção ou Seleção de Entidade**: usar elementos da coleção ou entidades para definir o conteúdo da linha do list box. Note que com esta caixa de lista, você precisa definir a propriedade [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection).
+- **Coleção ou Seleção de Entidade**: usar elementos da coleção ou entidades para definir o conteúdo da linha do list box. Note que com esta caixa de lista, você precisa definir a propriedade [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection).
 
 #### Gramática JSON
 
@@ -282,8 +282,8 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 
 ## Cálculo de variáveis
 
-This property sets the type of calculation to be done in a [column footer](./listbox-header-footer.md#footers) area.
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html) 4D command.
+Esta propriedade define o tipo de cálculo a ser feito em uma área de [rodapé de coluna](./listbox-header-footer.md#footers).
+> O cálculo para rodapés também pode ser definido usando o comando [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html) do 4D.
 
 Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais cálculos podem ser usados conforme o tipo de dados encontrados em cada coluna e indica que o tipo é automaticamente afetado por 4D para a variável de rodapé (se não for digitado pelo código):
 
@@ -324,7 +324,7 @@ Quando **Personalizado** ("none" em JSON) é definido, nenhum cálculo automáti
 
 | Nome                | Tipo de dados | Valores possíveis                                                                                     |
 | ------------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objectos suportados
 

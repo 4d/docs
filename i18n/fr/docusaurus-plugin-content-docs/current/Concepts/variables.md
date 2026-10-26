@@ -60,23 +60,23 @@ Si `varType` est omis, une variable de type **variant** est créée.
 
 Le tableau suivant liste toutes les valeurs `varType` prises en charge :
 
-| varType                     | Contenu                                                  |
-| --------------------------- | -------------------------------------------------------- |
-| `Text`                      | Valeur texte                                             |
-| `Date`                      | Valeur date                                              |
-| `Time`                      | Valeur Heure                                             |
-| `Boolean`                   | Valeur booléen                                           |
-| `Integer`                   | Valeur entier long                                       |
-| `Real`                      | Valeur réel                                              |
-| `Pointer`                   | Valeur pointeur                                          |
-| `Picture`                   | Valeur image                                             |
-| `Blob`                      | Valeur Blob scalaire                                     |
-| `Collection`                | Valeur collection                                        |
-| `Variant`                   | Valeur variant                                           |
-| `Object`                    | Objet avec classe par défaut                             |
-| `4D.<className>`            | Objet de la classe 4D className                          |
-| `cs.<className>`            | Objet de la classe utilisateur className                 |
-| `cs.<namespace><className>` | Object de la classe className du composant `<namespace>` |
+| varType                                        | Contenu                                                  |
+| ---------------------------------------------- | -------------------------------------------------------- |
+| `Text`                                         | Valeur texte                                             |
+| `Date`                                         | Valeur date                                              |
+| `Time`                                         | Valeur Heure                                             |
+| `Boolean`                                      | Valeur booléen                                           |
+| `Integer`                                      | Valeur entier long                                       |
+| `Real`                                         | Valeur réel                                              |
+| `Pointer`                                      | Valeur pointeur                                          |
+| `Picture`                                      | Valeur image                                             |
+| `Blob`                                         | Valeur Blob scalaire                                     |
+| `Collection`                                   | Valeur collection                                        |
+| `Variant`                                      | Valeur variant                                           |
+| `Object`                                       | Objet avec classe par défaut                             |
+| `4D.<className>`                               | Objet de la classe 4D className                          |
+| `cs.<className>`                               | Objet de la classe utilisateur className                 |
+| `cs.<namespace>`cs.<namespace> | Object de la classe className du composant `<namespace>` |
 
 :::note Compatibilité
 

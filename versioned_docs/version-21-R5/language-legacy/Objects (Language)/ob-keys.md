@@ -62,6 +62,6 @@ You want a collection with all first-level property names of an object:
 |  |  |
 | --- | --- |
 | Command number | 1719 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

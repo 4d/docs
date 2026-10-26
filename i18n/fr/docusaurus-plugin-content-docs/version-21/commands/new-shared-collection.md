@@ -58,8 +58,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 - date
 - heure (stockée en nombre de milliseconds - réel)
 - Null
-- Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
-- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode.
+- objet partagé
+- collection partagée
 
 :::note
 

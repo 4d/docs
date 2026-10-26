@@ -27,7 +27,7 @@ Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
 Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](../commands/object-set-font-style).
 
-> Esto es texto normal.<br/>
+> Este es un texto normal.<br/>
 > **Esto es texto en negrita.**
 
 #### Gramática JSON
@@ -52,8 +52,8 @@ Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
 También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](../commands/object-set-font-style).
 
-> Esto es texto normal.<br/>
-> *Este es texto en cursiva.*
+> Este es un texto normal.<br/>
+> Este es un texto normal.<br/>
 
 #### Gramática JSON
 
@@ -77,9 +77,9 @@ Hace que el texto tenga una línea por debajo.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles      |
-| -------------- | -------------- | --------------------- |
-| textDecoration | string         | "normal", "underline" |
+| Nombre         | Tipos de datos | Valores posibles    |
+| -------------- | -------------- | ------------------- |
+| textDecoration | string         | "none", "underline" |
 
 #### Objetos soportados
 
@@ -167,7 +167,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de opción](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Text Area](text.md)
 
 #### Comandos
 
@@ -179,7 +179,11 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 Designa el color de la fuente.
 
-> Esta propiedad también define el color del borde del objeto (si existe) cuando se utiliza el estilo "plano" o "punteado".
+:::note
+
+For objects with text properties, this property also sets the color of the border when "plain" or "dotted" [border style](./properties_BackgroundAndBorder.md#border-line-style) is used, except if you used the [Border color](./properties_BackgroundAndBorder.md#border-color) property.
+
+:::
 
 El color puede ser especificado por:
 
@@ -187,7 +191,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVA - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](../commands/object-set-rgb-colors).
+You can also set this property using the [**OBJECT SET RGB COLORS**](../commands/object-set-rgb-colors) command.
 
 #### Gramática JSON
 
@@ -197,7 +201,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Indicadores de progreso](progressIndicator.md) - [Regla](ruler.md) - [Botón radio](radio_overview.md) - [Área de texto](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Text Area](text.md)
 
 #### Comandos
 
@@ -209,11 +213,11 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 `List box de tipo colección/selección de entidades`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. For more information about this, refer to the description of the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
 Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
-También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) con la constante `lk font color expression`.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) command with `lk font color expression` constant.
 
 > Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
@@ -246,7 +250,7 @@ Foreground color;Dark shadow color)
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede usar las constantes listadas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) command.
 
 Ejemplo:
 
@@ -254,7 +258,7 @@ Ejemplo:
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) con la constante `lk font style expression`.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) command with `lk font style expression` constant.
 
 > Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
@@ -286,7 +290,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 :::note
 
-- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" sólo es compatible con las [entradas ](input_overview.md) y [áreas de texto](text.md)
 
 :::
@@ -310,7 +314,7 @@ La opción **Predeterminado** (`automático` valor JSON) define la alineación s
 - `abajo` para todos los datos (excepto las imágenes) y
 - `arriba` para los datos del tipo imagen.
 
-Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) y [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment).
+This property can also be handled by the [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) and [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment) commands.
 
 #### Gramática JSON
 
@@ -519,11 +523,11 @@ En el caso de los atributos de color de fuente y de fondo, el valor del color pu
 
 Los comandos que pueden utilizarse para manipular objetos de texto por programación no tienen en cuenta ninguna etiqueta de estilo integrada en el texto. Sólo actúan sobre el texto visualizado. Esto afecta a los siguientes comandos:
 
-- comandos del tema [Interfaz de usuario](../commands/theme/User_Interface.md)
+- Comandos del tema [Interfaz de usuario](../commands/theme/User_Interface.md)
 - [`HIGHLIGHT TEXT`](../commands/highlight-text)
 - [`GET HIGHLIGHT`](../commands/get-highlight)
 
-Cuando se utilizan estos comandos con comandos que manipulan cadenas de caracteres, es necesario filtrar los caracteres de formato utilizando el comando [`ST Get plain text`](../commands/st-get-plain-text):
+When you use these commands with commands that manipulate character strings, it is necessary to filter the formatting characters using the [`ST Get plain text`](../commands/st-get-plain-text) command:
 
 ```4d
  HIGHLIGHT TEXT([Products]Notes;1;Length(ST Get plain text([Products]Notes))+1)
@@ -531,13 +535,13 @@ Cuando se utilizan estos comandos con comandos que manipulan cadenas de caracter
 
 #### Objetos (formularios)
 
-Los comandos que se pueden utilizar para modificar el estilo de los objetos (por ejemplo, [`OBJECT SET FONT`](../commands/object-set-font)) se aplican a todo el objeto y no a la selección.
+The commands that can be used to modify the style of objects (for example, [`OBJECT SET FONT`](../commands/object-set-font)) apply to the whole object and not to the selection.
 
 Si el objeto no tiene el foco cuando se ejecuta el comando, la modificación se aplica simultáneamente al objeto (el área de texto) y a su variable asociada. Si el objeto tiene el foco, la modificación se aplica al objeto, pero no a la variable asociada. La modificación solo se aplica a la variable cuando el objeto pierde el foco. Tenga presente este principio a la hora de programar áreas de texto.
 
 :::note
 
-Si la opción [**Guardar con etiquetas de estilo predeterminadas**](#store-with-default-style-tags) está marcada para el objeto, el uso de estos comandos provocará una modificación de las etiquetas guardadas con cada objeto.
+If the [**Store with default style tags**](#store-with-default-style-tags) option is checked for the object, the use of these commands will cause a modification of the tags saved with each object.
 
 :::
 
@@ -578,9 +582,9 @@ En el contexto de las áreas multiestilo, estos comandos sólo deben utilizarse 
 
 #### Get edited text
 
-Cuando se utiliza con un área de texto enriquecido, el comando [`Get edited text`](../commands/get-edited-text) devuelve el texto del área actual, incluidas las etiquetas de estilo.
+When it is used with a rich text area, the [`Get edited text`](../commands/get-edited-text) command returns the text of the current area including any style tags.
 
-Para recuperar el texto "sin formato" (texto sin etiquetas) que se está editando, debe utilizar el comando [`ST Get plain text`](../commands/st-get-plain-text):
+To retrieve the "plain" text (text without tags) being edited, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command:
 
 ```4d
 ST Get plain text(Get edited text)
@@ -590,7 +594,7 @@ ST Get plain text(Get edited text)
 
 Las consultas y ordenaciones realizadas entre objetos con varios estilos tienen en cuenta las etiquetas de estilo guardadas en el objeto. Si se ha modificado el estilo de una palabra, la búsqueda de esa palabra no dará resultado.
 
-Para poder realizar búsquedas y ordenaciones válidas, debe utilizar el comando [`ST Get plain text`](../commands/st-get-plain-text). Por ejemplo:
+To be able to carry out valid searches and sorts, you must use the [`ST Get plain text`](../commands/st-get-plain-text) command. Por ejemplo:
 
 ```4d
 QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")

@@ -79,7 +79,7 @@ Define o texto para ter uma linha por baixo.
 
 | Nome           | Tipo de dados | Valores possíveis     |
 | -------------- | ------------- | --------------------- |
-| textDecoration | string        | "normal", "underline" |
+| textDecoration | string        | "none", "underline" |
 
 #### Objectos suportados
 
@@ -167,7 +167,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista de seleção](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapé da List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão de opção](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista de seleção](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapé da List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Indicadores de Progresso](progressIndicator.md) - [Botão de opção](radio_overview.md) - [Régua](ruler.md) - [Área de Texto](text.md)
 
 #### Comandos
 
@@ -179,7 +179,12 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 Designa a cor do tipo de letra.
 
-> Esta propriedade também define a cor da borda do objeto (se houver) quando o estilo "plaino" ou "pontilhado" é usado.
+
+:::note
+
+Para objetos com propriedades de texto, esta propriedade também define a cor da borda quando o estilo de borda "plain" ou "dotted" [border style](./properties_BackgroundAndBorder.md#border-line-style) é usado, exceto se você usou a propriedade [Border color](./properties_BackgroundAndBorder.md#border-color).
+
+:::
 
 A cor pode ser especificada por:
 
@@ -197,7 +202,7 @@ Você também pode definir essa propriedade usando o comando [**OBJECT SET RGB C
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Text Area](text.md)
 
 #### Comandos
 
@@ -285,8 +290,8 @@ Localização horizontal do texto na área que o contém.
 
 :::note
 
-- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
-- "justify" sólo es compatible con las [entradas ](input_overview.md) y [áreas de texto](text.md)
+- "automatic" não é suportado por [botões](button_overview.md), [caixas de verificação](checkbox_overview.md) e [botões de opção](radio_overview.md)
+- "justify" só é suportado por [entradas](input_overview.md) e [áreas de texto](text.md)
 
 :::
 

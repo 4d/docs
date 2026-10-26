@@ -137,7 +137,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずロー
 
 - **[`local` キーワード](../Concepts/classes.md#local) を使用したクライアント/サーバー** あるいは **シングルユーザーモードの4D**:
   - ユーザーが4D フォーム上で値を設定した
-  - 4D コードが `:=` 演算子によって代入を行った。 4D コードが `:=` 演算子によって代入を行った。 このイベントは自己代入の場合にもトリガーされます(`$entity.attribute:=$entity.attribute`)。
+  - 4D コードが `:=` 演算子によって代入を行った。このイベントは自己代入の場合にもトリガーされます(`$entity.attribute:=$entity.attribute`)。
 - **`local` キーワード を使用しないクライアント/サーバー**: `:=` 演算子によって代入を行う一部の4D コードは、[サーバー上で実行されます](../commands/execute-on-server)。
 - **`local` キーワードを使用しないクライアント/サーバー**、**[Qodly アプリケーション](https://developer.4d.com/qodly)** および **[リモートデータストア](../commands/open-datastore)**: ORDA 関数(エンティティ上の関数あるいはエンティティを引数として使用する関数)を呼び出した場合にはエンティティは4D Server に受信されます。これはつまり、リモートアプリケーション側に*refresh* あるいは *preview* 関数を実装することでORDA リクエストをサーバーに送信し、イベントをトリガーするようにする必要があるかもしれない、ということです。
 - REST サーバー: 値は REST サーバーに、[REST リクエスト](../REST/$method.md#methodupdate) (`$method=update`) とともに受信されます。

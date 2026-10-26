@@ -86,7 +86,7 @@ title: フォームエディター
 | ![](../assets/en/FormEditor/radio.png)     | [ラジオボタン](FormObjects/radio_overview.md)                                                                                                                                                                                                            |  R  |
 | ![](../assets/en/FormEditor/checkbox.png)  | [チェックボックス](FormObjects/checkbox_overview.md)                                                                                                                                                                                                       |  C  |
 | ![](../assets/en/FormEditor/indicator.png) | [進捗インジケーター](FormObjects/progressIndicator.md) / [ルーラー](FormObjects/ruler.md) / [ステッパー](FormObjects/stepper.md) / [スピナー](FormObjects/spinner.md)                                                                                                    |  I  |
-| ![](../assets/en/FormEditor/rectangle.png) | [四角](FormObjects/shapesOverview.md#四角) / [線](FormObjects/shapesOverview.md#線) / [楕円](FormObjects/shapesOverview.md#楕円)                                                                                                                             |  S  |
+| ![](../assets/en/FormEditor/rectangle.png) | [四角](FormObjects/shapes_overview.md#四角) / [線](FormObjects/shapes_overview.md#線) / [楕円](FormObjects/shapes_overview.md#楕円)                                                                                                                          |  S  |
 | ![](../assets/en/FormEditor/splitter.png)  | [スプリッター](FormObjects/splitters.md) / [タブコントロール](FormObjects/tabControl.md)                                                                                                                                                                         |  D  |
 | ![](../assets/en/FormEditor/plugin.png)    | [プラグインエリア](FormObjects/pluginArea_overview.md) / [サブフォーム](FormObjects/subform_overview.md) / [Webエリア](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |  X  |
 
@@ -271,7 +271,7 @@ title: フォームエディター
 
 このダイアログボックスを表示するには、揃えたいオブジェクトを選択し、**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。
 
-- “左/右整列” や “上/下整列” エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<br>見本エリアには、選択結果が表示されます。見本エリアには、選択結果が表示されます。
+- “左/右整列” や “上/下整列” エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<br>見本エリアには、選択結果が表示されます。
 
 - 標準のアンカー方式による整列を実行するには、**プレビュー** または **適用** をクリックします。この場合、整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。または:<br/>特定のオブジェクトを基準にオブジェクトを揃えるには、**整列** オプションを選択し、整列基準としたいオブジェクトを一覧から選択します。この場合、基準オブジェクトの位置は変わりません。
 
@@ -386,7 +386,7 @@ JSONフォームの入力順序の設定は、[`entryOrder`](properties_JSONref.
 
    ポインターが入力順ポインターに変わり、4D はフォーム上に線を引いて、データ入力時にオブジェクトが選択される順序を示します。ツールパレット上の他のツールをクリックするまでは、入力順序の表示と変更操作しかおこなえません。
 
-2. データ入力順を変更するには、フォームオブジェクト上にポインターを置き、マウスボタンを押したまま、次の入力順に設定したいオブジェクトまでポインターをドラッグします。<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D はそれに応じて入力順を調整します。![](../assets/en/FormEditor/entryOrder3.png)<br/>4D はそれに応じて入力順を調整します。
+2. データ入力順を変更するには、フォームオブジェクト上にポインターを置き、マウスボタンを押したまま、次の入力順に設定したいオブジェクトまでポインターをドラッグします。<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D はそれに応じて入力順を調整します。
 
 3. 入力順を設定したいだけ、ステップ2 を繰り返します。
 
@@ -753,7 +753,7 @@ OR
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-ビューをロックするにはこのアイコンをクリックします。 南京錠が閉まり、ビューがロックされます: 南京錠が閉まり、ビューがロックされます:
+ビューをロックするにはこのアイコンをクリックします。南京錠が閉まり、ビューがロックされます:
 
 ![](../assets/en/FormEditor/locked.png)
 

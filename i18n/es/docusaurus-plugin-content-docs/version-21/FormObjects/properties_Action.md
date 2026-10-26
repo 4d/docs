@@ -19,9 +19,9 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                                                                                        |
-| -------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| dragging | text           | "none" (por defecto), "custom", "automatic" (excluyendo list box) |
+| Nombre   | Tipos de datos | Valores posibles                                                                                                                                          |
+| -------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dragging | text           | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
 
 #### Objetos soportados
 
@@ -51,9 +51,9 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                                                                                        |
-| -------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| dropping | text           | "none" (por defecto), "custom", "automatic" (excluyendo list box) |
+| Nombre   | Tipos de datos | Valores posibles                                                                                                                                          |
+| -------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dropping | text           | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
 
 #### Objetos soportados
 

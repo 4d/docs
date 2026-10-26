@@ -84,7 +84,7 @@ L'événement `On Close Detail` est alors généré lorsqu'un enregistrement aff
 
 Cette propriété permet de spécifier l'ensemble à utiliser pour gérer les enregistrements en surbrillance dans la list box (lorsque la source de données **Tableaux** est sélectionnée, un tableau booléen portant le même nom que la list box est utilisé).
 
-4D crée un ensemble par défaut appelé *ListBoxSetN* où *N* commence à 0 et est incrémenté en fonction du nombre de list box dans le formulaire. Si nécessaire, vous pouvez modifier l'ensemble par défaut. Si nécessaire, vous pouvez modifier l'ensemble par défaut. Il est ensuite maintenu automatiquement par 4D. Si l'utilisateur sélectionne une ou plusieurs lignes dans la list box, l'ensemble est immédiatement mis à jour. Si vous souhaitez sélectionner une ou plusieurs lignes par programmation, vous pouvez appliquer les commandes du thème "Ensembles" à cet ensemble.
+4D crée un ensemble par défaut appelé *ListBoxSetN* où *N* commence à 0 et est incrémenté en fonction du nombre de list box dans le formulaire. Si nécessaire, vous pouvez modifier la configuration par défaut. Si nécessaire, vous pouvez modifier l'ensemble par défaut. Il est ensuite maintenu automatiquement par 4D. Si l'utilisateur sélectionne une ou plusieurs lignes dans la list box, l'ensemble est immédiatement mis à jour. Si vous souhaitez sélectionner une ou plusieurs lignes par programmation, vous pouvez appliquer les commandes du thème "Ensembles" à cet ensemble.
 
 > - L'état de surbrillance des lignes de la list box et l'état de surbrillance des enregistrements de la table sont totalement indépendants.
 > - Si la propriété "Highlight Set" ne contient pas de nom, il ne sera pas possible d'effectuer des sélections dans la list box.
@@ -164,15 +164,9 @@ Nombre de colonnes qui ne peuvent pas être déplacées pendant l'exécution.
 
 ## Nombre de colonnes
 
-Définit le nombre de colonnes de la list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 > Vous pouvez ajouter ou supprimer des colonnes dynamiquement par programmation, en utilisant des commandes telles que [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
-
-#### Grammaire JSON
-
-| Nom         | Type de données | Valeurs possibles          |
-| ----------- | --------------- | -------------------------- |
-| columnCount | integer         | minimum: 1 |
 
 #### Objets pris en charge
 

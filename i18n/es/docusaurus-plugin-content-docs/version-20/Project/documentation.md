@@ -3,16 +3,13 @@ id: documentation
 title: Documentar un proyecto
 ---
 
-
-
-En los proyectos aplicación, puede documentar sus métodos así como sus clases, formularios, tablas o campos. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.
+In application projects, you can document your methods, classes, and forms. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.
 
 Los siguientes elementos del proyecto aceptan la documentación:
 
 - Métodos (métodos base, métodos componente, métodos proyecto, métodos formulario, métodos 4D Mobile y triggers)
 - Clases
 - Formularios
-- Tablas y campos
 
 Sus archivos de documentación se escriben en la sintaxis Markdown (archivos .md) utilizando cualquier editor que soporte el Markdown. Se almacenan como archivos independientes dentro de la carpeta Proyecto.
 
@@ -22,15 +19,13 @@ La documentación se muestra en el área de vista previa (panel lateral derecho)
 
 También se puede exponer parcialmente como [consejos del editor de código](#viewing-documentation-in-the-code-editor).
 
-
 ## Archivos documentación
 
 ### Nombre del archivo de documentación
 
-Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md". Por ejemplo, el archivo de documentación adjunto al método proyecto `myMethod.4dm` se llamará `myMethod.md`.
+Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md". Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md".
 
 En el Explorador, 4D muestra automáticamente el archivo de documentación con el mismo nombre que el elemento seleccionado (ver abajo).
-
 
 ### Arquitectura de los archivos de documentación
 
@@ -39,31 +34,31 @@ Todos los archivos de documentación se almacenan en la carpeta `Documentación`
 La arquitectura de la carpeta `Documentation` es la siguiente:
 
 - `Documentation`
-    + `Clases`
-        * myClass.md
-    + `DatabaseMethods`
-        * onStartup.md
-        * ...
-    + `Formularios`
-        * loginDial.md
-        * ...
-    + `Métodos`
-        * myMethod.md
-        * ...
-    + `TableForms`
-        * **1**
-            - input.md
-            - ...
-        * ...
-    + `Triggers`
-        * table1.md
-        * ...
+  - `Clases`
+    - myClass.md
+  - `DatabaseMethods`
+    - onStartup.md
+    - ...
+  - `Formularios`
+    - loginDial.md
+    - ...
+  - `Métodos`
+    - myMethod.md
+    - ...
+  - `TableForms`
+    - **1**
+      - input.md
+      - ...
+    - ...
+  - `Triggers`
+    - table1.md
+    - ...
 
 - Un formulario proyecto y su método de formulario proyecto comparten el mismo archivo de documentación para el formulario y el método.
+
 - Un formulario tabla y su método de formulario tabla comparten el mismo archivo de documentación para el formulario y el método.
 
 > Renombrar o eliminar un elemento documentado en su proyecto también renombrará o eliminará el archivo Markdown asociado al elemento.
-
 
 ## Documentación en el Explorador
 
@@ -96,27 +91,24 @@ Si no existe un archivo de documentación para el elemento seleccionado, puede:
 
 Si ya existe un archivo de documentación para el elemento seleccionado, puede abrirlo con su editor de Markdown eligiendo la opción **Modificar la documentación...** del menú contextual o del menú de opciones del Explorador.
 
-
-
 ## Visualizar la documentación en el editor de código
 
 El editor de código 4D muestra una parte de la documentación de un método en su consejo de ayuda.
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;package&#062;/documentation`, el editor de código muestra (por prioridad):
+Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/documentation`, el editor de código muestra (por prioridad):
 
 - Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
-- O, si no se utiliza la etiqueta de comentario html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
-  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código 4D.
+- O, si no se usa ninguna etiqueta de comentario html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
+  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
 
 :::note
 
-De lo contrario, el editor de código muestra [el comentario de bloque en la parte superior del código del método](../code-editor/write-class-method.md#help-tips).
+En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](../code-editor/write-class-method.md#help-tips).
 
 :::
-
 
 ## Definición del archivo de documentación
 
@@ -128,15 +120,15 @@ Los nuevos archivos de documentación se crean con el siguiente contenido por de
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Línea                                    | Descripción                                                                                                                                                                                 |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<!-- Escriba aquí su resumen -->` | Comentario HTML. Se utiliza prioritariamente como descripción del método en los [consejos del editor de código](#viewing-documentation-in-the-code-editor)                                  |
-| ## Description                          | Título de nivel 2 en Markdown. La primera frase después de esta etiqueta se utiliza como descripción del método en las sugerencias del editor de código si no se utiliza el comentario HTML |
-| ## Ejemplo                              | Título de nivel 2, puede utilizar esta área para mostrar un ejemplo de código                                                                                                               |
-| ` ```4d Escriba aquí su ejemplo`` `      | Se utiliza para dar formato a los ejemplos de código 4D (utiliza la librería highlight.js)                                                                                                  |
-
+| Línea                               | Descripción                                                                                                                                                                                                 |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<!-- Escriba aquí su resumen -->`  | Comentario HTML. Se utiliza prioritariamente como descripción del método en los [consejos del editor de código](#viewing-documentation-in-the-code-editor)                                  |
+| ## Description                      | Título de nivel 2 en Markdown. La primera frase después de esta etiqueta se utiliza como descripción del método en las sugerencias del editor de código si no se utiliza el comentario HTML |
+| ## Ejemplo                          | Título de nivel 2, puede utilizar esta área para mostrar un ejemplo de código                                                                                                                               |
+| ` ```4d Type here your example``` ` | Se utiliza para dar formato a los ejemplos de código 4D (utiliza la librería highlight.js)                                                                               |
 
 ### Markdown soportado
+
 - La etiqueta del título es soportada:
 
 ```md
@@ -154,18 +146,15 @@ _italic_
 ~~strikethrough~~
 ```
 
-
-- La etiqueta de bloque de código (\``4d ... ``) es compatible con el resaltado del código 4D:
+- La etiqueta de bloque de código (\`4d ... `) es compatible con el resaltado de código 4D:
 
 ````md
 ```4d
-    var $txt : Texto
-    $txt:="¡Hola mundo!"  
-```  
-```  
-```  
+	var $txt : Text
+	$txt:="Hello world!"  
 ```
 ````
+
 - La etiqueta de la tabla es soportada:
 
 ```md
@@ -175,14 +164,13 @@ _italic_
 | toolbar   | Text |Toolbar name  |
 ```
 
-
 - La etiqueta del enlace es soportada:
 
 ```md
 // Caso 1
-La [documentation](https://doc.4d.com) del comando ....
+The [documentation](https://doc.4d.com) of the command ....
 
-// Case 2
+// Caso 2
 [4D blog][1]
 
 [1]: https://blog.4d.com
@@ -197,42 +185,40 @@ La [documentation](https://doc.4d.com) del comando ....
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
-[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo del blog 4D")](https://blog.4d.com)
+
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > Para más información, consulte la [guía Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
-
-
-
 
 ## Ejemplo
 
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ````md
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- Este método devuelve un logo diferente dependiendo del parámetro size -->
 
 
 GetLogo (size) -> logo
 
 
-| Parameter | Type   | in/out | Description |
-| --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
+| Parámetro | Tipo   | Entrada/Salida | Descripción |
+| --------- | ------ | -------------- | ----------- |
+| size      | Integer  | Entrada | Selector de estilo de logo (1 a 5)  |
+| logo      | Picture | Salida | Logo seleccionado |
 
 
-## Description
+## Descripción
 
 Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
-## Example
+## Ejemplo
 
 ```4d
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Obtener el logotipo más grande
+//Obtener el logo más grande
 $logo:=GetLogo(5)
 ```
 ````

@@ -2565,7 +2565,7 @@ où :
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)           |
 
 - **value** : la valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de toute expression de valeur constante correspondant à la propriété de type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
-  Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de <strong x-id="1">value</strong> dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet.
+  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type **booléen**: **true** or **false** (sensible à la casse).
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'

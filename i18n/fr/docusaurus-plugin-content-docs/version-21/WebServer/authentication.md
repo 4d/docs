@@ -97,7 +97,7 @@ La méthode base `On Web Authentication` n'est PAS appelée :
 
 | Paramètres | Type    |                             | Description                                                                 |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------------------- |
-| $url       | Text    | <- | Variable URL                                                                |
+| $url       | Text    | <- | URL                                                                         |
 | $content   | Text    | <- | En-têtes HTTP + Corps HTTP (jusqu'à une limite de 32 ko) |
 | $IPClient  | Text    | <- | Adresse IP du client web (navigateur)                    |
 | $IPServer  | Text    | <- | Adresse IP du serveur                                                       |

@@ -573,7 +573,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|wordwrap |string | "automatic" (excluding list box), "normal", "none"|
+|wordwrap |string | "automatic" (excluding list box column and footer), "normal", "none"|
 
 #### Objects Supported
 

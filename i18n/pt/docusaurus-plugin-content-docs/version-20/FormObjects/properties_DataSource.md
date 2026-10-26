@@ -12,7 +12,7 @@ Quando a opção **inserção automática** não está definida (padrão), o val
 Esta propriedade é suportada por:
 
 - [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
-- os [Combo box](comboBox_overview.md) cuja lista associada é preenchida por seu array ou objeto datasource.
+- [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
 
 Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" que está associada a um combo box "Countries": se a propriedade **inserção automática** estiver definida e um usuário digitar "Espanha", o valor "Espanha" será automaticamente adicionado à lista na memória:
 
@@ -114,7 +114,7 @@ Especifica uma variável ou expressão a que será atribuída uma longa indicand
 Define o tipo de dados para a expressão apresentada. Esta propriedade é utilizada com:
 
 - [List box columns](listbox-column.md) of the selection and collection types.
-- Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
+- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
@@ -315,7 +315,7 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 | Nome           | Tipo de dados | Valores possíveis |
 | -------------- | ------------- | ----------------- |
-| namedSelection | string        | Nome da selecção  |
+| selectionName  | string        | Nome da selecção  |
 
 #### Objectos suportados
 

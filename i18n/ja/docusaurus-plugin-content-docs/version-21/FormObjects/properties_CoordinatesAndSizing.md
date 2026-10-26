@@ -264,7 +264,7 @@ title: 座標とサイズ
 
 [テキスト](text.md) および [入力](input_overview.md) フォームオブジェクトについて:
 
-- 角の半径プロパティは、[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) "なし"、"標準"、"ドット" の場合にのみ利用可能です。
+- 角の半径プロパティは、[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) "なし"、"標準"、"ドット" の場合にのみ利用可能です。
 - 角の丸みはフォームオブジェクトの外側に絵描画されます (つまり、オブジェクトはより大きく表示されますが、[幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) プロパティは変更されません)。
 
 ![](../assets/en/FormObjects/radius-text.png)

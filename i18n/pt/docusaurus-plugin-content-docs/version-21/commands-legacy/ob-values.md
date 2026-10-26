@@ -62,6 +62,6 @@ Se quiser uma coleção com todos os valores de propriedade de um objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1718 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 

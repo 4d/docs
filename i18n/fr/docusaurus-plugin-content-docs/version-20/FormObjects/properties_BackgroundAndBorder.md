@@ -3,12 +3,11 @@ id: propertiesBackgroundAndBorder
 title: Fond et bordure
 ---
 
-
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
 
-Vous pouvez également définir cette propriété en utilisant la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Grammaire JSON
 
@@ -18,7 +17,7 @@ Vous pouvez également définir cette propriété en utilisant la commande [`OBJ
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 ---
 
@@ -28,7 +27,7 @@ Définit la couleur de fond d'un objet.
 
 Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
-Vous pouvez également définir cette propriété en utilisant la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Grammaire JSON
 
@@ -48,11 +47,12 @@ Vous pouvez également définir cette propriété en utilisant la commande [`OBJ
 
 ## Expression couleur de fond {#background-color-expression}
 
-`List box de type collection et de type sélection d'entité`
+`List box de type collection et entity selection`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) dans le manuel *Langage* de 4D.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the *4D Language Reference manual*.
 
 Vous pouvez également définir cette propriété en utilisant la commande [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) avec la constante `lk background color expression`.
+
 > Avec les list box de type collection ou sélection d'entité, cette propriété peut également être définie à l'aide d'une [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Grammaire JSON
@@ -63,7 +63,7 @@ Vous pouvez également définir cette propriété en utilisant la commande [`LIS
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 ---
 
@@ -89,8 +89,8 @@ Décrit le type de ligne en pointillé comme une séquence de points noirs et bl
 
 #### Grammaire JSON
 
-| Nom             | Type de données            | Valeurs possibles                                                                 |
-| --------------- | -------------------------- | --------------------------------------------------------------------------------- |
+| Nom             | Type de données            | Valeurs possibles                                                                                                                                                     |
+| --------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | strokeDashArray | tableau numérique ou texte | Ex : Ex : "6 1" ou \[6,1\] pour une séquence de 6 points noirs et 1 point blanc |
 
 #### Objets pris en charge
@@ -123,13 +123,14 @@ Vous pouvez supprimer ces lignes vides en sélectionnant cette option. Le bas de
 
 ## Couleur du trait
 
-Désigne la couleur des lignes de l'objet. La couleur peut être spécifiée par :
+Désigne la couleur des lignes de l'objet.
+La couleur peut être spécifiée par :
 
-* un nom de couleur - comme "red"
-* une valeur HEX - comme "# ff0000"
-* une valeur RVB - comme "rgb (255,0,0)"
+- un nom de couleur - comme "red"
+- une valeur HEX - comme "# ff0000"
+- une valeur RVB - comme "rgb (255,0,0)"
 
-Vous pouvez également définir cette propriété en utilisant la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
 #### Grammaire JSON
 
@@ -151,9 +152,9 @@ Désigne l'épaisseur d'une ligne.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                                         |
-| ----------- | --------------- | ----------------------------------------------------------------------------------------- |
-| strokeWidth | number          | 0 pour la plus petite épaisseur dans un formulaire imprimé, ou toute valeur d'entier < 20 |
+| Nom         | Type de données | Valeurs possibles                                                                                                |
+| ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| strokeWidth | number          | 0 pour la plus petite largeur dans un formulaire imprimé, ou toute valeur d'entier < 20 |
 
 #### Objets pris en charge
 
@@ -173,15 +174,15 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // valeur par défaut
+ <>_BgndColors{$i}:=-255 // default value
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, vous définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple `<>_BgndColor_1`, `<>_BgndColor_2` et `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
@@ -189,23 +190,23 @@ Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orang
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) et [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) . Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
+Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) et [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html). Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
 
 #### Grammaire JSON
 
-| Nom           | Type de données | Valeurs possibles             |
-| ------------- | --------------- | ----------------------------- |
+| Nom           | Type de données | Valeurs possibles                             |
+| ------------- | --------------- | --------------------------------------------- |
 | rowFillSource | string          | Nom d'un tableau entier long. |
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 ---
 
 ## Transparent
 
-Définit l'arrière-plan de la list box sur "Transparent". Lorsque cette propriété est définie, toute autre [couleur de fond alternée](#alternate-background-color) ou [couleur de fond](#background-color--fill-color) définie pour la colonne est ignorée.
+Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est définie, toute [autre couleur d'arrière-plan](#alternate-background-color) ou [couleur d'arrière-plan](#background-color--fill-color) définie pour la colonne est ignorée.
 
 #### Grammaire JSON
 

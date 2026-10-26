@@ -53,7 +53,7 @@ La compilación requiere una [licencia apropiada](../Admin/licenses.md). Sin est
 
 </details>
 
-While developing your application, you can compile the components used by the host project directly from the host project, without having to open them separately. When the host project contains one or more *eligible* components (see [Requirements](#requirements) below), an additional menu is displayed in the Compiler window. Este menú le permite seleccionar el/los proyecto(s) a compilar:
+Mientras desarrolla su aplicación, puede compilar los componentes utilizados por el proyecto anfitrión directamente desde el proyecto anfitrión, sin tener que abrirlos por separado. Cuando el proyecto anfitrión contiene uno o más componentes *elegibles* (ver los [Requisitos](#requirements) abajo), aparece un menú adicional en la ventana del compilador. Este menú le permite seleccionar el/los proyecto(s) a compilar:
 
 - solo el proyecto anfitrión (por defecto)
 - el proyecto anfitrión y todos sus componentes elegibles

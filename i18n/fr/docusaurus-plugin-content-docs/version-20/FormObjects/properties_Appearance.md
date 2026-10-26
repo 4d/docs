@@ -21,16 +21,33 @@ Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul 
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- defaultButton|booléen|true, false |
+| Nom           | Type de données | Valeurs possibles |
+| ------------- | --------------- | ----------------- |
+| defaultButton | boolean         | true, false       |
 
 #### Objets pris en charge
 
 [Bouton](button_overview.md#regular) - [Bouton plat](button_overview.md#regular)
 
 ---
+
+## Display formula source as symbol
+
+Displays source text of formulas as symbols when expressions are shown as references.
+
+#### Grammaire JSON
+
+| Nom                    | Type de données | Valeurs possibles                           |
+| ---------------------- | --------------- | ------------------------------------------- |
+| displayFormulaAsSymbol | boolean         | true (par défaut), false |
+
+#### Objets pris en charge
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## Cacher rectangle de focus
 
@@ -54,7 +71,7 @@ A l'exécution, un champ ou toute zone saisissable est délimité par un rectang
 
 Cette propriété est utilisée pour désactiver la mise en évidence de la sélection dans les list box.
 
-Lorsque cette option est activée, la surbrillance de la sélection n'est plus visible pour les sélections effectuées dans les list box. Les sélections elles-mêmes sont toujours valides et fonctionnent exactement de la même manière que précédemment; cependant, ils ne sont plus représentés graphiquement à l'écran et vous devrez [définir leur apparence par programmation](listbox_overview.md#customizing-appearance-of-selected-rows).
+Lorsque cette option est activée, la surbrillance de la sélection n'est plus visible pour les sélections effectuées dans les list box. Les sélections elles-mêmes sont toujours valides et fonctionnent exactement de la même manière que précédemment ; cependant, elles ne sont plus représentées graphiquement à l'écran, et vous devrez [définir leur apparence par programmation](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Par défaut, cette option n'est pas activée.
 
@@ -76,11 +93,11 @@ Un outil d'interface permettant à l'utilisateur de déplacer la zone de visuali
 
 Valeurs disponibles :
 
-| Liste de propriétés | Valeur JSON | Description                                                                                                                                                                       |
-| ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                                                                                          |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Oui                 | "visible"   | La barre de défilement est toujours visible, même lorsqu'elle n'est pas nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est inférieure à celle du cadre). |
-| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                       |
-| Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire et l'utilisateur peut saisir du texte plus grand que la largeur de l'objet                             |
+| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                                                          |
+| Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire et l'utilisateur peut saisir du texte plus grand que la largeur de l'objet                                                                |
 
 > Les objets image peuvent avoir des barres de défilement lorsque le format d'affichage de l'image est défini sur "Tronqué (non centré)"
 
@@ -92,7 +109,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -106,33 +123,49 @@ Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par d�
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- dpi|number|0=automatic, 72, 96 |
+| Nom | Type de données | Valeurs possibles   |
+| --- | --------------- | ------------------- |
+| dpi | number          | 0=automatic, 72, 96 |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
-## Afficher l'arrière-plan
+## Show background and anchored elements
 
 Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showBackground|booléen|true (par défaut), false|
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| showBackground | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
+
+## Show empty or unsupported images
+
+Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+
+#### Grammaire JSON
+
+| Nom             | Type de données | Valeurs possibles                           |
+| --------------- | --------------- | ------------------------------------------- |
+| showEmptyImages | boolean         | true (par défaut), false |
+
+#### Objets pris en charge
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## Afficher les pieds de page
 
@@ -140,14 +173,13 @@ Affiche/masque les pieds de page lorsque le [mode d'affichage de la page](#view-
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showFooters|booléen|true (par défaut), false|
+| Nom         | Type de données | Valeurs possibles                           |
+| ----------- | --------------- | ------------------------------------------- |
+| showFooters | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -159,14 +191,13 @@ Lorsqu'elle est activée, la barre de formule est visible sous l'interface de la
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- withFormulaBar|booléen|true (par défaut), false|
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| withFormulaBar | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D View Pro](viewProArea_overview.md)
+[4D View Pro area](viewProArea_overview.md)
 
 ---
 
@@ -176,14 +207,13 @@ Affiche/masque les en-têtes de la page lorsque le [mode d'affichage de la page]
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showHeaders|booléen|true (par défaut), false|
+| Nom         | Type de données | Valeurs possibles                           |
+| ----------- | --------------- | ------------------------------------------- |
+| showHeaders | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -193,14 +223,13 @@ Affiche/masque les caractères visibles
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showHiddenChars|booléen|true (par défaut), false|
+| Nom             | Type de données | Valeurs possibles                           |
+| --------------- | --------------- | ------------------------------------------- |
+| showHiddenChars | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -210,14 +239,13 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showHorizontalRuler|booléen|true (par défaut), false|
+| Nom                 | Type de données | Valeurs possibles                           |
+| ------------------- | --------------- | ------------------------------------------- |
+| showHorizontalRuler | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -227,14 +255,13 @@ Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showHTMLWysiwyg|booléen|true, false (par défaut)|
+| Nom             | Type de données | Valeurs possibles                           |
+| --------------- | --------------- | ------------------------------------------- |
+| showHTMLWysiwyg | boolean         | true, false (par défaut) |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -244,14 +271,13 @@ Affiche/masque le cadre de la page lorsque le [mode d'affichage de la page](#vie
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showPageFrames|booléen|true, false|
+| Nom            | Type de données | Valeurs possibles |
+| -------------- | --------------- | ----------------- |
+| showPageFrames | boolean         | true, false       |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -271,14 +297,13 @@ Lorsque la propriété Afficher les références est activée, la référence s'
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showReferences|booléen|true, false (par défaut)|
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| showReferences | boolean         | true, false (par défaut) |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -288,14 +313,13 @@ Affiche/masque la règle verticale lorsque la vue du document est en mode [Page]
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- showVerticalRuler|booléen|true (par défaut), false|
+| Nom               | Type de données | Valeurs possibles                           |
+| ----------------- | --------------- | ------------------------------------------- |
+| showVerticalRuler | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -307,14 +331,13 @@ Lorsque des onglets sont affichés avec une direction personnalisée sous Window
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- labelsPlacement|booléen|"top", "bottom" |
+| Nom             | Type de données | Valeurs possibles |
+| --------------- | --------------- | ----------------- |
+| labelsPlacement | text            | "top", "bottom"   |
 
 #### Objets pris en charge
 
-[Onglets](tabControl.md)
+[Tab Control](tabControl.md)
 
 ---
 
@@ -324,18 +347,17 @@ Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utili
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- userInterface|texte|"none" (par défaut), "ribbon", "toolbar" |
+| Nom           | Type de données | Valeurs possibles                                           |
+| ------------- | --------------- | ----------------------------------------------------------- |
+| userInterface | text            | "none" (par défaut), "ribbon", "toolbar" |
 
 #### Objets pris en charge
 
-[Zone 4D View Pro](viewProArea_overview.md)
+[4D View Pro area](viewProArea_overview.md)
 
 #### Voir également
 
-[guide de référence 4D View Pro](../ViewPro/getting-started.md)
+[Guide de référence 4D View Pro](../ViewPro/getting-started.md)
 
 ---
 
@@ -345,11 +367,11 @@ Un outil d'interface permettant à l'utilisateur de déplacer la zone de visuali
 
 Valeurs disponibles :
 
-| Liste de propriétés | Valeur JSON | Description                                                                                                                                                                       |
-| ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Liste de propriétés | Valeur JSON | Description                                                                                                                                                                                                          |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Oui                 | "visible"   | La barre de défilement est toujours visible, même lorsqu'elle n'est pas nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est inférieure à celle du cadre). |
-| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                       |
-| Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est supérieure à celle du cadre)          |
+| Non                 | "hidden"    | La barre de défilement n'est jamais visible                                                                                                                                                                          |
+| Automatique         | "automatic" | La barre de défilement apparaît automatiquement chaque fois que nécessaire (en d'autres termes, lorsque la taille du contenu de l'objet est supérieure à celle du cadre)                          |
 
 > Les objets image peuvent avoir des barres de défilement lorsque le format d'affichage de l'image est défini sur "Tronqué (non centré)"
 
@@ -363,7 +385,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -377,20 +399,19 @@ Définit le mode d'affichage du document 4D Write Pro dans la zone de formulaire
 
 - **Page** : le mode d'affichage le plus complet, qui comprend les contours de page, l'orientation, les marges, les sauts de page, les en-têtes et pieds de page, etc.
 - **Brouillon** : mode brouillon avec propriétés de base du document
-- **Embedded** : mode d'affichage adapté aux zones intégrées; il n'affiche pas les marges, les pieds de page, les en-têtes, les cadres, etc. Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également la [résolution de 96 dpi](#resolution) et les propriétés [Afficher HTML WYSIWYG](#show-html-wysiwyg)).
+- **Embedded** : mode d'affichage adapté aux zones intégrées; il n'affiche pas les marges, les pieds de page, les en-têtes, les cadres, etc. Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également les propriétés [résolution 96 dpi](#resolution) et [Montrer HTML WYSIWYG](#show-html-wysiwyg)).
 
 > La propriété Mode d'affichage est utilisée uniquement pour le rendu à l'écran. Concernant les paramètres d'impression, des règles de rendu spécifiques sont automatiquement utilisées.
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- layoutMode|texte|"page", "draft", "embedded"|
+| Nom        | Type de données | Valeurs possibles           |
+| ---------- | --------------- | --------------------------- |
+| layoutMode | text            | "page", "draft", "embedded" |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)
 
 ---
 
@@ -400,11 +421,10 @@ Définit le pourcentage de zoom pour l'affichage du contenu de la zone 4D Write 
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles |
-| --- | --------------- | ----------------- |
-|     |                 |                   |
- zoom|numérique|minimum = 0 |
+| Nom  | Type de données | Valeurs possibles |
+| ---- | --------------- | ----------------- |
+| zoom | number          | minimum = 0       |
 
 #### Objets pris en charge
 
-[Zone 4D Write Pro](writeProArea_overview.md)
+[4D Write Pro area](writeProArea_overview.md)

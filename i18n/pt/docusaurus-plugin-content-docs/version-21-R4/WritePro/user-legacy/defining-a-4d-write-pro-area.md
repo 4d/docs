@@ -11,7 +11,7 @@ slug: /WritePro/configuring-4d-write-pro-areas
 
 Para configurar as propriedades arrastar e soltar para suas áreas 4D Write Pro, é necessário seleciar as opções apropriadas no tema "Action" na lista de Propriedades:
 
-![](../../assets/en/WritePro/pict4101267.pt.png)
+![](../../assets/en/WritePro/pict4101267.en.png)
 
 Áreas 4D Write Pro suporta dois modos arrastar e soltar:
 
@@ -26,7 +26,7 @@ Neste modo, pode automativamente mover ou copiar (aperte a tecla **Alt/Option**)
 
 As propriedades de vista do documento estão diretamennte disponíveis na lista Propriedades das áreas 4D Write pro para permitier que defina como um documento 4D Write será exibido como padrão nesta área. Estas propriedades permitem que personalise, por exemplo, se os documentos 4D Write Pro são exibidos da mesma maneira que serão impressos, ou como gerados pelo navegador. Pode estabelecer diferentes vistas do mesmo documento 4D Write Pro no mesmo formulário.
 
-**Nota:** Configurações de Vista podem ser gerenciadas dinamicamente usando os comandos [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) e [WP Get view properties](../commands/wp-get-view-properties).
+**Nota:** Configurações de Vista podem ser gerenciadas dinamicamente usando os comandos [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) e [WP Get view properties](./commands/wp-get-view-properties).
 
 Configurações de vista de documento são gerenciadas através de itens específicos no tema **Aparência** da lista de propriedades de objetos de formulário 4D Write Pro.:
 
@@ -56,6 +56,7 @@ Se marcar a opção **Mostrar referências**, a referência é exibida:
 * **Mostrar régua vertical**: mostra/oculta a régua vertical quando o documento estiver em modo Página. Para saber mais sobre as réguas nas áreas 4D Write Pro, consulte *Manejar réguas*.
 * Mostrar imágens vaziaws ou não compatíveis: mostra/oculta um retângulo negro para s imagens que não podem ser carregadas ou calculadas (imagens vazias ou em um formato não compatível). Para saber mais veja *Imagens vazias*.
 * Mostrar a fonte da fórmula como símbolo: mostra o texto fonte das formulas como ![](../../assets/en/WritePro/icon-f.png) símbolos quando as expressões são mostradas como referencias (ver acima). Mostrar as fórmulas como símbolos faz com que os documentos de modelo sejam mais compactos e mais wysiwyg.
+* **Mostrar bordas de tabela**: Exibe bordas internas e externas de tabelas como linhas pontilhadas quando essas bordas são parcial ou totalmente invisíveis. Isso facilita o layout da página (mais acessível, redimensionamento mais visual) e a entrada de dados (conveniente no caso de células mescladas, por exemplo). Veja também [este post no blog](https://blog.4d.com/4d-write-pro-make-hidden-table-borders-visible-temporarily/).
 
 
 ## Menu contextual 
@@ -81,7 +82,5 @@ O modo de visualização pode ser configurardo utilizando a área de menu pop-up
 
 **Nota:** o modo de visualização da página não são armazenadas com o documento.
 
-Para áreas embebidas em formulários 4D, o modo vista pode ser também definido como padrão usando a lista Propriedades. Neste caso, o modo de vista é armazenado como uma propriedade do objeto de formulário 4D Write Pro (para saber mais, veja o parágrafo *Configurar propriedades de Vista*). 
-
-
+Para áreas embebidas em formulários 4D, o modo vista pode ser também definido como padrão usando a lista Propriedades. Neste caso, o modo de vista é armazenado como uma propriedade do objeto de formulário 4D Write Pro (para saber mais, veja o parágrafo *Configurar propriedades de Vista*).
 

@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-set-view-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( {* ;} *wpArea* : Text, Object ; *wpViewProps* : Object )<!-- END REF-->
+<!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( * ; *wpArea* : Text ; *wpViewProps* : Object )<br/>**WP SET VIEW PROPERTIES** ( *wpArea* : Variable, Field ; *wpViewProps* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
 <div class="no-index">
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | * | Operador | &#8594;  | Se especificado, wpArea é um nome de objeto formulário (string). Se omitido, wpArea é um campo objeto ou variável (documento) |
-| wpArea | Text, Object | &#8594;  | Nome objeto formulário (se * for especificado) ou viarável ou campo objeto 4D Wriote Pro (se * for omitido) |
+| wpArea | Text, Variable, Field | &#8594;  | Nome objeto formulário (se * for especificado) ou viarável ou campo objeto 4D Wriote Pro (se * for omitido) |
 | wpViewProps | Object | &#8594;  | Propriedades de vista a modificar |
 </div>
 <!-- END REF-->
@@ -42,12 +42,13 @@ Em *wpViewProps*, passe um objeto no qual cada propriedade seja uma propriedad v
 | wk visible HTML WYSIWYG      | htmlWYSIWIGEnabled     | Ativa a visão HTML WYSIWYG Valores possíveis: True/False                                                                                                                                                                                                                                                                                                                                                                           |
 | wk visible page frames       | visiblePageFrames      | Exibe a frame da página (efeitos visíveis apenas no modo Página). Valores possíveis: True/False                                                                                                                                                                                                                                                                                                                                    |
 | wk visible references        | visibleReferences      | Exibe todas as expressões 4D inseridas no documento como referência. Valores possíveis: True/False                                                                                                                                                                                                                                                                                                                                 |
+| wk visible table borders     | visibleTableBorders    | Exibe bordas internas e externas de tabelas como linhas pontilhadas quando essas bordas são parcial ou totalmente invisíveis. Valores possíveis: True/False                                                                                                                                                                                                                                                                         |
 | wk visible vertical ruler    | visibleVerticalRuler   | Exibe a régua vertical (efeito visível no modo Página apenas). Valores possíveis: True/False                                                                                                                                                                                                                                                                                                                                       |
 | wk zoom                      | zoom                   | Porcentagem de Zoom para exibir os conteúdos da área 4D Write Pro. Valores possíveis: Número maior que 1                                                                                                                                                                                                                                                                                                                           |
 
 Todas as propriedades podem ser modificadas a qualqueer momento, mas algumas só são levadas em consideração se for usado um modo de compatível com 4D Write Pro. Portanto, mesmo se modificar uma propriedade de vista, é possível que não tenha um efeito visível no modo de visualização atual.
 
-**Nota:** para mais informação sobre as propriedades vista, consulte a página *Criar uma área 4D Write Pro*. 
+**Nota:** para mais informação sobre as propriedades vista, consulte a seção [Propriedades de Vista](../configuring-4d-write-pro-areas#view-properties). 
 
 Quando tiver estabelecido as propriedades de vista para *wpArea* utilizando este comando, são aplicadas enquanto a área de formulario é usada, desde que não seja modificada por outra chamada. As modificações de propriedade não são salvadas com o documento ou o formulário
 
@@ -73,4 +74,4 @@ Se quiser definir algumas propriedades de vista para uma área 4D Write Pro:
 
 ## Ver também 
 
-[WP Get view properties](../commands/wp-get-view-properties)  
+[WP Get view properties](wp-get-view-properties.md)

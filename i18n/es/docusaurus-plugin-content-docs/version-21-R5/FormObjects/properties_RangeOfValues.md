@@ -23,15 +23,15 @@ El valor por defecto sólo puede utilizarse si el [tipo de fuente de datos](prop
 | #H    | Hora actual         |
 | #N    | Número de secuencia |
 
-Puede utilizar un número de secuencia para crear un número único para cada registro de la tabla para el archivo de datos actual. Un número de secuencia es un longint que se genera para cada nuevo registro. Los números comienzan en uno (1) y van aumentando de uno en uno. Un número de secuencia no se repite nunca, incluso si el registro al que se asigna se elimina de la tabla. Cada tabla tiene su propio contador interno de números de secuencia. Para más información, consulte el párrafo [Autoincremento](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#976029).
+Puede utilizar un número de secuencia para crear un número único para cada registro de la tabla para el archivo de datos actual. Un número de secuencia es un longint que se genera para cada nuevo registro. Los números comienzan en uno (1) y van aumentando de uno en uno. Un número de secuencia no se repite nunca, incluso si el registro al que se asigna se elimina de la tabla. Cada tabla tiene su propio contador interno de números de secuencia. Para más información, consulte el párrafo [Autoincremento](../Develop/structure-fields#autoincrement).
 
 > No hay que confundir esta propiedad con la propiedad "valores por defecto" que permite llenar una columna list box con valores estáticos.
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos                      | Valores posibles                                          |
-| ------------ | ----------------------------------- | --------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Todo valor y/o un sello: "#D", "#H", "#N" |
+| Nombre       | Tipos de datos | Valores posibles                                                                                                                        |
+| ------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | string         | Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"... |
 
 #### Objetos soportados
 

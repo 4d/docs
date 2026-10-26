@@ -9,17 +9,29 @@ title: フォームオブジェクト
 
 4D フォームでは多くのビルトイン **アクティブ** オブジェクトおよび **スタティック** オブジェクトが提供されています:
 
-- **アクティブオブジェクト** はインターフェース機能やデータベースタスクを実行します。アクティブオブジェクトの種類は、アクティブオブジェクトの種類は、 入力フィールド、コンボボックス、ドロップダウンリスト、ピクチャーボタンなど様々ですが、いずれもデータを表示したり、メモリに一時保存したり、ダイアログボックスを開く・レポートを印刷する・バックグラウンドプロセスを開始するなどの動作を実行したりします。
+- **アクティブオブジェクト** はインターフェース機能やデータベースタスクを実行します。アクティブオブジェクトの種類は、入力フィールド、コンボボックス、ドロップダウンリスト、ピクチャーボタンなど様々ですが、いずれもデータを表示したり、メモリに一時保存したり、ダイアログボックスを開く・レポートを印刷する・バックグラウンドプロセスを開始するなどの動作を実行したりします。
 - **スタティックオブジェクト** (線、枠、背景ピクチャー等) は一般的に、フォームのアピアランスやラベル、グラフィックインターフェースを設定するために使用されます。アクティブオブジェクトと異なり、スタティックオブジェクトには変数や式が割り当てられません。しかし、スタティックオブジェクトにダイナミックオブジェクトを挿入することは可能です。
-
 
 ## オブジェクトの操作
 
 4D フォームオブジェクトの追加や編集は次の方法でおこなえます:
 
-*   **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他のプロパティのうち必要なものを設定します。 詳細については [ダイナミックフォーム](https://doc.4d.com/4Dv20/4D/20/Dynamic-Forms.300-6263740.ja.html) ページを参照ください。
+- **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。次に、プロパティリストでオブジェクトのプロパティを指定します。  
+  See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.
 
-* **4D ランゲージ**: [オブジェクト(フォーム)](https://doc.4d.com/4Dv18/4D/18/Objects-Forms.201-4504342.ja.html) テーマのコマンド (`OBJECT DUPLICATE` や `OBJECT SET FONT STYLE` など) を使って、フィームオブジェクトを作成・定義することができます。
+- **4D language**: Commands from the [Objects (Forms)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html) theme such as `OBJECT DUPLICATE` or `OBJECT SET FONT STYLE` allow to create and define form objects.
 
-*   **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。フォームに配置したら、そのオブジェクトのプロパティをプロパティリストから編集できます。     
-  詳細については [フォームの作成](https://doc.4d.com/4Dv18/4D/18/Building-forms.200-4575447.ja.html) を参照ください。
+- **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 Use the [type](properties_Object.md#type) property to define the object type, then set its available properties.  See the [Dynamic Forms](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) page for information.  
+  次はボタンオブジェクトの例です:
+  ```
+  {
+  	"type": "button", 
+  	"style": "bevel", 
+  	"text": "OK", 
+  	"action": "Cancel", 
+  	"left": 60, 
+  	"top": 160, 
+  	"width": 100, 
+  	"height": 20
+  }
+  ```

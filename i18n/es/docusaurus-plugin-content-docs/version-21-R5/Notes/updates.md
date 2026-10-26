@@ -12,18 +12,29 @@ Lea [**Las novedades en 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 - Soporte de la firma de correo electrónico de S/MIME a través de las nuevas propiedades de clase [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md): [`.certificate`](../API/SMTPTransporterClass.md#certificate) o [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (suministro del certificado) y [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - Ahora puede [compilar un componente directamente desde el host](../Project/compiler.md#compile-components).
 - Soporte de formularios lista en la [renderización **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) en Windows.
+- 4D.Vector fields: [new specific icon](../Develop/field-properties.md#4dvector-class) and new [dedicated index types](../Develop/structure-indexes.md#vector-index).
+- Support of vector indexes in [`CREATE INDEX`](../commands/create-index) and [`SET INDEX`](../commands/set-index) 4D language commands.
+- Nueva función [dataClass.getIndexes()](../API/DataClassClass.md#getindexes).
+- New [`.precision` property](../API/VectorClass.md#precision) in `4D.Vector` class objects.
 - Acceso directo a la [plataforma 4D Corner](https://corner.4d.com/) desde el [gestor de dependencias](../Project/components.md#using-4d-corner).
-- New [`WebServer.quotas`](../API/WebServerClass.md#quotas) property and enhanced [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to configure [Web server quotas](../WebServer/quotas.md).
+- Nueva propiedad [`WebServer.quotas`](../API/WebServerClass.md#quotas) y clase [`4D.QuotaManager`](../API/QuotaManagerClass.md) mejorada para configurar [las cuotas del servidor web](../WebServer/quotas.md).
 - Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Soporte de [alineación vertical](../FormObjects/properties_Text.md#vertical-alignment).
-- New [`OBJECT SET PADDING`](../commands/object-set-padding) and [`OBJECT Get padding`](../commands/object-get-padding) commands to manage padding by programming.
-- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [border color](../FormObjects/properties_BackgroundAndBorder.md#border-color) and [border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) properties.
-- Acceso directo a la [plataforma 4D Corner](https://corner.4d.com/) desde el [gestor de dependencias](../Project/components.md#using-4d-corner).
-- [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes.
+- Nuevos comandos [`OBJECT SET PADDING`](../commands/object-set-padding) y [`OBJECT Get padding`](../commands/object-get-padding) para gestionar las márgenes interiores por programación.
+- New inner border design for [custom buttons](../FormObjects/button_overview.md#custom), [custom check boxes](../FormObjects/checkbox_overview.md#custom) and [custom radio buttons](../FormObjects/radio_overview.md#custom): support of [fill color](../FormObjects/properties_BackgroundAndBorder.md#background-color--fill-color) and [corner radius](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) properties; new [Border width](../FormObjects/properties_BackgroundAndBorder.md#border-width) property.
+- Support of ["System rounded" border line style](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) property for [inputs](../FormObjects/input_overview.md), compliant with macOS *Liquid glass* design. Also supported by [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) and [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) commands.
+- New ["Border color" property](../FormObjects/properties_BackgroundAndBorder.md#border-color) available for most form objects. [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) and [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) commands support a new *borderColor* parameter.
+- [Nueva preferencia **Editor de código**](../Preferences/methods.md#code-editor) para utilizar automáticamente el editor de código 4D o VS Code al crear o abrir métodos y clases 4D.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos los bugs que se han corregido en 4D 21 R5.
 
 #### Cambios de comportamiento
 
 - For consistency, the **corner radius** property has been moved from the ["Coordinates & Sizing"](../FormObjects/properties_CoordinatesAndSizing.md) to the ["Background and Border"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) section of the Property List.
+
+:::warning Default vector precision
+
+In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default](../API/VectorClass.md#4dvectornew). In previous releases, only 64-bit precision was available. If you reopen a project containing vectors created in 4D 21 R5 or later using default precision (or explicitly set to 32-bit) with an ealier version, those vectors will be empty and their values will be lost.
+
+:::
 
 ## 4D 21 R4
 

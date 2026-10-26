@@ -337,9 +337,9 @@ Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une s
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles   |
-| -------------- | --------------- | ------------------- |
-| namedSelection | string          | Nom de la sélection |
+| Nom           | Type de données | Valeurs possibles   |
+| ------------- | --------------- | ------------------- |
+| selectionName | string          | Nom de la sélection |
 
 #### Objets pris en charge
 

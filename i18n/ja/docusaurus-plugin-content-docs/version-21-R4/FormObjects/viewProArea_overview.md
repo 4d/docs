@@ -28,7 +28,7 @@ title: 4D View Pro エリア
 [表示状態](properties_Display.md#表示状態) -
 [ユーザーインターフェース](properties_Appearance.md#ユーザーインターフェース) -
 [フォーミュラバーを表示](properties_Appearance.md#フォーミュラバーを表示) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [メソッド](properties_Action.md#メソッド)
 
 ## サポートされるイベント

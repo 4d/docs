@@ -20,9 +20,9 @@ Esta opción permite configurar la visualización por defecto de 4D al inicio, c
 
 > **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
-### Creación de formularios automática
+### Creación automática de formularios
 
-> Esta opción sólo se utiliza en bases de datos binarias; se ignora en la arquitectura proyectos. Ver doc.4d.com.
+> Esta opción solo se utiliza en bases de datos binarias; se ignora en la arquitectura de proyectos. Ver doc.4d.com.
 
 ### Ventana con pestañas (sólo en macOS)
 
@@ -67,7 +67,7 @@ Hay tres opciones disponibles:
 
 ### Salir del modo Diseño al ir al modo Aplicación
 
-Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación utilizando el comando de menú **Probar la aplicación**, se cierran todas las ventanas del entorno Diseño. Si esta opción no está marcada (configuración de fábrica), las ventanas del entorno Diseño permanecen visibles al fondo del entorno Aplicación.
+Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación utilizando el comando de menú **Probar la aplicación**, se cierran todas las ventanas del entorno Diseño. Si esta opción no está marcada (configuración de fábrica), las ventanas del entorno Diseño permanecen visibles en segundo plano del entorno Aplicación.
 
 ### Activar la creación de bases de datos binarias
 
@@ -124,26 +124,26 @@ Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en
 
 La [documentación oficial de git](https://git-scm.com/docs/gitignore) es un gran recurso para entender cómo funcionan los archivos `.gitignore`.
 
-### Lenguaje de comparación de texto
+### Idioma de comparación de texto
 
-Este parámetro permite definir el lenguaje utilizado por defecto utilizado para el procesamiento y la comparación de cadenas de caracteres en las nuevas bases. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto (configuración de fábrica), 4D utiliza el idioma actual del usuario definido en el sistema.
+Este parámetro permite definir el idioma utilizado por defecto utilizado para el procesamiento y la comparación de cadenas de caracteres en las nuevas bases. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto (configuración de fábrica), 4D utiliza el idioma actual del usuario definido en el sistema.
 
-Una base 4D puede funcionar en un lenguaje distinto al del sistema. Cuando se abre una base, el motor de 4D detecta el lenguaje utilizado por el fichero de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las realiza el motor de la base de datos o el lenguaje, se hacen en el mismo lenguaje.
+Una base 4D puede funcionar en un idioma distinto al del sistema. Cuando se abre una base, el motor de 4D detecta el lenguaje utilizado por el fichero de datos y lo pasa al lenguaje (modo interpretado o compilado). Las comparaciones de texto, independientemente de si las realiza el motor de la base de datos o el lenguaje, se hacen en el mismo idioma.
 
 Al crear un nuevo archivo de datos, 4D utiliza el idioma previamente configurado en este menú. Al abrir un archivo de datos que no está en el mismo idioma que la estructura, se utiliza el idioma del archivo de datos y el código del idioma se copia en la estructura.
 
 > Puede modificar este parámetro para la base abierta utilizando la Configuración de la base (ver [Comparación de textos](../settings/database.md#text-comparison)).
 
-## Ubicación de la documentation
+## Ubicación de la documentación
 
 Esta área configura el acceso a la documentación HTML de 4D mostrada en su navegador actual:
 
 - Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
 - Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
-### Lenguaje de la documentación
+### Idioma de la documentación
 
-Idioma de la documentación HTML a mostrar. Puede seleccionar una documentación en un idioma distinto del idioma de la aplicación.
+Idioma de la documentación HTML que se va a mostrar. Puede seleccionar una documentación en un idioma distinto del idioma de la aplicación.
 
 ### Primero buscar en la carpeta local
 

@@ -1,12 +1,9 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
-
- 
 Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
-
 
 ## Descripción
 
@@ -26,7 +23,6 @@ Un filtro más compejo se compone de los siguientes elementos, que unen dos cons
 
 **\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
-
 Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `salary` son atributos de la clase de datos Employee.
 
 ### Utilizar la propiedad params
@@ -37,17 +33,13 @@ También puede utilizar la propiedad params de 4D.
 
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
-Para más información sobre cómo consultar los datos en 4D, consulte la [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentación.
-
-
-
+Para más información sobre cómo consultar datos en 4D, consulte la documentación de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
 
 :::note
 
-No está permitido el uso de la instrucción `eval()` en las consultas REST (y, por lo tanto, en las consultas [a datastores remotos](../ORDA/remoteDatastores.md)).
+El uso de la instrucción `eval()` no está permitido en consultas REST (y por lo tanto en las consultas a un [datastore remoto](../ORDA/remoteDatastores.md)).
 
 :::
-
 
 :::note
 
@@ -56,7 +48,7 @@ Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su c�
 - Comillas ('): \u0027
 - Comillas dobles ("): \u0022
 
-Por ejemplo, se puede escribir lo siguiente al pasar un valor con una comilla cuando se utiliza la propiedad *params*:<  
+Por ejemplo, puede escribir lo siguiente al pasar un valor con comillas cuando utilice la propiedad \*params  
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 
 Si pasa el valor directamente, puede escribir lo siguiente:  
@@ -80,21 +72,21 @@ También puede consultar los atributos de tipo Object utilizando la anotación d
 
 Puede buscar en el objeto escribiendo lo siguiente:
 
-`GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
+` GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## Comparador
 
 El comparador debe ser uno de los siguientes valores:
 
-| Comparador | Descripción       |
-| ---------- | ----------------- |
-| =          | igual a           |
-| !=         | diferente de      |
-| >          | mayor que         |
-| >=         | mayor o igual que |
-| <          | menor que         |
-| <=         | menor o igual que |
-| begin      | comienza con      |
+| Comparador                  | Descripción       |
+| --------------------------- | ----------------- |
+| =                           | igual a           |
+| !=                          | diferente de      |
+| >                           | mayor que         |
+| > =                         | mayor o igual que |
+| <  | menor que         |
+| <= | menor o igual que |
+| begin                       | comienza con      |
 
 ## Ejemplos
 

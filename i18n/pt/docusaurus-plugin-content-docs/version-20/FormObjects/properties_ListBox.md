@@ -120,7 +120,7 @@ Estas propriedades interagem da seguinte forma:
 
 *   Você pode definir uma combinação de colunas bloqueadas e estáticas de acordo com suas necessidades. Por exemplo, se você definir três colunas bloqueadas e uma coluna estática, o usuário poderá trocar as duas colunas mais à direita na área bloqueada (já que somente a primeira coluna é estática).
 
-### Número de colunas estáticas
+### Número de colunas bloqueadas
 
 Número de colunas que devem permanecer permanentemente exibidas na parte esquerda do list box, mesmo quando o usuário rolar as colunas horizontalmente.
 
@@ -135,7 +135,7 @@ Número de colunas que devem permanecer permanentemente exibidas na parte esquer
 [List Box](listbox_overview.md)
 
 
-### Número de colunas
+### Número de colunas estáticas
 
 Número de colunas que não podem ser movidas durante a execução.
 
@@ -155,16 +155,12 @@ Número de colunas que não podem ser movidas durante a execução.
 
 
 ---
-## Número de colunas trancadas
+## Número de colunas
 
-Define o número de colunas do list box.
+Define o comprimento da [coleção de colunas](#columns) do list box.
 > Você pode adicionar ou remover colunas dinamicamente por programação, usando comandos como [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) ou [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
-#### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis |
-| ----------- | ------------- | ----------------- |
-| columnCount | integer       | mínimo: 1         |
 
 #### Objectos suportados
 

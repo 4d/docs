@@ -8,7 +8,7 @@ title: エラー処理
 エラー処理は次の2つの要望に応えます:
 
 - 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
-- とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
+- 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など)を独自のインターフェースに置換できます。
 
 :::tip グッドプラクティス
 
@@ -16,13 +16,11 @@ title: エラー処理
 
 :::
 
-
 ## エラー/ステータス
 
 `entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
 ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。これらのエラーは例外を発生させ、エラー処理メソッドを介して対応する必要があります。
-
 
 ## エラー処理メソッドの実装
 
@@ -30,7 +28,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。例:
+エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例: 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -42,7 +40,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。このコマンドは汎用的なコードでとくに有用です。 エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。このコマンドは汎用的なコードでとくに有用です。 エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -76,8 +74,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 エラーが発生した場合、以下の図のように 1つのメソッドのみが呼び出されます:
 
-![エラー管理](../assets/en/Concepts/error-schema.png)
-
+![error management](../assets/en/Concepts/error-schema.png)
 
 ### メソッド内でのエラー処理
 
@@ -93,12 +90,10 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::info
 
 4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。
-::: 
 :::
 
 - [`Last errors`](https://doc.4d.com/4dv19/help/command/ja/page1799.html) コマンドは、4Dアプリケーションのカレントエラースタックに関する情報をコレクションとして返します。また、同じ情報を配列として返す [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/ja/page1015.html) コマンドを使用することもできます。
 - `Get call chain` コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。
-
 
 #### 例題
 
@@ -126,8 +121,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 ON ERR CALL("emptyMethod") // emptyMethod は空のエラー処理メソッドです
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-    ALERT("ファイルが見つかりません。
-")
+ ALERT("ファイルが見つかりません。")
 End if
 ON ERR CALL("")
 ```

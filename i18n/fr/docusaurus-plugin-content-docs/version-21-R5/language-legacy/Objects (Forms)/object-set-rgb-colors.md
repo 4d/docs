@@ -5,7 +5,7 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objet* : Text ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objet* : Variable, Field ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objet* : Text ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer {; *borderColor* : Text, Integer}}} )<br/>**OBJECT SET RGB COLORS** ( *objet* : Variable, Field ; *couleurAvantPlan* : Text, Integer {; *couleurArrièrePlan* : Text, Integer {; *couleurArrièrePlanAlt* : Text, Integer {; *borderColor* : Text, Integer}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 <div class="no-index">
 
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 | couleurAvantPlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'avant-plan ("" = ne pas changer)|
 | couleurArrièrePlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan ("" = ne pas changer)|
 | couleurArrièrePlanAlt | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan alternée ("" = ne pas changer)|
+| borderColor | Text, Integer | &#8594; | Valeur de la couleur RVB de la bordure ("" = ne pas changer)|
 </div>
 <!-- END REF-->
 
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21 R5|Prise en charge du paramètre *borderColor*|
 |17 R6|Modifié|
 |14|Modifié|
 |12|Renommé|
@@ -35,18 +37,25 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->La commande **OBJECT SET RGB COLORS** modifie les couleurs d'avant-plan et d'arrière-plan du ou des objet(s) défini(s) par le paramètre *objet* et le paramètre optionnel *\**.<!-- END REF--> Lorsque la commande est appliquée à un objet de type list box, un paramètre supplémentaire permet de modifier la couleur alternée des lignes.
+<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->La commande **OBJECT SET RGB COLORS** modifie les couleurs d'avant-plan et d'arrière-plan des objets désignés par le paramètre *objet* et le paramètre optionnel *\**.<!-- END REF--> Selon l'objet auquel la commande est appliquée, deux autres paramètres de couleur peuvent être disponibles.
 
-Si vous passez le paramètre optionnel *\**, vous spécifiez que le paramètre *objet* est le nom d'un objet (une chaîne de caractères). Si le paramètre \* est omis, vous spécifiez que *objet* est un champ ou un objet. Dans ce cas, vous ne passez pas dans *objet* une chaîne de caractères mais la référence à un champ ou à une variable (champ ou variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
+Si vous passez le paramètre optionnel *\**, vous indiquez que *objet* est un nom d'objet (une chaîne de caractères). Si vous omettez le paramètre \*, *objet* désigne un champ ou une variable. Dans ce cas, vous passez une référence de champ ou de variable (champs ou variables objet uniquement) et non une chaîne.
 
 Le paramètre facultatif *couleurArrièrePlanAlt* permet de désigner une couleur alternative pour l’arrière-plan (c’est-à-dire le fond) des lignes paires. Ce paramètre n’est utile que lorsque l’objet désigné est de type list box ou colonne de list box. Lorsque ce paramètre est utilisé, la *couleurArrièrePlan* est utilisée pour le fond des lignes impaires uniquement. Utiliser des couleurs alternées améliore la lisibilité des tableaux. Si *objet* désigne l’objet list box, les couleurs alternées sont utilisées dans la totalité de la list box. Si *objet* désigne une colonne de list box, seule cette colonne utilisera les couleurs définies.
 
-Vous pouvez passer "" (chaîne vide) dans *couleurAvantPlan*, *couleurArrièrePlan*, et/ou *couleurArrièrePlanAlt* pour laisser la couleur inchangée.
+Le paramètre facultatif *borderColor* permet de modifier la couleur de la bordure à l'exécution. Il ne peut être appliqué qu'aux objets prenant en charge la propriété `borderColor` et nécessite un style de bordure "plain" ou "dotted" (sauf pour les boutons avec un style personnalisé). Pour plus de détails, consultez la section ["Couleur de la bordure"](../../FormObjects/properties_BackgroundAndBorder.md#border-color).
 
+:::note
+
+Le paramètre *borderColor* n'est pas disponible dans les bases de données binaires.
+
+:::
+
+Vous pouvez passer "" (chaîne vide) dans *couleurAvantPlan*, *couleurArrièrePlan*, *couleurArrièrePlanAlt* et/ou *borderColor* pour laisser la couleur inchangée.
 
 **Définition des couleurs**
 
-Vous passez des valeurs de couleurs RVB dans les paramètres *couleurAvantPlan* et, éventuellement, *couleurArrièrePlan* et *couleurArrièrePlanAlt*. Les formats suivants sont pris en charge :
+Vous passez des valeurs de couleurs RVB dans les paramètres *couleurAvantPlan* et, éventuellement, *couleurArrièrePlan*, *couleurArrièrePlanAlt* et *borderColor*. Les formats suivants sont pris en charge :
 
 | **Nom du format**                      | **Type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Exemples**                                                                                                |
 | -------------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -117,6 +126,21 @@ Passage du fond en transparent avec couleur de police claire :
 
 ![](../../assets/en/commands/pict1210702.fr.png)
 
+## Exemple 3
+
+Modification de la seule couleur de bordure de la list box :
+
+![](../../assets/en/commands/set-rgb-colors.png)
+
+```4d
+    //Modifier le style de bordure en plain (system par défaut)
+OBJECT SET BORDER STYLE(*; "listOfDays"; Border Plain)
+    //Définir la couleur de bordure en rouge
+OBJECT SET RGB COLORS(*; "listOfDays"; ""; ""; ""; "#ff0000")
+```
+
+![](../../assets/en/commands/set-rgb-colors-2.png)
+
 ## Voir aussi 
 
 [OBJECT GET RGB COLORS](../commands/object-get-rgb-colors)  
@@ -128,5 +152,4 @@ Passage du fond en transparent avec couleur de police claire :
 | --- | --- |
 | Numéro de commande | 628 |
 | Thread safe | no |
-
 

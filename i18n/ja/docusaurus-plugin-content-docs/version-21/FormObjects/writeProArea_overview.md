@@ -45,7 +45,7 @@ title: 4D Write Pro エリア
 [HTML WYSIWYG 表示](properties_Appearance.md#html-wysiwyg-表示) -
 [水平ルーラーを表示](properties_Appearance.md#水平ルーラーを表示) -
 [垂直ルーラーを表示](properties_Appearance.md#垂直ルーラーを表示) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [印刷時可変](properties_Print.md#印刷時可変) -
 [メソッド](properties_Action.md#メソッド) -
 [ドラッグ有効](properties_Action.md#ドラッグ有効) -

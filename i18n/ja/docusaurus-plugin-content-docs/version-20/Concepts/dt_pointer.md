@@ -13,15 +13,14 @@ title: Pointer
 
 テーブル・フィールド・変数・配列・配列要素・オブジェクトを参照するためにポインターを使用することができます。以下の表に、各タイプの例を示します:
 
-| 型      | 参照時                     | 使用時                      | 代入時                      |
-| ------ | ----------------------- | ------------------------ | ------------------------ |
-| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
-| 変数     | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
-| 配列     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| 配列要素   | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
-
+| 型      | 参照時                                                                                         | 使用時                                         | 代入時                                         |
+| ------ | ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                                         |
+| フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"           |
+| 変数     | vpVar:=->Variable                                                           | ALERT(vpVar->)           | vpVar->:="John"             |
+| 配列     | vpArr:=->Array                                                              | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
+| 配列要素   | vpElem:=->Array{1}                                                          | ALERT (vpElem->)         | vpElem->:="John"            |
+| オブジェクト | vpObj:=->myObject                                                           | ALERT (vpObj->myProp)    | vpObj->myProp:="John"       |
 
 ## ポインターの使用例
 
@@ -30,13 +29,15 @@ title: Pointer
 ```4d
 $MyVar:="Hello"
 ```
+
 $MyVar は、文字列 "Hello" を含む変数です。 $MyVar に対するポインターを作成します:
 
 ```4d
 var $MyPointer : Pointer
 $MyPointer:=->$MyVar
 ```
-ポインター記号 (->) は、"･･･に対するポインターを求める" ことを意味します。この記号は、"ダッシュ" (-) の後に "大なり" (>) を付けて構成されます。ここでは、$MyVar を参照するポインターを取得します。このポインターは、代入演算子 (:=) で $MyPointer に対して割り当てられます。
+
+ポインター記号 (->) は、"･･･に対するポインターを求める" ことを意味します。この記号は、"ダッシュ" (-) の後に "大なり" (&#062;) を付けて構成されます。ここでは、$MyVar を参照するポインターを取得します。このポインターは、代入演算子 (:=) で $MyPointer に対して割り当てられます。
 
 $MyPointer は、$MyVar に対するポインターを格納する変数です。 $MyPointer は、"Hello" という $MyVar の値を含みませんが、その値を参照することはできます。以下の式は $MyVar の値を返します:
 
@@ -46,22 +47,27 @@ $MyPointer->
 
 前述の式は、"Hello" という文字列を返します。ポインター記号 (->) をポインターの後につけると、参照先の値を取得することができます。これをデリファレンス (参照外し) と呼びます。
 
-ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。つまり、変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
+ポインター記号 (->) を後につけたポインターは、その参照先を直接使うのと同義であることを理解することが重要です。つまり、オリジナルの変数 $MyVar を使用することと、$MyPointer-> を使用することは、まったく同じ意味になります。たとえば、以下のステートメントはアラートボックスに文字列 "Hello" を表示します:
+
 ```4d
 ALERT($MyPointer->)
 ```
 
 $MyPointer を使用して $MyVar の値を変更することもできます。下記のステートメントは、変数 $MyVar に文字列 "Goodbye" を代入します:
+
 ```4d
 $MyPointer->:="Goodbye"
 ```
+
 この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。以下の2つのステートメントも、同一の動作を実行します。 両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
+
 以下の2つのステートメントも、同一の動作を実行します。 両方とも $MyVar に、文字列 "Goodbye" を代入します:
+
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
@@ -70,6 +76,7 @@ $MyVar:="Goodbye"
 ## ポインター演算子
 
 前提:
+
 ```4d
   // vPtrA と vPtrB は同じ対象を参照します
  vPtrA:=->anObject
@@ -85,8 +92,7 @@ $MyVar:="Goodbye"
 | 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
 |     |                   |         | vPtrA # vPtrB | false |
 
-
-:::警告 Null ポインター
+:::warning Null ポインター
 
 null ポインター (別名 "nil") への代入または読み出しを試みた場合、ランタイムにおいてエラーを生成します。例:
 
@@ -106,38 +112,44 @@ End if
 
 :::
 
-
-
-
 ## ポインターの使用例
-
 
 ### テーブルへのポインター
 
 テーブルの代わりにデリファレンスしたポインターを使用することができます。以下のようなステートメントで、テーブルのポインターを作成します:
+
 ```4d
 $TablePtr:=->[anyTable]
 ```
+
 あるいは、以下のように `Table` コマンドを使用してテーブルのポインターを得ることができます:
-```4d  
+
+```4d
 $TablePtr:=Table(20)
 ```
+
 取得したポインターは、以下のようにデリファレンスしてコマンドに渡すことができます:
-```4d  
+
+```4d
 DEFAULT TABLE($TablePtr->)
 ```
+
 ### フィールドへのポインター
+
 フィールドの代わりにデリファレンスしたポインターを使用することができます。以下のようなステートメントで、フィールドのポインターを作成します:
+
 ```4d
 $FieldPtr:=->[aTable]ThisField
 ```
 
 あるいは、以下のように `Field` コマンドを使用してフィールドのポインターを得ることができます:
+
 ```4d
 $FieldPtr:=Field(1;2)
 ```
 
 取得したポインターは、以下のようにデリファレンスしてコマンドに渡すことができます:
+
 ```4d
 OBJECT SET FONT($FieldPtr->;"Arial")
 ```
@@ -152,65 +164,76 @@ OBJECT SET FONT($FieldPtr->;"Arial")
  $MyVar:="Hello world"
  Method2(->$MyVar)
 ```
+
 *Method2*:
 
 ```4d
 #DECLARE($param : Pointer)
 ...
 ```
+
 デバッガーは $param を以下のように表示します:
 
 | $param | ->$MyVar (Method1) |
-| ------ | ------------------ |
-|        |                    |
+| ------ | ------------------------------------- |
 
 $param を展開すると、その値は次のようになります:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |
-|        |               |
 
 ### 配列要素へのポインター
+
 配列要素に対するポインターを作成することができます。以下の例は配列を作成し、配列の最初の要素を指し示すポインターを変数 $ElemPtr に割り当てます:
+
 ```4d
 ARRAY REAL($anArray;10) // 配列を作成
 $ElemPtr:=->$anArray{1} // 配列要素へのポインターを作成
 ```
 
 以下のように、ポインターの参照先である配列要素に値を代入することができます:
+
 ```4d
 $ElemPtr->:=8
 ```
 
 ### 配列へのポインター
+
 配列に対するポインターを作成することができます。以下の例は配列を作成し、配列を指し示すポインターを変数 $ArrPtr に割り当てます:
+
 ```4d
 ARRAY REAL($anArray;10) // 配列を作成
 $ArrPtr:=->$anArray // 配列へのポインターを作成
 ```
+
 ポインターの参照先はあくまでも配列であり、配列要素ではないことを理解することが重要です。たとえば、デリファレンスしたポインターを以下のように使用できます:
+
 ```4d
 SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
 ```
+
 配列の4番目の要素にアクセスするのに配列のポインターを使う場合は、以下のように記述します:
+
 ```4d
  ArrPtr->{4}:=84
 ```
 
 ### メソッドの引数としてのポインター
+
 ポインターは引数としてメソッドに渡すことができます。メソッド内で、ポインターの参照先の値を変更することができます。たとえば、以下のメソッド `takeTwo` は、2つのポインターを引数として受け取ります。そして、最初の引数の参照先を大文字に変換し、2つめの引数の参照先を小文字に変換します。当該プロジェクトメソッドのコードです:
 
 ```4d
   //takeTwo プロジェクトメソッド
-  //$changeUp – 文字列フィールドまたは変数へのポインター。これを大文字に変換します。これを大文字に変換します。
-  //$changeLow – 文字列フィールドまたは変数へのポインター。これを小文字に変換します。これを小文字に変換します。
-  #DECLARE($changeUp : Pointer ; $changeLow : Pointer) 
+  //$changeUp – 文字列フィールドまたは変数へのポインター。これを大文字に変換します。
+  //$changeLow – 文字列フィールドまたは変数へのポインター。これを小文字に変換します。
+ #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
 ```
 
 以下のステートメントではメソッド `takeTwo` を使用し、フィールドの値を大文字に、変数の値を小文字に変換します:
-```  
+
+```
 takeTwo(->[myTable]myField;->$MyVar)
 ```
 
@@ -221,6 +244,7 @@ takeTwo(->[myTable]myField;->$MyVar)
 ### ポインターへのポインター
 
 より複雑な使い方として、ポインターを参照するポインターを使うことができます。以下の例を考えます:
+
 ```4d
  $MyVar:="Hello"
  $PointerOne:=->$MyVar
@@ -228,22 +252,29 @@ takeTwo(->[myTable]myField;->$MyVar)
  ($PointerTwo->)->:="Goodbye"
  ALERT(($PointerTwo->)->)
 ```
+
 この例はアラートボックスに "Goodbye" を表示します。
 
 各行について見ていきましょう:
 
 - $MyVar:="Hello" --> この行は、変数 $MyVar に文字列 "Hello" を代入しています。
-- $PointerOne:=->$MyVar --> 変数 $PointerOne に、変数 $MyVar へのポインターを代入しています。
-- $PointerTwo:=->$PointerOne --> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入しています。
-- ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。つまり、($PointerTwo->)-> は、$MyVar を示しています。結果として、文字列 "Goodbye" が $MyVar に代入されます。
-- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVar を示しています。つまり、($PointerTwo->)-> は、$MyVar を示しています。結果として、アラートボックスには $MyVar の内容が表示されます。
+- $PointerOne:=->$MyVar
+  \--> 変数 $PointerOne に、変数 $MyVar へのポインターを代入します。
+- $PointerTwo:=->$PointerOne
+  \--> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入します。
+- ($PointerTwo->)->:="Goodbye"
+  \--> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示します。つまり、($PointerTwo->)-> は、$MyVar を示しています。結果として、文字列 "Goodbye" が $MyVar に代入されます。
+- ALERT (($PointerTwo->)->)
+  \--> 先の説明と同様に $PointerTwo-> は $PointerOne の中身を示し、$PointerOne は $MyVar を示しています。つまり、($PointerTwo->)-> は、$MyVar を示しています。結果として、アラートボックスには $MyVar の内容が表示されます。
 
 以下の例では、$MyVar に "Hello" が代入されます:
+
 ```4d
 ($PointerTwo->)->:="Hello"
 ```
 
 以下のステートメントは、$NewVar に $MyVar の値である "Hello" が代入されます:
+
 ```
 $NewVar:=($PointerTwo->)->
 ```

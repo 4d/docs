@@ -3,9 +3,7 @@ id: ordaClasses
 title: Clases del modelo de datos
 ---
 
-
-
-ORDA permite crear funciones de clase de alto nivel arriba del [modelo de datos](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
+ORDA permite crear funciones de clase de alto nivel sobre el [modelo de datos](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
@@ -26,13 +24,11 @@ Gracias a esta funcionalidad, toda la lógica de negocio de su aplicación 4D pu
 
 - Si la estructura física evoluciona, basta con adaptar el código de las funciones y las aplicaciones cliente seguirán llamándolas de forma transparente.
 
-- Por defecto, todas las funciones de clase de su modelo de datos (incluidas las [funciones de atributo calculado](#computed-attributes-1)) y los [atributos alias](#alias-attributes-1) **no se exponen** a aplicaciones remotas y no se pueden llamar desde solicitudes REST. Debe declarar explícitamente cada función pública y alias con la palabra clave [`exposed`](#exposed-vs-non-exposed-functions).
+- Los atributos alias de ORDA por defecto son **no expuestos**. Debe añadir la palabra clave [`exposed`](#exposed-vs-non-exposed-functions) antes de la palabra clave `Alias` si desea que el alias esté disponible para peticiones remotas.
 
 ![](../assets/en/ORDA/api.png)
 
-
 Además, 4D [precrea automáticamente](#creating-classes) las clases para cada objeto del modelo de datos disponible.
-
 
 ## Arquitectura
 
@@ -42,12 +38,12 @@ ORDA ofrece **clases genéricas** expuestas a través del [class store](Concepts
 
 Todas las clases de modelo de datos ORDA se exponen como propiedades del class store **`cs`**. Las clases ORDA siguientes están disponibles:
 
-| Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | comando [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
-| cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
+| Class                                                                                 | Nombre del ejemplo                   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cs.DataStore                                                          | cs.DataStore         | comando [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| cs.*DataClassName*                                                    | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
+| cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
 > Las clases usuario ORDA se almacenan como archivos de clase estándar (.4dm) en la subcarpeta Classes del proyecto [(ver más abajo)](#class-files).
 
@@ -58,22 +54,19 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 - un objeto de clase Entity selection puede llamar las funciones de la [clase genérica ORDA Entity selection](API/EntitySelectionClass.md).
 - un objeto de clase Entity puede llamar las funciones de la [clase genérica ORDA Entity](API/EntityClass.md).
 
-
-
 ## Descripción de la clase
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                                                                              |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 19 R4       | Atributos alias en la Entity Class                                                                                          |
-| 19 R3       | Atributos calculados en la Entity Class                                                                                     |
+| Lanzamiento | Modificaciones                                                                                                                                              |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 19 R4       | Atributos alias en la Entity Class                                                                                                                          |
+| 19 R3       | Atributos calculados en la Entity Class                                                                                                                     |
 | 18 R5       | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
+
 </details>
 
-
 ### Clase DataStore
-
 
 Una base de datos 4D expone su propia clase DataStore en el class store `cs`.
 
@@ -84,7 +77,7 @@ Puede crear funciones en la clase DataStore que estarán disponibles a través d
 
 #### Ejemplo
 
-```4d  
+```4d
 // cs.DataStore class
 
 Class extends DataStoreImplementation
@@ -93,14 +86,11 @@ Function getDesc
   $0:="Database exposing employees and their companies"
 ```
 
-
 Esta función puede ser llamada:
 
 ```4d
 $desc:=ds.getDesc() //"Database exposing..."
 ```
-
-
 
 ### Clase DataClass
 
@@ -109,8 +99,6 @@ Cada tabla expuesta con ORDA ofrece una clase DataClass en el class store `cs`.
 - **Extends**: 4D.DataClass
 - **Nombre de clase**: cs.*DataClassName* (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.Employee
-
-
 
 #### Ejemplo
 
@@ -124,24 +112,18 @@ Class extends DataClass
 // Devuelve una selección de entidades relacionadas con la clase de datos Company
 
 Function GetBestOnes()
-    $sel:=This.query("ingresos >= :1";This.all().average("ingresos"));
-    $0:=$sel
+$sel:=This.query("revenues >= :1";This.all().average("revenues"));
+	$0:=$sel
 ```
 
 A continuación, puede obtener una selección de entidades de las "mejores" empresas ejecutando:
 
-
-
-
-
-
 ```4d
-    var $best : cs.CompanySelection
-    $best:=ds.Company.GetBestOnes()
+	var $best : cs.CompanySelection
+	$best:=ds.Company.GetBestOnes()
 ```
 
 > [Los atributos calculados](#computed-attributes) se definen en [la clase Entity](#entity-class).
-
 
 #### Ejemplo con un datastore remoto
 
@@ -151,23 +133,23 @@ El catálogo *City* siguiente está expuesto en un datastore remoto (vista parci
 
 La clase `City` ofrece una API:
 
-```4d  
-// cs.City class
+```4d
+// clase cs.City 
 
 Class extends DataClass
 
 Function getCityName()
-    var $1; $zipcode : Integer
-    var $zip : 4D.Entity
-    var $0 : Text
+	var $1; $zipcode : Integer
+	var $zip : 4D.Entity
+	var $0 : Text
 
-    $zipcode:=$1
-    $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+	$zipcode:=$1
+	$zip:=ds.ZipCode.get($zipcode)
+	$0:="" 
 
-    If ($zip#Null)
-        $0:=$zip.city.name
-    End if
+	If ($zip#Null)
+		$0:=$zip.city.name
+	End if
 ```
 
 La aplicación cliente abre una sesión en el datastore remoto:
@@ -183,29 +165,27 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ```
 
-
 ### Clase EntitySelection
 
 Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store `cs`.
 
 - **Extends**: 4D.EntitySelection
-- **Nombre de clase**: *DataClassName*Selection (donde *DataClassName* es el nombre de la tabla)
+- **Nombre de clase**: _DataClassName_Selection (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.EmployeeSelection
-
 
 #### Ejemplo
 
 ```4d
-// Clase cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Clase extends EntitySelection
+Class extends EntitySelection
 
-//Extrae de esta selección de entidades los empleados con un salario superior a la media  
+//Extract the employees with a salary greater than the average from this entity selection 
 
 Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+	C_OBJECT($0)
+	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -220,7 +200,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 
 - **Extends**: 4D.Entity
-- **Nombre de clase**: *DataClassName*Entity (donde *DataClassName* es el nombre de la tabla)
+- **Nombre de clase**: _DataClassName_Entity (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.CityEntity
 
 #### Atributos calculados
@@ -242,7 +222,6 @@ Las clases Entity permiten definir **atributos alias**, normalmente sobre atribu
 
 Para más información, consulte la sección [Atributos alias](#alias-attributes-1).
 
-
 #### Ejemplo
 
 ```4d
@@ -255,7 +234,7 @@ Function getPopulation()
 
 
 Function isBigCity(): Boolean
-// La función getPopulation() es utilizable e la clase
+// The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
@@ -268,7 +247,7 @@ $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManage
 $city:=$cityManager.City.getCity("Caguas")
 
 If ($city.isBigCity())
-    ALERT($city.name + " is a big city")
+	ALERT($city.name + " is a big city")
 End if
 ```
 
@@ -277,15 +256,14 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
-    - No dé el mismo nombre a una tabla 4D y a un [nombre de clase de usuario](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
-    - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
-- Cuando defina una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) corresponda exactamente al nombre de la clase padre (recuerde que es sensible a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
+- Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar uno de los métodos estándar listados en la columna [`Instanciado por` de la tabla de las clases ORDA](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar un método regular como se muestra en la [columna `Instantiated by` de la tabla de clases ORDA](#architecture).
 
 - No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
-
 
 ### Ejecución apropiativa
 
@@ -296,9 +274,7 @@ Cuando se compilan, las funciones de clase del modelo de datos se ejecutan:
 
 Si su proyecto está diseñado para ejecutarse en cliente/servidor, asegúrese de que el código de la función de clase del modelo de datos es hilo seguro. Si se llama un código thread-unsafe, se lanzará un error en tiempo de ejecución (no se lanzará ningún error al momento de la compilación ya que la ejecución cooperativa está soportada en las aplicaciones monopuesto).
 
-
 ## Atributos calculados
-
 
 ### Generalidades
 
@@ -310,21 +286,19 @@ Un atributo calculado también puede implementar una función `set`, que se ejec
 
 Al igual que los atributos de almacenamiento, los atributos calculados pueden incluirse en **búsquedas**. Por defecto, cuando se utiliza un atributo calculado en una búsqueda ORDA, el atributo se calcula una vez por entidad examinada. En algunos casos esto es suficiente. Sin embargo, para un mejor rendimiento, especialmente en cliente/servidor, los atributos calculados pueden implementar una función `query` que se basa en los atributos reales de la clase de datos y se beneficia de sus índices.
 
-Del mismo modo, los atributos calculados pueden incluirse en **ordenaciones**. Cuando se utiliza un atributo calculado en una ordenación ORDA, el atributo se calcula una vez por entidad examinada. Al igual que en las búsquedas, los atributos calculados pueden implementar una función `orderBy` que sustituya a otros atributos durante la ordenación, aumentando así el rendimiento.
-
+Del mismo modo, los atributos calculados pueden incluirse en **ordenaciones**. Cuando se utiliza un atributo calculado en una ordenación ORDA, el atributo se calcula una vez por entidad examinada. Cuando se utiliza un atributo calculado en una ordenación ORDA, el atributo se calcula una vez por entidad examinada.
 
 ### Cómo definir los atributos calculados
 
-Se crea un atributo calculado definiendo un accesor `get` en la [**clase entity **](#entity-class) de la dataclass. El atributo calculado estará disponible automáticamente en los atributos de la dataclass y en los atributos de la entidad.
+Se crea un atributo calculado definiendo un accesor `get` en la [**clase entity**](#entity-class) de la dataclass. El atributo calculado estará disponible automáticamente en los atributos de la dataclass y en los atributos de la entidad.
 
 También pueden definirse en la clase entity otras funciones de atributos calculados (`set`, `query` y `orderBy`). Son opcionales.
 
 Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#this) designa la entidad. Los atributos calculados pueden utilizarse y manejarse como cualquier atributo de dataclass, es decir, serán procesados por las funciones de [clase entity](API/EntityClass.md) o [clase entity selection](API/EntitySelectionClass.md).
 
-> Los atributos calculados de ORDA no son [**expuestos**](#exposed-vs-non-exposed-functions) por defecto. Para exponer un atributo calculado, añada la palabra clave `exposed` a la definición de la función **get **.
+> Los atributos calculados ORDA no están [**expuestos**](#exposed-vs-non-exposed-functions) por defecto. Para exponer un atributo calculado, añada la palabra clave `exposed` a la definición de la función \*\*get \*\*.
 
 > **Las funciones get y set** pueden tener la propiedad [**local**](#local-functions) para optimizar el procesamiento cliente/servidor.
-
 
 ### `Function get <attributeName>`
 
@@ -334,6 +308,7 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
+
 La función *getter* es obligatoria para declarar el atributo calculado *attributeName*. Cada vez que se accede al atributo *attributeName*, 4D evalúa el código `Function get` y devuelve el valor *$result*.
 
 > Un atributo calculado puede utilizar el valor de otro(s) atributo(s) calculado(s). Las llamadas recursivas generan errores.
@@ -349,13 +324,12 @@ La función *getter* define el tipo de datos del atributo calculado gracias al p
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                                  |
-| ------------- | ------- | -------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                                 |
-| dataClassName | Text    | Nombre de la clase de datos                                                                  |
-| kind          | Text    | "get"                                                                                        |
+| Propiedad     | Tipo    | Descripción                                                                                                  |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| attributeName | Text    | Nombre de atributo calculado                                                                                 |
+| dataClassName | Text    | Nombre de la clase de datos                                                                                  |
+| kind          | Text    | "get"                                                                                                        |
 | resultado     | Variant | Opcional. Añada esta propiedad con valor Null si desea que un atributo escalar devuelva Null |
-
 
 #### Ejemplos
 
@@ -364,24 +338,24 @@ El parámetro *$event* contiene las siguientes propiedades:
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
-  Case of   
-    : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null //use result to return Null
-    : (This.firstName=Null)
-        $fullName:=This.lastName
-    : (This.lastName=Null)
-        $fullName:=This.firstName
-    Else 
-        $fullName:=This.firstName+" "+This.lastName
-    End case 
+  Case of 	
+	: (This.firstName=Null) & (This.lastName=Null)
+		$event.result:=Null //use result to return Null
+	: (This.firstName=Null)
+		$fullName:=This.lastName
+	: (This.lastName=Null)
+		$fullName:=This.firstName
+	Else 
+		$fullName:=This.firstName+" "+This.lastName
+	End case 
 ```
 
 - Un atributo calculado puede basarse en un atributo relativo a una entidad:
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
-    $result:=This.manager.manager
-
+	$result:=This.manager.manager
+    
 ```
 
 - Un atributo calculado puede basarse en un atributo relacionado con una entity selection:
@@ -396,7 +370,6 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 ```
 
 ### `Function set <attributeName>`
-
 
 #### Sintaxis
 
@@ -423,13 +396,11 @@ El parámetro *$event* contiene las siguientes propiedades:
 
 ```4d
 Function set fullName($value : Text; $event : Object)
-    var $p : Integer
-    $p:=Position(" "; $value)       
-    This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
-    This.lastname:=Substring($value; $p+1)
+	var $p : Integer
+    $p:=Position(" "; $value) 		
+	This.firstname:=Substring($value; 1; $p-1)  // "" if $p<0
+	This.lastname:=Substring($value; $p+1)
 ```
-
-
 
 ### `Function query <attributeName>`
 
@@ -446,28 +417,32 @@ Esta función soporta tres sintaxis:
 
 - Con la primera sintaxis, se maneja toda la consulta a través de la propiedad del objeto `$event.result`.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
-    - Si *$result* es un texto, debe ser una cadena de consulta válida
-    - Si *$result* es un Objeto, debe contener dos propiedades:
 
-    | Propiedad          | Tipo       | Descripción                                                         |
-    | ------------------ | ---------- | ------------------------------------------------------------------- |
-    | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
-    | $result.parameters | Collection | valores para marcadores                                             |
+  - Si *$result* es un texto, debe ser una cadena de consulta válida
+  - Si *$result* es un Objeto, debe contener dos propiedades:
+
+  | Propiedad                          | Tipo       | Descripción                                                                                                                            |
+  | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
+  | $result.parameters | Collection | valores para marcadores                                                                                                                |
 
 La función `query` se ejecuta cada vez que se lanza una consulta que utiliza el atributo calculado. Resulta útil personalizar y optimizar las consultas basándose en los atributos indexados. Cuando la función `query` no está implementada para un atributo calculado, la búsqueda es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
 
-> The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
+> No se soportan las siguientes funcionalidades:
+>
+> - llamar a una función `query` en los atributos calculados de tipo Entity o Entity selection,
+> - utilizando la palabra clave `order by` en la cadena de consulta resultante.
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                                |
-| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                 |
-| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                     |
-| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                    |
-| operator      | Text    | Operador de consulta (ver también la función de clase [`query`](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (igual a, @ no es comodín)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (mayor o igual que)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
-| resultado     | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                            |
+| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| operator      | Text    | Operador de búsqueda (ver también la [función de clase `query`](API/DataClassClass.md#query)). Valores posibles:<li>== (igual a, @ es un comodín)</li><li>=== (igual a, @ no es un comodín)</li><li>!= (no igual a, @ es un comodín)</li><li>!== (no igual a, @ no es un comodín)</li><li>< (menor que)</li><li><= (menor que o igual a)</li><li>> (mayor que)</li><li>>= (mayor que o igual a)</li><li>IN (incluido en)</li><li>% (contiene la palabra clave)</li> |
+| resultado     | Variant | Valor a tratar por el atributo calculado. Pase `Null` en esta propiedad si desea que 4D ejecute la consulta por defecto (siempre secuencialmente para los atributos calculados).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 > Si la función devuelve un valor en *$result* y se asigna otro valor a la propiedad `$event.result`, se da prioridad a `$event.result`.
 
@@ -478,43 +453,43 @@ El parámetro *$event* contiene las siguientes propiedades:
 ```4d
 Function query fullName($event : Object)->$result : Object
 
-    var $fullname; $firstname; $lastname; $query : Text
-    var $operator : Text
-    var $p : Integer
-    var $parameters : Collection
+	var $fullname; $firstname; $lastname; $query : Text
+	var $operator : Text
+	var $p : Integer
+	var $parameters : Collection
 
-    $operator:=$event.operator
-    $fullname:=$event.value
+	$operator:=$event.operator
+	$fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
-    If ($p>0)
-        $firstname:=Substring($fullname; 1; $p-1)+"@"
-        $lastname:=Substring($fullname; $p+1)+"@"
-        $parameters:=New collection($firstname; $lastname) //colección de dos elementos
-    Else 
-        $fullname:=$fullname+"@"
-        $parameters:=New collection($fullname) // colección de un solo elemento
-    End if 
+	$p:=Position(" "; $fullname) 
+	If ($p>0)
+		$firstname:=Substring($fullname; 1; $p-1)+"@"
+		$lastname:=Substring($fullname; $p+1)+"@"
+		$parameters:=New collection($firstname; $lastname) // two items collection
+	Else 
+		$fullname:=$fullname+"@"
+		$parameters:=New collection($fullname) // single item collection
+	End if 
 
-    Case of 
-    : ($operator="==") | ($operator="===")
-        If ($p>0)
-            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
-            $query:="firstName = :1 or lastName = :1"
-        End if 
-    : ($operator="!=")
-        If ($p>0)
-            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
-            $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+	Case of 
+	: ($operator="==") | ($operator="===")
+		If ($p>0)
+			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+		Else 
+			$query:="firstName = :1 or lastName = :1"
+		End if 
+	: ($operator="!=")
+		If ($p>0)
+			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+		Else 
+			$query:="firstName != :1 and lastName != :1"
+		End if 
+	End case 
 
-    $result:=New object("query"; $query; "parameters"; $parameters)
+	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
-> Tenga en cuenta que, por motivos de seguridad, se recomienda utilizar marcadores de posición en las consultas basadas en la introducción de texto por parte del usuario (consulte la descripción de [`query()`](API/DataClassClass.md#query)).
+> Ten en cuenta que el uso de marcadores de posición en consultas basadas en la entrada de texto del usuario es recomendado por razones de seguridad (ver la [descripción de `query()`](API/DataClassClass.md#query)).
 
 Código de llamada, por ejemplo:
 
@@ -525,15 +500,42 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 - Esta función gestiona las consultas sobre el atributo calculado *age* y devuelve un objeto con parámetros:
 
 ```4d
-Class extends Entity
+Function query age($event : Object)->$result : Object
+	
+	var $operator : Text
+	var $age : Integer
+	var $_ages : Collection
+	
+	$operator:=$event.operator
+			
+	$age:=Num($event.value)  // integer
+	$d1:=Add to date(Current date; -$age-1; 0; 0)
+	$d2:=Add to date($d1; 1; 0; 0)
+	$parameters:=New collection($d1; $d2)
+	
+	Case of 
+			
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // después de d1 y antes o igual a d2
+			
+		: ($operator="===") 
 
-local Function age() -> $age: Variant
+			$query:="birthday = :2"  // d2 = segunda fecha calculada (= birthday date)
 
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
-    $age:=Null
-End if
+		: ($operator=">=")
+			$query:="birthday <= :2"
+			
+			//... Otros operadores	
+			
+			
+	End case 
+	
+	
+	If (Undefined($event.result))
+		$result:=New object
+		$result.query:=$query
+		$result.parameters:=$parameters
+	End if
 
 ```
 
@@ -544,10 +546,9 @@ Código de llamada, por ejemplo:
 $twenty:=people.query("age = 20")  // llama al case "=="
 
 // personas de 20 años hoy
-$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20") 
+$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
 
 ```
-
 
 ### `Function orderBy <attributeName>`
 
@@ -560,26 +561,26 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // code
 ```
 
-La función `orderBy` se ejecuta siempre que sea necesario ordenar el atributo calculado. Permite ordenar el atributo calculado. Por ejemplo, puede ordenar *fullName* en función de los nombres y luego de los apellidos, o a la inversa. Cuando la función `orderBy` no está implementada para un atributo calculado, la ordenación es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
+La función `orderBy` se ejecuta siempre que sea necesario ordenar el atributo calculado. Permite ordenar el atributo calculado. Por ejemplo, puede ordenar *fullName* en función de los nombres y luego de los apellidos, o a la inversa.
+Cuando la función `orderBy` no está implementada para un atributo calculado, la ordenación es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
 
 > **No se soporta** la llamada a una función `orderBy` sobre atributos calculados de tipo Entity class o Entity selection class.
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                                              |
-| ------------- | ------- | -------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                                             |
-| dataClassName | Text    | Nombre de la clase de datos                                                                              |
-| kind          | Text    | "orderBy"                                                                                                |
-| value         | Variant | Valor a tratar por el atributo calculado                                                                 |
-| operator      | Text    | "desc" o "asc" (por defecto)                                                                             |
-| descending    | Boolean | `true` para orden descendente, `false` para orden ascendente                                             |
+| Propiedad     | Tipo    | Descripción                                                                                                                              |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Text    | Nombre de atributo calculado                                                                                                             |
+| dataClassName | Text    | Nombre de la clase de datos                                                                                                              |
+| kind          | Text    | "orderBy"                                                                                                                                |
+| value         | Variant | Valor a tratar por el atributo calculado                                                                                                 |
+| operator      | Text    | "desc" o "asc" (por defecto)                                                                                          |
+| descending    | Boolean | `true` para orden descendente, `false` para orden ascendente                                                                             |
 | resultado     | Variant | Valor a tratar por el atributo calculado. Pase `Null` si desea que 4D ejecute la ordenación por defecto. |
 
 > Puede utilizar el `operator` o la propiedad `descending`. Es esencialmente una cuestión de estilo de programación (ver ejemplos).
 
 Puede devolver la cadena `orderBy` en la propiedad del objeto `$event.result` o en el resultado de la función *$result*. Si la función devuelve un valor en *$result* y se asigna otro valor a la propiedad `$event.result`, se da prioridad a `$event.result`.
-
 
 #### Ejemplo
 
@@ -598,7 +599,7 @@ También puede escribir un código compacto:
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
-    $result:="firstName "+$event.operator+", "lastName "+$event.operator
+	$result:="firstName "+$event.operator+", "lastName "+$event.operator
 
 ```
 
@@ -615,7 +616,6 @@ Function orderBy age($event : Object)-> $result : Text
 
 ```
 
-
 ## Atributos de tipo alias
 
 ### Generalidades
@@ -626,11 +626,9 @@ Los atributos del alias son particularmente útiles para manejar las relaciones 
 
 ### Cómo definir los atributos alias
 
-Se crea un atributo alias en una clase de datos utilizando la palabra clave `Alias` en la clase entity [****](#entity-class) de la clase de datos.
-
+Se crea un atributo alias en una dataclass utilizando la palabra clave `Alias` en la [**clase Entity**](#entity-class) de la dataclass.
 
 ### `Alias <attributeName> <targetPath>`
-
 
 #### Sintaxis
 
@@ -646,8 +644,7 @@ Un alias puede ser utilizado como parte de una ruta de otro alias.
 
 Un [atributo calculado](#computed-attributes-1) puede utilizarse en una ruta alias, pero sólo como último nivel de la ruta; de lo contrario, se devuelve un error. Por ejemplo, si "fullName" es un atributo calculado, un alias con ruta "employee.fullName" es válido.
 
-> Los atributos alias de ORDA por defecto son **no expuestos**. Debe añadir la palabra clave [`expuesto`](#exposed-vs-non-exposed-functions) antes de la palabra clave `Alias` si desea que el alias esté disponible para peticiones remotas.
-
+> Los atributos alias de ORDA por defecto son **no expuestos**. Debe añadir la palabra clave [`exposed`](#exposed-vs-non-exposed-functions) antes de la palabra clave `Alias` si desea que el alias esté disponible para peticiones remotas.
 
 ### Uso de los atributos alias
 
@@ -674,15 +671,14 @@ Los atributos alias son de sólo lectura (excepto cuando se basan en un atributo
 
 ### Propiedades del alias
 
-Atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
+El atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
 
-Un atributo alias hereda su propiedad [`type`](../API/DataClassClass.md#attributename) del atributo destino:
+Un atributo alias hereda su propiedad de [`type`](../API/DataClassClass.md#attributename) del atributo objetivo:
 
-- si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "storage", el tipo de datos del alias es del mismo tipo,
-- si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "relatedEntity" o "relatedEntities", el tipo de datos del alias es del tipo `4D.Entity` o `4D.EntitySelection` ("*classname*Entity" o "*classname*Selection").
+- si el [`kind`](../API/DataClassClass.md#attributename) del atributo objetivo es "storage", el tipo de datos del alias es del mismo tipo,
+- si el [`kind`](../API/DataClassClass.md#attributename) del atributo objetivo es "relatedEntity" o "relatedEntities", el tipo de datos del alias es de tipo `4D.Entity` o `4D.EntitySelection` ("_classname_Entity" o "_classname_Selection").
 
-Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`). Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassClass.md#attributename), que contiene la ruta de sus atributos de destino.
-
+Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassClass.md#attributename), que contiene la ruta de sus atributos objetivos. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
 
 ### Ejemplos
 
@@ -702,7 +698,6 @@ Alias students courses.student //relatedEntities
 
 En la clase Student, un atributo alias devuelve todos los profesores de un alumno:
 
-
 ```4d
 // cs.StudentEntity class
 
@@ -716,7 +711,6 @@ En la dataclass Course:
 - un atributo alias devuelve otra etiqueta para el atributo "name"
 - un atributo alias devuelve el nombre del profesor
 - un atributo alias devuelve el nombre del estudiante
-
 
 ```4d
 // cs.CourseEntity class
@@ -753,7 +747,6 @@ ds. Teacher.query("students.name = :1";"Martin")
 //  subquery:[ Student.name === Martin]]"
 ```
 
-
 También puede editar el valor del alias *courseName*:
 
 ```4d
@@ -762,9 +755,6 @@ $arch:=ds.Course.query("courseName = :1"; "Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName y name son "Archaeology II"
 ```
-
-
-
 
 ## Funciones expuestas y no expuestas
 
@@ -781,7 +771,7 @@ Una función que no está expuesta no está disponible en aplicaciones remotas y
 
 Para permitir que una función de clase de modelo de datos sea llamada por una petición remota, debe declararla explícitamente utilizando la palabra clave `exposed`. La sintaxis formal es:
 
-```4d  
+```4d
 // declarar una función expuesta
 exposed Function <functionName>   
 ```
@@ -807,7 +797,7 @@ $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
 //función (privada) no expuesta
-Function computeIDNumber()-> $id : Integer
+Function computeIDNumber() -> $id : Integer
 //calcular un nuevo número de ID
 $id:=...
 
@@ -826,14 +816,13 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
-
 ## Funciones locales
 
 Por defecto en la arquitectura cliente/servidor, las funciones de modelo de datos ORDA se ejecutan **en el servidor**. Suele ofrecer el mejor rendimiento, ya que sólo se envían por la red la petición de función y el resultado.
 
 Sin embargo, puede ocurrir que una función sea totalmente ejecutable del lado del cliente (por ejemplo, cuando procesa los datos que ya están en la caché local). En este caso, puede ahorrar peticiones al servidor y, de este modo, mejorar el rendimiento de la aplicación insertando la palabra clave `local`. La sintaxis formal es:
 
-```4d  
+```4d
 // declarar una función a ejecutar localmente en cliente/servidor
 local Function <functionName>   
 ```
@@ -845,15 +834,15 @@ Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Obtener los estudiantes más jóvenes  
+// Obtener los estudiantes más jóvenes
 // Utilización inapropiada de la palabra clave local
 local Function getYoungest
-    var $0 : Object
+	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
+
 - **sin** la palabra clave `local`, el resultado se da utilizando una única petición
 - **con** la palabra clave `local`, son necesarias 4 peticiones: una para obtener la entidad Schools, una para la `query()`, una para la `orderBy()`, y una para la `slice()`. En este ejemplo, el uso de la palabra clave `local` es inapropiado.
-
 
 ### Ejemplos
 
@@ -864,43 +853,15 @@ Dada una entidad con un atributo *birthDate*, queremos definir una función `age
 En la classe *StudentsEntity*:
 
 ```4d
-Function query age($event : Object)->$result : Object
+Class extends Entity
 
-    var $operator : Text
-    var $age : Integer
-    var $_ages : Collection
+local Function age() -> $age: Variant
 
-    $operator:=$event.operator
-
-    $age:=Num($event.value)  // integer
-    $d1:=Add to date(Current date; -$age-1; 0; 0)
-    $d2:=Add to date($d1; 1; 0; 0)
-    $parameters:=New collection($d1; $d2)
-
-    Case of 
-
-        : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
-
-        : ($operator="===") 
-
-            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
-
-        : ($operator=">=")
-            $query:="birthday <= :2"
-
-            //...
-    other operators           
-
-
-    End case 
-
-
-    If (Undefined($event.result))
-        $result:=New object
-        $result.query:=$query
-        $result.parameters:=$parameters
-    End if
+If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
 ```
 
 #### Verificación de los atributos
@@ -938,15 +899,11 @@ If ($status.success)
 End if
 ```
 
-
-
 ## Soporte en IDE 4D
-
 
 ### Archivos de clase (class files)
 
-Una clase usuario ORDA del modelo de datos se define añadiendo, en la [misma ubicación que los archivos de clase usuarles](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá a través de un archivo `UtilitiesEntity.4dm`.
-
+Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
 
 ### Crear las clases
 
@@ -954,21 +911,20 @@ Una clase usuario ORDA del modelo de datos se define añadiendo, en la [misma ub
 
 ![](../assets/en/ORDA/ORDA_Classes-3.png)
 
-
-> Por defecto, las clases ORDA vacías no se muestran en el Explorador. Para mostrarlas debe seleccionar **Mostrar todas las dataclasses** en el menú de opciones del Explorador: ![](../assets/en/ORDA/showClass.png)
+> Por defecto, las clases ORDA vacías no se muestran en el Explorador. Para mostrarlas, debe seleccionar **Mostrar todas las clases de datos** en el menú de opciones del Explorador:
+> ![](../assets/en/ORDA/showClass.png)
 
 Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las clases vacías se atenúan:
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. 4D crea el archivo de clase y añade el código `extends`. Por ejemplo, para una clase Entity:
+Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase predefinida correspondiente en el Explorador. Por ejemplo, para una clase Entity:
 
 ```
 Class extends Entity
 ```
 
 Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
-
 
 ### Editar las clases
 
@@ -979,7 +935,6 @@ Para abrir una clase ORDA definida en el editor de código 4D, seleccione o haga
 Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directamente al código de la clase desde la ventana de estructura 4D:
 
 ![](../assets/en/ORDA/classORDA5.png)
-
 
 ### Editor de código
 

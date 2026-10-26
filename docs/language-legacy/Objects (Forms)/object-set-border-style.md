@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|21 R5|New Border Custom` constant |
+|21 R5|New `Border Custom` and `Border System Rounded` constant |
 |14|Created|
 
 </details>
@@ -38,16 +38,18 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 In the *borderStyle* parameter, pass the value of the border line style that you want to apply to the object. You can pass one of the following constants, found in the "*Form Objects (Properties)*" theme:
 
-| Constant      | Type    | Value | Comment                                                                                         |
-| ------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
+| Constant      | Type    | Value | Comment   |
+| ------------- | ------- | ----- | ------------------ |
 | Border Custom | Integer | 9     | (buttons only) Enables the inner frame design for buttons, supporting extra properties |
-| Border Dotted | Integer | 2     | Objects appear framed with a dotted 1-pt. border line                                           |
+| Border Dotted | Integer | 2     | Objects appear framed with a dotted 1-pt. border line  |
 | Border Double | Integer | 5     | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel |
-| Border None   | Integer | 0     | Objects appear with no border                                                                   |
-| Border Plain  | Integer | 1     | Objects appear framed with a continuous 1-pt. border line                                       |
-| Border Raised | Integer | 3     | Objects appear framed with a 3D effect (raised)                                                 |
-| Border Sunken | Integer | 4     | Objects appear framed with a sunken 3D effect                                                   |
-| Border System | Integer | 6     | The border line is drawn based on the graphic specifications of the system                      |
+| Border None   | Integer | 0     | Objects appear with no border|
+| Border Plain  | Integer | 1     | Objects appear framed with a continuous 1-pt. border line |
+| Border Raised | Integer | 3     | Objects appear framed with a 3D effect (raised)  |
+| Border Sunken | Integer | 4     | Objects appear framed with a sunken 3D effect   |
+| Border System | Integer | 6     | The border line is drawn based on the graphic specifications of the system |
+| Border System Rounded | Integer | 8  | On macOS, the border line is drawn with "Liquid Glass" graphic appearance. Note that the "Liquid Glass" appearance is *not* used in a multiline input object if the [scroll bars property](../../FormObjects/properties_Appearance.md#vertical-scroll-bar) is enabled (`Border System` is used in this case). On Windows, the rendering is similar to `Border System` |
+
 
 ## See also 
 

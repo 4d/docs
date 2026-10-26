@@ -335,13 +335,13 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 Especifica la selección temporal a utilizar. Debe introducir el nombre de una selección temporal válida. Puede ser una selección temporal proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
-> Las selecciones temporales son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
+> Las selecciones temporales son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. For more information, refer to [**Named Selections**](../Develop/named-selections) section.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles       |
-| -------------- | -------------- | ---------------------- |
-| namedSelection | string         | Nombre de la selección |
+| Nombre        | Tipos de datos | Valores posibles       |
+| ------------- | -------------- | ---------------------- |
+| selectionName | string         | Nombre de la selección |
 
 #### Objetos soportados
 

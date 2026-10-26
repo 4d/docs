@@ -12,6 +12,12 @@ The `4D.QuotaManager` class provides you with an interface to configure and moni
 
 :::
 
+:::tip Related Blog post
+
+[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
+
 `4D.QuotaManager` objects can be instantiated by:
 - the [`quotas` property of a Session](./SessionClass.md#quotas) object
 - the [`quotas` property of a Web server](./WebServerClass.md#quotas) object

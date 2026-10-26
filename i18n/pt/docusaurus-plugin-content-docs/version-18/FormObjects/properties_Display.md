@@ -548,7 +548,7 @@ Nas caixas de lista, qualquer texto muito longo é truncado e exibido com uma el
 
 Observe que, independentemente do valor da opção Wordwrap, a altura da linha não será alterada. Se o texto com quebras de linha não puder ser exibido inteiramente na coluna, ele é truncado (sem uma elipse). No caso de caixas de lista exibindo apenas uma única linha, somente a primeira linha do texto é exibida:
 
-![](../assets/en/FormObjects/property_wordwrap1.png)
+![](../assets/en/FormObjects/property_wordwrap2.png)
 
 #### Automático para entrada (opção padrão)
 
@@ -563,7 +563,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 | Nome     | Tipo de dados | Valores possíveis                                 |
 | -------- | ------------- | ------------------------------------------------- |
-| wordwrap | string        | "automatic" (exceto list box), "normal", "nenhum" |
+| wordwrap | string        | "automatic" (exceto coluna e rodapé de list box), "normal", "nenhum" |
 
 #### Objectos suportados
 

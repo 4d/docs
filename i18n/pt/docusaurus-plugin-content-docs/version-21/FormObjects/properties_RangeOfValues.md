@@ -29,9 +29,9 @@ O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_O
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados                       | Valores possíveis                                                |
+| Nome         | Tipo de dados | Valores possíveis                                                |
 | ------------ | ----------------------------------- | ---------------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Qualquer valor e/ou um carimbo: "#D", "#H", "#N" |
+| defaultValue | string | Qualquer valor e/ou um carimbo como string: "#D", "#H", "#N", "42", "true"... |
 
 #### Objectos suportados
 

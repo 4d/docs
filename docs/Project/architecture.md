@@ -161,6 +161,8 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
 
+When the project is compiled, 4D also generates in this folder the `syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the `exposed MCP Function` class functions. This file is not used if a `syntaxMCP.json` file exists in the [`Resources`](#resources) folder.
+
 ## `Libraries`
 
 > This folder is used on macOS only.
@@ -175,6 +177,7 @@ Contents|Description|Format
 --------|-------|----
 *item*|Project resource files and folders|various
 Images/Library/*item*|Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name.|picture
+syntaxMCP.json|Custom [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata). If this file exists, it is used instead of the `Project/DerivedData/syntaxMCP.json` file generated at compilation. The compiler never modifies it.|JSON
 
 (*) only if the project was exported from a .4db binary database.
 

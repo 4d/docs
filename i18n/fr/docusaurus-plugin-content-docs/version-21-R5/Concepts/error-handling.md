@@ -98,7 +98,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 :::
 
 - la commande [`Last errors`](../commands/last-errors) qui renvoie une collection avec la pile courante d'erreurs survenues dans l'application 4D.
-- la commande `Call chain` qui renvoie une collection d'objets décrivant chaque étape de la chaîne d'appel de méthode dans le process en cours.
+- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemple
 

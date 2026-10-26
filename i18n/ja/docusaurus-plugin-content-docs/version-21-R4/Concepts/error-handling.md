@@ -98,7 +98,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::
 
 - [`Last errors`](../commands/last-errors) コマンドは4D アプリケーション内で発生したエラーのカレントのスタックのコレクションを返します。
-- `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
+- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### 例題
 

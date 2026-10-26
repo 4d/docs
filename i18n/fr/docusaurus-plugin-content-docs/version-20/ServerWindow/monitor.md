@@ -23,7 +23,6 @@ La zone graphique permet de visualiser l’évolution en temps réel de plusieur
 
 A noter que lorsque cette option est sélectionnée, le défilement de la zone graphique est ralenti car une analyse efficace du cache s’effectue généralement sur une période d’observation assez longue.
 
-
 ## Zone Vue d’ensemble
 
 La zone "Vue d’ensemble" fournit diverses informations relatives au système, à l’application et aux licences installées sur la machine de 4D Server.
@@ -35,7 +34,7 @@ La zone "Vue d’ensemble" fournit diverses informations relatives au système, 
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-En général, vous devez consulter le [**Gestionnaire de licences**](Admin/licenses.md).
+En règle générale, vous devrez consulter le [**Gestionnaire de licences**](Admin/licenses.md).
 
 ## Zone Détails
 

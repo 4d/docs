@@ -30,7 +30,7 @@ title: スピナー
 [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ### サポートされるイベント

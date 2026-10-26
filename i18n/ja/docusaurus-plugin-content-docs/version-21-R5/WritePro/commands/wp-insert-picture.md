@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP Insert picture** コマンドは、<!--REF #_command_.WP Insert picture.Summary-->指定した挿入モード*mode* とレンジ更新モード*rangeUpdate* に従って、*picture* または*pictureFileObj* のピクチャーを*targetObj* で指定したレンジに挿入し、ピクチャー要素への参照を返します。<!-- END REF--> ピクチャーは文字として*targetObj* に挿入されます。ピクチャーは文字として*targetObj* に挿入されます。
+**WP Insert picture** コマンドは、<!--REF #_command_.WP Insert picture.Summary-->指定した挿入モード*mode* とレンジ更新モード*rangeUpdate* に従って、*picture* または*pictureFileObj* のピクチャーを*targetObj* で指定したレンジに挿入し、ピクチャー要素への参照を返します。<!-- END REF-->ピクチャーは文字として*targetObj* に挿入されます。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 | wk prepend | Integer | 1 | コンテンツをターゲットの始めに挿入する  |
 | wk replace | Integer | 0 | ターゲットのコンテンツを置き換える    |
 
-*targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいずれか一つを渡すことで挿入されたピクチャーが結果のレンジに含まれるかどうかを指定することができます:
+*targetObj* がレンジである場合、オプションの*rangeUpdate* 引数に以下の定数のいづれか一つを渡すことで挿入されたピクチャーが結果のレンジに含まれるかどうかを指定することができます:
 
 | 定数                    | 型       | 値 | 説明                                             |
 | --------------------- | ------- | - | ---------------------------------------------- |

@@ -3,17 +3,16 @@ id: propertiesTextAndPicture
 title: Texto e Imagen
 ---
 
-
 ## Ruta de acceso fondo
 
 Define la ruta de la imagen que se dibujará en el fondo del objeto. Si el objeto utiliza un [icono](#picture-pathname) con [diferentes estados](#number-of-states), la imagen de fondo soportará automáticamente el mismo número de estados.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
-| Nombre                  | Tipos de datos | Valores posibles                                                                                              |
-| ----------------------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| Nombre                  | Tipos de datos | Valores posibles                                                                                                                              |
+| ----------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | customBackgroundPicture | string         | Ruta relativa en sintaxis POSIX. Debe utilizarse junto con la opción "Personalizado" de la propiedad "Style". |
 
 #### Objetos soportados
@@ -29,12 +28,12 @@ Aspecto general del botón. El estilo del botón también influye en la disponib
 #### Gramática JSON
 
 | Nombre | Tipos de datos | Valores posibles                                                                                                                                                   |
-|:------:|:--------------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style  |      text      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| :----: | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|  style |      text      | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)
 
 ---
 
@@ -48,12 +47,13 @@ Este parámetro es útil, por ejemplo, cuando la imagen de fondo contiene bordes
 | ------------------------ | ------------------------------------------------------------ |
 | Sin margen               | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | Con un margen 13 píxeles | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
+
 > Esta propiedad funciona junto con la propiedad [Margen vertical](#vertical-margin).
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                   |
-| ------------- | -------------- | -------------------------------------------------- |
+| Nombre        | Tipos de datos | Valores posibles                                                                   |
+| ------------- | -------------- | ---------------------------------------------------------------------------------- |
 | customBorderX | number         | Para usar con el estilo "personalizado". Mínimo: 0 |
 
 #### Objetos soportados
@@ -74,7 +74,7 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Objetos soportados
 
-[Encabezado de list box](listbox-header-footer.md#headers)
+[Encabezado de List Box](listbox-header-footer.md#headers)
 
 ---
 
@@ -86,9 +86,9 @@ El título del botón se desplazará hacia la derecha y hacia la parte inferior 
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles |
-| ------------ | -------------- | ---------------- |
-| customOffset | number         | mínimo: 0        |
+| Nombre       | Tipos de datos | Valores posibles          |
+| ------------ | -------------- | ------------------------- |
+| customOffset | number         | mínimo: 0 |
 
 #### Objetos soportados
 
@@ -119,12 +119,10 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 ![](../assets/en/FormObjects/six-states.png)
 
-
-
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                    |
-| ---------- | -------------- | --------------------------------------------------- |
+| Nombre     | Tipos de datos | Valores posibles                                                                    |
+| ---------- | -------------- | ----------------------------------------------------------------------------------- |
 | iconFrames | number         | Número de estados en la imagen del icono. Mínimo: 1 |
 
 #### Objetos soportados
@@ -137,19 +135,19 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 Define la ruta de la imagen que se utilizará como icono del objeto.
 
-El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
+El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso para las imágenes estáticas](properties_Picture.md#pathname).
 
 > Cuando se utiliza como icono de objetos activos, la imagen debe estar diseñada para soportar un [número de estados](#number-of-states) variable.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                              |
-| ------ | -------------- | --------------------------------------------- |
+| Nombre | Tipos de datos | Valores posibles                                              |
+| ------ | -------------- | ------------------------------------------------------------- |
 | icon   | picture        | Ruta relativa o filesystem en sintaxis POSIX. |
 
 #### Objetos soportados
 
-[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de verificación](checkbox_overview.md) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de radio](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Botón radio](radio_overview.md)
 
 ---
 
@@ -159,8 +157,8 @@ Esta propiedad permite modificar la ubicación relativa del título del botón e
 
 Aquí están los resultados utilizando las distintas opciones para esta propiedad:
 
-| Option        | Descripción                                                                                                                                       | Ejemplo                                                           |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Option        | Descripción                                                                                                                                                                       | Ejemplo                                                           |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | **Izquierda** | El texto se coloca a la izquierda del icono. El contenido del botón se alinea a la derecha.                                                       | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Arriba**    | El texto se coloca debajo del icono. El contenido del botón está centrado.                                                                        | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Derecha**   | El texto se coloca a la derecha del icono. El contenido del botón se alinea a la izquierda.                                                       | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
@@ -189,16 +187,15 @@ Por defecto, cuando un botón contiene un título y una imagen, los elementos se
 
 ![](../assets/en/FormObjects/hugs.png)
 
-
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles          |
-| -------------- | -------------- | ------------------------- |
+| Nombre         | Tipos de datos | Valores posibles                             |
+| -------------- | -------------- | -------------------------------------------- |
 | imageHugsTitle | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
-[Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular, Plano, Revelar y Contraer/Expandir) - [Botón radio](radio_overview.md) (todos los estilos excepto Regular, Plano, Revelar y Contraer/Expandir).
+[Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir) - [Botón de radio](radio_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir).
 
 ---
 
@@ -212,8 +209,8 @@ Este parámetro es útil, por ejemplo, cuando la imagen de fondo contiene bordes
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                   |
-| ------------- | -------------- | -------------------------------------------------- |
+| Nombre        | Tipos de datos | Valores posibles                                                                   |
+| ------------- | -------------- | ---------------------------------------------------------------------------------- |
 | customBorderY | number         | Para usar con el estilo "personalizado". Mínimo: 0 |
 
 #### Objetos soportados
@@ -234,9 +231,10 @@ La apariencia y ubicación de este símbolo depende del estilo del botón y de l
 
 Para asociar un símbolo de menú emergente a un botón, hay dos opciones de visualización disponibles:
 
-|                        Enlazado                         |                          Separado                          |
-|:-------------------------------------------------------:|:----------------------------------------------------------:|
+|                         Enlazado                        |                          Separado                          |
+| :-----------------------------------------------------: | :--------------------------------------------------------: |
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
+
 > La disponibilidad efectiva de un modo "separado" depende del estilo del botón y de la plataforma.
 
 Cada opción precisa la relación entre el botón y el menú emergente asociado:
@@ -246,20 +244,20 @@ Cada opción precisa la relación entre el botón y el menú emergente asociado:
 
 :::info
 
-Consulte la descripción del evento [`On Alternative Click`](../Events/onAlternativeClick.md) para más información sobre el manejo de eventos en este caso.
+Consulte la descripción del evento [`On Alternative Click`](../Events/onAlternativeClick.md) para más información sobre la gestión de eventos en este caso.
 
 :::
 
 ### Gestión del menú emergente
 
-Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, particularmente utilizando `eventos formulario` y los comandos [`Menú emergente dinámico`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
+Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop menu`](https://doc.md.com/4dv19R7/help/command/en/page1006.html) y [`Menú emergente`](https://doc.4d.com/4dv19R7/help/command/en/page542.html).
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles          |
-|:-------------- | -------------- | ------------------------- |
+| Nombre         | Tipos de datos | Valores posibles                                              |
+| :------------- | -------------- | ------------------------------------------------------------- |
 | popupPlacement | string         | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### Objetos soportados
 
-[Botón de la barra de herramientas](button_overview.md#toolbar) - [Botón Bisel](button_overview.md#bevel) - [Botón Bisel redondeado](button_overview.md#rounded-bevel) - [Botón Gradiente OS X](button_overview.md#os-x-gradient) - [Botón Texturizado OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Personalizado](button_overview.md#custom)
+[Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Personalizado](button_overview.md#custom)

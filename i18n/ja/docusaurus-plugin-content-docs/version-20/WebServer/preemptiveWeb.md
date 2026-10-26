@@ -3,7 +3,6 @@ id: preemptiveWeb
 title: プリエンプティブWebプロセスの使用
 ---
 
-
 4D Webサーバーを使って、アプリケーションでプリエンプティブWebプロセスを使用することによって、マルチコアコンピューターの利点を最大限引き出すことができます。 4D変換タグや Webデータベースメソッド、ORDA の RESTクラス関数を含めた Web関連コードを、可能な限り多くのコアで同時に実行するよう設定することが可能です。
 
 4D のプリエンプティブプロセスについての詳細は、*ランゲージリファレンス* の [*プリエンプティブ4Dプロセス*](https://doc.4d.com) の章を参照ください。
@@ -13,10 +12,10 @@ title: プリエンプティブWebプロセスの使用
 実行コンテキストによって、プリエンプティブモードが使用される、または使用可能かを次の表に示します:
 
 | 4D Server   | インタープリター ([デバッガー有効](../Debugging/debugging-remote.md)) | インタープリター (デバッガー無効) | コンパイル済みコード |
-| ----------- | ------------------------------------------------------ | ------------------ | ---------- |
-| REST サーバー   | コオペラティブ                                                | プリエンプティブ           | プリエンプティブ   |
-| Web サーバー    | コオペラティブ                                                | コオペラティブ            | *Web設定*    |
-| Webサービスサーバー | コオペラティブ                                                | コオペラティブ            | *Web設定*    |
+| ----------- | ------------------------------------------------------------------------- | ------------------------------------- | ---------- |
+| REST サーバー   | コオペラティブ                                                                   | プリエンプティブ                              | プリエンプティブ   |
+| Web サーバー    | コオペラティブ                                                                   | コオペラティブ                               | *Web設定*    |
+| Webサービスサーバー | コオペラティブ                                                                   | コオペラティブ                               | *Web設定*    |
 
 | 4Dリモート/シングルユーザー | インタープリターコード | コンパイル済みコード |
 | --------------- | ----------- | ---------- |
@@ -28,32 +27,29 @@ title: プリエンプティブWebプロセスの使用
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
 - ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
-    - いつ [**スケーラブルセッション**](sessions.md#enabling-sessions)オプションが選択されている場合、すべてのWebプロセスは自動的にプリエンプティブモードで起動します。
-    - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
-    - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
-
-
-
+  - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the preemptive mode is automatically used for web processes.
+  - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
+  - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
 
 ## スレッドセーフなWebサーバーコードの書き方
 
 Webプロセスをプリエンプティモードで実行するには、Webサーバーで実行されるすべての 4Dコードがスレッドセーフでなければなりません。[プリエンプティブモードが有効化](#webプロセスにおけるプリエンプティブモードの使用可能状況) されている場合、アプリケーションの以下の部分が 4Dコンパイラーによって自動的に評価されます:
 
-*   すべての Web関連データベースメソッド:
-    *   [`On Web Authentication`](authentication.md#on-web-authentication)
-    *   [`On Web Connection`](httpRequests.md#on-web-connection)
-    *   [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)
-    *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+- すべての Web関連データベースメソッド:
+  - [`On Web Authentication`](authentication.md#on-web-authentication)
+  - [`On Web Connection`](httpRequests.md#on-web-connection)
+  - [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)
+  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
-*   `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
+- `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 
-*   Webコンテキストにおいて [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
+- Webコンテキストにおいて [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
 
-*   "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
+- "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
 
-*   "RESTリソースとして公開" 属性が有効なテーブルのトリガー
+- "RESTリソースとして公開" 属性が有効なテーブルのトリガー
 
-*   REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
+- REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
 これらそれぞれのメソッドとコードの部分について、スレッドセーフのルールが遵守されているかをコンパイラーがチェックし、問題があった場合にはエラーを返します。スレッドセーフルールについての詳細は、[4Dランゲージリファレンス](https://doc.4d.com) マニュアルの *プロセス* の章の *スレッドセーフなメソッドの書き方* の段落を参照ください。
 
@@ -65,28 +61,27 @@ Web関連のほとんどの 4Dコマンドや関数、データベースメソ�
 
 すべての Web関連コマンドはスレッドセーフです:
 
-*   *Webサーバー* テーマの全コマンド
-*   *HTTPクライアント* テーマの全コマンド
+- *Webサーバー* テーマの全コマンド
+- *HTTPクライアント* テーマの全コマンド
 
 Web関連のデータベースメソッドもスレッドセーフであり、プリエンプティモードで使用することが可能です (前述参照): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...)。
 
 もちろん、これらのメソッドによって実行されるコードもまたスレッドセーフである必要があります。
 
-
 ### WebサーバーURL
 
 以下の 4D WebサーバーURLはスレッドセーフであり、プリエンプティモードで使用可能です:
 
-*   *4daction/* (呼び出されるプロジェクトメソッドもまたスレッドセーフでなければいけません)
-*   *4dcgi/* (呼び出されるデータベースメソッドもまたスレッドセーフでなければいけません)
-*   *4dwebtest/*
-*   *4dblank/*
-*   *4dstats/*
-*   *4dhtmlstats/*
-*   *4dcacheclear/*
-*   *rest/*
-*   *4dimgfield/* (ピクチャーフィールドの Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
-*   *4dimg/* (ピクチャー変数の Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
+- *4daction/* (呼び出されるプロジェクトメソッドもまたスレッドセーフでなければいけません)
+- *4dcgi/* (呼び出されるデータベースメソッドもまたスレッドセーフでなければいけません)
+- *4dwebtest/*
+- *4dblank/*
+- *4dstats/*
+- *4dhtmlstats/*
+- *4dcacheclear/*
+- *rest/*
+- *4dimgfield/* (ピクチャーフィールドの Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
+- *4dimg/* (ピクチャー変数の Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
 
 ### プリエンプティブWebプロセスアイコン
 

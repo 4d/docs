@@ -103,7 +103,7 @@ title: コンポーネントの開発
 - プロジェクトフォームメソッド
 - コマンドと定数
 - プラグイン
-- ゴミ箱
+- Trash
 
 ![tab-component](../assets/en/Project/tab-component.gif)
 

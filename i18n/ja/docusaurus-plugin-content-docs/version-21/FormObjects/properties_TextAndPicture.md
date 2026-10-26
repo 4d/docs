@@ -37,7 +37,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [ラジオボタン](radio_overview.md) - [チェックボックス](checkbox_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)
 
 #### コマンド
 

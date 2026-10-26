@@ -22,14 +22,14 @@ Les chemins des filesystem sont utiles pour deux raisons principales :
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                  | Exemple                                              |
-| ------------ | -------------------------------------------------------- | ---------------------------------------------------- |
-| "/DATA"      | Dossier data courant                                     | "C:\\MyApps\\Students\\Data\\"               |
-| "/LOGS"      | Dossier Logs                                             | "C:\\MyApps\\Students\\Data\\Logs\\"       |
-| "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) | "C:\\MyApps\\Students\\"                       |
-| "/PROJECT"   | Dossier Project                                          | "C:\\MyApps\\Students\\Project\\"            |
-| "/RESOURCES" | Dossier de ressources du projet courant                  | "C:\\MyApps\\Students\\Resources\\"          |
-| "/SOURCES"   | Dossier des sources du projet courant                    | "C:\\MyApps\\Students\\Project\\Sources\\" |
+| filesystem   | Désigne                                                                     | Exemple                                                          |
+| ------------ | --------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| "/DATA"      | Dossier data courant                                                        | "C:\\MyApps\\Students\\Data\\"              |
+| "/LOGS"      | Dossier Logs                                                                | "C:\\MyApps\\Students\\Data\\Logs\\"       |
+| "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) | "C:\\MyApps\\Students\\"                     |
+| "/PROJECT"   | Dossier Project                                                             | "C:\\MyApps\\Students\\Project\\"           |
+| "/RESOURCES" | Dossier de ressources du projet courant                                     | "C:\\MyApps\\Students\\Resources\\"         |
+| "/SOURCES"   | Dossier des sources du projet courant                                       | "C:\\MyApps\\Students\\Project\\Sources\\" |
 
 ## Syntaxe POSIX
 
@@ -50,9 +50,6 @@ var $pathFolder : 4D.Folder
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
-
-
-
 
 ## Syntaxe spécifique à la plate-forme
 
@@ -75,7 +72,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Chemins d'accès Windows et séquences d'échappement
 
-Le langage 4D permet l'utilisation de [séquences d'échappement](quick-tour.md#sequences-dechappement). Les séquences d'échappement commencent par une barre oblique inverse `\`, suivie d'un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+Le langage 4D permet l'utilisation de [séquences d'échappement](quick-tour.md#sequences-dechappement). Chemins d'accès Chemins d'accès Chemins d'accès Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
 Étant donné que le caractère `\` est également utilisé comme séparateur dans les noms de chemins sous Windows, vous devez saisir un double `\\` dans ces noms de chemins.
 
@@ -97,23 +94,23 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume doit s'appel
 
 ### Constructeurs `File` et `Folder`
 
-Les commandes [`File`](../API/FileClass.md#file) et [`Folder`](../API/FolderClass.md#folder) n'acceptent que les **chemins absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
+Les commandes [`File`](../API/FileClass.md#file) et [`Folder`](../API/FolderClass.md#folder) n'acceptent que les **chemins d'accès absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
 
 ```4d
-    //ERROR
+	//ERREUR
 $ko:=Folder("myFolder").create() //nom de chemin relatif avec constructeur
 ```
 
-Si vous souhaitez gérer des fichiers ou des dossiers situés à différents endroits (dossier de projet, dossiers système, etc.), vous pouvez utiliser `filesystems` (voir ci-dessus). Par exemple, vous pouvez écrire :
+Si vous souhaitez gérer des fichiers ou des dossiers situés à différents endroits (dossier de projet, dossiers système, etc.), vous pouvez utiliser les `filesystems` (voir ci-dessus). Par exemple, vous pouvez écrire :
 
 ```4d
 $okFolder:=Folder("/PACKAGE/myFolder").create() //dossier créé au niveau de la structure
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //fichier créé dans le dossier data
 ```
 
-### Fonctions de dossier `.file()` et `.folder()`
+### Fonctions de folder `.file()` et `.folder()`
 
-Les fonctions des objets dossier telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder-1) attendent des noms de chemin POSIX relatifs. Par exemple :
+Les fonctions des objets folder telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder-1) attendent des chemins POSIX relatifs. Par exemple :
 
 ```4d
 var $userImages : 4D.Folder
@@ -126,10 +123,10 @@ $ok:=Folder(fk desktop folder).folder("myFolder").create()
 
 Les chemins absolus ne sont pas pris en charge et provoqueront des erreurs.
 
-
 ## Exemples
 
 La flexibilité des fonctions de fichiers et de dossiers vous offre diverses possibilités de manipulation des fichiers et des dossiers, comme dans les exemples suivants :
+
 ```4d
 var $fold : 4D.Folder
 var $file : 4D.File

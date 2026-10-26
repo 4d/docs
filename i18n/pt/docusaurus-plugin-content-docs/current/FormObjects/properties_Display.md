@@ -42,7 +42,7 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 
 | Nome       | Tipo de dados | Valores possíveis                                                                                                   |
 | ---------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| textFormat | string        | "####", "(#####) ### ####", "### ### ### ####", "#### ## ####", "00000", formatos personalizados |
+| textFormat | string        | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", formatos personalizados |
 
 #### Objectos suportados
 
@@ -382,7 +382,7 @@ Formatos de hora personalizados podem ser construídos usando vários padrões d
 | Padrão                                  | Exemplo (sistema americano) |
 | --------------------------------------- | ---------------------------------------------- |
 | "HH 'horas' mm 'minutos' ss 'segundos'" | 13 horas 25 minutos 12 segundos                |
-| hh:mm a                 | 01:25: PM      |
+| "hh:mm aa"                 | 01:25 PM      |
 
 #### Gramática JSON
 
@@ -654,7 +654,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 | Nome     | Tipo de dados | Valores possíveis                                                    |
 | -------- | ------------- | -------------------------------------------------------------------- |
-| wordwrap | string        | "automatic" (exceto list box), "normal", "nenhum" |
+| wordwrap | string        | "automatic" (exceto coluna e rodapé de list box), "normal", "nenhum" |
 
 #### Objectos suportados
 

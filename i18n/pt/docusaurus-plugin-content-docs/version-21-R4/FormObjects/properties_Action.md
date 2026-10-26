@@ -24,7 +24,7 @@ For more information, refer to the [Drag and Drop](../Desktop/drag-and-drop.md) 
 
 | Nome     | Tipo de dados | Valores possíveis                                                                                  |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| dragging | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto botão e list box) |
 
 #### Objectos suportados
 
@@ -56,7 +56,7 @@ For more information, refer to the [Drag and Drop](../Desktop/drag-and-drop.md) 
 
 | Nome     | Tipo de dados | Valores possíveis                                                                                  |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
+| dropping | text          | "none" (por padrão), "custom" (exceto plug-in area), "automatic" (exceto botão e list box) |
 
 #### Objectos suportados
 

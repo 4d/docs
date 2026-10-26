@@ -3,7 +3,7 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-`TCPEvent` クラスはTCP 接続のライフサイクル中に発生するイベントに関する情報を提供します。 これは[TCPConnection](TCPConnectionClass.md) が開いた時に生成され、一般的には`onConnection`、`onData`、`onError` などのコールバックの中で使用されます。これは[TCPConnection](TCPConnectionClass.md) が開いた時に生成され、一般的には`onConnection`、`onData`、`onError` などのコールバックの中で使用されます。
+`TCPEvent` クラスはTCP 接続のライフサイクル中に発生するイベントに関する情報を提供します。これは[TCPConnection](TCPConnectionClass.md) が開いた時に生成され、一般的には`onConnection`、`onData`、`onError` などのコールバックの中で使用されます。
 
 <details><summary>履歴</summary>
 

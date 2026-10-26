@@ -54,7 +54,7 @@ Super.doSomething(42) // スーパークラスにて宣言されている
 
 ## 例題 1
 
-クラスコンストレクター内で`Super` を使う例です。クラスコンストレクター内で`Super` を使う例です。 `Rectangle` と `Square` クラスの共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
+クラスコンストレクター内で `Super` を使う例です。 `Rectangle` と `Square` クラスの共通要素がコンストラクター内で重複しないよう、このコマンドを呼び出します。
 
 ```4d
 // Class: Rectangle
@@ -93,7 +93,7 @@ Function getArea() : Integer
 
 ## 例題 2
 
-参照参照 関数を持つ `Rectangle` クラスを作成します:
+参照関数を持つ `Rectangle` クラスを作成します:
 
 ```4d
 //Class: Rectangle

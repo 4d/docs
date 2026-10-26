@@ -685,7 +685,7 @@ End if
 
 #### 説明
 
-`.expunge()` 関数は <!-- REF #IMAPTransporterClass.expunge().Summary -->IMAPメールサーバーから "deleted "フラグのついたメッセー ジをすべて削除します。<!-- END REF --> "deleted" フラグは[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。 "deleted" フラグは[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
+`.expunge()` 関数は <!-- REF #IMAPTransporterClass.expunge().Summary -->IMAPメールサーバーから "deleted "フラグのついたメッセー ジをすべて削除します。<!-- END REF --> "deleted" フラグは[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
 
 **返されるオブジェクト**
 

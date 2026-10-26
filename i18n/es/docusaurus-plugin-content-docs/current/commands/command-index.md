@@ -155,7 +155,7 @@ title: Comandos por nombre
 [`CREATE EMPTY SET`](../commands/create-empty-set)<br/>
 [`Create entity selection`](../commands/create-entity-selection)<br/>
 [`CREATE FOLDER`](../commands/create-folder)<br/>
-[`CREATE INDEX`](../commands/create-index)<br/>
+[`CREATE INDEX`](../commands/create-index) **modified 4D 21 R5**<br/>
 [`Create menu`](../commands/create-menu)<br/>
 [`CREATE RECORD`](../commands/create-record)<br/>
 [`CREATE RELATED ONE`](../commands/create-related-one)<br/>
@@ -1072,7 +1072,7 @@ title: Comandos por nombre
 [`SET GROUP ACCESS`](../commands/set-group-access)<br/>
 [`Set group properties`](../commands/set-group-properties)<br/>
 [`SET HELP MENU`](../commands/set-help-menu)<br/>
-[`SET INDEX`](../commands/set-index)<br/>
+[`SET INDEX`](../commands/set-index) **modified 4D 21 R5**<br/>
 [`SET INDEX CACHE PRIORITY`](../commands/set-index-cache-priority)<br/>
 [`SET LIST ITEM`](../commands/set-list-item)<br/>
 [`SET LIST ITEM FONT`](../commands/set-list-item-font)<br/>
@@ -1113,7 +1113,7 @@ title: Comandos por nombre
 [`SET UPDATE FOLDER`](../commands/set-update-folder)<br/>
 [`SET USER ALIAS`](../commands/set-user-alias)<br/>
 [`Set user properties`](../commands/set-user-properties)<br/>
-[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **nuevo 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands/set-window-rect)<br/>
 [`SET WINDOW TITLE`](../commands/set-window-title)<br/>
 [`Shift down`](../commands/shift-down)<br/>

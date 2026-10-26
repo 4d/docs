@@ -14,19 +14,19 @@ A l'instar d'autres types de champs pouvant contenir une grande quantité de don
 Dans le langage 4D, il existe deux façons de manipuler un blob :
 
 - **comme une valeur scalaire** : un blob peut être stocké dans une variable ou un champ Blob et peut être modifié.
-- **comme un objet (`4D.Blob`)** : un `4D.Blob` est un objet blob. Vous pouvez encapsuler un blob ou une partie de celui-ci dans un `4D.Blob` sans modifier le blob d'origine. Cette méthode est appelée ["boxing"](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Pour plus d'informations sur l'instanciation d'un `4D.Blob`, consultez la rubrique [Blob Class](../API/BlobClass.md).
+- **comme un objet (`4D.Blob`)** : un `4D.Blob` est un objet blob. Vous pouvez encapsuler un blob ou une partie de celui-ci dans un `4D.Blob` sans modifier le blob d'origine. Cette méthode est appelée [boxing](https://en.wikipedia.org/wiki/Object_type_\\(object-oriented_programming\\)#Boxing). Pour plus d'informations sur l'instanciation d'un `4D.Blob`, consultez la rubrique [Blob Class](../API/BlobClass.md).
 
 Chaque type de blob a ses avantages. Utilisez le tableau suivant pour déterminer celui qui convient à vos besoins :
 
 |                                         | Blob | 4D.Blob |
-| --------------------------------------- |:----:|:-------:|
-| Modifiable                              | Oui  |   Non   |
-| Partageable en objets et collections    | Non  |   Oui   |
-| Passé par référence\*                 | Non  |   Oui   |
-| Performances lors de l'accès aux octets |  +   |    -    |
-| Taille maximale                         | 2Go  | Mémoire |
+| --------------------------------------- | :--: | :---------------------: |
+| Modifiable                              |  Oui |           Non           |
+| Partageable en objets et collections    |  Non |           Oui           |
+| Passé par référence\*                   |  Non |           Oui           |
+| Performances lors de l'accès aux octets |   +  |            -            |
+| Taille maximale                         |  2Go |         Mémoire         |
 
-A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes. Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes.
+A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes. Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blob`) est plus efficace, car ils sont passés par référence.
 
 > Par défaut, la taille maximale des blobs scalaires est fixée à 2 Go, mais cette limite peut être inférieure en fonction de votre OS et de l'espace disponible.
 
@@ -34,7 +34,8 @@ Vous ne pouvez pas utiliser d'opérateurs sur les blobs.
 
 ## Vérifier si une variable contient un blob scalaire ou un `4D.Blob`
 
-Utilisez la commande [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) pour déterminer si une valeur est de type Blob ou Object. Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html) :
+La commande [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) permet de déterminer si une valeur est de type Blob ou Object.
+Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html) :
 
 ```4d
 var $myBlob: Blob
@@ -75,7 +76,7 @@ Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en ch
 
 ### Passer des blobs et des objets blob aux méthodes
 
-Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blob`) est plus efficace, car ils sont passés par référence. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
+Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
 
 ### Passer un blob scalaire par référence en utilisant un pointeur
 
@@ -112,7 +113,7 @@ COMPUTE BLOB(->$myBlobVar)
 
 Vous pouvez affecter une variable Blob à une autre :
 
-**Exemple :**
+**Example:**
 
 ```4d
 // Déclarer deux variables de type Blob
@@ -143,7 +144,8 @@ $myBlob:= $myObject.blob
 $type:= Value type($myBlob) // Blob
 ```
 
-> Lors de la conversion d'un `4D.Blob` en un blob scalaire, si la taille du `4D.Blob` dépasse la taille maximale des blobs scalaires, le blob scalaire résultant est vide. Par exemple, lorsque la taille maximale des blobs scalaires est de 2GB, si vous convertissez un `4D.Blob` de 2,5Go en blob scalaire, vous obtenez un blob vide.
+> Lors de la conversion d'un `4D.Blob` en un blob scalaire, si la taille du `4D.Blob` dépasse la taille maximale des blobs scalaires, le blob scalaire résultant est vide.
+> Par exemple, lorsque la taille maximale des blobs scalaires est de 2GB, si vous convertissez un `4D.Blob` de 2,5Go en blob scalaire, vous obtenez un blob vide.
 
 ## Modification d'un blob scalaire
 

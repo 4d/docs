@@ -13,14 +13,13 @@ El entorno de desarrollo 4D ofrece varias herramientas de depuración para todo 
 
 Los errores de escritura son detectados por el Editor de código. Se muestran en rojo y se ofrece información adicional en la parte inferior de la ventana. He aquí un error de escritura:
 
-![punto de ruptura](../assets/en/Debugging/typing-error.png)
-
+![break-point](../assets/en/Debugging/typing-error.png)
 
 Estos errores de escritura suelen causar errores de sintaxis (en la imagen anterior, el nombre de la tabla es desconocido). Se obtiene la descripción del error cuando se valida la línea de código. Cuando esto ocurre, corrija el error de digitación y escriba Enter para validar la solución.
 
 ### Errores de sintaxis
 
-Algunos errores sólo se pueden capturar cuando se ejecuta el método. La [ventana de error de sintáxis](#syntax-error-window) aparece cuando ocurre un error durante la ejecución del código. Por ejemplo:
+Algunos errores sólo se pueden capturar cuando se ejecuta el método. Algunos errores sólo se pueden capturar cuando se ejecuta el método. Por ejemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -69,14 +68,14 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Rastrear**: entra en modo Rastrear/Depurador. Se muestra la ventana del [Depurador](debugger.md). Si la línea actual solo se ha ejecutado parcialmente, es posible que tenga que hacer clic en el botón **rastrear** varias veces.
 
-- **Continuar**: la ejecución continua. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error. Continúe con precaución: el error puede impedir que el resto de su método se ejecute correctamente. Recomendamos hacer clic en **Continuar** sólo si el error está en una llamada trivial (como `SET WINDOW TITLE`) que no impide ejecutar y probar el resto de su código.
+- **Continuar**: la ejecución continua. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error. Continúe con precaución: el error puede impedir que el resto de su método se ejecute correctamente. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error.
 
 > Consejo: para ignorar un error que ocurre repetidamente (por ejemplo, en bucles), puede convertir el botón **Continuar** en un botón **Ignorar**. Mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) y haga clic en el botón **Continuar** la primera vez que aparece. La etiqueta del botón cambia a **Ignorar** si el diálogo es llamado de nuevo por el mismo error.
 
 - **Abandonar**: detiene la ejecución del método y devuelve al estado antes del inicio de la ejecución del método:
 
-    - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
-    - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
+  - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
+  - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
 - **Copiar**: copia la información de depuración en el portapapeles. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 

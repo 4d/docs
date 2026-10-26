@@ -33,9 +33,9 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 #### Grammaire JSON
 
-| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| --- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css | string ou collection | Chemin(s) de fichier(s) CSS fourni(s) sous la forme<li>d'une chaîne (un fichier pour les deux plates-formes)</li><li>d'une collection de chaînes (une liste de fichiers pour les deux plates-formes)</li><li>d'une collection d'objets {"path":chaîne ; "media" : "mac" &#124; "win"}. </li> |
+| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                           |
+| --- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "windows"} objects </li> |
 
 ---
 

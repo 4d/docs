@@ -3,22 +3,23 @@ id: onAfterKeystroke
 title: On After Keystroke
 ---
 
-| Code | Peut être appelé par                                                                                                                                                                                                                                               | Définition                                                                                                                                          |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 28   | [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulaire - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) [Colonne de list box](FormObjects/listbox-column.md) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **y compris** ce caractère. |
+| Code | Peut être appelé par                                                                                                                                                                                                                                       | Définition                                                                                                                                                                          |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 28   | [Zone 4D Write Pro](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | Un caractère est sur le point d'être saisi dans l'objet qui a le focus. `Get edited text` retourne le texte de l'objet, **y compris** ce caractère. |
 
 <details><summary>Historique</summary>
 
 | Release | Modifications                                                                                                      |
 | ------- | ------------------------------------------------------------------------------------------------------------------ |
 | 18 R5   | - Prise en charge dans les list box non saisissables - L'événement est désormais déclenché après la validation IME |
+
 </details>
 
 ## Description
 
 > L'événement `On After Keystroke` peut généralement être remplacé par l'événement [`On After Edit`](onAfterEdit.md) (voir ci-dessous).
 
-Après avoir sélectionné les propriétés d'événement [`On Before Keystroke`](onBeforeKeystroke.md) et `On After Keystroke` pour un objet, vous pouvez détecter et gérer les frappes au sein de l'objet, en utilisant la commande `FORM event` qui renverra `On Before Keystroke` puis `On After Keystroke` (pour plus d'informations, veuillez reportez-vous à la description de la commande `Get edited text`).
+Après avoir sélectionné les propriétés d'événement [`On Before Keystroke`](onBeforeKeystroke.md) et `On After Keystroke` pour un objet, vous pouvez détecter et gérer les frappes au sein de l'objet, en utilisant la commande `FORM event` qui retournera `On Before Keystroke` puis `On After Keystroke` (pour plus d'informations, veuillez vous reporter à la description de la commande `Get edited text`).
 
 > Ces événements sont également activés par des commandes de langage qui simulent une action utilisateur telle que `POST KEY`.
 
@@ -29,7 +30,7 @@ L'événement `On After Keystroke` n'est pas généré :
 
 ### Séquence d'entrée
 
-Lorsqu'une entrée nécessite une séquence de frappes clavier, les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke event`] sont générés uniquement lorsque l'entrée est entièrement validée par l'utilisateur. La commande `Keystroke` retourne le caractère validé. Ce cas se produit principalement :
+Lorsqu'une saisie nécessite une séquence de frappes clavier, les événements [`On Before Keystroke`](onBeforeKeystroke.md) et les événements [`On After Keystroke`] sont générés uniquement lorsque la saisie est entièrement validée par l'utilisateur. La commande `Keystroke` retourne le caractère validé. Ce cas se produit principalement :
 
 - lors de l'utilisation de touches "mortes" telles que ^ ou ~: les événements ne sont générés que lorsque le caractère étendu est éventuellement saisi (par exemple "ê" ou ñ),
 - lorsqu'un IME (Input method editor) affiche une boîte de dialogue intermédiaire où l'utilisateur peut saisir une combinaison de caractères : les événements sont générés uniquement lorsque la boîte de dialogue IME est validée.

@@ -37,7 +37,7 @@ LIST TO ARRAY("ListName";varCol)
 
 このタイプのリストボックスでは、各カラムに式が割り当てられている必要があります。各行の中身はコレクション要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
 
-コレクションの各要素、またはエンティティセレクションの各エンティティは、[This](../Concepts/classes.md#this) キーワードを用いてオブジェクトとして取得します。カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、`This` を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。例: `This.<propertyPath>` (あるいはスカラー値のコレクションの場合は `This.value`)。 `(あるいはスカラー値のコレクションの場合は`This.value`)。 カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA`および`LISTBOX INSERT COLUMN FORMULA\` コマンドを使用します。
+コレクションの各要素、またはエンティティセレクションの各エンティティは、[This](../Concepts/classes.md#this) キーワードを用いてオブジェクトとして取得します。カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、`This` を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。例: `This.<propertyPath>` (あるいはスカラー値のコレクションの場合は `This.value`)。カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
@@ -63,7 +63,8 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [背景色](properties_BackgroundAndBorder.md#背景色塗りカラー)                        | ○         | ○             | ○                            |
 | [太字](properties_Text.md#太字)                                              | ○         | ○             | ○                            |
 | [背景色式](properties_BackgroundAndBorder.md#背景色式)                           |           | ○             | ○                            |
-| [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル)                     | ○         | ○             | ○                            |
+| [境界線カラー](./properties_BackgroundAndBorder.md#border-color)               | ○         | ○             | ○                            |
+| [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style)           | ○         | ○             | ○                            |
 | [下](properties_CoordinatesAndSizing.md#下)                                | ○         | ○             | ○                            |
 | [クラス](properties_Object.md#cssクラス)                                       | ○         | ○             | ○                            |
 | [コレクションまたはエンティティセレクション](properties_Object.md#コレクションまたはエンティティセレクション)      |           | ○             | ○                            |

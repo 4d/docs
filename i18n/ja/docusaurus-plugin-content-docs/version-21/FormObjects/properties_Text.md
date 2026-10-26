@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: テキスト
+title: Text
 ---
 
 ---
@@ -100,9 +100,9 @@ title: テキスト
 
 #### JSON 文法
 
-| 名称             | データタイプ | とりうる値                 |
-| -------------- | ------ | --------------------- |
-| textDecoration | string | "normal", "underline" |
+| 名称             | データタイプ | とりうる値               |
+| -------------- | ------ | ------------------- |
+| textDecoration | string | "none", "underline" |
 
 #### 対象オブジェクト
 
@@ -371,7 +371,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 :::note
 
-- "automatic" は、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
+- "automatic" は、[ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
 - "justify" は、[入力](input_overview.md) と [テキストエリア](text.md) でのみサポートされています。
 
 :::
@@ -438,7 +438,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 | fontWeight     | string  | "normal","bold"                                                                                                                                                                                                                                                         |
 | textDecoration | string  | "normal","underline"                                                                                                                                                                                                                                                    |
 | unselectable   | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。チェックボックスやリストといったコントロール類は引き続き稼働します。この設定はリストボックスの選択モードが "なし" の場合には無視されます。デフォルト値: false。 |
-| disabled       | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの)コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                                                   |
+| 無効             | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの)コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                                                   |
 
 特別な "cell" プロパティを使用すると、特定の列にプロパティをまとめて適用することができます:
 
@@ -533,7 +533,7 @@ End if
 
 ---
 
-## 方向
+## 向き
 
 テキストエリアの角度 (回転) を変更します。テキストエリアは、90°単位で回転させることができます。それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 

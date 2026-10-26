@@ -59,7 +59,7 @@ title: DataClass
 | indexed          | Boolean | 属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | inverseName      | Text    | リレーション先の属性名。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | keywordIndexed   | Boolean | 属性にキーワードインデックスが存在すれば true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| kind             | Text    | 属性の種類。属性の種類。 とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"calculated": 計算属性。[`get`](../ORDA/ordaClasses.md#function-get-attributename) 関数 によって定義されます。</li><li>"alias": [他の属性](../ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。</li><li>"relatedEntity": N対1 リレーション属性 (エンティティへの参照) </li><li>"relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)</li>       |
+| kind             | Text    | 属性の種類。とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"calculated": 計算属性。[`get`](../ORDA/ordaClasses.md#function-get-attributename) 関数 によって定義されます。</li><li>"alias": [他の属性](../ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。</li><li>"relatedEntity": N対1 リレーション属性 (エンティティへの参照) </li><li>"relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)</li>              |
 | 必須               | Boolean | 属性において Null値の入力が拒否されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。注記: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。                                                                                                                                                                                                                                                                                                                 |
 | name             | Text    | 属性名 (文字列)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | path             | Text    | リレーションに基づく [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) のパス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -727,7 +727,7 @@ $number:=$ds.Persons.getCount()
 
 #### 説明
 
-`.getRemoteCache()` 関数は、<!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。。
+`.getRemoteCache()` 関数は、<!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。
 
 4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
 
@@ -951,7 +951,7 @@ attributePath|formula 比較演算子 値
 
 クエリに使用するフォーミュラは $1 に引数を受け取ることができます。詳細については後述の **フォーミュラ引数** を参照ください。
 
-> - フォーミュラが複雑な場合など、`queryString` パラメーターを使わずに、 `formula` パラメーターにオブジェクトを直接渡すこともできます。 後述の **フォーミュラ引数** を参照ください。後述の **フォーミュラ引数** を参照ください。
+> - フォーミュラが複雑な場合など、`queryString` パラメーターを使わずに、 `formula` パラメーターにオブジェクトを直接渡すこともできます。後述の **フォーミュラ引数** を参照ください。
 > - セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 `querySettings` パラメーターの説明を参照ください。
 
 - **比較演算子**: *attributePath* 引数と*value* 引数の比較に使用する記号。以下のプロパティがサポートされています:

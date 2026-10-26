@@ -62,6 +62,6 @@ Desea una colección con todos los valores de propiedad de un objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 1718 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 

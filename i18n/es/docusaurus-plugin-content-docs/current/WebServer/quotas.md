@@ -4,7 +4,7 @@ title: Cuotas del servidor web
 ---
 
 Las aplicaciones web pueden recibir solicitudes de muchos clientes diferentes, lo que genera distintos niveles de tráfico y consumo de recursos. Sin los límites adecuados, una actividad excesiva por parte de uno o varios clientes puede afectar al rendimiento y a la disponibilidad del servidor web.
-Las cuotas del servidor web le permiten controlar el uso de recursos limitando el tráfico, las solicitudes, las sesiones activas, las sesiones de invitados y los conjuntos de entidades REST. Quotas can be configured at the web server global level (for all sessions combined), at the session default level (for each new session) or at the current REST session level.
+Las cuotas del servidor web le permiten controlar el uso de recursos limitando el tráfico, las solicitudes, las sesiones activas, las sesiones de invitados y los conjuntos de entidades REST. Las cuotas se pueden configurar a nivel global del servidor web (para el conjunto de sesiones), en el nivel predeterminado de las sesiones (para cada nueva sesión) o a nivel de la sesión REST actual.
 
 :::tip Entradas de blog relacionadas
 
@@ -20,7 +20,7 @@ La configuración de cuotas requiere la activación de las [sesiones escalables]
 
 ### Al inicio
 
-At startup, you can configure quotas in the `quotas` property passed to [`WebServer.start()`](../API/WebServerClass.md#start) for the host Web server or a component Web server. For the host Web server only, you can also load quotas from an **HTTPQuotas.json** file stored in the [`Project/Sources`](../Project/architecture.md#sources) folder.
+Al inicio, puede configurar las cuotas en la propiedad `quotas` pasada a [`WebServer.start()`](../API/WebServerClass.md#start) para el servidor Web anfitrión o un servidor Web de componentes. Para el servidor web anfitrión únicamente, también puede cargar cuotas desde un archivo **HTTPQuotas.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
 #### Uso de la propiedad `quotas`
 
@@ -36,7 +36,7 @@ WEB Server().start({quotas: $quotas})
 
 #### Usando un archivo HTTPQuotas.json
 
-For the host Web server, you can create an **HTTPQuotas.json** file and store it in the [`Project/Sources`](../Project/architecture.md#sources) folder. El servidor web del host carga este archivo al iniciarse. El archivo debe contener un objeto JSON cuyas propiedades sean los [nombres de las propiedades de cuotas](../API/QuotaManagerClass.md):
+Para el servidor web anfitrión, se puede crear un archivo **HTTPQuotas.json** y guardarlo en la carpeta [`Project/Sources`](../Project/architecture.md#sources). El servidor web del host carga este archivo al iniciarse. El archivo debe contener un objeto JSON cuyas propiedades sean los [nombres de las propiedades de cuotas](../API/QuotaManagerClass.md):
 
 ```json title="/Project/Sources/HTTPQuotas.json"
 {
@@ -57,7 +57,7 @@ En un servidor web en ejecución, puede actualizar las cuotas mediante la propie
 
 ### Cuotas de sesión REST actuales
 
-La propiedad [`Session.quotas`](../API/SessionClass.md#quotas) configura las cuotas para la sesión REST actual. Proporciona los valores de uso actuales y permite configurar los límites de conjuntos de entidades REST y los tiempos de espera de la sesión. These quotas are distinct from the session default quotas configured through [`WebServer.quotas`](../API/WebServerClass.md#quotas), which are applied when new Web sessions are created.
+La propiedad [`Session.quotas`](../API/SessionClass.md#quotas) configura las cuotas para la sesión REST actual. Proporciona los valores de uso actuales y permite configurar los límites de conjuntos de entidades REST y los tiempos de espera de la sesión. Estas cuotas son distintas de las cuotas predeterminadas de sesión configuradas a través de [`WebServer.quotas`](../API/WebServerClass.md#quotas), que se aplican cuando se crean nuevas sesiones web.
 
 ### Ejemplo
 
@@ -92,7 +92,7 @@ $webServer.start({quotas: $quotas})
 
 ## Aplicación de las cuotas
 
-For each incoming request, the Web server checks quotas during preprocessing, before the [`On Web Connection`](./httpRequests.md#on-web-connection) database method is called (if defined):
+Para cada petición entrante, el servidor Web verifica las cuotas durante el preprocesamiento, antes de que se llame al método base [`On Web Connection`](./httpRequests.md#on-web-connection) (si está definido):
 
 1. Si se configura una cuota de sesión, se verifica primero.
 2. Si se acepta la solicitud, se comprueba el límite global del servidor.
@@ -118,9 +118,9 @@ Los contadores de cuota se almacenan en la memoria de cada instancia de 4D Serve
 
 ## Servidores web de componentes
 
-Quotas configured for a component Web server apply only to that server and are independent of the quotas configured for the host Web server or other component Web servers.
+Las cuotas configuradas para el servidor web de un componente solo se aplican a ese servidor y son independientes de las cuotas configuradas para el servidor web anfitrión u otros servidores web de componentes.
 
-El archivo de configuración [**HTTPQuotas.json**](#using-an-httpquotasjson-file) solo se aplica al servidor web anfitrión. Component Web servers must be configured with the Web server [`.quotas`](../API/WebServerClass.md#quotas) property and/or the session [`.quotas`](../API/SessionClass.md#quotas) property.
+El archivo de configuración [**HTTPQuotas.json**](#using-an-httpquotasjson-file) solo se aplica al servidor web anfitrión. Los servidores web de los componentes deben configurarse con la propiedad [`.quotas`](../API/WebServerClass.md#quotas) del servidor web y/o la propiedad [`.quotas`](../API/SessionClass.md#quotas) de la sesión.
 
 ## Ver también
 

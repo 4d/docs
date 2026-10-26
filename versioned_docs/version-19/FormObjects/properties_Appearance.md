@@ -299,7 +299,7 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-labelsPlacement|boolean|"top", "bottom" |
+labelsPlacement|text|"top", "bottom" |
 
 #### Objects Supported
 

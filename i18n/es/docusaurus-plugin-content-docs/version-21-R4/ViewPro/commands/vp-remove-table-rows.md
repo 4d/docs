@@ -22,7 +22,7 @@ title: VP REMOVE TABLE ROWS
 | Parámetros | Tipo    |    | Descripción                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text    | -> | Nombre de la tabla                                             |
+| tableName  | Text    | -> | Table name                                                     |
 | row        | Integer | -> | Índice en la tabla de la línea inicial a eliminar              |
 | count      | Integer | -> | Número de líneas a eliminar (debe ser >0)   |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |

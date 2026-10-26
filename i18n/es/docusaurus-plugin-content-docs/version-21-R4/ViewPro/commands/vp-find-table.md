@@ -19,10 +19,10 @@ title: VP Find table
 
 <div class="no-index">
 
-| Parámetros | Tipo   |                             | Descripción        |
-| ---------- | ------ | --------------------------- | ------------------ |
-| rangeObj   | Object | ->                          | Rango de celdas    |
-| Resultado  | Text   | <- | Nombre de la tabla |
+| Parámetros | Tipo   |                             | Descripción     |
+| ---------- | ------ | --------------------------- | --------------- |
+| rangeObj   | Object | ->                          | Rango de celdas |
+| Resultado  | Text   | <- | Table name      |
 
 </div>
 <!-- END REF -->

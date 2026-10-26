@@ -3,26 +3,21 @@ id: ClassClass
 title: Class
 ---
 
-
 Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto en sí mismo, de la clase "Class", que tiene propiedades y una función.
-
-
 
 ### Resumen
 
-
-|                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
+|                                                                                                                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->                   |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary -->                  |
 | [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
-
-
 <!-- REF ClassClass.name.Desc -->
+
 ## .name
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -36,16 +31,15 @@ Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en 
 
 La propiedad `.name` <!-- REF #ClassClass.name.Summary -->contiene el nombre del objeto `4D.Class`<!-- END REF -->. .
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF ClassClass.new().Desc -->
+
 ## .new()
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -55,23 +49,23 @@ Esta propiedad es **de sólo lectura**.
 
 <!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
-
 <!-- REF #ClassClass.new().Params -->
+
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
-|---------|--- |:---:|------|
-|param|any|->|Parámetro(s) a pasar a la función constructor|
-|Resultado|4D.Object|<-|New object of the class|
+| Parámetros | Tipo                      |                             | Descripción                                                      |
+| ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------------------- |
+| param      | any                       |              ->             | Parámetro(s) a pasar a la función constructor |
+| Resultado  | 4D.Object | <- | Nuevo objeto de la clase                                         |
+
 </div>
 <!-- END REF -->
 
-
 #### Descripción
 
-La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases del class store [`cs`](Concepts/classes.md#cs).
+La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases a partir del [class store `cs`](Concepts/classes.md#cs).
 
-Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la función [constructor de la clase](Concepts/classes.md#class-constructor) (si la hay) en la definición de la clase className. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
+You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Dentro de la función constructor, el [`This`](Concepts/classes.md#this) está vinculado al nuevo objeto que se está construyendo.
 
 Si se llama a `.new()` en una clase inexistente, se devuelve un error.
 
@@ -90,9 +84,9 @@ Para crear una nueva instancia de la clase Person con parámetros:
 ```4d
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text; $age : Integer)
-    This.firstName:=$firstname
-    This.lastName:=$lastname
-    This.age:=$age
+	This.firstName:=$firstname
+	This.lastName:=$lastname
+	This.age:=$age
 ```
 
 ```4d
@@ -104,15 +98,13 @@ $person:=cs.Person.new("John";"Doe";40)
 //$person.age = 40
 ```
 
-
 <!-- END REF -->
 
-
-
 <!-- REF ClassClass.superclass.Desc -->
+
 ## .superclass
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -128,7 +120,7 @@ La propiedad `.superclass` <!-- REF #ClassClass.superclass.Summary -->devuelve l
 
 Para definir una superclase para una clase usuario, utilice la palabra clave [`extends`](Concepts/classes.md#class-extends-classname) como: `Class extends <superclass>`.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es de **solo lectura**.
 
 #### Ejemplos
 
@@ -143,7 +135,6 @@ $sup:=cs.MyFile.superclass //File
 
 ```
 
-
-
 **Ver también:** [Super](Concepts/classes.md#super)
+
 <!-- END REF -->

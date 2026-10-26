@@ -50,7 +50,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`columns`](properties_ListBox.md#columns)|A collection of list box columns|Collection of column objects with defined column properties
 |[`contextMenu`](properties_Entry.md#context-menu)|Provides the user access to a standard context menu in the selected area.	|"automatic", "none"|
 |[`continuousExecution`](properties_Action.md#execute-object-method)|Designates whether or not to run the method of an object while the user is tracking the control. |true, false|
-|[`controlType`](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"input", "checkbox" (for boolean / numeric columns), "automatic", "popup" (only for boolean columns)|
+|[`controlType`](properties_Display.md#display-type)|Specifies how the value should be rendered in a list box cell.|"automatic" or "checkbox" for numeric columns, "popup" or "checkbox" for boolean columns|
 |[`currentItemSource`](properties_DataSource.md#current-item)| The last selected item in a list box.|Object expression	|
 |[`currentItemPositionSource`](properties_DataSource.md#current-item-position)| The position of the last selected item in a list box.|Number expression	|
 |[`customBackgroundPicture`](properties_TextAndPicture.md#background-pathname) |Sets the picture that will be drawn in the background of a button.|Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option.| 
@@ -163,6 +163,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`shortcutControl`](properties_Entry.md#shortcut)|Designates the Control key (Windows)|true, false|
 |[`shortcutKey`](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"a", "b",... or "[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 |[`shortcutShift`](properties_Entry.md#shortcut)	|Designates the Shift key	|true, false|
+[Show background](properties_Appearance.md#show-background)  
 |[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
 |[`showGraduations`](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |true, false|
 |[`showHeaders`](properties_Headers.md#display-headers)|Displays or hides column headers. |true, false|
@@ -211,7 +212,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`userInterface`](properties_Appearance.md#user-interface)|4D View Pro area interface.|"none" (default), "ribbon", "toolbar"<a id="v"></a>|
 |**v**|||
 |[`values`](properties_DataSource.md#default-list-of-values)|List of default values for an array listbox column|ex: "A","B","42"...|
-|[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare"|
+|[`variableCalculation`](properties_Object.md#variable-calculation)|Allows mathematical calculations to be performed.|"none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares"|
 |[`verticalAlign`](properties_Text.md#vertical-alignment)|Vertical location of text within the area that contains it. |"automatic", "top", "middle", "bottom"|
 |[`verticalLineStroke`](properties_Gridlines.md#vertical-line-color)|Defines the color of the vertical lines in a list box (gray by default).|Any CSS value, "transparent", "automatic"|
 |[`visibility`](properties_Display.md#visibility)|Allows hiding the object in the Application environment.|"visible", "hidden", "selectedRows", "unselectedRows"<a id="w"></a>|
@@ -219,6 +220,6 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`webEngine`](properties_WebArea.md#use-embedded-web-rendering-engine)| Used to choose between two rendering engines for the Web area, depending on the specifics of the application.|"embedded", "system"|
 |[`width`](properties_CoordinatesAndSizing.md#width)|Designates an object's horizontal size|minimum: 0|
 |[`withFormulaBar`](properties_Appearance.md#show-formula-bar)|Manages the display of a formula bar with the Toolbar interface in the 4D View Pro area.|true, false|
-|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box), "normal", "none"<a id="z"></a>|
+|[`wordwrap`](properties_Display.md#wordwrap) |Manages the display of contents when it exceeds the width of the object. | "automatic" (excluding list box column and footer), "normal", "none"<a id="z"></a>|
 |**z**|||
 |[`zoom`](properties_Appearance.md#zoom)|Zoom percentage for displaying 4D Write Pro area|number (minimum=0)|

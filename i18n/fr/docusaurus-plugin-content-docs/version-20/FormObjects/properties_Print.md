@@ -23,9 +23,9 @@ Les options d'impression sont les suivantes :
 
 #### Grammaire JSON
 
-|    Nom     | Type de données | Valeurs possibles                                                 |
-|:----------:|:---------------:| ----------------------------------------------------------------- |
-| printFrame |     string      | "fixed", "variable", (sous-formulaire uniquement) "fixedMultiple" |
+|     Nom    | Type de données | Valeurs possibles                                                                    |
+| :--------: | :-------------: | ------------------------------------------------------------------------------------ |
+| printFrame |      string     | "fixed", "variable", (sous-formulaire uniquement) "fixedMultiple" |
 
 #### Objets pris en charge
 

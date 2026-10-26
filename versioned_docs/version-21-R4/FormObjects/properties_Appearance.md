@@ -31,6 +31,27 @@ defaultButton|boolean|true, false |
 
 ---
 
+## Display formula source as symbol
+ 
+Displays source text of formulas as symbols when expressions are shown as references.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+displayFormulaAsSymbol|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
+
+
 ## Hide focus rectangle  
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
@@ -145,8 +166,8 @@ dpi|number|0=automatic, 72, 96 |
 
 ---
 
-## Show background
-
+## Show background and anchored elements
+ 
 Displays/hides both background images and background color.
 
 #### JSON Grammar
@@ -165,6 +186,27 @@ showBackground|boolean|true (default), false|
 
 
 ---
+
+
+
+## Show empty or unsupported images
+
+Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showEmptyImages|boolean|true (default), false|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 
 ## Show footers
 
@@ -341,6 +383,29 @@ showReferences|boolean|true, false (default)|
 
 ---
 
+
+## Show table borders
+
+Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. This facilitates page layout (more accessible, more visual resizing) and data entry (convenient in the case of merged cells, for example).
+
+![](../assets/en/FormObjects/visible.png)
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+showTableBorders|boolean|true, false (default)|
+
+#### Objects Supported
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ## Show vertical ruler
 
 Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
@@ -372,7 +437,7 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-labelsPlacement|boolean|"top", "bottom" |
+labelsPlacement|text|"top", "bottom" |
 
 #### Objects Supported
 

@@ -3,15 +3,13 @@ id: configuration
 title: サーバー設定
 ---
 
-4D の RESTサーバーは、標準の HTTPリクエストを用いて外部アプリケーションがアプリケーションのデータにアクセスすることを可能にします。
+4D の RESTサーバーは、標準の HTTPリクエストを用いて外部アプリケーションがアプリケーションのデータにアクセスすることを可能にします。つまり、プロジェクトのデータクラス情報を取得したり、データを操作したり、Webアプリケーションにログインしたり、といったことが可能です。
 
 REST機能を使い始めるまえに、まずは 4D REST サーバーの設定をおこない、これを起動させる必要があります。
 
 > - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
 > - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
-> - リクエストをおこなうアプリケーションの [セッション](authUsers.md) は別途管理する必要があります。
-
-
+> - You need to manage the [session](authUsers.md) for your requesting application.
 
 ## RESTサーバーを開始する
 
@@ -25,17 +23,16 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 > 変更を反映するには、4Dアプリケーションを再起動する必要があります。
 
-
 ## アクセス権の設定
 
 デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
 REST接続は次の方法で制限することができます:
-- ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて、RESTサービスに割り当てる **読み込み/書き出し** ユーザーグループを設定します;
-- `On REST Authentication` データベースメソッドに、RESTの初期リクエストを処理するコードを書きます。
 
-> 上に挙げた 2つの方法を同時に使用することはできません。 `On REST Authentication` データベースメソッドを定義した場合、4D は RESTリクエストの処理を同メソッドに委ねます。 つまり、ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて指定した "読み込み/書き出し" の設定は無視されます。
+- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
+- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
+> 上に挙げた 2つの方法を同時に使用することはできません。 Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
 ### ストラクチャー設定を使用する
 
@@ -46,9 +43,8 @@ REST接続は次の方法で制限することができます:
 > この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。これが定義されている場合は、ストラクチャー設定にて指定したアクセス設定は無視されます。
 
 ### On REST Authentication データベースメソッドを使用する
+
 `On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。評価にあたっては、4Dアプリケーションのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
-
-
 
 ## テーブルやフィールドの公開
 
@@ -58,6 +54,7 @@ REST接続は次の方法で制限することができます:
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
 ```
+
 このリクエストで、salary (給与) フィールドが 10000以上の社員データが取得されます。
 
 > "非表示" 属性を選択されたテーブルやフィールドも、デフォルトで REST に公開されています。
@@ -74,8 +71,9 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 1. ストラクチャーエディターにて対象となるテーブルを選択し、右クリックでコンテキストメニューを開いてテーブルプロパティを選択します。
 
-2. **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](../assets/en/REST/table.png) 公開設定を変更する各テーブルに対して、この手順を繰り返します。
-
+2. **RESTリソースとして公開** オプションの選択を解除します:
+   ![alt-text](../assets/en/REST/table.png)
+   公開設定を変更する各テーブルに対して、この手順を繰り返します。
 
 ### フィールドの公開
 
@@ -87,6 +85,9 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. フィールドの **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](../assets/en/REST/field.png) 公開設定を変更する各フィールドに対してこの手順を繰り返します。 ![alt-text](../assets/en/REST/field.png) 公開設定を変更する各フィールドに対してこの手順を繰り返します。
+2. フィールドの **RESTリソースとして公開** オプションの選択を解除します:
+   フィールドの **RESTリソースとして公開** オプションの選択を解除します:
+   ![alt-text](../assets/en/REST/field.png)
+   Repeat this for each field whose exposure needs to be modified.
 
 > あるフィールドが REST を通してアクセス可能であるためには、その親テーブルも公開されている必要があります。親テーブルが公開されていない場合、各フィールドの公開設定に関わらず、すべてのフィールドがアクセス不可になります。

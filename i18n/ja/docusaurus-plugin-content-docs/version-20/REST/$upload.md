@@ -1,8 +1,7 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
-
 
 サーバーにアップロードしたファイルの ID を返します
 
@@ -20,7 +19,7 @@ title: '$upload'
 
 次に、下のようなリクエストを使用して、選択した画像を 4D Server にアップロードします:
 
- `POST  /rest/$upload?$rawPict=true`
+`POST  /rest/$upload?$rawPict=true`
 
 その結果、サーバーからはファイルを識別する ID が返されます。
 
@@ -28,9 +27,9 @@ title: '$upload'
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します. リクエストは次のようになります:
+この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します。リクエストは次のようになります:
 
- `POST  /rest/Employee/?$method=update`
+`POST  /rest/Employee/?$method=update`
 
 **POST データ**:
 
@@ -83,7 +82,7 @@ $url:="localhost:80/rest/$upload?$binary=true" // RESTリクエストの準備
 $headerNames{1}:="Content-Type"
 $headerValues{1}:="application/octet-stream"
 
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリの読み込み
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリーの読み込み
 
  // ファイルをアップロードするための 1つ目の POSTリクエスト
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)

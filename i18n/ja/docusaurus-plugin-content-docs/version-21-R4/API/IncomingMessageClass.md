@@ -5,7 +5,7 @@ title: IncomingMessage
 
 `4D.IncomingMessage` クラスを使用すると、カスタムの [**HTTP リクエストハンドラー**](../WebServer/http-request-handler.md) が受信したオブジェクトを管理できるようになります。 HTTP リクエストおよびそのプロパティは`4D.IncomingMessage` クラスのインスタンスとして自動的に受信されます。 GET 動詞とともにリクエストに直接渡された引数は[`.urlQuery`](#urlquery) プロパティで管理される一方、リクエストの本文に渡された引数は[`.getBlob()`](#getblob) あるいは [`getText()`](#gettext) といった関数を通して利用可能です。
 
-HTTPリクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。 通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
+HTTPリクエストハンドラーはあらゆる値を返すことが可能です(あるいは返さないことも可能です)。通常は、[`4D.OutgoingMessage`](OutgoingMessageClass.md) クラスのインスタンスを返します。
 
 このクラスの全てのプロパティは読み出し専用です。これらはリクエストハンドラーによって自動的に値が入れられます。
 
@@ -255,7 +255,7 @@ $value := $request.getHeader("content-type")
 
 `.headers` プロパティは、読み出し専用です。
 
-ヘッダー名(キー)は全て小文字となっています。ヘッダー名では大文字と小文字が区別されることに注意してください。
+ヘッダー名(キー)は全て小文字となっています。ヘッダー名は全て大文字・小文字は区別されます。
 
 <!-- END REF -->
 

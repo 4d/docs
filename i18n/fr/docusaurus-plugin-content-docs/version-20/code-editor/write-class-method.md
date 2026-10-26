@@ -19,17 +19,16 @@ L'éditeur de code 4D fournit un contrôle de base des erreurs de syntaxe. Un co
 
 Chaque fenêtre de l'éditeur de code dispose d'une barre d'outils qui permet un accès instantané aux fonctionnalités de base liées à l'exécution et à l'édition du code.
 
-| Élément                                 | Icône                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Exécuter la méthode**                 | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Lorsque vous travaillez avec des méthodes, chaque fenêtre de l'éditeur de code dispose d'un bouton qui peut être utilisé pour exécuter la méthode en cours. A l'aide du menu associé à ce bouton, vous pouvez choisir le type d'exécution:<ul><li> **Exécuter dans un nouveau process** : Crée un process et exécute la méthode en mode standard dans ce process.</li><li>**Exécuter et déboguer dans un nouveau process** : Crée un nouveau process et affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans ce process.</li><li>**Exécuter dans le process application** : Exécute la méthode en mode standard dans le contexte du process Application (en d'autres termes, la fenêtre d'affichage de l'enregistrement).</li><li>**Exécuter et déboguer dans le process application** : Affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans le contexte du processus d'application (en d'autres termes, la fenêtre d'affichage de l'enregistrement).</li></ul>Pour plus d'informations sur l'exécution des méthodes, voir [Méthodes projet](../Concepts/methods.md#calling-project-methods). |
-| **Chercher dans la méthode**            | ![search-icon](../assets/en/code-editor/search.png)                               | Affiche la zone [*Chercher*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                                  |
-| **Liste des macros**                    | ![macros-button](../assets/en/code-editor/macros.png)                             | Insère une macro dans la sélection. Cliquez sur la flèche déroulante pour afficher la liste des macros disponibles. Pour plus d'informations sur la création et l'instanciation des macros, voir [Macros](creating-using-macros.md).                                                                                                                                                              |
-| **Contracter tout / Déployer tout**     | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Ces boutons permettent de déployer ou de contracter toutes les structures de flux de contrôle du code.                                                                                                                                                                                                                                                                                            |
-| **Propriétés de la méthode**            | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Affiche la boîte de dialogue [Propriétés de la méthode](./overview.md#project-method-properties) (méthodes projet uniquement).                                                                                                                                                                                                                                                                    |
-| **Dernières valeurs du Presse-papiers** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Affiche les dernières valeurs stockées dans le presse-papiers.                                                                                                                                                                                                                                                                                                                                    |
-| **Presse-papiers**                      | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Neuf presse-papiers sont disponibles dans l'éditeur de code. Vous pouvez [utiliser ces presse-papiers](#clipboards) en cliquant directement dessus ou en utilisant les raccourcis clavier. Vous pouvez utiliser l'[option Préférences](Preferences/methods.md#options-1) pour les masquer.                                                                                                        |
-| **Menu déroulant de navigation**        | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Vous permet de naviguer à l'intérieur des méthodes et des classes avec du contenu étiqueté automatiquement ou des marqueurs déclarés manuellement. Voir ci-dessous                                                                                                                                                                                                                                |
-
+| Élément                                 | Icône                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Exécuter la méthode**                 | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Lorsque vous travaillez avec des méthodes, chaque fenêtre de l'éditeur de code dispose d'un bouton qui peut être utilisé pour exécuter la méthode en cours. Le menu associé à ce bouton permet de choisir le type d'exécution :<ul><li> **Exécuter nouveau process** : Crée un process et exécute la méthode en mode standard dans ce process.</li><li>**Exécuter et déboguer nouveau process** : Crée un nouveau process et affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans ce process.</li><li>**Exécuter dans le process de l'application** : Exécute la méthode en mode standard dans le contexte du process de l'application (c'est-à-dire la fenêtre d'affichage des enregistrements).</li><li>**Exécuter et déboguer dans le process de l'application** : Affiche la méthode dans la fenêtre du débogueur pour une exécution pas à pas dans le contexte du process de l'application (la fenêtre d'affichage des enregistrements).</li></ul>Pour plus d'informations sur l'exécution des méthodes, voir [Appel des méthodes projet](../Concepts/methods.md#calling-project-methods). |
+| **Chercher dans la méthode**            | ![search-icon](../assets/en/code-editor/search.png)                               | Affiche la [*zone de recherche*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Macros**                              | ![macros-button](../assets/en/code-editor/macros.png)                             | Insère une macro dans la sélection. Cliquez sur la flèche déroulante pour afficher la liste des macros disponibles. Pour plus d'informations sur la création et l'instanciation des macros, voir [Macros](creating-using-macros.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Déployer tout / Contracter tout**     | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Ces boutons permettent de déployer ou de contracter toutes les structures de flux de contrôle du code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Informations sur la méthode**         | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Affiche la boîte de dialogue [Propriétés de la méthode](./overview.md#project-method-properties) (méthodes projet uniquement).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Dernières valeurs du presse-papiers** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Affiche les dernières valeurs stockées dans le presse-papiers.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Presse-papiers**                      | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Neuf presse-papiers sont disponibles dans l'éditeur de code. Vous pouvez [utiliser ces presse-papiers](#clipboards) en cliquant directement dessus ou en utilisant des raccourcis clavier. Vous pouvez utiliser une option des [Préférences](Preferences/methods.md#options-1) pour les masquer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Menu déroulant de navigation**        | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Vous permet de naviguer à l'intérieur des méthodes et des classes avec du contenu étiqueté automatiquement ou des marqueurs déclarés manuellement. Voir ci-dessous                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ### Zone d'édition
 
@@ -37,13 +36,13 @@ C'est ici que vous écrivez et modifiez votre code. L'éditeur indente automatiq
 
 Vous pouvez personnaliser l'affichage de la zone d'édition. Toute personnalisation est automatiquement reportée sur toutes les fenêtres de l'éditeur de code :
 
-| Option                                       | Description                                                                                                                                                                                                                       | Défini dans...                                                                                                                                                                                                                                                              |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **police** et **taille de police**           | Définit la police et la taille de caractères à utiliser dans la zone d'édition                                                                                                                                                    | **Préférences** > [**Méthodes**](../Preferences/methods.md) ou **Méthode > Affichage** > **Agrandir la police** ou **Réduire la police**                                                                                                                                    |
-| **style et couleur des éléments de syntaxe** | assigner une couleur et/ou un style spécifique à chaque type d'élément du langage 4D.  Vous pouvez également changer les différentes couleurs utilisées dans l'interface de la zone d'édition (surlignement, arrière-plan, etc.). | Clic avec le bouton droit de la souris sur un élément du langage (variable, mot-clé, etc.) Clic avec le bouton droit de la souris sur un élément du langage (variable, mot-clé, etc.) > Sous-menu **Style**. Ou **Préférences** > [**Méthodes**](../Preferences/methods.md) |
-| **espaces**                                  | Vous pouvez afficher les espaces entre les mots en utilisant des points (.) au lieu d'espaces vides. Cette option s'applique à tous les éléments du code (noms de commandes, variables, commentaires, etc.).                      | **Méthode > Affichage > Espaces**                                                                                                                                                                                                                                           |
-| **thèmes**                                   | Vous pouvez sélectionner le thème sombre ou clair, ou en définir un thème personnalisé                                                                                                                                            | **Préférences** > [**Méthodes**](../Preferences/methods.md)                                                                                                                                                                                                                 |
-| **largeur des indentations de code**         | Définir la largeur des indentations de code                                                                                                                                                                                       | **Préférences** > [**Méthodes**](../Preferences/methods.md)                                                                                                                                                                                                                 |
+| Option                                       | Description                                                                                                                                                                                                                                                                                                        | Défini dans...                                                                                                                                                                      |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **police** et **taille de police**           | Définit la police et la taille de caractères à utiliser dans la zone d'édition                                                                                                                                                                                                                                     | **Préférences** > [**Méthodes**](../Preferences/methods.md) ou **Méthode > Affichage** > **Agrandir la police** ou **Réduire la police**                                                                                            |
+| **style et couleur des éléments de syntaxe** | assigner une couleur et/ou un style spécifique à chaque type d'élément du langage 4D.  Vous pouvez également changer les différentes couleurs utilisées dans l'interface de la zone d'édition (surlignement, arrière-plan, etc.).               | Clic avec le bouton droit de la souris sur un élément du langage (variable, mot-clé, etc.) > Sous-menu **Style**. Ou **Préférences** > [**Méthodes**](../Preferences/methods.md) |
+| **espaces**                                  | Vous pouvez afficher les espaces entre les mots en utilisant des points (.) au lieu d'espaces vides. Cette option s'applique à tous les éléments du code (noms de commandes, variables, commentaires, etc.). | **Méthode > Affichage > Espaces**                                                                                                                                                                                                   |
+| **thèmes**                                   | Vous pouvez sélectionner le thème sombre ou clair, ou en définir un thème personnalisé                                                                                                                                                                                                                             | **Préférences** > [**Méthodes**](../Preferences/methods.md)                                                                                                                                                                         |
+| **largeur des indentations de code**         | Définir la largeur des indentations de code                                                                                                                                                                                                                                                                        | **Préférences** > [**Méthodes**](../Preferences/methods.md)                                                                                                                                                                         |
 
 #### Barres de modification
 
@@ -55,8 +54,6 @@ La couleur de la barre de modification indique si les modifications ont été en
 
 - jaune : La ligne a été modifiée et la méthode n'a pas encore été enregistrée.
 - vert : La ligne a été modifiée et la méthode a été enregistrée.
-
-
 
 ### Zone des listes
 
@@ -71,7 +68,8 @@ Vous pouvez agrandir ou réduire la largeur relative de chaque zone de liste en 
 
 ![](../assets/en/code-editor/list-area.png)
 
-- Pour ajouter ou supprimer une liste, cliquez sur la zone de titre de l'une des listes et choisissez la commande correspondante dans le menu contextuel. La commande **Supprimer cette liste** est désactivée lorsque vous cliquez sur la dernière liste. Si vous souhaitez masquer toutes les listes, vous devez soit cliquer sur le bouton **Montrer ou cacher les listes**  en bas à droite de la fenêtre, soit les masquer par défaut dans les **Préférences**.
+- Pour ajouter ou supprimer une liste, cliquez sur la zone de titre de l'une des listes et choisissez la commande correspondante dans le menu contextuel.
+  La commande **Supprimer cette liste** est désactivée lorsque vous cliquez sur la dernière liste. Si vous souhaitez masquer toutes les listes, vous devez soit cliquer sur le bouton **Montrer ou cacher les listes**  en bas à droite de la fenêtre, soit les masquer par défaut dans les **Préférences**.
 
 - Vous pouvez masquer les listes dans toutes les fenêtres de la manière suivante :
   - Sélectionnez l'option **Affichage > Listes** dans le menu **Méthode** (une coche indique si les listes sont affichées)
@@ -112,7 +110,7 @@ Les paramètres suivants sont stockés dans le modèle :
 - Emplacement et contenu de chaque liste
 - Largeur relative de chaque liste
 
-Pour enregistrer une fenêtre de l'éditeur de code en tant que modèle, choisissez **Méthode** > **Enregistrer comme modèle**. Le modèle est enregistré immédiatement (aucune boîte de dialogue ne s'affiche). Il est stocké dans les **Préférences ** de l'application 4D. Si un modèle précédent existe déjà, il est remplacé.
+Pour enregistrer une fenêtre de l'éditeur de code en tant que modèle, choisissez **Méthode** > **Enregistrer comme modèle**. Le modèle est enregistré immédiatement (aucune boîte de dialogue ne s'affiche). Le modèle est enregistré immédiatement (aucune boîte de dialogue ne s'affiche). Si un modèle précédent existe déjà, il est remplacé.
 
 ### Zone de points d'arrêt
 
@@ -138,9 +136,10 @@ La barre d'état située en bas à droite de la fenêtre de l'éditeur affiche �
 - **Ln**: Numéro de ligne
 - **Col**: Numéro de colonne, c'est-à-dire le niveau dans la hiérarchie des structures de programmation. Le premier niveau est 0. Le numéro de colonne est utile pour le débogage car cette information peut être fournie par l'interpréteur en cas d'erreur dans le code.
 - **Ch**: Emplacement du caractère dans la ligne.
-- ![](../assets/en/code-editor/show-hide-list.png): Masquer/afficher les listes.
+- ![](../assets/en/code-editor/show-hide-list.png) : Masquer/afficher les listes.
 
-Lorsque vous placez le curseur dans une commande, une fonction ou un paramètre, la barre d'état affiche la syntaxe de la commande. Si vous écrivez ou sélectionnez un paramètre, la zone affiche le paramètre actuel en **gras** : ![](../assets/en/code-editor/status-bar-bold.png)
+Lorsque vous placez le curseur dans une commande, une fonction ou un paramètre, la barre d'état affiche la syntaxe de la commande. Si vous écrivez ou sélectionnez un paramètre, la zone affiche le paramètre courant en **gras**:
+![](../assets/en/code-editor/status-bar-bold.png)
 
 ### Menu déroulant de navigation
 
@@ -162,19 +161,19 @@ Lorsqu'il n'y a pas de balise dans la classe/méthode, l'outil affiche "No tag".
 
 Les éléments suivants sont ajoutés automatiquement :
 
-| Icône                                                                       | Élément                                       |
-| --------------------------------------------------------------------------- | --------------------------------------------- |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Pas de balise                                 |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou déclaration de méthode   |
+| Icône                                                                       | Élément                                                          |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Pas de balise                                                    |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou déclaration de méthode                      |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Attribut calculé (get, set, orderBy et query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | Nom de la fonction de classe                  |
+| ![function-icon](../assets/en/code-editor/function.png)                     | Nom de la fonction de classe                                     |
 
 #### Balisage manuel
 
 En ajoutant des marqueurs dans votre code, vous pouvez ajouter les balises suivantes à la liste déroulante :
 
-| Icône                                                   | Élément        |
-| ------------------------------------------------------- | -------------- |
+| Icône                                                   | Élément                        |
+| ------------------------------------------------------- | ------------------------------ |
 | ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK : balise  |
 | ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO : balise  |
 | ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME : balise |
@@ -185,7 +184,7 @@ Vous les déclarez en ajoutant des commentaires tels que :
 // FIXME : Corriger les éléments suivants
 ```
 
-Les déclarations ne sont pas sensibles à la casse ; écrire `fixme` : a le même effet.
+Les déclarations ne sont pas sensibles à la casse ; écrire `fixme:` a le même effet.
 
 L'ajout d'un trait d'union après la balise `MARK:` trace une ligne de séparation dans l'éditeur de code et dans le menu déroulant. Ainsi, cette saisie :
 
@@ -208,8 +207,6 @@ Pour afficher les balises d'une méthode ou d'une classe par ordre alphabétique
 
 > Les balises à l'intérieur des fonctions se déplacent avec leurs éléments parents.
 
-
-
 ### Raccourcis
 
 De nombreuses fonctionnalités de l'éditeur de code de 4D sont disponibles par le biais de raccourcis clavier par défaut.
@@ -220,54 +217,52 @@ Sous macOS, utilisez la touche **Command** au lieu de la touche **Ctrl** mention
 
 :::
 
-| **Equivalent clavier**                                      | **Action**                                                                                                                                        |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sélection et navigation**                                 |                                                                                                                                                   |
-| Double-clic                                                 | Sélectionne un nom d'élément du langage                                                                                                           |
-| [Alt]+Double-clic                                           | Sélectionne un nom d'élément du langage contenant des espaces (constante, méthode, etc.)                                                          |
-| [Maj]+[flèche droite]                                       | Crée et agrandit la sélection, caractère par caractère, vers la droite, ou Réduit la sélection, caractère par caractère, à partir de la gauche    |
-| [Maj]+[flèche gauche]                                       | Réduit la sélection, caractère par caractère, à partir de la droite ou Crée et agrandit la sélection, caractère par caractère, vers la gauche     |
-| [Maj]+[flèche vers le bas]                                  | Crée et agrandit une sélection, ligne par ligne, du haut vers le bas                                                                              |
-| [Maj]+[flèche haut]                                         | Crée et agrandit une sélection, ligne par ligne, du bas vers le haut                                                                              |
-| [Ctrl]+[Maj]+[flèche droite]                                | Crée et agrandit la sélection, mot par mot, de droite à gauche                                                                                    |
-| [Ctrl]+[Maj]+[flèche gauche]                                | Réduit la sélection, mot par mot, à partir de la droite, ou crée et agrandit la sélection, mot par mot, à partir de la gauche                     |
-| [Ctrl]+[flèche droite]                                      | Déplace le point d'insertion, mot par mot, de gauche à droite                                                                                     |
-| [Ctrl]+[flèche gauche]                                      | Déplace le point d'insertion, mot par mot, de droite à gauche                                                                                     |
-| [Alt]+[flèche vers le bas]                                  | Déplace la ou les ligne(s) où se trouve le curseur vers le bas                                                                                    |
-| [Alt]+[flèche haut]                                         | Déplace la ou les ligne(s) où se trouve le curseur vers le haut                                                                                   |
-| [Home]                                                      | Place le point d'insertion au début de la ligne                                                                                                   |
-| [Fin]                                                       | Place le point d'insertion à la fin de la ligne                                                                                                   |
-| [Ctrl]+[Home]                                               | Place le point d'insertion au début de la méthode                                                                                                 |
-| [Ctrl]+[Fin]                                                | Place le point d'insertion à la fin de la méthode                                                                                                 |
-| [Maj]+[Home]                                                | Sélectionne tous les caractères de la ligne qui se trouvent à gauche du curseur                                                                   |
-| [Maj]+[Fin]                                                 | Sélectionne tous les caractères de la ligne qui se trouvent à droite du curseur                                                                   |
-| [PgAV]                                                      | Fait défiler le contenu de la méthode, page par page, du bas vers le haut (ne modifie pas le point d'insertion)                                   |
-| [PgAR]                                                      | Fait défiler le contenu de la méthode, page par page, du haut vers le bas (ne modifie pas le point d'insertion)                                   |
-| [**Introspection**](#goto-definition)                       |                                                                                                                                                   |
-| [Ctrl]+K ou [Alt]+double-clic                               | Identique à la commande [**Aller à définition**](#goto-definition)                                                                                |
-| \[Ctrl\] (Windows) ou \[Alt\] (macOS)+survol d'un token | Souligne le token (élément de langage identifié). Clic sur le token souligné = identique à la commande [**Aller à définition**](#goto-definition) |
-| [**Chercher et remplacer**](#find-and-replace)              |                                                                                                                                                   |
-| [Ctrl]+F                                                    | Chercher                                                                                                                                          |
-| [Ctrl]+G                                                    | Chercher suivant                                                                                                                                  |
-| [Ctrl]+[Maj]+G                                              | Chercher précédent                                                                                                                                |
-| [Ctrl]+E                                                    | Chercher identique suivant                                                                                                                        |
-| [Ctrl]+[Maj]+E                                              | Chercher identique précédent                                                                                                                      |
-| [Ctrl]+[Alt]+F                                              | Remplacer                                                                                                                                         |
-| [Ctrl]+[Alt]+G                                              | Remplacer suivant                                                                                                                                 |
-| [Ctrl]+[Alt]+[Maj]+G                                        | Remplacer précédent                                                                                                                               |
-| [**Presse-papiers**](#clipboards)                           |                                                                                                                                                   |
-| [Maj]+clic ou [Alt]+clic sur l'icône du presse-papiers      | Copier le texte sélectionné dans un presse-papiers                                                                                                |
-| [Ctrl]+[Maj]+touche numérotée                               | Copier le texte sélectionné dans le presse-papiers de ce numéro                                                                                   |
-| [Ctrl]+clic sur l'icône du presse-papiers                   | Coller le contenu d'un presse-papiers à l'emplacement du curseur                                                                                  |
-| [Ctrl]+[Maj]+touche numérotée                               | Coller le contenu du presse-papiers de ce numéro à l'emplacement du curseur                                                                       |
+| **Raccourci**                                                                                                                                                                                             | **Action**                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sélection et navigation**                                                                                                                                                                               |                                                                                                                                                                                         |
+| Double-clic                                                                                                                                                                                               | Sélectionne un nom d'élément du langage                                                                                                                                                 |
+| [Alt]+Double-clic                                                                                                                                     | Sélectionne un nom d'élément du langage contenant des espaces (constante, méthode, etc.)                                                             |
+| [Maj]+[flèche droite]                                                                             | Crée et agrandit la sélection, caractère par caractère, vers la droite, ou Réduit la sélection, caractère par caractère, à partir de la gauche                                          |
+| [Maj]+[flèche gauche]                                                                             | Réduit la sélection, caractère par caractère, à partir de la droite ou Crée et agrandit la sélection, caractère par caractère, vers la gauche                                           |
+| [Maj]+[flèche vers le bas]                                                                        | Crée et agrandit une sélection, ligne par ligne, du haut vers le bas                                                                                                                    |
+| [Maj]+[flèche haut]                                                                               | Crée et agrandit une sélection, ligne par ligne, du bas vers le haut                                                                                                                    |
+| [Ctrl]+[Maj]+[flèche droite]                  | Crée et agrandit la sélection, mot par mot, de droite à gauche                                                                                                                          |
+| [Ctrl]+[Maj]+[flèche gauche]                  | Réduit la sélection, mot par mot, à partir de la droite, ou crée et agrandit la sélection, mot par mot, à partir de la gauche                                                           |
+| [Ctrl]+[flèche droite]                                                                            | Déplace le point d'insertion, mot par mot, de gauche à droite                                                                                                                           |
+| [Ctrl]+[flèche gauche]                                                                            | Déplace le point d'insertion, mot par mot, de droite à gauche                                                                                                                           |
+| [Alt]+[flèche vers le bas]                                                                        | Déplace la ou les ligne(s) où se trouve le curseur vers le bas                                                                                                       |
+| [Alt]+[flèche haut]                                                                               | Déplace la ou les ligne(s) où se trouve le curseur vers le haut                                                                                                      |
+| [Home]                                                                                                                                                | Place le point d'insertion au début de la ligne                                                                                                                                         |
+| [Fin]                                                                                                                                                 | Place le point d'insertion à la fin de la ligne                                                                                                                                         |
+| [Ctrl]+[Home]                                                                                     | Place le point d'insertion au début de la méthode                                                                                                                                       |
+| [Ctrl]+[Fin]                                                                                      | Place le point d'insertion à la fin de la méthode                                                                                                                                       |
+| [Maj]+[Home]                                                                                      | Sélectionne tous les caractères de la ligne qui se trouvent à gauche du curseur                                                                                                         |
+| [Maj]+[Fin]                                                                                       | Sélectionne tous les caractères de la ligne qui se trouvent à droite du curseur                                                                                                         |
+| [PgAV]                                                                                                                                                | Fait défiler le contenu de la méthode, page par page, du bas vers le haut (ne modifie pas le point d'insertion)                                                      |
+| [PgAR]                                                                                                                                                | Fait défiler le contenu de la méthode, page par page, du haut vers le bas (ne modifie pas le point d'insertion)                                                      |
+| [**Introspection**](#goto-definition)                                                                                                                                                                     |                                                                                                                                                                                         |
+| [Ctrl]+K ou [Alt]+double-clic                                                                     | Identique à la commande [**Aller à la définition**](#goto-definition)                                                                                                                   |
+| \[Ctrl\] (Windows) ou \[Alt\] (macOS)+survol d'un token | Souligne le token (élément de langage identifié). Clic sur le token souligné = identique à la commande [**Aller à définition**](#aller-a-definition) |
+| [**Chercher et remplacer**](#find-and-replace)                                                                                                                                                            |                                                                                                                                                                                         |
+| [Ctrl]+F                                                                                                                                              | Chercher                                                                                                                                                                                |
+| [Ctrl]+G                                                                                                                                              | Chercher suivant                                                                                                                                                                        |
+| [Ctrl]+[Maj]+G                                                                                    | Chercher précédent                                                                                                                                                                      |
+| [Ctrl]+E                                                                                                                                              | Chercher identique suivant                                                                                                                                                              |
+| [Ctrl]+[Maj]+E                                                                                    | Chercher identique précédent                                                                                                                                                            |
+| [Ctrl]+[Alt]+F                                                                                    | Remplacer                                                                                                                                                                               |
+| [Ctrl]+[Alt]+G                                                                                    | Remplacer suivant                                                                                                                                                                       |
+| [Ctrl]+[Alt]+[Maj]+G                          | Remplacer précédent                                                                                                                                                                     |
+| [**Presse-papiers**](#clipboards)                                                                                                                                                                         |                                                                                                                                                                                         |
+| [Maj]+clic ou [Alt]+clic sur l'icône du presse-papiers                                            | Copier le texte sélectionné dans un presse-papiers                                                                                                                                      |
+| [Ctrl]+[Maj]+touche numérotée                                                                     | Copier le texte sélectionné dans le presse-papiers de ce numéro                                                                                                                         |
+| [Ctrl]+clic sur l'icône du presse-papiers                                                                                                             | Coller le contenu d'un presse-papiers à l'emplacement du curseur                                                                                                                        |
+| [Ctrl]+[Maj]+touche numérotée                                                                     | Coller le contenu du presse-papiers de ce numéro à l'emplacement du curseur                                                                                                             |
 
 :::tip
 
 La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dialogue [Préférences 4D](../Preferences/shortcuts.md).
 
 :::
-
-
 
 ## Edition du code
 
@@ -288,14 +283,11 @@ Le caractère backslash (`\`) bénéficie d'un support spécifique dans le langa
 - inséré à la fin des lignes, il permet d'écrire une seule instruction sur [plusieurs lignes](../Concepts/quick-tour.md#code-on-several-lines).
 - il permet de définir des [séquences d'échappement](../Concepts/quick-tour.md#escape-sequences).
 
-
 :::caution
 
-Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemin Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple `\` par une barre oblique inverse double `\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété à tort comme</code>\N`(une [séquence d'échappement](../Concepts/quick-tour.md#escape-sequences) existante). Vous devez donc saisir un double backslash `\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
+Le caractère backslash (`\`) est utilisé comme séparateur dans les [chemins d'accès sous Windows](../Concepts/paths.md#windows). En général, 4D interprétera correctement les noms de chemin Windows entrés dans l'éditeur de code en remplaçant la barre oblique inverse simple `\` par une barre oblique inverse double `\\`. Par exemple, `C:\MyDocuments` deviendra `C:\\MyDocuments`. Toutefois, si vous écrivez `"C:\MyDocuments\New"`, 4D affichera `"C:\\MyDocuments\New"`. Dans ce cas, le deuxième backslash est interprété incorrectement comme `\N` (une [séquence d'échappement](../Concepts/quick-tour.md#s%C3%A9quences-d%C3%A9chappement) existante). Vous devez donc saisir une double barre oblique inversée `\\` lorsque vous souhaitez placer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
 
 :::
-
-
 
 ### Glisser-déposer
 
@@ -303,10 +295,8 @@ Depuis l'explorateur, vous pouvez glisser-déposer des tables, des champs, des f
 
 Lorsque vous insérez une commande en la faisant glisser depuis la page **Commandes** de l'Explorateur, elle apparaît avec sa syntaxe (qui comprend tous ses paramètres) dans l'Éditeur de code. Cette fonctionnalité vous rappelle simplement les paramètres que la commande attend. Vous pouvez alors utiliser la syntaxe qui convient le mieux à votre utilisation.
 
-
-Vous pouvez également effectuer un glisser-déposer à l'intérieur d'une méthode, d'une classe ou d'une fonction, ou entre deux méthodes, classes ou fonctions différentes. Dans l'éditeur de code, le mécanisme de glisser-déposer est activé dès qu'une portion de texte est sélectionnée. Par défaut, le mécanisme de glisser-déposer **déplace** le texte sélectionné. Pour **copier** celui-ci, maintenez la touche **Ctrl** (Windows) ou la touche **Option** (macOS) enfoncée pendant l'opération.
-
-
+Vous pouvez également effectuer un glisser-déposer à l'intérieur d'une méthode, d'une classe ou d'une fonction, ou entre deux méthodes, classes ou fonctions différentes. Dans l'éditeur de code, le mécanisme de glisser-déposer est activé dès qu'une portion de texte est sélectionnée.
+Par défaut, le mécanisme de glisser-déposer **déplace** le texte sélectionné. Pour **copier** celui-ci, maintenez la touche **Ctrl** (Windows) ou la touche **Option** (macOS) enfoncée pendant l'opération.
 
 ### Modification de la casse
 
@@ -335,22 +325,17 @@ En plus de l'opération standard copier-coller, 4D offre deux fonctionnalités s
 
 - Le programme stocke en mémoire les 10 dernières actions de "copier" ou "couper" qui ont été effectuées dans l'Éditeur de code pendant la session en cours. Chacun des différents contenus enregistrés de cette manière peut être réutilisé à tout moment. Pour cela, utilisez la commande **Historique du Presse-papier** du menu contextuel de l'éditeur de code ou le bouton "Dernières valeurs du presse-papiers" de la barre d'outils :
 
-    ![](../assets/en/code-editor/last-clipboard-values-2.png)
+  ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    Les premiers mots des éléments copiés ou coupés sont affichés. Sélectionnez un élément pour l'insérer à l'emplacement courant du curseur.
+  Les premiers mots des éléments copiés ou coupés sont affichés. Sélectionnez un élément pour l'insérer à l'emplacement courant du curseur.
 
 - Neuf presse-papiers numérotés supplémentaires sont disponibles et peuvent être utilisés directement à l'aide des boutons de la barre d'outils de l'Éditeur de code ou [en utilisant des raccourcis clavier](#shortcuts) :
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-
 ### Déplacement des lignes
 
 Vous pouvez déplacer la ligne où se trouve le curseur directement sans devoir la sélectionner d'abord en utilisant les commandes **Déplacer lignes en haut** et **Déplacer lignes en bas** dans le menu **Méthode**. Vous pouvez également le faire en utilisant le [raccourci clavier](#shortcuts) touche **Alt/Option** + flèche **Haut** ou flèche **Bas**.
-
-
-
-
 
 ### Fonctions d'autocomplétion
 
@@ -360,11 +345,14 @@ Dans l'exemple ci-dessous, en tapant la chaîne de caractères "cop", un triangl
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
-Lorsque les caractères que vous saisissez correspondent à une seule possibilité, cette valeur suggérée apparaît en gris (et est insérée si vous appuyez sur la touche **Tabulation**) : ![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
+Lorsque les caractères que vous saisissez correspondent à une seule possibilité, cette valeur suggérée apparaît en gris (et est insérée si vous appuyez sur la touche **Tab**):
+![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
 
-> Si vous avez coché l'option **Insérer () et fermer } ) ] "** dans la page **Méthodes** des **Préférences**, 4D ajoutera également automatiquement **()** après une commande 4D, un mot-clé ou une méthode projet qui nécessite un ou plusieurs arguments obligatoires (après avoir accepté une suggestion ou une complétion) : ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
+> Si vous avez coché l'option **Insérer () et ajouter } ) ] " fermants** dans la page **Méthodes** des **Préférences**, 4D ajoutera également automatiquement **()** après une commande, un mot-clé ou une méthode projet 4D qui nécessite un ou plusieurs arguments obligatoires (après avoir accepté une suggestion ou une complétion) :
+> ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
-L'autocomplétion fonctionne également avec les structures de code (par exemple, If..End if, For each...End for each) : lorsque vous saisissez la première partie de la structure, l'éditeur de code suggérera automatiquement la partie de fermeture : ![](../assets/en/code-editor/autocomplete-code-structures.png)
+L'autocomplétion fonctionne également avec les structures de code (par exemple If..End if, For each...End for each) : lorsque vous saisissez la première partie de la structure, l'Éditeur de code suggérera automatiquement la partie de clôture :
+![](../assets/en/code-editor/autocomplete-code-structures.png)
 
 S'il y a plusieurs suggestions disponibles, 4D les affiche dans une liste déroulante lorsque vous appuyez sur la touche **Tabulation** :
 
@@ -374,7 +362,7 @@ La liste est par ordre alphabétique. Choisissez la valeur en double-cliquant de
 
 Par défaut, vous pouvez également insérer une valeur suggérée en appuyant sur l'un des délimiteurs suivants `( ; : = < [ {` après avoir sélectionné une valeur : la valeur insérée est ensuite suivie du délimiteur, prête pour la saisie des données.
 
-![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** clé --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
+![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** touche --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
 
 > Vous pouvez désactiver l'utilisation de délimiteurs pour insérer des valeurs suggérées dans les **Préférences** > **Méthodes** > **Options**.
 
@@ -395,7 +383,7 @@ Si les caractères saisis correspondent à différents types d'objets, la liste 
 - Mots-clés SQL
 - Macros (affichées entre < >)
 
-> Pour des raisons pratiques, vous pouvez désactiver l'affichage automatique de la liste des suggestions pour les **constantes**, les **variables (locales ou interprocess) et les attributs d'objets**, les **tables** et les **prototypes**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
+> Pour des raisons pratiques, vous pouvez désactiver l'affichage automatique de la liste des suggestions pour les **constantes**, les **variables (locales ou interprocess) et les attributs d'objets**, et/ou les **tables**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
 
 #### Noms de propriétés d'objets
 
@@ -418,9 +406,7 @@ Lorsque la base de données est redémarrée, la liste est réinitialisée.
 
 > Vous pouvez désactiver l'affichage automatique des propriétés d'objet dans les **Préférences** > **Méthodes** > **suggestions**.
 
-
 ## Chercher et remplacer
-
 
 L'éditeur de code dispose de puissantes fonctionnalités de **recherche et remplacement** qui s'appliquent à la fenêtre en cours.
 
@@ -436,26 +422,22 @@ La fonctionnalité **Chercher dans le développement** de la barre d'outils 4D o
 
 :::
 
-
 ### Chercher
 
 Sélectionnez **Chercher > Chercher...** dans le menu **Edition** ou tapez **Ctrl+F** (Windows)**/Cmd+F** (macOS) pour afficher/activer la *zone de recherche*.
 
 La recherche définie dans la zone sera effectuée dans le code situé dans la fenêtre.
 
-La zone de **saisie de recherche** vous permet d'entrer la chaîne à rechercher. Cette zone est une combo box qui stocke les 10 dernières chaînes qui ont été recherchées ou remplacées pendant la session. Si vous surlignez le texte avant de choisir la commande **Chercher...**, il apparaîtra automatiquement dans cette zone. Vous pouvez alors utiliser ce texte ou le remplacer par un autre.
+La zone de **saisie de recherche** vous permet d'entrer la chaîne à rechercher. Cette zone est une combo box qui stocke les 10 dernières chaînes qui ont été recherchées ou remplacées pendant la session. Cette zone est une combo box qui stocke les 10 dernières chaînes qui ont été recherchées ou remplacées pendant la session. Vous pouvez alors utiliser ce texte ou le remplacer par un autre.
 
 Une fois qu'une chaîne de caractères est entrée ou sélectionnée, toutes les occurrences trouvées dans la fenêtre ouverte sont surlignées et le côté droit de la zone affiche le nombre total de correspondances trouvées. Il indique également la position actuelle du curseur parmi tous les résultats.
 
-Appuyez sur la touche **Entrée** pour sélectionner l'occurrence la plus proche du curseur. Vous pouvez également cliquer sur les boutons **Suivant / Précédent** ![find-next-previous](../assets/en/code-editor/find-next.png) pour sélectionner toutes les occurrences séquentiellement vers le début ou la fin de la méthode actuelle, à partir de l'emplacement initial du curseur, ou utiliser les commandes **Chercher suivant** et **Chercher précédent** du menu [**Edition**](#shortcuts).
-
+Appuyez sur la touche **Entrée** pour sélectionner l'occurrence la plus proche du curseur. Vous pouvez également cliquer sur les boutons **Suivant / Précédent** ![find-next-previous](../assets/en/code-editor/find-next.png) pour sélectionner toutes les occurrences séquentiellement vers le début ou la fin de la méthode courante, à partir de l'emplacement initial du curseur, ou utiliser les commandes **Chercher suivant** et **Chercher précédent** du [menu **Edition**](#raccourcis).
 
 #### Options
 
-- **Majuscule/Minuscule** ![case-sensitive](../assets/en/code-editor/case-sensitive.png) : Prendre en compte la casse des caractères telle qu'elle a été saisie dans la zone de recherche. Cette option prend également en compte les caractères diacritiques. Par exemple, une recherche pour "MyVar" ne trouvera pas "myVar" ; une recherche pour "dej" ne trouvera pas "déjà".
-- **Mot entier** ![full-word](../assets/en/code-editor/full-word.png) : Limiter la recherche aux occurrences exactes du mot recherché. Lorsque cette option est cochée, par exemple, une recherche sur "client" ne trouvera ni "clients" ni "myclient". Par défaut, cette option n'est pas cochée ; par conséquent, une recherche de "var" donnera "Myvar", "variation", etc.
-
-
+- **Majuscule/Minuscule** ![sensible-a-la-casse](../assets/en/code-editor/case-sensitive.png) : Prenez en compte la casse des caractères telle qu'elle a été saisie dans la zone de recherche. Cette option prend également en compte les caractères diacritiques. Par exemple, une recherche pour "MyVar" ne trouvera pas "myVar" ; une recherche pour "dej" ne trouvera pas "déjà".
+- **Mot entier** ![full-word](../assets/en/code-editor/full-word.png): Limiter la recherche aux occurrences exactes du mot recherché. Lorsque cette option est cochée, par exemple, une recherche sur "client" ne trouvera ni "clients" ni "myclient". Par défaut, cette option n'est pas cochée ; par conséquent, une recherche de "var" donnera "Myvar", "variation", etc.
 
 ### Remplacer
 
@@ -463,11 +445,9 @@ Cliquez sur le bouton de bascule **v** sur le côté gauche de la *zone Recherch
 
 La zone de saisie *Remplacer* est utilisée pour définir la chaîne de caractères qui remplacera celle définie ci-dessus.
 
-Cliquez sur le bouton **Remplacer** pour lancer la recherche avec toutes les options définies et remplacer la première occurrence trouvée. 4D commence la recherche à partir du point d'insertion de texte en cours et la poursuit jusqu'à la fin de la méthode. Il est ensuite possible de continuer à chercher/remplacer en utilisant les commandes **Remplacer suivant** et **Remplacer précédent** du [menu **Edition**](#shortcuts).
+Cliquez sur le bouton **Remplacer** pour lancer la recherche avec toutes les options définies et remplacer la première occurrence trouvée. 4D commence la recherche à partir du point d'insertion de texte en cours et la poursuit jusqu'à la fin de la méthode. Il est alors possible de continuer à chercher/remplacer en utilisant les commandes **Remplacer suivant** et **Remplacer précédent** du [menu **Édition**](#raccourcis).
 
 Cliquez sur le bouton **Tout remplacer** pour remplacer toutes les occurrences correspondant aux critères de recherche directement dans la méthode ouverte.
-
-
 
 ### Chercher identique
 
@@ -477,13 +457,9 @@ La recherche effectuée est de type "Chercher suivant" dans la fenêtre courante
 
 Les commandes **Chercher identique suivant** et **Chercher identique précédent** permettent de trouver des chaînes de caractères *strictement* identiques à celles sélectionnées. Par exemple, la casse doit correspondre.
 
-
 ### Tout marquer
 
 La commande **Edition > Tout marquer** est activée lorsqu'une recherche a déjà été spécifiée dans la boîte de dialogue de recherche ou de remplacement. Lorsque vous sélectionnez cette commande, 4D place un signet à chaque ligne contenant un élément correspondant aux critères de recherche "courants". Cela permet de repérer facilement tous les résultats de la recherche. Pour plus d'informations sur les signets, voir [Signets](#bookmarks).
-
-
-
 
 ## Erreurs de syntaxe
 
@@ -491,7 +467,7 @@ La commande **Edition > Tout marquer** est activée lorsqu'une recherche a déj�
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-Lors de la saisie du code, il est possible de vérifier immédiatement la syntaxe de la ligne en cours (sans passer à la ligne suivante) en appuyant sur la touche **Entrée** du clavier numérique. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. Vous pouvez également forcer la validation en appuyant sur la touche **Entrée.**.
+Lors de la saisie du code, il est possible de vérifier immédiatement la syntaxe de la ligne en cours (sans passer à la ligne suivante) en appuyant sur la touche **Entrée** du clavier numérique. 4D évalue la ligne, la met en forme, marque les erreurs éventuelles et place le point d'insertion à la fin de la ligne. Lorsqu'une ligne d'une méthode, d'une classe ou d'une fonction est signalée comme ayant une syntaxe incorrecte, vérifiez et corrigez la saisie. Si la ligne devient correcte, 4D supprime le symbole d'erreur. Lorsque vous enregistrez ou fermez la fenêtre, l'ensemble de la méthode est validé. Vous pouvez également forcer la validation en appuyant sur la touche **Entrée**.
 
 Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les éléments suivants :
 
@@ -501,11 +477,11 @@ Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les él�
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la façon dont 4D indique la correspondance des caractères englobants ou désactiver cette fonction dans **Préférences** > **Méthodes** > **Options** > **Correspondance `[](){}`**.
+> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la manière dont 4D affiche les caractères d'encadrement correspondants ou désactiver cette fonctionnalité dans **Préférences** > **Méthodes** > **Options** > **Parenthèses correspondantes**.
 
 L'éditeur de code ne peut vérifier que les erreurs de syntaxe évidentes (fautes d'orthographe, etc.). Il ne vérifie pas les erreurs qui ne se produisent que pendant l'exécution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
 
-4D dispose d'un débogueur intégré (voir [Débogage](../Debugging/debugger.md)) pour traiter et corriger ces erreurs. Le compilateur fournit également une aide indispensable à la détection des erreurs. Pour plus d'informations sur le compilateur, voir le chapitre [Compilation](../Project/compiler.md).
+4D dispose d'un débogueur intégré (voir [Débogage](../Debugging/debugger.md)) permettant de gérer et de corriger ces erreurs. Le compilateur fournit également une aide indispensable à la détection des erreurs. Pour plus d'informations sur le compilateur, consultez le chapitre [Compilation](../Project/compiler.md).
 
 ## Infobulles
 
@@ -519,17 +495,22 @@ La [barre d'état](#status-bar) fournit également des informations contextuelle
 
 - **Erreurs** : Lorsque vous passez la souris sur le symbole indiquant une erreur à gauche de la zone d'édition, une infobulle affiche la cause de l'erreur (voir [Erreurs de syntaxe](#syntax-errors)).
 
-- **Documentation de commande 4D** : Lorsque vous déplacez la souris sur une commande ou une fonction 4D, une infobulle affiche sa syntaxe ainsi qu'une brève description de son fonctionnement. ![](../assets/en/code-editor/status-bar-description.png)
+- **Documentation de commande 4D** : Lorsque vous déplacez la souris sur une commande ou une fonction 4D, une infobulle affiche sa syntaxe ainsi qu'une brève description de son fonctionnement.
+  ![](../assets/en/code-editor/status-bar-description.png)
 
-- **Type et description de la variable** : Lorsque vous survolez une variable, une infobulle affiche son type (si celui-ci a été explicitement défini dans la méthode) et le commentaire associé, le cas échéant. ![](../assets/en/code-editor/variable-type.png)
+- **Type et description de la variable** : Lorsque vous survolez une variable, une infobulle affiche son type (si celui-ci a été explicitement défini dans la méthode) et le commentaire associé, le cas échéant.
+  ![](../assets/en/code-editor/variable-type.png)
 
 - **Méthodes projet ou fonctions** : Lorsque vous survolez une méthode projet ou une fonction de classe, une infobulle affiche :
 
   - soit les commentaires spécifiés dans l'Explorateur.
-  - soit les premières lignes de la méthode ou de la fonction de classe si elle comporte des commentaires (lignes commençant par // ou bloc de commentaires /*...*/). Il est courant d'insérer la documentation de la méthode ainsi que ses paramètres sous forme de commentaires au début de la méthode. Vous pouvez obtenir ces informations directement dans l'infobulle, en veillant à supprimer au préalable tous les commentaires présents dans l'Explorateur. Commentaires au début d'une méthode: ![](../assets/en/code-editor/comments-method.png) Infobulle dans une autre méthode : ![](../assets/en/code-editor/help-tip.png)
+  - soit les premières lignes de la méthode ou de la fonction de classe si elle comporte des commentaires (lignes commençant par // ou bloc de commentaires /*...*/). Il est courant d'insérer la documentation de la méthode ainsi que ses paramètres sous forme de commentaires au début de la méthode. Vous pouvez obtenir ces informations directement dans l'infobulle, en veillant à supprimer au préalable tous les commentaires présents dans l'Explorateur.
+    Commentaires au début d'une méthode :
+    ![](../assets/en/code-editor/comments-method.png)
+    Aide dans une autre méthode :
+    ![](../assets/en/code-editor/help-tip.png)
 
 - Vous pouvez également créer un **fichier de documentation dédié** nommé `<MethodName>MethodName<MethodName>.md` dans le dossier `<package>package<package>/documentation`. Voir [Afficher la documentation dans l'éditeur de code](../Project/documentation.md#viewing-documentation-in-the-code-editor)
-
 
 ## Commenter / Ne pas commenter
 
@@ -537,22 +518,23 @@ Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), q
 
 Il existe deux types de commentaires : `//commentaire` (commentaire sur une seule ligne) et `/*commentaire*/` (commentaires en ligne ou blocs de commentaires multilignes).
 
-Des commentaires peuvent être créés en tapant les caractères `/`. Ou encore, la commande **Commenter/Ne pas commenter** , présente dans le menu **Méthode** ainsi que dans le menu contextuel de l'éditeur de code, permet de marquer un groupe de lignes de code sélectionnées en tant que commentaires d'une seule ligne ou, au contraire, de supprimer les caractères de commentaires d'une seule ligne d'une sélection. Pour utiliser cette commande, sélectionnez le code à commenter, puis sélectionnez la commande **Commenter/Ne pas commenter** :
+Des commentaires peuvent être créés en tapant les caractères `/`. Alternativement, la commande **Commenter/Ne pas commenter**, présente dans le menu **Méthode** ainsi que dans le menu contextuel de l'éditeur de code, permet de commenter chaque ligne d'un groupe de lignes sélectionnées ou, au contraire, de supprimer les caractères de commentaires de chaque ligne de la sélection. Pour utiliser cette commande, sélectionnez le code à commenter, puis sélectionnez la commande **Commenter/Ne pas commenter** :
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-Lorsque la sélection ne contient que du code actif, la commande **Commenter** est appliquée. Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée". Lorsque la sélection ne contient que des lignes commentées, la commande **Ne pas commenter** est appliquée.
+Lorsque la sélection ne contient que du code actif, la commande **Commenter** est appliquée. Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée". Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée".
 
 > La commande **Commenter/Ne pas commenter** ne fonctionne qu'avec des lignes complètes - elle ne peut pas être utilisée pour commenter seulement une partie d'une ligne.
-
 
 ## Déployer / Contracter
 
 Le code 4D situé à l'intérieur des boucles et des conditions peut être contracté ou déployé, afin de faciliter la lecture des méthodes :
 
-- Code déployé : ![](../assets/en/code-editor/expanded-code.png)
+- Code déployé :
+  ![](../assets/en/code-editor/expanded-code.png)
 
-- Code contracté :  ![](../assets/en/code-editor/collapsed-code.png)
+- Code contracté :
+  ![](../assets/en/code-editor/collapsed-code.png)
 
 Si vous placez la souris sur le bouton de déploiement [...], une infobulle apparaît, affichant les premières lignes du code masqué.
 
@@ -564,9 +546,8 @@ Il y a plusieurs façons de déployer et de contracter le code :
 - Utiliser les commandes du sous-menu **Méthode > Plier/Déplier** :
 
   - **Plier la sélection** / **Déplier la sélection** : réduit ou développe toutes les structures de code trouvées dans la sélection de texte.
-  - **Plier le niveau courant** / **Déplier le niveau courant**: réduit ou développe la structure du code là où se trouve le curseur. Ces commandes sont également disponibles dans le **menu contextuel** de l'éditeur.
-  - **Plier tout** / **Déplier tout**: réduit ou développe toutes les boucles et conditions d'une méthode. Ces commandes sont également disponibles dans la barre d'outils de l'éditeur.
-
+  - **Plier le niveau courant** / **Déplier le niveau courant** : réduit ou développe la structure du code là où se trouve le curseur. Ces commandes sont également disponibles dans le **menu contextuel** de l'éditeur.
+  - **Plier tout** / **Déplier tout** : réduit ou développe toutes les boucles et conditions d'une méthode. Ces commandes sont également disponibles dans la barre d'outils de l'éditeur.
 
 ## Blocs
 
@@ -579,14 +560,13 @@ Les blocs peuvent être définis par :
 
 ### Début de bloc ou Fin de bloc
 
-La fonction **Sélectionner bloc ** permet de sélectionner le "bloc englobant" du code contenant le point d'insertion.
+La fonction **Sélectionner bloc** est utilisée pour sélectionner le "bloc englobant" du code contenant le point d'insertion.
 
 Si un bloc de texte est déjà sélectionné, la fonction sélectionne le bloc englobant du niveau supérieur suivant, et ainsi de suite, jusqu'à ce que la méthode entière soit sélectionnée.
 
-Appuyez sur **Ctrl+Shift+B** (Windows) ou **Command+Maj+B** (macOS) pour annuler cette opération et désélectionner le dernier bloc sélectionné.
+Appuyez sur **Ctrl+Maj+B** (Windows) ou **Command+Maj+B** (macOS) pour annuler cette opération et désélectionner le dernier bloc sélectionné.
 
 **Note :** Si le point d'insertion est placé dans une structure de type `If` ou `Else`, le bloc englobant sera celui contenant respectivement l'instruction `If` ou `Else`.
-
 
 ### Début de bloc ou Fin de bloc
 
@@ -597,8 +577,8 @@ Deux commandes facilitent la navigation au sein des structures de code (par exem
 
 Ces commandes se trouvent dans le menu **Méthode** ainsi que dans le menu contextuel de l'éditeur. Vous pouvez également utiliser les raccourcis suivants :
 
-- Windows : **Ctrl + flèche vers le haut** ou **Ctrl** + **flèche vers le bas**
-- macOS : **Commande** + **flèche vers le haut** ou **Commande** +**flèche vers le bas**.
+- Windows : **Ctrl + flèche vers le haut** ou **Ctrl** + **flèche vers le bas**‚
+- macOS : **Commande** + **flèche vers le haut** ou **Commande** + **flèche vers le bas**.
 
 ## Signets
 
@@ -610,29 +590,27 @@ Un signet se déplace avec sa ligne d'origine si des lignes supplémentaires son
 
 Les signets sont gérés en utilisant le sous-menu **Signets** du menu **Méthode** :
 
-- **Permuter** : Associe un signet à la ligne courante (où se trouve le curseur) si elle n'en a pas déjà un, ou supprime le signet existant si elle en a un. Cette fonction est également disponible en utilisant la commande **Permuter** du menu contextuel de l'éditeur ou en utilisant le raccourci clavier **Ctrl+F3** (Windows) ou **Command+F3** (macOS).
+- **Permuter** : Associe un signet à la ligne courante (où se trouve le curseur) si elle n'en a pas déjà un, ou supprime le signet existant si elle en a un. Cette fonction est également disponible dans le menu contextuel de l'éditeur ou en utilisant le raccourci clavier **Ctrl+F3** (Windows) ou **Command+F3** (macOS).
 - **Tout supprimer** : Supprime tous les signets de la fenêtre en cours.
-- **Aller au suivant** / **Aller au précédent** : Permet de naviguer entre les signets dans la fenêtre. La sélection d'une de ces commandes place le curseur sur le premier caractère de la ligne associée au signet concerné. Vous pouvez également utiliser les raccourcis clavier **F3** (aller au suivant) ou **Maj+F3** (passer au précédent).
+- **Aller au suivant** / **Aller au précédent** : Permet de naviguer parmi les signets dans la fenêtre. La sélection d'une de ces commandes place le curseur sur le premier caractère de la ligne associée au signet concerné. Vous pouvez également utiliser les raccourcis clavier **F3** (passer à la suivante) ou **Maj+F3** (passer à la précédente).
 
 :::info
 
-Vous pouvez utiliser les signets comme marqueurs pour les lignes qui contiennent un [élément trouvé par une recherche](#find). Dans ce cas, 4D ajoute automatiquement les signets. Pour plus d'informations, reportez-vous à la section [Tout marquer](#bookmark-all).
+Vous pouvez utiliser des signets comme marqueurs pour les lignes qui contiennent un [élément trouvé par une recherche](#find). Dans ce cas, 4D ajoute automatiquement les signets. Pour plus d'informations, voir [Tout mettre en signet](#bookmark-all).
 
 :::
 
 ## Afficher dans l'Explorateur
 
-La commande **Afficher dans l'Explorateur...** ouvre une fenêtre de l'Explorateur avec l'élément cible sélectionné. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le, puis choisissez **Méthode** > **Afficher dans l'Explorateur...**
-
+La commande **Afficher dans l'Explorateur...** ouvre une fenêtre de l'Explorateur avec l'élément cible sélectionné. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le, puis choisissez **Méthode** > **Afficher dans l'Explorateur...** .
 
 ## Chercher les appelants
 
 La commande **Chercher les appelants** dans le menu **Méthode** est uniquement activée pour les méthodes projet. Elle recherche tous les objets (autres méthodes ou menus) qui font référence à la méthode projet.
 
-**Note :** La commande **Chercher les appelants...** est également disponible dans l'**Explorateur** > **Méthodes**
+**Note:** La commande **Chercher les appelants...** est également disponible dans **Explorateur > Méthodes**
 
 Cette commande affiche ses résultats dans une nouvelle fenêtre.
-
 
 ## Aller à définition
 
@@ -648,22 +626,21 @@ L'effet de la commande **Aller à définition...** varie en fonction de l'élém
 
 - avec une méthode projet, elle affiche le contenu de la méthode dans une nouvelle fenêtre de l'Editeur de code
 - avec un nom de classe ou une fonction de classe, elle ouvre la classe dans l'Éditeur de code
-- avec une commande ou une fonction intégrée de 4D, elle a le même effet que la commande [**Montrer la documentation**](#show-documentation).
+- avec une commande ou fonction 4D intégrée, elle a le même effet que la commande [**Montrer la documentation**](#show-documentation).
 
 ## Montrer la documentation
 
-La commande **Montrer la documentation...** permet d'ouvrir la documentation de l'élément cible. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le et choisissez **Méthode** > **Montrer la documentation...** ou utilisez le menu contextuel de l'éditeur. L'effet varie en fonction de l'élément cible. Par exemple :
+La commande **Montrer la documentation...** ouvre la documentation pour l'élément cible. Pour ce faire, placez le curseur à l'intérieur du nom de l'élément ou sélectionnez-le, puis choisissez **Méthode** > **Montrer la documentation...** ou utilisez le menu contextuel. L'effet varie en fonction de l'élément cible. Par exemple :
 
 - Sélectionner une méthode projet ou une classe utilisateur et choisir **Montrer la documentation...** sélectionne la méthode dans l'Explorateur et bascule vers l'onglet de documentation
 - Sélectionner le nom d'une commande, fonction ou classe 4D et choisir **Montrer la documentation...** affiche la documentation en ligne.
-- Si aucun élément n'est sélectionné, la commande ouvre la documentation de la méthode actuellement ouverte dans l'éditeur de code, [le cas échéant](../Project/documentation.md).
+- Si aucun élément n'est sélectionné, la commande ouvre la documentation de la méthode actuellement affichée dans l'Éditeur de Code, [le cas échéant](../Project/documentation.md).
 
 :::tip
 
 Pour afficher la documentation d'une commande de langage "classique" 4D, sélectionnez le nom de la commande ou placez simplement le curseur dans le nom et appuyez sur **F1**. La documentation de la commande est affichée dans une nouvelle fenêtre de votre navigateur par défaut. 4D recherche la documentation en fonction des paramètres définis dans les Préférences (voir [Emplacement de la documentation](../Preferences/general.md#documentation-location)).
 
 :::
-
 
 ## Chercher les références
 

@@ -5,7 +5,7 @@ title: Fundo e margem
 
 ## Cor de fundo alternado
 
-Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
+Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado para colunas de list box: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
 Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
@@ -37,7 +37,7 @@ The **Fill color** property is named **Background color** with [List Box](listbo
 
 ### Standard objects
 
-No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
+No caso de uma coluna de list box, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
 
 #### Gramática JSON
 
@@ -105,15 +105,17 @@ Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPE
 
 ## Border Color {#border-color}
 
-Allows defining the color of the inner border for:
+Permite definir a cor da borda. O efeito desta propriedade varia ligeiramente dependendo do tipo de objeto ao qual ela é aplicada.
 
-- [custom buttons](./button_overview.md#custom) with the ["custom" Border Line Style](#border-line-style),
-- [custom check boxes](./checkbox_overview.md#custom),
-- [custom radio buttons](./radio_overview.md#custom).
+- **objetos com propriedades de texto**: [botões](./button_overview.md) (todos os estilos exceto "custom", veja abaixo), [listas hierárquicas](list_overview.md), [entradas](input_overview.md), [list boxes](listbox_overview.md), [indicadores de progresso](./progressIndicator.md), [réguas](./ruler.md) e [áreas de texto](text.md).  
+Por padrão, a cor da borda desses objetos é definida automaticamente para a sua propriedade [**cor da fonte**](./properties_Text.md#font-color). Esta configuração padrão corresponde à opção **Igual à fonte** na Lista de Propriedades (a propriedade `borderColor` fica indefinida no JSON).  
+Você pode separar essas duas propriedades definindo um valor de cor para a propriedade "Cor da borda" do objeto (disponível apenas quando a propriedade [**estilo de linha de borda**](#border-line-style) é **simples** (`solid` na propriedade JSON) ou **pontilhada**).
 
-In other contexts, the property is ignored.
+- **objetos sem propriedades de texto**: [áreas 4D View Pro](viewProArea_overview.md), [áreas 4D Write Pro](writeProArea_overview.md), [grades de botões](buttonGrid_overview.md), [botões de imagem](pictureButton_overview.md), [menus pop-up de imagem](picturePopupMenu_overview.md), [áreas de plug-in](pluginArea_overview.md), [subformulários](subform_overview.md), [spinners](spinner.md), [splitters](splitters.md), [steppers](stepper.md), [áreas web](webArea_overview.md).  
+A propriedade cor da borda define a cor das bordas. O valor padrão da cor é "Automático", ou seja, a borda é exibida com a cor automática definida pelo seu sistema operacional.
 
-Note that the border is only displayed when its [width](#border-width) is > 0.
+- **botões com estilo customizado**: [custom buttons](./button_overview.md#custom) com ["custom" Border Line Style](#border-line-style), [custom check boxes](./checkbox_overview.md#custom) e [custom radio buttons](./radio_overview.md#custom).  
+Neste caso, a propriedade cor da borda define a cor de uma borda *interna*, que é um atributo do próprio objeto e não uma propriedade de decoração. Esta borda interna também pode ter uma [largura](#border-width) (ela só é exibida se a largura > 0).
 
 #### Gramática JSON
 
@@ -123,27 +125,39 @@ Note that the border is only displayed when its [width](#border-width) is > 0.
 
 #### Objectos suportados
 
-[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](./button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Botão imagem](pictureButton_overview.md) - [Menu pop-up com imagem](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progresso](./progressIndicator.md) - [Radio Button ("custom" style)](radio_overview.md#custom) - [Regua](./ruler.md) - [Área de texto](text.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subformulário](subform_overview.md) - [Área web](webArea_overview.md)
 
 #### Comandos
 
 [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
+#### Veja também
+
+[Cor da linha](#cor-da-linha) (para formas)
+
 ## Estilo de linha de borda {#border-line-style}
 
-Permite definir um estilo padrão para o contorno do objeto.
+Permite definir um estilo para o contorno do objeto. As seguintes opções estão disponíveis (nem todas as opções são possíveis dependendo do objeto):
 
-:::note
+| Estilo           | Objetos (\*) | Descrição |
+|------------------|--------------|-----------|
+| None             | todos        | Objetos aparecem sem borda. |
+| Plain            | todos        | Objetos aparecem emoldurados com uma linha contínua de 1 pt. ("solid" valor json) |
+| Dotted           | todos        | Objetos aparecem emoldurados com uma linha pontilhada de 1 pt. |
+| Raised           | todos        | Objetos aparecem emoldurados com um efeito 3D. |
+| Sunken           | todos        | Objetos aparecem emoldurados com um efeito 3D rebaixado. |
+| Double           | todos        | Objetos aparecem emoldurados com uma linha dupla, ou seja, duas linhas contínuas de 1 pt separadas por um pixel. |
+| System           | todos *exceto* [botões](button_overview.md) e [áreas de texto](text.md) | Objetos aparecem com uma linha de borda baseada nas especificações gráficas do sistema operacional. |
+| System rounded   | [entradas](input_overview.md) | No macOS, objetos aparecem com o efeito nativo de borda "Liquid Glass" do sistema (para informações sobre Liquid Glass, veja [este post do blog 4D](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications/)). Inclui borda interna definida pelo sistema, raio de canto, cor de borda cinza e padding interno. Note que a aparência "Liquid Glass" *não* é usada em um objeto de entrada multilinha se a [propriedade de barras de rolagem](./properties_Appearance.md#vertical-scroll-bar) estiver ativada ("System" é usada neste caso).<br/> No Windows, este estilo é semelhante ao "System" em tempo de execução. |
+| Custom           | [custom buttons](./button_overview.md#custom) | Habilita o design de borda interna, que inclui um conjunto de propriedades extras: [Cor de preenchimento](#fill-color), [Cor da borda](#border-color), [Largura da borda](#border-width) e [Raio do canto](#corner-radius). <br/>![](../assets/en/FormObjects/custom-button.png) |
 
-For [custom buttons](./button_overview.md#custom), the **custom** border line style enables the inner frame design, that includes a set of extra properties: [Fill color](#background-color--fill-color), [Frame color](#frame-color), [Frame width](#frame-width), and [Corner radius](./properties_BackgroundAndBorder.md#corner-radius).
+(\*) "todos" significa "todos os objetos suportados" listados abaixo.
 
-![](../assets/en/FormObjects/custom-button.png)
+:::tip Related blog posts
 
-:::
-
-:::tip Related blog post
-
-[Customize Buttons, Radio Buttons, and Check Boxes with Background and Border Properties](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+- [Customize Buttons, Radio Buttons, and Check Boxes with Background and Border Properties](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).  
+- [Give Your Form Objects the Border Color They Deserve](https://blog.4d.com/give-your-form-objects-the-border-color-they-deserve)
+- [Choose the Right Native Input Style for Your Interface on macOS](https://blog.4d.com/choose-the-right-native-input-style-for-your-interface-on-macos)
 
 :::
 
@@ -151,7 +165,7 @@ For [custom buttons](./button_overview.md#custom), the **custom** border line st
 
 | Nome        | Tipo de dados | Valores possíveis                                                           |
 | ----------- | ------------- | --------------------------------------------------------------------------- |
-| borderStyle | text          | "system", "none", "solid", "dotted", "raised", "sunken", "double", "custom" |
+| borderStyle | text          | "custom", "dotted", "double", "none", "raised", "solid", "sunken", "system", "systemRounded" |
 
 #### Objectos suportados
 
@@ -160,6 +174,10 @@ For [custom buttons](./button_overview.md#custom), the **custom** border line st
 #### Comandos
 
 [`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style)
+
+#### Veja também
+
+[Tipo de linha pontilhada](#tipo-de-linha-pontilhada) (formas)
 
 ---
 
@@ -183,7 +201,7 @@ The value is expressed in pixels.
 
 #### Objectos suportados
 
-[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botão ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom style")](checkbox_overview.md#custom) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 ---
 
@@ -222,7 +240,7 @@ In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line S
 
 #### Objectos suportados
 
-[Custom Button](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Custom Check Box](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Custom Radio Button](radio_overview.md#custom)
+[Botão ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 #### Comandos
 
@@ -289,7 +307,11 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 | ------ | ------------- | ---------------------------------------- |
 | stroke | string        | um valor css, "transparent", "automatic" |
 
-> Essa propriedade também está disponível para objetos baseados em texto, neste caso é designada tanto a cor da fonte quanto as linhas do objeto, veja [Cor da fonte](properties_Text.md#font-color).
+:::note
+
+Essa propriedade também está disponível para objetos com propriedades de texto, neste caso ela designa tanto a [Cor da fonte](properties_Text.md#font-color) quanto as linhas do objeto, exceto se você usou a propriedade [Cor da borda](#border-color).
+
+:::
 
 #### Objectos suportados
 
@@ -309,7 +331,7 @@ Designa a espessura de uma linha.
 
 | Nome        | Tipo de dados | Valores possíveis                                                                                               |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, o qualquer valor de inteiro < 20 |
+| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, ou qualquer valor de inteiro < 20 |
 
 #### Objectos suportados
 

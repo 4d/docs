@@ -274,7 +274,7 @@ La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dial
 
 4D utilise des techniques d'édition de texte standard pour la saisie et la modification dans l'Éditeur de code.
 
-L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
+L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Vous pouvez [personnaliser ces conventions](#editing-area). Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
 
 Vous pouvez utiliser les touches fléchées pour vous déplacer rapidement d'une ligne à l'autre. Utiliser les touches fléchées pour se déplacer sur plusieurs lignes est plus rapide que de cliquer car l'éditeur retarde l'évaluation de la ligne pour les erreurs.
 

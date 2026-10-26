@@ -15,8 +15,8 @@ As ações atribuídas aos botões podem se originar de [ações padrão](proper
 
 Os botões com ações padrão são escurecidos quando apropriado durante a execução do formulário. Por exemplo, se o primeiro registro de uma tabela for exibido, um botão com a ação padrão `firstRecord` aparecerá esmaecido.
 
-Normalmente, você ativaria o evento `On Clicked` e o método seria executado somente quando o botão fosse clicado.
-Se você quer um botão para executar uma ação que não está disponível como uma ação padrão, deixar o campo de ação padrão vazio e escrever um [método de objeto para especificar a ação do botão](../FormObjects/properties_Action.md#method). Pode associar um método a qualquer botão.
+Se você quer um botão para executar uma ação que não está disponível como uma ação padrão, deixar o campo de ação padrão vazio e escrever um [método de objeto para especificar a ação do botão](../FormObjects/properties_Action.md#method).
+Normalmente, você ativaria o evento `On Clicked` e o método seria executado somente quando o botão fosse clicado. Pode associar um método a qualquer botão.
 
 La [variable](properties_Object.md#variable-or-expression) asociada a un botón se define automáticamente a **0** cuando el formulario se ejecuta por primera vez en modo Diseño o Aplicación. Cuando el usuario hace clic en un botón, su variable se define como **1**.
 
@@ -55,7 +55,7 @@ Por padrão, o estilo Regular tem um fundo cinza-claro com um rótulo no centro.
 }
 ```
 
-The Regular style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+O estilo Regular oferece uma [propriedade adicional](#additional-properties-for-flat-and-regular-buttons): a propriedade [Botão padrão](properties_Appearance.md#default-button).
 
 ### Plano
 
@@ -82,7 +82,7 @@ Por padrão, o estilo Plano tem um fundo branco com um rótulo no centro, cantos
                 }
 ```
 
-The Flat style offers an [additional property](#additional-properties-for-flat-and-regular-buttons): the [Default Button](properties_Appearance.md#default-button) property.
+O estilo Plano oferece uma [propriedade adicional](#additional-properties-for-flat-and-regular-buttons): a propriedade [Botão padrão](properties_Appearance.md#default-button).
 
 ### Barra de ferramentas
 
@@ -150,7 +150,7 @@ Por padrão, o estilo Bevel arredondado tem um fundo cinza-claro com um rótulo 
 
 ![](../assets/en/FormObjects/button_roundedbevel.png)
 
-- *macOS* - las esquinas del botón están redondeadas. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - las esquinas del botão estão redondeadas. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -178,7 +178,7 @@ Por padrão, o estilo OS X Gradient tem um fundo cinza-claro com um rótulo no c
 
 ![](../assets/en/FormObjects/button_osxgradient.png)
 
-- *macOS* - el botón se muestra como un botón de dos tonos. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
+- *macOS* - el botón se muestra como un botão de dos tonos. Quando ele usa a propriedade "Com menu pop-up", um triângulo é exibido à direita e na parte inferior do botão.
 
 #### Exemplo JSON:
 
@@ -281,9 +281,9 @@ O estilo de botão Círculo aparece como um botão sistema redondo.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+Este estilo de botão é compatível com macOS e [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
 
-On Windows Classic UI theme, this style is not supported.
+No tema Windows Classic UI, este estilo não é compatível.
 
 #### Exemplo JSON:
 
@@ -302,7 +302,7 @@ On Windows Classic UI theme, this style is not supported.
 
 ### Personalizado
 
-The Custom button style accepts a personalized background picture and allows managing [additional properties](#additional-properties-for-custom-buttons) such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontal-margin).
+O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerenciar [propriedades adicionais](#additional-properties-for-custom-buttons) como [deslocamento do ícone](properties_TextAndPicture.md#icon-offset) e [margens](properties_TextAndPicture.md#horizontal-margin).
 
 ![](../assets/en/FormObjects/button_custom.png)
 
@@ -342,19 +342,19 @@ Todos os botões partilham o mesmo conjunto de propriedades básicas:
 > (1) Não é compatível com o estilo [Help](#help).<br/>
 > (2) Não é compatível com os estilos [Help](#help), [Flat](#flat) e [Regular](#regular).
 
-### Additional properties for custom buttons
+### Propriedades adicionais para botões personalizados
 
-Additional specific properties are available for [custom](#custom) style buttons:
+Propriedades específicas adicionais estão disponíveis para botões de estilo [personalizado](#custom):
 
 [Background pathname](properties_TextAndPicture.md#background-pathname) - [Border color](./properties_BackgroundAndBorder.md#border-color) - [Border width](./properties_BackgroundAndBorder.md#border-width) - [Corner radius](./properties_BackgroundAndBorder.md#corner-radius) - [Default Button](properties_Appearance.md#default-button) - [Fill color](./properties_BackgroundAndBorder.md#background-color--fill-color) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 
-### Additional properties for flat and regular buttons
+### Propriedade adicional para botões plano e clássico
 
-An additional specific property is available for [flat](#flat) and [regular](#regular) style buttons:
+Uma propriedade específica adicional está disponível para botões de estilo [plano](#flat) e [clássico](#regular):
 
 [Default Button](properties_Appearance.md#default-button)
 
-## Supported Events
+## Eventos compatíveis
 
 [On Alternative Click](../Events/onAlternativeClick.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Long Click](../Events/onLongClick.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
 

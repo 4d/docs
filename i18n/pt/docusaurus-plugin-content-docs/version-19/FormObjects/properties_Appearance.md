@@ -24,8 +24,7 @@ No Windows, o conceito de "escolha recomendada" não é compatível: somente o b
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- defaultButton|booléen|true, false |
+| defaultButton|boolean|true, false |
 
 #### Objectos suportados
 
@@ -109,8 +108,7 @@ Define a resolução do ecrã para o conteúdo da área 4D Write Pro. Por padrã
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- dpi|number|0=automatic, 72, 96 |
+| dpi|number|0=automatic, 72, 96 |
 
 #### Objectos suportados
 
@@ -126,8 +124,7 @@ Apresenta/oculta as imagens de fundo e a cor de fundo.
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showBackground|boolean|true (padrão), false|
+| showBackground|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -143,8 +140,7 @@ Apresenta/oculta os rodapés quando o [modo de visualização da página](#view-
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showFooters|boolean|true (por padrão), false|
+| showFooters|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -162,8 +158,7 @@ Quando activada, a barra de fórmulas é visível por baixo da interface da barr
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- withFormulaBar|boolean|true (padrão), false|
+| withFormulaBar|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -179,8 +174,7 @@ Exibe/oculta os cabeçalhos quando [Modo de exibição de página](#view-mode) e
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showHeaders|boolean|true (padrão), false|
+| showHeaders|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -196,8 +190,7 @@ Apresenta/oculta caracteres invisíveis
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showHiddenChars|boolean|true (padrão), false|
+| showHiddenChars|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -213,8 +206,7 @@ Exibe/oculta a régua horizontal quando a visualização do documento está no m
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showHorizontalRuler|boolean|true (padrão), false|
+| showHorizontalRuler|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -230,8 +222,7 @@ Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avança
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showHTMLWysiwyg|boolean|true, false (padrão)|
+| showHTMLWysiwyg|boolean|true, false (padrão)|
 
 #### Objectos suportados
 
@@ -247,8 +238,7 @@ Exibe/oculta o quadro da página quando [Modo de exibição de página](#view-mo
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showPageFrames|boolean|true, false|
+| showPageFrames|boolean|true, false|
 
 #### Objectos suportados
 
@@ -274,8 +264,7 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showReferences|booléen|true, false (par défaut)|
+| showReferences|boolean|true, false (padrão)|
 
 #### Objectos suportados
 
@@ -291,8 +280,7 @@ Exibe/oculta a régua vertical quando a visualização do documento está no mod
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- showVerticalRuler|boolean|true (padrão), false|
+| showVerticalRuler|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -311,8 +299,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- labelsPlacement|boolean|"top", "bottom" |
+| labelsPlacement|text|"top", "bottom" |
 
 #### Objectos suportados
 
@@ -328,8 +315,7 @@ Quando os controles de aba com uma direção personalizada são exibidos no Wind
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- userInterface|text|"none" (padrão), "ribbon", "toolbar" |
+| userInterface|text|"none" (padrão), "ribbon", "toolbar" |
 
 #### Objectos suportados
 
@@ -379,7 +365,7 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 - **Página**: o modo de visualização mais completo, que inclui contornos de página, orientação, margens, quebras de página, cabeçalhos e rodapés, etc.
 - **Rascunho**: modo rascunho com propriedades básicas do documento
-- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)). Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
+- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
 
 > A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 
@@ -387,8 +373,7 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- layoutMode|texte|"page", "draft", "embedded"|
+| layoutMode|text|"page", "draft", "embedded"|
 
 #### Objectos suportados
 
@@ -404,8 +389,7 @@ Define a porcentagem de zoom para a exibição do conteúdo da área do 4D Write
 
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
-|      |               |                   |
- zoom|número|mínimo = 0 |
+| zoom|número|mínimo = 0 |
 
 #### Objectos suportados
 

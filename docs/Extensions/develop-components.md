@@ -278,6 +278,20 @@ A syntax file (JSON format) is then automatically created during the compilation
 
 If you don't enter a [component namespace](#declaring-the-component-namespace), the resources for the classes and exposed methods are not generated even if the syntax file option is checked.
 
+When your class functions and class constructors are documented with a [comment block above their declaration](../Concepts/classes.md#function-comments), the syntax file also contains their description and parameter comments (`MCP:` lines are never included). Host projects then display them as plain text in the code completion and help of the compiled component. For example, with the following function in a component class:
+
+```4d
+// Class: Tools
+
+// Scales a value by a factor
+// $value: value to scale
+// $factor: multiplier to apply
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
+
+a host project that types `cs.MyComponent.Tools.new().scale(` sees "Scales a value by a factor" and the `$value:` and `$factor:` lines below the signature.
+
 ## Passing variables  
 
 Variables are not shared between components and host projects. The only way to modify component variables from the host project and vice versa is using pointers.

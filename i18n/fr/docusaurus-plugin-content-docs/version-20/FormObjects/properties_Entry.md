@@ -5,9 +5,9 @@ title: Saisie
 
 ## Correction orthographique
 
-4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Les [zones de saisie](input_overview.md) de type texte peuvent être vérifiées, ainsi que les documents [4D Write Pro](writeProArea_overview.md).
+4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Les [zones de saisie](input_overview.md) de texte peuvent être vérifiées, ainsi que les documents [4D Write Pro](writeProArea_overview.md).
 
-La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. Vous pouvez également exécuter la commande de langage 4D `SPELL CHECKING` pour chaque objet à vérifier.
+La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. Vous pouvez également exécuter la commande `SPELL CHECKING` pour chaque objet à vérifier.
 
 #### Grammaire JSON
 
@@ -25,25 +25,26 @@ La propriété Correction orthographique active la vérification orthographique 
 
 Permet à l'utilisateur d'accéder à un menu contextuel standard dans l'objet lorsque le formulaire est exécuté.
 
-Pour une [zone de saisie](input_overview.md) image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Omporter...** qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...** , qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d"affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display.md#picture-format) à l'aide de ce menu est temporaire ; elle n'est pas sauvegardée avec l'enregistrement.
+Pour une [zone de saisie](input_overview.md) de type image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Importer...**, qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...**, qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d'affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display.md#picture-format) à l'aide de ce menu est temporaire ; elle n'est pas sauvegardée avec l'enregistrement.
 
-Pour une [zone de saisie](input_overview.md) type texte [multi-style](properties_Text.md#multi-style) ou une [colonne de list box](listbox-column.md), en plus des commandes d'édition standard, le menu contextuel propose les commandes suivantes :
+Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox-column.md) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
-- **Polices...**: affiche la boîte de dialogue système de police
-- **Polices récentes**: affiche les noms des polices récentes sélectionnées pendant la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
-- commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan. Lorsque l'utilisateur modifie un attribut de style via ce menu contextuel, 4D génère l'événement formulaire `On After Edit`.
+- **Polices...** : affiche la boîte de dialogue système de police
+- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
+- commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
+  Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande `WA SET PREFERENCE`.
+Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                         |
-| ----------- | --------------- | ----------------------------------------- |
+| Nom         | Type de données | Valeurs possibles                                            |
+| ----------- | --------------- | ------------------------------------------------------------ |
 | contextMenu | string          | "automatic" (utilisé si manquant), "none" |
 
 #### Objets pris en charge
 
-[Zone de saisie](input_overview.md) - [Zone Web](webArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
+[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
 ---
 
@@ -51,7 +52,7 @@ Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur d
 
 L'attribut Saisissable indique si les utilisateurs peuvent entrer des valeurs dans l'objet.
 
-Les objets sont saisissables par défaut. Si vous voulez rendre un champ ou un objet non-saisissable pour ce formulaire, vous pouvez désactiver la propriété Saisissable pour l'objet. Un objet non-saisissable ne fait qu'afficher des données. Vous contrôlez les données avec des méthodes qui utilisent le nom du champ ou de la variable. Vous pouvez toujours utiliser les événements formulaire `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` et `On Losing Focus` avec des objets non-saisissables. Cela facilite la gestion des menus contextuels personnalisés et vous permet de concevoir des interfaces où vous pouvez glisser-déposer et sélectionner des variables non-saisissables.
+Les objets sont saisissables par défaut. Si vous voulez rendre un champ ou un objet non-saisissable pour ce formulaire, vous pouvez désactiver la propriété Saisissable pour l'objet. Un objet non-saisissable ne fait qu'afficher des données. Vous contrôlez les données avec des méthodes qui utilisent le nom du champ ou de la variable. Vous pouvez toujours utiliser les événements formulaire `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` et `On Losing Focus` avec des objets non saisissables. Cela facilite la gestion des menus contextuels personnalisés et vous permet de concevoir des interfaces où vous pouvez glisser-déposer et sélectionner des variables non-saisissables.
 
 Lorsque cette propriété est désactivée, tous les pop-up menus associés à une colonne de listbox via une liste sont désactivés.
 
@@ -69,7 +70,7 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 ## Filtres de saisie
 
-Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. A la différence des listes de [valeurs obligatoires](properties_RangeOfValues.md#required-list) par exemple, les filtres de saisie fonctionnent sur une base de caractère par caractère. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
+Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Contrairement aux [énumérations obligatoires](properties_RangeOfValues.md#required-list) par exemple, les filtres de saisie fonctionnent caractère par caractère. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
 
 Un filtre de saisie n’est effectif que pendant la saisie. Il n’a aucun effet sur l’affichage des données une fois que l'objet est désélectionné. En général, les filtres de saisie sont utilisés conjointement avec les [formats d'affichage](properties_Display.md). Le filtre agit pendant la saisie et le format d’affichage assure un affichage approprié de la valeur après sa saisie.
 
@@ -84,54 +85,54 @@ La plupart du temps, les [filtres intégrés](#default-entry-filters) de 4D rép
 - vous pouvez directement entrer une chaîne de définition de filtre
 - ou vous pouvez entrer le nom d'un filtre de saisie créé dans l'éditeur de filtres de la Boîte à outils. Les noms des filtres personnalisés que vous créez commencent par une barre verticale (|).
 
-Pour plus d'informations sur la création de filtres de saisie, voir [Codes de filtre et de format](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
+For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 ### Filtres par défaut
 
 Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de saisie :
 
-| Filtres de saisie               | Description                                                                                                                                                                   |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                              | Permet la saisie de toute lettre, mais les transforme en caractères majuscules.                                                                                               |
-| &9                              | Permet tout chiffre.                                                                                                                                                          |
-| &A                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                |
-| &a                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                |
-| &@                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                            |
-| ~a##                            | Abréviation du nom de l'état (par exemple, CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                                               |
-| !0&9##/##/##                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                          |
+| Filtres de saisie                                                                                   | Description                                                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                                                                                  | Permet la saisie de toute lettre, mais les transforme en caractères majuscules.                                                                                                                                               |
+| &9                                                                              | Permet tout chiffre.                                                                                                                                                                                                          |
+| &A                                                                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                                                                |
+| &A                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                                             |
+| &@                                                                 | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                                            |
+| ~a##                                                                                | Abréviation du nom de l'état (par exemple, CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                                                            |
+| !0&9##/##/##                                                                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                          |
 | !0&9 Day: ## Month: ## Year: ## | Filtre personnalisé de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Deux entrées après chaque mot.                       |
-| !0&9##:##                       | Filtre de saisie d’heure. Limité aux heures et aux minutes. Affiche des zéros aux emplacements de saisie. Affiche des zéros aux emplacements de saisie.                       |
-| !0&9## Hrs ## Mins ## Secs      | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Autorise deux chiffres avant chaque mot.                                                              |
-| !0&9Hrs: ## Mins: ## Secs: ##   | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Autorise deux chiffres après chaque mot.                                                              |
-| !0&9##-##-##-##                 | Format de numéro de téléphone local. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Deux entrées, trait d'union, deux entrées, etc.          |
-| !_&9(###)!0###-####             | Numéro de téléphone interurbain. Affiche des tirets de soulignement dans les trois premiers espaces de saisie, puis des zéros.                                                |
-| !0&9###-###-###                 | Numéro de téléphone interurbain. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Trois entrées, tirets, trois entrées, tiret, quatre entrées. |
-| !0&9###-##-###                  | Numéro de sécurité sociale. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                   |
-| ~"A-Z;0-9; ;,;.;-"              | Lettres majuscules et ponctuation. Autorise uniquement les lettres majuscules, chiffres, espaces, virgules, points et traits d'union.                                         |
-| &"a-z;0-9; ;,;.;-"              | Lettres majuscules et minuscules et ponctuation. Autorise les lettres minuscules, chiffres, espaces, virgules, points et traits d'union.                                      |
-| &"0-9;.;-"                      | Nombres. Autorise uniquement les chiffres, les points décimaux et les traits d'union (signe inférieur).                                                                       |
+| !0&9##:##                                                       | Filtre de saisie d’heure. Limité aux heures et aux minutes. Affiche des zéros aux emplacements de saisie. Affiche des zéros aux emplacements de saisie.                       |
+| !0&9## Hrs ## Mins ## Secs                                                      | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Autorise deux chiffres avant chaque mot.                                                                              |
+| !0&9Hrs: ## Mins: ## Secs: ##   | Filtre de saisie d’heure. Affiche des zéros aux emplacements de saisie. Autorise deux chiffres après chaque mot.                                                                              |
+| !0&9##-##-##-##                                                                 | Format de numéro de téléphone local. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Deux entrées, trait d'union, deux entrées, etc.          |
+| !_&9(###)!0###-####                     | Numéro de téléphone interurbain. Affiche des tirets de soulignement dans les trois premiers espaces de saisie, puis des zéros.                                                                                |
+| !0&9###-###-###                                                                 | Numéro de téléphone interurbain. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Trois entrées, tirets, trois entrées, tiret, quatre entrées. |
+| !0&9###-##-###                                                                  | Numéro de sécurité sociale. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                                   |
+| ~"A-Z;0-9; ;,;.;-"                                                  | Lettres majuscules et ponctuation. Autorise uniquement les lettres majuscules, chiffres, espaces, virgules, points et traits d'union.                                                                         |
+| &"a-z;0-9; ;,;.;-"                                              | Lettres majuscules et minuscules et ponctuation. Autorise les lettres minuscules, chiffres, espaces, virgules, points et traits d'union.                                                                      |
+| &"0-9;.;-"                                                      | Nombres. Autorise uniquement les chiffres, les points décimaux et les traits d'union (signe inférieur).                                                                                    |
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                    |
-| ----------- | --------------- | ---------------------------------------------------- |
-| entryFilter | string          | <li>Code de filtre de saisie</li> ou <li>Nom du filtre de saisie (les noms des filtres commencent par &#124;)</li> |
+| Nom         | Type de données | Valeurs possibles                                                                                                       |
+| ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string          | <li>Code du filtre de saisie</li> ou <li>nom du filtre de saisie (les noms des filtres commencent par &#124; )</li> |
 
 #### Objets pris en charge
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [Colonne List Box](listbox-column.md)
 
 ---
 
 ## Focusable
 
-Lorsque la propriété **Focusable** est activée pour un objet, l'objet peut avoir le focus (et peut donc être activé par le clavier par exemple). Il est entouré d'une ligne grise pointillée lorsqu'il est sélectionné — sauf lorsque l'option [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle) a également été sélectionnée.
+Lorsque la propriété **Focusable** est activée pour un objet, l'objet peut avoir le focus (et peut donc être activé par le clavier par exemple). Il est délimité par une ligne pointillée grise lorsqu'il est sélectionné, sauf si l'option [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle) a également été sélectionnée.
 
-> Un [objet de saisie](input_overview.md) est toujours focusable s'il a la propriété [Saisissable](#enterable).
+> Une [zone de saisie](input_overview.md) est toujours focusable s'il possède la propriété [Saisissable](#enterable).
 
-- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Case à cocher affichant le focus quand elle est sélectionnée
+- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
 
-- ![](../assets/en/FormObjects/property_focusable2.png)<br/>Case à cocher sélectionnée, mais n'affichant pas le focus |
+- ![](../assets/en/FormObjects/property_focusable2.png)<br/>La case à cocher est sélectionnée mais ne peut pas être afficher le focus|
 
 Lorsque la propriété **Focusable** est sélectionnée pour un objet non saisissable, l'utilisateur peut sélectionner, copier ou même glisser-déposer le contenu de la zone.
 
@@ -143,27 +144,27 @@ Lorsque la propriété **Focusable** est sélectionnée pour un objet non saisis
 
 #### Objets pris en charge
 
-[Zones 4D Write Pro](writeProArea_overview.md) - [Bouton](button_overview.md) - [Case à cocher](checkbox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md) - [Zone de Plug-in](pluginArea_overview.md) - [Bouton Radio](radio_overview.md) - [Sous-formulaire](subform_overview.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
 ---
 
 ## Configuration du clavier
 
-Cette propriété associe une configuration de clavier spécifique à une [zone de saisie](input_overview.md). Par exemple, dans une application internationale, si un formulaire contient un champ dont le contenu doit être saisi en caractères grecs, vous pouvez associer la configuration de clavier "grec" à ce champ. De cette façon, lors de la saisie des données, la configuration du clavier est automatiquement modifiée lorsque ce champ a le focus.
+Cette propriété associe une disposition de clavier spécifique à une [zone de saisie](input_overview.md). Par exemple, dans une application internationale, si un formulaire contient un champ dont le contenu doit être saisi en caractères grecs, vous pouvez associer la configuration de clavier "grec" à ce champ. De cette façon, lors de la saisie des données, la configuration du clavier est automatiquement modifiée lorsque ce champ a le focus.
 
 Par défaut, la saisie utilise la configuration courante du clavier.
 
-> Vous pouvez également définir et lire la configuration clavier dynamiquement en utilisant les commandes `OBJECT SET KEYBOARD LAYOUT` et `OBJECT Get keyboard layout`.
+> Vous pouvez également définir et obtenir le clavier de manière dynamique à l'aide des commandes `OBJECT SET KEYBOARD LAYOUT` et `OBJECT Get keyboard layout`.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                                            |
-| --------------- | --------------- | ---------------------------------------------------------------------------- |
+| Nom             | Type de données | Valeurs possibles                                                                            |
+| --------------- | --------------- | -------------------------------------------------------------------------------------------- |
 | keyboardDialect | text            | Code de langue, par exemple "ar-ma" ou "cs". Voir RFC3066, ISO639 et ISO3166 |
 
 #### Objets pris en charge
 
-[Zones 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
 ---
 
@@ -174,13 +175,13 @@ Cette propriété est disponible pour les [objets de zone de saisie](input_overv
 #### Automatique
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques :  
+- Dans les zones de saisis multilignes, 4D effectue des retours à la ligne automatiques :  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Non
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si le champ ou la variable alpha ou texte contient des retour chariots, le texte situé après le premier retour chariot est effacé dès que la zone est modifiée :  
+- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si l'expression Alpha ou Texte contient des retours de chariot, le texte situé après le premier retour de chariot est supprimé dès que la zone est modifiée :  
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Oui
@@ -189,8 +190,8 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                   |
-| --------- | --------------- | --------------------------------------------------- |
+| Nom       | Type de données | Valeurs possibles                                                      |
+| --------- | --------------- | ---------------------------------------------------------------------- |
 | multiline | text            | "yes", "no", "automatic" (par défaut si non défini) |
 
 #### Objets pris en charge
@@ -212,19 +213,20 @@ Le texte d'exemple est affiché à nouveau si le contenu du champ est effacé.
 Un texte exemple peut être affiché pour les types de données suivants :
 
 - chaîne (texte ou alpha)
-- date et heure lorsque la propriété **Vide si null** est activée.
+- date et heure lorsque la propriété **Vide si null** est sélectionnée.
 
 Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tant que texte exemple, par exemple :
 
- :xliff:PH_Lastname
+:xliff:PH_Lastname
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
-> Vous pouvez également définir et obtenir le texte du placeholder par programmation à l'aide des commandes `OBJECT SET PLACEHOLDER` et `OBJECT Get placeholder`.
+
+> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                  |
-| ----------- | --------------- | ------------------------------------------------------------------ |
+| Nom         | Type de données | Valeurs possibles                                                                     |
+| ----------- | --------------- | ------------------------------------------------------------------------------------- |
 | placeholder | string          | Texte à afficher (grisé) lorsque l'objet ne contient aucune valeur |
 
 #### Objets pris en charge
@@ -233,13 +235,13 @@ Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pa
 
 #### Voir également
 
-[Message d'aide](properties_Help.md)
+[Help tip](properties_Help.md)
 
 ---
 
 ## Sélection toujours visible
 
-Cette propriété conserve la sélection visible dans l'objet après qu'il ait perdu le focus. Cela facilite l'implémentation d'interfaces qui permettent de modifier le style du texte (voir [Multi-style](properties_Text.md#multi-style)).
+Cette propriété conserve la sélection visible dans l'objet après qu'il ait perdu le focus. Cela facilite la mise en œuvre d'interfaces permettant de modifier le style du texte (voir [Multi-style](properties_Text.md#multi-style)).
 
 #### Grammaire JSON
 
@@ -249,35 +251,36 @@ Cette propriété conserve la sélection visible dans l'objet après qu'il ait p
 
 #### Objets pris en charge
 
-[Zones 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
 
 ---
 
 ## Equivalent clavier
 
-Cette propriété permet d'associer des touches (raccourcis clavier) aux [boutons](button_overview.md), [boutons radio](radio_overview.md)et [cases à cocher](checkbox_overview.md). Ils permettent à l'utilisateur d'actionner l'objet à l'aide du clavier au lieu d'avoir à utiliser la souris.
+Cette propriété permet de définir des touches avec signification spéciales (raccourcis clavier) pour les [boutons](button_overview.md), les [boutons radio](radio_overview.md) et les [cases à cocher](checkbox_overview.md). Ils permettent à l'utilisateur d'actionner l'objet à l'aide du clavier au lieu d'avoir à utiliser la souris.
 
-Vous pouvez configurer cette option en cliquant sur le bouton [...] de la propriété Equivalent clavier de la Liste des propriétés.
+Vous pouvez configurer cette option en cliquant sur le bouton [...] dans la propriété Raccourcis de la Liste des propriétés.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. Pour plus d'informations sur l'association de raccourcis aux menus, reportez-vous à la section [Définition des propriétés des menus](../Menus/properties.md).
 
-Pour afficher une liste de tous les raccourcis utilisés dans l'environnement de développement de 4D, consultez la page [Raccourcis](../Preferences/shortcuts.md) dans la boîte de dialogue Préférences.
+> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. Pour plus d'informations sur l'association de raccourcis aux menus, reportez-vous à [Définition des propriétés des menus](../Menus/properties.md).
+
+Pour afficher une liste de tous les raccourcis utilisés dans l'IDE de 4D, voir la [Page des raccourcis](../Preferences/shortcuts.md) dans la boîte de dialogue Préférences.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                  |
-| --------------- | --------------- | -------------------------------------------------- |
-| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)           |
-| shortcutAlt     | boolean         | true, false                                        |
-| shortcutControl | boolean         | true, false (macOS Control)                        |
-| shortcutShift   | boolean         | true, false                                        |
-|                 |                 |                                                    |
+| Nom             | Type de données | Valeurs possibles                                                                                                                                                                                                                                                   |
+| --------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                         |
+| shortcutAlt     | boolean         | true, false                                                                                                                                                                                                                                                         |
+| shortcutControl | boolean         | true, false (macOS Control)                                                                                                                                                                                                                      |
+| shortcutShift   | boolean         | true, false                                                                                                                                                                                                                                                         |
+|                 |                 |                                                                                                                                                                                                                                                                     |
 | shortcutKey     | string          | <li>toute touche de caractère : "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objets pris en charge
 
-[Bouton](button_overview.md) - [Case à cocher](checkbox_overview.md) - [Bouton image](pictureButton_overview.md) - [Bouton Radio](radio_overview.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -285,7 +288,7 @@ Pour afficher une liste de tous les raccourcis utilisés dans l'environnement de
 
 Active le passage direct en mode édition dans les list box.
 
-Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Notez que cette option permet de modifier les cellules même lorsque le [mode de sélection](properties_ListBox.md#selection-mode) de la list box est défini sur "Aucun".
+Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Notez que cette option permet de modifier les cellules même lorsque le [mode de sélection](properties_ListBox.md#selection-mode) de la list box est "Aucun".
 
 Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélectionner la ligne de la cellule puis cliquer sur la cellule pour modifier son contenu.
 

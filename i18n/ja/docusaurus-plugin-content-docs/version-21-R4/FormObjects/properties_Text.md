@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: テキスト
+title: Text
 ---
 
 ---
@@ -100,9 +100,9 @@ title: テキスト
 
 #### JSON 文法
 
-| 名称             | データタイプ | とりうる値                 |
-| -------------- | ------ | --------------------- |
-| textDecoration | string | "normal", "underline" |
+| 名称             | データタイプ | とりうる値               |
+| -------------- | ------ | ------------------- |
+| textDecoration | string | "none", "underline" |
 
 #### 対象オブジェクト
 
@@ -339,7 +339,7 @@ Foreground color;Dark shadow color)
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-このプロパティは[`LISTBOX SET PROPERTY`](../commands/listbox-set-property) と `lk font style expression` 定数を組み合わせて使用しても設定することができます。
+このプロパティは [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) と `lk font style expression` 定数を組み合わせて使用しても設定することができます。
 
 > このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
@@ -371,7 +371,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 :::note
 
-- "automatic" は、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
+- "automatic" は、[ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
 - "justify" は、[入力](input_overview.md) と [テキストエリア](text.md) でのみサポートされています。
 
 :::
@@ -438,7 +438,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 | fontWeight     | string  | "normal","bold"                                                                                                                                                                                                                                                         |
 | textDecoration | string  | "normal","underline"                                                                                                                                                                                                                                                    |
 | unselectable   | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。チェックボックスやリストといったコントロール類は引き続き稼働します。この設定はリストボックスの選択モードが "なし" の場合には無視されます。デフォルト値: false。 |
-| disabled       | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの)コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                                                   |
+| 無効             | boolean | 対応する行を無効化します。このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。テキストや、(チェックボックス、リストなどの)コントロール類は暗くなっているかグレーアウトされます。デフォルト値: false。                                                                                                                   |
 
 特別な "cell" プロパティを使用すると、特定の列にプロパティをまとめて適用することができます:
 
@@ -559,7 +559,7 @@ End if
 <span><a href="url">Visible label</a></span>
 ```
 
-このタグはテキストにURLを挿入します。例:
+このタグはテキストにURLを挿入します。例: 例:
 
 ```html
 <span><a href="http://www.4d.com/">4D Web Site</a></span>
@@ -573,7 +573,7 @@ End if
 
 "ユーザーリンク" は見た目が URL と同じですが、クリックしてもソースは自動的に開きません。どのような文字列でも参照として渡すことができますが、クリックされたときに起こるアクションはデベロッパーによってプログラムされた内容によります。つまり、タグがクリックされたときに、URL の代わりに、ファイルや 4Dメソッド等を開いたり実行したりすることができます。 [`ST Get content type`](../commands/st-get-content-type) コマンドによって、ユーザーリンクがクリックされたかどうかを検知することもできます。
 
-ユーザーリンクは[`ST SET TEXT`](../commands/st-set-text) コマンドによって定義します。例:
+ユーザーリンクは[`ST SET TEXT`](../commands/st-set-text) コマンドによって定義します。例: 例:
 
 ```4d
 ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\">User Label</span>";$start;$end)
@@ -590,9 +590,9 @@ ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\"
 - フォント名: `<SPAN STYLE="font-family: DESDEMONA"> ... </SPAN>`
 - フォントサイズ: `<SPAN STYLE="font-size: 20pt"> ... </SPAN>`
 - フォントスタイル:
-  - ボールド(太字) `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
   - イタリック `<SPAN STYLE="font-style: italic"> ... </SPAN>`
   - 普通 `<SPAN STYLE="font-style: normal"> ... </SPAN>`
+  - ボールド(太字) `<SPAN STYLE="font-weight: bold"> ... </SPAN>`
   - 下線付き `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
   - 取り消し線 `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
 
@@ -693,7 +693,7 @@ QUERY BY FORMULA([MyTable];ST Get plain text([MyTable]MyFieldStyle)="very well")
 
 ---
 
-## 方向
+## 向き
 
 テキストエリアの角度 (回転) を変更します。テキストエリアは、90°単位で回転させることができます。それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 

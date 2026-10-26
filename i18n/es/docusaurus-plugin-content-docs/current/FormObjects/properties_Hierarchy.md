@@ -17,7 +17,7 @@ Ver [List box jerárquicos](listbox_overview.md#hierarchical-list-boxes)
 
 | Nombre     | Tipos de datos | Valores posibles                                        |
 | ---------- | -------------- | ------------------------------------------------------- |
-| datasource | array cadena   | Colección de nombres de arrays que definen la jerarquía |
+| dataSource | array cadena   | Colección de nombres de arrays que definen la jerarquía |
 
 #### Objetos soportados
 

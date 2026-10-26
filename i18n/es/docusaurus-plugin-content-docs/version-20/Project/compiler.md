@@ -5,7 +5,6 @@ title: Compilación
 
 Puede compilar sus proyectos, es decir, traducir todos sus métodos a lenguaje máquina. La compilación de un proyecto permite verificar la coherencia del código y acelerar su ejecución, además de posibilitar ocultar el código en su totalidad. La compilación es un paso indispensable entre el desarrollo de proyectos con 4D y su despliegue como aplicaciones independientes.
 
-
 ## Compilar
 
 La compilación se realiza desde su aplicación 4D y es totalmente automática.
@@ -14,9 +13,9 @@ La compilación se realiza desde su aplicación 4D y es totalmente automática.
 
 1. Abra la ventana de compilación seleccionando el comando **Compilador...** en el menú **Diseño** o el botón **Compilador** de la barra de herramientas.
 
-    ![](../assets/en/Project/compilerWin1.png)
+   ![](../assets/en/Project/compilerWin1.png)
 
-    ![](../assets/en/Project/comp1.png)
+   ![](../assets/en/Project/comp1.png)
 
 > También puede lanzar directamente la compilación seleccionando el elemento de menú **Iniciar compilación** en el menú **Diseño**.
 
@@ -50,7 +49,7 @@ Si modifica su proyecto en modo interpretado, debe recompilarlo para que sus mod
 
 ## Características de la ventana del compilador
 
-Además del botón [**Compilar**](#compile), la ventana del compilador ofrece otras funcionalidades útiles durante la fase de desarrollo del proyecto.
+Además del [botón **Compilar**](#compile), la ventana Compilador ofrece otras funcionalidades útiles durante la fase de desarrollo del proyecto.
 
 ### Verificar la sintaxis
 
@@ -60,7 +59,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos. Los métodos de compilación son los métodos proyecto que agrupan todas las declaraciones de tipos de las variables y de los arrays (proceso e interproceso), así como los [parámetros de los métodos](../Concepts/parameters.md#compiler-method).
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). Los métodos de compilación son los métodos proyecto que agrupan todas las declaraciones de tipos de las variables y de los arrays (proceso e interproceso), así como los <a href="../Concepts/parameters.md#compiler-method">parámetros de los métodos</a>.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -70,11 +69,9 @@ Sólo se generan los métodos de compilación necesarios (es decir, aquellos par
 
 El área de información indica todo error encontrado durante la creación o actualización del método. Hacer doble clic en una línea de error provoca que el método y la línea en cuestión se muestren en el editor de código.
 
-
 ### Eliminar el código de compilación
 
 El botón **Borrar el código compilado** borra el código compilado del proyecto. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
-
 
 ### Mostrar/Ocultar advertencias
 
@@ -108,14 +105,11 @@ Sólo se pueden desactivar los avisos con números. Los números de advertencia 
   //%W-518.5
 ```
 
-
-
 ## Parámetros del compilador
 
 La página "Compilador" de la caja de diálogo de Propiedades le permite definir los parámetros relacionados con la compilación del proyecto. Puede abrir directamente esta página desde la [ventana del compilador](#compiler-window-features) haciendo clic en el botón **Parámetros del compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
-
 
 ### Opciones de compilación
 
@@ -123,24 +117,23 @@ Esta área agrupa las opciones genéricas utilizadas durante el proceso de compi
 
 #### Generar el archivo de símbolos
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. El archivo de error se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. El archivo de símbolos se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_symbols.txt`.
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de errores se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
-
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 #### Ruta de compilación
 
 Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
 
-- **Definir los tipos de las variables**: pasa por todas las etapas que hacen posible la compilación.
-- **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método no se realiza. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales, así como los parámetros de los métodos, se han escrito claramente.
+- **Type the variables**: Passes by all the stages that make compilation possible.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales, así como los parámetros de los métodos, se han escrito claramente.
 
 #### Objetivo de compilación
 
-<details><summary>Histórico</summary>
+<details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
@@ -155,10 +148,10 @@ Este parámetro le permite seleccionar la familia de procesadores para la cual s
 
 Se proponen dos opciones de objetivo. El resultado depende del procesador de la máquina en la que se ejecuta 4D.
 
-| *Option*                                               | *en Windows Intel/AMD*                                                                   | *macOS Intel*                                                                                          | *macOS Silicon*                                                                                        |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| *Opción*                                                                  | *en Windows Intel/AMD*                                                             | *macOS Intel*                                                                                    | *macOS Silicon*                                                                                  |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | **Todos los procesadores (Intel/AMD y Apple Silicon)** | Código para Intel/AMD<br/>*No es posible producir código Apple Silicon en Windows* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* |
-| **Mi procesador (procesador)**                         | Código para Intel/AMD                                                                    | Código para Intel/AMD                                                                                  | Código para Apple Silicon                                                                              |
+| **Mi procesador (procesador)**                         | Código para Intel/AMD                                                              | Código para Intel/AMD                                                                            | Código para Apple Silicon                                                                        |
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang viene con la última versión de Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
 
@@ -179,16 +172,15 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). Para más información, consulte el método [`Compiler_Methods`](../Concepts/parameters.md#compiler-method).
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). Para más información, ver [método `Compiler_Methods`](../Concepts/parameters.md#compiler-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
-
 
 ## Herramientas de compilación
 
 ### Archivo Symbol
 
-Si selecciona la opción [**Generar el archivo de simbolos**](#symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](../Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
+Si activa la opción [**Generar el archivo de símbolos**](#symbol-file) en la configuración del compilador, se creará un archivo de símbolos llamado `ProjectName_symbols.txt` en la [carpeta Logs](../Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
@@ -198,12 +190,13 @@ Estas dos listas contienen cuatro columnas:
 - Tipo de la variable. Los tipos se definen por medio de comandos de directivas de compilación o son determinados por el compilador en función del uso de la variable. Si no se puede determinar el tipo de una variable, la columna está vacía.
 - Número de dimensiones si la variable es un array.
 - Referencia al contexto en el que el compilador estableció el tipo de la variable. Si la variable se utiliza en varios contextos, el contexto mencionado es el que utiliza el compilador para determinar su tipo.
-    - Si la variable se encuentra en un método base, se indica el nombre del método base, precedido por (M)*.
-    - Si la variable se encuentra en un método proyecto, el método se identifica como se ha definido en 4D, precedido de (M).
-    - Si la variable se encuentra en un trigger, se indica el nombre de la tabla, precedido por (TM).
-    - Si la variable se encontró en un método formulario, se da el nombre del formulario, precedido por el nombre de la tabla y (FM).
-    - Si la variable se encontró en un método objeto, se da el nombre del método objeto, precedido por el nombre del formulario, el nombre de la tabla y por (OM).
-    - Si la variable es un objeto de un formulario y no aparece en ningún método proyecto, formulario, objeto o trigger, se indica el nombre del formulario en el que aparece, precedido de (F). Al final de cada lista, puede encontrar los tamaños de las variables proceso e interproceso en bytes.
+  - Si la variable se encuentra en un método base, se indica el nombre del método base, precedido por (M)\*.
+  - Si la variable se encuentra en un método proyecto, el método se identifica como se ha definido en 4D, precedido de (M).
+  - Si la variable se encuentra en un trigger, se indica el nombre de la tabla, precedido por (TM).
+  - Si la variable se encontró en un método formulario, se da el nombre del formulario, precedido por el nombre de la tabla y (FM).
+  - Si la variable se encontró en un método objeto, se da el nombre del método objeto, precedido por el nombre del formulario, el nombre de la tabla y por (OM).
+  - Si la variable es un objeto de un formulario y no aparece en ningún método proyecto, formulario, objeto o trigger, se indica el nombre del formulario en el que aparece, precedido de (F).
+    Al final de cada lista, puede encontrar los tamaños de las variables proceso e interproceso en bytes.
 
 > Al compilar, el compilador no puede determinar en qué proceso se utiliza una determinada variable proceso. Una variable proceso puede tener un valor diferente en cada proceso. En consecuencia, todas las variables proceso se duplican sistemáticamente cuando se lanza cada nuevo proceso: por lo tanto, es aconsejable vigilar la cantidad de memoria que ocuparán. También hay que tener en cuenta que el espacio para las variables proceso no está relacionado con el tamaño de la pila del proceso.
 
@@ -235,7 +228,7 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Archivo de errores
 
-Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](../Project/architecture.md#logs) del proyecto.
+Puede elegir si desea o no generar un archivo de error durante la compilación utilizando la opción [**Generar archivo de error**](#generate-error-file) en los parámetros del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](../Project/architecture.md#logs) del proyecto.
 
 Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
@@ -245,9 +238,9 @@ La estructura del archivo de errores es la siguiente:
 
 - En la parte superior del archivo se encuentra la lista de errores y advertencias, ordenados por método y en su orden de creación en 4D.
 - En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. Estos errores y advertencias se listan utilizando el siguiente formato:
-    - el número de línea en el método (0 indica errores generales)
-    - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
-    - diagnóstico que describe el error
+  - el número de línea en el método (0 indica errores generales)
+  - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
+  - diagnóstico que describe el error
 
 Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
@@ -256,15 +249,12 @@ Un archivo de error puede contener tres tipos de mensajes:
 - **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. El compilador informa de este tipo de error cuando encuentra una expresión en la que ve una incoherencia relacionada con el tipo de datos o la sintaxis. En la ventana del compilador, haga doble clic en cada error detectado para abrir el método en cuestión directamente en el editor de código 4D, con la línea que contiene el error resaltada.
 
 - **Errores generales**: son errores que imposibilitan la compilación del proyecto. Hay dos casos en los que el compilador informa de un error general:
-    - No se ha podido determinar el tipo de datos de una variable proceso.
-    - Dos tipos diferentes de objetos tienen el mismo nombre.
+  - No se ha podido determinar el tipo de datos de una variable proceso.
+  - Dos tipos diferentes de objetos tienen el mismo nombre.
 
 Los errores generales se denominan así porque no pueden vincularse a ningún método específico. En el primer caso, el compilador no pudo realizar una tipificación específica en ninguna parte del proyecto. En el segundo, no pudo decidir si asociar un nombre determinado con un objeto y no con otro.
 
 - **Avisos**: los avisos no son errores. No impiden la compilación del proyecto, sino que simplemente señalan posibles errores de código. En la ventana del compilador, las advertencias aparecen en itálica. Haga doble clic en cada advertencia para abrir el método en cuestión directamente en el editor de código 4D, con la línea que contiene la advertencia resaltada.
-
-
-
 
 ### Control de ejecución
 
@@ -276,9 +266,9 @@ Para ello, debe rodear el código a excluir del control de rangos con los coment
 
 ```4d
   // %R- para desactivar el control de rangos
-
+ 
  ... //Coloque aquí el código a excluir del control de rangos
-
+ 
 // %R+ para volver a reactivar el control de rangos para el resto
 ```
 
@@ -291,16 +281,13 @@ Para ello, debe rodear el código a excluir del control de rangos con los coment
 
 El compilador clásico puede utilizarse en cualquier plataforma, mientras que el compilador Silicon sólo puede utilizarse en una máquina Mac:
 
-|             | Compilar para Windows | Compilación para Intel Mac | Compilación para Mac Silicon |
-| ----------- |:---------------------:|:--------------------------:|:----------------------------:|
-| En Windows  |       &#10003;        |          &#10003;          |           &#10007;           |
-| Intel Mac   |       &#10003;        |          &#10003;          |           &#10003;           |
-| Silicon Mac |       &#10003;        |          &#10003;          |           &#10003;           |
-
+|             |     Compilar para Windows    |  Compilación para Intel Mac  | Compilación para Mac Silicon |
+| ----------- | :--------------------------: | :--------------------------: | :--------------------------: |
+| En Windows  | &#10003; | &#10003; | &#10007; |
+| Intel Mac   | &#10003; | &#10003; | &#10003; |
+| Silicon Mac | &#10003; | &#10003; | &#10003; |
 
 Ambos compiladores están integrados en 4D. El compilador adecuado se selecciona automáticamente en función de la opción [objetivo de compilación](#compilation-target).
-
-
 
 ### Compilador clásico
 
@@ -308,30 +295,27 @@ El compilador clásico genera código compilado nativo para procesadores Intel/A
 
 El código compilado resultante se almacena en la carpeta [DerivedData](architecture.md#deriveddata) del proyecto.
 
-
 ### Compilador Silicon
 
 El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
 El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries) del proyecto.
 
-
 #### Requisitos
 
 - **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
 - **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
 - **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
-    - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
-    - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
+  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
+  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 
 > Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
 
 En todos los casos, el compilador Silicon de 4D le advertirá si su configuración no cumple con sus requisitos.
-
 
 #### Compilación incremental
 
 El compilador Silicon es incremental, lo que significa que:
 
 - Durante la primera compilación, se compilan **todos los métodos 4D**. Este paso podría tomar un cierto tiempo. Sin embargo, sólo ocurre una vez.
-- Durante todas las compilaciones posteriores, sólo se procesan los métodos **nuevos o modificados**, lo que reduce drásticamente el tiempo de compilación. 
+- Durante todas las compilaciones posteriores, sólo se procesan los métodos **nuevos o modificados**, lo que reduce drásticamente el tiempo de compilación.
