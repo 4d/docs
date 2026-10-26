@@ -37,7 +37,7 @@ Aspecto general del botón. El estilo del botón también influye en la disponib
 
 #### Objetos soportados
 
-[Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)
 
 #### Comandos
 

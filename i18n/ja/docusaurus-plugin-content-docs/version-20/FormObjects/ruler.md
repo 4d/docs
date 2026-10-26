@@ -35,7 +35,7 @@ title: ルーラー
 [入力可](properties_Entry.md#入力可) -
 [数値フォーマット](properties_Display.md#数値フォーマット) -
 [表示状態](properties_Display.md#表示状態) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [太字](properties_Text.md#太字) -
 [ヘルプTips](properties_Help.md#ヘルプtips) -
 [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)

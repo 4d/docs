@@ -35,7 +35,7 @@ Debe distinguir el operador de asignación := de los demás operadores. En lugar
 
 ## Variables
 
-El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave <code>var</code>.
+El lenguaje 4D es estricto con los tipos de datos, aunque se permite cierta flexibilidad en muchos casos. Por ejemplo, para crear una variable de tipo fecha, puede escribir: Se crea una variable digitada utilizando la palabra clave <code>var</code>.
 
 ```4d
 var MyDate : Date
@@ -426,6 +426,6 @@ En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `
 
 Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 
-- los caracteres{ }` (llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\\` significa que el parámetro *option* puede omitirse al llamar a la función.
+- los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
 - la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
 - la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo (número, texto, booleano, fecha, hora, objeto, colección...).

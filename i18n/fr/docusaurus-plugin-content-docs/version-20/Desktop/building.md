@@ -122,7 +122,7 @@ Cochez l'option **Créer une application autonome** et cliquez sur **Générer**
 Le principe consiste à fusionner un fichier de structure compilé avec **4D Volume Desktop** (le moteur de base de données de 4D). Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
 
 - Vous pouvez définir un fichier de données par défaut ou permettre aux utilisateurs de [créer et utiliser leur propre fichier de données](#gestion-des-fichiers-de-données).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**About licenses**](#about-licenses) paragraph).
+- Vous pouvez soit intégrer une licence de déploiement, soit laisser l'utilisateur final saisir sa licence au premier lancement de l'application (voir la section [**A propos des licences**](#about-licenses)).
 
 :::note
 
@@ -201,8 +201,8 @@ Une application autonome nécessite une licence de déploiement. Elle peut être
 
 | Licence de déploiement | Description                                                                                    | Où la saisir                                                                                                   |
 | ---------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| *4D OEM Desktop*       | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Licenses page](#licenses) of the Build application dialog                                                     |
-| *4D Unlimited Desktop* | **Non maintenu** - Licence personnalisée intégrée                                              | [Licenses page](#licenses) of the Build application dialog                                                     |
+| *4D OEM Desktop*       | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](#licenses) de la boîte de dialogue du Générateur d'application                             |
+| *4D Unlimited Desktop* | **Non maintenu** - Licence personnalisée intégrée                                              | [Page des licences](#licenses) de la boîte de dialogue du Générateur d'application                             |
 | *4D Desktop*           | Licence par ordinateur, permettant d'utiliser des applications 4D autonomes                    | Boîte de dialogue [Première activation](../Admin/licenses.md#first-activation) sur la machine de l'utilisateur |
 
 ## Page Client/Serveur
@@ -494,26 +494,26 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 > Si vous désélectionnez MeCab pour une application en langue japonaise utilisée sur des plateformes hétérogènes, assurez-vous de le désélectionner à la fois sur le build client/serveur et sur le [build de l'application cliente](#build-client-application) (pour la plate-forme concurrente), sinon des dysfonctionnements majeurs se produiront dans l'application.
 
-- **PHP**: Necessary to use PHP features and commands in 4D (see this [settings paragraph](../settings/php.md)).
+- **PHP** : Indispensable pour utiliser les fonctionnalités et les commandes PHP dans 4D (voir ce [paragraphe sur les paramètres](../settings/php.md)).
 - **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
-- **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user
+- **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user).
 
 ## Page Licences & Certificat
 
 La page Licences & Certificat vous permet de :
 
-- designate the license number(s) that you want to integrate into your single-user [stand-alone application](#application-page),
+- désigner le(s) numéro(s) de licence que vous souhaitez intégrer dans votre [application autonome](#application-page),
 - signer l'application à l'aide d'un certificat sous macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licences
 
-This tab displays the list of available [deployment licenses that you can embed](#about-licenses) into your application. Par défaut, la liste est vide.
+Cet onglet affiche la liste des [licences de déploiement que vous pouvez intégrer](#about-licenses) à votre application. Par défaut, la liste est vide.
 
 :::info
 
-Si vous laissez la liste vide, vous créez une application autonome sans licence de déploiement intégrée. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. Si vous intégrez une licence de déploiement, l'utilisateur n'aura pas besoin de saisir ou utiliser son propre numéro de licence au démarrage de l'application. For more information, see the [**About licenses**](#about-licenses) paragraph.
+Si vous laissez la liste vide, vous créez une application autonome sans licence de déploiement intégrée. In this case, the end-user will have to purchase and enter a per-user *4D Desktop* license. Si vous intégrez une licence de déploiement, l'utilisateur n'aura pas besoin de saisir ou utiliser son propre numéro de licence au démarrage de l'application. Pour plus d'informations, consultez la section [**À propos des licences**](#about-licenses).
 
 :::
 

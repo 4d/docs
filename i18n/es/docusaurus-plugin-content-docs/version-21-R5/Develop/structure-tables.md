@@ -15,7 +15,7 @@ Using the tools provided by 4D, you can:
 
 You can create a new table either directly in the Structure window, or via a dialog box. Direct creation is faster; but creation using the dialog box lets you specify certain parameters of the table and cancel the operation when necessary. You can also create tables using copy-paste.
 
-- To create a new table directly:
+- Para crear una nueva tabla directamente:
 
 1. Right-click an empty area of the Structure editor window, then choose **Add Table...** from the context menu.  
    **OR**  
@@ -132,7 +132,7 @@ The editors and dialog boxes concerned in the Application environment include th
 
 - All query editors
 - Order by editor
-- [Label editor](../Desktop/labels.md)
+- [Editor de etiquetas](../Desktop/labels.md)
 - Quick report editor
 - Exporting and importing data dialog boxes
 - Formula editor
@@ -246,7 +246,7 @@ You create, edit and/or remove primary keys directly using the context menu of t
 Primary key fields should be handled with care to ensure data integrity at all times. In particular, a primary key field must respect the following rules:
 
 - it must not be empty,
-- it must be unique,
+- debe ser único,
 - once created, it should (in principle) never be modified, especially if:
   - [Global stamp features](../ORDA/global-stamp.md) are enabled,
   - [REST (or similar) feature](../REST/gettingStarted.md) is enabled,
@@ -282,7 +282,7 @@ To remove a primary key from a table:
 
 1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu:
 
-[picture here]
+[imagen aquí]
 
 A confirmation dialog box appears. Click **OK** to remove the primary key.
 

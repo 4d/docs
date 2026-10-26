@@ -39,7 +39,7 @@ var $myclass:=cs.EmployeeEntity
 
 #### 説明
 
-コンポーネントによって公開されたそれぞれの`4D.ClassStore`
+<!-- REF ClassStoreClass.classStoreName.Summary -->コンポーネントによって公開されたそれぞれの`4D.ClassStore`<!-- END REF --> は、クラスストアのプロパティとして利用可能です。
 
 コンポーネントによって公開されるクラスストアの名前とは、[コンポーネントの設定ページにおいて宣言されている](../Extensions/develop-components.md#declaring-the-component-namespace) コンポーネントの名前空間です。
 

@@ -3,9 +3,9 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). L'objet Session est automatiquement créé et maintenu par le serveur web 4D pour contrôler la session d'un client web (par exemple, un navigateur). Cet objet fournit au développeur web une interface avec la session de l'utilisateur, permettant de gérer les privilèges, de stocker des données contextuelles, de partager des informations entre les process et de lancer des processus préemptifs liés à la session.
+Les objets de session sont renvoyés par la commande [`Session`](#session) lorsque [les sessions évolutives sont activées dans votre projet](WebServer/sessions.md#enabling-sessions). L'objet Session est automatiquement créé et maintenu par le serveur web 4D pour contrôler la session d'un client web (par exemple, un navigateur). Cet objet fournit au développeur web une interface avec la session de l'utilisateur, permettant de gérer les privilèges, de stocker des données contextuelles, de partager des informations entre les process et de lancer des processus préemptifs liés à la session.
 
-For detailed information about the session implementation, please refer to the [web server Sessions](WebServer/sessions.md) section.
+Pour plus d'informations sur la mise en œuvre des sessions, veuillez vous reporter à la section [Sessions du serveur web](WebServer/sessions.md).
 
 ### Sommaire
 
@@ -45,17 +45,17 @@ For detailed information about the session implementation, please refer to the [
 
 #### Description
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
+La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `Session` correspondant à la session web évolutive utilisateur courante<!-- END REF -->.
 
-This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used.
+Cette commande ne fonctionne que lorsque [les sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions). Elle renvoie *Null* lorsque les sessions sont désactivées ou lorsque des anciennes sessions sont utilisées.
 
-When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
+Lorsque les sessions évolutives sont activées, l'objet `Session` est accessible depuis n'importe quel process Web dans les contextes suivants :
 
 - Méthodes base `On Web Authentication`, `On Web Connection`, et `On REST Authentication`,
 - méthodes base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) pour les requêtes mobiles,
-- ORDA [Data Model Class functions](ORDA/ordaClasses.md) called with REST requests,
+- [Fonctions de classe du modèle de données ORDA](ORDA/ordaClasses.md) appelées via REST,
 - code traité par les balises 4D dans les pages semi-dynamiques (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- les méthodes projet avec l'attribut "Available through 4D tags and URLs (4DACTION...)" et appelées via les urls 4DACTION/.
+- méthodes projet avec l'attribut "Disponible via balises HTML et URLs 4D (4DACTION...)" et appelées via les urls 4DACTION/.
 
 #### Exemple
 
@@ -69,7 +69,7 @@ IP:port/4DACTION/action_Session
   //action_Session method
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
+       If(Session.hasPrivilege("WebAdmin")) //appel de la fonction hasPrivilege
           WEB SEND TEXT("4DACTION --> Session is WebAdmin")
        Else
           WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
@@ -106,7 +106,7 @@ IP:port/4DACTION/action_Session
 
 #### Description
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
+La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
 
 #### Exemple
 
@@ -177,7 +177,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 #### Description
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+La fonction `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->renvoie True si le *privilege* est associé à la session, et False sinon<!-- END REF -->.
 
 #### Exemple
 
@@ -306,7 +306,7 @@ End if
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
+La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe le ou les privilège(s) et/ou le ou les rôle(s) défini(s) dans le paramètre à la session<!-- END REF -->.
 
 - Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
@@ -368,7 +368,7 @@ End if
 
 #### Description
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+La propriété `.storage` contient <!-- REF #SessionClass.storage.Summary -->un objet partagé qui peut être utilisé pour stocker des informations disponibles pour toutes les requêtes du client web<!-- END REF -->.
 
 Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Puisqu'il s'agit d'un objet partagé, cette propriété sera disponible dans l'objet `Storage` du serveur.
 
@@ -381,7 +381,7 @@ Cette propriété est en **lecture seule**.
 Vous voulez stocker l'adresse IP du client dans la propriété `.storage`. Vous pouvez écrire dans la méthode base `On Web Authentication` :
 
 ```4d
-If (Session.storage.clientIP=Null) //first access
+If (Session.storage.clientIP=Null) //premier accès
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
     End use

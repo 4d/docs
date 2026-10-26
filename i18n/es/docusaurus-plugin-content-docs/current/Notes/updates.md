@@ -12,6 +12,10 @@ Lea [**Las novedades en 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 - Soporte de la firma de correo electrónico de S/MIME a través de las nuevas propiedades de clase [`4D.SMTPTransporter`](../API/SMTPTransporterClass.md): [`.certificate`](../API/SMTPTransporterClass.md#certificate) o [`.certificateName`](../API/SMTPTransporterClass.md#certificatename) (suministro del certificado) y [`.certificatePassword`](../API/SMTPTransporterClass.md#certificatepassword).
 - Ahora puede [compilar un componente directamente desde el host](../Project/compiler.md#compile-components).
 - Soporte de formularios lista en la [renderización **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) en Windows.
+- 4D.Vector fields: [new specific icon](../Develop/field-properties.md#4dvector-class) and new [dedicated index types](../Develop/structure-indexes.md#vector-index).
+- Support of vector indexes in [`CREATE INDEX`](../commands/create-index) and [`SET INDEX`](../commands/set-index) 4D language commands.
+- Nueva función [dataClass.getIndexes()](../API/DataClassClass.md#getindexes).
+- New [`.precision` property](../API/VectorClass.md#precision) in `4D.Vector` class objects.
 - Acceso directo a la [plataforma 4D Corner](https://corner.4d.com/) desde el [gestor de dependencias](../Project/components.md#using-4d-corner).
 - Nueva propiedad [`WebServer.quotas`](../API/WebServerClass.md#quotas) y clase [`4D.QuotaManager`](../API/QuotaManagerClass.md) mejorada para configurar [las cuotas del servidor web](../WebServer/quotas.md).
 - Text Area and Input objects: New [top padding](../FormObjects/properties_CoordinatesAndSizing.md#top-padding), [bottom padding](../FormObjects/properties_CoordinatesAndSizing.md#bottom-padding), [left padding](../FormObjects/properties_CoordinatesAndSizing.md#left-padding), [right padding](../FormObjects/properties_CoordinatesAndSizing.md#right-padding) with related [CSS support](../FormEditor/createStylesheet.md#attribute-mapping). Soporte de [alineación vertical](../FormObjects/properties_Text.md#vertical-alignment).

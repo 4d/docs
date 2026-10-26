@@ -15,7 +15,7 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 - time
 - boolean
 
-4D fournit des balises pour générer des valeurs par défaut pour la date, l'heure et le numéro de séquence. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
+4D provides stamps for generating default values for a date, a time, and a sequence number. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
 
 | Stamp | Description        |
 | ----- | ------------------ |
@@ -23,15 +23,15 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 | #H    | Heure courante     |
 | #N    | Numéro de séquence |
 
-Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. Pour plus d'informations, reportez-vous au paragraphe [Autoincrement](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#976029).
+Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. Pour plus d'informations, reportez-vous au paragraphe [Autoincrement](../Develop/structure-fields#autoincrement).
 
 > Ne pas confondre cette propriété avec la propriété "[Valeurs par défaut](properties_DataSource.md#default-list-of-values)" qui permet de remplir une colonne de list box avec des valeurs statiques.
 
 #### Grammaire JSON
 
-| Nom          | Type de données                     | Valeurs possibles                                                |
-| ------------ | ----------------------------------- | ---------------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Toute valeur et/ou une balise : "#D", "#H", "#N" |
+| Nom          | Type de données | Valeurs possibles                                                                                                                       |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | string          | Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"... |
 
 #### Objets pris en charge
 
@@ -41,7 +41,7 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 ## Exclusion
 
-Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans l'objet. `valeurs` Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
+Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans l'objet. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
 
 > Si une énumération spécifiée est hiérarchique, seuls les éléments du premier niveau sont pris en compte.
 

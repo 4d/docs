@@ -1083,7 +1083,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1174,7 +1174,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1358,7 +1358,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1456,7 +1456,7 @@ Dans *toSearch*, passez l'expression à trouver dans la collection. Vous pouvez 
 Optionnellement, vous pouvez passer l'indice de la collection à partir duquel démarrer la recherche dans *startFrom*.
 
 - Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la recherche n'est pas effectuée.
-- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention** : N'oubliez pas que la numérotation des éléments de collection débute à 0.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1882,7 +1882,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -2557,7 +2557,7 @@ où :
 | Inclus parmi                            | IN                            | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)           |
 
 - **value** : la valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de toute expression de valeur constante correspondant à la propriété de type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
-  Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de <strong x-id="1">value</strong> dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet.
+  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type **booléen**: **true** or **false** (sensible à la casse).
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'

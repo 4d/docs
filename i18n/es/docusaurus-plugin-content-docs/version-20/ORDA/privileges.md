@@ -76,19 +76,19 @@ Para permitir un rol en una sesión:
 ```4d
 
 exposed Function authenticate($identifier : Text; $password : Text)->$result : Text
-
+    
     var $user : cs.UsersEntity
-
+    
     Session.clearPrivileges()
-
-    $result:="Está autentificado como Invitado"
-
+    
+    $result:="Your are authenticated as Guest"
+    
     $user:=ds.Users.query("identifier = :1"; $identifier).first()
-
+    
     If ($user#Null)
         If (Verify password hash($password; $user.password))
             Session.setPrivileges(New object("roles"; $user.role))
-            $result:="Está autentificado como "+$user.role
+            $result:="Your are authenticated as "+$user.role
         End if
     End if
 
@@ -190,10 +190,8 @@ Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
-Else // puede evitar que el proyecto se abra
- ALERT("El archivo roles.json está malformado o contiene inconsistencias, la aplicación se cerrará.")
- QUIT 4D
-End if
+Else // you can prevent the project to open
+ ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
 End if 
 ```
@@ -206,85 +204,85 @@ Sin embargo, cuando la aplicación está a punto de desplegarse, una buena prác
 
 ```json title="/Project/Sources/roles.json"
 {
-    "privileges": [
-        {
-            "privilege": "none",
-            "includes": []
-        }
-    ],
+	"privileges": [
+		{
+			"privilege": "none",
+			"includes": []
+		}
+	],
 
-    "roles": [],
+	"roles": [],
 
-    "permissions": {
-        "allowed": [{
-            "applyTo": "ds",
-            "type": "datastore",
-            "read": [
-                "none"
-            ],
-            "create": [
-                "none"
-            ],
-            "update": [
-                "none"
-            ],
-            "drop": [
-                "none"
-            ],
-            "execute": [
-                "none"
-            ],
-            "describe": [
-                "none"
-            ],
-            "promote": [
-                "none"
-            ]
-        },
-        {
-            "applyTo": "ds.loginAs",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.hasPrivilege",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.clearPrivileges",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.isGuest",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.getPrivileges",
-            "type": "method",
-            "execute": [
-                    "guest"
-                ]
-        },
-        {
-            "applyTo": "ds.setAllPrivileges",
-            "type": "method",
-            "execute": [
-                "guest"
-            ]
-    }
+	"permissions": {
+		"allowed": [{
+			"applyTo": "ds",
+			"type": "datastore",
+			"read": [
+				"none"
+			],
+			"create": [
+				"none"
+			],
+			"update": [
+				"none"
+			],
+			"drop": [
+				"none"
+			],
+			"execute": [
+				"none"
+			],
+			"describe": [
+				"none"
+			],
+			"promote": [
+				"none"
+			]
+		},
+		{
+			"applyTo": "ds.loginAs",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.hasPrivilege",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.clearPrivileges",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.isGuest",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.getPrivileges",
+			"type": "method",
+			"execute": [
+					"guest"
+				]
+		},
+		{
+			"applyTo": "ds.setAllPrivileges",
+			"type": "method",
+			"execute": [
+				"guest"
+			]
+	}
 
-        ]
-    }
+		]
+	}
 }
 ```

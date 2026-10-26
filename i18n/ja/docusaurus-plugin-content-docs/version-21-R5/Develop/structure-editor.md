@@ -3,246 +3,244 @@ id: structure-editor
 title: ストラクチャーエディター
 ---
 
-You use the Structure editor to manage the database structure — the tables and their relations. It gives you control over tables, table properties, fields, field properties including indexes, and table relations.
+ストラクチャーエディターを使用してデータベースストラクチャー (テーブルとリレーション) を管理できます。このエディターを使用してテーブル、テーブルプロパティ、フィールド、フィールドプロパティ、インデックスやテーブルリレーションを管理できます。
 
-You can access the **Structure editor** by choosing the **Database Structure** command in the **Design** menu or by clicking on the Structure button ![](../assets/en/Develop/structure-button.png) in the 4D toolbar.
+**ストラクチャーエディター**には**デザイン**メニューの**データベースストラクチャー**コマンドを選択するか、4Dツールバーのストラクチャーボタン ![](../assets/en/Develop/structure-button.png) をクリックすることでアクセスできます。
 
-The Structure editor provides a graphic view of a database’s structure as well as a toolbar and context menus that you can use to carry out database design operations. Each table is represented by a table image. It shows the fields and their types in the form of icons. An information bar displays the characteristics of tables and fields as the mouse moves over them.
+ストラクチャーエディターはデータベースストラクチャーをグラフィカルに表示し、データベースデザイン操作に使用するツールバーやコンテキストメニューを提供します。エディター内では、それぞれのテーブルはテーブルイメージとして表現されます。テーブルにはフィールドとその型がアイコンで表示されます。マウスを重ねると、情報バーにテーブルやフィールドの情報が表示されます。
 
-A floating **Inspector palette** can be used to view and modify the properties of structure objects and of the structure editor itself. This window is described in the [Inspector palette](#inspector-palette) section.
+フローティングパレット上に表示される**インスペクターパレット**を使用して、ストラクチャーオブジェクトやストラクチャーエディター自身のプロパティを表示したり変更したりできます。このウィンドウについては[インスペクターパレット](#インスペクターパレット) の章で説明します。
 
 ## ツールバー
 
-The structure editor has a toolbar containing functions like the addition of objects, as well as navigation and display options:
+ストラクチャーエディターにはオブジェクト追加などの機能、およびナビゲーションや表示オプションを格納するツールバーがあります:
 
 ![](../assets/en/Develop/structure-toolbar.png)
 
-From left to right, the icons perform the following actions:
+左から右へ順に、アイコンは以下のアクションを実行します:
 
-- add objects (tables, fields, index, relations)
-- search in editor
-- hide/display tables according to folders defined in the Home page of the Explorer
-- display filters
-- Tools (size, alignment, sort)
+- オブジェクト(テーブル、フィールド、インデックス、リレーション)の追加
+- エディター内を検索
+- エクスプローラーのホームページ内で定義されたフォルダに基づいてテーブルの表示/非表示を切り替える
+- フィルターを表示
+- ツール (サイズ、配置、並べ替え)
 - カラー
-- Index list window
-- Primary key manager
+- インデックス一覧ウィンドウ
+- プライマリーキー(主キー)マネージャー
 
 ### ロック情報
 
-A closed lock icon ![](../assets/en/Develop/structure-lock.png) is displayed if the structure file is locked.  
-Locking can occur in both project and client/server modes when:
+ストラクチャーファイルがロックされている時には、閉じた南京錠のアイコン ![](../assets/en/Develop/structure-lock.png) が表示されます。  
+ロックは、プロジェクトモードおよびクライアント/サーバーモードの両方において、以下ような場合に起こり得ます:
 
-- The `catalog.4DCatalog` file is *Read-only* (Projects only). Clicking on the lock icon will display an alert to unlock it, if possible.
-- Two or more users attempt to modify the same structure at the same time. The structure cannot be used until the first user frees it by closing the window. *(クライアント/サーバーモードのみ)*
+- `catalog.4DCatalog` ファイルが*読み出し専用* であるとき(プロジェクトモードのみ)。南京錠のアイコンをクリックすると、可能である場合にはそれを解錠するアラートが表示されます。
+- 2人以上のユーザーが同じストラクチャーを同時に編集しようとしたとき。ストラクチャーは、最初のユーザーがウィンドウを閉じて解放するまで使用することができません。*(クライアント/サーバーモードのみ)*
 
-In both cases, the structure can be opened in *Read-only*, but cannot be used until the lock is removed.
+どちらのケースにおいても、設定は *読み取り専用* として開くことはできますが、ロックが解除されるまでは使用することができません。
 
-## Information bar
+## 情報バー
 
-The lower part of the editor window is an information bar displaying data corresponding to the area the mouse is over: table, field or relation.
+エディターウィンドウの下部にはマウスが重なっているオブジェクトのエリアに対応する情報を表示する情報バーがあります:テーブル、フィールド、リレーション。
 
-#### Information about a table
+#### テーブルに関する情報
 
-- Table name and number
-- Table triggers:
-  - **NEW:** On saving new record
-  - **SAVE:** On saving existing record
-  - **DEL:** On deleting a record
+- テーブル名とテーブル番号
+- テーブルトリガ:
+  - **NEW:** 新規レコード保存時
+  - **SAVE:** 既存レコード保存時
+  - **DEL:** レコード削除時
 
-#### Information about a field
+#### フィールドに関する情報
 
-- Table name and number
-- Field name and number
+- テーブル名とテーブル番号
+- フィールド名とフィールド番号
 - フィールドの型
-- Field attributes:
-  - **NUL:** Map null values to blank values
-  - **UNI:** Unique
+- フィールド属性:
+  - **NUL:** 空値にヌル値をマップ
+  - **UNI:** 重複不可
 
-#### Information about a relation
+#### リレーションに関する情報
 
-- Origin table and field (many field)
-- Destination table and field (one field)
-- Relation type and ORDA name:
-  - **N→1** (many to one) and `relatedEntities` relation attribute name
-  - **1→N** (one to many) and `relatedEntity` relation attribute name
+- リレーション元のテーブルとフィールド(Nフィールド)
+- リレーション先のテーブルとフィールド(1フィールド)
+- リレーションの種類とORDA 名:
+  - **N→1** (N対1) および `relatedEntities` リレーション属性名
+  - **1→N** (1対N) および `relatedEntity` リレーション属性名
 
 :::note
 
-For more information on ORDA names, refer to the [Data Model Objects](../ORDA/dsMapping.md#structure-mapping) page.
+ORDA 名についての詳細な情報に関しては、[データモデルオブジェクト](../ORDA/dsMapping.md#structure-mapping) のページを参照して下さい。
 
 :::
 
-## Inspector palette
+## インスペクターパレット
 
-The properties of the Structure editor objects (tables, fields and relations) can be viewed and modified via the Inspector palette:
+ストラクチャーエディターオブジェクト (テーブル、フィールド、リレーション) のプロパティはインスペクターパレットに表示し編集することができます:
 
 ![](../assets/en/Develop/structure-inspector.png)
 
-This palette appears when you double-click on an object. When it is displayed, its contents are updated dynamically depending on the objects selected. The Inspector displays the [general properties of the Structure editor window](#customizing-the-editor-window) when you click in an empty area of the window.
+このパレットはオブジェクト上でダブルクリックすると表示されます。表示されているとき、表示内容は選択されたオブジェクトに基づきダイナミックに更新されます。ウィンドウの空のエリアをクリックすると、[インスペクターにはストラクチャーエディターの一般的なプロパティ](#エディターウィンドウのカスタマイズ) が表示されます。
 
-The different areas of the palette can be expanded/collapsed. You can click on the adjacent triangles to display or hide the corresponding information.
+パレットの異なるエリアは、パネルごとに展開・折りたたみができます。すぐとなりの三角形をクリックすることで対応する情報を表示、または非表示にすることができます。
 
-The following shortcuts can be used:
+以下のショートカットが使用することができます:
 
-- **Shift+click** on the title bar of a collapsed panel expands that panel and collapses all the others.
-- **Alt** (Windows) or **Option** (macOS) + **click** on the title bar of a collapsed panel expands all the panels.
-- **Alt** (Windows) or **Option** (macOS) + **click** on the title bar of an expanded panel collapses all the panels.
+- 折りたたまれたパネルのタイトルバーを**Shift+クリック**すると、そのパネルを展開し、他を折りたたみます。
+- 折りたたまれたパネルのタイトルバーを**Alt** (Windows) または**Option** (macOS) + **クリック**すると、すべてのパネルを展開します。
+- 展開されたパネルのタイトルバーを**Alt** (Windows) または**Option** (macOS) + **クリック**すると、すべてのパネルを折りたたみます。
 
-The position of the palette and the expanded/collapsed states of its panels are saved.
+パレットの位置とパネルの展開/折りたたみ状態は保存されます。
 
-## Selecting an object
+## オブジェクトを選択する
 
-To work with an image of an object in the Structure editor, you must first select it. You can then specify its properties, move it, resize it, delete it, etc. You can select several objects of the same type simultaneously to modify their common properties in the Inspector palette.
+ストラクチャーエディター中のオブジェクトのイメージを操作するには、まずそれを選択します。そしてそのプロパティを定義したり、移動したり、サイズ変更したり、削除したりできます。同時に同じタイプのオブジェクトを複数選択して、例えばインスペクターパレットで共通のプロパティを表示し、変更することができます。
 
-To select:
+選択の仕方は以下の通りです:
 
-- **A table:** Click the image of the table, or press `Tab` / `Shift+Tab` to select each table successively.
-- **A field or relation:** Click the field or relation, or use the arrow keys to navigate.
-- **Several objects:** Use `Shift+Click` for adjacent objects, `Ctrl+Click` (Windows) or `Command+Click` (macOS) for non-adjacent ones.
+- **テーブル:** テーブルイメージをクリックする、または `Tab` / `Shift+Tab` を押して、ストラクチャーエディター中のテーブルを移動しながら選択します。
+- **フィールドまたはリレーション:** フィールドまたはリレーション上をクリックする、または矢印キーを押して移動する。
+- **複数のオブジェクト:** 連続した(隣り合った)オブジェクトを選択するには`Shift+Click` を、連続していないオブジェクトを選択するには`Ctrl+Click` (Windows) または `Command+Click` (macOS) を使用します。
 
-## Working with table images
+## テーブルイメージを操作する
 
-You can resize or move the table images in the Structure editor according to your requirements.
+必要に応じて、ストラクチャーエディター中でテーブルイメージのサイズを変更したり移動したりできます。
 
-**4D Server**: In [development mode](../Desktop/clientServer.md#development-mode), any modification in table images (resize, location...) is propagated to all developers in the Design environment.
+**4D Server**: [開発モード](../Desktop/clientServer.md#開発モード) でテーブルイメージをサイズ変更(リサイズや位置の変更など)すると、すべてのユーザーのデザインモードでテーブルイメージサイズが変更されます。
 
-### Scrolling the field list
+### フィールドリストのスクロール
 
-When you add fields to a table or when you reduce the size of a table, there may be more fields in the table than the image can display. When this happens, 4D automatically adds a cursor than you can use to scroll through the list of visible fields:
+テーブルにフィールドを追加するときや、テーブルのサイズを小さくしたときなど、テーブルイメージが表示できるよりも多くのフィールドがテーブルに含まれることがあります。このような場合、4D は自動でスクロールバーを追加し、フィールドリストをスクロールして表示できるようにします:
 
 ![](../assets/en/Develop/structure-table1.png)
 
-### Resizing a table image
+### テーブルイメージのサイズ変更
 
-You can resize a table image to display more field names or reorganize your screen.
+テーブルイメージのサイズを変更して、より多くのフィールドを表示したり、画面を再構成したりできます。
 
-- **Manual resizing**: Simply click and drag the bottom of the table image or its lower right corner.
+- **手動によるサイズ変更**: テーブルイメージの下部または右下の角をクリックしドラッグします。
 
 ![](../assets/en/Develop/structure-table2.png)
 
-- **Optimal Size**: This option automatically resizes the selected table(s) so that their size corresponds exactly to the number of fields they contain (no empty lines are displayed). To apply the **Optimal Size** command to one or more tables, select **Optimal Size** from the menu associated with the toolbar button of the editor or from the editor’s context menu (click on a table).
+- **最適サイズ**: これは選択されたテーブルを自動でサイズ変更し、含まれるフィールド全体がぴったり表示されるようにします(空の行は表示されないようになります)。**最適サイズ** コマンドを適用するには、エディタのツールバーボタンに割り当てられたメニュー、またはエディタのコンテキストメニューから**最適サイズ**コマンドを選択します。
 
-- **Collapse**: The **Collapse** function collapses the selected table image(s) so that only their names are visible.  This is useful for large structures.
+- **折りたたむ**: この機能はテーブルイメージを折りたたみ、テーブル名のみが表示されるようにします。これは大きなストラクチャーで便利です。
 
-To apply the **Collapse** command to one or more tables, you can:
+**折りたたむ**コマンドを適用するには、以下を行います:
 
  ```
- - Select **Collapse** from the editor’s context menu (click in the title area of the table).  
- - **Shift+Double-click** in the table name area to toggle through the same sequence *original size → collapse.*
+ - エディターのコンテキストメニューから **折りたたむ** コマンドを選択します (テーブルのタイトルエリア上でクリック)。
+ - テーブルの名前部分を **Shift+ダブルクリック** します。この操作を繰り返すと、以下の動作が適用されます: *元のサイズ -> 折りたたむ*
  ```
 
 :::note 注記
 
-- A standard double-click on the table name area opens the **Inspector**.
-- **Alt** (Windows) or **Option** (macOS) + double-click opens the trigger method of the table in the **Method editor**.
-- **Ctrl** (Windows) or **Command** (macOS) + double-click opens the **Explorer** on the Form page.
+- テーブル名エリアで標準のダブルクリックを行うと**インスペクター**が表示されます。
+- **Alt** (Windows) または **Option** (macOS) + ダブルクリックでテーブルのトリガーメソッドが **メソッドエディタ** 中で開かれます。
+- **Ctrl** (Windows) または **Command** (macOS) + ダブルクリックで **エクスプローラー** のフォームページが開かれます。
 
 :::
 
-### Moving table images
+### テーブルイメージの移動
 
-You can move table images to regroup them according to function or to reorganize the Structure editor window. You can also align them to improve the readability of the structure. Any relations are redrawn automatically to correspond with the new table locations.
+機能に基づいてテーブルをグループ化したり、ストラクチャーエディターウィンドウを再編成したりするために、テーブルイメージをエディター内で移動することができます。ストラクチャーの可読性を向上させるためにテーブルを揃えることもできます。リレーションは新しいテーブル位置に基づいて再描画されます。
 
-To move a table image manually, click on the name of a table and drag it using the mouse cursor. Drag the table name bar only. Dragging other parts of the table image may produce different effects, such as creating a new table relation or changing the size of the table image.
+手動でテーブルイメージを移動するには、マウスカーソルでテーブル名エリアをクリックしドラッグします。テーブル名バーのみをドラッグします。テーブルイメージの他の部分をドラッグすると、異なる効果を起こします。例えば新しいテーブルリレーションが作成されたりテーブルイメージのサイズが変更されたりします。
 
-To align two or more tables, select the tables to align and choose an alignment option in the tools menu:
+複数のテーブルの位置を揃えるには、揃えるテーブルを選択し、ツールメニューから対応するメニューを選択します:
 
 ![](../assets/en/Develop/structure-align.png)
 
-These commands are only active when at least two tables are selected.
+これらのコマンドは少なくとも2つ以上のテーブルが選択されている場合にのみ有効となります。
 
-## Scrolling
+## スクロール
 
-Specific scrolling functions facilitate navigation among large structures:
+巨大なストラクチャーにおいては特別なスクロール機能がナビゲーションを容易にします:
 
-- The mouse wheel can be used to scroll the contents of the editor window vertically. This will also scroll through the fields of a table when the cursor is placed above it.
-- Holding down **Shift** while using the mouse wheel scrolls the contents of the window horizontally.
-- Pressing **Shift** activates the "hand" tool which can be used to drag the entire contents of window by clicking in the empty area.
+- マウスホイールを使用するとエディターウィンドウが縦にスクロールされます。カーソルがテーブル上にあるときはテーブルのフィールドがスクロールされます。
+- マウスホイールスクロール時に **Shift** を押すと、ウィンドウを横にスクロールします。
+- **Shift** キーを押して空のエリアをクリック＆ドラッグすると"ハンド"ツールが使用可能になり、ウィンドウの内容全体をスクロールすることができます。
 
 ## 拡大
 
-You can modify the display scale of the database structure using the **Zoom** menu in the right side of the information bar. 100% is the default value when opening a database. Zoom action is focused on the selection if there is one.
+情報バーの右側にある**ズーム**機能を使用して、データベースストラクチャーの表示倍率を変更できます。データベースを開く際のデフォルトは100%です。セレクションがフォーム内にある場合にはそこへズームされます。
 
-The current zoom setting is specific to each user and is memorized when the window is closed.
+ズーム設定はユーザーごとに異なります。設定はウィンドウを閉じる際に保存されます。
 
 :::note
 
-You can [configure the graphic rendering of the Structure editor during a zoom](../Preferences/structure.md#graphic-quality-of-the-structure) using a preference.
+環境設定を使用して[ズーム時のストラクチャーエディターの描画品質を設定する](../Preferences/structure.md#ストラクチャーの描画クォリティ) ことができます。
 
 :::
 
-## Object type display
+## オブジェクトタイプの表示
 
-The **Display** button in the toolbar of the Structure editor is associated with a menu and lets you choose the objects to be displayed in the structure according to their type:
+ストラクチャーエディターのツールバーの**表示**ボタンには、タイプに基づいてストラクチャーオブジェクトの表示と非表示を切り替えるメニューが割り当てられています:
 
 ![](../assets/en/Develop/structure-display.png)
 
-By default, all objects are displayed. This feature allows various representations or views — from the simplest to the most complete — and provides an analysis tool for the structure based on the level of information required.
+デフォルトでは、全てのオブジェクトが表示されています。この機能を使用してさまざまな表現 (もっとも単純なものから完全な表示まで) を得ることができます。そして必要な情報のレベルに基づくストラクチャーの検証ツールを提供します。
 
-The choices are applied to all tables and fields. They are saved per user and memorized when the window is closed. Hiding objects does not change the position of the tables.
+選択はすべてのテーブルとフィールドに適用されます。設定はユーザーごとに異なり、ウィンドウを閉じる際に保存されます。特定のオブジェクトを非表示にしてもテーブルの位置は変わりません。
 
-- When several types of fields are checked, a logical OR operator is used to determine the objects to be displayed. For example, if *Invisible Fields* and *Not Indexed Fields* are both checked, all the non-indexed and invisible fields (indexed or not) are displayed.
-- Tables have priority over fields: if a table is not displayed, its fields are not displayed.
-- If you add an object whose type is not displayed (table, field, or relation), it becomes visible. To hide it again, you must uncheck the corresponding option in the **Display** menu.
+- 複数のフィールドタイプがチェックされている場合、論理 OR 演算を使用して表示するオブジェクトが決定されます。例えば*非表示フィールド* と*インデックスされていないフィールド* オプションが選択されている場合、(表示・非表示属性に関わらず) すべてのインデックスがないフィールドと、(インデックス属性に関わらず) すべての非表示フィールドが表示されます。
+- テーブルはフィールドに対して優先されます。テーブルが表示されない場合、フィールドも表示されません。
+- 表示されないタイプのオブジェクト (テーブル、フィールド、リレーション) を追加すると、オブジェクトはエディターに表示されます。それを非表示にするには、**表示** ボタンに割り当てられた対応するオプションで改めてチェックを外す必要があります。
 
-## Highlight/dim tables by folder
+## フォルダーごとにテーブルをハイライト/薄暗くする
 
-You can hide groups of tables in the Structure editor based on folders defined in the **Home Page** of the Explorer window. You configure this display using the **Folders** button in the Structure editor toolbar.
+エクスプローラーウィンドウの**ホームページ** で定義されたフォルダーに基づき、ストラクチャーエディター内でテーブルグループを非表示にすることができます。ストラクチャーエディターのツールバーにある**フォルダー**ボタンを使用してテーブルの表示を設定します。
 
-The menu associated with this button displays commands that manage the display as well as the list of folders in the database. A check mark appears next to each folder displayed. You can modify the current display by selecting or deselecting a folder from this menu.
+ボタンに割り当てあられたメニューには表示を管理するコマンドと、データベースに定義されたフォルダーのリストが表示されます。表示されるフォルダーの隣にはチェックが付けられます。このメニューでフォルダーを選択/選択解除することで、表示を変更できます。
 
-The **Highlight All Folders** and **Dim All Folders** commands can be used to display or hide all the tables in folders of the database.
+**すべてのフォルダーをハイライト** / **すべてのフォルダーを薄暗く表示** コマンドを使用してデータベースのフォルダー中のテーブルをすべて表示したり隠したりできます。
 
-Each click on the toolbar's folder button inverts the display of the tables: highlighted tables are dimmed and vice versa.
+ツールバーのフォルダーボタンをクリックするたびにテーブルの表示が切り替えられます: ハイライトされたテーブルは薄暗くなり、薄暗くなっていたテーブルがハイライトされます。
 
-When the tables are dimmed, only their outlines appear in the Structure window. Tables that are not dimmed remain fully visible.
+テーブルが薄暗く表示されているとき、デフォルトでストラクチャーウィンドウにはその外周部だけが表示されます。隠されていないテーブルのみが全体として表示されます。
 
 ![](../assets/en/Develop/structure-dimmed.png)
 
 :::note
 
-You can set the appearance of dimmed tables in the Structure editor to either *Dimmed* or *Invisible* using an [option in the **Structure** page of the Preferences](../Preferences/structure.md#when-a-folder-is-dimmed-its-contents-are). It is necessary to close and reopen the Structure editor window for this preference to take effect.
+ストラクチャーエディター中で薄暗く表示するテーブルのアピアランスを、[環境設定の**ストラクチャー**ページにあるオプション](../Preferences/structure.md#フォルダーが表示対象外のとき) を使用して、*薄暗く表示* するか *非表示* にするかを切り替えることができます。この環境設定を変更した場合には設定を有効にするために、ストラクチャーエディターウィンドウを一度閉じて開きなおす必要があります。
 
 :::
 
-## Customizing the editor window
+## エディターウィンドウのカスタマイズ
 
-The Structure editor window has specific properties that can be set using the **Inspector**.
+ストラクチャーエディターの特定のプロパティは**インスペクター**を使用して変更することができます。
 
-To display these properties, you can either:
+これらのプロパティを表示するには:
 
-- Double-click (or click, if the window is already displayed) in an empty area of the window, or
-- Right-click in an empty area and choose **Structure Properties** from the context menu.
+- ウィンドウの空のエリアをダブルクリックします。またはインスペクターウィンドウが既に表示されている場合は空のエリアをクリックします。
+- ウィンドウの空のエリアで右クリックをし、コンテキストメニューから**ストラクチャープロパティ**コマンドを選択します。
 
-The Inspector palette displays the Structure properties.
+インスペクターパレットにストラクチャープロパティが表示されます。
 
 ![](../assets/en/Develop/structure-properties.png)
 
-The following properties can be set:
+以下のプロパティを設定できます:
 
-- **Background Picture:** You can add or modifiy the background picture used as well as its display format. To add or modify the picture, click on the **Open** button or right-click in the preview area and choose **Open** from the context menu; then select the file containing the picture to be displayed. You can use any picture format. The selected picture is displayed immediately in the preview area and in the editor window.
-  To change the display format of the picture, choose a value from the Picture Format menu. The formats provided are the standard picture display formats of 4D.
-  To delete a custom picture, click on the **Clear** button or right-click in the preview area and choose **Clear** from the context menu.
-- **Fill Color:** You can change the color used for the background of the editor window. To do this, click in the color selection area and choose a color from the selection menu.
-- **Default Font:** To change the default font used for table and field names, choose a vaue from this menu. You can also use the Size menu to change the default font size.
+- **バックグランドピクチャー**: 使用するバックグランドピクチャーとその表示フォーマットを変更できます。ピクチャーを変更するには、**開く**ボタンをクリックするかプレビューエリアをクリックしてコンテキストメニューから**開く**を選択します。そして表示するピクチャーを選択します。どのピクチャーフォーマットも使用できます。選択されたピクチャーをすぐにプレビューエリアとエディターウィンドウに表示されます。ピクチャーの表示フォーマットを変更するには、ピクチャーフォーマットメニューから値を選択します。提供される選択肢は4D 標準のピクチャー表示フォーマットです。カスタムピクチャーを削除するには、**クリア** ボタンをクリックするか、プレビューエリアをクリックしてコンテキストメニューから**クリア** を選択します。
+- **塗りカラー**: エディターウィンドウのバックグランドに使用されるカラーを変更できます。これを行うにはカラー選択エリアをクリックして選択メニューからカラーを選択します。
+- **デフォルトフォント**: テーブルやフィールド名に使用されるデフォルトのフォントを変更するには、このメニューから使用するフォントを選択します。サイズメニューを使用してデフォルトのフォントサイズを変更することもできます。
 
-## Find in Structure
+## ストラクチャーを検索
 
-4D lets you carry out searches directly in the Structure editor window. Searches can be among the following elements:
+4D ではストラクチャーエディターウィンドウ内で検索を行えます。検索は以下の要素に対して行われます:
 
-- Table names and/or field names
-- Table numbers
+- テーブル名やフィールド名
+- テーブル番号
 
-To perform a search, enter a text or table number in the **Search** field of the Structure editor. As you type, a bar appears below where you can specify search options:
+検索を行うには、ストラクチャーを**検索**エリアに検索する文字列やテーブル番号を入力します。エリアに値を入力するとその下にオプションバーが表示され、検索のスコープとタイプを指定できます:
 
 ![](../assets/en/Develop/structure-search.png)
 
-- **Scope**: *Tables & fields* or *Tables* (i.e. tables only).
-- **Types**:
-  - *Contains* (default): typing "le" finds "Table", "Letter", etc.
-  - *Starts with*: typing "pa" finds "paper", "paid", but not "repair".
-  - *Number*: typing "2" finds tables numbered 2, 12, 20, etc.
+- **スコープ**: *テーブル & フィールド* または *テーブル* (つまりテーブルのみ)。
+- **タイプ**:
+  - *含む* (デフォルト): “le”を検索すると“Table”、“Letter”、等が見つかります。
+  - *前方一致* : “pa”を検索すると“paper”や“paid”が見つかりますが、“repair”は見つかりません。
+  - *番号* : “2”を検索するとテーブル番号2、12、20、などが見つかります。
 
-Searches are performed in real time as you type. Tables and fields that match are highlighted. If nothing is found, the search area turns red. To exit **Search** mode, click the **X** button in the search bar or delete all the characters in the search area.
+検索は値を入力するに従いリアルタイムで実行されます。検索されたテーブルやフィールドは強調表示されます。何も見つからないと、検索条件エリアが赤に変わります。**検索** モードを抜けるには、検索バーの **X** ボタンをクリックするか、検索エリア内の文字をすべて削除します。
 

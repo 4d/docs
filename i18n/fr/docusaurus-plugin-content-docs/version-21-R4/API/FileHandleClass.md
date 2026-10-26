@@ -29,14 +29,14 @@ $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
-Fin pour
+End for
 
 //Ecriture ligne par ligne à partir de la fin
 $fhandle:=$f.open("append")
 $text:="Hello New World !"
 For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
-Fin pour
+End for
 
 //Lecture en utilisant un caractère d'arrêt et un paramètre objet
 $o:=Nouvel objet()

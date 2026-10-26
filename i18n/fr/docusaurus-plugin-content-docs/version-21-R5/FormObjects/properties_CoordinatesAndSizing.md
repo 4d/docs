@@ -164,7 +164,7 @@ Coordonnées de gauche de l'objet dans le formulaire.
 
 ## Marge gauche
 
-Définit l'espacement entre le bord droit de l'objet et son contenu textuel. La valeur est définie en pixels (valeur par défaut = 0).
+Définit l'espacement entre le bord gauche de l'objet et son contenu textuel. La valeur est définie en pixels (valeur par défaut = 0).
 
 #### Grammaire JSON
 
@@ -252,7 +252,7 @@ Coordonnées de droite de l'objet dans le formulaire.
 
 ## Marge droite
 
-Définit l'espacement entre le bord gauche de l'objet et son contenu textuel. La valeur est définie en pixels (valeur par défaut = 0).
+Définit l'espacement entre le bord droit de l'objet et son contenu textuel. La valeur est définie en pixels (valeur par défaut = 0).
 
 #### Grammaire JSON
 

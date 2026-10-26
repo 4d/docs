@@ -15,7 +15,7 @@ Los [semáforos](../Develop/processes.md#semaphores) también se pueden utilizar
 
 Una señal es un objeto compartido que debe ser pasado como parámetro a los comandos que llaman o crean trabajadores o procesos.
 
-Lanzamiento Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
+Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna CPU. Esto puede ser muy interesante para el rendimiento en aplicaciones multiproceso. Lanzamiento
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 

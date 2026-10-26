@@ -55,9 +55,9 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                                     |
-| ------------ | --------------- | ----------------------------------------------------- |
-| footerHeight | string          | décimales positives +px &#124; em |
+| Nom          | Type de données | Valeurs possibles                      |
+| ------------ | --------------- | -------------------------------------- |
+| footerHeight | string          | value+px &#124; em |
 
 #### Objets pris en charge
 

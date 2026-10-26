@@ -3,7 +3,7 @@ id: writeProAreaOverview
 title: 4D Write Pro エリア
 ---
 
-4D Write Pro は、4Dユーザーに対して、4Dアプリケーションに完全に統合した高度なワードプロセスツールを提供します。 4D Write Proを使用すれば、プリフォーマットされた Eメールや文章に画像、スキャン済みの署名、フォーマットされたテキストやダイナミック変数用のプレースホルダーなどを含めることができます。また、請求書やレポートを動的に作成し、フォーマット済みのテキストや画像を含めることができます。 4D Write Proを使用すれば、プリフォーマットされた Eメールや文章に画像、スキャン済みの署名、フォーマットされたテキストやダイナミック変数用のプレースホルダーなどを含めることができます。また、請求書やレポートを動的に作成し、フォーマット済みのテキストや画像を含めることができます。
+4D Write Pro は、4Dユーザーに対して、4Dアプリケーションに完全に統合した高度なワードプロセスツールを提供します。 4D Write Proを使用すれば、プリフォーマットされた Eメールや文章に画像、スキャン済みの署名、フォーマットされたテキストやダイナミック変数用のプレースホルダーなどを含めることができます。また、請求書やレポートを動的に作成し、フォーマット済みのテキストや画像を含めることができます。
 
 ![](../assets/en/FormObjects/writePro2.png)
 
@@ -45,7 +45,7 @@ title: 4D Write Pro エリア
 [HTML WYSIWYG 表示](properties_Appearance.md#html-wysiwyg-表示) -
 [水平ルーラーを表示](properties_Appearance.md#水平ルーラーを表示) -
 [垂直ルーラーを表示](properties_Appearance.md#垂直ルーラーを表示) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [印刷時可変](properties_Print.md#印刷時可変) -
 [メソッド](properties_Action.md#メソッド) -
 [ドラッグ有効](properties_Action.md#ドラッグ有効) -

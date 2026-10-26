@@ -34,9 +34,9 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| css    | cadena o colección | Ruta(s) del archivo CSS proporcionada(s) como:<li>una cadena (un archivo para ambas plataformas)</li><li>una colección de cadenas (una lista de archivos para ambas plataformas)</li><li>una colección de objetos {"path":string; media":"mac" &#124; "win"} </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                                                                                                                                                                                                                                                            |
+| ------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css    | cadena o colección | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "windows"} objects </li> |
 
 ---
 

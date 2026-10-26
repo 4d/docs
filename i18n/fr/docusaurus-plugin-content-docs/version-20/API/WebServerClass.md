@@ -233,7 +233,7 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
+  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
@@ -275,7 +275,7 @@ Le <!-- REF #WebServerClass.defaultHomepage.Summary -->nom de la page home par d
 
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
-Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur Web, puis toutes les futures requêtes HTTP seront automatiquement transformées en requêtes HTTPS. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. HSTS nécessite l'activation de HTTPS sur le serveur. HTTP doit également être activé pour permettre des connexions client initiales.
+Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transport Security (HSTS)<!-- END REF -->. HSTS permet au serveur Web de déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS sécurisées. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur Web, puis toutes les futures requêtes HTTP seront automatiquement transformées en requêtes HTTPS. La durée de stockage de ces informations par le navigateur est indiquée avec la propriété `HSTSMaxAge`. HSTS nécessite l'activation de HTTPS sur le serveur. HTTP doit également être activé pour permettre des connexions client initiales.
 
 <!-- END REF -->
 

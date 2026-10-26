@@ -29,9 +29,9 @@ Puede utilizar un número de secuencia para crear un número único para cada re
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos                      | Valores posibles                                          |
-| ------------ | ----------------------------------- | --------------------------------------------------------- |
-| defaultValue | string, number, date, time, boolean | Todo valor y/o un sello: "#D", "#H", "#N" |
+| Nombre       | Tipos de datos | Valores posibles                                                                                                                        |
+| ------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | string         | Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"... |
 
 #### Objetos soportados
 

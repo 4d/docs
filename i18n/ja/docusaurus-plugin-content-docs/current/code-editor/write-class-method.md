@@ -538,7 +538,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
     別のメソッドからこのメソッドを呼び出したときのヘルプTip:
     ![](../assets/en/code-editor/help-tip.png)
 
-- また、 **専用のドキュメントファイル** を `<MethodName>.md` という名前で `<package>/documentation` フォルダーに作成することも可能です。 [コードエディターでドキュメンテーションを表示する](../Project/documentation.md#コードエディターでドキュメンテーションを表示する) を参照ください。[コードエディターでドキュメンテーションを表示する](../Project/documentation.md#コードエディターでドキュメンテーションを表示する) を参照ください。
+- また、 **専用のドキュメントファイル** を `<MethodName>.md` という名前で `<package>/documentation` フォルダーに作成することも可能です。[コードエディターでドキュメンテーションを表示する](../Project/documentation.md#コードエディターでドキュメンテーションを表示する) を参照ください。
 
 ## コメント/アンコメント
 

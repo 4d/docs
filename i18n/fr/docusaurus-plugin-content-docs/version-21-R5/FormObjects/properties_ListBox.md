@@ -164,15 +164,9 @@ Nombre de colonnes qui ne peuvent pas être déplacées pendant l'exécution.
 
 ## Nombre de colonnes
 
-Définit le nombre de colonnes de la list box.
+Sets the length of the [column collection](#columns) of the list box.
 
 > Vous pouvez ajouter ou supprimer des colonnes dynamiquement par programmation, en utilisant des commandes telles que [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
-
-#### Grammaire JSON
-
-| Nom         | Type de données | Valeurs possibles          |
-| ----------- | --------------- | -------------------------- |
-| columnCount | integer         | minimum: 1 |
 
 #### Objets pris en charge
 

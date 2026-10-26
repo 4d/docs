@@ -77,9 +77,9 @@ Une ligne est placée sous le texte.
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles     |
-| -------------- | --------------- | --------------------- |
-| textDecoration | string          | "normal", "underline" |
+| Nom            | Type de données | Valeurs possibles   |
+| -------------- | --------------- | ------------------- |
+| textDecoration | string          | "none", "underline" |
 
 #### Objets pris en charge
 
@@ -290,7 +290,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 :::note
 
-- "automatic" n'est pas pris en charge par les [cases à cocher](checkbox_overview.md) et les [boutons radio](radio_overview.md)
+- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
 - "justify" n'est pris en charge que par les [zones de saisie](input_overview.md) et les [zones de texte](text.md)
 
 :::

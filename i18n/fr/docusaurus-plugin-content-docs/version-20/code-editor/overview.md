@@ -3,9 +3,9 @@ id: overview
 title: Gestion du code
 ---
 
-The 4D code used across your application is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
+Le code 4D utilisé dans votre projet est écrit dans des [méthodes](../Concepts/methods.md) et des [classes](../Concepts/classes.md).
 
-L'IDE de 4D vous offre diverses fonctionnalités pour créer, modifier, exporter ou supprimer votre code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
+L'IDE de 4D vous offre diverses fonctionnalités pour créer, modifier, exporter ou supprimer votre code. Vous utiliserez généralement l'[éditeur intégré de code 4D](write-class-method.md) pour travailler avec votre code.
 
 ## Créer des méthodes
 
@@ -37,7 +37,7 @@ Pour supprimer une méthode ou une classe existante, vous pouvez :
 
 ## Importer et exporter le code
 
-Vous pouvez importer et exporter une méthode ou le code d'une classe sous la forme d'un fichier. These commands are found in the **Method** menu of the Code editor.
+Vous pouvez importer et exporter une méthode ou le code d'une classe sous la forme d'un fichier. Ces commandes se trouvent dans le menu **Méthode** de l'éditeur de code.
 
 - Lorsque vous sélectionnez la commande **Exporter la méthode...** , une boîte de dialogue standard d'enregistrement de fichier apparaît, vous permettant de choisir le nom, l'emplacement et le format du fichier d'export (voir ci-dessous). Comme pour l'impression, l'export ne tient pas compte de l'état contracté des structures de code et le code entier est exporté.
 - Lorsque vous sélectionnez la commande **Importer la méthode...**, une boîte de dialogue standard d'ouverture de fichier standard apparaît, vous permettant de désigner le fichier à importer. L'importation remplace le texte sélectionné dans la méthode. Pour remplacer une méthode existante par une méthode importée, il suffit de sélectionner l’ensemble du contenu de la méthode avant d’effectuer l’importation.
@@ -70,7 +70,7 @@ Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../
 
 :::caution
 
-Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
 Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez désigner un propriétaire de la méthode pour que seuls certains utilisateurs puissent changer son nom.
 
@@ -110,15 +110,15 @@ Cette option vous permet de déclarer la méthode éligible à l'exécution en m
 
 Si vous voulez bénéficier de la fonctionnalité du mode préemptif, vous devez déclarer explicitement toutes les méthodes que vous souhaitez démarrer en mode préemptif. Le compilateur vérifiera par la suite que ces méthodes sont effectivement thread-safe.
 
-**Note:** Execution in preemptive mode is only available in compiled mode. For more information, refer to the [Preemptive 4D processes](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html) section.
+**Note** : L'exécution en mode préemptif n'est disponible qu'en mode compilé. Pour plus d'informations, consultez la section [Process préemptifs 4D](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html).
 
 Les options suivantes sont prises en charge :
 
-- **Can be run in preemptive processes**: By checking this option, you declare that the method is capable of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. La propriété "preemptive" de la méthode prend pour valeur "capable".
+- **Peut être exécutée dans un process préemptif** : En sélectionnant cette option, vous déclarez que la méthode est capable d'être exécutée dans un process préemptif et qu'elle doit donc être exécutée en mode préemptif à chaque fois que cela est possible. La propriété "preemptive" de la méthode prend pour valeur "capable".
 
 Lorsque cette option est sélectionnée, le compilateur de 4D vérifiera que la méthode est effectivement capable et retournera des erreurs si ce n'est pas le cas -- par exemple, si elle appelle directement ou indirectement des commandes ou d'autres méthodes qui, elles, ne peuvent pas être exécutées en mode préemptif (toute la chaîne d'appel est analysée mais les erreurs sont signalées uniquement au premier niveau). Dans ce cas, vous pourrez modifier la méthode afin de la rendre "thread-safe" ou sélectionner une autre option.
 
-Si l'éligibilité de la méthode au mode préemptif est confirmée par le compilateur, elle est étiquetée "thread-safe" en interne et sera exécutée en mode préemptif à chaque fois que les conditions requises seront réunies. This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a specific context (see [When is a process started preemptively?](https://doc.4d.com/4Dv19R5/4D/19-R5/Preemptive-4D-processes.300-5830919.en.html#2822148)).
+Si l'éligibilité de la méthode au mode préemptif est confirmée par le compilateur, elle est étiquetée "thread-safe" en interne et sera exécutée en mode préemptif à chaque fois que les conditions requises seront réunies. Cette propriété définit si la méthode est éligible au mode préemptif, mais ne garantit pas qu’elle sera effectivement exécutée en mode préemptif, car ce mode d’exécution nécessite un contexte spécifique (voir [Quand un process est-il lancé en mode préemptif ?](https://doc.4d.com/4Dv19R5/4D/19-R5/Preemptive-4D-processes.300-5830919.en.html#2822148)).
 
 - **Ne peut pas être exécutée dans un process préemptif** : En sélectionnant cette option, vous déclarez que la méthode ne doit jamais être exécutée en mode préemptif, et doit par conséquent toujours être exécutée en mode coopératif. La propriété "preemptive" de la méthode prend pour valeur "incapable".
 
@@ -128,9 +128,9 @@ Lorsque cette option est sélectionnée, le compilateur de 4D ne vérifiera pas 
 
 Lorsque cette option est sélectionnée, le compilateur de 4D évaluera la compatibilité de la méthode avec le mode préemptif et lui apposera l'étiquette interne "thread-safe" ou "thread-unsafe". Aucune erreur liée à l'exécution en préemptif ne sera toutefois retournée. Si la méthode est évaluée "thread-safe", à l'exécution elle n'empêchera pas l'utilisation du mode préemptif si elle est appelée dans un contexte préemptif. A l'inverse, si la méthode est évaluée "thread-unsafe", à l'exécution elle empêchera toute utilisation du mode préemptif si elle est appelée.
 
-Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the [New process](https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html) command). La propriété "thread-safe" interne n'est prise en compte que lorsque la méthode est appelée par d'autres méthodes à l'intérieur de la chaîne d'appel.
+Notez qu’avec cette option, quelle que soit l’évaluation interne de la sécurité des threads, la méthode sera toujours exécutée en mode coopératif lorsqu’elle est appelée directement par 4D en tant que première méthode parente (par exemple via la commande [New process](https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html)). La propriété "thread-safe" interne n'est prise en compte que lorsque la méthode est appelée par d'autres méthodes à l'intérieur de la chaîne d'appel.
 
-***Particular case*:** If the method has also the [**Shared by components and host database**](shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. Si la méthode a aussi la propriété [**Partagée entre composants et projet hôte**](../Project/project-method-properties.md#shared-by-components-and-host-database), l'option **Indifférent** marquera automatiquement la méthode comme thread-unsafe.
+***Cas particulier* :** si la méthode possède également la propriété [**Partagée par les composants et la base hôte**](shared-by-components-and-host-database), le fait de sélectionner l'option **Indifférent** marquera automatiquement la méthode comme thread-unsafe. Si vous souhaitez qu'une méthode de composant partagé soit thread-safe, vous devez explicitement lui attribuer l'option **Peut être exécutée dans un process préemptif**.
 
 ### Disponibilité
 
@@ -140,7 +140,7 @@ Les attributs de disponibilité précisent les services externes autorisés à a
 
 Cet attribut vous permet de publier la méthode courante comme service Web accessible via des requêtes SOAP. Pour plus d’informations, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Lorsque cette option est cochée, l’option **Publié dans WSDL** est active.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
+Dans l'Explorateur, les méthodes projet proposées sous forme de service Web sont signalées par une icône spécifique ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
 **Note :** Il n'est pas possible de publier en tant que Web service une méthode dont le nom comporte des caractères non conformes à la nomenclature XML (par exemple des espaces). Si le nom de la méthode n'est pas conforme, 4D refuse l'affectation de la propriété.
 
@@ -148,13 +148,13 @@ In the Explorer, project methods that are offered as a Web Service are given a s
 
 Cet attribut est actif uniquement si l'attribut "Web service" est coché. Il permet d’inclure la méthode courante dans le fichier WSDL de l’application 4D. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Génération du WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+Dans l'Explorateur, les méthodes projet proposées sous forme de service Web et publiées au format WSDL sont signalées par une icône spécifique ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 #### Balises HTML et URLs 4D (4DACTION...)
 
 Cette option permet de renforcer la sécurité du serveur Web 4D : lorsqu'elle n'est pas cochée, la méthode projet ne peut pas être exécutée via une requête HTTP contenant l'URL spéciale [4DACTION](../WebServer/httpRequests.md#4daction) utilisée pour appeler les méthodes 4D, ni les balises spéciales [4DSCRIPT, 4DTEXT et 4DHTML](../Tags/tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
+Dans l'Explorateur, les méthodes projet dotées de cet attribut sont signalées par une icône spécifique ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 
 Pour des raisons de sécurité, cette option est désélectionnée par défaut. Vous devez désigner individuellement chaque méthode pouvant être exécutée via les URLs et les balises spéciales.
 

@@ -48,68 +48,68 @@ El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
 El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
-| Evento                   | Code     | Método objeto                                                    | Método formulario | Objetos                         |
-| ------------------------ | -------- | ---------------------------------------------------------------- | ----------------- | ------------------------------- |
-| On Activate              | 11       | Nunca                                                            | Sí                | Ninguno                         |
-| On After Edit            | 45       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On After Keystroke       | 28       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On After Sort            | 30       | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
-| On Alternative Click     | 38       | Sí (Botón y List box)                         | Nunca             | Objetos involucrados únicamente |
-| On Before Data Entry     | 41       | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
-| On Before Keystroke      | 17       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Begin Drag Over       | 46       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Begin URL Loading     | 47       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On Bound variable change | 54       | Nunca                                                            | Sí                | Ninguno                         |
-| On Clicked               | 4        | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Close Box             | 22       | Nunca                                                            | Sí                | Ninguno                         |
-| On Close Detail          | 26       | Sí (List box)                                 | Sí                | Ninguna, excepto los list box   |
-| On Collapse              | 44       | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
-| On Column Moved          | 32       | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
-| On Column Resize         | 33       | Sí (List box y Área 4D View Pro)              | Nunca             | Objetos involucrados únicamente |
-| On Data Change           | 20       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Deactivate            | 12       | Nunca                                                            | Sí                | Ninguno                         |
-| On Delete Action         | 58       | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
-| On Display Detail        | 8        | Sí                                                               | Sí                | Todos los objetos               |
-| On Double Clicked        | 13       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Drag Over             | 21       | Sí                                                               | Nunca             | Objetos involucrados únicamente |
-| On Drop                  | 16 16 16 | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On End URL Loading       | 49       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On Expand                | 43       | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
-| On Footer Click          | 57       | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
-| On Getting Focus         | 15       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Header                | 5        | Sí                                                               | Sí                | Todos los objetos               |
-| On Header Click          | 42       | Sí (List box y Área 4D View Pro)              | Nunca             | Objetos involucrados únicamente |
-| On Load                  | 1        | Sí                                                               | Sí                | Todos los objetos               |
-| On Load Record           | 40       | Nunca                                                            | Sí                | Ninguno                         |
-| On Long Click            | 39       | Sí (botón)                                    | Sí                | Objetos involucrados únicamente |
-| On Losing Focus          | 14       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Menu Selected         | 18       | Nunca                                                            | Sí                | Ninguno                         |
-| On Mouse Enter           | 35       | Sí                                                               | Sí                | Todos los objetos               |
-| On Mouse Leave           | 36       | Sí                                                               | Sí                | Todos los objetos               |
-| On Mouse Move            | 37       | Sí                                                               | Sí                | Todos los objetos               |
-| On Mouse Up              | 2        | Sí                                                               | Nunca             | Objetos involucrados únicamente |
-| On Open Detail           | 25       | Sí (List box)                                 | Sí                | Ninguna, excepto los list box   |
-| On Open External Link    | 52       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On Outside Call          | 10       | Nunca                                                            | Sí                | Ninguno                         |
-| On Page Change           | 56       | Nunca                                                            | Sí                | Ninguno                         |
-| On Plug in Area          | 19       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Printing Break        | 6        | Sí                                                               | Sí                | Todos los objetos               |
-| On Printing Detail       | 23       | Sí                                                               | Sí                | Todos los objetos               |
-| On Printing Footer       | 7        | Sí                                                               | Sí                | Todos los objetos               |
-| On Resize                | 29       | Nunca                                                            | Sí                | Ninguno                         |
-| On Row Moved             | 34       | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
-| On Row Resize            | 60       | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
-| On Scroll                | 59       | Sí                                                               | Nunca             | Objetos involucrados únicamente |
-| On Selection Change      | 31       | Sí                                                               | Sí                | Objetos involucrados únicamente |
-| On Timer                 | 27       | Nunca                                                            | Sí                | Ninguno                         |
-| On Unload                | 24       | Sí                                                               | Sí                | Todos los objetos               |
-| On URL Filtering         | 51       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On URL Loading Error     | 50       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On URL Resource Loading  | 48       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
-| On Validate              | 3        | Sí                                                               | Sí                | Todos los objetos               |
-| On VP Range Changed      | 61       | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
-| On VP Ready              | 9        | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
-| On Window Opening Denied | 53       | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| Evento                   | Code | Método objeto                                                    | Método formulario | Objetos                         |
+| ------------------------ | ---- | ---------------------------------------------------------------- | ----------------- | ------------------------------- |
+| On Activate              | 11   | Nunca                                                            | Sí                | Ninguno                         |
+| On After Edit            | 45   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On After Keystroke       | 28   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On After Sort            | 30   | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
+| On Alternative Click     | 38   | Sí (Botón y List box)                         | Nunca             | Objetos involucrados únicamente |
+| On Before Data Entry     | 41   | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
+| On Before Keystroke      | 17   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Begin Drag Over       | 46   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Begin URL Loading     | 47   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On Bound variable change | 54   | Nunca                                                            | Sí                | Ninguno                         |
+| On Clicked               | 4    | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Close Box             | 22   | Nunca                                                            | Sí                | Ninguno                         |
+| On Close Detail          | 26   | Sí (List box)                                 | Sí                | Ninguna, excepto los list box   |
+| On Collapse              | 44   | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
+| On Column Moved          | 32   | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
+| On Column Resize         | 33   | Sí (List box y Área 4D View Pro)              | Nunca             | Objetos involucrados únicamente |
+| On Data Change           | 20   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Deactivate            | 12   | Nunca                                                            | Sí                | Ninguno                         |
+| On Delete Action         | 58   | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
+| On Display Detail        | 8    | Sí                                                               | Sí                | Todos los objetos               |
+| On Double Clicked        | 13   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Drag Over             | 21   | Sí                                                               | Nunca             | Objetos involucrados únicamente |
+| On Drop                  | 16   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On End URL Loading       | 49   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On Expand                | 43   | Sí (Lista jerarq. y list box) | Nunca             | Objetos involucrados únicamente |
+| On Footer Click          | 57   | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
+| On Getting Focus         | 15   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Header                | 5    | Sí                                                               | Sí                | Todos los objetos               |
+| On Header Click          | 42   | Sí (List box y Área 4D View Pro)              | Nunca             | Objetos involucrados únicamente |
+| On Load                  | 1    | Sí                                                               | Sí                | Todos los objetos               |
+| On Load Record           | 40   | Nunca                                                            | Sí                | Ninguno                         |
+| On Long Click            | 39   | Sí (botón)                                    | Sí                | Objetos involucrados únicamente |
+| On Losing Focus          | 14   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Menu Selected         | 18   | Nunca                                                            | Sí                | Ninguno                         |
+| On Mouse Enter           | 35   | Sí                                                               | Sí                | Todos los objetos               |
+| On Mouse Leave           | 36   | Sí                                                               | Sí                | Todos los objetos               |
+| On Mouse Move            | 37   | Sí                                                               | Sí                | Todos los objetos               |
+| On Mouse Up              | 2    | Sí                                                               | Nunca             | Objetos involucrados únicamente |
+| On Open Detail           | 25   | Sí (List box)                                 | Sí                | Ninguna, excepto los list box   |
+| On Open External Link    | 52   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On Outside Call          | 10   | Nunca                                                            | Sí                | Ninguno                         |
+| On Page Change           | 56   | Nunca                                                            | Sí                | Ninguno                         |
+| On Plug in Area          | 19   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Printing Break        | 6    | Sí                                                               | Sí                | Todos los objetos               |
+| On Printing Detail       | 23   | Sí                                                               | Sí                | Todos los objetos               |
+| On Printing Footer       | 7    | Sí                                                               | Sí                | Todos los objetos               |
+| On Resize                | 29   | Nunca                                                            | Sí                | Ninguno                         |
+| On Row Moved             | 34   | Sí (List box)                                 | Nunca             | Objetos involucrados únicamente |
+| On Row Resize            | 60   | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
+| On Scroll                | 59   | Sí                                                               | Nunca             | Objetos involucrados únicamente |
+| On Selection Change      | 31   | Sí                                                               | Sí                | Objetos involucrados únicamente |
+| On Timer                 | 27   | Nunca                                                            | Sí                | Ninguno                         |
+| On Unload                | 24   | Sí                                                               | Sí                | Todos los objetos               |
+| On URL Filtering         | 51   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On URL Loading Error     | 50   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On URL Resource Loading  | 48   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
+| On Validate              | 3    | Sí                                                               | Sí                | Todos los objetos               |
+| On VP Range Changed      | 61   | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
+| On VP Ready              | 9    | Sí (Área 4D View Pro)                         | Nunca             | Objetos involucrados únicamente |
+| On Window Opening Denied | 53   | Sí (Área Web)                                 | Nunca             | Objetos involucrados únicamente |
 
 Tenga siempre en cuenta que, para todo evento, se llama al método de un formulario o de un objeto si se selecciona la correspondiente propiedad del evento para el formulario o los objetos. La ventaja de desactivar los eventos en el entorno de diseño (utilizando la lista de propiedades del editor de formularios) es que puede reducir el número de llamadas a los métodos y, por tanto, optimizar significativamente la velocidad de ejecución de sus formularios.
 

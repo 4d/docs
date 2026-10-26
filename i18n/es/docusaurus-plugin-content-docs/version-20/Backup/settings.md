@@ -55,7 +55,7 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 - **Archivo de estructura usuario (sólo para bases binaria)**: *funcionalidad obsoleta*
 - **Adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la aplicación. Estos archivos pueden ser de cualquier tipo (documentos o plantillas de plug-ins, etiquetas, informes, imágenes, etc.). Puede definir archivos individuales o carpetas cuyo contenido se respaldará completamente. Cada elemento adjunto aparece con su ruta de acceso completa en el área "Adjuntos ".
   - **Eliminar**: retira el archivo seleccionado de la lista de archivos adjuntos.
-  - Gestión del archivo de historial Gestión del archivo de historial En el caso de una restitución, la carpeta se recuperará con su estructura interna. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la aplicación.
+  - Gestión del archivo de historial En el caso de una restitución, la carpeta se recuperará con su estructura interna. Puede seleccionar toda carpeta o volumen conectado a la máquina, a excepción de la carpeta que contiene los archivos de la aplicación.
   - **Añadir archivo...**: muestra una caja de diálogo que permite seleccionar un archivo para añadirlo a la copia de seguridad.
 
 ### Carpeta de destino del archivo de copia de seguridad

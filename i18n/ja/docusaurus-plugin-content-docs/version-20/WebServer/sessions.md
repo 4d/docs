@@ -3,7 +3,7 @@ id: sessions
 title: ユーザーセッション
 ---
 
-セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。セッション管理を有効化する方法は複数あります: ユーザーセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。ユーザーセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
+The 4D web server provides built-in features for managing **user sessions**. ユーザーセッションを作成・維持することで、Webアプリケーション上のユーザーエクスペリエンスを管理・向上することができます。ユーザーセッションが有効かされていると、Webクライアントはリクエスト間で同じコンテキスト (セレクションや変数の値) を再利用できます。
 
 Webサーバーのユーザーセッションでは、以下のことが可能です:
 
@@ -16,13 +16,13 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 ## セッションの有効化
 
-セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。セッション管理を有効化する方法は複数あります: セッション管理を有効化する方法は複数あります:
+セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。セッション管理を有効化する方法は複数あります:
 
 - ストラクチャー設定の Web / オプション (I) ページの **スケーラブルセッション** を使用する (永続的な設定): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-このオプションは、新規プロジェクトではデフォルトで選択されています。このオプションは、新規プロジェクトではデフォルトで選択されています。これは、 **セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
+このオプションは、新規プロジェクトではデフォルトで選択されています。これは、 **セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
+- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
 > メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
 
@@ -32,7 +32,7 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 ## セッションの実装
 
-[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID__AppName_"、*AppName* はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。この cookie は、アプリケーションのカレントWebセッションを参照します。この cookie は、アプリケーションのカレントWebセッションを参照します。
+[セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID__AppName_"、*AppName* はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。この cookie は、アプリケーションのカレントWebセッションを参照します。
 
 > この cookie の名前は、[`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) プロパティを使用して取得できます。
 
@@ -49,11 +49,11 @@ The current `Session` object can then be accessed through the [`Session`](API/Se
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
+Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
 
 ## 情報の共有
 
-各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
+各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
 
 ## セッションの有効期限
 
@@ -76,7 +76,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 セッションには、権限を関連付けることができます。セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
 
-You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. 権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。  By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。  By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 > 現在の実装では (v18 R6)、"WebAdmin" アクセス権のみ利用可能です。
 
@@ -93,7 +93,7 @@ End if
 
 ## 例題
 
-CRMアプリケーションを使って、各営業担当者が自分の顧客ポートフォリオを管理します。データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。
+CRMアプリケーションを使って、各営業担当者が自分の顧客ポートフォリオを管理します。データストアには、少なくとも 2つのリンクされたデータクラス Customers と SalesPersons が含まれています (営業担当者は複数の顧客を持ちます)。
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 

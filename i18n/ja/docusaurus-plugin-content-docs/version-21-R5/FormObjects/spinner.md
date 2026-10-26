@@ -9,7 +9,7 @@ title: スピナー
 
 このタイプのオブジェクトは通常、ネットワークへの接続や、計算などの処理が実行中であることを表すために使用します。このインジケーターが選択されるとプロパティリストの [スケール](properties_Scale.md) テーマは非表示になります。
 
-フォームが実行されたとき、オブジェクトのアニメーションは開始されません。フォームが実行されたとき、オブジェクトのアニメーションは開始されません。[割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
+フォームが実行されたとき、オブジェクトのアニメーションは開始されません。[割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
 
 - 非 0 値 = アニメーション開始
 - 0 = アニメーション停止
@@ -30,7 +30,7 @@ title: スピナー
 [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
 [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
 [表示状態](properties_Display.md#表示状態) -
-[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
 [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ### サポートされるイベント

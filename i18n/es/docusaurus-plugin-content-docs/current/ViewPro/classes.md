@@ -65,7 +65,7 @@ La propiedad `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-La propiedad `.secondColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1
+La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica si se muestra un estilo de columnas alternas<!-- END REF -->. .
 
 ### .bandRows
 
@@ -81,7 +81,7 @@ La propiedad `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indica si se
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1
+La propiedad `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->. .
 
 ### .highlightFirstColumn
 
@@ -89,7 +89,7 @@ La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.f
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-La propiedad `.highlightFirstColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->de la primera columna<!-- END REF -->. Por defecto=1
+La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->. .
 
 ### .showFooter
 
@@ -97,7 +97,7 @@ La propiedad `.highlightFirstColumnStyle` es el estilo <!-- REF #TableThemeOptio
 
 **.showFooter** : Boolean<!-- END REF -->
 
-La propiedad `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica si se debe mostrar un pie de página<!-- END REF -->. Por defecto=1
+La propiedad `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica si se debe mostrar un pie de página<!-- END REF -->. .
 
 ### .showHeader
 
@@ -113,7 +113,7 @@ La propiedad `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica s
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-La propiedad `.secondRowStripSize` es el tamaño <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1
+La propiedad `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica si se debe mostrar el manejador de redimensionamiento para las tablas que no tienen un *source*<!-- END REF -->. .
 
 ### .tableColumns
 
@@ -139,7 +139,7 @@ Consulte los[ temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indica si se debe utilizar una lista desplegable en las celdas de pie de página que calculan el valor total de una columna<!-- END REF -->. Por defecto=1
+La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indica si se debe utilizar una lista desplegable en las celdas de pie de página que calculan el valor total de una columna<!-- END REF -->. .
 
 ## TableStyle
 
@@ -274,7 +274,7 @@ Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/sprea
 
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-La propiedad `.firstRowStripSize` es el tamaño <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1
+La propiedad `.firstColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1
 
 ### .firstColumnStripStyle
 
@@ -306,7 +306,7 @@ La propiedad `.firstHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.fi
 
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-La propiedad `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica si se debe resaltar la primera columna<!-- END REF -->. .
+La propiedad `.firstRowStripSize` es el tamaño <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->de la primera columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .firstRowStripStyle
 
@@ -338,7 +338,7 @@ La propiedad `.headerRowStyle` es el estilo predeterminado<!-- REF #TableThemeOp
 
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propiedad `.highlightLastColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->de la última columna<!-- END REF -->. "highlightFirstColumn" debe ser true.
+La propiedad `.highlightFirstColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->de la primera columna<!-- END REF -->. "highlightFirstColumn" debe ser true.
 
 ### .highlightLastColumnStyle
 
@@ -346,7 +346,7 @@ La propiedad `.highlightLastColumnStyle` es el estilo <!-- REF #TableThemeOption
 
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propiedad `.lastHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->de la última celda de encabezado<!-- END REF -->. "highlightLastColumn" debe ser true.
+La propiedad `.highlightLastColumnStyle` es el estilo <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->de la última columna<!-- END REF -->. "highlightLastColumn" debe ser true.
 
 ### .lastFooterCellStyle
 
@@ -362,7 +362,7 @@ La propiedad `.lastFooterCellStyle` es el estilo <!-- REF #TableThemeOptions.las
 
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propiedad `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica si se debe resaltar la última columna<!-- END REF -->. "highlightLastColumn" debe ser true.
+La propiedad `.lastHeaderCellStyle` es el estilo <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->de la última celda de encabezado<!-- END REF -->. "highlightLastColumn" debe ser true.
 
 ### .name
 
@@ -378,7 +378,7 @@ La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-La propiedad `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indica si se muestra un estilo de columnas alternas<!-- END REF -->. Por defecto=1
+La propiedad `.secondColumnStripSize` es el tamaño <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -394,7 +394,7 @@ La propiedad `.secondColumnStripStyle` es el <!-- REF #TableThemeOptions.secondC
 
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-La propiedad `.secondRowStripSize` es el tamaño <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. .
+La propiedad `.secondRowStripSize` es el tamaño <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->de la segunda columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .secondRowStripStyle
 

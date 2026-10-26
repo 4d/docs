@@ -34,7 +34,7 @@ Pour vous connecter à distance à un projet 4D Server :
 
 La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server inclut un système de diffusion TCP/IP intégré qui, par défaut, publie le nom des projets 4D Server disponibles sur le réseau. La liste est triée par ordre d'apparition et est mise à jour dynamiquement.
+Si 4D Server est connecté au même réseau que le 4D distant, sélectionnez **Disponible**. 4D Server inclut un système de diffusion TCP/IP intégré qui, par défaut, publie le nom des projets 4D Server disponibles sur le réseau. La liste est triée par ordre d'apparition et est mise à jour dynamiquement.
 
 ![](../assets/en/getStart/serverConnect.png)
 

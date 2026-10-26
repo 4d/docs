@@ -89,9 +89,9 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 </div>
 <!-- END REF -->
 
-`4D.WebSocket.new()` 関数は、<!-- REF #4D.WebSocket.new().Summary -->*url* で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
+`4D.WebSocket.new()` 関数は、<!-- REF #4D.WebSocket.new().Summary -->*url* で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
 
-*url*には、WebSocketサーバーが応答する URL を渡します。 以下の URLパターンが使用できます: 以下の URLパターンが使用できます: 以下の URLパターンが使用できます:
+*url*には、WebSocketサーバーが応答する URL を渡します。以下の URLパターンが使用できます:
 
 - 標準接続用: `ws://host[:port]path[?query]`
 - TLSセキュア接続用: `wss://host[:port]path[?query]`
@@ -146,7 +146,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### 説明
 
-`.dataType` プロパティは、<!-- REF #WebSocketClass.dataType.Summary -->レスポンス本文のデータ型です<!-- END REF -->。 "text"、"blob"、"object" のいずれかです。 "text"、"blob"、"object" のいずれかです。
+`.dataType` プロパティは、<!-- REF #WebSocketClass.dataType.Summary -->レスポンス本文のデータ型です<!-- END REF -->。 "text"、"blob"、"object" のいずれかです。
 
 このプロパティは 読み取り専用 です。
 
@@ -250,7 +250,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 *code* には、接続を閉じる理由を説明するステータスコードを渡すことができます ([RFC6455 の WebSocket Connection Close Code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) も参照ください):
 
 - 指定しなかった場合、接続のクローズコードは自動的に設定されます: 通常終了の場合は 1000、そうでない場合は、接続が切断された実際の理由を示す 1001〜1015 の標準値。
-- 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。
+- 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。
 
 *reason* には、接続を閉じる理由を説明するテキストを渡すことができます。
 
@@ -264,7 +264,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### 説明
 
-`.url` プロパティは、<!-- REF #WebSocketClass.url.Summary -->WebSocket が接続した URL を格納します<!-- END REF -->。これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。
+`.url` プロパティは、<!-- REF #WebSocketClass.url.Summary -->WebSocket が接続した URL を格納します<!-- END REF -->。これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。
 
 このプロパティは 読み取り専用 です。
 

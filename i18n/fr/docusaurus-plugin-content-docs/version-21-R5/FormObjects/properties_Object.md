@@ -326,9 +326,9 @@ Lorsque **Custom** ("none" en JSON) est défini, aucun calcul automatique n'est 
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles                                                                                     |
-| ------------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string          | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| Nom                 | Type de données | Valeurs possibles                                                                                      |
+| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
+| variableCalculation | string          | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquares" |
 
 #### Objets pris en charge
 

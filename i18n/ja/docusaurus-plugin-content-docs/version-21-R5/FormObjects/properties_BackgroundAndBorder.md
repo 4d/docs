@@ -5,7 +5,7 @@ title: 背景色と境界線
 
 ## 交互に使用する背景色
 
-奇数番の行/列に使用するための異なる背景色を設定することができます。デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
+奇数番の行/列に使用するための異なる背景色を設定することができます。リストボックス列では、デフォルトで *自動* が選択されています。また、リストボックス列は、リストボックスレベルで設定されている "交互に使用する背景色" も使用します。
 
 このプロパティは[`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドを使用しても設定することができます。
 
@@ -27,7 +27,7 @@ title: 背景色と境界線
 
 ## 背景色/塗りカラー
 
-オブジェクトの背景色/塗りカラーを設定します。オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
+オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
 :::note
 
@@ -37,7 +37,7 @@ title: 背景色と境界線
 
 ### 標準のオブジェクト
 
-リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
+リストボックス列の場合は、デフォルトで *自動* が選択されています。また、リストボックス列は、リストボックスレベルで設定されている "交互に使用する背景色" も使用します。
 
 #### JSON 文法
 
@@ -55,7 +55,7 @@ title: 背景色と境界線
 
 ### カスタムボタン、カスタムチェックボックス、あるいはカスタムのラジオボタン
 
-このプロパティを使用することで、[カスタムボタン](./button_overview.md#カスタム) 、[カスタムのチェックボックス](./checkbox_overview.md#カスタム) 、あるいは[カスタムのラジオボタン](./radio_overview.md#カスタム) に対して塗りカラー属性を割り当てることができます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。
+このプロパティを使用することで、[カスタムボタン](./button_overview.md#カスタム) 、[カスタムのチェックボックス](./checkbox_overview.md#カスタム) 、あるいは[カスタムのラジオボタン](./radio_overview.md#カスタム) に対して塗りカラー属性を割り当てることができます。さらに、[カスタムボタン](./button_overview.md#カスタム) の場合には、["カスタム" 境界線スタイル](#border-line-style) になっている必要があります。その他のコンテキストにおいては、このプロパティは無視されます。
 
 #### JSON 文法
 
@@ -81,7 +81,7 @@ title: 背景色と境界線
 
 `セレクションとコレクション型リストボックス`
 
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。詳細については、[`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。詳細については、[`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。
+リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。詳細については、[`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。
 
 また、このプロパティは [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) コマンドに `lk background color expression` 定数を指定して設定することもできます。
 
@@ -105,15 +105,17 @@ title: 背景色と境界線
 
 ## 境界線カラー{#border-color}
 
-以下のオブジェクトに対して、内側の境界線のカラーを定義します:
+Allows defining the border color. The effect of this property varies slightly depending on the type of object to which it is applied.
 
-- ["カスタム" 境界線スタイル](#境界線スタイル) を持った[カスタムボタン](./button_overview.md#カスタム)
-- [カスタムチェックボックス](./checkbox_overview.md#カスタム)
-- [カスタムラジオボタン](./radio_overview.md#カスタム)
+- **objects with text properties**: [buttons](./button_overview.md) (all styles except "custom", see  below), [hierarchical lists](list_overview.md), [inputs](input_overview.md), [list boxes](listbox_overview.md), [progress indicators](./progressIndicator.md), [rulers](./ruler.md), and [text areas](text.md).  
+  By default, the border color of these objects is automatically set to their [**font color**](./properties_Text.md#font-color) property. This default configuration corresponds to the **Same as font** option in the Property List (`borderColor` property is undefined in JSON).  
+  You can separate these two properties by setting a color value for the object's "Border color" property (only available when the [**border line style**](#border-line-style) property is **plain** (`solid` in JSON property) or **dotted**).
 
-その他のコンテキストにおいては、このプロパティは無視されます。
+- **objects without text properties**: [4D View Pro areas](viewProArea_overview.md), [4D Write Pro areas](writeProArea_overview.md), [button grids](buttonGrid_overview.md), [picture buttons](pictureButton_overview.md), [picture pop-up menus](picturePopupMenu_overview.md), [plug-in areas](pluginArea_overview.md), [subforms](subform_overview.md), [spinners](spinner.md), [splitters](splitters.md), [steppers](stepper.md), [web areas](webArea_overview.md).  
+  The border color property sets the color of the borders. The default color value is "Automatic", i.e. the border is displayed with the automatic color set by your OS.
 
-境界線は、[幅](#border-width) が> 0 (0 より大きい)の場合にのみ表示されるという点に注意して下さい。
+- **custom-styled buttons**: [custom buttons](./button_overview.md#custom) with ["custom" Border Line Style](#border-line-style), [custom check boxes](./checkbox_overview.md#custom), and [custom radio buttons](./radio_overview.md#custom).  
+  In this case, the border color property defines the color of an *inner* border, which is an attribute of the object itself ans not a decoration property. This inner border can also have a [width](#border-width) (it is displayed only if the width > 0).
 
 #### JSON 文法
 
@@ -123,35 +125,47 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[カスタムボタン](button_overview.md#カスタム)(["カスタム" の境界線スタイル](#border-line-style) のもの) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](./button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](./progressIndicator.md) - [Radio Button ("custom" style)](radio_overview.md#custom) - [Ruler](./ruler.md) - [Text Area](text.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Web Area](webArea_overview.md)
 
 #### コマンド
 
 [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
+#### 参照
+
+[Line Color](#line-color) (for shapes)
+
 ## 境界線スタイル{#border-line-style}
 
-リストボックスの境界線のスタイルを設定します。
+Allows setting a style for the object border. The following choices are available (all choices are not possible depending on the object):
 
-:::note
+| Style          | Objects (\*)                                      | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| なし             | all                                                                  | Objects appear with no border.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Plain          | all                                                                  | Objects appear framed with a continuous 1-pt. border line. ("solid" json value)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Dotted         | all                                                                  | Objects appear framed with a dotted 1-pt. border line.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Raised         | all                                                                  | Objects appear framed with a 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Sunken         | all                                                                  | Objects appear framed with a sunken 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Double         | all                                                                  | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| System         | all *except* [buttons](button_overview.md) and [text areas](text.md) | Objects appear with a border line based on the graphic specifications of the OS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| System rounded | [inputs](input_overview.md)                                          | On macOS, objects appear with a native "Liquid Glass" system border effect (for information about Liquid Glass, see [this 4D blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications/)). It includes system-defined inner border, corner radius, grey border color, and inner padding. Note that the "Liquid Glass" appearance is *not* used in a multiline input object if the [scroll bars property](./properties_Appearance.md#vertical-scroll-bar) is enabled ("System" is used in this case).<br/> On Windows, this style is similar to "System" at runtime. |
+| カスタム           | [custom buttons](./button_overview.md#custom)                        | Enables the inner border design, that includes a set of extra properties: [Fill color](#fill-color), [Border color](#border-color), [Border width](#border-width), and [Corner radius](#corner-radius). <br/>![](../assets/en/FormObjects/custom-button.png)                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-[カスタムボタン](./button_overview.md#カスタム) においては、**カスタム** の境界線スタイルを使用すると内部フレームデザインが有効化され、これによって以下のプロパティのセットが追加されます: [塗りカラー](#background-color--fill-color)、[フレームカラー](#frame-color)、[フレーム幅](#frame-width)、および[角の半径](./properties_BackgroundAndBorder.md#角の半径)。
-
-![](../assets/en/FormObjects/custom-button.png)
-
-:::
+(\*) "all" means "all objects supported" listed below.
 
 :::tip 関連したblog 記事
 
-[Customize Buttons, Radio Buttons, and Check Boxes with Background and Border Properties](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+- [Customize Buttons, Radio Buttons, and Check Boxes with Background and Border Properties](https://blog.4d.com/customize-buttons-radio-buttons-and-check-boxes-with-background-and-border-properties).
+- [Give Your Form Objects the Border Color They Deserve](https://blog.4d.com/give-your-form-objects-the-border-color-they-deserve)
+- [Choose the Right Native Input Style for Your Interface on macOS](https://blog.4d.com/choose-the-right-native-input-style-for-your-interface-on-macos)
 
 :::
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                                                       |
-| ----------- | ------ | --------------------------------------------------------------------------- |
-| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double", "custom" |
+| 名称          | データタイプ | とりうる値                                                                                        |
+| ----------- | ------ | -------------------------------------------------------------------------------------------- |
+| borderStyle | text   | "custom", "dotted", "double", "none", "raised", "solid", "sunken", "system", "systemRounded" |
 
 #### 対象オブジェクト
 
@@ -177,6 +191,10 @@ title: 背景色と境界線
 
 [`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style)
 
+#### 参照
+
+[Dotted Line Type](#dotted-line-type) (shapes)
+
 ---
 
 ## 境界線幅{#border-width}
@@ -193,13 +211,13 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称          | データタイプ | とりうる値                                        |
-| ----------- | ------ | -------------------------------------------- |
-| borderWidth | number | 整数値(ピクセル)。最小値 = 0 最小値 = 0 |
+| 名称          | データタイプ | とりうる値                                |
+| ----------- | ------ | ------------------------------------ |
+| borderWidth | number | 整数値(ピクセル)。最小値 = 0 |
 
 #### 対象オブジェクト
 
-[カスタムボタン](button_overview.md#カスタム)(["カスタム" の境界線スタイル](#border-line-style) のもの) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom style")](checkbox_overview.md#custom) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 ---
 
@@ -214,11 +232,11 @@ title: 背景色と境界線
 
 </details>
 
-フォームオブジェクトの角の丸みをピクセル単位で指定します。デフォルトでは、角の半径は 0ピクセルとなっています。フォームオブジェクトの角の丸みをピクセル単位で指定します。デフォルトでは、角の半径は 0ピクセルとなっています。このプロパティを変更することによって独自の形の角の丸いフォームオブジェクトを描画することができます:
+フォームオブジェクトの角の丸みをピクセル単位で指定します。デフォルトでは、角の半径は 0ピクセルとなっています。このプロパティを変更することによって独自の形の角の丸いフォームオブジェクトを描画することができます:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
+最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
 
 [テキストエリア](./text.md) および[入力](./input_overview.md) では以下のように振る舞います:
 
@@ -237,7 +255,7 @@ title: 背景色と境界線
 
 #### 対象オブジェクト
 
-[カスタムボタン](./button_overview.md#カスタム) (["カスタム" 境界線スタイル](#border-line-style)を使用しているもの) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [入力](input_overview.md) - [四角形](shapes_overview.md#四角形) - [テキストエリア](text.md) - [カスタムラジオボタン](radio_overview.md#カスタム)
+[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Radio Button ("custom" style)](radio_overview.md#custom)
 
 #### コマンド
 
@@ -251,9 +269,9 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称              | データタイプ     | とりうる値                                                                                                                                                          |
-| --------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| strokeDashArray | 数値配列または文字列 | 例:  例:  例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
+| 名称              | データタイプ     | とりうる値                                                                                                                                      |
+| --------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| strokeDashArray | 数値配列または文字列 | 例:  例:  6個の点と1個の空白のパターンは "6 1" または \[6,1\] によって表します。 |
 
 #### 対象オブジェクト
 
@@ -263,11 +281,11 @@ title: 背景色と境界線
 
 ## 追加の空白の行を非表示
 
-リストボックスオブジェクト下部に追加される余分な空白行の表示を管理します。リストボックスオブジェクト下部に追加される余分な空白行の表示を管理します。デフォルトで、4D は空のエリアを埋めるためにこのような行を追加します:
+リストボックスオブジェクト下部に追加される余分な空白行の表示を管理します。デフォルトで、4D は空のエリアを埋めるためにこのような行を追加します:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-このオプションをチェックすると、これらの空白行を除去することができます。このオプションをチェックすると、これらの空白行を除去することができます。リストボックスオブジェクトの下部は空のままになります:
+このオプションをチェックすると、これらの空白行を除去することができます。リストボックスオブジェクトの下部は空のままになります:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -290,7 +308,6 @@ title: 背景色と境界線
 ## 線カラー
 
 オブジェクトの線の色を指定します。カラーは次の方法で指定できます:
-カラーは次の方法で指定できます:
 
 - カラーネーム - 例: "red"
 - 16進数値 - 例: "#ff0000"
@@ -304,7 +321,11 @@ title: 背景色と境界線
 | ------ | ------ | ------------------------------------ |
 | stroke | string | 任意の css値; "transparent"; "automatic" |
 
-> このプロパティはテキスト系のオブジェクトでも利用可能です。この場合、このプロパティはフォントカラーおよびオブジェクトの線カラーの両方を指定します ([フォントカラー](properties_Text.md#フォントカラー) 参照)。
+:::note
+
+This property is also available for objects with text properties, in which case it designates both the [Font color](properties_Text.md#font-color) and the object's lines, except if you used the [Border color](#border-color) property.
+
+:::
 
 #### 対象オブジェクト
 
@@ -340,7 +361,7 @@ title: 背景色と境界線
 
 倍長整数型の配列の名前を入力しなければなりません。配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
-たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
+たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // オレンジ
@@ -349,7 +370,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-次に、負の値を持つセルの色を濃いオレンジで示したい場合、次に、負の値を持つセルの色を濃いオレンジで示したい場合、各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
+次に、負の値を持つセルの色を濃いオレンジで示したい場合、各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
@@ -360,7 +381,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) および [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) コマンドを使用することでも同じ結果を得ることができます。コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。 この場合、これらはコマンドによって動的に作成されます。コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。 この場合、これらはコマンドによって動的に作成されます。
+[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) および [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) コマンドを使用することでも同じ結果を得ることができます。コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。 この場合、これらはコマンドによって動的に作成されます。
 
 #### JSON 文法
 

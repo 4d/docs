@@ -32,7 +32,7 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -40,7 +40,7 @@ Toutes les classes de modèle de données ORDA sont exposées en tant que propri
 
 | Class                                                                                 | Nom de l'exemple                     | Instanciée par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                                                          | cs.DataStore         | commande [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| cs.DataStore                                                          | cs.DataStore         | Commande [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | cs.*DataClassName*                                                    | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | cs._DataClassName_Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs._DataClassName_Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
@@ -139,17 +139,17 @@ La classe `City Class` fournit une API :
 Class extends DataClass
 
 Function getCityName()
-    var $1; $zipcode : Integer
-    var $zip : 4D.Entity
-    var $0 : Text
+	var $1; $zipcode : Integer
+	var $zip : 4D.Entity
+	var $0 : Text
 
-    $zipcode:=$1
-    $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+	$zipcode:=$1
+	$zip:=ds.ZipCode.get($zipcode)
+	$0:="" 
 
-    If ($zip#Null)
-        $0:=$zip.city.name
-    End if
+	If ($zip#Null)
+		$0:=$zip.city.name
+	End if
 ```
 
 L'application cliente ouvre une session sur le datastore distant :
@@ -176,16 +176,16 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// Classe cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Classe extends EntitySelection
+Class extends EntitySelection
 
-//Extrait, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne
+//Extract the employees with a salary greater than the average from this entity selection 
 
 Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+	C_OBJECT($0)
+	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -234,7 +234,7 @@ Function getPopulation()
 
 
 Function isBigCity(): Boolean
-// La fonction getPopulation() est utilisable dans la classe
+// The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
@@ -256,12 +256,12 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
-  - Ne donnez pas le même nom à une table 4D et à une [classe utilisateur](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
   - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
 
-- Vous ne pouvez pas instancier un objet de classe du modèle de données avec le mot clé `new()` (une erreur est retournée). Vous devez utiliser une des méthodes standard listées dans la colonne [`Instanciée par`](#architecture) du tableau des classes ORDA.
+- Vous ne pouvez pas instancier un objet de classe du modèle de données avec le mot clé `new()` (une erreur est retournée). Vous devez utiliser une des méthodes listées dans la colonne [`Instanciée par` de la table de classe ORDA](#architecture).
 
 - Vous ne pouvez pas remplacer une fonction de classe ORDA native du [class store](Concepts/classes.md#class-stores) **`4D`** par une fonction de classe utilisateur de modèle de données.
 
@@ -270,7 +270,7 @@ Lors de la création ou de la modification de classes de modèles de données, v
 Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :
 
 - dans **des process préemptifs ou coopératifs** (en fonction du process appelant) dans les applications monoposte,
-- dans **des process préemptifs** dans des applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas il dépend du process appelant comme dans le cas d'un monoposte).
+- dans des **process préemptifs** dans les applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas cela dépend du process d'appel comme en mono-utilisateur).
 
 Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).
 
@@ -338,24 +338,24 @@ Les propriétés du paramètre *$event* sont les suivantes :
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
-  Case of   
-    : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null //utiliser le résultat pour retourner Null
-    : (This.firstName=Null)
-        $fullName:=This.lastName
-    : (This.lastName=Null)
-        $fullName:=This.firstName
-    Else 
-        $fullName:=This.firstName+" "+This.lastName
-    End case 
+  Case of 	
+	: (This.firstName=Null) & (This.lastName=Null)
+		$event.result:=Null //utiliser result pour retourner Null
+	: (This.firstName=Null)
+		$fullName:=This.lastName
+	: (This.lastName=Null)
+		$fullName:=This.firstName
+	Else 
+		$fullName:=This.firstName+" "+This.lastName
+	End case 
 ```
 
 - Un attribut calculé peut être basé sur un attribut relatif à une entité :
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
-    $result:=This.manager.manager
-
+	$result:=This.manager.manager
+    
 ```
 
 - Un attribut calculé peut être basé sur un attribut relatif à une entity selection :
@@ -453,40 +453,40 @@ Les propriétés du paramètre *$event* sont les suivantes :
 ```4d
 Function query fullName($event : Object)->$result : Object
 
-    var $fullname; $firstname; $lastname; $query : Text
-    var $operator : Text
-    var $p : Integer
-    var $parameters : Collection
+	var $fullname; $firstname; $lastname; $query : Text
+	var $operator : Text
+	var $p : Integer
+	var $parameters : Collection
 
-    $operator:=$event.operator
-    $fullname:=$event.value
+	$operator:=$event.operator
+	$fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
-    If ($p>0)
-        $firstname:=Substring($fullname; 1; $p-1)+"@"
-        $lastname:=Substring($fullname; $p+1)+"@"
-        $parameters:=New collection($firstname; $lastname) //collection de deux éléments
-    Else 
-        $fullname:=$fullname+"@"
-        $parameters:=New collection($fullname) // collection d'un seul élément
-    End if 
+	$p:=Position(" "; $fullname) 
+	If ($p>0)
+		$firstname:=Substring($fullname; 1; $p-1)+"@"
+		$lastname:=Substring($fullname; $p+1)+"@"
+		$parameters:=New collection($firstname; $lastname) // two items collection
+	Else 
+		$fullname:=$fullname+"@"
+		$parameters:=New collection($fullname) // single item collection
+	End if 
 
-    Case of 
-    : ($operator="==") | ($operator="===")
-        If ($p>0)
-            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
-            $query:="firstName = :1 or lastName = :1"
-        End if 
-    : ($operator="!=")
-        If ($p>0)
-            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
-            $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+	Case of 
+	: ($operator="==") | ($operator="===")
+		If ($p>0)
+			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+		Else 
+			$query:="firstName = :1 or lastName = :1"
+		End if 
+	: ($operator="!=")
+		If ($p>0)
+			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+		Else 
+			$query:="firstName != :1 and lastName != :1"
+		End if 
+	End case 
 
-    $result:=New object("query"; $query; "parameters"; $parameters)
+	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
 > N'oubliez pas que l'utilisation de placeholders dans les recherches basées sur la saisie de texte par l'utilisateur est recommandée pour des raisons de sécurité (voir la description de [`query()`](API/DataClassClass.md#query)).
@@ -501,52 +501,52 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 
 ```4d
 Function query age($event : Object)->$result : Object
+	
+	var $operator : Text
+	var $age : Integer
+	var $_ages : Collection
+	
+	$operator:=$event.operator
+			
+	$age:=Num($event.value)  // integer
+	$d1:=Add to date(Current date; -$age-1; 0; 0)
+	$d2:=Add to date($d1; 1; 0; 0)
+	$parameters:=New collection($d1; $d2)
+	
+	Case of 
+			
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // après d1 et avant ou égale à d2
+			
+		: ($operator="===") 
 
-    var $operator : Text
-    var $age : Integer
-    var $_ages : Collection
+			$query:="birthday = :2"  // d2 = seconde date calculée (= anniversaire)
 
-    $operator:=$event.operator
-
-    $age:=Num($event.value)  // entier
-    $d1:=Add to date(Current date; -$age-1; 0; 0)
-    $d2:=Add to date($d1; 1; 0; 0)
-    $parameters:=New collection($d1; $d2)
-
-    Case of 
-
-        : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // après jour1 et avant ou égal à jour2
-
-        : ($operator="===") 
-
-            $query:="birthday = :2"  // d2 = deuxième date calculée (= jour anniversaire)
-
-        : ($operator=">=")
-            $query:="birthday <= :2"
-
-            //... autres opérateurs           
-
-
-    End case 
-
-
-    If (Undefined($event.result))
-        $result:=New object
-        $result.query:=$query
-        $result.parameters:=$parameters
-    End if
+		: ($operator=">=")
+			$query:="birthday <= :2"
+			
+			//... autres opérateurs			
+			
+			
+	End case 
+	
+	
+	If (Undefined($event.result))
+		$result:=New object
+		$result.query:=$query
+		$result.parameters:=$parameters
+	End if
 
 ```
 
 Code d'appel, par exemple :
 
 ```4d
-// personnes âgées de 20 à 21 ans (-1 jour)
-$twenty:=people.query("age = 20")  // appelle le cas "=="
+// personnes entre 20 et 21 ans (-1 jour)
+$twenty:=people.query("age = 20")  // appelle le cas "==" 
 
 // personnes âgées de 20 ans aujourd'hui
-$twentyToday:=people.query("age === 20") // équivalent à people.query("age is 20") 
+$twentyToday:=people.query("age === 20") // équivaut à people.query("age is 20") 
 
 ```
 
@@ -758,7 +758,7 @@ $arch.save() //courseName et name sont "Archaeology II"
 
 ## Fonctions exposées et non exposées
 
-Pour des raisons de sécurité, toutes les fonctions des classes de votre modèle de données et les attributs alias **ne sont pas exposés** par défaut (i.e.
+Pour des raisons de sécurité, toutes vos fonctions de classe de modèle de données et les attributs alias ne sont **pas exposés** (c'est-à-dire privés) par défaut aux requêtes distantes.
 
 Les requêtes distantes incluent :
 
@@ -813,7 +813,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method" 
+$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
 ## Fonctions locales
@@ -823,7 +823,7 @@ Par défaut dans l'architecture client/serveur, les fonctions de modèle de donn
 Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
 
 ```4d
-// déclarer une fonction à exécuter localement en client/serveur 
+// déclarer une fonction à exécuter localement en client/serveur
 local Function <functionName>   
 ```
 
@@ -834,10 +834,10 @@ Avec ce mot-clé, la fonction sera toujours exécutée côté client.
 A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
 
 ```4d
-// Obtenir les élèves les plus jeunes  
+// Trouver les étudiants les plus jeunes  
 // Utilisation inappropriée du mot-clé local
 local Function getYoungest
-    var $0 : Object
+	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
@@ -903,7 +903,7 @@ End if
 
 ### Fichiers de classe (class files)
 
-Une classe utilisateur ORDA du modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
+Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
 
 ### Créer des classes
 

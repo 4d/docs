@@ -21,7 +21,7 @@ La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](c
 
 **.style** : Integer<!-- END REF -->
 
-La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Par défaut=1.
+La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. .
 
 ## TableColumn
 
@@ -57,7 +57,7 @@ La propriété `.name` <!-- REF #TableColumn.name.Summary -->contient le nom de 
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-La propriété `.secondRowStripSize` est la <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indique si les colonnes ou les lignes du tableau doivent être étendues lorsque des valeurs sont ajoutées dans des cellules vides adjacentes<!-- END REF -->. .
 
 ### .bandColumns
 
@@ -65,7 +65,7 @@ La propriété `.secondRowStripSize` est la <!-- REF #TableThemeOptions.secondRo
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-La propriété `.firstColumnStripSize` est la <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->taille de la première colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. .
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ La propriété `.firstColumnStripSize` est la <!-- REF #TableThemeOptions.firstC
 
 **.bandRows** : Boolean<!-- END REF -->
 
-La propriété `.firstRowStripSize` est la <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->taille de la première colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. .
 
 ### .highlightLastColumn
 
@@ -81,7 +81,7 @@ La propriété `.firstRowStripSize` est la <!-- REF #TableThemeOptions.firstRowS
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style de la dernière colonne<!-- END REF -->. Par défaut=1
+La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. .
 
 ### .highlightFirstColumn
 
@@ -89,7 +89,7 @@ La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.hi
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style de la première colonne<!-- END REF -->. Par défaut=1
+La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. .
 
 ### .showFooter
 
@@ -97,7 +97,7 @@ La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.h
 
 **.showFooter** : Boolean<!-- END REF -->
 
-La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. Par défaut=1
+La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. .
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indiqu
 
 **.showHeader** : Boolean<!-- END REF -->
 
-La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. .
 
 ### .showResizeHandle
 
@@ -113,7 +113,7 @@ La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indi
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. Par défaut=1
+La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. .
 
 ### .tableColumns
 
@@ -139,7 +139,7 @@ Voir les [thèmes natifs de SpreadJS](https://developer.mescius.com/spreadjs/api
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. Par défaut=1
+La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. .
 
 ## TableStyle
 
@@ -274,7 +274,7 @@ Si Texte : nom d'un [thème natif SpreadJS](https://developer.mescius.com/spread
 
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.firstColumnStripSize` est la <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->taille de la première colonne alternée<!-- END REF -->. Par défaut=1
 
 ### .firstColumnStripStyle
 
@@ -306,7 +306,7 @@ La propriété `.firstHeaderCellStyle` est le <!-- REF #TableThemeOptions.firstH
 
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. . Par défaut=1.
+La propriété `.firstRowStripSize` est la <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->taille de la première colonne alternée<!-- END REF -->. Par défaut=1.
 
 ### .firstRowStripStyle
 
@@ -338,7 +338,7 @@ La propriété `.headerRowStyle` est le <!-- REF #TableThemeOptions.headerRowSty
 
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style de la dernière cellule d'en-tête<!-- END REF -->. "highlightFirstColumn" doit être true.
+La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style de la première colonne<!-- END REF -->. "highlightFirstColumn" doit être true.
 
 ### .highlightLastColumnStyle
 
@@ -346,7 +346,7 @@ La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHea
 
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.lastFooterCellStyle` est le <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style de la dernière cellule du pied de page<!-- END REF -->. "highlightLastColumn" doit être true.
+La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style de la dernière colonne<!-- END REF -->. "highlightLastColumn" doit être true.
 
 ### .lastFooterCellStyle
 
@@ -362,7 +362,7 @@ La propriété `.lastFooterCellStyle` est le <!-- REF #TableThemeOptions.lastFoo
 
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. "highlightLastColumn" doit être true.
+La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style de la dernière cellule d'en-tête<!-- END REF -->. "highlightLastColumn" doit être true.
 
 ### .name
 
@@ -378,7 +378,7 @@ La propriété `.name` est le <!-- REF #TableThemeOptions.name.Summary -->nom d'
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.secondRowStripSize` est la <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1
 
 ### .secondColumnStripStyle
 

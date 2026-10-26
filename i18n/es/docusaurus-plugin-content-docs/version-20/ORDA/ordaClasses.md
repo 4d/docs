@@ -134,22 +134,22 @@ El catálogo *City* siguiente está expuesto en un datastore remoto (vista parci
 La clase `City` ofrece una API:
 
 ```4d
-// cs.City class
+// clase cs.City 
 
 Class extends DataClass
 
 Function getCityName()
-    var $1; $zipcode : Integer
-    var $zip : 4D.Entity
-    var $0 : Text
+	var $1; $zipcode : Integer
+	var $zip : 4D.Entity
+	var $0 : Text
 
-    $zipcode:=$1
-    $zip:=ds.ZipCode.get($zipcode)
-    $0:="" 
+	$zipcode:=$1
+	$zip:=ds.ZipCode.get($zipcode)
+	$0:="" 
 
-    If ($zip#Null)
-        $0:=$zip.city.name
-    End if
+	If ($zip#Null)
+		$0:=$zip.city.name
+	End if
 ```
 
 La aplicación cliente abre una sesión en el datastore remoto:
@@ -176,16 +176,16 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 #### Ejemplo
 
 ```4d
-// Clase cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Clase extends EntitySelection
+Class extends EntitySelection
 
-//Extrae de esta selección de entidades los empleados con un salario superior a la media  
+//Extract the employees with a salary greater than the average from this entity selection 
 
 Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+	C_OBJECT($0)
+	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -234,7 +234,7 @@ Function getPopulation()
 
 
 Function isBigCity(): Boolean
-// La función getPopulation() es utilizable e la clase
+// The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
@@ -256,12 +256,12 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
-  - No dé el mismo nombre a una tabla 4D y a un [nombre de clase de usuario](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
   - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar uno de los métodos estándar listados en la columna [`Instanciado por` de la tabla de las clases ORDA](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar un método regular como se muestra en la [columna `Instantiated by` de la tabla de clases ORDA](#architecture).
 
 - No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
 
@@ -338,24 +338,24 @@ El parámetro *$event* contiene las siguientes propiedades:
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
 
-  Case of   
-    : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null //use result to return Null
-    : (This.firstName=Null)
-        $fullName:=This.lastName
-    : (This.lastName=Null)
-        $fullName:=This.firstName
-    Else 
-        $fullName:=This.firstName+" "+This.lastName
-    End case 
+  Case of 	
+	: (This.firstName=Null) & (This.lastName=Null)
+		$event.result:=Null //use result to return Null
+	: (This.firstName=Null)
+		$fullName:=This.lastName
+	: (This.lastName=Null)
+		$fullName:=This.firstName
+	Else 
+		$fullName:=This.firstName+" "+This.lastName
+	End case 
 ```
 
 - Un atributo calculado puede basarse en un atributo relativo a una entidad:
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
-    $result:=This.manager.manager
-
+	$result:=This.manager.manager
+    
 ```
 
 - Un atributo calculado puede basarse en un atributo relacionado con una entity selection:
@@ -453,40 +453,40 @@ El parámetro *$event* contiene las siguientes propiedades:
 ```4d
 Function query fullName($event : Object)->$result : Object
 
-    var $fullname; $firstname; $lastname; $query : Text
-    var $operator : Text
-    var $p : Integer
-    var $parameters : Collection
+	var $fullname; $firstname; $lastname; $query : Text
+	var $operator : Text
+	var $p : Integer
+	var $parameters : Collection
 
-    $operator:=$event.operator
-    $fullname:=$event.value
+	$operator:=$event.operator
+	$fullname:=$event.value
 
-    $p:=Position(" "; $fullname) 
-    If ($p>0)
-        $firstname:=Substring($fullname; 1; $p-1)+"@"
-        $lastname:=Substring($fullname; $p+1)+"@"
-        $parameters:=New collection($firstname; $lastname) //colección de dos elementos
-    Else 
-        $fullname:=$fullname+"@"
-        $parameters:=New collection($fullname) // colección de un solo elemento
-    End if 
+	$p:=Position(" "; $fullname) 
+	If ($p>0)
+		$firstname:=Substring($fullname; 1; $p-1)+"@"
+		$lastname:=Substring($fullname; $p+1)+"@"
+		$parameters:=New collection($firstname; $lastname) // two items collection
+	Else 
+		$fullname:=$fullname+"@"
+		$parameters:=New collection($fullname) // single item collection
+	End if 
 
-    Case of 
-    : ($operator="==") | ($operator="===")
-        If ($p>0)
-            $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else 
-            $query:="firstName = :1 or lastName = :1"
-        End if 
-    : ($operator="!=")
-        If ($p>0)
-            $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else 
-            $query:="firstName != :1 and lastName != :1"
-        End if 
-    End case 
+	Case of 
+	: ($operator="==") | ($operator="===")
+		If ($p>0)
+			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
+		Else 
+			$query:="firstName = :1 or lastName = :1"
+		End if 
+	: ($operator="!=")
+		If ($p>0)
+			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
+		Else 
+			$query:="firstName != :1 and lastName != :1"
+		End if 
+	End case 
 
-    $result:=New object("query"; $query; "parameters"; $parameters)
+	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
 
 > Ten en cuenta que el uso de marcadores de posición en consultas basadas en la entrada de texto del usuario es recomendado por razones de seguridad (ver la [descripción de `query()`](API/DataClassClass.md#query)).
@@ -501,42 +501,42 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 
 ```4d
 Function query age($event : Object)->$result : Object
+	
+	var $operator : Text
+	var $age : Integer
+	var $_ages : Collection
+	
+	$operator:=$event.operator
+			
+	$age:=Num($event.value)  // integer
+	$d1:=Add to date(Current date; -$age-1; 0; 0)
+	$d2:=Add to date($d1; 1; 0; 0)
+	$parameters:=New collection($d1; $d2)
+	
+	Case of 
+			
+		: ($operator="==")
+			$query:="birthday > :1 and birthday <= :2"  // después de d1 y antes o igual a d2
+			
+		: ($operator="===") 
 
-    var $operator : Text
-    var $age : Integer
-    var $_ages : Collection
+			$query:="birthday = :2"  // d2 = segunda fecha calculada (= birthday date)
 
-    $operator:=$event.operator
+		: ($operator=">=")
+			$query:="birthday <= :2"
+			
+			//... Otros operadores	
+			
+			
+	End case 
+	
+	
+	If (Undefined($event.result))
+		$result:=New object
+		$result.query:=$query
+		$result.parameters:=$parameters
+	End if
 
-    $age:=Num($event.value)  // integer
-    $d1:=Add to date(Current date; -$age-1; 0; 0)
-    $d2:=Add to date($d1; 1; 0; 0)
-    $parameters:=New collection($d1; $d2)
-
-    Case of 
-
-        : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
-
-        : ($operator="===") 
-
-            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
-
-        : ($operator=">=")
-            $query:="birthday <= :2"
-
-            //...
-    other operators           
-
-
-    End case 
-
-
-    If (Undefined($event.result))
-        $result:=New object
-        $result.query:=$query
-        $result.parameters:=$parameters
-    End if
 ```
 
 Código de llamada, por ejemplo:
@@ -546,7 +546,7 @@ Código de llamada, por ejemplo:
 $twenty:=people.query("age = 20")  // llama al case "=="
 
 // personas de 20 años hoy
-$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20") 
+$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
 
 ```
 
@@ -622,7 +622,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 Un atributo **alias** se crea sobre otro atributo del modelo de datos, denominado **atributo de destino**. El atributo de destino puede pertenecer a una clase de datos relacionada (disponible a través de todo número de niveles de relación) o a la misma clase de datos. Un atributo alias no almacena ningún dato, sino la ruta a su atributo de destino. Puede definir tantos atributos de alias como desee en una clase de datos.
 
-Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
+Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
 
 ### Cómo definir los atributos alias
 
@@ -834,10 +834,10 @@ Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Obtener los estudiantes más jóvenes  
+// Obtener los estudiantes más jóvenes
 // Utilización inapropiada de la palabra clave local
 local Function getYoungest
-    var $0 : Object
+	var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
@@ -862,7 +862,6 @@ If (This.birthDate#!00-00-00!)
 Else 
     $age:=Null
 End if
-
 ```
 
 #### Verificación de los atributos
@@ -904,7 +903,7 @@ End if
 
 ### Archivos de clase (class files)
 
-Una clase usuario ORDA del modelo de datos se define añadiendo, en la [misma ubicación que los archivos de clase usuarles](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
+Una clase de usuario modelo de datos ORDA se define agregando, en la [misma ubicación que los archivos de clase normales](../Concepts/classes.md#class-definition) (*es decir* en la carpeta `/Sources/Classes` de la carpeta del proyecto), un archivo .4dm con el nombre de la clase. Por ejemplo, una clase de entidad para la dataclass `Utilities` se definirá en un archivo `UtilitiesEntity.4dm`.
 
 ### Crear las clases
 

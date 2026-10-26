@@ -31,6 +31,24 @@ Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul 
 
 ---
 
+## Display formula source as symbol
+
+Displays source text of formulas as symbols when expressions are shown as references.
+
+#### Grammaire JSON
+
+| Nom                    | Type de données | Valeurs possibles                           |
+| ---------------------- | --------------- | ------------------------------------------- |
+| displayFormulaAsSymbol | boolean         | true (par défaut), false |
+
+#### Objets pris en charge
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ## Cacher rectangle de focus
 
 A l'exécution, un champ ou toute zone saisissable est délimité par un rectangle de sélection lorsqu'il a le focus (via la touche Tab ou un simple clic). Vous pouvez masquer ce rectangle en activant cette propriété. Masquer le rectangle de focus peut être utile dans le cas d'interfaces spécifiques.
@@ -115,7 +133,7 @@ Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par d�
 
 ---
 
-## Afficher l'arrière-plan
+## Show background and anchored elements
 
 Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
@@ -130,6 +148,24 @@ Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 [4D Write Pro area](writeProArea_overview.md)
 
 ---
+
+## Show empty or unsupported images
+
+Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+
+#### Grammaire JSON
+
+| Nom             | Type de données | Valeurs possibles                           |
+| --------------- | --------------- | ------------------------------------------- |
+| showEmptyImages | boolean         | true (par défaut), false |
+
+#### Objets pris en charge
+
+[4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## Afficher les pieds de page
 
@@ -297,7 +333,7 @@ Lorsque des onglets sont affichés avec une direction personnalisée sous Window
 
 | Nom             | Type de données | Valeurs possibles |
 | --------------- | --------------- | ----------------- |
-| labelsPlacement | boolean         | "top", "bottom"   |
+| labelsPlacement | text            | "top", "bottom"   |
 
 #### Objets pris en charge
 

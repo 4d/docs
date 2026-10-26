@@ -341,9 +341,9 @@ Especifica la selección temporal a utilizar. Debe introducir el nombre de una s
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles       |
-| -------------- | -------------- | ---------------------- |
-| namedSelection | string         | Nombre de la selección |
+| Nombre        | Tipos de datos | Valores posibles       |
+| ------------- | -------------- | ---------------------- |
+| selectionName | string         | Nombre de la selección |
 
 #### Objetos soportados
 

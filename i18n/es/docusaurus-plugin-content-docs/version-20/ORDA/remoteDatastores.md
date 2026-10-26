@@ -3,17 +3,17 @@ id: datastores
 title: Utilizar un almacén de datos remoto
 ---
 
-Un [datastore](dsMapping.md#datastore) expuesto en una aplicación 4D se puede acceder simultáneamente a través de diferentes clientes:
+A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
 
-- Las aplicaciones 4D remotas que utilizan ORDA para acceder al almacén de datos principal con el comando `ds`. Tenga en cuenta que la aplicación 4D remota puede seguir accediendo a la base de datos en modo clásico. Estos accesos son gestionados por el **servidor de aplicaciones**.
-- Otras aplicaciones 4D (4D remote, 4D Server) abriendo una sesión en el datastore remoto a través del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore). Estos accesos son gestionados por el **servidor HTTP REST**.
-- Las peticiones [4D for iOS o 4D for Android](https://developer.4d.com/go-mobile/) para actualizar las aplicaciones móviles. Estos accesos son gestionados por el **servidor HTTP**.
+- 4D remote applications using ORDA to access the main datastore with the `ds` command. Tenga en cuenta que la aplicación 4D remota puede seguir accediendo a la base de datos en modo clásico. These accesses are handled by the **4D application server**.
+- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. These accesses are handled by the **HTTP REST server**.
+- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. These accesses are handled by the **HTTP server**.
 
 ## Apertura de las sesiones
 
-Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando `Open datastore`, la conexión entre los procesos que efectúan la petición y el datastore remoto se gestiona a través de sesiones.
+When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
-Se crea una sesión en el datastore remoto para gestionar la conexión. Esta sesión se identifica mediante un ID de sesión interno que se asocia al `localID` del lado de la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
+Se crea una sesión en el datastore remoto para gestionar la conexión. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
 El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 
@@ -25,7 +25,7 @@ Estos principios se ilustran en los gráficos siguientes:
 
 ![](../assets/en/ORDA/sessions.png)
 
-> Para las sesiones abiertas por peticiones REST, consulte [Usuarios y sesiones](REST/authUsers.md).
+> For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
 
 ### Visualización de las sesiones
 
@@ -60,7 +60,7 @@ Si se envía una solicitud al almacén de datos remoto después de haber cerrado
 
 ## Optimización cliente/servidor
 
-4D optimiza las peticiones ORDA que utilizan entity selections o cargan entidades en configuraciones cliente/servidor (datastore accesible remotamente a través de `ds` o de `Open datastore`). Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
+4D provides optimizations for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). Estas optimizaciones aceleran la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red. Incluyen:
 
 - el **contexto de optimización**
 - la **caché ORDA**
@@ -85,7 +85,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- Un contexto de optimización existente puede pasarse como propiedad a otra selección de entidad de la misma dataclass, evitando así la fase de aprendizaje y acelerando la aplicación (ver [Uso de la propiedad context](#reusing-the-context-property) abajo).
+- Un contexto de optimización existente puede pasarse como propiedad a otra selección de entidad de la misma dataclass, evitando así la fase de aprendizaje y acelerar la aplicación (ver abajo [Utilización de la propiedad context](#reusing-the-context-property)).
 
 - Puede crear contextos de optimización manualmente mediante la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (consulte [Preconfiguración de contextos](#preconfiguring-contexts)).
 
@@ -93,7 +93,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 :::warning Nota de compatibilidad
 
-Los contextos manejados en conexiones establecidas a través de [`Open datastore`](../API/DataStoreClass.md#open-datastore) solo pueden ser utilizados entre versiones principales similares de 4D. Por ejemplo, una aplicación remota 4D v20.x sólo puede utilizar contextos de un almacen de datos 4D Server v20.x.
+Los contextos manejados en conexiones establecidas a través de [`Open datastore`](../API/DataStoreClass.md#open-datastore) sólo pueden ser utilizados entre las versiones principales similares de 4D. Por ejemplo, una aplicación remota 4D v20.x sólo puede utilizar contextos de un almacen de datos 4D Server v20.x.
 
 :::
 
@@ -141,8 +141,8 @@ All ORDA functions that handle entity selections support the <strong x-id="1">co
  // se activa y asocia al contexto "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // En el método extractDetailedData la optimización
- // asociada al contexto "longList" se aplica
+ $data:=extractDetailedData($sel4) // En el método extractDetailedData es aplicada
+ // la optimización asociada al contexto "longList"
 ```
 
 #### List box basado en una selección de entidades
