@@ -14,7 +14,7 @@ title: OpenAIChatAPI
 | `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | チャット補完リクエストを管理するインスタンス。      |
 | `vision`      | [OpenAIVision](OpenAIVision.md)                         | ビジョン関連のリクエストを管理するヘルパーインスタンス。 |
 
-## Function
+## 関数
 
 ### create()
 

@@ -3,7 +3,7 @@ id: asynchronous-call
 title: Asynchronous Call
 ---
 
-# Asynchronous Call
+# Llamada asíncrona
 
 Si no desea esperar la respuesta del OpenAPI al hacer una petición a su API, debe utilizar un código asíncrono.
 
