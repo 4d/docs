@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-Desktop/building" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>アプリケーションビルド | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/Desktop/building /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="アプリケーションビルド | 4D Docs"/><meta data-rh=true name=description content="4D にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。"/><meta data-rh=true property=og:description content="4D にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/Desktop/building /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/Desktop/building hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/Desktop/building hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/Desktop/building hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/Desktop/building hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/Desktop/building hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/Desktop/building hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/desktop-applications","name":"デスクトップアプリ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/Desktop/building","name":"アプリケーションビルド","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.d29a3dbc.js defer></script><script src=/docs/ja/assets/js/main.de328a70.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-Desktop/building" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>アプリケーションビルド | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/20/Desktop/building /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="アプリケーションビルド | 4D Docs"/><meta data-rh=true name=description content="4D にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。"/><meta data-rh=true property=og:description content="4D にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/20/Desktop/building /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/Desktop/building hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/Desktop/building hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/Desktop/building hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/Desktop/building hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/Desktop/building hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/Desktop/building hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/category/desktop-applications","name":"デスクトップアプリ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/20/Desktop/building","name":"アプリケーションビルド","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.3a7cebc7.js defer></script><script src=/docs/ja/assets/js/main.f4e14db1.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/20/Desktop/building>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/Desktop/building>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/Desktop/building>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/Desktop/building>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/20/Desktop/building>20</a><li><a class=dropdown__link href=/docs/ja/19/Desktop/building>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -19,19 +19,19 @@
 <p>プロジェクトパッケージをビルドするには次の方法があります:</p>
 <ul>
 <li class=""><a href=https://doc.4d.com/4dv20/help/command/ja/page871.html target=_blank rel="noopener noreferrer" class=""><code>BUILD APPLICATION</code></a> コマンドを使う</li>
-<li class="">あるいは<a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%93%E3%83%AB%E3%83%89 class="">アプリケーションビルド画面</a>を使用することができます。</li>
+<li class=""><a href=#build-application-dialog class="">アプリケーションビルド</a> ダイアログを使う</li>
 </ul>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>また、ヘッドレスアプリケーションからでも、4Dプロジェクトのコンパイル、ビルド、署名をおこなうためのクラスを提供するコンポーネント、<a href=https://github.com/4d-depot/Build4D target=_blank rel="noopener noreferrer" class=""><code>Build4D</code></a> をダウンロードして使用することができます。</div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=アプリケーションビルド>アプリケーションビルド<a href=#アプリケーションビルド class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
-<p>このウィンドウを開くには 4D の<strong>デザイン</strong>メニューから**アプリケーションビルド...**を選択します。</p>
+<p>このウィンドウを開くには 4D の <strong>デザイン</strong>メニューから <strong>アプリケーションビルド...</strong> を選択します。</p>
 <p><img decoding=async loading=lazy src="data:image/png;base64,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" width=278 height=254 class=img_ev3q /></p>
 <p>アプリケーションビルドウィンドウには複数のページがあり、タブを使用してページを移動できます:</p>
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/appbuilderProj-52004fd6e5c2243a1c57a9e389903786.png width=860 height=645 class=img_ev3q /></p>
 <p>ビルドをおこなう前にプロジェクトはコンパイルされていなければなりません。まだコンパイルされていないプロジェクトでこのメニューコマンドを選択する、あるいはコンパイル後にコードが変更されていると、プロジェクトを (再) コンパイルしなければならない旨の警告ダイアログが表示されます。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=buildapp4dsettings>buildApp.4DSettings<a href=#buildapp4dsettings class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
-<p>アプリケーションビルドの設定パラメーターは、<code>buildApp.4DSettings</code> という名前の XML ファイル内の XML キーとして記録されます。 このファイルはプロジェクトの<a class="" href=/docs/ja/20/Project/architecture#settings-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC><code>Settings</code> フォルダー</a>にあります。</p>
+<p>アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、<code>buildApp.4DSettings</code> という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはプロジェクトの <a class="" href=/docs/ja/20/Project/architecture#settings-user><code>Settings</code> フォルダー</a> に配置されます。</p>
 <p>アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。<strong>ビルド</strong> ボタンや <strong>設定保存</strong> ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。同じデータベースについて内容の異なる複数の XML ファイルを定義し、<a href=https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html target=_blank rel="noopener noreferrer" class="">BUILD APPLICATION</a> コマンドでそれらを使い分けることができます。</p>
-<p>また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 XML キーの詳細は <a href=https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.ja.html target=_blank rel="noopener noreferrer" class="">アプリケーションビルド設定ファイル</a> リファレンスを参照してください。</p>
+<p>また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。これらのキーの詳細は <a href=https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.ja.html target=_blank rel="noopener noreferrer" class="">4D XML キーBuildApplication</a> マニュアルに詳細な説明があります。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ログファイル>ログファイル<a href=#ログファイル class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>アプリケーションをビルドすると、4D はログファイル (<em>BuildApp.log.xml</em>) を生成して、プロジェクトの <strong>Logs</strong> フォルダーに保存します。ログファイルにはビルド毎に以下の情報が書き込まれます:</p>
 <ul>
@@ -54,11 +54,11 @@
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/appbuilderProj-52004fd6e5c2243a1c57a9e389903786.png width=860 height=645 class=img_ev3q /></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=コンパイル済みストラクチャーをビルド>コンパイル済みストラクチャーをビルド<a href=#コンパイル済みストラクチャーをビルド class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>インタープリターコードを含まないアプリケーションをビルドします。</p>
-<p>これにより、<em>Compiled Database/&lt;project name></em> フォルダーの中に <code>.4dz</code> ファイルが作成されます。たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:</p>
+<p>これにより、<code>Compiled Database/&lt;project name></code> フォルダーの中に <em>.4dz</em> ファイルが作成されます。たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:</p>
 <p><code>&lt;destination>/Compiled Database/MyProject/MyProject.4dz</code></p>
 <p>.4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリーデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。</p>
 <blockquote>
-<p>.4dz ファイルを生成する際、4D はデフォルトで <strong>標準的な</strong> zip形式を使用します。このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。標準圧縮形式を使用しない場合、 <a href=#buildapp4dsettings class=""><code>buildApp.4DSettings</code></a> ファイルの<code>UseStandardZipFormat</code> XML キーに値 <code>False</code> を設定してください (詳細は <a href=https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html target=_blank rel="noopener noreferrer" class="">アプリケーションビルド設定ファイル</a> リファレンスを参照してください)。</p>
+<p>.4dz ファイルを生成する際、4D はデフォルトで <strong>標準的な</strong> zip形式を使用します。このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。この標準フォーマットを使用したくない場合、<a href=#buildapp4dsettings class=""><code>buildApp.4DSettings</code></a> 内において<code>UseStandardZipFormat</code> XML キーを値<code>False</code> で追加して下さい(より詳細な情報については、<a href=https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html target=_blank rel="noopener noreferrer" class="">4D XML キーBuildApplication</a> マニュアルを参照して下さい)。</p>
 </blockquote>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=関連するフォルダーを含む>関連するフォルダーを含む<a href=#関連するフォルダーを含む class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>このオプションを選択すると、プロジェクトに関連するフォルダーが、Build フォルダーの <em>Components</em> および <em>Resources</em> フォルダーにコピーされます。これらのフォルダーの詳細については <a class="" href=/docs/ja/20/Project/architecture>プロジェクトアーキテクチャーの説明</a> を参照ください。</p>
@@ -66,7 +66,7 @@
 <p>ストラクチャーからコンパイル済みコンポーネントをビルドします。</p>
 <p>コンポーネントは特定の機能を実装した標準の 4D プロジェクトです。ビルドされたコンポーネントを他の 4Dプロジェクト (ホストアプリケーションプロジェクト) にインストールすると、ホストプロジェクトはその機能を利用できるようになります。</p>
 <p>アプリケーション名を <em>MyComponent</em> に指定した場合、4D は <em>Components</em> フォルダーを作成し、その中に <em>MyComponent.4dbase</em> フォルダーを生成します:</p>
-<p><code>&lt;destination>/Components/MyComponent.4dbase/MyComponent.4DZ</code>.</p>
+<p><code>&lt;destination>/Components/MyComponent.4dbase/MyComponent.4DZ</code></p>
 <p><em>MyComponent.4dbase</em> フォルダーには次のファイルが含まれます:</p>
 <ul>
 <li class="">
@@ -105,19 +105,19 @@
 <p><strong>アプリケーション名</strong> (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。</p>
 </li>
 <li class="">
-<p><strong>アプリケーションパス</strong> - このモードでは、組み込み 4D アプリケーションは自身に紐づいている <em>lastDataPath.xml</em> ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。</p>
+<p><strong>アプリケーションパス</strong> - このモードでは、組み込み 4D アプリケーションは自身に紐づいている <em>lastDataPath.xml</em> ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。</p>
 </li>
 </ul>
 <p>データリンクモードについての詳細は <a href=#%E6%9C%80%E5%BE%8C%E3%81%AB%E9%96%8B%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB class="">最後に開かれたデータファイル</a> を参照してください。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=生成されるファイル>生成されるファイル<a href=#生成されるファイル class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-<p><strong>ビルド</strong> ボタンをクリックすると、4D は <strong>保存先フォルダー</strong> に <strong>Final Application</strong> フォルダーを作成し、 その中に指定したアプリケーション名のサブフォルダーを作成します。その中に指定したアプリケーション名のサブフォルダーを作成します。</p>
+<p><strong>ビルド</strong> ボタンをクリックすると、4D は <strong>保存先フォルダー</strong> に <strong>Final Application</strong> フォルダーを作成し、その中に指定したアプリケーション名のサブフォルダーを作成します。</p>
 <p>アプリケーション名に "MyProject"と指定した場合、MyProject サブフォルダー内には以下のファイルが置かれます:</p>
 <ul>
 <li class=""><em>Windows</em>
 <ul>
 <li class="">MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)</li>
 <li class="">4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル</li>
-<li class="">Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。<strong>注記</strong>: もし<em>Default Data</em> フォルダーが設定されていれば、ここに格納されます (<a href=#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%AE%A1%E7%90%86 class="">データファイルの管理</a>を参照してください)。</li>
+<li class="">Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。<strong>注</strong>: このフォルダーには、定義されていれば <em>Default Data</em> フォルダーも含まれています (<a href=#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%AE%A1%E7%90%86 class="">最終アプリケーションでのデータファイルの管理</a>を参照してください)。</li>
 <li class="">(オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。この点に関する詳細は <a href=#%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%EF%BC%86%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8 class="">プラグイン＆コンポーネントページ</a> を参照してください。</li>
 <li class="">(オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。この点に関する詳細は <a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%EF%BC%86%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%83%9A%E3%83%BC%E3%82%B8 class="">ライセンス＆証明書ページ</a> を参照してください。</li>
 <li class="">4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) (<a href=#4d-volume-desktop-%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA class="">4D Volume Desktop フォルダーのカスタマイズ</a> 参照)</li>
@@ -128,7 +128,7 @@
 <ul>
 <li class=""><em>macOS</em>
 <ul>
-<li class="">MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。プラグインやコンポーネントの統合に関する詳細は <a href=#%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%EF%BC%86%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8 class="">プラグイン＆コンポーネントページ</a> を参照ください。ライセンスの統合に関しては <a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%EF%BC%86%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%83%9A%E3%83%BC%E3%82%B8 class="">ライセンス＆証明書ページ</a> を参照してください。<strong>注</strong>: macOSでは、4D ランゲージの <a href=https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html target=_blank rel="noopener noreferrer" class="">Application file</a> コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。</li>
+<li class="">MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。プラグインやコンポーネントの統合に関する詳細は <a href=#%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%EF%BC%86%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%83%9A%E3%83%BC%E3%82%B8 class="">プラグイン＆コンポーネントページ</a> を参照してください。ライセンスの統合に関しては <a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%EF%BC%86%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%83%9A%E3%83%BC%E3%82%B8 class="">ライセンス＆証明書ページ</a> を参照してください。<strong>注</strong>: macOSでは、4D ランゲージの <a href=https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.ja.html target=_blank rel="noopener noreferrer" class="">Application file</a> コマンドが返すのは、ソフトウェアパッケージ内の "Contents:macOS" フォルダー内にコピーされる ApplicationName ファイルのパス名です (ソフトウェアパッケージの "Contents:Resources" フォルダー内の .comp ファイルのパスではありません)。</li>
 </ul>
 </li>
 </ul>
@@ -140,7 +140,7 @@
 <li class=""><em>Resources</em> フォルダーの内容をカスタマイズする</li>
 </ul>
 <blockquote>
-<p><em>Resources</em> フォルダーの内容をカスタマイズする > macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。内容を変更するにはパッケージを開きます (アイコンを <strong>Control+クリック</strong>)。</p>
+<p>macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。内容を変更するにはパッケージを開きます (アイコンを <strong>Control+クリック</strong>)。</p>
 </blockquote>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=webファイルの場所>Webファイルの場所<a href=#webファイルの場所 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは以下の特定の場所にインストールする必要があります :</p>
@@ -180,7 +180,7 @@
 
 
 
-<table><thead><tr><th>運用ライセンス<th>説明<th>入力する場所<tbody><tr><td><em>4D OEM Desktop</em><td>埋め込まれたカスタムのライセンス。 詳細は 4D 営業部にお問い合わせ下さい。<td>アプリケーションビルドダイアログの<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9 class="">ライセンスページ</a><tr><td><em>4D Unlimited Desktop</em><td><strong>販売終了</strong> - 埋め込まれたカスタムのライセンス<td>アプリケーションビルドダイアログの<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9 class="">ライセンスページ</a><tr><td><em>4D Desktop</em><td>コンピューターごとのライセンス、スタンドアロン4D アプリケーションを使用するのに必要<td>ユーザーのコンピューターで表示される<a class="" href=/docs/ja/20/Admin/licenses#%E5%88%9D%E5%9B%9E%E3%81%AE%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3>初回のアクティベーション</a> ダイアログ画面</table>
+<table><thead><tr><th>運用ライセンス<th>説明<th>入力する場所<tbody><tr><td><em>4D OEM Desktop</em><td>埋め込まれたカスタムのライセンス。 詳細は 4D 営業部にお問い合わせ下さい。<td>アプリケーションビルドダイアログの<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9 class="">ライセンスページ</a><tr><td><em>4D Unlimited Desktop</em><td><strong>販売終了</strong> - 埋め込まれたカスタムのライセンス<td>アプリケーションビルドダイアログの<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9 class="">ライセンスページ</a><tr><td><em>4D Desktop</em><td>コンピューターごとのライセンス、スタンドアロン4D アプリケーションを使用するのに必要<td>ユーザーマシン上での<a class="" href=/docs/ja/20/Admin/licenses#%E5%88%9D%E5%9B%9E%E3%81%AE%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3>初回起動時</a> に表示されるダイアログボックス</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=クライアントサーバーページ>クライアント/サーバーページ<a href=#クライアントサーバーページ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p>このページでは、クライアントの自動更新もサポートできるクロスプラットフォームなクライアント/サーバーアプリケーションをビルドするための設定をおこないます。</p>
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/client-server-buildapp-b18201cf4843526dde2d276475437836.png width=842 height=662 class=img_ev3q /></p>
@@ -193,14 +193,14 @@
 </ul>
 <p>ビルドを行うと、クライアント/サーバーアプリケーションは 2つのカスタマイズされたパーツ (サーバーと、各クライアントマシンにインストールするクライアント) で構成されます。</p>
 <blockquote>
-<p>Intel/AMD と Apple Silicon マシンが混在している環境でクライアントアプリケーションを実行する場合、そのクライアントサーバーアプリケーションは macOS 上で、<a class="" href=/docs/ja/20/Project/compiler#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E5%AF%BE%E8%B1%A1cpu>全てのプロセッサ</a> 向けにコンパイルすることが推奨されます。こうすることで、クライアントアプリケーションはすべてネイティブに実行されます。</p>
+<p>Intel/AMD と Apple Silicon マシンが混在している環境でクライアントアプリケーションを実行する場合、そのクライアントサーバーアプリケーションは macOS 上で、<a class="" href=/docs/ja/20/Project/compiler#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E5%AF%BE%E8%B1%A1cpu>すべてのプロセッサー</a> 向けにコンパイルすることが推奨されます。こうすることで、クライアントアプリケーションはすべてネイティブに実行されます。</p>
 </blockquote>
 <p>ビルドされたクライアント/サーバーアプリケーションは起動や接続処理が簡易です:</p>
 <ul>
 <li class="">サーバーを起動するには、サーバーアプリケーションをダブルクリックします。プロジェクトファイルを選択する必要はありません。</li>
-<li class="">クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。 IPアドレスの指定は buildapp.4DSettings ファイル内の <code>IPAddress</code> XMLキーを使用して設定されます。接続が失敗した場合のために、代替機構を実装することができます。 これについては <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%AE%E7%AE%A1%E7%90%86 class="">クライアント接続の管理</a> の章で説明されています。また、<strong>Option</strong> (macOS) や <strong>Alt</strong> (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。</li>
-<li class="">クライアント側を <a href=#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC class="">ネットワーク越しに自動更新</a> するようにクライアント/サーバーアプリケーションを設定することも可能です。クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。 以降のアップデートは、自動アップデート機構を利用することで管理します。</li>
-<li class="">また、ランゲージコマンド (<a href=https://doc.4d.com/4dv20/help/command/ja/page1291.html target=_blank rel="noopener noreferrer" class="">SET UPDATE FOLDER</a>、および <a href=https://doc.4d.com/4dv20/help/command/ja/page1292.html target=_blank rel="noopener noreferrer" class="">RESTART 4D</a>) を使用して、サーバーアプリケーションの更新を自動化することも可能です。</li>
+<li class="">クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、接続ダイアログでサーバーを選択する必要はありません。クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の <code>IPAddress</code> XMLキーを使用して設定されます。接続が失敗した場合のために、代替機構を実装することができます。これについては <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%AE%E7%AE%A1%E7%90%86 class="">クライアント接続の管理</a> の章で説明されています。また、<strong>Option</strong> (macOS) や <strong>Alt</strong> (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。</li>
+<li class="">クライアント側を <a href=#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC class="">ネットワーク越しに自動更新</a> するようにクライアント/サーバーアプリケーションを設定することも可能です。クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。</li>
+<li class="">また、ランゲージコマンド (<a href=https://doc.4d.com/4dv20/help/command/en/page1291.html target=_blank rel="noopener noreferrer" class="">SET UPDATE FOLDER</a> および <a href=https://doc.4d.com/4dv20/help/command/en/page1292.html target=_blank rel="noopener noreferrer" class="">RESTART 4D</a>) を使用して、サーバーアプリケーションの更新を自動化することも可能です。</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=サーバーアプリケーションをビルド>サーバーアプリケーションをビルド<a href=#サーバーアプリケーションをビルド class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>アプリケーションのサーバー部分をビルドするにはこのオプションを選択します。ビルドに使用する 4D Server アプリケーションの場所を選択する必要があります。この 4D Server はビルドをおこなうプラットフォームに対応していなければなりません (たとえば、Windows 用のサーバーアプリケーションをビルドするには Windows 上でビルドを実行する必要があり、Windows 版の 4D Server アプリケーションを指定する必要があります)。</p>
@@ -231,7 +231,7 @@
 
 
 
-<table><thead><tr><th>名称<th>定義<tbody><tr><td>プロジェクトのディレクトリファイル<td>プロジェクトの<a class="" href=/docs/ja/20/Project/architecture#settings-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC> Settings フォルダー</a>内の<a class="" href=/docs/ja/20/Users/editing#directoryjson-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB>directory.json</a> ファイル<tr><td>アプリケーションのディレクトリファイル<td>ビルドアプリケーションの<a class="" href=/docs/ja/20/Project/architecture#settings-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC> Settings フォルダー</a>内の<a class="" href=/docs/ja/20/Users/editing#directoryjson-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB>directory.json</a> ファイル<tr><td>データのディレクトリファイル<td><a class="" href=/docs/ja/20/Project/architecture#settings-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF>ユーザーデータ > Settings フォルダー</a>内の<a class="" href=/docs/ja/20/Users/editing#directoryjson-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB>directory.json</a> ファイル</table>
+<table><thead><tr><th>名称<th>定義<tbody><tr><td>プロジェクトのディレクトリファイル<td>プロジェクトの <a class="" href=/docs/ja/20/Project/architecture#settings-user>Settings フォルダー</a> に置かれた <a class="" href=/docs/ja/20/Users/editing#directoryjson-file>directory.json</a> ファイル<tr><td>アプリケーションのディレクトリファイル<td>ビルドされた 4D Server の <a class="" href=/docs/ja/20/Project/architecture#settings-user>Settings フォルダー</a> に置かれた <a class="" href=/docs/ja/20/Users/editing#directoryjson-file>directory.json</a> ファイル<tr><td>データのディレクトリファイル<td><a class="" href=/docs/ja/20/Project/architecture#settings-user-data>Data ＞ Settings フォルダー</a> に置かれた <a class="" href=/docs/ja/20/Users/editing#directoryjson-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB>directory.json</a> ファイル</table>
 <p>このオプションをチェックすると、ビルド時にプロジェクトのディレクトリファイルがアプリケーションのディレクトリファイルとしてコピーされます。</p>
 <p>ビルドした 4D Server アプリケーションを実行すると:</p>
 <ul>
@@ -254,7 +254,7 @@
 <p><strong>アプリケーション名</strong> (デフォルト) - このモードでは、4D アプリケーションはストラクチャーファイルに対応する、最後に開かれたデータファイルを開きます。このモードではアプリケーションパッケージをディスク上で自由に移動させることができます。アプリケーションを複製する場合を除いて、通常は組み込みアプリに対してこのモードが使用されるべきです。</p>
 </li>
 <li class="">
-<p><strong>アプリケーションパス</strong> - このモードでは、組み込み 4D アプリケーションは自身に紐づいている <em>lastDataPath.xml</em> ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、 同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。</p>
+<p><strong>アプリケーションパス</strong> - このモードでは、組み込み 4D アプリケーションは自身に紐づいている <em>lastDataPath.xml</em> ファイルを解析して、起動アプリのフルパスに合致する "executablePath" 属性を持つデータパスマップのエントリーを探し、同エントリー内で "dataFilePath" 属性で定義されているデータファイルを開きます。ない場合は、最後に開かれたデータファイルを開きます (デフォルトモード)。</p>
 </li>
 </ul>
 <p>データリンクモードについての詳細は <a href=#%E6%9C%80%E5%BE%8C%E3%81%AB%E9%96%8B%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB class="">最後に開かれたデータファイル</a> を参照してください。</p>
@@ -268,7 +268,7 @@
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4d-volume-desktopの場所-1>4D Volume Desktopの場所<a href=#4d-volume-desktopの場所-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>クライアントアプリケーションのビルドに使用する 4D Volume Desktop アプリケーションの場所を指定します。</p>
 <blockquote>
-<p>4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。 4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。</p>
+<p>4D Volume Desktop のバージョン番号は、4D Developer のバージョン番号と合致する必要があります。たとえば、4D Developer の v19 を利用していれば、4D Volume Desktop v19 が必要です。</p>
 </blockquote>
 <p>この 4D Volume Desktop はビルドをおこなうプラットフォームに対応していなければなりません。異なるプラットフォーム用のクライアントアプリケーションをビルドするには、そのプラットフォームで 4D アプリケーションを実行し、追加のビルド処理をしなければなりません。</p>
 <p>クライアントアプリから特定のアドレスを使用して (サブネットワーク上にサーバー名が公開されていない) サーバーに接続したい場合、buildapp.4DSettings ファイル内の <code>IPAddress</code> XML キーを使用する必要があります。詳細は <a href=https://doc.4d.com/4dv19/help/command/ja/page871.html target=_blank rel="noopener noreferrer" class=""><code>BUILD APPLICATION</code></a> コマンドの説明を参照してください。接続失敗時の特定の機構を実装することもできます。詳細は <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%AE%E7%AE%A1%E7%90%86 class="">クライアント接続の管理</a> で説明されています。</p>
@@ -308,7 +308,7 @@
 
 
 <table><thead><tr><th>現在のサーバープラットフォーム<th>必要なファイル<th>詳細<tbody><tr><td>macOS<td>Windows用4D Volume Desktop <em>または</em> Windows クライアントアップデートアーカイブ<td>デフォルトでは、Windows用の <code>4D Volume Desktop</code> アプリケーションを選択することができます。しかしながら、更新後にも適切なアイコン管理、そして署名された.exe ファイルを保持するためにも事前にWindows 用にビルドされた<code>.4darchive</code> ファイルを使用することが、<strong>推奨されます</strong>。これを行うためには、<strong>Shift</strong> を押しながら[...] をクリックします。<tr><td>Windows<td>macOS クライアントアップデートアーカイブ<td>前もって macOS でビルドされた署名入り <code>.4darchive</code> ファイルを選択します。</table>
-<p><a href=#build-client-application class=""><strong>クライアントアプリケーションをビルド</strong></a> と <a href=#copy-of-client-applications-inside-the-server-application class=""><strong>自動更新を有効にする</strong></a> オプションのみを選択することで、サーバーとは異なるプラットフォーム上で <code>.4darchive</code> ファイルをビルドすることができます。</p>
+<p><a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%83%93%E3%83%AB%E3%83%89 class="">クライアントアプリケーションをビルド</a> と <a href=#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%86%85%E9%83%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC class="">自動更新を有効にする</a> オプションのみを選択することで、サーバーとは異なるプラットフォーム上で <code>.4darchive</code> ファイルをビルドすることができます。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=更新通知の表示>更新通知の表示<a href=#更新通知の表示 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>サーバーアプリケーションが更新されると、クライアントアプリケーションへの更新通知が自動でおこなわれます。</p>
 <p>これは次のように動作します: クライアント/サーバーアプリケーションの新しいバージョンをビルドする際、新しいクライアントは <strong>ApplicationName</strong> Server フォルダー内の <strong>Upgrade4DClient</strong> サブフォルダーに圧縮して格納されます (macOS では、これらのフォルダーはサーバーパッケージ内に配置されます)。クロスプラットフォームのクライアントアプリケーションを生成した場合には、各プラットフォーム用に <em>.4darchive</em> という更新ファイルが格納されます:</p>
@@ -316,12 +316,12 @@
 <p>古いバージョンのクライアントが、更新されたサーバーに接続を試みると、新しいバージョンが利用可能である旨を伝えるダイアログがクライアントマシン上に表示されます。ユーザーはバージョンを更新するか、ダイアログをキャンセルできます。</p>
 <ul>
 <li class="">ユーザーが <strong>OK</strong> をクリックすると、新バージョンがネットワーク越しにクライアントマシンにダウンロードされます。ダウンロードが完了すると古いクライアントアプリケーションが閉じられて、新しいバージョンが起動しサーバーに接続します。古いバージョンのアプリケーションはマシンのゴミ箱に移動されます。</li>
-<li class="">ユーザーが <strong>キャンセル</strong> をクリックすると、更新手続きはキャンセルされます。 古いクライアントのバージョンがサーバーの許可する範囲外であれば (後述参照)、アプリケーションは閉じられて、接続することはできません。そうでなければ (デフォルトで) 接続がおこなわれます。</li>
+<li class="">ユーザーが <strong>キャンセル</strong> をクリックすると、更新手続きはキャンセルされます。古いクライアントのバージョンがサーバーの許可する範囲外であれば (後述参照)、アプリケーションは閉じられて、接続することはできません。そうでなければ (デフォルトで) 接続がおこなわれます。</li>
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=自動更新の強制>自動更新の強制<a href=#自動更新の強制 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-<p>更新のダウンロードをキャンセルさせたくない場合、更新のダウンロードをキャンセルさせたくない場合、 たとえば新しいメジャーバージョンの 4D Server を使用するような場合、新しいバージョンのクライアントアプリケーションを各クライアントマシンに必ずインストールしなければなりません。</p>
+<p>更新のダウンロードをキャンセルさせたくない場合、たとえば新しいメジャーバージョンの 4D Server を使用するような場合、新しいバージョンのクライアントアプリケーションを各クライアントマシンに必ずインストールしなければなりません。</p>
 <p>更新を強制するには、サーバーアプリケーションと互換性のあるバージョン番号の範囲からクライアントアプリケーションの現バージョン番号を除外します。すると、未更新クライアントからの接続は更新メカニズムによって拒否されます。たとえば、クライアントサーバーアプリケーションの新しいバージョン番号がの 6 の場合、バージョン番号が 5 以下のクライアントアプリケーションを許可しないようにできます。</p>
-<p><a href=#%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3 class="">現在のバージョン番号</a> はアプリケーションビルドダイアログのクライアント/サーバーページで設定できます。接続を許可するバージョン番号の範囲は <a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%93%E3%83%AB%E3%83%89%E8%A8%AD%E5%AE%9A class="">XMLキー</a> で設定します。</p>
+<p><a href=#%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3 class="">現在のバージョン番号</a> はアプリケーションビルドダイアログ のクライアント/サーバーページで設定できます。接続を許可するバージョン番号の範囲は <a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%93%E3%83%AB%E3%83%89%E8%A8%AD%E5%AE%9A class="">XMLキー</a> で設定します。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=エラーが発生する場合>エラーが発生する場合<a href=#エラーが発生する場合 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>クライアントアプリケーションの更新を実行できなかった場合、クライアントマシンには次のメッセージが表示されます: "クライアントアプリケーションの更新に失敗しました。アプリケーションは終了します。 "</p>
 <p>このエラーが発生する原因は複数ありえます。このエラーが表示されるような場合は、まず次の点をチェックしてみてください:</p>
@@ -330,22 +330,22 @@
 <li class=""><strong>読み書き権限</strong> - クライアントマシン上でカレントユーザーがクライアントアプリケーションを更新する書き込みアクセス権を持っているか確認してください。</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=生成されるファイル-1>生成されるファイル<a href=#生成されるファイル-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
-<p>クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に <strong>Client Server executable</strong> という名前の新しいフォルダーが作成されます。このフォルダーにはさらに2つのサブフォルダー、 <code>&lt;ApplicationName>Client</code> と <code>&lt;ApplicationName>Server</code> があります。</p>
+<p>クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に <strong>Client Server executable</strong> という名前の新しいフォルダーが作成されます。このフォルダーにはさらに2つのサブフォルダー、<code>&lt;ApplicationName>Client</code> と <code>&lt;ApplicationName>Server</code> があります。</p>
 <blockquote>
 <p>エラーが発生した場合これらのフォルダーは作成されません。そのような場合には、エラーの原因を特定するために <a href=#%E3%83%AD%E3%82%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB class="">ログファイル</a> の内容を確認してください。</p>
 </blockquote>
 <p><code>&lt;ApplicationName>Client</code> フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。このフォルダーを各クライアントにインストールします。 <code>&lt;ApplicationName>Server</code> フォルダーはサーバーアプリケーションを格納します。</p>
 <p>これらのフォルダーの内容はカレントのプラットフォームにより異なります:</p>
 <ul>
-<li class=""><em>Windows</em> - 各フォルダーに<code>&lt;ApplicationName>Client.exe</code> (クライアント用) あるいは <code>&lt;ApplicationName>Server.exe</code> (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。</li>
-<li class=""><em>macOS</em> - 各フォルダーは <code>&lt;ApplicationName>Client.app</code> (クライアント用) と <code>&lt;ApplicationName>Server.app</code> (サーバー用) という名前のアプリケーションパッケージになっています。各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。</li>
+<li class=""><em>Windows</em> - 各フォルダーに <code>&lt;ApplicationName>Client.exe</code> (クライアント用) あるいは <code>&lt;ApplicationName>Server.exe</code> (サーバー用) という名前の実行ファイル、およびそれぞれに対応する .rsrファイルが作成されます。これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。</li>
+<li class=""><em>macOS</em> - 各フォルダーは <code>&lt;ApplicationName>Client</code> (クライアント用) と <code>&lt;ApplicationName>Server</code> (サーバー用) という名前のアプリケーションパッケージになっています。各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。</li>
 </ul>
 <blockquote>
-<p>ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。ビルドされた macOS パッケージの内容を表示するにはアイコンを <strong>Control+クリック</strong> して、"パッケージの内容を表示" を選択します。</p>
+<p>ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。ビルドされた macOS パッケージの内容を表示するにはアイコンを <strong>Control+クリック</strong> して、"パッケージの内容を表示"を選択します。</p>
 </blockquote>
-<p>"クライアントの自動更新を有効にする" オプションを選択している場合、<em>&lt;ApplicationName>Server</em> フォルダー/パッケージには追加で <code>Upgrade4DClient</code> サブフォルダーが作成されます。このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。クライアントアプリケーションを自動更新するときに、このファイルは使用されます。</p>
+<p>"クライアントの自動更新を有効にする" オプションを選択している場合、<code>&lt;ApplicationName>Server</code> フォルダー/パッケージには追加で <em>Upgrade4DClient</em> サブフォルダーが作成されます。このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。クライアントアプリケーションを自動更新するときに、このファイルは使用されます。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=webファイルの場所-1>Webファイルの場所<a href=#webファイルの場所-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-<p>ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは以下の特定の場所にインストールする必要があります : :</p>
+<p>ダブルクリックで起動可能なアプリケーションのサーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを以下の特定の場所に配置しなければなりません :</p>
 <ul>
 <li class=""><em>cert.pem</em> と <em>key.pem</em> ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。</li>
 <li class="">デフォルト Web ルートフォルダー (WebFolder)</li>
@@ -377,7 +377,7 @@
 <p>基本シナリオは以下の通りです:</p>
 <ol>
 <li class="">アプリケーションビルド ダイアログボックス内にて、"コンパイルされたストラクチャーをビルド" オプションを選択し、シングルユーザーモードで使用されるアプリケーションの .4DC または .4DZ ファイルを生成します。</li>
-<li class="">クライアント/サーバーアプリケーションの <em>buildApp.4DSettings</em> ファイル内で、コンパイルされたシングルユーザーアプリケーションを格納しているフォルダーへのパスを以下の xml キーに指示します:</li>
+<li class="">クライアント/サーバーアプリケーションの <em>buildApp.4DSettings</em> ファイル内で、コンパイルされたシングルユーザーアプリケーションを格納しているフォルダーへのパスを以下のxml キーに指示します:</li>
 </ol>
 <ul>
 <li class=""><code>DatabaseToEmbedInClientWinFolder</code></li>
@@ -393,7 +393,7 @@
 <li class=""><code>PublishName</code> キーは、組み込みクライアントの <em>info.plist</em> にコピーされません。</li>
 <li class="">シングルユーザーデータベースに "Default Data" フォルダーがない場合、組み込みクライアントはデータなしで実行されます。</li>
 </ul>
-<p>4D Server の自動アップデート機能 (<a href=#%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3 class="">現在のバージョン</a> 番号、<code>SET UPDATE FOLDER&lt;/a> コマンドなど...) は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。接続時、シングルユーザーアプリケーションは &lt;code>CurrentVers</code> キーを 4D Server バージョンレンジと比較します。レンジ外だった場合、アップデートされているシングルユーザーアプリケーションがサーバーからダウンロードされ、アップデーターがローカルアップデートプロセスを実行します。</p>
+<p>4D Server の自動アップデート機能 (<a href=#%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3 class="">現在のバージョン</a> 番号、<code>SET UPDATE FOLDER</code> コマンドなど...)  は、シングルユーザーアプリケーションにおいても標準のリモートアプリケーションと同様に動きます。接続時、シングルユーザーアプリケーションは <code>CurrentVers</code> キーを 4D Server バージョンレンジと比較します。レンジ外だった場合、アップデートされているシングルユーザーアプリケーションがサーバーからダウンロードされ、アップデーターがローカルアップデートプロセスを実行します。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=クライアントおよびサーバーキャッシュフォルダー名のカスタマイズ>クライアントおよびサーバーキャッシュフォルダー名のカスタマイズ<a href=#クライアントおよびサーバーキャッシュフォルダー名のカスタマイズ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>クライアントおよびサーバーのキャッシュフォルダーは、リソースやコンポーネントなどの共有要素を格納するのに使用されます。これらは、サーバーとリモートクライアント間の通信を管理するのに必要です。クライアント/サーバーアプリケーションは、クライアントおよびサーバーシステム両方のキャッシュフォルダーにデフォルトパス名を使用します。</p>
 <p>特殊な場合においては、特定のアーキテクチャーを実装するために、これらのフォルダー名をカスタマイズする必要があるかもしれません (後述参照)。このため、4D は <em>buildApp</em> 設定ファイルにて使用可能な <code>ClientServerSystemFolderName</code> および <code>ServerStructureFolderName</code> キーを提供しています。</p>
@@ -452,7 +452,7 @@
 <li class=""><strong>MeCab</strong>: 日本語のテキストインデックスに使用されるライブラリです (<a class="" href=/docs/ja/20/settings/database#mecab-%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88-%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88>Mecab のサポート (日本語版)</a> 参照)。このモジュールの選択を解除すると、テキストインデックスが日本語で再構築されます。</li>
 </ul>
 <blockquote>
-<p>異なるプラットフォームで使用する日本語のアプリケーションで MeCab の選択を解除する場合、必ず、クライアント/サーバーのビルドと <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%83%93%E3%83%AB%E3%83%89 class="">クライアントアプリケーションをビルド</a> (実行中のOS用) の両方で選択を解除しないと、アプリケーションに大きな不具合が生じます。</p>
+<p>異なるプラットフォームで使用する日本語のアプリケーションで MeCab の選択を解除する場合、必ず、クライアント/サーバーのビルドと <a href=#%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%83%93%E3%83%AB%E3%83%89 class="">クライアントアプリケーションをビルド</a> (実行中のOS用) の両方で選択を解除しないと、アプリケーションに大きな不具合が生じます。</p>
 </blockquote>
 <ul>
 <li class=""><strong>PHP</strong>: PHP の機能とコマンドを 4D で使用するために必要です (設定の <a class="" href=/docs/ja/20/settings/php>PHP ページ</a> 参照)。</li>
@@ -462,16 +462,16 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ライセンス証明書ページ>ライセンス＆証明書ページ<a href=#ライセンス証明書ページ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p>ライセンス&証明書のページでは、次のようなことができます:</p>
 <ul>
-<li class="">シングルユーザーの<a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8 class="">スタンドアロンアプリケーション</a>に統合するライセンス番号を指定します。</li>
+<li class="">シングルユーザー用<a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8 class="">スタンドアロンアプリケーション</a>に統合したいライセンス番号を指定する。</li>
 <li class="">macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。</li>
 </ul>
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/buildappCertif-caab658621c64e523293c83ad6ecb3d5.png width=952 height=734 class=img_ev3q /></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ライセンスリスト>ライセンスリスト<a href=#ライセンスリスト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
-<p>アプリケーションに<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6 class="">埋め込みに使用できる配布ライセンス</a>の一覧を表示します。デフォルトでリストは空です。</p>
+<p>アプリケーションに<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6 class="">埋め込むことのできる配布ライセンス</a>の一覧を表示します。デフォルトでリストは空です。</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>info</div><div class=admonitionContent_BuS1><p>このリストを空のままにしていた場合、埋め込み配布ライセンスのないスタンドアロンアプリケーションをビルドすることになります。この場合、エンドユーザーは <em>4D Desktop</em> ライセンスを、ユーザーごとに購入して入力する必要があります。配布ライセンスを統合した場合、エンドユーザーは自身のライセンス番号をアプリケーション起動時に入力したり使用する必要はありません。詳細については、<a href=#%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6 class=""><strong>ライセンスについて</strong></a> の段落を参照ください。</div></div>
 <p>カレントの <em>4D Developer Professional</em> ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。</p>
 <p>ライセンスを追加または取り除くにはウィンドウ下部の <strong>[+]</strong> または <strong>[-]</strong> ボタンをクリックします。</p>
-<p>[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの <em>Licenses</em> フォルダーの内容が表示されます。このフォルダーの場所については [Get 4D folder](<a href=https://doc.4d.com/4dv20/help/command/ja/page target=_blank rel="noopener noreferrer" class="">https://doc.4d.com/4dv20/help/command/ja/page</a> 485.html) コマンドの説明を参照してください。</p>
+<p>[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの <em>Licenses</em> フォルダーの内容が表示されます。このフォルダーの場所については <a href=https://doc.4d.com/4Dv20/4D/20/Get-4D-folder.301-4311294.en.html target=_blank rel="noopener noreferrer" class="">Get 4D folder</a> コマンドの説明を参照してください。</p>
 <p>開発ライセンスとそれに対応した配布ライセンスを格納したファイルを選択します。これらのファイルは <em>4D Developer Professional</em> ライセンスや <em>4D Desktop Volume</em> ライセンスをアクティベーションした際、この場所にコピーされます。</p>
 <p>ファイルを選択すると、リストに選択内容が反映されます:</p>
 <ul>
@@ -499,10 +499,12 @@
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/certificate-6369a174053feb8e273c0bd851059f9d.png width=1187 height=846 class=img_ev3q /></p>
 <p>Apple からデベロッパー認証を取得するためには、キーチェーンアクセスのメニューのコマンドを使用するか、次のリンクへ移動してください: <a href=http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html target=_blank rel="noopener noreferrer" class="">http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html</a>。</p>
 <blockquote>
-<p>この証明書の取得には Apple の codesign ユーティリティが必要になります。 このユーティリティはデフォルトで提供されており、通常 “/usr/bin/” フォルダーにあります。エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。</p>
+<p>この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/” フォルダーにあります。エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。</p>
 </blockquote>
 <ul>
-<li class=""><strong>自己署名証明書の生成</strong> - 自己署名証明書を生成するための "証明書アシスタント" を実行します。 Apple 社のデベロッパー認証を持たない場合には、自己署名証明書を提供する必要があります。この証明書を使うと、アプリケーションを内部的に運用する場合に警告が表示されません。アプリケーションを外部で運用する場合 (http やメールを介した場合) には、アプリケーションの開発者が不明であるという警告が macOS での起動時に表示されます。その場合でもユーザーはアプリケーションを "強制的" に起動することができます。"証明書アシスタント" では、オプションを適切に選択します: <img decoding=async loading=lazy src=/docs/ja/assets/images/Cert1-07c488457ef1c405333d49f96dea766b.png width=583 height=439 class=img_ev3q /> <img decoding=async loading=lazy src=/docs/ja/assets/images/Cert2-a4ba1e5a772ed11634b5b54db813c7e2.png width=583 height=439 class=img_ev3q /></li>
+<li class=""><strong>自己署名証明書の生成</strong> - 自己署名証明書を生成するための "証明書アシスタント" を実行します。 Apple 社のデベロッパー認証を持たない場合には、自己署名証明書を提供する必要があります。この証明書を使うと、アプリケーションを内部的に運用する場合に警告が表示されません。アプリケーションを外部で運用する場合 (http やメールを介した場合) には、アプリケーションの開発者が不明であるという警告が macOS での起動時に表示されます。その場合でもユーザーはアプリケーションを "強制的" に起動することができます。"証明書アシスタント" では、オプションを適切に選択します:
+<img decoding=async loading=lazy src=/docs/ja/assets/images/Cert1-07c488457ef1c405333d49f96dea766b.png width=583 height=439 class=img_ev3q />
+<img decoding=async loading=lazy src=/docs/ja/assets/images/Cert2-a4ba1e5a772ed11634b5b54db813c7e2.png width=583 height=439 class=img_ev3q /></li>
 </ul>
 <blockquote>
 <p>Apple Developer Program に加入し、アプリケーションの公証 (後述参照) に必要なデベロッパー認証を取得することが推奨されます。</p>
@@ -510,26 +512,26 @@
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=gatekeeper-について>Gatekeeper について<a href=#gatekeeper-について class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。</p>
 <blockquote>
-<p>Apple Silicon マシンでは, コンポーネントもきちんと署名されている必要があります。署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")</p>
+<p>Apple Silicon マシンでは, コンポーネントもきちんと署名されている必要があります。署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...") が発生します。</p>
 </blockquote>
 <p>アプリケーションビルダーの <strong>アプリケーションに署名</strong> 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ノータリゼーション-公証-について>ノータリゼーション (公証) について<a href=#ノータリゼーション-公証-について class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。 公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。</p>
-<p>4Dに組み込まれている<a href=#macos-%E7%BD%B2%E5%90%8D%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%A8%BC%E6%98%8E%E6%9B%B8 class="">署名機能全般</a>は、Apple が提供する公証サービスの利用条件に適合するよう作られています。公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。 なお、Xcode のインストールが必須である点に注意してください。公証についての詳細は <a href=https://blog.4d.com/how-to-notarize-your-merged-4d-application/ target=_blank rel="noopener noreferrer" class="">4D ブログ記事 (英語)</a> や関連の <a href=https://4d-jp.github.io/tech_notes/20-02-25-notarization/ target=_blank rel="noopener noreferrer" class="">テクニカルノート (日本語)</a> を参照ください。</p>
+<p>Apple の公証サービスを利用するのに必要な条件を満たすため、4D の <a href=#macos-%E7%BD%B2%E5%90%8D%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E8%A8%BC%E6%98%8E%E6%9B%B8 class="">ビルトインの署名機能</a> が適合されました。公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。公証についての詳細は <a href=https://blog.4d.com/how-to-notarize-your-merged-4d-application/ target=_blank rel="noopener noreferrer" class="">4D ブログ記事 (英語)</a> や関連の <a href=https://4d-jp.github.io/tech_notes/20-02-25-notarization/ target=_blank rel="noopener noreferrer" class="">テクニカルノート (日本語)</a> を参照ください。</p>
 <p>公証についての詳細は、<a href=https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow target=_blank rel="noopener noreferrer" class="">Apple のデベロッパー Web サイト</a> を参照ください。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=アプリケーションアイコンのカスタマイズ>アプリケーションアイコンのカスタマイズ<a href=#アプリケーションアイコンのカスタマイズ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p>4Dは、ダブルクリックで実行可能なアプリケーションにデフォルトアイコンを割り当てますが、アプリケーションごとにこのアイコンをカスタマイズできます。</p>
 <ul>
-<li class=""><strong>macOS</strong> - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。</li>
+<li class=""><strong>macOS</strong> - アプリケーションビルドの際にアイコンをカスタマイズするには、 icns タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。</li>
 </ul>
 <blockquote>
-<p>Apple, Inc. より、<em>icns</em> アイコンファイルを作成するツールが提供されています。 (詳細については、<a href=https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2 target=_blank rel="noopener noreferrer" class="">Apple documentation</a> を参照してください。</p>
+<p>Apple, Inc. より、<em>icns</em> アイコンファイルを作成するツールが提供されています。 (詳細については、<a href=https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2 target=_blank rel="noopener noreferrer" class="">Apple documentation</a> を参照してください)</p>
 </blockquote>
-<p>アイコンファイルの名前は、プロジェクトファイル名 + "<em>.ico</em>" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。</p>
+<p>アイコンファイルの名前は、プロジェクトファイル名 + "<em>.icns</em>" 拡張子でなければなりません。 4D は自動でこのファイルを認識し、アイコンとして使用します (<em>.icns</em> ファイルは <em>ApplicationName.icns</em> に名称変更されて Resourcesフォルダーに置かれます。さらに <em>info.plist</em> ファイルの <em>CFBundleFileIcon</em> エントリーを更新します)。</p>
 <ul>
-<li class=""><strong>Windows</strong> - アプリケーションビルドの際にアイコンをカスタマイズするには、 <em>.ico</em> タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。 <em>.ico</em> タイプのアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。</li>
+<li class=""><strong>Windows</strong> - アプリケーションビルドの際にアイコンをカスタマイズするには、アプリケーションファイルをビルドする前に <em>.ico</em> 拡張子のアイコンファイルを作成し、それを Project フォルダーと同階層に配置しておきます。</li>
 </ul>
-<p>アイコンファイルの名前は、プロジェクトファイル名 + "<em>.icns</em>" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。</p>
+<p>アイコンファイルの名前は、プロジェクトファイル名 + "<em>.ico</em>" 拡張子でなければなりません。 4Dは自動でこのファイルを認識し、アイコンとして使用します。</p>
 <p>また、buildApp.4DSettings ファイルにて、使用すべきアイコンを <a href=https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-BuildApplication.100-4670981.ja.html target=_blank rel="noopener noreferrer" class="">XML keys</a> (SourcesFiles の項参照)によって指定することも可能です。次のキーが利用できます:</p>
 <ul>
 <li class="">RuntimeVLIconWinPath</li>
@@ -546,7 +548,7 @@
 <p>ユーザーが組み込みアプリ、またはアプリのアップデート (シングルユーザー、またはクライアント/サーバーアプリ) を起動すると、4D は有効なデータファイルを選択しようとします。アプリケーションによって、複数の場所が順次検索されます。</p>
 <p>組み込みアプリ起動時のオープニングシーケンスは以下のようになっています:</p>
 <ol>
-<li class="">4D は最後に開かれたデータファイルを開こうとします。 詳しくは <a href=#%E6%9C%80%E5%BE%8C%E3%81%AB%E9%96%8B%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB class="">後述の説明</a> を参照ください (これは初回起動時には適用されません)。</li>
+<li class="">4D は最後に開かれたデータファイルを開こうとします。詳しくは <a href=#%E6%9C%80%E5%BE%8C%E3%81%AB%E9%96%8B%E3%81%8B%E3%82%8C%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB class="">後述の説明</a> を参照ください (これは初回起動時には適用されません)。</li>
 <li class="">見つからない場合、4D は .4DZ ファイルと同階層の Default Data フォルダー内にあるデータファイルを、読み取り専用モードで開こうとします。</li>
 <li class="">これも見つからない場合、4D は標準のデフォルトデータファイルを開こうとします (.4DZ ファイルと同じ場所にある、同じ名前のファイル)。</li>
 <li class="">これも見つからない場合、4D は "データファイルを開く" ダイアログボックスを表示します。</li>
@@ -556,7 +558,7 @@
 <p>4D でビルドされたスタンドアロンまたはサーバーアプリケーションは、最後に開かれたデータファイルのパスをアプリケーションのユーザー設定フォルダー内に保存します。</p>
 <p>アプリケーションのユーザー設定フォルダーの場所は、以下のコマンドで返されるパスに対応しています:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">userPrefs:=Get 4D folder(Active 4D Folder)</span><br/></div></code></pre></div></div>
-<p>データファイルパスは <em>lastDataPath.xml</em> という名前の専用ファイルに保存されます。</p>
+<p>データファイルパス は <em>lastDataPath.xml</em> という名前の専用ファイルに保存されます。</p>
 <p>これにより、アプリケーションのアップデートを提供したときにも、ローカルのユーザーデータファイル (最後に使用されたデータファイル) が初回の起動から自動的に開かれます。</p>
 <p>このメカニズムは標準的な運用に適しています。しかしながら特定の場合、たとえば組み込みアプリケーションを複製した場合などにおいて、データファイルとアプリケーションのリンクを変えたいことがあるかもしれません (次章参照)。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=データリンクモードの設定>データリンクモードの設定<a href=#データリンクモードの設定 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -564,11 +566,13 @@
 <p>異なるデータファイルを使用するために組み込みアプリを複製する場合には、この方法は適さないかもしれません。複製されたアプリは同じアプリケーションユーザー設定フォルダーを共有するため、同じデータファイルを使用することになります (最後に使用されたファイルが開かれるため、データファイル名を変更した場合でも結果は同じです)。</p>
 <p>そのため 4D では、アプリケーションパスを使用してデータファイルとリンクすることも可能です。このとき、データファイルは特定のパスを使用してリンクされるので、最後に開かれたファイルであるかは問われません。この設定を使うには、データリンクモードの基準を <strong>アプリケーションパス</strong> に設定します。</p>
 <p>このモードを使えば、組み込みアプリがいくつあっても、それぞれが専用のデータファイルを使えます。ただし、デメリットもあります: アプリケーションパッケージを移動させてしまうとアプリケーションパスが変わってしまうため、データファイルを見つけられなくなります。 この場合、ユーザーは開くデータファイルを指定するダイアログを提示され、正しいファイルを選択しなくてはなりません。 一度選択されれば、<em>lastDataPath.xml</em> ファイルが更新され、新しい "executablePath" 属性のエントリーが保存されます。</p>
-<p><em>データがアプリケーション名でリンクされている場合の複製:</em> <img decoding=async loading=lazy src=/docs/ja/assets/images/datalinking1-7e88683a0156eafd46689aa52ec81972.png width=305 height=208 class=img_ev3q /></p>
-<p><em>データがアプリケーションパスでリンクされている場合の複製:</em> <img decoding=async loading=lazy src=/docs/ja/assets/images/datalinking2-ff22a6ee981348d06c828fdb78b92924.png width=305 height=189 class=img_ev3q /></p>
+<p><em>データがアプリケーション名でリンクされている場合の複製:</em>
+<img decoding=async loading=lazy src=/docs/ja/assets/images/datalinking1-7e88683a0156eafd46689aa52ec81972.png width=305 height=208 class=img_ev3q /></p>
+<p><em>データがアプリケーションパスでリンクされている場合の複製:</em>
+<img decoding=async loading=lazy src=/docs/ja/assets/images/datalinking2-ff22a6ee981348d06c828fdb78b92924.png width=305 height=189 class=img_ev3q /></p>
 <p>このデータリンクモードはアプリケーションビルドの際に選択することができます。これには、次の二つの方法があります:</p>
 <ul>
-<li class="">アプリケーションビルダダイアログの <a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8 class="">アプリケーションページ</a> または <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8 class="">クライアント/サーバーページ</a> を使用する。</li>
+<li class="">アプリケーションビルダーの<a href=#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8 class="">アプリケーションページ</a> あるいは <a href=#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8 class="">クライアント/サーバーページ</a> を使用する。</li>
 <li class="">シングルユーザーまたはサーバーアプリケーションの <strong>LastDataPathLookup</strong> XMLキーを使用する。</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=デフォルトのデータフォルダーを定義する>デフォルトのデータフォルダーを定義する<a href=#デフォルトのデータフォルダーを定義する class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
@@ -592,9 +596,8 @@
 <p>組み込みクライアントアプリの接続プロシージャーは、専用サーバーが使用不可能な場合にも柔軟に対応します。 4Dクライアントアプリのスタートアップシナリオは、次のとおりです:</p>
 <ol>
 <li class="">
-<p>クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリは指定されたサーバーアドレスへ接続を試みます。<br/>
-または<br/>
-クライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。</p>
+<p>クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリはその指定されたサーバーアドレスへ接続を試みます。<br/>
+またはクライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。</p>
 </li>
 <li class="">
 <p>これが失敗した場合、クライアントアプリケーションは、アプリケーションのユーザー設定フォルダーに保存されている情報 ("lastServer.xml" ファイル、詳細は後述参照) を使用してサーバーへの接続を試みます。</p>
@@ -604,7 +607,7 @@
 </li>
 </ol>
 <ul>
-<li class="">ユーザーが <strong>選択...</strong> ボタンをクリックした場合、標準の "サーバー接続" ダイアログボックスが表示されます (ビルドの段階で許可されていた場合に限ります。</li>
+<li class="">ユーザーが <strong>選択...</strong> ボタンをクリックした場合、標準の "サーバー接続" ダイアログボックスが表示されます (ビルドの段階で許可されていた場合に限ります。詳細は後述)。</li>
 <li class="">ユーザーが <strong>終了</strong> ボタンをクリックした場合、クライアントアプリケーションは終了します。</li>
 </ul>
 <ol start=4>
@@ -618,7 +621,7 @@
 <p>このメカニズムは、最初に指定したサーバーが何らかの理由 (例えばメンテナンスモードなど) で一時的に使用できないケースに対応します。こういった状態が初めて起こったときにはサーバー選択ダイアログボックスが表示され (ただし許可されていた場合に限ります、後述参照)、ほかのサーバーをユーザーが手動で選択すると、その接続が成功した場合にはそのパスが保存されます。それ以降に接続ができなかった場合には、"lastServer.xml" のパス情報によって自動的に対処されます。</p>
 <blockquote>
 <ul>
-<li class="">ネットワークの設定などの影響で、クライアントアプリが恒久的に検索サービスを使ったサーバー接続ができない場合には、ビルド時にあらかじめ "BuildApp.4DSettings" ファイル内の <a href=https://doc.4d.com/4Dv18/4D/18/IPAddress.300-4671089.ja.html target=_blank rel="noopener noreferrer" class="">IPAddress</a> キーでホスト名を指定しておくことが推奨されます。このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。</li>
+<li class="">ネットワークの設定などの影響で、クライアントアプリが恒久的に検索サービスを使ったサーバー接続ができない場合には、ビルド時にあらかじめ "BuildApp.4DSettings" ファイル内の <a href=https://doc.4d.com/4Dv17R6/4D/17-R6/IPAddress.300-4465710.ja.html target=_blank rel="noopener noreferrer" class="">IPAddress</a> キーでホスト名を指定しておくことが推奨されます。このメカニズムはあくまで一時的な接続不可状態の場合を想定しています。</li>
 <li class="">スタートアップ時に <strong>Alt/Option</strong> キーを押しながら起動してサーバー接続ダイアログボックスを表示する方法は、すべての場合において可能です。</li>
 </ul>
 </blockquote>
@@ -626,15 +629,19 @@
 <p>組み込みクライアントアプリがサーバーに接続できない場合、標準のサーバー選択ダイアログボックスを表示するかどうかは設定しておくことができます。この設定は、アプリケーションをビルドするマシン上の <a href=https://doc.4d.com/4Dv18/4D/18/ServerSelectionAllowed.300-4671093.ja.html target=_blank rel="noopener noreferrer" class="">ServerSelectionAllowedXML</a> キーの値によって制御されます:</p>
 <ul>
 <li class="">
-<p><strong>エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする</strong>。ユーザーは <strong>選択...</strong> ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。 <code>ServerSelectionAllowed</code>: <strong>True</strong> 値 <img decoding=async loading=lazy src=/docs/ja/assets/images/connect1-9f26e4426f4644f8604a04a6d4474d84.png width=517 height=284 class=img_ev3q /></p>
+<p><strong>エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない</strong>。デフォルトの挙動です。アプリケーションは終了する以外の選択肢がありません。<br/>
+<code>ServerSelectionAllowed</code>: <strong>False</strong> 値、またはキーを省略
+<img decoding=async loading=lazy src=/docs/ja/assets/images/connect1-9f26e4426f4644f8604a04a6d4474d84.png width=517 height=284 class=img_ev3q /></p>
 </li>
 <li class="">
-<p><strong>エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない</strong>。ユーザーは <strong>選択...</strong> ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。<br/>
-<code>ServerSelectionAllowed</code>: <strong>False</strong> 値、またはキーを省略 <img decoding=async loading=lazy src=/docs/ja/assets/images/connect2-899d1a7ad63bd1b3b2525137717bfd11.png width=526 height=248 class=img_ev3q /> <img decoding=async loading=lazy src=/docs/ja/assets/images/connect3-f030d997dbe37708f668d90ffe07c25c.png width=466 height=488 class=img_ev3q /></p>
+<p><strong>エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする</strong>。ユーザーは <strong>選択...</strong> ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。
+<code>ServerSelectionAllowed</code>: <strong>True</strong>
+<img decoding=async loading=lazy src=/docs/ja/assets/images/connect2-899d1a7ad63bd1b3b2525137717bfd11.png width=526 height=248 class=img_ev3q />
+<img decoding=async loading=lazy src=/docs/ja/assets/images/connect3-f030d997dbe37708f668d90ffe07c25c.png width=466 height=488 class=img_ev3q /></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=サーバーまたはシングルユーザーアプリケーションの自動更新>サーバーまたはシングルユーザーアプリケーションの自動更新<a href=#サーバーまたはシングルユーザーアプリケーションの自動更新 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
-<p>原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。 組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。</p>
+<p>原則的に、サーバーアプリケーションや組み込みのシングルユーザーアプリケーションを更新するには、ユーザーの介入 (またはカスタムのシステムルーチンのプログラミング) が必要です。組み込みアプリケーションの新しいバージョンが利用可能になるたびに、運用中のアプリケーションを終了して、古いファイルを新しいファイルに手動で置き換え、その後アプリケーションを再起動してカレントのデータファイルを選択しなければなりません。</p>
 <p>この手順は、次のランゲージコマンドを使って大部分を自動化することができます: <a href=https://doc.4d.com/4dv19/help/command/ja/page1291.html target=_blank rel="noopener noreferrer" class=""><code>SET UPDATE FOLDER</code></a>、<a href=https://doc.4d.com/4dv19/help/command/ja/page1292.html target=_blank rel="noopener noreferrer" class=""><code>RESTART 4D</code></a>、そして <a href=https://doc.4d.com/4dv19/help/command/ja/page1301.html target=_blank rel="noopener noreferrer" class=""><code>Get last update log path</code></a> (モニタリング操作用)。これらのコマンドを使い、4Dアプリケーションに、以下に説明する自動更新手順をトリガーする機能を実装します。具体的には、メニューコマンドや、バックグラウンドで動作するプロセスなどを実装し、サーバーにアーカイブがあるかどうかを定期的にチェックします。</p>
 <blockquote>
 <p>また、Windows で保護されたファイルを使用できるように、インストール権限を昇格させる XMLキーもあります (<a href=https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.ja.html target=_blank rel="noopener noreferrer" class="">アプリケーションビルド設定ファイル</a> のマニュアルを参照ください)。</p>
@@ -642,7 +649,7 @@
 <p>以下に、サーバーや組み込みシングルユーザーアプリケーションをアップデートする場合のシナリオを説明します:</p>
 <ol>
 <li class="">HTTPサーバーなどを使用して、サーバーアプリケーションまたは組み込みシングルユーザーアプリケーションの新バージョンを本番環境のマシンに転送します。</li>
-<li class="">本番環境のアプリケーションでは、<code>SET UPDATE FOLDER</code> コマンドを呼び出します。 このコマンドは、カレントアプリケーションの "保留中" のアップデートが置かれたフォルダーの場所を指定します。任意で、本番環境バージョンのカスタム要素 (ユーザーファイル) をこのフォルダーにコピーすることもできます。</li>
+<li class="">本番環境のアプリケーションでは、<code>SET UPDATE FOLDER</code> コマンドを呼び出します。このコマンドは、カレントアプリケーションの "保留中" のアップデートが置かれたフォルダーの場所を指定します。任意で、本番環境バージョンのカスタム要素 (ユーザーファイル) をこのフォルダーにコピーすることもできます。</li>
 <li class="">本番環境のアプリケーションで、<code>RESTART 4D</code> コマンドを呼び出します。 このコマンドは、"updater" という名前のユーティリティプログラムの実行を自動的にトリガーします。 このユーティリティは カレントのアプリケーションを終了し、"保留中" のアップデートが指定されている場合はそれで置き換え、カレントのデータファイルでアプリケーションを再起動します。旧バージョンは名称変更されます。</li>
 </ol>
 <blockquote>
