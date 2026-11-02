@@ -39,12 +39,6 @@ A permissão **execute** de um [singleton compartilhado](../Concepts/classes.md#
 
 Permissões nunca se aplicam a [código de sessão desktop](../Desktop/sessions.md) (standalone, client/server, stored procedures) ou [tool4d](../Admin/cli.md#tool4d).
 
-:::warning
-
-Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso fica acessível para sessões `guest`.
-
-:::
-
 ### Ferramentas MCP
 
 As mesmas permissões se aplicam às sessões do [servidor MCP](../WebServer/mcp-server.md), sem nada específico para configurar:
@@ -264,6 +258,12 @@ As configurações de segurança web do projeto são definidas em `roles.json`:
 
 :::
 
+:::warning
+
+Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso fica acessível para sessões `guest`.
+
+:::
+
 ### Localização e conteúdo padrão
 
 Novos projetos geram o arquivo `roles.json` em:
@@ -310,7 +310,7 @@ Em versões anteriores ao 4D 20 R6, o `roles.json` não era criado por padrão. 
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+No Qodly Studio para 4D, o modo de login pode ser definido usando a opção [**Force login**](https://developer.4d.com/qodly/4DQodlyPro/force-login) no painel Roles and Privileges.
 
 :::
 
