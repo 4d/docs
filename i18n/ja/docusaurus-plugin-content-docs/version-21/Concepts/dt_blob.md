@@ -141,7 +141,7 @@ $type:= OB Instance of($myObject.blob; 4D.Blob)  // true
 
 // 4D.Blob から スカラーBLOB への変換
 $myBlob:= $myObject.blob
-$type:=
+$type:= Value type($myBlob) // Blob
 ```
 
 > `4D.Blob` をスカラーBLOB に変換する際に、`4D.Blob` のサイズがスカラーBLOB の最大サイズを超える場合、結果のスカラーBLOB は空になります。たとえば、スカラーBLOB の最大サイズが 2GB の場合、2.5GB の `4D.Blob` をスカラーBLOB に変換すると、空の BLOB が得られます。

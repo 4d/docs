@@ -3,366 +3,362 @@ id: structure-tables
 title: テーブル
 ---
 
-Tables are the foundation of every 4D database. Each table defines a collection of records that share the same set of fields and properties. In the Structure editor, tables are represented as graphic objects that you can create, rename, or delete, and whose attributes you can configure individually.
+テーブルは全ての4D データベースの基盤です。それぞれのテーブルは、同じフィールドとプロパティの集合を共有するレコードの集合を定義します。ストラクチャーエディターでは、テーブルはグラフィカルなオブジェクトとして表示され、作成、名称変更、削除が可能で、またその属性を個別に設定することが可能です。
 
-Using the tools provided by 4D, you can:
+4D が提供するツールを使用して、以下のようなことを行えます:
 
-- Define tables and manage their primary keys and relations
-- Set and edit table-level properties such as triggers, visibility, and replication
-- Control naming rules and organize tables into folders for easier maintenance
+- テーブルを定義し、その主キーやリレーションを管理する
+- トリガ、表示状態、複製などのテーブルレベルのプロパティを設定し編集する
+- 命名規則を管理しテーブルをフォルダに管理しメンテナンスを容易にする
 
-## Creating a table
+## テーブルの作成
 
-You can create a new table either directly in the Structure window, or via a dialog box. Direct creation is faster; but creation using the dialog box lets you specify certain parameters of the table and cancel the operation when necessary. You can also create tables using copy-paste.
+直接ストラクチャウィンドウで、あるいはダイアログボックス経由で、テーブルを作成することができます。直接の作成は素早く行えますが、ダイアログボックスを 使用した作成ではテーブルの特定のパラメターを設定したり、必要であれば作成をキャンセルすることができます。またコピー/ペーストでテーブルを作成する こともできます。
 
-- To create a new table directly:
+- 新規テーブルを直接作成するには:
 
-1. Right-click an empty area of the Structure editor window, then choose **Add Table...** from the context menu.  
-   **OR**  
-   In the add objects menu of the [Structure editor toolbar](./structure-editor.md#toolbar), choose the Table option.
+1. ストラクチャーエディターウィンドウの空のエリアで右クリックをし、コンテキストメニューから**テーブル追加...** を選択します。  
+   **または**
+   [ストラクチャーエディターツールバー](./structure-editor.md#ツールバー) のオブジェクト追加メニューから、テーブルを選択します。
 
-4D creates the table directly in the Structure editor. You can then change its name, add fields, etc.
+4Dは直接ストラクチャーエディター内にテーブルを作成します。その後、名前を変更したりフィールドを追加したりできます。
 
 :::note
 
-If you want to put the table in a specific folder, you need to use the Home Page of the Explorer.
+テーブルを特定のフォルダーに入れたい場合、エクスプローラーのホームページを使用します。
 
 :::
 
-- To create a new table using the "New table" dialog box:
+- “新規テーブル”ダイアログボックスを使用してテーブルを作成するには:
 
-1. Choose **New > Table...** in the **File** menu (or in the **New** button of the 4D tool bar).  
-   **OR**  
-   On the Tables Page of the Explorer, click on the **\[+]** button.
+1. **ファイル**メニューの **新規 > テーブル...** コマンドを選択します (または4Dツールバーの**新規**ボタンをクリックします)。  
+   **または**
+   エクスプローラーのテーブルページで、 **\[+]** ボタンをクリックします。
 
-The "New table" dialog box appears. 4D names the first table `Table_1` and then numbers them sequentially:
+"新規テーブル"ダイアログボックスが表示されます。 4D は最初のテーブルに `Table_1` と名前をつけ、それ以降は順番に番号を振っていきます:
 
 ![](../assets/en/Develop/new-table.png)
 
-2. (optional) Modify the [name of the table](../Concepts/identifiers.md#tables-and-fields) you want to create.
-3. (optional) Specify the folder in which you want to place the new table.  
-   By default, the table is placed at the highest level of the folder hierarchy ("Top Level"). Folders are handled in Home Page of the Explorer.
-4. Click **OK** to validate.  
-   4D creates a new table image. It becomes the selected table image in the Structure editor window.
+2. (任意) 作成する[テーブルの名称](../Concepts/identifiers.md#テーブルとフィールド) を変更します。
+3. (任意) 新しいテーブルを配置するフォルダーを選択します。  
+   デフォルトでテーブルはフォルダー階層のトップレベルに配置されます。フォルダーはエクスプローラーのホームページ内で管理されます。
+4. **OK** をクリックします。  
+   4D は新しいテーブルイメージを作成します。それがストラクチャーエディターウィンドウ内で選択されます。
 
-- To create a new table by copy-paste:
+- コピー/ペーストでテーブルを作成するには:
 
-1. Select and copy the table(s) to be duplicated.
-2. Paste the table(s) in the Structure editor window.
+1. 複製するテーブルを選択し、コピーします。
+2. ストラクチャーウィンドウ内でテーブルを貼り付けします。
 
-The table is pasted with all its fields and properties.
+テーブルはすべてのフィールドとプロパティとともにペーストされます。
 
-## Renaming a table
+## テーブルの名称変更
 
-You can rename tables at any time. If you have used the old table name in a method, 4D automatically changes it to the new name provided the method is closed. If the method is open, you must make the changes yourself. Each table name must be unique in the database.
+テーブルはいつでも名称変更できます。古いテーブル名がメソッド中で使用されていた場合、4D は自動でそれを新しい名称で置き換えます(メソッドがエディタで開かれていてはいけません)。メソッドが開かれている場合、手作業で変更を行う必要があります。データベース内でテーブル名はユ ニークでなければなりません。
 
-You can rename a table directly in the Structure editor, in the Explorer, or using the Inspector palette.
+テーブル名の変更はストラクチャーエディター、エクスプローラー、またはインスペクターパレットを使用して直接行うことができます。
 
-To rename a table directly (Structure editor or Tables page of the Explorer), **click twice** on the table name (if the table is already selected, click once), so that it switches to editing mode:
+(ストラクチャーエディターまたはエクスプローラーのテーブルページを使用して)テーブル名を直接変更するには、テーブル名を2回クリックし(テーブルが既に選択されている場合は1回クリック)、編集モードにスイッチします:
 
 ![](../assets/en/Develop/table-rename.png)
 
-Enter the new name and click outside of the table.
+新しい名称を入力し、テーブルの外側をクリックします。
 
-To rename a table using the Inspector palette of the Structure editor, double-click on the table name (or select **Table Properties...** in the context menu of the table) and enter the new name in the "Name" area.
+ストラクチャーエディターのインスペクターパレットを使用して名称変更するには、テーブル名をダブルクリック(またはテーブルイメージ上で右クリックをし、コンテキストメニューから\*\*テーブルプロパティ...\*\*を選択)し、"名称"エリアに新しい名前を入力します。
 
 ![](../assets/en/Develop/table-rename-2.png)
 
-4D displays the name and properties of the selected table in the Inspector palette. This palette also indicates the table number. If the Inspector palette is already open but is displaying the properties of another table or another object, just select the desired table image and the palette will then display its properties.
+4D はインスペクターパレット内に選択されたテーブルの名前とプロパティを表示します。このパレットにはテーブル番号も表示されます。インスペクターペレット が既に開かれていて、他のテーブルや他のオブジェクトのプロパティを表示している場合には、名称変更したいテーブルのテーブルイメージを選択すると、パ レットにそのテーブルのプロパティが表示されます。
 
-## Deleting a table
+## テーブルの削除
 
-You can delete tables from your database. There are two ways of deleting tables in 4D: **permanent deletion** (the table and its data are actually removed from the database) and **non-permanent deletion** (the table is simply put into the Trash of the Explorer and may be recovered subsequently).
+テーブルはデータベースから削除することができます。 4D では二つの方法でテーブルを削除できます: **恒久的削除** (テーブルおよびそのデータが実際にデータベースから取り除かれる削除) と**非恒久的削除** (テーブルが単にエクスプローラーのゴミ箱に置かれあとで元に戻すことができる削除) の二つです。
 
 :::info
 
-You can also remove tables using the [SQL engine of 4D](https://doc.4d.com/4Dv21/4D/21/4D-SQL-Reference.100-7649299.en.html).
+テーブルの削除は[4D のSQL エンジン](https://doc.4d.com/4Dv21/4D/21/4D-SQL-Reference.100-7649299.ja.html) を使用して行うこともできます。
 
 :::
 
-### Permanent deletion
+### 恒久的削除
 
-To permanently delete one or more database tables in the Structure editor:
+ストラクチャーエディターで一つまたは複数のテーブルを恒久的に削除するには:
 
-Select the table(s) to be deleted then choose **Clear** from the **Edit** menu or choose **Delete** from the context menu of the table.
+削除するテーブルを選択し、**編集**メニューから**クリア**を選択するか、テーブルのコンテキストメニューから**削除**を選択します。
 
-A warning dialog box will ask you to confirm the operation. When you click **OK**, 4D carries out the following operations:
+警告ダイアログが表示され、処理を続行するか確認されます。 **OK** をクリックすると、4D は以下の処理を行います:
 
-- The table is permanently deleted from the structure. All the data associated with the table are deleted permanently from the data file.
-- Any trigger method associated with the table is deleted.
-- The forms and lists associated with the table are transformed into project forms and are placed in the Trash of the Explorer.
+- テーブルは恒久的にストラクチャーから削除されます。またデータファイルから、そのテーブル関連するデータが恒久的に削除されます。
+- テーブルのトリガーメソッドが削除されます。
+- テーブルに関連づけられていたテーブルフォームとリストフォームはプロジェクトフォームとなり、エクスプローラーのゴミ箱に移動されます。
 
-### Non-permanent deletion
+### 非恒久的削除
 
-Non-permanent deletion of a table consists in putting it in the Trash of the project (which can be accessed via the Explorer), just like the file deletion mechanisms implemented by Windows and macOS.
+テーブルの非恒久的削除は、プロジェクトのゴミ箱(エクスプローラーからアクセス可能)に、削除するテーブルを移動することで行われます。これはWindows やmacOS に実装されたファイル削除のメカニズムと同様のものです。
 
-The table then no longer appears in the 4D editors and its contents become inaccessible but it can still be recovered so long as the Trash is not emptied.
+これを行うとテーブルは4Dのエディターに表示されず、その内容にアクセスすることもできなくなりますが、ゴミ箱を空にしない限り元に戻すことが可能です。
 
-To put one or more tables into the Trash from the Structure editor, choose the **Move to Trash** command from the context menu of the table or select the table(s) to be deleted then press the **Delete** or **Backspace** key. A confirmation dialog box appears. If you click **OK**, the table is put into the Trash. It can be recovered at any time from the Trash Page of the Explorer.
+ストラクチャーエディターから一つまたは複数のテーブルをゴミ箱に移動するには、テーブルのコンテキストメニューから**ゴミ箱に移動**コマンドを選択するか、削除するテーブルを選択し、**Delete** または**Backspace** キーを押します。確認ダイアログが表示されます。 **OK** をクリックすると、テーブルはゴミ箱に移動されます。ゴミ箱を空にしない限りエクスプローラーのゴミ箱ページからいつでも元に戻すことができます。
 
-### Numbers of deleted tables
+### 削除されたテーブルの番号
 
-When a table is deleted, the other tables of the database are not renumbered, so as to avoid endangering the stability of the database. It is therefore possible, for example, to have a database with three tables numbered 2, 4 and 5.
+テーブルが削除されても、データベースの安定性を損ねることを避けるために、データベース中の他のテーブルの番号は変更されません。そのため例えば3 つのテーブルがあるデータベースにおいて、それらのテーブル番号が2, 4 および 5であるといったことが起こり得ます。
 
-Note that the numbers of permanently deleted tables are reused when new tables are created subsequently.
+恒久的に削除されたテーブルのテーブル番号は、新しくテーブルが作成されるときに再利用される点に留意してください。
 
-## Table properties
+## テーブルプロパティ
 
-You can set several properties for tables using the **Inspector palette** or, for certain properties, using the context menu for the tables.
+**インスペクターパレット**を使用してテーブルのプロパティを設定できます。また特定のプロパティについてはテーブルのコンテキストメニューからも設定できます。
 
 ### Triggers
 
-A [trigger](./triggers) is a method that runs automatically when certain events related to the table occur. Trigger events can be set in the **Inspector palette** or using the context menu associated with the table (right-click on the title area of the table). Check each event for which you want to [activate the trigger](./triggers#activating-and-creating-a-trigger).
+[trigger](./triggers) はテーブルに関連する特定のイベントが発生した際に自動で実行されるメソッドです。トリガーイベントは**インスペクターパレット** またはテーブルに割り当てられたコンテキストメニューを使用(テーブルのタイトルエリアを右クリック)して設定できます。[有効にしたいトリガー](./triggers#トリガーのアクティブ化と作成) のイベントにチェックします。
 
-You can access the trigger of a table directly from the Structure editor by clicking on the **Edit...** button in the Inspector palette or by selecting **Edit Method...** in the context submenu. You can also create and display triggers with the **Methods Page** of the Explorer.
+テーブルのトリガーには、ストラクチャーエディターのテーブルインスペクターパレットで**編集...**ボタンをクリックするか、テーブルのコンテキストメニューから**メソッド編集...**サブメニューを選択します。エクスプローラーの**メソッドページ**を使用してトリガーを作成および表示ができます。
 
-The [information bar](./structure-editor.md#information-bar) of the **Structure editor** indicates the triggers that are activated for each table.
+**ストラクチャーエディター**の[情報バー](./structure-editor.md#情報バー) には有効にされているトリガーがテーブルごとに表示されます。
 
 ### 属性
 
-You can set different attributes to configure the appearance and general behavior of each table.
+アピアランスや一般的な振る舞いを指定するために、テーブルごとに異なる属性を設定できます。
 
 #### 非表示
 
-This option lets you make a table invisible in the Application mode and for plug-ins. You can activate this option for utility tables or tables that are not being used temporarily.
+このオプションを使用して、アプリケーションモードおよびプラグインからテーブルを見えなくできます。このオプションはユーティリティテーブルや、一時的に使用しないテーブルに対して使用できます。
 
-Making a table invisible allows you to limit the operations that a user can perform on a table by making the table and its fields invisible in all editors and some dialog boxes that appear in the Application environment. It can also not be used by plug-ins.
+テーブルを非表示にすることで、アプリケーションモードのすべてのエディター上やいくつかのダイアログボックスでそのテーブルとフィールドが非表示になり、ユーザーがテーブルに対して行うことのできる処理を制限できます。またプラグインから使用することもできなくなります。
 
-The editors and dialog boxes concerned in the Application environment include the following:
+アプリケーションモードにおいて関連するエディターやダイアログボックスは以下の通りです:
 
-- All query editors
-- Order by editor
-- [Label editor](../Desktop/labels.md)
-- Quick report editor
-- Exporting and importing data dialog boxes
-- Formula editor
+- すべてのクエリーエディター
+- 並び替えエディター
+- [ラベルエディター](../Desktop/labels.md)
+- クイックレポートエディター
+- データの読み込みと書き出しダイアログボックス
+- フォーミュラエディター
 
-In each of these editors, the user is unable to see or choose the table or any of its fields. For instance, the user cannot include any fields from an invisible table in a report or label.
+これらのエディターそれぞれで、ユーザーはテーブルやそのフィールドを見たり選択したりすることはできません。例えばレポートやラベルに非表示テーブルのフィールドを含めることはできません。
 
 :::note 注記
 
-- When using these editors, users have the option of saving their specifications (e.g., the query or sort they created) to disk files. In this case, any specified tables or fields that are subsequently made invisible may still be used in the operation.
-- Users can type the names of invisible tables and fields in the dialog box.
-- It is also possible to set this attribute for each field individually.
+- これらのエディターを使用する際、ユーザーは設定をディスクファイルに保存することができます (例えば作成したクエリや並び替え設定)。その設定ファイルが使用される場合、設定が作成された後に非表示にされたテーブルやフィールドは、あとの操作でも使用することが可能です。
+- ユーザーはフォーミュラエディターダイアログボックスに非表示テーブルやフィールド名をタイプ入力することが可能です。
+- またこの属性をそれぞれのフィールドに対して個別に設定することも可能です。
 
 :::
 
-Invisible tables and fields are displayed in *italics* in the Structure editor window.
+非表示テーブルとフィールドはストラクチャーエディターウィンドウ内で*イタリック* で表示されます。
 
-#### Color of the table image
+#### テーブルイメージのカラー
 
-A color can be attributed to each table. Using colors helps to organize the structure of a large database. For example, you could use one color for all tables that relate to customers and another for tables that relate to inventory.
+テーブルイメージごとにカラーを割り当てることができます。カラーを使用すると、大きなデータベースストラクチャーでグループを視認しやすくできます。例えば顧客や顧客にリレートするすべてのテーブルに同じカラーを設定し、在庫や在庫にリレートするすべてのテーブルに別のカラーを割り当てることができます。
 
 :::note
 
-It is also possible to attribute a color to each field individually as well as to each relation.
+個々のフィールドやリレーションにカラーを割り当てることもできます。
 
 :::
 
-To set the color of one or more tables, make your selection and then choose the color using:
+テーブルにカラーを設定するには、テーブルを選択し、以下の方法でカラーを選択します:
 
-- The **Color** button of the Structure editor toolbar
-- The **Color** command in the context menu of the tables
-- The **Color** option in the **Inspector palette**
+- ストラクチャーエディターツールバーの**カラー**ボタン
+- テーブルのコンテキストメニューの**カラー**コマンド
+- **インスペクターパレット**の**カラー**オプション
 
-The **Automatic** option can be used to apply the standard original color to the table.
+**自動**オプションを使用すると、テーブルのデフォルトカラーが使用されます。
 
-#### Expose as REST resource
+#### REST リソースとして公開
 
-This option controls whether the [table is exposed to REST requests](../REST/configuration.md#exposing-tables).
+このオプションは、[テーブルがREST リクエストに対して公開されるかどうか](../REST/configuration.md#テーブルの公開) を管理します。
 
 :::note 注記
 
-- You can also set this option at the level of each field of the table.
-- This option is used in the context of [ORDA remote datastore features](../ORDA/remoteDatastores.md).
+- このオプションは、テーブルのフィールドレベルで個別に設定することもできます。
+- このオプションは [ORDA のリモートデータストア機能](../ORDA/remoteDatastores.md)のコンテキストにおいて使用されます。
 
 :::
 
-#### Records definitively deleted
+#### レコードを完全に削除
 
-This option lets you optimize the deletion of a selection of records made using the [`DELETE SELECTION`](../commands/delete-selection) command.
+このオプションを使用すると、[`DELETE SELECTION`](../commands/delete-selection) コマンドを使用して選択したレコードを削除する際の動作を最適化できます。
 
-When 4D deletes a selection, the record markers are also deleted. A record marker is a header attached to the record that contains information relating to this record. Deleting both markers and records is slower than deleting only records. In certain cases, it may be desirable to not automatically delete the record markers.
+4Dはレコードのセレクションを削除する際、レコードマーカーも削除します。レコードマーカーはそのレコードに関連する情報を含む、レコードに添付されたヘッダーです。マーカーとレコード両方を削除するのは、レコードだけを削除するよりも時間がかかります。特定の場合においては、レコードマーカーを自動では削除しないほうに設定した方がよいこともあります。
 
-To accelerate the deletion of a large selection made using the [`DELETE SELECTION`](../commands/delete-selection) command, deselect the **Records definitively deleted** option. Record markers will then not be deleted. This option cannot be set by programming.
+[`DELETE SELECTION`](../commands/delete-selection) を使用して実行される大量のセレクションの削除を加速するために、**レコードを完全に削除** オプションの選択を解除できます。そうするとレコードマーカーは削除されなくなります。このオプションをプログラムで設定することはできません。
 
-#### Enable replication
+#### 複製を有効にする
 
 :::info 非推奨
 
-Replication and synchronize mechanisms using SQL are deprecated as of 4D 20 R3. They are still supported but it is now recommended to use the [ORDA-based Global Stamp feature](../ORDA/global-stamp.md), providing a flexible and robust solution to implement replication and synchronization in 4D.
+SQL を使用した複製と同期の機構は4D 20 R3 以降は非推奨となっています。これらはまだサポートされていますが、現在は[ORDA ベースのグローバルスタンプ機能](../ORDA/global-stamp.md) を使用することが推奨されます。この機能は4D 内において複製と同期を実装するための柔軟で堅牢なソリューションを提供します。
 
 :::
 
-#### Include in Log File
+#### ログファイルに含める
 
-By default, this option is checked for all new tables created and for all tables in converted databases. Check this option in order for operations performed on the table’s data to be included in the [database log file](../Backup/log.md) (when it is generated).
+このオプションは、作成された全ての新しいテーブルと変換されたデータベースにおいては、デフォルトでチェックがされています。テーブルのデータに対して行われたオペレーションを、全て[データベースのログファイル](../Backup/log.md)(作成時)に含めたい場合にはこのオプションにチェックを入れて下さい。
 
-This option must generally be checked for most tables. However, for optimization purposes, you can uncheck it, for example for temporary tables or tables used for importing data.
+このオプションは一般的に、ほとんどのテーブルにおいてチェックされるべきものです。しかしながら、最適化の観点から、例えばデータをインポートするために一時的に使用するテーブルなどではチェックを外すこともできます。
 
-It is important to note that this option only indicates that the table’s data must be journaled if the database uses a log file; it does not enable the journaling procedure itself at the database level.
+このオプションは、データベースがログファイルを使用する場合には、そのテーブルのデータがログに記録されなければならないという指示にすぎず、データベースレベルでのデータログ処理そのものを有効化するスイッチではないということに留意して下さい。
 
 :::note 注記
 
-- This option is grayed out when the table does not have a primary key.
-- 4D displays a warning icon to the right of the **Include in Log File** option when the required conditions are not met. As long as this icon is shown, journaling is not yet enabled.
+- このオプションはテーブルがプライマリーキーを持っていない場合にはグレーになって選択することができません。
+- 必要要件を満たしていない場合は、**ログファイルに含める** のオプションの横に警告アイコンが表示されます。このアイコンが表示されている限り、データログは有効化されていません。
 
 :::
 
-#### Encryptable
+#### 暗号化可能
 
-This option controls whether the data stored in the table must be encrypted on disk when [data file encryption is enabled](../MSC/encrypt.md).
+このオプションは、[データファイル暗号化が有効化された](../MSC/encrypt.md) 際に、テーブルに保存されたデータがディスク上で暗号化されるべきかどうかを管理します。
 
-Since encrypting/decrypting can be time consuming, selecting the tables to encrypt allows you to optimize the performance of encrypted databases. For example, you could set only the tables that contain personal data as **Encryptable**.
+暗号化 / 復号化は時間がかかることがあるため、暗号化するテーブルを選択することで暗号化されたデータベースの操作を最適化することができます。例えば、個人データを格納しているデータのみを**暗号化可能**に設定する、とすることが可能です。
 
-Note that this option flags table(s); it does not perform any encryption or decryption operation. To actually encrypt or decrypt selected table(s) in the data file, you must use the [MSC](../MSC/encrypt.md) or call the [`Encrypt data file`](../commands/encrypt-data-file) command.
+このオプションはテーブルにフラグを立てるだけであり、実際の暗号化/復号化操作を実行するわけではないことに注意してください。実際にデータファイル内で選択されたテーブルを暗号化あるいは復号化するためには、[MSC](../MSC/encrypt.md) あるいは[`Encrypt data file`](../commands/encrypt-data-file) コマンドを使用しなければなりません。
 
 :::warning
 
-- When you modify the value of this option for a table in an already encrypted database, you must also use the [MSC](../MSC/encrypt.md) or call the [`Encrypt data file`](../commands/encrypt-data-file) command to preserve data consistency. Otherwise, you will not be allowed to save data in the modified table (errors will be returned by 4D when trying to save records).
-- Encryption of data stored outside of the data file is not managed by this option.
+- 既に暗号化されているデータベース内でこのオプションの値を変更した場合、データの一貫性を保つために必ず[MSC](../MSC/encrypt.md) か[`Encrypt data file`](../commands/encrypt-data-file) コマンドを使用しなければなりません。使用しない場合、編集したテーブル内にデータを保存することができません(レコードを保存しようとした場合、4D はエラーを返します)。
+- データファイルの外部に保存されているデータの暗号化は、このオプションによる管理できません。
 
 :::
 
 ### コメント
 
-The **Comments** area of the **Inspector palette** lets you store additional information about the table. These comments are available for all the developers. Note that each field and each relation has its own comments area.
+**インスペクターパレット**の**コメント**エリアにはテーブルに関する追加の情報を格納できます。このコメントはすべての開発者が利用できます。各フィールドおよびリレーションごとにコメントエリアがあります。
 
 ### SQL
 
-- The "Schemas" menu lists all the SQL schemas specified in the database. You can use this menu to set the schema to which the table will belong (it is also possible to modify this property via SQL commands). Every database has at least one schema, named **DEFAULT_SCHEMA**. By default, all the tables belong to this schema. For more information about SQL schemas, refer to the [**Schemas** section](https://doc.4d.com/4Dv21/4D/21/4D-SQL-engine-implementation.300-7649386.en.html#148386) in the *4D SQL Reference guide*.
-- The information area indicates whether the name of the table respects the rules regarding SQL nomenclature (for example, unlike 4D, SQL does not allow a field name to contain spaces).
+- “スキーマ”メニューにはデータベースに定義されたすべてのSQL スキーマが一覧されます。このメニューを使用して、テーブルが属するスキーマを指定できます (このプロパティはSQL コマンドを使用して変更することもできます)。すべてのデータベースには最低1つの、**DEFAULT_SCHEMA** という名前のスキーマがあります。デフォルトですべてのテーブルはこのスキーマに属します。 SQL スキーマに関する詳細は*4D SQL リファレンス* の[**スキーマ** の章](https://doc.4d.com/4Dv21/4D/21/4D-SQL-engine-implementation.300-7649386.ja.html#148386) を参照してください。
+- 情報エリアは、テーブル名がSQL の命名規則に沿っているかどうかを表示します (例えば4D と異なり、SQL ではフィールド名にスペースを含めることはできません)。
 
-### Primary keys
+### プライマリーキー(主キー)
 
-A primary key designates the field(s) used for uniquely identifying the records in a table. Setting a primary key is necessary for the [journaling features](../Backup/log.md).
+プライマリーキー(主キー)は、テーブル内のレコードを個別に識別するために使用されるフィールドを指定します。[データログ機能](../Backup/log.md) を使用するためにはプライマリーキーを設定しなければなりません。
 
-You create, edit and/or remove primary keys directly using the context menu of the Structure editor or the [Primary key manager](#primary-key-manager).
+ストラクチャーエディターのコンテキストメニューまたは[プライマリーキーマネージャー](#プライマリーキー-主キー-マネージャー) を使用して、直接プライマリーキーを作成/編集/削除することができます。
 
-> **Note:** Primary keys can also be set using the SQL language by means of the **PRIMARY KEY** clause followed by the list of columns.
+> **注:** プライマリーキーは、SQL ランゲージにて**PRIMARY KEY** 節のあとカラムのリストを記述することでも作成することができます。
 
-#### Rules for using primary key fields
+#### プライマリーキーフィールドの使用ルール
 
-Primary key fields should be handled with care to ensure data integrity at all times. In particular, a primary key field must respect the following rules:
+プライマリーキーフィールドは、データの整合性を保証するために常に細心の注意で管理すべきものです。具体的には、プライマリーキーフィールドは以下のルールを遵守する必要があります:
 
-- it must not be empty,
-- it must be unique,
-- once created, it should (in principle) never be modified, especially if:
-  - [Global stamp features](../ORDA/global-stamp.md) are enabled,
-  - [REST (or similar) feature](../REST/gettingStarted.md) is enabled,
-  - the database is periodically synchronized (backup or logical mirror using the [log file](../Backup/log.md)).
+- 空であってはいけません。
+- 固有(重複不可)でなければなりません。
+- 一度作成されたら、原則として変更してはなりません。以下のような場合には絶対変更してなりません:
+  - [グローバルスタンプ機能](../ORDA/global-stamp.md) が有効化されている
+  - [REST (あるいはそれに似た)機能](../REST/gettingStarted.md) が有効化されている
+  - データベースが([ログファイル](../Backup/log.md) を使用したバックアップあるいは論理ミラーを使用して)定期的に同期されている。
 
-Modifying primary key field value is highly discouraged, even if 4D allows it for specific use cases.  
-If you absolutely need to modify a primary key value (e.g. you used a social security number field as primary key and incorrect values have been entered), it is preferable to disable (remove) the current primary key and to add a new field used as primary key with automatic assignment.
+プライマリーキーフィールドを変更することは、たとえ4D が特殊な場合に対して許可しているとしても、変更しないことが強く推奨されます。  
+どうしてもプライマリーキーフィールドを変更しなくてはいけない場合(例：マイナンバーをプライマリーキーとして指定してしまい、誤った番号を入力してしまった、等)でも、変更する代わりにカレントのプライマリーキーを無効化(削除)して自動割り当てをつけた新しいフィールドを追加してプライマリーキーフィールドとして使用する方が望ましいです。
 
-Primary key fields can be long integer type or UUID format (alpha type). In most cases, we recommend the UUID format with the Auto UUID option enabled. Even though the long integer type takes up less disk space, UUIDs have many advantages, for example, facilitating the merge of independent databases, data import/export, implementation of elaborate mirror/replication strategies or synchronization with external systems.
+プライマリーキーフィールドは、倍長整数型がUUIDフォーマット(文字型)が選べます。多くの場合、自動UUIDオプションを有効化したUUIDフォーマットの方が推奨されます。倍長整数型の方が使用するディスク容量が小さいのですが、UUID には他の多くの利点があります。例えば、独立したデータベースの統合が容易であったり、データの読み込み/書き出し、精巧なミラー/複製戦略の実装、あるいは外部システムとの同期、などにおいて有利です。
 
-#### Setting primary keys
+#### プライマリーキーの設定
 
-To create a primary key from the Structure editor:
+ストラクチャーエディターからプライマリーキーを作成するためには、以下の手順に従って下さい:
 
-1. Select the field(s) that make up the table’s primary key.
-2. Right-click and choose **Create primary key** in the context menu (this command is only displayed for fields whose type is eligible for primary keys).
+1. テーブルのプライマリーキーを構成するフィールド(複数も可)を選択します。
+2. 右クリックでコンテキストメニューを表示し、**主キーを作成**を選択します(このコマンドは主キーとして使用可能な型のフィールドに対してのみ表示されます)。
 
-You cannot have more than one primary key for each table. If a primary key is already specified, a warning dialog box appears indicating that the existing primary key will first be disabled.
+一つのテーブルにつき二つ以上のプライマリーキーを作成することはできません。プライマリーキーが既にテーブルにおいて指定されている場合、既存のプライマリーキーは無効化されるという旨の警告ダイアログボックスが表示されます。
 
-The primary key is created immediately. Fields included in the primary key are *underlined* in the editor and their SQL description displays the **PRIMARY KEY** keyword.
+プライマリーキーは直ちに作成されます。プライマリーキーに含まれるフィールドはエディター上では下線が引かれ、インスペクターのSQL の詳細には**PRIMARY KEY** のキーワードが入ります。
 
-When you create a primary key in a table that already contains records (using an existing field or adding a new one), 4D checks the conformity of all the values present or automatically performs updating operations:
+既にレコードが存在するテーブルに主キーを作成した場合(既存フィールドを使用、あるいは新規に追加した場合)、4D は存在している全ての値の適合性をチェックするか、あるいは自動的にアップデート操作を実行します:
 
-- The field(s) belonging to the primary key cannot contain any duplicated values. If any duplicated values for the key exist in the table records, a warning dialog box appears to indicate that it is not possible to create the key because of this.
-- If the duplicated values are blank or null values (case of an added key field), you can check the corresponding automatic generation option (for Alpha fields in or for Longint fields).  
-  In this case, 4D examines all the records of the table and automatically assigns a calculated value to each primary key. Note that this process is sequential and may require a significant amount of time if there are a sizable number of records.
+- 主キーに属しているフィールド内では重複している値を持つ事はできません。テーブルのレコード内に重複している値が存在していた場合、この値の為に主キーを作成する事ができない旨を示す警告ダイアログボックスが表示されます。
+- 重複した値が空の値、またはヌル値(追加されたフィールド)だった場合、それに対応する自動生成オプションをチェックする事ができます(文字フィールドでの自動UUID、または倍長整数フィールドでの自動インクリメント)。  
+  この場合、4D はテーブルの全てのレコードを検査し計算された値をそれぞれの主キーに自動的に割り当てます。ただし処理はシーケンシャルであり、レコードの数が大量であった場合、この処理に長い時間を要することがあるという点に注意して下さい。
 
-> **Note:** The column(s) belonging to the primary key do not accept NULL values.
+> **注:** プライマリーキーに所属するカラムは、ヌル値を受け付けません。
 
-#### Removing primary keys
+#### プライマリーキーの削除
 
-To remove a primary key from a table:
+テーブルからプライマリーキーを削除するためには、以下の手順に従って下さい:
 
-1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu:
+1. プライマリーキーを含むテーブルを右クリックしてコンテキストメニューを表示し、**主キーを削除**を選択します。確認ダイアログが表示されます。プライマリーキーを削除するためには**OK**をクリックします。
 
-[picture here]
+#### デフォルトのプライマリーキーフィールド
 
-A confirmation dialog box appears. Click **OK** to remove the primary key.
+新規に作成されるテーブルには全てデフォルトでプライマリーキーが含まれています。このフィールドは、デフォルトで名前が **"ID"** の倍長整数型のフィールドであり、特に以下の属性を持ちます:
 
-#### Default primary key field
+- 重複不可
+- ヌル値の入力を拒否
+- 自動インクリメント
+- 自動インデックス
 
-Every new table created in the database contains a primary key by default. This field, named **"ID"** by default, is of the Longint type, and has, in particular, the following attributes:
-
-- Unique,
-- Reject NULL value input,
-- Autoincrement,
-- Automatic index.
-
-You can use this field as is, or change its name and/or its properties if you want (for example, you may want to use an UUID field). You can also delete it if you want to use another field (or fields) as primary key(s). However, it is strongly recommended to keep at least one primary key in each 4D table.
+このフィールドはそのまま使用することもできますし、必要に応じて名前やプロパティを変更する事もできます (例えば UUID フィールドを使用する等)。また、他のフィールドをプライマリーキーとして使用する場合はプライマリーキーを削除することはできます。ただし、全ての 4D テーブルに最低一つずつプライマリーキーを用意しておくことが強く推奨されます。
 
 :::note
 
-In the [Structure page of the Preferences](../Preferences/structure.md), you can modify the name and type of the primary keys that are created by default.
+[環境設定のストラクチャーページ](../Preferences/structure.md) にて、プライマリーキーのデフォルトの名前と型を変更することができます。
 
 :::
 
 :::info
 
-Default primary keys are not added to tables that are created using the SQL **CREATE TABLE** command, or tables that are imported into the database.
+デフォルトのプライマリーキーは、SQL **CREATE TABLE** コマンドを使用して作成されたテーブルやデータベースにインポートされたテーブルには追加されません。
 
 :::
 
 ## プライマリーキー(主キー)マネージャー
 
-The **Primary key manager** is an assistant intended to facilitate the resolution of errors related to the presence of tables without primary keys, particularly in the context of a journaled database:
+**プライマリーキー管理** (プライマリーキーマネージャー)というアシスタントウィンドウは、特にログを使用しているデータベースにおいて、プライマリーキーがないテーブルに起因するエラーの解消を手助けするためのものです:
 
 ![](../assets/en/Develop/pk-manager.png)
 
-You can use this assistant to:
+このアシスタントには以下の様な機能があります:
 
-- diagnose the compatibility of each database table with the 4D journaling mechanism,
-- propose a correction for each table found that is not compatible, more particularly by creating a primary key.
+- データベースのそれぞれのテーブルと 4D のデータログのメカニズムとの競合性を検証します。
+- データログのメカニズム合致しないテーブルに対してそれぞれに解決方法を提示します。具体的にはプライマリーキーの作成です。
 
-### Accessing assistant
+### アシスタントを表示
 
-There are two ways to display the **Primary key manager** window:
+**プライマリーキー管理** ウィンドウを表示する方法は二通りあります:
 
-- From the **Primary key error window**: click on the **Run assistant** button to display the assistant window.
+- **プライマリーキーエラーウィンドウ** から表示: **アシスタントを起動**ボタンをクリックしてアシスタントウィンドウを表示します。
 
-**Note:** The Primary key manager is displayed in Design mode. If the database starts in Application mode, the assistant does not appear right away and you will need to switch to Design mode.
+**注:** プライマリーキー管理はデザインモードで表示されます。データベースがアプリケーションモードで開かれた場合はアシスタントは直ちには表示されず、デザインモードへと切り替える必要があります。
 
-- From the **Structure editor**: click on the button in the [toolbar](./structure-editor.md#toolbar) of this window to display the assistant.
+- **ストラクチャーエディター**から: ウィンドウの[ツールバー](./structure-editor.md#ツールバー) 内の新しいボタン をクリックするとアシスタントを表示できます。
 
-### Using the assistant
+### アシスタントの使用
 
-The **Primary key manager** window displays a line for every table in the database:
+**プライマリーキー管理**ウィンドウではデータベース内の全てのテーブルに関しての情報が行となって表示されます:
 
 ![](../assets/en/Develop/pk-1.png)
 
-The assistant does not take tables placed in the Trash into account.
+アシスタントはごみ箱に入っているテーブルは検知しません。
 
-The icon at the head of each line indicates whether the table requires the attention of the user:
+それぞれの行の先頭にあるアイコンはテーブルの状態をユーザーに知らせます:
 
-| アイコン                                   | ステータス                                                | 説明                                                                                                                                                                                                                                                                        |
-| -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Develop/pk-icon1.png) | OK                                                   | A valid primary key is set for the table.                                                                                                                                                                                                                 |
-| ![](../assets/en/Develop/pk-icon2.png) | No primary key, eligible field(s) | The table does not have a primary key but contains at least one field that could become the primary key.                                                                                                                                                  |
-| ![](../assets/en/Develop/pk-icon3.png) | No primary key, no eligible fields                   | The table does not have a primary key and does not have any fields that could become one (you will have to create a primary key field).                                                                                                |
-| ![](../assets/en/Develop/pk-icon4.png) | 警告                                                   | The table does not have a primary key but it is not journaled ("Include in Log File" option disabled for the table). It is possible to hide tables that have this status by unchecking the option to display warnings. |
+| アイコン                                   | ステータス                   | 説明                                                                                                                             |
+| -------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Develop/pk-icon1.png) | OK                      | テーブルには有効なプライマリーキーがあります。                                                                                                        |
+| ![](../assets/en/Develop/pk-icon2.png) | プライマリーキーなし、使用可能なフィールド有り | テーブルにはプライマリーキーがないものの、プライマリーキーとして使用できるフィールドが少なくとも一つは含まれています。                                                                    |
+| ![](../assets/en/Develop/pk-icon3.png) | プライマリーキーも使用可能なフィールドもなし  | テーブルにはプライマリーキーも、プライマリーキーとして使用できるフィールドもありません(プライマリーキーフィールドを作成する必要があります)。                                     |
+| ![](../assets/en/Develop/pk-icon4.png) | 警告                      | テーブルにはプライマリーキーがありませんが、データのログを取りません("ログファイルに含める"のオプションのチェックが外されています)。この状態のテーブルは、警告アイコンをクリックすることによって非表示にできます。 |
 
-For each journaled table that does not have a primary key, the assistant displays a menu to set the action to be performed. You can choose from the following options:
+データログを残すテーブルでプライマリーキーがないものに関して、アシスタントはそれぞれに実行すべきアクションを表示します。以下の選択肢から選ぶことができます:
 
-- **Ignore:** does not modify the table. The errors are not corrected and the status of the table is not changed. Use this option if you wish to intervene later, or if you want to create the primary key outside of the assistant. This option is necessary in particular when you want to create a primary key based on several fields in the table.
+- **無視:** テーブルに何も変更を加えません。エラーは修正されず、テーブルの状態は変更されません。後でエラーを修正したい場合、またはアシスタントを使用せずにエラーを修正したい場合などにはこのオプションを選択して下さい。このオプションは特に、複数のテーブルをもとにプライマリーキーを作成したい場合に必要です。
 
-- **Use existing field** (only shown for tables with at least one field eligible to be a primary key): designates one of the table fields as the primary key. When you choose this option, the assistant suggests the most appropriate field by default. If you want to use another field or if the assistant fails to identify a particularly suitable field (the assistant displays *Select a field*), click on the second menu in the row to display the list of eligible fields.
+- **既存のフィールドを使用**(プライマリーキーとして使用可能なフィールドが少なくとも一つはあるテーブルにおいてのみ表示): テーブルのフィールドのどれかをプライマリーキーとして指定します。このオプションを選択すると、アシスタントはデフォルトでプライマリーキーとして最適なフィールドを選択して提示します。他のフィールドを使用したい場合、またはアシスタントが適切なフィールドを識別するのに失敗した場合(この場合アシスタントは *選択可能なフィールド* を表示します) などは、行の中の二つ目のメニューをクリックして選択可能なフィールドのリストを表示して下さい。
 
-- **Create a new field:** creates a new primary key field in the table. This field will have the same characteristics as the one [added by default when a new table is created](#default-primary-key-field). By default, the assistant proposes to create a field of the Longint type, named “ID”. You can modify the name and type of default primary key fields in the [Preferences](../Preferences/structure.md#primary-key). You can also change the name and/or type of the field directly in the Primary key manager window.
+- **新規フィールドを作成:** テーブル内に新しいプライマリーキーを作成します。このフィールドは[新規テーブルが作成されたときのもの](#デフォルトのプライマリーキーフィールド) と同じ属性を持ちます。デフォルトでは、アシスタントは "ID" という名前の倍長整数型のフィールドが提示されます。このデフォルトのプライマリーキーの名前と型は[環境設定](../Preferences/structure.md#プライマリーキー)から変更することができます。プライマリーキー管理ウィンドウ内で直接テーブルの名前/型を変更することもできます。
 
-- **Do not log this table:** unchecks the [**Include in Log File**](#include-in-log-file) option for the table. You can choose this option in the case of temporary tables. After you validate this dialog box, a “Warning” status is assigned to the table.
+- **このテーブルはログに含めない:** このテーブルに関しては[**ログファイルに含める**](#ログファイルに含める) のチェックを外します。一時的なテーブルなどの場合にこのオプションを選択することができます。ダイアログボックスを確定させると、"警告"の状態がテーブルへと適用されできます。
 
-Once you have made your settings, click on **Apply...** to apply the changes to the database or **Close** to close the dialog box without modifying the database. When you click on **Apply...**, a confirmation dialog box appears listing the operations to be performed; you can either confirm or cancel the operation.
+設定が完了したら**適用...** をクリックして変更をデータベースに適用するか、データベースを変更せずに閉じる場合には**閉じる**をクリックして下さい。**適用...** をクリックすると、実行されるオペレーションの一覧がダイアログボックスに表示され、適用かキャンセルがクリックできます。
 
-If you have designated existing fields as primary keys, 4D checks each table to make sure that its existing data respects the rules concerning uniqueness and null values for this type of field. If, for example, a field contains duplicate values or null values, an error is generated. You will need to find and remove these anomalies before you can enable journaling for the data.
+既存のフィールドをプライマリーキーとして使用した場合、4D はそれぞれのテーブルに関して、既存のデータがそのフィールドの型の固有性やヌル値の設定とあてはまるかどうかを検証します。もし、例えばフィールドが複製値やヌル値を含んでいた場合、エラーが生成されます。データログを有効にするためにはこれらのエラーを探して削除する必要があります。
 
 :::note
 
-In order to facilitate the correction of errors related to primary keys, the primary key values are displayed in the [**Activity analysis** page of the Maintenance and Security Center](../MSC/analysis.md).
+プライマリーキーに関するエラーの修正を容易にするために、プライマリーキーの値は[MSCの **アクティビティ解析ページ**](../MSC/analysis.md) の中に表示されています。
 
 :::

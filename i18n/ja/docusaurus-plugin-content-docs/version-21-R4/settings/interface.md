@@ -66,7 +66,7 @@ title: インターフェースページ
 
 ### Windows 上でFluent UI を使用
 
-このオプションがチェックされている場合、4D は[利用可能な状態](../FormEditor/forms.md#要件) のであれば、Windows 上の全てのフォームに対しては [Fluent UI レンダリングテーマ](../FormEditor/forms.md#fluent-ui-レンダリング) を自動的に使用します。これがチェックされていない場合、デフォルトでWindows クラシクUI レンダリングテーマが使用されます。
+このオプションがチェックされている場合、4D は[利用可能な状態](../FormEditor/forms.md#要件) のであれば、Windows 上の全てのフォームに対しては [Fluent UI レンダリングテーマ](../FormEditor/forms.md#fluent-ui-レンダリング) を自動的に使用します。これがチェックされていない場合、デフォルトで Windows クラシック UI レンダリングテーマが使用されます。
 
 > このオプションはWindows でのみ使用され、macOS では何の効果もありません。
 

@@ -23,7 +23,7 @@ title: $filter
 
 **\{attribute\} {comparator} {value} {AND/OR/EXCEPT} \{attribute\} {comparator} {value}**
 
-たとえば: `$filter="firstName=john AND salary>20000"` （`firstName` および `salary` は Employee データクラスの属性です)。
+たとえば: `$filter="firstName=john AND salary>20000"` (`firstName` および `salary` は Employee データクラスの属性です)。
 
 ### paramsプロパティの使用
 

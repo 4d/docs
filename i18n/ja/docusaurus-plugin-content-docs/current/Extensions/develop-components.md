@@ -17,7 +17,7 @@ title: コンポーネントの開発
 
 :::note
 
-他の別のマトリックスプロジェクトを開くことなく、[ホストプロジェクトから直接コンポーネントを作成](#コンポーネントの作成) することができます。
+他の別のマトリクスプロジェクトを開くことなく、[ホストプロジェクトから直接コンポーネントを作成](#コンポーネントの作成) することができます。
 
 :::
 
@@ -260,19 +260,19 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 [コンポーネント名前空間](#コンポーネント名前空間の宣言) を入力しない場合、シンタックスファイル生成のオプションがチェックされていても、クラスや公開メソッド用のリソースは生成されません。
 
-When your class functions and class constructors are documented with a [comment block above their declaration](../Concepts/classes.md#function-comments), the syntax file also contains their description and parameter comments (`MCP:` lines are never included). Host projects then display them as plain text in the code completion and help of the compiled component. For example, with the following function in a component class:
+クラス関数やクラスコンストラクターが[宣言部分の上にあるコメントブロック内にドキュメントが記述されている](../Concepts/classes.md#関数コメント) 場合、シンタックスファイルにはその詳細と引数のコメントが含まれます(`MCP:` の行が含まれることはありません)。ホストプロジェクトはそれらをコード保管の中に平文テキストとして表示し、またコンパイルされたコンポーネントのヘルプにも表示します。例えば、コンポーネントのクラスに以下のような関数があった場合:
 
 ```4d
 // Class: Tools
 
-// Scales a value by a factor
-// $value: value to scale
-// $factor: multiplier to apply
+// 値を指定された倍数で増幅する
+// $value: 増幅する値
+// $factor: 適用する倍率
 Function scale($value : Real; $factor : Real) : Real
 	return $value*$factor
 ```
 
-a host project that types `cs.MyComponent.Tools.new().scale(` sees "Scales a value by a factor" and the `$value:` and `$factor:` lines below the signature.
+ホストプロジェクトにおいて`cs.MyComponent.Tools.new().scale(` と入力すると、その署名の下に"値を指定された倍数で増幅する" および `$value:` と `$factor:` の行が表示されます。
 
 ## 変数の渡し方
 

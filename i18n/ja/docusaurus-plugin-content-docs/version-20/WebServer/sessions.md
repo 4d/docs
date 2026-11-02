@@ -20,13 +20,13 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 - ストラクチャー設定の Web / オプション (I) ページの **スケーラブルセッション** を使用する (永続的な設定): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-このオプションは、新規プロジェクトではデフォルトで選択されています。これは、 **セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
+このオプションは、新規プロジェクトではデフォルトで選択されています。これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
+- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します)。この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
 > メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
 
-いずれの場合も、設定はマシンに対しローカルなものです。 つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。
+いずれの場合も、設定はマシンに対しローカルなものです。つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。
 
 > **互換性について**: 4D v18 R6 以前の 4Dバージョンで作成されたプロジェクトでは、**旧式セッション** オプションが使用できます (詳細については、[doc.4d.com](https://doc.4d.com) の Webサイトを参照ください)。
 
@@ -36,13 +36,13 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 > この cookie の名前は、[`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) プロパティを使用して取得できます。
 
-1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID__AppName_" cookie の存在と値をチェックします。
+1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID_*AppName*" cookie の存在と値をチェックします。
 
 2. cookie に値がある場合、4D は既存セッションの中からこのクッキーを作成したセッションを探し、見つかった場合には再利用します。
 
 3. クライアントからのリクエストが、すでに開かれているセッションに対応していない場合:
 
-- プライベートな "4DSID__AppName_" cookie を持つ新しいセッションが Webサーバー上に作成されます。
+- プライベートな "4DSID_*AppName*" cookie を持つ新しいセッションが Webサーバー上に作成されます。
 - 新しいゲスト `Session` オブジェクトが作成され、このスケーラブルWebセッション専用に使用されます。
 
 The current `Session` object can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
@@ -76,7 +76,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 セッションには、権限を関連付けることができます。セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
 
-You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。  By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 > 現在の実装では (v18 R6)、"WebAdmin" アクセス権のみ利用可能です。
 

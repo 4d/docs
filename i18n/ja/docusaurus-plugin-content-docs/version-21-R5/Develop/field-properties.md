@@ -39,7 +39,7 @@ title: フィールド
 
 オブジェクト型フィールドのクラスとして`4D.Vector` を割り当てた場合、**ベクトルフィールド** を定義します。このようなフィールドは埋め込みを保存し、AI 機能を使用してデータをクエリすることに使用することができます。ベクトルに対してどのようにクエリを行うかについては[`4D.Vector` クラス](../API/VectorClass.md) のドキュメンテーションをご覧ください。
 
-また[**4D Embedding Studio** コンポーネント](corner.4d.com/component/4d-embedding-studio) を使用すると、4D.Vector フィールドを設定したり更新したりするに役立ちます。
+また[**4D Embedding Studio** コンポーネント](https://corner.4d.com/component/4d-embedding-studio) を使用すると、4D.Vector フィールドを設定したり更新したりするに役立ちます。
 
 オブジェクト型フィールドに対して`4D.Vector` クラスを割り当てると、ストラクチャーエディター内において特定のアイコンがフィールドの型として表示されるようになります: ![](../assets/en/Develop/ai-icon.png)
 

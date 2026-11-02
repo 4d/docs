@@ -213,7 +213,7 @@ title: クラス
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-`.borderBottom` プロパティは、 <!-- REF #TableStyle.borderHorizontal.Summary -->表の横の外枠線を定義します <!-- END REF -->。
+`.borderHorizontal` プロパティは、 <!-- REF #TableStyle.borderHorizontal.Summary -->表の横の外枠線を定義します <!-- END REF -->。
 
 ### .borderVertical
 

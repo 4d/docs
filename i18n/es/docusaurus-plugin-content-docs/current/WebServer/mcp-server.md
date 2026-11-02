@@ -22,7 +22,7 @@ You do not need to write the MCP layer: 4D generates the tool catalog, converts 
 
 ## Enabling the MCP server
 
-The MCP server is disabled by default. It requires:
+The MCP server is disabled by default. Requiere:
 
 - the web server of the host application (the MCP server is not available on [component web servers](webServerObject.md)),
 - [scalable sessions](sessions.md#enabling-web-sessions). If scalable sessions are disabled, the MCP server does not start, 4D logs a message in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt), and `/mcp` answers 404.
@@ -76,18 +76,18 @@ Responses are `application/json`. Every result contains a `resultType` property 
 
 The following methods are supported:
 
-| Método            | Token required | Descripción                                                                                   |
-| ----------------- | -------------- | --------------------------------------------------------------------------------------------- |
-| `server/discover` | No             | Returns the capabilities of the server (see below)                         |
-| `ping`            | No             | Returns an empty result                                                                       |
-| `tools/list`      | Sí             | Returns the [tool catalog](#tool-catalog) of the session                                      |
-| `tools/call`      | Sí             | Calls a [custom tool](#calling-a-custom-tool) or a [built-in CRUD tool](#built-in-crud-tools) |
+| Método            | Se necesita un token | Descripción                                                                                   |
+| ----------------- | -------------------- | --------------------------------------------------------------------------------------------- |
+| `server/discover` | No                   | Returns the capabilities of the server (see below)                         |
+| `ping`            | No                   | Returns an empty result                                                                       |
+| `tools/list`      | Sí                   | Returns the [tool catalog](#tool-catalog) of the session                                      |
+| `tools/call`      | Sí                   | Calls a [custom tool](#calling-a-custom-tool) or a [built-in CRUD tool](#built-in-crud-tools) |
 
 Clients may call `tools/list` and `tools/call` directly, without calling `server/discover` first. The legacy `initialize` request of previous MCP revisions is not supported.
 
 #### `server/discover`
 
-The `server/discover` result is the same for all callers. It contains:
+The `server/discover` result is the same for all callers. Contiene:
 
 | Propiedad                                     | Descripción                                                                                                                                                                                                                                                                                     |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -117,7 +117,7 @@ $request.wait()
 
 4D checks each request in the following order, before running any code of the application. The first failing check gives the answer:
 
-| Check                                                                                                                                                                                                    | Estado HTTP                                     | JSON-RPC error |
+| Check                                                                                                                                                                                                    | Estado HTTP                                     | Error JSON-RPC |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | -------------- |
 | MCP server disabled                                                                                                                                                                                      | 404, no body                                    |                |
 | Plain HTTP not allowed (see [Secure connections](#secure-connections))                                                                                                                | 404, no body                                    |                |
@@ -128,7 +128,7 @@ $request.wait()
 | JSON-RPC notification (no `id`): accepted, nothing is executed                                                                                                        | 202, no body                                    |                |
 | Missing `MCP-Protocol-Version`, `Mcp-Method` or `Mcp-Name` header, or header that does not match the body. A legacy `initialize` request gets a message naming the `2026-07-28` revision | 400                                             | `-32020`       |
 | Unsupported protocol version (`data.supported` lists the supported versions)                                                                                                          | 400                                             | `-32022`       |
-| Unknown method                                                                                                                                                                                           | 404                                             | `-32601`       |
+| Método desconocido                                                                                                                                                                                       | 404                                             | `-32601`       |
 
 Then, for methods that require a token:
 
@@ -155,7 +155,7 @@ Requests with an `Origin` header are refused (403) to protect the server against
 
 #### Proxies and public URL
 
-4D publishes some URLs (OAuth metadata and endpoints, binary URLs). Their base is:
+4D publishes some URLs (OAuth metadata and endpoints, binary URLs). Su base es:
 
 - [`mcp.publicURL`](../API/WebServerClass.md#mcp) if it is set (recommended when the server is reachable under several names),
 - otherwise the scheme and the `Host` header of the request. The `X-Forwarded-Proto` and `X-Forwarded-Host` headers are only used when the request comes from a proxy listed in `mcp.trustedProxies`.
@@ -220,7 +220,7 @@ Requests are stateless, but 4D keeps one web session per token and caller IP add
 - Its privileges are those of the token. Then 4D calls the [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) function of your DataStore class, if defined, once per session: you can use it to fill [`Session.storage`](../API/SessionClass.md#storage) from the information stored with the token.
 - The session closes after the [inactivity timeout of web sessions](sessions.md#session-lifetime), when its token is revoked or expires, or when the MCP server is disabled. Its license is then released.
 
-### OAuth 2.1 mode
+### Modo OAuth 2.1
 
 In OAuth mode, 4D is the OAuth authorization server: users log in from their AI client through a 4D login page, without any external identity provider. The OAuth mode is enabled when your DataStore class defines the [`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) function. Fine-Grained Tokens remain accepted.
 
@@ -282,7 +282,7 @@ To protect the login page against password guessing:
 - after 10 failed logins from one caller IP address within 15 minutes, this address gets a 429 status for 15 minutes,
 - after 20 failed logins for one user name within 15 minutes, this user name is refused for 15 minutes, with the same message as a wrong password.
 
-## Authorization
+## Autorización
 
 The MCP server uses the [`roles.json`](../ORDA/privileges.md) file of the project, exactly as the REST server. There is nothing specific to MCP to configure:
 
@@ -463,10 +463,10 @@ exposed MCP Function cancel() : Text
 
 The built-in CRUD tools let a client read and write the data of the datastore without custom code. They are listed when the session has at least one data permission (**read**, **create**, **update**, or **drop**) on a dataclass, and each call requires the corresponding permission:
 
-| Tool                 | Arguments                                                                 | Resultado                                                                                                               | Permission          |
+| Tool                 | Argumentos                                                                | Resultado                                                                                                               | Permission          |
 | -------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | `describeModel`      | Ninguno                                                                   | The dataclasses the session can access, their readable or writable attributes, and their relations to these dataclasses | Any data permission |
-| `getEntity`          | `dataClass`, `key`, `attributes`                                          | The entity                                                                                                              | read                |
+| `getEntity`          | `dataClass`, `key`, `attributes`                                          | La entidad                                                                                                              | read                |
 | `queryEntities`      | `dataClass`, `filter`, `params`, `attributes`, `orderBy`, `limit`, `skip` | `{entities, total, skip, nextSkip}`                                                                                     | read                |
 | `aggregateEntities`  | `dataClass`, `attribute`, `filter`, `params`                              | `count`, and with `attribute`: `countNotNull`, `sum`, `average`, `min`, `max`                           | read                |
 | `addEntity`          | `dataClass`, `data`                                                       | The created entity                                                                                                      | create              |

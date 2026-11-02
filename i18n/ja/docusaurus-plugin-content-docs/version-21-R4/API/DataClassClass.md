@@ -482,7 +482,7 @@ $ds.Persons.clearRemoteCache()
 
 :::info
 
-*settings* パラメーター**なし**で `.get()` 関数を呼び出すと、属性値のリクエストが直接サーバーに送信されます ([ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) は使用されません）。一方、*settings* パラメーターを介して `context` を渡す形で `.get()` 関数を呼び出すと、コンテキストに対応する ORDAキャッシュから属性値が取得されます。この場合、[`reload()`](EntityClass.md#reload) を呼び出して、最新のデータがサーバーから取得されていることを確認することをお勧めします。
+*settings* パラメーター**なし**で `.get()` 関数を呼び出すと、属性値のリクエストが直接サーバーに送信されます ([ORDAキャッシュ](../ORDA/client-server-optimization.md#ordaキャッシュ) は使用されません)。一方、*settings* パラメーターを介して `context` を渡す形で `.get()` 関数を呼び出すと、コンテキストに対応する ORDAキャッシュから属性値が取得されます。この場合、[`reload()`](EntityClass.md#reload) を呼び出して、最新のデータがサーバーから取得されていることを確認することをお勧めします。
 
 :::
 

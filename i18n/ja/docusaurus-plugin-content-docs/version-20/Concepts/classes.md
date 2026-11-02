@@ -377,7 +377,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
+`property` キーワードは、クラス関数において `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 

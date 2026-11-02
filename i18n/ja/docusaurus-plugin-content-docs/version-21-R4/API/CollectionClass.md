@@ -376,7 +376,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### 例題 1
 
-通常の (非共有の) コレクション *$lastnames \* を、共有オブジェクト *$sharedObject* 内にコピーします。このためには、まず共有コレクション (*$sharedLastnames\*) を作成する必要があります。
+通常の (非共有の) コレクション *$lastnames* を、共有オブジェクト *$sharedObject* 内にコピーします。このためには、まず共有コレクション (*$sharedLastnames*) を作成する必要があります。
 
 ```4d
 var $sharedObject : Object
@@ -398,7 +398,7 @@ End use
 
 #### 例題 2
 
-どちらも共有コレクションである *$sharedColl1* と\*$sharedColl2\* を結合します。これらは異なる共有グループに所属しているため、直接結合した場合にはエラーが生成されます。そこで、 *$sharedColl1* のコピーを作成し、*$sharedColl2* をそのコピーの共有グループ先に指定します。
+どちらも共有コレクションである *$sharedColl1* と *$sharedColl2* を結合します。これらは異なる共有グループに所属しているため、直接結合した場合にはエラーが生成されます。そこで、 *$sharedColl1* のコピーを作成し、*$sharedColl2* をそのコピーの共有グループ先に指定します。
 
 ```4d
 var $sharedColl1;$sharedColl2;$copyColl : Collection

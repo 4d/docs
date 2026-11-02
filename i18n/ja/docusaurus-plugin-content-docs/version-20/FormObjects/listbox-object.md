@@ -28,7 +28,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## セレクションリストボックス
 
-このタイプのリストボックスでは、列ごとにフィールド (例: `[Employees]LastName`) や式を割り当てます。式は 1つ以上のフィールド (たとえば `[Employees]FirstName+“ ”[Employees]LastName`) または単にフォーミュラ (たとえば `String(Milliseconds)`) を使用できます。式にはプロジェクトメソッド、変数、あるいは配列項目も指定できます。カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
+このタイプのリストボックスでは、列ごとにフィールド (例: `[Employees]LastName`) や式を割り当てます。式は 1つ以上のフィールド (たとえば `[Employees]FirstName+" "[Employees]LastName`) または単にフォーミュラ (たとえば `String(Milliseconds)`) を使用できます。式にはプロジェクトメソッド、変数、あるいは配列項目も指定できます。カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
 
 それぞれの行はセレクションのレコードを基に評価されます。セレクションは **カレントセレクション** または **命名セレクション**です。
 

@@ -33,8 +33,8 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 | -------- | ------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | 水平連結     | Pict1 + Pict2                               | Picture | Pict1 の右側に Pict2 を追加します                                                                                                               |
 | 垂直連結     | Pict1 / Pict2                               | Picture | Pict1 の下側に Pict2 を追加します                                                                                                               |
-| 排他的論理和   | Pict1 & Pict2           | Picture | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。               |
-| 包括的論理和   | Pict1 &#124; Pict2      | Picture | Pict1 と Pict2 を重ね、そのマスクした結果を返します (両ピクチャーとも同じサイズである必要があります) `$equal:=Equal pictures(Pict1;Pict2;Pict3)` と同じ結果になります。 |
+| 排他的重ね合わせ | Pict1 & Pict2           | Picture | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。               |
+| 包括的重ね合わせ | Pict1 &#124; Pict2      | Picture | Pict1 と Pict2 を重ね、そのマスクした結果を返します (両ピクチャーとも同じサイズである必要があります) `$equal:=Equal pictures(Pict1;Pict2;Pict3)` と同じ結果になります。 |
 | 水平移動     | Picture + Number                            | Picture | 指定ピクセル分、ピクチャーを横に移動します。                                                                                                                |
 | 垂直移動     | Picture / Number                            | Picture | 指定ピクセル分、ピクチャーを縦に移動します。                                                                                                                |
 | リサイズ     | Picture \* Number                           | Picture | 割合によってピクチャーをサイズ変更します。                                                                                                                 |
@@ -71,7 +71,7 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 ![](../assets/en/Concepts/concatVer.en.png)
 ![](../assets/en/Concepts/concatVer2.en.png)
 
-排他的論理和
+排他的重ね合わせ
 
 ```4d
 Pict3:=Pict1 & Pict2 // Pict1 の上に Pict2 を重ねます。
@@ -79,7 +79,7 @@ Pict3:=Pict1 & Pict2 // Pict1 の上に Pict2 を重ねます。
 
 ![](../assets/en/Concepts/superimpoExc.fr.png)
 
-包括的論理和
+包括的重ね合わせ
 
 ```4d
 Pict3:=Pict1|Pict2 // 同じサイズの二つのピクチャーを重ね合わせた上でそのマスクの結果を返します。

@@ -23,9 +23,9 @@ title: エラー処理
 
 ## 予測可能なエラーvs予測不可能なエラー {#predictable-vs-unpredictable-errors}
 
-[`entity.save()`](../API/EntityClass.md#save) や [`transporter.send()`](../API/SMTPTransporterClass.md#send) などの多くの4D クラス関数は、*status* 情報を格納しているオブジェクトを返します。このオブジェクトには、プログラムの実行を停止する必要のないエラー(無効なパスワード、ロックされたエンティティ)など、ランタイムコンテキストにおける**予測可能な**エラーを保存するのに使用されます。このカテゴリーのエラーは、**サイレントエラー**とも呼ばれ、通常のコードで管理することができます。 [`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは[エラー処理メソッド](#エラー処理メソッドを実装する) などのエラー処理コンテキストにおいてこのようなエラーが発生した場合、これらは実行を中断することはせず、エラー処理(例: [`Try/Catch`](#trycatchend-try) の`Catch` 部分)をトリガーすることはありません。これらは[`Last errors`](../commands/last-errors) のコレクションには含まれません。エラーは返されるオブジェクトの`status` および `statusText` プロパティ内にのみ返されます。これはビジネスロジックに応じて処理することが可能です。
+[`entity.save()`](../API/EntityClass.md#save) や [`transporter.send()`](../API/SMTPTransporterClass.md#send) などの多くの4D クラス関数は、*status* 情報を格納しているオブジェクトを返します。このオブジェクトには、プログラムの実行を停止する必要のないエラー(無効なパスワード、ロックされたエンティティ)など、ランタイムコンテキストにおける**予測可能な**エラーを保存するのに使用されます。このカテゴリーのエラーは、**サイレントエラー**とも呼ばれ、通常のコードで管理することができます。 [`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは[エラー処理メソッド](#エラー処理メソッドの実装) などのエラー処理コンテキストにおいてこのようなエラーが発生した場合、これらは実行を中断することはせず、エラー処理(例: [`Try/Catch`](#trycatchend-try) の`Catch` 部分)をトリガーすることはありません。これらは[`Last errors`](../commands/last-errors) のコレクションには含まれません。エラーは返されるオブジェクトの`status` および `statusText` プロパティ内にのみ返されます。これはビジネスロジックに応じて処理することが可能です。
 
-もう一つのエラーのカテゴリーは**予測不可能な**エラーと呼ばれ、別名**深刻なエラー**とも呼ばれます。これにはディスク書き込みエラー、ネットワーク失敗、あるいはそれ以外の予期せぬ中断が含まれます。これらのカテゴリーのエラーは[*コード*、*メッセージ*および*署名*](#エラーコード)によって定義される例外を生成します。これらは実行を中断し、[`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは [エラー処理メソッド](#エラー処理メソッドの実装) 機能のエラー処理をトリガーします。これらは[`Last errors`](../commands/last-errors) のコレクションに含まれます。深刻なエラーは、プロパティに値(例: `dk status serious error` - "その他のエラー")も返すことがあり得るという点に注意してください。
+もう一つのエラーのカテゴリーは**予測不可能な**エラーと呼ばれ、別名**深刻なエラー**とも呼ばれます。これにはディスク書き込みエラー、ネットワーク失敗、あるいはそれ以外の予期せぬ中断が含まれます。これらのカテゴリーのエラーは[*コード*、*メッセージ*および*署名*](#エラーコード)によって定義される例外を生成します。これらは実行を中断し、[`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは [エラー処理メソッド](#エラー処理メソッドの実装) 機能のエラー処理をトリガーします。これらは[`Last errors`](../commands/last-errors) のコレクションに含まれます。深刻なエラーは、`status` と `statusText` プロパティに値 (例: `dk status serious error` - "その他のエラー") を返すこともあり得るという点に注意してください。
 
 ## エラー処理メソッドの実装
 
@@ -45,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](../commands/method-called-on-error) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。このコマンドは汎用的なコードでとくに有用です。 エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](../commands/method-called-on-error) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -98,7 +98,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::
 
 - [`Last errors`](../commands/last-errors) コマンドは4D アプリケーション内で発生したエラーのカレントのスタックのコレクションを返します。
-- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process.
+- [`Call chain`](../commands/call-chain) コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
 
 #### 例題
 
@@ -229,7 +229,7 @@ End try
 
 - エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
 - コードブロックの実行が *非遅延エラー* をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
-- コードブロックが *非遅延エラー* をスローするメソッドを呼び出した場合、実行フローは対応する `Catch` コードブロックへと直接ジャンプします。
+- コードブロックが *遅延エラー* をスローするメソッドを呼び出した場合、実行フローは対応する `Catch` コードブロックへと直接ジャンプします。
 - 遅延エラーが `Try` ブロックから直接スローされた場合、実行フローは `Try` ブロックの終わりまで継続し、対応する `Catch` ブロックは実行しません。
 
 :::note
@@ -290,14 +290,14 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 コード実行を妨げる例外は4D によって返されますが、その原因はOS、デバイス、4D カーネル、コード内の[`throw`](../commands/throw) など、様々な要因が考えられます。そのため、3つの要素によって定義されます:
 
 - **コンポーネント署名**。エラーの起きた場所を表します(署名の一覧については[`Last errors`](../commands/last-errors) を参照してください)
-- **メッセージ**。エラーがなぜ起きたかを説明します。
+- **メッセージ**。エラーがなぜ起きたかを説明します
 - **コード**。コンポーネントによって返される任意の数値です。
 
 エラーと特にその原因の完全な詳細を取得するには、[4D エラーダイアログボックス](../Debugging/basics.md) あるいは[`Last errors`](../commands/last-errors.md) コマンドを使用することができます。
 
 ### エラーダイアログボックス
 
-[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。**詳細** エリアを展開し、**保存...** あるいは **コピー** ボランをクリックします:
+[4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。**詳細** エリアを展開し、**保存...** あるいは **コピー** ボタンをクリックします:
 
 ![copy-button](../assets/en/Concepts/error.png)
 

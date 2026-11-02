@@ -24,7 +24,7 @@ title: 依存関係
 
 - **インタープリター版コンポーネント**の場合: 標準の [Project フォルダー](../Project/architecture.md)。[プロジェクトの**Components** フォルダー](architecture.md#コンポーネント)にインストールする場合には、パッケージフォルダー名の末尾を **.4dbase** にする必要があります。
 - **コンパイル版コンポーネント**の場合:
-  - .4DZ ファイル、*Resources* フォルダー、*Info.plist* ファイルを格納している"Contents" フォルダー推奨されるアーキテクチャー)
+  - .4DZ ファイル、*Resources* フォルダー、*Info.plist* ファイルを格納している"Contents" フォルダー (推奨されるアーキテクチャー)
   - *Resources* などの他のフォルダーを格納している.4DZ ファイル。
 
 :::note
@@ -90,7 +90,7 @@ title: 依存関係
 **優先度高**
 
 1. [プロジェクトの **Components** フォルダー](architecture.md#components) に置かれているコンポーネント
-2. dependencies.json\*\*ファイルで宣言されたコンポーネント (ローカル環境を構成するために **environment4d.json** で指定されたパスは **dependencies.json** のパスをオーバーライドします)。
+2. **dependencies.json**ファイルで宣言されたコンポーネント (ローカル環境を構成するために **environment4d.json** で指定されたパスは **dependencies.json** のパスをオーバーライドします)。
 3. 内部のユーザー4Dコンポーネント (4D NetKit、4D SVG など)
 
 **優先度低**
@@ -539,7 +539,7 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 これに加えて、単一の依存関係あるいは全ての依存関係に対して、いつでも更新をチェックすることができます:
 
-- 単一の依存関係に対して更新をチェクするためには、依存関係を右クリックしてコンテキストメニューから**更新をチェックする** を選択します。
+- 単一の依存関係に対して更新をチェックするためには、依存関係を右クリックしてコンテキストメニューから**更新をチェックする** を選択します。
 
 ![check component](../assets/en/Project/check-component-one.png)
 
