@@ -201,7 +201,7 @@ These accesses are defined in the Settings dialog. The following example shows D
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). This distribution is defined in the Groups editor.
+You also use groups to [distribute available licenses](#assigning-a-license-to-a-group). This distribution is defined in the Groups editor.
 
 ## Directory.json file
 

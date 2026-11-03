@@ -40,7 +40,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 When the command is applied to a list box type object, the alternating background color for the rows can be returned in the *altBackgrndColor* parameter. In this case, the value of *backgroundColor* is used for the background of odd-numbered rows only. 
 
-When the command is applied to an object that supports the [`borderColor` property]((../../FormObjects/properties_BackgroundAndBorder.md#border-color)), the border color can be returned in the  *borderColor* parameter.
+When the command is applied to an object that supports the [`borderColor` property](../../FormObjects/properties_BackgroundAndBorder.md#border-color), the border color can be returned in the  *borderColor* parameter.
 
 :::note
 

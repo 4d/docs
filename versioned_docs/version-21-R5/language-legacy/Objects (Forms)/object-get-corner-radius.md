@@ -38,7 +38,7 @@ The **OBJECT Get corner radius** command can be used with the following form obj
 - [rectangles](../../FormObjects/shapes_overview.md#rectangle)
 - [inputs](../../FormObjects/input_overview.md) (4D projects only)
 - [text areas](../../FormObjects/text.md) (4D projects only)
-- custom-styled [buttons](../../FormObjects/button_overview.md#custom) with ["custom" Border Line Style](#border-line-style), custom-styled [radio buttons](../../FormObjects/radio_overview.md#custom) and custom-styled [check boxes](../../FormObjects/checkbox_overview.md#custom) (4D projects only)
+- custom-styled [buttons](../../FormObjects/button_overview.md#custom) with ["custom" Border Line Style](../../FormObjects/properties_BackgroundAndBorder.md#border-line-style), custom-styled [radio buttons](../../FormObjects/radio_overview.md#custom) and custom-styled [check boxes](../../FormObjects/checkbox_overview.md#custom) (4D projects only)
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
