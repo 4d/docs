@@ -8,27 +8,29 @@ slug: /WritePro/standard-actions
 
 A interface de usuário de áreas 4D Write Pro pode ser manejada através de um amplo conjunto de **ações padrão**. As ações padrão podem ser atribuidas a:
 
-* comandos de menu, disponíveis através da **barra de menu** ou do comando [Dynamic pop up menu](../../commands/dynamic-pop-up-menu)
-* list items, listas pop up ou drop down, menus pop up hierárquicos
-* botões, check boxes
-* ou executados pelo comando [INVOKE ACTION](../../commands/invoke-action).
+* comandos de menu, disponíveis através da **barra de menu** ou do comando [Dynamic pop up menu](../commands/dynamic-pop-up-menu)
+* itens de lista, disponíveis através de [listas drop-down](../../FormObjects/dropdownList_Overview.md),
+* botões, check boxes,
+* ou executados pelo comando [INVOKE ACTION](../commands/invoke-action).
 
-Quando são atribuidos aos objetos de interface, as ações padrão manejam a ativação/desativação de objeto em função de contexto. Para mais informação, consulte a seção *Ações padrões*.
+Quando são atribuidos aos objetos de interface, as ações padrão manejam a ativação/desativação de objeto em função de contexto. Para mais informação, consulte a seção [Ações padrões](../../Desktop/standard-actions).
 
 Dois tipos de ações estão disponíveis para áreas 4D Write Pro:
 
 * As ações específicas 4D Write Pro, que só podem ser utilizadas com áreas 4D Write Pro,
-* *[Outras ações](#other-actions)*, incluido as fontes, expressões, corretor ortográfico e ações de edição, que podem ser utilizadas com as áreas 4D Write Pro e as outras áreas 4D (ver [*Ações padrões*](#standard-actions)).
+* Outras ações, incluindo fontes, expressões, corretor ortográfico e ações de edição, que podem ser utilizadas com as áreas 4D Write Pro e as outras áreas 4D (ver [Ações padrões](../../Desktop/standard-actions)).
 
 ### Ações 4D Write Pro 
 
+As seguintes ações padrão estão disponíveis com áreas 4D Write Pro.  
+
 **Notas:**
 
-* As ações que mostram um menu/lista só podem ser associadas aos comandos de menu ou aos objetos pop-up/listas suspensas e menus pop-up hierárquicos (ver *Submenu*).
+* As ações que mostram um menu/lista só podem ser associadas aos comandos de menu ou aos objetos de lista drop-down (ver *Submenu*).
 * Check boxes e 3D check boxes devem ser associadas com ações de estado, tais como "section/differentFirstPage" ou "visibleHorizontalRuler". Três opções de estado são suportadas com check boxes padrão apenas.
 * um status de ação de seção é sempre igual ao status atual de seção selecionada (estado herdado se o atributo for herdado da seção pai ou de um atributo padrão) já que deve refletir o status de seção selecionada (o status que é aplicado atualmente para a seção). Entretanto, modificar o atributo de seção com uma ação padrão vai sobrepujar o atributo de seção selecionado.
-* *Submenu*: Quando usado sem parâmetros e associados ao comando menu, um pop-up/lista drop down ou um objeto de menu hierárquico pop-up, essas ações exibem um submenu/lista automática. Por exemplo, se atribuir a ação "backgroundColor" a um comando de menu, selecionando este comando de menu na execução vai exibir os itens de submenu de Cor de Fundo. Se atribuir a ação "zoom" a um menu hierárquico pop-up menu, vai conter automaticamente conter uma lista de valores pré-definidos de zoom. Note que essas ações não podem ser atribuídas aos botões.
-* *showDialog*:Adicionar a string "/showDialog" ao nome de ação permite a exibição da caixa de diálogo padrão associada para a ação. Por exemplo, pode ser usado "paragraph/styleSheet/showDialog" para abrir o diálogo de input que permite a entrada de um novo nome de folha de estilo. .
+* *Submenu*: Quando usado sem parâmetros e associados ao comando menu ou a um objeto de lista drop-down, essas ações exibem um submenu/lista automática. Por exemplo, se atribuir a ação "backgroundColor" a um comando de menu, selecionando este comando de menu na execução vai exibir os itens de submenu de Cor de Fundo. Se atribuir a ação "zoom" a uma lista drop-down, vai conter automaticamente uma lista de valores pré-definidos de zoom. Note que essas ações não podem ser atribuídas aos botões.
+* *showDialog*:Adicionar a string "/showDialog" ao nome de ação permite a exibição da caixa de diálogo padrão associada para a ação. Por exemplo, pode ser usado "paragraph/styleSheet/showDialog" para abrir o diálogo de input que permite a entrada de um novo nome de folha de estilo.
 
 | Ação | Sintaxe | Disponível com  | Descrição  | 
 |---|---|---|---|
@@ -103,10 +105,10 @@ Dois tipos de ações estão disponíveis para áreas 4D Write Pro:
 | keepWithNext | keepWithNext | Paragraph | Links a paragraph with the next so that they cannot be separated by automatic page or column breaks.   If applied to the last paragraph of the last cell in a table, the last row of the table is linked to the following paragraph.  | 
 | lineHeight | lineHeight?value={<Css_length> \| <Css_percentage>} | Paragraph, Submenu | Paragraph line height.  Ex: lineHeight?value=120% | 
 | layer | {image \| textBox}/layer | Submenu | Default submenu with layering actions for images or text boxes | 
-| listConcatString | listConcatStringFormat | Paragraph | Determines whether the numbering marker of the current level should be concatenated with the one of the previous level or not.|
-| listLevelAppend  | listLevelDec  | Paragraph | Creates a new hierarchical paragraph style sheet of a higher level and applies it to the selected paragraph.| 
-| listLevelDec     | listLevelDec  | Paragraph | Applies the hierarchical paragraph style sheet of the next level to the selected paragraph.| 
-| listLevelInc     | listLevelInc  | Paragraph | Applies the hierarchical paragraph style sheet of the previous level to the selected paragraph.| 
+| listConcatStringFormat | listConcatStringFormat | Paragraph | Determines whether the numbering marker of the current level should be concatenated with the one of the previous level or not.|
+| listLevelAppend  | listLevelAppend  | Paragraph | Creates a new hierarchical list style sheet of a next level and applies it to the selected paragraph.| 
+| listLevelDec     | listLevelDec  | Paragraph | Applies the hierarchical list style sheet of the previous level to the selected paragraph.| 
+| listLevelInc     | listLevelInc  | Paragraph | Applies the hierarchical list style sheet of the next level to the selected paragraph.| 
 | listNumberFormat | listNumberFormat?value=endDot|endParenthesis|doubleParenthesis | Paragraph, Submenu | Determines which delimiter to add to the numbering marker: an ending dot, an ending parenthesis, or double parenthesis (“1.”, “1)”, “(1)” |
 | listStartNumber | listStartNumber?value={<number> (longint) \| auto} | Paragraph, Submenu | List start number. Ex: listStartNumber?value=10 | 
 | listStyleImage | listStyleImage/showDialog | Paragraph, showDialog | Opens a file dialog to choose a image to display as list style bullet; it will set also list style type to disc – style to be used if image is not found. | 

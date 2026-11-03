@@ -18,7 +18,7 @@ Os botões com ações padrão são escurecidos quando apropriado durante a exec
 Se você quer um botão para executar uma ação que não está disponível como uma ação padrão, deixar o campo de ação padrão vazio e escrever um [método de objeto para especificar a ação do botão](../FormObjects/properties_Action.md#method).
 Normalmente, você ativaria o evento `On Clicked` e o método seria executado somente quando o botão fosse clicado. Pode associar um método a qualquer botão.
 
-La [variable](properties_Object.md#variable-or-expression) asociada a un botón se define automáticamente a **0** cuando el formulario se ejecuta por primera vez en modo Diseño o Aplicación. Cuando el usuario hace clic en un botón, su variable se define como **1**.
+A [variável](properties_Object.md#variable-or-expression) associada a um botão é automaticamente definida como **0** quando o formulário é executado pela primeira vez no modo Design ou Aplicação. Quando o usuário clica em um botão, sua variável é definida como **1**.
 
 > A um botão pode ser atribuída uma ação padrão e um método. Nesse caso, se o botão não for desativado pela ação padrão, o método será executado antes da ação padrão.
 
@@ -332,6 +332,102 @@ O estilo de botão Personalizado aceita uma imagem de fundo personalizada e perm
 				"iconFrames": 4
                 }
 ```
+
+## Ações padrão compatíveis
+
+As seguintes ações padrão podem ser atribuídas a botões:
+
+### Registros e formulários
+
+- [accept](../Desktop-legacy/standard-actions.md#accept)
+- [cancel](../Desktop-legacy/standard-actions.md#cancel)
+- [deleteRecord](../Desktop-legacy/standard-actions.md#deleterecord)
+- [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord)
+- [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord)
+- [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord)
+- [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord)
+- [firstRecord](../Desktop-legacy/standard-actions.md#firstrecord)
+- [lastRecord](../Desktop-legacy/standard-actions.md#lastrecord)
+- [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord)
+- [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
+
+### Páginas
+
+- [firstPage](../Desktop-legacy/standard-actions.md#firstpage)
+- [lastPage](../Desktop-legacy/standard-actions.md#lastpage)
+- [nextPage](../Desktop-legacy/standard-actions.md#nextpage)
+- [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
+- [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
+
+### Edição e expressões
+
+- [clear](../Desktop-legacy/standard-actions.md#clear)
+- [copy](../Desktop-legacy/standard-actions.md#copy)
+- [cut](../Desktop-legacy/standard-actions.md#cut)
+- [paste](../Desktop-legacy/standard-actions.md#paste)
+- [redo](../Desktop-legacy/standard-actions.md#redo)
+- [undo](../Desktop-legacy/standard-actions.md#undo)
+- [selectAll](../Desktop-legacy/standard-actions.md#selectall)
+- [computeExpressions](../Desktop-legacy/standard-actions.md#computeexpressions)
+- [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
+- [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
+
+### Formatação
+
+- [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
+- [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
+- [color/showDialog](../Desktop-legacy/standard-actions.md#colorshowdialog)
+- [color?value=\<color\>](../Desktop-legacy/standard-actions.md#colorvaluecolor)
+- [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)
+- [fontBold](../Desktop-legacy/standard-actions.md#fontbold)
+- [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)
+- [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)
+- [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
+- [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
+
+### Verificação ortográfica
+
+- [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
+- [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
+- [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)
+- [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)
+- [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)
+- [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)
+- [spell/forgetIgnore](../Desktop-legacy/standard-actions.md#spellforgetignore)
+- [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)
+- [spell/ignore](../Desktop-legacy/standard-actions.md#spellignore)
+- [spell/learn](../Desktop-legacy/standard-actions.md#spelllearn)
+- [spell/removeSubstitution](../Desktop-legacy/standard-actions.md#spellremovesubstitution)
+- [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)
+- [spell/suggestion?index=\<1-number\<=10\>](../Desktop-legacy/standard-actions.md#spellsuggestionindex1-number10)
+- [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
+- [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
+
+### Controles de área web
+
+- [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
+- [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
+- [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
+- [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
+
+### Outras ações
+
+- [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
+- [designMode](../Desktop-legacy/standard-actions.md#designmode)
+- [msc](../Desktop-legacy/standard-actions.md#msc)
+- [quit](../Desktop-legacy/standard-actions.md#quit)
+- [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
+- [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
+
+### Apenas botões invisíveis
+
+- [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
+
+### Ações padrão do 4D Write Pro
+
+- [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
+
+A [ação vazia](../Desktop-legacy/standard-actions.md#-empty-string) deixa o comportamento do botão para seu método. Veja a [tabela de compatibilidade de ações padrão](../Desktop-legacy/standard-actions.md#supported-form-objects) para comparações com outros objetos.
 
 ## Propriedades compatíveis
 

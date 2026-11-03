@@ -47,13 +47,13 @@ O método objeto de coluna obtém os eventos que ocorrem em seu [cabeçalho](./l
 
 ### Tipos de List box
 
-Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos.
+Há vários tipos de list boxes com seus próprios comportamentos e propriedades específicos. O tipo de list box depende de sua [propriedade Data Source](properties_Object.md#data-source):
 
 - **Arrays**: cada coluna é vinculada a um array 4D. Os list boxes baseados em arrays podem ser exibidas como [list boxes hierárquicos](listbox_overview.md#hierarchical-list-boxes).
 - **Seleção** (**Seleção atual** ou **Seleção temporária**): cada coluna é vinculada a uma expressão (por exemplo, um campo) avaliada para cada registro da seleção.
 - **Coleção ou seleção de entidade**: cada coluna é conectada a uma expressão avaliada para todo elemento da coleção ou toda entidade da seleção de entidade.
 
-> &#062; Não é possível combinar diferentes tipos de list box no mesmo objeto list box. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
+> Não é possível combinar diferentes tipos de list box no mesmo objeto list box. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
 
 ### Gerenciando list boxes
 
@@ -135,20 +135,20 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
   Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
 
 ```4d
- BOOLEANY ARRAY (tBListBox; 0)
+ ARRAY BOOLEAN(tBListBox;10)
   //tBListBox é o nome da variável da caixa de lista no formato
  If(tBListBox{1}=True)
     tBListBox{1}:=False
  Else
-    tBListBox{1}:=Verdadeiro
- final, se
+    tBListBox{1}:=True
+ End if
 ```
 
 > The [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command scrolls the list box rows so that the first selected row or a specified row is displayed.
 
 ### Personalizar a aparência de linhas selecionadas
 
-Quando a opção [Esconder destaque da seleção](properties_Appearance.md#hide-selection-highlight) estiver selecionada, você precisará tornar visíveis as seleções da caixa de listagem usando as opções de interface disponíveis. Como seleções não são gerenciadas totalmente por 4D, isso significa:
+Quando a opção [Esconder destaque da seleção](properties_Appearance.md#hide-selection-highlight) estiver selecionada, você precisará tornar visíveis as seleções da caixa de listagem usando as opções de interface disponíveis. Como seleções ainda são totalmente gerenciadas pelo 4D, isso significa:
 
 - Para array de tipo list boxes, deve analisar a variável array booleana associada com a list box para determinar quais linhas foram ou não selecionadas.
 - Para caixas de listagem do tipo seleção, é necessário verificar se o registro atual (linha) pertence ao conjunto especificado na propriedade [Conjunto destacado](properties_ListBox.md#highlight-set) do list box.
@@ -176,9 +176,10 @@ Em seguida, você pode definir a aparência das linhas selecionadas usando uma o
 Observe que os conjuntos de caixas de listagem usados para definir a aparência das linhas selecionadas devem ser recalculados durante o evento de formulário `On Selection Change`; no entanto, você também pode modificar esses conjuntos com base nos seguintes eventos de formulário adicionais:
 
 - `On Getting Focus` (propriedade da caixa de listagem)
-- `On Losing Focus` (propiedad list box)
-- `On Activate` (propiedad list box)
-- `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
+- `On Losing Focus` (propriedade da caixa de listagem)
+- `On Activate` (propriedade do formulário)
+- `On Deactivate` (propriedade do formulário)
+...dependendo se e como você deseja representar visualmente as mudanças de foco nas seleções.
 
 ##### Exemplo
 
@@ -196,7 +197,7 @@ No método de objeto da list box, pode escrever:
 
 ```4d
  Case of
-    :(Form event=On Selection Change)
+    :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
        ARRAY LONGINT(_ListboxBackground;$n) // cores de fundo linha
        For($i;1;$n)
@@ -234,7 +235,7 @@ Você pode escrever no método *UI_SetColor*:
 
 ## Gestão de ordenações
 
-Uma ordenação num list box pode ser padrão ou personalizada. Todas as colunas são sincronizadas automaticamente.
+Uma ordenação num list box pode ser padrão ou personalizada. Quando uma coluna de uma list box é ordenada, todas as outras colunas são sempre sincronizadas automaticamente.
 
 ### Ordenação standard
 
@@ -248,7 +249,7 @@ O suporte de ordenação padrão depende do tipo de list box:
 | ----------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" são classificáveis.</li><li>A [propriedade de origem da list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                            |
 | Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Seleção de entidades          | Sim                         | <ul><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li></ul> |
+| Seleção de entidades          | Sim                         | <ul><li>A [propriedade de origem da list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: ordenações em propriedades de atributos de objeto (por exemplo, "This.data.city" quando "data" é um atributo de objeto)</li><li>Suportado: ordenações em atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: ordenações em propriedades de atributos de objeto através de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar ordenação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li></ul> |
 | Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Seleção temporal              | Não                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -291,11 +292,11 @@ O valor da [variável de cabeçalho de coluna](properties_Object.md#variable-or-
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;  
   ![](../assets/en/FormObjects/sorticon0.png)
 
-- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.  
-  ![](../assets/en/FormObjects/sorticon2.png)
-
 - Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.  
   ![](../assets/en/FormObjects/sorticon1.png)
+
+- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.  
+  ![](../assets/en/FormObjects/sorticon2.png)
 
 > Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
 
@@ -519,7 +520,7 @@ Por exemplo, se quiser seleccionar a fila que contém Rennes, deve passar:
 
 > Se uma ou mais filas estiverem escondidas porque os seus pais estão desmoronados, já não são seleccionados. Apenas as linhas visíveis (directamente ou por rolagem) podem ser seleccionadas. Por outras palavras, as filas não podem ser tanto escondidas como seleccionadas.
 
-As with selections, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) will return the same position: (3;2).
+Assim como nas seleções, o comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retornará os mesmos valores para uma list box hierárquica e uma list box não hierárquica. Isso significa que em ambos os exemplos abaixo, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retornará a mesma posição: (3;2).
 
 *Non-hierarchical representation:*  
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -531,11 +532,11 @@ Quando todas as filas de uma sub-hierarquia estão escondidas, a linha de quebra
 
 #### Linhas de quebra
 
-If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns the first occurrence of the row in the corresponding array. No caso seguinte:
+Se o usuário selecionar uma linha de quebra, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retorna a primeira ocorrência da linha no array correspondente. No caso seguinte:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns (2;4). To select a break row by programming, you will need to use the [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) command.
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retorna (2;4). Para selecionar uma linha de quebra por programação, você precisará usar o comando [`LISTBOX SELECT BREAK`](../commands/listbox-select-break).
 
 As linhas de quebra não são tidas em conta nos arrays internos utilizados para gerir o aspecto gráfico das caixas de listagem (estilos e cores). No entanto, é possível modificar estas características para linhas de quebra através dos comandos de gestão gráfica dos objectos. Basta executar os comandos apropriados nas matrizes que constituem a hierarquia.
 
@@ -564,19 +565,19 @@ Resultados:
 
 Pode optimizar a exibição e gerenciamento de caixas de listagem hierárquica usando os eventos de formulário `On Expand` e `On Collapse`.
 
-Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória.
+Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Isso dificulta a construção de grandes caixas de listagem hierárquica baseadas em arrays geradas a partir de dados (através do comando [`SELECTION TO ARRAY`](../commands/selection-to-array)), não apenas por causa da velocidade de exibição, mas também da memória utilizada.
 
-Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar estas restrições: por exemplo, é possível exibir apenas parte da hierarquia e carregar/descarregar as arrays a qualquer momento, com base nas ações dos usuários. In the context of these events, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell where the user clicked in order to expand or collapse a row.
+Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar estas restrições: por exemplo, é possível exibir apenas parte da hierarquia e carregar/descarregar as arrays a qualquer momento, com base nas ações dos usuários. No contexto desses eventos, o comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retorna a célula onde o usuário clicou para expandir ou recolher uma linha.
 
 Neste caso, é necessário preencher e esvaziar os arrays através do código. Os princípios a serem implementados são os seguintes:
 
-- Quando a list box é exibido, somente o primeiro array deve ser preenchido. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:  
+- Quando a list box é exibido, somente o primeiro array deve ser preenchido. No entanto, você deve criar um segundo array com valores vazios para que a list box exiba os botões de expandir/recolher:  
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand`. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the [`SELECTION TO ARRAY`](../commands/selection-to-array) command and you insert as many rows as needed in the list box using the [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) command.  
+- Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand`. O comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retorna a célula em questão e permite construir a hierarquia apropriada: você preenche o primeiro array com os valores repetidos e o segundo com os valores enviados pelo comando [`SELECTION TO ARRAY`](../commands/selection-to-array) e insere quantas linhas forem necessárias na list box usando o comando [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows).  
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse`. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) command.
+- Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse`. O comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) retorna a célula em questão: você remove quantas linhas forem necessárias da list box usando o comando [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
 
 ## List boxes and the 4D language
 
