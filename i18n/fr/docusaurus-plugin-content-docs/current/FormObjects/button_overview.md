@@ -333,6 +333,102 @@ Le style de bouton Personnalisé permet d'utiliser une image d'arrière-plan per
                 }
 ```
 
+## Actions standard prises en charge
+
+Les actions standard suivantes peuvent être affectées aux boutons :
+
+### Enregistrements et formulaires
+
+- [accept](../Desktop-legacy/standard-actions.md#accept)
+- [cancel](../Desktop-legacy/standard-actions.md#cancel)
+- [deleteRecord](../Desktop-legacy/standard-actions.md#deleterecord)
+- [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord)
+- [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord)
+- [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord)
+- [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord)
+- [firstRecord](../Desktop-legacy/standard-actions.md#firstrecord)
+- [lastRecord](../Desktop-legacy/standard-actions.md#lastrecord)
+- [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord)
+- [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
+
+### Pages
+
+- [firstPage](../Desktop-legacy/standard-actions.md#firstpage)
+- [lastPage](../Desktop-legacy/standard-actions.md#lastpage)
+- [nextPage](../Desktop-legacy/standard-actions.md#nextpage)
+- [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
+- [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
+
+### Édition et expressions
+
+- [clear](../Desktop-legacy/standard-actions.md#clear)
+- [copy](../Desktop-legacy/standard-actions.md#copy)
+- [cut](../Desktop-legacy/standard-actions.md#cut)
+- [paste](../Desktop-legacy/standard-actions.md#paste)
+- [redo](../Desktop-legacy/standard-actions.md#redo)
+- [undo](../Desktop-legacy/standard-actions.md#undo)
+- [selectAll](../Desktop-legacy/standard-actions.md#selectall)
+- [computeExpressions](../Desktop-legacy/standard-actions.md#computeexpressions)
+- [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
+- [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
+
+### Mise en forme
+
+- [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
+- [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
+- [color/showDialog](../Desktop-legacy/standard-actions.md#colorshowdialog)
+- [color?value=\<color\>](../Desktop-legacy/standard-actions.md#colorvaluecolor)
+- [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)
+- [fontBold](../Desktop-legacy/standard-actions.md#fontbold)
+- [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)
+- [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)
+- [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
+- [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
+
+### Correction orthographique
+
+- [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
+- [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
+- [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)
+- [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)
+- [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)
+- [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)
+- [spell/forgetIgnore](../Desktop-legacy/standard-actions.md#spellforgetignore)
+- [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)
+- [spell/ignore](../Desktop-legacy/standard-actions.md#spellignore)
+- [spell/learn](../Desktop-legacy/standard-actions.md#spelllearn)
+- [spell/removeSubstitution](../Desktop-legacy/standard-actions.md#spellremovesubstitution)
+- [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)
+- [spell/suggestion?index=\<1-number\<=10\>](../Desktop-legacy/standard-actions.md#spellsuggestionindex1-number10)
+- [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
+- [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
+
+### Contrôles des zones web
+
+- [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
+- [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
+- [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
+- [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
+
+### Autres actions
+
+- [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
+- [designMode](../Desktop-legacy/standard-actions.md#designmode)
+- [msc](../Desktop-legacy/standard-actions.md#msc)
+- [quit](../Desktop-legacy/standard-actions.md#quit)
+- [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
+- [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
+
+### Boutons invisibles uniquement
+
+- [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
+
+### Actions standard 4D Write Pro
+
+- [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
+
+L'[action vide](../Desktop-legacy/standard-actions.md#-empty-string) laisse la gestion du comportement du bouton à sa méthode. Consultez le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects) pour une comparaison avec les autres objets.
+
 ## Propriétés prises en charge
 
 Tous les boutons partagent une même série de propriétés de base :

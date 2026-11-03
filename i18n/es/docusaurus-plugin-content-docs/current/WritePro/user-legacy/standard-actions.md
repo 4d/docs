@@ -10,7 +10,7 @@ slug: /WritePro/standard-actions
 La interfaz de usuario de áreas 4D Write Pro se puede manejar a través de un amplio conjunto de **acciones estándar**. Las acciones estándar pueden asignarse a:
 
 * comandos de menú, disponibles a través de la **barra de menú** o del comando [Dynamic pop up menu](../../commands/dynamic-pop-up-menu)
-* elementos de lista, disponibles por medio de listas pop-up/desplegables o menús pop-up jerárquicos,
+* elementos de lista, disponibles por medio de [listas desplegables](../../FormObjects/dropdownList_Overview.md),
 * botones, casillas de selección,
 * o ejecutados por el comando [INVOKE ACTION](../../commands/invoke-action).
 
@@ -27,10 +27,10 @@ Las siguientes acciones estándar están disponibles para las áreas 4D Write Pr
 
 **Notas:**
 
-* Las acciones que muestran un menú/lista automático sólo se pueden asociar a los comandos de menús o a los objetos pop-ups/listas desplegables y menús pop-up jerárquicos (ver *Submenú*).
+* Las acciones que muestran un menú/lista automático sólo se pueden asociar a los comandos de menús o a los objetos listas desplegables (ver *Submenú*).
 * Las casillas de selección y las casillas de selección 3D deben estar asociadas con acciones de estado, tales como "section/differentFirstPage" o "visibleHorizontalRuler". La opción de tres estados sólo se admite con casillas de selección estándar.
 * Un estado de acción de sección siempre es igual al estado actual de la sección seleccionada (estado heredado si el atributo se hereda de la sección principal o del atributo por defecto) ya que debe reflejar el estado de sección seleccionado (el estado que se aplica actualmente a la sección). Sin embargo, la modificación de un atributo de sección con una acción estándar solo anulará el atributo de sección seleccionado.
-* *Submenú*: cuando se utilizan sin parámetros y asociados a un comando de menú, un objeto pop-up/lista desplegable o pop-up menú jerárquico, estas acciones muestran un submenú automático. Por ejemplo, si asigna la acción "backgroundColor" a un comando de menú, la selección de este comando de menú a la ejecución mostrará automáticamente los comandos del submenú "Color de fondo". Si asigna la acción "zoom" a un menú pop-up jerárquico, contendrá automáticamente una lista de valores de zoom predefinidos. Tenga en cuenta que estas acciones no pueden asignarse a botones.
+* *Submenú*: cuando se utilizan sin parámetros y asociados a un comando de menú o a un objeto lista desplegable, estas acciones muestran un submenú automático. Por ejemplo, si asigna la acción "backgroundColor" a un comando de menú, la selección de este comando de menú a la ejecución mostrará automáticamente los comandos del submenú "Color de fondo". Si asigna la acción "zoom" a una lista desplegable, contendrá automáticamente una lista de valores de zoom predefinidos. Tenga en cuenta que estas acciones no pueden asignarse a botones.
 * *showDialog*: agregar la cadena "/showDialog" al nombre de la acción permite la visualización del diálogo estándar asociado a la acción. Por ejemplo, puede utilizar "paragraph/styleSheet/showDialog" para abrir el diálogo de entrada que permite la entrada de un nuevo nombre de hoja de estilo.
 
 | Acción | Modelo | Disponible con  | Descripción  |

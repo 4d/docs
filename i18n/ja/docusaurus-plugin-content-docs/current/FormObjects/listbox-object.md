@@ -53,6 +53,14 @@ LIST TO ARRAY("ListName";varCol)
 myCol:=myCol.push("new value") // リストボックスに new value を表示
 ```
 
+## サポートされる標準アクション
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): 配列リストボックスで利用可能です。[リストボックスタイプ別のサポートされるプロパティ](#supported-properties) を参照してください。
+
+[addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord)、[deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord)、[displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord)、および [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) アクションはセレクションリストボックスに作用することができますが、セレクションリストボックス自体ではなく、ボタンまたはメニューコマンドに割り当てます。
+
+[標準アクションの互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) を参照してください。
+
 ## プロパティ一覧
 
 提供されるプロパティはリストボックスのタイプに依存します。

@@ -9,7 +9,7 @@ slug: /WritePro/standard-actions
 L'interface utilisateur des zones 4D Write Pro peut être gérée grâce à un grand nombre d'**actions standard**. Les actions standard peuvent être assignées :
 
 * aux commandes de menu, disponibles via une **barre de menu** ou la commande [Pop up menu dynamique](../../commands/pop-up-menu-dynamique),
-* aux éléments de listes, disponibles via des pop-ups/listes déroulantes ou des pop-up menus hiérarchiques,
+* aux éléments de listes, disponibles via des [listes déroulantes](../../FormObjects/dropdownList_Overview.md),
 * aux boutons, cases à cocher,
 * ou exécutées avec la commande [APPELER ACTION](../../commands/appeler-action).
 
@@ -26,10 +26,10 @@ Les actions standard ci-dessous sont disponibles pour les zones 4D Write Pro :
 
 **Notes :**
 
-* Les actions qui affichent un menu/une liste automatique peuvent uniquement être attachées aux commandes de menus ou aux objets pop-ups/liste déroulantes et pop-up menus hiérarchiques (voir *Sous-menu*).
+* Les actions qui affichent un menu/une liste automatique peuvent uniquement être attachées aux commandes de menus ou aux objets listes déroulantes (voir *Sous-menu*).
 * Les cases à cocher et cases à cocher 3D doivent être associées à des actions de statut, telles que "section/differentFirstPage" ou "visibleHorizontalRuler". L'option "Trois états" est prise en charge avec les cases à cocher standard uniquement.
 * Un statut d'action de section est toujours égal au statut courant de la section sélectionnée (statut hérité si l'attribut est hérité de la section parente ou de l'attribut par défaut) car il doit refléter le statut de la section sélectionnée (le statut qui est actuellement appliqué à la section). Cependant, modifier un attribut de section avec une action standard surchargera uniquement l'attribut de la section sélectionnée.
-* *Sous-menu* : Lorsqu'elles sont utilisées sans paramètres et associées à une commande de menu, un objet pop-up/Liste déroulante ou pop-up menu hiérarchqiue, ces actions affichent un sous-menu automatique. Par exemple, si vous assignez l'action "backgroundColor" à une commande de menu, la sélection de cette commande de menu à l'exécution affichera automatiquement les commandes du sous-menu "couleur de fond". Si vous assignez l'action "zoom" à un pop-up menu hiérarchique, il contiendra automatiquement une liste de valeurs de zoom prédéfinies. A noter que ces actions ne peuvent pas être assignées à des boutons.
+* *Sous-menu* : Lorsqu'elles sont utilisées sans paramètres et associées à une commande de menu ou à un objet liste déroulante, ces actions affichent un sous-menu automatique. Par exemple, si vous assignez l'action "backgroundColor" à une commande de menu, la sélection de cette commande de menu à l'exécution affichera automatiquement les commandes du sous-menu "couleur de fond". Si vous assignez l'action "zoom" à une liste déroulante, elle contiendra automatiquement une liste de valeurs de zoom prédéfinies. A noter que ces actions ne peuvent pas être assignées à des boutons.
 * *showDialog* : Ajouter la chaîne "/showDialog**"** au nom de l'action permet d'afficher la boîte de dialogue standard associée à l'action. Par exemple, vous pouvez utiliser "paragraph/styleSheet/showDialog" pour ouvrir le dialogue permettant de saisir le nom d'une nouvelle feuille de style.
 
 | **Nom de l'action** | **Syntaxe** | **Disponible avec** | **Description** |
