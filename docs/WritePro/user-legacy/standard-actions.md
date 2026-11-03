@@ -9,7 +9,7 @@ slug: /WritePro/standard-actions
 The user interface of 4D Write Pro areas can be handled through a wide set of **standard actions**. Standard actions can be assigned to:
 
 * menu commands, available through the **menu bar** or the [Dynamic pop up menu](../commands/dynamic-pop-up-menu) command
-* list items, available through pop-up/drop-down lists or hierarchical pop-up menus,
+* list items, available through [Drop-down lists](../../FormObjects/dropdownList_Overview.md),
 * buttons, check boxes,
 * or executed by the [INVOKE ACTION](../commands/invoke-action) command.
 
@@ -26,10 +26,10 @@ The following standard actions are available with 4D Write Pro areas.
 
 **Notes:**
 
-* Actions that display an automatic menu/list can only be attached to menu commands, pop-up/drop-down lists or hierarchical pop-up menus objects (see *Submenu*).
+* Actions that display an automatic menu/list can only be attached to menu commands or drop-down list objects (see *Submenu*).
 * Check boxes and 3D check boxes should be associated with status actions, such as "section/differentFirstPage" or "visibleHorizontalRuler". Three-states option is supported with standard check boxes only.
 * A section action status is always equal to the selected section actual status (inherited status if attribute is inherited from parent section or from default attribute) as it must reflect the selected section status (the status which is applied currently to the section). However, modifying a section attribute with a standard action will only override the selected section attribute.
-* *Submenu*: When used without any parameters and associated to a menu command, a pop-up/drop-down list or a hierarchical pop-up menu object, these actions display an automatic submenu/list. For example, if you assign the "backgroundColor" action to a menu command, selecting this menu command at runtime will display the Background color submenu items. If you assign the "zoom" action to a hierarchical pop-up menu, it will automatically contain a list of predefined zoom values. Note that these actions cannot be assigned to buttons.
+* *Submenu*: When used without any parameters and associated to a menu command or a drop-down list object, these actions display an automatic submenu/list. For example, if you assign the "backgroundColor" action to a menu command, selecting this menu command at runtime will display the Background color submenu items. If you assign the "zoom" action to a drop-down list, it will automatically contain a list of predefined zoom values. Note that these actions cannot be assigned to buttons.
 * *showDialog*: Adding the "/showDialog" string to the action name allows the display of the associated standard dialog box for the action. For example, you can use "paragraph/styleSheet/showDialog" to open the input dialog allowing the entry of a new stylesheet name.
 
 | Action name | Pattern | Available with  | Description  |  

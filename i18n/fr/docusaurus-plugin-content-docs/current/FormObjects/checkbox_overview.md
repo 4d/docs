@@ -38,41 +38,6 @@ La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci
 
 Vous pouvez affecter une [action standard](properties_Action.md#standard-action) à une case à cocher pour gérer les attributs des zones de texte. Par exemple, si vous sélectionnez l'action standard `fontBold`, à l'exécution la case à cocher permettra de gérer l'attribut "gras" du texte sélectionné dans la zone de texte courante.
 
-Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
-
-| Actions prises en charge            | Conditions d'utilisation (le cas échéant) |
-| ----------------------------------- | ------------------------------------------------------------ |
-| avoidPageBreakInsideEnabled         | Zones 4D Write Pro uniquement                                |
-| fontItalic                          |                                                              |
-| fontBold                            |                                                              |
-| fontLinethrough                     |                                                              |
-| fontSubscript                       | Zones 4D Write Pro uniquement                                |
-| fontSuperscript                     | Zones 4D Write Pro uniquement                                |
-| fontUnderline                       |                                                              |
-| font/showDialog                     | Mac uniquement                                               |
-| htmlWYSIWIGEnabled                  | Zones 4D Write Pro uniquement                                |
-| section/differentFirstPage          | Zones 4D Write Pro uniquement                                |
-| section/differentLeftRightPages     | Zones 4D Write Pro uniquement                                |
-| spell/autoCorrectionEnabled         |                                                              |
-| spell/autoDashSubstitutionsEnabled  | Mac uniquement                                               |
-| spell/autoLanguageEnabled           | Mac uniquement                                               |
-| spell/autoQuoteSubstitutionsEnabled | Mac uniquement                                               |
-| spell/autoSubstitutionsEnabled      |                                                              |
-| spell/enabled                       |                                                              |
-| spell/grammarEnabled                | Mac uniquement                                               |
-| spell/showDialog                    | Mac uniquement                                               |
-| spell/visibleSubstitutions          |                                                              |
-| visibleBackground                   | Zones 4D Write Pro uniquement                                |
-| visibleFooters                      | Zones 4D Write Pro uniquement                                |
-| visibleHeaders                      | Zones 4D Write Pro uniquement                                |
-| visibleHiddenChars                  | Zones 4D Write Pro uniquement                                |
-| visibleHorizontalRuler              | Zones 4D Write Pro uniquement                                |
-| visiblePageFrames                   | Zones 4D Write Pro uniquement                                |
-| visibleReferences                   |                                                              |
-| widowAndOrphanControlEnabled        | Zones 4D Write Pro uniquement                                |
-
-Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](properties_Action.md#standard-action).
-
 ## Styles des boutons "Case à cocher"
 
 Les cases à cocher utilisent [les styles de bouton](properties_TextAndPicture.md#button-style) pour contrôler l'apparence générale de la case à cocher ainsi que ses propriétés disponibles. Il est possible d'appliquer différents styles prédéfinis aux cases à cocher. Plusieurs variantes peuvent être obtenues en combinant ces propriétés/comportements.
@@ -382,6 +347,45 @@ Il est généralement associé à une [image à 4 états](properties_TextAndPict
 		"customBorderY": 5
 		}
 ```
+
+## Actions standard prises en charge
+
+Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
+
+|Actions prises en charge|Conditions d'utilisation (le cas échéant)|
+|---|---|
+|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|Zones 4D Write Pro uniquement|
+|[fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)||
+|[fontBold](../Desktop-legacy/standard-actions.md#fontbold)||
+|[fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)||
+|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|Zones 4D Write Pro uniquement|
+|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|Zones 4D Write Pro uniquement|
+|[fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)||
+|[font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)|Mac uniquement|
+|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|Zones 4D Write Pro uniquement|
+|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|Zones 4D Write Pro uniquement|
+|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|Zones 4D Write Pro uniquement|
+|[spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)||
+|[spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)|Mac uniquement|
+|[spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)|Mac uniquement|
+|[spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)|Mac uniquement|
+|[spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)||
+|[spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)||
+|[spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)|Mac uniquement|
+|[spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)|Mac uniquement|
+|[spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)||
+|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|Zones 4D Write Pro uniquement|
+|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|Zones 4D Write Pro uniquement|
+|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|Zones 4D Write Pro uniquement|
+|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|Zones 4D Write Pro uniquement|
+|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|Zones 4D Write Pro uniquement|
+|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|Zones 4D Write Pro uniquement|
+|[visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)||
+|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|Zones 4D Write Pro uniquement|
+
+Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](properties_Action.md#standard-action).
+
+Voir aussi le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

@@ -58,6 +58,12 @@ title: ピクチャーボタン
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
 
+## サポートされる標準アクション
+
+ピクチャーボタンは、特定のボタンスタイルに限定されたアクション (非表示ボタン用の [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) など) を除き、[ボタンと同じ標準アクション](button_overview.md#supported-standard-actions) をサポートします。アクションは [標準アクションプロパティ](properties_Action.md#standard-action) を使用して割り当てます。
+
+アクションの説明とアクティベーション条件については、[標準アクション](../Desktop-legacy/standard-actions.md#available-actions) を参照してください。[標準アクションの互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) も参照してください。
+
 ## プロパティ一覧
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [パス名](properties_Picture.md#パス名) - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新) - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る) - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果) - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用) - [アニメーション間隔 (tick)](properties_Animation.md#アニメーション間隔-tick) - [行](properties_Crop.md#行) - [列](properties_Crop.md#列) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [ショートカット](properties_Entry.md#ショートカット) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [イタリック](properties_Text.md#イタリック) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
