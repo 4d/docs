@@ -1,4 +1,4 @@
-﻿---
+---
 id: set-database-parameter
 title: SET DATABASE PARAMETER
 slug: /commands/set-database-parameter
@@ -23,6 +23,7 @@ displayed_sidebar: docs
 |Versão|Alterações|
 |---|---|
 |21 R4|Adicionado *QUIC session timeout*|
+|21 R3|Removido suporte a *Use legacy network layer*, adicionado *Use legacy print rendering*|
 |20 R6|Modificado|
 |20 R3|Modificado|
 |19 R5|Modificado|
@@ -425,9 +426,7 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 
 **Se conserva entre duas sessões**: não
 
-**Valores possíveis**: 1 a 9 (1 = mais rápido, 9 = mais comprimido) ou -1 = o mejor compromiso.
-
-**Descrição**: nível de compressão para todos os intercambios HTTP comprimidos efetuados para os serviços web (petições cliente ou respostas servidor). Os intercâmbios comprimidos são uma otimização que pode implementar quando tiver duas aplicações 4D que se comunicam através serviços web (ver o comando *SET WEB SERVICE OPTION*). Este seletor lhe permite otimizar os intercâmbios n seja privilegiando a velocidade de execução (menor compressão) ou a quantidade de compressão (menor velocidade). A escolha de um valor depende do tamanho e da natureza dos dados intercambiados. Passe de 1 a 9 no parâmetro valor onde 1 é a compressão mais rápida e 9 a mais alta. Também pode passar -1 para obter um compromisso entre velocidade e taxa de compressão. Por padrão, o nível de compressão é 1 (compressão rápida).
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
  
 
@@ -442,8 +441,6 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 **Alcance**: aplicação 4D
 
 **Se conserva entre duas sessões**: não
-
-**Valores possíveis**: todo valor de tipo inteiro longo
 
 **Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
@@ -493,7 +490,7 @@ Este parâmetro pode ser definido do lado do cliente. Geralmente, não necessita
 
 **Se conserva entre duas sessões**: Não
 
-**Valores**: string formateada do tipo "nnn.nnn.nnn.nnn" (por exemplo "127.0.0.1").
+**Valores**: string formateada do tipo IPv4 (por exemplo "127.0.0.1") ou tipo IPv6 (por exemplo "2001:0db8:0000:0000:0000:ff00:0042:8329")
 
 **Descrição**: endereço IP utilizado localmente por 4D para se comunicar com o intérprete PHP através FastCGI. Por padrão, o valor é "127.0.0.1". Esta endereço deve corresponder à máquina onde se encontra 4D. Este parâmetro também pode ser definido globalmente para todas as máquinas através das Propriedades do banco.
 
@@ -667,26 +664,6 @@ Este funcionamento pode ser uma fonte de erros se deseja enviar valores de data 
 
 
 
-### Use legacy network layer (87)
-
-**Alcance:** 4D em modo local, 4D Server**
-
-Se conserva entre duas sessões:** sim**
-
-** **Descrição:** fixa ou obtém o estado atual da capa de rede antiga para as conexões cliente/servidor. 
-
-A capa de rede antiga é obsoleta a partir de 4D v14 R5 e deve ser substituída progressivamente em suas aplicações pela capa de rede   *ServerNet*. *ServerNet* será requerida em próximas versões 4D com o propósito de se beneficiar das futuras evoluções da rede. Por razões de compatibilidade, a capa de rede antiga ainda é suportada para permitir uma transição sem problemas para as aplicações existentes; (se usar por padrão em aplicações convertidas de uma versão anterior a v14 R5). Passe 1 neste parâmetro para utilizar a capa de rede antiga (e desativar *ServerNet*) para as conexões cliente/servidor, e passe 0 para desabilitar a rede antiga (e utilizar *ServerNet*).
-
-Esta propriedade também pode ser definida mediante a opção "Usar capa de rede antiga " que se encontram em *Página Compatibilidade* das Propriedades da base (ver *Preferências de configuração*). Nesta seção, também pode encontrar uma discussão sobre a estratégia de migração. Lhe recomendamos que ative *ServerNet* o mais rápido possível.
-
-Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. Não está disponível em 4D Server v14 R5 64-bit versão para macOS, que só suporta o *ServetNet*; (sempre devolve 0).
-
-**Valores possíveis**: 0 ou 1 (0 = não utilizam capa de rede antiga, 1 = uso capa de rede antiga)
-
-**Valor por padrão:** 0 em bases de dados criadas com 4D v14 R5 ou superior, 1 em bases de dados convertidas de 4D v14 R4 ou anteriores.
-
-
-
 ### SQL Server Port ID (88)
 
 **Alcance**: 4D modo local e 4D Server.
@@ -812,11 +789,17 @@ Lembre que este parâmetro define todos os conselhos 4D, ou seja, as mensages de
 
 **Mantido entre sessões**: Não
 
-**Descrição**: Usado para especificar o nível de Transport Layer Security (TLS) , o que oferece criptografia e autenticação de dados entre aplicações e servidores. Os valores definidos são aplicados globalmente a capa de rede. Quando for modificado o servidor deve ser reiniciado para usar o novo valor. O protocolo mínimo padrão é TLSv1\_2.
+**Descrição**: Usado para especificar o nível de Transport Layer Security (TLS) , o que oferece criptografia e autenticação de dados entre aplicações e servidores. Os valores definidos são aplicados globalmente a capa de rede. Quando for modificado o servidor deve ser reiniciado para usar o novo valor. 
+
+**Valor padrão**: TLSv1\_3
 
 **Valores possíveis**:
 
-TLSv1\_0 \- TLS 1.0, introduzido em 1999 como uma atualização de SSL v3.0\. TLS 1.0 e SSL 3.0 não interoperamTLSv1\_1 \- TLS 1.1, introduzido em 2006 como uma atualização de TLS 1.0\. Melhorias incluem melhor segurança e manejo de erros.TLSv1\_2 \- TLS 1.2, introduzido em 2008 como uma atualização de TLS 1.1\. Melhorias incluem flexibilidade, compatibilidade adicional para criptografia autenticada, etc.**NOTA**: O plugin 4D Internet Commands usa uma capa de rede diferente, portanto esse seletor terá nenhum impacto na versão TLS.
+- TLSv1\_2 (TLS 1.2, introduzido em 2008)
+- TLSv1\_3 (TLS 1.3, introduzido em 2018)
+
+
+**NOTA**: O plugin 4D Internet Commands usa uma capa de rede diferente, portanto esse seletor terá nenhum impacto na versão TLS.
 
 
 
@@ -830,7 +813,7 @@ TLSv1\_0 \- TLS 1.0, introduzido em 1999 como uma atualização de SSL v3.0\. TL
 
 **Descrição:** String personalizada passada de uma sessão para a próxima quando a aplicação 4D for reiniciada. Esse seletor é útil no contexto de testes de unidade automáticos que exigem que a aplicação reinicie com parâmetros diferentes. 
 
-Quando usados com [SET DATABASE PARAMETER](../commands/set-database-parameter), define um novo valor que estará disponível dentro do novo banco de dados aberto depois que 4D for reiniciado manualmente ou usando os comandos [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), ou [RESTART 4D](../commands/restart-4d). Quando usados com [Get database parameter](../commands/get-database-parameter), obtém o valor do parâmetro de usuário disponível definido usando a linha de comando (ver *Interface da linha de comando*), o arquivo .4DLink (ver *Usar um arquivo 4DLink*), ou uma chamada a [SET DATABASE PARAMETER](../commands/set-database-parameter) durante a sessão anterior. (\*) se [SET DATABASE PARAMETER](../commands/set-database-parameter) estabelecer User param value antes da chamada a [OPEN DATABASE](../commands/open-database) com o arquivo .4DLink que também contém um atributo usuário param xml. 4D leva em consideração apenas o parâmetro fornecido por [SET DATABASE PARAMETER](../commands/set-database-parameter).
+Quando usados com [SET DATABASE PARAMETER](../commands/set-database-parameter), define um novo valor que estará disponível dentro do novo banco de dados aberto depois que 4D for reiniciado manualmente ou usando os comandos [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), ou [RESTART 4D](../commands/restart-4d). Quando usados com [Get database parameter](../commands/get-database-parameter), obtém o valor do parâmetro de usuário disponível definido usando a linha de comando (ver *Interface da linha de comando*), o arquivo .4DLink (ver *Sobre arquivos 4DLink*), ou uma chamada a [SET DATABASE PARAMETER](../commands/set-database-parameter) durante a sessão anterior. (\*) se [SET DATABASE PARAMETER](../commands/set-database-parameter) estabelecer User param value antes da chamada a [OPEN DATABASE](../commands/open-database) com o arquivo .4DLink que também contém um atributo usuário param xml. 4D leva em consideração apenas o parâmetro fornecido por [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 
 
@@ -1005,9 +988,9 @@ Esse seletor permite suspender/retomar todas as operações de histórico inicia
 
 **Se conserva entre duas sessões**: não
 
-**Valores possíveis**: número inteiro positivo. Valor padrão = 900, valor mínimo = 60. 
+**Valores possíveis**: número inteiro positivo. Valor padrão = 15, valor mínimo = 1. 
 
-**Descrição**: tempo limite em segundos para sessões cliente/servidor em caso de desconexão inesperada ao utilizar a camada de rede QUIC. Este tempo limite é o período permitido para uma sessão durante o qual a conexão entre o servidor e o cliente pode ser restabelecida automaticamente após uma desconexão não intencional. Se, ao final deste tempo limite, a conexão não tiver sido restabelecida, a sessão será encerrada.  
+**Descrição**: tempo limite em minutos para sessões cliente/servidor em caso de desconexão inesperada ao utilizar a camada de rede QUIC. Este tempo limite é o período permitido para uma sessão durante o qual a conexão entre o servidor e o cliente pode ser restabelecida automaticamente após uma desconexão não intencional. Se, ao final deste tempo limite, a conexão não tiver sido restabelecida, a sessão será encerrada.  
 
 Esta configuração só pode ser definida no 4D Server e aplica-se a todas as novas sessões remotas 4D (o valor do tempo limite das sessões existentes não é alterado). 
 
@@ -1067,6 +1050,8 @@ Este exemplo força temporariamente a execução de um comando de pesquisa por f
 ```4d
  curVal:=Get database parameter([tabla1];Query By Formula On Server) //Armazena a configuração atual
  SET DATABASE PARAMETER([tabla1];Query By Formula On Server;1) //Força a execução no computador cliente
+ QUERY BY FORMULA([tabla1];myformula)
+ SET DATABASE PARAMETER([tabla1];Query By Formula On Server;curVal) //Restaura a configuração atual
 ```
 
 ## Exemplo 3 
@@ -1075,10 +1060,10 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 
 ```4d
  var $o : Object
- SET DATABASE PARAMETER(JSON use local time;0)
+ SET DATABASE PARAMETER(Dates inside objects;0)
  OB SET($o ;"myDate";Current date) // conversão JSON
  $json:=JSON Stringify($o)
- SET DATABASE PARAMETER(JSON use local time;1)
+ SET DATABASE PARAMETER(Dates inside objects;1)
 ```
 
 ## Ver também 

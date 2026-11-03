@@ -11,8 +11,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo. |
-| objeto | any | &#8594; | Nome do objeto (se * é especificado) ou Variável ou Campo (se * é omitido) |
+| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (string)<br/>Se omitido, objeto é uma variável ou campo. |
+| objeto | Text, Variable, Field | &#8594; | Nome do objeto (se * é especificado) ou <br/>Variável ou Campo (se * é omitido) |
 | corPrimeiroPlano | Text, Integer | &#8592; | Valor da cor RGB do primeiro plano |
 | corFundo | Text, Integer | &#8592; | Valor da cor do RGB para segundo plano (fundo) |
 | corFundoAlternativo | Text, Integer | &#8592; | Valor da cor RGB do fundo alternativo |
@@ -53,7 +53,7 @@ Os valores de cores RGB devolvidos nos parâmetros a *corPrimerPlano*, *corFundo
 * se passar um parâmetro de tipo texto, a cor é devolvida em formato CSS com a sintaxe "#rrggbb" (por exemplo: "# 0000FF")
 * Se passar um parâmetro de tipo inteiro, a cor pode ser um inteiro longo de 4 bytes de formato (0x00RRGGBB) ou valores negativos correspondentes às cores de "sistema".
 
-Para obter mais informação sobre do formato dos parâmetros *corPrimeiroPlano*, *corFundo*, *corFundoAlt* e *corBorda*, consulte a descrição do comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors).
+Para obter mais informação sobre do formato dos parâmetros *corPrimeiroPlano*, *corFundo*, *corFundoAlternativo* e *corBorda*, consulte a descrição do comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors).
 
 ## Ver também 
 

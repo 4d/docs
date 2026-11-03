@@ -32,13 +32,13 @@ O Designer pode:
 
 Después del Diseñador, el siguiente usuario más poderoso es el **Administrador**, al que se le suelen encomendar las tareas de gestión del sistema de acceso y las funciones de administración.
 
-O Administrador não pode:
+O Administrador pode:
 
 - criar usuários e grupos,
 - acessar ao monitor e janela de Administração 4D Server
 - acessar a janela MSC para gerenciar cópias de segurança, restaurações ou servidor.
 
-O administrador pode:
+O Administrador não pode:
 
 - editar o usuário Designer
 - como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. In particular, the Administrator cannot access to the Design mode if it is restricted. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
@@ -52,7 +52,7 @@ Pode renomear os usuários Designer e Administardor. Na linguagem, o ID de Desig
 
 O Designer e Administrador podem cada um criar até 16.000 grupos e 16 mil usuários.
 
-## Editor de grupos
+## Editor de usuários
 
 O editor de usuários está na Barra de Ferramentas de 4D.
 
@@ -105,7 +105,7 @@ Usuários deletados não aparecem mais no editor de Usuários. Note que as IDs d
 
 - **Método de inicio**: nombre de un método asociado que se ejecutará automáticamente cuando el usuario abra la aplicación (opcional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
 
-## Editor de usuários
+## Editor de grupos
 
 O editor para grupos está na Barra de ferramentas de 4D.
 
@@ -151,15 +151,15 @@ A colocação de grupos noutros grupos permite-lhe criar uma hierarquia de usuá
 
 Para remover um usuário ou grupo de outro grupo, você só precisa desmarcar a opção correspondente na área de atribuição de membros.
 
-### Assigning a license to a group
+### Atribuir uma licença a um grupo
 
-You can assign a group privileges to any [extensions](../Extensions/overview.md) installed in the project. This includes all the 4D and third-party plug-ins and components.
+Você pode atribuir privilégios de grupo a qualquer [extensão](../Extensions/overview.md) instalada no projeto. Isso inclui todos os plug-ins e componentes 4D e de terceiros.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions in client/server environment. Any users that do not belong to the access group of an extension cannot load this extension.
+Distribuir o acesso às extensões permite controlar o uso das licenças que você possui para essas extensões em ambiente cliente/servidor. Qualquer usuário que não pertença ao grupo de acesso de uma extensão não pode carregar essa extensão.
 
 > Licenças utilizadas permanecem anexadas a contas de usuário 4D no grupo para toda a sessão 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions [requiring a license](../Admin/licenses.md) loaded by the 4D application. To give a group access to an extension, you simply need to check the corresponding option.
+A área “Plug-in” na página Grupos da barra de ferramentas lista todas as extensões [que requerem licença](../Admin/licenses.md) carregadas pela aplicação 4D. Para dar acesso de um grupo a uma extensão, basta marcar a opção correspondente.
 
 ![](../assets/en/Users/plugins.png)
 
@@ -197,7 +197,7 @@ Estes acessos são definidos no diálogo Parâmetros. O exemplo abaixo mostra di
 
 ![](../assets/en/Users/Access1.png)
 
-También se utilizan grupos para [distribuir las licencias disponibles](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribuição é definida no editor Grupos.
+Você também usa grupos para [distribuir as licenças disponíveis](#atribuir-uma-licenca-a-um-grupo). Esta distribuição é definida no editor Grupos.
 
 ## Ficheiro Directory.json
 

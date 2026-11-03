@@ -27,7 +27,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ## Background Color / Fill color
 
-Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).  
+Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-button-custom-check-box-or-custom-radio-button) (`borderFillColor` JSON property).  
 
 :::note
 
