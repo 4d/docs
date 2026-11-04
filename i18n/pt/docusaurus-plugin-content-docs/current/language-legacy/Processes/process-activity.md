@@ -1,4 +1,4 @@
-﻿---
+---
 id: process-activity
 title: Process activity
 slug: /commands/process-activity
@@ -124,3 +124,4 @@ Se quiser obter todos os processos relacionados à sessão atual:
 | --- | --- |
 | Número do comando | 1495 |
 | Thread-seguro | sim |
+

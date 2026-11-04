@@ -1,4 +1,4 @@
-﻿---
+---
 id: process-activity
 title: Process activity
 slug: /commands/process-activity
