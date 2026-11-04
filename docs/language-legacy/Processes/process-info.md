@@ -169,3 +169,12 @@ $preemptive:=Process info(Current process).preemptive
 [Process state](../commands/process-state)  
 [Session info](../commands/session-info)  
 
+
+## Properties
+
+
+|  |  |
+| --- | --- |
+| Command number | 1843 |
+| Thread safe | yes |
+

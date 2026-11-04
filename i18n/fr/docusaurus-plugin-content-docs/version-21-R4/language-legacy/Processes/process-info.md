@@ -163,7 +163,18 @@ $preemptive:=Process info(Current process).preemptive
 
 ## Voir également
 
-[Count tasks](../../commands-legacy/count-tasks)\
-[Process activity](../commands/process-activity)\
-[Process state](../../commands-legacy/process-state)\
+[Count tasks](../../commands-legacy/count-tasks)  
+[Process activity](../commands/process-activity)  
+[Process state](../../commands-legacy/process-state)  
 [Session info](../commands/session-info)
+
+## Propriétés 
+
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1843 |
+| Thread safe | oui |
+
+
+

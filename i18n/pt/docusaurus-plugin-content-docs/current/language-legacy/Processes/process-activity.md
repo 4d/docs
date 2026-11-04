@@ -113,7 +113,14 @@ Se quiser obter todos os processos relacionados à sessão atual:
 
 ## Veja também
 
-[`Process info`](../commands/process-info)
-[`Session info`](../commands/session-info)
-[Session storage](../commands/session-storage)  
-[WEB Get server info](../commands/web-get-server-info)
+[`Process info`](../commands/process-info)  
+[`Session info`](../commands/session-info)  
+[`Session storage`](../commands/session-storage)  
+[`WEB Get server info`](../commands/web-get-server-info)
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1495 |
+| Thread-seguro | sim |
