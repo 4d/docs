@@ -101,7 +101,7 @@ Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md
 
 ## .getBlob()
 
-<!-- REF #IncomingMessageClass.getBlob().Syntax -->**.getBlob**() : Blob<!-- END REF -->
+<!-- REF #IncomingMessageClass.getBlob().Syntax -->**.getBlob**(): Blob<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
@@ -222,7 +222,7 @@ Si el cuerpo no se recibe como una imagen válida, la función devuelve null.
 
 ## .getText()
 
-<!-- REF #IncomingMessageClass.getText().Syntax -->**.getText**() : Text<!-- END REF -->
+<!-- REF #IncomingMessageClass.getText().Syntax -->**.getText**(): Text<!-- END REF -->
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
@@ -301,7 +301,7 @@ La propiedad `.urlPath` es de sólo lectura.
 
 ## .urlQuery
 
-<!-- REF #IncomingMessageClass.urlQuery.Syntax -->**urlQuery** : Object<!-- END REF -->
+<!-- REF #IncomingMessageClass.urlQuery.Syntax -->**urlQuery**: Object<!-- END REF -->
 
 #### Descripción
 
@@ -334,10 +334,10 @@ Los caracteres especiales, como las comillas simples o los retornos de carro, de
 
 Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
-````4d
+```4d
 //urlQuery.mdcode = ```4d
 $test:=Length($r.urlQuery.mdcode) //5
-````
+```
 
 :::note
 

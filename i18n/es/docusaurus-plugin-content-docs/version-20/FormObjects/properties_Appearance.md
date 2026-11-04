@@ -47,7 +47,7 @@ Displays source text of formulas as symbols when expressions are shown as refere
 
 #### Comandos
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## Ocultar rectángulo de enfoque
 
@@ -165,7 +165,7 @@ Displays/hides a black rectangle for images that cannot be loaded or computed (e
 
 #### Comandos
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## Mostrar los pies de página
 

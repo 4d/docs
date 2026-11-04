@@ -27,7 +27,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 ## Couleur de fond
 
-Définit la couleur de fond / couleur de remplissage d'un objet. Elle peut être définie pour certains objets standard (propriété JSON `fill`) ou pour des [objets de style "Custom"](#custom-style-button-check-box-or-radio-button) (propriété JSON `borderFillColor`).
+Définit la couleur de fond / couleur de remplissage d'un objet. Elle peut être définie pour certains objets standard (propriété JSON `fill`) ou pour des [objets de style "Custom"](#custom-button-custom-check-box-or-custom-radio-button) (propriété JSON `borderFillColor`).
 
 :::note
 
@@ -231,6 +231,9 @@ Dans les [zones de texte](./text.md) et les [zones de saisie](./input_overview.m
 ![](../assets/en/FormObjects/radius-text.png)
 
 Dans les [boutons personnalisés](./button_overview.md#custom) (avec un [style de bordure "personnalisé"](#border-line-style)), les [cases à cocher personnalisées](checkbox_overview.md#custom) et les [boutons radio personnalisés](radio_overview.md#custom), le rayon d'arrondi est tracé **à l'intérieur** de la zone de l'objet.
+
+![](../assets/en/FormObjects/custom-button.png)  
+![](../assets/en/FormObjects/custom-radius-runtime.png)
 
 #### Grammaire JSON
 

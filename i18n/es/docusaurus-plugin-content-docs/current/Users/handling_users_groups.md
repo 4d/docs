@@ -193,7 +193,7 @@ Estos accesos se definen en la caja de diálogo Parámetros. El siguiente ejempl
 
 ![](../assets/en/Users/Access1.png)
 
-También se utilizan grupos para [distribuir las licencias disponibles](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribución se define en el editor Grupos.
+También se utilizan grupos para [distribuir las licencias disponibles](#assigning-a-license-to-a-group). Esta distribución se define en el editor Grupos.
 
 ## Archivo directory.json
 

@@ -47,7 +47,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## フォーカスの四角を隠す
 
@@ -165,7 +165,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## フッター表示
 

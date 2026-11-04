@@ -1243,7 +1243,7 @@ Voir [plus d'exemples ci-dessous](#example-4-2) (exemples 4 et 5).
 :::tip Articles de blog sur le sujet
 
 - [4D AI : Recherche d'entités par similarité vectorielle en 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
-- [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
+- [Pourquoi votre pile de recherche semble brisée – et comment Vector Search y remédie](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
 

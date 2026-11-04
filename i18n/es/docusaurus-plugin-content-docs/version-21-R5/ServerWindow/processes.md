@@ -21,13 +21,13 @@ También hay tres botones de acceso directo que se pueden utilizar para filtrar 
 - **Procesos 4D**: procesos generados por el motor de 4D Server. Estos procesos van precedidos de un icono en forma de rueda dentada.
 - **Procesos de reserva**: procesos inactivos pero que se mantienen temporalmente y que pueden reutilizarse en cualquier momento. Este mecanismo optimiza la reactividad de 4D Server. Estos procesos van precedidos de un icono en forma de figura atenuada.
 
-La opción **Mostrar los procesos por grupos** le permite agrupar los procesos internos de 4D Server así como los procesos cliente, para una mejor legibilidad. Al seleccionar esta opción:
+La opción **Mostrar los procesos por grupos** le permite agrupar los procesos internos de 4D Server así como los procesos cliente, para una mejor legibilidad. Cuando seleccione esta opción:
 
 - los procesos cliente 4D "gemelos" (proceso cliente 4D principal y proceso base cliente 4D, ver [Tipo de proceso](#process-type)) se agrupan como uno solo,
 - se crea un grupo "Gestores de tareas", que incluye los procesos internos dedicados al reparto de tareas (Shared balancer, Net session manager, Exclusive pool worker),
 - se crea un grupo "Gestores de clientes", que incluye varios procesos internos clientes.
 
-El área inferior de la ventana se utiliza para mostrar la representación gráfica de la actividad del proceso(s) seleccionados.
+La área inferior de la ventana se utiliza para mostrar la representación gráfica de la actividad del proceso(s) seleccionados.
 
 > Puede seleccionar varias líneas manteniendo presionada la tecla **Mayús** para una selección adyacente o **Ctrl** (Windows) / **Comando** (macOS) para una selección no adyacente.
 
@@ -58,7 +58,7 @@ Cada proceso se identifica con un icono y un tipo. El color y la forma del icono
 | ![](../assets/en/Admin/server-icon-6.png)  | Proceso cliente 4D protegido (proceso de desarrollo de un 4D conectado)                                                                                                                                |
 | ![](../assets/en/Admin/server-icon-7.png)  | Proceso principal de un cliente 4D conectado o proceso creado con `New process` en un cliente 4D conectado (Proceso colaborativo, equivalente en el servidor del proceso creado en la máquina cliente) |
 | ![](../assets/en/Admin/server-icon-8.png)  | Proceso cliente 4D principal (proceso paralelo a un proceso cliente 4D. Proceso apropiativo responsable de controlar el proceso cliente 4D principal correspondiente)                  |
-| ![](../assets/en/Admin/server-icon-9.png)  | Proceso de reserva (antiguo o futuro ¨Proceso cliente 4D base de datos")                                                                                                                               |
+| ![](../assets/en/Admin/server-icon-9.png)  | Proceso de reserva (antiguo o futuro "¨Proceso cliente 4D base de datos")                                                                                                                              |
 | ![](../assets/en/Admin/server-icon-10.png) | Worker servidor SQL                                                                                                                                                                                                       |
 | ![](../assets/en/Admin/server-icon-11.png) | Proceso worker servidor HTTP                                                                                                                                                                                              |
 | ![](../assets/en/Admin/server-icon-13.png) | Procedimiento almacenado (proceso lanzado por un 4D conectado y ejecutado en el servidor)                                                                                                              |

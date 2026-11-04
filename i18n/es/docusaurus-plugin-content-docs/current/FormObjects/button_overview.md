@@ -333,11 +333,11 @@ The Custom button style accepts a personalized background picture and allows man
                 }
 ```
 
-## Acciones estándar soportadas
+## Supported standard actions
 
-Las siguientes acciones estándar pueden asignarse a los botones:
+The following standard actions can be assigned to buttons:
 
-### Registros y formularios
+### Records and forms
 
 - [accept](../Desktop-legacy/standard-actions.md#accept)
 - [cancel](../Desktop-legacy/standard-actions.md#cancel)
@@ -351,7 +351,7 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord)
 - [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
 
-### Páginas
+### Pages
 
 - [firstPage](../Desktop-legacy/standard-actions.md#firstpage)
 - [lastPage](../Desktop-legacy/standard-actions.md#lastpage)
@@ -359,7 +359,7 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
 - [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
 
-### Edición y expresiones
+### Editing and expressions
 
 - [clear](../Desktop-legacy/standard-actions.md#clear)
 - [copy](../Desktop-legacy/standard-actions.md#copy)
@@ -372,7 +372,7 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
 - [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
 
-### Formato
+### Formatting
 
 - [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
 - [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
@@ -385,7 +385,7 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
 - [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
 
-### Corrección ortográfica
+### Spellchecking
 
 - [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
 - [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
@@ -403,14 +403,14 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
 - [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
 
-### Controles de área web
+### Web-area controls
 
 - [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
 - [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
 - [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
 - [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
 
-### Otras acciones
+### Other actions
 
 - [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
 - [designMode](../Desktop-legacy/standard-actions.md#designmode)
@@ -419,15 +419,15 @@ Las siguientes acciones estándar pueden asignarse a los botones:
 - [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
 - [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
 
-### Solo botones invisibles
+### Invisible buttons only
 
 - [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
 
-### Acciones estándar 4D Write Pro
+### 4D Write Pro standard actions
 
 - [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
 
-La [acción vacía](../Desktop-legacy/standard-actions.md#-empty-string) deja el comportamiento del botón a su método. Consulte la [tabla de compatibilidad de las acciones estándar](../Desktop-legacy/standard-actions.md#supported-form-objects) para comparar con otros objetos.
+The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves the button's behavior to its method. See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects) for comparisons with other objects.
 
 ## Propiedades soportadas
 

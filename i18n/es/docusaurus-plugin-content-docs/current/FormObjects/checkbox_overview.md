@@ -348,44 +348,44 @@ Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPict
 		}
 ```
 
-## Acciones estándar soportadas
+## Supported standard actions
 
 Sólo las acciones que pueden representar un estado verdadero/falso (acciones "marcables") son soportadas por este objeto:
 
-|Acciones soportadas|Condiciones de uso (si las hay)|
-|---|---|
-|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|Área 4D Write Pro únicamente|
-|[fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)||
-|[fontBold](../Desktop-legacy/standard-actions.md#fontbold)||
-|[fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)||
-|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|Área 4D Write Pro únicamente|
-|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|Área 4D Write Pro únicamente|
-|[fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)||
-|[font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)|Mac únicamente|
-|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|Área 4D Write Pro únicamente|
-|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|Área 4D Write Pro únicamente|
-|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|Área 4D Write Pro únicamente|
-|[spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)||
-|[spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)|Mac únicamente|
-|[spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)|Mac únicamente|
-|[spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)|Mac únicamente|
-|[spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)||
-|[spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)||
-|[spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)|Mac únicamente|
-|[spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)|Mac únicamente|
-|[spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)||
-|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|Área 4D Write Pro únicamente|
-|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|Área 4D Write Pro únicamente|
-|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|Área 4D Write Pro únicamente|
-|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|Área 4D Write Pro únicamente|
-|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|Área 4D Write Pro únicamente|
-|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|Área 4D Write Pro únicamente|
-|[visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)||
-|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|Área 4D Write Pro únicamente|
+| Acciones soportadas                                                                                                   | Condiciones de uso (si las hay) |
+| --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)                       | Área 4D Write Pro únicamente                       |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                                                        |                                                    |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                                                            |                                                    |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                                              |                                                    |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                                     | Área 4D Write Pro únicamente                       |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                                 | Área 4D Write Pro únicamente                       |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                                                  |                                                    |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                                               | Mac únicamente                                     |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                           | Área 4D Write Pro únicamente                       |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)           | Área 4D Write Pro únicamente                       |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | Área 4D Write Pro únicamente                       |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)                       |                                                    |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)         | Mac únicamente                                     |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)                           | Mac únicamente                                     |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)       | Mac únicamente                                     |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)                 |                                                    |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                                                   |                                                    |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                                     | Mac únicamente                                     |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                                             | Mac únicamente                                     |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)                         |                                                    |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                             | Área 4D Write Pro únicamente                       |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                                   | Área 4D Write Pro únicamente                       |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                                   | Área 4D Write Pro únicamente                       |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                           | Área 4D Write Pro únicamente                       |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)                   | Área 4D Write Pro únicamente                       |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                             | Área 4D Write Pro únicamente                       |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                                          |                                                    |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)       | Área 4D Write Pro únicamente                       |
 
 Para información detallada sobre estas acciones, consulte la sección [Acciones estándar](properties_Action.md#standard-action).
 
-Consulte también la [tabla de compatibilidad de las acciones estándar](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propiedades soportadas
 

@@ -58,11 +58,11 @@ title: ピクチャーボタン
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
 
-## サポートされる標準アクション
+## Supported standard actions
 
-ピクチャーボタンは、特定のボタンスタイルに限定されたアクション (非表示ボタン用の [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) など) を除き、[ボタンと同じ標準アクション](button_overview.md#supported-standard-actions) をサポートします。アクションは [標準アクションプロパティ](properties_Action.md#standard-action) を使用して割り当てます。
+Picture buttons support the same [standard actions as buttons](button_overview.md#supported-standard-actions), except for actions restricted to a specific button style, such as [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) for invisible buttons. Assign an action using the [Standard action property](properties_Action.md#standard-action).
 
-アクションの説明とアクティベーション条件については、[標準アクション](../Desktop-legacy/standard-actions.md#available-actions) を参照してください。[標準アクションの互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) も参照してください。
+For action descriptions and activation conditions, see [Standard actions](../Desktop-legacy/standard-actions.md#available-actions). See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## プロパティ一覧
 

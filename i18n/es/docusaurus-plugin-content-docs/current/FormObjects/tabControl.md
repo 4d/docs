@@ -114,11 +114,11 @@ Cuando se asigna la acción [acción estándar](properties_Action.md#standard-ac
 
 Por ejemplo, si el usuario selecciona la tercera pestaña, 4D mostrará la página 3 del formulario actual (si existe).
 
-## Acciones estándar soportadas
+## Supported standard actions
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): utiliza el número de la pestaña seleccionada como se describe en [Acción Goto Page](#goto-page-action).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected tab number as described in [Goto Page action](#goto-page-action).
 
-Consulte la [tabla de compatibilidad de las acciones estándar](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propiedades soportadas
 

@@ -1721,7 +1721,7 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Descripción
 
-La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. . Puede utilizar esta función para determinar si necesita guardar la entidad.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
 Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 

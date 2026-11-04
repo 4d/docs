@@ -1160,20 +1160,20 @@ Use it to prepare the session from the information stored with the token, for ex
 
 The *$info* parameter contains:
 
-| Propiedad  | Tipo                       | Descripción                                                                                                                                                                          |
-| ---------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type       | Text                       | "fineGrainedToken" for a [Fine-Grained Token](../WebServer/mcp-server.md#fine-grained-tokens), "oauth" for an [OAuth](../WebServer/mcp-server.md#oauth-21-mode) access token         |
-| id         | Text                       | Identifier of the token or of the OAuth grant                                                                                                                                        |
-| name       | Text                       | Fine-Grained Token: name of the token                                                                                                                                |
-| userName   | Text                       | OAuth: user name of the grant                                                                                                                                        |
-| clientId   | Text                       | OAuth: identifier of the MCP client                                                                                                                                  |
-| clientName | Text                       | OAuth: name of the MCP client                                                                                                                                        |
-| privileges | Text, Collection or Object | Privileges and roles of the token or of the grant                                                                                                                                    |
-| expiry     | Text                       | Fine-Grained Token: expiration date of the token                                                                                                                     |
-| expiresAt  | Text                       | OAuth: expiration date and time of the grant                                                                                                                         |
-| info       | Object                     | Fine-Grained Token: *info* object passed to [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) (*Null* if none) |
-| createdAt  | Text                       | Date and time of the token generation or of the login                                                                                                                                |
-| IPAddress  | Text                       | IP address of the MCP client                                                                                                                                                         |
+| Propiedad  | Tipo                      | Descripción                                                                                                                                                                          |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type       | Text                      | "fineGrainedToken" for a [Fine-Grained Token](../WebServer/mcp-server.md#fine-grained-tokens), "oauth" for an [OAuth](../WebServer/mcp-server.md#oauth-21-mode) access token         |
+| id         | Text                      | Identifier of the token or of the OAuth grant                                                                                                                                        |
+| name       | Text                      | Fine-Grained Token: name of the token                                                                                                                                |
+| userName   | Text                      | OAuth: user name of the grant                                                                                                                                        |
+| clientId   | Text                      | OAuth: identifier of the MCP client                                                                                                                                  |
+| clientName | Text                      | OAuth: name of the MCP client                                                                                                                                        |
+| privileges | Text, Collection u Object | Privileges and roles of the token or of the grant                                                                                                                                    |
+| expiry     | Text                      | Fine-Grained Token: expiration date of the token                                                                                                                     |
+| expiresAt  | Text                      | OAuth: expiration date and time of the grant                                                                                                                         |
+| info       | Object                    | Fine-Grained Token: *info* object passed to [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) (*Null* if none) |
+| createdAt  | Text                      | Date and time of the token generation or of the login                                                                                                                                |
+| IPAddress  | Text                      | IP address of the MCP client                                                                                                                                                         |
 
 Se aplican las siguientes reglas:
 

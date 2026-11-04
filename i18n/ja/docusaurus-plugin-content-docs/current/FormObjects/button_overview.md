@@ -332,11 +332,11 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
                 }
 ```
 
-## サポートされる標準アクション
+## Supported standard actions
 
-ボタンには、以下の標準アクションを割り当てることができます:
+The following standard actions can be assigned to buttons:
 
-### レコードとフォーム
+### Records and forms
 
 - [accept](../Desktop-legacy/standard-actions.md#accept)
 - [cancel](../Desktop-legacy/standard-actions.md#cancel)
@@ -350,7 +350,7 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord)
 - [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
 
-### ページ
+### Pages
 
 - [firstPage](../Desktop-legacy/standard-actions.md#firstpage)
 - [lastPage](../Desktop-legacy/standard-actions.md#lastpage)
@@ -358,7 +358,7 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
 - [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
 
-### 編集と式
+### Editing and expressions
 
 - [clear](../Desktop-legacy/standard-actions.md#clear)
 - [copy](../Desktop-legacy/standard-actions.md#copy)
@@ -371,7 +371,7 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
 - [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
 
-### 書式設定
+### Formatting
 
 - [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
 - [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
@@ -384,7 +384,7 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
 - [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
 
-### スペルチェック
+### Spellchecking
 
 - [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
 - [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
@@ -402,14 +402,14 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
 - [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
 
-### Web エリアの制御
+### Web-area controls
 
 - [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
 - [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
 - [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
 - [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
 
-### その他のアクション
+### Other actions
 
 - [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
 - [designMode](../Desktop-legacy/standard-actions.md#designmode)
@@ -418,15 +418,15 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
 - [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
 - [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
 
-### 非表示ボタンのみ
+### Invisible buttons only
 
 - [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
 
-### 4D Write Pro 標準アクション
+### 4D Write Pro standard actions
 
 - [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
 
-[空のアクション](../Desktop-legacy/standard-actions.md#-empty-string) を使用すると、ボタンの動作はそのメソッドに委ねられます。他のオブジェクトとの比較については、[標準アクションの互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) を参照してください。
+The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves the button's behavior to its method. See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects) for comparisons with other objects.
 
 ## プロパティ一覧
 

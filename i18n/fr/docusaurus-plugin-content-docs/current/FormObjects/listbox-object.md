@@ -54,13 +54,13 @@ Lorsque la source de données est une collection, toute modification apportée a
 myCol:=myCol.push("new value") //afficher new value dans la list box
 ```
 
-## Actions standard prises en charge
+## Supported standard actions
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage) : disponible pour les list box de type tableau ; voir les [propriétés prises en charge par type de list box](#supported-properties).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Available for array list boxes; see the [supported properties by list box type](#supported-properties).
 
-Les actions [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord), [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord), [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord) et [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) peuvent agir sur les list box de type sélection, mais elles sont affectées à des boutons ou à des commandes de menu, et non à la list box de type sélection elle-même.
+The [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord), [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord), [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord), and [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) actions can affect selection list boxes, but are assigned to buttons or menu commands, not to the selection list box itself.
 
-Voir le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

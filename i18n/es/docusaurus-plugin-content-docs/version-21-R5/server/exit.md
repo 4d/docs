@@ -27,15 +27,15 @@ Aparecerá una ventana idéntica en cada máquina 4D remota. Esta ventana se rep
 
 - **Espere a que todos los clientes se desconecten.**
 
-El servidor solo se cerrará una vez que todos los clientes, incluidos los que estén en modo de suspensión, se hayan desconectado. Esta opción podría ser inadecuada para operaciones de mantenimiento durante el almuerzo, por ejemplo, ya que es probable que haya clientes en [modo inactivo](../ServerWindow/users.md#managing-sleeping-users).
+El servidor solo se cerrará una vez que todos los clientes, incluidos los que estén en modo de suspensión, se hayan desconectado. Esta opción podría ser inadecuada para operaciones de mantenimiento durante el almuerzo, por ejemplo, ya que es probable que haya clientes en [modo inactivo](../ServerWindow/sessions.md#management-of-sleeping-client-sessions).
 
 - **Espere a que los clientes activos se desconecten. (Ignorar a los clientes inactivos)**
 
-El servidor solo se cerrará después de que todos los clientes activos se hayan desconectado (en otras palabras, todas las máquinas cliente que no están en [modo inactivo](../ServerWindow/users.md#managing-sleeping-users)). Con esta opción, los clientes que se encuentren en modo inactivo no se consideran conectados. Utilice esta opción si desea realizar operaciones de mantenimiento durante el almuerzo, por ejemplo. Cuando se utiliza esta opción, cualquier cliente que se encuentre en modo inactivo experimentará un error de conexión al reactivarse.
+El servidor solo se cerrará después de que todos los clientes activos se hayan desconectado (en otras palabras, todas las máquinas cliente que no están en [modo inactivo](../ServerWindow/sessions.md#management-of-sleeping-client-sessions)). Con esta opción, los clientes que se encuentren en modo inactivo no se consideran conectados. Utilice esta opción si desea realizar operaciones de mantenimiento durante el almuerzo, por ejemplo. Cuando se utiliza esta opción, cualquier cliente que se encuentre en modo inactivo experimentará un error de conexión al reactivarse.
 
 :::note
 
-Un *cliente inactivo* se refiere a una aplicación 4D remota en una máquina que ha pasado a [modo inactivo](../ServerWindow/users.md#managing-sleeping-users) mientras la conexión a la máquina servidor seguía activa.
+Un *cliente inactivo* se refiere a una aplicación 4D remota en una máquina que ha pasado a [modo inactivo](../ServerWindow/sessions.md#management-of-sleeping-client-sessions) mientras la conexión a la máquina servidor seguía activa.
 
 :::
 

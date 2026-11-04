@@ -333,11 +333,11 @@ Le style de bouton Personnalisé permet d'utiliser une image d'arrière-plan per
                 }
 ```
 
-## Actions standard prises en charge
+## Supported standard actions
 
-Les actions standard suivantes peuvent être affectées aux boutons :
+The following standard actions can be assigned to buttons:
 
-### Enregistrements et formulaires
+### Records and forms
 
 - [accept](../Desktop-legacy/standard-actions.md#accept)
 - [cancel](../Desktop-legacy/standard-actions.md#cancel)
@@ -359,7 +359,7 @@ Les actions standard suivantes peuvent être affectées aux boutons :
 - [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
 - [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
 
-### Édition et expressions
+### Editing and expressions
 
 - [clear](../Desktop-legacy/standard-actions.md#clear)
 - [copy](../Desktop-legacy/standard-actions.md#copy)
@@ -372,7 +372,7 @@ Les actions standard suivantes peuvent être affectées aux boutons :
 - [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
 - [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
 
-### Mise en forme
+### Formatting
 
 - [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
 - [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
@@ -385,7 +385,7 @@ Les actions standard suivantes peuvent être affectées aux boutons :
 - [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
 - [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
 
-### Correction orthographique
+### Spellchecking
 
 - [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
 - [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
@@ -403,14 +403,14 @@ Les actions standard suivantes peuvent être affectées aux boutons :
 - [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
 - [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
 
-### Contrôles des zones web
+### Web-area controls
 
 - [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
 - [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
 - [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
 - [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
 
-### Autres actions
+### Other actions
 
 - [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
 - [designMode](../Desktop-legacy/standard-actions.md#designmode)
@@ -419,15 +419,15 @@ Les actions standard suivantes peuvent être affectées aux boutons :
 - [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
 - [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
 
-### Boutons invisibles uniquement
+### Invisible buttons only
 
 - [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
 
-### Actions standard 4D Write Pro
+### 4D Write Pro standard actions
 
 - [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
 
-L'[action vide](../Desktop-legacy/standard-actions.md#-empty-string) laisse la gestion du comportement du bouton à sa méthode. Consultez le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects) pour une comparaison avec les autres objets.
+The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves the button's behavior to its method. See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects) for comparisons with other objects.
 
 ## Propriétés prises en charge
 

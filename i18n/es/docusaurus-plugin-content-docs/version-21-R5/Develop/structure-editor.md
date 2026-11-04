@@ -3,17 +3,17 @@ id: structure-editor
 title: Editor de estructura
 ---
 
-You use the Structure editor to manage the database structure — the tables and their relations. It gives you control over tables, table properties, fields, field properties including indexes, and table relations.
+Utiliza el editor de estructuras para administrar la estructura de base de datos, las tablas y sus relaciones. Le da control sobre las tablas, propiedades de la tabla, campos, propiedades del campo incluyendo índices, y relaciones de la tabla.
 
-You can access the **Structure editor** by choosing the **Database Structure** command in the **Design** menu or by clicking on the Structure button ![](../assets/en/Develop/structure-button.png) in the 4D toolbar.
+Puede acceder al **Editor de estructuras** eligiendo el comando **Estructura de la base de datos** en el menú **Diseño** o haciendo clic en el botón de estructura![](../assets/en/Develop/structure-button.png) en la barra de herramientas 4D.
 
-The Structure editor provides a graphic view of a database’s structure as well as a toolbar and context menus that you can use to carry out database design operations. Each table is represented by a table image. It shows the fields and their types in the form of icons. An information bar displays the characteristics of tables and fields as the mouse moves over them.
+El editor de estructuras proporciona una vista gráfica de la estructura de una base de datos así como una barra de herramientas y menús contextuales que puede utilizar para realizar operaciones de diseño de bases de datos. Cada tabla es representada por una imagen de tabla. Muestra los campos y sus tipos en forma de iconos. Una barra de información muestra las características de las tablas y campos a medida que el ratón se mueve sobre ellas.
 
-A floating **Inspector palette** can be used to view and modify the properties of structure objects and of the structure editor itself. This window is described in the [Inspector palette](#inspector-palette) section.
+Una **paleta Inspector** flotante puede ser usada para ver y modificar las propiedades de los objetos de estructura y del propio editor de estructuras. Esta ventana se describe en la sección [Paleta del Inspector](#inspector-palette).
 
 ## Toolbar (Barra de herramientas)
 
-The structure editor has a toolbar containing functions like the addition of objects, as well as navigation and display options:
+El editor de estructura tiene una barra de herramientas que contiene funciones como la adición de objetos, así como opciones de navegación y visualización:
 
 ![](../assets/en/Develop/structure-toolbar.png)
 

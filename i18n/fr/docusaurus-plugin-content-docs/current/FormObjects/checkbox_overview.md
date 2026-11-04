@@ -348,44 +348,44 @@ Il est généralement associé à une [image à 4 états](properties_TextAndPict
 		}
 ```
 
-## Actions standard prises en charge
+## Supported standard actions
 
 Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
 
-|Actions prises en charge|Conditions d'utilisation (le cas échéant)|
-|---|---|
-|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|Zones 4D Write Pro uniquement|
-|[fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)||
-|[fontBold](../Desktop-legacy/standard-actions.md#fontbold)||
-|[fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)||
-|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|Zones 4D Write Pro uniquement|
-|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|Zones 4D Write Pro uniquement|
-|[fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)||
-|[font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)|Mac uniquement|
-|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|Zones 4D Write Pro uniquement|
-|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|Zones 4D Write Pro uniquement|
-|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|Zones 4D Write Pro uniquement|
-|[spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)||
-|[spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)|Mac uniquement|
-|[spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)|Mac uniquement|
-|[spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)|Mac uniquement|
-|[spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)||
-|[spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)||
-|[spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)|Mac uniquement|
-|[spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)|Mac uniquement|
-|[spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)||
-|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|Zones 4D Write Pro uniquement|
-|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|Zones 4D Write Pro uniquement|
-|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|Zones 4D Write Pro uniquement|
-|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|Zones 4D Write Pro uniquement|
-|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|Zones 4D Write Pro uniquement|
-|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|Zones 4D Write Pro uniquement|
-|[visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)||
-|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|Zones 4D Write Pro uniquement|
+| Actions prises en charge                                                                                              | Conditions d'utilisation (le cas échéant) |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)                       | Zones 4D Write Pro uniquement                                |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                                                        |                                                              |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                                                            |                                                              |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                                              |                                                              |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                                     | Zones 4D Write Pro uniquement                                |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                                 | Zones 4D Write Pro uniquement                                |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                                                  |                                                              |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                                               | Mac uniquement                                               |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                           | Zones 4D Write Pro uniquement                                |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)           | Zones 4D Write Pro uniquement                                |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | Zones 4D Write Pro uniquement                                |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)                       |                                                              |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)         | Mac uniquement                                               |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)                           | Mac uniquement                                               |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)       | Mac uniquement                                               |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)                 |                                                              |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                                                   |                                                              |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                                     | Mac uniquement                                               |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                                             | Mac uniquement                                               |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)                         |                                                              |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                             | Zones 4D Write Pro uniquement                                |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                                   | Zones 4D Write Pro uniquement                                |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                                   | Zones 4D Write Pro uniquement                                |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                           | Zones 4D Write Pro uniquement                                |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)                   | Zones 4D Write Pro uniquement                                |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                             | Zones 4D Write Pro uniquement                                |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                                          |                                                              |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)       | Zones 4D Write Pro uniquement                                |
 
 Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](properties_Action.md#standard-action).
 
-Voir aussi le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

@@ -26,11 +26,11 @@ Si no se selecciona ningún elemento, el valor es 0
 
 Puede asignar la [acción estándar](/Desktop/standard-actions) `gotoPage` a una rejilla de botones. Cuando se selecciona esta acción, 4D mostrará automáticamente la página del formulario que corresponde al número del botón que está seleccionado en la rejilla de botones. Por ejemplo, si el usuario selecciona el décimo botón de la rejilla, 4D mostrará la décima página del formulario actual (si existe).
 
-## Acciones estándar soportadas
+## Supported standard actions
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): utiliza el número del botón seleccionado como se describe en [Ir a la página](#goto-page).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected button number as described in [Goto page](#goto-page).
 
-Consulte la [tabla de compatibilidad de las acciones estándar](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propiedades soportadas
 

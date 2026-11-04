@@ -186,7 +186,7 @@ title: 4Dユーザー＆グループの管理
 
 ![](../assets/en/Users/Access1.png)
 
-また、グループを使って [利用可能なライセンスを割り当てる](#プラグインやサーバーにグループを割り当てる) こともできます。この割り当ては、グループエディターで定義します。
+You also use groups to [distribute available licenses](#assigning-a-license-to-a-group). この割り当ては、グループエディターで定義します。
 
 ## Directory.json ファイル
 

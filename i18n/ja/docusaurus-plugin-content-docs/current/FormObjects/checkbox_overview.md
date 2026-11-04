@@ -348,44 +348,44 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 		}
 ```
 
-## サポートされる標準アクション
+## Supported standard actions
 
 true/false ステータスで表すことのできるアクション ("checkable" アクション) のみがサポートされます:
 
-| サポートされるアクション | 使用条件 (あれば) |
-| --- | --- |
-| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside) | 4D Write Proエリアのみ |
-| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic) | |
-| [fontBold](../Desktop-legacy/standard-actions.md#fontbold) | |
-| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough) | |
-| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript) | 4D Write Proエリアのみ |
-| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript) | 4D Write Proエリアのみ |
-| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline) | |
-| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog) | macOS のみ |
-| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled) | 4D Write Proエリアのみ |
-| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage) | 4D Write Proエリアのみ |
-| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | 4D Write Proエリアのみ |
-| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled) | |
-| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled) | macOS のみ |
-| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled) | macOS のみ |
-| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled) | macOS のみ |
-| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled) | |
-| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled) | |
-| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled) | macOS のみ |
-| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog) | macOS のみ |
-| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions) | |
-| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground) | 4D Write Proエリアのみ |
-| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters) | 4D Write Proエリアのみ |
-| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders) | 4D Write Proエリアのみ |
-| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars) | 4D Write Proエリアのみ |
-| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler) | 4D Write Proエリアのみ |
-| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes) | 4D Write Proエリアのみ |
-| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences) | |
-| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled) | 4D Write Proエリアのみ |
+| サポートされるアクション                                                                                                          | 使用条件 (あれば) |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)                       | 4D Write Proエリアのみ             |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                                                        |                               |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                                                            |                               |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                                              |                               |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                                     | 4D Write Proエリアのみ             |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                                 | 4D Write Proエリアのみ             |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                                                  |                               |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                                               | macOS のみ                      |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                           | 4D Write Proエリアのみ             |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)           | 4D Write Proエリアのみ             |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | 4D Write Proエリアのみ             |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)                       |                               |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)         | macOS のみ                      |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)                           | macOS のみ                      |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)       | macOS のみ                      |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)                 |                               |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                                                   |                               |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                                     | macOS のみ                      |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                                             | macOS のみ                      |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)                         |                               |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                             | 4D Write Proエリアのみ             |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                                   | 4D Write Proエリアのみ             |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                                   | 4D Write Proエリアのみ             |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                           | 4D Write Proエリアのみ             |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)                   | 4D Write Proエリアのみ             |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                             | 4D Write Proエリアのみ             |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                                          |                               |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)       | 4D Write Proエリアのみ             |
 
 これらのアクションについての詳細は、[標準アクション](properties_Action.md#標準アクション) の章を参照してください。
 
-[標準アクションの互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) も参照してください。
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## プロパティ一覧
 

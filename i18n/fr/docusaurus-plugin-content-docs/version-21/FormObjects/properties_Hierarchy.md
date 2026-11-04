@@ -17,7 +17,7 @@ Voir [List box hiérarchiques](listbox_overview.md#hierarchical-list-boxes)
 
 | Nom        | Type de données | Valeurs possibles                                        |
 | ---------- | --------------- | -------------------------------------------------------- |
-| datasource | tableau chaîne  | Collection de noms de tableaux définissant la hiérarchie |
+| dataSource | tableau chaîne  | Collection de noms de tableaux définissant la hiérarchie |
 
 #### Objets pris en charge
 

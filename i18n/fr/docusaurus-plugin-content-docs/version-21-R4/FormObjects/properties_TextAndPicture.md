@@ -37,7 +37,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 #### Objets pris en charge
 
-[Bouton](button_overview.md) - [Bouton radio](radio_overview.md) - [Case à cocher](checkbox_overview.md) - [Bouton radio](radio_overview.md)
+[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md)
 
 #### Commandes
 

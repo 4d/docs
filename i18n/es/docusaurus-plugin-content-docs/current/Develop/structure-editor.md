@@ -3,26 +3,26 @@ id: structure-editor
 title: Editor de estructura
 ---
 
-You use the Structure editor to manage the database structure — the tables and their relations. It gives you control over tables, table properties, fields, field properties including indexes, and table relations.
+Utiliza el editor de estructuras para administrar la estructura de base de datos, las tablas y sus relaciones. Le da control sobre las tablas, propiedades de la tabla, campos, propiedades del campo incluyendo índices, y relaciones de la tabla.
 
-You can access the **Structure editor** by choosing the **Database Structure** command in the **Design** menu or by clicking on the Structure button ![](../assets/en/Develop/structure-button.png) in the 4D toolbar.
+Puede acceder al **Editor de estructuras** eligiendo el comando **Estructura de la base de datos** en el menú **Diseño** o haciendo clic en el botón de estructura![](../assets/en/Develop/structure-button.png) en la barra de herramientas 4D.
 
-The Structure editor provides a graphic view of a database’s structure as well as a toolbar and context menus that you can use to carry out database design operations. Each table is represented by a table image. It shows the fields and their types in the form of icons. An information bar displays the characteristics of tables and fields as the mouse moves over them.
+El editor de estructuras proporciona una vista gráfica de la estructura de una base de datos así como una barra de herramientas y menús contextuales que puede utilizar para realizar operaciones de diseño de bases de datos. Cada tabla es representada por una imagen de tabla. Muestra los campos y sus tipos en forma de iconos. Una barra de información muestra las características de las tablas y campos a medida que el ratón se mueve sobre ellas.
 
-A floating **Inspector palette** can be used to view and modify the properties of structure objects and of the structure editor itself. This window is described in the [Inspector palette](#inspector-palette) section.
+Una **paleta Inspector** flotante puede ser usada para ver y modificar las propiedades de los objetos de estructura y del propio editor de estructuras. Esta ventana se describe en la sección [Paleta del Inspector](#inspector-palette).
 
 ## Toolbar (Barra de herramientas)
 
-The structure editor has a toolbar containing functions like the addition of objects, as well as navigation and display options:
+El editor de estructura tiene una barra de herramientas que contiene funciones como la adición de objetos, así como opciones de navegación y visualización:
 
 ![](../assets/en/Develop/structure-toolbar.png)
 
 From left to right, the icons perform the following actions:
 
 - add objects (tables, fields, index, relations)
-- search in editor
+- buscar en el editor
 - hide/display tables according to folders defined in the Home page of the Explorer
-- display filters
+- mostrar filtros
 - Tools (size, alignment, sort)
 - colores
 - Index list window
@@ -38,7 +38,7 @@ Locking can occur in both project and client/server modes when:
 
 In both cases, the structure can be opened in *Read-only*, but cannot be used until the lock is removed.
 
-## Information bar
+## Barra de información
 
 The lower part of the editor window is an information bar displaying data corresponding to the area the mouse is over: table, field or relation.
 
@@ -46,9 +46,9 @@ The lower part of the editor window is an information bar displaying data corres
 
 - Table name and number
 - Table triggers:
-  - **NEW:** On saving new record
+  - **NEW:** al guardar un nuevo registro
   - **SAVE:** On saving existing record
-  - **DEL:** On deleting a record
+  - **DEL:** al eliminar un registro
 
 #### Information about a field
 
@@ -57,7 +57,7 @@ The lower part of the editor window is an information bar displaying data corres
 - Tipo de campo
 - Field attributes:
   - **NUL:** Map null values to blank values
-  - **UNI:** Unique
+  - **UNI:** único
 
 #### Information about a relation
 
@@ -91,11 +91,11 @@ The following shortcuts can be used:
 
 The position of the palette and the expanded/collapsed states of its panels are saved.
 
-## Selecting an object
+## Seleccionar un objeto
 
 To work with an image of an object in the Structure editor, you must first select it. You can then specify its properties, move it, resize it, delete it, etc. You can select several objects of the same type simultaneously to modify their common properties in the Inspector palette.
 
-To select:
+Para seleccionar:
 
 - **A table:** Click the image of the table, or press `Tab` / `Shift+Tab` to select each table successively.
 - **A field or relation:** Click the field or relation, or use the arrow keys to navigate.
@@ -136,7 +136,7 @@ To apply the **Collapse** command to one or more tables, you can:
 
 - A standard double-click on the table name area opens the **Inspector**.
 - **Alt** (Windows) or **Option** (macOS) + double-click opens the trigger method of the table in the **Method editor**.
-- **Ctrl** (Windows) or **Command** (macOS) + double-click opens the **Explorer** on the Form page.
+- **Ctrl** (Windows) o **Comando** (macOS) + doble clic abre el **Explorador** en la página Formulario.
 
 :::
 
@@ -172,7 +172,7 @@ You can [configure the graphic rendering of the Structure editor during a zoom](
 
 :::
 
-## Object type display
+## Mostrar tipo de objeto
 
 The **Display** button in the toolbar of the Structure editor is associated with a menu and lets you choose the objects to be displayed in the structure according to their type:
 
@@ -206,7 +206,7 @@ You can set the appearance of dimmed tables in the Structure editor to either *D
 
 :::
 
-## Customizing the editor window
+## Personalizar la ventana del editor
 
 The Structure editor window has specific properties that can be set using the **Inspector**.
 

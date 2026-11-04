@@ -26,11 +26,11 @@ Si aucun élément n'est sélectionné, la valeur est de 0
 
 Vous pouvez assigner l'[action standard](/Desktop/standard-actions) `gotoPage` à une grille de boutons. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant au numéro du bouton sélectionné dans la grille de boutons. Par exemple, si l’utilisateur clique sur le 10e bouton de la grille, 4D affichera la page 10 du formulaire courant (si elle existe).
 
-## Actions standard prises en charge
+## Supported standard actions
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage) : utilise le numéro du bouton sélectionné comme décrit dans [Aller à page](#goto-page).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected button number as described in [Goto page](#goto-page).
 
-Voir le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

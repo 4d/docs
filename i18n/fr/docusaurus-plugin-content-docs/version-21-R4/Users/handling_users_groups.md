@@ -197,7 +197,7 @@ Ces accès sont définis dans la boîte de dialogue Paramètres. L'exemple suiva
 
 ![](../assets/en/Users/Access1.png)
 
-Vous utilisez également des groupes pour [distribuer les licences disponibles](#assigning-a-group-to-a-plug-in-or-to-a-server). Cette distribution est définie dans l'éditeur Groupes.
+Vous utilisez également des groupes pour [distribuer les licences disponibles](#assigning-a-license-to-a-group). Cette distribution est définie dans l'éditeur Groupes.
 
 ## Fichier directory.json
 

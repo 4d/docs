@@ -315,22 +315,22 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <div class="no-index">
 
-| Parámetros | Tipo       |                             | Descripción                                                             |
-| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------- |
-| privilege  | Text       | &#8594; | Privilege name, or comma-separated privilege names                      |
-| privileges | Collection | &#8594; | Colección de nombres de privilegios                                     |
-| settings   | Object     | &#8594; | Object with a "privileges" and/or "roles" property                      |
-| name       | Text       | &#8594; | Name of the token                                                       |
-| expiry     | Fecha      | &#8594; | Expiration date of the token                                            |
-| info       | Object     | &#8594; | Information stored with the token and passed to `ds.mcpAuthenticated()` |
-| Resultado  | Object     | &#8592; | `{id; token}`                                                           |
+| Parámetros | Tipo       |                             | Descripción                                                                       |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------- |
+| privilege  | Text       | &#8594; | Nombre del privilegio, o nombres de privilegios separados por comas               |
+| privileges | Collection | &#8594; | Colección de nombres de privilegios                                               |
+| settings   | Object     | &#8594; | Objeto con una propiedad "privilegios" y/o "roles"                                |
+| name       | Text       | &#8594; | Nombre del token                                                                  |
+| expiry     | Fecha      | &#8594; | Fecha de vencimiento del token                                                    |
+| info       | Object     | &#8594; | Información almacenada junto con el token y transmitida a `ds.mcpAuthenticated()` |
+| Resultado  | Object     | &#8592; | `{id; token}`                                                                     |
 
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-The `.generateFineGrainedToken()` function <!-- REF #DataStoreClass.generateFineGrainedToken().Summary -->generates a Fine-Grained Token that gives access to the MCP server with the privileges you pass<!-- END REF -->. For more information, see [Fine-Grained Tokens](../WebServer/mcp-server.md#fine-grained-tokens).
+La función `.generateFineGrainedToken()` <!-- REF #DataStoreClass.generateFineGrainedToken().Summary -->genera un token de acceso detallado que permite acceder al servidor MCP con los privilegios que se le asignen<!-- END REF -->. Para obtener más información, consulte [Tokens de grano fino](../WebServer/mcp-server.md#fine-grained-tokens).
 
 You pass the privileges and/or roles of the token in the same forms as for [`Session.setPrivileges()`](SessionClass.md#setprivileges):
 
@@ -744,14 +744,14 @@ When the function is called in a web context (code executed for a web or REST re
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades. The token itself and its hash are never returned.
 
-| Propiedad  | Tipo                       | Descripción                                                |
-| ---------- | -------------------------- | ---------------------------------------------------------- |
-| id         | Text                       | Identifier of the token                                    |
-| name       | Text                       | Name of the token                                          |
-| privileges | Text, Collection or Object | Privileges and roles of the token, as passed at generation |
-| expiry     | Text                       | Expiration date of the token                               |
-| info       | Object                     | Information stored with the token                          |
-| createdAt  | Text                       | Date and time of the token generation                      |
+| Propiedad  | Tipo                      | Descripción                                                |
+| ---------- | ------------------------- | ---------------------------------------------------------- |
+| id         | Text                      | Identifier of the token                                    |
+| name       | Text                      | Nombre del token                                           |
+| privileges | Text, Collection u Object | Privileges and roles of the token, as passed at generation |
+| expiry     | Text                      | Fecha de vencimiento del token                             |
+| info       | Object                    | Information stored with the token                          |
+| createdAt  | Text                      | Date and time of the token generation                      |
 
 #### Ejemplo
 
@@ -800,16 +800,16 @@ When the function is called in a web context (code executed for a web or REST re
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
-| Propiedad  | Tipo                       | Descripción                                                                                                                                       |
-| ---------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id         | Text                       | Identifier of the grant                                                                                                                           |
-| userName   | Text                       | User name of the grant (`userName` returned by [`ds.mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant), or the login name) |
-| clientId   | Text                       | Identifier of the MCP client                                                                                                                      |
-| clientName | Text                       | Name of the MCP client                                                                                                                            |
-| privileges | Text, Collection or Object | Privileges and roles returned by `ds.mcpGrant()`                                                                                                  |
-| createdAt  | Text                       | Date and time of the login                                                                                                                        |
-| lastUsedAt | Text                       | Date and time of the last use of the grant                                                                                                        |
-| expiresAt  | Text                       | Expiration date and time of the grant                                                                                                             |
+| Propiedad  | Tipo                      | Descripción                                                                                                                                       |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id         | Text                      | Identifier of the grant                                                                                                                           |
+| userName   | Text                      | User name of the grant (`userName` returned by [`ds.mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant), or the login name) |
+| clientId   | Text                      | Identifier of the MCP client                                                                                                                      |
+| clientName | Text                      | Name of the MCP client                                                                                                                            |
+| privileges | Text, Collection u Object | Privileges and roles returned by `ds.mcpGrant()`                                                                                                  |
+| createdAt  | Text                      | Date and time of the login                                                                                                                        |
+| lastUsedAt | Text                      | Date and time of the last use of the grant                                                                                                        |
+| expiresAt  | Text                      | Expiration date and time of the grant                                                                                                             |
 
 #### Ejemplo
 
