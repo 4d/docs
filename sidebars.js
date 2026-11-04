@@ -1012,6 +1012,41 @@ module.exports =
           href: "https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer"
         },
         {
+          type: "category",
+          label: "4D Embedding Studio",
+          link: {
+            type: "generated-index",
+            title: "4D Embedding Studio",
+            slug: "/category/4d-embedding-studio",
+            keywords: [
+              "4D Embedding Studio"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            "embedding-studio/overview",
+            "embedding-studio/ratelimit",
+            {
+              type: "category",
+              label: "Classes",
+              key: "embedding-studio-classes",
+              items: [
+                "embedding-studio/Classes/definition",
+                "embedding-studio/Classes/embedder",
+                "embedding-studio/Classes/embedderresult",
+                "embedding-studio/Classes/phrase",
+                "embedding-studio/Classes/process",
+                "embedding-studio/Classes/processerror",
+                "embedding-studio/Classes/processerrorcode",
+                "embedding-studio/Classes/processresult",
+                "embedding-studio/Classes/scheduler",
+                "embedding-studio/Classes/settings",
+                "embedding-studio/Classes/studioembedder"
+              ]
+            }
+          ]
+        },
+        {
           type: "link",
           label: "4D Mobile App Server",
           href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"

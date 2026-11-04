@@ -317,6 +317,9 @@ title: (
         <Link to="https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer">
           <Translate>4D Analyzer</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
+        <Link to="embedding-studio/overview">
+          <Translate>4D Embedding Studio</Translate>
+        </Link>
         <Link to="https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md">
           <Translate>4D Mobile App Server</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
