@@ -11,12 +11,6 @@ title: QuotaManager
 
 :::
 
-:::tip 関連したBlog 記事
-
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 `4D.QuotaManager` オブジェクトは以下の方法でインスタンス化することが可能です:
 
 - [Session オブジェクトの`quotas` プロパティ](./SessionClass.md#quotas)
