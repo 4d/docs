@@ -163,8 +163,15 @@ $preemptive:=Process info(Current process).preemptive
 
 ## Ver también
 
-[Count tasks](../commands/count-tasks)\
-[Process activity](../commands/process-activity)\
-[Process state](../commands/process-state)\
+[Count tasks](../commands/count-tasks)  
+[Process activity](../commands/process-activity)  
+[Process state](../commands/process-state)  
 [Session info](../commands/session-info)
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1843 |
+| Hilo seguro | sí |
 

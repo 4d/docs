@@ -217,7 +217,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) コマンドの説明を参照ください。
 
-引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、 それらの型は自動的に変換されます。
+引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。
 
 日付およびオブジェクト引数は次のように扱われます:
 

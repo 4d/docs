@@ -596,7 +596,7 @@ ST SET TEXT(txtVar;"This is a user link: <span style=\"-d4-ref-user:'UserLink'\"
   - 下線付き `<SPAN STYLE="text-decoration: underline"> ... </SPAN>`
   - 取り消し線 `<SPAN STYLE="text-decoration:line-through">...</SPAN>`
 
-*注意 : maOS では"取り消し線"がサポートされていません。指定しても表示されませんが、プログラムで管理することはできます。*
+*注意 : macOS では"取り消し線"がサポートされていません。指定しても表示されませんが、プログラムで管理することはできます。*
 
 - フォントカラー: `<SPAN STYLE="color:green"> ... </SPAN>` または `<SPAN STYLE="color:#006CCC">...</SPAN>`
 - 背景色: `<SPAN STYLE="background-color:green"> ... </SPAN>` または `<SPAN STYLE="background-color:#006CCC">...</SPAN>`

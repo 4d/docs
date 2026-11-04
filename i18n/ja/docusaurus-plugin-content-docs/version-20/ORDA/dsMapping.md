@@ -161,7 +161,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 これに加えて、以下のリレーション属性もまた自動的に利用可能になります:
 
-- Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。各 Project (クライアント) に対して最大 1つの Companyが あります。
+- Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。各 Project (クライアント) に対して最大 1つの Company があります。
 - Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。各 Company に対して不定数の Project があります。
 
 > データベースリレーションの手動あるいは自動プロパティは、ORDA においては何の効力も持ちません。

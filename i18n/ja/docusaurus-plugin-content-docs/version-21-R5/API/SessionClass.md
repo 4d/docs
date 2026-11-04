@@ -83,7 +83,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- この関数は [roles.json](../ORDA/privileges.md#rolesjsonファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
+- この関数は [roles.json](../ORDA/privileges.md#rolesjson-ファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
 - セキュリティ上の理由から、この関数はリモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
@@ -528,7 +528,7 @@ End if
 | hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                          |
 | creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                 |
 | state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                      |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値)                                                                                                 |
 | persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                   |
 | unreachableSince | Integer                          | リモートセッション: ピアが到達不能になってから経過した秒数。 4D Server 上では、この属性は[`Process activity.sessions`](../commands/process-activity) プロパティ内から読み出し可能です。 |
 

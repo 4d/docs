@@ -12,7 +12,6 @@ The `4D.QuotaManager` class provides you with an interface to configure and moni
 :::
 
 `4D.QuotaManager` objects can be instantiated by:
-
 - the [`quotas` property of a Session](./SessionClass.md#quotas) object
 - the [`quotas` property of a Web server](./WebServerClass.md#quotas) object
 

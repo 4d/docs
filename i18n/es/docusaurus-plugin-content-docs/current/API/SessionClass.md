@@ -18,7 +18,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 
 Los siguientes tipos de sesiones están soportados por esta clase:
 
-- [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-web-sessions). Se utilizan para las conexiones Web (incluidos los accesos REST) y se controlan mediante los [privilegios](../ORDA/privileges.md) asignados.
+- [**Sesiones usuario web**](../WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](../WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access and [MCP server](../WebServer/mcp-server.md) access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**Sesiones usuario remoto**](../Desktop/sessions.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas desde el cliente y el servidor.
 - [Sesiones procedimientos almacenados\*\*](../Desktop/sessions.md#stored-procedure-sessions): sesión usuario virtual para todos los procedimientos almacenados ejecutados en el servidor.
 - [**Sesiones autónomas**](../Desktop/sessions.md#standalone-sessions): sesión local devuelta en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
@@ -501,6 +501,7 @@ End if
 
 | Lanzamiento | Modificaciones                     |
 | ----------- | ---------------------------------- |
+| 21 R6       | New "mcp" session type             |
 | 21 R4       | Nueva propiedad *unreachableSince* |
 | 20 R5       | Añadidos                           |
 
@@ -520,7 +521,7 @@ El objeto `.info` contiene las siguientes propiedades:
 
 | Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                                                   |
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                                                      |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone", "rest", "web", "mcp" (session of the [MCP server](../WebServer/mcp-server.md#mcp-sessions))                                                                       |
 | userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                                            |
 | machineName      | Text          | <ul><li>Sesiones remotas: nombre de la máquina remota.</li><li>Sesiones cliente: nombre de la máquina local.</li><li>Sesión de procedimientos almacenados: nombre del equipo servidor.</li><li> Sesión autónoma: nombre de la máquina</li></ul>               |
 | systemUserName   | Text          | <ul><li>Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.</li><li>Sesiones cliente: nombre de la sesión sistema local</li><ul>                                                                                                  |
@@ -539,6 +540,16 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 :::
 
 Esta propiedad es **solo lectura**.
+
+#### Ejemplo
+
+You run specific code for the requests of MCP clients:
+
+```4d
+If (Session.info.type="mcp")
+	// the request comes from an MCP client through the MCP server
+End if
+```
 
 <!-- END REF -->
 

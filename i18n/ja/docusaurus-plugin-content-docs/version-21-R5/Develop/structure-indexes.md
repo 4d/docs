@@ -50,39 +50,39 @@ title: インデックス
 
 ストラクチャーエディターでは、複合インデックスはインデックス作成ダイアログでのみ作成することができます。このダイアログボックスについては後述の“インデックスの作成”を参照してください。
 
-### Keywords index
+### キーワードインデックス
 
-You can use a specific type of index with Alpha, Text and Picture fields: a keyword index.
+キーワードインデックスは文字、テキスト、およびピクチャーフィールドに使用することができます。
 
-- When you associate this type of index with an Alpha or Text field, the text stored in the field will be indexed word by word. All the words will be indexed even if they have only 1 or 2 characters. This type of index will accelerate subsequent keyword searches among text fields in a dramatic manner.  
-  It is possible to associate both a standard index and a keyword index with Alpha and Text fields (when stored in the records). 4D will use the appropriate index depending on the context.
+- 文字およびテキストフィールドにこのタイプのインデックスを割り当てると、フィールドに格納されたテキストは単語ごとにインデックス化されます。 1文字や2文字の単語も含め、すべての単語がインデックス化されます。このタイプのインデックスはテキストフィールドのキーワードによる検索速度を劇的に向上させます。  
+  文字やテキストフィールドには標準のインデックスとキーワードインデックス両方を割り当てることができます (データがレコード内に保存されている場合)。 4D はコンテキストに応じて適切なインデックスを使用します。
 
-- When you associate this type of index with a Picture field, searches among keywords associated with pictures (metadata) are greatly accelerated. Warning: Picture keyword indexes are exclusively based on metadata of the IPTC/Keywords type. These types of metadata are supported in particular by the TIFF and JPEG formats (note that BMP, PNG and GIF do not support them). Other types of metadata are not managed by indexing.  
-  Keyword indexes for pictures are updated automatically by 4D each time the Picture field is saved (when a record is created or modified, when data is imported, and so on). Metadata of the IPTC/Keywords type are indexed automatically by 4D when they are found in the picture (you do not have to call the [`SET PICTURE METADATA`](../commands/set-picture-metadata) command to include them in the index of the Picture field).
+- ピクチャーフィールドにキーワードインデックスを使用すると、ピクチャーに割り当てられたキーワード (メタデータ) に対する検索が劇的に速くなります。警告: ピクチャーキーワードインデックスはIPTC/Keywordsタイプのメタデータを使用します。これらのタイプのメタデータは特にTIFFとJPEGでサポートされています (BMP、PNG、GIFではサポートされていません)。他のタイプのメタデータはインデックスでサポートされません。  
+  ピクチャーのキーワードインデックスは、ピクチャーフィールドが保存 (レコードが作成・更新される、ピクチャーが読み込まれるなど) されるたびにIPTC/Keywordsタイプのキーワードがあれば、4Dが自動で更新します。 IPTC/Keywords タイプのメタデータは、ピクチャー内にあるのが見つかったときに4D によって自動的にインデックス化されます(ピクチャーフィールドのインデックスに含めるために[`SET PICTURE METADATA`](../commands/set-picture-metadata) コマンドを呼び出す必要はありません)。
 
-You can use the [`DISTINCT VALUES`](../commands/distinct-values) command to get the list of keywords contained in an keywords index.
+キーワードインデックスに含まれるキーワードのリストを取得するために[`DISTINCT VALUES`](../commands/distinct-values) コマンドを使用できます。
 
-You use picture or text keyword indexes through the [`%` operator](../Concepts/dt_string.md#keywords): this operator must be placed in the query or sort formulas in order to specifically use an index value. 例:
+テキストやピクチャーフィールドのキーワードインデックスは [`%` 演算子](../Concepts/dt_string.md#キーワード)で使用します。インデックスの値を明示的に使用するには、この演算子をクエリまたは並び替えフォーミュラで使用しなければなりません。例:
 
 ```4d
 QUERY([PICTURES];[PICTURES]Photos %"cats")
-// look for photos associated with the cats keyword
+// cats キーワードを持つ写真を探す
 ```
 
-This works the same way for all the query and order by commands: [`QUERY BY FORMULA`](../commands/query-by-formula), [`QUERY SELECTION`](../commands/query-selection), [`ORDER BY`](../commands/order-by), etc.
+この書式はすべてのクエリおよび並び替えコマンドで同様に動作します: [`QUERY BY FORMULA`](../commands/query-by-formula)、[`QUERY SELECTION`](../commands/query-selection)、[`ORDER BY`](../commands/order-by) 等。
 
-### Vector index
+### ベクトルインデックス
 
-A vector index can be associated to an Object type field that was configured as a `4D.Vector` [class](./field-properties.md#4dvector-class). In this case, the following options are available:
+ベクトルインデックスは、`4D.Vector` [クラス](./field-properties.md#4dvector-クラス)として設定されたオブジェクト型フィールドに対して割り当て可能です。この場合、以下のオプションが利用可能です:
 
 ![](../assets/en/Develop/vector-index.png)
 
-- **Cosine**: the vector index is optimized for [cosine similarity](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Dot**: the vector index is optimized for [dot similarity](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Euclidean**: the vector index is optimized for [euclidean distance](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Automatic**: standard object index type ([see above](#standard-indexes)). You can select this index type to handle null vectors, it will be automatically used in this case.
+- **コサイン**: このベクトルインデックスは[コサイン類似度](../API/VectorClass.md#異なるベクトル計算を理解する) 計算に対して最適化されています。
+- **ドット**: このベクトルインデックスは[ドット類似度](../API/VectorClass.md#異なるベクトル計算を理解する) 計算に対して最適化されています。
+- **ユークリッド**: このベクトルインデックスは [ユークリッド距離](../API/VectorClass.md#異なるベクトル計算を理解する) 計算に対して最適化されています。
+- **自動**: 標準のオブジェクトインデックスタイプ([上記参照](#標準インデックス))。 Null ベクトルを管理したい場合にはこのインデックスタイプを選択できます。その場合、自動的に使用されます。
 
-You can select one or more index types for your vector fields, the appropriate index will be automatically used depending on the actual computation. For optimization reasons, it is recommended to only select necessary index types.
+ベクトルフィールドに対しては一つまた複数のインデックスタイプを割り当てることができ、実際の計算に応じて適切なインデックスが自動的に使用されます。ただし最適化のため、必要なインデックスタイプのみを選択することが推奨されます。
 
 :::tip 関連したblog 記事
 
@@ -90,84 +90,82 @@ You can select one or more index types for your vector fields, the appropriate i
 
 :::
 
-:::warning Limitation: Vector indexes and transactions
+:::warning 制約: ベクトルインデックスとトランザクション
 
-Vector indexes are not compatible with [transaction processing](../Develop/transactions). When vector-indexed records are inserted, updated, or deleted within a transaction, the corresponding index changes are not committed or rolled back with the transaction. As a result, the vector index may become inconsistent with the database state after a rollback, and search results may not reflect the persisted data.
+ベクトルインデックスは[トランザクションの処理](../Develop/transactions) とは互換性がありません。トランザクション中にベクトルインデックスがつきレコードが追加、更新、削除された場合、対応するインデックスの変更はそのトランザクションとともにコミットまたはロールバックされることはありません。結果として、ベクトルインデックスはロールバック後にデータベースの状態と不整合になる可能性があり、検索結果には永続的なデータが反省されない可能性があります。
 
 :::
 
-## Index List
+## インデックスリスト
 
-The ![](../assets/en/Develop/index-list.png) button of the toolbar in the Structure editor displays the Index List window. This window displays the list of all the indexes of the structure, regardless of their type:
+ストラクチャーエディターのツールバーにある![](../assets/en/Develop/index-list.png) ボタンをクリックすると、インデックスリストウィンドウが表示されます。このウィンドウはタイプに関わらず、ストラクチャのすべてのインデックスを表示します:
 
 ![](../assets/en/Develop/index-window.png)
 
-The Index List can be used to view the main properties of the indexes:
+インデックスリストを使用して、インデックスの主なプロパティを確認することができます:
 
-- **Type:** Index type. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
-- **Description:** Table and field(s) of index. For a composite index, this list contains all the fields of the index.
-- **Name:** Index name. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
+- **タイプ:** インデックスのタイプ。それぞれインデックスのタイプ(Bツリー、クラスターBツリー、キーワード、ユークリッド、コサイン、ドット) がそれぞれ異なるアイコンで表示されます。
+- **詳細:** インデックスのテーブルとフィールド。複合インデックスに対しては、リストにはインデックスに使用される全てのフィールドが含まれます。
+- **名前:** インデックスの名前。このプロパティは特にランゲージコマンドにおいて使用されます。この列をダブルクリックすることでインデックス名を変更または追加することができます。
 
-The **[+]** button displays the index property dialog box and allows you to edit the selected index or to add a new index when no index was selected.  
-The **[-]** button deletes the selected index (a confirmation dialog box appears).  
-This button can be used more particularly to delete composite indexes.
+**[+]** ボタンをクリックすると、選択されたインデックスに対して編集するためのインデックスプロパティダイアログボックスを表示するか、インデックスが何も選択されていない場合には新しいインデックスを追加します。  
+**[-]** ボタンは選択したインデックスを削除します(確認ダイアログが表示されます)。  
+このボタンは特に複合インデックスを削除するために使用されます。
 
-Two additional commands are available in the menu associated with the tool button (enabled when an index is selected:
+ツールボタンに割り当てられた2つのメニューを使用できます(インデックスが選択されている場合にのみ使用できます):
 
-- **Edit:** Displays the properties of the selected index in the index property dialog box (see next paragraph). This command has the same effect as double-clicking on a row of the list (except for in the name area).
-- **Rebuild:** Can be used to delete and rebuild the selected index. A confirmation dialog box appears when you select this command.
+- **編集:** インデックスプロパティダイアログボックスに選択したインデックスのプロパティを表示します (次段落参照)。このダイアログはリスト中のインデックスをダブルクリックすることでも表示できます (名前エリアを除く)。
+- **再構築:** 選択したインデックスを再構築するために使用されます。このコマンドを選択すると、確認ダイアログボックスが表示されます。
 
-## Creating an index
+## インデックスの作成
 
-To create a **standard index** directly:
+**標準のインデックス** を直接作成する:
 
-1. Select a field then choose a value from the "Index" menu of the **Inspector palette**.
-   **OR**  
-   Right-click on the field then select a value from the **Index>** submenu of the context menu.
+1. フィールドを選択し、**インスペクターパレット**の"インデックス"メニューから選択します。**または**  
+   フィールドを右クリックし、コンテキストメニューの**インデックス>** サブメニューから選択します。
 
-To create a **composite index** or any other type of index using the index creation dialog box:
+インデックス作成ダイアログボックスを使用して**複合インデックス** や他のタイプのインデックスを作成するためには:
 
-1. Select several fields while holding down the **Shift** key (for adjacent selection) or **Ctrl** (Windows) or **Command** (macOS) button then right click on one of the fields and select **New Composite Index...** in the context menu.
-   **OR**  
-   Select the **New Index...** in the context menu of the table or select **Index** in the add objects menu of the Structure editor tool bar.
+1. **Shift** キー(連続した選択)、あるいは**Ctrl** (Windows) または **Command** (macOS) ボタンを押しながら複数のフィールドを選択し、うち一つのフィールドを右クリックしてコンテキストメニューから**新規複合インデックス...** を選択します。**または**
+   テーブルのコンテキストメニューから**新規インデックス...** を選択するか、ストラクチャーエディターツールバーのオブジェクト追加メニューを使用して、**インデックス** オプションを選択します。
 
-The index configuration dialog box then appears.
+インデックス設定ダイアログが表示されます。
 
 ![](../assets/en/Develop/index-add.png)
 
-It contains the following elements:
+このダイアログには以下の要素が含まれます:
 
-- **Table:** List of all the database tables. Choose the table to which the index will belong from this menu.
-- **Name:** Index name entry area. This name is used by the 4D language commands.
-- **Type:** Selection menu for type of index to be created. If you keep the "Automatic" option, 4D will automatically choose the index type according to the contents of the field.
-- **List of Fields:** This area is used to specify the field(s) associated with the index. It can contain a field by default depending on the current selection in the editor.
+- **テーブル:** データベース中のすべてのテーブルのリスト。このメニューから、インデックスが属するテーブルを選択します。
+- **名称:** インデックス名の入力エリア。この名前は4D ランゲージコマンドによって使用されます。
+- **タイプ:** 作成するインデックスのタイプを選択するメニュー。"自動"を選択すると、フィールドの内容に基づき、4D が自動でインデックスタイプを決定します。
+- **フィールドリスト:** このエリアで、インデックスに割り当てるフィールドを指定します。ストラクチャーエディターでフィールドを選択していると、あらかじめそのフィールドがこのリストに設定されます。
 
-To add a field to the index, click on the **[+]** button. The list of fields of the selected table is displayed so that you can indicate the field to be added to the index.
+インデックスにフィールドを追加するには **[+]** ボタンをクリックします。選択したテーブルのフィールドリストが表示され、インデックスに追加するフィールドを指定できます。
 
-- If you want to create a composite index, add each field to be included in the index successively. Once the list is completed, you can reorder the fields using the arrow buttons or using drag and drop.
-- If you create a composite index based on primary key fields, make sure you put the fields in the same order in the primary key and in the index.
+- 複合インデックスを作成するには、インデックスに含めるフィールドを複数選択します。フィールドリストが完成したら、矢印ボタンやドラッグ＆ドロップを使用してフィールドの並びを変更できます。
+- 主キーフィールドをもとに複合インデックスを作成する場合、フィールドの並び順が主キーとインデックスとで同じ順番になるようにしてください。
 - If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
 
-To delete a field from the index, select it in the list and click on the **[-]** button.
+インデックスからフィールドを削除するには、リスト中でそれを選択し、 **[-]** ボタンをクリックします。
 
-Once the index has been configured, click on **OK** to generate the index.
+インデックスの設定ができたら、**OK** ボタンをクリックするとインデックスが生成されます。
 
-## Deleting an index in the Structure editor
+## ストラクチャーエディターでインデックスを削除する
 
-You can delete indexes that are no longer useful at any time. This can be carried out directly in the Structure editor or using the [Index List](#index-list) window.
+利用しなくなったインデックスはいつでも削除できます。削除はストラクチャーエディター上で直接、または[インデックスリスト](#インデックスリスト) ウィンドウ上で行うことができます。
 
-To delete a standard index in the Structure editor:
+ストラクチャーエディター内で標準インデックスを削除するには:
 
-1. Select the field associated with the index you want to delete, then choose the **None** or uncheck the **Keyword Index** option (for a keyword index) in the Index menu of the **Inspector palette**
-   **OR**  
-   Right-click on the field associated with the index, then choose the **None** or uncheck the **Keywords** option from the **Index>** submenu of the context menu.
+1. 削除するインデックスが割り当てられているフィールドを選択し、**インスペクターパレット** のインデックスメニューから**なし** を選択するか、**キーワードインデックス** オプションのチェックを外します(キーワードインデックスの場合)。
+   **または**
+   削除するインデックスが割り当てられているフィールド上で右クリックし、コンテキストメニューから**インデックス>** から**なし** を選択するか、**キーワード** オプションのチェックを外します。
 
-The deletion (and viewing) of a composite index can only be carried out from the List Index window, see above.
+複合インデックスの削除(と表示)は、リストインデックスウィンドウを通してのみ実行可能です。詳細は上記を参照してください。
 
-## Reindexing a field
+## インデックスの再構築
 
-You can reindex a field at any time; in other words, rebuild the index table(s) associated with it, in accordance with the data present. This can be useful in the case of application maintenance.
+フィールドのインデックスをいつでも再構築できます。これは言い換えると、そのインデックスに対応するインデックステーブルを、現在のデータを使用して再構築することを意味します。これはアプリケーションメンテナンスの際に利用できます。
 
-Reindexing can be carried out using the **Rebuild** command in the [Index List](#index-list) window.
+インデックスの再構築は[インデックスリスト](#インデックスリスト) ウィンドウの**再構築** コマンドを使用して行います。
 
-Note that modifying the [data language](../settings/database.md#text-comparison) or maintenance operations such as [compacting](../MSC/compact.md) will also cause the indexes to be rebuilt.
+[データ言語](../settings/database.md#テキスト比較) の変更や、データの[圧縮](../MSC/compact.md) などのメンテナンス処理においても、インデックスの再構築が行われることに留意してください。

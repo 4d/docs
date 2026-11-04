@@ -35,7 +35,7 @@ title: ピクチャーボタン
 
 ピクチャーは、縦、横、または縦横格子状に整理することができます (上図を参照)。ピクチャーを格子状に並べた場合、各ピクチャーには上の行から順に左から右へと、0から始まる番号が振られます。たとえば、4行と 3列で構成される格子において、2行目の 2番目の画像の番号は 4 になります (上の例では英国旗)。
 
-2. プロジェクトの Resouces フォルダーに画像があるのを確認し、そのファイルパスを [パス名](properties_Picture.md#パス名) プロパティに入力します。
+2. プロジェクトの Resources フォルダーに画像があるのを確認し、そのファイルパスを [パス名](properties_Picture.md#パス名) プロパティに入力します。
 
 3. 画像の [行と列](properties_Crop.md) プロパティを設定します。
 
@@ -58,9 +58,15 @@ title: ピクチャーボタン
 
 > ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
 
+## Supported standard actions
+
+Picture buttons support the same [standard actions as buttons](button_overview.md#supported-standard-actions), except for actions restricted to a specific button style, such as [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) for invisible buttons. Assign an action using the [Standard action property](properties_Action.md#standard-action).
+
+For action descriptions and activation conditions, see [Standard actions](../Desktop-legacy/standard-actions.md#available-actions). See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## プロパティ一覧
 
-[Border color](./properties_BackgroundAndBorder.md#border-color) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Switch back when released](properties_Animation.md#switch-back-when-released) - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks) - [Switch every x seconds](properties_Animation.md#switch-every-x-seconds) - [Title](properties_Object.md#title) - [Switch when roll over](properties_Animation.md#switch-when-roll-over) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [パス名](properties_Picture.md#パス名) - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新) - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る) - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果) - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用) - [アニメーション間隔 (tick)](properties_Animation.md#アニメーション間隔-tick) - [行](properties_Crop.md#行) - [列](properties_Crop.md#列) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [ショートカット](properties_Entry.md#ショートカット) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [イタリック](properties_Text.md#イタリック) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
 
 ## サポートされるイベント
 

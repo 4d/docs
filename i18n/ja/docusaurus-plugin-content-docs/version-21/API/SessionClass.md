@@ -81,7 +81,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::note
 
-この関数は [roles.json](../ORDA/privileges.md#rolesjsonファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
+この関数は [roles.json](../ORDA/privileges.md#rolesjson-ファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
 
 :::
 
@@ -525,7 +525,7 @@ End if
 | hostType         | Text                             | ホストタイプ: "windows" または "mac"                                                                             |
 | creationDateTime | 日付 (ISO 8601) | セッション作成の日付と時間。セッション作成の日付と時間。 スタンドアロンセッションの場合: アプリケーション起動の日付と時間                                          |
 | state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                             |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                       |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値)                                                                        |
 | persistentID     | Text                             | リモートセッション: セッションの永続的な ID                                                                                |
 
 :::note

@@ -48,7 +48,7 @@ Exibe o texto fonte das fórmulas como símbolos quando as expressões são most
 
 #### Comandos
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 
 
@@ -172,7 +172,7 @@ Exibe/oculta um retângulo preto para imagens que não podem ser carregadas ou c
 
 #### Comandos
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 
 ## Mostrar rodapés

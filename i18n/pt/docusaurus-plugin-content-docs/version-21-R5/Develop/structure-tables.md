@@ -280,10 +280,7 @@ Neste caso, o 4D examina todos os registros da tabela e atribui automaticamente 
 
 Para remover uma chave primária de uma tabela:
 
-1. Clique com o botão direito na tabela que contém a chave primária e escolha **Remover chave primária** no menu de contexto:
-
-[imagem aqui]
-
+1. Clique com o botão direito na tabela que contém a chave primária e escolha **Remover chave primária** no menu de contexto.
 Uma caixa de diálogo de confirmação aparece. Clique em **OK** para remover a chave primária.
 
 #### Campo de chave primária padrão

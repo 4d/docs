@@ -148,6 +148,8 @@ Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, p
 
 Le dossier DerivedData contient des données en cache utilisées en interne par 4D pour optimiser le traitement. Il est automatiquement créé ou recréé si nécessaire. Vous pouvez ignorer ce dossier.
 
+When the project is compiled, 4D also generates in this folder the `syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the `exposed MCP Function` class functions. This file is not used if a `syntaxMCP.json` file exists in the [`Resources`](#resources) folder.
+
 ## `Libraries`
 
 > Ce dossier n'est utilisé que sur macOS.
@@ -158,10 +160,11 @@ Le dossier Librairies contient le fichier résultant d'une compilation avec le [
 
 Le dossier Resources contient tous les fichiers et dossiers de ressources personnalisés du projet. Dans ce dossier, vous pouvez placer tous les fichiers nécessaires à la traduction ou à la personnalisation de l'interface de l'application (fichiers image, fichiers texte, fichiers XLIFF, etc.). 4D utilise des mécanismes automatiques pour manipuler le contenu de ce dossier, notamment pour le traitement des fichiers XLIFF et des images statiques. Pour l'utilisation en mode distant, le dossier Resources vous permet de partager des fichiers entre le serveur et tous les ordinateurs clients. Voir le *Manuel 4D Server - Référence*.
 
-| Contenu               | Description                                                                                                                                                                                                                                                     | Format  |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *élément*             | Fichiers et dossiers de ressources de la base                                                                                                                                                                                                                   | variés  |
-| Images/Library/*item* | Images de la bibliothèque d'images sous forme de fichiers séparés(\*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom. | picture |
+| Contenu                        | Description                                                                                                                                                                                                                                                              | Format  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| *élément*                      | Fichiers et dossiers de ressources de la base                                                                                                                                                                                                                            | variés  |
+| Images/Library/*item*          | Images de la bibliothèque d'images sous forme de fichiers séparés(\*). Les noms de ces éléments deviennent des noms de fichiers. Si un élément dupliqué existe, un numéro est ajouté au nom.          | picture |
+| syntaxMCP.json | Custom [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata). If this file exists, it is used instead of the `Project/DerivedData/syntaxMCP.json` file generated at compilation. The compiler never modifies it. | JSON    |
 
 (\*) uniquement si le projet a été exporté depuis une base binaire .4db.
 

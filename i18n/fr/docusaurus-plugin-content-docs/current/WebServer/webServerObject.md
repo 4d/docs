@@ -99,6 +99,19 @@ Ces propriétés sont définies :
 
 > *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 
+### MCP server settings
+
+The [`mcp`](../API/WebServerClass.md#mcp) property contains the settings of the [MCP server](mcp-server.md) of the host application's web server: `enabled`, `serverName`, `serverVersion`, `instructions`, `maxResults`, `crudTools`, `allowInsecureHTTP`, `trustedProxies`, `publicURL`, and `oauthDynamicRegistration`. Unlike other properties:
+
+- `mcp.enabled` can be modified while the web server is running, to enable or disable the MCP server without restarting the web server,
+- the `mcp` settings passed to the [`.start()`](../API/WebServerClass.md#start) function are kept when the web server is restarted.
+
+```4d
+var webServer : 4D.WebServer:=WEB Server
+	//enable the MCP server of the running web server
+webServer.mcp.enabled:=True
+```
+
 ## Portée des commandes 4D Web
 
 Le langage 4D contient [plusieurs commandes](../commands/theme/Web_Server) permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.

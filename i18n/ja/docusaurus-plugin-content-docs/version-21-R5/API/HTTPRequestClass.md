@@ -13,7 +13,7 @@ title: HTTPRequest
 
 </details>
 
-`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。   HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
+`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
 
 ### 非同期プログラミング
 
@@ -197,7 +197,7 @@ macOS では、新しいアプリケーション(新しい [UUID](./FileClass.md
 
 | プロパティ                 | 型    | 説明                                                                                    |
 | --------------------- | ---- | ------------------------------------------------------------------------------------- |
-| .data | blob | 取得データ。取得データ。 `onData` コールバック以外の場合は常に *undefined* です。                                  |
+| .data | blob | 取得データ。 `onData` コールバック以外の場合は常に *undefined* です。                                        |
 | .type | text | イベントの種類。取り得る値: "response", "error", "headers", "data", または "terminate |
 
 #### authentication オブジェクト
@@ -311,9 +311,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                      |
-| ----- | ----------------------------------------------------------------------- |
-| 19 R8 | `.headers` は小文字の名前を返します。  `.rawHeaders` プロパティの追加 `.rawHeaders` プロパティの追加 |
+| リリース  | 内容                                               |
+| ----- | ------------------------------------------------ |
+| 19 R8 | `.headers` は小文字の名前を返します。  `.rawHeaders` プロパティの追加 |
 
 </details>
 
@@ -343,7 +343,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された` returnResponseBody` を格納します<!-- END REF -->。省略された場合は true。
+`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された` returnResponseBody` を格納します<!-- END REF -->。(省略された場合は true)。
 
 <!-- END REF -->
 
@@ -392,7 +392,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。省略された場合は未定義。
+`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。(省略された場合は未定義)。
 
 <!-- END REF -->
 

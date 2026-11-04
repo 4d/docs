@@ -54,7 +54,7 @@ The editor prevents you from removing the index of a Unique field (**None** opti
 
 ### Expose as REST resource
 
-This option controls whether the [field is exposed to REST requests](../REST/configuration.md#exposing-field).  
+This option controls whether the [field is exposed to REST requests](../REST/configuration.md#exposing-fields).  
 
 :::note Notes
 

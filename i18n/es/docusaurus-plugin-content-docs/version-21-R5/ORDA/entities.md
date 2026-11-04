@@ -566,7 +566,7 @@ El siguiente diagrama ilustra el bloqueo optimista:
 
 1. Dos procesos cargan la misma entidad.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Dado que coinciden, la entidad se guarda y su valor de marcador se incrementa.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Como corresponden, la entidad se guarda y el valor de su marcador se incrementa.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
 3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Dado que el valor del sello de la entidad modificada no coincide con el de la entidad almacenada en los datos, no se realiza el guardado y se devuelve un error.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 

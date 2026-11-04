@@ -27,7 +27,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ## Background Color / Fill color
 
-Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-style-button-check-box-or-radio-button) (`borderFillColor` JSON property).  
+Defines the background color / fill color of an object. It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-button-custom-check-box-or-custom-radio-button) (`borderFillColor` JSON property).  
 
 :::note
 
@@ -230,7 +230,10 @@ In [text areas](./text.md) and [inputs](./input_overview.md):
 
 ![](../assets/en/FormObjects/radius-text.png)
 
-In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line Style](#border-line-style)), [custom check boxes](checkbox_overview.md#custom) and [custom radio buttons](radio_overview.md#custom), the corner radius is drawn **inside** the area of the object.
+In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line Style](#border-line-style)), [custom check boxes](checkbox_overview.md#custom) and [custom radio buttons](radio_overview.md#custom), the corner radius is drawn **inside** the area of the object. 
+
+![](../assets/en/FormObjects/custom-button.png)  
+![](../assets/en/FormObjects/custom-radius-runtime.png)
 
 #### Gramática JSON
 
@@ -331,7 +334,7 @@ Designa a espessura de uma linha.
 
 | Nome        | Tipo de dados | Valores possíveis                                                                                               |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| strokeWidth | number        | 0 para el ancho más pequeño en un formulario impreso, ou qualquer valor de inteiro < 20 |
+| strokeWidth | number        | 0 para el ancho más pequeño en un formulário impresso, ou qualquer valor de inteiro < 20 |
 
 #### Objectos suportados
 

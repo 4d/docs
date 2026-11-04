@@ -27,6 +27,8 @@ Si aucune erreur n'est détectée, la compilation démarre et le message "Compil
 
 Vous pouvez immédiatement [exécuter votre application en mode compilé](#run-compiled) et identifier sa rapidité.
 
+When the compilation succeeds, the compiler also generates the `Project/DerivedData/syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the project, whatever the [syntax file setting](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
 Si des erreurs sont détectées, le process est stoppé et le message "Compilation failed" s'affiche. La zone d'information de la fenêtre affiche les noms des méthodes et les numéros de ligne concernés dans une liste hiérarchique :
 
 ![](../assets/en/Project/compilerWin2.png)
@@ -276,6 +278,23 @@ Par exemple, pour désactiver le warning suivant :
 Les commentaires des warnings spéciaux sont prioritaires sur les paramètres d'affichage des warnings définis dans l'onglet des warnings.
 
 :::
+
+### Warnings on function comments
+
+When a class function or a class constructor has a [comment block above its declaration](../Concepts/classes.md#function-comments), the compiler checks it and reports a warning:
+
+- for each parameter of the signature that is not documented by a `$name:` or `{$name}:` line (variadic parameters are not checked),
+- when the `MCP:` behavior tags contradict each other (`@readOnly`, `@destructive`, and `@additive` used together). In this case, the corresponding hints are omitted from the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata).
+
+Functions without a comment block are not checked. For example, the following function generates a warning for the *$factor* parameter and a warning for the `@readOnly` and `@destructive` tags:
+
+```4d
+// Scales a value by a factor
+// MCP: @readOnly @destructive
+// $value: value to scale
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
 
 ## Outils de compilation
 

@@ -54,7 +54,7 @@ O editor impede que você remova o índice de um campo Único (opção **Nenhum*
 
 ### Expor como recurso REST
 
-Esta opção controla se o [campo é exposto para requisições REST](../REST/configuration.md#exposing-field).  
+Esta opção controla se o [campo é exposto para requisições REST](../REST/configuration.md#exposing-fields).  
 
 :::note Notas
 

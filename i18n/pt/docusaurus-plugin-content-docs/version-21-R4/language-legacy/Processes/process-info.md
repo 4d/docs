@@ -1,4 +1,4 @@
-﻿---
+---
 id: process-info
 title: Process info
 slug: /commands/process-info
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | Parâmetro     | Tipo    |                             | Descrição                     |
 | ------------- | ------- | :-------------------------: | ----------------------------- |
 | processNumber | Integer | &#8594; | Process number                |
-| Resultados    | Object  | &#8592; | Information about the process |
+| Result        | Object  | &#8592; | Information about the process |
 
 </div>
 <!-- END REF -->
@@ -43,12 +43,12 @@ O objeto retornado contém as propriedades abaixo:
 | ID               | Integer                                 | ID única do processo                                                                         |
 | name             | Text                                    | Nome de processo                                                                             |
 | number           | Integer                                 | Process number                                                                               |
-| preemptive       | Parâmetros                              | True if run preemptive, false otherwise                                                      |
+| preemptive       | Boolean                                 | True if run preemptive, false otherwise                                                      |
 | sessionID        | Text                                    | UUID da sessão                                                                               |
 | state            | Integer                                 | Estado atual. Valores possíveis: veja abaixo                 |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                                         |
 | type             | Integer                                 | Tipo de processo em execução. Valores possíveis: veja abaixo |
-| visible          | Parâmetros                              | True if visible, false otherwise                                                             |
+| visible          | Boolean                                 | True if visible, false otherwise                                                             |
 
 - Valores possíveis para "state":
 
@@ -120,7 +120,7 @@ O objeto retornado contém as propriedades abaixo:
 | Web server spare process      | -32   |
 | Worker pool in use            | -41   |
 | Worker pool spare             | -42   |
-| Processo do trabalhador       | 5     |
+| Worker process                | 5     |
 
 :::note
 
@@ -163,8 +163,15 @@ $preemptive:=Process info(Current process).preemptive
 
 ## Veja também
 
-[Count tasks](../commands/count-tasks)\
-[Process activity](../commands/process-activity)\
-[Process state](../commands/process-state)\
-[Session info](../commands/session-info)
+[Count tasks](../commands/count-tasks)  
+[Process activity](../commands/process-activity)  
+[Process state](../commands/process-state)  
+[Session info](../commands/session-info)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1843 |
+| Thread-seguro | sim |
 

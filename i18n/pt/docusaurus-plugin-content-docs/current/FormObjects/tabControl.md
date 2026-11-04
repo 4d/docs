@@ -113,6 +113,12 @@ Quando você atribuir a [ação padrão](properties_Action.md#padrao) `gotoPage`
 
 Por exemplo, se o usuário selecionar a terceira aba, 4D exibirá a terceira página do formulário atual (se existir).
 
+## Ações padrão compatíveis
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Usa o número da aba selecionada conforme descrito em [Acção Goto Page](#goto-page-action).
+
+Veja a [tabela de compatibilidade de ações padrão](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## Propriedades compatíveis
 
 [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Lista de opções](properties_DataSource.md#choice-list-static-list) - [Clase](properties_Object.md#css-class) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) -  - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensagem de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Guardar valor](properties_Object.md#save-value) - [Ação padrão](properties_Action.md#standard-action) - [Direção do controle de tabulação](properties_Appearance.md#tab-control-direction) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable ou expressão](properties_Object.md#variable-or-expression) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)

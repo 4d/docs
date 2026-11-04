@@ -27,7 +27,7 @@ La lista ofrece la siguiente información:
 - **Fecha de inicio de sesión**: fecha y hora en las que se inició la sesión.
 - **Tiempo de CPU**: tiempo de CPU consumido por la sesión desde su creación.
 - **Actividad**: porcentaje de la actividad del servidor dedicada actualmente a la sesión (valor dinámico).
-- **Estado**: estado de la sesión. Las sesiones con los clientes pueden ser **en línea**, **[en reposo](../Desktop/clientServer.md#management-of-sleeping-client-sessions)** o **[inalcanzables](../Desktop/clientServer.md#management-of-unreachable-peer)**. Las sesiones Web, REST y SOAP siempre tienen el estado **En línea**.
+- **Estado**: estado de la sesión. Las sesiones con los clientes pueden ser **en línea**, **[en reposo](#management-of-sleeping-client-sessions)** o **[inalcanzables](#management-of-unreachable-peer)**. Las sesiones Web, REST y SOAP siempre tienen el estado **En línea**.
 
 Cuando se selecciona una sesión, se muestra información adicional en el panel de detalles.
 

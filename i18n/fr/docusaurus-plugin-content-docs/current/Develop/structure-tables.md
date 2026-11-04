@@ -280,11 +280,8 @@ When you create a primary key in a table that already contains records (using an
 
 To remove a primary key from a table:
 
-1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu:
-
-[picture here]
-
-A confirmation dialog box appears. Click **OK** to remove the primary key.
+1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu.
+   A confirmation dialog box appears. Click **OK** to remove the primary key.
 
 #### Default primary key field
 

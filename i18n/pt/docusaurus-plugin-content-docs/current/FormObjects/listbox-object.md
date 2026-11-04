@@ -54,6 +54,14 @@ Quando a fonte de dados for uma coleção, qualquer modificação feita nos valo
 myCol:=myCol.push("new value") //exibir novo valor na list box
 ```
 
+## Ações padrão compatíveis
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Disponível para list boxes de tipo array; veja as [propriedades compatíveis por tipo de list box](#supported-properties).
+
+As ações [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord), [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord), [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord) e [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) podem afetar list boxes de seleção, mas são atribuídas a botões ou comandos de menu, não ao próprio list box de seleção.
+
+Veja a [tabela de compatibilidade de ações padrão](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## Propriedades compatíveis
 
 Propriedades compatíveis dependem do tipo de list box.
@@ -193,7 +201,7 @@ Os eventos formulário nos list box ou colunas de list box podem retornar as seg
 | oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                       |
 | oldSize              | inteiro longo | Tamanho anterior (em pixéis) da coluna ou linha           |
 | row                  | inteiro longo | Número da linha                                                              |
-| Alinhamento vertical | inteiro longo | Positivo se a deslocação for para baixo, negativo se for para cima           |
+| verticalScroll       | inteiro longo | Positivo se a deslocação for para baixo, negativo se for para cima           |
 
 > Se um evento ocorrer em uma coluna ou linha "falsa" que não exista, é normalmente retornada uma cadeia de caracteres vazia.
 

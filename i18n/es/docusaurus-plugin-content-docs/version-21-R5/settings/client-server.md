@@ -135,7 +135,7 @@ Este parámetro puede utilizarse para definir globalmente el modo de actualizaci
 - **Nunca**: la carpeta local **Resources** no se actualiza durante la sesión. La notificación enviada por el servidor es ignorada. La carpeta **Resources** local puede actualizarse manualmente mediante el comando **Update Local Resources** del menú de acción (ver [Uso del explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Siempre**: la sincronización de la carpeta local **Resources** se realiza automáticamente durante la sesión cada vez que el servidor envía una notificación.
 - **Preguntar**: cuando la notificación es enviada por el servidor, se muestra una caja de diálogo en las máquinas cliente, indicando la modificación. A continuación, el usuario puede aceptar o rechazar la sincronización de la carpeta local **Resources**.\
-  La carpeta **Resources** centraliza los archivos personalizados necesarios para la interfaz de la base (archivos de traducción, imágenes, etc.). Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta. Para más información, consulte la sección [Gestión de la carpeta Resources](../Desktop/clientServer.md#managing-the-resources-folder).
+  La carpeta **Resources** centraliza los archivos personalizados necesarios para la interfaz de la base (archivos de traducción, imágenes, etc.). Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta. For more information, please refer to the [Resources folder](../Desktop/clientServer.md#resources-folder) section.
 
 ## Página Configuración IP
 

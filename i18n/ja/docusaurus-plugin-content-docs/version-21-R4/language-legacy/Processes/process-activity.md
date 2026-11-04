@@ -113,7 +113,14 @@ displayed_sidebar: docs
 
 ## 参照
 
-[`Process info`](../commands/process-info)
-[`Session info`](../commands/session-info)
-[Session storage](../commands/session-storage)  
-[WEB Get server info](../commands/web-get-server-info)
+[`Process info`](../commands/process-info)  
+[`Session info`](../commands/session-info)  
+[`Session storage`](../commands/session-storage)  
+[`WEB Get server info`](../commands/web-get-server-info)
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1495 |
+| スレッドセーフである | yes |

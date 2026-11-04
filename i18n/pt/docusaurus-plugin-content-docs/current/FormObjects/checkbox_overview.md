@@ -38,41 +38,6 @@ A variável associada à caixa de seleção devolve o valor 2 quando a caixa est
 
 Você pode atribuir uma [ação padrão](properties_Action.md#standard-action) a uma caixa de seleção para manipular atributos de áreas de texto. Por exemplo, se atribuir a ação padrão `fontBold`, em execução a caixa de seleção gerenciará o atributo "negrito" do texto selecionado na área atual.
 
-Só as ações que podem representar um estado verdadeiro/falso (ações "marcáveis") são compatíveis com esse objeto:
-
-| Ações suportadas                    | Condições de uso (se houver) |
-| ----------------------------------- | ----------------------------------------------- |
-| avoidPageBreakInsideEnabled         | Apenas áreas 4D Write Pro                       |
-| fontItalic                          |                                                 |
-| fontBold                            |                                                 |
-| fontLinethrough                     |                                                 |
-| fontSubscript                       | Apenas áreas 4D Write Pro                       |
-| fontSuperscript                     | Apenas áreas 4D Write Pro                       |
-| fontUnderline                       |                                                 |
-| font/showDialog                     | Só em Mac                                       |
-| htmlWYSIWIGEnabled                  | Apenas áreas 4D Write Pro                       |
-| section/differentFirstPage          | Apenas áreas 4D Write Pro                       |
-| section/differentLeftRightPages     | Apenas áreas 4D Write Pro                       |
-| spell/autoCorrectionEnabled         |                                                 |
-| spell/autoDashSubstitutionsEnabled  | Só em Mac                                       |
-| spell/autoLanguageEnabled           | Só em Mac                                       |
-| spell/autoQuoteSubstitutionsEnabled | Só em Mac                                       |
-| spell/autoSubstitutionsEnabled      |                                                 |
-| spell/enabled                       |                                                 |
-| spell/grammarEnabled                | Só em Mac                                       |
-| spell/showDialog                    | Só em Mac                                       |
-| spell/visibleSubstitutions          |                                                 |
-| visibleBackground                   | Apenas áreas 4D Write Pro                       |
-| visibleFooters                      | Apenas áreas 4D Write Pro                       |
-| visibleHeaders                      | Apenas áreas 4D Write Pro                       |
-| visibleHiddenChars                  | Apenas áreas 4D Write Pro                       |
-| visibleHorizontalRuler              | Apenas áreas 4D Write Pro                       |
-| visiblePageFrames                   | Apenas áreas 4D Write Pro                       |
-| visibleReferences                   |                                                 |
-| widowAndOrphanControlEnabled        | Apenas áreas 4D Write Pro                       |
-
-Para obter informações detalhadas sobre essas ações, consulte a seção [Ações padrão](properties_Action.md#standard-action).
-
 ## Estilos de botão caixas de seleção
 
 As caixas de seleção usam [estilos de botão](properties_TextAndPicture.md#button-style) para controlar a aparência geral de uma caixa de seleção, bem como suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
@@ -382,6 +347,45 @@ Geralmente el é associado a uma [imagem de 4 estados](properties_TextAndPicture
 		"customBorderY": 5
 		}
 ```
+
+## Ações padrão compatíveis
+
+Só as ações que podem representar um estado verdadeiro/falso (ações "marcáveis") são compatíveis com esse objeto:
+
+| Ações suportadas                    | Condições de uso (se houver) |
+| ----------------------------------- | ----------------------------------------------- |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)         | Apenas áreas 4D Write Pro                       |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                          |                                                 |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                            |                                                 |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                     |                                                 |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                       | Apenas áreas 4D Write Pro                       |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                     | Apenas áreas 4D Write Pro                       |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                       |                                                 |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                     | Só em Mac                                       |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                  | Apenas áreas 4D Write Pro                       |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)          | Apenas áreas 4D Write Pro                       |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)     | Apenas áreas 4D Write Pro                       |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)         |                                                 |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)  | Só em Mac                                       |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)           | Só em Mac                                       |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled) | Só em Mac                                       |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)      |                                                 |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                       |                                                 |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                | Só em Mac                                       |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                    | Só em Mac                                       |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)          |                                                 |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                   | Apenas áreas 4D Write Pro                       |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                      | Apenas áreas 4D Write Pro                       |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                      | Apenas áreas 4D Write Pro                       |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                  | Apenas áreas 4D Write Pro                       |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)              | Apenas áreas 4D Write Pro                       |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                   | Apenas áreas 4D Write Pro                       |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                   |                                                 |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)        | Apenas áreas 4D Write Pro                       |
+
+Para obter informações detalhadas sobre essas ações, consulte a seção [Ações padrão](properties_Action.md#standard-action).
+
+Veja também a [tabela de compatibilidade de ações padrão](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriedades compatíveis
 

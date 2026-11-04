@@ -388,7 +388,7 @@ Session.quotas.nbEntitySets:=50
 
 #### 説明
 
-`.outBytesPerMin` プロパティには<!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->Web サーバーが1分間に送信できる最大バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
+`.outBytesPerMin` プロパティには <!-- REF #QuotaManagerClass.outBytesPerMin.Summary -->Web サーバーが 1分間に送信できる最大バイト数<!-- END REF -->が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
 スコープ: [サーバーグローバルレベル](./WebServerClass.md#スコープレベル)
 
@@ -402,8 +402,7 @@ Session.quotas.nbEntitySets:=50
 
 #### 説明
 
-`.outBytesPerMinPerSession` プロパティには<!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->Web サーバーがセッションに対して
-1分間に送信できる最大の総バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
+`.outBytesPerMinPerSession` プロパティには<!-- REF #QuotaManagerClass.outBytesPerMinPerSession.Summary -->Web サーバーがセッションに対して 1分間に送信できる最大の総バイト数<!-- END REF --> が格納されています。このクォータは、Web サーバーの圧縮設定に関わらず、圧縮されていないレスポンスのペイロードサイズに基づいて評価されます。
 
 スコープ: [セッションデフォルトレベル](./WebServerClass.md#スコープレベル)
 

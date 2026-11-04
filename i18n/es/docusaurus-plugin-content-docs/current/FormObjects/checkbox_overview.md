@@ -38,41 +38,6 @@ La variable asociada a la casilla de selección devuelve el valor 2 cuando la ca
 
 Puede asignar una [acción estándar](properties_Action.md#standard-action) a una casilla de selección para manejar los atributos de las áreas de texto. Por ejemplo, si asigna la acción estándar `fontBold`, en ejecución la casilla de selección gestionará el atributo "negrita" del texto seleccionado en el área actual.
 
-Sólo las acciones que pueden representar un estado verdadero/falso (acciones "marcables") son soportadas por este objeto:
-
-| Acciones soportadas                 | Condiciones de uso (si las hay) |
-| ----------------------------------- | -------------------------------------------------- |
-| avoidPageBreakInsideEnabled         | Área 4D Write Pro únicamente                       |
-| fontItalic                          |                                                    |
-| fontBold                            |                                                    |
-| fontLinethrough                     |                                                    |
-| fontSubscript                       | Área 4D Write Pro únicamente                       |
-| fontSuperscript                     | Área 4D Write Pro únicamente                       |
-| fontUnderline                       |                                                    |
-| font/showDialog                     | Mac únicamente                                     |
-| htmlWYSIWIGEnabled                  | Área 4D Write Pro únicamente                       |
-| section/differentFirstPage          | Área 4D Write Pro únicamente                       |
-| section/differentLeftRightPages     | Área 4D Write Pro únicamente                       |
-| spell/autoCorrectionEnabled         |                                                    |
-| spell/autoDashSubstitutionsEnabled  | Mac únicamente                                     |
-| spell/autoLanguageEnabled           | Mac únicamente                                     |
-| spell/autoQuoteSubstitutionsEnabled | Mac únicamente                                     |
-| spell/autoSubstitutionsEnabled      |                                                    |
-| spell/enabled                       |                                                    |
-| spell/grammarEnabled                | Mac únicamente                                     |
-| spell/showDialog                    | Mac únicamente                                     |
-| spell/visibleSubstitutions          |                                                    |
-| visibleBackground                   | Área 4D Write Pro únicamente                       |
-| visibleFooters                      | Área 4D Write Pro únicamente                       |
-| visibleHeaders                      | Área 4D Write Pro únicamente                       |
-| visibleHiddenChars                  | Área 4D Write Pro únicamente                       |
-| visibleHorizontalRuler              | Área 4D Write Pro únicamente                       |
-| visiblePageFrames                   | Área 4D Write Pro únicamente                       |
-| visibleReferences                   |                                                    |
-| widowAndOrphanControlEnabled        | Área 4D Write Pro únicamente                       |
-
-Para información detallada sobre estas acciones, consulte la sección [Acciones estándar](properties_Action.md#standard-action).
-
 ## Estilos de botones casillas de selección
 
 Las casillas de selección utilizan [los estilos de botón](properties_TextAndPicture.md#button-style) para controlar la apariencia general de una casilla de selección, así como sus posibles propiedades. Es posible aplicar diferentes estilos predefinidos a las casillas de selección. Se puede obtener un gran número de variaciones combinando estas propiedades/comportamientos.
@@ -382,6 +347,45 @@ Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPict
 		"customBorderY": 5
 		}
 ```
+
+## Supported standard actions
+
+Sólo las acciones que pueden representar un estado verdadero/falso (acciones "marcables") son soportadas por este objeto:
+
+| Acciones soportadas                                                                                                   | Condiciones de uso (si las hay) |
+| --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)                       | Área 4D Write Pro únicamente                       |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                                                        |                                                    |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                                                            |                                                    |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                                              |                                                    |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                                     | Área 4D Write Pro únicamente                       |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                                 | Área 4D Write Pro únicamente                       |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                                                  |                                                    |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                                               | Mac únicamente                                     |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                           | Área 4D Write Pro únicamente                       |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)           | Área 4D Write Pro únicamente                       |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | Área 4D Write Pro únicamente                       |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)                       |                                                    |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)         | Mac únicamente                                     |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)                           | Mac únicamente                                     |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)       | Mac únicamente                                     |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)                 |                                                    |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                                                   |                                                    |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                                     | Mac únicamente                                     |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                                             | Mac únicamente                                     |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)                         |                                                    |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                             | Área 4D Write Pro únicamente                       |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                                   | Área 4D Write Pro únicamente                       |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                                   | Área 4D Write Pro únicamente                       |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                           | Área 4D Write Pro únicamente                       |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)                   | Área 4D Write Pro únicamente                       |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                             | Área 4D Write Pro únicamente                       |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                                          |                                                    |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)       | Área 4D Write Pro únicamente                       |
+
+Para información detallada sobre estas acciones, consulte la sección [Acciones estándar](properties_Action.md#standard-action).
+
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propiedades soportadas
 

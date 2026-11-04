@@ -209,7 +209,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 クラス関数とは、当該クラスのプロパティです。クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
 
-[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use) なしで関数を呼び出せるようにできます。詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -357,11 +357,11 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `shared` キーワードを使うと**共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。   `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 :::note
 
-[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) も`Class constructor` 機能の恩恵を受けることができます。実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-クラス) も`Class constructor` 機能の恩恵を受けることができます。実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
 
 :::
 
@@ -433,7 +433,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
+`property` キーワードは、クラス関数において `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 
@@ -467,7 +467,7 @@ property fuzzy // バリアント
 
 :::note
 
-宣言と同時に色かするプロパティが [共有クラス](#共有クラス) のオブジェクトまたはコレクションである場合、その値は自動的に共有された値に変換されます:
+宣言と同時に初期化するプロパティが [共有クラス](#共有クラス) のオブジェクトまたはコレクションである場合、その値は自動的に共有された値に変換されます:
 
 ```4d
 // 共有クラス内
@@ -691,7 +691,7 @@ $val:=$o.f() //8
 
 共有クラスは **共有関数** をサポートしています。共有関数は、[`Use...End use`](shared.md#useend-use) 構文なしで呼び出すことができます。
 
-クラスが共有クラスかどうかは、Classオブジェクトの .[`.isShared`](../API/ClassClass.md#isshared)プロパティで確認できます。
+クラスが共有クラスかどうかは、Classオブジェクトの [`.isShared`](../API/ClassClass.md#isshared)プロパティで確認できます。
 
 :::info
 
@@ -723,7 +723,7 @@ cs.Person.isShared // true
 
 共有クラス内で定義された関数が、そのクラスのオブジェクトを変更する場合には、共有オブジェクトへのアクセスを保護するために、[`Use...End use`](shared.md#useend-use) 構文を呼び出す必要があります。しかし、**shared** として関数を定義することで、実行時には内部的な `Use...End use` を自動でトリガーするようにし、コードを簡略化することができます。
 
-共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します 。例:
+共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します。例:
 
 ```4d
 	//共有クラス Foo
@@ -789,9 +789,9 @@ shared Function Bar($value : Integer)
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
-クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+クラスがシングルトンクラスかどうかは、Classオブジェクトの [`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
-クラスがセッションシングルトンかどうかは、Classオブジェクトの .[`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
+クラスがセッションシングルトンかどうかは、Classオブジェクトの [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
 
 ### 公開されたシングルトン関数
 

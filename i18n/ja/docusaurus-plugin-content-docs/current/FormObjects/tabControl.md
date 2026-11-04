@@ -114,6 +114,12 @@ FORM GOTO PAGE(arrPages)
 
 たとえば、ユーザーが 3番目のタブをクリックすると、4Dはカレントフォームの 3ページ目 (存在する場合) を表示します。
 
+## Supported standard actions
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected tab number as described in [Goto Page action](#goto-page-action).
+
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## プロパティ一覧
 
 [タイプ](properties_Object.md#タイプ) -

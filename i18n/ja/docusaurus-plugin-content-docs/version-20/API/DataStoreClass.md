@@ -14,7 +14,7 @@ title: DataStore
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->                   |
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
-| [<!-- INCLUDE #DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.dataclassName.Summary -->                                   |
+| [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
 | [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
@@ -881,7 +881,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 有効な暗号化キーが提供された場合、そのキーはメモリ内の *keyChain* に追加され、暗号化モードが有効になります:
 
-- 暗号化可能テーブルに対するデータ編集はすべて、ディスク上 (.4DD、.journal、 .4Dindx ファイル) で暗号化されます。 .4Dindx ファイル) で暗号化されます。
+- 暗号化可能テーブルに対するデータ編集はすべて、ディスク上 (.4DD、.journal、 .4Dindx ファイル) で暗号化されます。
 - 暗号化可能テーブルから読み出したすべてのデータは、メモリ内で復号化されます。
 
 **戻り値**

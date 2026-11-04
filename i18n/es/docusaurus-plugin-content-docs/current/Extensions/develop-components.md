@@ -260,6 +260,20 @@ Un archivo de sintaxis (formato JSON) se crea automáticamente durante la fase d
 
 Si no ingresa un [namespace](#declaring-the-component-namespace), los recursos de las clases y de los métodos exposed no se generan incluso si la opción de archivo de sintaxis está marcada.
 
+When your class functions and class constructors are documented with a [comment block above their declaration](../Concepts/classes.md#function-comments), the syntax file also contains their description and parameter comments (`MCP:` lines are never included). Host projects then display them as plain text in the code completion and help of the compiled component. For example, with the following function in a component class:
+
+```4d
+// Class: Tools
+
+// Scales a value by a factor
+// $value: value to scale
+// $factor: multiplier to apply
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
+
+a host project that types `cs.MyComponent.Tools.new().scale(` sees "Scales a value by a factor" and the `$value:` and `$factor:` lines below the signature.
+
 ## Paso de variables
 
 Las variables no se comparten entre los componentes y los proyectos locales. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.

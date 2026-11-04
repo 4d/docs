@@ -67,6 +67,12 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 
 Setting permissions requires to be consistent, in particular **update** and **drop** permissions also need **read** permission (but **create** does not need it).
 
+:::warning
+
+Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso estará acessível para sessões `guest`.
+
+:::
+
 ### Inherited permissions
 
 Uma ação de permissão definida em um determinado nível é herdada por padrão em níveis inferiores, mas várias permissões podem ser configuradas:
@@ -202,7 +208,7 @@ When a new project is created, a default `roles.json` file is generated at:
 <project folder>/Project/Sources/ 
 ```
 
-Ver la sección [Arquitectura](../Project/architecture.md#sources).
+Ver la seção [Arquitetura](../Project/architecture.md#sources).
 
 Default content:
 

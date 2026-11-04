@@ -38,41 +38,6 @@ title: チェックボックス
 
 チェックボックスに [標準アクション](properties_Action.md#標準アクション) を割り当てることで、テキストエリアの属性を管理することができます。たとえば、`fontBold` 標準アクションを選択すると、ランタイムにおいてそのチェックボックスは、カレントエリア内で選択されたテキストの "bold" 属性を管理します。
 
-true/false ステータスで表すことのできるアクション ("checkable" アクション) のみがサポートされます:
-
-| サポートされるアクション                        | 使用条件 (あれば) |
-| ----------------------------------- | ----------------------------- |
-| avoidPageBreakInsideEnabled         | 4D Write Proエリアのみ             |
-| fontItalic                          |                               |
-| fontBold                            |                               |
-| fontLinethrough                     |                               |
-| fontSubscript                       | 4D Write Proエリアのみ             |
-| fontSuperscript                     | 4D Write Proエリアのみ             |
-| fontUnderline                       |                               |
-| font/showDialog                     | macOS のみ                      |
-| htmlWYSIWIGEnabled                  | 4D Write Proエリアのみ             |
-| section/differentFirstPage          | 4D Write Proエリアのみ             |
-| section/differentLeftRightPages     | 4D Write Proエリアのみ             |
-| spell/autoCorrectionEnabled         |                               |
-| spell/autoDashSubstitutionsEnabled  | macOS のみ                      |
-| spell/autoLanguageEnabled           | macOS のみ                      |
-| spell/autoQuoteSubstitutionsEnabled | macOS のみ                      |
-| spell/autoSubstitutionsEnabled      |                               |
-| spell/enabled                       |                               |
-| spell/grammarEnabled                | macOS のみ                      |
-| spell/showDialog                    | macOS のみ                      |
-| spell/visibleSubstitutions          |                               |
-| visibleBackground                   | 4D Write Proエリアのみ             |
-| visibleFooters                      | 4D Write Proエリアのみ             |
-| visibleHeaders                      | 4D Write Proエリアのみ             |
-| visibleHiddenChars                  | 4D Write Proエリアのみ             |
-| visibleHorizontalRuler              | 4D Write Proエリアのみ             |
-| visiblePageFrames                   | 4D Write Proエリアのみ             |
-| visibleReferences                   |                               |
-| widowAndOrphanControlEnabled        | 4D Write Proエリアのみ             |
-
-これらのアクションについての詳細は、[標準アクション](properties_Action.md#標準アクション) の章を参照してください。
-
 ## チェックボックスのボタンスタイル
 
 チェックボックスの [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル)は、チェックボックスの外観を制御すると同時に、提供されるプロパティをも決定します。チェックボックスには、あらかじめ定義されたスタイルを割り当てることができます。これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
@@ -382,6 +347,45 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 		"customBorderY": 5
 		}
 ```
+
+## Supported standard actions
+
+true/false ステータスで表すことのできるアクション ("checkable" アクション) のみがサポートされます:
+
+| サポートされるアクション                                                                                                          | 使用条件 (あれば) |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| [avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)                       | 4D Write Proエリアのみ             |
+| [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)                                                        |                               |
+| [fontBold](../Desktop-legacy/standard-actions.md#fontbold)                                                            |                               |
+| [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)                                              |                               |
+| [fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)                                     | 4D Write Proエリアのみ             |
+| [fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)                                 | 4D Write Proエリアのみ             |
+| [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)                                                  |                               |
+| [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)                                               | macOS のみ                      |
+| [htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)                           | 4D Write Proエリアのみ             |
+| [section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)           | 4D Write Proエリアのみ             |
+| [section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages) | 4D Write Proエリアのみ             |
+| [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)                       |                               |
+| [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)         | macOS のみ                      |
+| [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)                           | macOS のみ                      |
+| [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)       | macOS のみ                      |
+| [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)                 |                               |
+| [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)                                                   |                               |
+| [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)                                     | macOS のみ                      |
+| [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)                                             | macOS のみ                      |
+| [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)                         |                               |
+| [visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)                             | 4D Write Proエリアのみ             |
+| [visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)                                   | 4D Write Proエリアのみ             |
+| [visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)                                   | 4D Write Proエリアのみ             |
+| [visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)                           | 4D Write Proエリアのみ             |
+| [visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)                   | 4D Write Proエリアのみ             |
+| [visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)                             | 4D Write Proエリアのみ             |
+| [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)                                          |                               |
+| [widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)       | 4D Write Proエリアのみ             |
+
+これらのアクションについての詳細は、[標準アクション](properties_Action.md#標準アクション) の章を参照してください。
+
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## プロパティ一覧
 

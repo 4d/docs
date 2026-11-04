@@ -162,8 +162,15 @@ $preemptive:=Process info(Current process).preemptive
 
 ## 参照
 
-[Count tasks](../commands/count-tasks)\
-[Process activity](../commands/process-activity)\
-[Process state](../commands/process-state)\
+[Count tasks](../commands/count-tasks)  
+[Process activity](../commands/process-activity)  
+[Process state](../commands/process-state)  
 [Session info](../commands/session-info)
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1843 |
+| スレッドセーフである | yes |
 

@@ -16,7 +16,7 @@ title: ログファイル
 - [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- [ORDA requests log file](#orda-requests)
+- [ORDAリクエストのログファイル](#ordaリクエスト)
 - [4DTCPUDPLog.txt](#4dtcpudplogtxt)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
@@ -66,14 +66,14 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 | time                                                                                                   | 'YYYY-MM-DDTHH:MM:SS.mmm' の ISO 8601フォーマットを使用した日付と時間                                                                                                                                                                                                                                                                                       |
 | systemid                                                                                               | システムID                                                                                                                                                                                                                                                                                                                                                                                     |
 | component                                                                                              | コンポーネント署名 (例: '4SQLS' または 'dbmg')                                                                                                                                                                                                                                                                                                                       |
-| process\_info\_index                                       | 4DRequestsLog_ProcessInfo.txt ログの "index"フ ィールドに対応し、リクエストとプロセスのリンクを可能にします。                                                                                                                                                                                                                                                                            |
+| process\_info\_index                                       | 4DRequestsLog_ProcessInfo.txt ログの "index"フィールドに対応し、リクエストとプロセスのリンクを可能にします。                                                                                                                                                                                                                                                                             |
 | request                                                                                                | [C/S または ORDA リクエストID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt)、または SQLリクエストのメッセージ文字列、または `LOG EVENT` メッセージ                                                                                                                                                                                                                                               |
 | bytes_in                                                                          | 受信したバイト数                                                                                                                                                                                                                                                                                                                                                                                   |
 | bytes_out                                                                         | 送信したバイト数                                                                                                                                                                                                                                                                                                                                                                                   |
 | server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>_server\*duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。以下の画像の B から E までに相当します。</li> |
-| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。以下の画像の E から F までに相当します。</li>                                                                                                                                                                             |
+| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。以下の画像の A から B までに相当します。</li><li>レスポンス(サーバー上で実行された場合)。以下の画像の E から F までに相当します。</li>                                                                                                                                                                              |
 | task_kind                                                                         | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                                                                                                                                                                                                                                                                |
-| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤーを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。 </li>                                                                                                              |
+| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。 旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 より前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li>                                                                                                              |
 | extra                                                                                                  | コンテキストに関連する追加情報 (ORDAリクエストの場合、データクラス名や属性名など)                                                                                                                                                                                                                                                                                                                            |
 
 リクエストフロー:
@@ -253,7 +253,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 | timestamp          | ISO 8601フォーマットの日付と時間 (YYYY-MM-DDTHH:MM:SS.mmm) |
 | loggerID           | 任意                                                                                                                |
 | componentSignature | 任意 - 内部コンポーネント署名                                                                                                  |
-| messageLevel       | Trace、Debug、Info、警告、エラー、Fatal                                                                                     |
+| messageLevel       | Trace, Debug, Info, Warning, Error, Fatal                                                                         |
 | message            | ログエントリーの詳細                                                                                                        |
 
 イベントによって、タスク、ソケットなど様々な他のフィールドを記録に含めることができます。
@@ -290,7 +290,7 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 2種類のログファイルを生成することができます:
 
 - 通常バージョン:
-  - 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt と名前がつけられます。
+  - 4DSMTPLog.txt, 4DPOP3Log.txt, または 4DIMAPLog.txt と名前がつけられます。
   - 添付ファイルは含めません
   - 10MBごとの自動循環ファイルリサイクルを使用します。
   - 通常のデバッギング用途を想定しています。
@@ -315,21 +315,21 @@ SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
 
 このログを開始するには:
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### 内容
 
@@ -458,7 +458,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 ## 4DTCPUDPLog.txt
 
-このログファイルは TCP 接続または UDP 接続に関連したイベントを記録します。記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。このログは、開発者は自身のアプリケーション内でのネットワークアクティビティをモニターしてデバッグするのを助けます。
+このログファイルは TCP 接続または UDP 接続に関連したイベントを記録します。記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。このログは、デベロッパーが自身のアプリケーション内でのネットワークアクティビティをモニターしてデバッグするのを助けます。
 
 このログの開始方法:
 
@@ -670,7 +670,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 :::note
 
-- "state" プロパティ値の詳細は対応するコマンド内にて説明されています: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`)、[`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`)、[`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`、 `IMAP Log\\`,...)。
+- "state" プロパティ値の詳細は対応するコマンド内にて説明されています: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`)、[`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`)、[`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`、 `IMAP Log\`,...)。
 - httpDebugLogs においては、"level" プロパティは[`WEB SET OPTION`](../commands/web-set-option) コマンドで説明されている`wdl` 定数オプションに対応します。
 - diagnosticLogs においては、"level" プロパティは[`SET DATABASE PARAMETER`](../commands/set-database-parameter) コマンドで説明されている`Diagnostic log level` 定数オプションに対応します。
 

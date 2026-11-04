@@ -1,4 +1,4 @@
-﻿---
+---
 id: object-set-corner-radius
 title: OBJECT SET CORNER RADIUS
 slug: /commands/object-set-corner-radius
@@ -11,8 +11,8 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (cadeia) Se omitir, objeto é uma variável ou um campo |
-| objeto | any | &#8594; | Nome de objeto (se especificar *) ou Campo ou variável (se omitir *) |
+| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (cadeia)<br/>Se omitir, objeto é uma variável ou um campo |
+| objeto | Text, Variable, Field | &#8594; | Nome de objeto (se especificar *) ou <br/>Variável ou campo (se omitir *) |
 | radio | Integer | &#8594; | Novo rádio de esquinas arredondadas (em píxels) |
 </div>
 <!-- END REF-->
@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
+|21 R5|Suporte para botões, botões de opção e caixas de seleção com estilo personalizado |
 |19 R7|Modificado|
 |14 R4|Criado por|
 
@@ -30,19 +31,22 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->O comando **OBJECT SET CORNER RADIUS** modifica o rádio das esquinas dos objetos retângulo arredondado cujos nomes passou no parâmetro *objeto*.<!-- END REF--> O novo rádio só se define para o processo e não é guardado no formulário. 
+<!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->O comando **OBJECT SET CORNER RADIUS** modifica o rádio das esquinas dos objetos que você passou no parâmetro *objeto*.<!-- END REF--> O novo rádio só se define para o processo e não é guardado no formulário. 
 
-* Pode utilizar este comando com os seguientes objetos de formulário:  
-retângulos
-* entradas (só projetos 4D)
+Você pode usar este comando com os seguintes objetos de formulário:
 
-Ao passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável em lugar de uma cadeia (campo ou variável objeto unicamente). 
+- [retângulos](../../FormObjects/shapes_overview.md#rectangle)
+- [entradas](../../FormObjects/input_overview.md) (somente projetos 4D)
+- [áreas de texto](../../FormObjects/text.md) (somente projetos 4D)
+- [botões](../../FormObjects/button_overview.md#custom) com estilo personalizado e ["custom" Border Line Style](../../FormObjects/properties_BackgroundAndBorder.md#border-line-style), [botões de opção](../../FormObjects/radio_overview.md#custom) com estilo personalizado e [caixas de seleção](../../FormObjects/checkbox_overview.md#custom) com estilo personalizado (somente projetos 4D)
 
-**Nota:** na versão atual de 4D, este comando só se aplica aos retângulos arredondados (que são objetos estáticos). Como resultado, só a sintaxe baseada no nome do objeto (usando o parâmetro *\**) é compatível.
+Ao passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passa uma referência de campo ou variável em lugar de uma cadeia (campo ou variável objeto unicamente). 
 
-No parâmetro *radio*, passe um novo valor do rádio em píxels a aplicar nas esquinas do objeto. Por padrão, este valor é de 5 píxels. 
+No parâmetro *radio*, passe um novo valor do rádio em píxels a aplicar nas esquinas do objeto. 
 
-**Nota:** também pode modificar este valor a nível de formulário utilizando a lista de propriedades (ver   *Nova propriedade Arredondada de esquinas para retângulo arredondado*).
+**Nota:** Com objetos de entrada e áreas de texto, a propriedade de raio de canto só está disponível com estilos de linha de borda "none", "solid" ou "dotted".
+
+Você pode modificar este valor a nível de formulário utilizando a [**propriedade Corner radius**](../../FormObjects/properties_BackgroundAndBorder.md#corner-radius).
 
 ## Exemplo 1 
 
@@ -60,11 +64,11 @@ Pode executar o seguinte código para mudar seu rádio:
 
 ## Exemplo 2 
 
-You have the following text area in your form, named "required-label":
+Você tem a seguinte área de texto em seu formulário, chamada "required-label":
 
 ![](../../assets/en/commands/pict6074566.en.png)
 
-If you execute the following code:
+Se você executar o seguinte código:
 
 ```4d
  OBJECT SET CORNER RADIUS(*;"required-label";10)
@@ -72,11 +76,27 @@ If you execute the following code:
 
 ![](../../assets/en/commands/pict6074568.en.png)
 
-Note that for text areas (as well as inputs), unlike for rectangles, the corner roundness is drawn outside the initial area of the object.
+Note que para áreas de texto (assim como entradas), ao contrário dos retângulos, o arredondamento dos cantos é desenhado **fora** da área inicial do objeto.
+
+## Exemplo 3
+
+Com botões com estilo personalizado que possuem ["custom" Border Line Style](#border-line-style), o raio do canto é desenhado dentro da área inicial do objeto:
+
+![](../../assets/en/FormObjects/custom-button.png)
+
+```4d
+ OBJECT SET CORNER RADIUS(*;"custom-button";8)
+```
+
+![](../../assets/en/FormObjects/custom-radius-runtime.png)
+
+
 
 ## Ver também 
 
 [OBJECT Get corner radius](../commands/object-get-corner-radius)  
+[OBJECT SET BORDER STYLE](../commands/object-set-border-style)  
+
 
 ## Propriedades
 

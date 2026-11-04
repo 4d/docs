@@ -27,15 +27,15 @@ An identical window appears on each remote 4D machine. This window is repeated o
 
 - **Wait for all clients to disconnect.**
 
-The server will only quit after all clients, including those in sleep mode, have disconnected. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/users.md#managing-sleeping-users).
+The server will only quit after all clients, including those in sleep mode, have disconnected. This option could be inappropriate for maintenance operations run during lunch time, for instance, since there are likely to be clients in [sleep mode](../ServerWindow/sessions.md#management-of-sleeping-client-sessions).
 
 - **Wait for active clients to disconnect. (Ignore sleeping clients)**
 
-The server will only quit after all active clients have disconnected (in other words, all client machines that are not in [sleep mode](../ServerWindow/users.md#managing-sleeping-users)). With this option, any clients in sleep mode are not considered as connected. Use this option if you want to perform maintenance operations during lunch time, for example. When this option is used, any clients in sleep mode will have a connection error when they wake up.
+The server will only quit after all active clients have disconnected (in other words, all client machines that are not in [sleep mode](../ServerWindow/sessions.md#management-of-sleeping-client-sessions)). With this option, any clients in sleep mode are not considered as connected. Use this option if you want to perform maintenance operations during lunch time, for example. When this option is used, any clients in sleep mode will have a connection error when they wake up.
 
 :::note
 
-A *sleeping client* refers to a remote 4D application on a machine that has switched to [sleep mode](../ServerWindow/users.md#managing-sleeping-users) while the connection to the server machine was still active.
+A *sleeping client* refers to a remote 4D application on a machine that has switched to [sleep mode](../ServerWindow/sessions.md#management-of-sleeping-client-sessions) while the connection to the server machine was still active.
 
 :::
 

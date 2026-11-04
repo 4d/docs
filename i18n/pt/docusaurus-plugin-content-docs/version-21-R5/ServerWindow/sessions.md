@@ -27,7 +27,7 @@ The list provides the following information:
 - **Login Date**: Date and time when the session was established.
 - **CPU Time**: CPU time consumed by the session since it was created.
 - **Activity**: Percentage of server activity currently devoted to the session (dynamic value).
-- **Status**: Status of the session. Client sessions can be **Online**, **[Sleeping](../Desktop/clientServer.md#management-of-sleeping-client-sessions)**, or **[Unreachable](../Desktop/clientServer.md#management-of-unreachable-peer)**. Web, REST, and SOAP sessions always have the **Online** status.
+- **Status**: Status of the session. Client sessions can be **Online**, **[Sleeping](#management-of-sleeping-client-sessions)**, or **[Unreachable](#management-of-unreachable-peer)**. Web, REST, and SOAP sessions always have the **Online** status.
 
 Additional information is available in the detail panel when a session is selected.
 
@@ -41,7 +41,7 @@ The following information is available:
 
 - **System username**: Name of the operating system session opened on the remote machine.
 - **IP address**: IP address of the remote machine that opened the session.
-- **Nombre de máquina**: Nombre de la máquina remota.
+- **Nome da máquina**: Nome da máquina remota.
 - **4D Write Pro**: Indicates whether the session user belongs to a group that grants access to 4D Write Pro.
 - **4D View Pro**: Indicates whether the session user belongs to a group that grants access to 4D View Pro.
 

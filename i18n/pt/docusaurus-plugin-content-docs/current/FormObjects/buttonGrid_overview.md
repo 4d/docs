@@ -26,6 +26,12 @@ Se nenhum elemento for seleccionado, o valor é 0
 
 You can assign the `gotoPage` [standard action](/Desktop/standard-actions) to a button grid. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
 
+## Ações padrão compatíveis
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Usa o número do botão selecionado conforme descrito em [Ir para página](#ir-para-página).
+
+Veja a [tabela de compatibilidade de ações padrão](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## Propriedades compatíveis
 
 [Cor da borda](./properties_BackgroundAndBorder.md#border-color) - [Estilo de linha de bordo](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Colunas](properties_Crop.md#columns) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dica de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Filhas](properties_Crop.md#rows) - [Ação padrão](properties_Action.md#standard-action) - [Topo](properties_Coordinates_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variável ou Expression](properties_Object.md#variable-or-expression) - [Tamanho vertical](properties_ResizingOptions.md#vertical-sizing) - [Largura](properties_CoordinatesAndSizing.md#width) - [Visibilidade](properties_Display.md#visibility)

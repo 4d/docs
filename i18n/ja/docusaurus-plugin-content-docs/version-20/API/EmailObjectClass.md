@@ -5,8 +5,7 @@ title: Email
 
 4Dにおけるメールの作成・送信・受信は `Email` オブジェクトの操作よっておこなわれます。
 
-*transporter* クラス関数を使ってメールを取得する際に、
-`Email` オブジェクトが作成されます。
+*transporter* クラス関数を使ってメールを取得する際に、`Email` オブジェクトが作成されます。
 
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) および [`.getMails()`](IMAPTransporterClass.md#getmails) 関数は IMAPサーバーからメールを受信します。
 - POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) 関数は POP3サーバーからメールを受信します。

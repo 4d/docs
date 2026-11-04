@@ -5,7 +5,7 @@ title: On Before Keystroke
 
 | コード | 呼び出し元                                                                                                                                                                                                                                        | 定義                                                                                 |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox-object.md) - [リストボックスカラム](FormObjects/listbox_column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
+| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox-object.md) - [リストボックスカラム](FormObjects/listbox-column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
 
 <details><summary>履歴</summary>
 

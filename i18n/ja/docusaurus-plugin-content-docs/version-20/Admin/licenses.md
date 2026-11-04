@@ -27,7 +27,7 @@ title: 4D ライセンスの管理
 
 ユーザーID (メールアドレスまたは 4Dアカウント) とパスワードを入力します。既存のユーザーアカウントが無い場合、まず以下のアドレスから作成する必要があります:
 
-[https://account.4d.com/us/login.shtml](https://account.4d.com/us/login.shtml/ja)
+[https://account.4d.com/ja/login.shtml](https://account.4d.com/ja/login.shtml)
 
 ![](../assets/en/getStart/activ1.png)
 
@@ -45,7 +45,7 @@ title: 4D ライセンスの管理
 ![](../assets/en/getStart/activ3.png)
 
 3. 生成された *reg.txt* ファイルを USBドライブへと保存し、インターネット環境があるコンピューターへと移動させます。
-4. インターネット環境のあるマシンから、[https://store.4d.com/jp/activation.shtml](https://store.4d.com/jp/activation.shtml) にログインします。
+4. インターネット環境のあるマシンから、[https://activation.4d.com/jp/activation.shtml](https://activation.4d.com/jp/activation.shtml) にログインします。
 5. Web ページ上にて、**ファイルを選択...** ボタンをクリックし、手順3と4で生成した *reg.txt* ファイルを選択し、**Activate** ボタンをクリックします。
 6. シリアルファイルをダウンロードします。
 
@@ -83,7 +83,7 @@ title: 4D ライセンスの管理
 
 **更新** ボタンは、以下のような場合に使用します:
 
-- 追加のエクスパンションを購入したとき、またはそれをアクティベートしたいとき。
+- 追加のエクスパンションを購入し、それをアクティベートしたいとき。
 - パートナーなどの失効した有限ライセンスを更新するとき。
 
 ## 4D オンラインストア
@@ -134,9 +134,9 @@ title: 4D ライセンスの管理
 日本にお住まいの方:
 
 - Web: [https://jp.4d.com/technical-support](https://jp.4d.com/technical-support)
-- この情報で問題が解決しない場合は、お問い合わせください。
+- Tel: 03-4400-1789
 
 
 
 -
-- Tel: 03-4400-1789
+-

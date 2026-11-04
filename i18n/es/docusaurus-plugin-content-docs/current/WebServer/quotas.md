@@ -12,6 +12,12 @@ Las cuotas del servidor web le permiten controlar el uso de recursos limitando e
 
 :::
 
+:::tip Entradas de blog relacionadas
+
+[Un servidor web 4D que sabe cuándo decir No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
+
 ## Requisitos
 
 La configuración de cuotas requiere la activación de las [sesiones escalables](./sessions.md#enabling-web-sessions).
@@ -101,6 +107,17 @@ Para cada petición entrante, el servidor Web verifica las cuotas durante el pre
 Si se supera cualquiera de las dos cuotas, la solicitud se rechaza con una respuesta **HTTP 429 Too Many Requests**. No se crea ningún proceso web y no se llama a [`On Web Connection`](./httpRequests.md#on-web-connection) (si está definido).
 
 Si se supera una cuota de bytes de salida mientras se envía una respuesta, se interrumpe la solicitud actual. Las reglas de preprocesamiento anteriores se aplican a la siguiente solicitud dentro de la misma ventana de tiempo.
+
+### MCP requests
+
+Requests to the [MCP server](mcp-server.md) (`/mcp` URL) are Web server requests: they count in the server global quotas, and each MCP session counts as a session in the session quotas. Requests over a quota get the **HTTP 429 Too Many Requests** response before any 4D code runs, including authentication code.
+
+For example, to limit each session, including MCP sessions used by AI agents, to 30 requests per minute:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+$webServer.quotas.nbRequestsPerMinPerSession:=30
+```
 
 ### Respuestas de limitación de velocidad
 

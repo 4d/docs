@@ -149,6 +149,8 @@ title: アーキテクチャー
 
 DerivedData フォルダーには、処理を最適化するため 4D が内部的に使用するキャッシュデーターが格納されます。これらは必要に応じて自動的に生成・再生成されます。このフォルダーは無視してかまいません。
 
+When the project is compiled, 4D also generates in this folder the `syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the `exposed MCP Function` class functions. This file is not used if a `syntaxMCP.json` file exists in the [`Resources`](#resources) folder.
+
 ## `Libraries`
 
 > このフォルダーは macOS でのみ使用されます。
@@ -159,10 +161,11 @@ Libraries フォルダーには、macOS 上で [Apple Silicon用にコンパイ�
 
 Resources フォルダーには、追加のカスタムプロジェクトリソースファイルやフォルダーが格納されます。アプリケーションインターフェースの翻訳やカスタマイズに必要なファイルはすべてここに格納します (ピクチャー、テキスト、XLIFF ファイルなど)。 4D は自動のメカニズムによってフォルダー内のファイル (とくに XLIFF ファイルおよびスタティックピクチャー) を扱います。リモートモードにおいては、サーバーとすべてのクライアントマシン間でファイルを共有することが Resources フォルダーによって可能です。  (*4D Server リファレンスマニュアル* の [リソースフォルダーの管理](https://doc.4d.com/4Dv18/4D/18/Managing-the-Resources-folder.300-4672420.ja.html) を参照ください)。
 
-| 内容                    | 説明                                                                                          | 形式      |
-| --------------------- | ------------------------------------------------------------------------------------------- | ------- |
-| *項目*                  | プロジェクトリソースファイルとフォルダー                                                                        | 様々      |
-| Images/Library/*item* | ピクチャーライブラリの個別ピクチャーファイル(\*)。各アイテムの名称がファイル名となります。名称が重複する場合には、名称に番号が追加されます。 | picture |
+| 内容                             | 説明                                                                                                                                                                                                                                                                       | 形式      |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| *項目*                           | プロジェクトリソースファイルとフォルダー                                                                                                                                                                                                                                                     | 様々      |
+| Images/Library/*item*          | ピクチャーライブラリの個別ピクチャーファイル(\*)。各アイテムの名称がファイル名となります。名称が重複する場合には、名称に番号が追加されます。                                                                                                                                                                              | picture |
+| syntaxMCP.json | Custom [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata). If this file exists, it is used instead of the `Project/DerivedData/syntaxMCP.json` file generated at compilation. The compiler never modifies it. | JSON    |
 
 (\*) .4db バイナリーデータベースから変換されたプロジェクトの場合のみ
 

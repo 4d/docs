@@ -27,7 +27,7 @@ title: 背景色と境界線
 
 ## 背景色/塗りカラー
 
-オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["カスタムスタイル" オブジェクト](#カスタムスタイルのボタン、チェックボックス、あるいはカスタムのラジオボタン) (`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
+オブジェクトの背景色/塗りカラーを設定します。 It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-button-custom-check-box-or-custom-radio-button) (`borderFillColor` JSON property).
 
 :::note
 
@@ -246,6 +246,9 @@ Allows setting a style for the object border. The following choices are availabl
 ![](../assets/en/FormObjects/radius-text.png)
 
 [カスタムボタン](./button_overview.md#カスタム) (["カスタム" 境界線スタイル](#border-line-style)を使用)、 [カスタムチェックボックス](checkbox_overview.md#カスタム) および[カスタムラジオボタン](radio_overview.md#カスタム) においては、角の丸みはオブジェクトのエリアの**内側**に描画されます。
+
+![](../assets/en/FormObjects/custom-button.png)  
+![](../assets/en/FormObjects/custom-radius-runtime.png)
 
 #### JSON 文法
 

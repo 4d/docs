@@ -75,7 +75,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 #### 説明
 
-`.disposition` プロパティは、<!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値<!-- END REF -->を格納します。 二つの値が利用可能です: 二つの値が利用可能です:
+`.disposition` プロパティは、<!-- REF #MailAttachmentClass.disposition.Summary -->`Content-Disposition` ヘッダーの値<!-- END REF -->を格納します。二つの値が利用可能です:
 
 - "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。レンダリングの結果はメールクライアントによって異なります。
 - "attachment": 添付ファイルはメッセージ内でリンクとして提供されます。

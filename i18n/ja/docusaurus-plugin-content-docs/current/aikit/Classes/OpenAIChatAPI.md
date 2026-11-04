@@ -5,7 +5,7 @@ title: OpenAIChatAPI
 
 # OpenAIChatAPI
 
-`OpenAIChatAPI` クラスはOpenAiI のチャットベースの機能とやりとるするためのインターフェースを提供し、補完機能とビジョン機能を活用します。
+`OpenAIChatAPI` クラスはOpenAI のチャットベースの機能とやりとるするためのインターフェースを提供し、補完機能とビジョン機能を活用します。
 
 ## プロパティ
 
@@ -22,7 +22,7 @@ title: OpenAIChatAPI
 
 | 引数             | 型                                       | 説明                        |
 | -------------- | --------------------------------------- | ------------------------- |
-| *systemPrompt* | Text                                    | チャットを初期化するシステムプロント。       |
+| *systemPrompt* | Text                                    | チャットを初期化するシステムプロンプト。      |
 | 戻り値            | [OpenAIChatHelper](OpenAIChatHelper.md) | チャットのやり取りを管理するヘルパーインスタンス。 |
 
 #### 使用例

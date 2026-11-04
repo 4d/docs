@@ -63,16 +63,16 @@ Le tableau suivant liste les événements d'entité ORDA ainsi que leurs règles
 | Instanciation d'entité                | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                           local                           | non                                           |
 | Attribut touched                      | Attribut | `event touched <attrName>()`                            | Dépend du mot-clé [`local`](../Concepts/classes.md#local) | non                                           |
 |                                       | Entity   | `event touched()`                                       | Dépend du mot-clé [`local`](../Concepts/classes.md#local) | non                                           |
-| Avant l'enregistrement d'une entité   | Attribut | `validateSave <attrName>()`                             |                          serveur                          | oui                                           |
-|                                       | Entity   | `validateSave()`                                        |                          serveur                          | oui                                           |
-| Pendant l'enregistrement d'une entité | Attribut | `saving <attrName>()`                                   |                          serveur                          | oui                                           |
-|                                       | Entity   | `saving()`                                              |                          serveur                          | oui                                           |
-| Après l'enregistrement d'une entité   | Entity   | `afterSave()`                                           |                          serveur                          | non                                           |
-| Avant la suppression d'une entité     | Attribut | `validateDrop <attrName>()`                             |                          serveur                          | oui                                           |
-|                                       | Entity   | `validateDrop()`                                        |                          serveur                          | oui                                           |
-| Pendant la suppression d'une entité   | Attribut | `dropping <attrName>()`                                 |                          serveur                          | oui                                           |
-|                                       | Entity   | `dropping()`                                            |                          serveur                          | oui                                           |
-| Après la suppression d'une entité     | Entity   | `afterDrop()`                                           |                          serveur                          | non                                           |
+| Avant l'enregistrement d'une entité   | Attribut | `validateSave <attrName>()`                             |                           server                          | oui                                           |
+|                                       | Entity   | `validateSave()`                                        |                           server                          | oui                                           |
+| Pendant l'enregistrement d'une entité | Attribut | `saving <attrName>()`                                   |                           server                          | oui                                           |
+|                                       | Entity   | `saving()`                                              |                           server                          | oui                                           |
+| Après l'enregistrement d'une entité   | Entity   | `afterSave()`                                           |                           server                          | non                                           |
+| Avant la suppression d'une entité     | Attribut | `validateDrop <attrName>()`                             |                           server                          | oui                                           |
+|                                       | Entity   | `validateDrop()`                                        |                           server                          | oui                                           |
+| Pendant la suppression d'une entité   | Attribut | `dropping <attrName>()`                                 |                           server                          | oui                                           |
+|                                       | Entity   | `dropping()`                                            |                           server                          | oui                                           |
+| Après la suppression d'une entité     | Entity   | `afterDrop()`                                           |                           server                          | non                                           |
 
 :::note
 

@@ -12,6 +12,12 @@ Les quotas du serveur Web vous permettent de contrôler l'utilisation des ressou
 
 :::
 
+:::tip Article de blog lié
+
+[Un serveur web 4D qui sait quand dire « non »](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
+
 ## Conditions requises
 
 La configuration des quotas nécessite l'activation des [sessions évolutives](./sessions.md#enabling-web-sessions).
@@ -101,6 +107,17 @@ Pour chaque requête entrante, le serveur Web vérifie les quotas lors du prétr
 Si l'un ou l'autre de ces quotas est dépassé, la requête est rejetée avec une réponse **HTTP 429 Too Many Requests**. Aucun process Web n'est créé et la méthode [`On Web Connection`](./httpRequests.md#on-web-connection) n'est pas appelée (si elle est définie).
 
 Si le quota d'octets de sortie est dépassé pendant l'envoi d'une réponse, la requête en cours est interrompue. Les règles de prétraitement ci-dessus s'appliquent à la requête suivante dans la même fenêtre temporelle.
+
+### MCP requests
+
+Requests to the [MCP server](mcp-server.md) (`/mcp` URL) are Web server requests: they count in the server global quotas, and each MCP session counts as a session in the session quotas. Requests over a quota get the **HTTP 429 Too Many Requests** response before any 4D code runs, including authentication code.
+
+For example, to limit each session, including MCP sessions used by AI agents, to 30 requests per minute:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+$webServer.quotas.nbRequestsPerMinPerSession:=30
+```
 
 ### Réponses de limitation de débit
 

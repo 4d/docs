@@ -55,9 +55,114 @@ Esta sintaxis está disponible donde quiera que se pueda definir una acción est
 - Las acciones de corrección ortográfica están disponibles solo si la [opción Corrección ortográfica automática](../FormObjects/properties_Entry.md#auto-spellcheck) está seleccionada para el área. 
 - Cuando se modifica un atributo de estilo como `fontSize` o `color` mediante una acción estándar, 4D genera el evento de formulario `On After Edit`.
 - *Botones* designa todos los botones e incluye también las casillas de selección que pueden representar acciones con estado verdadero/falso, por ejemplo `fontBold`.
-- Los objetos [Listas emergentes/desplegables](../FormObjects/dropdownList_Overview.md) y [Lista de selección jerárquica](../FormObjects/dropdownList_Overview.md#using-a-hierarchical-choice-list) solo pueden asociarse directamente con las acciones estándar que generan un submenú (lista), como `backgroundColor` o `fontSize`. En este caso, muestran una lista automática de valores, a menos que se hayan configurado acciones estándar personalizadas en los elementos de lista (ver más abajo).
-- *Elementos de lista*: Si no desea utilizar valores automáticos, puede asociar acciones estándar personalizadas con elementos de una lista (mediante el editor de listas o el comando [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)) y definir la lista como "Lista de opciones" para los objetos Pop-up/Lista desplegable y menú emergente jerárquico. Los valores automáticos se reemplazan por acciones personalizadas en tiempo de ejecución. En este contexto, solo se pueden utilizar acciones estándar con parámetros de valor en relación con una acción principal de submenú (lista). Por ejemplo, puede definir una lista de elementos asociados con valores de acción backgroundColor (`backgroundColor?value="red"`, `backgroundColor?value="blue"`...) y definirla como lista de opciones para un menú emergente jerárquico.
+- Los objetos [Listas desplegables](../FormObjects/dropdownList_Overview.md) solo pueden asociarse directamente con las acciones estándar que generan un submenú (lista), como `backgroundColor` o `fontSize`. En este caso, muestran una lista automática de valores, a menos que se hayan configurado acciones estándar personalizadas en los elementos de lista (ver más abajo).
+- *Elementos de lista*: Si no desea utilizar valores automáticos, puede asociar acciones estándar personalizadas con elementos de una lista (mediante el editor de listas o el comando [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)) y definir la lista como "Lista de opciones" para la lista desplegable. Los valores automáticos se reemplazan por acciones personalizadas en tiempo de ejecución. En este contexto, solo se pueden utilizar acciones estándar con parámetros de valor en relación con una acción principal de submenú (lista). Por ejemplo, puede definir una lista de elementos asociados con valores de acción backgroundColor (`backgroundColor?value="red"`, `backgroundColor?value="blue"`...) y definirla como lista de opciones para una lista desplegable.
 
+
+## Objetos de formulario soportados
+
+Las siguientes tablas enumeran los objetos de formulario a los que se pueden asignar acciones estándar. Se refieren al **objeto que dispara la acción**, no al área sobre la que opera la acción. Consulte la descripción de cada acción para conocer sus condiciones de activación y los requisitos del área de destino.
+
+### Acciones generales
+
+|Acción|Objetos soportados|Condiciones|
+|---|---|---|
+|[Cadena vacía](#-empty-string)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Ninguna acción estándar.|
+|[accept](#accept)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[addSubrecord](#addsubrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[automaticSplitter](#automaticsplitter)|[Botón](../FormObjects/button_overview.md#supported-standard-actions)|Solo botones invisibles.|
+|[backgroundColor](#backgroundcolor)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|Lista automática.|
+|[backgroundColor/showDialog](#backgroundcolorshowdialog)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[backgroundColor?value=\<color\>](#backgroundcolorvaluecolor)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[cancel](#cancel)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[clear](#clear)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[color](#color)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|Lista automática.|
+|[color/showDialog](#colorshowdialog)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[color?value=\<color\>](#colorvaluecolor)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[computeExpressions](#computeexpressions)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[copy](#copy)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[cut](#cut)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[databaseSettings](#databasesettings)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[deleteRecord](#deleterecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[deleteSubrecord](#deletesubrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[designMode](#designmode)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[displaySubrecord](#displaysubrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[editSubrecord](#editsubrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[firstPage](#firstpage)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[firstRecord](#firstrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[font/showDialog](#fontshowdialog)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Casillas de selección: solo macOS.|
+|[fontBold](#fontbold)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontItalic](#fontitalic)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontLinethrough](#fontlinethrough)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSize](#fontsize)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|Lista automática.|
+|[fontSize?value=\<size\>](#fontsizevaluesize)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[fontStyle](#fontstyle)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|Lista automática.|
+|[fontUnderline](#fontunderline)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[freezeExpressions](#freezeexpressions)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[gotoPage](#gotopage)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions), [Rejilla de botones](../FormObjects/buttonGrid_overview.md#supported-standard-actions), [Menú pop-up imagen](../FormObjects/picturePopupMenu_overview.md#supported-standard-actions), [List box](../FormObjects/listbox-object.md#supported-standard-actions), [Control de pestañas](../FormObjects/tabControl.md#supported-standard-actions)|List boxes: solo de tipo array.|
+|[gotoPage?value=\<page\>](#gotopagevaluepage)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[lastPage](#lastpage)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[lastRecord](#lastrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[msc](#msc)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[nextPage](#nextpage)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[nextRecord](#nextrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[openBackURL](#openbackurl)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Área web de destino.|
+|[openForwardURL](#openforwardurl)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Área web de destino.|
+|[paste](#paste)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[previousPage](#previouspage)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[previousRecord](#previousrecord)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[quit](#quit)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[redo](#redo)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[refreshCurrentURL](#refreshcurrenturl)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Área web de destino.|
+|[selectAll](#selectall)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[showClipboard](#showclipboard)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell](#spell)||Solo comandos de menú.|
+|[spell/autoCorrectionEnabled](#spellautocorrectionenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/autoDashSubstitutionsEnabled](#spellautodashsubstitutionsenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Solo macOS.|
+|[spell/autoLanguageEnabled](#spellautolanguageenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Solo macOS.|
+|[spell/autoQuoteSubstitutionsEnabled](#spellautoquotesubstitutionsenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Solo macOS.|
+|[spell/autoSubstitutionsEnabled](#spellautosubstitutionsenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/enabled](#spellenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/forgetIgnore](#spellforgetignore)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/grammarEnabled](#spellgrammarenabled)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Solo macOS.|
+|[spell/ignore](#spellignore)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/learn](#spelllearn)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/removeSubstitution](#spellremovesubstitution)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/showDialog](#spellshowdialog)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)|Casillas de selección: solo macOS.|
+|[spell/suggestion?index=\<1-number\<=10\>](#spellsuggestionindex1-number10)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/unLearn](#spellunlearn)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/visibleSubstitutions](#spellvisiblesubstitutions)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[stopLoadingURL](#stoploadingurl)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Área web de destino.|
+|[undo](#undo)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[visibleReferences](#visiblereferences)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions), [Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[writingTools](#writingtools)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Solo entorno macOS compatible.|
+
+Para las listas de formato automáticas, consulte los [requisitos de las listas desplegables](../FormObjects/dropdownList_Overview.md#using-a-standard-action), incluidas las restricciones relativas al área de destino, al foco y a las listas desplegables. Asignar una acción con parámetros a un elemento de lista es distinto de asignar la acción base a la propia lista desplegable.
+
+
+### Disponibilidad de las acciones 4D Write Pro
+
+La siguiente tabla enumera las acciones estándar para áreas 4D Write Pro que pueden asociarse a objetos de formulario. Estas acciones operan sobre un área 4D Write Pro, no sobre el objeto de formulario que las dispara. Para la lista completa de acciones y sus descripciones, consulte [Acciones estándar 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
+
+|Acción|Objetos soportados|Condiciones|
+|---|---|---|
+|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[formulaHighlight](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)|[Lista desplegable](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|Lista automática.|
+|[formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)|[Botón](../FormObjects/button_overview.md#supported-standard-actions), [Botón imagen](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[formulaHighlightReferences](../WritePro/user-legacy/standard-actions.md#action-formulahighlightreferences)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[formulaHighlightValues](../WritePro/user-legacy/standard-actions.md#action-formulahighlightvalues)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|[Casilla de selección](../FormObjects/checkbox_overview.md#supported-standard-actions)||
 
 ## Acciones disponibles
 
@@ -108,7 +213,7 @@ Esta acción estándar permite crear separadores personalizados en sus formulari
 
 | Constante (si la hay) | Condiciones de activación | Disponible con |
 |---|---|---|
-| `ak background color` | Ninguna | Comandos de menú, listas emergentes/desplegables, menús emergentes jerárquicos |
+| `ak background color` | Ninguna | Comandos de menú, listas desplegables |
 
 Muestra el submenú de color de fondo estándar.
 
@@ -155,7 +260,7 @@ Elimina la selección. Si no se selecciona nada, borra todo el área que contien
 
 | Constante (si la hay) | Condiciones de activación | Disponible con |
 |---|---|---|
-| `ak font color` | Ninguna | Comandos de menú, listas emergentes/desplegables, menús emergentes jerárquicos |
+| `ak font color` | Ninguna | Comandos de menú, listas desplegables |
 
 Muestra el submenú de color de fuente estándar.
 
@@ -306,7 +411,7 @@ Activa/desactiva el atributo de fuente negrita.
 
 Activa/desactiva el atributo de fuente itálica.
 
-### fontLineThrough
+### fontLinethrough
 
 | Constante (si la hay) | Condiciones de activación | Disponible con |
 |---|---|---|
@@ -318,7 +423,7 @@ Activa/desactiva el atributo de fuente tachado.
 
 | Constante (si la hay) | Condiciones de activación | Disponible con |
 |---|---|---|
-| `ak font size` | Ninguna | Comandos de menú, listas emergentes/desplegables, menús emergentes jerárquicos |
+| `ak font size` | Ninguna | Comandos de menú, listas desplegables |
 
 Muestra el submenú de tamaño de fuente estándar.
 
@@ -334,7 +439,7 @@ Define el tamaño de fuente en `<size>`. Pasa un valor de longitud CSS en pt. Ej
 
 | Constante (si la hay) | Condiciones de activación | Disponible con |
 |---|---|---|
-| `ak font style` | Ninguna | Comandos de menú, listas emergentes/desplegables, menús emergentes jerárquicos |
+| `ak font style` | Ninguna | Comandos de menú, listas desplegables |
 
 Muestra el submenú de estilo de fuente estándar.
 

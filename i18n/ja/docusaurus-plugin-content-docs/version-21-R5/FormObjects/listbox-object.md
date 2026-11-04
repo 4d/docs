@@ -5,7 +5,7 @@ title: リストボックスオブジェクト
 
 ## 配列リストボックス
 
-配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。 ポインター配列を除きすべてのタイプの配列を使用できま す。行数は配列の要素数により決定されます。
+配列リストボックスでは、それぞれの列に 4D の 1次元配列を割り当てなければなりません。 ポインター配列を除きすべてのタイプの配列を使用できます。行数は配列の要素数により決定されます。
 
 デフォルトで 4D は各列に “ColumnX” という名前を割り当てます。これは他のカラムプロパティ同様、 [カラムプロパティ](./listbox-column.md) 内で変更することができます。それぞれのカラムにおける表示フォーマットは、 [`OBJECT SET FORMAT`](../commands/object-set-format) コマンドを使用することで定義することもできます。
 
@@ -27,7 +27,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## セレクションリストボックス
 
-このタイプのリストボックスでは、列ごとにフィールド (例: `[Employees]LastName`) や式を割り当てます。式は 1つ以上のフィールド (たとえば `[Employees]FirstName+“ ”[Employees]LastName`) または単にフォーミュラ (たとえば `String(Milliseconds)`) を使用できます。式にはプロジェクトメソッド、変数、あるいは配列項目も指定できます。また[`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) や [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) コマンドを使用して、カラムをプログラムで変更することもできます。
+このタイプのリストボックスでは、列ごとにフィールド (例: `[Employees]LastName`) や式を割り当てます。式は 1つ以上のフィールド (たとえば `[Employees]FirstName+" "[Employees]LastName`) または単にフォーミュラ (たとえば `String(Milliseconds)`) を使用できます。式にはプロジェクトメソッド、変数、あるいは配列項目も指定できます。また[`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) や [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) コマンドを使用して、カラムをプログラムで変更することもできます。
 
 それぞれの行はセレクションのレコードを基に評価されます。セレクションは **カレントセレクション** または **命名セレクション**です。
 

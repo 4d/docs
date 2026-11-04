@@ -651,33 +651,33 @@ El método proyecto ***SearchDuplicate*** busca valores duplicados en cualquier 
 
 #### Descripción
 
-The `.getIndexes()` function <!-- REF #DataClassClass.getIndexes().Summary -->returns a collection of all indexes related to the dataclass<!-- END REF -->.
+La función `.getIndexes()` <!-- REF #DataClassClass.getIndexes().Summary -->devuelve una colección de todos los índices relacionados con la clase de datos<!-- END REF -->.
 
-Each index is an object of the collection. Indexes are returned in the creation/modification order. An empty collection is returned if there is no index in the dataclass.
+Cada índice es un objeto de la colección. Los índices se muestran en el orden en que se crearon o modificaron. Se devuelve una colección vacía si no hay ningún índice en la clase de datos.
 
 **Colección devuelta**
 
-Each object of the returned collection has the following properties:
+Cada objeto de la colección devuelta tiene las siguientes propiedades:
 
-| Propiedad  | Tipo       | Descripción                                                                                                                                                                                                                                                 |
-| ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | Integer    | Index type: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree, 4 = Cosine, 5 = Dot, 6 = Euclidean. If the index is set to Automatic, the type property represents the type of the indexing algorithm used |
-| automatic  | Boolean    | True if "automatic" index is selected                                                                                                                                                                                                                       |
-| name       | Text       | Index name if defined                                                                                                                                                                                                                                       |
-| kind       | Text       | "keywords" if *keyword index* checked, otherwise "regular"                                                                                                                                                                                                  |
-| attributes | Collection | Index attribute or list of attributes (for composite index)                                                                                                                                                                              |
-| UUID       | Text       | Índice UUID                                                                                                                                                                                                                                                 |
-| uniqueKey  | Boolean    | True if index has the Unique key property                                                                                                                                                                                                                   |
+| Propiedad  | Tipo       | Descripción                                                                                                                                                                                                                                                                                  |
+| ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type       | Integer    | Tipo de índice: -1 = Palabras clave, 0 = predeterminado, 1 = B-Tree estándar, 3 = B-Tree en clúster, 4 = Coseno, 5 = Punto, 6 = Euclídico. Si el índice se establece en Automático, la propiedad de tipo representa el tipo de algoritmo de indexación usado |
+| automatic  | Boolean    | True si el índice "automático" está seleccionado                                                                                                                                                                                                                                             |
+| name       | Text       | Nombre del índice, si está definido                                                                                                                                                                                                                                                          |
+| kind       | Text       | "palabras clave" si la casilla *índice de palabras clave* está marcada, de lo contrario "regular"                                                                                                                                                                                            |
+| attributes | Collection | Atributo de índice o lista de atributos (para índice compuesto)                                                                                                                                                                                                           |
+| UUID       | Text       | Índice UUID                                                                                                                                                                                                                                                                                  |
+| uniqueKey  | Boolean    | True si el índice tiene la propiedad de clave única                                                                                                                                                                                                                                          |
 
 :::tip Entrada de blog relacionada
 
-[Managing 4D Indexes Programmatically with getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
+[Gestión de índices 4D por programación con getIndexes()](https://blog.4d.com/managing-4d-indexes-programmatically-with-getindexes)
 
 :::
 
 #### Ejemplo
 
-Considering the following table:
+Considerando la siguiente tabla:
 
 ![table-indexes](../assets/en/API/table-index.png)
 

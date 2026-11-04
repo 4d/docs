@@ -55,9 +55,114 @@ gotoPage?value=5
 - スペルチェックアクションは、エリアに対して [自動スペルチェックオプション](../FormObjects/properties_Entry.md#auto-spellcheck) が選択されている場合にのみ使用できます。
 - `fontSize` や `color` などのスタイル属性が標準アクションによって変更されると、4D は `On After Edit` フォームイベントを生成します。
 - *ボタン* とは、すべてのボタンを意味し、`fontBold` などの true/false ステータスを持つアクションを表すことができるチェックボックスも含みます。
-- [ポップアップ/ドロップダウンリスト](../FormObjects/dropdownList_Overview.md) および [階層選択リスト](../FormObjects/dropdownList_Overview.md#using-a-hierarchical-choice-list) オブジェクトは、`backgroundColor` や `fontSize` などのサブメニュー (リスト) を生成する標準アクションにのみ直接関連付けることができます。この場合、カスタム標準アクションがリスト項目に設定されていない限り、自動値リストを表示します (以下参照)。
-- *リスト項目*: 自動値を使用したくない場合は、リストの項目にカスタム標準アクションを関連付け (リストエディターまたは [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) コマンドを使用)、そのリストをポップアップ/ドロップダウンリストおよび階層ポップアップメニューの「選択リスト」として設定できます。自動値は実行時にカスタムアクションに置き換えられます。このコンテキストでは、サブメニュー (リスト) のメインアクションに関連する値パラメーターを持つ標準アクションのみ使用できます。たとえば、backgroundColor アクション値 (`backgroundColor?value="red"`、`backgroundColor?value="blue"`...) に関連付けたリスト項目を定義し、それを階層ポップアップメニューの選択リストとして設定できます。
+- [ドロップダウンリスト](../FormObjects/dropdownList_Overview.md) オブジェクトは、`backgroundColor` や `fontSize` などのサブメニュー (リスト) を生成する標準アクションにのみ直接関連付けることができます。この場合、カスタム標準アクションがリスト項目に設定されていない限り、自動値リストを表示します (以下参照)。
+- *リスト項目*: 自動値を使用したくない場合は、リストの項目にカスタム標準アクションを関連付け (リストエディターまたは [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) コマンドを使用)、そのリストをドロップダウンリストの「選択リスト」として設定できます。自動値は実行時にカスタムアクションに置き換えられます。このコンテキストでは、サブメニュー (リスト) のメインアクションに関連する値パラメーターを持つ標準アクションのみ使用できます。たとえば、backgroundColor アクション値 (`backgroundColor?value="red"`、`backgroundColor?value="blue"`...) に関連付けたリスト項目を定義し、それをドロップダウンリストの選択リストとして設定できます。
 
+
+## サポートされるフォームオブジェクト
+
+以下の表は、標準アクションを割り当てることのできるフォームオブジェクトの一覧です。これらは、アクションが作用するエリアではなく、**アクションをトリガーするオブジェクト** を指します。各アクションのアクティベーション条件およびターゲットエリアの要件については、各アクションの説明を参照してください。
+
+### 一般アクション
+
+|アクション|サポートされるオブジェクト|条件|
+|---|---|---|
+|[空文字列](#-empty-string)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|標準アクションなし。|
+|[accept](#accept)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[addSubrecord](#addsubrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[automaticSplitter](#automaticsplitter)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions)|非表示ボタンのみ。|
+|[backgroundColor](#backgroundcolor)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|自動リスト。|
+|[backgroundColor/showDialog](#backgroundcolorshowdialog)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[backgroundColor?value=\<color\>](#backgroundcolorvaluecolor)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[cancel](#cancel)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[clear](#clear)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[color](#color)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|自動リスト。|
+|[color/showDialog](#colorshowdialog)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[color?value=\<color\>](#colorvaluecolor)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[computeExpressions](#computeexpressions)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[copy](#copy)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[cut](#cut)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[databaseSettings](#databasesettings)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[deleteRecord](#deleterecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[deleteSubrecord](#deletesubrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[designMode](#designmode)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[displaySubrecord](#displaysubrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[editSubrecord](#editsubrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[firstPage](#firstpage)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[firstRecord](#firstrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[font/showDialog](#fontshowdialog)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|チェックボックス: macOS のみ。|
+|[fontBold](#fontbold)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontItalic](#fontitalic)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontLinethrough](#fontlinethrough)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSize](#fontsize)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|自動リスト。|
+|[fontSize?value=\<size\>](#fontsizevaluesize)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[fontStyle](#fontstyle)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|自動リスト。|
+|[fontUnderline](#fontunderline)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[freezeExpressions](#freezeexpressions)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[gotoPage](#gotopage)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions), [ボタングリッド](../FormObjects/buttonGrid_overview.md#supported-standard-actions), [ピクチャーポップアップメニュー](../FormObjects/picturePopupMenu_overview.md#supported-standard-actions), [リストボックス](../FormObjects/listbox-object.md#supported-standard-actions), [タブコントロール](../FormObjects/tabControl.md#supported-standard-actions)|リストボックス: 配列タイプのみ。|
+|[gotoPage?value=\<page\>](#gotopagevaluepage)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[lastPage](#lastpage)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[lastRecord](#lastrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[msc](#msc)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[nextPage](#nextpage)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[nextRecord](#nextrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[openBackURL](#openbackurl)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Web エリアが対象。|
+|[openForwardURL](#openforwardurl)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Web エリアが対象。|
+|[paste](#paste)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[previousPage](#previouspage)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[previousRecord](#previousrecord)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[quit](#quit)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[redo](#redo)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[refreshCurrentURL](#refreshcurrenturl)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Web エリアが対象。|
+|[selectAll](#selectall)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[showClipboard](#showclipboard)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell](#spell)||メニューコマンドのみ。|
+|[spell/autoCorrectionEnabled](#spellautocorrectionenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/autoDashSubstitutionsEnabled](#spellautodashsubstitutionsenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|macOS のみ。|
+|[spell/autoLanguageEnabled](#spellautolanguageenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|macOS のみ。|
+|[spell/autoQuoteSubstitutionsEnabled](#spellautoquotesubstitutionsenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|macOS のみ。|
+|[spell/autoSubstitutionsEnabled](#spellautosubstitutionsenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/enabled](#spellenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[spell/forgetIgnore](#spellforgetignore)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/grammarEnabled](#spellgrammarenabled)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|macOS のみ。|
+|[spell/ignore](#spellignore)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/learn](#spelllearn)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/removeSubstitution](#spellremovesubstitution)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/showDialog](#spellshowdialog)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)|チェックボックス: macOS のみ。|
+|[spell/suggestion?index=\<1-number\<=10\>](#spellsuggestionindex1-number10)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/unLearn](#spellunlearn)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[spell/visibleSubstitutions](#spellvisiblesubstitutions)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[stopLoadingURL](#stoploadingurl)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|Web エリアが対象。|
+|[undo](#undo)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[visibleReferences](#visiblereferences)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions), [チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[writingTools](#writingtools)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)|対応する macOS 環境のみ。|
+
+自動フォーマットリストについては、ターゲットエリア、フォーカス、およびドロップダウンの制限を含む [ドロップダウンリストの要件](../FormObjects/dropdownList_Overview.md#using-a-standard-action) を参照してください。パラメーター付きアクションをリスト項目に割り当てることは、ベースアクションをドロップダウンリスト自体に割り当てることとは別です。
+
+
+### 4D Write Pro アクションの利用可能性
+
+以下の表は、フォームオブジェクトに関連付けることのできる 4D Write Pro エリア用の標準アクションの一覧です。これらのアクションは、アクションをトリガーするフォームオブジェクトではなく、4D Write Pro エリアに対して作用します。アクションの完全な一覧とその説明については、[4D Write Pro 標準アクション](../WritePro/user-legacy/standard-actions.md) を参照してください。
+
+|アクション|サポートされるオブジェクト|条件|
+|---|---|---|
+|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[formulaHighlight](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)|[ドロップダウンリスト](../FormObjects/dropdownList_Overview.md#supported-standard-actions)|自動リスト。|
+|[formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)|[ボタン](../FormObjects/button_overview.md#supported-standard-actions), [ピクチャーボタン](../FormObjects/pictureButton_overview.md#supported-standard-actions)||
+|[formulaHighlightReferences](../WritePro/user-legacy/standard-actions.md#action-formulahighlightreferences)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[formulaHighlightValues](../WritePro/user-legacy/standard-actions.md#action-formulahighlightvalues)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
+|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|[チェックボックス](../FormObjects/checkbox_overview.md#supported-standard-actions)||
 
 ## 利用可能なアクション
 
@@ -108,7 +213,7 @@ gotoPage?value=5
 
 | 定数 (ある場合) | アクティベーション条件 | 利用可能なオブジェクト |
 |---|---|---|
-| `ak background color` | なし | メニューコマンド、ポップアップ/ドロップダウンリスト、階層ポップアップメニュー |
+| `ak background color` | なし | メニューコマンド、ドロップダウンリスト |
 
 標準の背景色サブメニューを表示します。
 
@@ -155,7 +260,7 @@ gotoPage?value=5
 
 | 定数 (ある場合) | アクティベーション条件 | 利用可能なオブジェクト |
 |---|---|---|
-| `ak font color` | なし | メニューコマンド、ポップアップ/ドロップダウンリスト、階層ポップアップメニュー |
+| `ak font color` | なし | メニューコマンド、ドロップダウンリスト |
 
 標準のフォントカラーサブメニューを表示します。
 
@@ -306,7 +411,7 @@ macOS では、`databaseSettings` アクションに関連付けられたメニ�
 
 イタリックフォント属性を切り替えます。
 
-### fontLineThrough
+### fontLinethrough
 
 | 定数 (ある場合) | アクティベーション条件 | 利用可能なオブジェクト |
 |---|---|---|
@@ -318,7 +423,7 @@ macOS では、`databaseSettings` アクションに関連付けられたメニ�
 
 | 定数 (ある場合) | アクティベーション条件 | 利用可能なオブジェクト |
 |---|---|---|
-| `ak font size` | なし | メニューコマンド、ポップアップ/ドロップダウンリスト、階層ポップアップメニュー |
+| `ak font size` | なし | メニューコマンド、ドロップダウンリスト |
 
 標準のフォントサイズサブメニューを表示します。
 
@@ -334,7 +439,7 @@ macOS では、`databaseSettings` アクションに関連付けられたメニ�
 
 | 定数 (ある場合) | アクティベーション条件 | 利用可能なオブジェクト |
 |---|---|---|
-| `ak font style` | なし | メニューコマンド、ポップアップ/ドロップダウンリスト、階層ポップアップメニュー |
+| `ak font style` | なし | メニューコマンド、ドロップダウンリスト |
 
 標準のフォントスタイルサブメニューを表示します。
 

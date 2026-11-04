@@ -217,7 +217,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、 それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
+> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:
 >
 > | プロパティ | 型    | 説明                          |
 > | ----- | ---- | --------------------------- |

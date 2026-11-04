@@ -3,6 +3,24 @@ id: updates
 title: Notas de lançamento
 ---
 
+## 4D 21 R6
+
+Leia [**O que há de novo no 4D 21 R6**](https://blog.4d.com/whats-new-in-4d-21-r6/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 21 R6.
+
+#### Destaques
+
+- Funções de classe e construtores de classe podem ser documentados com um [bloco de comentário acima de sua declaração](../Concepts/classes.md#function-comments): a descrição e os comentários dos parâmetros são exibidos no autocompletar e na ajuda do [editor de código 4D](../code-editor/write-class-method.md#help-tips) e do VS Code, e no [arquivo de sintaxe de componentes compilados](../Extensions/develop-components.md#code-completion-for-compiled-components).
+- Linhas de comentário `MCP:` e tags de comportamento fornecem os [metadados da ferramenta MCP](../Concepts/classes.md#mcp-tool-metadata) das declarações `exposed MCP Function`, gerados na compilação em [`Project/DerivedData/syntaxMCP.json`](../Project/architecture.md#deriveddata) ou fornecidos por um arquivo [`Resources/syntaxMCP.json`](../Project/architecture.md#resources) personalizado.
+- Novo [servidor MCP](../WebServer/mcp-server.md) nativo no 4D Web Server: clientes de IA podem chamar suas funções [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) e as [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools), com os mesmos [papéis e privilégios](../ORDA/privileges.md#mcp-tools) que as requisições REST. O servidor MCP é configurado com a nova propriedade [`WebServer.mcp`](../API/WebServerClass.md#mcp).
+- Clientes MCP autenticam-se com Fine-Grained Tokens gerenciados com as novas funções [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken), [`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens) e [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken). A função reservada [`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) da classe DataStore prepara cada sessão MCP, cujo [`Session.info.type`](../API/SessionClass.md#info) é "mcp".
+- [Modo OAuth 2.1](../WebServer/mcp-server.md#oauth-21-mode) opcional do servidor MCP, habilitado pela função reservada [`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) da classe DataStore. As concessões são gerenciadas com as novas funções [`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants) e [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant).
+- Novo comando [`MCP`](../commands/mcp) e classe [`4D.MCPContext`](../API/MCPContextClass.md) para [pedir confirmação ao usuário](../WebServer/mcp-server.md#asking-the-user-for-confirmation) em ferramentas MCP.
+- Um [MCP Bundle](../WebServer/mcp-server.md#claude-desktop-bundle) de referência permite que o Claude Desktop conecte-se a um servidor MCP 4D na rede local.
+
+#### Mudanças de comportamento
+
+- O compilador agora reporta [avisos em comentários de função](../Project/compiler.md#warnings-on-function-comments): uma função de classe ou construtor de classe que possui um bloco de comentário acima de sua declaração recebe um aviso para cada parâmetro sem um comentário `$name:`, e para tags de comportamento MCP contraditórias.
+
 ## 4D 21 R5
 
 Leia [**O que há de novo no 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 21 R5.
@@ -43,7 +61,7 @@ Leia [**O que há de novo no 4D v21 R4**](https://blog.4d.com/whats-new-in-4d-21
 #### Destaques
 
 - AI: On macOS, end users can enhance or summarize texts thanks to the Apple Intelligence **Writing Tools**, available as a [property](../FormObjects/properties_Entry.md#writing-tools) and a [standard action](../Desktop/standard-actions) for [4D Write Pro](../FormObjects/writeProArea_overview.md) and [input](../FormObjects/input_overview.md) form objects.
-- Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
+- Enhanced [support of client/server disconnections](../Desktop/clientServer.md#management-of-unreachable-peer) with QUIC network layer: new [`QUIC session timeout`](../commands/set-database-parameter#quic-session-timeout-135) database parameter, new [`unreachableSince` session.info](../API/SessionClass.md#info) property.
 - Multi-level list style sheets are now [supported in 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), allowing users to create and manage structured multi-level lists directly from the toolbar and sidebar.
 - New [`defer`](../commands/defer) command to declare some code to be always executed at method or function exit; new [`Deferred formulas`](../commands/deferred-formulas) command to get the list of deferred formulas.
 - New session [`.quotas` property](../API/SessionClass.md#quotas) to configure REST thresholds for sessions.
@@ -125,11 +143,11 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 | libldap         | 2.6.10 | 21               |                                                                                                                                                    |
 | libsasl         | 2.1.28 | 20               |                                                                                                                                                    |
 | Liblsquic       | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                                                    |
-| Libuv           | 1.53.0 | **21 R6**            | Usado para QUIC                                                                                                                                    |
+| Libuv           | 1.53.0 | **21 R5**            | Usado para QUIC                                                                                                                                    |
 | libZip          | 1.11.4 | 21               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                               |
 | LZMA            | 5.8.1  | 21               |                                                                                                                                                    |
 | ngtcp2          | 1.24.0 | 21 R4            | Usado para QUIC                                                                                                                                    |
-| OpenSSL         | 4.0.3  | **21 R6**        |                                                                                                                                                    |
+| OpenSSL         | 4.0.3  | **21 R5**        |                                                                                                                                                    |
 | PDFWriter       | 4.7.0  | 21               | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para uma visão geral dos novos recursos                           |
 | webKit          | WKWebView                              | 19               |                                                                                                                                                    |

@@ -202,7 +202,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-n
 | 引数         | 型       |                             | 説明                                                           |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------ |
 | msgNumber  | Integer |              ->             | リスト中のメッセージの番号                                                |
-| headerOnly | Boolean |              ->             | メールヘッダーのみをダウンロードする場合は true (デフォルトは false） |
+| headerOnly | Boolean |              ->             | メールヘッダーのみをダウンロードする場合は true (デフォルトは false) |
 | 戻り値        | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-オブジェクト)             |
 
 </div>

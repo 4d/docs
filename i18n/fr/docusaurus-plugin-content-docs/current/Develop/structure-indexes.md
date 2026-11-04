@@ -147,7 +147,7 @@ Pour ajouter un champ à l'index, cliquez sur le bouton **[+]**. La liste des ch
 
 - Si vous souhaitez créer un index composite, ajoutez successivement chaque champ à inclure dans l'index. Une fois la liste complétée, vous pouvez réorganiser les champs à l'aide des boutons fléchés ou par glisser-déposer.
 - Si vous créez un index composite basé sur les champs de la clé primaire, veillez à ce que l'ordre des champs soit identique dans la clé primaire et dans l'index.
-- Si vous avez choisi le type "Index de mots-clés", seuls les champs Alpha ou Texte peuvent être sélectionnés. Dans ce cas également, vous ne pouvez inclure qu'un seul champ dans l'index.
+- If you have chosen the “Keyword Index” type, only Alpha, Text, or Picture fields can be selected. Also in this case, you can include only one field in the index.
 
 Pour supprimer un champ de l'index, sélectionnez-le dans la liste et cliquez sur le bouton **[-]**.
 

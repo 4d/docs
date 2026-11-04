@@ -316,7 +316,7 @@ ALERT($param1+" "+$param2)
 
 - The new [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) component allows you to connect to third-party APIs such as Microsoft Graph.
 
-- ツールボックス、<code>CHANGE PASSWORD</code> コマンド、または <code>Set user properties</code> コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
+- ツールボックス、<code>CHANGE PASSWORD</code> コマンド、または <code>Set user properties</code> コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリーデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。
 

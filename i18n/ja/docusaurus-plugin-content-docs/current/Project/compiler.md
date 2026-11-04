@@ -27,6 +27,8 @@ title: コンパイル
 
 コンパイルが終了次第、[アプリケーションをコンパイル済みモードで実行](#コンパイル済み実行)し、実行速度がどれだけ向上したのか確認することができます。
 
+When the compilation succeeds, the compiler also generates the `Project/DerivedData/syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the project, whatever the [syntax file setting](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
 エラーが検出されると処理が中止され、"コンパイルに失敗しました" というメッセージが表示されます。ウィンドウの情報エリアに、問題となるメソッド名と行番号が階層リスト形式で表示されます:
 
 ![](../assets/en/Project/compilerWin2.png)
@@ -67,7 +69,7 @@ title: コンパイル
 
 :::
 
-コンパイル中のコンポーネントの一覧がコンパイラウィンドウ内に表示されます。コンポーネント内でエラーが検知された場合、そのコンパイルは停止されますがその他のコンポーネントに対しての処理は継続されます。
+コンパイル中のコンポーネントの一覧がコンパイラーウィンドウ内に表示されます。コンポーネント内でエラーが検知された場合、そのコンパイルは停止されますがその他のコンポーネントに対しての処理は継続されます。
 
 - コンポーネントに少なくとも一つのエラーがある場合には**太字**で表示され、エラーリストを展開して表示することができます。
 - コンポーネントに少なくとも一つの警告がある場合には、警告のリストを展開して表示することができます。
@@ -78,7 +80,7 @@ title: コンパイル
 ホストプロジェクトからのコンパイルの対象になり得るためには、コンポーネントは以下の要件に合致している必要があります:
 
 - コンポーネントは[プロジェクトアーキテクチャー](../Project/architecture.md) を使用している
-- コンポーネントの[インタープリタコード](../Concepts/interpreted.md) が利用可能であり、コンポーネントが[コンパイルモードで実行中](#run-compiled) ではない
+- コンポーネントの[インタープリターコード](../Concepts/interpreted.md) が利用可能であり、コンポーネントが[コンパイルモードで実行中](#run-compiled) ではない
 - コンポーネントが[直接型指定](#直接型指定の有効化) 宣言を使用している。
 
 :::note
@@ -157,7 +159,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 #### エラーファイルを生成
 
-シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。エラーファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_error.xml` という名前で作成されます。
+シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。エラーファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_errors.xml` という名前で作成されます。
 
 #### コンパイル対象CPU
 
@@ -276,6 +278,23 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 :::
 
+### Warnings on function comments
+
+When a class function or a class constructor has a [comment block above its declaration](../Concepts/classes.md#function-comments), the compiler checks it and reports a warning:
+
+- for each parameter of the signature that is not documented by a `$name:` or `{$name}:` line (variadic parameters are not checked),
+- when the `MCP:` behavior tags contradict each other (`@readOnly`, `@destructive`, and `@additive` used together). In this case, the corresponding hints are omitted from the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata).
+
+Functions without a comment block are not checked. For example, the following function generates a warning for the *$factor* parameter and a warning for the `@readOnly` and `@destructive` tags:
+
+```4d
+// Scales a value by a factor
+// MCP: @readOnly @destructive
+// $value: value to scale
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
+
 ## コンパイルツール
 
 ### Symbolファイル
@@ -326,7 +345,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 ### エラーファイル
 
-コンパイラー設定の [**エラーファイルを生成**](#エラーファイルを生成) オプションを使用して、コンパイル時にエラーファイルを生成するかどうかを選択することができます。エラーファイルは、プロジェクトの [Logsフォルダー](../Project/architecture.md#logs)内に `ProjectName_errors.txt` という名前で作成されます。
+コンパイラー設定の [**エラーファイルを生成**](#エラーファイルを生成) オプションを使用して、コンパイル時にエラーファイルを生成するかどうかを選択することができます。エラーファイルは、プロジェクトの [Logsフォルダー](../Project/architecture.md#logs)内に `ProjectName_errors.xml` という名前で作成されます。
 
 [コンパイラーウインドウ](#コンパイラーウインドウ) からエラーに直接アクセスすることができますが、マシンからマシンへ送信できるエラーファイルがあると便利な場合があります。エラーファイルは、その内容を自動的に解析しやすいように XMLフォーマットで生成されます。これを利用して、エラー表示用に独自のインターフェースを作成することもできます。
 

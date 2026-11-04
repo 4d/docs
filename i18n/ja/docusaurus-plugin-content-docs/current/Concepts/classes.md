@@ -160,9 +160,11 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 クラス関数とは、当該クラスのプロパティです。クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
 
-[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use) なしで関数を呼び出せるようにできます。詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+[共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
 クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` または `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
+
+In ORDA data model classes and singleton classes, the [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) keyword allows a function to be called by REST requests, and the `exposed MCP Function` declaration publishes the function as a tool of the [MCP server](../WebServer/mcp-server.md). The `MCP` keyword is supported in the DataStore class, DataClass and Entity classes, and shared singleton classes. A function declared with `MCP` but without `exposed` is not published. For more information, refer to [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -310,11 +312,11 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `shared` キーワードを使うと**共有クラス** が作成されます。共有クラスは、共有オブジェクトのインスタンス化にのみ使われます。詳細については、後述の [共有クラス](#共有クラス) の項目を参照ください。
 
-`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。   `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
+`singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。 `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
 :::note
 
-[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) も`Class constructor` 機能の恩恵を受けることができます。実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-クラス) も`Class constructor` 機能の恩恵を受けることができます。実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
 
 :::
 
@@ -386,7 +388,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
+`property` キーワードは、クラス関数において `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 
@@ -420,7 +422,7 @@ property fuzzy // バリアント
 
 :::note
 
-宣言と同時に色かするプロパティが [共有クラス](#共有クラス) のオブジェクトまたはコレクションである場合、その値は自動的に共有された値に変換されます:
+宣言と同時に初期化するプロパティが [共有クラス](#共有クラス) のオブジェクトまたはコレクションである場合、その値は自動的に共有された値に変換されます:
 
 ```4d
 // 共有クラス内
@@ -590,6 +592,251 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
+## Function comments
+
+You can document a class function or a class constructor with comment lines written right above its `Function` or `Class constructor` declaration. 4D reads this comment block and shows it in the code assistance of the [4D code editor](../code-editor/write-class-method.md#help-tips) and of VS Code (completion details, help tips, and signature help), together with the function signature. The same comments also provide the [MCP tool metadata](#mcp-tool-metadata) of the function.
+
+The comment block follows these rules:
+
+- It is made of `//` lines and/or a `/* */` block. Each line of a `/* */` block is handled like a `//` line, and the `/*` and `*/` markers are not displayed.
+- It must be placed immediately above the declaration. A blank line between the comment block and the declaration breaks the association: only the signature is displayed.
+- Each comment block is associated only with the next declaration, even when it is written right after the code of the previous function.
+- Only the saved code is read: after you edit a comment, the code assistance shows the new text once the class is saved.
+- The text is displayed as plain text: Markdown markers such as `**` or `*` are shown as written.
+
+Each line of the block is interpreted according to its beginning:
+
+| 線                                                                            | 意味                                                                                                                                                                                                                          |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `// <text>`                                                                  | Description of the function. Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored. |
+| `// $name: <text>`                                                           | Description of the *$name* parameter.                                                                                                                                                                       |
+| `// {$name}: <text>`                                                         | Description of the *$name* parameter, marked as optional for MCP.                                                                                                                                           |
+| `// ...: <text>`                                                             | Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : 型`).                                                                                       |
+| `// param: $name <text>`, `// param: {$name} <text>`, `// param: ... <text>` | Same as `$name:`, `{$name}:`, and `...:` lines.                                                                                                                                                             |
+| `// MCP: <text>`                                                             | Description of the function for MCP only. Several `MCP:` description lines are combined in order.                                                                                           |
+| `// MCP: @tag {@tag}` or `// @tag {@tag}`                                    | MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is a description line.                          |
+
+A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters.
+
+The code assistance displays the description lines, then a blank line, then the parameter lines as written. `MCP:` lines are never displayed in the code assistance.
+
+When you [compile](../Project/compiler.md) the project, the compiler reports a [warning](../Project/compiler.md#warnings-on-function-comments) for each parameter of the signature that has no `$name:` or `{$name}:` line in the comment block, and for contradictory MCP behavior tags. Functions without a comment block are not checked.
+
+:::note
+
+Comment blocks are supported in project classes (including shared and singleton classes) and in component classes. For compiled components, the descriptions are provided by the [syntax file](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
+:::
+
+#### 例題 1
+
+You want to document a function and its parameter so that they are displayed in the code editor:
+
+```4d
+// Class: Invoice
+
+// Returns the price with taxes
+// The rate is a percentage
+// $rate: tax rate to apply (20 for 20%)
+Function priceWithTaxes($rate : Real) : Real
+	return This.price*(1+($rate/100))
+```
+
+When you type `$invoice.priceWithTaxes(` in a method, the help displays the signature with:
+
+```
+Returns the price with taxes
+The rate is a percentage
+
+$rate: tax rate to apply (20 for 20%)
+```
+
+#### 例題 2
+
+You want to document a class constructor with a `/* */` block:
+
+```4d
+// Class: Counter
+
+/*
+Creates a counter starting at a value
+$start: initial value of the counter
+*/
+Class constructor($start : Integer)
+	This.value:=$start
+```
+
+The description and the `$start:` line are displayed when you type `cs.Counter.new(`.
+
+### MCP tool metadata
+
+The comment blocks of `exposed MCP Function` declarations also describe these functions as MCP tools. When the project is compiled, 4D generates the `Project/DerivedData/syntaxMCP.json` file, which contains the metadata of these tools in a `toolList` array.
+
+Only functions of the following classes are listed:
+
+- the DataStore class,
+- DataClass and Entity classes,
+- シングルトンクラス.
+
+Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed MCP Function`, are not listed, even if their comment block contains `MCP:` lines.
+
+:::note
+
+If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
+
+:::
+
+The [MCP server](../WebServer/mcp-server.md) of 4D builds its tool catalog from the same comment blocks and the same type conversions, using the running code: in interpreted mode, a function you add or modify is published at the next `tools/list` request, without restarting. The catalog of the MCP server also adds the elements needed to call the tools, such as a `key` argument for Entity class functions and `"additionalProperties": false` in `inputSchema` (see [Tool catalog](../WebServer/mcp-server.md#tool-catalog)). The following functions are not published, and 4D logs a message:
+
+- a function whose tool name is longer than 64 characters, contains characters other than letters, digits, `_` and `-`, or is the name of another tool (including a built-in CRUD tool),
+- an Entity class function that declares a `$key` parameter,
+- a function that declares both a `$args` parameter and variadic parameters.
+
+A function without description is published, and 4D logs a warning.
+
+Each tool of the `toolList` array is an object with the following properties:
+
+| プロパティ          | 説明                                                                                                                                                                                            |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`         | Name of the tool: the function name for a DataStore class function, `ClassName-functionName` for other classes                                                                |
+| `description`  | Text of the `MCP:` description lines, or the description lines if there is no `MCP:` description. Omitted if there is no description                                          |
+| `inputSchema`  | `{"type": "object", "properties": {...}, "required": [...]}`: one property per parameter of the signature, named without the `$`, with the parameter comment as `description` |
+| `outputSchema` | Schema of the return type. Omitted if the function returns nothing or a Variant                                                                                               |
+| `annotations`  | Behavior hints derived from the `MCP:` behavior tags                                                                                                                                          |
+
+In `inputSchema`:
+
+- every parameter is listed in `required`, except those documented with a `{$name}:` line. `required` is omitted if it is empty.
+- typed variadic parameters (`... : Type`) are represented by an optional `args` property of type `array`, whose `items` have the schema of *Type*. The `...:` line is its description.
+
+Parameter and return types are converted to JSON Schema as follows:
+
+| 4D type                                | JSON Schema                                                 |
+| -------------------------------------- | ----------------------------------------------------------- |
+| Text                                   | `{"type": "string"}`                                        |
+| Integer                                | `{"type": "integer"}`                                       |
+| Real                                   | `{"type": "number"}`                                        |
+| Boolean                                | `{"type": "boolean"}`                                       |
+| Date                                   | `{"type": "string", "format": "date"}`                      |
+| Time                                   | `{"type": "integer", "description": "duration in seconds"}` |
+| Object, class instance                 | `{"type": "object"}`                                        |
+| Collection                             | `{"type": "array"}`                                         |
+| Blob, 4D.Blob, Picture | `{"type": "string", "contentEncoding": "base64"}`           |
+| Variant, or no type                    | `{}`                                                        |
+
+The supported behavior tags are converted to annotations as follows:
+
+| Tag            | Annotation                 |
+| -------------- | -------------------------- |
+| `@readOnly`    | `"readOnlyHint": true`     |
+| `@destructive` | `"destructiveHint": true`  |
+| `@additive`    | `"destructiveHint": false` |
+| `@idempotent`  | `"idempotentHint": true`   |
+| `@openWorld`   | `"openWorldHint": true`    |
+
+`openWorldHint` is always present: it is `false` if `@openWorld` is not used. Other hints are omitted when their tag is not used. `@readOnly`, `@destructive`, and `@additive` contradict each other: if a function uses two or more of them, the compiler reports a warning and the corresponding hints are omitted. Unknown tags are ignored.
+
+#### 例題 3
+
+You document the MCP tools of a `DateTime` singleton class:
+
+```4d
+// Class: DateTime
+
+singleton Class constructor()
+	This.date:=Current date
+
+// Adds a number of days to the date
+// MCP: Add days to the date-time
+// $days: number of days to add (negative to subtract)
+exposed MCP Function addDays($days : Integer) : Date
+	This.date:=Add to date(This.date; 0; 0; $days)
+	return This.date
+
+// Adds zero or more day offsets to the date and returns the updated date
+// MCP: Add day offsets to the date-time
+// MCP: @idempotent
+// ...: day offsets to add (negative to subtract)
+exposed MCP Function addDayOffsets(... : Integer) : Date
+	var $offsetIndex; $totalDays : Integer
+	For ($offsetIndex; 1; Count parameters)
+		$totalDays+=${$offsetIndex}
+	End for
+	This.date:=Add to date(This.date; 0; 0; $totalDays)
+	return This.date
+```
+
+After compilation, `Project/DerivedData/syntaxMCP.json` contains:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
+        },
+        "required": ["days"]
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "openWorldHint": false }
+    },
+    {
+      "name": "DateTime-addDayOffsets",
+      "description": "Add day offsets to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "day offsets to add (negative to subtract)"
+          }
+        }
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "idempotentHint": true, "openWorldHint": false }
+    }
+  ]
+}
+```
+
+#### 例題 4
+
+You want to read the names of the MCP tools generated by the last compilation:
+
+```4d
+var $file : 4D.File:=File("/PACKAGE/Project/DerivedData/syntaxMCP.json")
+var $metadata : Object:=JSON Parse($file.getText())
+var $names : Collection:=$metadata.toolList.extract("name")
+// $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
+```
+
+#### 例題 5
+
+You document a tool with `param:` lines and a behavior tag line without the `MCP:` prefix:
+
+```4d
+// Class: Stock
+
+shared singleton Class constructor()
+
+// Returns the quantity in stock of a product
+// param: $reference reference of the product
+// param: {$warehouse} code of the warehouse (all warehouses if omitted)
+// @readOnly
+exposed MCP Function getQuantity($reference : Text; $warehouse : Text) : Integer
+	If ($warehouse="")
+		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
+	End if
+	return ds.Stock.query("reference = :1 and warehouse = :2"; $reference; $warehouse).sum("quantity")
+```
+
+The `Stock-getQuantity` tool has a required `reference` property, an optional `warehouse` property, and the `"readOnlyHint": true` annotation.
+
 ## クラス関数コマンド
 
 以下のコマンドは、クラス関数内で使用された場合には特定の機能を持っています:
@@ -642,7 +889,7 @@ $val:=$o.f() //8
 
 共有クラスは **共有関数** をサポートしています。共有関数は、[`Use...End use`](shared.md#useend-use) 構文なしで呼び出すことができます。
 
-クラスが共有クラスかどうかは、Classオブジェクトの .[`.isShared`](../API/ClassClass.md#isshared)プロパティで確認できます。
+クラスが共有クラスかどうかは、Classオブジェクトの [`.isShared`](../API/ClassClass.md#isshared)プロパティで確認できます。
 
 :::info
 
@@ -674,7 +921,7 @@ cs.Person.isShared // true
 
 共有クラス内で定義された関数が、そのクラスのオブジェクトを変更する場合には、共有オブジェクトへのアクセスを保護するために、[`Use...End use`](shared.md#useend-use) 構文を呼び出す必要があります。しかし、**shared** として関数を定義することで、実行時には内部的な `Use...End use` を自動でトリガーするようにし、コードを簡略化することができます。
 
-共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します 。例:
+共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します。例:
 
 ```4d
 	//共有クラス Foo
@@ -740,9 +987,9 @@ shared Function Bar($value : Integer)
 
 シングルトンを引数付きでインスタンス化する必要がある場合には、[`new()`](../API/ClassClass.md#new) 関数を呼び出すこともできます。この場合、アプリケーションの起動時に実行されるコードでシングルトンをインスタンス化することが推奨されます。
 
-クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
+クラスがシングルトンクラスかどうかは、Classオブジェクトの [`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
-クラスがセッションシングルトンかどうかは、Classオブジェクトの .[`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
+クラスがセッションシングルトンかどうかは、Classオブジェクトの [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
 
 ### 公開されたシングルトン関数
 
@@ -847,7 +1094,7 @@ $myList := cs.ItemInventory.me.itemList
 
 ## `local` および `server`
 
-[クライアント/サーバーアーキテクチャー](../Desktop/clientServer.md) におていは、`local` および `server` キーワードを使用することで関数を実行する場所を指定することができます: クライアント側、またはサーバー側です。実行場所をコントロールすることは、パフォーマンス上の理由から、またビジネスロジック機能を実装する観点からも有用といえます。
+[クライアント/サーバーアーキテクチャー](../Desktop/clientServer.md) においては、`local` および `server` キーワードを使用することで関数を実行する場所を指定することができます: クライアント側、またはサーバー側です。実行場所をコントロールすることは、パフォーマンス上の理由から、またビジネスロジック機能を実装する観点からも有用といえます。
 
 シンタックスは次の通りです:
 
@@ -929,7 +1176,7 @@ End if
 
 :::
 
-`server` の関数の引数と戻り値は、[**ストリーム可能**](./dt_object.md#ストリーミングサポート) ストリーム可能でなければなりません。例えば、[4D.Datastore](../API/DataStoreClass.md)、[File handle](../API/FileHandleClass.md)、あるいは [WebServer](../API/WebServerClass.md) などはストリーム不可能なクラスですが、 [4D.File](../API/FileClass.md) クラスはストリーム可能です。
+`server` の関数の引数と戻り値は、[**ストリーム可能**](./dt_object.md#ストリーミングサポート) でなければなりません。例えば、[4D.Datastore](../API/DataStoreClass.md)、[File handle](../API/FileHandleClass.md)、あるいは [WebServer](../API/WebServerClass.md) などはストリーム不可能なクラスですが、 [4D.File](../API/FileClass.md) クラスはストリーム可能です。
 
 この機能は、特に[リモートユーザーセッション](../Desktop/sessions.md#リモートユーザーセッション) のコンテキストにおいて有用で、これを使用することでビジネスロジックを[セッションシングルトン](../Concepts/classes.md#session-singleton) に実装することでセッションの全てのプロセス間でこれを共有することができ、結果として[`Session`](../commands/session) コマンドの機能を拡張することが可能になります。この場合、全てのセッション情報がサーバーに集められる様に、関連するビジネスロジックが**サーバー上で**実行されるようにしたい場合があるかもしれません。
 
@@ -944,7 +1191,7 @@ End if
 - シングルトン *S1* はクライアント上でインスタンス化されます(名前は *s1* )
 - *s1.function()* はクライアント上で実行されます。
 
-その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタン上で実行されます。結果として、それぞれ異なるプロパティ値をもつ、二つの *S1* のインスタンスが(クライアント側とサーバー側で)共存することが有り得ます。この場合、 *s1.property* は常にローカルにアクセス可能です。これはサーバーからはアクセスすることはできません。例えば、サーバー側のコードで直接ドット記法からアクセスするなどです(エラーが返されます)。
+その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタンス上で実行されます。結果として、それぞれ異なるプロパティ値をもつ、二つの *S1* のインスタンスが(クライアント側とサーバー側で)共存することが有り得ます。この場合、 *s1.property* は常にローカルにアクセス可能です。これはサーバーからはアクセスすることはできません。例えば、サーバー側のコードで直接ドット記法からアクセスするなどです(エラーが返されます)。
 
 :::
 

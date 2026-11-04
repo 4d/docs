@@ -45,6 +45,7 @@ Leurs propriétés et fonctions sont les suivantes :
 | [<!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Syntax -->](#maxconcurrentprocesses)<br/><!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Summary -->             |
 | [<!-- INCLUDE #WebServerClass.maxRequestSize.Syntax -->](#maxrequestsize)<br/><!-- INCLUDE #WebServerClass.maxRequestSize.Summary -->                                     |
 | [<!-- INCLUDE #WebServerClass.maxSessions.Syntax -->](#maxsessions)<br/><!-- INCLUDE #WebServerClass.maxSessions.Summary -->                                              |
+| [<!-- INCLUDE #WebServerClass.mcp.Syntax -->](#mcp)<br/><!-- INCLUDE #WebServerClass.mcp.Summary -->                                                                      |
 | [<!-- INCLUDE #WebServerClass.minTLSVersion.Syntax -->](#mintlsversion)<br/><!-- INCLUDE #WebServerClass.minTLSVersion.Summary -->                                        |
 | [<!-- INCLUDE #WebServerClass.name.Syntax -->](#name)<br/><!-- INCLUDE #WebServerClass.name.Summary -->                                                                   |
 | [<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)<br/><!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->                                     |
@@ -418,6 +419,63 @@ Contient le <!-- REF #WebServerClass.maxSessions.Summary -->nombre maximum de se
 
 <!-- END REF -->
 
+<!-- REF WebServerClass.mcp.Desc -->
+
+## .mcp
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 21 R6   | Ajout         |
+
+</details>
+
+<!-- REF #WebServerClass.mcp.Syntax -->**.mcp** : Object<!-- END REF -->
+
+#### Description
+
+The `.mcp` property contains <!-- REF #WebServerClass.mcp.Summary -->the settings of the MCP server of the web server<!-- END REF -->. For more information, see [MCP server](../WebServer/mcp-server.md).
+
+The MCP server is only available on the web server of the host application, and requires [scalable sessions](#scalablesession).
+
+The `.mcp` object contains the following properties:
+
+| Propriété                | Type       | Par défaut                                             | Description                                                                                                                                                                                                                                                                                    |
+| ------------------------ | ---------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| enabled                  | Boolean    | False                                                  | True to enable the MCP server on the `/mcp` URL. Can be modified while the web server is running                                                                                                                                                                               |
+| serverName               | Text       | ""                                                     | Name of the server returned by `server/discover`. If empty, the application name is returned                                                                                                                                                                                   |
+| serverVersion            | Text       | ""                                                     | Version of the server returned by `server/discover`. If empty, the version of the built application is returned ("0.0.0" if the application is not built)                                                                   |
+| instructions             | Text       | ""                                                     | Instructions for the MCP clients, returned by `server/discover`                                                                                                                                                                                                                                |
+| maxResults               | Integer    | 100                                                    | Maximum number of entities returned by a `queryEntities` page or by a custom tool returning an entity selection                                                                                                                                                                                |
+| crudTools                | Collection | All the tools                                          | Names of the [built-in CRUD tools](../WebServer/mcp-server.md#built-in-crud-tools) available to the clients: "describeModel", "getEntity", "queryEntities", "aggregateEntities", "addEntity", "updateEntity", "dropEntity", "getBinaryAttribute", "setBinaryAttribute"         |
+| allowInsecureHTTP        | Boolean    | False                                                  | True to accept MCP requests over plain HTTP from any address (not recommended). By default, plain HTTP is only accepted from a loopback address or a trusted proxy. See [Secure connections](../WebServer/mcp-server.md#secure-connections) |
+| trustedProxies           | Collection | [] | IP addresses of the reverse proxies whose `X-Forwarded-For`, `X-Forwarded-Proto`, and `X-Forwarded-Host` headers are used                                                                                                                                                                      |
+| publicURL                | Text       | ""                                                     | Base URL (scheme and host) of the URLs published by the MCP server, for example "https://sales.example.com". If empty, the base URL is built from the request                                               |
+| oauthDynamicRegistration | Boolean    | True                                                   | True to allow dynamic client registration in [OAuth mode](../WebServer/mcp-server.md#oauth-21-mode)                                                                                                                                                                                            |
+
+You can pass an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. While the web server is running, only `mcp.enabled` can be modified: setting it to **True** or **False** enables or disables the MCP server without restarting the web server. The MCP settings are kept when the web server is restarted.
+
+#### Exemple 1
+
+You enable the MCP server at startup:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+var $status:=$webServer.start({mcp: {enabled: True; serverName: "Sales"; maxResults: 50}})
+```
+
+#### Exemple 2
+
+You disable the MCP server while the web server is running:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+$webServer.mcp.enabled:=False // /mcp now answers 404, MCP sessions are closed
+```
+
+<!-- END REF -->
+
 <!-- REF WebServerClass.minTLSVersion.Desc -->
 
 ## .minTLSVersion
@@ -703,6 +761,7 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation de 
 
 | Release | Modifications                                           |
 | ------- | ------------------------------------------------------- |
+| 21 R6   | Support of `mcp` in the `settings` parameter            |
 | 21 R5   | Prise en charge des quotas dans le paramètre `settings` |
 | 18 R3   | Ajout                                                   |
 
@@ -734,7 +793,9 @@ Vous pouvez configurer les quotas via la propriété `quotas` du paramètre *set
 
 :::
 
-Les paramètres de session personnalisés seront réinitialisés lorsque la fonction [`.stop()`](#stop) sera appelée.
+You can configure the [MCP server](../WebServer/mcp-server.md) via the [`mcp`](#mcp) property in the *settings* parameter.
+
+Customized session settings will be reset when the [`.stop()`](#stop) function is called, except the `mcp` settings, which are kept.
 
 #### Objet retourné
 
@@ -769,6 +830,15 @@ L'exemple suivant permet de démarrer le serveur Web avec des paramètres person
  If($result.success)
   //...
  End if
+```
+
+#### Exemple 2
+
+The following example starts the web server with the MCP server enabled:
+
+```4d
+var $webServer:=WEB Server
+var $result:=$webServer.start({mcp: {enabled: True; instructions: "Use describeModel to learn the data model."}})
 ```
 
 <!-- END REF -->

@@ -54,6 +54,14 @@ Lorsque la source de données est une collection, toute modification apportée a
 myCol:=myCol.push("new value") //afficher new value dans la list box
 ```
 
+## Supported standard actions
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Available for array list boxes; see the [supported properties by list box type](#supported-properties).
+
+The [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord), [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord), [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord), and [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) actions can affect selection list boxes, but are assigned to buttons or menu commands, not to the selection list box itself.
+
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## Propriétés prises en charge
 
 Les propriétés prises en charge dépendent du type de list box.

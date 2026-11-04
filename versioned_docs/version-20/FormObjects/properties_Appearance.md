@@ -47,7 +47,7 @@ displayFormulaAsSymbol|boolean|true (default), false|
 
 #### Commands
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 
 
@@ -170,7 +170,7 @@ showEmptyImages|boolean|true (default), false|
 
 #### Commands
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 
 ## Show footers

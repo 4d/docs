@@ -11,6 +11,12 @@ La clase `4D.QuotaManager` le ofrece una interfaz para configurar y monitorizar 
 
 :::
 
+:::tip Entradas de blog relacionadas
+
+[Un servidor web 4D que sabe cuándo decir No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
+
+:::
+
 Los objetos `4D.QuotaManager` se pueden instanciar de las siguientes maneras:
 
 - la [propiedad `quotas` de un objeto Session](./SessionClass.md#quotas)

@@ -290,13 +290,11 @@ In this case, 4D examines all the records of the table and automatically assigns
 
 To remove a primary key from a table:
 
-1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu:  
-
-[picture here]
-
+1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu.
 A confirmation dialog box appears. Click **OK** to remove the primary key.
 
 #### Default primary key field
+
 
 Every new table created in the database contains a primary key by default. This field, named **"ID"** by default, is of the Longint type, and has, in particular, the following attributes:
 

@@ -201,7 +201,7 @@ title: データソース
 
 ## 式
 
-[セレクション型](FormObjects/listbox_object.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](../FormObjects/listbox-object.md#コレクションまたはエンティティセレクションリストボックス) リストボックス特有のプロパティです。**[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
+[セレクション型](FormObjects/listbox-object.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](../FormObjects/listbox-object.md#コレクションまたはエンティティセレクションリストボックス) リストボックス特有のプロパティです。**[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
 列に割り当てる 4D式です。以下のものを指定できます:
 

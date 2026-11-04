@@ -160,7 +160,7 @@ Les références de formule peuvent être affichées en tant que :
 
 - textes sources (par défaut)
 - symboles
-- noms
+- names
 
 ### Références en textes sources (par défaut)
 

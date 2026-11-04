@@ -42,8 +42,8 @@ In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default]
 
 #### ハイライト
 
-- AI: macOS では、Apple Inteligence **Writing Tools** のおかげで、テキストを改善したり要約したりといったことができるようになりました。これは[4D Write Pro](../FormObjects/writeProArea_overview.md) および[入力](../FormObjects/input_overview.md) フォームオブジェクトにおいて、[プロパティ](../FormObjects/properties_Entry.md#writing-tools) および [標準アクション](../Desktop/standard-actions) として利用可能です。
-- QUIC ネットワークレイヤーにおける、改善された[クライアント/サーバーの接続切断のサポート](../Desktop/clientServer.md#到達不能なピアの管理): 新しい [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) データベースパラメーター、新しい [`unreachableSince` session.info](../API/SessionClass.md#info) プロパティ。
+- AI: macOS では、Apple Intelligence **作文ツール** のおかげで、テキストを改善したり要約したりといったことができるようになりました。これは[4D Write Pro](../FormObjects/writeProArea_overview.md) および[入力](../FormObjects/input_overview.md) フォームオブジェクトにおいて、[プロパティ](../FormObjects/properties_Entry.md#writing-tools) および [標準アクション](../Desktop/standard-actions) として利用可能です。
+- QUIC ネットワークレイヤーにおける、改善された[クライアント/サーバーの接続切断のサポート](../Desktop/clientServer.md#到達不能なピアの管理): 新しい [`QUIC session timeout`](../commands/set-database-parameter#quic-session-timeout-135) データベースパラメーター、新しい [`unreachableSince` session.info](../API/SessionClass.md#info) プロパティ。
 - マルチレベルスタイルシートが、[4D Write Pro インターフェースでサポートされる](../WritePro/writeprointerface#multi-level-list-style-sheets) ようになり、これによりユーザーはツールバーとサイドバーから構造化されたマルチレベルリストを直接作成・管理できるようになりました。
 - 新しい[`defer`](../commands/defer) コマンドが追加され、これによってメソッドまたは関数の終了時に必ず実行される同じコードを宣言することができるようになりました。また新しい[`Deferred formulas`](../commands/deferred-formulas) コマンドを使用することで、遅延されたフォーミュラの一覧を取得することができます。
 - セッションのREST しきい値を設定するための、セッションオブジェクトの新しい[`.quotas` プロパティ](../API/SessionClass.md#quotas)。
@@ -124,12 +124,11 @@ In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default]
 | ICU             | 77.1                   | 21             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                                     |
 | libldap         | 2.6.10 | 21             |                                                                                                                                                      |
 | libsasl         | 2.1.28 | 20             |                                                                                                                                                      |
-| Liblsquic       | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                             |
-| Libuv           | 1.52.1 | 21 R4          | QUIC に使用                                                                                                                                             |
+| Libuv           | 1.53.0 | **21 R5**      | QUIC に使用                                                                                                                                             |
 | libZip          | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
 | LZMA            | 5.8.1  | 21             |                                                                                                                                                      |
 | ngtcp2          | 1.24.0 | 21 R4          | QUIC に使用                                                                                                                                             |
-| OpenSSL         | 4.0.1  | **21 R5**      |                                                                                                                                                      |
+| OpenSSL         | 4.0.3  | **21 R5**      |                                                                                                                                                      |
 | PDFWriter       | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
 | SpreadJS        | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit          | WKWebView                              | 19             |                                                                                                                                                      |

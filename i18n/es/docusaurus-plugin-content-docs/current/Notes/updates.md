@@ -3,6 +3,24 @@ id: updates
 title: Notas del lanzamiento
 ---
 
+## 4D 21 R6
+
+Lea [**Novedades en 4D 21 R6**](https://blog.4d.com/whats-new-in-4d-21-r6/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21 R6.
+
+#### Lo más destacado
+
+- Class functions and class constructors can be documented with a [comment block above their declaration](../Concepts/classes.md#function-comments): the description and parameter comments are displayed in the code completion and help of the [4D code editor](../code-editor/write-class-method.md#help-tips) and VS Code, and in the [syntax file of compiled components](../Extensions/develop-components.md#code-completion-for-compiled-components).
+- `MCP:` comment lines and behavior tags provide the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of `exposed MCP Function` declarations, generated at compilation in [`Project/DerivedData/syntaxMCP.json`](../Project/architecture.md#deriveddata) or provided by a custom [`Resources/syntaxMCP.json`](../Project/architecture.md#resources) file.
+- New native [MCP server](../WebServer/mcp-server.md) in the 4D Web Server: AI clients can call your [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) functions and the [built-in CRUD tools](../WebServer/mcp-server.md#built-in-crud-tools), with the same [roles and privileges](../ORDA/privileges.md#mcp-tools) as REST requests. The MCP server is configured with the new [`WebServer.mcp`](../API/WebServerClass.md#mcp) property.
+- MCP clients authenticate with Fine-Grained Tokens managed with the new [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken), [`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens), and [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken) functions. The reserved [`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) DataStore class function prepares each MCP session, whose [`Session.info.type`](../API/SessionClass.md#info) is "mcp".
+- Optional [OAuth 2.1 mode](../WebServer/mcp-server.md#oauth-21-mode) of the MCP server, enabled by the reserved [`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) DataStore class function. Grants are managed with the new [`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants) and [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant) functions.
+- New [`MCP`](../commands/mcp) command and [`4D.MCPContext`](../API/MCPContextClass.md) class to [ask the user for a confirmation](../WebServer/mcp-server.md#asking-the-user-for-confirmation) in MCP tools.
+- A reference [MCP Bundle](../WebServer/mcp-server.md#claude-desktop-bundle) lets Claude Desktop connect to a 4D MCP server on the local network.
+
+#### Cambios de comportamiento
+
+- The compiler now reports [warnings on function comments](../Project/compiler.md#warnings-on-function-comments): a class function or class constructor that has a comment block above its declaration gets a warning for each parameter without a `$name:` comment, and for contradictory MCP behavior tags.
+
 ## 4D 21 R5
 
 Lea [**Las novedades en 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21 R5.
@@ -43,7 +61,7 @@ Lea [**Novedades en 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/), la 
 #### Lo más destacado
 
 - IA: en macOS, los usuarios finales pueden mejorar o resumir textos gracias a las **herramientas de escritura** de Apple Intelligence, disponibles como [propiedad](../FormObjects/properties_Entry.md#writing-tools) y como [acción estándar](../Desktop/standard-actions) para los objetos de formulario [4D Write Pro](../FormObjects/writeProArea_overview.md) e [input](../FormObjects/input_overview.md).
-- Se ha mejorado la [gestión de las desconexiones cliente/servidor](../Desktop/clientServer.md#management-of-unreachable-peer) con la capa de red QUIC: nuevo parámetro de base de datos [`QUIC session timeout`](../commands/set-database-parameter#quick-session-timeout-135) y nueva propiedad [`unreachableSince` de session.info](../API/SessionClass.md#info).
+- Se ha mejorado la [gestión de las desconexiones cliente/servidor](../Desktop/clientServer.md#management-of-unreachable-peer) con la capa de red QUIC: nuevo parámetro de base de datos [`QUIC session timeout`](../commands/set-database-parameter#quic-session-timeout-135) y nueva propiedad [`unreachableSince` de session.info](../API/SessionClass.md#info).
 - Las hojas de estilo para listas de varios niveles ya son [compatibles con 4D Write Pro Interface](../WritePro/writeprointerface#multi-level-list-style-sheets), lo que permite a los usuarios crear y gestionar listas estructuradas de varios niveles directamente desde la barra de herramientas y la barra lateral.
 - Nuevo comando [`defer`](../commands/defer) para declarar que un fragmento de código se ejecute siempre al salir de un método o una función; nuevo comando [`Deferred formulas`](../commands/deferred-formulas) para obtener la lista de fórmulas diferidas.
 - Nueva [propiedad `.quotas`](../API/SessionClass.md#quotas) para configurar los límites REST para las sesiones.
@@ -124,12 +142,11 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | ICU             | 77.1                   | 21                | Esta actualización fuerza una reconstrucción automática de los índices alfanuméricos, textos y objetos.                                |
 | libldap         | 2.6.10 | 21                |                                                                                                                                                        |
 | libsasl         | 2.1.28 | 20                |                                                                                                                                                        |
-| Liblsquic       | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                    |
-| Libuv           | 1.53.0 | **21 R6**         | Utilizado para QUIC                                                                                                                                    |
+| Libuv           | 1.53.0 | **21 R5**         | Utilizado para QUIC                                                                                                                                    |
 | libZip          | 1.11.4 | 21                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
 | LZMA            | 5.8.1  | 21                |                                                                                                                                                        |
 | ngtcp2          | 1.24.0 | 21 R4             | Utilizado para QUIC                                                                                                                                    |
-| OpenSSL         | 4.0.3  | **21 R6**         |                                                                                                                                                        |
+| OpenSSL         | 4.0.3  | **21 R5**         |                                                                                                                                                        |
 | PDFWriter       | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
 | webKit          | WKWebView                              | 19                |                                                                                                                                                        |

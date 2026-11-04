@@ -93,7 +93,7 @@ title: $entityset
 
 ## $entityset/$release
 
-[4D Server のキャッシュ](./$info.md) から、一つ以上の既存のエンティティセットを削除します).
+[4D Server のキャッシュ](./$info.md) から、一つ以上の既存のエンティティセットを削除します。
 
 ### 説明
 

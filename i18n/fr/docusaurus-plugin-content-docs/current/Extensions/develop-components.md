@@ -210,7 +210,7 @@ Un *namespace* garantit qu'aucun conflit n'émerge lorsqu'un projet hôte utilis
 
 :::
 
-Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans la [class store utilisateurs (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que ses composants chargés, à travers les espaces de noms `cs.<value>`. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle` contenant une fonction `getArea()`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
+Lorsque vous entrez une valeur, vous déclarez que les classes de composants seront disponibles dans la [class store utilisateurs (**cs**)](../Concepts/classes.md#cs) du projet hôte ainsi que ses composants chargés, à travers les espaces de noms `cs.<value>. Par exemple, si vous entrez "eGeometry" comme namespace, en supposant que vous avez créé une classe `Rectangle`contenant une fonction`getArea()\`, une fois votre projet installé comme composant, le développeur du projet hôte peut écrire :
 
 ```4d
 //dans le projet hôte ou l'une de ses composantes
@@ -259,6 +259,20 @@ Un fichier de syntaxe (format JSON) est alors automatiquement créé lors de la 
 ![](../assets/en/settings/syntax-code-completion-1.png)
 
 Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les ressources des classes et des méthodes 'exposed' ne sont pas générées, même si l'option de fichier de syntaxe est cochée.
+
+When your class functions and class constructors are documented with a [comment block above their declaration](../Concepts/classes.md#function-comments), the syntax file also contains their description and parameter comments (`MCP:` lines are never included). Host projects then display them as plain text in the code completion and help of the compiled component. For example, with the following function in a component class:
+
+```4d
+// Class: Tools
+
+// Scales a value by a factor
+// $value: value to scale
+// $factor: multiplier to apply
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
+
+a host project that types `cs.MyComponent.Tools.new().scale(` sees "Scales a value by a factor" and the `$value:` and `$factor:` lines below the signature.
 
 ## Passage de variables
 
@@ -449,7 +463,7 @@ Les composants peuvent utiliser des ressources situées dans le dossier Ressourc
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
+Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
 
 ## Exécution du code d'initialisation
 

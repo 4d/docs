@@ -1,6 +1,6 @@
 ---
 id: text
-title: Texte
+title: Text
 ---
 
 Un objet texte vous permet d'afficher du contenu écrit statique (ex : instructions, libellés, étiquettes, etc.) dans un formulaire. Ces zones de texte statique peuvent devenir dynamiques lorsqu'elles incluent des références dynamiques. Pour plus d'informations, reportez-vous à la section [Utiliser des références dans les textes statiques](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html).

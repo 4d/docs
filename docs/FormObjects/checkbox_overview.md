@@ -41,41 +41,6 @@ The variable associated with the check box returns the value 2 when the check bo
 
 You can assign a [standard action](properties_Action.md#standard-action) to a check box to handle attributes of text areas. For example, if you assign the `fontBold` standard action, at runtime the check box will manage the "bold" attribute of the selected text in the current area. 
 
-Only actions that can represent a true/false status ("checkable" actions) are supported by this object: 
-
-|Supported actions|	Usage condition (if any)|
-|---|---|
-|avoidPageBreakInsideEnabled|	4D Write Pro areas only|
-|fontItalic	||
-|fontBold	||
-|fontLinethrough	||
-|fontSubscript	|4D Write Pro areas only|
-|fontSuperscript	|4D Write Pro areas only|
-|fontUnderline	||
-|font/showDialog	|Mac only|
-|htmlWYSIWIGEnabled	|4D Write Pro areas only|
-|section/differentFirstPage	|4D Write Pro areas only|
-|section/differentLeftRightPages	|4D Write Pro areas only|
-|spell/autoCorrectionEnabled	||
-|spell/autoDashSubstitutionsEnabled	|Mac only|
-|spell/autoLanguageEnabled	|Mac only|
-|spell/autoQuoteSubstitutionsEnabled	|Mac only|
-|spell/autoSubstitutionsEnabled	||
-|spell/enabled	||
-|spell/grammarEnabled	|Mac only|
-|spell/showDialog	|Mac only|
-|spell/visibleSubstitutions	||
-|visibleBackground	|4D Write Pro areas only|
-|visibleFooters	|4D Write Pro areas only|
-|visibleHeaders	|4D Write Pro areas only|
-|visibleHiddenChars	|4D Write Pro areas only|
-|visibleHorizontalRuler	|4D Write Pro areas only|
-|visiblePageFrames	|4D Write Pro areas only|
-|visibleReferences	||
-|widowAndOrphanControlEnabled	|4D Write Pro areas only|
-
-For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
-
 ## Check box button styles
 
 Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. It is possible to apply different predefined styles to check boxes. A great number of variations can be obtained by combining these properties / behaviors. 
@@ -413,6 +378,45 @@ It is usually associated with a [4-state picture](properties_TextAndPicture.md#n
 
 
 
+
+## Supported standard actions
+
+Only actions that can represent a true/false status ("checkable" actions) are supported by this object:
+
+|Supported actions|	Usage condition (if any)|
+|---|---|
+|[avoidPageBreakInside](../WritePro/user-legacy/standard-actions.md#action-avoidpagebreakinside)|4D Write Pro areas only|
+|[fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)||
+|[fontBold](../Desktop-legacy/standard-actions.md#fontbold)||
+|[fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)||
+|[fontSubscript](../WritePro/user-legacy/standard-actions.md#action-fontsubscript)|4D Write Pro areas only|
+|[fontSuperscript](../WritePro/user-legacy/standard-actions.md#action-fontsuperscript)|4D Write Pro areas only|
+|[fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)||
+|[font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)|Mac only|
+|[htmlWYSIWIGEnabled](../WritePro/user-legacy/standard-actions.md#action-htmlwysiwigenabled)|4D Write Pro areas only|
+|[section/differentFirstPage](../WritePro/user-legacy/standard-actions.md#action-section-differentfirstpage)|4D Write Pro areas only|
+|[section/differentLeftRightPages](../WritePro/user-legacy/standard-actions.md#action-section-differentleftrightpages)|4D Write Pro areas only|
+|[spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)||
+|[spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)|Mac only|
+|[spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)|Mac only|
+|[spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)|Mac only|
+|[spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)||
+|[spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)||
+|[spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)|Mac only|
+|[spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)|Mac only|
+|[spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)||
+|[visibleBackground](../WritePro/user-legacy/standard-actions.md#action-visiblebackground)|4D Write Pro areas only|
+|[visibleFooters](../WritePro/user-legacy/standard-actions.md#action-visiblefooters)|4D Write Pro areas only|
+|[visibleHeaders](../WritePro/user-legacy/standard-actions.md#action-visibleheaders)|4D Write Pro areas only|
+|[visibleHiddenChars](../WritePro/user-legacy/standard-actions.md#action-visiblehiddenchars)|4D Write Pro areas only|
+|[visibleHorizontalRuler](../WritePro/user-legacy/standard-actions.md#action-visiblehorizontalruler)|4D Write Pro areas only|
+|[visiblePageFrames](../WritePro/user-legacy/standard-actions.md#action-visiblepageframes)|4D Write Pro areas only|
+|[visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)||
+|[widowAndOrphanControlEnabled](../WritePro/user-legacy/standard-actions.md#action-widowandorphancontrolenabled)|4D Write Pro areas only|
+
+For detailed information on these actions, please refer to the [Standard actions](properties_Action.md#standard-action) section.
+
+See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Supported Properties
 

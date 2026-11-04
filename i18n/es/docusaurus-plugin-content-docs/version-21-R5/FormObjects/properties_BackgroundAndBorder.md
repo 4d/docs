@@ -27,7 +27,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 ## Color de fondo / Color de relleno
 
-Define el color de fondo o el color de relleno de un objeto. Se puede definir para algunos objetos estándar (propiedad JSON `fill`) o para los [objetos de "estilo personalizado"](#custom-style-button-check-box-or-radio-button) (propiedad JSON `borderFillColor`).
+Define el color de fondo o el color de relleno de un objeto. Se puede definir para algunos objetos estándar (propiedad JSON `fill`) o para los [objetos de "estilo personalizado"](#custom-button-custom-check-box-or-custom-radio-button) (propiedad JSON `borderFillColor`).
 
 :::note
 
@@ -231,6 +231,9 @@ En las [áreas de texto](./text.md) y las [áreas de entrada](./input_overview.m
 ![](../assets/en/FormObjects/radius-text.png)
 
 In [custom buttons](./button_overview.md#custom) (with a ["custom" Border Line Style](#border-line-style)), [custom check boxes](checkbox_overview.md#custom) and [custom radio buttons](radio_overview.md#custom), the corner radius is drawn **inside** the area of the object.
+
+![](../assets/en/FormObjects/custom-button.png)  
+![](../assets/en/FormObjects/custom-radius-runtime.png)
 
 #### Gramática JSON
 

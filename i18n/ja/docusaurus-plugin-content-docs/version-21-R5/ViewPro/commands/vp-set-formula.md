@@ -29,7 +29,7 @@ title: VP SET FORMULA
 *formula* 引数に、*rangeObj* 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。
 
 > *formula* が文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。
-> 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](vp-set-allowed-method.md) コマンドで許可されている必要があります。
+> 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](vp-set-allowed-methods.md) コマンドで許可されている必要があります。
 
 任意の *formatPattern* 引数は、*formula* に対する [パターン](../configuring.md#セルフォーマット) を定義します。
 

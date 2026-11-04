@@ -26,9 +26,33 @@ title: ボタングリッド
 
 ボタングリッドにページ指定用の `gotoPage` [標準アクション](/Desktop/standard-actions)を割り当てることができます。この標準アクションを設定すると、4D はボタングリッドで選択されたボタンの番号に相当するフォームページを自動的に表示します。たとえばグリッド上の 10 番目のボタンを選択すると、4D は現在のフォームの 10 ページ目を表示します (存在する場合)。
 
+## Supported standard actions
+
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected button number as described in [Goto page](#goto-page).
+
+See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+
 ## プロパティ一覧
 
-[Border color](./properties_BackgroundAndBorder.md#border-color) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows) - [Standard action](properties_Action.md#standard-action) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Width](properties_CoordinatesAndSizing.md#width) - [Visibility](properties_Display.md#visibility)
+¥[タイプ](properties_Object.md#タイプ) -
+[オブジェクト名](properties_Object.md#オブジェクト名) -
+[変数あるいは式](properties_Object.md#変数あるいは式) -
+[CSSクラス](properties_Object.md#cssクラス) -
+[行](properties_Crop.md#行) -
+[列](properties_Crop.md#列) -
+[左](properties_CoordinatesAndSizing.md#左) -
+[上](properties_CoordinatesAndSizing.md#上) -
+[右](properties_CoordinatesAndSizing.md#右) -
+[下](properties_CoordinatesAndSizing.md#下) -
+[幅](properties_CoordinatesAndSizing.md#幅) -
+[高さ](properties_CoordinatesAndSizing.md#高さ) -
+[横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) -
+[縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) -
+[表示状態](properties_Display.md#表示状態) -
+[境界線カラー](./properties_BackgroundAndBorder.md#border-color) -
+[境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) -
+[ヘルプTips](properties_Help.md#ヘルプtips) -
+[標準アクション](properties_Action.md#標準アクション)
 
 ## サポートされるイベント
 

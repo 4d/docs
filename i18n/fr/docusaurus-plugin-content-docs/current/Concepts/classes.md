@@ -164,6 +164,8 @@ Si les fonctions sont déclarées dans une [classe partagée](#shared-classes), 
 
 Dans le contexte d'une application client/serveur, le mot-clé `local` ou `server` permet de spécifier sur quelle machine la fonction doit être exécutée. Ces mots-clés ne peuvent être utilisés qu'avec les fonctions du modèle de données ORDA et les fonctions singleton partagées/session. Pour plus d'informations, reportez-vous au paragraphe [fonctions locales et serveur](#local-and-server) ci-dessous.
 
+In ORDA data model classes and singleton classes, the [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) keyword allows a function to be called by REST requests, and the `exposed MCP Function` declaration publishes the function as a tool of the [MCP server](../WebServer/mcp-server.md). The `MCP` keyword is supported in the DataStore class, DataClass and Entity classes, and shared singleton classes. A function declared with `MCP` but without `exposed` is not published. For more information, refer to [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
+
 Le nom de la fonction doit être conforme aux [règles de nommage des objets](Concepts/identifiers.md#object-properties).
 
 :::note
@@ -588,6 +590,251 @@ Class constructor ($side : Integer)
  Function getArea() -> $area : Integer
  $area:=This.height*This.width
 ```
+
+## Function comments
+
+You can document a class function or a class constructor with comment lines written right above its `Function` or `Class constructor` declaration. 4D reads this comment block and shows it in the code assistance of the [4D code editor](../code-editor/write-class-method.md#help-tips) and of VS Code (completion details, help tips, and signature help), together with the function signature. The same comments also provide the [MCP tool metadata](#mcp-tool-metadata) of the function.
+
+The comment block follows these rules:
+
+- It is made of `//` lines and/or a `/* */` block. Each line of a `/* */` block is handled like a `//` line, and the `/*` and `*/` markers are not displayed.
+- It must be placed immediately above the declaration. A blank line between the comment block and the declaration breaks the association: only the signature is displayed.
+- Each comment block is associated only with the next declaration, even when it is written right after the code of the previous function.
+- Only the saved code is read: after you edit a comment, the code assistance shows the new text once the class is saved.
+- The text is displayed as plain text: Markdown markers such as `**` or `*` are shown as written.
+
+Each line of the block is interpreted according to its beginning:
+
+| Ligne                                                                        | Description                                                                                                                                                                                                                 |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `// <text>`                                                                  | Description of the function. Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored. |
+| `// $name: <text>`                                                           | Description of the *$name* parameter.                                                                                                                                                                       |
+| `// {$name}: <text>`                                                         | Description of the *$name* parameter, marked as optional for MCP.                                                                                                                                           |
+| `// ...: <text>`                                                             | Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : Type`).                                                                                    |
+| `// param: $name <text>`, `// param: {$name} <text>`, `// param: ... <text>` | Same as `$name:`, `{$name}:`, and `...:` lines.                                                                                                                                                             |
+| `// MCP: <text>`                                                             | Description of the function for MCP only. Several `MCP:` description lines are combined in order.                                                                                           |
+| `// MCP: @tag {@tag}` or `// @tag {@tag}`                                    | MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is a description line.                          |
+
+A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters.
+
+The code assistance displays the description lines, then a blank line, then the parameter lines as written. `MCP:` lines are never displayed in the code assistance.
+
+When you [compile](../Project/compiler.md) the project, the compiler reports a [warning](../Project/compiler.md#warnings-on-function-comments) for each parameter of the signature that has no `$name:` or `{$name}:` line in the comment block, and for contradictory MCP behavior tags. Functions without a comment block are not checked.
+
+:::note
+
+Comment blocks are supported in project classes (including shared and singleton classes) and in component classes. For compiled components, the descriptions are provided by the [syntax file](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
+:::
+
+#### Exemple 1
+
+You want to document a function and its parameter so that they are displayed in the code editor:
+
+```4d
+// Class: Invoice
+
+// Returns the price with taxes
+// The rate is a percentage
+// $rate: tax rate to apply (20 for 20%)
+Function priceWithTaxes($rate : Real) : Real
+	return This.price*(1+($rate/100))
+```
+
+When you type `$invoice.priceWithTaxes(` in a method, the help displays the signature with:
+
+```
+Returns the price with taxes
+The rate is a percentage
+
+$rate: tax rate to apply (20 for 20%)
+```
+
+#### Exemple 2
+
+You want to document a class constructor with a `/* */` block:
+
+```4d
+// Class: Counter
+
+/*
+Creates a counter starting at a value
+$start: initial value of the counter
+*/
+Class constructor($start : Integer)
+	This.value:=$start
+```
+
+The description and the `$start:` line are displayed when you type `cs.Counter.new(`.
+
+### MCP tool metadata
+
+The comment blocks of `exposed MCP Function` declarations also describe these functions as MCP tools. When the project is compiled, 4D generates the `Project/DerivedData/syntaxMCP.json` file, which contains the metadata of these tools in a `toolList` array.
+
+Only functions of the following classes are listed:
+
+- the DataStore class,
+- DataClass and Entity classes,
+- classes Singleton.
+
+Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed MCP Function`, are not listed, even if their comment block contains `MCP:` lines.
+
+:::note
+
+If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
+
+:::
+
+The [MCP server](../WebServer/mcp-server.md) of 4D builds its tool catalog from the same comment blocks and the same type conversions, using the running code: in interpreted mode, a function you add or modify is published at the next `tools/list` request, without restarting. The catalog of the MCP server also adds the elements needed to call the tools, such as a `key` argument for Entity class functions and `"additionalProperties": false` in `inputSchema` (see [Tool catalog](../WebServer/mcp-server.md#tool-catalog)). The following functions are not published, and 4D logs a message:
+
+- a function whose tool name is longer than 64 characters, contains characters other than letters, digits, `_` and `-`, or is the name of another tool (including a built-in CRUD tool),
+- an Entity class function that declares a `$key` parameter,
+- a function that declares both a `$args` parameter and variadic parameters.
+
+A function without description is published, and 4D logs a warning.
+
+Each tool of the `toolList` array is an object with the following properties:
+
+| Propriété      | Description                                                                                                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`         | Name of the tool: the function name for a DataStore class function, `ClassName-functionName` for other classes                                                                |
+| `description`  | Text of the `MCP:` description lines, or the description lines if there is no `MCP:` description. Omitted if there is no description                                          |
+| `inputSchema`  | `{"type": "object", "properties": {...}, "required": [...]}`: one property per parameter of the signature, named without the `$`, with the parameter comment as `description` |
+| `outputSchema` | Schema of the return type. Omitted if the function returns nothing or a Variant                                                                                               |
+| `annotations`  | Behavior hints derived from the `MCP:` behavior tags                                                                                                                                          |
+
+In `inputSchema`:
+
+- every parameter is listed in `required`, except those documented with a `{$name}:` line. `required` is omitted if it is empty.
+- typed variadic parameters (`... : Type`) are represented by an optional `args` property of type `array`, whose `items` have the schema of *Type*. The `...:` line is its description.
+
+Parameter and return types are converted to JSON Schema as follows:
+
+| 4D type                                | JSON Schema                                                 |
+| -------------------------------------- | ----------------------------------------------------------- |
+| Text                                   | `{"type": "string"}`                                        |
+| Integer                                | `{"type": "integer"}`                                       |
+| Real                                   | `{"type": "number"}`                                        |
+| Boolean                                | `{"type": "boolean"}`                                       |
+| Date                                   | `{"type": "string", "format": "date"}`                      |
+| Time                                   | `{"type": "integer", "description": "duration in seconds"}` |
+| Object, class instance                 | `{"type": "object"}`                                        |
+| Collection                             | `{"type": "array"}`                                         |
+| Blob, 4D.Blob, Picture | `{"type": "string", "contentEncoding": "base64"}`           |
+| Variant, or no type                    | `{}`                                                        |
+
+The supported behavior tags are converted to annotations as follows:
+
+| Tag            | Annotation                 |
+| -------------- | -------------------------- |
+| `@readOnly`    | `"readOnlyHint": true`     |
+| `@destructive` | `"destructiveHint": true`  |
+| `@additive`    | `"destructiveHint": false` |
+| `@idempotent`  | `"idempotentHint": true`   |
+| `@openWorld`   | `"openWorldHint": true`    |
+
+`openWorldHint` is always present: it is `false` if `@openWorld` is not used. Other hints are omitted when their tag is not used. `@readOnly`, `@destructive`, and `@additive` contradict each other: if a function uses two or more of them, the compiler reports a warning and the corresponding hints are omitted. Unknown tags are ignored.
+
+#### Exemple 3
+
+You document the MCP tools of a `DateTime` singleton class:
+
+```4d
+// Class: DateTime
+
+singleton Class constructor()
+	This.date:=Current date
+
+// Adds a number of days to the date
+// MCP: Add days to the date-time
+// $days: number of days to add (negative to subtract)
+exposed MCP Function addDays($days : Integer) : Date
+	This.date:=Add to date(This.date; 0; 0; $days)
+	return This.date
+
+// Adds zero or more day offsets to the date and returns the updated date
+// MCP: Add day offsets to the date-time
+// MCP: @idempotent
+// ...: day offsets to add (negative to subtract)
+exposed MCP Function addDayOffsets(... : Integer) : Date
+	var $offsetIndex; $totalDays : Integer
+	For ($offsetIndex; 1; Count parameters)
+		$totalDays+=${$offsetIndex}
+	End for
+	This.date:=Add to date(This.date; 0; 0; $totalDays)
+	return This.date
+```
+
+After compilation, `Project/DerivedData/syntaxMCP.json` contains:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
+        },
+        "required": ["days"]
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "openWorldHint": false }
+    },
+    {
+      "name": "DateTime-addDayOffsets",
+      "description": "Add day offsets to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "day offsets to add (negative to subtract)"
+          }
+        }
+      },
+      "outputSchema": { "type": "string", "format": "date" },
+      "annotations": { "idempotentHint": true, "openWorldHint": false }
+    }
+  ]
+}
+```
+
+#### Exemple 4
+
+You want to read the names of the MCP tools generated by the last compilation:
+
+```4d
+var $file : 4D.File:=File("/PACKAGE/Project/DerivedData/syntaxMCP.json")
+var $metadata : Object:=JSON Parse($file.getText())
+var $names : Collection:=$metadata.toolList.extract("name")
+// $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
+```
+
+#### Exemple 5
+
+You document a tool with `param:` lines and a behavior tag line without the `MCP:` prefix:
+
+```4d
+// Class: Stock
+
+shared singleton Class constructor()
+
+// Returns the quantity in stock of a product
+// param: $reference reference of the product
+// param: {$warehouse} code of the warehouse (all warehouses if omitted)
+// @readOnly
+exposed MCP Function getQuantity($reference : Text; $warehouse : Text) : Integer
+	If ($warehouse="")
+		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
+	End if
+	return ds.Stock.query("reference = :1 and warehouse = :2"; $reference; $warehouse).sum("quantity")
+```
+
+The `Stock-getQuantity` tool has a required `reference` property, an optional `warehouse` property, and the `"readOnlyHint": true` annotation.
 
 ## Commandes de fonctions de classe
 

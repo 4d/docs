@@ -58,7 +58,7 @@ myBoolean:=(myButton=1)
 | false | true  | true                                   |
 | false | false | false                                  |
 
-**Tip:** 式1と式2の排他的結合子演算を実行する必要がある場合、次の評価式を使用します:
+**Tip:** 式1と式2の排他的論理和を実行する必要がある場合、次の評価式を使用します:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  

@@ -1,17 +1,17 @@
 ---
 id: ordering
-title: コレクションとオブジェクトの並び替え
+title: コレクションとオブジェクトの並べ替え
 ---
 
 一連のデータをソートするために、4D はデータの型に応じて定義された比較条件を適用することで、それぞれの値を他の値と比較します([並べ替えルール](#並べ替えルール) を参照してください)。このプロセスは全ての要素に渡って総合的な並べ替えを確立するためのソートアルゴリズムに依存しています。全てのデータが同じ [データ型](./data-types.md) に所属している場合、比較ルールは単純で正確に定義されています。
 
-しかしながら、[コレクション](./dt_collection.md) および [entity selections](../ORDA/dsMapping.md#エンティティセレクション) も含めた [オブジェクト](./dt_object.md) は異種の型の要素や属性を格納することが可能です: これにはスカラー型(テキスト、数値、ブール、日付、) あるいは複雑型(オブジェクト、Blob、コレクション) が含まれます。異なる種類の値を格納しているコレクションやオブジェクトの並べ替えをする場合、4D は戦略的な並べ替えスキームを適用します。まず最初に要素を型ごとに並べ替えし、その次に各型ごとの中で比較ルールを適用します。
+しかしながら、[コレクション](./dt_collection.md) および [entity selections](../ORDA/dsMapping.md#エンティティセレクション) も含めた [オブジェクト](./dt_object.md) は異種の型の要素や属性を格納することが可能です: これにはスカラー型(テキスト、数値、ブール、日付、) あるいは複雑型(オブジェクト、Blob、コレクション) が含まれます。異なる種類の値を格納しているコレクションやオブジェクトの並べ替えをする場合、4D は階層化された並べ替え方式を適用します。まず最初に要素を型ごとに並べ替えし、その次に各型ごとの中で比較ルールを適用します。
 
 ## 並べ替え機能
 
 4D ランゲージには、コレクション要素、オブジェクト属性をソートしたり、あるいは順序づけされた結果のためのソートを作成することに依存する複数の機構を提供します:
 
-- **コレクションの並べ替え用関数**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (明示的なキーと並べ替え指定を使用した複数条件並べ替え)、[`collection.orderBy()`](../API/CollectionClass.md#orderby) (各要素に対して式を評価することによる並べ替え)、 [`collection.sort()`](../API/CollectionClass.md#sort) (自然な並べかリレーションによるインプレースなソート)
+- **コレクションの並べ替え用関数**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (キーと順序を明示的に指定する多条件ソート)、[`collection.orderBy()`](../API/CollectionClass.md#orderby) (各要素に対して式を評価することによるソート)、 [`collection.sort()`](../API/CollectionClass.md#sort) (自然な順序関係によるインプレースなソート)
 - **エンティティセレクションの並べ替え用関数**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)、コレクションと同じ並べ替えルールを適用します。
 - **並べ替え付きのクエリ関数**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query)、 [`dataClass.query()`](../API/DataClassClass.md#query) に対して `order by attributePath` キーワードを使用すると決定的な順序で結果を返します。
 - **順序依存の統計関数**: [`collection.max()`](../API/CollectionClass.md#max)、 [`collection.min()`](../API/CollectionClass.md#min)、 [`entitySelection.max()`](../API/EntitySelectionClass.md#max)、 [`entitySelection.min()`](../API/EntitySelectionClass.md#min)、 これらは極値を識別するために順序関係に依存します。

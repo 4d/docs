@@ -38,7 +38,7 @@ To retrieve the associated class name at runtime, use the [`classID`](../API/Dat
 
 Se você atribuir `4D.Vector` como a classe de um campo do tipo Object, você define um **campo vetor**. Esses campos armazenam embeddings e podem ser usados para consultar dados usando recursos de IA. Consulte a documentação da [classe `4D.Vector`](../API/VectorClass.md) para ver como consultar com vetores.
 
-Observe que o componente [**4D Embedding Studio**](corner.4d.com/component/4d-embedding-studio) pode ajudar você a configurar e atualizar seus campos 4D.Vector.
+Observe que o componente [**4D Embedding Studio**](https://corner.4d.com/component/4d-embedding-studio) pode ajudar você a configurar e atualizar seus campos 4D.Vector.
 
 Quando você atribui `4D.Vector` como a classe de um campo do tipo Object, um ícone específico é exibido como tipo de campo no editor de Estrutura: ![](../assets/en/Develop/ai-icon.png)
 

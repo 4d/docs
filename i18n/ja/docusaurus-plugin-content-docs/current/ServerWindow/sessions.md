@@ -27,7 +27,7 @@ title: セッションページ
 - **ログイン日**: セッションが確立された日付と時刻。
 - **CPU時間**: セッションが作成されてから消費したCPU 時間。
 - **Activity**: セッションに対して現在割り当てられているサーバーアクティビティの割合(動的な値)。
-- **ステータス**: セッションのステータス。クライアントセッションの場合、**オンライン**、 **[スリープ中](../Desktop/clientServer.md#スリープしたクライアントセッションの管理)**あるいは **[クライアント接続不可](../Desktop/clientServer.md#到達不能なピアの管理)** のいずれかになります。 Web、REST、およびSOAP セッションは常に**オンライン** ステータスとなります。
+- **ステータス**: セッションのステータス。 Client sessions can be **Online**, **[Sleeping](#management-of-sleeping-client-sessions)**, or **[Unreachable](#management-of-unreachable-peer)**. Web、REST、およびSOAP セッションは常に**オンライン** ステータスとなります。
 
 セッションが選択されていれば追加の情報が詳細パネル内に表示されます。
 

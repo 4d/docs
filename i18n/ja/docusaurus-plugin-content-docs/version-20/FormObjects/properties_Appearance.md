@@ -31,9 +31,9 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ---
 
-## Display formula source as symbol
+## フォーミュラのソースを記号として表示
 
-Displays source text of formulas as symbols when expressions are shown as references.
+式が参照として表示される場合、フォーミュラのソーステキストを記号として表示します。
 
 #### JSON 文法
 
@@ -47,7 +47,7 @@ Displays source text of formulas as symbols when expressions are shown as refere
 
 #### コマンド
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## フォーカスの四角を隠す
 
@@ -133,7 +133,7 @@ Displays source text of formulas as symbols when expressions are shown as refere
 
 ---
 
-## Show background and anchored elements
+## 背景とアンカーされた要素を表示
 
 ページの背景画像および背景色を表示/非表示にします。
 
@@ -149,9 +149,9 @@ Displays source text of formulas as symbols when expressions are shown as refere
 
 ---
 
-## Show empty or unsupported images
+## 空またはサポートされていない画像を表示
 
-Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+読み込めない、あるいは計算できない画像(空の画像またはサポートされていないフォーマットの画像)に対してデフォルトの黒い四角形を表示したり非表示にします。
 
 #### JSON 文法
 
@@ -165,7 +165,7 @@ Displays/hides a black rectangle for images that cannot be loaded or computed (e
 
 #### コマンド
 
-[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+WP Get view properties - WP SET VIEW PROPERTIES
 
 ## フッター表示
 

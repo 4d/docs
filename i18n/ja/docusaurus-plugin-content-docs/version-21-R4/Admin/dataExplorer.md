@@ -86,7 +86,7 @@ title: データエクスプローラー
   - すべての属性タイプが表示されます (画像、オブジェクト (json で表現) や、[計算属性](../ORDA/ordaClasses.md#計算属性-1) と [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) も含む)。
   - リレートデータ (N対1 および 1対Nリレーション) は、展開/折りたたみ可能なエリアで表示できます:<br/>
     ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - 右側のエリアでリレート属性名を **Ctrl+Click** (Windows) または **Command+Click** (macOS) すると、その属性値がフローティングエリアに表示されます):<br/>
+  - 右側のエリアでリレート属性名を **Ctrl+Click** (Windows) または **Command+Click** (macOS) すると、その属性値がフローティングエリアに表示されます:<br/>
     ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
 ### エンティティの並べ替え
@@ -204,7 +204,7 @@ firstname = "Marie Sophie" AND manager.lastname = "@th"
 
 ### 値の入力
 
-**Allow editing** セレクターが特定のデータクラスに対して有効になっている場合、**Details** エリアで、そのデータクラスの新規または選択されたエンティティの値を専用ウィジェットを使って入力することができます。
+**Allow editing** セレクターが特定のデータクラスに対して有効になっている場合、右側の **詳細エリア** で、そのデータクラスの新規または選択されたエンティティの値を専用ウィジェットを使って入力することができます。
 
 次のスカラー属性値が編集できます:
 

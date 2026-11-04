@@ -13,8 +13,8 @@ As páginas Cliente-servidor agrupam parâmetros relacionados ao uso do banco de
 
 Essa opção permite que você indique se o banco de dados do 4D Server aparecerá ou não na lista de bancos de dados publicados.
 
-- When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
-- Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Personalizado** da caixa de diálogo de conexão.
+-   When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
+-   Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Personalizado** da caixa de diálogo de conexão.
 
 :::note
 
@@ -39,7 +39,7 @@ Essa opção permite mudar o número da porta TCP na qual o 4D Server publica o 
 A personalização desse valor é necessária quando se deseja usar vários aplicativos 4D na mesma máquina; nesse caso, é necessário especificar um número de porta diferente para cada aplicativo.
 Quando você modifica esse valor no 4D Server ou no 4D, ele é automaticamente transmitido a todas as máquinas 4D conectadas ao banco de dados.
 
-Para actualizar las otras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos puntos) después de la dirección IP del equipo servidor en la pestaña **Personalizado** de la caja de diálogo de conexión  Por exemplo, se o novo número de porta é 19888: Por exemplo, se o novo número de porta é 19888:
+Para actualizar las outras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos puntos) después de la dirección IP del equipo servidor en la pestaña **Personalizado** de la caja de diálogo de conexión  Por exemplo, se o novo número de porta é 19888: Por exemplo, se o novo número de porta é 19888:
 
 ![](../assets/en/settings/client-server-network.png)
 
@@ -136,7 +136,7 @@ Essa configuração pode ser usada para definir globalmente o modo de atualizaç
 - **Nunca**: a pasta local **Resources** não é atualizada durante a sessão. A notificação enviada pelo servidor é ignorada. A pasta local **Resources** pode ser atualizada manualmente com o comando do menu de ação **Update Local Resources** (consulte [Usando o explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Sempre**: a sincronização da pasta **Resources** local é realizada automaticamente durante a sessão sempre que a notificação é enviada pelo servidor.
 - **Perguntar**: quando a notificação for enviada pelo servidor, uma caixa de diálogo é exibida nas máquinas de cliente, indicando a modificação. O usuário pode então aceitar ou recusar a sincronização da pasta local **Resources**.\
-  A pasta **Resources** centraliza os arquivos personalizados necessários para a interface do banco de dados (arquivos de tradução, imagens, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](../Desktop/clientServer.md#managing-the-resources-folder).
+  A pasta **Resources** centraliza os arquivos personalizados necessários para a interface do banco de dados (arquivos de tradução, imagens, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Resources folder](../Desktop/clientServer.md#resources-folder).
 
 ## Página Configuração IP
 

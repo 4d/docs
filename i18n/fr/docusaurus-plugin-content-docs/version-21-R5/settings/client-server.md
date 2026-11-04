@@ -135,7 +135,7 @@ Ce paramètre permet de définir globalement le mode de mise à jour de l'instan
 - **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Toujours** : La synchronisation du dossier local **Resources** est automatiquement effectuée pendant la session chaque fois qu'une notification est envoyée par le serveur.
 - **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. L'utilisateur peut ensuite accepter ou refuser la synchronisation du dossier **Resources** local.\
-  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, veuillez consulter la section [Gestion du dossier Resources](../Desktop/clientServer.md#managing-the-resources-folder).
+  Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base de données (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. For more information, please refer to the [Resources folder](../Desktop/clientServer.md#resources-folder) section.
 
 ## Page Configuration IP
 

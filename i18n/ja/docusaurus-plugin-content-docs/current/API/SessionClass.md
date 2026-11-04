@@ -18,7 +18,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
+- [**Webユーザーセッション**](../WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](../WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 They are used for Web connections (including REST access and [MCP server](../WebServer/mcp-server.md) access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、クライアントおよびサーバーから管理される独自のセッションを持ちます。
 - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
 - [**スタンドアロンセッション**](../Desktop/sessions.md#standalone-sessions): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
@@ -83,7 +83,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- この関数は [roles.json](../ORDA/privileges.md#rolesjsonファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
+- この関数は [roles.json](../ORDA/privileges.md#rolesjson-ファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
 - セキュリティ上の理由から、この関数はリモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
@@ -501,6 +501,7 @@ End if
 
 | リリース  | 内容                           |
 | ----- | ---------------------------- |
+| 21 R6 | New "mcp" session type       |
 | 21 R4 | 新しい *unreachableSince* プロパティ |
 | 20 R5 | 追加                           |
 
@@ -518,19 +519,19 @@ End if
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                               |
-| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                  |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                       |
-| machineName      | Text                             | <ul><li>リモートセッション: リモートマシン名。</li><li>クライアントセッション: ローカルマシン名</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li> スタンドアロンセッション: マシンの名前</li></ul>         |
-| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前。</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                     |
-| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                            |
-| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                          |
-| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                 |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                      |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                |
-| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                   |
-| unreachableSince | Integer                          | リモートセッション: ピアが到達不能になってから経過した秒数。 4D Server 上では、この属性は[`Process activity.sessions`](../commands/process-activity) プロパティ内から読み出し可能です。 |
+| プロパティ            | 型                                | 説明                                                                                                                                                                                      |
+| ---------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | Session type: "remote", "storedProcedure", "standalone", "rest", "web", "mcp" (session of the [MCP server](../WebServer/mcp-server.md#mcp-sessions)) |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                              |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシン名。</li><li>クライアントセッション: ローカルマシン名</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li> スタンドアロンセッション: マシンの名前</li></ul>                                                |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前。</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                                                            |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                                                                   |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                                                                 |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                                                                        |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                             |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値)                                                                                                                                        |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                                                                          |
+| unreachableSince | Integer                          | リモートセッション: ピアが到達不能になってから経過した秒数。 4D Server 上では、この属性は[`Process activity.sessions`](../commands/process-activity) プロパティ内から読み出し可能です。                                        |
 
 :::note
 
@@ -539,6 +540,16 @@ End if
 :::
 
 このプロパティは **読み取り専用** です。
+
+#### 例題
+
+You run specific code for the requests of MCP clients:
+
+```4d
+If (Session.info.type="mcp")
+	// the request comes from an MCP client through the MCP server
+End if
+```
 
 <!-- END REF -->
 
