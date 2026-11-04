@@ -319,6 +319,7 @@ title: (
         </Link>
         <Link to="embedding-studio/overview">
           <Translate>4D Embedding Studio</Translate>
+          <span style={{ backgroundColor: '#e8590c', color: '#fff', fontSize: '0.65rem', fontWeight: 700, padding: '1px 5px', borderRadius: 4, marginLeft: '0.4rem', verticalAlign: 'middle' }}>new!</span>
         </Link>
         <Link to="https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md">
           <Translate>4D Mobile App Server</Translate> <i class="fa-solid fa-up-right-from-square"></i>
