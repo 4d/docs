@@ -106,7 +106,7 @@ When using 4D in client/server mode, it is **strongly recommended** to execute A
 
 ## Model Aliases
 
-The Model Aliases page allows you to list models from registered Providers that you want to use in your code and to name them with *aliases*. Thanks to model aliases, you avoid hardcoding model names, switch models without changing your code, and keep consistency across environments.
+The Model Aliases page allows you to list models from registered Providers that you want to use in your code and to name them with *aliases*. Thanks to model aliases, you avoid hardcoding model names, switch models without changing your code, and keep consistency across environments. Model aliases are also fully supported by the [4D Embedding Studio](../embedding-studio/overview.md) component. 
 
 When using a model alias:
 
@@ -144,9 +144,9 @@ To edit or remove an alias:
 
 ### Using a model alias
 
-You can directly use the model alias name wherever a model name is required (provided that model aliases are supported). 
+You can directly use the model alias name wherever a model name is required (provided that model aliases are supported). Examples:
 
-For example, in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
+- in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
@@ -154,6 +154,7 @@ var $result := $client.chat.completions.create($messages; \
     {model: "Chat Model"})
 ```
 
+- in 4D Embedding Studio, the [list of models](../embedding-studio/overview.md#selecting-a-model) available for generating embeddings includes the model aliases. 
 
 
 ### See also
