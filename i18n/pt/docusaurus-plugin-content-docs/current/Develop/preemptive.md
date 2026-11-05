@@ -41,7 +41,7 @@ Dado que um thread se maneja de forma independente a partir do método processo 
 
 A propriedade "segurança de fio" de cada elemento depende do elemento em si:
 
-- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands/command-name) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
+- Comandos 4D: thread seguro é uma propriedade interna. A documentação do 4D indica se cada comando é thread-safe ou não na seção Propriedades. Você também pode usar o comando [`Command name`](../commands/command-name) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
 - Métodos de projeto: as condições para segurança de thread se listam no [este parágrafo](#writing-a-thread-safe-method).
 
 Basicamente, o código que se executa em thread apropriativos não podem ser chamados as partes com as interações externas, tal como o código plug-in ou as variáveis interprocesso. Os acessos aos dados, entretanto, são permitidos desde o servidor de dados 4D que suporta a execução apropriativa.
@@ -76,7 +76,7 @@ Note que com essa opção, independentemente da avaliação interna de seguranç
 
 :::note Caso particular
 
-Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**. Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/project-method-properties.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe.
+Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/project-method-properties.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
 
 :::
 
@@ -188,13 +188,13 @@ Como são acessos "externos", as chamadas para objetos da interface do usuário,
 
 Os únicos acessos possíveis à interface do usuário de um thread preemptivo são:
 
-- [Diálogo de erro padrão](.../Debugging/basics). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). O botão **Rastreamento** está desativado.
+- [Diálogo de erro padrão](../Debugging/basics). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). O botão **Rastreamento** está desativado.
 - Indicadores de progresso padrão
-- Diálogos `ALERT`, `Request` e `CONFIRM`. A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server).
+- Diálogos `ALERT`, `Request` e `CONFIRM`. A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). Note que se o 4D Server foi iniciado como um serviço no Windows sem interação do usuário permitida, as caixas de diálogo não serão exibidas.
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+Quando um método utiliza um comando que pode chamar um [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), o compilador 4D avalia a segurança de thread do trigger para verificar a segurança de thread do método:
 
 ```4d
  SALVAR RECORD([Table_1]) //trigger na Table_1, se ele existir, deve ser seguro por thread-safe
@@ -217,7 +217,7 @@ Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for de
 
 :::note
 
-Em as [aplicações client/servidor](../Desktop/clientServer.md), os triggers podem ser executados em modo cooperativo, mesmo que o código deles seja thread-safe. Since this process is used for all calls from the client, it is always executed in cooperative mode. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine.
+Em as [aplicações client/servidor](../Desktop/clientServer.md), os triggers podem ser executados em modo cooperativo, mesmo que o código deles seja thread-safe. Isso acontece quando um trigger é ativado a partir de um processo remoto: nesse caso, o trigger é executado no ["processo gêmeo" do processo cliente](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) na máquina do servidor. Como esse processo é usado para todas as chamadas do cliente, ele é sempre executado em modo cooperativo.
 
 :::
 
