@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
 ## Descripción 
@@ -102,3 +101,11 @@ El siguiente ejemplo recorre una selección de entidades y crea una vista previa
 [Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
 [WP Get data context](../commands/wp-get-data-context)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1786 |
+| Hilo seguro | yes |

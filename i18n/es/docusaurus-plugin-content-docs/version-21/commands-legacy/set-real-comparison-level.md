@@ -53,6 +53,6 @@ Utilizando **SET REAL COMPARISON LEVEL**, puede aumentar o reducir el valor epsi
 |  |  |
 | --- | --- |
 | Número de comando | 623 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 

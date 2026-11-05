@@ -83,4 +83,12 @@ Windows でのMDI アプリケーションの場合、 *winRef* 引数に`-1` �
 
 ## 参照
 
-[Create entity selection](../commands/create-entity-selection)
+[Create entity selection](../commands/create-entity-selection)  
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1840 |
+| スレッドセーフである | no |

@@ -66,7 +66,7 @@ El siguiente ejemplo coloca el nombre y número de referencia para cada proceso 
 |  |  |
 | --- | --- |
 | Número de comando | 330 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 
 

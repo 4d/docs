@@ -54,4 +54,12 @@ En caso de error, el comando genera un código que puede ser interceptado con el
 
 ## Ver también
 
-[SELECT LOG FILE](../commands/select-log-file)
+[SELECT LOG FILE](../commands/select-log-file)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 926 |
+| Hilo seguro | yes |

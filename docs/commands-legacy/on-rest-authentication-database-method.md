@@ -40,11 +40,3 @@ displayed_sidebar: docs
 The [Force login authentication](../REST/authUsers.md) is now highly recommended. In converted projects, you can upgrade your configuration by clicking on the [**Activate REST authentication through ds.authentify() function**](../settings/web.md#access) settings button. See also [this blog post](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/) to know how to migrate your code if necessary.
 
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 3367 |
-| Thread safe | no |
-
-

@@ -1153,4 +1153,4 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 |  |  |
 | --- | --- |
 | Número de comando | 643 |
-| Hilo seguro | no |
+| Hilo seguro | yes (partially) |

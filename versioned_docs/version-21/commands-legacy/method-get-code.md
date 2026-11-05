@@ -140,6 +140,6 @@ The resulting document will contain:
 |  |  |
 | --- | --- |
 | Command number | 1190 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

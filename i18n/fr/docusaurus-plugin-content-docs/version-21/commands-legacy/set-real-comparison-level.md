@@ -53,6 +53,6 @@ Modifier l'epsilon affecte seulement la comparaison d'égalité des réels. Cela
 |  |  |
 | --- | --- |
 | Numéro de commande | 623 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

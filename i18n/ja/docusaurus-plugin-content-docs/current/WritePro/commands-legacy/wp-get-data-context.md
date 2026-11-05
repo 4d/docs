@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
 ## 説明 
@@ -64,3 +63,11 @@ method2 の中身は、例えば以下のようになっています:
 
   
 [WP SET DATA CONTEXT](../commands/wp-set-data-context)  
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1787 |
+| スレッドセーフである | yes |

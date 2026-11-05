@@ -54,7 +54,7 @@ The command returns `null` if it is called in a request that does not originate 
 |  |  |
 | --- | --- |
 | Command number | 1735 |
-| Thread safe | no |
+| Thread safe | yes |
 
 
 

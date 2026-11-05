@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 
 ## Description 
@@ -70,3 +69,11 @@ For more details, please refer to *Merging and splitting cells*.
 
 *Handling tables*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1815 |
+| Thread safe | yes |

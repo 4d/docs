@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 
 ## Description 
@@ -97,3 +96,14 @@ The following example loops through an entity selection and creates a print prev
 [Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get data context](wp-get-data-context.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1786 |
+| Thread safe | yes |
+
+
+

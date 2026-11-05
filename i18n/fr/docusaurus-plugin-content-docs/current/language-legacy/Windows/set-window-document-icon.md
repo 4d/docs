@@ -83,4 +83,12 @@ Dans cet exemple, nous voulons créer quatre fenêtres :
 
 ## Voir également
 
-[Create entity selection](../commands/create-entity-selection)
+[Create entity selection](../commands/create-entity-selection)  
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1840 |
+| Thread safe | no |

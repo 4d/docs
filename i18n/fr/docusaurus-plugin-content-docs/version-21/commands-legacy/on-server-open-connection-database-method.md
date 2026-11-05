@@ -146,14 +146,4 @@ L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du mat
  Else
     $result:=0
  End if
-```
-
-
-## Propriétés
-
-|  |  |
-| --- | --- |
-| Numéro de commande | 16001 |
-| Thread safe | no |
-
-
+```  

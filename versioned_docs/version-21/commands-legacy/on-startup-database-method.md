@@ -47,12 +47,3 @@ See the example in the [Semaphore](semaphore.md) section.
 *Database Methods*  
 [On Exit database method](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 905263 |
-| Thread safe | no |
-
-

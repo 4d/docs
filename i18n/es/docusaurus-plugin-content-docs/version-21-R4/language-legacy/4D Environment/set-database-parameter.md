@@ -1142,4 +1142,4 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D convertida. Note 
 |  |  |
 | --- | --- |
 | Número de comando | 642 |
-| Hilo seguro | no |
+| Hilo seguro | yes (partially) |

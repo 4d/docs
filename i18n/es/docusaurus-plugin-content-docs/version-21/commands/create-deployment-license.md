@@ -124,6 +124,6 @@ Designar una licencia de uso:
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1811 |
-| Hilo seguro       | no   |
+| Hilo seguro       | yes   |
 
 

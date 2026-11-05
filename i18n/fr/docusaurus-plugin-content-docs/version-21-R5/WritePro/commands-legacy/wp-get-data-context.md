@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
 ## Description 
@@ -64,3 +63,11 @@ méthode2 pourrait avoir le contenu suivant :
 
   
 [WP SET DATA CONTEXT](../commands/wp-set-data-context)  
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1787 |
+| Thread safe | yes |

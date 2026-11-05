@@ -46,12 +46,3 @@ displayed_sidebar: docs
 [On Exitデータベースメソッド](on-exit-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 *データベースメソッド*  
-
-## プロパティ
-
-|  |  |
-| --- | --- |
-| コマンド番号 | 905263 |
-| スレッドセーフである | no |
-
-

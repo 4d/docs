@@ -143,14 +143,4 @@ The following example prevents any new connection from 2 to 4 A.M.
  Else
     $result:=0
  End if
-```
-
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 16001 |
-| Thread safe | no |
-
-
+```  

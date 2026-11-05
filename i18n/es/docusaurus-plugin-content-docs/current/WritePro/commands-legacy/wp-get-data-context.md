@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
 ## Descripción 
@@ -64,3 +63,11 @@ method2 podría ser algo así:
 
   
 [WP SET DATA CONTEXT](../commands/wp-set-data-context)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1787 |
+| Hilo seguro | yes |

@@ -66,6 +66,6 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1674 |
-| Hilo seguro       | no   |
+| Hilo seguro       | yes   |
 
 

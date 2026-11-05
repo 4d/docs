@@ -1522,4 +1522,4 @@ En el [Método base On Startup](../commands/metodo-base-on-startup), usted escri
 |  |  |
 | --- | --- |
 | Número de comando | 643 |
-| Hilo seguro | no |
+| Hilo seguro | yes (partially) |

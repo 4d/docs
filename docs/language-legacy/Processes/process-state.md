@@ -66,7 +66,7 @@ The following example puts the name and process reference number for each proces
 |  |  |
 | --- | --- |
 | Command number | 330 |
-| Thread safe | no |
+| Thread safe | yes |
 
 
 

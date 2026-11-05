@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-<h2 data-noindex>Description</h2>
+## Description
 
 
 <!--REF #_command_.Get database localization.Summary-->The Get database localization command returns the database default language or the language specified by the *languageType*, expressed in the standard defined by the RFC 3066\.<!-- END REF--> Typically, the command returns “en” for English, “es” for Spanish, etc. For more information about this standard and the values returned by this command, please refer to *Appendix B: XLIFF architecture* in the *Design Reference* manual.
@@ -61,12 +61,13 @@ The current language of the database determines the .lproj folder where the prog
 
 **Note:** If the database does not have an .lproj folder, 4D applies the following order of priority: 1\. System language, 2\. English (if the system language cannot be identified).
 
-<h2 data-noindex>See also</h2>
+## See also
 
 [Localized document path](../commands/localized-document-path)  
 [SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
-<h2 data-noindex>Properties</h2>
+
+## Properties
 
 |  |  |
 | --- | --- |

@@ -107,12 +107,3 @@ The following example shows a typical case where you launch one or more backgrou
 
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 905252 |
-| Thread safe | no |
-
-

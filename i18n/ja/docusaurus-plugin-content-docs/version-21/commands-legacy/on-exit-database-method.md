@@ -108,12 +108,3 @@ displayed_sidebar: docs
 
 [On Startupデータベースメソッド](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
-
-## プロパティ
-
-|  |  |
-| --- | --- |
-| コマンド番号 | 905252 |
-| スレッドセーフである | no |
-
-

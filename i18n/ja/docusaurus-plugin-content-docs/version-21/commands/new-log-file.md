@@ -52,4 +52,12 @@ displayed_sidebar: docs
 
 ## 参照
 
-[SELECT LOG FILE](select-log-file.md)
+[SELECT LOG FILE](select-log-file.md)  
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 926 |
+| スレッドセーフである | yes |

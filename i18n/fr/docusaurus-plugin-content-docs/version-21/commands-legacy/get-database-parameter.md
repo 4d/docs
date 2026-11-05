@@ -1093,6 +1093,6 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 |  |  |
 | --- | --- |
 | Numéro de commande | 643 |
-| Thread safe | no |
+| Thread safe | yes (partially) |
 
 

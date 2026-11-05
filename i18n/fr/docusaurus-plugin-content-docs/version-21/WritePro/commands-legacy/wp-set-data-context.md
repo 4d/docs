@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
 ## Description 
@@ -97,3 +96,11 @@ L'exemple suivant fait une boucle à travers une *entity selection* et crée un 
 [Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get data context](wp-get-data-context.md)  
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1786 |
+| Thread safe | yes |

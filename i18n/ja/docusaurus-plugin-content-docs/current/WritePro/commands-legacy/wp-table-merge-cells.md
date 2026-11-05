@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
 ## 説明 
@@ -70,3 +69,11 @@ If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数�
 
 [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  
 *表の管理*  
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1815 |
+| スレッドセーフである | yes |

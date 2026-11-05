@@ -113,7 +113,7 @@ Utilizando las tablas del **Ejemplo 1**:
 |  |  |
 | --- | --- |
 | Número de comando | 1576 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 
 
