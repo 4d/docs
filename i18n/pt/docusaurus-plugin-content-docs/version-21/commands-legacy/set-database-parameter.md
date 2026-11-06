@@ -424,9 +424,7 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 
 **Se conserva entre duas sessões**: não
 
-**Valores possíveis**: 1 a 9 (1 = mais rápido, 9 = mais comprimido) ou -1 = o mejor compromiso.
-
-**Descrição**: nível de compressão para todos os intercambios HTTP comprimidos efetuados para os serviços web (petições cliente ou respostas servidor). Os intercâmbios comprimidos são uma otimização que pode implementar quando tiver duas aplicações 4D que se comunicam através serviços web (ver o comando *SET WEB SERVICE OPTION*). Este seletor lhe permite otimizar os intercâmbios n seja privilegiando a velocidade de execução (menor compressão) ou a quantidade de compressão (menor velocidade). A escolha de um valor depende do tamanho e da natureza dos dados intercambiados. Passe de 1 a 9 no parâmetro valor onde 1 é a compressão mais rápida e 9 a mais alta. Também pode passar -1 para obter um compromisso entre velocidade e taxa de compressão. Por padrão, o nível de compressão é 1 (compressão rápida).
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
 
  
 
@@ -441,8 +439,6 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 **Alcance**: aplicação 4D
 
 **Se conserva entre duas sessões**: não
-
-**Valores possíveis**: todo valor de tipo inteiro longo
 
 **Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
 
@@ -1077,6 +1073,6 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 |  |  |
 | --- | --- |
 | Número do comando | 642 |
-| Thread-seguro | no |
+| Thread-seguro | yes (parcialmente) |
 
 

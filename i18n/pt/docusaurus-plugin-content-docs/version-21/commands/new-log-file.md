@@ -52,4 +52,12 @@ No caso de um erro, o comando gera um código que pode ser interceptado com o co
 
 ## Veja também
 
-[SELECT LOG FILE](select-log-file.md)
+[SELECT LOG FILE](select-log-file.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Command number | 926 |
+| Thread safe | yes |

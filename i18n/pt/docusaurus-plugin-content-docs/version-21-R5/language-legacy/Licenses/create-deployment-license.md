@@ -124,6 +124,6 @@ Designate a license to use:
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1811 |
-| Thread safe       | não  |
+| Thread safe       | sim  |
 
 

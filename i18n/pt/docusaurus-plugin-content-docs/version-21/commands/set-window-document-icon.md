@@ -82,4 +82,12 @@ In this example, we want to create four windows:
 
 ## Veja também
 
-[Create entity selection](create-entity-selection.md)
+[Create entity selection](create-entity-selection.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Command number | 1840 |
+| Thread safe | no |

@@ -1079,6 +1079,6 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 |  |  |
 | --- | --- |
 | Número do comando | 642 |
-| Thread-seguro | no |
+| Thread-seguro | yes (parcialmente) |
 
 

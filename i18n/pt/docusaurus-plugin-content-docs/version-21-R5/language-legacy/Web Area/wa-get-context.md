@@ -1,4 +1,4 @@
-﻿---
+---
 id: wa-get-context
 title: WA Get context
 slug: /commands/wa-get-context
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-### Descrição
+## Descrição
 
 The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the \* and *object* parameters using [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> Se `WA SET CONTEXT` não foi chamado para a área web, o comando retorna `null`.
 
@@ -40,7 +40,7 @@ The command is only usable with an embedded web area where the [**Use embedded w
 
 :::
 
-### Exemplo
+## Exemplo
 
 Checking if a context exists:
 
@@ -54,11 +54,11 @@ Checking if a context exists:
  End if
 ```
 
-### Veja também
+## Veja também
 
 [WA SET CONTEXT](../commands/wa-set-context)
 
-### Propriedades
+## Propriedades
 
 |                   |      |
 | ----------------- | ---- |

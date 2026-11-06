@@ -1,4 +1,4 @@
-﻿---
+---
 id: method-get-code
 title: METHOD GET CODE
 slug: /commands/method-get-code
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, triggers, métodos projeto, métodos formulário e métodos objeto.  
+<!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, definições de classe, triggers, métodos projeto, métodos formulário e métodos objeto.  
   
 Pode utilizar dois tipos de sintaxes, baseadas em arrays texto ou variáveis texto:  
 
@@ -95,12 +95,9 @@ Se quiser exportar o método abaixo "simple\_init" :
 
 ```4d
  Case of
-
-:(FORM Event.code=On Load)
+    :(Form event code=On Load)
        ALL RECORDS([Customer])
  End case
-
-
 ```
   
   
@@ -109,15 +106,19 @@ Se executar o código abaixo:
 ```4d
  var $path : Text
  var $contents : Text
- $code:=METHOD Get path(Path project method;"simple_init")
+ $path:=METHOD Get path(Path project method;"simple_init")
  METHOD GET CODE($path;$contents;0) //sem tokens
  TEXT TO DOCUMENT("simple_init.txt";$contents)
 ```
 
 O documento resultante conterá:
 
-```RAW
-  //%attributes = {"lang":"en"} comentario adicionado e reservado por 4DCase of    : (Form event=On Load)        ALL RECORDS([Customer])End case
+```json
+  //%attributes = {"lang":"en"} comentario adicionado e reservado por 4D
+Case of
+    : (Form event code=On Load)
+        ALL RECORDS([Customer])
+End case
 ```
 
 Se executar o código abaixo:
@@ -125,15 +126,19 @@ Se executar o código abaixo:
 ```4d
  var $path : Text
  var $contents : Text
- $code:=METHOD Get path(Path project method;"simple_init")
+ $path:=METHOD Get path(Path project method;"simple_init")
  METHOD GET CODE($path;$contents;Code with tokens) //sem tokens
  TEXT TO DOCUMENT("simple_init.txt";$contents)
 ```
 
 O documento resultante conterá:
 
-```RAW
-  //%attributes = {"lang":"en"} comentario adicionado e reservado por 4DCase of    : (Form event:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
+```json
+  //%attributes = {"lang":"en"} comentario adicionado e reservado por 4D
+Case of
+    : (Form event code:C388=On Load:K2:1)
+        ALL RECORDS:C47([Customer:1])
+End case
 ```
 
 ## Ver também 
@@ -146,7 +151,7 @@ O documento resultante conterá:
 |  |  |
 | --- | --- |
 | Número do comando | 1190 |
-| Thread-seguro | no |
+| Thread-seguro | sim |
 
 
 

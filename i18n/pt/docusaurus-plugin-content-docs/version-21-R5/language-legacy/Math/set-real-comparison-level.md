@@ -1,4 +1,4 @@
-﻿---
+---
 id: set-real-comparison-level
 title: SET REAL COMPARISON LEVEL
 slug: /commands/set-real-comparison-level
@@ -53,6 +53,6 @@ Utilizando **SET REAL COMPARISON LEVEL** , pode aumentar ou reduzir o valor epsi
 |  |  |
 | --- | --- |
 | Número do comando | 623 |
-| Thread-seguro | no |
+| Thread-seguro | sim |
 
 

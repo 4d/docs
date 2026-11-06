@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-merge-cells
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* : Object ) | ( *tableRef* : Object ; *startColumn* : Integer ; *startRow* : Integer {; *columnCount* : Integer{; *rowCount* : Integer}} )<!-- END REF-->
+<!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* : Object )<br/>**WP TABLE MERGE CELLS** ( *tableRef* : Object ; *startColumn* : Integer ; *startRow* : Integer {; *columnCount* : Integer{; *rowCount* : Integer}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
 <div class="no-index">
 
@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -70,4 +69,15 @@ Para mais detalhes, consulte *Fundir e separar células*.
 ## Ver também 
 
 *Gerenciar tabelas*  
-[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  
+[WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1815 |
+| Thread safe | yes |
+
+
+

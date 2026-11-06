@@ -5,26 +5,25 @@ slug: /WritePro/commands/wp-new-text-box
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* : Object ; *pageNum* : Number ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* : Object ; *pageNum* : Real ) : Object<!-- END REF-->
 <!--REF #_command_.WP New text box.Params-->
 <div class="no-index">
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | Documento 4D Write Pro |
-| pageNum | Number | &#8594;  | Número de página onde ancorar a caixa de texto |
-| Resultado | Object | &#8592; | Objeto caixa de texto |
+| pageNum | Real | &#8594;  | Número de página onde ancorar a caixa de texto |
+| Function result | Object | &#8592; | Objeto caixa de texto |
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
 
 <!--REF #_command_.WP New text box.Summary-->O comando **WP New text box** cria e retorna um novo objeto caixa de texto na página *pageNum* de *wpDoc*.<!-- END REF-->
 
-**Nota:** Para saber mais sobre caixas de texto, veja o parágrafo *Gerenciar caixas de texto*.
+**Nota:** Para saber mais sobre caixas de texto, veja o parágrafo [*Caixas de texto*](../text-boxes).
 
 No parâmetro *wpDoc*, passe um documento 4D Write Pro. 
 
@@ -41,7 +40,7 @@ O comando cria um novo elemento caixa de texto com os atributos padrão abaixo:
 * id = "textBoxN" onde N é um número,
 * ancorado na frente do corpo no canto esquerdo superior do retângulo de página (imagem, uma caixa de texto pode ser ancorada em modo embebido, ou a uma seção, a todas as seções ou uma subseção em modo página e ao fundo ou camada superior)
 
-Ver a seção *Atributos 4D Write Pro* para descrição detalhada desses atributos. . 
+Ver a seção [Atributos 4D Write Pro](../4d-write-pro-attributes) para descrição detalhada desses atributos. . 
 
 A nova caixa de texto é renderizada só na página *pageNum,* então não pode ser renderizada se:
 
@@ -83,9 +82,9 @@ Se quiser adicionar uma caixa de texto em um modelo de carta, para exibir o ende
  WP SET ATTRIBUTES($textBox;wk vertical align;wk center)
  
   // #3: define as fórmulas dentro da caixa de texto
- WP INSERT FORMULA($textBox;Formula(This.data.fullName);wk append)
+ WP Insert formula($textBox;Formula(This.data.fullName);wk append)
  WP INSERT BREAK($textBox;wk paragraph break;wk append)
- WP INSERT FORMULA($textBox;Formula(This.data.fullAddress);wk append)
+ WP Insert formula($textBox;Formula(This.data.fullAddress);wk append)
  
   // #4: Dá estilo ao conteúdo da caixa de texto
  WP SET ATTRIBUTES($textBox;wk font;"Arial";wk font bold;wk true;wk font size;"18pt")
@@ -97,4 +96,12 @@ Result:
 
 ## Ver também 
 
-[WP DELETE TEXT BOX](../commands/wp-delete-text-box)  
+[WP DELETE TEXT BOX](wp-delete-text-box.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1797 |
+| Thread safe | sim |

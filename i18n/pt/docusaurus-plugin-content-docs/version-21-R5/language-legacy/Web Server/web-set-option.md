@@ -1,4 +1,4 @@
-﻿---
+---
 id: web-set-option
 title: WEB SET OPTION
 slug: /commands/web-set-option
@@ -66,7 +66,7 @@ No parâmetro selector, passe uma das constantes do tema *Web Server* e passe o 
 | Web port ID                              | Inteiro longo | 15    | **Alcance**: 4D em modo local e 4D Server. <br/>**Descrição**: estabelece ou obtém o número da porta TCP utilizado pelo servidor web 4D com 4D em modo local e 4D Server. Por padrão, o valor é 80\. O número de porta TCP se define na página "Web/Configuração" da caixa de diálogo Propriedades da base. Pode utilizar uma das constantes do tema *Números de porta TCP* para o parâmetro *valor*. Este seletor é útil no marco de servidores web 4D que se compilam e fundem utilizando 4D de escritório (sem acesso ao ambiente Desenho). <br/>**Valores possíveis**: para obter mais informação sobre o número de porta TCP, consulte a seção *Web Server Settings*. <br/>**Valor por padrão**: 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Web scalable session                     | Inteiro longo | 90    | **Alcance**: servidor Web local<br/>**Descripción:** ativa ou desativa o modo de gestão de sessões escalável (descrito na *página Sessões de usuário* em *developer.4d.com*)<br/>**Valores possíveis**: 1 (modo de ativação) ou 0 (modo de desativação). Se modificar o valor, o servidor web deve ser reiniciado para que leve em consideração a mudança. Quando se habilitar este modo, as opções a seguir são ignoradas: Web inactive process timeout, Web max concurrent processes, Web session cookie name e Web inactive session timeout.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Web session cookie domain                | Inteiro longo | 81    | **Alcance**: Servidor web local <br/>**Descrição**: define ou obtém o valor do campo "domínio" da cookie de sessão. Este seletor (assim como o seletor 82) é útil para controlar o alcance das cookies de sessão: se configura, por exemplo, o valor "/\*.4d.fr" para este seletor, o cliente só enviará uma cookie quando a petição se dirige ao domínio ".4d.fr", que exclui os servidores que alojam os dados estáticos externos. <br/>**Valores possíveis**: Texto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Web session cookie name                  | Inteiro longo | 73    | **Alcance**: servidor web local<br/>**Descrição**: permite definir o nome da cookie utilizada para armazenar o ID da sessão. <br/>**Valores**: Texto<br/>**Valores por defeito**: "4DSID" (passe uma cadeia vazia para restabelecer o valor por defeito)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Web session cookie name                  | Inteiro longo | 73    | **Compatibilidade**: Este seletor é ignorado quando o modo de sessão escalável da Web está ativado.<br/>**Alcance**: servidor web local<br/>**Descrição**: permite definir o nome da cookie utilizada para armazenar o ID da sessão. <br/>**Valores**: Texto<br/>**Valores por defeito**: "4DSID\_*AppName*" (passe uma cadeia vazia para restabelecer o valor por defeito)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Web session cookie path                  | Inteiro longo | 82    | **Alcance**: Servidor web local <br/>**Descrição**: define ou obtém o valor do campo "path" da cookie de sessão. Este seletor (assim como o seletor 81) é útil para controlar o alcance das cookies de sessão: se configura, por exemplo, o valor"/4DACTION" para este seletor, o cliente deverá enviar só uma cookie para petições dinâmicas que comecem com 4DACTION, e não para as imagens, páginas estáticas, etc. <br/>**Valores possíveis**: Texto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Web session enable IP address validation | Inteiro longo | 83    | **Alcance**: servidorWeb Local **<br/>** **Descrição**: Ativa ou desativa a validação dos endereços IP para as cookies de sessão. Por razões de segurança, por padrão, o servidor web de 4D verifica o endereço IP de cada solicitação que contém uma cookie de sessão e a rejeita se este endereço não coincide com o endereço IP utilizado para criar a cookie. Em algumas aplicações específicas, é possível que deseje desativar esta validação e aceitar as cookies de sessão, inclusive quando seus endereços IP não coincidam. Por exemplo, quando os dispositivos móveis mudam entre redes WiFi e 3G/4G, seu endereço IP muda. Neste caso, deve passar 0 nesta opção para permitir que os clientes podam seguir utilizando seus sessões web inclusive quando as endereços IP mudem. Tenha em conta que esta configuração reduz o nível de segurança da aplicação. <br/>Quando se modifica, esta configuração é efetiva imediatamente (não é necessário reiniciar o servidor HTTP).<br/>**Valores possíveis**: 0 (desativado) ou 1 (ativado)<br/>**Valor por padrão**: 1 (os endereços IP são verificados)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
@@ -90,12 +90,40 @@ A ativação do arquivo de histórico de depuração das petições HTTP sem as 
 
 Uma entrada registrada se vê dessa maneira:
 
-```RAW
-# REQUEST# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089388#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber:5GET /4DWEBTEST HTTP/1.1Accept: text/html,(...)Accept-Encoding: gzip, deflateConnection: keep-aliveHost: 127.0.0.1User-Agent: 4D_HTTP_Client/0.0.0.0# RESPONSE# SocketID: 1592# PeerIP: 127.0.0.1# PeerPort: 54912# TimeStamp: 39089389 (tempo transcorrido: 1 minuto) #ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD#SequenceNumber:6HTTP/1.1 200 OKAccept-Ranges: bytesConnection: keep-aliveContent-Encoding: gzipContent-Length: 3555Content-Type: text/plain; charset=UTF-8Date: Thu, 20 Apr 2017 10:51:29 GMTExpires: Thu, 20 Apr 2017 10:51:29 GMTServer: 4D/16.0.1
-```
+```txt
+# REQUEST
+# SocketID: 1592
+# PeerIP: 127.0.0.1
+# PeerPort: 54912
+# TimeStamp: 39089388
+#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD
+#SequenceNumber:5
+GET /4DWEBTEST HTTP/1.1
+Accept: text/html,(...)
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 127.0.0.1
+User-Agent: 4D_HTTP_Client/0.0.0.0
 
-`  
-[Body Size: 3555]`
+# RESPONSE
+# SocketID: 1592
+# PeerIP: 127.0.0.1
+# PeerPort: 54912
+# TimeStamp: 39089389 (elapsed time: 1 ms)
+#ConnectionID: 9808E3B4B06E4EB5A60E9A3FC69116BD
+#SequenceNumber:6
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Length: 3555
+Content-Type: text/plain; charset=UTF-8
+Date: Thu, 20 Apr 2017 10:51:29 GMT
+Expires: Thu, 20 Apr 2017 10:51:29 GMT
+Server: 4D/16.0.1
+
+[Body Size: 3555]
+```
 
 ## Ver também 
 
@@ -106,7 +134,7 @@ Uma entrada registrada se vê dessa maneira:
 
 |  |  |
 | --- | --- |
-| Número do comando | 5 |
+| Número do comando | 1210 |
 | Thread-seguro | yes |
 
 

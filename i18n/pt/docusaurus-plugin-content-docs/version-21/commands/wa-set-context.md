@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-### Descrição
+## Descrição
 
 The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> defines a context object *contextObj* for `$4d` in the Web area designated by the \* and *object* parameters. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Passe em *contextObj* as instâncias de classes usuário ou as fórmulas a serem
 - Se *contextObj* for null, `$4d` terá acesso a todos os métodos 4D.
 - Se *contextObj* estiver vazio, `$4d` não terá acesso.
 
-### Exemplo 1
+## Exemplo 1
 
 Permitir `$4d` a métodos específicos
 
@@ -64,7 +64,7 @@ $4d.myMethod2(); // Permitiu
 $4d.someOtherMethod(); // Não acessível
 ```
 
-### Exemplo 2
+## Exemplo 2
 
 Using a Class Object
 
@@ -81,11 +81,11 @@ $4d.myWAFunction(); // Permitido
 $4d._myPrivateFunction(); // Não fará nada porque a função é privada
 ```
 
-### Veja também
+## Veja também
 
 [WA Get context](wa-get-context.md)
 
-### Propriedades
+## Propriedades
 
 |                   |      |
 | ----------------- | ---- |

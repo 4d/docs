@@ -21,10 +21,10 @@ displayed_sidebar: docs
 Este método é utilizado nos seguintes ambientes 4D:
 
 * 4D em modo local
-* 4D em modo remoto (do lado do cliente)
-* Aplicação 4D compilada e fusionada com 4D Volume Desktop
+* 4D em modo remoto
+* Aplicação 4D compilada e fusionada com 4D VolumeDesktop
 
-**Nota**: o Método banco de dados On Exit NÃO é invocado por 4D Server.
+**Nota**: o Método banco de dados On Exit NÃO é invocado por 4D Server. Você deve usar o [On Server Shutdown database method](on-server-shutdown-database-method.md) neste contexto.
 
 O Método banco de dados On Exit é invocado automaticamente por 4D; diferentemente dos métodos de projeto, você não pode chamar este método por programação. Entretanto, pode ser executado desde o editor de métodos. Igualmente pode utilizar subrotinas.
 
@@ -38,6 +38,14 @@ Sem importar como se inicie a saída do banco, 4D realiza as seguintes ações:
 
 * Se não existir um Método banco de dados On Exit, 4D aborta cada processo em execução um por um, sem distinção. Se o usuário está introduzindo dados, os registros não serão guardados.
 * Se existir um Método banco de dados On Exit , 4D começa a execução deste método em um processo local criado recentemente. Observe que sairá eventualmente de 4D, o Método banco de dados On Exit pode realizar toda a limpeza ou fechar as operações que queira, mas não pode ser negado a sair.
+
+Quando o 4D está prestes a sair, o programa:
+
+* pede aos processos em execução para abortarem sua execução o mais rápido possível (considerado apenas em processos que executam código 4D)
+* define o flag ‘process aborted’ deles
+* acorda processos que foram atrasados por [DELAY PROCESS](delay-process.md) ou outros meios.
+
+O 4D continua iterando processos enquanto qualquer processo ainda estiver ativo, por uma duração máxima de 13 segundos. Para responder a uma ação de sair, recomendamos definir uma flag (como uma entrada no objeto [Storage](storage.md)) no Método banco de dados On Exit ou em seu método personalizado de saída. Pode fazer sentido fazer um loop nesse método (máx. 10 segundos) para dar tempo aos seus processos em execução de responderem e saírem corretamente. Não é recomendado esperar mais de 10 segundos, para evitar que o 4D mate o processo ou o sistema operacional encerre toda a aplicação.
 
 O Método banco de dados On Exit é perfeito para:
 
@@ -99,4 +107,4 @@ O exemplo abaixo mostra um caso típico onde você lança um ou mais processos n
 ## Ver também 
 
 [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md)  
-[QUIT 4D](quit-4d.md)  
+[QUIT 4D](quit-4d.md)

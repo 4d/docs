@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -71,3 +70,11 @@ Para mais detalhes, consulte *Fundir e separar células*.
 
 *Gerenciar tabelas*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1815 |
+| Thread safe | sim |

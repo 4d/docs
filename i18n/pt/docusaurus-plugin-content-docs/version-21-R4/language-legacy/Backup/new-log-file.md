@@ -1,4 +1,4 @@
-﻿---
+---
 id: new-log-file
 title: New log file
 slug: /commands/new-log-file
@@ -53,4 +53,12 @@ No caso de um erro, o comando gera um código que pode ser interceptado com o co
 
 ## Veja também
 
-[SELECT LOG FILE](../commands/select-log-file)
+[SELECT LOG FILE](../commands/select-log-file)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Command number | 926 |
+| Thread safe | yes |

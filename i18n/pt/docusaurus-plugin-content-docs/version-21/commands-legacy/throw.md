@@ -60,7 +60,7 @@ Pode conter as seguintes propriedades, assim como toda propriedade personalizada
 | componentSignature | text                  | Assinatura de quatro letras para identificar de forma única a origem do erro. Se não indicar **componentSignature**, o comando utilizar "host" para o banco de dados host, e "C001", "C002", ... para os componentes.                                                                                                                                                                                                                                                                    |
 | errCode            | number                | Código de erro.<br/> Se não indicar **errCode**, o comando utiliza -1.                                                                                                                                                                                                                                                                                                                                                                                                           |
 | message            | text                  | Descrição do erro.<br/> A **mensagem** pode conter marcadores de posição que serão substituídos por propriedades personalizadas adicionadas ao objeto errorObj. Cada marcador de posição deve especificar-se utilizando chaves {} terminando o nome da propriedade a utilizar. Se a **mensagem** não for indicada ou for uma string vazia, o comando buscará uma descrição nos arquivos xliff da base de dados atual com um renome construido assuim: ERR\_{component}\_{code}". |
-| deferred           | boolean               | True se o erro deve diferir-se quando voltar o método atual. O valor por padrão é false.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| deferred           | boolean               | True se o erro deve diferir-se quando voltar o método atual ou ao final do [bloco Try](../Concepts/error-handling.md#trycatchend-try). O valor por padrão é false.                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 Quando se utilizar esta sintaxe, o objeto *errorObj* se devolve em Últimos erros.
 
@@ -124,6 +124,6 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | Número do comando | 1805 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 

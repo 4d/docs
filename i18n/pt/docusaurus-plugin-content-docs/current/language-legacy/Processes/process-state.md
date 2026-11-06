@@ -1,4 +1,4 @@
-﻿---
+---
 id: process-state
 title: Process state
 slug: /commands/process-state
@@ -33,7 +33,7 @@ O resultado da função pode ser um dos valores das seguintes constantes predefi
 | Waiting for internal flag | Inteiro longo | 4     |                                                                                                                                                                                                                                                  |
 | Paused                    | Inteiro longo | 5     |                                                                                                                                                                                                                                                  |
 
-Se o processo não existe (o qual significa que não passou um número no intervalo de 1 a [Count tasks](count-tasks.md "Count tasks")), Process state devolve Does not exist (-100).
+Se o processo não existe (o qual significa que não passou um número no intervalo de 1 a [Count tasks](../commands/count-tasks)), Process state devolve Does not exist (-100).
 
 ## Exemplo 
 
@@ -66,7 +66,7 @@ O seguinte exemplo coloca o nome e número de referencia para cada processo nos 
 |  |  |
 | --- | --- |
 | Número do comando | 330 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 
 

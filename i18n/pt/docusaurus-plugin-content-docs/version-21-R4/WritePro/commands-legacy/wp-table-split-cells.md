@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -45,6 +44,8 @@ Se *targetObj* intersectar uma ou muitas células que não forem fusionadas ante
     
 Se rowCount for omitido, é equivalente de passar 1 (valor normal). Se tanto columnCount quanto rowCount, forem omitidos, equivale a dividir una única célula e se não forem fusionados antes não acontece nada.
 
+Se startColumn mais columnCount ou *startRow* mais rowCount exceder o número de colunas/linhas em *tableRef*, ou se startColumn ou *startRow* for maior que o número de colunas/linhas em *tableRef*, o intervalo retornado contém o máximo possível de colunas/linhas, o que significa que toda célula da tabela (se tiver sido fusionada antes) será dividida.
+
 ## Exemplo 
 
 Se quiser atribuir a um intervalo de células (que contenha algumas células já combinadas) e dividí-lo:
@@ -68,3 +69,11 @@ Para mais detalles, consulte *Fundir e separar células*.
 
 *Gerenciar tabelas*  
 [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1816 |
+| Thread safe | sim |
