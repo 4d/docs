@@ -165,7 +165,7 @@ title: リストボックス
 
 ## 列数
 
-Sets the length of the [column collection](#columns) of the list box.
+リストボックスの[列のコレクション](#列) の長さを設定します。
 
 > [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) あるいは [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) などのコマンドを使用することで、カラムをプログラミングによって動的に追加または削除することができます。
 

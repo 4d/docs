@@ -332,101 +332,46 @@ Windows Classic UI テーマでは、このスタイルはサポートされま�
                 }
 ```
 
-## Supported standard actions
+## サポートされる標準アクション
 
-The following standard actions can be assigned to buttons:
+ボタンには、以下の標準アクションを割り当てることができます.
+[empty アクション](../Desktop-legacy/standard-actions.md#-empty-string) の場合にはボタンの振る舞いはそのオブジェクトメソッドに移譲されます。他のオブジェクトとの比較のためには[標準アクション互換性表](../Desktop-legacy/standard-actions.md#サポートされるフォームオブジェクト) を参照してください。
 
-### Records and forms
+#### レコードとフォーム
 
-- [accept](../Desktop-legacy/standard-actions.md#accept)
-- [cancel](../Desktop-legacy/standard-actions.md#cancel)
-- [deleteRecord](../Desktop-legacy/standard-actions.md#deleterecord)
-- [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord)
-- [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord)
-- [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord)
-- [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord)
-- [firstRecord](../Desktop-legacy/standard-actions.md#firstrecord)
-- [lastRecord](../Desktop-legacy/standard-actions.md#lastrecord)
-- [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord)
-- [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
+[accept](../Desktop-legacy/standard-actions.md#accept) - [cancel](../Desktop-legacy/standard-actions.md#cancel) - [deleteRecord](../Desktop-legacy/standard-actions.md#deleterecord) - [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord) - [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord) - [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord) - [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) - [firstRecord](../Desktop-legacy/standard-actions.md#firstrecord) - [lastRecord](../Desktop-legacy/standard-actions.md#lastrecord) - [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord) - [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
 
-### Pages
+#### ページ
 
-- [firstPage](../Desktop-legacy/standard-actions.md#firstpage)
-- [lastPage](../Desktop-legacy/standard-actions.md#lastpage)
-- [nextPage](../Desktop-legacy/standard-actions.md#nextpage)
-- [previousPage](../Desktop-legacy/standard-actions.md#previouspage)
-- [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
+[firstPage](../Desktop-legacy/standard-actions.md#firstpage) - [lastPage](../Desktop-legacy/standard-actions.md#lastpage) - [nextPage](../Desktop-legacy/standard-actions.md#nextpage) - [previousPage](../Desktop-legacy/standard-actions.md#previouspage) - [gotoPage?value=\<page\>](../Desktop-legacy/standard-actions.md#gotopagevaluepage)
 
-### Editing and expressions
+#### 編集と式
 
-- [clear](../Desktop-legacy/standard-actions.md#clear)
-- [copy](../Desktop-legacy/standard-actions.md#copy)
-- [cut](../Desktop-legacy/standard-actions.md#cut)
-- [paste](../Desktop-legacy/standard-actions.md#paste)
-- [redo](../Desktop-legacy/standard-actions.md#redo)
-- [undo](../Desktop-legacy/standard-actions.md#undo)
-- [selectAll](../Desktop-legacy/standard-actions.md#selectall)
-- [computeExpressions](../Desktop-legacy/standard-actions.md#computeexpressions)
-- [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions)
-- [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
+[clear](../Desktop-legacy/standard-actions.md#clear) - [copy](../Desktop-legacy/standard-actions.md#copy) - [cut](../Desktop-legacy/standard-actions.md#cut) - [paste](../Desktop-legacy/standard-actions.md#paste) - [redo](../Desktop-legacy/standard-actions.md#redo) - [undo](../Desktop-legacy/standard-actions.md#undo) - [selectAll](../Desktop-legacy/standard-actions.md#selectall) - [computeExpressions](../Desktop-legacy/standard-actions.md#computeexpressions) - [freezeExpressions](../Desktop-legacy/standard-actions.md#freezeexpressions) - [visibleReferences](../Desktop-legacy/standard-actions.md#visiblereferences)
 
-### Formatting
+#### 書式設定
 
-- [backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog)
-- [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor)
-- [color/showDialog](../Desktop-legacy/standard-actions.md#colorshowdialog)
-- [color?value=\<color\>](../Desktop-legacy/standard-actions.md#colorvaluecolor)
-- [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog)
-- [fontBold](../Desktop-legacy/standard-actions.md#fontbold)
-- [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic)
-- [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough)
-- [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize)
-- [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
+[backgroundColor/showDialog](../Desktop-legacy/standard-actions.md#backgroundcolorshowdialog) - [backgroundColor?value=\<color\>](../Desktop-legacy/standard-actions.md#backgroundcolorvaluecolor) - [color/showDialog](../Desktop-legacy/standard-actions.md#colorshowdialog) - [color?value=\<color\>](../Desktop-legacy/standard-actions.md#colorvaluecolor) - [font/showDialog](../Desktop-legacy/standard-actions.md#fontshowdialog) - [fontBold](../Desktop-legacy/standard-actions.md#fontbold) - [fontItalic](../Desktop-legacy/standard-actions.md#fontitalic) - [fontLinethrough](../Desktop-legacy/standard-actions.md#fontlinethrough) - [fontSize?value=\<size\>](../Desktop-legacy/standard-actions.md#fontsizevaluesize) - [fontUnderline](../Desktop-legacy/standard-actions.md#fontunderline)
 
-### Spellchecking
+#### スペルチェック
 
-- [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled)
-- [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled)
-- [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled)
-- [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled)
-- [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled)
-- [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled)
-- [spell/forgetIgnore](../Desktop-legacy/standard-actions.md#spellforgetignore)
-- [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled)
-- [spell/ignore](../Desktop-legacy/standard-actions.md#spellignore)
-- [spell/learn](../Desktop-legacy/standard-actions.md#spelllearn)
-- [spell/removeSubstitution](../Desktop-legacy/standard-actions.md#spellremovesubstitution)
-- [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog)
-- [spell/suggestion?index=\<1-number\<=10\>](../Desktop-legacy/standard-actions.md#spellsuggestionindex1-number10)
-- [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn)
-- [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
+[spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled) - [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled) - [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled) - [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled) - [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled) - [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled) - [spell/forgetIgnore](../Desktop-legacy/standard-actions.md#spellforgetignore) - [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled) - [spell/ignore](../Desktop-legacy/standard-actions.md#spellignore) - [spell/learn](../Desktop-legacy/standard-actions.md#spelllearn) - [spell/removeSubstitution](../Desktop-legacy/standard-actions.md#spellremovesubstitution) - [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog) - [spell/suggestion?index=\<1-number\<=10\>](../Desktop-legacy/standard-actions.md#spellsuggestionindex1-number10) - [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn) - [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
 
-### Web-area controls
+#### Webエリアコントロール
 
-- [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl)
-- [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl)
-- [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl)
-- [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
+[openBackURL](../Desktop-legacy/standard-actions.md#openbackurl) - [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl) - [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl) - [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
 
-### Other actions
+#### その他のアクション
 
-- [databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings)
-- [designMode](../Desktop-legacy/standard-actions.md#designmode)
-- [msc](../Desktop-legacy/standard-actions.md#msc)
-- [quit](../Desktop-legacy/standard-actions.md#quit)
-- [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard)
-- [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
+[databaseSettings](../Desktop-legacy/standard-actions.md#databasesettings) - [designMode](../Desktop-legacy/standard-actions.md#designmode) - [msc](../Desktop-legacy/standard-actions.md#msc) - [quit](../Desktop-legacy/standard-actions.md#quit) - [showClipboard](../Desktop-legacy/standard-actions.md#showclipboard) - [writingTools](../Desktop-legacy/standard-actions.md#writingtools)
 
-### Invisible buttons only
+#### 非表示ボタンのみ
 
-- [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
+[automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter)
 
-### 4D Write Pro standard actions
+#### 4D Write Pro標準アクション
 
-- [formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
-
-The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves the button's behavior to its method. See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects) for comparisons with other objects.
+[formulaHighlight?value=\<mode\>](../WritePro/user-legacy/standard-actions.md#action-formulahighlight)
 
 ## プロパティ一覧
 
@@ -441,7 +386,7 @@ The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves t
 
 [カスタム](#カスタム) スタイルのボタンに対しては特有の追加のプロパティが利用可能です:
 
-[背景パス名](properties_TextAndPicture.md#背景パス名) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線幅](./properties_BackgroundAndBorder.md#境界線幅) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [デフォルトボタン](properties_Appearance.md#デフォルトボタン) - [塗りカラー](./properties_BackgroundAndBorder.md#背景色塗りカラー)
+[背景パス名](properties_TextAndPicture.md#背景パス名) - [境界線カラー](./properties_BackgroundAndBorder.md#border-color) - [境界線幅](./properties_BackgroundAndBorder.md#境界線幅) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [デフォルトボタン](properties_Appearance.md#デフォルトボタン) - [塗りカラー](./properties_BackgroundAndBorder.md#背景色塗りカラー)
 
 ### フラットおよび通常ボタンにおける追加のプロパティ
 

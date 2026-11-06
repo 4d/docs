@@ -1,11 +1,11 @@
 ---
 id: structure-indexes
-title: Indexes
+title: Índices
 ---
 
-You can associate indexes with fields that you frequently use for searching and sorting. For example, you might index LastName, CompanyName, or ProductName if you plan to search or sort entities using these attributes. You also use this property for fields that establish relations between tables.
+Puede asociar índices con campos que utiliza frecuentemente para buscar y ordenar. Por ejemplo, puede indexar LastName, CompanyName o ProductName si planea buscar o ordenar entidades usando estos atributos. También utiliza esta propiedad para campos que establecen relaciones entre las tablas.
 
-When an index is associated with a field, 4D creates an internal index table for the field. This table allows 4D to perform rapid searches and sorts on the field. When searching or sorting on an unindexed field, 4D moves through data sequentially, examining each record in order. Indexing allows 4D to search and sort without going through every record.
+Cuando un índice está asociado con un campo, 4D crea una tabla de índice interna para el campo. Esta tabla permite a 4D realizar búsquedas y ordenaciones rápidas en ese campo. Al buscar o ordenar en un campo indexado, 4D se mueve a través de datos secuencialmente, examinando cada registro en el orden. La indexación permite a 4D realizar búsquedas y ordenar los datos sin tener que revisar todos los registros.
 
 You can index fields of the Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture and Object type. As you add and delete records, 4D automatically updates its index table. If you create an index for a field that already exists, 4D automatically indexes the existing data. You can specify as many indexed fields as you want. Indexes are also rebuilt during specific operations such as conversion of earlier databases or [data compacting](../MSC/compact.md).
 
@@ -105,7 +105,7 @@ The ![](../assets/en/Develop/index-list.png) button of the toolbar in the Struct
 
 The Index List can be used to view the main properties of the indexes:
 
-- **Type:** Index type. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
+- **Tipo:** tipo de índice. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
 - **Description:** Table and field(s) of index. For a composite index, this list contains all the fields of the index.
 - **Name:** Index name. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
 
