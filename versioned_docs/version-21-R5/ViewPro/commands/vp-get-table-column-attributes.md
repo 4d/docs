@@ -1,6 +1,6 @@
 ---
 id: vp-get-table-column-attributes
-title: VP Get column attributes
+title: VP Get table column attributes
 ---
 
 <details><summary>History</summary>
