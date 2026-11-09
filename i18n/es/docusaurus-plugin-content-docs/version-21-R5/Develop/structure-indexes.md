@@ -1,29 +1,29 @@
 ---
 id: structure-indexes
-title: Indexes
+title: Índices
 ---
 
-You can associate indexes with fields that you frequently use for searching and sorting. For example, you might index LastName, CompanyName, or ProductName if you plan to search or sort entities using these attributes. You also use this property for fields that establish relations between tables.
+Puede asociar índices con campos que utiliza frecuentemente para buscar y ordenar. Por ejemplo, puede indexar LastName, CompanyName o ProductName si planea buscar o ordenar entidades usando estos atributos. También utiliza esta propiedad para campos que establecen relaciones entre las tablas.
 
-When an index is associated with a field, 4D creates an internal index table for the field. This table allows 4D to perform rapid searches and sorts on the field. When searching or sorting on an unindexed field, 4D moves through data sequentially, examining each record in order. Indexing allows 4D to search and sort without going through every record.
+Cuando un índice está asociado con un campo, 4D crea una tabla de índice interna para el campo. Esta tabla permite a 4D realizar búsquedas y ordenaciones rápidas en ese campo. Al buscar o ordenar en un campo indexado, 4D se mueve a través de datos secuencialmente, examinando cada registro en el orden. La indexación permite a 4D realizar búsquedas y ordenar los datos sin tener que revisar todos los registros.
 
-You can index fields of the Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture and Object type. As you add and delete records, 4D automatically updates its index table. If you create an index for a field that already exists, 4D automatically indexes the existing data. You can specify as many indexed fields as you want. Indexes are also rebuilt during specific operations such as conversion of earlier databases or [data compacting](../MSC/compact.md).
+Puede indexar campos de tipo Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture y Object. A medida que añade y elimina registros, 4D actualiza automáticamente su tabla de índices. Si crea un índice para un campo que ya existe, 4D indexa automáticamente los datos existentes. Puede especificar tantos campos indexados como desee. Los índices también se reconstruyen durante operaciones específicas, como la conversión de bases de datos anteriores o la [compactación de datos](../MSC/compact.md).
 
-Each index table can contain up to:
+Cada tabla de índices puede contener hasta:
 
-- 128 billion keys for Alpha, Text, and Float indexes
-- 256 billion keys for other index types (scalar data)
+- 128 mil millones de llaves para los índices Alpha, Text y Float
+- 256 mil millones de llaves para otros tipos de índice (datos escalares)
 
-Do not index every field. An index increases the size of the database, using more space on disk. Using many indexes also increases the time needed to save a record since 4D updates the index table with each record validation.
+No indexar todos los campos. Un índice aumenta el tamaño de la base de datos, usando más espacio en el disco. Utilizar muchos índices también aumenta el tiempo necesario para guardar un registro desde que 4D actualiza la tabla con cada validación de registro.
 
-Indexed fields are displayed in **bold** type in the Structure editor.
+Los campos indexados se muestran en el tipo **negrita** en el editor de estructura.
 
 ## Tipos de índices
 
-4D provides different types of indexes. Choosing between the different types is generally based on the result expected and the type of data present in the field. There are four main types of indexes:
+4D ofrece diferentes tipos de índices. La elección entre los diferentes tipos se basa generalmente en el resultado esperado y el tipo de datos presentes en el campo. Hay cuatro tipos principales de índices:
 
-- **Standard indexes:** These are single-field indexes used to accelerate standard database operations (searches and sorts). 4D lets you choose the internal architecture of this type of index (except for Object fields): B-Tree or Cluster B-Tree.
-- **Composite indexes:** This index stores the combined values of two or more fields that are often searched for together, for example LastName+FirstName.
+- **Índice estándar:** estos son índices de un solo campo utilizados para acelerar las operaciones estándar de bases de datos (búsquedas y ordenes). 4D le permite elegir la arquitectura interna de este tipo de índice (excepto los campos de objetos): B-Tree o Cluster B-Tree.
+- **Índice compuesto:** este índice almacena los valores combinados de dos o más campos que a menudo se buscan juntos, por ejemplo Apellido+Nombre.
 - **Keyword indexes:** These indexes are only available for Alpha, Text and Picture type fields. They are intended to facilitate fast searching inside text or, in the case of pictures, among the keywords associated with the pictures.
 - **Vector indexes**: These indexes are designed to accelerate AI-based queries on Object fields storing [embeddings](./field-properties.md#4dvector-class).
 
@@ -105,7 +105,7 @@ The ![](../assets/en/Develop/index-list.png) button of the toolbar in the Struct
 
 The Index List can be used to view the main properties of the indexes:
 
-- **Type:** Index type. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
+- **Tipo:** tipo de índice. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
 - **Description:** Table and field(s) of index. For a composite index, this list contains all the fields of the index.
 - **Name:** Index name. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
 
@@ -147,7 +147,7 @@ To add a field to the index, click on the **[+]** button. The list of fields of 
 
 - If you want to create a composite index, add each field to be included in the index successively. Once the list is completed, you can reorder the fields using the arrow buttons or using drag and drop.
 - If you create a composite index based on primary key fields, make sure you put the fields in the same order in the primary key and in the index.
-- If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
+- If you have chosen the “Keyword Index” type, only Alpha, Text, or Picture fields can be selected. Also in this case, you can include only one field in the index.
 
 To delete a field from the index, select it in the list and click on the **[-]** button.
 

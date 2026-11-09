@@ -7,23 +7,23 @@ Puede asociar índices con campos que utiliza frecuentemente para buscar y orden
 
 Cuando un índice está asociado con un campo, 4D crea una tabla de índice interna para el campo. Esta tabla permite a 4D realizar búsquedas y ordenaciones rápidas en ese campo. Al buscar o ordenar en un campo indexado, 4D se mueve a través de datos secuencialmente, examinando cada registro en el orden. La indexación permite a 4D realizar búsquedas y ordenar los datos sin tener que revisar todos los registros.
 
-You can index fields of the Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture and Object type. As you add and delete records, 4D automatically updates its index table. If you create an index for a field that already exists, 4D automatically indexes the existing data. You can specify as many indexed fields as you want. Indexes are also rebuilt during specific operations such as conversion of earlier databases or [data compacting](../MSC/compact.md).
+Puede indexar campos de tipo Alpha, Text, Date, Time, Boolean, Integer, Long integer, Integer 64 bits, Real, Picture y Object. A medida que añade y elimina registros, 4D actualiza automáticamente su tabla de índices. Si crea un índice para un campo que ya existe, 4D indexa automáticamente los datos existentes. Puede especificar tantos campos indexados como desee. Los índices también se reconstruyen durante operaciones específicas, como la conversión de bases de datos anteriores o la [compactación de datos](../MSC/compact.md).
 
-Each index table can contain up to:
+Cada tabla de índices puede contener hasta:
 
-- 128 billion keys for Alpha, Text, and Float indexes
-- 256 billion keys for other index types (scalar data)
+- 128 mil millones de llaves para los índices Alpha, Text y Float
+- 256 mil millones de llaves para otros tipos de índice (datos escalares)
 
-Do not index every field. An index increases the size of the database, using more space on disk. Using many indexes also increases the time needed to save a record since 4D updates the index table with each record validation.
+No indexar todos los campos. Un índice aumenta el tamaño de la base de datos, usando más espacio en el disco. Utilizar muchos índices también aumenta el tiempo necesario para guardar un registro desde que 4D actualiza la tabla con cada validación de registro.
 
-Indexed fields are displayed in **bold** type in the Structure editor.
+Los campos indexados se muestran en el tipo **negrita** en el editor de estructura.
 
 ## Tipos de índices
 
-4D provides different types of indexes. Choosing between the different types is generally based on the result expected and the type of data present in the field. There are four main types of indexes:
+4D ofrece diferentes tipos de índices. La elección entre los diferentes tipos se basa generalmente en el resultado esperado y el tipo de datos presentes en el campo. Hay cuatro tipos principales de índices:
 
-- **Standard indexes:** These are single-field indexes used to accelerate standard database operations (searches and sorts). 4D lets you choose the internal architecture of this type of index (except for Object fields): B-Tree or Cluster B-Tree.
-- **Composite indexes:** This index stores the combined values of two or more fields that are often searched for together, for example LastName+FirstName.
+- **Índice estándar:** estos son índices de un solo campo utilizados para acelerar las operaciones estándar de bases de datos (búsquedas y ordenes). 4D le permite elegir la arquitectura interna de este tipo de índice (excepto los campos de objetos): B-Tree o Cluster B-Tree.
+- **Índice compuesto:** este índice almacena los valores combinados de dos o más campos que a menudo se buscan juntos, por ejemplo Apellido+Nombre.
 - **Keyword indexes:** These indexes are only available for Alpha, Text and Picture type fields. They are intended to facilitate fast searching inside text or, in the case of pictures, among the keywords associated with the pictures.
 - **Vector indexes**: These indexes are designed to accelerate AI-based queries on Object fields storing [embeddings](./field-properties.md#4dvector-class).
 

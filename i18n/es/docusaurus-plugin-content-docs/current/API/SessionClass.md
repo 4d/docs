@@ -547,7 +547,7 @@ You run specific code for the requests of MCP clients:
 
 ```4d
 If (Session.info.type="mcp")
-	// the request comes from an MCP client through the MCP server
+	// la solicitud viene de un cliente MCP a través del servidor MCP
 End if
 ```
 
