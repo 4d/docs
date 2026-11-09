@@ -10,20 +10,18 @@ title: VP Get workbook options
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição                                        |
-| ---------- | ------ | --------------------------- | ------------------------------------------------ |
-| vpAreaName | Text   | ->                          | Nome de objeto formulário área 4D View Pro       |
-| Resultados | Object | <- | Objeto que contém as opções do livro de trabalho |
-
+|Parameter|Type||Description|
+|---|---|---|---|
+|vpAreaName  |Text|->|4D View Pro area form object name|
+|Result |Object|<-|Object containing the workbook options|
 </div>
 <!-- END REF -->
 
 ## Descrição
 
-`VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
+`VP Get workbook options` <!-- REF #_method_.VP Get workbook options.Summary -->
 retorna um objeto que contém todas as opções de pasta de trabalho em *vpAreaName*<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.

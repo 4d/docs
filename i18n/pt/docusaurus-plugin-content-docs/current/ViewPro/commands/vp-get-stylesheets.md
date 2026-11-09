@@ -1,14 +1,12 @@
 ---
-id: vp-get-stylesheet
+id: vp-get-stylesheets
 title: VP Get stylesheets
 ---
 
 <!-- REF #_method_.VP Get stylesheets.Syntax -->
-
 **VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
-
 <div class="no-index">
 
 | Parâmetro  | Tipo       |                             | Descrição                                             |
@@ -28,8 +26,8 @@ Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um 
 
 You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
-- `vk current sheet`
-- `vk workbook`
+* `vk current sheet`
+* `vk workbook`  
 
 ## Exemplo
 
