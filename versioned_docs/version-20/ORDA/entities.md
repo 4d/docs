@@ -92,7 +92,7 @@ You can handle entities like any other object in 4D and pass their references di
 
 ## Using entity attributes  
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while attributes of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 
 >For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 

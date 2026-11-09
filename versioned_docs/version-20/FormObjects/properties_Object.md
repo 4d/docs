@@ -29,7 +29,7 @@ Each active form object is associated with an object name. Each object name must
 
 >Object names are limited to a size of 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv20/4D/20.6/Object-Properties.300-7487807.en.html) in the 4D Language Reference manual).
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
@@ -272,7 +272,7 @@ To insert a \ in the label, enter "&#92;&#92;".
 
 By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
 
-For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 #### JSON Grammar
 
