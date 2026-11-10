@@ -43,7 +43,10 @@ Permissões nunca se aplicam a [código de sessão desktop](../Desktop/sessions.
 
 Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso fica acessível para sessões `guest`.
 
-:::
+- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
+- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
+- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
+- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
 
 ### Ferramentas MCP
 
