@@ -1025,7 +1025,6 @@ module.exports =
           },
           items: [
             "embedding-studio/overview",
-            "embedding-studio/ratelimit",
             {
               type: "category",
               label: "Classes",
@@ -1043,7 +1042,8 @@ module.exports =
                 "embedding-studio/Classes/settings",
                 "embedding-studio/Classes/studioembedder"
               ]
-            }
+            },
+            "embedding-studio/ratelimit"
           ]
         },
         {
