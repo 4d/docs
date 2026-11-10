@@ -28,7 +28,7 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome de objeto deve ser único.
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
-Ao usar a linguagem 4D, você pode se referir a um objeto de formulário ativo pelo nome do objeto (para obter mais informações sobre isso, consulte [Propriedades do objeto](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) no manual de referência da linguagem 4D).
+Ao usar a linguagem 4D, você pode se referir a um objeto de formulário ativo pelo nome do objeto (para obter mais informações sobre isso, consulte [Propriedades do objeto](https://doc.4d.com/4Dv20/4D/20.6/Object-Properties.300-7487807.en.html) no manual de referência da linguagem 4D).
 
 Para obter mais informações sobre regras de nomeação para objetos de formulário, consulte a seção [Identificadores](Concepts/identifiers.md).
 
@@ -266,7 +266,7 @@ Para inserir um \ na etiqueta, introduzir "&#92;&#92;".
 
 Por padrão, a etiqueta é colocada no centro do objeto. Quando o objeto também contém um ícone, você pode modificar a localização relativa desses dois elementos usando a propriedade [Posição Título/Imagem](properties_TextAndPicture.md#titlepicture-position).
 
-Para a tradução do banco de dados, pode introduzir uma referência XLIFF na área do título de um botão (ver [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Para a tradução do banco de dados, pode introduzir uma referência XLIFF na área do título de um botão (ver [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 #### Gramática JSON
 

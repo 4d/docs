@@ -22,7 +22,7 @@ As informações seguintes são fornecidas para cada linha:
     + **Sub-operações** (se houver): Operações dependentes da operação selecionada (ex. excluir registros relacionados antes de um registro pai).
     + **Detalhes do processo**: Informações adicionais sobre a tabela, campo, processo ou cliente, dependendo do tipo de operação
 
-> A página de monitoramento em tempo real usa o comando [`GET ATIVIDADE SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) internamente. Para mais informações, consultar a descrição deste comando.
+> A página de monitoramento em tempo real usa o comando [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv20/help/command/en/page1277.html) internamente. Para mais informações, consultar a descrição deste comando.
 
 A página está ativa e é atualizada permanentemente assim que é exibida. Note-se que o seu funcionamento pode atrasar significativamente a execução da aplicação. É possível suspender a atualização desta página de uma das seguintes maneiras:
 
@@ -36,7 +36,7 @@ Quando você pausa a página, uma mensagem "PAUSADA" aparece e o rótulo do bot�
 
 A página RTM pode exibir informações adicionais, se necessário, para cada operação listada.
 
-Para acessar o modo avançado para uma operação, pressione **Shift** e selecione a operação desejada. Todas as informações disponíveis são então exibidas na área "Detalhes do Processo" sem qualquer filtro (conforme retornado pelo comando `ATIVAR SNAPSHOT`). A informação disponível depende da operação selecionada.
+Para acessar o modo avançado para uma operação, pressione **Shift** e selecione a operação desejada. Todas as informações disponíveis são então exibidas na área "Detalhes do Processo" sem qualquer filtro (conforme retornado pelo comando `GET ACTIVITY SNAPSHOT`). A informação disponível depende da operação selecionada.
 
 Eis um exemplo de informações apresentadas no modo padrão:
 

@@ -89,11 +89,11 @@ Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas v
 | `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                           |
 | `CONVERT COORDINATES`             | `XY Screen` é o sistema de coordenadas global onde a tela principal está posicionada em (0,0). Telas situadas à sua esquerda ou por cima podem ter coordenadas negativas e as telas situadas à sua direita ou por baixo podem ter coordenadas superiores aos valores devolvidos por `Screen height` ou `Screen width`. |
 | `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                           |
-| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                |
+| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0                                                                                                                                                                                                                                                |
 | `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                         |
 
 :::info
 
-Pode utilizar o comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para conhecer o modo de execução atual no Windows.
+Pode utilizar o comando [**Get application info**](https://doc.4d.com/4dv20/help/command/en/page1599.html) para conhecer o modo de execução atual no Windows.
 
 :::

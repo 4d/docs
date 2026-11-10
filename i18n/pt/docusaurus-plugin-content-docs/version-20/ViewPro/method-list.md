@@ -975,7 +975,7 @@ O parâmetro opcional *paramObj* permite definir várias propriedades para o obj
 | -------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format                     | text       | (opcional) Quando presente, designa o formato de arquivo exportado: ".4vp" (padrão), ".csv", ".xlsx" ou ".pdf". É possível utilizar as seguintes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adiciona a extensão apropriada ao nome do arquivo se necessário. Se o formato especificado não corresponder à extensão em *filePath*, ele será adicionado ao final de *filePath*. Se um formato não for especificado e nenhuma extensão for fornecida em *filePath*, o formato de arquivo padrão será usado. |
 | senha                      | text       | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| formula                    | object     | Método de retorno de chamada a ser lançado quando a exportação estiver concluída. O uso de um método de retorno de chamada é necessário quando a exportação é assíncrona (que é o caso dos formatos PDF e Excel) se você precisar que algum código seja executado após a exportação. O método callback deve ser usado com o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) (veja abaixo para obter mais informações).                                                                                                                                  |
+| formula                    | object     | Método de retorno de chamada a ser lançado quando a exportação estiver concluída. O uso de um método de retorno de chamada é necessário quando a exportação é assíncrona (que é o caso dos formatos PDF e Excel) se você precisar que algum código seja executado após a exportação. O método callback deve ser usado com o comando [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) (veja abaixo para obter mais informações).                                                                                                                                  |
 | valuesOnly                 | boolean    | Especifica que somente os valores das fórmulas (se houver) serão exportados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | includeFormatInfo          | boolean    | Verdadeiro para incluir informações de formatação; caso contrário, falso (o padrão é verdadeiro). As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, definir essa propriedade como **false** permite reduzir o tempo de exportação.                                                                                                                                                                                                                                                                                     |
 | includeBindingSource       | Parâmetros | 4DVP e Microsoft Excel apenas. True (padrão) para exportar os valores do contexto de dados atual como valores de célula no documento exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada. Para o gerenciamento do contexto de dados e da vinculação de células, consulte [VP SET DATA CONTEXT](#vp-set-data-context) e [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                  |
@@ -1003,7 +1003,7 @@ Após a conclusão da operação de exportação, o `VP EXPORT DOCUMENT` aciona 
 
 #### Passagem de um método de retorno de chamada (fórmula)
 
-Ao incluir o parâmetro opcional *paramObj*, o comando `VP EXPORT DOCUMENT` permite que você use o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) para chamar um método 4D que será executado após a conclusão da exportação. O método de retorno de chamada receberá os seguintes valores em variáveis locais:
+Ao incluir o parâmetro opcional *paramObj*, o comando `VP EXPORT DOCUMENT` permite que você use o comando [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) para chamar um método 4D que será executado após a conclusão da exportação. O método de retorno de chamada receberá os seguintes valores em variáveis locais:
 
 | Variável |               | Tipo    | Descrição                                                    |
 | -------- | ------------- | ------- | ------------------------------------------------------------ |
@@ -1022,7 +1022,8 @@ Pretende exportar o conteúdo da área "VPArea" para um documento 4D View Pro no
 ```4d
 var $docPath: Text
 
-$docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP" VP EXPORT DOCUMENT("VPArea";$docPath)
+$docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
+VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP is saved on your disk
 ```
 
@@ -1069,7 +1070,7 @@ Método ***AfterExport***:
  End if
 ```
 
-#### Exemplo
+#### Exemplo 4
 
 Pretende exportar a folha atual para um ficheiro `.txt` com valores separados por "|":
 
@@ -1080,7 +1081,8 @@ var $params : Object
 $params:=New object
 $params.range:=VP Cells("ViewProArea";0;0;2;5)
 $params.rowDelimiter:="\n"
-$params.columnDelimiter:="|" VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv format;"csvOptions";$params))
+$params.columnDelimiter:="|"
+VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv format;"csvOptions";$params))
 ```
 
 Aqui está o resultado:
@@ -3073,7 +3075,7 @@ O parâmetro opcional *paramObj* permite definir as propriedades do documento im
 
 | Parâmetro  |                 | Tipo   | Descrição                                                                                                                                                                                                                                                                             |
 | ---------- | --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                 | object | Nome de um método callback a ser iniciado quando a importação for concluída. O método deve utilizar o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
+| formula    |                 | object | Nome de um método callback a ser iniciado quando a importação for concluída. O método deve utilizar o comando [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html). Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
 | senha      |                 | text   | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                               |
 | csvOptions |                 | object | opções para importação csv                                                                                                                                                                                                                                                            |
 |            | range           | object | O intervalo  de células que contém a primeira célula onde os dados serão escritos. Se o intervalo especificado não é um intervalo de células, só a primeira célula do intervalo é usada.                                                                                              |
@@ -3100,12 +3102,16 @@ Você deseja importar um documento do Microsoft Excel protegido por senha para u
 
 ```4d
 $o:=New object
-$o.password:="excel123" VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+$o.password:="excel123"
+
+VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
 ```4d
     //método retro chamada myImport
-#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object) If ($status.success)
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
      ALERT("Import successfully completed")
 Else
      ALERT("Error: "+$status.errorMessage)
@@ -3250,9 +3256,9 @@ O resultado é:
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R6   | Adicionado |
+|Release|Mudanças|
+|---|---|
+|19 R7|Adicionado
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3305,9 +3311,9 @@ Ver exemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) e [VP SET TABLE 
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R6   | Adicionado |
+|Release|Mudanças|
+|---|---|
+|19 R7|Adicionado
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3356,7 +3362,11 @@ $context:=New object()
 $context.col:=New collection
 $context.col.push(New object("name"; "Smith"; "salary"; 10000))
 $context.col.push(New object("name"; "Wesson"; "salary"; 50000))
-$context.col.push(New object("name"; "Gross"; "salary"; 10500)) VP SET DATA CONTEXT("ViewProArea"; $context) VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 ```
 
 ![](../assets/en/ViewPro/table-base.png)
@@ -3708,7 +3718,8 @@ O seguinte código:
 O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->avalia imediatamente todas as fórmulas em *vpAreaName*<!-- END REF -->. Por padrão, o 4D calcula automaticamente fórmulas quando elas são inseridas, importadas ou exportadas. `VP RECOMPUTE FORMULAS` permite forçar o cálculo a qualquer momento (por exemplo, se as fórmulas forem modificadas ou se as fórmulas contiverem chamadas para o banco de dados). O comando inicia a execução do comando [VP FLUSH COMMANDS](#vp-flush-commands) para executar quaisquer comandos armazenados e limpar a memória temporária de comandos e, em seguida, calcula todas as fórmulas na pasta de trabalho.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
-> Certifique-se de que o comando [VP SUSPEND COMPUTANDO](#vp-suspend-computing) não foi executado antes de usar `VP RECOMPUTE FORMULAS`, caso contrário, o comando não faz nada.
+
+> Certifique-se de que o comando [VP SUSPEND COMPUTING](#vp-suspend-computing) não foi executado antes de usar `VP RECOMPUTE FORMULAS`, caso contrário, o comando não faz nada.
 
 
 #### Exemplo
@@ -3741,13 +3752,13 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 #### Descrição
 
-O comando `VP REMOVER NOME` <!-- REF #_method_.VP REMOVE NAME.Summary -->remove o intervalo nomeado ou a fórmula nomeada passada no parâmetro *nome* no escopo definido **<!-- END REF -->.
+O comando `VP REMOVE NAME` <!-- REF #_method_.VP REMOVE NAME.Summary -->remove o intervalo nomeado ou a fórmula nomeada passada no parâmetro *name* no escopo definido<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Passe o intervalo ou a fórmula nomeada que você deseja remover no nome **.
+Passe o intervalo ou a fórmula nomeada que você deseja remover em *name*.
 
-Você pode definir onde remover o nome no escopo ** usando o índice da folha (contagem começa em 0) ou as seguintes constantes:
+Você pode definir onde remover o nome em *scope* usando o índice da folha (contagem começa em 0) ou as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
@@ -3756,7 +3767,9 @@ Você pode definir onde remover o nome no escopo ** usando o índice da folha (c
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
-VP ADD RANGE NAME("Total1";$range) VP REMOVE NAME("ViewProArea";"Total1")
+VP ADD RANGE NAME("Total1";$range)
+
+VP REMOVE NAME("ViewProArea";"Total1")
 $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
@@ -3792,6 +3805,7 @@ O comando `VP REMOVE SHEET` <!-- REF #_method_.VP REMOVE SHEET.Summary -->remove
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 No *index*, passe o índice da folha para remover. Se o *index* passado não existir, o comando não fará nada.
+
 > A indexação começa em 0.
 
 #### Exemplo
@@ -3821,6 +3835,8 @@ VP REMOVE SHEET("ViewProArea";2)
 |rangeObj   |Object|->|Range object|
 </div>
 <!-- END REF -->
+
+
 #### Descrição
 
 O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o intervalo das células em *rangeObj*<!-- END REF -->.
@@ -3952,7 +3968,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 | Release | Mudanças   |
 | ------- | ---------- |
-| 18 R6   | Adicionado |
+| 19 R7   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3975,7 +3991,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 O comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->remove uma ou *count* coluna(s) no *tableName* especificado no índice especificado *coluna*<!-- END REF -->. O comando remove valores e estilos.
 
-O comando remove colunas da tabela *tableName*, NÃO da planilha. O número total de colunas da folha não é impactado pelo  comando. O número total de colunas da folha não é impactado pelo  comando.
+O comando remove colunas da tabela *tableName*, NÃO da planilha. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são automaticamente movidos para a esquerda de acordo com o número de colunas removidas.
 
 Se *tableName* não existir, não acontece nada.
 
@@ -4001,7 +4017,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 | Release | Mudanças   |
 | ------- | ---------- |
-| 18 R6   | Adicionado |
+| 19 R7   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4024,7 +4040,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 O comando `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->remove uma ou *count* linha(s) do *tableName* especificado no índice *row* especificado<!-- END REF -->. O comando remove valores e estilos.
 
-Este comando remove linhas da tabela *nome da tabela*, não da folha. O número total de linhas da folha não é impactado pelo  comando. O número total de linhas da folha não é impactado pelo  comando.
+Este comando remove linhas da tabela *tableName*, NÃO da folha. O número total de linhas da folha não é impactado pelo comando. Dados presentes abaixo da tabela (se houver) são automaticamente movidos para cima de acordo com o número de linhas removidas.
 
 Se a tabela *tableName* está vinculada a um contexto [de dados](#vp-set-data-context), o comando remove o(s) elemento(s) da coleção.
 
@@ -4092,7 +4108,7 @@ VP RESET SELECTION("myVPArea")
 
 | Release | Mudanças   |
 | ------- | ---------- |
-| 18 R6   | Adicionado |
+| 19 R7   | Adicionado |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4134,7 +4150,11 @@ $context:=New object()
 $context.col:=New collection
 $context.col.push(New object("name"; "Smith"; "salary"; 10000))
 $context.col.push(New object("name"; "Wesson"; "salary"; 50000))
-$context.col.push(New object("name"; "Gross"; "salary"; 10500)) VP SET DATA CONTEXT("ViewProArea"; $context) VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 ```
 
 ![](../assets/en/ViewPro/table-base.png)
@@ -4173,11 +4193,11 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 O comando `VP RESUME COMPUTING` <!-- REF #_method_.VP RESUME COMPUTING.Summary --> reinicia o cálculo das fórmulas em *vpAreaName*<!-- END REF -->.
 
-O comando reativa o serviço de cálculo de 4D View Pro. Quaisquer fórmulas afetadas por alterações feitas enquanto os cálculos foram suspensos são atualizadas, e fórmulas adicionadas após `RESUME VP CONCLUÍDO` são calculadas.
+O comando reativa o serviço de cálculo de 4D View Pro. Quaisquer fórmulas afetadas por alterações feitas enquanto os cálculos foram suspensos são atualizadas, e fórmulas adicionadas após `VP RESUME COMPUTING` são calculadas.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-> O serviço de cálculo de 4D View Pro mantém um contador de ações de sugastar/retomar. Portanto, cada execução de `VP RESUME COMPUTING` deve ser balanceada por uma execução [VP SUSPEND COMPUTING](#vp-suspend-computing).
+> O serviço de cálculo de 4D View Pro mantém um contador de ações de suspender/retomar. Portanto, cada execução de `VP RESUME COMPUTING` deve ser balanceada por uma execução correspondente do comando [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 #### Exemplo
 
@@ -4211,7 +4231,7 @@ O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devolve um novo objeto i
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Passar o índice da linha (a contagem começa em 0) neste parâmetro.
+O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo contiver várias linhas, você também deve usar o parâmetro opcional *rowCount*.
 
 O parâmetro *rowCount* opcional permite que você defina o número total de linhas do intervalo. *rowCount* tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
 

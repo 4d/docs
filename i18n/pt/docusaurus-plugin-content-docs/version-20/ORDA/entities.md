@@ -90,7 +90,7 @@ Você pode lidar com entidades como qualquer outro objeto em 4D e passar suas re
 
 ## Utilização de atributos de entidades
 
-Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Os atributos de entidade do tipo armazenamento podem ser definidos ou obtidos como propriedades simples do objeto de entidade, enquanto a entidade do tipo **relatedEntity** ou **relatedEntities** retornará uma entidade ou uma seleção de entidades.
+Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Os atributos de entidade do tipo armazenamento podem ser definidos ou obtidos como propriedades simples do objeto de entidade, enquanto atributos do tipo **relatedEntity** ou **relatedEntities** retornarão uma entidade ou uma seleção de entidades.
 > Para obter mais informações sobre o tipo de atributo, consulte o parágrafo [Atributos de armazenamento e de relação](dsMapping.md#storage-and-relation-attributes).
 
 Por exemplo, para definir um atributo de armazenamento:
@@ -145,7 +145,7 @@ Para atribuir um valor diretamente ao atributo "employer", você deve passar uma
 ```4d
  $emp:=ds. Employee.new() // crie um funcionário
  $emp.lastname:="Smith" // atribua um valor a um atributo
- $emp. mployer:=ds. Company.query("nome =:1";"4D")[0]  //atribuir uma entidade da empresa
+ $emp.employer:=ds. Company.query("name =:1";"4D")[0]  //atribuir uma entidade da empresa
  $emp.save()
 ```
 
@@ -166,7 +166,8 @@ Isso é particularmente útil quando você está importando grandes quantidades 
 Você pode atribuir ou modificar o valor de um "1" atributo da entidade relacionada a partir do dataclass "N" diretamente através do atributo relacionado. Por exemplo, se você deseja modificar o atributo de nome de uma entidade relacionada da Empresa de uma entidade funcional, você pode escrever:
 
 ```code4d
- $emp:=ds. //modificar o atributo name da empresa relacionada
+ $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
+ $emp.employer.name:="4D, Inc." //modificar o atributo name da empresa relacionada
  $emp.employer.save() //salvar o atributo relacionado
   //a entidade relacionada é atualizada
 ```
@@ -179,7 +180,7 @@ Você pode criar um objeto de tipo [seleção de entidade](dsMapping.md#entity-s
 *   Usando a função [`.all()`](API/DataClassClass.md#all) de dataclass para selecionar todas as entidades em um dataclass;
 *   Usando o comando `Create entity selection` ou o método [`.newSelection()`](API/DataClassClass.md#newselection) para criar uma seleção de entidade em branco;
 *   Usando a função [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar uma seleção de entidade existente;
-*   a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+*   Usando uma das várias funções da [classe Entity selection](API/EntitySelectionClass.md) que retorna uma nova seleção de entidade, como [`.or()`](API/EntitySelectionClass.md#or);
 *   Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
 Você pode criar e usar simultaneamente tantas seleções de entidades diferentes quanto desejar para uma classe de dados. Lembre-se de que uma seleção de entidade contém apenas referências a entidades. Seleções diferentes de entidades podem conter referências para as mesmas entidades.
@@ -234,21 +235,22 @@ $toModify:=ds. Company.all().copy() //$toModify é alterável
 
 Uma nova seleção de entidade **herda** da natureza da seleção de entidade original nos seguintes casos:
 
-- Usando uma das várias funções da classe [Entity selection](API/EntitySelectionClass.md) que retorna uma nova entidade selecionada, tais como`. .
+- a nova seleção de entidade resulta de uma das várias funções de classe ORDA aplicadas a uma seleção de entidade existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - a nova entity selection é baseada numa relação:
     - [entity.*attributeName*](API/EntityClass.md#attributename) (por exemplo, "company.employees") quando *attributeName* é um atributo relacionado um-para-muitos e a entidade pertence a uma seleção de entidade (mesma natureza da seleção de entidade [.getSelection()](API/EntityClass.md#getselection)),
-    - [entitySeletion.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),
+    - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por exemplo, "employees.employer") quando *attributeName* é um atributo relacionado (mesma natureza que a seleção da entidade),
     - [.extract()](API/EntitySelectionClass.md#extract) quando a coleção resultante contém seleções de entidade (mesma natureza que a seleção da entidade).
 
 Exemplos:
 
 ```4d
-<code class="4d">Employee.query("salary >= :1"; 1000000)   
-
+$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
     //$highSal é compartilhável por causa da consulta em dataClass
 $comp:=$highSal.employer //$comp é compartilhável porque $highSal é compartilhável
 
-$lowSal:=ds.
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+    //$lowSal é alterável por causa do copy()
+$comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
 ```
 
 :::note Seleções de entidades devolvidas pelo servidor
@@ -285,41 +287,42 @@ var $paid; $unpaid : cs. InvoicesSelection
 $paid:=ds. Invoices.query("status=:1"; "Paid")
 $unpaid:=ds. Invoices.query("status=:1"; "Unpaid")
 
-//Passamos referências de seleção de entidades como parâmetros para o worker CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
-
+//Passamos referências de seleção de entidades como parâmetros para o worker
+CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
+ 
 ```
 
 O método `sendMails`:
 
 ```4d 
 
- #DECLARAR ($paid : cs. InvoicesSelection, $unpaid : cs. InvoicesSelection)
- var $invoice : cs. nvoicesEntity
+ #DECLARE ($paid : cs. InvoicesSelection; $unpaid : cs. InvoicesSelection)
+ var $invoice : cs. InvoicesEntity
 
- var $server; $transporter; $email; $status : Objeto
+ var $server; $transporter; $email; $status : Object
 
   //Prepare e-mails
- $server:=Novo objet()
- $server. . ost:="exchange.company.com"
+ $server:=New object()
+ $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
- $server. assword:="minha!!senha"
+ $server.password:="my!!password"
  $transporter:=SMTP New transporter($server)
  $email:=New object()
- $email.from:="myName@company. Um"
+ $email.from:="myName@company.com"
 
   //Laços em seleções das entidades
- Para cada uma ($invoice;$paid)
-    $email. o:=$invoicecliente ddress // endereço de e-mail do cliente
-    $email. ubject:="Pagamento OK para fatura # "+String($invoice.number)
+ For each($invoice;$paid)
+    $email.to:=$invoice.customer.address // endereço de e-mail do cliente
+    $email.subject:="Pagamento OK para fatura # "+String($invoice.number)
 
-    $status:=$transporter. end($email)
- End para cada
-
- Por cada uma ($invoice;$unpaid)
-    $email. o:=$invoice.customer.address // endereço de e-mail do cliente
-    $email. ubject:="Por favor pague a fatura # "+String($invoice.number)
     $status:=$transporter.send($email)
- End para cada
+ End for each
+
+ For each($invoice;$unpaid)
+    $email.to:=$invoice.customer.address // endereço de e-mail do cliente
+    $email.subject:="Por favor pague a fatura # "+String($invoice.number)
+    $status:=$transporter.send($email)
+ End for each
 ```
 
 
@@ -346,7 +349,7 @@ Além da variedade de maneiras que você pode consultar, você também pode usar
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-A última linha retornará em $myInvoices uma seleção de entidade de todas as faturas que tenham pelo menos um item de fatura relacionado a uma peça na seleção de entidade myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
+A última linha retornará em $myInvoices uma seleção de entidade de todas as faturas que tenham pelo menos um item de fatura relacionado a uma peça na seleção de entidade myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades e nenhuma entidade é devolvida, o resultado é uma seleção de entidades vazia, não nula.
 
 
 ## Bloqueio de entidades
@@ -423,4 +426,4 @@ Estes princípios são apresentados no diagrama seguinte:
 Os **bloqueios de transação** também se aplicam aos comandos clássicos e ORDA. Em um processo multiusuário ou um aplicativo multiusuário, um bloqueio definido dentro de uma transação em um registro por um comando clássico resultará na prevenção de quaisquer outros processos para bloquear entidades relacionadas a este registro (ou inversamente), até que a transação seja validada ou cancelada.
 
 *   Exemplo com um bloqueio definido por um comando clássico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-*   Example with a lock set by an ORDA method:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+*   Exemplo com um bloqueio definido por um método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

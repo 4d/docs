@@ -46,7 +46,7 @@ Cada comando de menu pode ter um método de projeto ou uma ação padrão anexad
 
 Se não atribuir um método ou uma ação padrão a um comando de menu, a escolha desse comando de menu faz com que 4D saia do ambiente Application e vá para o ambiente Design. Se apenas o ambiente de Aplicação estiver disponível, isto significa desistir do Ambiente de Trabalho.
 
-Ações padrão podem ser usadas para executar várias operações cotidianas conectadas às funções de sistema (copiar, sair, etc) ou às funções do banco de dados 4D (adicionar registro, selecionar tudo, etc.).
+Ações padrão podem ser usadas para executar várias operações cotidianas conectadas às funções de sistema (copiar, sair, etc) ou às funções do banco de dados (adicionar registro, selecionar tudo, etc.).
 
 Pode atribuir tanto uma acção padrão como um método de projecto a um comando de menu. Neste caso, a acção padrão nunca é executada; contudo, 4D utiliza esta acção para ativar/desativar o comando do menu de acordo com o contexto actual e para associar uma operação específica com ele de acordo com a plataforma. Quando um comando de menu for desativado, o método de projecto associado não pode ser executado.
 
@@ -89,7 +89,7 @@ Adiciona-se uma linha separadora através da criação de um comando de menu esp
 
 No editor do Menu, em vez de introduzir o texto do comando do menu na área do título, basta seleccionar a opção **Linha Separadora** . Em vez de texto, aparece uma linha na área actual da barra de menu. Quando esta opção é verificada, as outras propriedades não têm qualquer efeito. **Nota:** Sob macOS, se usar o traço "-" como primeiro caracter de um item do menu, aparecerá como uma linha separadora.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM`] commands.
+Na linguagem 4D, insere-se uma linha separadora introduzindo `-` ou `(-` como itemText para os comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, ou `SET MENU ITEM`.
 
 
 
@@ -150,13 +150,13 @@ A menos que especifique o contrário, 4D activa automaticamente cada item de men
 
 ### Marca de verificação
 
-Esta opção de menu editor pode ser usada para associar uma marca de verificação do sistema com um item de menu. You can then manage the display of the check mark using language commands `SET MENU ITEM MARK` and `Get menu item mark`.
+Esta opção de menu editor pode ser usada para associar uma marca de verificação do sistema com um item de menu. Pode então gerir a exibição da marca de verificação usando os comandos de linguagem `SET MENU ITEM MARK` e `Get menu item mark`.
 
 As marcas de verificação são geralmente utilizadas para itens do menu de acção contínua e indicam que a acção está actualmente em curso.
 
 ### Font-style
 
-4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, `SET MENU ITEM STYLE`.
+4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. Pode personalizar os seus menus com os estilos Negrito, Itálico ou Sublinhado através das opções no editor de Menu, `SET MENU ITEM STYLE`.
 
 Como regra geral, aplique estilos de fonte moderadamente aos seus menus - demasiados estilos distrairão o utilizador e darão um aspecto desorganizado à sua aplicação.
 > Também se pode aplicar estilos inserindo caracteres especiais no título do menu (ver [Utilizando caracteres de controlo](properties.md#using-control-characters) acima).
@@ -174,4 +174,4 @@ Para definir o ícone no editor de Menu, clicar na área "Ícone de item" e sele
 
 Para remover o ícone do item, escolher a opção **No Icon** da área "Item Icon".
 
-Para definir ícones de itens usando a linguagem 4D, chamar o comando `SET MENU ITEM ICON` . 
+Para definir ícones de itens usando a linguagem 4D, chamar o comando `SET MENU ITEM ICON` .

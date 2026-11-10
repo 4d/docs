@@ -20,7 +20,7 @@ Essa opção permite que você indique se o banco de dados do 4D Server aparecer
 
 #### Nome da publicação
 
-Essa opção permite alterar o nome de publicação de um banco de dados do 4D Server, *, ou seja,*, o nome exibido na guia dinâmica **Available** da caixa de diálogo de conexão (consulte a seção [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html)). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
+Essa opção permite alterar o nome de publicação de um banco de dados do 4D Server, *, ou seja,*, o nome exibido na guia dinâmica **Available** da caixa de diálogo de conexão (consulte a seção [Connecting to a 4D Server Database](https://doc.4d.com/4Dv20/4D/20/Connecting-to-a-4D-Server-Database.300-6330563.en.html)). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
 
 > Esse parâmetro não é levado em conta em aplicativos cliente-servidor personalizados. Em teoria, o aplicativo cliente se conecta diretamente ao aplicativo servidor, sem passar pela caixa de diálogo de conexão. No entanto, em caso de erro, essa caixa de diálogo pode ser exibida; nesse caso, o nome de publicação do aplicativo do servidor é o nome do projeto compilado.
 
